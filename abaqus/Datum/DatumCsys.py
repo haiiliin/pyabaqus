@@ -1,0 +1,50 @@
+from .Datum import Datum
+from .DatumAxis import DatumAxis
+from .DatumPoint import DatumPoint
+from abaqusConstants import *
+
+class DatumCsys(Datum):
+
+    """The DatumCsys object has no direct constructor; it is created when a Feature object is 
+    created. For example, the DatumCsysByOffset method creates a Feature object that creates 
+    a DatumCsys object. 
+    The DatumCsys object is derived from the Datum object. 
+
+    Access
+    ------
+        - import part
+        - mdb.models[name].parts[name].datums[i]
+        - import assembly
+        - mdb.models[name].rootAssembly.allInstances[name].datums[i]
+        - mdb.models[name].rootAssembly.connectorOrientations[i].localCsys1
+        - mdb.models[name].rootAssembly.connectorOrientations[i].localCsys2
+        - mdb.models[name].rootAssembly.datums[i]
+        - mdb.models[name].rootAssembly.instances[name].datums[i]
+        - import odbAccess
+        - session.odbs[name].rootAssembly.connectorOrientations[i].localCsys1
+        - session.odbs[name].rootAssembly.connectorOrientations[i].localCsys2
+
+    Table Data
+    ----------
+
+    Corresponding analysis keywords
+    -------------------------------
+
+    """
+
+    # A SymbolicConstant specifying the type of the coordinate system. Possible values are 
+    # CARTESIAN, CYLINDRICAL, and SPHERICAL. 
+    coordSysType: SymbolicConstant = None
+
+    # A DatumPoint object specifying the origin of the coordinate system. 
+    origin: DatumPoint = None
+
+    # A DatumAxis object specifying the 1-direction of the coordinate system. 
+    axis1: DatumAxis = None
+
+    # A DatumAxis object specifying the 2-direction of the coordinate system. 
+    axis2: DatumAxis = None
+
+    # A DatumAxis object specifying the 3-direction of the coordinate system. 
+    axis3: DatumAxis = None
+

@@ -1,0 +1,3 @@
+# Section commands
+
+The Section commands are used to create sections and profiles with their associated properties and behavior. The various section objects are all derived from the Section object. The various profile objects are all derived from the Profile object. See [Property commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-PtoPyc-sb.htm?ContextScope=all) for the property assignment commands.

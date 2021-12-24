@@ -1,0 +1,63 @@
+# SubmodelSBState object
+
+The SubmodelSBState object stores the propagating data for a Submodel load in a step. One instance of this object is created internally by the [SubmodelSB](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-submodelsbpyc.htm?ContextScope=all) object for each step. The instance is also deleted internally by the [SubmodelSB](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-submodelsbpyc.htm?ContextScope=all) object.
+
+The SubmodelSBState object has no constructor or methods.
+
+The SubmodelSBState object is derived from the [LoadState](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-loadstatepyc.htm?ContextScope=all) object.
+
+## Access
+
+```
+import load
+mdb.models[name].steps[name].loadStates[name]
+```
+
+## Members
+
+The SubmodelSBState object has the following members:
+
+- *globalStepState*
+
+  A SymbolicConstant specifying the propagation state of the *globalStep* member. Possible values are SET and UNCHANGED.
+
+- *globalIncrement*
+
+  An Int specifying the increment number in the global model step at which the solution will be used to specify the values of the driven variables. This argument is applicable only for linear perturbation steps.
+
+- *globalIncrementState*
+
+  A SymbolicConstant specifying the propagation state of the *globalIncrement* member. Possible values are SET and UNCHANGED.
+
+- *globalStep*
+
+  A String specifying the step in the global model from which Abaqus reads the values of the variables that will drive the submodel analysis. The String indicates the position of the step in the sequence of analysis steps. For example, *globalStep*='1' indicates the first step.
+
+- *amplitudeState*
+
+  A SymbolicConstant specifying the propagation state of the *amplitude* member. Possible values are UNSET, SET, UNCHANGED, and FREED.
+
+- *status*
+
+  A SymbolicConstant specifying the propagation state of the [LoadState](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-loadstatepyc.htm?ContextScope=all) object. Possible values are:
+
+  - NOT_YET_ACTIVE
+  - CREATED
+  - PROPAGATED
+  - MODIFIED
+  - DEACTIVATED
+  - NO_LONGER_ACTIVE
+  - TYPE_NOT_APPLICABLE
+  - INSTANCE_NOT_APPLICABLE
+  - BUILT_INTO_BASE_STATE
+
+- *amplitude*
+
+  A String specifying the name of the amplitude reference. The String is empty if the load has no amplitude reference.
+
+
+
+## Corresponding analysis keywords
+
+- [SUBMODEL](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKEYRefMap/simakey-r-submodel.htm?ContextScope=all#simakey-r-submodel)
+- [DSLOAD](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKEYRefMap/simakey-r-dsload.htm?ContextScope=all#simakey-r-dsload), SUBMODEL

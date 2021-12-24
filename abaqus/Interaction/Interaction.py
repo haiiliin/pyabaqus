@@ -1,0 +1,139 @@
+
+
+class Interaction:
+
+    """The Interaction object is the abstract base type for other Interaction objects. The 
+    Interaction object has no explicit constructor. Each of the Interaction objects has the 
+    following methods: 
+    - deactivate 
+    - move 
+    - reset 
+    - resume 
+    - suppress 
+    - delete 
+    The methods are described below. 
+
+    Access
+    ------
+        - import interaction
+        - mdb.models[name].interactions[name]
+
+    Table Data
+    ----------
+
+    Corresponding analysis keywords
+    -------------------------------
+
+    """
+
+    # A String specifying the repository key. 
+    name: str = ''
+
+    def deactivate(self, stepName: str):
+        """This method deactivates the interaction in the specified step and all its subsequent
+        steps.
+
+        Parameters
+        ----------
+        stepName
+            A String specifying the name of the step in which the interaction is deactivated. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    def move(self, fromStepName: str, toStepName: str):
+        """This method moves an interaction from one step to another.
+
+        Parameters
+        ----------
+        fromStepName
+            A String specifying the name of the step from which to move the interaction. 
+        toStepName
+            A String specifying the name of the step to which to move the interaction. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    def reset(self, stepName: str):
+        """This method reactivates an interaction that was deactivated previously. The reset method
+        is available during the step in which the interaction was deactivated originally.
+
+        Parameters
+        ----------
+        stepName
+            A String specifying the name of the step in which the interaction is reactivated. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    def resume(self):
+        """This method resumes an interaction that was previously suppressed.
+
+        Parameters
+        ----------
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    def suppress(self):
+        """This method suppresses an interaction.
+
+        Parameters
+        ----------
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    def delete(self, indices: tuple):
+        """This method allows you to delete existing interactions.
+
+        Parameters
+        ----------
+        indices
+            A sequence of Ints specifying the index of each interaction to delete. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+

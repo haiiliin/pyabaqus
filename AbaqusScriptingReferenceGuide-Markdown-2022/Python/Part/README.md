@@ -1,0 +1,3 @@
+# Part commands
+
+Features in Abaqus/CAE include Parts, Datums, Partitions, and Assembly operations. Part commands create Feature objects on only the Part object. The commands that create Feature objects on only the *rootAssembly* object are described in [Assembly commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-AsmPyc-sb.htm?ContextScope=all#simaker-m-AsmPyc-sb). The commands that create Feature objects on both the Part and the *rootAssembly* objects are described in [Feature commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-FtsPyc-sb.htm?ContextScope=all#simaker-m-FtsPyc-sb).

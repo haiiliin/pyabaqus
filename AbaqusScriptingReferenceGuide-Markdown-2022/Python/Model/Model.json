@@ -1,0 +1,820 @@
+{
+    "lines": [],
+    "itemizes": {},
+    "sections": {
+        "Model object": {
+            "lines": [
+                "Abaqus creates a Model object named `Model-1` when a session is started."
+            ],
+            "itemizes": {},
+            "header": "Model object",
+            "subSections": {
+                "Access": {
+                    "lines": [
+                        "```",
+                        "mdb.models[name]",
+                        "```"
+                    ],
+                    "itemizes": {},
+                    "subHeader": "Access",
+                    "subSubSections": {}
+                },
+                "Model(...)": {
+                    "lines": [
+                        "This method creates a Model object."
+                    ],
+                    "itemizes": {},
+                    "subHeader": "Model(...)",
+                    "subSubSections": {
+                        "Path": {
+                            "lines": [
+                                "```",
+                                "mdb.Model",
+                                "```"
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Path"
+                        },
+                        "Required arguments": {
+                            "lines": [],
+                            "itemizes": {
+                                "name": {
+                                    "lines": [
+                                        "A String specifying the repository key."
+                                    ],
+                                    "label": "name"
+                                }
+                            },
+                            "subSubHeader": "Required arguments"
+                        },
+                        "Optional arguments": {
+                            "lines": [],
+                            "itemizes": {
+                                "description": {
+                                    "lines": [
+                                        "A String specifying the purpose and contents of the Model object. The default value is an empty string."
+                                    ],
+                                    "label": "description"
+                                },
+                                "stefanBoltzmann": {
+                                    "lines": [
+                                        "None or a Float specifying the Stefan-Boltzmann constant. The default value is None."
+                                    ],
+                                    "label": "stefanBoltzmann"
+                                },
+                                "absoluteZero": {
+                                    "lines": [
+                                        "None or a Float specifying the absolute zero constant. The default value is None."
+                                    ],
+                                    "label": "absoluteZero"
+                                },
+                                "waveFormulation": {
+                                    "lines": [
+                                        "A SymbolicConstant specifying the type of incident wave formulation to be used in acoustic problems. Possible values are NOT_SET, SCATTERED, and TOTAL. The default value is NOT_SET."
+                                    ],
+                                    "label": "waveFormulation"
+                                },
+                                "modelType": {
+                                    "lines": [
+                                        "A SymbolicConstant specifying the analysis model type. Possible values are STANDARD_EXPLICIT and ELECTROMAGNETIC. The default is STANDARD_EXPLICIT."
+                                    ],
+                                    "label": "modelType"
+                                },
+                                "universalGas": {
+                                    "lines": [
+                                        "None or a Float specifying the universal gas constant. The default value is None."
+                                    ],
+                                    "label": "universalGas"
+                                },
+                                "copyConstraints": {
+                                    "lines": [
+                                        "A boolean specifying whether to copy the constraints created in the model to the model that instances this model. The default value is ON."
+                                    ],
+                                    "label": "copyConstraints"
+                                },
+                                "copyConnectors": {
+                                    "lines": [
+                                        "A boolean specifying whether to copy the connectors created in the model to the model that instances this model. The default value is ON."
+                                    ],
+                                    "label": "copyConnectors"
+                                },
+                                "copyInteractions": {
+                                    "lines": [
+                                        "A boolean specifying whether to copy the interactions created in the model to the model that instances this model. The default value is ON."
+                                    ],
+                                    "label": "copyInteractions"
+                                }
+                            },
+                            "subSubHeader": "Optional arguments"
+                        },
+                        "Return value": {
+                            "lines": [
+                                "A Model object."
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Return value"
+                        },
+                        "Exceptions": {
+                            "lines": [
+                                "None."
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Exceptions"
+                        }
+                    }
+                },
+                "ModelFromInputFile(...)": {
+                    "lines": [
+                        "This method creates a Model object by reading the keywords in an input file and creating the corresponding Abaqus/CAE objects."
+                    ],
+                    "itemizes": {},
+                    "subHeader": "ModelFromInputFile(...)",
+                    "subSubSections": {
+                        "Path": {
+                            "lines": [
+                                "```",
+                                "mdb.ModelFromInputFile",
+                                "```"
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Path"
+                        },
+                        "Required arguments": {
+                            "lines": [],
+                            "itemizes": {
+                                "name": {
+                                    "lines": [
+                                        "A String specifying the repository key."
+                                    ],
+                                    "label": "name"
+                                },
+                                "inputFileName": {
+                                    "lines": [
+                                        "A String specifying the name of the input file (including the .inp extension) to be parsed into the new model. This String can also be the full path to the input file if it is located in another directory."
+                                    ],
+                                    "label": "inputFileName"
+                                }
+                            },
+                            "subSubHeader": "Required arguments"
+                        },
+                        "Optional arguments": {
+                            "lines": [
+                                "None."
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Optional arguments"
+                        },
+                        "Return value": {
+                            "lines": [
+                                "A Model object."
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Return value"
+                        },
+                        "Exceptions": {
+                            "lines": [
+                                "None."
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Exceptions"
+                        }
+                    }
+                },
+                "ModelFromOdbFile(...)": {
+                    "lines": [
+                        "This method creates a Model object by reading an output database and creating any corresponding Abaqus/CAE objects."
+                    ],
+                    "itemizes": {},
+                    "subHeader": "ModelFromOdbFile(...)",
+                    "subSubSections": {
+                        "Path": {
+                            "lines": [
+                                "```",
+                                "mdb.ModelFromOdbFile",
+                                "```"
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Path"
+                        },
+                        "Required arguments": {
+                            "lines": [],
+                            "itemizes": {
+                                "name": {
+                                    "lines": [
+                                        "A String specifying the repository key."
+                                    ],
+                                    "label": "name"
+                                },
+                                "odbFileName": {
+                                    "lines": [
+                                        "A String specifying the name of the output database file (including the .odb extension) to be read into the new model. This String can also be the full path to the output database file if it is located in another directory."
+                                    ],
+                                    "label": "odbFileName"
+                                }
+                            },
+                            "subSubHeader": "Required arguments"
+                        },
+                        "Optional arguments": {
+                            "lines": [
+                                "None."
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Optional arguments"
+                        },
+                        "Return value": {
+                            "lines": [
+                                "A Model object."
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Return value"
+                        },
+                        "Exceptions": {
+                            "lines": [
+                                "None."
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Exceptions"
+                        }
+                    }
+                },
+                "ModelFromNastranFile(...)": {
+                    "lines": [
+                        "This method creates a Model object by reading the keywords in a Nastran bulk data file or Nastran input file and creating any corresponding Abaqus/CAE objects. The default values is discussed in following and can be defined alternatively in the Abaqus environment file as the one used for the translator from Nastran to Abaqus. For more information, see [Translating Nastran data to Abaqus files](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEEXCRefMap/simaexc-c-nasabaproc.htm?ContextScope=all)."
+                    ],
+                    "itemizes": {},
+                    "subHeader": "ModelFromNastranFile(...)",
+                    "subSubSections": {
+                        "Path": {
+                            "lines": [
+                                "```",
+                                "mdb.ModelFromNastranFile",
+                                "```"
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Path"
+                        },
+                        "Required arguments": {
+                            "lines": [],
+                            "itemizes": {
+                                "modelName": {
+                                    "lines": [
+                                        "A String specifying the repository key."
+                                    ],
+                                    "label": "modelName"
+                                },
+                                "inputFileName": {
+                                    "lines": [
+                                        "A String specifying the name of the Nastran input file (including the .bdf, .dat, .nas, .nastran, .blk, .bulk extension) to be read into the new model. This String can also be the full path to the Nastran input file if it is located in another directory."
+                                    ],
+                                    "label": "inputFileName"
+                                }
+                            },
+                            "subSubHeader": "Required arguments"
+                        },
+                        "Optional arguments": {
+                            "lines": [],
+                            "itemizes": {
+                                "sectionConsolidation": {
+                                    "lines": [
+                                        "A SymbolicConstant specifying the method used to create shell section. Possible values are PRESERVE_SECTION, GROUP_BY_MATERIAL, and NONE. If PRESERVE_SECTION is used, an Abaqus section is created corresponding to each shell property ID. If GROUP_BY_MATERIAL is used, a single Abaqus section is created for all homogeneous elements referencing the same material. In both cases, material orientations and offsets are created using discrete fields. If NONE is used, a separate shell section is created for each combination of orientation, material offset, and/or thickness. The default is PRESERVE_SECTION."
+                                    ],
+                                    "label": "sectionConsolidation"
+                                },
+                                "preIntegratedShell": {
+                                    "lines": [
+                                        "A Boolean specifying whether the pre-integrated shell section is created in default for shell element. The default value is OFF."
+                                    ],
+                                    "label": "preIntegratedShell"
+                                },
+                                "weightMassScaling": {
+                                    "lines": [
+                                        "A Boolean specifying whether the value on the Nastran data line PARAM, WTMASS is used as a multiplier for all density, mass, and rotary inertia values created in the Abaqus input file. The default value is ON."
+                                    ],
+                                    "label": "weightMassScaling"
+                                },
+                                "loadCases": {
+                                    "lines": [
+                                        "A Boolean specifying whether each SUBCASE for linear static analyses is translated to a [LOAD CASE](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKEYRefMap/simakey-r-loadcase.htm?ContextScope=all#simakey-r-loadcase) option, and all such [LOAD CASE](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKEYRefMap/simakey-r-loadcase.htm?ContextScope=all#simakey-r-loadcase) options are grouped in a single [STEP](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKEYRefMap/simakey-r-step.htm?ContextScope=all#simakey-r-step) option. The default value is ON."
+                                    ],
+                                    "label": "loadCases"
+                                },
+                                "coupleBeamOffsets": {
+                                    "lines": [
+                                        "A Boolean specifying whether to translate the beam element connectivity to newly created nodes at the offset location and rigidly coupling the new and original nodes. If not, beam element offsets are translated to the [CENTROID](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKEYRefMap/simakey-r-centroid.htm?ContextScope=all#simakey-r-centroid) and [SHEAR CENTER](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKEYRefMap/simakey-r-shearcenter.htm?ContextScope=all#simakey-r-shearcenter) options, which are suboptions of the [BEAM GENERAL SECTION](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKEYRefMap/simakey-r-beamgeneralsection.htm?ContextScope=all#simakey-r-beamgeneralsection) option. The default value is ON. When the beam element references a PBARL or PBEAML property or if the beam offset has a significant component in the direction of the beam axis, the setting for this argument is always ON."
+                                    ],
+                                    "label": "coupleBeamOffsets"
+                                },
+                                "cbar": {
+                                    "lines": [
+                                        "A String specifying the 2-node beam that is created from CBAR and CBEAM elements. Possible values are B31 and B33. The default is B31."
+                                    ],
+                                    "label": "cbar"
+                                },
+                                "cquad4": {
+                                    "lines": [
+                                        "A String specifying the 4-node shell that is created from CQUAD4 elements. Possible values are S4 and S4R. The default is S4. If a reduced-integration element is chosen, the enhanced hourglass formulation is applied automatically."
+                                    ],
+                                    "label": "cquad4"
+                                },
+                                "chexa": {
+                                    "lines": [
+                                        "A String specifying the 8-node brick that is created from CHEXA elements. Possible values are C3D8I, C3D8 and C3D8R. The default is C3D8I. If a reduced-integration element is chosen, the enhanced hourglass formulation is applied automatically."
+                                    ],
+                                    "label": "chexa"
+                                },
+                                "ctetra": {
+                                    "lines": [
+                                        "A String specifying the 10-node tetrahedron that is created from CTETRA elements. Possible values are C3D10 and C3D10M. The default is C3D10."
+                                    ],
+                                    "label": "ctetra"
+                                },
+                                "keepTranslatedFiles": {
+                                    "lines": [
+                                        "A Boolean specifying whether to keep the generated Abaqus input file after the model is created from the Nastran input file. The default value is ON."
+                                    ],
+                                    "label": "keepTranslatedFiles"
+                                }
+                            },
+                            "subSubHeader": "Optional arguments"
+                        },
+                        "Return value": {
+                            "lines": [
+                                "A Model object."
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Return value"
+                        },
+                        "Exceptions": {
+                            "lines": [
+                                "None."
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Exceptions"
+                        }
+                    }
+                },
+                "setValues(...)": {
+                    "lines": [
+                        "This method modifies the Model object."
+                    ],
+                    "itemizes": {},
+                    "subHeader": "setValues(...)",
+                    "subSubSections": {
+                        "Required arguments": {
+                            "lines": [
+                                "None."
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Required arguments"
+                        },
+                        "Optional arguments": {
+                            "lines": [],
+                            "itemizes": {
+                                "description": {
+                                    "lines": [
+                                        "A String specifying the purpose and contents of the Model object. The default value is an empty string."
+                                    ],
+                                    "label": "description"
+                                },
+                                "noPartsInputFile": {
+                                    "lines": [
+                                        "A Boolean specifying whether an input file should be written without parts and assemblies. The default value is OFF."
+                                    ],
+                                    "label": "noPartsInputFile"
+                                },
+                                "absoluteZero": {
+                                    "lines": [
+                                        "None or a Float specifying the absolute zero constant. The default value is None."
+                                    ],
+                                    "label": "absoluteZero"
+                                },
+                                "stefanBoltzmann": {
+                                    "lines": [
+                                        "None or a Float specifying the Stefan-Boltzmann constant. The default value is None."
+                                    ],
+                                    "label": "stefanBoltzmann"
+                                },
+                                "waveFormulation": {
+                                    "lines": [
+                                        "A SymbolicConstant specifying the type of incident wave formulation to be used in acoustic problems. Possible values are NOT_SET, SCATTERED, and TOTAL. The default value is NOT_SET."
+                                    ],
+                                    "label": "waveFormulation"
+                                },
+                                "universalGas": {
+                                    "lines": [
+                                        "None or a Float specifying the universal gas constant. The default value is None."
+                                    ],
+                                    "label": "universalGas"
+                                },
+                                "restartJob": {
+                                    "lines": [
+                                        "A String specifying the name of the job that generated the restart data."
+                                    ],
+                                    "label": "restartJob"
+                                },
+                                "restartStep": {
+                                    "lines": [
+                                        "A String specifying the name of the step where the restart analysis will start."
+                                    ],
+                                    "label": "restartStep"
+                                },
+                                "restartIncrement": {
+                                    "lines": [
+                                        "An Int specifying the increment, interval, iteration or cycle where the restart analysis will start. To select the end of the step use the SymbolicConstant STEP_END."
+                                    ],
+                                    "label": "restartIncrement"
+                                },
+                                "endRestartStep": {
+                                    "lines": [
+                                        "A Boolean specifying that the step specified by *restartStep* should be terminated at the increment specified by *restartIncrement*."
+                                    ],
+                                    "label": "endRestartStep"
+                                },
+                                "globalJob": {
+                                    "lines": [
+                                        "A String specifying the name of the job that generated the results for the global model."
+                                    ],
+                                    "label": "globalJob"
+                                },
+                                "shellToSolid": {
+                                    "lines": [
+                                        "A Boolean specifying that a shell global model drives a solid submodel."
+                                    ],
+                                    "label": "shellToSolid"
+                                },
+                                "copyConstraints": {
+                                    "lines": [
+                                        "A Boolean specifying whether to copy the constraints created in the model to the model that instances this model."
+                                    ],
+                                    "label": "copyConstraints"
+                                },
+                                "copyConnectors": {
+                                    "lines": [
+                                        "A Boolean specifying whether to copy the connectors created in the model to the model that instances this model"
+                                    ],
+                                    "label": "copyConnectors"
+                                },
+                                "copyInteractions": {
+                                    "lines": [
+                                        "A Boolean specifying whether to copy the interactions created in the model to the model that instances this model."
+                                    ],
+                                    "label": "copyInteractions"
+                                }
+                            },
+                            "subSubHeader": "Optional arguments"
+                        },
+                        "Return value": {
+                            "lines": [
+                                "None."
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Return value"
+                        },
+                        "Exceptions": {
+                            "lines": [
+                                "None."
+                            ],
+                            "itemizes": {},
+                            "subSubHeader": "Exceptions"
+                        }
+                    }
+                },
+                "Members": {
+                    "lines": [
+                        "The Model object can have the following members:"
+                    ],
+                    "itemizes": {
+                        "name": {
+                            "lines": [
+                                "A String specifying the repository key."
+                            ],
+                            "label": "name"
+                        },
+                        "stefanBoltzmann": {
+                            "lines": [
+                                "None or a Float specifying the Stefan-Boltzmann constant. The default value is None."
+                            ],
+                            "label": "stefanBoltzmann"
+                        },
+                        "absoluteZero": {
+                            "lines": [
+                                "None or a Float specifying the absolute zero constant. The default value is None."
+                            ],
+                            "label": "absoluteZero"
+                        },
+                        "waveFormulation": {
+                            "lines": [
+                                "A SymbolicConstant specifying the type of incident wave formulation to be used in acoustic problems. Possible values are NOT_SET, SCATTERED, and TOTAL. The default value is NOT_SET."
+                            ],
+                            "label": "waveFormulation"
+                        },
+                        "universalGas": {
+                            "lines": [
+                                "None or a Float specifying the universal gas constant. The default value is None."
+                            ],
+                            "label": "universalGas"
+                        },
+                        "noPartsInputFile": {
+                            "lines": [
+                                "A Boolean specifying whether an input file should be written without parts and assemblies. The default value is OFF."
+                            ],
+                            "label": "noPartsInputFile"
+                        },
+                        "restartIncrement": {
+                            "lines": [
+                                "An Int specifying the increment, interval, iteration or cycle where the restart analysis will start. To select the end of the step use the SymbolicConstant STEP_END."
+                            ],
+                            "label": "restartIncrement"
+                        },
+                        "endRestartStep": {
+                            "lines": [
+                                "A Boolean specifying that the step specified by *restartStep* should be terminated at the increment specified by *restartIncrement*."
+                            ],
+                            "label": "endRestartStep"
+                        },
+                        "shellToSolid": {
+                            "lines": [
+                                "A Boolean specifying that a shell global model drives a solid submodel."
+                            ],
+                            "label": "shellToSolid"
+                        },
+                        "lastChangedCount": {
+                            "lines": [
+                                "A Float specifying the time stamp that indicates when the model was last changed."
+                            ],
+                            "label": "lastChangedCount"
+                        },
+                        "description": {
+                            "lines": [
+                                "A String specifying the purpose and contents of the Model object. The default value is an empty string."
+                            ],
+                            "label": "description"
+                        },
+                        "restartJob": {
+                            "lines": [
+                                "A String specifying the name of the job that generated the restart data."
+                            ],
+                            "label": "restartJob"
+                        },
+                        "restartStep": {
+                            "lines": [
+                                "A String specifying the name of the step where the restart analysis will start."
+                            ],
+                            "label": "restartStep"
+                        },
+                        "globalJob": {
+                            "lines": [
+                                "A String specifying the name of the job that generated the results for the global model."
+                            ],
+                            "label": "globalJob"
+                        },
+                        "copyConstraints": {
+                            "lines": [
+                                "A boolean specifying the status of constraints created in a model, in the model which instances this model."
+                            ],
+                            "label": "copyConstraints"
+                        },
+                        "copyConnectors": {
+                            "lines": [
+                                "A boolean specifying the status of connectors created in a model, in the model which instances this model."
+                            ],
+                            "label": "copyConnectors"
+                        },
+                        "copyInteractions": {
+                            "lines": [
+                                "A boolean specifying the status of interactions created in a model, in the model which instances this model."
+                            ],
+                            "label": "copyInteractions"
+                        },
+                        "keywordBlock": {
+                            "lines": [
+                                "A [KeywordBlock](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-keywordblockpyc.htm?ContextScope=all) object."
+                            ],
+                            "label": "keywordBlock"
+                        },
+                        "rootAssembly": {
+                            "lines": [
+                                "An [Assembly](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-assemblypyc.htm?ContextScope=all) object."
+                            ],
+                            "label": "rootAssembly"
+                        },
+                        "amplitudes": {
+                            "lines": [
+                                "A repository of [Amplitude](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-amplitudepyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "amplitudes"
+                        },
+                        "profiles": {
+                            "lines": [
+                                "A repository of [Profile](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-profilepyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "profiles"
+                        },
+                        "boundaryConditions": {
+                            "lines": [
+                                "A repository of [BoundaryCondition](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-boundaryconditionpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "boundaryConditions"
+                        },
+                        "constraints": {
+                            "lines": [
+                                "A repository of [Constraint](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-constraintpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "constraints"
+                        },
+                        "analyticalFields": {
+                            "lines": [
+                                "A repository of [AnalyticalField](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-analyticalfieldpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "analyticalFields"
+                        },
+                        "discreteFields": {
+                            "lines": [
+                                "A repository of [DiscreteField](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-discretefieldpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "discreteFields"
+                        },
+                        "predefinedFields": {
+                            "lines": [
+                                "A repository of [PredefinedField](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-predefinedfieldpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "predefinedFields"
+                        },
+                        "interactions": {
+                            "lines": [
+                                "A repository of [Interaction](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-interactionpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "interactions"
+                        },
+                        "interactionProperties": {
+                            "lines": [
+                                "A repository of [InteractionProperty](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-interactionpropertypyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "interactionProperties"
+                        },
+                        "contactControls": {
+                            "lines": [
+                                "A repository of [ContactControl](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-contactcontrolpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "contactControls"
+                        },
+                        "contactInitializations": {
+                            "lines": [
+                                "A repository of [ContactInitialization](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-contactinitializationpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "contactInitializations"
+                        },
+                        "contactStabilizations": {
+                            "lines": [
+                                "A repository of [ContactStabilization](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-contactstabilizationpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "contactStabilizations"
+                        },
+                        "linkedInstances": {
+                            "lines": [
+                                "A tuple of tuples of Strings specifying the linked child PartInstance name in the current model to the corresponding parent PartInstance name in a different model."
+                            ],
+                            "label": "linkedInstances"
+                        },
+                        "linkedParts": {
+                            "lines": [
+                                "A tuple of tuples of Strings specifying the linked child Part name in the current model to the corresponding parent Part name in a different model."
+                            ],
+                            "label": "linkedParts"
+                        },
+                        "loads": {
+                            "lines": [
+                                "A repository of [Load](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-loadpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "loads"
+                        },
+                        "materials": {
+                            "lines": [
+                                "A repository of [Material](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-materialpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "materials"
+                        },
+                        "calibrations": {
+                            "lines": [
+                                "A repository of [Calibration](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-calibrationpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "calibrations"
+                        },
+                        "sections": {
+                            "lines": [
+                                "A repository of [Section](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-sectionpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "sections"
+                        },
+                        "remeshingRules": {
+                            "lines": [
+                                "A repository of [RemeshingRule](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-remeshingrulepyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "remeshingRules"
+                        },
+                        "sketches": {
+                            "lines": [
+                                "A repository of [ConstrainedSketch](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-constrainedsketchpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "sketches"
+                        },
+                        "parts": {
+                            "lines": [
+                                "A repository of [Part](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-partpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "parts"
+                        },
+                        "steps": {
+                            "lines": [
+                                "A repository of [Step](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-steppyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "steps"
+                        },
+                        "featureOptions": {
+                            "lines": [
+                                "A [FeatureOptions](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-featureoptionspyc.htm?ContextScope=all) object."
+                            ],
+                            "label": "featureOptions"
+                        },
+                        "adaptiveMeshConstraints": {
+                            "lines": [
+                                "A repository of [AdaptiveMeshConstraint](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-adaptivemeshconstraintpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "adaptiveMeshConstraints"
+                        },
+                        "adaptiveMeshControls": {
+                            "lines": [
+                                "A repository of [AdaptiveMeshControl](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-adaptivemeshcontrolpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "adaptiveMeshControls"
+                        },
+                        "timePoints": {
+                            "lines": [
+                                "A repository of [TimePoint](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-timepointpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "timePoints"
+                        },
+                        "filters": {
+                            "lines": [
+                                "A repository of [Filter](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-filterpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "filters"
+                        },
+                        "integratedOutputSections": {
+                            "lines": [
+                                "A repository of [IntegratedOutputSection](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-integratedoutputsectionpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "integratedOutputSections"
+                        },
+                        "fieldOutputRequests": {
+                            "lines": [
+                                "A repository of [FieldOutputRequest](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-fieldoutputrequestpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "fieldOutputRequests"
+                        },
+                        "historyOutputRequests": {
+                            "lines": [
+                                "A repository of [HistoryOutputRequest](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-historyoutputrequestpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "historyOutputRequests"
+                        },
+                        "optimizationTasks": {
+                            "lines": [
+                                "A repository of [OptimizationTask](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-optimizationtaskpyc.htm?ContextScope=all) objects."
+                            ],
+                            "label": "optimizationTasks"
+                        },
+                        "tableCollections": {
+                            "lines": [
+                                "A repository of [TableCollection](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-tableCollectionpyc.htm?ContextScope=all#simaker-c-tableCollectionpyc) objects."
+                            ],
+                            "label": "tableCollections"
+                        },
+                        "eventSeriesTypes": {
+                            "lines": [
+                                "A repository of [EventSeriesType](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-eventseriestypepyc.htm?ContextScope=all#simaker-c-eventseriestypepyc) objects."
+                            ],
+                            "label": "eventSeriesTypes"
+                        },
+                        "eventSeriesDatas": {
+                            "lines": [
+                                "A repository of [EventSeriesData](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-eventseriespyc.htm?ContextScope=all#simaker-c-eventseriespyc) objects."
+                            ],
+                            "label": "eventSeriesDatas"
+                        }
+                    },
+                    "subHeader": "Members",
+                    "subSubSections": {}
+                },
+                "Corresponding analysis keywords": {
+                    "lines": [
+                        "- [PHYSICAL CONSTANTS](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKEYRefMap/simakey-r-physicalconstants.htm?ContextScope=all#simakey-r-physicalconstants)"
+                    ],
+                    "itemizes": {},
+                    "subHeader": "Corresponding analysis keywords",
+                    "subSubSections": {}
+                }
+            }
+        }
+    }
+}

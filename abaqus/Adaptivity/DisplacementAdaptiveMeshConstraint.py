@@ -1,0 +1,211 @@
+from ..Region.Region import Region
+from abaqusConstants import *
+import typing
+
+class DisplacementAdaptiveMeshConstraint:
+
+    """The AdaptivityProcess object defines a series of jobs that will be submitted for 
+    analysis. Abaqus performs adaptive remeshing between each job. 
+
+    Access
+    ------
+        - import step
+        - mdb.models[name].adaptiveMeshConstraints[name]
+
+    Table Data
+    ----------
+
+    Corresponding analysis keywords
+    -------------------------------
+
+    """
+
+    # A String specifying the adaptive mesh constraint repository key. 
+    name: str = ''
+
+    # A SymbolicConstant specifying the category of the adaptive mesh constraint. Possible 
+    # values are MECHANICAL and THERMAL. 
+    category: SymbolicConstant = None
+
+    # A Region object specifying the region to which the adaptive mesh constraint is applied. 
+    region: Region = None
+
+    # None or a DatumCsys object specifying the local coordinate system of the adaptive mesh 
+    # constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
+    # in the global coordinate system. The default value is None. 
+    localCsys: str = None
+
+    def __init__(self, name: str, createStepName: str, region: Region, u1: typing.Union[SymbolicConstant, 
+                 float] = UNSET, u2: typing.Union[SymbolicConstant, float] = UNSET, 
+                 u3: typing.Union[SymbolicConstant, float] = UNSET, ur1: typing.Union[SymbolicConstant, 
+                 float] = UNSET, ur2: typing.Union[SymbolicConstant, float] = UNSET, 
+                 ur3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET, 
+                 motionType: SymbolicConstant = INDEPENDENT, localCsys: str = None):
+        """This method creates a DisplacementAdaptiveMeshConstraint object.
+
+        Path
+        ----
+            - mdb.models[name].DisplacementAdaptiveMeshConstraint
+
+        Parameters
+        ----------
+        name
+            A String specifying the adaptive mesh constraint repository key. 
+        createStepName
+            A String specifying the name of the step in which the adaptive mesh constraint is 
+            created. 
+        region
+            A Region object specifying the region to which the adaptive mesh constraint is applied. 
+        u1
+            A Float or a SymbolicConstant specifying the displacement component in the 1-direction. 
+            Possible values for the SymbolicConstant are UNSET and SET. The default value is 
+            UNSET.Note:Although *u1*, *u2*, *u3*, *ur1*, *ur2*, and *ur3* are optional arguments, at 
+            least one of them must be specified. 
+        u2
+            A Float or a SymbolicConstant specifying the displacement component in the 2-direction. 
+            Possible values for the SymbolicConstant are UNSET and SET. The default value is UNSET. 
+        u3
+            A Float or a SymbolicConstant specifying the displacement component in the 3-direction. 
+            Possible values for the SymbolicConstant are UNSET and SET. The default value is UNSET. 
+        ur1
+            A Float or a SymbolicConstant specifying the rotational displacement component about the 
+            1-direction. Possible values for the SymbolicConstant are UNSET and SET. The default 
+            value is UNSET. 
+        ur2
+            A Float or a SymbolicConstant specifying the rotational displacement component about the 
+            2-direction. Possible values for the SymbolicConstant are UNSET and SET. The default 
+            value is UNSET. 
+        ur3
+            A Float or a SymbolicConstant specifying the rotational displacement component about the 
+            3-direction. Possible values for the SymbolicConstant are UNSET and SET. The default 
+            value is UNSET. 
+        amplitude
+            A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. 
+            UNSET should be used if the adaptive mesh constraint has no amplitude reference. The 
+            default value is UNSET. You should provide the *amplitude* argument only if it is valid 
+            for the specified step. 
+        motionType
+            A SymbolicConstant specifying the mesh motion in relation to the underlying material. 
+            Possible values are INDEPENDENT, FOLLOW and USER_DEFINED. The default value is 
+            INDEPENDENT. 
+        localCsys
+            None or a DatumCsys object specifying the local coordinate system of the adaptive mesh 
+            constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
+            in the global coordinate system. The default value is None. 
+
+        Returns
+        -------
+            A DisplacementAdaptiveMeshConstraint object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    def setValues(self, u1: typing.Union[SymbolicConstant, float] = UNSET, u2: typing.Union[SymbolicConstant, 
+                  float] = UNSET, u3: typing.Union[SymbolicConstant, float] = UNSET, 
+                  ur1: typing.Union[SymbolicConstant, float] = UNSET, ur2: typing.Union[SymbolicConstant, 
+                  float] = UNSET, ur3: typing.Union[SymbolicConstant, float] = UNSET, 
+                  amplitude: str = UNSET, motionType: SymbolicConstant = INDEPENDENT, 
+                  localCsys: str = None):
+        """This method modifies the data for an existing DisplacementAdaptiveMeshConstraint object
+        in the step where it is created.
+
+        Parameters
+        ----------
+        u1
+            A Float or a SymbolicConstant specifying the displacement component in the 1-direction. 
+            Possible values for the SymbolicConstant are UNSET and SET. The default value is 
+            UNSET.Note:Although *u1*, *u2*, *u3*, *ur1*, *ur2*, and *ur3* are optional arguments, at 
+            least one of them must be specified. 
+        u2
+            A Float or a SymbolicConstant specifying the displacement component in the 2-direction. 
+            Possible values for the SymbolicConstant are UNSET and SET. The default value is UNSET. 
+        u3
+            A Float or a SymbolicConstant specifying the displacement component in the 3-direction. 
+            Possible values for the SymbolicConstant are UNSET and SET. The default value is UNSET. 
+        ur1
+            A Float or a SymbolicConstant specifying the rotational displacement component about the 
+            1-direction. Possible values for the SymbolicConstant are UNSET and SET. The default 
+            value is UNSET. 
+        ur2
+            A Float or a SymbolicConstant specifying the rotational displacement component about the 
+            2-direction. Possible values for the SymbolicConstant are UNSET and SET. The default 
+            value is UNSET. 
+        ur3
+            A Float or a SymbolicConstant specifying the rotational displacement component about the 
+            3-direction. Possible values for the SymbolicConstant are UNSET and SET. The default 
+            value is UNSET. 
+        amplitude
+            A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. 
+            UNSET should be used if the adaptive mesh constraint has no amplitude reference. The 
+            default value is UNSET. You should provide the *amplitude* argument only if it is valid 
+            for the specified step. 
+        motionType
+            A SymbolicConstant specifying the mesh motion in relation to the underlying material. 
+            Possible values are INDEPENDENT, FOLLOW and USER_DEFINED. The default value is 
+            INDEPENDENT. 
+        localCsys
+            None or a DatumCsys object specifying the local coordinate system of the adaptive mesh 
+            constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
+            in the global coordinate system. The default value is None. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    def setValuesInStep(self, stepName: str, u1: typing.Union[SymbolicConstant, float] = None, 
+                        u2: typing.Union[SymbolicConstant, float] = None, u3: typing.Union[SymbolicConstant, 
+                        float] = None, ur1: typing.Union[SymbolicConstant, float] = None, 
+                        ur2: typing.Union[SymbolicConstant, float] = None, ur3: typing.Union[SymbolicConstant, 
+                        float] = None, amplitude: str = ''):
+        """This method modifies the propagating data for an existing
+        DisplacementAdaptiveMeshConstraint object in the specified step.
+
+        Parameters
+        ----------
+        stepName
+            A String specifying the name of the step in which the adaptive mesh constraint is 
+            modified. 
+        u1
+            A Float or a SymbolicConstant specifying the displacement component in the 1-direction. 
+            Possible values for the SymbolicConstant are SET, UNCHANGED, and FREED. 
+        u2
+            A Float or a SymbolicConstant specifying the displacement component in the 2-direction. 
+            Possible values for the SymbolicConstant are SET, UNCHANGED, and FREED. 
+        u3
+            A Float or a SymbolicConstant specifying the displacement component in the 3-direction. 
+            Possible values for the SymbolicConstant are SET, UNCHANGED, and FREED. 
+        ur1
+            A Float or a SymbolicConstant specifying the rotational displacement component about the 
+            1-direction. Possible values for the SymbolicConstant are SET, UNCHANGED, and FREED. 
+        ur2
+            A Float or a SymbolicConstant specifying the rotational displacement component about the 
+            2-direction. Possible values for the SymbolicConstant are SET, UNCHANGED, and FREED. 
+        ur3
+            A Float or a SymbolicConstant specifying the rotational displacement component about the 
+            3-direction. Possible values for the SymbolicConstant are SET, UNCHANGED, and FREED. 
+        amplitude
+            A String or a SymbolicConstant specifying the name of the amplitude reference. Possible 
+            values for the SymbolicConstant are UNCHANGED and FREED. UNCHANGED should be used if the 
+            amplitude is propagated from the previous analysis step. FREED should be used if the 
+            adaptive mesh constraint is changed to have no amplitude reference. You should provide 
+            the *amplitude* argument only if it is valid for the specified step. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
