@@ -48,7 +48,7 @@ class ConnectorFriction(ConnectorBehaviorOption):
                  dependencies: int = 0, useContactForceComponent: Boolean = OFF, 
                  contactForceStyle: SymbolicConstant = COMPONENT_NUMBER, contactForceComponent: int = 0, 
                  forcePotentialOperator: SymbolicConstant = SUM, forcePotentialExponent: float = 2, 
-                 connectorPotentials: ConnectorPotentialArray = ConnectorPotentialArray(), 
+                 connectorPotentials: ConnectorPotentialArray = None,
                  table: tuple = (), independentComponents: tuple = ()):
         """This method creates a connector friction behavior option for a ConnectorSection object.
         Depending upon the arguments provided, the friction behavior can be Coulomb-like or

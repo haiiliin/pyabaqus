@@ -62,16 +62,16 @@ class Viscoelastic:
     """
 
     # A CombinedTestData object. 
-    combinedTestData: CombinedTestData = CombinedTestData()
+    combinedTestData: CombinedTestData = CombinedTestData(((), ))
 
     # A ShearTestData object. 
-    shearTestData: ShearTestData = ShearTestData()
+    shearTestData: ShearTestData = ShearTestData(((), ))
 
     # A Trs object. 
     trs: Trs = Trs()
 
     # A VolumetricTestData object. 
-    volumetricTestData: VolumetricTestData = VolumetricTestData()
+    volumetricTestData: VolumetricTestData = VolumetricTestData(((), ))
 
     def __init__(self, domain: SymbolicConstant, table: tuple, frequency: SymbolicConstant = FORMULA, 
                  type: SymbolicConstant = ISOTROPIC, preload: SymbolicConstant = NONE, 
@@ -87,9 +87,11 @@ class Viscoelastic:
         Parameters
         ----------
         domain
-            A SymbolicConstant specifying the domain definition. Possible values are:FREQUENCY, 
-            specifying a frequency domain. This domain is only available for an Abaqus/Standard 
-            analysis.TIME, specifying a time domain. 
+            A SymbolicConstant specifying the domain definition. Possible values are:
+            - FREQUENCY,
+                specifying a frequency domain. This domain is only available for an Abaqus/Standard analysis.
+            - TIME,
+                specifying a time domain.
         table
             A sequence of sequences of Floats specifying the items described below. 
         frequency

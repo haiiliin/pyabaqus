@@ -1,3 +1,4 @@
+from abaqusConstants import *
 
 
 class LoadDisplayOptions:

@@ -31,19 +31,19 @@ class Hyperfoam:
     """
 
     # A BiaxialTestData object. 
-    biaxialTestData: BiaxialTestData = BiaxialTestData()
+    biaxialTestData: BiaxialTestData = BiaxialTestData(((), ))
 
     # A VolumetricTestData object. 
-    volumetricTestData: VolumetricTestData = VolumetricTestData()
+    volumetricTestData: VolumetricTestData = VolumetricTestData(((), ))
 
     # A PlanarTestData object. 
-    planarTestData: PlanarTestData = PlanarTestData()
+    planarTestData: PlanarTestData = PlanarTestData(((), ))
 
     # A SimpleShearTestData object. 
-    simpleShearTestData: SimpleShearTestData = SimpleShearTestData()
+    simpleShearTestData: SimpleShearTestData = SimpleShearTestData(((), ))
 
     # A UniaxialTestData object. 
-    uniaxialTestData: UniaxialTestData = UniaxialTestData()
+    uniaxialTestData: UniaxialTestData = UniaxialTestData(((), ))
 
     def __init__(self, testData: Boolean = OFF, poisson: float = None, n: int = 1, 
                  temperatureDependency: Boolean = OFF, moduli: SymbolicConstant = LONG_TERM, 

@@ -148,7 +148,7 @@ class CavityRadiation(Interaction):
 
     def __init__(self, name: str, createStepName: str, surfaces: RegionArray, surfaceEmissivities: tuple = (), 
                  ambientTemp: float = None, blocking: SymbolicConstant = BLOCKING_ALL, 
-                 blockingSurfaces: RegionArray = RegionArray(), rangeOfView: float = None, 
+                 blockingSurfaces: RegionArray = None, rangeOfView: float = None,
                  surfaceReflection: Boolean = ON, viewfactorAccurTol: float = 0, 
                  minInfinitesimalRatio: float = 64, numPointsPerEdge: int = 3, 
                  minLumpedAreaDS: float = 5, cyclicSymmetry: Boolean = OFF, cyclicImages: int = 2, 
@@ -336,7 +336,7 @@ class CavityRadiation(Interaction):
 
     def setValues(self, surfaceEmissivities: tuple = (), ambientTemp: float = None, 
                   blocking: SymbolicConstant = BLOCKING_ALL, 
-                  blockingSurfaces: RegionArray = RegionArray(), rangeOfView: float = None, 
+                  blockingSurfaces: RegionArray = None, rangeOfView: float = None,
                   surfaceReflection: Boolean = ON, viewfactorAccurTol: float = 0, 
                   minInfinitesimalRatio: float = 64, numPointsPerEdge: int = 3, 
                   minLumpedAreaDS: float = 5, cyclicSymmetry: Boolean = OFF, cyclicImages: int = 2, 
@@ -511,7 +511,7 @@ class CavityRadiation(Interaction):
         pass
 
     def setValuesInStep(self, stepName: str, blocking: SymbolicConstant = BLOCKING_ALL, 
-                        blockingSurfaces: RegionArray = RegionArray(), rangeOfView: float = None, 
+                        blockingSurfaces: RegionArray = None, rangeOfView: float = None,
                         surfaceReflection: Boolean = ON, viewfactorAccurTol: float = 0):
         """This method modifies the propagating data of an existing CavityRadiation object in the
         specified step.

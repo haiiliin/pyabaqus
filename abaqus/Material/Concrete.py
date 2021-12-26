@@ -31,13 +31,13 @@ class Concrete:
     """
 
     # A FailureRatios object. 
-    failureRatios: FailureRatios = FailureRatios()
+    failureRatios: FailureRatios = FailureRatios(((), ))
 
     # A ShearRetention object. 
-    shearRetention: ShearRetention = ShearRetention()
+    shearRetention: ShearRetention = ShearRetention(((), ))
 
     # A TensionStiffening object. 
-    tensionStiffening: TensionStiffening = TensionStiffening()
+    tensionStiffening: TensionStiffening = TensionStiffening(((), ))
 
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a Concrete object.

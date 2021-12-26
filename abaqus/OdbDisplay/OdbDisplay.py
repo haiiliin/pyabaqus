@@ -126,7 +126,7 @@ class OdbDisplay:
 
     # A DisplayGroup object specifying the current display group and referring to an object in 
     # the *displayGroups* member of Session. 
-    displayGroup: DisplayGroup = DisplayGroup()
+    displayGroup: DisplayGroup = None
 
     # A DisplayGroupInstanceRepository object. 
     displayGroupInstances: DisplayGroupInstanceRepository = DisplayGroupInstanceRepository()

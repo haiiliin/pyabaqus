@@ -1,3 +1,4 @@
+from .MeshEdge import MeshEdge
 
 
 class MeshEdgeArray:
@@ -20,7 +21,7 @@ class MeshEdgeArray:
 
     """
 
-    def __init__(self, elemEdges: str):
+    def __init__(self, elemEdges: list[MeshEdge]):
         """This method creates a MeshEdgeArray object.
 
         Path

@@ -123,10 +123,10 @@ class Elastic:
     """
 
     # A FailStress object. 
-    failStress: FailStress = FailStress()
+    failStress: FailStress = FailStress(((), ))
 
     # A FailStrain object. 
-    failStrain: FailStrain = FailStrain()
+    failStrain: FailStrain = FailStrain(((), ))
 
     def __init__(self, table: tuple, type: SymbolicConstant = ISOTROPIC, noCompression: Boolean = OFF, 
                  noTension: Boolean = OFF, temperatureDependency: Boolean = OFF, dependencies: int = 0, 

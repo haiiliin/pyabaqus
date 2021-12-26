@@ -125,7 +125,7 @@ class Face:
         """
         pass
 
-    def getElementFaces(self, faceSide: str = ignored):
+    def getElementFaces(self, faceSide: SymbolicConstant = BOTH_SIDES):
         """This method returns an array of mesh face objects. Each mesh face object contains the
         element label and the side of the element that lies on the geometric face.
 
@@ -147,7 +147,7 @@ class Face:
         """
         pass
 
-    def getNodes(self, faceSide: str = ignored):
+    def getNodes(self, faceSide: SymbolicConstant = BOTH_SIDES):
         """This method returns an array of mesh node objects. Each mesh node object contains the
         label of the node that lies on the geometric face.
 

@@ -36,16 +36,16 @@ class Surface:
     """
 
     # An EdgeArray object. 
-    edges: EdgeArray = EdgeArray()
+    edges: EdgeArray = EdgeArray([])
 
     # A FaceArray object. 
-    faces: FaceArray = FaceArray()
+    faces: FaceArray = FaceArray([])
 
     # A MeshElementArray object. 
-    elements: MeshElementArray = MeshElementArray()
+    elements: MeshElementArray = MeshElementArray([])
 
     # A MeshNodeArray object. 
-    nodes: MeshNodeArray = MeshNodeArray()
+    nodes: MeshNodeArray = MeshNodeArray([])
 
     # A tuple of SymbolicConstants specifying the sides; for example, (SIDE1, SIDE2). 
     sides: SymbolicConstant = None
@@ -141,7 +141,7 @@ class Surface:
     def __init__(self, *args, **kwargs):
         pass
 
-    def SurfaceByBoolean(self, name: str, surfaces: tuple[Surface], operation: SymbolicConstant = UNION):
+    def SurfaceByBoolean(self, name: str, surfaces: tuple['Surface'], operation: SymbolicConstant = UNION):
         """This method creates a surface by performing a boolean operation on two or more input
         surfaces.
 

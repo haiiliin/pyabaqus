@@ -1,3 +1,5 @@
+import typing
+
 from abaqusConstants import *
 from ..Datum.DatumCsys import DatumCsys
 from ..Mesh.MeshEdge import MeshEdge
@@ -6,6 +8,10 @@ from ..Mesh.MeshFace import MeshFace
 from ..Mesh.MeshNode import MeshNode
 from ..Part.Part import Part as BasePart
 from ..Region.Region import Region
+
+
+class Node(MeshNode):
+    pass
 
 
 class Part(BasePart):
@@ -344,37 +350,6 @@ class Part(BasePart):
         """
         pass
 
-    def mergeNodes(self, nodes: tuple[Node], tolerance: float = None, removeDuplicateElements: Boolean = True, 
-                   keepHighLabels: Boolean = False):
-        """Merge the nodes of an orphan mesh part, or nodes that were generated using the bottom-up
-        meshing technique.
-
-        Parameters
-        ----------
-        nodes
-            A sequence of Node objects specifying the nodes to merge. 
-        tolerance
-            A Float specifying the maximum distance between nodes that will be merged to a single 
-            node. The location of the new node is the average position of the merged nodes. The 
-            default value is 10–6. 
-        removeDuplicateElements
-            A Boolean specifying whether elements with the same connectivity after the merge will 
-            merged into a single element. The default value is True. 
-        keepHighLabels
-            A Boolean specifying which node labels will remain after nodes are merged. If True then 
-            the highest node labels are kept; when False the lowest node labels are kept. The 
-            default value is False. This argument applies only to merging of orphan mesh nodes. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
-        """
-        pass
-
     def mergeElement(self, edge: str, elements: str):
         """Merge a selection of elements arranged in layers on an orphan mesh part into a single
         layer.
@@ -400,6 +375,39 @@ class Part(BasePart):
         """
         pass
 
+    @typing.overload
+    def mergeNodes(self, nodes: tuple[Node], tolerance: float = None, removeDuplicateElements: Boolean = True,
+                   keepHighLabels: Boolean = False):
+        """Merge the nodes of an orphan mesh part, or nodes that were generated using the bottom-up
+        meshing technique.
+
+        Parameters
+        ----------
+        nodes
+            A sequence of Node objects specifying the nodes to merge.
+        tolerance
+            A Float specifying the maximum distance between nodes that will be merged to a single
+            node. The location of the new node is the average position of the merged nodes. The
+            default value is 10–6.
+        removeDuplicateElements
+            A Boolean specifying whether elements with the same connectivity after the merge will
+            merged into a single element. The default value is True.
+        keepHighLabels
+            A Boolean specifying which node labels will remain after nodes are merged. If True then
+            the highest node labels are kept; when False the lowest node labels are kept. The
+            default value is False. This argument applies only to merging of orphan mesh nodes.
+
+        Returns
+        -------
+            None.
+
+        Exceptions
+        ----------
+            None.
+        """
+        pass
+
+    @typing.overload
     def mergeNodes(self, node1: MeshNode, node2: MeshNode, removeDuplicateElements: Boolean = True, 
                    keepHighLabels: Boolean = False):
         """Merge two nodes of an orphan mesh part or an Abaqus native mesh. If the nodes belong to
@@ -428,6 +436,9 @@ class Part(BasePart):
         ----------
             None. 
         """
+        pass
+
+    def mergeNodes(self, *args, **kwargs):
         pass
 
     def orientElements(self, pickedElements: tuple[MeshElement], referenceRegion: MeshFace):

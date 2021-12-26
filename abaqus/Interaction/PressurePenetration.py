@@ -1,3 +1,4 @@
+from abaqusConstants import *
 from .Interaction import Interaction
 from ..Region.RegionArray import RegionArray
 

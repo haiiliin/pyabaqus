@@ -1,3 +1,4 @@
+from .Edge import Edge
 from abaqusConstants import *
 
 class EdgeArray:
@@ -41,7 +42,7 @@ class EdgeArray:
 
     """
 
-    def __init__(self, edges: str):
+    def __init__(self, edges: list[Edge]):
         """This method creates an EdgeArray object.
 
         Path

@@ -5,10 +5,15 @@ from ..BasicGeometry.VertexArray import VertexArray
 from ..Datum.Datum import Datum
 from ..Mesh.MeshElementArray import MeshElementArray
 from ..Mesh.MeshNodeArray import MeshNodeArray
-from ..Model.Model import Model
+# from ..Model.Model import Model
 from ..Region.Set import Set
 from ..Region.Surface import Surface
 from ..UtilityAndView.Repository import Repository
+
+
+# prevent circular imports
+class Model:
+    pass
 
 
 class ModelInstance:
@@ -39,16 +44,16 @@ class ModelInstance:
     surfaces: Repository[str, Surface] = Repository[str, Surface]()
 
     # A VertexArray object. 
-    vertices: VertexArray = VertexArray()
+    vertices: VertexArray = VertexArray([])
 
     # An EdgeArray object. 
-    edges: EdgeArray = EdgeArray()
+    edges: EdgeArray = EdgeArray([])
 
     # A MeshElementArray object. 
-    elements: MeshElementArray = MeshElementArray()
+    elements: MeshElementArray = MeshElementArray([])
 
     # A MeshNodeArray object. 
-    nodes: MeshNodeArray = MeshNodeArray()
+    nodes: MeshNodeArray = MeshNodeArray([])
 
     # A repository of Datum objects. 
     datums: Repository[str, Datum] = Repository[str, Datum]()

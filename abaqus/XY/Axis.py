@@ -74,7 +74,7 @@ class Axis:
     # A LineStyle object specifying the line properties to be used when displaying axis ticks. 
     tickStyle: LineStyle = LineStyle()
 
-    def setValues(self, axis: 'Axis' = Axis(), labelFrequency: int = 1, 
+    def setValues(self, axis: 'Axis' = None, labelFrequency: int = 1,
                   labelPlacement: SymbolicConstant = INSIDE, labelStyle: TextStyle = TextStyle(), 
                   lineStyle: LineStyle = LineStyle(), placement: SymbolicConstant = MIN_MAX_EDGE, 
                   tickLength: float = 2, tickPlacement: SymbolicConstant = INSIDE, 

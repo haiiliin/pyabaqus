@@ -26,7 +26,7 @@ class DiscreteField(Field):
 
     def __init__(self, name: str, defaultValues: tuple, fieldType: SymbolicConstant, 
                  location: SymbolicConstant = NODES, dataWidth: int = 1, 
-                 data: DataTableArray = DataTableArray(), description: str = '', 
+                 data: DataTableArray = None, description: str = '',
                  orientationType: SymbolicConstant = CARTESIAN, partLevelOrientation: Boolean = OFF):
         """This method creates a DiscreteField object.
 
@@ -143,7 +143,7 @@ class DiscreteField(Field):
         pass
 
     def setValues(self, location: SymbolicConstant = NODES, dataWidth: int = 1, 
-                  data: DataTableArray = DataTableArray(), description: str = '', 
+                  data: DataTableArray = None, description: str = '',
                   orientationType: SymbolicConstant = CARTESIAN, partLevelOrientation: Boolean = OFF):
         """This method modifies the DiscreteField object.
 

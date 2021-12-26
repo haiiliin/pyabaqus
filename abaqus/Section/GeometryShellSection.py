@@ -90,7 +90,7 @@ class GeometryShellSection(ShellSection):
     thicknessField: str = ''
 
     # A RebarLayers object specifying reinforcement properties. 
-    rebarLayers: RebarLayers = RebarLayers()
+    rebarLayers: RebarLayers = None
 
     # A String specifying the name of the AnalyticalField or DiscreteField object used to 
     # define the thickness of the shell elements at each node. The *nodalThicknessField* 
@@ -99,7 +99,7 @@ class GeometryShellSection(ShellSection):
     nodalThicknessField: str = ''
 
     # A TransverseShearShell object specifying the transverse shear stiffness properties. 
-    transverseShear: TransverseShearShell = TransverseShearShell()
+    transverseShear: TransverseShearShell = None
 
     def Section(self, nodalThicknessField: str = '', thicknessField: str = '', 
                 thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF, 

@@ -431,66 +431,6 @@ None.
 
 
 
-## getNodeFromLabel(...)
-
-
-
-This method is used to retrieved a node with a specific label from an instance object.
-
-
-
-### Required arguments
-
-- *label*
-
-  An Int specifying the node label.
-
-### Optional arguments
-
-None.
-
-### Return value
-
-An [OdbMeshNode](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-odbmeshnodepyc.htm?ContextScope=all) object.
-
-### Exceptions
-
-- If no node with the specified label exists:
-
-  OdbError: Invalid node label
-
-
-
-## getNodeFromLabel(...)
-
-
-
-This method is used to retrieved a node with a specific label from an instance object.
-
-
-
-### Required arguments
-
-- *label*
-
-  An Int specifying the node label.
-
-### Optional arguments
-
-None.
-
-### Return value
-
-An [OdbMeshNode](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-odbmeshnodepyc.htm?ContextScope=all) object.
-
-### Exceptions
-
-- If no node with the specified label exists:
-
-  OdbError: Invalid node label
-
-
-
 ## Members
 
 The OdbInstance object can have the following members:

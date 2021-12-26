@@ -52,7 +52,7 @@ class Legend:
     # A TextStyle object specifying the text properties used to display the legend title. 
     titleStyle: TextStyle = TextStyle()
 
-    def setValues(self, legend: 'Legend' = Legend(), show: Boolean = ON, showMinMax: Boolean = OFF, 
+    def setValues(self, legend: 'Legend' = None, show: Boolean = ON, showMinMax: Boolean = OFF,
                   title: str = '', numberFormat: SymbolicConstant = AUTOMATIC, numDigits: int = 2, 
                   textStyle: TextStyle = TextStyle(), titleStyle: TextStyle = TextStyle()):
         """This method modifies the Legend object.

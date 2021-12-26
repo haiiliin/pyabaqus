@@ -28,13 +28,13 @@ class Skin:
     """
 
     # A MeshElementArray object. 
-    elements: MeshElementArray = MeshElementArray()
+    elements: MeshElementArray = MeshElementArray([])
 
     # An EdgeArray object. 
-    edges: EdgeArray = EdgeArray()
+    edges: EdgeArray = EdgeArray([])
 
     # A FaceArray object. 
-    faces: FaceArray = FaceArray()
+    faces: FaceArray = FaceArray([])
 
     def __init__(self, name: str, faces: tuple[Face] = (), edges: tuple[Edge] = (), 
                  elementFaces: tuple[MeshFace] = (), elementEdges: tuple[MeshEdge] = ()):

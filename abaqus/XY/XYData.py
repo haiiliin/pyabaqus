@@ -2,8 +2,12 @@ import typing
 
 from abaqusConstants import *
 from .QuantityType import QuantityType
-from ..Odb.Odb import Odb
+# from ..Odb.Odb import Odb
 from ..PathAndProbe.Path import Path
+
+# prevent circular imports
+class Odb:
+    pass
 
 
 class XYData:
@@ -473,7 +477,7 @@ class XYData:
                        pathStyle: SymbolicConstant, numIntervals: int, labelType: SymbolicConstant, 
                        viewport: str = '', removeDuplicateXYPairs: Boolean = True, 
                        includeAllElements: Boolean = False, step: int = None, frame: int = None, 
-                       variable: SymbolicConstant = included, deformedMag: float = None, 
+                       variable: SymbolicConstant = None, deformedMag: float = None,
                        numericForm: SymbolicConstant = REAL, complexAngle: float = 0, 
                        projectOntoMesh: Boolean = False, projectionTolerance: float = 0):
         """This method creates an XYData object from path information.

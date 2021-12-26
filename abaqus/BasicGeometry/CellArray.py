@@ -1,3 +1,4 @@
+from .Cell import Cell
 from abaqusConstants import *
 
 class CellArray:
@@ -29,7 +30,7 @@ class CellArray:
 
     """
 
-    def __init__(self, cells: str):
+    def __init__(self, cells: list[Cell]):
         """This method creates a CellArray object.
 
         Path

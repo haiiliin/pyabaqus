@@ -1,3 +1,4 @@
+from .Face import Face
 from abaqusConstants import *
 
 class FaceArray:
@@ -39,7 +40,7 @@ class FaceArray:
 
     """
 
-    def __init__(self, faces: str):
+    def __init__(self, faces: list[Face]):
         """This method creates a FaceArray object.
 
         Path

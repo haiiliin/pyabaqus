@@ -31,10 +31,10 @@ class MohrCoulombPlasticity:
     """
 
     # A MohrCoulombHardening object. 
-    mohrCoulombHardening: MohrCoulombHardening = MohrCoulombHardening()
+    mohrCoulombHardening: MohrCoulombHardening = MohrCoulombHardening(((), ))
 
     # A TensionCutOff object. 
-    tensionCutOff: TensionCutOff = TensionCutOff()
+    tensionCutOff: TensionCutOff = TensionCutOff(((), ))
 
     def __init__(self, table: tuple, deviatoricEccentricity: float = None, meridionalEccentricity: float = 0, 
                  temperatureDependency: Boolean = OFF, dependencies: int = 0, 

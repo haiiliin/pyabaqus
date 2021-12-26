@@ -98,7 +98,7 @@ class OdbPart:
 
     @typing.overload
     def addElements(self, labels: tuple, connectivity: tuple, type: str, elementSetName: str = '', 
-                    sectionCategory: SectionCategory = SectionCategory()):
+                    sectionCategory: SectionCategory = None):
         """This method adds elements to an OdbPart object using element labels and nodal
         connectivity.
         Warning:Adding elements not in ascending order of their labels may cause Abaqus/Viewer
@@ -129,7 +129,7 @@ class OdbPart:
 
     @typing.overload
     def addElements(self, elementData: tuple, type: str, elementSetName: str = None, 
-                    sectionCategory: SectionCategory = SectionCategory()):
+                    sectionCategory: SectionCategory = None):
         """This method adds elements to an OdbPart object using a sequence of element labels and
         nodal connectivity.
         Warning:Adding elements not in ascending order of their labels may cause Abaqus/Viewer

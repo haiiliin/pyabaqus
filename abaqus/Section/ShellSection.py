@@ -27,5 +27,5 @@ class ShellSection(Section):
     name: str = ''
 
     # A TransverseShearShell object specifying the transverse shear stiffness properties. 
-    transverseShear: TransverseShearShell = TransverseShearShell()
+    transverseShear: TransverseShearShell = None
 

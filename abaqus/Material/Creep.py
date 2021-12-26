@@ -84,7 +84,7 @@ class Creep:
     ornl: Ornl = Ornl()
 
     # A Potential object. 
-    potential: Potential = Potential()
+    potential: Potential = Potential(((), ))
 
     def __init__(self, table: tuple, law: SymbolicConstant = STRAIN, temperatureDependency: Boolean = OFF, 
                  dependencies: int = 0, time: SymbolicConstant = TOTAL):

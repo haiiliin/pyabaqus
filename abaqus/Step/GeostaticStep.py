@@ -155,7 +155,7 @@ class GeostaticStep(AnalysisStep):
     diagnosticPrint: DiagnosticPrint = DiagnosticPrint()
 
     # A Monitor object. 
-    monitor: Monitor = Monitor()
+    monitor: Monitor = None
 
     # A Restart object. 
     restart: Restart = Restart()

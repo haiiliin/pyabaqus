@@ -19,7 +19,7 @@ class Queue:
     """
 
     def __init__(self, name: str, queueName: str, hostName: str = '', fileCopy: Boolean = ON, 
-                 directory: str = '', driver: str = '', remotePlatform: SymbolicConstant = Linux, 
+                 directory: str = '', driver: str = '', remotePlatform: SymbolicConstant = 'Linux',
                  filesToCopy: str = ALL, deleteAfterCopy: Boolean = OFF, description: str = ''):
         """This method creates a Queue object.
         Note:Remote queues are available only on Linux platforms.

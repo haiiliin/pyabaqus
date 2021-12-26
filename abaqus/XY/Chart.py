@@ -253,8 +253,8 @@ class Chart:
         """
         pass
 
-    def setValues(self, chart: 'Chart' = Chart(), curvesToPlot: tuple[XYCurve] = (), aspectRatio: float = None, 
-                  transform: tuple = (), view: View = View(), useQuantityType: Boolean = ON):
+    def setValues(self, chart: 'Chart' = None, curvesToPlot: tuple[XYCurve] = (), aspectRatio: float = None,
+                  transform: tuple = (), view: View = None, useQuantityType: Boolean = ON):
         """This method modifies the Chart object.
 
         Parameters

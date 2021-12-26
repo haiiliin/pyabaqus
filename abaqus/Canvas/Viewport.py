@@ -117,7 +117,7 @@ class Viewport:
     layers: Repository[str, Layer] = Repository[str, Layer]()
 
     # A View object specifying the object that controls viewing of the viewport content. 
-    view: View = View()
+    view: View = None
 
     # An OdbDisplay object specifying the display options for the Odb object. 
     odbDisplay: OdbDisplay = OdbDisplay()

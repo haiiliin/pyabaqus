@@ -1,4 +1,5 @@
 from abaqusConstants import *
+
 from .KeywordBlock import KeywordBlock
 from ..Adaptivity.AdaptiveMeshConstraint import AdaptiveMeshConstraint
 from ..Adaptivity.AdaptiveMeshControl import AdaptiveMeshControl
@@ -27,14 +28,14 @@ from ..Step.Step import Step
 from ..StepOutput.FieldOutputRequest import FieldOutputRequest
 from ..StepOutput.HistoryOutputRequest import HistoryOutputRequest
 from ..StepOutput.TimePoint import TimePoint
+from ..TableCollection.EventSeriesData import EventSeriesData
 from ..TableCollection.EventSeriesType import EventSeriesType
 from ..TableCollection.TableCollection import TableCollection
 from ..UtilityAndView.Repository import Repository
 
 
 class Model:
-
-    """Abaqus creates a Model object named `Model-1` when a session is started. 
+    """Abaqus creates a Model object named `Model-1` when a session is started.
 
     Access
     ------
@@ -219,10 +220,10 @@ class Model:
     # A repository of EventSeriesData objects. 
     eventSeriesDatas: Repository[str, EventSeriesData] = Repository[str, EventSeriesData]()
 
-    def __init__(self, name: str, description: str = '', stefanBoltzmann: float = None, 
-                 absoluteZero: float = None, waveFormulation: SymbolicConstant = NOT_SET, 
-                 modelType: SymbolicConstant = STANDARD_EXPLICIT, universalGas: float = None, 
-                 copyConstraints: Boolean = ON, copyConnectors: Boolean = ON, 
+    def __init__(self, name: str, description: str = '', stefanBoltzmann: float = None,
+                 absoluteZero: float = None, waveFormulation: SymbolicConstant = NOT_SET,
+                 modelType: SymbolicConstant = STANDARD_EXPLICIT, universalGas: float = None,
+                 copyConstraints: Boolean = ON, copyConnectors: Boolean = ON,
                  copyInteractions: Boolean = ON):
         """This method creates a Model object.
 
@@ -324,11 +325,11 @@ class Model:
         """
         pass
 
-    def ModelFromNastranFile(self, modelName: str, inputFileName: str, 
-                             sectionConsolidation: SymbolicConstant = PRESERVE_SECTION, 
-                             preIntegratedShell: Boolean = OFF, weightMassScaling: Boolean = ON, 
-                             loadCases: Boolean = ON, coupleBeamOffsets: Boolean = ON, cbar: str = B31, 
-                             cquad4: str = S4, chexa: str = C3D8I, ctetra: str = C3D10, 
+    def ModelFromNastranFile(self, modelName: str, inputFileName: str,
+                             sectionConsolidation: SymbolicConstant = PRESERVE_SECTION,
+                             preIntegratedShell: Boolean = OFF, weightMassScaling: Boolean = ON,
+                             loadCases: Boolean = ON, coupleBeamOffsets: Boolean = ON, cbar: str = B31,
+                             cquad4: str = S4, chexa: str = C3D8I, ctetra: str = C3D10,
                              keepTranslatedFiles: Boolean = ON):
         """This method creates a Model object by reading the keywords in a Nastran bulk data file
         or Nastran input file and creating any corresponding Abaqus/CAE objects. The default
@@ -403,11 +404,11 @@ class Model:
         """
         pass
 
-    def setValues(self, description: str = '', noPartsInputFile: Boolean = OFF, absoluteZero: float = None, 
-                  stefanBoltzmann: float = None, waveFormulation: SymbolicConstant = NOT_SET, 
-                  universalGas: float = None, restartJob: str = '', restartStep: str = '', 
-                  restartIncrement: SymbolicConstant = None, endRestartStep: Boolean = OFF, 
-                  globalJob: str = '', shellToSolid: Boolean = OFF, copyConstraints: Boolean = OFF, 
+    def setValues(self, description: str = '', noPartsInputFile: Boolean = OFF, absoluteZero: float = None,
+                  stefanBoltzmann: float = None, waveFormulation: SymbolicConstant = NOT_SET,
+                  universalGas: float = None, restartJob: str = '', restartStep: str = '',
+                  restartIncrement: SymbolicConstant = None, endRestartStep: Boolean = OFF,
+                  globalJob: str = '', shellToSolid: Boolean = OFF, copyConstraints: Boolean = OFF,
                   copyConnectors: Boolean = OFF, copyInteractions: Boolean = OFF):
         """This method modifies the Model object.
 
@@ -462,4 +463,3 @@ class Model:
             None. 
         """
         pass
-

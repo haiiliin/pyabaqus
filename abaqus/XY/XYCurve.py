@@ -48,7 +48,7 @@ class XYCurve:
     legendSource: SymbolicConstant = CURVE_LEGEND
 
     # An XYData object specifying the data for the curve. 
-    data: XYData = XYData()
+    data: XYData = None
 
     # A LineStyle object specifying the line properties used to display the curve. 
     lineStyle: LineStyle = LineStyle()

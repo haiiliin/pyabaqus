@@ -35,7 +35,7 @@ class Title:
     # A TextStyle object specifying the text properties used to display the legend title. 
     titleStyle: TextStyle = TextStyle()
 
-    def setValues(self, title: 'Title' = Title(), text: str = '', area: Area = Area(), 
+    def setValues(self, title: 'Title' = None, text: str = '', area: Area = Area(),
                   useDefault: Boolean = OFF, titleStyle: TextStyle = TextStyle()):
         """This method modifies the Title object.
 

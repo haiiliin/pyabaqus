@@ -24,7 +24,7 @@ class SingleTermDesignResponse(DesignResponse):
     def __init__(self, name: str, identifier: str, csys: int = None, drivingRegion: str = None, 
                  operation: SymbolicConstant = SUM, region: SymbolicConstant = MODEL, 
                  shellLayer: SymbolicConstant = MAXIMUM, stepOperation: SymbolicConstant = SUM, 
-                 stepOptions: StepOptionArray = StepOptionArray()):
+                 stepOptions: StepOptionArray = None):
         """This method creates a SingleTermDesignResponse object.
 
         Path
@@ -72,7 +72,7 @@ class SingleTermDesignResponse(DesignResponse):
 
     def setValues(self, csys: int = None, drivingRegion: str = None, operation: SymbolicConstant = SUM, 
                   region: SymbolicConstant = MODEL, shellLayer: SymbolicConstant = MAXIMUM, 
-                  stepOperation: SymbolicConstant = SUM, stepOptions: StepOptionArray = StepOptionArray()):
+                  stepOperation: SymbolicConstant = SUM, stepOptions: StepOptionArray = None):
         """This method modifies the SingleTermDesignResponse object.
 
         Parameters

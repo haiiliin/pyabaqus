@@ -16,7 +16,7 @@ Corresponding analysis keywords
 
 """
 
-def getIndentedRepr(object: Python, maxRecursionDepth: SymbolicConstant = None, 
+def getIndentedRepr(object, maxRecursionDepth: SymbolicConstant = None,
                     maxElementsInSequence: SymbolicConstant = None, significantDigits: float = 6):
     """This method returns a String with each level of parentheses indented.
 
@@ -51,7 +51,7 @@ def getIndentedRepr(object: Python, maxRecursionDepth: SymbolicConstant = None,
     """
     pass
 
-def getPaths(object: Python, maxRecursionDepth: SymbolicConstant = None, 
+def getPaths(object, maxRecursionDepth: SymbolicConstant = None,
              maxElementsInSequence: SymbolicConstant = None, pathRoot: str = ''):
     """This method processes the argument and interprets its structure. It then returns a
     String containing the object paths of all the child objects found.
@@ -87,7 +87,7 @@ def getPaths(object: Python, maxRecursionDepth: SymbolicConstant = None,
     """
     pass
 
-def getTypes(object: Abaqus, maxRecursionDepth: SymbolicConstant = None, 
+def getTypes(object, maxRecursionDepth: SymbolicConstant = None,
              maxElementsInSequence: SymbolicConstant = None, pathRoot: str = ''):
     """This method processes the argument, interprets its structure, and returns a String
     containing all the object types within the object in the form '*TypeName* *Path*'.
@@ -121,7 +121,7 @@ def getTypes(object: Abaqus, maxRecursionDepth: SymbolicConstant = None,
     """
     pass
 
-def prettyPrint(object: Abaqus, maxRecursionDepth: SymbolicConstant = None, 
+def prettyPrint(object, maxRecursionDepth: SymbolicConstant = None,
                 maxElementsInSequence: SymbolicConstant = None, significantDigits: float = 6):
     """This method prints a formatted version of the object. The prettyPrint function uses
     getIndentedRepr to format the String representation, but does not save the full text
@@ -156,7 +156,7 @@ def prettyPrint(object: Abaqus, maxRecursionDepth: SymbolicConstant = None,
     """
     pass
 
-def printPaths(object: Abaqus, maxRecursionDepth: SymbolicConstant = None, 
+def printPaths(object, maxRecursionDepth: SymbolicConstant = None,
                maxElementsInSequence: SymbolicConstant = None, pathRoot: str = ''):
     """This method prints the object path of the *object* argument and its members, depending
     on the *maxRecursionDepth* argument. The printPaths function uses getPaths to print a
@@ -192,7 +192,7 @@ def printPaths(object: Abaqus, maxRecursionDepth: SymbolicConstant = None,
     """
     pass
 
-def printTypes(object: Abaqus, maxRecursionDepth: SymbolicConstant = None, 
+def printTypes(object, maxRecursionDepth: SymbolicConstant = None,
                maxElementsInSequence: SymbolicConstant = None, pathRoot: str = ''):
     """This method prints the object type. The printTypes function uses getTypes to print a
     list of all the object types in *object*.

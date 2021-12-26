@@ -59,19 +59,19 @@ class Assembly:
 
     # A VertexArray object specifying all the vertices existing at the assembly level. This 
     # member does not provide access to the vertices at the instance level. 
-    vertices: VertexArray = VertexArray()
+    vertices: VertexArray = VertexArray([])
 
     # An EdgeArray object specifying all the edges existing at the assembly level. This member 
     # does not provide access to the edges at the instance level. 
-    edges: EdgeArray = EdgeArray()
+    edges: EdgeArray = EdgeArray([])
 
     # A MeshElementArray object specifying all the elements existing at the assembly level. 
     # This member does not provide access to the elements at the instance level. 
-    elements: MeshElementArray = MeshElementArray()
+    elements: MeshElementArray = MeshElementArray([])
 
     # A MeshNodeArray object specifying all the nodes existing at the assembly level. This 
     # member does not provide access to the nodes at the instance level. 
-    nodes: MeshNodeArray = MeshNodeArray()
+    nodes: MeshNodeArray = MeshNodeArray([])
 
     # A repository of PartInstance objects. 
     instances: Repository[str, PartInstance] = Repository[str, PartInstance]()
@@ -1149,4 +1149,3 @@ class Assembly:
             None. 
         """
         pass
-

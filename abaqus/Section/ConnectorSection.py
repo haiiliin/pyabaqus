@@ -35,7 +35,7 @@ class ConnectorSection(Section):
                  contactAngle: float = None, materialFlowFactor: float = 1, regularize: Boolean = ON, 
                  defaultTolerance: Boolean = ON, regularization: float = 0, 
                  extrapolation: SymbolicConstant = CONSTANT, 
-                 behaviorOptions: ConnectorBehaviorOptionArray = ConnectorBehaviorOptionArray()):
+                 behaviorOptions: ConnectorBehaviorOptionArray = None):
         """This method creates a ConnectorSection object.
 
         Path
@@ -142,7 +142,7 @@ class ConnectorSection(Section):
                   massPerLength: float = None, contactAngle: float = None, materialFlowFactor: float = 1, 
                   regularize: Boolean = ON, defaultTolerance: Boolean = ON, regularization: float = 0, 
                   extrapolation: SymbolicConstant = CONSTANT, 
-                  behaviorOptions: ConnectorBehaviorOptionArray = ConnectorBehaviorOptionArray()):
+                  behaviorOptions: ConnectorBehaviorOptionArray = None):
         """This method modifies the ConnectorSection object.
 
         Parameters

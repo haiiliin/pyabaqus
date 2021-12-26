@@ -97,8 +97,8 @@ class ConnectorDamage(ConnectorBehaviorOption):
                  degradation: SymbolicConstant = MAXIMUM, evolutionTemperature: Boolean = OFF, 
                  evolutionDependencies: int = 0, evolutionPotentialOperator: SymbolicConstant = SUM, 
                  evolutionPotentialExponent: float = 2, 
-                 initiationPotentials: ConnectorPotentialArray = ConnectorPotentialArray(), 
-                 evolutionPotentials: ConnectorPotentialArray = ConnectorPotentialArray(), 
+                 initiationPotentials: ConnectorPotentialArray = None,
+                 evolutionPotentials: ConnectorPotentialArray = None,
                  initiationTable: tuple = (), evolutionTable: tuple = (), affectedComponents: tuple = (), 
                  components: tuple = ()):
         """This method creates a connector damage behavior option for a ConnectorSection object.

@@ -61,31 +61,31 @@ class Set:
     """
 
     # A MeshElementArray object. 
-    elements: MeshElementArray = MeshElementArray()
+    elements: MeshElementArray = MeshElementArray([])
 
     # A MeshNodeArray object. 
-    nodes: MeshNodeArray = MeshNodeArray()
+    nodes: MeshNodeArray = MeshNodeArray([])
 
     # A VertexArray object. 
-    vertices: VertexArray = VertexArray()
+    vertices: VertexArray = VertexArray([])
 
     # An EdgeArray object. 
-    edges: EdgeArray = EdgeArray()
+    edges: EdgeArray = EdgeArray([])
 
     # A FaceArray object. 
-    faces: FaceArray = FaceArray()
+    faces: FaceArray = FaceArray([])
 
     # A CellArray object. 
-    cells: CellArray = CellArray()
+    cells: CellArray = CellArray([])
 
     # A VertexArray object. 
-    xVertices: VertexArray = VertexArray()
+    xVertices: VertexArray = VertexArray([])
 
     # An EdgeArray object. 
-    xEdges: EdgeArray = EdgeArray()
+    xEdges: EdgeArray = EdgeArray([])
 
     # A FaceArray object. 
-    xFaces: FaceArray = FaceArray()
+    xFaces: FaceArray = FaceArray([])
 
     # A ReferencePointArray object. 
     referencePoints: ReferencePointArray = ReferencePointArray()
@@ -183,7 +183,7 @@ class Set:
     def __init__(self, *args, **kwargs):
         pass
 
-    def SetByBoolean(self, name: str, sets: tuple[Set], operation: SymbolicConstant = UNION):
+    def SetByBoolean(self, name: str, sets: tuple['Set'], operation: SymbolicConstant = UNION):
         """This method creates a set by performing a boolean operation on two or more input sets.
 
         Path

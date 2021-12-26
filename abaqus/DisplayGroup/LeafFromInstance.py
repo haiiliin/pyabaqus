@@ -48,6 +48,6 @@ class LeafFromInstance(Leaf):
             - If an invalid argument is passed to this method: 
               Cannot define empty leaf. 
         """
-        super().__init__()
+        super().__init__(DEFAULT_MODEL)
         pass
 

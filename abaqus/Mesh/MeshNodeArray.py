@@ -1,3 +1,4 @@
+from .MeshNode import MeshNode
 
 
 class MeshNodeArray:
@@ -41,7 +42,7 @@ class MeshNodeArray:
 
     """
 
-    def __init__(self, nodes: str):
+    def __init__(self, nodes: list[MeshNode]):
         """This method creates a MeshNodeArray object.
 
         Path

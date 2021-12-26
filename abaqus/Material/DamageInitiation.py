@@ -209,10 +209,10 @@ class DamageInitiation:
     table: float = None
 
     # A DamageEvolution object. 
-    damageEvolution: DamageEvolution = DamageEvolution()
+    damageEvolution: DamageEvolution = None
 
     # A DamageStabilization object. 
-    damageStabilization: DamageStabilization = DamageStabilization()
+    damageStabilization: DamageStabilization = None
 
     # A DamageStabilizationCohesive object. 
     damageStabilizationCohesive: DamageStabilizationCohesive = DamageStabilizationCohesive()

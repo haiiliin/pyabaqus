@@ -69,22 +69,22 @@ class Plastic:
     """
 
     # A RateDependent object. 
-    rateDependent: RateDependent = RateDependent()
+    rateDependent: RateDependent = RateDependent(((), ))
 
     # A Potential object. 
-    potential: Potential = Potential()
+    potential: Potential = Potential(((), ))
 
     # A CyclicHardening object. 
-    cyclicHardening: CyclicHardening = CyclicHardening()
+    cyclicHardening: CyclicHardening = CyclicHardening(((), ))
 
     # An Ornl object. 
     ornl: Ornl = Ornl()
 
     # A CycledPlastic object. 
-    cycledPlastic: CycledPlastic = CycledPlastic()
+    cycledPlastic: CycledPlastic = CycledPlastic(((), ))
 
     # An AnnealTemperature object. 
-    annealTemperature: AnnealTemperature = AnnealTemperature()
+    annealTemperature: AnnealTemperature = AnnealTemperature(((), ))
 
     # A TensileFailure object. 
     tensileFailure: TensileFailure = TensileFailure()

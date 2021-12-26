@@ -40,7 +40,7 @@ class OdbFrame:
 
     # An OdbFrame object specifying the real or imaginary portion of the data corresponding to 
     # this cyclic symmetry mode. 
-    associatedFrame: 'OdbFrame' = OdbFrame()
+    associatedFrame: 'OdbFrame' = None
 
     # A repository of FieldOutput objects specifying the key to the *fieldOutputs*repository 
     # is a String representing an output variable. 

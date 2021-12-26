@@ -49,6 +49,6 @@ class LeafFromOdbElementPick(Leaf):
         ----------
             None. 
         """
-        super().__init__()
+        super().__init__(DEFAULT_MODEL)
         pass
 

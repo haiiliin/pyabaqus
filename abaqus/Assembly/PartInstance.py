@@ -66,7 +66,7 @@ class PartInstance:
     referenceNode: int = None
 
     # A Part object specifying the instanced part. 
-    part: Part = Part()
+    part: Part = None
 
     # A repository of Set objects specifying the sets created on the part. For more 
     # information, see [Region 
@@ -89,31 +89,31 @@ class PartInstance:
     stringers: Repository[str, Stringer] = Repository[str, Stringer]()
 
     # A VertexArray object. 
-    vertices: VertexArray = VertexArray()
+    vertices: VertexArray = VertexArray([])
 
     # An IgnoredVertexArray object. 
     ignoredVertices: IgnoredVertexArray = IgnoredVertexArray()
 
     # An EdgeArray object. 
-    edges: EdgeArray = EdgeArray()
+    edges: EdgeArray = EdgeArray([])
 
     # An IgnoredEdgeArray object. 
     ignoredEdges: IgnoredEdgeArray = IgnoredEdgeArray()
 
     # A FaceArray object. 
-    faces: FaceArray = FaceArray()
+    faces: FaceArray = FaceArray([])
 
     # A CellArray object. 
-    cells: CellArray = CellArray()
+    cells: CellArray = CellArray([])
 
     # A repository of Datum objects. 
     datums: Repository[str, Datum] = Repository[str, Datum]()
 
     # A MeshElementArray object. 
-    elements: MeshElementArray = MeshElementArray()
+    elements: MeshElementArray = MeshElementArray([])
 
     # A MeshNodeArray object. 
-    nodes: MeshNodeArray = MeshNodeArray()
+    nodes: MeshNodeArray = MeshNodeArray([])
 
     # A repository of MeshFace objects specifying all the element faces in the part instance. 
     # For a given element and a given face index within that element, the corresponding 
@@ -122,7 +122,7 @@ class PartInstance:
     elemFaces: Repository[str, MeshFace] = Repository[str, MeshFace]()
 
     # A MeshFaceArray object. 
-    elementFaces: MeshFaceArray = MeshFaceArray()
+    elementFaces: MeshFaceArray = MeshFaceArray([])
 
     # A repository of MeshEdge objects specifying all the element edges in the part instance. 
     # For a given element and a given edge index on a given face within that element, the 
@@ -132,7 +132,7 @@ class PartInstance:
     elemEdges: Repository[str, MeshEdge] = Repository[str, MeshEdge]()
 
     # A MeshEdgeArray object. 
-    elementEdges: MeshEdgeArray = MeshEdgeArray()
+    elementEdges: MeshEdgeArray = MeshEdgeArray([])
 
     # A repository of ReferencePoint objects. 
     referencePoints: Repository[str, ReferencePoint] = Repository[str, ReferencePoint]()
@@ -171,7 +171,7 @@ class PartInstance:
         """
         pass
 
-    def InstanceFromBooleanCut(self, name: str, instanceToBeCut: str, cuttingInstances: tuple[PartInstance], 
+    def InstanceFromBooleanCut(self, name: str, instanceToBeCut: str, cuttingInstances: tuple['PartInstance'],
                                originalInstances: SymbolicConstant = SUPPRESS):
         """This method creates a PartInstance in the instances repository after subtracting or
         cutting the geometries of a group of part instances from that of a base part instance.
@@ -204,7 +204,7 @@ class PartInstance:
         """
         pass
 
-    def InstanceFromBooleanMerge(self, name: str, instances: tuple[PartInstance], keepIntersections: Boolean = False, 
+    def InstanceFromBooleanMerge(self, name: str, instances: tuple['PartInstance'], keepIntersections: Boolean = False,
                                  originalInstances: SymbolicConstant = SUPPRESS, domain: SymbolicConstant = GEOMETRY, 
                                  mergeNodes: SymbolicConstant = BOUNDARY_ONLY, nodeMergingTolerance: float = None, 
                                  removeDuplicateElements: Boolean = True):

@@ -25,10 +25,10 @@ class Stringer:
     """
 
     # A MeshElementArray object. 
-    elements: MeshElementArray = MeshElementArray()
+    elements: MeshElementArray = MeshElementArray([])
 
     # An EdgeArray object. 
-    edges: EdgeArray = EdgeArray()
+    edges: EdgeArray = EdgeArray([])
 
     def __init__(self, name: str, edges: tuple[Edge] = (), elementEdges: tuple[MeshEdge] = ()):
         """This method creates a stringer from a sequence of objects in a model database. At least

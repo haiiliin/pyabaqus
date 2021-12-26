@@ -4,8 +4,7 @@ from abaqusConstants import *
 
 
 class ViewCut:
-
-    """The ViewCut object is used to store values and attributes associate with ViewCut type 
+    """The ViewCut object is used to store values and attributes associate with ViewCut type
     objects. ViewCut objects can be created using the methods described below. The methods 
     accessed via the OdbDisplay object cause the ViewCut object to be added to the 
     session.viewports[name].odbDisplay.viewCuts repository. 
@@ -69,10 +68,10 @@ class ViewCut:
     # ON. 
     crossSectionalArea: float = None
 
-    def __init__(self, name: str, shape: SymbolicConstant, origin: tuple, 
-                 normal: typing.Union[SymbolicConstant,float], 
-                 axis2: typing.Union[SymbolicConstant,float], csysName: str, 
-                 cylinderAxis: typing.Union[SymbolicConstant,float], followDeformation: Boolean = OFF, 
+    def __init__(self, name: str, shape: SymbolicConstant, origin: tuple,
+                 normal: typing.Union[SymbolicConstant, float],
+                 axis2: typing.Union[SymbolicConstant, float], csysName: str,
+                 cylinderAxis: typing.Union[SymbolicConstant, float], followDeformation: Boolean = OFF,
                  overrideAveraging: Boolean = ON, referenceFrame: SymbolicConstant = FIRST_FRAME):
         """This method creates a ViewCut object.
 
@@ -136,15 +135,15 @@ class ViewCut:
         """
         pass
 
-    def setValues(self, angle: float = None, motion: SymbolicConstant = TRANSLATE, position: float = None, 
-                  radius: float = None, rotationAxis: SymbolicConstant = AXIS_2, value: float = None, 
-                  showModelAboveCut: Boolean = OFF, showModelOnCut: Boolean = ON, 
-                  showModelBelowCut: Boolean = ON, showFreeBodyCut: Boolean = OFF, csysName: str = '', 
-                  origin: tuple = (), 
-                  normal: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                  axis2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                  cylinderAxis: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                  followDeformation: Boolean = OFF, overrideAveraging: Boolean = ON, 
+    def setValues(self, angle: float = None, motion: SymbolicConstant = TRANSLATE, position: float = None,
+                  radius: float = None, rotationAxis: SymbolicConstant = AXIS_2, value: float = None,
+                  showModelAboveCut: Boolean = OFF, showModelOnCut: Boolean = ON,
+                  showModelBelowCut: Boolean = ON, showFreeBodyCut: Boolean = OFF, csysName: str = '',
+                  origin: tuple = (),
+                  normal: typing.Union[SymbolicConstant, float] = AXIS_1,
+                  axis2: typing.Union[SymbolicConstant, float] = AXIS_2,
+                  cylinderAxis: typing.Union[SymbolicConstant, float] = AXIS_3,
+                  followDeformation: Boolean = OFF, overrideAveraging: Boolean = ON,
                   referenceFrame: SymbolicConstant = FIRST_FRAME):
         """This method modifies the ViewCut object.
 
@@ -239,4 +238,3 @@ class ViewCut:
             None. 
         """
         pass
-

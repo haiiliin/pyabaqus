@@ -100,7 +100,7 @@ class Area:
     # The default value is (-1, 0). The valid range for each float is (0, 1). 
     originOffset: tuple[float] = ()
 
-    def setValues(self, area: 'Area' = Area(), style: AreaStyle = AreaStyle(), border: LineStyle = LineStyle(), 
+    def setValues(self, area: 'Area' = None, style: AreaStyle = AreaStyle(), border: LineStyle = LineStyle(),
                   positionMethod: SymbolicConstant = AUTO_ALIGN, 
                   alignment: SymbolicConstant = BOTTOM_LEFT, sizeMethod: SymbolicConstant = AUTOMATIC, 
                   originOffset: tuple[float] = (), widthScale: float = 1, heightScale: float = 1, 

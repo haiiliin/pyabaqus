@@ -27,7 +27,7 @@ class Layer:
     displayedObject: Displayable = Displayable()
 
     # A View object specifying the object that controls viewing of the layer. 
-    view: View = View()
+    view: View = None
 
     # An OdbDisplay object specifying the display options for the Odb object. 
     odbDisplay: OdbDisplay = OdbDisplay()

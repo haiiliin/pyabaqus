@@ -57,7 +57,7 @@ class DisplacementBaseMotionBC(BoundaryCondition):
     localCsys: str = None
 
     def __init__(self, name: str, createStepName: str, dof: SymbolicConstant, amplitudeScaleFactor: float = 1, 
-                 centerOfRotation: tuple = (), correlation: CorrelationArray = CorrelationArray(), 
+                 centerOfRotation: tuple = (), correlation: CorrelationArray = None,
                  secondaryBase: str = '', useComplex: Boolean = OFF, amplitude: str = UNSET):
         """This method creates a DisplacementBaseMotionBC object.
 
@@ -105,7 +105,7 @@ class DisplacementBaseMotionBC(BoundaryCondition):
         pass
 
     def setValues(self, amplitudeScaleFactor: float = 1, centerOfRotation: tuple = (), 
-                  correlation: CorrelationArray = CorrelationArray(), secondaryBase: str = '', 
+                  correlation: CorrelationArray = None, secondaryBase: str = '',
                   useComplex: Boolean = OFF, amplitude: str = UNSET):
         """This method modifies the data for an existing DisplacementBaseMotionBC object in the
         step where it is created.

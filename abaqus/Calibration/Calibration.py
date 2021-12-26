@@ -20,10 +20,10 @@ class Calibration:
     """
 
     # A DataSet object. 
-    dataSets: DataSet = DataSet()
+    dataSets: DataSet = None
 
     # A Behavior object. 
-    behaviors: Behavior = Behavior()
+    behaviors: Behavior = None
 
     def __init__(self, name: str):
         """This method creates a Calibration object.

@@ -30,10 +30,10 @@ class CastIronPlasticity:
     """
 
     # A CastIronTensionHardening object. 
-    castIronTensionHardening: CastIronTensionHardening = CastIronTensionHardening()
+    castIronTensionHardening: CastIronTensionHardening = CastIronTensionHardening(((), ))
 
     # A CastIronCompressionHardening object. 
-    castIronCompressionHardening: CastIronCompressionHardening = CastIronCompressionHardening()
+    castIronCompressionHardening: CastIronCompressionHardening = CastIronCompressionHardening(((), ))
 
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a CastIronPlasticity object.

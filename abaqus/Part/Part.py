@@ -2,7 +2,7 @@ import typing
 
 from abaqusConstants import *
 from .AcisFile import AcisFile
-from ..Assembly.PartInstance import PartInstance
+# from ..Assembly.PartInstance import PartInstance
 from ..BasicGeometry.Cell import Cell
 from ..BasicGeometry.CellArray import CellArray
 from ..BasicGeometry.Edge import Edge
@@ -33,6 +33,10 @@ from ..Region.Stringer import Stringer
 from ..Region.Surface import Surface
 from ..Sketcher.ConstrainedSketch import ConstrainedSketch
 from ..UtilityAndView.Repository import Repository
+
+# prevent circular imports
+class PartInstance:
+    pass
 
 
 class Part:
@@ -66,22 +70,22 @@ class Part:
     timeStamp: float = None
 
     # A VertexArray object specifying all the vertices in the part. 
-    vertices: VertexArray = VertexArray()
+    vertices: VertexArray = VertexArray([])
 
     # An IgnoredVertexArray object specifying all the ignored vertices in the part. 
     ignoredVertices: IgnoredVertexArray = IgnoredVertexArray()
 
     # An EdgeArray object specifying all the edges in the part. 
-    edges: EdgeArray = EdgeArray()
+    edges: EdgeArray = EdgeArray([])
 
     # An IgnoredEdgeArray object specifying all the ignored edges in the part. 
     ignoredEdges: IgnoredEdgeArray = IgnoredEdgeArray()
 
     # A FaceArray object specifying all the faces in the part. 
-    faces: FaceArray = FaceArray()
+    faces: FaceArray = FaceArray([])
 
     # A CellArray object specifying all the cells in the part. 
-    cells: CellArray = CellArray()
+    cells: CellArray = CellArray([])
 
     # A repository of Feature objects specifying all the features in the part. 
     features: Repository[str, Feature] = Repository[str, Feature]()
@@ -97,7 +101,7 @@ class Part:
     datums: Repository[str, Datum] = Repository[str, Datum]()
 
     # A MeshElementArray object specifying all the elements in the part. 
-    elements: MeshElementArray = MeshElementArray()
+    elements: MeshElementArray = MeshElementArray([])
 
     # A repository of MeshFace objects specifying all the element faces in the part. For a 
     # given element and a given face index within that element, the corresponding MeshFace 
@@ -106,13 +110,13 @@ class Part:
     elemFaces: Repository[str, MeshFace] = Repository[str, MeshFace]()
 
     # A MeshFaceArray object specifying all the unique element faces in the part. 
-    elementFaces: MeshFaceArray = MeshFaceArray()
+    elementFaces: MeshFaceArray = MeshFaceArray([])
 
     # A MeshNodeArray object specifying all the nodes in the part. 
-    nodes: MeshNodeArray = MeshNodeArray()
+    nodes: MeshNodeArray = MeshNodeArray([])
 
     # A MeshNodeArray object specifying all the retained nodes in the substructure part. 
-    retainedNodes: MeshNodeArray = MeshNodeArray()
+    retainedNodes: MeshNodeArray = MeshNodeArray([])
 
     # A repository of Set objects specifying for more information, see Set. 
     sets: Repository[str, Set] = Repository[str, Set]()
@@ -163,7 +167,7 @@ class Part:
     elemEdges: Repository[str, MeshEdge] = Repository[str, MeshEdge]()
 
     # A MeshEdgeArray object specifying all the unique element edges in the part. 
-    elementEdges: MeshEdgeArray = MeshEdgeArray()
+    elementEdges: MeshEdgeArray = MeshEdgeArray([])
 
     @typing.overload
     def __init__(self, name: str, dimensionality: SymbolicConstant, type: SymbolicConstant, 

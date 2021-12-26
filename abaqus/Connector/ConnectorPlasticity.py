@@ -83,7 +83,7 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
                  kinematicType: SymbolicConstant = HALF_CYCLE, kinematicTemperature: Boolean = OFF, 
                  kinematicDependencies: int = 0, forcePotentialOperator: SymbolicConstant = SUM, 
                  forcePotentialExponent: float = 2, 
-                 connectorPotentials: ConnectorPotentialArray = ConnectorPotentialArray(), 
+                 connectorPotentials: ConnectorPotentialArray = None,
                  isotropicTable: tuple = (), kinematicTable: tuple = (), components: tuple = ()):
         """This method creates a connector plasticity behavior option for a ConnectorSection
         object.

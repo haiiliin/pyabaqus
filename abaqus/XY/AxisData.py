@@ -141,7 +141,7 @@ class AxisData:
     # *systemTitle*. 
     title: str = ''
 
-    def setValues(self, axisData: 'AxisData' = AxisData(), labelFormat: SymbolicConstant = AUTOMATIC, 
+    def setValues(self, axisData: 'AxisData' = None, labelFormat: SymbolicConstant = AUTOMATIC,
                   labelNumDigits: int = 2, scale: SymbolicConstant = LINEAR, dbReference: float = 1, 
                   minAutoCompute: Boolean = ON, minValue: float = None, maxAutoCompute: Boolean = ON, 
                   maxValue: float = None, tickMode: SymbolicConstant = AUTOCOMPUTE, 

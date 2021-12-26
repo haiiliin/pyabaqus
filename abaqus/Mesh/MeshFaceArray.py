@@ -1,3 +1,4 @@
+from .MeshFace import MeshFace
 
 
 class MeshFaceArray:
@@ -20,7 +21,7 @@ class MeshFaceArray:
 
     """
 
-    def __init__(self, elemFaces: str):
+    def __init__(self, elemFaces: list[MeshFace]):
         """This method creates a MeshFaceArray object.
 
         Path

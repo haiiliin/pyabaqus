@@ -1,5 +1,3 @@
-import typing
-
 from abaqusConstants import *
 from .AnalyticSurface import AnalyticSurface
 from .AnalyticSurfaceSegment import AnalyticSurfaceSegment
@@ -236,16 +234,16 @@ class OdbInstance:
         Parameters
         ----------
         label
-            An Int specifying the node label. 
+            An Int specifying the node label.
 
         Returns
         -------
-            AnOdbMeshNode object. 
+            AnOdbMeshNode object.
 
         Exceptions
         ----------
-            - If no node with the specified label exists: 
-              OdbError: Invalid node label 
+            - If no node with the specified label exists:
+              OdbError: Invalid node label
         """
         pass
 
@@ -392,48 +390,5 @@ class OdbInstance:
             - If *referenceNode* is not a node set: 
               OdbError: Rigid body definition requires a node set. 
         """
-        pass
-
-    @typing.overload
-    def getNodeFromLabel(self, label: int):
-        """This method is used to retrieved a node with a specific label from an instance object.
-
-        Parameters
-        ----------
-        label
-            An Int specifying the node label. 
-
-        Returns
-        -------
-            An OdbMeshNode object. 
-
-        Exceptions
-        ----------
-            - If no node with the specified label exists: 
-              OdbError: Invalid node label 
-        """
-        pass
-
-    @typing.overload
-    def getNodeFromLabel(self, label: int):
-        """This method is used to retrieved a node with a specific label from an instance object.
-
-        Parameters
-        ----------
-        label
-            An Int specifying the node label. 
-
-        Returns
-        -------
-            An OdbMeshNode object. 
-
-        Exceptions
-        ----------
-            - If no node with the specified label exists: 
-              OdbError: Invalid node label 
-        """
-        pass
-
-    def getNodeFromLabel(self, *args, **kwargs):
         pass
 

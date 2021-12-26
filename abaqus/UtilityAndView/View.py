@@ -246,7 +246,7 @@ class View:
         """
         pass
 
-    def setLayerTransform(self, layerTransform: tuple = (), options: 'View' = View(), drawImmediately: Boolean = False):
+    def setLayerTransform(self, layerTransform: tuple = (), options: 'View' = None, drawImmediately: Boolean = False):
         """This method modifies the transformation used to position a Layer.
         Note:This method is not available for Session and Viewport Views.
 

@@ -25,7 +25,7 @@ class SurfaceSection(Section):
     """
 
     # A RebarLayers object specifying reinforcement properties. 
-    rebarLayers: RebarLayers = RebarLayers()
+    rebarLayers: RebarLayers = None
 
     def __init__(self, name: str, useDensity: Boolean = OFF, density: float = 0):
         """This method creates a SurfaceSection object.

@@ -41,7 +41,7 @@ class MeshEdge:
         """
         pass
 
-    def getElementsViaTopology(self, domain: MeshElementArray = MeshElementArray()):
+    def getElementsViaTopology(self, domain: MeshElementArray = MeshElementArray([])):
         """This method returns an array of MeshElement objects that are obtained by recursively
         finding adjacent elements via topology.
 
@@ -61,7 +61,7 @@ class MeshEdge:
         """
         pass
 
-    def getNodesViaTopology(self, domain: MeshElementArray = MeshElementArray()):
+    def getNodesViaTopology(self, domain: MeshElementArray = MeshElementArray([])):
         """This method returns an array of MeshNode objects that lie along element edges
         topologically in line with the element edge.
 

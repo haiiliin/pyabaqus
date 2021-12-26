@@ -23,10 +23,10 @@ class LowDensityFoam:
     """
 
     # A UniaxialTestData object. 
-    uniaxialTensionTestData: UniaxialTestData = UniaxialTestData()
+    uniaxialTensionTestData: UniaxialTestData = UniaxialTestData(((), ))
 
     # A UniaxialTestData object. 
-    uniaxialCompressionTestData: UniaxialTestData = UniaxialTestData()
+    uniaxialCompressionTestData: UniaxialTestData = UniaxialTestData(((), ))
 
     def __init__(self, elementRemoval: Boolean = OFF, maxAllowablePrincipalStress: float = None, 
                  extrapolateStressStrainCurve: Boolean = OFF, 

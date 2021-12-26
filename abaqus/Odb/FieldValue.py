@@ -121,7 +121,7 @@ class FieldValue:
     instance: OdbInstance = OdbInstance()
 
     # A SectionPoint object. 
-    sectionPoint: SectionPoint = SectionPoint()
+    sectionPoint: SectionPoint = None
 
     # A tuple of tuples of Floats specifying the 3 × 3 matrix of Floats specifying the 
     # direction cosines of the local coordinate system (the rotation from global to local). 

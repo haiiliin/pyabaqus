@@ -81,6 +81,7 @@ class Mdb:
         ----------
             None. 
         """
+        self.models['Model-1'] = Model('Model-1')
         pass
 
     def importDxf(self, fileName: str):

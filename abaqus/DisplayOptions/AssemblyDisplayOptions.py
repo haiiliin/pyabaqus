@@ -106,7 +106,7 @@ class AssemblyDisplayOptions:
 
     # A DisplayGroup object specifying the current display group and referring to an object in 
     # the *displayGroups* member of Session. 
-    displayGroup: DisplayGroup = DisplayGroup()
+    displayGroup: DisplayGroup = None
 
     # A repository of DisplayGroupInstance objects. 
     displayGroupInstances: Repository[str, DisplayGroupInstance] = Repository[str, DisplayGroupInstance]()

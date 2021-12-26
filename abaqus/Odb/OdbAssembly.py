@@ -133,7 +133,7 @@ class OdbAssembly:
         pass
 
     def addElements(self, labels: tuple, connectivity: tuple, instanceNames: tuple, type: str, 
-                    elementSetName: str = '', sectionCategory: SectionCategory = SectionCategory()):
+                    elementSetName: str = '', sectionCategory: SectionCategory = None):
         """This method is used to define elements using nodes defined at the OdbAssembly and/or
         OdbInstance level. For connector elements connected to ground, specify the lone node in
         the connectivity. The position of the ground node cannot be specified. This is a

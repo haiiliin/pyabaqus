@@ -41,7 +41,7 @@ class FieldBulkData:
     instance: OdbInstance = OdbInstance()
 
     # A SectionPoint object specifying the section point number of the current block of data. 
-    sectionPoint: SectionPoint = SectionPoint()
+    sectionPoint: SectionPoint = None
 
     # A sequence of Ints specifying the element labels of the elements in the block. 
     # *elementLabels* is valid only if *position*=INTEGRATION_POINT, CENTROID, ELEMENT_NODAL, 

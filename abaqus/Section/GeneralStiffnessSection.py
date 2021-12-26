@@ -27,10 +27,10 @@ class GeneralStiffnessSection(ShellSection):
     """
 
     # A RebarLayers object specifying reinforcement properties. 
-    rebarLayers: RebarLayers = RebarLayers()
+    rebarLayers: RebarLayers = None
 
     # A TransverseShearShell object specifying the transverse shear stiffness properties. 
-    transverseShear: TransverseShearShell = TransverseShearShell()
+    transverseShear: TransverseShearShell = None
 
     def __init__(self, name: str, stiffnessMatrix: tuple, referenceTemperature: float = None, 
                  applyThermalStress: Boolean = OFF, temperatureDependency: Boolean = OFF, 

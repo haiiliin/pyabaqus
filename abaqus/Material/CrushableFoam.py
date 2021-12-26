@@ -38,10 +38,10 @@ class CrushableFoam:
     """
 
     # A CrushableFoamHardening object. 
-    crushableFoamHardening: CrushableFoamHardening = CrushableFoamHardening()
+    crushableFoamHardening: CrushableFoamHardening = CrushableFoamHardening(((), ))
 
     # A RateDependent object. 
-    rateDependent: RateDependent = RateDependent()
+    rateDependent: RateDependent = RateDependent(((), ))
 
     def __init__(self, table: tuple, hardening: SymbolicConstant = VOLUMETRIC, 
                  temperatureDependency: Boolean = OFF, dependencies: int = 0):

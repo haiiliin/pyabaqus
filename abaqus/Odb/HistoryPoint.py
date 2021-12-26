@@ -72,7 +72,7 @@ class HistoryPoint:
     element: OdbMeshElement = OdbMeshElement()
 
     # A SectionPoint object. 
-    sectionPoint: SectionPoint = SectionPoint()
+    sectionPoint: SectionPoint = None
 
     # An OdbSet object specifying the region for which the data are to be collected. 
     region: OdbSet = OdbSet()
@@ -107,7 +107,7 @@ class HistoryPoint:
         pass
 
     @typing.overload
-    def __init__(self, element: OdbMeshElement, ipNumber: int = 0, sectionPoint: SectionPoint = SectionPoint(), 
+    def __init__(self, element: OdbMeshElement, ipNumber: int = 0, sectionPoint: SectionPoint = None,
                  face: SymbolicConstant = FACE_UNKNOWN, node: OdbMeshNode = OdbMeshNode()):
         """This method creates a HistoryPoint object for an element.
 

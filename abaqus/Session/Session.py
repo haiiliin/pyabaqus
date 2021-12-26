@@ -12,6 +12,7 @@ from ..Animation.ImageAnimation import ImageAnimation
 from ..Animation.ImageAnimationOptions import ImageAnimationOptions
 from ..Animation.Movie import Movie
 from ..Animation.QuickTimeOptions import QuickTimeOptions
+from ..Canvas.Canvas import Canvas
 from ..Canvas.DrawingArea import DrawingArea
 from ..Canvas.Viewport import Viewport
 from ..CustomKernel.RepositorySupport import RepositorySupport
@@ -122,7 +123,7 @@ class Session:
     imageAnimationOptions: ImageAnimationOptions = ImageAnimationOptions()
 
     # An ImageAnimation object. 
-    imageAnimation: ImageAnimation = ImageAnimation()
+    imageAnimation: ImageAnimation = None
 
     # A QuickTimeOptions object. 
     quickTimeOptions: QuickTimeOptions = QuickTimeOptions()
@@ -489,7 +490,7 @@ class Session:
         """
         pass
 
-    def printToFile(self, fileName: str, format: SymbolicConstant = PNG, canvasObjects: tuple[canvas] = (), 
+    def printToFile(self, fileName: str, format: SymbolicConstant = PNG, canvasObjects: tuple[Canvas] = (),
                     compression: Boolean = OFF):
         """This method prints canvas objects to a file using the attributes stored in the
         PrintOptions object and the appropriate format options object.
@@ -520,7 +521,7 @@ class Session:
         """
         pass
 
-    def printToPrinter(self, printCommand: str = '', numCopies: int = 1, canvasObjects: tuple[canvas] = ()):
+    def printToPrinter(self, printCommand: str = '', numCopies: int = 1, canvasObjects: tuple[Canvas] = ()):
         """This method prints canvas objects to a Windows printer or to a PostScript printer. The
         attributes used for printing to a Windows printer are stored in the PrintOptions object
         and the PageSetupOptions object; the attributes used for printing to a PostScript
@@ -533,11 +534,15 @@ class Session:
             to the printer. The default value is “lpr” or the value specified by the printOptions 
             method. If you create a script to print directly to a Windows printer, the 
             *printCommand* must take the following 
-            form:`session.printToPrinter.setValues(printCommand='PRINTER[                            
-                 number of characters in name                                 ]:                     
-                        printername                                 PROPERTIES[                      
-                       number of characters in properties                                 ]:         
-                                    document properties                                 ')           
+            form:`session.printToPrinter.setValues(printCommand='PRINTER[
+                                                                    number of characters in name
+                                                                 ]:
+                                                                 printername
+                                                                 PROPERTIES[
+                                                                    number of characters in properties
+                                                                 ]:
+                                                                 document properties'
+                                                   )
                                `The `PROPERTIES` is a list of characters that represents the 
             printing preferences for the selected Windows printer. The properties are not required 
             in a script; the printed output will use the current settings for the selected printer. 
@@ -586,7 +591,7 @@ class Session:
         """
         pass
 
-    def writeVrmlFile(self, fileName: str, format: Boolean = OFF, canvasObjects: tuple[canvas] = ()):
+    def writeVrmlFile(self, fileName: str, format: Boolean = OFF, canvasObjects: tuple[Canvas] = ()):
         """This method exports the current viewport objects to a file.
 
         Parameters
@@ -610,7 +615,7 @@ class Session:
         """
         pass
 
-    def write3DXMLFile(self, fileName: str, format: Boolean = OFF, canvasObjects: tuple[canvas] = ()):
+    def write3DXMLFile(self, fileName: str, format: Boolean = OFF, canvasObjects: tuple[Canvas] = ()):
         """This method exports the current viewport objects to a file.
 
         Parameters
@@ -634,7 +639,7 @@ class Session:
         """
         pass
 
-    def writeOBJFile(self, fileName: str, canvasObjects: tuple[canvas] = ()):
+    def writeOBJFile(self, fileName: str, canvasObjects: tuple[Canvas] = ()):
         """This method exports the current viewport objects to a file.
 
         Parameters

@@ -2014,7 +2014,7 @@ class Feature:
         pass
 
     def setValues(self, parameter: float = None, parameter1: float = None, parameter2: float = None, 
-                  sketch: ConstrainedSketch = ConstrainedSketch(), distance: float = None):
+                  sketch: ConstrainedSketch = None, distance: float = None):
         """This method modifies the Feature object.
 
         Parameters

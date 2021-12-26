@@ -3,13 +3,6 @@ import time
 
 from ObjectParser.ObjectParser import ObjectParser
 
-# parser = ObjectParser(filePath='AbaqusScriptingReferenceGuide-Markdown-2022\\Python\\Part\\Part.md')
-# parser.parse().toAbaqusObject(searchParentDir='abaqus').toPythonScript(fileDir='abaqus\\Part', searchDir='abaqus')
-#
-#
-# parser = ObjectParser(filePath='AbaqusScriptingReferenceGuide-Markdown-2022\\Python\\BoundaryCondition\\AccelerationBC.md')
-# parser.parse().toAbaqusObject(searchParentDir='AbaqusScriptingReferenceGuide-Markdown-2022\\Python').toPythonScript(fileDir='abaqus\\BoundaryCondition', searchDir='abaqus')
-
 start_time = time.time()
 
 if not os.path.exists(os.path.join('abaqus', '__init__.py')):

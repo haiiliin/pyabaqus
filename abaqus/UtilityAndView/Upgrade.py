@@ -18,7 +18,7 @@ Corresponding analysis keywords
 """
 
 def upgradeScrip(fileNames: str, searchSubdirectories: Boolean = True, backup: Boolean = True, 
-                 preview: Boolean = True, diffExecutable: str = False, logFileName: str = asiUpgrade, 
+                 preview: Boolean = True, diffExecutable: str = False, logFileName: str = 'asiUpgrade',
                  fromVersion: str = EARLIEST, toVersion: str = LATEST, 
                  scriptType: SymbolicConstant = BOTH):
     """This function can be used to upgrade a directory, a file, or a list of both directories

@@ -34,7 +34,7 @@ class PorousMetalPlasticity:
     porousFailureCriteria: PorousFailureCriteria = PorousFailureCriteria()
 
     # A VoidNucleation object. 
-    voidNucleation: VoidNucleation = VoidNucleation()
+    voidNucleation: VoidNucleation = VoidNucleation(((), ))
 
     def __init__(self, table: tuple, relativeDensity: float = None, temperatureDependency: Boolean = OFF, 
                  dependencies: int = 0):

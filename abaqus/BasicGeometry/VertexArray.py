@@ -1,3 +1,4 @@
+from .Vertex import Vertex
 from abaqusConstants import *
 
 class VertexArray:
@@ -32,7 +33,7 @@ class VertexArray:
 
     """
 
-    def __init__(self, vertices: str):
+    def __init__(self, vertices: list[Vertex]):
         """This method creates a VertexArray object.
 
         Path

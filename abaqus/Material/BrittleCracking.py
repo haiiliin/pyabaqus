@@ -46,10 +46,10 @@ class BrittleCracking:
     """
 
     # A BrittleShear object. 
-    brittleShear: BrittleShear = BrittleShear()
+    brittleShear: BrittleShear = BrittleShear(((), ))
 
     # A BrittleFailure object. 
-    brittleFailure: BrittleFailure = BrittleFailure()
+    brittleFailure: BrittleFailure = BrittleFailure(((), ))
 
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0, 
                  type: SymbolicConstant = STRAIN):

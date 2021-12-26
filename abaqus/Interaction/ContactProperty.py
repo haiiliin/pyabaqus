@@ -43,7 +43,7 @@ class ContactProperty(InteractionProperty):
     damage: ContactDamage = ContactDamage()
 
     # A FractureCriterion object. 
-    fractureCriterion: FractureCriterion = FractureCriterion()
+    fractureCriterion: FractureCriterion = FractureCriterion(((), ))
 
     # A CohesiveBehavior object. 
     cohesiveBehavior: CohesiveBehavior = CohesiveBehavior()
@@ -55,7 +55,7 @@ class ContactProperty(InteractionProperty):
     heatGeneration: GapHeatGeneration = GapHeatGeneration()
 
     # A Radiation object. 
-    radiation: Radiation = Radiation()
+    radiation: Radiation = None
 
     # A GeometricProperties object. 
     geometricProperties: GeometricProperties = GeometricProperties()

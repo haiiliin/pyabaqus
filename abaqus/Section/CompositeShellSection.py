@@ -29,10 +29,10 @@ class CompositeShellSection(GeometryShellSection):
     """
 
     # A RebarLayers object specifying reinforcement properties. 
-    rebarLayers: RebarLayers = RebarLayers()
+    rebarLayers: RebarLayers = None
 
     # A TransverseShearShell object specifying the transverse shear stiffness properties. 
-    transverseShear: TransverseShearShell = TransverseShearShell()
+    transverseShear: TransverseShearShell = None
 
     def __init__(self, name: str, layup: SectionLayerArray, symmetric: Boolean = OFF, 
                  thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF, 

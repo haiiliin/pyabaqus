@@ -153,7 +153,7 @@ class SubstructureGenerateStep(AnalysisStep):
     diagnosticPrint: DiagnosticPrint = DiagnosticPrint()
 
     # A Monitor object. 
-    monitor: Monitor = Monitor()
+    monitor: Monitor = None
 
     # A Restart object. 
     restart: Restart = Restart()
@@ -192,8 +192,8 @@ class SubstructureGenerateStep(AnalysisStep):
                  computeReducedViscousDampingMatrix: Boolean = False, 
                  evaluateFrequencyDependentProperties: Boolean = False, frequency: float = 0, 
                  retainedEigenmodesMethod: SymbolicConstant = NONE, 
-                 modeRange: SubstructureGenerateModesArray = SubstructureGenerateModesArray(), 
-                 frequencyRange: SubstructureGenerateFrequencyArray = SubstructureGenerateFrequencyArray(), 
+                 modeRange: SubstructureGenerateModesArray = None,
+                 frequencyRange: SubstructureGenerateFrequencyArray = None,
                  globalDampingField: SymbolicConstant = NONE, alphaDampingRatio: float = 0, 
                  betaDampingRatio: float = 0, structuralDampingRatio: float = 0, 
                  viscousDampingControl: SymbolicConstant = NONE, 
@@ -285,8 +285,8 @@ class SubstructureGenerateStep(AnalysisStep):
                   computeReducedViscousDampingMatrix: Boolean = False, 
                   evaluateFrequencyDependentProperties: Boolean = False, frequency: float = 0, 
                   retainedEigenmodesMethod: SymbolicConstant = NONE, 
-                  modeRange: SubstructureGenerateModesArray = SubstructureGenerateModesArray(), 
-                  frequencyRange: SubstructureGenerateFrequencyArray = SubstructureGenerateFrequencyArray(), 
+                  modeRange: SubstructureGenerateModesArray = None,
+                  frequencyRange: SubstructureGenerateFrequencyArray = None,
                   globalDampingField: SymbolicConstant = NONE, alphaDampingRatio: float = 0, 
                   betaDampingRatio: float = 0, structuralDampingRatio: float = 0, 
                   viscousDampingControl: SymbolicConstant = NONE, 

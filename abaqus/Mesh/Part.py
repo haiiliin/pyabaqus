@@ -198,7 +198,7 @@ class Part(BasePart):
         """
         pass
 
-    def deleteMesh(self, regions: tuple[Part]):
+    def deleteMesh(self, regions: tuple['Part']):
         """This method deletes a subset of the mesh that contains the native elements from the
         given parts or regions.
 
@@ -260,7 +260,7 @@ class Part(BasePart):
         """
         pass
 
-    def deleteSeeds(self, regions: tuple[Part]):
+    def deleteSeeds(self, regions: tuple['Part']):
         """This method deletes the global edge seeds from the given parts or deletes the local edge
         seeds from the given edges.
 
@@ -280,7 +280,7 @@ class Part(BasePart):
         """
         pass
 
-    def generateMesh(self, regions: tuple[Part] = (), seedConstraintOverride: Boolean = OFF, 
+    def generateMesh(self, regions: tuple['Part'] = (), seedConstraintOverride: Boolean = OFF,
                      meshTechniqueOverride: Boolean = OFF, boundaryPreview: Boolean = OFF, 
                      boundaryMeshOverride: Boolean = OFF):
         """This method generates a mesh in the given parts or regions.
@@ -576,7 +576,7 @@ class Part(BasePart):
         """
         pass
 
-    def getIncompatibleMeshInterfaces(self, cells: tuple[cell] = ()):
+    def getIncompatibleMeshInterfaces(self, cells: tuple[Cell] = ()):
         """This method returns a sequence of face objects that are meshed with incompatible
         elements.
 

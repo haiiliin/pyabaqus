@@ -5,6 +5,16 @@ from ..BasicGeometry.Edge import Edge
 from ..BasicGeometry.Face import Face
 from ..BasicGeometry.ReferencePoint import ReferencePoint
 from ..BasicGeometry.Vertex import Vertex
+from ..Mesh.MeshElement import MeshElement
+from ..Mesh.MeshNode import MeshNode
+
+
+class Element(MeshElement):
+    pass
+
+
+class Node(MeshNode):
+    pass
 
 
 class Region:
