@@ -140,9 +140,10 @@ class ViewCut:
                   radius: float = None, rotationAxis: SymbolicConstant = AXIS_2, value: float = None, 
                   showModelAboveCut: Boolean = OFF, showModelOnCut: Boolean = ON, 
                   showModelBelowCut: Boolean = ON, showFreeBodyCut: Boolean = OFF, csysName: str = '', 
-                  origin: tuple = (), normal: typing.Union[SymbolicConstant,float] = None, 
-                  axis2: typing.Union[SymbolicConstant,float] = None, 
-                  cylinderAxis: typing.Union[SymbolicConstant,float] = None, 
+                  origin: tuple = (), 
+                  normal: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                  axis2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                  cylinderAxis: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
                   followDeformation: Boolean = OFF, overrideAveraging: Boolean = ON, 
                   referenceFrame: SymbolicConstant = FIRST_FRAME):
         """This method modifies the ViewCut object.

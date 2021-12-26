@@ -85,217 +85,217 @@ class Material:
     """
 
     # An AcousticMedium object. 
-    acousticMedium: AcousticMedium = None
+    acousticMedium: AcousticMedium = AcousticMedium()
 
     # A BrittleCracking object. 
-    brittleCracking: BrittleCracking = None
+    brittleCracking: BrittleCracking = BrittleCracking()
 
     # A CapPlasticity object. 
-    capPlasticity: CapPlasticity = None
+    capPlasticity: CapPlasticity = CapPlasticity()
 
     # A CastIronPlasticity object. 
-    castIronPlasticity: CastIronPlasticity = None
+    castIronPlasticity: CastIronPlasticity = CastIronPlasticity()
 
     # A ClayPlasticity object. 
-    clayPlasticity: ClayPlasticity = None
+    clayPlasticity: ClayPlasticity = ClayPlasticity()
 
     # A Concrete object. 
-    concrete: Concrete = None
+    concrete: Concrete = Concrete()
 
     # A ConcreteDamagedPlasticity object. 
-    concreteDamagedPlasticity: ConcreteDamagedPlasticity = None
+    concreteDamagedPlasticity: ConcreteDamagedPlasticity = ConcreteDamagedPlasticity()
 
     # A Conductivity object. 
-    conductivity: Conductivity = None
+    conductivity: Conductivity = Conductivity()
 
     # A Creep object. 
-    creep: Creep = None
+    creep: Creep = Creep()
 
     # A CrushableFoam object. 
-    crushableFoam: CrushableFoam = None
+    crushableFoam: CrushableFoam = CrushableFoam()
 
     # A DamageInitiation object. 
-    ductileDamageInitiation: DamageInitiation = None
+    ductileDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A DamageInitiation object. 
-    fldDamageInitiation: DamageInitiation = None
+    fldDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A DamageInitiation object. 
-    flsdDamageInitiation: DamageInitiation = None
+    flsdDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A DamageInitiation object. 
-    johnsonCookDamageInitiation: DamageInitiation = None
+    johnsonCookDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A DamageInitiation object. 
-    maxeDamageInitiation: DamageInitiation = None
+    maxeDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A DamageInitiation object. 
-    maxsDamageInitiation: DamageInitiation = None
+    maxsDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A DamageInitiation object. 
-    maxpeDamageInitiation: DamageInitiation = None
+    maxpeDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A DamageInitiation object. 
-    maxpsDamageInitiation: DamageInitiation = None
+    maxpsDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A DamageInitiation object. 
-    mkDamageInitiation: DamageInitiation = None
+    mkDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A DamageInitiation object. 
-    msfldDamageInitiation: DamageInitiation = None
+    msfldDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A DamageInitiation object. 
-    quadeDamageInitiation: DamageInitiation = None
+    quadeDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A DamageInitiation object. 
-    quadsDamageInitiation: DamageInitiation = None
+    quadsDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A DamageInitiation object. 
-    shearDamageInitiation: DamageInitiation = None
+    shearDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A DamageInitiation object. 
-    hashinDamageInitiation: DamageInitiation = None
+    hashinDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A Damping object. 
-    damping: Damping = None
+    damping: Damping = Damping()
 
     # A DeformationPlasticity object. 
-    deformationPlasticity: DeformationPlasticity = None
+    deformationPlasticity: DeformationPlasticity = DeformationPlasticity()
 
     # A Density object. 
-    density: Density = None
+    density: Density = Density()
 
     # A Depvar object. 
-    depvar: Depvar = None
+    depvar: Depvar = Depvar()
 
     # A Dielectric object. 
-    dielectric: Dielectric = None
+    dielectric: Dielectric = Dielectric()
 
     # A Diffusivity object. 
-    diffusivity: Diffusivity = None
+    diffusivity: Diffusivity = Diffusivity()
 
     # A DruckerPrager object. 
-    druckerPrager: DruckerPrager = None
+    druckerPrager: DruckerPrager = DruckerPrager()
 
     # An Elastic object. 
-    elastic: Elastic = None
+    elastic: Elastic = Elastic()
 
     # An ElectricalConductivity object. 
-    electricalConductivity: ElectricalConductivity = None
+    electricalConductivity: ElectricalConductivity = ElectricalConductivity()
 
     # An Eos object. 
-    eos: Eos = None
+    eos: Eos = Eos()
 
     # An Expansion object. 
-    expansion: Expansion = None
+    expansion: Expansion = Expansion()
 
     # A FluidLeakoff object. 
-    fluidLeakoff: FluidLeakoff = None
+    fluidLeakoff: FluidLeakoff = FluidLeakoff()
 
     # A GapFlow object. 
-    gapFlow: GapFlow = None
+    gapFlow: GapFlow = GapFlow()
 
     # A GasketThicknessBehavior object. 
-    gasketThicknessBehavior: GasketThicknessBehavior = None
+    gasketThicknessBehavior: GasketThicknessBehavior = GasketThicknessBehavior()
 
     # A GasketTransverseShearElastic object. 
-    gasketTransverseShearElastic: GasketTransverseShearElastic = None
+    gasketTransverseShearElastic: GasketTransverseShearElastic = GasketTransverseShearElastic()
 
     # A GasketMembraneElastic object. 
-    gasketMembraneElastic: GasketMembraneElastic = None
+    gasketMembraneElastic: GasketMembraneElastic = GasketMembraneElastic()
 
     # A Gel object. 
-    gel: Gel = None
+    gel: Gel = Gel()
 
     # A HeatGeneration object. 
-    heatGeneration: HeatGeneration = None
+    heatGeneration: HeatGeneration = HeatGeneration()
 
     # A Hyperelastic object. 
-    hyperelastic: Hyperelastic = None
+    hyperelastic: Hyperelastic = Hyperelastic()
 
     # A Hyperfoam object. 
-    hyperfoam: Hyperfoam = None
+    hyperfoam: Hyperfoam = Hyperfoam()
 
     # A Hypoelastic object. 
-    hypoelastic: Hypoelastic = None
+    hypoelastic: Hypoelastic = Hypoelastic()
 
     # An InelasticHeatFraction object. 
-    inelasticHeatFraction: InelasticHeatFraction = None
+    inelasticHeatFraction: InelasticHeatFraction = InelasticHeatFraction()
 
     # A JouleHeatFraction object. 
-    jouleHeatFraction: JouleHeatFraction = None
+    jouleHeatFraction: JouleHeatFraction = JouleHeatFraction()
 
     # A LatentHeat object. 
-    latentHeat: LatentHeat = None
+    latentHeat: LatentHeat = LatentHeat()
 
     # A LowDensityFoam object. 
-    lowDensityFoam: LowDensityFoam = None
+    lowDensityFoam: LowDensityFoam = LowDensityFoam()
 
     # A MagneticPermeability object. 
-    magneticPermeability: MagneticPermeability = None
+    magneticPermeability: MagneticPermeability = MagneticPermeability()
 
     # A MohrCoulombPlasticity object. 
-    mohrCoulombPlasticity: MohrCoulombPlasticity = None
+    mohrCoulombPlasticity: MohrCoulombPlasticity = MohrCoulombPlasticity()
 
     # A MoistureSwelling object. 
-    moistureSwelling: MoistureSwelling = None
+    moistureSwelling: MoistureSwelling = MoistureSwelling()
 
     # A MullinsEffect object. 
-    mullinsEffect: MullinsEffect = None
+    mullinsEffect: MullinsEffect = MullinsEffect()
 
     # A Permeability object. 
-    permeability: Permeability = None
+    permeability: Permeability = Permeability()
 
     # A Piezoelectric object. 
-    piezoelectric: Piezoelectric = None
+    piezoelectric: Piezoelectric = Piezoelectric()
 
     # A Plastic object. 
-    plastic: Plastic = None
+    plastic: Plastic = Plastic()
 
     # A PoreFluidExpansion object. 
-    poreFluidExpansion: PoreFluidExpansion = None
+    poreFluidExpansion: PoreFluidExpansion = PoreFluidExpansion()
 
     # A PorousBulkModuli object. 
-    porousBulkModuli: PorousBulkModuli = None
+    porousBulkModuli: PorousBulkModuli = PorousBulkModuli()
 
     # A PorousElastic object. 
-    porousElastic: PorousElastic = None
+    porousElastic: PorousElastic = PorousElastic()
 
     # A PorousMetalPlasticity object. 
-    porousMetalPlasticity: PorousMetalPlasticity = None
+    porousMetalPlasticity: PorousMetalPlasticity = PorousMetalPlasticity()
 
     # A Regularization object. 
-    regularization: Regularization = None
+    regularization: Regularization = Regularization()
 
     # A Solubility object. 
-    solubility: Solubility = None
+    solubility: Solubility = Solubility()
 
     # A Sorption object. 
-    sorption: Sorption = None
+    sorption: Sorption = Sorption()
 
     # A SpecificHeat object. 
-    specificHeat: SpecificHeat = None
+    specificHeat: SpecificHeat = SpecificHeat()
 
     # A Swelling object. 
-    swelling: Swelling = None
+    swelling: Swelling = Swelling()
 
     # A UserDefinedField object. 
-    userDefinedField: UserDefinedField = None
+    userDefinedField: UserDefinedField = UserDefinedField()
 
     # A UserMaterial object. 
-    userMaterial: UserMaterial = None
+    userMaterial: UserMaterial = UserMaterial()
 
     # A UserOutputVariables object. 
-    userOutputVariables: UserOutputVariables = None
+    userOutputVariables: UserOutputVariables = UserOutputVariables()
 
     # A Viscoelastic object. 
-    viscoelastic: Viscoelastic = None
+    viscoelastic: Viscoelastic = Viscoelastic()
 
     # A Viscosity object. 
-    viscosity: Viscosity = None
+    viscosity: Viscosity = Viscosity()
 
     # A Viscous object. 
-    viscous: Viscous = None
+    viscous: Viscous = Viscous()
 
     def __init__(self, name: str, description: str = '', materialIdentifier: str = ''):
         """This method creates a Material object.

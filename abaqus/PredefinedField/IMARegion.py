@@ -20,7 +20,7 @@ class IMARegion:
 
     # A Region object specifying the sub-region of the selected part instance to which the 
     # volume fractions will be applied. 
-    region: Region = None
+    region: Region = Region()
 
     # A tuple of Floats specifying the volume fractions, per material instance name. The 
     # length of the tuple corresponds to the number of material instance names, as established 

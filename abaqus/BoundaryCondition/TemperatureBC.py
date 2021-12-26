@@ -40,7 +40,7 @@ class TemperatureBC(BoundaryCondition):
     category: SymbolicConstant = None
 
     # A Region object specifying the region to which the boundary condition is applied. 
-    region: Region = None
+    region: Region = Region()
 
     # None or a DatumCsys object specifying the local coordinate system of the boundary 
     # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
@@ -134,8 +134,9 @@ class TemperatureBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, magnitude: typing.Union[SymbolicConstant,float] = None, dof: tuple = (), 
-                        amplitude: str = ''):
+    def setValuesInStep(self, stepName: str, 
+                        magnitude: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        dof: tuple = (), amplitude: str = ''):
         """This method modifies the propagating data for an existing TemperatureBC object in the
         specified step.
 

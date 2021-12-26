@@ -38,7 +38,7 @@ class ConnectorForce(Load):
     fastenerSetName: str = ''
 
     # A Region object specifying the region to which the load is applied. 
-    region: Region = None
+    region: Region = Region()
 
     def __init__(self, name: str, createStepName: str, region: str = '', fastenerName: str = '', 
                  fastenerSetName: str = '', f1: float = None, f2: float = None, f3: float = None, 
@@ -138,9 +138,11 @@ class ConnectorForce(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, f1: typing.Union[SymbolicConstant,float] = None, 
-                        f2: typing.Union[SymbolicConstant,float] = None, 
-                        f3: typing.Union[SymbolicConstant,float] = None, amplitude: str = ''):
+    def setValuesInStep(self, stepName: str, 
+                        f1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        f2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        f3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        amplitude: str = ''):
         """This method modifies the propagating data for an existing ConnectorForce object in the
         specified step.
 

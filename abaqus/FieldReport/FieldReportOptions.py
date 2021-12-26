@@ -23,8 +23,8 @@ class FieldReportOptions:
 
     """
 
-    def setValues(self, numColumns: int = 80, numberFormat: NumberFormat = None, printXYData: Boolean = ON, 
-                  printTotal: Boolean = ON, printMinMax: Boolean = ON, 
+    def setValues(self, numColumns: int = 80, numberFormat: NumberFormat = NumberFormat(), 
+                  printXYData: Boolean = ON, printTotal: Boolean = ON, printMinMax: Boolean = ON, 
                   pageWidth: SymbolicConstant = NO_LIMIT, columnLayout: SymbolicConstant = SINGLE_TABLE, 
                   sort: SymbolicConstant = ASCENDING, printLocalCSYS: Boolean = OFF):
         """This method modifies the FieldReportOptions object.

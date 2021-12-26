@@ -72,19 +72,19 @@ class Hyperelastic:
     """
 
     # A BiaxialTestData object. 
-    biaxialTestData: BiaxialTestData = None
+    biaxialTestData: BiaxialTestData = BiaxialTestData()
 
     # A PlanarTestData object. 
-    planarTestData: PlanarTestData = None
+    planarTestData: PlanarTestData = PlanarTestData()
 
     # A UniaxialTestData object. 
-    uniaxialTestData: UniaxialTestData = None
+    uniaxialTestData: UniaxialTestData = UniaxialTestData()
 
     # A VolumetricTestData object. 
-    volumetricTestData: VolumetricTestData = None
+    volumetricTestData: VolumetricTestData = VolumetricTestData()
 
     # A Hysteresis object. 
-    hysteresis: Hysteresis = None
+    hysteresis: Hysteresis = Hysteresis()
 
     def __init__(self, table: tuple, type: SymbolicConstant = UNKNOWN, 
                  moduliTimeScale: SymbolicConstant = LONG_TERM, temperatureDependency: Boolean = OFF, 

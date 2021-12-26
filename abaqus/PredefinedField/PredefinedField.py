@@ -29,7 +29,7 @@ class PredefinedField:
     # is ignored if the predefined field has an *instances* member available. *Region* is also 
     # ignored if the predefined field has a *distributionType* member available, and 
     # *distributionType*=FROM_FILE or FROM_FILE_AND_USER_DEFINED. 
-    region: Region = None
+    region: Region = Region()
 
     def move(self, fromStepName: str, toStepName: str):
         """This method moves a specific PredefinedFieldState object from one step to a different

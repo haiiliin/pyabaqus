@@ -34,7 +34,7 @@ class OdbAnalysisError:
     category: str = ''
 
     # An OdbAuxiliaryData object. 
-    data: OdbAuxiliaryData = None
+    data: OdbAuxiliaryData = OdbAuxiliaryData()
 
     # String specifying the cause of the error. This attribute is read-only. 
     description: str = ''

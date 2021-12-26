@@ -28,7 +28,7 @@ class Swelling:
     """
 
     # A Ratios object. 
-    ratios: Ratios = None
+    ratios: Ratios = Ratios()
 
     def __init__(self, table: tuple, law: SymbolicConstant = INPUT, temperatureDependency: Boolean = OFF, 
                  dependencies: int = 0):

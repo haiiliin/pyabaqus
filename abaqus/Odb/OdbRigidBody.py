@@ -25,8 +25,8 @@ class OdbRigidBody:
     """
 
     def RigidBody(self, referenceNode: OdbSet, position: SymbolicConstant = INPUT, isothermal: Boolean = ON, 
-                  elements: OdbSet = None, tieNodes: OdbSet = None, pinNodes: OdbSet = None, 
-                  analyticSurface: AnalyticSurface = None):
+                  elements: OdbSet = OdbSet(), tieNodes: OdbSet = OdbSet(), pinNodes: OdbSet = OdbSet(), 
+                  analyticSurface: AnalyticSurface = AnalyticSurface()):
         """This method creates a OdbRigidBody object.
 
         Path

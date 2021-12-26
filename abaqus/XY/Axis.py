@@ -58,27 +58,27 @@ class Axis:
     labelPlacement: SymbolicConstant = INSIDE
 
     # An AxisData object specifying the numerical data of the axis. 
-    axisData: AxisData = None
+    axisData: AxisData = AxisData()
 
     # A LineStyle object specifying the line properties used to display the axis. 
-    lineStyle: LineStyle = None
+    lineStyle: LineStyle = LineStyle()
 
     # A TextStyle object specifying the text properties to be used when displaying axis 
     # labels. 
-    labelStyle: TextStyle = None
+    labelStyle: TextStyle = TextStyle()
 
     # A TextStyle object specifying the text properties to be used when displaying the axis 
     # title. 
-    titleStyle: TextStyle = None
+    titleStyle: TextStyle = TextStyle()
 
     # A LineStyle object specifying the line properties to be used when displaying axis ticks. 
-    tickStyle: LineStyle = None
+    tickStyle: LineStyle = LineStyle()
 
-    def setValues(self, axis: 'Axis' = None, labelFrequency: int = 1, labelPlacement: SymbolicConstant = INSIDE, 
-                  labelStyle: TextStyle = None, lineStyle: LineStyle = None, 
-                  placement: SymbolicConstant = MIN_MAX_EDGE, tickLength: float = 2, 
-                  tickPlacement: SymbolicConstant = INSIDE, tickStyle: LineStyle = None, 
-                  titleStyle: TextStyle = None):
+    def setValues(self, axis: 'Axis' = Axis(), labelFrequency: int = 1, 
+                  labelPlacement: SymbolicConstant = INSIDE, labelStyle: TextStyle = TextStyle(), 
+                  lineStyle: LineStyle = LineStyle(), placement: SymbolicConstant = MIN_MAX_EDGE, 
+                  tickLength: float = 2, tickPlacement: SymbolicConstant = INSIDE, 
+                  tickStyle: LineStyle = LineStyle(), titleStyle: TextStyle = TextStyle()):
         """This method modifies the Axis object.
 
         Parameters

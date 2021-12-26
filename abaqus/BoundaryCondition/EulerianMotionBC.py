@@ -130,7 +130,7 @@ class EulerianMotionBC(BoundaryCondition):
     category: SymbolicConstant = None
 
     # A Region object specifying the region to which the boundary condition is applied. 
-    region: Region = None
+    region: Region = Region()
 
     # None or a DatumCsys object specifying the local coordinate system of the boundary 
     # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
@@ -138,16 +138,16 @@ class EulerianMotionBC(BoundaryCondition):
     localCsys: str = None
 
     def __init__(self, name: str, createStepName: str, instanceName: str, followRegion: Boolean = ON, 
-                 region: Region = None, materialName: str = '', ctrPosition1: SymbolicConstant = FREE, 
-                 posPosition1: SymbolicConstant = FREE, negPosition1: SymbolicConstant = FREE, 
-                 expansionRatio1: float = None, contractRatio1: float = 0, 
-                 ctrPosition2: SymbolicConstant = FREE, posPosition2: SymbolicConstant = FREE, 
-                 negPosition2: SymbolicConstant = FREE, expansionRatio2: float = None, 
-                 contractRatio2: float = 0, ctrPosition3: SymbolicConstant = FREE, 
-                 posPosition3: SymbolicConstant = FREE, negPosition3: SymbolicConstant = FREE, 
-                 expansionRatio3: float = None, contractRatio3: float = 0, 
-                 allowContraction: Boolean = ON, aspectLimit: float = 10, vmaxFactor: float = 1, 
-                 volThreshold: float = 0, bufferSize: float = 2):
+                 region: Region = Region(), materialName: str = '', 
+                 ctrPosition1: SymbolicConstant = FREE, posPosition1: SymbolicConstant = FREE, 
+                 negPosition1: SymbolicConstant = FREE, expansionRatio1: float = None, 
+                 contractRatio1: float = 0, ctrPosition2: SymbolicConstant = FREE, 
+                 posPosition2: SymbolicConstant = FREE, negPosition2: SymbolicConstant = FREE, 
+                 expansionRatio2: float = None, contractRatio2: float = 0, 
+                 ctrPosition3: SymbolicConstant = FREE, posPosition3: SymbolicConstant = FREE, 
+                 negPosition3: SymbolicConstant = FREE, expansionRatio3: float = None, 
+                 contractRatio3: float = 0, allowContraction: Boolean = ON, aspectLimit: float = 10, 
+                 vmaxFactor: float = 1, volThreshold: float = 0, bufferSize: float = 2):
         """This method creates an EulerianMotionBC object.
 
         Path
@@ -251,7 +251,7 @@ class EulerianMotionBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, instanceName: str = '', followRegion: Boolean = ON, region: Region = None, 
+    def setValues(self, instanceName: str = '', followRegion: Boolean = ON, region: Region = Region(), 
                   materialName: str = '', ctrPosition1: SymbolicConstant = FREE, 
                   posPosition1: SymbolicConstant = FREE, negPosition1: SymbolicConstant = FREE, 
                   expansionRatio1: float = None, contractRatio1: float = 0, 

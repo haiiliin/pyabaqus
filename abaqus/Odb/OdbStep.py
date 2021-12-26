@@ -40,13 +40,13 @@ class OdbStep:
     acousticMass: float = None
 
     # An OdbFrameArray object. 
-    frames: OdbFrameArray = None
+    frames: OdbFrameArray = OdbFrameArray()
 
     # A repository of HistoryRegion objects. 
-    historyRegions: Repository[str, HistoryRegion] = None
+    historyRegions: Repository[str, HistoryRegion] = Repository[str, HistoryRegion]()
 
     # A repository of OdbLoadCase objects. 
-    loadCases: Repository[str, OdbLoadCase] = None
+    loadCases: Repository[str, OdbLoadCase] = Repository[str, OdbLoadCase]()
 
     # A tuple of Floats specifying the coordinates of the center of mass. 
     massCenter: float = None
@@ -242,7 +242,7 @@ class OdbStep:
     def getFrame(self, *args, **kwargs):
         pass
 
-    def getHistoryRegion(self, point: HistoryPoint, loadCase: OdbLoadCase = None):
+    def getHistoryRegion(self, point: HistoryPoint, loadCase: OdbLoadCase = OdbLoadCase()):
         """This method retrieves a HistoryRegion object associated with a HistoryPoint in the
         model.
 

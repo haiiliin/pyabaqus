@@ -28,7 +28,7 @@ class AdaptivityProcess:
 
     # A repository of AdaptivityIteration objects specifying the AdaptivityIteration objects 
     # received during running the adaptivity process. 
-    iterations: Repository[str, AdaptivityIteration] = None
+    iterations: Repository[str, AdaptivityIteration] = Repository[str, AdaptivityIteration]()
 
     def __init__(self, name: str, job: ModelJob, maxIterations: int = 3, jobPrefix: str = ''):
         """This method creates an AdaptivityProcess object.

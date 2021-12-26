@@ -71,18 +71,19 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
 
     # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
     # for the isotropic hardening table. 
-    isotropicOptions: ConnectorOptions = None
+    isotropicOptions: ConnectorOptions = ConnectorOptions()
 
     # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
     # for the kinematic hardening table. 
-    kinematicOptions: ConnectorOptions = None
+    kinematicOptions: ConnectorOptions = ConnectorOptions()
 
     def __init__(self, coupling: SymbolicConstant = UNCOUPLED, isotropic: Boolean = ON, 
                  isotropicType: SymbolicConstant = TABULAR, isotropicTemperature: Boolean = OFF, 
                  isotropicDependencies: int = 0, kinematic: Boolean = OFF, 
                  kinematicType: SymbolicConstant = HALF_CYCLE, kinematicTemperature: Boolean = OFF, 
                  kinematicDependencies: int = 0, forcePotentialOperator: SymbolicConstant = SUM, 
-                 forcePotentialExponent: float = 2, connectorPotentials: ConnectorPotentialArray = None, 
+                 forcePotentialExponent: float = 2, 
+                 connectorPotentials: ConnectorPotentialArray = ConnectorPotentialArray(), 
                  isotropicTable: tuple = (), kinematicTable: tuple = (), components: tuple = ()):
         """This method creates a connector plasticity behavior option for a ConnectorSection
         object.

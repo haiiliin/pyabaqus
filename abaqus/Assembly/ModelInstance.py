@@ -31,30 +31,30 @@ class ModelInstance:
     # A repository of Set objects specifying the sets created on the assembly. For more 
     # information, see [Region 
     # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
-    sets: Repository[str, Set] = None
+    sets: Repository[str, Set] = Repository[str, Set]()
 
     # A repository of Surface objects specifying the surfaces created on the assembly. For 
     # more information, see [Region 
     # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
-    surfaces: Repository[str, Surface] = None
+    surfaces: Repository[str, Surface] = Repository[str, Surface]()
 
     # A VertexArray object. 
-    vertices: VertexArray = None
+    vertices: VertexArray = VertexArray()
 
     # An EdgeArray object. 
-    edges: EdgeArray = None
+    edges: EdgeArray = EdgeArray()
 
     # A MeshElementArray object. 
-    elements: MeshElementArray = None
+    elements: MeshElementArray = MeshElementArray()
 
     # A MeshNodeArray object. 
-    nodes: MeshNodeArray = None
+    nodes: MeshNodeArray = MeshNodeArray()
 
     # A repository of Datum objects. 
-    datums: Repository[str, Datum] = None
+    datums: Repository[str, Datum] = Repository[str, Datum]()
 
     # A repository of ReferencePoint objects. 
-    referencePoints: Repository[str, ReferencePoint] = None
+    referencePoints: Repository[str, ReferencePoint] = Repository[str, ReferencePoint]()
 
     def Instance(self, name: str, model: Model, autoOffset: Boolean = OFF):
         """This method creates a ModelInstance object and puts it into the instances repository.

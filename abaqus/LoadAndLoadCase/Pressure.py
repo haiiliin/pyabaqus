@@ -35,7 +35,7 @@ class Pressure(Load):
     field: str = ''
 
     # A Region object specifying the region to which the load is applied. 
-    region: Region = None
+    region: Region = Region()
 
     def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, hZero: float, 
                  hReference: float, field: str = '', refPoint: str = '', 

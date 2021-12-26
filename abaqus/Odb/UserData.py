@@ -46,29 +46,29 @@ class UserData:
 
     # A QuantityType object specifying the QuantityType object associated to the X -axis1- 
     # values. 
-    axis1QuantityType: QuantityType = None
+    axis1QuantityType: QuantityType = QuantityType()
 
     # A QuantityType object specifying the QuantityType object associated to the Y -axis2- 
     # values. 
-    axis2QuantityType: QuantityType = None
+    axis2QuantityType: QuantityType = QuantityType()
 
     # A String specifying the label to be used in the legend. The default value is the name of 
     # the XYData object. 
     legendLabel: str = ''
 
     # A repository of XYData objects. 
-    xyDataObjects: Repository[str, XYData] = None
+    xyDataObjects: Repository[str, XYData] = Repository[str, XYData]()
 
     # A repository of Annotation objects. 
-    annotations: Repository[str, Annotation] = None
+    annotations: Repository[str, Annotation] = Repository[str, Annotation]()
 
     # A tuple of pairs of Floats specifying the *X–Y* data pairs. 
     data: float = None
 
     def XYData(self, name: str, data: tuple, sourceDescription: str = '', contentDescription: str = '', 
                positionDescription: str = '', legendLabel: str = '', xValuesLabel: str = '', 
-               yValuesLabel: str = '', axis1QuantityType: QuantityType = None, 
-               axis2QuantityType: QuantityType = None):
+               yValuesLabel: str = '', axis1QuantityType: QuantityType = QuantityType(), 
+               axis2QuantityType: QuantityType = QuantityType()):
         """This method creates an XYData object from a sequence of *X–Y* data pairs.
 
         Path

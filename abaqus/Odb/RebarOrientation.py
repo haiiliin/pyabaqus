@@ -31,8 +31,8 @@ class RebarOrientation:
     angle: float = None
 
     # An OdbSet object specifying a region for which the rebar orientation is defined. 
-    region: OdbSet = None
+    region: OdbSet = OdbSet()
 
     # An OdbDatumCsys object specifying a datum coordinates system. 
-    csys: OdbDatumCsys = None
+    csys: OdbDatumCsys = OdbDatumCsys()
 

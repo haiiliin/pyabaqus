@@ -35,27 +35,27 @@ class ConstrainedSketch:
     """
 
     # A repository of ConstrainedSketchConstraint objects. 
-    constraints: Repository[str, ConstrainedSketchConstraint] = None
+    constraints: Repository[str, ConstrainedSketchConstraint] = Repository[str, ConstrainedSketchConstraint]()
 
     # A repository of ConstrainedSketchDimension objects. 
-    dimensions: Repository[str, ConstrainedSketchDimension] = None
+    dimensions: Repository[str, ConstrainedSketchDimension] = Repository[str, ConstrainedSketchDimension]()
 
     # A ConstrainedSketchGeometryArray object specifying the sketch geometry, such as lines, 
     # arcs, circles, and splines. 
-    geometry: ConstrainedSketchGeometryArray = None
+    geometry: ConstrainedSketchGeometryArray = ConstrainedSketchGeometryArray()
 
     # A repository of ConstrainedSketchParameter objects specifying sketch parameters, which 
     # may be associated with dimensions. 
-    parameters: Repository[str, ConstrainedSketchParameter] = None
+    parameters: Repository[str, ConstrainedSketchParameter] = Repository[str, ConstrainedSketchParameter]()
 
     # A ConstrainedSketchOptions object specifying the sketch option settings. 
-    sketchOptions: ConstrainedSketchOptions = None
+    sketchOptions: ConstrainedSketchOptions = ConstrainedSketchOptions()
 
     # A ConstrainedSketchVertexArray object. 
-    vertices: ConstrainedSketchVertexArray = None
+    vertices: ConstrainedSketchVertexArray = ConstrainedSketchVertexArray()
 
     # A ConstrainedSketchImageOptions object. 
-    imageOptions: ConstrainedSketchImageOptions = None
+    imageOptions: ConstrainedSketchImageOptions = ConstrainedSketchImageOptions()
 
     @typing.overload
     def __init__(self, name: str, sheetSize: float, gridSpacing: float = None, transform: tuple = ()):

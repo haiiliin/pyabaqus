@@ -2519,9 +2519,6 @@ required by ABAQUS that are not defined in C++
 """
 
 # imports
-import re as re  # D:\SIMULIA\Abaqus\6.14-4\tools\SMApy\python2.7\lib\re.pyc
-import sys as sys  # <module 'sys' (built-in)>
-import os as os  # D:\SIMULIA\Abaqus\6.14-4\tools\SMApy\python2.7\lib\os.pyc
 
 # Variables with simple values
 

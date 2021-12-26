@@ -42,50 +42,50 @@ class Chart:
 
     # A repository of XYCurve objects specifying a repository of XYCurve objects to display in 
     # the Chart. 
-    curves: Repository[str, XYCurve] = None
+    curves: Repository[str, XYCurve] = Repository[str, XYCurve]()
 
     # An AxisArray object specifying a read-only sequence of axis objects displayed as axes1 - 
     # the abscissa for a Cartesian chart. 
-    axes1: AxisArray = None
+    axes1: AxisArray = AxisArray()
 
     # An AxisArray object specifying a read-only sequence of axis objects displayed as axes2 - 
     # the ordinate for a Cartesian chart. 
-    axes2: AxisArray = None
+    axes2: AxisArray = AxisArray()
 
     # An Area object specifying position, padding, background and borders of the chart. 
-    area: Area = None
+    area: Area = Area()
 
     # An Area object specifying how to display the grid area. 
-    gridArea: Area = None
+    gridArea: Area = Area()
 
     # A Legend object specifying the attributes for the legend of the chart. 
-    legend: Legend = None
+    legend: Legend = Legend()
 
     # A LineStyle object specifying the line properties to be used when drawing major 
     # gridlines along axis 1. 
-    majorAxis1GridStyle: LineStyle = None
+    majorAxis1GridStyle: LineStyle = LineStyle()
 
     # A LineStyle object specifying the line properties to be used when drawing major 
     # gridlines along axis 2. 
-    majorAxis2GridStyle: LineStyle = None
+    majorAxis2GridStyle: LineStyle = LineStyle()
 
     # A LineStyle object specifying the line properties to be used when drawing minor 
     # gridlines along axis 1. 
-    minorAxis1GridStyle: LineStyle = None
+    minorAxis1GridStyle: LineStyle = LineStyle()
 
     # A LineStyle object specifying the line properties to be used when drawing minor 
     # gridlines along axis 2. 
-    minorAxis2GridStyle: LineStyle = None
+    minorAxis2GridStyle: LineStyle = LineStyle()
 
     # A TextStyle object specifying the text properties to be used when creating tags. 
-    tagTextStyle: TextStyle = None
+    tagTextStyle: TextStyle = TextStyle()
 
     # An AreaStyle object specifying the area properties to be used when creating tags. 
-    tagAreaStyle: AreaStyle = None
+    tagAreaStyle: AreaStyle = AreaStyle()
 
     # A LineStyle object specifying the tag area border properties to be used when creating 
     # tags. 
-    tagBorder: LineStyle = None
+    tagBorder: LineStyle = LineStyle()
 
     # A tuple of Floats specifying a transformation matrix used to scale or pan along the axes 
     # of the Chart. 
@@ -253,8 +253,8 @@ class Chart:
         """
         pass
 
-    def setValues(self, chart: 'Chart' = None, curvesToPlot: tuple[XYCurve] = (), aspectRatio: float = None, 
-                  transform: tuple = (), view: View = None, useQuantityType: Boolean = ON):
+    def setValues(self, chart: 'Chart' = Chart(), curvesToPlot: tuple[XYCurve] = (), aspectRatio: float = None, 
+                  transform: tuple = (), view: View = View(), useQuantityType: Boolean = ON):
         """This method modifies the Chart object.
 
         Parameters

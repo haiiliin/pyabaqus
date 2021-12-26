@@ -64,7 +64,7 @@ class Guess:
 
         defaults = {
             'int': 'None', 'float': 'None', 'Boolean': 'OFF', 'str': "''", 'tuple': '()', 'SymbolicConstant': 'None',
-            'Repository': 'None', 'dict': '{}'
+            'Repository': 'Repository()', 'dict': 'None'
         }
 
         userDefinedType = None
@@ -110,6 +110,6 @@ class Guess:
             elif argType.startswith('tuple'):
                 default = '()'
             else:
-                default = 'None'
+                default = '{}()'.format(argType)
 
         return argType, default, userDefinedType

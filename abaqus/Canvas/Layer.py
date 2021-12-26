@@ -1,7 +1,9 @@
+from .Displayable import Displayable
 from ..DisplayOptions.AssemblyDisplayOptions import AssemblyDisplayOptions
 from ..DisplayOptions.PartDisplayOptions import PartDisplayOptions
 from ..OdbDisplay.OdbDisplay import OdbDisplay
 from ..UtilityAndView.View import View
+
 
 class Layer:
 
@@ -22,19 +24,19 @@ class Layer:
     # A Displayable object specifying the object to be displayed. The Displayable type is an 
     # abstract generalization. The concrete possible types are Part, Assembly, 
     # ConstrainedSketch, Odb, or XYPlot. 
-    displayedObject: Displayable = None
+    displayedObject: Displayable = Displayable()
 
     # A View object specifying the object that controls viewing of the layer. 
-    view: View = None
+    view: View = View()
 
     # An OdbDisplay object specifying the display options for the Odb object. 
-    odbDisplay: OdbDisplay = None
+    odbDisplay: OdbDisplay = OdbDisplay()
 
     # A PartDisplayOptions object specifying the display options for the Part object. 
-    partDisplay: PartDisplayOptions = None
+    partDisplay: PartDisplayOptions = PartDisplayOptions()
 
     # An AssemblyDisplayOptions object specifying the display options for the Assembly object. 
-    assemblyDisplay: AssemblyDisplayOptions = None
+    assemblyDisplay: AssemblyDisplayOptions = AssemblyDisplayOptions()
 
     def __init__(self, name: str, copyViewName: str = ''):
         """This method creates a Layer object in the Layer repository.

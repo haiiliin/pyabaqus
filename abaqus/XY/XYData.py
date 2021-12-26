@@ -56,8 +56,8 @@ class XYData:
     @typing.overload
     def __init__(self, data: tuple, name: str = '', sourceDescription: str = '', contentDescription: str = '', 
                  positionDescription: str = '', legendLabel: str = '', xValuesLabel: str = '', 
-                 yValuesLabel: str = '', axis1QuantityType: QuantityType = None, 
-                 axis2QuantityType: QuantityType = None):
+                 yValuesLabel: str = '', axis1QuantityType: QuantityType = QuantityType(), 
+                 axis2QuantityType: QuantityType = QuantityType()):
         """This method creates an XYData object from a sequence of *X–Y* data pairs.
 
         Path
@@ -139,8 +139,9 @@ class XYData:
 
     def XYDataFromFile(self, fileName: str, name: str = '', sourceDescription: str = '', 
                        contentDescription: str = '', positionDescription: str = '', legendLabel: str = '', 
-                       xValuesLabel: str = '', yValuesLabel: str = '', axis1QuantityType: QuantityType = None, 
-                       axis2QuantityType: QuantityType = None, xField: int = 1, yField: int = 2, 
+                       xValuesLabel: str = '', yValuesLabel: str = '', 
+                       axis1QuantityType: QuantityType = QuantityType(), 
+                       axis2QuantityType: QuantityType = QuantityType(), xField: int = 1, yField: int = 2, 
                        skipFrequency: int = None):
         """This method creates an XYData object from data in an ASCII file.
 
@@ -606,8 +607,8 @@ class XYData:
 
     def setValues(self, sourceDescription: str = '', contentDescription: str = '', 
                   positionDescription: str = '', legendLabel: str = '', xValuesLabel: str = '', 
-                  yValuesLabel: str = '', axis1QuantityType: QuantityType = None, 
-                  axis2QuantityType: QuantityType = None):
+                  yValuesLabel: str = '', axis1QuantityType: QuantityType = QuantityType(), 
+                  axis2QuantityType: QuantityType = QuantityType()):
         """This method modifies the XYData object.
 
         Parameters

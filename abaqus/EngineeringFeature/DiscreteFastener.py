@@ -1,7 +1,9 @@
-from ..Region.Region import Region
-from .Fastener import Fastener
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .Fastener import Fastener
+from ..Region.Region import Region
+
 
 class DiscreteFastener(Fastener):
 

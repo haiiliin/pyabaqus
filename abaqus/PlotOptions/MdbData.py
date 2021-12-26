@@ -27,9 +27,9 @@ class MdbData:
 
     # A repository of MdbDataStep objects specifying the list of steps. The repository is 
     # read-only. 
-    steps: Repository[str, MdbDataStep] = None
+    steps: Repository[str, MdbDataStep] = Repository[str, MdbDataStep]()
 
     # A repository of MdbDataInstance objects specifying the list of instances. The repository 
     # is read-only. 
-    instances: Repository[str, MdbDataInstance] = None
+    instances: Repository[str, MdbDataInstance] = Repository[str, MdbDataInstance]()
 

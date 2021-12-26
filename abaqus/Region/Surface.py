@@ -36,16 +36,16 @@ class Surface:
     """
 
     # An EdgeArray object. 
-    edges: EdgeArray = None
+    edges: EdgeArray = EdgeArray()
 
     # A FaceArray object. 
-    faces: FaceArray = None
+    faces: FaceArray = FaceArray()
 
     # A MeshElementArray object. 
-    elements: MeshElementArray = None
+    elements: MeshElementArray = MeshElementArray()
 
     # A MeshNodeArray object. 
-    nodes: MeshNodeArray = None
+    nodes: MeshNodeArray = MeshNodeArray()
 
     # A tuple of SymbolicConstants specifying the sides; for example, (SIDE1, SIDE2). 
     sides: SymbolicConstant = None

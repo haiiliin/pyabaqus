@@ -47,7 +47,7 @@ class ConcentratedForce(Load):
     field: str = ''
 
     # A Region object specifying the region to which the load is applied. 
-    region: Region = None
+    region: Region = Region()
 
     def __init__(self, name: str, createStepName: str, region: Region, 
                  distributionType: SymbolicConstant = UNIFORM, field: str = '', cf1: float = None, 
@@ -154,9 +154,11 @@ class ConcentratedForce(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, cf1: typing.Union[SymbolicConstant,float] = None, 
-                        cf2: typing.Union[SymbolicConstant,float] = None, 
-                        cf3: typing.Union[SymbolicConstant,float] = None, amplitude: str = ''):
+    def setValuesInStep(self, stepName: str, 
+                        cf1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        cf2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        cf3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        amplitude: str = ''):
         """This method modifies the propagating data for an existing ConcentratedForce object in
         the specified step.
 

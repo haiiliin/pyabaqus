@@ -37,7 +37,7 @@ class FieldOutput:
     isComplex: Boolean = OFF
 
     # A FieldLocationArray object. 
-    locations: FieldLocationArray = None
+    locations: FieldLocationArray = FieldLocationArray()
 
     # A FieldValueArray object specifying the order of the objects in the array is determined 
     # by the Abaqus Scripting Interface; see the *data* argument to the addData method for a 
@@ -126,7 +126,7 @@ class FieldOutput:
 
     @typing.overload
     def addData(self, position: SymbolicConstant, instance: OdbInstance, labels: tuple, data: tuple, 
-                sectionPoint: SectionPoint = None, localCoordSystem: tuple = ()):
+                sectionPoint: SectionPoint = SectionPoint(), localCoordSystem: tuple = ()):
         """This method adds data to a FieldOutput object.
 
         Parameters
@@ -211,8 +211,8 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def addData(self, position: SymbolicConstant, set: OdbSet, data: tuple, sectionPoint: SectionPoint = None, 
-                conjugateData: float = None):
+    def addData(self, position: SymbolicConstant, set: OdbSet, data: tuple, 
+                sectionPoint: SectionPoint = SectionPoint(), conjugateData: float = None):
         """This method adds data to a FieldOutput object.
 
         Parameters
@@ -398,7 +398,7 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def getSubset(self, sectionPoint: SectionPoint = None):
+    def getSubset(self, sectionPoint: SectionPoint = SectionPoint()):
         """A FieldOutput object with a subset of the field values.
 
         Parameters
@@ -417,7 +417,7 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def getSubset(self, location: FieldLocation = None):
+    def getSubset(self, location: FieldLocation = FieldLocation()):
         """A FieldOutput object with a subset of the field values.
 
         Parameters
@@ -552,8 +552,8 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def getTransformedField(self, datumCsys: str, deformationField: 'FieldOutput' = None, projected22Axis: int = None, 
-                            projectionTol: str = ''):
+    def getTransformedField(self, datumCsys: str, deformationField: 'FieldOutput' = FieldOutput(), 
+                            projected22Axis: int = None, projectionTol: str = ''):
         """This method generates a new vector or tensor field containing the transformed component
         values of the parent field. The new field will hold values for the same nodes or
         elements as the parent field. Results will be transformed based on the orientations
@@ -592,8 +592,8 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def getTransformedField(self, datumCsys: str, deformationField: 'FieldOutput' = None, 
-                            rotationField: 'FieldOutput' = None, projected22Axis: int = None, 
+    def getTransformedField(self, datumCsys: str, deformationField: 'FieldOutput' = FieldOutput(), 
+                            rotationField: 'FieldOutput' = FieldOutput(), projected22Axis: int = None, 
                             projectionTol: str = ''):
         """This method generates a new vector or tensor field containing the transformed component
         values of the parent field. The new field will hold values for the same nodes or
@@ -639,7 +639,7 @@ class FieldOutput:
     def getTransformedField(self, *args, **kwargs):
         pass
 
-    def getConnectorFieldXformedToNodeA(self, deformationField: 'FieldOutput' = None):
+    def getConnectorFieldXformedToNodeA(self, deformationField: 'FieldOutput' = FieldOutput()):
         """This method generates a new vector field containing the transformed component values of
         the parent connector field to the node A coordinate system. The new field will hold
         values for the same connector elements as the parent field. Some connection types such

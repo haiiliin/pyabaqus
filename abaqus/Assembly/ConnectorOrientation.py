@@ -23,8 +23,8 @@ class ConnectorOrientation:
 
     """
 
-    def __init__(self, region: Set, localCsys1: DatumCsys = None, axis1: SymbolicConstant = AXIS_1, 
-                 angle1: float = 0, orient2sameAs1: Boolean = ON, localCsys2: DatumCsys = None, 
+    def __init__(self, region: Set, localCsys1: DatumCsys = DatumCsys(), axis1: SymbolicConstant = AXIS_1, 
+                 angle1: float = 0, orient2sameAs1: Boolean = ON, localCsys2: DatumCsys = DatumCsys(), 
                  axis2: SymbolicConstant = AXIS_1, angle2: float = 0):
         """This method creates a ConnectorOrientation object.
 

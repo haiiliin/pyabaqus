@@ -24,7 +24,8 @@ class TopologyOverhangControl(GeometricRestriction):
 
     def __init__(self, name: str, pullDirection: tuple, region: Region, csys: int = None, 
                  draftAngle: float = 45, overhangCheckRegion: SymbolicConstant = OVERHANG_REGION, 
-                 pointRegion: Region = None, radius: float = None, technique: SymbolicConstant = AUTO):
+                 pointRegion: Region = Region(), radius: float = None, 
+                 technique: SymbolicConstant = AUTO):
         """This method creates a TopologyOverhangControl object.
 
         Path
@@ -74,7 +75,7 @@ class TopologyOverhangControl(GeometricRestriction):
         pass
 
     def setValues(self, csys: int = None, draftAngle: float = 45, 
-                  overhangCheckRegion: SymbolicConstant = OVERHANG_REGION, pointRegion: Region = None, 
+                  overhangCheckRegion: SymbolicConstant = OVERHANG_REGION, pointRegion: Region = Region(), 
                   radius: float = None, technique: SymbolicConstant = AUTO):
         """This method modifies the TopologyOverhangControl object.
 

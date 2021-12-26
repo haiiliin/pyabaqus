@@ -21,7 +21,7 @@ class OdbDiagnosticIncrement:
     """
 
     # A repository of OdbDiagnosticAttempt objects. 
-    attempts: Repository[str, OdbDiagnosticAttempt] = None
+    attempts: Repository[str, OdbDiagnosticAttempt] = Repository[str, OdbDiagnosticAttempt]()
 
     # A float specifying the size of the initial increment. This attribute is read-only. 
     initialSize: str = ''

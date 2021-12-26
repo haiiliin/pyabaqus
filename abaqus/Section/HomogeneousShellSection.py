@@ -28,10 +28,10 @@ class HomogeneousShellSection(GeometryShellSection):
     """
 
     # A RebarLayers object specifying reinforcement properties. 
-    rebarLayers: RebarLayers = None
+    rebarLayers: RebarLayers = RebarLayers()
 
     # A TransverseShearShell object specifying the transverse shear stiffness properties. 
-    transverseShear: TransverseShearShell = None
+    transverseShear: TransverseShearShell = TransverseShearShell()
 
     def __init__(self, name: str, material: str, thickness: float = 0, numIntPts: int = 5, 
                  thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF, 

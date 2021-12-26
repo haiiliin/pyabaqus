@@ -44,15 +44,15 @@ class SurfaceToSurfaceContactStd(Interaction):
                  interferenceDirectionType: SymbolicConstant = COMPUTED, direction: tuple = (), 
                  amplitude: str = '', smooth: float = 0, hcrit: float = 0, extensionZone: float = 0, 
                  adjustMethod: SymbolicConstant = NONE, adjustTolerance: float = 0, 
-                 adjustSet: Region = None, enforcement: SymbolicConstant = SURFACE_TO_SURFACE, 
+                 adjustSet: Region = Region(), enforcement: SymbolicConstant = SURFACE_TO_SURFACE, 
                  thickness: Boolean = ON, contactControls: str = '', tied: Boolean = OFF, 
                  initialClearance: typing.Union[SymbolicConstant,float] = OMIT, 
                  halfThreadAngle: str = None, pitch: str = None, 
                  majorBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
                  meanBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
-                 datumAxis: DatumAxis = None, useReverseDatumAxis: Boolean = OFF, 
-                 clearanceRegion: Region = None, surfaceSmoothing: SymbolicConstant = NONE, 
-                 bondingSet: Region = None, handedness: SymbolicConstant = RIGHT, 
+                 datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF, 
+                 clearanceRegion: Region = Region(), surfaceSmoothing: SymbolicConstant = NONE, 
+                 bondingSet: Region = Region(), handedness: SymbolicConstant = RIGHT, 
                  normalAdjustment: SymbolicConstant = None):
         """This method creates a SurfaceToSurfaceContactStd object.
 
@@ -204,15 +204,15 @@ class SurfaceToSurfaceContactStd(Interaction):
                   interferenceDirectionType: SymbolicConstant = COMPUTED, direction: tuple = (), 
                   amplitude: str = '', smooth: float = 0, hcrit: float = 0, extensionZone: float = 0, 
                   adjustMethod: SymbolicConstant = NONE, adjustTolerance: float = 0, 
-                  adjustSet: Region = None, enforcement: SymbolicConstant = SURFACE_TO_SURFACE, 
+                  adjustSet: Region = Region(), enforcement: SymbolicConstant = SURFACE_TO_SURFACE, 
                   thickness: Boolean = ON, contactControls: str = '', tied: Boolean = OFF, 
                   initialClearance: typing.Union[SymbolicConstant,float] = OMIT, 
                   halfThreadAngle: str = None, pitch: str = None, 
                   majorBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
                   meanBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
-                  datumAxis: DatumAxis = None, useReverseDatumAxis: Boolean = OFF, 
-                  clearanceRegion: Region = None, surfaceSmoothing: SymbolicConstant = NONE, 
-                  bondingSet: Region = None, handedness: SymbolicConstant = RIGHT, 
+                  datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF, 
+                  clearanceRegion: Region = Region(), surfaceSmoothing: SymbolicConstant = NONE, 
+                  bondingSet: Region = Region(), handedness: SymbolicConstant = RIGHT, 
                   normalAdjustment: SymbolicConstant = None):
         """This method modifies the data for an existing SurfaceToSurfaceContactStd object in the
         step where it is created.

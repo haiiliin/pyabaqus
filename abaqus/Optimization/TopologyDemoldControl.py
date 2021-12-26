@@ -23,7 +23,7 @@ class TopologyDemoldControl(GeometricRestriction):
     """
 
     def __init__(self, name: str, region: Region, csys: int = None, draftAngle: float = 0, 
-                 collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, pointRegion: Region = None, 
+                 collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, pointRegion: Region = Region(), 
                  pullDirection: tuple = (), technique: SymbolicConstant = AUTO):
         """This method creates a TopologyDemoldControl object.
 
@@ -72,7 +72,7 @@ class TopologyDemoldControl(GeometricRestriction):
         pass
 
     def setValues(self, csys: int = None, draftAngle: float = 0, 
-                  collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, pointRegion: Region = None, 
+                  collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, pointRegion: Region = Region(), 
                   pullDirection: tuple = (), technique: SymbolicConstant = AUTO):
         """This method modifies the TopologyDemoldControl object.
 

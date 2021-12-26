@@ -209,13 +209,13 @@ class DamageInitiation:
     table: float = None
 
     # A DamageEvolution object. 
-    damageEvolution: DamageEvolution = None
+    damageEvolution: DamageEvolution = DamageEvolution()
 
     # A DamageStabilization object. 
-    damageStabilization: DamageStabilization = None
+    damageStabilization: DamageStabilization = DamageStabilization()
 
     # A DamageStabilizationCohesive object. 
-    damageStabilizationCohesive: DamageStabilizationCohesive = None
+    damageStabilizationCohesive: DamageStabilizationCohesive = DamageStabilizationCohesive()
 
     def DuctileDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10, fnn: float = 10, 
                                 fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4, 

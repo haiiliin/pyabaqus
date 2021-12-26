@@ -20,7 +20,7 @@ class ElementProgressiveActivation:
 
     """
 
-    def __init__(self, name: str, elset: Region = None, deformation: Boolean = OFF, 
+    def __init__(self, name: str, elset: Region = Region(), deformation: Boolean = OFF, 
                  freeSurfaceType: SymbolicConstant = NONE):
         """This method creates an ElementProgressiveActivation object and places it in the
         elementProgressiveActivation repository.

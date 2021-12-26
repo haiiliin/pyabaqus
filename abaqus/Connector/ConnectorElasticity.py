@@ -58,7 +58,7 @@ class ConnectorElasticity(ConnectorBehaviorOption):
 
     # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
     # for this ConnectorBehaviorOption. 
-    options: ConnectorOptions = None
+    options: ConnectorOptions = ConnectorOptions()
 
     def __init__(self, behavior: SymbolicConstant = LINEAR, coupling: SymbolicConstant = UNCOUPLED, 
                  dependencies: int = 0, temperatureDependency: Boolean = OFF, 

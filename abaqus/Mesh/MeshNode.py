@@ -52,7 +52,7 @@ class MeshNode:
     # A tuple of three Floats specifying the coordinates of the new node. 
     coordinates: float = None
 
-    def Node(self, coordinates: tuple, localCsys: DatumCsys = None, label: int = None):
+    def Node(self, coordinates: tuple, localCsys: DatumCsys = DatumCsys(), label: int = None):
         """This method creates a node on an orphan mesh part.
 
         Path

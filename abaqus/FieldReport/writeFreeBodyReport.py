@@ -15,7 +15,7 @@ Corresponding analysis keywords
 """
 
 def writeFreeBodyRepor(fileName: str, append: Boolean, step: int = None, frame: int = None, 
-                       stepFrame: SymbolicConstant = SPECIFY, odb: Odb = None):
+                       stepFrame: SymbolicConstant = SPECIFY, odb: Odb = Odb()):
     """This method writes a FreeBody object to a user-defined ASCII file.
 
     Path

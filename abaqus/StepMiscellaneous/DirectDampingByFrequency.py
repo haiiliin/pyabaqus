@@ -18,5 +18,5 @@ class DirectDampingByFrequency:
     """
 
     # A DirectDampingByFrequencyComponentArray object. 
-    components: DirectDampingByFrequencyComponentArray = None
+    components: DirectDampingByFrequencyComponentArray = DirectDampingByFrequencyComponentArray()
 

@@ -59,84 +59,84 @@ class Assembly:
 
     # A VertexArray object specifying all the vertices existing at the assembly level. This 
     # member does not provide access to the vertices at the instance level. 
-    vertices: VertexArray = None
+    vertices: VertexArray = VertexArray()
 
     # An EdgeArray object specifying all the edges existing at the assembly level. This member 
     # does not provide access to the edges at the instance level. 
-    edges: EdgeArray = None
+    edges: EdgeArray = EdgeArray()
 
     # A MeshElementArray object specifying all the elements existing at the assembly level. 
     # This member does not provide access to the elements at the instance level. 
-    elements: MeshElementArray = None
+    elements: MeshElementArray = MeshElementArray()
 
     # A MeshNodeArray object specifying all the nodes existing at the assembly level. This 
     # member does not provide access to the nodes at the instance level. 
-    nodes: MeshNodeArray = None
+    nodes: MeshNodeArray = MeshNodeArray()
 
     # A repository of PartInstance objects. 
-    instances: Repository[str, PartInstance] = None
+    instances: Repository[str, PartInstance] = Repository[str, PartInstance]()
 
     # A repository of Datum objects specifying all Datum objects in the assembly. 
-    datums: Repository[str, Datum] = None
+    datums: Repository[str, Datum] = Repository[str, Datum]()
 
     # A repository of Feature objects specifying all Feature objects in the assembly. 
-    features: Repository[str, Feature] = None
+    features: Repository[str, Feature] = Repository[str, Feature]()
 
     # A repository of Feature objects specifying all Feature objects in the assembly.The 
     # Feature objects in the featuresById repository are the same as the Feature objects in 
     # the features repository. However, the key to the objects in the featuresById repository 
     # is an integer specifying the *ID*, whereas the key to the objects in the features 
     # repository is a string specifying the *name*. 
-    featuresById: Repository[str, Feature] = None
+    featuresById: Repository[str, Feature] = Repository[str, Feature]()
 
     # A repository of Surface objects specifying for more information, see [Region 
     # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
-    surfaces: Repository[str, Surface] = None
+    surfaces: Repository[str, Surface] = Repository[str, Surface]()
 
     # A repository of Surface objects specifying for more information, see [Region 
     # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
-    allSurfaces: Repository[str, Surface] = None
+    allSurfaces: Repository[str, Surface] = Repository[str, Surface]()
 
     # A repository of Surface objects specifying picked regions. 
-    allInternalSurfaces: Repository[str, Surface] = None
+    allInternalSurfaces: Repository[str, Surface] = Repository[str, Surface]()
 
     # A repository of Set objects. 
-    sets: Repository[str, Set] = None
+    sets: Repository[str, Set] = Repository[str, Set]()
 
     # A repository of Set objects specifying for more information, see [Region 
     # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
-    allSets: Repository[str, Set] = None
+    allSets: Repository[str, Set] = Repository[str, Set]()
 
     # A repository of Set objects specifying picked regions. 
-    allInternalSets: Repository[str, Set] = None
+    allInternalSets: Repository[str, Set] = Repository[str, Set]()
 
     # A repository of Skin objects specifying the skins created on the assembly. 
-    skins: Repository[str, Skin] = None
+    skins: Repository[str, Skin] = Repository[str, Skin]()
 
     # A repository of Stringer objects specifying the stringers created on the assembly. 
-    stringers: Repository[str, Stringer] = None
+    stringers: Repository[str, Stringer] = Repository[str, Stringer]()
 
     # A repository of ReferencePoint objects. 
-    referencePoints: Repository[str, ReferencePoint] = None
+    referencePoints: Repository[str, ReferencePoint] = Repository[str, ReferencePoint]()
 
     # A repository of ModelInstance objects. 
-    modelInstances: Repository[str, ModelInstance] = None
+    modelInstances: Repository[str, ModelInstance] = Repository[str, ModelInstance]()
 
     # A PartInstance object specifying the PartInstances and A ModelInstance object specifying 
     # the ModelInstances. 
-    allinstances: PartInstance = None
+    allinstances: PartInstance = PartInstance()
 
     # An EngineeringFeature object. 
-    engineeringFeatures: EngineeringFeature = None
+    engineeringFeatures: EngineeringFeature = EngineeringFeature()
 
     # A String specifying the name of the model to which the assembly belongs. 
     modelName: str = ''
 
     # A ConnectorOrientationArray object. 
-    connectorOrientations: ConnectorOrientationArray = None
+    connectorOrientations: ConnectorOrientationArray = ConnectorOrientationArray()
 
     # A SectionAssignmentArray object. 
-    sectionAssignments: SectionAssignmentArray = None
+    sectionAssignments: SectionAssignmentArray = SectionAssignmentArray()
 
     def backup(self):
         """This method makes a backup copy of the features in the assembly. The backup() method is
@@ -702,7 +702,7 @@ class Assembly:
         """
         pass
 
-    def projectReferencesOntoSketch(self, sketch: str, filter: SymbolicConstant = ALL_EDGES, upToFeature: Feature = None, 
+    def projectReferencesOntoSketch(self, sketch: str, filter: SymbolicConstant = ALL_EDGES, upToFeature: Feature = Feature(), 
                                     edges: tuple = (), vertices: tuple = ()):
         """This method projects the specified edges, vertices, and datum points from the assembly
         onto the specified ConstrainedSketch object. The edges, vertices, and datum points
@@ -1092,7 +1092,7 @@ class Assembly:
         pass
 
     def copyMeshPattern(self, elements: tuple[MeshElement] = (), faces: tuple[Face] = (), 
-                        elemFaces: tuple[MeshFace] = (), targetFace: MeshFace = None, 
+                        elemFaces: tuple[MeshFace] = (), targetFace: MeshFace = MeshFace(), 
                         nodes: tuple[MeshNode] = (), coordinates: tuple = ()):
         """This method copies a mesh pattern from a source region consisting of a set of shell
         elements or element faces onto a target face, mapping nodes and elements in a one-one

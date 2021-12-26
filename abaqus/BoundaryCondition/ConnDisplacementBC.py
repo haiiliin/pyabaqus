@@ -57,7 +57,7 @@ class ConnDisplacementBC(BoundaryCondition):
     category: SymbolicConstant = None
 
     # A Region object specifying the region to which the boundary condition is applied. 
-    region: Region = None
+    region: Region = Region()
 
     # None or a DatumCsys object specifying the local coordinate system of the boundary 
     # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
@@ -230,13 +230,14 @@ class ConnDisplacementBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, u1: typing.Union[SymbolicConstant,float] = None, 
-                        u2: typing.Union[SymbolicConstant,float] = None, 
-                        u3: typing.Union[SymbolicConstant,float] = None, 
-                        ur1: typing.Union[SymbolicConstant,float] = None, 
-                        ur2: typing.Union[SymbolicConstant,float] = None, 
-                        ur3: typing.Union[SymbolicConstant,float] = None, amplitude: str = '', 
-                        buckleCase: SymbolicConstant = NOT_APPLICABLE):
+    def setValuesInStep(self, stepName: str, 
+                        u1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        u2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        u3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        ur1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        ur2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        ur3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        amplitude: str = '', buckleCase: SymbolicConstant = NOT_APPLICABLE):
         """This method modifies the propagating data for an existing ConnDisplacementBC object in
         the specified step.
 

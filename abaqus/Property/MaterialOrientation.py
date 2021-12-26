@@ -37,17 +37,18 @@ class MaterialOrientation:
     # rotation. The default value is an empty string. 
     additionalRotationField: str = ''
 
-    def __init__(self, region: Set = None, localCsys: DatumCsys = None, axis: SymbolicConstant = AXIS_1, 
-                 angle: float = 0, stackDirection: SymbolicConstant = STACK_3, fieldName: str = '', 
+    def __init__(self, region: Set = Set(), localCsys: DatumCsys = DatumCsys(), 
+                 axis: SymbolicConstant = AXIS_1, angle: float = 0, 
+                 stackDirection: SymbolicConstant = STACK_3, fieldName: str = '', 
                  orientationType: SymbolicConstant = GLOBAL, 
                  normalAxisDirection: SymbolicConstant = AXIS_3, 
                  normalAxisDefinition: SymbolicConstant = NORMAL_VECTOR, 
-                 normalAxisRegion: Surface = None, normalAxisDatum: DatumAxis = None, 
+                 normalAxisRegion: Surface = Surface(), normalAxisDatum: DatumAxis = DatumAxis(), 
                  flipNormalDirection: Boolean = OFF, normalAxisVector: tuple = (), 
                  primaryAxisDirection: SymbolicConstant = AXIS_1, 
-                 primaryAxisDefinition: SymbolicConstant = PRIMARY_VECTOR, primaryAxisRegion: Set = None, 
-                 primaryAxisDatum: DatumAxis = None, flipPrimaryDirection: Boolean = OFF, 
-                 primaryAxisVector: tuple = ()):
+                 primaryAxisDefinition: SymbolicConstant = PRIMARY_VECTOR, 
+                 primaryAxisRegion: Set = Set(), primaryAxisDatum: DatumAxis = DatumAxis(), 
+                 flipPrimaryDirection: Boolean = OFF, primaryAxisVector: tuple = ()):
         """This method creates a MaterialOrientation object.
 
         Path
@@ -132,16 +133,16 @@ class MaterialOrientation:
         """
         pass
 
-    def ReferenceOrientation(self, localCsys: DatumCsys = None, axis: SymbolicConstant = AXIS_1, angle: float = 0, 
+    def ReferenceOrientation(self, localCsys: DatumCsys = DatumCsys(), axis: SymbolicConstant = AXIS_1, angle: float = 0, 
                              stackDirection: SymbolicConstant = STACK_3, fieldName: str = '', 
                              orientationType: SymbolicConstant = GLOBAL, additionalRotationField: str = '', 
                              additionalRotationType: SymbolicConstant = ROTATION_NONE, 
                              normalAxisDirection: SymbolicConstant = AXIS_3, 
-                             normalAxisDefinition: SymbolicConstant = VECTOR, normalAxisRegion: Surface = None, 
-                             normalAxisDatum: DatumAxis = None, flipNormalDirection: Boolean = OFF, 
+                             normalAxisDefinition: SymbolicConstant = VECTOR, normalAxisRegion: Surface = Surface(), 
+                             normalAxisDatum: DatumAxis = DatumAxis(), flipNormalDirection: Boolean = OFF, 
                              normalAxisVector: tuple = (), primaryAxisDirection: SymbolicConstant = AXIS_1, 
-                             primaryAxisDefinition: SymbolicConstant = VECTOR, primaryAxisRegion: Set = None, 
-                             primaryAxisDatum: DatumAxis = None, flipPrimaryDirection: Boolean = OFF, 
+                             primaryAxisDefinition: SymbolicConstant = VECTOR, primaryAxisRegion: Set = Set(), 
+                             primaryAxisDatum: DatumAxis = DatumAxis(), flipPrimaryDirection: Boolean = OFF, 
                              primaryAxisVector: tuple = ()):
         """This method creates a MaterialOrientation object.
 

@@ -28,7 +28,7 @@ class DerivedComponent:
     """
 
     # A CDCTermArray object. 
-    cdcTerms: CDCTermArray = None
+    cdcTerms: CDCTermArray = CDCTermArray()
 
     def __init__(self):
         """This method creates a DerivedComponent object.

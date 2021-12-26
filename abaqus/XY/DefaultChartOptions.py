@@ -26,12 +26,14 @@ class DefaultChartOptions:
 
     """
 
-    def setValues(self, areaStyle: AreaStyle = None, aspectRatio: float = None, 
-                  defaultAxis1Options: Axis = None, defaultAxis2Options: Axis = None, 
-                  gridArea: Area = None, legend: Legend = None, majorAxis1GridStyle: LineStyle = None, 
-                  majorAxis2GridStyle: LineStyle = None, minorAxis1GridStyle: LineStyle = None, 
-                  minorAxis2GridStyle: LineStyle = None, tagAreaStyle: AreaStyle = None, 
-                  tagBorder: LineStyle = None, tagTextStyle: TextStyle = None, 
+    def setValues(self, areaStyle: AreaStyle = AreaStyle(), aspectRatio: float = None, 
+                  defaultAxis1Options: Axis = Axis(), defaultAxis2Options: Axis = Axis(), 
+                  gridArea: Area = Area(), legend: Legend = Legend(), 
+                  majorAxis1GridStyle: LineStyle = LineStyle(), 
+                  majorAxis2GridStyle: LineStyle = LineStyle(), 
+                  minorAxis1GridStyle: LineStyle = LineStyle(), 
+                  minorAxis2GridStyle: LineStyle = LineStyle(), tagAreaStyle: AreaStyle = AreaStyle(), 
+                  tagBorder: LineStyle = LineStyle(), tagTextStyle: TextStyle = TextStyle(), 
                   useQuantityType: Boolean = ON):
         """This method modifies the DefaultChartOptions object.
 

@@ -33,41 +33,42 @@ class OdbAssembly:
     """
 
     # A repository of OdbInstance objects. 
-    instances: Repository[str, OdbInstance] = None
+    instances: Repository[str, OdbInstance] = Repository[str, OdbInstance]()
 
     # A repository of OdbSet objects specifying node sets. 
-    nodeSets: Repository[str, OdbSet] = None
+    nodeSets: Repository[str, OdbSet] = Repository[str, OdbSet]()
 
     # A repository of OdbSet objects specifying element sets. 
-    elementSets: Repository[str, OdbSet] = None
+    elementSets: Repository[str, OdbSet] = Repository[str, OdbSet]()
 
     # A repository of OdbSet objects specifying surfaces. 
-    surfaces: Repository[str, OdbSet] = None
+    surfaces: Repository[str, OdbSet] = Repository[str, OdbSet]()
 
     # An OdbMeshNodeArray object. 
-    nodes: OdbMeshNodeArray = None
+    nodes: OdbMeshNodeArray = OdbMeshNodeArray()
 
     # An OdbMeshElementArray object. 
-    elements: OdbMeshElementArray = None
+    elements: OdbMeshElementArray = OdbMeshElementArray()
 
     # A repository of OdbDatumCsys objects. 
-    datumCsyses: Repository[str, OdbDatumCsys] = None
+    datumCsyses: Repository[str, OdbDatumCsys] = Repository[str, OdbDatumCsys]()
 
     # A SectionAssignmentArray object. 
-    sectionAssignments: SectionAssignmentArray = None
+    sectionAssignments: SectionAssignmentArray = SectionAssignmentArray()
 
     # An OdbRigidBodyArray object. 
-    rigidBodies: OdbRigidBodyArray = None
+    rigidBodies: OdbRigidBodyArray = OdbRigidBodyArray()
 
     # An OdbPretensionSectionArray object. 
-    pretensionSections: OdbPretensionSectionArray = None
+    pretensionSections: OdbPretensionSectionArray = OdbPretensionSectionArray()
 
     # A ConnectorOrientationArray object. 
-    connectorOrientations: ConnectorOrientationArray = None
+    connectorOrientations: ConnectorOrientationArray = ConnectorOrientationArray()
 
-    def ConnectorOrientation(self, region: str, localCsys1: OdbDatumCsys = None, axis1: SymbolicConstant = AXIS_1, 
-                             angle1: float = 0, orient2sameAs1: Boolean = OFF, localCsys2: OdbDatumCsys = None, 
-                             axis2: SymbolicConstant = AXIS_1, angle2: float = 0):
+    def ConnectorOrientation(self, region: str, localCsys1: OdbDatumCsys = OdbDatumCsys(), 
+                             axis1: SymbolicConstant = AXIS_1, angle1: float = 0, orient2sameAs1: Boolean = OFF, 
+                             localCsys2: OdbDatumCsys = OdbDatumCsys(), axis2: SymbolicConstant = AXIS_1, 
+                             angle2: float = 0):
         """This method assigns a connector orientation to a connector region.
 
         Parameters
@@ -132,7 +133,7 @@ class OdbAssembly:
         pass
 
     def addElements(self, labels: tuple, connectivity: tuple, instanceNames: tuple, type: str, 
-                    elementSetName: str = '', sectionCategory: SectionCategory = None):
+                    elementSetName: str = '', sectionCategory: SectionCategory = SectionCategory()):
         """This method is used to define elements using nodes defined at the OdbAssembly and/or
         OdbInstance level. For connector elements connected to ground, specify the lone node in
         the connectivity. The position of the ground node cannot be specified. This is a

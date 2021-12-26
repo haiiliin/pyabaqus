@@ -36,10 +36,10 @@ class Gravity(Load):
     field: str = ''
 
     # A Region object specifying the region to which the load is applied. 
-    region: Region = None
+    region: Region = Region()
 
     def __init__(self, name: str, createStepName: str, distributionType: SymbolicConstant = UNIFORM, 
-                 field: str = '', region: Region = None, comp1: float = None, comp2: float = None, 
+                 field: str = '', region: Region = Region(), comp1: float = None, comp2: float = None, 
                  comp3: float = None, amplitude: str = UNSET):
         """This method creates a Gravity object.
 
@@ -86,8 +86,9 @@ class Gravity(Load):
         super().__init__()
         pass
 
-    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', region: Region = None, 
-                  comp1: float = None, comp2: float = None, comp3: float = None, amplitude: str = UNSET):
+    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', 
+                  region: Region = Region(), comp1: float = None, comp2: float = None, 
+                  comp3: float = None, amplitude: str = UNSET):
         """This method modifies the data for an existing Gravity object in the step where it is
         created.
 
@@ -125,9 +126,11 @@ class Gravity(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, comp1: typing.Union[SymbolicConstant,float] = None, 
-                        comp2: typing.Union[SymbolicConstant,float] = None, 
-                        comp3: typing.Union[SymbolicConstant,float] = None, amplitude: str = ''):
+    def setValuesInStep(self, stepName: str, 
+                        comp1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        comp2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        comp3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        amplitude: str = ''):
         """This method modifies the propagating data for an existing Gravity object in the
         specified step.
 

@@ -18,5 +18,5 @@ class StructuralDampingByFrequency:
     """
 
     # A StructuralDampingByFrequencyComponentArray object. 
-    components: StructuralDampingByFrequencyComponentArray = None
+    components: StructuralDampingByFrequencyComponentArray = StructuralDampingByFrequencyComponentArray()
 

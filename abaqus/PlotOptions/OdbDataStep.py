@@ -20,7 +20,7 @@ class OdbDataStep:
     """
 
     # An OdbDataFrameArray object specifying the list of frames. The list is read-only. 
-    frames: OdbDataFrameArray = None
+    frames: OdbDataFrameArray = OdbDataFrameArray()
 
     def setValues(self, activateFrames: Boolean, update: Boolean = OFF):
         """This method modifies the OdbDataStep object.

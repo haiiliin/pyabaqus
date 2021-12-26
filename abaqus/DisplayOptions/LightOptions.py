@@ -58,7 +58,7 @@ class LightOptions:
     materialShininess: float = 105
 
     # A LightArray object of length 8. 
-    lights: LightArray = None
+    lights: LightArray = LightArray()
 
     # A String specifying the light applied evenly to the entire scene independent of any 
     # individual light. The initial value is 20% gray. A list of valid color strings is in the 

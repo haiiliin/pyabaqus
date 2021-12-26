@@ -118,10 +118,10 @@ class FieldValue:
     outOfPlanePrincipal: float = None
 
     # An OdbInstance object specifying the part to which the labels belong. 
-    instance: OdbInstance = None
+    instance: OdbInstance = OdbInstance()
 
     # A SectionPoint object. 
-    sectionPoint: SectionPoint = None
+    sectionPoint: SectionPoint = SectionPoint()
 
     # A tuple of tuples of Floats specifying the 3 × 3 matrix of Floats specifying the 
     # direction cosines of the local coordinate system (the rotation from global to local). 

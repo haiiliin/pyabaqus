@@ -1,8 +1,10 @@
+import typing
+
+from abaqusConstants import *
+from .Fastener import Fastener
 from ..Region.Region import Region
 from ..Region.RegionArray import RegionArray
-from .Fastener import Fastener
-from abaqusConstants import *
-import typing
+
 
 class PointFastener(Fastener):
 

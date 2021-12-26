@@ -24,7 +24,7 @@ class ModelChange(Interaction):
     """
 
     def __init__(self, name: str, createStepName: str, isRestart: Boolean = OFF, 
-                 regionType: SymbolicConstant = GEOMETRY, region: Region = None, 
+                 regionType: SymbolicConstant = GEOMETRY, region: Region = Region(), 
                  activeInStep: Boolean = OFF, includeStrain: Boolean = OFF):
         """This method creates a ModelChange object.
 
@@ -69,7 +69,7 @@ class ModelChange(Interaction):
         pass
 
     def setValues(self, isRestart: Boolean = OFF, regionType: SymbolicConstant = GEOMETRY, 
-                  region: Region = None, activeInStep: Boolean = OFF, includeStrain: Boolean = OFF):
+                  region: Region = Region(), activeInStep: Boolean = OFF, includeStrain: Boolean = OFF):
         """This method modifies the data for an existing ModelChange object in the step where it is
         created.
 

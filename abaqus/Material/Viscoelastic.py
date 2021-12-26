@@ -62,16 +62,16 @@ class Viscoelastic:
     """
 
     # A CombinedTestData object. 
-    combinedTestData: CombinedTestData = None
+    combinedTestData: CombinedTestData = CombinedTestData()
 
     # A ShearTestData object. 
-    shearTestData: ShearTestData = None
+    shearTestData: ShearTestData = ShearTestData()
 
     # A Trs object. 
-    trs: Trs = None
+    trs: Trs = Trs()
 
     # A VolumetricTestData object. 
-    volumetricTestData: VolumetricTestData = None
+    volumetricTestData: VolumetricTestData = VolumetricTestData()
 
     def __init__(self, domain: SymbolicConstant, table: tuple, frequency: SymbolicConstant = FORMULA, 
                  type: SymbolicConstant = ISOTROPIC, preload: SymbolicConstant = NONE, 

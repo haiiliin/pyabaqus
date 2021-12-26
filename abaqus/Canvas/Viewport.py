@@ -2,6 +2,7 @@ import typing
 
 from abaqusConstants import *
 from .AttributeColorMap import AttributeColorMap
+from .Displayable import Displayable
 from .ImageOptions import ImageOptions
 from .Layer import Layer
 from .MovieOptions import MovieOptions
@@ -109,32 +110,32 @@ class Viewport:
     # abstract generalization. The concrete possible types are Part, Assembly, 
     # ConstrainedSketch, Odb, PlyStackPlot, or XYPlot. If *displayedObject*=None, Abaqus 
     # displays an empty viewport. 
-    displayedObject: Displayable = None
+    displayedObject: Displayable = Displayable()
 
     # A repository of Layer objects specifying the key to the repository is a String with the 
     # name of the layer. 
-    layers: Repository[str, Layer] = None
+    layers: Repository[str, Layer] = Repository[str, Layer]()
 
     # A View object specifying the object that controls viewing of the viewport content. 
-    view: View = None
+    view: View = View()
 
     # An OdbDisplay object specifying the display options for the Odb object. 
-    odbDisplay: OdbDisplay = None
+    odbDisplay: OdbDisplay = OdbDisplay()
 
     # A PartDisplayOptions object specifying the display options for the Part object. 
-    partDisplay: PartDisplayOptions = None
+    partDisplay: PartDisplayOptions = PartDisplayOptions()
 
     # An AssemblyDisplayOptions object specifying the display options for the Assembly object. 
-    assemblyDisplay: AssemblyDisplayOptions = None
+    assemblyDisplay: AssemblyDisplayOptions = AssemblyDisplayOptions()
 
     # A ViewportAnnotationOptions object. 
-    viewportAnnotationOptions: ViewportAnnotationOptions = None
+    viewportAnnotationOptions: ViewportAnnotationOptions = ViewportAnnotationOptions()
 
     # A DetailPlotOptions object. 
-    detailPlotOptions: DetailPlotOptions = None
+    detailPlotOptions: DetailPlotOptions = DetailPlotOptions()
 
     # An AnnotationsToPlotArray object. 
-    annotationsToPlot: AnnotationsToPlotArray = None
+    annotationsToPlot: AnnotationsToPlotArray = AnnotationsToPlotArray()
 
     # A tuple of Strings specifying the names of layers that will be displayed in the viewport 
     # when *displayMode* = OVERLAY. 
@@ -152,16 +153,16 @@ class Viewport:
     iconOrigin: tuple[float] = ()
 
     # A LightOptions object. 
-    lightOptions: LightOptions = None
+    lightOptions: LightOptions = LightOptions()
 
     # An ImageOptions object. 
-    imageOptions: ImageOptions = None
+    imageOptions: ImageOptions = ImageOptions()
 
     # A MovieOptions object. 
-    movieOptions: MovieOptions = None
+    movieOptions: MovieOptions = MovieOptions()
 
     # An AnimationController object. 
-    animationController: AnimationController = None
+    animationController: AnimationController = AnimationController()
 
     # A tuple of Strings specifying keys to the session.drawings repository. The default value 
     # is an empty sequence. 
@@ -624,7 +625,7 @@ class Viewport:
         """
         pass
 
-    def setValues(self, displayedObject: Displayable = None, displayMode: SymbolicConstant = None, 
+    def setValues(self, displayedObject: Displayable = Displayable(), displayMode: SymbolicConstant = None, 
                   visibleLayers: tuple = (), viewManipLayers: SymbolicConstant = None, 
                   currentLayer: str = '', layerOffset: float = None):
         """This method modifies the Viewport object. The arguments to setValues are the same as the

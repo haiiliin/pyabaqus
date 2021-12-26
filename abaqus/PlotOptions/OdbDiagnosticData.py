@@ -25,19 +25,19 @@ class OdbDiagnosticData:
     """
 
     # A repository of OdbAnalysisError objects. 
-    analysisErrors: Repository[str, OdbAnalysisError] = None
+    analysisErrors: Repository[str, OdbAnalysisError] = Repository[str, OdbAnalysisError]()
 
     # A repository of OdbAnalysisWarning objects. 
-    analysisWarnings: Repository[str, OdbAnalysisWarning] = None
+    analysisWarnings: Repository[str, OdbAnalysisWarning] = Repository[str, OdbAnalysisWarning]()
 
     # A repository of OdbDiagnosticStep objects. 
-    steps: Repository[str, OdbDiagnosticStep] = None
+    steps: Repository[str, OdbDiagnosticStep] = Repository[str, OdbDiagnosticStep]()
 
     # An OdbJobTime object. 
-    jobTime: OdbJobTime = None
+    jobTime: OdbJobTime = OdbJobTime()
 
     # An OdbNumericalProblemSummary object. 
-    numericalProblemSummary: OdbNumericalProblemSummary = None
+    numericalProblemSummary: OdbNumericalProblemSummary = OdbNumericalProblemSummary()
 
     # A boolean specifying whether or not double precision is used for the analysis. This 
     # attribute is read-only. 

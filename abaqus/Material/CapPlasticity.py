@@ -35,13 +35,13 @@ class CapPlasticity:
     """
 
     # A CapCreepCohesion object. 
-    capCreepCohesion: CapCreepCohesion = None
+    capCreepCohesion: CapCreepCohesion = CapCreepCohesion()
 
     # A CapCreepConsolidation object. 
-    capCreepConsolidation: CapCreepConsolidation = None
+    capCreepConsolidation: CapCreepConsolidation = CapCreepConsolidation()
 
     # A CapHardening object. 
-    capHardening: CapHardening = None
+    capHardening: CapHardening = CapHardening()
 
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a CapPlasticity object.

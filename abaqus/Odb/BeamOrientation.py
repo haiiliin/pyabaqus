@@ -28,7 +28,7 @@ class BeamOrientation:
     method: SymbolicConstant = None
 
     # An OdbSet object specifying a region for which the beam orientation is defined. 
-    region: OdbSet = None
+    region: OdbSet = OdbSet()
 
     # A tuple of Floats specifying direction cosines of the n1-direction of the beam 
     # cross-section. 

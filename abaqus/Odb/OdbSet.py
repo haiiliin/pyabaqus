@@ -42,11 +42,11 @@ class OdbSet:
 
     # An OdbMeshNodeArray object specifying the nodes of an OdbSet. If a set spans more than 
     # one part instance, this member is a sequence of sequences for each part instance. 
-    nodes: OdbMeshNodeArray = None
+    nodes: OdbMeshNodeArray = OdbMeshNodeArray()
 
     # An OdbMeshElementArray object specifying the elements of an OdbSet. If a set spans more 
     # than one part instance, this member is a sequence of sequences for each part instance. 
-    elements: OdbMeshElementArray = None
+    elements: OdbMeshElementArray = OdbMeshElementArray()
 
     # A tuple of SymbolicConstants specifying the element face. If a set spans more than one 
     # part instance, this member is a sequence of sequences for each part instance. 

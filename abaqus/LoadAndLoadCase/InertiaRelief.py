@@ -31,7 +31,7 @@ class InertiaRelief(Load):
     localCoordinates: int = None
 
     # A Region object specifying the region to which the load is applied. 
-    region: Region = None
+    region: Region = Region()
 
     def __init__(self, name: str, createStepName: str, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF, 
                  ur1: Boolean = OFF, ur2: Boolean = OFF, ur3: Boolean = OFF, referencePoint: tuple = (), 

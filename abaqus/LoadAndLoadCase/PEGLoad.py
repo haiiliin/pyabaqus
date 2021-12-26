@@ -36,7 +36,7 @@ class PEGLoad(Load):
     field: str = ''
 
     # A Region object specifying the region to which the load is applied. 
-    region: Region = None
+    region: Region = Region()
 
     def __init__(self, name: str, createStepName: str, region: Region, 
                  distributionType: SymbolicConstant = UNIFORM, field: str = '', comp1: float = None, 
@@ -123,9 +123,11 @@ class PEGLoad(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, comp1: typing.Union[SymbolicConstant,float] = None, 
-                        comp2: typing.Union[SymbolicConstant,float] = None, 
-                        comp3: typing.Union[SymbolicConstant,float] = None, amplitude: str = ''):
+    def setValuesInStep(self, stepName: str, 
+                        comp1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        comp2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        comp3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        amplitude: str = ''):
         """This method modifies the propagating data for an existing PEGLoad object in the
         specified step.
 

@@ -121,11 +121,11 @@ class AxisData:
 
     # An XYCurveArray object specifying a read-only sequence of Curve objects associated to 
     # this axis. 
-    curves: XYCurveArray = None
+    curves: XYCurveArray = XYCurveArray()
 
     # A QuantityType object specifying the quantity type: i.e. the physical dimension and 
     # associated label of the data represented by this axis. 
-    quantityType: QuantityType = None
+    quantityType: QuantityType = QuantityType()
 
     # A tuple of Floats specifying the read-only major tick values shown. 
     tickValues: float = None
@@ -141,7 +141,7 @@ class AxisData:
     # *systemTitle*. 
     title: str = ''
 
-    def setValues(self, axisData: 'AxisData' = None, labelFormat: SymbolicConstant = AUTOMATIC, 
+    def setValues(self, axisData: 'AxisData' = AxisData(), labelFormat: SymbolicConstant = AUTOMATIC, 
                   labelNumDigits: int = 2, scale: SymbolicConstant = LINEAR, dbReference: float = 1, 
                   minAutoCompute: Boolean = ON, minValue: float = None, maxAutoCompute: Boolean = ON, 
                   maxValue: float = None, tickMode: SymbolicConstant = AUTOCOMPUTE, 

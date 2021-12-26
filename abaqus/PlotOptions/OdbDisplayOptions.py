@@ -33,20 +33,20 @@ class OdbDisplayOptions:
     """
 
     # A DGCommonOptions object. 
-    commonOptions: DGCommonOptions = None
+    commonOptions: DGCommonOptions = DGCommonOptions()
 
     # A DGSuperimposeOptions object. 
-    superimposeOptions: DGSuperimposeOptions = None
+    superimposeOptions: DGSuperimposeOptions = DGSuperimposeOptions()
 
     # A DGContourOptions object. 
-    contourOptions: DGContourOptions = None
+    contourOptions: DGContourOptions = DGContourOptions()
 
     # A DGSymbolOptions object. 
-    symbolOptions: DGSymbolOptions = None
+    symbolOptions: DGSymbolOptions = DGSymbolOptions()
 
     # A DGOrientationOptions object. 
-    materialOrientationOptions: DGOrientationOptions = None
+    materialOrientationOptions: DGOrientationOptions = DGOrientationOptions()
 
     # A DGDisplayBodyOptions object. 
-    displayBodyOptions: DGDisplayBodyOptions = None
+    displayBodyOptions: DGDisplayBodyOptions = DGDisplayBodyOptions()
 

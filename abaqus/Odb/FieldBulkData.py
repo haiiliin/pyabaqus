@@ -38,10 +38,10 @@ class FieldBulkData:
     type: SymbolicConstant = None
 
     # An OdbInstance object specifying the part to which the labels belong. 
-    instance: OdbInstance = None
+    instance: OdbInstance = OdbInstance()
 
     # A SectionPoint object specifying the section point number of the current block of data. 
-    sectionPoint: SectionPoint = None
+    sectionPoint: SectionPoint = SectionPoint()
 
     # A sequence of Ints specifying the element labels of the elements in the block. 
     # *elementLabels* is valid only if *position*=INTEGRATION_POINT, CENTROID, ELEMENT_NODAL, 

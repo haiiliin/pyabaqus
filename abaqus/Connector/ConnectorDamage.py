@@ -82,11 +82,11 @@ class ConnectorDamage(ConnectorBehaviorOption):
 
     # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
     # for the damage initiation table. 
-    initiationOptions: ConnectorOptions = None
+    initiationOptions: ConnectorOptions = ConnectorOptions()
 
     # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
     # for the damage evolution table. 
-    evolutionOptions: ConnectorOptions = None
+    evolutionOptions: ConnectorOptions = ConnectorOptions()
 
     def __init__(self, coupling: SymbolicConstant = UNCOUPLED, criterion: SymbolicConstant = FORCE, 
                  initiationTemperature: Boolean = OFF, 
@@ -97,9 +97,10 @@ class ConnectorDamage(ConnectorBehaviorOption):
                  degradation: SymbolicConstant = MAXIMUM, evolutionTemperature: Boolean = OFF, 
                  evolutionDependencies: int = 0, evolutionPotentialOperator: SymbolicConstant = SUM, 
                  evolutionPotentialExponent: float = 2, 
-                 initiationPotentials: ConnectorPotentialArray = None, 
-                 evolutionPotentials: ConnectorPotentialArray = None, initiationTable: tuple = (), 
-                 evolutionTable: tuple = (), affectedComponents: tuple = (), components: tuple = ()):
+                 initiationPotentials: ConnectorPotentialArray = ConnectorPotentialArray(), 
+                 evolutionPotentials: ConnectorPotentialArray = ConnectorPotentialArray(), 
+                 initiationTable: tuple = (), evolutionTable: tuple = (), affectedComponents: tuple = (), 
+                 components: tuple = ()):
         """This method creates a connector damage behavior option for a ConnectorSection object.
 
         Path

@@ -19,5 +19,5 @@ class DetailPlotOptions:
     """
 
     # A PlyStackPlotOptions object. 
-    plyStackPlotOptions: PlyStackPlotOptions = None
+    plyStackPlotOptions: PlyStackPlotOptions = PlyStackPlotOptions()
 

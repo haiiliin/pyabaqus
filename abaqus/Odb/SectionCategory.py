@@ -40,7 +40,7 @@ class SectionCategory:
     """
 
     # A SectionPointArray object. 
-    sectionPoints: SectionPointArray = None
+    sectionPoints: SectionPointArray = SectionPointArray()
 
     def __init__(self, name: str, description: str):
         """This method creates a SectionCategory object.

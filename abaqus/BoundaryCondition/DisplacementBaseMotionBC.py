@@ -38,7 +38,7 @@ class DisplacementBaseMotionBC(BoundaryCondition):
     centerOfRotation: tuple = ()
 
     # A CorrelationArray object. 
-    correlation: CorrelationArray = None
+    correlation: CorrelationArray = CorrelationArray()
 
     # A String specifying the name of the SecondaryBaseBC object associated with this boundary 
     # condition. The default value is an empty string. 
@@ -49,7 +49,7 @@ class DisplacementBaseMotionBC(BoundaryCondition):
     category: SymbolicConstant = None
 
     # A Region object specifying the region to which the boundary condition is applied. 
-    region: Region = None
+    region: Region = Region()
 
     # None or a DatumCsys object specifying the local coordinate system of the boundary 
     # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
@@ -57,7 +57,7 @@ class DisplacementBaseMotionBC(BoundaryCondition):
     localCsys: str = None
 
     def __init__(self, name: str, createStepName: str, dof: SymbolicConstant, amplitudeScaleFactor: float = 1, 
-                 centerOfRotation: tuple = (), correlation: CorrelationArray = None, 
+                 centerOfRotation: tuple = (), correlation: CorrelationArray = CorrelationArray(), 
                  secondaryBase: str = '', useComplex: Boolean = OFF, amplitude: str = UNSET):
         """This method creates a DisplacementBaseMotionBC object.
 
@@ -105,7 +105,7 @@ class DisplacementBaseMotionBC(BoundaryCondition):
         pass
 
     def setValues(self, amplitudeScaleFactor: float = 1, centerOfRotation: tuple = (), 
-                  correlation: CorrelationArray = None, secondaryBase: str = '', 
+                  correlation: CorrelationArray = CorrelationArray(), secondaryBase: str = '', 
                   useComplex: Boolean = OFF, amplitude: str = UNSET):
         """This method modifies the data for an existing DisplacementBaseMotionBC object in the
         step where it is created.

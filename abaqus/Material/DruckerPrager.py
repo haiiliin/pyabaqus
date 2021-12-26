@@ -48,16 +48,16 @@ class DruckerPrager:
     """
 
     # A DruckerPragerCreep object. 
-    druckerPragerCreep: DruckerPragerCreep = None
+    druckerPragerCreep: DruckerPragerCreep = DruckerPragerCreep()
 
     # A DruckerPragerHardening object. 
-    druckerPragerHardening: DruckerPragerHardening = None
+    druckerPragerHardening: DruckerPragerHardening = DruckerPragerHardening()
 
     # A RateDependent object. 
-    rateDependent: RateDependent = None
+    rateDependent: RateDependent = RateDependent()
 
     # A TriaxialTestData object. 
-    triaxialTestData: TriaxialTestData = None
+    triaxialTestData: TriaxialTestData = TriaxialTestData()
 
     def __init__(self, table: tuple, shearCriterion: SymbolicConstant = LINEAR, eccentricity: float = 0, 
                  testData: Boolean = OFF, temperatureDependency: Boolean = OFF, dependencies: int = 0):

@@ -54,37 +54,37 @@ class OdbInstance:
     resultState: SymbolicConstant = PROPAGATED
 
     # An OdbMeshNodeArray object. 
-    nodes: OdbMeshNodeArray = None
+    nodes: OdbMeshNodeArray = OdbMeshNodeArray()
 
     # An OdbMeshElementArray object. 
-    elements: OdbMeshElementArray = None
+    elements: OdbMeshElementArray = OdbMeshElementArray()
 
     # A repository of OdbSet objects specifying node sets. 
-    nodeSets: Repository[str, OdbSet] = None
+    nodeSets: Repository[str, OdbSet] = Repository[str, OdbSet]()
 
     # A repository of OdbSet objects specifying element sets. 
-    elementSets: Repository[str, OdbSet] = None
+    elementSets: Repository[str, OdbSet] = Repository[str, OdbSet]()
 
     # A repository of OdbSet objects specifying surfaces. 
-    surfaces: Repository[str, OdbSet] = None
+    surfaces: Repository[str, OdbSet] = Repository[str, OdbSet]()
 
     # A SectionAssignmentArray object. 
-    sectionAssignments: SectionAssignmentArray = None
+    sectionAssignments: SectionAssignmentArray = SectionAssignmentArray()
 
     # An OdbRigidBodyArray object. 
-    rigidBodies: OdbRigidBodyArray = None
+    rigidBodies: OdbRigidBodyArray = OdbRigidBodyArray()
 
     # A BeamOrientationArray object. 
-    beamOrientations: BeamOrientationArray = None
+    beamOrientations: BeamOrientationArray = BeamOrientationArray()
 
     # A MaterialOrientationArray object. 
-    materialOrientations: MaterialOrientationArray = None
+    materialOrientations: MaterialOrientationArray = MaterialOrientationArray()
 
     # A RebarOrientationArray object. 
-    rebarOrientations: RebarOrientationArray = None
+    rebarOrientations: RebarOrientationArray = RebarOrientationArray()
 
     # An AnalyticSurface object specifying analytic Surface defined on the instance. 
-    analyticSurface: AnalyticSurface = None
+    analyticSurface: AnalyticSurface = AnalyticSurface()
 
     def Instance(self, name: str, object: OdbPart, localCoordSystem: tuple = ()):
         """This method creates an OdbInstance object from an OdbPart object.

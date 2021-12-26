@@ -35,7 +35,7 @@ class AnalyticSurface:
 
     # An OdbSequenceAnalyticSurfaceSegment object specifying the profile associated with the 
     # surface. 
-    segments: OdbSequenceAnalyticSurfaceSegment = None
+    segments: OdbSequenceAnalyticSurfaceSegment = OdbSequenceAnalyticSurfaceSegment()
 
     # A tuple of tuples of Floats specifying the global coordinates of points representing the 
     # local coordinate system, if used. 

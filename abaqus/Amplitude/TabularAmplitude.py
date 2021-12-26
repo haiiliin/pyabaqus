@@ -28,7 +28,7 @@ class TabularAmplitude(Amplitude):
     """
 
     # A BaselineCorrection object. 
-    baselineCorrection: BaselineCorrection = None
+    baselineCorrection: BaselineCorrection = BaselineCorrection()
 
     def __init__(self, name: str, data: tuple, smooth: typing.Union[SymbolicConstant,float] = SOLVER_DEFAULT, 
                  timeSpan: SymbolicConstant = STEP):

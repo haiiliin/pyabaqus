@@ -42,7 +42,7 @@ class EulerianBC(BoundaryCondition):
     category: SymbolicConstant = None
 
     # A Region object specifying the region to which the boundary condition is applied. 
-    region: Region = None
+    region: Region = Region()
 
     # None or a DatumCsys object specifying the local coordinate system of the boundary 
     # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
@@ -87,7 +87,7 @@ class EulerianBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, region: Region = None, definition: SymbolicConstant = INFLOW, 
+    def setValues(self, region: Region = Region(), definition: SymbolicConstant = INFLOW, 
                   inflowType: SymbolicConstant = FREE, outflowType: SymbolicConstant = ZERO_PRESSURE):
         """This method modifies the data for an existing EulerianBC object in the step where it is
         created.

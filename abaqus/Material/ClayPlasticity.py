@@ -42,7 +42,7 @@ class ClayPlasticity:
     """
 
     # A ClayHardening object. 
-    clayHardening: ClayHardening = None
+    clayHardening: ClayHardening = ClayHardening()
 
     def __init__(self, table: tuple, intercept: float = None, hardening: SymbolicConstant = EXPONENTIAL, 
                  temperatureDependency: Boolean = OFF, dependencies: int = 0):

@@ -31,13 +31,13 @@ class BoltLoad(Load):
     # A DatumAxis object specifying the orientation of the pre-tension section 
     # normal.Note:*datumAxis* is required only for Solid and Shell regions; it has no meaning 
     # for Wire regions. 
-    datumAxis: DatumAxis = None
+    datumAxis: DatumAxis = DatumAxis()
 
     # A Region object specifying the region to which the load is applied. 
-    region: Region = None
+    region: Region = Region()
 
     def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, 
-                 boltMethod: SymbolicConstant = APPLY_FORCE, datumAxis: DatumAxis = None, 
+                 boltMethod: SymbolicConstant = APPLY_FORCE, datumAxis: DatumAxis = DatumAxis(), 
                  amplitude: str = UNSET, preTenSecPartLevel: Boolean = False):
         """This method creates a BoltLoad object.
 
@@ -84,7 +84,7 @@ class BoltLoad(Load):
         super().__init__()
         pass
 
-    def setValues(self, boltMethod: SymbolicConstant = APPLY_FORCE, datumAxis: DatumAxis = None, 
+    def setValues(self, boltMethod: SymbolicConstant = APPLY_FORCE, datumAxis: DatumAxis = DatumAxis(), 
                   amplitude: str = UNSET, preTenSecPartLevel: Boolean = False):
         """This method modifies the data for an existing BoltLoad object in the step where it is
         created.

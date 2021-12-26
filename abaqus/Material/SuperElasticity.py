@@ -34,11 +34,11 @@ class SuperElasticity:
 
     # A [SuperElasticHardening 
     # object](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-superelastichardeningpyc.htm?ContextScope=all#simaker-c-superelastichardeningpyc). 
-    superElasticHardening: SuperElasticHardening = None
+    superElasticHardening: SuperElasticHardening = SuperElasticHardening()
 
     # A [SuperElasticHardeningModifications 
     # object](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-superelastichardeningmodificationpyc.htm?ContextScope=all#simaker-c-superelastichardeningmodificationpyc). 
-    superElasticHardeningModifications: SuperElasticHardeningModifications = None
+    superElasticHardeningModifications: SuperElasticHardeningModifications = SuperElasticHardeningModifications()
 
     def __init__(self, table: tuple, nonassociated: float = None):
         """This method creates a SuperElasticity object.

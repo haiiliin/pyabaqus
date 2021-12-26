@@ -125,7 +125,7 @@ class Job:
     userSubroutine: str = ''
 
     # A MessageArray object specifying the messages received during an analysis. 
-    messages: MessageArray = None
+    messages: MessageArray = MessageArray()
 
     # A tuple of Strings specifying the environment variables and their values. 
     environment: tuple = ()

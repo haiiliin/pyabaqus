@@ -18,5 +18,5 @@ class RayleighDamping:
     """
 
     # A RayleighDampingComponentArray object. 
-    components: RayleighDampingComponentArray = None
+    components: RayleighDampingComponentArray = RayleighDampingComponentArray()
 

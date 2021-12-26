@@ -109,7 +109,7 @@ class CavityRadiation(Interaction):
 
     # A RegionArray object specifying the surfaces for which radiation viewfactor control is 
     # being specified. 
-    surfaces: RegionArray = None
+    surfaces: RegionArray = RegionArray()
 
     # A tuple of Strings specifying the names of the Cavity Radiation properties containing 
     # the surface emissivity data. One name per specified surface. The emissivity data is 
@@ -118,15 +118,15 @@ class CavityRadiation(Interaction):
 
     # A ModelDot object specifying the rotation axis point. This argument applies only when 
     # *cyclicSymmetry*=ON. 
-    cyclicRotPt: ModelDot = None
+    cyclicRotPt: ModelDot = ModelDot()
 
     # A ModelDot object specifying the rotation axis end point. This argument applies only for 
     # three-dimensional models, and only when *cyclicSymmetry*=ON. 
-    cyclicRotEndPt: ModelDot = None
+    cyclicRotEndPt: ModelDot = ModelDot()
 
     # A ModelDot object specifying the symmetry axis end point. This argument applies only 
     # when *cyclicSymmetry*=ON. 
-    cyclicSymPt: ModelDot = None
+    cyclicSymPt: ModelDot = ModelDot()
 
     # A tuple of tuples of Floats specifying the two points of the vector that describes the 
     # periodic distance for the first periodic symmetry. Each point is defined by a tuple of 
@@ -148,20 +148,21 @@ class CavityRadiation(Interaction):
 
     def __init__(self, name: str, createStepName: str, surfaces: RegionArray, surfaceEmissivities: tuple = (), 
                  ambientTemp: float = None, blocking: SymbolicConstant = BLOCKING_ALL, 
-                 blockingSurfaces: RegionArray = None, rangeOfView: float = None, 
+                 blockingSurfaces: RegionArray = RegionArray(), rangeOfView: float = None, 
                  surfaceReflection: Boolean = ON, viewfactorAccurTol: float = 0, 
                  minInfinitesimalRatio: float = 64, numPointsPerEdge: int = 3, 
                  minLumpedAreaDS: float = 5, cyclicSymmetry: Boolean = OFF, cyclicImages: int = 2, 
-                 cyclicRotPt: ModelDot = None, cyclicRotEndPt: ModelDot = None, 
-                 cyclicSymPt: ModelDot = None, periodicSymmetries: int = 0, periodicImages_1: int = 2, 
-                 periodicImages_2: int = 2, periodicImages_3: int = 2, periodicSymAxis_1: str = '', 
-                 periodicSymAxis_2: str = '', periodicSymPlane_1: str = '', periodicSymPlane_2: str = '', 
-                 periodicSymPlane_3: str = '', periodicDistance_1: tuple = (), 
-                 periodicDistance_2: tuple = (), periodicDistance_3: tuple = (), 
-                 periodicSymZ: float = None, periodicDistZ: float = None, reflectionSymmetries: int = 0, 
-                 reflectionSymAxis_1: str = '', reflectionSymAxis_2: str = '', 
-                 reflectionSymPlane_1: str = '', reflectionSymPlane_2: str = '', 
-                 reflectionSymPlane_3: str = '', reflectionSymZ: float = None):
+                 cyclicRotPt: ModelDot = ModelDot(), cyclicRotEndPt: ModelDot = ModelDot(), 
+                 cyclicSymPt: ModelDot = ModelDot(), periodicSymmetries: int = 0, 
+                 periodicImages_1: int = 2, periodicImages_2: int = 2, periodicImages_3: int = 2, 
+                 periodicSymAxis_1: str = '', periodicSymAxis_2: str = '', periodicSymPlane_1: str = '', 
+                 periodicSymPlane_2: str = '', periodicSymPlane_3: str = '', 
+                 periodicDistance_1: tuple = (), periodicDistance_2: tuple = (), 
+                 periodicDistance_3: tuple = (), periodicSymZ: float = None, periodicDistZ: float = None, 
+                 reflectionSymmetries: int = 0, reflectionSymAxis_1: str = '', 
+                 reflectionSymAxis_2: str = '', reflectionSymPlane_1: str = '', 
+                 reflectionSymPlane_2: str = '', reflectionSymPlane_3: str = '', 
+                 reflectionSymZ: float = None):
         """This method creates a CavityRadiation object.
 
         Path
@@ -334,20 +335,22 @@ class CavityRadiation(Interaction):
         pass
 
     def setValues(self, surfaceEmissivities: tuple = (), ambientTemp: float = None, 
-                  blocking: SymbolicConstant = BLOCKING_ALL, blockingSurfaces: RegionArray = None, 
-                  rangeOfView: float = None, surfaceReflection: Boolean = ON, 
-                  viewfactorAccurTol: float = 0, minInfinitesimalRatio: float = 64, 
-                  numPointsPerEdge: int = 3, minLumpedAreaDS: float = 5, cyclicSymmetry: Boolean = OFF, 
-                  cyclicImages: int = 2, cyclicRotPt: ModelDot = None, cyclicRotEndPt: ModelDot = None, 
-                  cyclicSymPt: ModelDot = None, periodicSymmetries: int = 0, periodicImages_1: int = 2, 
-                  periodicImages_2: int = 2, periodicImages_3: int = 2, periodicSymAxis_1: str = '', 
-                  periodicSymAxis_2: str = '', periodicSymPlane_1: str = '', periodicSymPlane_2: str = '', 
-                  periodicSymPlane_3: str = '', periodicDistance_1: tuple = (), 
-                  periodicDistance_2: tuple = (), periodicDistance_3: tuple = (), 
-                  periodicSymZ: float = None, periodicDistZ: float = None, reflectionSymmetries: int = 0, 
-                  reflectionSymAxis_1: str = '', reflectionSymAxis_2: str = '', 
-                  reflectionSymPlane_1: str = '', reflectionSymPlane_2: str = '', 
-                  reflectionSymPlane_3: str = '', reflectionSymZ: float = None):
+                  blocking: SymbolicConstant = BLOCKING_ALL, 
+                  blockingSurfaces: RegionArray = RegionArray(), rangeOfView: float = None, 
+                  surfaceReflection: Boolean = ON, viewfactorAccurTol: float = 0, 
+                  minInfinitesimalRatio: float = 64, numPointsPerEdge: int = 3, 
+                  minLumpedAreaDS: float = 5, cyclicSymmetry: Boolean = OFF, cyclicImages: int = 2, 
+                  cyclicRotPt: ModelDot = ModelDot(), cyclicRotEndPt: ModelDot = ModelDot(), 
+                  cyclicSymPt: ModelDot = ModelDot(), periodicSymmetries: int = 0, 
+                  periodicImages_1: int = 2, periodicImages_2: int = 2, periodicImages_3: int = 2, 
+                  periodicSymAxis_1: str = '', periodicSymAxis_2: str = '', periodicSymPlane_1: str = '', 
+                  periodicSymPlane_2: str = '', periodicSymPlane_3: str = '', 
+                  periodicDistance_1: tuple = (), periodicDistance_2: tuple = (), 
+                  periodicDistance_3: tuple = (), periodicSymZ: float = None, periodicDistZ: float = None, 
+                  reflectionSymmetries: int = 0, reflectionSymAxis_1: str = '', 
+                  reflectionSymAxis_2: str = '', reflectionSymPlane_1: str = '', 
+                  reflectionSymPlane_2: str = '', reflectionSymPlane_3: str = '', 
+                  reflectionSymZ: float = None):
         """This method modifies the data for an existing CavityRadiation object in the step where
         it is created.
 
@@ -508,7 +511,7 @@ class CavityRadiation(Interaction):
         pass
 
     def setValuesInStep(self, stepName: str, blocking: SymbolicConstant = BLOCKING_ALL, 
-                        blockingSurfaces: RegionArray = None, rangeOfView: float = None, 
+                        blockingSurfaces: RegionArray = RegionArray(), rangeOfView: float = None, 
                         surfaceReflection: Boolean = ON, viewfactorAccurTol: float = 0):
         """This method modifies the propagating data of an existing CavityRadiation object in the
         specified step.

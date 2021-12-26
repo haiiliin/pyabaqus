@@ -1,6 +1,7 @@
-from ..Region.Region import Region
-from .Crack import Crack
 from abaqusConstants import *
+from .Crack import Crack
+from ..Region.Region import Region
+
 
 class XFEMCrack(Crack):
 
@@ -29,7 +30,7 @@ class XFEMCrack(Crack):
     suppressed: Boolean = OFF
 
     def __init__(self, name: str, crackDomain: Region, allowCrackGrowth: Boolean = ON, 
-                 crackLocation: Region = None, singularityCalcRadius: float = None, 
+                 crackLocation: Region = Region(), singularityCalcRadius: float = None, 
                  interactionProperty: str = '', elemId: tuple = (), nodeId: tuple = (), 
                  hasCrackFront: tuple = (), crackPlaneDist: tuple = (), crackFrontDist: tuple = (), 
                  autoDetectValue: str = ''):
@@ -94,7 +95,7 @@ class XFEMCrack(Crack):
         super().__init__()
         pass
 
-    def setValues(self, allowCrackGrowth: Boolean = ON, crackLocation: Region = None, 
+    def setValues(self, allowCrackGrowth: Boolean = ON, crackLocation: Region = Region(), 
                   singularityCalcRadius: float = None, interactionProperty: str = '', elemId: tuple = (), 
                   nodeId: tuple = (), hasCrackFront: tuple = (), crackPlaneDist: tuple = (), 
                   crackFrontDist: tuple = (), autoDetectValue: str = ''):

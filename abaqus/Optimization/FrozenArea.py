@@ -20,7 +20,7 @@ class FrozenArea(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, region: Region = None):
+    def __init__(self, name: str, region: Region = Region()):
         """This method creates a FrozenArea object.
 
         Path
@@ -47,7 +47,7 @@ class FrozenArea(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, region: Region = None):
+    def setValues(self, region: Region = Region()):
         """This method modifies the FrozenArea object.
 
         Parameters

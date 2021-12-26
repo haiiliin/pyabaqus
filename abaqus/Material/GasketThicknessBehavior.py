@@ -70,7 +70,7 @@ class GasketThicknessBehavior:
     """
 
     # A ContactArea object. 
-    contactArea: ContactArea = None
+    contactArea: ContactArea = ContactArea()
 
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0, 
                  tensileStiffnessFactor: float = None, type: SymbolicConstant = ELASTIC_PLASTIC, 

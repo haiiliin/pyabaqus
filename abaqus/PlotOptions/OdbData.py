@@ -52,66 +52,66 @@ class OdbData:
 
     # A repository of HistoryVariable objects specifying the history request label. The 
     # repository is read-only. 
-    historyVariables: Repository[str, HistoryVariable] = None
+    historyVariables: Repository[str, HistoryVariable] = Repository[str, HistoryVariable]()
 
     # A repository of OdbDataStep objects specifying the list of steps. The repository is 
     # read-only. 
-    steps: Repository[str, OdbDataStep] = None
+    steps: Repository[str, OdbDataStep] = Repository[str, OdbDataStep]()
 
     # A repository of OdbDataInstance objects specifying the list of instances. The repository 
     # is read-only. 
-    instances: Repository[str, OdbDataInstance] = None
+    instances: Repository[str, OdbDataInstance] = Repository[str, OdbDataInstance]()
 
     # A repository of OdbDataMaterial objects specifying the list of materials. The repository 
     # is read-only. 
-    materials: Repository[str, OdbDataMaterial] = None
+    materials: Repository[str, OdbDataMaterial] = Repository[str, OdbDataMaterial]()
 
     # A repository of OdbDataSection objects specifying the list of sections. The repository 
     # is read-only. 
-    sections: Repository[str, OdbDataSection] = None
+    sections: Repository[str, OdbDataSection] = Repository[str, OdbDataSection]()
 
     # A repository of OdbDataElementSet objects specifying the list of element sets. The 
     # repository is read-only. 
-    elementSets: Repository[str, OdbDataElementSet] = None
+    elementSets: Repository[str, OdbDataElementSet] = Repository[str, OdbDataElementSet]()
 
     # A repository of OdbDataNodeSet objects specifying the list of node sets. The repository 
     # is read-only. 
-    nodeSets: Repository[str, OdbDataNodeSet] = None
+    nodeSets: Repository[str, OdbDataNodeSet] = Repository[str, OdbDataNodeSet]()
 
     # A repository of OdbDataSurfaceSet objects specifying the list of surface sets. The 
     # repository is read-only. 
-    surfaceSets: Repository[str, OdbDataSurfaceSet] = None
+    surfaceSets: Repository[str, OdbDataSurfaceSet] = Repository[str, OdbDataSurfaceSet]()
 
     # A repository of OdbDataDatumCsys objects specifying the list of coordinate systems 
     # defined in the model. The repository is read-only. 
-    datumCsyses: Repository[str, OdbDataDatumCsys] = None
+    datumCsyses: Repository[str, OdbDataDatumCsys] = Repository[str, OdbDataDatumCsys]()
 
     # A repository of CouplingConstraint objects specifying the list of kinematic couplings. 
     # The repository is read-only. 
-    kinematicCouplings: Repository[str, CouplingConstraint] = None
+    kinematicCouplings: Repository[str, CouplingConstraint] = Repository[str, CouplingConstraint]()
 
     # A repository of CouplingConstraint objects specifying the list of distributing 
     # couplings. The repository is read-only. 
-    distributingCouplings: Repository[str, CouplingConstraint] = None
+    distributingCouplings: Repository[str, CouplingConstraint] = Repository[str, CouplingConstraint]()
 
     # A repository of CouplingConstraint objects specifying the list of shellsolid couplings. 
     # The repository is read-only. 
-    shellSolidCouplings: Repository[str, CouplingConstraint] = None
+    shellSolidCouplings: Repository[str, CouplingConstraint] = Repository[str, CouplingConstraint]()
 
     # A repository of RigidBodyConstraint objects specifying the list of rigid body 
     # constraints. The repository is read-only. 
-    rigidbodies: Repository[str, RigidBodyConstraint] = None
+    rigidbodies: Repository[str, RigidBodyConstraint] = Repository[str, RigidBodyConstraint]()
 
     # A repository of MpcConstraint objects specifying the list of multipoint constraints. The 
     # repository is read-only. 
-    multiPointConstraints: Repository[str, MpcConstraint] = None
+    multiPointConstraints: Repository[str, MpcConstraint] = Repository[str, MpcConstraint]()
 
     # A repository of TieConstraint objects specifying the list of Tie constraints. The 
     # repository is read-only. 
-    ties: Repository[str, TieConstraint] = None
+    ties: Repository[str, TieConstraint] = Repository[str, TieConstraint]()
 
     # An OdbDiagnosticData object. 
-    diagnosticData: OdbDiagnosticData = None
+    diagnosticData: OdbDiagnosticData = OdbDiagnosticData()
 
     def setValues(self, activeFrames: SymbolicConstant = None, stepPeriods: tuple = ()):
         """This method modifies the OdbData object.

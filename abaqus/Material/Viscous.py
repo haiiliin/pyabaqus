@@ -83,7 +83,7 @@ class Viscous:
     """
 
     # A Potential object. 
-    potential: Potential = None
+    potential: Potential = Potential()
 
     def __init__(self, table: tuple, law: SymbolicConstant = STRAIN, temperatureDependency: Boolean = OFF, 
                  dependencies: int = 0, time: SymbolicConstant = TOTAL):

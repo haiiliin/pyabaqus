@@ -18,5 +18,5 @@ class CompositeDamping:
     """
 
     # A CompositeDampingComponentArray object. 
-    components: CompositeDampingComponentArray = None
+    components: CompositeDampingComponentArray = CompositeDampingComponentArray()
 

@@ -23,8 +23,10 @@ class JournalOptions:
     """
 
     def setValues(self, replayGeometry: SymbolicConstant = COMPRESSEDINDEX, 
-                  recoverGeometry: SymbolicConstant = COMPRESSEDINDEX, defaultFormat: NumberFormat = None, 
-                  fieldReportFormat: NumberFormat = None, geometryFormat: NumberFormat = None):
+                  recoverGeometry: SymbolicConstant = COMPRESSEDINDEX, 
+                  defaultFormat: NumberFormat = NumberFormat(), 
+                  fieldReportFormat: NumberFormat = NumberFormat(), 
+                  geometryFormat: NumberFormat = NumberFormat()):
         """This method modifies the JournalOptions object.
 
         Parameters

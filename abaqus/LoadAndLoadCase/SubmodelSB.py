@@ -39,7 +39,7 @@ class SubmodelSB(Load):
     globalDrivingRegion: str = ''
 
     # A Region object specifying the region to which the load is applied. 
-    region: Region = None
+    region: Region = Region()
 
     def __init__(self, name: str, createStepName: str, region: Region, globalStep: str, 
                  globalDrivingRegion: str = '', absoluteExteriorTolerance: float = None, 

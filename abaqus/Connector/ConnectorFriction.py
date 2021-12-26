@@ -29,17 +29,17 @@ class ConnectorFriction(ConnectorBehaviorOption):
     """
 
     # A TangentialBehavior object. 
-    tangentialBehavior: TangentialBehavior = None
+    tangentialBehavior: TangentialBehavior = TangentialBehavior()
 
     # A DerivedComponent object specifying the DerivedComponent used to compute the contact 
     # force component direction. This argument applies only if 
     # *frictionModel*=USER_CUSTOMIZED, if *useContactForceComponent*=ON, and if 
     # *contactForceStyle*=DERIVED_COMPONENT. 
-    derivedComponent: DerivedComponent = None
+    derivedComponent: DerivedComponent = DerivedComponent()
 
     # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
     # for this ConnectorBehaviorOption. 
-    options: ConnectorOptions = None
+    options: ConnectorOptions = ConnectorOptions()
 
     def __init__(self, frictionModel: SymbolicConstant = PREDEFINED, slipStyle: SymbolicConstant = SPECIFY, 
                  tangentDirection: int = None, stickStiffness: float = None, 
@@ -48,8 +48,8 @@ class ConnectorFriction(ConnectorBehaviorOption):
                  dependencies: int = 0, useContactForceComponent: Boolean = OFF, 
                  contactForceStyle: SymbolicConstant = COMPONENT_NUMBER, contactForceComponent: int = 0, 
                  forcePotentialOperator: SymbolicConstant = SUM, forcePotentialExponent: float = 2, 
-                 connectorPotentials: ConnectorPotentialArray = None, table: tuple = (), 
-                 independentComponents: tuple = ()):
+                 connectorPotentials: ConnectorPotentialArray = ConnectorPotentialArray(), 
+                 table: tuple = (), independentComponents: tuple = ()):
         """This method creates a connector friction behavior option for a ConnectorSection object.
         Depending upon the arguments provided, the friction behavior can be Coulomb-like or
         hysteretic in nature.

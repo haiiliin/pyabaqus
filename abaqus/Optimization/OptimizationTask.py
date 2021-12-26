@@ -35,17 +35,17 @@ class OptimizationTask:
     region: SymbolicConstant = MODEL
 
     # A repository of DesignResponse objects. 
-    designResponses: Repository[str, DesignResponse] = None
+    designResponses: Repository[str, DesignResponse] = Repository[str, DesignResponse]()
 
     # A repository of ObjectiveFunction objects. 
-    objectiveFunctions: Repository[str, ObjectiveFunction] = None
+    objectiveFunctions: Repository[str, ObjectiveFunction] = Repository[str, ObjectiveFunction]()
 
     # A repository of OptimizationConstraint objects. 
-    optimizationConstraints: Repository[str, OptimizationConstraint] = None
+    optimizationConstraints: Repository[str, OptimizationConstraint] = Repository[str, OptimizationConstraint]()
 
     # A repository of GeometricRestriction objects. 
-    geometricRestrictions: Repository[str, GeometricRestriction] = None
+    geometricRestrictions: Repository[str, GeometricRestriction] = Repository[str, GeometricRestriction]()
 
     # A repository of StopCondition objects. 
-    stopConditions: Repository[str, StopCondition] = None
+    stopConditions: Repository[str, StopCondition] = Repository[str, StopCondition]()
 

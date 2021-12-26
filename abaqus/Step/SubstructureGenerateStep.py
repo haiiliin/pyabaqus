@@ -93,13 +93,13 @@ class SubstructureGenerateStep(AnalysisStep):
 
     # A Region object specifying the region for substructure recovery. This argument is 
     # required when *recoveryMatrix*=REGION. 
-    recoveryRegion: Region = None
+    recoveryRegion: Region = Region()
 
     # A SubstructureGenerateFrequencyArray object. 
-    frequencyRange: SubstructureGenerateFrequencyArray = None
+    frequencyRange: SubstructureGenerateFrequencyArray = SubstructureGenerateFrequencyArray()
 
     # A SubstructureGenerateModesArray object. 
-    modeRange: SubstructureGenerateModesArray = None
+    modeRange: SubstructureGenerateModesArray = SubstructureGenerateModesArray()
 
     # A SymbolicConstant specifying whether the step has an explicit procedure type 
     # (*procedureType*=ANNEAL, DYNAMIC_EXPLICIT, or DYNAMIC_TEMP_DISPLACEMENT). 
@@ -144,56 +144,56 @@ class SubstructureGenerateStep(AnalysisStep):
     suppressed: Boolean = OFF
 
     # A repository of FieldOutputRequestState objects. 
-    fieldOutputRequestState: Repository[str, FieldOutputRequestState] = None
+    fieldOutputRequestState: Repository[str, FieldOutputRequestState] = Repository[str, FieldOutputRequestState]()
 
     # A repository of HistoryOutputRequestState objects. 
-    historyOutputRequestState: Repository[str, HistoryOutputRequestState] = None
+    historyOutputRequestState: Repository[str, HistoryOutputRequestState] = Repository[str, HistoryOutputRequestState]()
 
     # A DiagnosticPrint object. 
-    diagnosticPrint: DiagnosticPrint = None
+    diagnosticPrint: DiagnosticPrint = DiagnosticPrint()
 
     # A Monitor object. 
-    monitor: Monitor = None
+    monitor: Monitor = Monitor()
 
     # A Restart object. 
-    restart: Restart = None
+    restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = None
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
-    adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = None
+    adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
 
     # A Control object. 
-    control: Control = None
+    control: Control = Control()
 
     # A SolverControl object. 
-    solverControl: SolverControl = None
+    solverControl: SolverControl = SolverControl()
 
     # A repository of BoundaryConditionState objects. 
-    boundaryConditionStates: Repository[str, BoundaryConditionState] = None
+    boundaryConditionStates: Repository[str, BoundaryConditionState] = Repository[str, BoundaryConditionState]()
 
     # A repository of InteractionState objects. 
     interactionStates: int = None
 
     # A repository of LoadState objects. 
-    loadStates: Repository[str, LoadState] = None
+    loadStates: Repository[str, LoadState] = Repository[str, LoadState]()
 
     # A repository of LoadCase objects. 
-    loadCases: Repository[str, LoadCase] = None
+    loadCases: Repository[str, LoadCase] = Repository[str, LoadCase]()
 
     # A repository of PredefinedFieldState objects. 
-    predefinedFieldStates: Repository[str, PredefinedFieldState] = None
+    predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
     def __init__(self, name: str, previous: str, substructureIdentifier: int, description: str = '', 
-                 recoveryMatrix: SymbolicConstant = WHOLE_MODEL, recoveryRegion: Region = None, 
+                 recoveryMatrix: SymbolicConstant = WHOLE_MODEL, recoveryRegion: Region = Region(), 
                  computeGravityLoadVectors: Boolean = False, computeReducedMassMatrix: Boolean = False, 
                  computeReducedStructuralDampingMatrix: Boolean = False, 
                  computeReducedViscousDampingMatrix: Boolean = False, 
                  evaluateFrequencyDependentProperties: Boolean = False, frequency: float = 0, 
                  retainedEigenmodesMethod: SymbolicConstant = NONE, 
-                 modeRange: SubstructureGenerateModesArray = None, 
-                 frequencyRange: SubstructureGenerateFrequencyArray = None, 
+                 modeRange: SubstructureGenerateModesArray = SubstructureGenerateModesArray(), 
+                 frequencyRange: SubstructureGenerateFrequencyArray = SubstructureGenerateFrequencyArray(), 
                  globalDampingField: SymbolicConstant = NONE, alphaDampingRatio: float = 0, 
                  betaDampingRatio: float = 0, structuralDampingRatio: float = 0, 
                  viscousDampingControl: SymbolicConstant = NONE, 
@@ -279,14 +279,14 @@ class SubstructureGenerateStep(AnalysisStep):
         pass
 
     def setValues(self, description: str = '', recoveryMatrix: SymbolicConstant = WHOLE_MODEL, 
-                  recoveryRegion: Region = None, computeGravityLoadVectors: Boolean = False, 
+                  recoveryRegion: Region = Region(), computeGravityLoadVectors: Boolean = False, 
                   computeReducedMassMatrix: Boolean = False, 
                   computeReducedStructuralDampingMatrix: Boolean = False, 
                   computeReducedViscousDampingMatrix: Boolean = False, 
                   evaluateFrequencyDependentProperties: Boolean = False, frequency: float = 0, 
                   retainedEigenmodesMethod: SymbolicConstant = NONE, 
-                  modeRange: SubstructureGenerateModesArray = None, 
-                  frequencyRange: SubstructureGenerateFrequencyArray = None, 
+                  modeRange: SubstructureGenerateModesArray = SubstructureGenerateModesArray(), 
+                  frequencyRange: SubstructureGenerateFrequencyArray = SubstructureGenerateFrequencyArray(), 
                   globalDampingField: SymbolicConstant = NONE, alphaDampingRatio: float = 0, 
                   betaDampingRatio: float = 0, structuralDampingRatio: float = 0, 
                   viscousDampingControl: SymbolicConstant = NONE, 

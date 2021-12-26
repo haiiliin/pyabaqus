@@ -18,5 +18,5 @@ class StructuralDamping:
     """
 
     # A StructuralDampingComponentArray object. 
-    components: StructuralDampingComponentArray = None
+    components: StructuralDampingComponentArray = StructuralDampingComponentArray()
 

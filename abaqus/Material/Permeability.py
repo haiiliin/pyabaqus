@@ -44,11 +44,11 @@ class Permeability:
 
     # A SaturationDependence object specifying the dependence of the permeability of a 
     # material on the saturation of the wetting liquid. 
-    saturationDependence: SaturationDependence = None
+    saturationDependence: SaturationDependence = SaturationDependence()
 
     # A VelocityDependence object specifying the dependence of the permeability of a material 
     # on the velocity of fluid flow. 
-    velocityDependence: VelocityDependence = None
+    velocityDependence: VelocityDependence = VelocityDependence()
 
     def __init__(self, specificWeight: float, inertialDragCoefficient: float, table: tuple, 
                  type: SymbolicConstant = ISOTROPIC, temperatureDependency: Boolean = OFF, 

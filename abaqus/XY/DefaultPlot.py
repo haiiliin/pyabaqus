@@ -22,9 +22,9 @@ class DefaultPlot:
 
     # An Area object specifying an Area used to hold on to the default display properties for 
     # the plot area. 
-    area: Area = None
+    area: Area = Area()
 
     # A Title object specifying a Title object used to hold on to the default properties of 
     # the XY-Plot title. 
-    title: Title = None
+    title: Title = Title()
 

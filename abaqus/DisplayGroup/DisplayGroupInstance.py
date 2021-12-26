@@ -42,7 +42,7 @@ class DisplayGroupInstance:
     # An OdbDisplayOptions object specifying this member is available only for 
     # DisplayGroupInstance objects that are members of the DisplayGroupInstance repository 
     # member of the OdbDisplay object. 
-    odbDisplayOptions: OdbDisplayOptions = None
+    odbDisplayOptions: OdbDisplayOptions = OdbDisplayOptions()
 
     def nodes(self):
         """This method is used to obtain the list of nodes present in the DisplayGroupInstance

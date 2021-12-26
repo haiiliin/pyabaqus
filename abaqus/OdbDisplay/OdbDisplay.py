@@ -80,62 +80,62 @@ class OdbDisplay:
     fieldSteps: tuple = ()
 
     # An OdbFieldVarList object. 
-    fieldVariables: OdbFieldVarList = None
+    fieldVariables: OdbFieldVarList = OdbFieldVarList()
 
     # An OdbModelFieldVarList object. 
-    modelVariableList: OdbModelFieldVarList = None
+    modelVariableList: OdbModelFieldVarList = OdbModelFieldVarList()
 
     # A repository of OdbSet objects specifying the set label. The repository is read-only. 
-    nodeSet: Repository[str, OdbSet] = None
+    nodeSet: Repository[str, OdbSet] = Repository[str, OdbSet]()
 
     # A repository of OdbSet objects specifying the set label. The repository is read-only. 
-    elementSet: Repository[str, OdbSet] = None
+    elementSet: Repository[str, OdbSet] = Repository[str, OdbSet]()
 
     # A repository of OdbSet objects specifying the set label. The repository is read-only. 
-    surfaceSet: Repository[str, OdbSet] = None
+    surfaceSet: Repository[str, OdbSet] = Repository[str, OdbSet]()
 
     # A DisplayOptions object. 
-    display: DisplayOptions = None
+    display: DisplayOptions = DisplayOptions()
 
     # A ContourOptions object. 
-    contourOptions: ContourOptions = None
+    contourOptions: ContourOptions = ContourOptions()
 
     # A CommonOptions object. 
-    commonOptions: CommonOptions = None
+    commonOptions: CommonOptions = CommonOptions()
 
     # A SymbolOptions object. 
-    symbolOptions: SymbolOptions = None
+    symbolOptions: SymbolOptions = SymbolOptions()
 
     # A SuperimposeOptions object. 
-    superimposeOptions: SuperimposeOptions = None
+    superimposeOptions: SuperimposeOptions = SuperimposeOptions()
 
     # A DisplayBodyOptions object. 
-    displayBodyOptions: DisplayBodyOptions = None
+    displayBodyOptions: DisplayBodyOptions = DisplayBodyOptions()
 
     # A FreeBodyOptions object. 
-    freeBodyOptions: FreeBodyOptions = None
+    freeBodyOptions: FreeBodyOptions = FreeBodyOptions()
 
     # A StreamOptions object. 
-    streamOptions: StreamOptions = None
+    streamOptions: StreamOptions = StreamOptions()
 
     # A ViewCutOptions object. 
-    viewCutOptions: ViewCutOptions = None
+    viewCutOptions: ViewCutOptions = ViewCutOptions()
 
     # A repository of ViewCut objects. 
-    viewCuts: Repository[str, ViewCut] = None
+    viewCuts: Repository[str, ViewCut] = Repository[str, ViewCut]()
 
     # A DisplayGroup object specifying the current display group and referring to an object in 
     # the *displayGroups* member of Session. 
-    displayGroup: DisplayGroup = None
+    displayGroup: DisplayGroup = DisplayGroup()
 
     # A DisplayGroupInstanceRepository object. 
-    displayGroupInstances: DisplayGroupInstanceRepository = None
+    displayGroupInstances: DisplayGroupInstanceRepository = DisplayGroupInstanceRepository()
 
     # A BasicOptions object. 
-    basicOptions: BasicOptions = None
+    basicOptions: BasicOptions = BasicOptions()
 
     # An OrientationOptions object. 
-    materialOrientationOptions: OrientationOptions = None
+    materialOrientationOptions: OrientationOptions = OrientationOptions()
 
     # A tuple of Strings specifying the step label and the frame label when the current step 
     # is user defined. Alternatively, *fieldFrame* maybe specified as a pair of Ints with the 
@@ -344,7 +344,7 @@ class OdbDisplay:
         pass
 
     def setPrimaryVariable(self, variableLabel: str, field: str, outputPosition: SymbolicConstant, 
-                           refinement: SymbolicConstant = None, sectionPoint: dict = {}):
+                           refinement: SymbolicConstant = None, sectionPoint: dict = None):
         """This method specifies the field output variable for which to obtain results.
 
         Parameters
@@ -411,7 +411,7 @@ class OdbDisplay:
         pass
 
     def setStatusVariable(self, variableLabel: str, field: str, outputPosition: SymbolicConstant, 
-                          refinement: SymbolicConstant = None, sectionPoint: dict = {}, 
+                          refinement: SymbolicConstant = None, sectionPoint: dict = None, 
                           statusMinimum: float = None, statusMaximum: float = None, 
                           statusInsideRange: Boolean = OFF, useStatus: Boolean = OFF, 
                           applyStatusToUndeformed: Boolean = False):
@@ -470,7 +470,7 @@ class OdbDisplay:
         pass
 
     def setSymbolVariable(self, variableLabel: str, field: str, outputPosition: SymbolicConstant, 
-                          refinement: SymbolicConstant = None, sectionPoint: dict = {}, 
+                          refinement: SymbolicConstant = None, sectionPoint: dict = None, 
                           tensorQuantity: SymbolicConstant = None, vectorQuantity: SymbolicConstant = None):
         """This method specifies the field output variable for which to obtain results used for
         symbol plots. This variable must be in the form of vector or tensor data. The output

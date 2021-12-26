@@ -26,17 +26,17 @@ class Title:
     useDefault: Boolean = OFF
 
     # An Area object specifying the area of the title. 
-    area: Area = None
+    area: Area = Area()
 
     # A String specifying the text to appear as a title. By default the title is set to the 
     # XYPlot object name. The default value is an empty string. 
     text: str = ''
 
     # A TextStyle object specifying the text properties used to display the legend title. 
-    titleStyle: TextStyle = None
+    titleStyle: TextStyle = TextStyle()
 
-    def setValues(self, title: 'Title' = None, text: str = '', area: Area = None, useDefault: Boolean = OFF, 
-                  titleStyle: TextStyle = None):
+    def setValues(self, title: 'Title' = Title(), text: str = '', area: Area = Area(), 
+                  useDefault: Boolean = OFF, titleStyle: TextStyle = TextStyle()):
         """This method modifies the Title object.
 
         Parameters

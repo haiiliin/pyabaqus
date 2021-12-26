@@ -86,10 +86,10 @@ class Area:
     pb: float = 1
 
     # An AreaStyle object specifying whether and how to fill the area. 
-    style: AreaStyle = None
+    style: AreaStyle = AreaStyle()
 
     # A LineStyle object specifying whether and how to draw the border of the area. 
-    border: LineStyle = None
+    border: LineStyle = LineStyle()
 
     # A pair of Floats specifying the X- and Y-offsets in millimeters from the lower-left 
     # corner of the XYPlot. 
@@ -100,7 +100,7 @@ class Area:
     # The default value is (-1, 0). The valid range for each float is (0, 1). 
     originOffset: tuple[float] = ()
 
-    def setValues(self, area: 'Area' = None, style: AreaStyle = None, border: LineStyle = None, 
+    def setValues(self, area: 'Area' = Area(), style: AreaStyle = AreaStyle(), border: LineStyle = LineStyle(), 
                   positionMethod: SymbolicConstant = AUTO_ALIGN, 
                   alignment: SymbolicConstant = BOTTOM_LEFT, sizeMethod: SymbolicConstant = AUTOMATIC, 
                   originOffset: tuple[float] = (), widthScale: float = 1, heightScale: float = 1, 

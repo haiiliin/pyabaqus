@@ -42,7 +42,7 @@ class OdbMeshElement:
     type: str = ''
 
     # A SectionCategory object specifying the element section properties. 
-    sectionCategory: SectionCategory = None
+    sectionCategory: SectionCategory = SectionCategory()
 
     # A tuple of Ints specifying the element connectivity. For connector elements connected to 
     # ground, the other node is repeated in the connectivity data. The position of the ground 

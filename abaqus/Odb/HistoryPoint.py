@@ -69,19 +69,19 @@ class HistoryPoint:
     position: SymbolicConstant = None
 
     # An OdbMeshElement object specifying the element for which the data are to be collected. 
-    element: OdbMeshElement = None
+    element: OdbMeshElement = OdbMeshElement()
 
     # A SectionPoint object. 
-    sectionPoint: SectionPoint = None
+    sectionPoint: SectionPoint = SectionPoint()
 
     # An OdbSet object specifying the region for which the data are to be collected. 
-    region: OdbSet = None
+    region: OdbSet = OdbSet()
 
     # An OdbAssembly object specifying the assembly for which the data are to be collected. 
-    assembly: OdbAssembly = None
+    assembly: OdbAssembly = OdbAssembly()
 
     # An OdbInstance object specifying the instance for which the data are to be collected. 
-    instance: OdbInstance = None
+    instance: OdbInstance = OdbInstance()
 
     @typing.overload
     def __init__(self, node: OdbMeshNode):
@@ -107,8 +107,8 @@ class HistoryPoint:
         pass
 
     @typing.overload
-    def __init__(self, element: OdbMeshElement, ipNumber: int = 0, sectionPoint: SectionPoint = None, 
-                 face: SymbolicConstant = FACE_UNKNOWN, node: OdbMeshNode = None):
+    def __init__(self, element: OdbMeshElement, ipNumber: int = 0, sectionPoint: SectionPoint = SectionPoint(), 
+                 face: SymbolicConstant = FACE_UNKNOWN, node: OdbMeshNode = OdbMeshNode()):
         """This method creates a HistoryPoint object for an element.
 
         Path

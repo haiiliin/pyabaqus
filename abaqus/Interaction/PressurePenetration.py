@@ -34,11 +34,11 @@ class PressurePenetration(Interaction):
 
     # A RegionArray object specifying the points on the main surface that are exposed to the 
     # fluid. 
-    mainPoints: RegionArray = None
+    mainPoints: RegionArray = RegionArray()
 
     # A RegionArray object specifying the points on the secondary surface that are exposed to 
     # the fluid. 
-    secondaryPoints: RegionArray = None
+    secondaryPoints: RegionArray = RegionArray()
 
     def __init__(self, name: str, createStepName: str, contactInteraction: str, mainPoints: RegionArray, 
                  secondaryPoints: RegionArray, penetrationPressure: float, criticalPressure: float, 

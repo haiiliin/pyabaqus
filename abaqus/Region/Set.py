@@ -61,34 +61,34 @@ class Set:
     """
 
     # A MeshElementArray object. 
-    elements: MeshElementArray = None
+    elements: MeshElementArray = MeshElementArray()
 
     # A MeshNodeArray object. 
-    nodes: MeshNodeArray = None
+    nodes: MeshNodeArray = MeshNodeArray()
 
     # A VertexArray object. 
-    vertices: VertexArray = None
+    vertices: VertexArray = VertexArray()
 
     # An EdgeArray object. 
-    edges: EdgeArray = None
+    edges: EdgeArray = EdgeArray()
 
     # A FaceArray object. 
-    faces: FaceArray = None
+    faces: FaceArray = FaceArray()
 
     # A CellArray object. 
-    cells: CellArray = None
+    cells: CellArray = CellArray()
 
     # A VertexArray object. 
-    xVertices: VertexArray = None
+    xVertices: VertexArray = VertexArray()
 
     # An EdgeArray object. 
-    xEdges: EdgeArray = None
+    xEdges: EdgeArray = EdgeArray()
 
     # A FaceArray object. 
-    xFaces: FaceArray = None
+    xFaces: FaceArray = FaceArray()
 
     # A ReferencePointArray object. 
-    referencePoints: ReferencePointArray = None
+    referencePoints: ReferencePointArray = ReferencePointArray()
 
     @typing.overload
     def __init__(self, name: str, nodes: tuple[MeshNode] = None, elements: tuple[MeshElement] = None, 

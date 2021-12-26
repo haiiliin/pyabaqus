@@ -29,7 +29,7 @@ class Viscosity:
     """
 
     # A Trs object. 
-    trs: Trs = None
+    trs: Trs = Trs()
 
     def __init__(self, table: tuple, type: SymbolicConstant = NEWTONIAN, temperatureDependency: Boolean = OFF, 
                  dependencies: int = 0):

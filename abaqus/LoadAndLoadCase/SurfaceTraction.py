@@ -77,7 +77,7 @@ class SurfaceTraction(Load):
     directionVector: tuple = ()
 
     # A Region object specifying the region to which the load is applied. 
-    region: Region = None
+    region: Region = Region()
 
     def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, 
                  distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET, 
@@ -221,7 +221,8 @@ class SurfaceTraction(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, magnitude: typing.Union[SymbolicConstant,float] = None, 
+    def setValuesInStep(self, stepName: str, 
+                        magnitude: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing SurfaceTraction object in the
         specified step.

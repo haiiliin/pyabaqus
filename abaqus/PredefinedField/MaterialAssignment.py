@@ -25,7 +25,7 @@ class MaterialAssignment(PredefinedField):
     """
 
     # A Region object specifying the region to which the predefined field is applied. 
-    region: Region = None
+    region: Region = Region()
 
     def __init__(self, name: str, instanceList: PartInstanceArray, useFields: Boolean = OFF, 
                  assignmentList: tuple = (), fieldList: tuple = (), colorList: tuple = ()):

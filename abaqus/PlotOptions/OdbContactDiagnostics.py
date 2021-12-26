@@ -20,7 +20,7 @@ class OdbContactDiagnostics:
     """
 
     # A repository of OdbAuxiliaryData objects. This attribute is read-only. 
-    data: Repository[str, OdbAuxiliaryData] = None
+    data: Repository[str, OdbAuxiliaryData] = Repository[str, OdbAuxiliaryData]()
 
     # A string specifying the opening/overclosure status of the contact. This attribute is 
     # read-only. 

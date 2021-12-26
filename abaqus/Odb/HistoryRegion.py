@@ -28,7 +28,7 @@ class HistoryRegion:
     position: SymbolicConstant = None
 
     # A repository of HistoryOutput objects. 
-    historyOutputs: Repository[str, HistoryOutput] = None
+    historyOutputs: Repository[str, HistoryOutput] = Repository[str, HistoryOutput]()
 
     def __init__(self, name: str, description: str, point: HistoryPoint, loadCase: str = None):
         """This method creates a HistoryRegion object.

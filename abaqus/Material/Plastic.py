@@ -69,25 +69,25 @@ class Plastic:
     """
 
     # A RateDependent object. 
-    rateDependent: RateDependent = None
+    rateDependent: RateDependent = RateDependent()
 
     # A Potential object. 
-    potential: Potential = None
+    potential: Potential = Potential()
 
     # A CyclicHardening object. 
-    cyclicHardening: CyclicHardening = None
+    cyclicHardening: CyclicHardening = CyclicHardening()
 
     # An Ornl object. 
-    ornl: Ornl = None
+    ornl: Ornl = Ornl()
 
     # A CycledPlastic object. 
-    cycledPlastic: CycledPlastic = None
+    cycledPlastic: CycledPlastic = CycledPlastic()
 
     # An AnnealTemperature object. 
-    annealTemperature: AnnealTemperature = None
+    annealTemperature: AnnealTemperature = AnnealTemperature()
 
     # A TensileFailure object. 
-    tensileFailure: TensileFailure = None
+    tensileFailure: TensileFailure = TensileFailure()
 
     def __init__(self, table: tuple, hardening: SymbolicConstant = ISOTROPIC, rate: Boolean = OFF, 
                  dataType: SymbolicConstant = HALF_CYCLE, strainRangeDependency: Boolean = OFF, 

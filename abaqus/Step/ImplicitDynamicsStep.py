@@ -79,7 +79,7 @@ class ImplicitDynamicsStep(AnalysisStep):
     minInc: float = None
 
     # The SymbolicConstant DEFAULT or a Float specifying the maximum time increment allowed. 
-    maxInc: typing.Union[SymbolicConstant,float] = None
+    maxInc: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float]()
 
     # A SymbolicConstant specifying the way of specifying half-increment residual tolerance 
     # with the automatic time incrementation scheme. Possible values are 
@@ -187,53 +187,53 @@ class ImplicitDynamicsStep(AnalysisStep):
     suppressed: Boolean = OFF
 
     # A repository of FieldOutputRequestState objects. 
-    fieldOutputRequestState: Repository[str, FieldOutputRequestState] = None
+    fieldOutputRequestState: Repository[str, FieldOutputRequestState] = Repository[str, FieldOutputRequestState]()
 
     # A repository of HistoryOutputRequestState objects. 
-    historyOutputRequestState: Repository[str, HistoryOutputRequestState] = None
+    historyOutputRequestState: Repository[str, HistoryOutputRequestState] = Repository[str, HistoryOutputRequestState]()
 
     # A DiagnosticPrint object. 
-    diagnosticPrint: DiagnosticPrint = None
+    diagnosticPrint: DiagnosticPrint = DiagnosticPrint()
 
     # A Monitor object. 
-    monitor: Monitor = None
+    monitor: Monitor = Monitor()
 
     # A Restart object. 
-    restart: Restart = None
+    restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = None
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
-    adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = None
+    adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
 
     # A Control object. 
-    control: Control = None
+    control: Control = Control()
 
     # A SolverControl object. 
-    solverControl: SolverControl = None
+    solverControl: SolverControl = SolverControl()
 
     # A repository of BoundaryConditionState objects. 
-    boundaryConditionStates: Repository[str, BoundaryConditionState] = None
+    boundaryConditionStates: Repository[str, BoundaryConditionState] = Repository[str, BoundaryConditionState]()
 
     # A repository of InteractionState objects. 
     interactionStates: int = None
 
     # A repository of LoadState objects. 
-    loadStates: Repository[str, LoadState] = None
+    loadStates: Repository[str, LoadState] = Repository[str, LoadState]()
 
     # A repository of LoadCase objects. 
-    loadCases: Repository[str, LoadCase] = None
+    loadCases: Repository[str, LoadCase] = Repository[str, LoadCase]()
 
     # A repository of PredefinedFieldState objects. 
-    predefinedFieldStates: Repository[str, PredefinedFieldState] = None
+    predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
     def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1, 
                  nlgeom: Boolean = OFF, matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
                  application: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT, adiabatic: Boolean = OFF, 
                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
                  initialInc: float = None, minInc: float = None, 
-                 maxInc: typing.Union[SymbolicConstant,float] = None, 
+                 maxInc: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
                  hafTolMethod: SymbolicConstant = VALUE, haftol: float = None, 
                  halfIncScaleFactor: float = None, nohaf: Boolean = OFF, 
                  amplitude: SymbolicConstant = STEP, 
@@ -349,7 +349,7 @@ class ImplicitDynamicsStep(AnalysisStep):
                   application: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT, adiabatic: Boolean = OFF, 
                   timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
                   initialInc: float = None, minInc: float = None, 
-                  maxInc: typing.Union[SymbolicConstant,float] = None, 
+                  maxInc: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
                   hafTolMethod: SymbolicConstant = VALUE, haftol: float = None, 
                   halfIncScaleFactor: float = None, nohaf: Boolean = OFF, 
                   amplitude: SymbolicConstant = STEP, 

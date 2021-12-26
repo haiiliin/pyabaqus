@@ -384,7 +384,7 @@ class BasicOptions:
 
     # A DatumCsys object specifying the coordinate system to use for results transformation 
     # when *transformationType*=USER_SPECIFIED. 
-    datumCsys: DatumCsys = None
+    datumCsys: DatumCsys = DatumCsys()
 
     # A tuple of Ints specifying which sectors to display when 
     # *sectorSelectionType*=SELECT_BY_NUMBER. Possible values are 1 ≤≤ *selectedSectorNumbers* 
@@ -432,7 +432,7 @@ class BasicOptions:
                   patternRotationAxis: SymbolicConstant = ZAXIS, patternTotalAngle: float = 360, 
                   patternNumCircular: int = 1, couplingDisplay: Boolean = ON, 
                   coordSystemDisplay: Boolean = OFF, scratchCoordSystemDisplay: Boolean = OFF, 
-                  transformationType: SymbolicConstant = DEFAULT, datumCsys: DatumCsys = None, 
+                  transformationType: SymbolicConstant = DEFAULT, datumCsys: DatumCsys = DatumCsys(), 
                   rigidTransformPrimary: Boolean = OFF, rigidTransformDeformed: Boolean = OFF, 
                   transformOnDeformed: Boolean = ON, averageElementOutput: Boolean = ON, 
                   averageOnlyDisplayed: Boolean = ON, 

@@ -110,31 +110,31 @@ class Model:
     copyInteractions: Boolean = OFF
 
     # A KeywordBlock object. 
-    keywordBlock: KeywordBlock = None
+    keywordBlock: KeywordBlock = KeywordBlock()
 
     # An Assembly object. 
-    rootAssembly: Assembly = None
+    rootAssembly: Assembly = Assembly()
 
     # A repository of Amplitude objects. 
-    amplitudes: Repository[str, Amplitude] = None
+    amplitudes: Repository[str, Amplitude] = Repository[str, Amplitude]()
 
     # A repository of Profile objects. 
-    profiles: Repository[str, Profile] = None
+    profiles: Repository[str, Profile] = Repository[str, Profile]()
 
     # A repository of BoundaryCondition objects. 
-    boundaryConditions: Repository[str, BoundaryCondition] = None
+    boundaryConditions: Repository[str, BoundaryCondition] = Repository[str, BoundaryCondition]()
 
     # A repository of Constraint objects. 
-    constraints: Repository[str, Constraint] = None
+    constraints: Repository[str, Constraint] = Repository[str, Constraint]()
 
     # A repository of AnalyticalField objects. 
-    analyticalFields: Repository[str, AnalyticalField] = None
+    analyticalFields: Repository[str, AnalyticalField] = Repository[str, AnalyticalField]()
 
     # A repository of DiscreteField objects. 
-    discreteFields: Repository[str, DiscreteField] = None
+    discreteFields: Repository[str, DiscreteField] = Repository[str, DiscreteField]()
 
     # A repository of PredefinedField objects. 
-    predefinedFields: Repository[str, PredefinedField] = None
+    predefinedFields: Repository[str, PredefinedField] = Repository[str, PredefinedField]()
 
     # A repository of Interaction objects. 
     interactions: int = None
@@ -143,13 +143,13 @@ class Model:
     interactionProperties: int = None
 
     # A repository of ContactControl objects. 
-    contactControls: Repository[str, ContactControl] = None
+    contactControls: Repository[str, ContactControl] = Repository[str, ContactControl]()
 
     # A repository of ContactInitialization objects. 
-    contactInitializations: Repository[str, ContactInitialization] = None
+    contactInitializations: Repository[str, ContactInitialization] = Repository[str, ContactInitialization]()
 
     # A repository of ContactStabilization objects. 
-    contactStabilizations: Repository[str, ContactStabilization] = None
+    contactStabilizations: Repository[str, ContactStabilization] = Repository[str, ContactStabilization]()
 
     # A tuple of tuples of Strings specifying the linked child PartInstance name in the 
     # current model to the corresponding parent PartInstance name in a different model. 
@@ -160,64 +160,64 @@ class Model:
     linkedParts: tuple = ()
 
     # A repository of Load objects. 
-    loads: Repository[str, Load] = None
+    loads: Repository[str, Load] = Repository[str, Load]()
 
     # A repository of Material objects. 
-    materials: Repository[str, Material] = None
+    materials: Repository[str, Material] = Repository[str, Material]()
 
     # A repository of Calibration objects. 
-    calibrations: Repository[str, Calibration] = None
+    calibrations: Repository[str, Calibration] = Repository[str, Calibration]()
 
     # A repository of Section objects. 
-    sections: Repository[str, Section] = None
+    sections: Repository[str, Section] = Repository[str, Section]()
 
     # A repository of RemeshingRule objects. 
-    remeshingRules: Repository[str, RemeshingRule] = None
+    remeshingRules: Repository[str, RemeshingRule] = Repository[str, RemeshingRule]()
 
     # A repository of ConstrainedSketch objects. 
-    sketches: Repository[str, ConstrainedSketch] = None
+    sketches: Repository[str, ConstrainedSketch] = Repository[str, ConstrainedSketch]()
 
     # A repository of Part objects. 
-    parts: Repository[str, Part] = None
+    parts: Repository[str, Part] = Repository[str, Part]()
 
     # A repository of Step objects. 
-    steps: Repository[str, Step] = None
+    steps: Repository[str, Step] = Repository[str, Step]()
 
     # A FeatureOptions object. 
-    featureOptions: FeatureOptions = None
+    featureOptions: FeatureOptions = FeatureOptions()
 
     # A repository of AdaptiveMeshConstraint objects. 
-    adaptiveMeshConstraints: Repository[str, AdaptiveMeshConstraint] = None
+    adaptiveMeshConstraints: Repository[str, AdaptiveMeshConstraint] = Repository[str, AdaptiveMeshConstraint]()
 
     # A repository of AdaptiveMeshControl objects. 
-    adaptiveMeshControls: Repository[str, AdaptiveMeshControl] = None
+    adaptiveMeshControls: Repository[str, AdaptiveMeshControl] = Repository[str, AdaptiveMeshControl]()
 
     # A repository of TimePoint objects. 
-    timePoints: Repository[str, TimePoint] = None
+    timePoints: Repository[str, TimePoint] = Repository[str, TimePoint]()
 
     # A repository of Filter objects. 
-    filters: Repository[str, Filter] = None
+    filters: Repository[str, Filter] = Repository[str, Filter]()
 
     # A repository of IntegratedOutputSection objects. 
     integratedOutputSections: int = None
 
     # A repository of FieldOutputRequest objects. 
-    fieldOutputRequests: Repository[str, FieldOutputRequest] = None
+    fieldOutputRequests: Repository[str, FieldOutputRequest] = Repository[str, FieldOutputRequest]()
 
     # A repository of HistoryOutputRequest objects. 
-    historyOutputRequests: Repository[str, HistoryOutputRequest] = None
+    historyOutputRequests: Repository[str, HistoryOutputRequest] = Repository[str, HistoryOutputRequest]()
 
     # A repository of OptimizationTask objects. 
-    optimizationTasks: Repository[str, OptimizationTask] = None
+    optimizationTasks: Repository[str, OptimizationTask] = Repository[str, OptimizationTask]()
 
     # A repository of TableCollection objects. 
-    tableCollections: Repository[str, TableCollection] = None
+    tableCollections: Repository[str, TableCollection] = Repository[str, TableCollection]()
 
     # A repository of EventSeriesType objects. 
-    eventSeriesTypes: Repository[str, EventSeriesType] = None
+    eventSeriesTypes: Repository[str, EventSeriesType] = Repository[str, EventSeriesType]()
 
     # A repository of EventSeriesData objects. 
-    eventSeriesDatas: Repository[str, EventSeriesData] = None
+    eventSeriesDatas: Repository[str, EventSeriesData] = Repository[str, EventSeriesData]()
 
     def __init__(self, name: str, description: str = '', stefanBoltzmann: float = None, 
                  absoluteZero: float = None, waveFormulation: SymbolicConstant = NOT_SET, 

@@ -52,7 +52,8 @@ class Assembly(BaseAssembly):
         pass
 
     def associateMeshWithGeometry(self, geometricEntity: str, elements: tuple[MeshElement] = (), 
-                                  elemFaces: tuple[MeshFace] = (), elemEdges: tuple[MeshEdge] = (), node: MeshNode = None):
+                                  elemFaces: tuple[MeshFace] = (), elemEdges: tuple[MeshEdge] = (), 
+                                  node: MeshNode = MeshNode()):
         """This method associates a geometric entity with mesh entities that are either orphan
         elements, bounds orphan elements, or were created using the bottom-up meshing technique.
 
@@ -335,7 +336,8 @@ class Assembly(BaseAssembly):
     def generateBottomUpSweptMesh(self, cell: Cell, geometrySourceSide: str = '', elemFacesSourceSide: tuple[MeshFace] = (), 
                                   elemSourceSide: tuple = (), geometryConnectingSides: str = '', 
                                   elemFacesConnectingSides: tuple[MeshFace] = (), elemConnectingSides: tuple = (), 
-                                  targetSide: Face = None, numberOfLayers: int = None, extendElementSets: Boolean = False):
+                                  targetSide: Face = Face(), numberOfLayers: int = None, 
+                                  extendElementSets: Boolean = False):
         """This method generates solid elements by sweeping a 2D mesh, either on an orphan mesh or
         within a cell region using a bottom-up technique.
 

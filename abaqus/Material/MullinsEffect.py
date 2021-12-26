@@ -42,11 +42,11 @@ class MullinsEffect:
     table: tuple = ()
 
     # A UniaxialTestDataArray object. 
-    uniaxialTests: UniaxialTestDataArray = None
+    uniaxialTests: UniaxialTestDataArray = UniaxialTestDataArray()
 
     # A BiaxialTestDataArray object. 
-    biaxialTests: BiaxialTestDataArray = None
+    biaxialTests: BiaxialTestDataArray = BiaxialTestDataArray()
 
     # A PlanarTestDataArray object. 
-    planarTests: PlanarTestDataArray = None
+    planarTests: PlanarTestDataArray = PlanarTestDataArray()
 

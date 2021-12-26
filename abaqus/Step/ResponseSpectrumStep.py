@@ -67,28 +67,28 @@ class ResponseSpectrumStep(AnalysisStep):
     description: str = ''
 
     # A ResponseSpectrumComponentArray object. 
-    components: ResponseSpectrumComponentArray = None
+    components: ResponseSpectrumComponentArray = ResponseSpectrumComponentArray()
 
     # A DirectDamping object. 
-    directDamping: DirectDamping = None
+    directDamping: DirectDamping = DirectDamping()
 
     # A CompositeDamping object. 
-    compositeDamping: CompositeDamping = None
+    compositeDamping: CompositeDamping = CompositeDamping()
 
     # A RayleighDamping object. 
-    rayleighDamping: RayleighDamping = None
+    rayleighDamping: RayleighDamping = RayleighDamping()
 
     # A DirectDampingByFrequency object. 
-    directDampingByFrequency: DirectDampingByFrequency = None
+    directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency()
 
     # A RayleighDampingByFrequency object. 
-    rayleighDampingByFrequency: RayleighDampingByFrequency = None
+    rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency()
 
     # A StructuralDamping object. 
-    structuralDamping: StructuralDamping = None
+    structuralDamping: StructuralDamping = StructuralDamping()
 
     # A StructuralDampingByFrequency object. 
-    structuralDampingByFrequency: StructuralDampingByFrequency = None
+    structuralDampingByFrequency: StructuralDampingByFrequency = StructuralDampingByFrequency()
 
     # A SymbolicConstant specifying whether the step has an explicit procedure type 
     # (*procedureType*=ANNEAL, DYNAMIC_EXPLICIT, or DYNAMIC_TEMP_DISPLACEMENT). 
@@ -133,53 +133,54 @@ class ResponseSpectrumStep(AnalysisStep):
     suppressed: Boolean = OFF
 
     # A repository of FieldOutputRequestState objects. 
-    fieldOutputRequestState: Repository[str, FieldOutputRequestState] = None
+    fieldOutputRequestState: Repository[str, FieldOutputRequestState] = Repository[str, FieldOutputRequestState]()
 
     # A repository of HistoryOutputRequestState objects. 
-    historyOutputRequestState: Repository[str, HistoryOutputRequestState] = None
+    historyOutputRequestState: Repository[str, HistoryOutputRequestState] = Repository[str, HistoryOutputRequestState]()
 
     # A DiagnosticPrint object. 
-    diagnosticPrint: DiagnosticPrint = None
+    diagnosticPrint: DiagnosticPrint = DiagnosticPrint()
 
     # A Monitor object. 
-    monitor: Monitor = None
+    monitor: Monitor = Monitor()
 
     # A Restart object. 
-    restart: Restart = None
+    restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = None
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
-    adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = None
+    adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
 
     # A Control object. 
-    control: Control = None
+    control: Control = Control()
 
     # A SolverControl object. 
-    solverControl: SolverControl = None
+    solverControl: SolverControl = SolverControl()
 
     # A repository of BoundaryConditionState objects. 
-    boundaryConditionStates: Repository[str, BoundaryConditionState] = None
+    boundaryConditionStates: Repository[str, BoundaryConditionState] = Repository[str, BoundaryConditionState]()
 
     # A repository of InteractionState objects. 
     interactionStates: int = None
 
     # A repository of LoadState objects. 
-    loadStates: Repository[str, LoadState] = None
+    loadStates: Repository[str, LoadState] = Repository[str, LoadState]()
 
     # A repository of LoadCase objects. 
-    loadCases: Repository[str, LoadCase] = None
+    loadCases: Repository[str, LoadCase] = Repository[str, LoadCase]()
 
     # A repository of PredefinedFieldState objects. 
-    predefinedFieldStates: Repository[str, PredefinedFieldState] = None
+    predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
     def __init__(self, name: str, previous: str, components: ResponseSpectrumComponentArray, 
                  description: str = '', comp: SymbolicConstant = SINGLE_DIRECTION, 
-                 sum: SymbolicConstant = ABS, directDamping: DirectDamping = None, 
-                 compositeDamping: CompositeDamping = None, rayleighDamping: RayleighDamping = None, 
-                 directDampingByFrequency: DirectDampingByFrequency = None, 
-                 rayleighDampingByFrequency: RayleighDampingByFrequency = None, 
+                 sum: SymbolicConstant = ABS, directDamping: DirectDamping = DirectDamping(), 
+                 compositeDamping: CompositeDamping = CompositeDamping(), 
+                 rayleighDamping: RayleighDamping = RayleighDamping(), 
+                 directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(), 
+                 rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(), 
                  maintainAttributes: Boolean = False):
         """This method creates a ResponseSpectrumStep object.
 
@@ -232,10 +233,11 @@ class ResponseSpectrumStep(AnalysisStep):
         pass
 
     def setValues(self, description: str = '', comp: SymbolicConstant = SINGLE_DIRECTION, 
-                  sum: SymbolicConstant = ABS, directDamping: DirectDamping = None, 
-                  compositeDamping: CompositeDamping = None, rayleighDamping: RayleighDamping = None, 
-                  directDampingByFrequency: DirectDampingByFrequency = None, 
-                  rayleighDampingByFrequency: RayleighDampingByFrequency = None):
+                  sum: SymbolicConstant = ABS, directDamping: DirectDamping = DirectDamping(), 
+                  compositeDamping: CompositeDamping = CompositeDamping(), 
+                  rayleighDamping: RayleighDamping = RayleighDamping(), 
+                  directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(), 
+                  rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency()):
         """This method modifies the ResponseSpectrumStep object.
 
         Parameters

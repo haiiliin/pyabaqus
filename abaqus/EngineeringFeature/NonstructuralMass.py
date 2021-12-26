@@ -1,6 +1,7 @@
-from ..Region.Region import Region
-from .Inertia import Inertia
 from abaqusConstants import *
+from .Inertia import Inertia
+from ..Region.Region import Region
+
 
 class NonstructuralMass(Inertia):
 

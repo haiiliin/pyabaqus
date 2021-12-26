@@ -453,7 +453,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def BlendFaces(self, side1: tuple[Edge], side2: tuple, method: SymbolicConstant = None, path: Edge = None):
+    def BlendFaces(self, side1: tuple[Edge], side2: tuple, method: SymbolicConstant = None, path: Edge = Edge()):
         """This method creates a Feature object by creating new faces that blends two sets of
         faces.
 
@@ -845,9 +845,9 @@ class Feature(BaseFeature):
         """
         pass
 
-    def CutSweep(self, path: str, profile: str, pathPlane: str = '', pathUpEdge: Edge = None, 
+    def CutSweep(self, path: str, profile: str, pathPlane: str = '', pathUpEdge: Edge = Edge(), 
                  pathOrientation: SymbolicConstant = None, sketchPlane: str = '', 
-                 sketchUpEdge: Edge = None, sketchOrientation: SymbolicConstant = None, 
+                 sketchUpEdge: Edge = Edge(), sketchOrientation: SymbolicConstant = None, 
                  draftAngle: float = None, pitch: float = None, profileNormal: Boolean = OFF, 
                  flipSweepDirection: Boolean = OFF):
         """This method creates an additional Feature object by sweeping the given ConstrainedSketch
@@ -1735,9 +1735,9 @@ class Feature(BaseFeature):
         """
         pass
 
-    def ShellSweep(self, path: str, profile: str, pathPlane: str = '', pathUpEdge: Edge = None, 
+    def ShellSweep(self, path: str, profile: str, pathPlane: str = '', pathUpEdge: Edge = Edge(), 
                    pathOrientation: SymbolicConstant = None, sketchPlane: str = '', 
-                   sketchUpEdge: Edge = None, sketchOrientation: SymbolicConstant = None, 
+                   sketchUpEdge: Edge = Edge(), sketchOrientation: SymbolicConstant = None, 
                    draftAngle: float = None, pitch: float = None, profileNormal: Boolean = OFF, 
                    flipSweepDirection: Boolean = OFF, keepInternalBoundaries: Boolean = OFF):
         """This method creates an additional Feature object by sweeping the given ConstrainedSketch
@@ -2028,9 +2028,9 @@ class Feature(BaseFeature):
         """
         pass
 
-    def SolidSweep(self, path: str, profile: str, pathPlane: str = '', pathUpEdge: Edge = None, 
+    def SolidSweep(self, path: str, profile: str, pathPlane: str = '', pathUpEdge: Edge = Edge(), 
                    pathOrientation: SymbolicConstant = None, sketchPlane: str = '', 
-                   sketchUpEdge: Edge = None, sketchOrientation: SymbolicConstant = None, 
+                   sketchUpEdge: Edge = Edge(), sketchOrientation: SymbolicConstant = None, 
                    draftAngle: float = None, pitch: float = None, profileNormal: Boolean = OFF, 
                    flipSweepDirection: Boolean = OFF, keepInternalBoundaries: Boolean = OFF):
         """This method creates an additional Feature object by sweeping the given ConstrainedSketch

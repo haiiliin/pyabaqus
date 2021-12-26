@@ -39,7 +39,7 @@ class BeamSection(Section):
     """
 
     # A TransverseShearBeam object specifying the transverse shear stiffness properties. 
-    beamTransverseShear: TransverseShearBeam = None
+    beamTransverseShear: TransverseShearBeam = TransverseShearBeam()
 
     def __init__(self, name: str, integration: SymbolicConstant, profile: str, poissonRatio: float = 0, 
                  thermalExpansion: Boolean = OFF, temperatureDependency: Boolean = OFF, 

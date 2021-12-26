@@ -28,7 +28,7 @@ class EquallySpacedAmplitude(Amplitude):
     """
 
     # A BaselineCorrection object. 
-    baselineCorrection: BaselineCorrection = None
+    baselineCorrection: BaselineCorrection = BaselineCorrection()
 
     def __init__(self, name: str, fixedInterval: float, data: tuple, begin: float = 0, 
                  smooth: typing.Union[SymbolicConstant,float] = SOLVER_DEFAULT, 

@@ -36,43 +36,43 @@ class Odb:
     isReadOnly: Boolean = OFF
 
     # A repository of Amplitude objects. 
-    amplitudes: Repository[str, Amplitude] = None
+    amplitudes: Repository[str, Amplitude] = Repository[str, Amplitude]()
 
     # A repository of Filter objects. 
-    filters: Repository[str, Filter] = None
+    filters: Repository[str, Filter] = Repository[str, Filter]()
 
     # An OdbAssembly object. 
-    rootAssembly: OdbAssembly = None
+    rootAssembly: OdbAssembly = OdbAssembly()
 
     # A JobData object. 
-    jobData: JobData = None
+    jobData: JobData = JobData()
 
     # A repository of OdbPart objects. 
-    parts: Repository[str, OdbPart] = None
+    parts: Repository[str, OdbPart] = Repository[str, OdbPart]()
 
     # A repository of Material objects. 
-    materials: Repository[str, Material] = None
+    materials: Repository[str, Material] = Repository[str, Material]()
 
     # A repository of OdbStep objects. 
-    steps: Repository[str, OdbStep] = None
+    steps: Repository[str, OdbStep] = Repository[str, OdbStep]()
 
     # A repository of Section objects. 
-    sections: Repository[str, Section] = None
+    sections: Repository[str, Section] = Repository[str, Section]()
 
     # A repository of SectionCategory objects. 
-    sectionCategories: Repository[str, SectionCategory] = None
+    sectionCategories: Repository[str, SectionCategory] = Repository[str, SectionCategory]()
 
     # A SectorDefinition object. 
-    sectorDefinition: SectorDefinition = None
+    sectorDefinition: SectorDefinition = SectorDefinition()
 
     # A UserData object. 
-    userData: UserData = None
+    userData: UserData = UserData()
 
     # A RepositorySupport object. 
-    customData: RepositorySupport = None
+    customData: RepositorySupport = RepositorySupport()
 
     # A repository of Profile objects. 
-    profiles: Repository[str, Profile] = None
+    profiles: Repository[str, Profile] = Repository[str, Profile]()
 
     def __init__(self, name: str, analysisTitle: str = '', description: str = '', path: str = ''):
         """This method creates a new Odb object.

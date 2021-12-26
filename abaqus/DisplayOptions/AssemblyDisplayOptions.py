@@ -99,47 +99,47 @@ class AssemblyDisplayOptions:
     renderStyle: SymbolicConstant = WIREFRAME
 
     # A BCDisplayOptions object. 
-    bcOptions: BCDisplayOptions = None
+    bcOptions: BCDisplayOptions = BCDisplayOptions()
 
     # A ConstraintDisplayOptions object. 
-    constraintOptions: ConstraintDisplayOptions = None
+    constraintOptions: ConstraintDisplayOptions = ConstraintDisplayOptions()
 
     # A DisplayGroup object specifying the current display group and referring to an object in 
     # the *displayGroups* member of Session. 
-    displayGroup: DisplayGroup = None
+    displayGroup: DisplayGroup = DisplayGroup()
 
     # A repository of DisplayGroupInstance objects. 
-    displayGroupInstances: Repository[str, DisplayGroupInstance] = None
+    displayGroupInstances: Repository[str, DisplayGroupInstance] = Repository[str, DisplayGroupInstance]()
 
     # An EngineeringFeatureDisplayOptions object. 
-    engineeringFeatureOptions: EngineeringFeatureDisplayOptions = None
+    engineeringFeatureOptions: EngineeringFeatureDisplayOptions = EngineeringFeatureDisplayOptions()
 
     # A PredefinedFieldDisplayOptions object. 
-    predefinedFieldOptions: PredefinedFieldDisplayOptions = None
+    predefinedFieldOptions: PredefinedFieldDisplayOptions = PredefinedFieldDisplayOptions()
 
     # A GeometricRestrictionDisplayOptions object. 
-    geometricRestrictionOptions: GeometricRestrictionDisplayOptions = None
+    geometricRestrictionOptions: GeometricRestrictionDisplayOptions = GeometricRestrictionDisplayOptions()
 
     # A GeometryDisplayOptions object. 
-    geometryOptions: GeometryDisplayOptions = None
+    geometryOptions: GeometryDisplayOptions = GeometryDisplayOptions()
 
     # An InteractionDisplayOptions object. 
     interactionOptions: int = None
 
     # A LoadDisplayOptions object. 
-    loadOptions: LoadDisplayOptions = None
+    loadOptions: LoadDisplayOptions = LoadDisplayOptions()
 
     # A MeshDisplayOptions object. 
-    meshOptions: MeshDisplayOptions = None
+    meshOptions: MeshDisplayOptions = MeshDisplayOptions()
 
     # An OptimizationTaskDisplayOptions object. 
-    optimizationTaskOptions: OptimizationTaskDisplayOptions = None
+    optimizationTaskOptions: OptimizationTaskDisplayOptions = OptimizationTaskDisplayOptions()
 
     # A StopConditionDisplayOptions object. 
-    stopConditionOptions: StopConditionDisplayOptions = None
+    stopConditionOptions: StopConditionDisplayOptions = StopConditionDisplayOptions()
 
     # A SymbolDisplayOptions object. 
-    symbolOptions: SymbolDisplayOptions = None
+    symbolOptions: SymbolDisplayOptions = SymbolDisplayOptions()
 
     # A tuple of Strings specifying the names of the part instances that are visible in the 
     # viewport. The default value is an empty sequence. 

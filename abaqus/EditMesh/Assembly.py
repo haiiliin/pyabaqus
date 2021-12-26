@@ -111,7 +111,7 @@ class Assembly(BaseAssembly):
 
     def editNode(self, nodes: tuple[MeshNode], coordinate1: float = None, coordinate2: float = None, 
                  coordinate3: float = None, coordinates: tuple = (), offset1: float = None, 
-                 offset2: float = None, offset3: float = None, localCsys: DatumCsys = None, 
+                 offset2: float = None, offset3: float = None, localCsys: DatumCsys = DatumCsys(), 
                  projectToGeometry: Boolean = ON):
         """This method changes the coordinates of the given nodes on a part instance.
 

@@ -34,7 +34,7 @@ class BodyCurrent(Load):
     field: str = ''
 
     # A Region object specifying the region to which the load is applied. 
-    region: Region = None
+    region: Region = Region()
 
     def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, 
                  amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM, field: str = ''):

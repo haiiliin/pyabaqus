@@ -23,7 +23,7 @@ class MoistureSwelling:
     """
 
     # A Ratios object. 
-    ratios: Ratios = None
+    ratios: Ratios = Ratios()
 
     def __init__(self, table: tuple):
         """This method creates a MoistureSwelling object.

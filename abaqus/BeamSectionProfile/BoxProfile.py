@@ -1,5 +1,6 @@
-from .Profile import Profile
 from abaqusConstants import *
+from .Profile import Profile
+
 
 class BoxProfile(Profile):
 

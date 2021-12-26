@@ -66,104 +66,104 @@ class Part:
     timeStamp: float = None
 
     # A VertexArray object specifying all the vertices in the part. 
-    vertices: VertexArray = None
+    vertices: VertexArray = VertexArray()
 
     # An IgnoredVertexArray object specifying all the ignored vertices in the part. 
-    ignoredVertices: IgnoredVertexArray = None
+    ignoredVertices: IgnoredVertexArray = IgnoredVertexArray()
 
     # An EdgeArray object specifying all the edges in the part. 
-    edges: EdgeArray = None
+    edges: EdgeArray = EdgeArray()
 
     # An IgnoredEdgeArray object specifying all the ignored edges in the part. 
-    ignoredEdges: IgnoredEdgeArray = None
+    ignoredEdges: IgnoredEdgeArray = IgnoredEdgeArray()
 
     # A FaceArray object specifying all the faces in the part. 
-    faces: FaceArray = None
+    faces: FaceArray = FaceArray()
 
     # A CellArray object specifying all the cells in the part. 
-    cells: CellArray = None
+    cells: CellArray = CellArray()
 
     # A repository of Feature objects specifying all the features in the part. 
-    features: Repository[str, Feature] = None
+    features: Repository[str, Feature] = Repository[str, Feature]()
 
     # A repository of Feature objects specifying all Feature objects in the part. The Feature 
     # objects in the featuresById repository are the same as the Feature objects in the 
     # features repository. However, the key to the objects in the featuresById repository is 
     # an integer specifying the *ID*, whereas the key to the objects in the features 
     # repository is a string specifying the *name*. 
-    featuresById: Repository[str, Feature] = None
+    featuresById: Repository[str, Feature] = Repository[str, Feature]()
 
     # A repository of Datum objects specifying all the datums in the part. 
-    datums: Repository[str, Datum] = None
+    datums: Repository[str, Datum] = Repository[str, Datum]()
 
     # A MeshElementArray object specifying all the elements in the part. 
-    elements: MeshElementArray = None
+    elements: MeshElementArray = MeshElementArray()
 
     # A repository of MeshFace objects specifying all the element faces in the part. For a 
     # given element and a given face index within that element, the corresponding MeshFace 
     # object can be retrieved from the repository by using the key calculated as (i*8 + j), 
     # where i and j are zero-based element and face indices, respectively. 
-    elemFaces: Repository[str, MeshFace] = None
+    elemFaces: Repository[str, MeshFace] = Repository[str, MeshFace]()
 
     # A MeshFaceArray object specifying all the unique element faces in the part. 
-    elementFaces: MeshFaceArray = None
+    elementFaces: MeshFaceArray = MeshFaceArray()
 
     # A MeshNodeArray object specifying all the nodes in the part. 
-    nodes: MeshNodeArray = None
+    nodes: MeshNodeArray = MeshNodeArray()
 
     # A MeshNodeArray object specifying all the retained nodes in the substructure part. 
-    retainedNodes: MeshNodeArray = None
+    retainedNodes: MeshNodeArray = MeshNodeArray()
 
     # A repository of Set objects specifying for more information, see Set. 
-    sets: Repository[str, Set] = None
+    sets: Repository[str, Set] = Repository[str, Set]()
 
     # A repository of Set objects specifying the contents of the *allSets* repository is the 
     # same as the contents of the *sets* repository. 
-    allSets: Repository[str, Set] = None
+    allSets: Repository[str, Set] = Repository[str, Set]()
 
     # A repository of Set objects specifying picked regions. 
-    allInternalSets: Repository[str, Set] = None
+    allInternalSets: Repository[str, Set] = Repository[str, Set]()
 
     # A repository of Surface objects specifying for more information, see Surface. 
-    surfaces: Repository[str, Surface] = None
+    surfaces: Repository[str, Surface] = Repository[str, Surface]()
 
     # A repository of Surface objects specifying the contents of the *allSurfaces* repository 
     # is the same as the contents of the *surfaces* repository. 
-    allSurfaces: Repository[str, Surface] = None
+    allSurfaces: Repository[str, Surface] = Repository[str, Surface]()
 
     # A repository of Surface objects specifying picked regions. 
-    allInternalSurfaces: Repository[str, Surface] = None
+    allInternalSurfaces: Repository[str, Surface] = Repository[str, Surface]()
 
     # A repository of Skin objects specifying the skins created on the part. 
-    skins: Repository[str, Skin] = None
+    skins: Repository[str, Skin] = Repository[str, Skin]()
 
     # A repository of Stringer objects specifying the stringers created on the part. 
-    stringers: Repository[str, Stringer] = None
+    stringers: Repository[str, Stringer] = Repository[str, Stringer]()
 
     # A repository of ReferencePoint objects. 
-    referencePoints: Repository[str, ReferencePoint] = None
+    referencePoints: Repository[str, ReferencePoint] = Repository[str, ReferencePoint]()
 
     # An EngineeringFeature object. 
-    engineeringFeatures: EngineeringFeature = None
+    engineeringFeatures: EngineeringFeature = EngineeringFeature()
 
     # A SectionAssignmentArray object. 
-    sectionAssignments: SectionAssignmentArray = None
+    sectionAssignments: SectionAssignmentArray = SectionAssignmentArray()
 
     # A MaterialOrientationArray object. 
-    materialOrientations: MaterialOrientationArray = None
+    materialOrientations: MaterialOrientationArray = MaterialOrientationArray()
 
     # A repository of CompositeLayup objects. 
-    compositeLayups: Repository[str, CompositeLayup] = None
+    compositeLayups: Repository[str, CompositeLayup] = Repository[str, CompositeLayup]()
 
     # A repository of MeshEdge objects specifying all the element edges in the part. For a 
     # given element and a given edge index on a given face within that element, the 
     # corresponding MeshEdge object can be retrieved from the repository by using the key 
     # calculated as (i*32 + j*4 + k), where i, j, and k are zero-based element, face, and edge 
     # indices, respectively. 
-    elemEdges: Repository[str, MeshEdge] = None
+    elemEdges: Repository[str, MeshEdge] = Repository[str, MeshEdge]()
 
     # A MeshEdgeArray object specifying all the unique element edges in the part. 
-    elementEdges: MeshEdgeArray = None
+    elementEdges: MeshEdgeArray = MeshEdgeArray()
 
     @typing.overload
     def __init__(self, name: str, dimensionality: SymbolicConstant, type: SymbolicConstant, 
@@ -1460,7 +1460,7 @@ class Part:
         """
         pass
 
-    def projectReferencesOntoSketch(self, sketch: str, filter: SymbolicConstant = ALL_EDGES, upToFeature: Feature = None, 
+    def projectReferencesOntoSketch(self, sketch: str, filter: SymbolicConstant = ALL_EDGES, upToFeature: Feature = Feature(), 
                                     edges: tuple = (), vertices: tuple = ()):
         """This method projects the vertices of specified edges, and datum points from the part
         onto the specified ConstrainedSketch object. The vertices and datum points appear on the
@@ -1894,7 +1894,7 @@ class Part:
         pass
 
     def copyMeshPattern(self, elements: tuple[MeshElement] = (), faces: tuple[Face] = (), 
-                        elemFaces: tuple[MeshFace] = (), targetFace: MeshFace = None, 
+                        elemFaces: tuple[MeshFace] = (), targetFace: MeshFace = MeshFace(), 
                         nodes: tuple[MeshNode] = (), coordinates: tuple = ()):
         """This method copies a mesh pattern from a source region consisting of a set of shell
         elements or element faces onto a target face, mapping nodes and elements in a one-one

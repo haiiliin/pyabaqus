@@ -25,13 +25,13 @@ class CompositeLayup:
     """
 
     # A GeometryShellSection object. 
-    section: GeometryShellSection = None
+    section: GeometryShellSection = GeometryShellSection()
 
     # A MaterialOrientation object. 
-    orientation: MaterialOrientation = None
+    orientation: MaterialOrientation = MaterialOrientation()
 
     # A CompositePlyArray object specifying the plies that make up this composite layup. 
-    plies: CompositePlyArray = None
+    plies: CompositePlyArray = CompositePlyArray()
 
     def __init__(self, name: str, description: str = '', offsetType: SymbolicConstant = GLOBAL, 
                  offsetField: str = '', offsetValues: float = 0, elementType: SymbolicConstant = SHELL, 

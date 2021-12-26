@@ -19,13 +19,13 @@ class OdbPretensionSection:
     """
 
     # An OdbSet object specifying the node set containing the pretension node. 
-    node: OdbSet = None
+    node: OdbSet = OdbSet()
 
     # An OdbSet object specifying the element set that defines the pretension section. 
-    element: OdbSet = None
+    element: OdbSet = OdbSet()
 
     # An OdbSet object specifying the surface set that defines the pretension section. 
-    surface: OdbSet = None
+    surface: OdbSet = OdbSet()
 
     # A tuple of Floats specifying the components of the normal to the pretension section. 
     normal: float = None

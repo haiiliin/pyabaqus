@@ -35,37 +35,37 @@ class OdbPart:
     """
 
     # An OdbMeshNodeArray object. 
-    nodes: OdbMeshNodeArray = None
+    nodes: OdbMeshNodeArray = OdbMeshNodeArray()
 
     # An OdbMeshElementArray object. 
-    elements: OdbMeshElementArray = None
+    elements: OdbMeshElementArray = OdbMeshElementArray()
 
     # A repository of OdbSet objects specifying node sets. 
-    nodeSets: Repository[str, OdbSet] = None
+    nodeSets: Repository[str, OdbSet] = Repository[str, OdbSet]()
 
     # A repository of OdbSet objects specifying element sets. 
-    elementSets: Repository[str, OdbSet] = None
+    elementSets: Repository[str, OdbSet] = Repository[str, OdbSet]()
 
     # A repository of OdbSet objects specifying surfaces. 
-    surfaces: Repository[str, OdbSet] = None
+    surfaces: Repository[str, OdbSet] = Repository[str, OdbSet]()
 
     # A SectionAssignmentArray object. 
-    sectionAssignments: SectionAssignmentArray = None
+    sectionAssignments: SectionAssignmentArray = SectionAssignmentArray()
 
     # A BeamOrientationArray object. 
-    beamOrientations: BeamOrientationArray = None
+    beamOrientations: BeamOrientationArray = BeamOrientationArray()
 
     # A MaterialOrientationArray object. 
-    materialOrientations: MaterialOrientationArray = None
+    materialOrientations: MaterialOrientationArray = MaterialOrientationArray()
 
     # A RebarOrientationArray object. 
-    rebarOrientations: RebarOrientationArray = None
+    rebarOrientations: RebarOrientationArray = RebarOrientationArray()
 
     # An OdbRigidBodyArray object. 
-    rigidBodies: OdbRigidBodyArray = None
+    rigidBodies: OdbRigidBodyArray = OdbRigidBodyArray()
 
     # An AnalyticSurface object specifying analytic Surface defined on the instance. 
-    analyticSurface: AnalyticSurface = None
+    analyticSurface: AnalyticSurface = AnalyticSurface()
 
     def Part(self, name: str, embeddedSpace: SymbolicConstant, type: SymbolicConstant):
         """This method creates an OdbPart object. Nodes and elements are added to this object at a
@@ -98,7 +98,7 @@ class OdbPart:
 
     @typing.overload
     def addElements(self, labels: tuple, connectivity: tuple, type: str, elementSetName: str = '', 
-                    sectionCategory: SectionCategory = None):
+                    sectionCategory: SectionCategory = SectionCategory()):
         """This method adds elements to an OdbPart object using element labels and nodal
         connectivity.
         Warning:Adding elements not in ascending order of their labels may cause Abaqus/Viewer
@@ -129,7 +129,7 @@ class OdbPart:
 
     @typing.overload
     def addElements(self, elementData: tuple, type: str, elementSetName: str = None, 
-                    sectionCategory: SectionCategory = None):
+                    sectionCategory: SectionCategory = SectionCategory()):
         """This method adds elements to an OdbPart object using a sequence of element labels and
         nodal connectivity.
         Warning:Adding elements not in ascending order of their labels may cause Abaqus/Viewer

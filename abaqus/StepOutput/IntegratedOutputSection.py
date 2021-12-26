@@ -19,7 +19,7 @@ class IntegratedOutputSection:
 
     """
 
-    def __init__(self, name: str, surface: Region = None, refPoint: SymbolicConstant = None, 
+    def __init__(self, name: str, surface: Region = Region(), refPoint: SymbolicConstant = None, 
                  refPointAtCenter: Boolean = OFF, refPointMotion: SymbolicConstant = INDEPENDENT, 
                  localCsys: str = None, projectOrientation: Boolean = OFF):
         """This method creates an IntegratedOutputSection object.
@@ -70,7 +70,7 @@ class IntegratedOutputSection:
         """
         pass
 
-    def setValues(self, surface: Region = None, refPoint: SymbolicConstant = None, 
+    def setValues(self, surface: Region = Region(), refPoint: SymbolicConstant = None, 
                   refPointAtCenter: Boolean = OFF, refPointMotion: SymbolicConstant = INDEPENDENT, 
                   localCsys: str = None, projectOrientation: Boolean = OFF):
         """This method modifies the IntegratedOutputSection object.

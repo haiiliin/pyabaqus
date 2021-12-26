@@ -46,19 +46,19 @@ class PartDisplayOptions:
 
     # A DisplayGroup object specifying the current display group and referring to an object in 
     # the *displayGroups* member of Session. 
-    displayGroup: DisplayGroup = None
+    displayGroup: DisplayGroup = DisplayGroup()
 
     # A repository of DisplayGroupInstance objects. 
-    displayGroupInstances: Repository[str, DisplayGroupInstance] = None
+    displayGroupInstances: Repository[str, DisplayGroupInstance] = Repository[str, DisplayGroupInstance]()
 
     # An EngineeringFeatureDisplayOptions object. 
-    engineeringFeatureOptions: EngineeringFeatureDisplayOptions = None
+    engineeringFeatureOptions: EngineeringFeatureDisplayOptions = EngineeringFeatureDisplayOptions()
 
     # A GeometryDisplayOptions object. 
-    geometryOptions: GeometryDisplayOptions = None
+    geometryOptions: GeometryDisplayOptions = GeometryDisplayOptions()
 
     # A MeshDisplayOptions object. 
-    meshOptions: MeshDisplayOptions = None
+    meshOptions: MeshDisplayOptions = MeshDisplayOptions()
 
     def setValues(self, renderStyle: SymbolicConstant = WIREFRAME, 
                   visibleDisplayGroups: tuple[DisplayGroup] = (), engineeringFeatures: Boolean = OFF, 

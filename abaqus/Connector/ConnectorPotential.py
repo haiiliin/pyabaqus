@@ -34,7 +34,7 @@ class ConnectorPotential:
 
     # A DerivedComponent object specifying the DerivedComponent used in the contribution. This 
     # argument is applicable only if *componentStyle*=DERIVED_COMPONENT. 
-    derivedComponent: DerivedComponent = None
+    derivedComponent: DerivedComponent = DerivedComponent()
 
     def __init__(self, componentStyle: SymbolicConstant = COMPONENT_NUMBER, componentNumber: int = 0, 
                  sign: SymbolicConstant = POSITIVE, scaleFactor: float = 1, positiveExponent: float = 2, 

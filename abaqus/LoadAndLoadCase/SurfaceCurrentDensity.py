@@ -29,7 +29,7 @@ class SurfaceCurrentDensity(Load):
     distributionType: SymbolicConstant = UNIFORM
 
     # A Region object specifying the region to which the load is applied. 
-    region: Region = None
+    region: Region = Region()
 
     def __init__(self, name: str, createStepName: str, region: Region, comp1: str, comp2: str, comp3: str, 
                  distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):

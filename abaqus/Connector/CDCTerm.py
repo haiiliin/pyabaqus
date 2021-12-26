@@ -29,7 +29,7 @@ class CDCTerm:
 
     # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
     # for this ConnectorBehaviorOption. 
-    options: ConnectorOptions = None
+    options: ConnectorOptions = ConnectorOptions()
 
     def __init__(self, intrinsicComponents: tuple, table: tuple, termOperator: SymbolicConstant = RSS, 
                  termSign: SymbolicConstant = POSITIVE, localDependency: Boolean = OFF, 

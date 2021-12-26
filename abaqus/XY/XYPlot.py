@@ -25,16 +25,16 @@ class XYPlot:
 
     # An Area object specifying position, padding, background and borders of the XYPlot 
     # object. 
-    area: Area = None
+    area: Area = Area()
 
     # A Title object specifying the title of the XYPlot object. 
-    title: Title = None
+    title: Title = Title()
 
     # A repository of Chart objects. 
-    charts: Repository[str, Chart] = None
+    charts: Repository[str, Chart] = Repository[str, Chart]()
 
     # A repository of XYCurve objects. 
-    curves: Repository[str, XYCurve] = None
+    curves: Repository[str, XYCurve] = Repository[str, XYCurve]()
 
     # A tuple of Floats specifying a transformation matrix used to scale or pan along the axes 
     # of the active Chart object of this XYPlot. 
@@ -160,7 +160,7 @@ class XYPlot:
         """
         pass
 
-    def setValues(self, title: Title = None, transform: tuple = ()):
+    def setValues(self, title: Title = Title(), transform: tuple = ()):
         """This method modifies the XYPlot object.
 
         Parameters

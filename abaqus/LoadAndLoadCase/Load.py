@@ -23,7 +23,7 @@ class Load:
     name: str = ''
 
     # A Region object specifying the region to which the load is applied. 
-    region: Region = None
+    region: Region = Region()
 
     def deactivate(self, stepName: str):
         """This method deactivates the load in the specified step and all its subsequent steps.

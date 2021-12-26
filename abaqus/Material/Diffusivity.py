@@ -52,10 +52,10 @@ class Diffusivity:
     """
 
     # A PressureEffect object. 
-    pressureEffect: PressureEffect = None
+    pressureEffect: PressureEffect = PressureEffect()
 
     # A SoretEffect object. 
-    soretEffect: SoretEffect = None
+    soretEffect: SoretEffect = SoretEffect()
 
     def __init__(self, table: tuple, type: SymbolicConstant = ISOTROPIC, law: SymbolicConstant = GENERAL, 
                  temperatureDependency: Boolean = OFF, dependencies: int = 0):

@@ -1,6 +1,7 @@
-from ..Region.RegionArray import RegionArray
-from .Crack import Crack
 from abaqusConstants import *
+from .Crack import Crack
+from ..Region.RegionArray import RegionArray
+
 
 class ContourIntegral(Crack):
 

@@ -40,21 +40,21 @@ class Legend:
     showMinMax: Boolean = OFF
 
     # An Area object specifying the area of the legend. 
-    area: Area = None
+    area: Area = Area()
 
     # A TextStyle object specifying the text properties used to display the legend text. 
-    textStyle: TextStyle = None
+    textStyle: TextStyle = TextStyle()
 
     # A String specifying the title to appear on the legend. The default value is an empty 
     # string. 
     title: str = ''
 
     # A TextStyle object specifying the text properties used to display the legend title. 
-    titleStyle: TextStyle = None
+    titleStyle: TextStyle = TextStyle()
 
-    def setValues(self, legend: 'Legend' = None, show: Boolean = ON, showMinMax: Boolean = OFF, title: str = '', 
-                  numberFormat: SymbolicConstant = AUTOMATIC, numDigits: int = 2, 
-                  textStyle: TextStyle = None, titleStyle: TextStyle = None):
+    def setValues(self, legend: 'Legend' = Legend(), show: Boolean = ON, showMinMax: Boolean = OFF, 
+                  title: str = '', numberFormat: SymbolicConstant = AUTOMATIC, numDigits: int = 2, 
+                  textStyle: TextStyle = TextStyle(), titleStyle: TextStyle = TextStyle()):
         """This method modifies the Legend object.
 
         Parameters

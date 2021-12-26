@@ -31,37 +31,37 @@ class ContactProperty(InteractionProperty):
     """
 
     # A ContactTangentialBehavior object. 
-    tangentialBehavior: ContactTangentialBehavior = None
+    tangentialBehavior: ContactTangentialBehavior = ContactTangentialBehavior()
 
     # A NormalBehavior object. 
-    normalBehavior: NormalBehavior = None
+    normalBehavior: NormalBehavior = NormalBehavior()
 
     # A ContactDamping object. 
-    damping: ContactDamping = None
+    damping: ContactDamping = ContactDamping()
 
     # A ContactDamage object. 
-    damage: ContactDamage = None
+    damage: ContactDamage = ContactDamage()
 
     # A FractureCriterion object. 
-    fractureCriterion: FractureCriterion = None
+    fractureCriterion: FractureCriterion = FractureCriterion()
 
     # A CohesiveBehavior object. 
-    cohesiveBehavior: CohesiveBehavior = None
+    cohesiveBehavior: CohesiveBehavior = CohesiveBehavior()
 
     # A ThermalConductance object. 
-    thermalConductance: ThermalConductance = None
+    thermalConductance: ThermalConductance = ThermalConductance()
 
     # A GapHeatGeneration object. 
-    heatGeneration: GapHeatGeneration = None
+    heatGeneration: GapHeatGeneration = GapHeatGeneration()
 
     # A Radiation object. 
-    radiation: Radiation = None
+    radiation: Radiation = Radiation()
 
     # A GeometricProperties object. 
-    geometricProperties: GeometricProperties = None
+    geometricProperties: GeometricProperties = GeometricProperties()
 
     # A GapElectricalConductance object. 
-    electricalConductance: GapElectricalConductance = None
+    electricalConductance: GapElectricalConductance = GapElectricalConductance()
 
     def __init__(self, name: str):
         """This method creates a ContactProperty object.

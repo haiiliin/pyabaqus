@@ -25,7 +25,7 @@ class MembraneSection(Section):
     """
 
     # A RebarLayers object specifying reinforcement properties. 
-    rebarLayers: RebarLayers = None
+    rebarLayers: RebarLayers = RebarLayers()
 
     def __init__(self, name: str, material: str, thickness: float = 1, 
                  thicknessType: SymbolicConstant = UNIFORM, 

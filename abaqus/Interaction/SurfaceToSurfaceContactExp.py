@@ -34,8 +34,8 @@ class SurfaceToSurfaceContactExp(Interaction):
                  halfThreadAngle: str = None, pitch: str = None, 
                  majorBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
                  meanBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
-                 datumAxis: DatumAxis = None, useReverseDatumAxis: Boolean = OFF, 
-                 clearanceRegion: Region = None):
+                 datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF, 
+                 clearanceRegion: Region = Region()):
         """This method creates a SurfaceToSurfaceContactExp object.
 
         Path
@@ -131,8 +131,8 @@ class SurfaceToSurfaceContactExp(Interaction):
                   halfThreadAngle: str = None, pitch: str = None, 
                   majorBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
                   meanBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
-                  datumAxis: DatumAxis = None, useReverseDatumAxis: Boolean = OFF, 
-                  clearanceRegion: Region = None):
+                  datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF, 
+                  clearanceRegion: Region = Region()):
         """This method modifies the data for an existing SurfaceToSurfaceContactExp object in the
         step where it is created.
 

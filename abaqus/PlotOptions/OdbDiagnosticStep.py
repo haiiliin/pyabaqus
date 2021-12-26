@@ -29,7 +29,7 @@ class OdbDiagnosticStep:
     characteristicElementLength: str = ''
 
     # A repository of OdbContactDiagnostics objects. 
-    contactDiagnostics: Repository[str, OdbContactDiagnostics] = None
+    contactDiagnostics: Repository[str, OdbContactDiagnostics] = Repository[str, OdbContactDiagnostics]()
 
     # A sequence of string specifying the explicit increment status. This attribute is 
     # read-only. 
@@ -47,7 +47,7 @@ class OdbDiagnosticStep:
     incrementsCompleted: str = ''
 
     # A repository of OdbDiagnosticIncrement objects. 
-    increments: Repository[str, OdbDiagnosticIncrement] = None
+    increments: Repository[str, OdbDiagnosticIncrement] = Repository[str, OdbDiagnosticIncrement]()
 
     # A float specifying the initial increment size for the step. This attribute is read-only. 
     initialTimeIncrement: str = ''

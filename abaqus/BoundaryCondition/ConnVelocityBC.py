@@ -47,7 +47,7 @@ class ConnVelocityBC(BoundaryCondition):
     category: SymbolicConstant = None
 
     # A Region object specifying the region to which the boundary condition is applied. 
-    region: Region = None
+    region: Region = Region()
 
     # None or a DatumCsys object specifying the local coordinate system of the boundary 
     # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
@@ -204,12 +204,14 @@ class ConnVelocityBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, v1: typing.Union[SymbolicConstant,float] = None, 
-                        v2: typing.Union[SymbolicConstant,float] = None, 
-                        v3: typing.Union[SymbolicConstant,float] = None, 
-                        vr1: typing.Union[SymbolicConstant,float] = None, 
-                        vr2: typing.Union[SymbolicConstant,float] = None, 
-                        vr3: typing.Union[SymbolicConstant,float] = None, amplitude: str = ''):
+    def setValuesInStep(self, stepName: str, 
+                        v1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        v2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        v3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        vr1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        vr2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        vr3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        amplitude: str = ''):
         """This method modifies the propagating data for an existing ConnVelocityBC object in the
         specified step.
 

@@ -48,13 +48,13 @@ class XYCurve:
     legendSource: SymbolicConstant = CURVE_LEGEND
 
     # An XYData object specifying the data for the curve. 
-    data: XYData = None
+    data: XYData = XYData()
 
     # A LineStyle object specifying the line properties used to display the curve. 
-    lineStyle: LineStyle = None
+    lineStyle: LineStyle = LineStyle()
 
     # A SymbolStyle object specifying the symbol properties used to display the curve. 
-    symbolStyle: SymbolStyle = None
+    symbolStyle: SymbolStyle = SymbolStyle()
 
     # A String specifying the label to be displayed in the legend. By default, the label is 
     # system defined. 

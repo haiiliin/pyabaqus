@@ -35,29 +35,29 @@ class Mdb:
     lastChangedCount: float = None
 
     # A repository of Job objects. 
-    jobs: Repository[str, Job] = None
+    jobs: Repository[str, Job] = Repository[str, Job]()
 
     # A repository of AdaptivityProcess objects. 
-    adaptivityProcesses: Repository[str, AdaptivityProcess] = None
+    adaptivityProcesses: Repository[str, AdaptivityProcess] = Repository[str, AdaptivityProcess]()
 
     # A repository of Coexecution objects. 
-    coexecutions: Repository[str, Coexecution] = None
+    coexecutions: Repository[str, Coexecution] = Repository[str, Coexecution]()
 
     # A repository of OptimizationProcess objects. 
-    optimizationProcesses: Repository[str, OptimizationProcess] = None
+    optimizationProcesses: Repository[str, OptimizationProcess] = Repository[str, OptimizationProcess]()
 
     # A MeshEditOptions object specifying the undo/redo behavior when editing meshes on parts 
     # or part instances. 
-    meshEditOptions: MeshEditOptions = None
+    meshEditOptions: MeshEditOptions = MeshEditOptions()
 
     # A repository of Model objects. 
-    models: Repository[str, Model] = None
+    models: Repository[str, Model] = Repository[str, Model]()
 
     # A RepositorySupport object. 
-    customData: RepositorySupport = None
+    customData: RepositorySupport = RepositorySupport()
 
     # A repository of Annotation objects. 
-    annotations: Repository[str, Annotation] = None
+    annotations: Repository[str, Annotation] = Repository[str, Annotation]()
 
     def __init__(self, pathName: str = ''):
         """This constructor creates an empty Mdb object.

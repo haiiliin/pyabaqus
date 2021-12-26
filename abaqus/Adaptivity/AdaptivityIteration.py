@@ -23,7 +23,7 @@ class AdaptivityIteration:
     # A repository of RuleResult objects specifying the calculated results from sizing 
     # functions corresponding to the RemeshingRule objects for this iteration of an adaptivity 
     # process. 
-    ruleResults: Repository[str, RuleResult] = None
+    ruleResults: Repository[str, RuleResult] = Repository[str, RuleResult]()
 
     def __init__(self, iteration: str, jobName: str, modelName: str, odbPath: str, remeshingErrors: int):
         """This method creates an AdaptivityIteration object.

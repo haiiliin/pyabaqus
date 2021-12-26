@@ -36,16 +36,16 @@ class ConcreteDamagedPlasticity:
     """
 
     # A ConcreteCompressionHardening object. 
-    concreteCompressionHardening: ConcreteCompressionHardening = None
+    concreteCompressionHardening: ConcreteCompressionHardening = ConcreteCompressionHardening()
 
     # A ConcreteTensionStiffening object. 
-    concreteTensionStiffening: ConcreteTensionStiffening = None
+    concreteTensionStiffening: ConcreteTensionStiffening = ConcreteTensionStiffening()
 
     # A ConcreteCompressionDamage object. 
-    concreteCompressionDamage: ConcreteCompressionDamage = None
+    concreteCompressionDamage: ConcreteCompressionDamage = ConcreteCompressionDamage()
 
     # A ConcreteTensionDamage object. 
-    concreteTensionDamage: ConcreteTensionDamage = None
+    concreteTensionDamage: ConcreteTensionDamage = ConcreteTensionDamage()
 
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a ConcreteDamagedPlasticity object.

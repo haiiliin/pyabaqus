@@ -29,32 +29,32 @@ class DefaultOdbDisplay:
     """
 
     # A BasicOptions object. 
-    basicOptions: BasicOptions = None
+    basicOptions: BasicOptions = BasicOptions()
 
     # A CommonOptions object. 
-    commonOptions: CommonOptions = None
+    commonOptions: CommonOptions = CommonOptions()
 
     # A ContourOptions object. 
-    contourOptions: ContourOptions = None
+    contourOptions: ContourOptions = ContourOptions()
 
     # A DisplayBodyOptions object. 
-    displayBodyOptions: DisplayBodyOptions = None
+    displayBodyOptions: DisplayBodyOptions = DisplayBodyOptions()
 
     # A FreeBodyOptions object. 
-    freeBodyOptions: FreeBodyOptions = None
+    freeBodyOptions: FreeBodyOptions = FreeBodyOptions()
 
     # A StreamOptions object. 
-    streamOptions: StreamOptions = None
+    streamOptions: StreamOptions = StreamOptions()
 
     # An OrientationOptions object. 
-    materialOrientationOptions: OrientationOptions = None
+    materialOrientationOptions: OrientationOptions = OrientationOptions()
 
     # A SuperimposeOptions object. 
-    superimposeOptions: SuperimposeOptions = None
+    superimposeOptions: SuperimposeOptions = SuperimposeOptions()
 
     # A SymbolOptions object. 
-    symbolOptions: SymbolOptions = None
+    symbolOptions: SymbolOptions = SymbolOptions()
 
     # A ViewCutOptions object. 
-    viewCutOptions: ViewCutOptions = None
+    viewCutOptions: ViewCutOptions = ViewCutOptions()
 

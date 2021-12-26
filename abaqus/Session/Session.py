@@ -94,176 +94,176 @@ class Session:
     kernelMemoryLimit: float = None
 
     # A repository of Color objects. 
-    colors: Repository[str, Color] = None
+    colors: Repository[str, Color] = Repository[str, Color]()
 
     # A JournalOptions object specifying how to record selection of geometry in the journal 
     # and replay files. 
-    journalOptions: JournalOptions = None
+    journalOptions: JournalOptions = JournalOptions()
 
     # A MemoryReductionOptions object specifying options for running in reduced memory mode. 
-    memoryReductionOptions: MemoryReductionOptions = None
+    memoryReductionOptions: MemoryReductionOptions = MemoryReductionOptions()
 
     # A NodeQuery object specifying nodes and their coordinates in a path. 
-    nodeQuery: NodeQuery = None
+    nodeQuery: NodeQuery = NodeQuery()
 
     # A ConstrainedSketcherOptions object specifying common options for all sketches. 
-    sketcherOptions: ConstrainedSketcherOptions = None
+    sketcherOptions: ConstrainedSketcherOptions = ConstrainedSketcherOptions()
 
     # A ViewerOptions object. 
-    viewerOptions: ViewerOptions = None
+    viewerOptions: ViewerOptions = ViewerOptions()
 
     # An AnimationOptions object. 
-    animationOptions: AnimationOptions = None
+    animationOptions: AnimationOptions = AnimationOptions()
 
     # An AVIOptions object. 
-    aviOptions: AVIOptions = None
+    aviOptions: AVIOptions = AVIOptions()
 
     # An ImageAnimationOptions object. 
-    imageAnimationOptions: ImageAnimationOptions = None
+    imageAnimationOptions: ImageAnimationOptions = ImageAnimationOptions()
 
     # An ImageAnimation object. 
-    imageAnimation: ImageAnimation = None
+    imageAnimation: ImageAnimation = ImageAnimation()
 
     # A QuickTimeOptions object. 
-    quickTimeOptions: QuickTimeOptions = None
+    quickTimeOptions: QuickTimeOptions = QuickTimeOptions()
 
     # A repository of Viewport objects. 
-    viewports: Repository[str, Viewport] = None
+    viewports: Repository[str, Viewport] = Repository[str, Viewport]()
 
     # A RepositorySupport object. 
-    customData: RepositorySupport = None
+    customData: RepositorySupport = RepositorySupport()
 
     # A FieldReportOptions object. 
-    defaultFieldReportOptions: FieldReportOptions = None
+    defaultFieldReportOptions: FieldReportOptions = FieldReportOptions()
 
     # A FreeBodyReportOptions object. 
-    defaultFreeBodyReportOptions: FreeBodyReportOptions = None
+    defaultFreeBodyReportOptions: FreeBodyReportOptions = FreeBodyReportOptions()
 
     # A FieldReportOptions object. 
-    fieldReportOptions: FieldReportOptions = None
+    fieldReportOptions: FieldReportOptions = FieldReportOptions()
 
     # A FreeBodyReportOptions object. 
-    freeBodyReportOptions: FreeBodyReportOptions = None
+    freeBodyReportOptions: FreeBodyReportOptions = FreeBodyReportOptions()
 
     # A repository of Odb objects. 
-    odbs: Repository[str, Odb] = None
+    odbs: Repository[str, Odb] = Repository[str, Odb]()
 
     # A repository of ScratchOdb objects. 
-    scratchOdbs: Repository[str, ScratchOdb] = None
+    scratchOdbs: Repository[str, ScratchOdb] = Repository[str, ScratchOdb]()
 
     # A DefaultOdbDisplay object. 
-    defaultOdbDisplay: DefaultOdbDisplay = None
+    defaultOdbDisplay: DefaultOdbDisplay = DefaultOdbDisplay()
 
     # A DefaultPlot object. 
-    defaultPlot: DefaultPlot = None
+    defaultPlot: DefaultPlot = DefaultPlot()
 
     # A DefaultChartOptions object. 
-    defaultChartOptions: DefaultChartOptions = None
+    defaultChartOptions: DefaultChartOptions = DefaultChartOptions()
 
     # A repository of OdbData objects. 
-    odbData: Repository[str, OdbData] = None
+    odbData: Repository[str, OdbData] = Repository[str, OdbData]()
 
     # A repository of MdbData objects. 
-    mdbData: Repository[str, MdbData] = None
+    mdbData: Repository[str, MdbData] = Repository[str, MdbData]()
 
     # A repository of Path objects. 
-    paths: Repository[str, Path] = None
+    paths: Repository[str, Path] = Repository[str, Path]()
 
     # A repository of FreeBody objects. 
-    freeBodies: Repository[str, FreeBody] = None
+    freeBodies: Repository[str, FreeBody] = Repository[str, FreeBody]()
 
     # A repository of Stream objects. 
-    streams: Repository[str, Stream] = None
+    streams: Repository[str, Stream] = Repository[str, Stream]()
 
     # A repository of Spectrum objects. 
-    spectrums: Repository[str, Spectrum] = None
+    spectrums: Repository[str, Spectrum] = Repository[str, Spectrum]()
 
     # A CurrentProbeValues object. 
-    currentProbeValues: CurrentProbeValues = None
+    currentProbeValues: CurrentProbeValues = CurrentProbeValues()
 
     # A ProbeOptions object. 
-    defaultProbeOptions: ProbeOptions = None
+    defaultProbeOptions: ProbeOptions = ProbeOptions()
 
     # A ProbeOptions object. 
-    probeOptions: ProbeOptions = None
+    probeOptions: ProbeOptions = ProbeOptions()
 
     # A ProbeReport object. 
-    probeReport: ProbeReport = None
+    probeReport: ProbeReport = ProbeReport()
 
     # A ProbeReport object. 
-    defaultProbeReport: ProbeReport = None
+    defaultProbeReport: ProbeReport = ProbeReport()
 
     # A SelectedProbeValues object. 
-    selectedProbeValues: SelectedProbeValues = None
+    selectedProbeValues: SelectedProbeValues = SelectedProbeValues()
 
     # A PrintOptions object. 
-    printOptions: PrintOptions = None
+    printOptions: PrintOptions = PrintOptions()
 
     # An EpsOptions object. 
-    epsOptions: EpsOptions = None
+    epsOptions: EpsOptions = EpsOptions()
 
     # A PageSetupOptions object. 
-    pageSetupOptions: PageSetupOptions = None
+    pageSetupOptions: PageSetupOptions = PageSetupOptions()
 
     # A PngOptions object. 
-    pngOptions: PngOptions = None
+    pngOptions: PngOptions = PngOptions()
 
     # A PsOptions object. 
-    psOptions: PsOptions = None
+    psOptions: PsOptions = PsOptions()
 
     # A SvgOptions object. 
-    svgOptions: SvgOptions = None
+    svgOptions: SvgOptions = SvgOptions()
 
     # A TiffOptions object. 
-    tiffOptions: TiffOptions = None
+    tiffOptions: TiffOptions = TiffOptions()
 
     # An AutoColors object specifying the color palette to be used for color coding. 
-    autoColors: AutoColors = None
+    autoColors: AutoColors = AutoColors()
 
     # An AutoColors object specifying the color palette to be used forXYCurve objects. 
-    xyColors: AutoColors = None
+    xyColors: AutoColors = AutoColors()
 
     # A repository of XYData objects. 
-    xyDataObjects: Repository[str, XYData] = None
+    xyDataObjects: Repository[str, XYData] = Repository[str, XYData]()
 
     # A repository of XYCurve objects. 
-    curves: Repository[str, XYCurve] = None
+    curves: Repository[str, XYCurve] = Repository[str, XYCurve]()
 
     # A repository of XYPlot objects. 
-    xyPlots: Repository[str, XYPlot] = None
+    xyPlots: Repository[str, XYPlot] = Repository[str, XYPlot]()
 
     # A repository of Chart objects. 
-    charts: Repository[str, Chart] = None
+    charts: Repository[str, Chart] = Repository[str, Chart]()
 
     # An XYReportOptions object. 
-    defaultXYReportOptions: XYReportOptions = None
+    defaultXYReportOptions: XYReportOptions = XYReportOptions()
 
     # An XYReportOptions object. 
-    xyReportOptions: XYReportOptions = None
+    xyReportOptions: XYReportOptions = XYReportOptions()
 
     # A repository of View objects. 
-    views: Repository[str, View] = None
+    views: Repository[str, View] = Repository[str, View]()
 
     # A repository of NetworkDatabaseConnector objects. 
-    networkDatabaseConnectors: Repository[str, NetworkDatabaseConnector] = None
+    networkDatabaseConnectors: Repository[str, NetworkDatabaseConnector] = Repository[str, NetworkDatabaseConnector]()
 
     # A repository of DisplayGroup objects. 
-    displayGroups: Repository[str, DisplayGroup] = None
+    displayGroups: Repository[str, DisplayGroup] = Repository[str, DisplayGroup]()
 
     # A GraphicsInfo object. 
-    graphicsInfo: GraphicsInfo = None
+    graphicsInfo: GraphicsInfo = GraphicsInfo()
 
     # A GraphicsOptions object. 
-    defaultGraphicsOptions: GraphicsOptions = None
+    defaultGraphicsOptions: GraphicsOptions = GraphicsOptions()
 
     # A GraphicsOptions object. 
-    graphicsOptions: GraphicsOptions = None
+    graphicsOptions: GraphicsOptions = GraphicsOptions()
 
     # A ViewportAnnotationOptions object. 
-    defaultViewportAnnotationOptions: ViewportAnnotationOptions = None
+    defaultViewportAnnotationOptions: ViewportAnnotationOptions = ViewportAnnotationOptions()
 
     # A repository of Queue objects. 
-    queues: Repository[str, Queue] = None
+    queues: Repository[str, Queue] = Repository[str, Queue]()
 
     # A String specifying the name of the current viewport. 
     currentViewportName: str = ''
@@ -271,25 +271,25 @@ class Session:
     # A Dictionary object specifying the viewports and their associated models. The Dictionary 
     # key specifies the viewport name. The Dictionary value is a Dictionary specifying the 
     # model name. 
-    sessionState: dict = {}
+    sessionState: dict = None
 
     # A repository of Image objects. 
-    images: Repository[str, Image] = None
+    images: Repository[str, Image] = Repository[str, Image]()
 
     # A repository of Movie objects. 
-    movies: Repository[str, Movie] = None
+    movies: Repository[str, Movie] = Repository[str, Movie]()
 
     # A LightOptions object. 
-    defaultLightOptions: LightOptions = None
+    defaultLightOptions: LightOptions = LightOptions()
 
     # A DrawingArea object. 
-    drawingArea: DrawingArea = None
+    drawingArea: DrawingArea = DrawingArea()
 
     # A MesherOptions object specifying how to control default settings in the Mesh module. 
-    defaultMesherOptions: MesherOptions = None
+    defaultMesherOptions: MesherOptions = MesherOptions()
 
     # A repository of Drawing objects. 
-    drawings: Repository[str, Drawing] = None
+    drawings: Repository[str, Drawing] = Repository[str, Drawing]()
 
     def setValues(self, kernelMemoryLimit: float = None):
         """This method modifies the Session object.

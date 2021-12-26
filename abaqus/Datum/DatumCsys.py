@@ -38,14 +38,14 @@ class DatumCsys(Datum):
     coordSysType: SymbolicConstant = None
 
     # A DatumPoint object specifying the origin of the coordinate system. 
-    origin: DatumPoint = None
+    origin: DatumPoint = DatumPoint()
 
     # A DatumAxis object specifying the 1-direction of the coordinate system. 
-    axis1: DatumAxis = None
+    axis1: DatumAxis = DatumAxis()
 
     # A DatumAxis object specifying the 2-direction of the coordinate system. 
-    axis2: DatumAxis = None
+    axis2: DatumAxis = DatumAxis()
 
     # A DatumAxis object specifying the 3-direction of the coordinate system. 
-    axis3: DatumAxis = None
+    axis3: DatumAxis = DatumAxis()
 

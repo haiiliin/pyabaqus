@@ -18,5 +18,5 @@ class RayleighDampingByFrequency:
     """
 
     # A RayleighDampingByFrequencyComponentArray object. 
-    components: RayleighDampingByFrequencyComponentArray = None
+    components: RayleighDampingByFrequencyComponentArray = RayleighDampingByFrequencyComponentArray()
 

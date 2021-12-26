@@ -95,7 +95,7 @@ class MappedField(AnalyticalField):
     xyzPointData: tuple = ()
 
     # An OdbMeshRegionData object specifying the external source data from ODB mesh region. 
-    odbMeshRegionData: OdbMeshRegionData = None
+    odbMeshRegionData: OdbMeshRegionData = OdbMeshRegionData()
 
     # A tuple of Floats specifying the scaling factors for the global 1, 2 and 3 directions. 
     # The default value is (1.0, 1.0, 1.0). 

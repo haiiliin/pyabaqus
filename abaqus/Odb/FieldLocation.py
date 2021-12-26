@@ -32,5 +32,5 @@ class FieldLocation:
     position: SymbolicConstant = None
 
     # A SectionPointArray object. 
-    sectionPoints: SectionPointArray = None
+    sectionPoints: SectionPointArray = SectionPointArray()
 

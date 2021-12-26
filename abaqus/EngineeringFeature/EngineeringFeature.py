@@ -1,9 +1,10 @@
-from ..Region.Region import Region
-from ..UtilityAndView.Repository import Repository
 from .Crack import Crack
 from .Fastener import Fastener
 from .Inertia import Inertia
 from .SpringDashpot import SpringDashpot
+from ..Region.Region import Region
+from ..UtilityAndView.Repository import Repository
+
 
 class EngineeringFeature:
 
@@ -26,16 +27,16 @@ class EngineeringFeature:
     """
 
     # A repository of Inertia objects. 
-    inertias: Repository[str, Inertia] = None
+    inertias: Repository[str, Inertia] = Repository[str, Inertia]()
 
     # A repository of Crack objects. 
-    cracks: Repository[str, Crack] = None
+    cracks: Repository[str, Crack] = Repository[str, Crack]()
 
     # A repository of Fastener objects. 
-    fasteners: Repository[str, Fastener] = None
+    fasteners: Repository[str, Fastener] = Repository[str, Fastener]()
 
     # A repository of SpringDashpot objects. 
-    springDashpots: Repository[str, SpringDashpot] = None
+    springDashpots: Repository[str, SpringDashpot] = Repository[str, SpringDashpot]()
 
     def assignSeam(self, regions: tuple[Region]):
         """This method creates a seam crack along an edge or a face.

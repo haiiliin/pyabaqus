@@ -23,7 +23,7 @@ class FluidCavityPressure(PredefinedField):
     """
 
     # A Region object on which the *fluidCavity* interaction is specified. 
-    region: Region = None
+    region: Region = Region()
 
     def __init__(self, name: str, fluidCavity: str, fluidPressure: float):
         """This method creates a FluidCavityPressure object.

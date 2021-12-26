@@ -49,5 +49,5 @@ class Message:
     # A Dictionary object specifying the data returned by the analysis product. The value 
     # depends on the message returned. For a list of the possible entries, see the members of 
     # DataObject. 
-    data: dict = {}
+    data: dict = None
 

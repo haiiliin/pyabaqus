@@ -36,7 +36,7 @@ class SurfaceConcentrationFlux(Load):
     field: str = ''
 
     # A Region object specifying the region to which the load is applied. 
-    region: Region = None
+    region: Region = Region()
 
     def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, field: str = '', 
                  distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):
