@@ -1,6 +1,7 @@
-from ..Region.Surface import Surface
-from .Leaf import Leaf
 from abaqusConstants import *
+from .Leaf import Leaf
+from ..Region.Surface import Surface
+
 
 class LeafFromMeshSurfaceSets(Leaf):
 

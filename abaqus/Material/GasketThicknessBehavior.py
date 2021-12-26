@@ -1,5 +1,6 @@
-from .ContactArea import ContactArea
 from abaqusConstants import *
+from .ContactArea import ContactArea
+
 
 class GasketThicknessBehavior:
 

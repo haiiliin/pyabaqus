@@ -1,5 +1,6 @@
-from .OdbMeshNode import OdbMeshNode
 from abaqusConstants import *
+from .OdbMeshNode import OdbMeshNode
+
 
 class OdbDatumCsys:
 

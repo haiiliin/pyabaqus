@@ -1,4 +1,4 @@
-from ..UtilityAndView.Repository import Repository
+from abaqusConstants import *
 from .CouplingConstraint import CouplingConstraint
 from .HistoryVariable import HistoryVariable
 from .MpcConstraint import MpcConstraint
@@ -13,7 +13,8 @@ from .OdbDataSurfaceSet import OdbDataSurfaceSet
 from .OdbDiagnosticData import OdbDiagnosticData
 from .RigidBodyConstraint import RigidBodyConstraint
 from .TieConstraint import TieConstraint
-from abaqusConstants import *
+from ..UtilityAndView.Repository import Repository
+
 
 class OdbData:
 

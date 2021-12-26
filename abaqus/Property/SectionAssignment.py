@@ -1,5 +1,6 @@
-from ..Region.Set import Set
 from abaqusConstants import *
+from ..Region.Set import Set
+
 
 class SectionAssignment:
 

@@ -1,6 +1,7 @@
-from ..Region.Region import Region
-from .Interaction import Interaction
 from abaqusConstants import *
+from .Interaction import Interaction
+from ..Region.Region import Region
+
 
 class ModelChange(Interaction):
 

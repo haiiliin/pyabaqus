@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .ConnectorBehaviorOption import ConnectorBehaviorOption
 from .ConnectorOptions import ConnectorOptions
-from abaqusConstants import *
+
 
 class ConnectorElasticity(ConnectorBehaviorOption):
 

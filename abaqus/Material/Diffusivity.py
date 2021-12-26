@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .PressureEffect import PressureEffect
 from .SoretEffect import SoretEffect
-from abaqusConstants import *
+
 
 class Diffusivity:
 

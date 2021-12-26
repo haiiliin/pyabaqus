@@ -1,3 +1,4 @@
+from abaqusConstants import *
 from ..BasicGeometry.EdgeArray import EdgeArray
 from ..BasicGeometry.ReferencePoint import ReferencePoint
 from ..BasicGeometry.VertexArray import VertexArray
@@ -8,7 +9,7 @@ from ..Model.Model import Model
 from ..Region.Set import Set
 from ..Region.Surface import Surface
 from ..UtilityAndView.Repository import Repository
-from abaqusConstants import *
+
 
 class ModelInstance:
 

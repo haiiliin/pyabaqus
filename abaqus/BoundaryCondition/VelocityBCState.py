@@ -1,5 +1,6 @@
-from .BoundaryConditionState import BoundaryConditionState
 from abaqusConstants import *
+from .BoundaryConditionState import BoundaryConditionState
+
 
 class VelocityBCState(BoundaryConditionState):
 

@@ -1137,7 +1137,7 @@ This method returns the total surface area of a given face or group of faces.
 
 - *faces*
 
-  A sequence of face objects whose area the method will calculate.
+  A sequence of Face objects whose area the method will calculate.
 
 ### Optional arguments
 
@@ -1214,11 +1214,11 @@ Depending on the arguments provided, this method returns the following:
 
 - *faces*
 
-  A sequence of face objects whose centroid the method will calculate. The arguments *faces* and *cells* are mutually exclusive.
+  A sequence of Face objects whose centroid the method will calculate. The arguments *faces* and *cells* are mutually exclusive.
 
 - *cells*
 
-  A sequence of face objects whose centroid the method will calculate. The arguments *faces* and *cells* are mutually exclusive.
+  A sequence of Face objects whose centroid the method will calculate. The arguments *faces* and *cells* are mutually exclusive.
 
 ### Optional arguments
 
@@ -1276,7 +1276,7 @@ This method returns the maximum curvature of a given edge or group of edges. For
 
 - *edges*
 
-  A sequence of edge objects whose curvature the method will calculate.
+  A sequence of Edge objects whose curvature the method will calculate.
 
 ### Optional arguments
 
@@ -1342,7 +1342,7 @@ This method returns the length of a given edge or group of edges.
 
 - *edges*
 
-  A sequence of edge objects whose total length the method will calculate.
+  A sequence of Edge objects whose total length the method will calculate.
 
 ### Optional arguments
 
@@ -1370,7 +1370,7 @@ This method returns the total perimeter of a given face or group of faces. All f
 
 - *faces*
 
-  A sequence of face objects whose perimeter the method will calculate.
+  A sequence of Face objects whose perimeter the method will calculate.
 
 ### Optional arguments
 
@@ -1398,7 +1398,7 @@ This method returns the volume area of a given cell or group of cells.
 
 - *cells*
 
-  A sequence of cell objects whose volume the method will calculate.
+  A sequence of Cell objects whose volume the method will calculate.
 
 ### Optional arguments
 

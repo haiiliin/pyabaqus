@@ -1,5 +1,7 @@
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+
 
 class TransverseShearBeam:
 
@@ -23,7 +25,7 @@ class TransverseShearBeam:
     """
 
     def __init__(self, scfDefinition: SymbolicConstant, k23: float = None, k13: float = None, 
-                 slendernessCompensation: typing.Union[SymbolicConstant, float] = 0):
+                 slendernessCompensation: typing.Union[SymbolicConstant,float] = 0):
         """This method creates a TransverseShearBeam object.
 
         Path

@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .DisplayGroupArray import DisplayGroupArray
 from .Leaf import Leaf
-from abaqusConstants import *
+
 
 class LeafFromDisplayGroup(Leaf):
 

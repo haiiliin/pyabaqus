@@ -1,7 +1,10 @@
-from ..UtilityAndView.Repository import Repository
+import typing
+
+from abaqusConstants import *
 from .HistoryOutput import HistoryOutput
 from .HistoryPoint import HistoryPoint
-from abaqusConstants import *
+from ..UtilityAndView.Repository import Repository
+
 
 class HistoryRegion:
 
@@ -56,6 +59,46 @@ class HistoryRegion:
         """
         pass
 
+    @typing.overload
+    def getSubset(self, variableName: str):
+        """This method returns a subset of the data in the HistoryRegion object.
+
+        Parameters
+        ----------
+        variableName
+            A String specifying the name of the output variable to return. 
+
+        Returns
+        -------
+            A HistoryRegion object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
+    def getSubset(self, start: float):
+        """This method returns a subset of the data in the HistoryRegion object.
+
+        Parameters
+        ----------
+        start
+            A Float specifying the start of the subset. This is the same as the first item in the 
+            data array member of the HistoryOutput object. 
+
+        Returns
+        -------
+            A HistoryRegion object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
     def getSubset(self, start: float, end: float):
         """This method returns a subset of the data in the HistoryRegion object.
 
@@ -75,5 +118,8 @@ class HistoryRegion:
         ----------
             None. 
         """
+        pass
+
+    def getSubset(self, *args, **kwargs):
         pass
 

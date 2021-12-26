@@ -1,5 +1,6 @@
-from .ConnectorBehaviorOption import ConnectorBehaviorOption
 from abaqusConstants import *
+from .ConnectorBehaviorOption import ConnectorBehaviorOption
+
 
 class ConnectorFailure(ConnectorBehaviorOption):
 

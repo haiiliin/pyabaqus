@@ -1,5 +1,6 @@
-from .AdaptiveMeshConstraintState import AdaptiveMeshConstraintState
 from abaqusConstants import *
+from .AdaptiveMeshConstraintState import AdaptiveMeshConstraintState
+
 
 class VelocityAdaptiveMeshConstraintState(AdaptiveMeshConstraintState):
 

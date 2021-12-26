@@ -1,7 +1,9 @@
+from abaqusConstants import *
+from .DataTableArray import DataTableArray
+from .Field import Field
 from ..Assembly.PartInstance import PartInstance
 from ..Region.Region import Region
-from .Field import Field
-from abaqusConstants import *
+
 
 class DiscreteField(Field):
 

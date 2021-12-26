@@ -1,6 +1,7 @@
-from ..Region.Set import Set
-from .Leaf import Leaf
 from abaqusConstants import *
+from .Leaf import Leaf
+from ..Region.Set import Set
+
 
 class LeafFromSets(Leaf):
 

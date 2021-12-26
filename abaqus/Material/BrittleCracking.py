@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .BrittleFailure import BrittleFailure
 from .BrittleShear import BrittleShear
-from abaqusConstants import *
+
 
 class BrittleCracking:
 

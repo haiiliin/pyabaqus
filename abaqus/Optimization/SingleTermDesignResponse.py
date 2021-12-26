@@ -1,5 +1,7 @@
-from .DesignResponse import DesignResponse
 from abaqusConstants import *
+from .DesignResponse import DesignResponse
+from .StepOptionArray import StepOptionArray
+
 
 class SingleTermDesignResponse(DesignResponse):
 

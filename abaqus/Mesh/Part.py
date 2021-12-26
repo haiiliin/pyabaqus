@@ -1,15 +1,17 @@
-from ..BasicGeometry.Cell import Cell
-from ..BasicGeometry.Edge import Edge
-from ..BasicGeometry.Face import Face
-from ..BasicGeometry.IgnoredVertex import IgnoredVertex
-from ..Part.Part import Part as BasePart
+import typing
+
+from abaqusConstants import *
 from .ElemType import ElemType
 from .MeshEdge import MeshEdge
 from .MeshElement import MeshElement
 from .MeshFace import MeshFace
 from .MeshNode import MeshNode
-from abaqusConstants import *
-import typing
+from ..BasicGeometry.Cell import Cell
+from ..BasicGeometry.Edge import Edge
+from ..BasicGeometry.Face import Face
+from ..BasicGeometry.IgnoredVertex import IgnoredVertex
+from ..Part.Part import Part as BasePart
+
 
 class Part(BasePart):
     """The following commands operate on Part objects. For more information about the Part 
@@ -461,7 +463,7 @@ class Part(BasePart):
         """
         pass
 
-    def getEdgeSeeds(self, edge: Edge, attribute: typing.Union[SymbolicConstant, float]):
+    def getEdgeSeeds(self, edge: Edge, attribute: typing.Union[SymbolicConstant,float]):
         """This method returns an edge seed parameter for a specified edge of a part.
 
         Parameters
@@ -667,7 +669,7 @@ class Part(BasePart):
         """
         pass
 
-    def getPartSeeds(self, attribute: typing.Union[SymbolicConstant, float]):
+    def getPartSeeds(self, attribute: typing.Union[SymbolicConstant,float]):
         """This method returns a part seed parameter for the part.
 
         Parameters

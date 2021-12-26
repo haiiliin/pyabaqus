@@ -1,4 +1,4 @@
-
+from .SectionPointArray import SectionPointArray
 
 class SectionCategory:
 

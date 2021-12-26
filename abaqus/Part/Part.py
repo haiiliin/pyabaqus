@@ -1,5 +1,11 @@
+import typing
+
+from abaqusConstants import *
+from .AcisFile import AcisFile
 from ..Assembly.PartInstance import PartInstance
+from ..BasicGeometry.Cell import Cell
 from ..BasicGeometry.CellArray import CellArray
+from ..BasicGeometry.Edge import Edge
 from ..BasicGeometry.EdgeArray import EdgeArray
 from ..BasicGeometry.Face import Face
 from ..BasicGeometry.FaceArray import FaceArray
@@ -19,14 +25,15 @@ from ..Mesh.MeshFaceArray import MeshFaceArray
 from ..Mesh.MeshNode import MeshNode
 from ..Mesh.MeshNodeArray import MeshNodeArray
 from ..Property.CompositeLayup import CompositeLayup
+from ..Property.MaterialOrientationArray import MaterialOrientationArray
+from ..Property.SectionAssignmentArray import SectionAssignmentArray
 from ..Region.Set import Set
 from ..Region.Skin import Skin
 from ..Region.Stringer import Stringer
 from ..Region.Surface import Surface
 from ..Sketcher.ConstrainedSketch import ConstrainedSketch
 from ..UtilityAndView.Repository import Repository
-from .AcisFile import AcisFile
-from abaqusConstants import *
+
 
 class Part:
 
@@ -158,6 +165,41 @@ class Part:
     # A MeshEdgeArray object specifying all the unique element edges in the part. 
     elementEdges: MeshEdgeArray = None
 
+    @typing.overload
+    def __init__(self, name: str, dimensionality: SymbolicConstant, type: SymbolicConstant, 
+                 twist: Boolean = OFF):
+        """This method creates a Part object and places it in the parts repository.
+
+        Path
+        ----
+            - mdb.models[name].Part
+
+        Parameters
+        ----------
+        name
+            A String specifying the repository key. 
+        dimensionality
+            A SymbolicConstant specifying the dimensionality of the part. Possible values are 
+            THREE_D, TWO_D_PLANAR, and AXISYMMETRIC. 
+        type
+            A SymbolicConstant specifying the type of the part. Possible values are DEFORMABLE_BODY, 
+            EULERIAN, DISCRETE_RIGID_SURFACE, and ANALYTIC_RIGID_SURFACE. 
+        twist
+            A Boolean specifying whether to include a twist DEGREE OF FREEDOM in the part (only 
+            available when *dimensionality*=AXISYMMETRIC and *type*=DEFORMABLE_BODY). The default 
+            value is OFF. 
+
+        Returns
+        -------
+            A Part object. 
+
+        Exceptions
+        ----------
+            InvalidNameError. 
+        """
+        pass
+
+    @typing.overload
     def __init__(self, name: str, objectToCopy: str, scale: float = 1, mirrorPlane: SymbolicConstant = NONE, 
                  compressFeatureList: Boolean = OFF, separate: Boolean = OFF):
         """This method copies a Part object and places the copy in the parts repository.
@@ -198,6 +240,9 @@ class Part:
         ----------
             InvalidNameError. 
         """
+        pass
+
+    def __init__(self, *args, **kwargs):
         pass
 
     def PartFromBooleanCut(self, name: str, instanceToBeCut: str, cuttingInstances: tuple[PartInstance]):
@@ -947,13 +992,13 @@ class Part:
         """
         pass
 
-    def getArea(self, faces: tuple[face], relativeAccuracy: float = 0):
+    def getArea(self, faces: tuple[Face], relativeAccuracy: float = 0):
         """This method returns the total surface area of a given face or group of faces.
 
         Parameters
         ----------
         faces
-            A sequence of face objects whose area the method will calculate. 
+            A sequence of Face objects whose area the method will calculate. 
         relativeAccuracy
             A Float specifying that the area computation should stop when the specified relative 
             accuracy has been achieved. The default value is 0.000001 (0.0001%). 
@@ -1007,7 +1052,7 @@ class Part:
         """
         pass
 
-    def getCentroid(self, faces: tuple[face], cells: tuple[face], relativeAccuracy: float = 0):
+    def getCentroid(self, faces: tuple[Face], cells: tuple[Face], relativeAccuracy: float = 0):
         """Depending on the arguments provided, this method returns the following:
         - The location of the centroid of a given face or group of faces.
         - The location of the centroid of a given cell or group of cells.
@@ -1015,10 +1060,10 @@ class Part:
         Parameters
         ----------
         faces
-            A sequence of face objects whose centroid the method will calculate. The arguments 
+            A sequence of Face objects whose centroid the method will calculate. The arguments 
             *faces* and *cells* are mutually exclusive. 
         cells
-            A sequence of face objects whose centroid the method will calculate. The arguments 
+            A sequence of Face objects whose centroid the method will calculate. The arguments 
             *faces* and *cells* are mutually exclusive. 
         relativeAccuracy
             A Float specifying that the centroid computation should stop when the specified relative 
@@ -1052,7 +1097,7 @@ class Part:
         """
         pass
 
-    def getCurvature(self, edges: tuple[edge], samplePoints: int = 100):
+    def getCurvature(self, edges: tuple[Edge], samplePoints: int = 100):
         """This method returns the maximum curvature of a given edge or group of edges. For an arc,
         the curvature is constant over the entire edge, and equal to the inverse of the radius.
         For a straight line, the curvature is constant and equal to 0. For a spline edge, the
@@ -1061,7 +1106,7 @@ class Part:
         Parameters
         ----------
         edges
-            A sequence of edge objects whose curvature the method will calculate. 
+            A sequence of Edge objects whose curvature the method will calculate. 
         samplePoints
             An Int specifying the number of points along each edge at which the curvature will be 
             computed. The higher the number of sample points, the better the accuracy of the 
@@ -1102,13 +1147,13 @@ class Part:
         """
         pass
 
-    def getLength(self, edges: tuple[edge]):
+    def getLength(self, edges: tuple[Edge]):
         """This method returns the length of a given edge or group of edges.
 
         Parameters
         ----------
         edges
-            A sequence of edge objects whose total length the method will calculate. 
+            A sequence of Edge objects whose total length the method will calculate. 
 
         Returns
         -------
@@ -1120,7 +1165,7 @@ class Part:
         """
         pass
 
-    def getPerimeter(self, faces: tuple[face]):
+    def getPerimeter(self, faces: tuple[Face]):
         """This method returns the total perimeter of a given face or group of faces. All faces
         need to be on the same part. If the specified faces have shared edges, these edges are
         excluded from the computation, thus providing the length of the outer perimeter of the
@@ -1129,7 +1174,7 @@ class Part:
         Parameters
         ----------
         faces
-            A sequence of face objects whose perimeter the method will calculate. 
+            A sequence of Face objects whose perimeter the method will calculate. 
 
         Returns
         -------
@@ -1141,13 +1186,13 @@ class Part:
         """
         pass
 
-    def getVolume(self, cells: tuple[cell], relativeAccuracy: float = 0):
+    def getVolume(self, cells: tuple[Cell], relativeAccuracy: float = 0):
         """This method returns the volume area of a given cell or group of cells.
 
         Parameters
         ----------
         cells
-            A sequence of cell objects whose volume the method will calculate. 
+            A sequence of Cell objects whose volume the method will calculate. 
         relativeAccuracy
             A Float specifying the relative accuracy of the computation. The default value is 
             0.000001 (0.0001%). 

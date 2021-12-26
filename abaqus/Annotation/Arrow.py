@@ -1,6 +1,8 @@
-from .Annotation import Annotation
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .Annotation import Annotation
+
 
 class Arrow(Annotation):
 
@@ -23,8 +25,8 @@ class Arrow(Annotation):
     """
 
     def __init__(self, name: str, startPoint: tuple[float] = (), endPoint: tuple[float] = (), 
-                 startAnchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT, 
-                 endAnchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT, 
+                 startAnchor: typing.Union[SymbolicConstant,float] = BOTTOM_LEFT, 
+                 endAnchor: typing.Union[SymbolicConstant,float] = BOTTOM_LEFT, 
                  startHeadStyle: SymbolicConstant = NONE, endHeadStyle: SymbolicConstant = FILLED_ARROW, 
                  startGap: float = 0, endGap: float = 0, color: str = '', 
                  lineStyle: SymbolicConstant = SOLID, lineThickness: SymbolicConstant = VERY_THIN):
@@ -141,8 +143,8 @@ class Arrow(Annotation):
         pass
 
     def setValues(self, startPoint: tuple[float] = (), endPoint: tuple[float] = (), 
-                  startAnchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT, 
-                  endAnchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT, 
+                  startAnchor: typing.Union[SymbolicConstant,float] = BOTTOM_LEFT, 
+                  endAnchor: typing.Union[SymbolicConstant,float] = BOTTOM_LEFT, 
                   startHeadStyle: SymbolicConstant = NONE, endHeadStyle: SymbolicConstant = FILLED_ARROW, 
                   startGap: float = 0, endGap: float = 0, color: str = '', 
                   lineStyle: SymbolicConstant = SOLID, lineThickness: SymbolicConstant = VERY_THIN):

@@ -1,6 +1,7 @@
-from ..Mesh.MeshElement import MeshElement
-from .Leaf import Leaf
 from abaqusConstants import *
+from .Leaf import Leaf
+from ..Mesh.MeshElement import MeshElement
+
 
 class LeafFromMeshElementLabels(Leaf):
 

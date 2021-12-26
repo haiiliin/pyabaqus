@@ -1,5 +1,7 @@
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+
 
 class SolverControl:
 
@@ -19,7 +21,7 @@ class SolverControl:
     """
 
     def setValues(self, allowPropagation: Boolean = ON, resetDefaultValues: Boolean = OFF, 
-                  relativeTolerance: typing.Union[SymbolicConstant, float] = DEFAULT, 
+                  relativeTolerance: typing.Union[SymbolicConstant,float] = DEFAULT, 
                   maxIterations: SymbolicConstant = DEFAULT, fillInLevel: SymbolicConstant = DEFAULT):
         """This method modifies the SolverControl object.
 

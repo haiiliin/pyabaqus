@@ -1,5 +1,6 @@
-from .LoadState import LoadState
 from abaqusConstants import *
+from .LoadState import LoadState
+
 
 class GravityState(LoadState):
 

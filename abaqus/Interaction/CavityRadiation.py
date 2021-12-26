@@ -1,6 +1,8 @@
-from ..BasicGeometry.ModelDot import ModelDot
-from .Interaction import Interaction
 from abaqusConstants import *
+from .Interaction import Interaction
+from ..BasicGeometry.ModelDot import ModelDot
+from ..Region.RegionArray import RegionArray
+
 
 class CavityRadiation(Interaction):
 

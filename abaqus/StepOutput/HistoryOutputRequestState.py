@@ -1,5 +1,7 @@
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+
 
 class HistoryOutputRequestState:
 
@@ -40,7 +42,7 @@ class HistoryOutputRequestState:
 
     # The SymbolicConstant EVERY_TIME_INCREMENT or a Float specifying the time interval at 
     # which the output states are to be written. The default value is EVERY_TIME_INCREMENT. 
-    timeInterval: typing.Union[SymbolicConstant, float] = EVERY_TIME_INCREMENT
+    timeInterval: typing.Union[SymbolicConstant,float] = EVERY_TIME_INCREMENT
 
     # A SymbolicConstant specifying the propagation state of the history output request time 
     # interval. Possible values are UNSET, SET, and UNCHANGED. 

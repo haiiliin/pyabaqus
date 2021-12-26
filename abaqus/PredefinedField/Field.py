@@ -1,6 +1,7 @@
-from ..Region.Region import Region
-from .PredefinedField import PredefinedField
 from abaqusConstants import *
+from .PredefinedField import PredefinedField
+from ..Region.Region import Region
+
 
 class Field(PredefinedField):
 

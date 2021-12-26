@@ -1,5 +1,7 @@
-from .Job import Job
 from abaqusConstants import *
+from .Job import Job
+from .MessageArray import MessageArray
+
 
 class JobFromInputFile(Job):
 

@@ -1,6 +1,8 @@
-from ..Region.Region import Region
-from .BoundaryCondition import BoundaryCondition
 from abaqusConstants import *
+from .BoundaryCondition import BoundaryCondition
+from ..Amplitude.CorrelationArray import CorrelationArray
+from ..Region.Region import Region
+
 
 class VelocityBaseMotionBC(BoundaryCondition):
 

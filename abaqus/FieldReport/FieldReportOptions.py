@@ -1,5 +1,6 @@
-from ..Session.NumberFormat import NumberFormat
 from abaqusConstants import *
+from ..Session.NumberFormat import NumberFormat
+
 
 class FieldReportOptions:
 

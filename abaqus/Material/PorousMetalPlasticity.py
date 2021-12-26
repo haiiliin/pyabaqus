@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .PorousFailureCriteria import PorousFailureCriteria
 from .VoidNucleation import VoidNucleation
-from abaqusConstants import *
+
 
 class PorousMetalPlasticity:
 

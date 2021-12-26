@@ -1,7 +1,9 @@
-from ..Region.Region import Region
-from .Load import Load
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .Load import Load
+from ..Region.Region import Region
+
 
 class ConcentratedForce(Load):
 
@@ -152,9 +154,9 @@ class ConcentratedForce(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, cf1: typing.Union[SymbolicConstant, float] = None, 
-                        cf2: typing.Union[SymbolicConstant, float] = None, cf3: typing.Union[SymbolicConstant, 
-                        float] = None, amplitude: str = ''):
+    def setValuesInStep(self, stepName: str, cf1: typing.Union[SymbolicConstant,float] = None, 
+                        cf2: typing.Union[SymbolicConstant,float] = None, 
+                        cf3: typing.Union[SymbolicConstant,float] = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing ConcentratedForce object in
         the specified step.
 

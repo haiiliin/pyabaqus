@@ -265,7 +265,7 @@ The ContactExp object can have the following members:
 
 - *polarityAssignments*
 
-  A [PolarityAssignment](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-polarityassignmentpyc.htm?ContextScope=all) object specifying the polarity assignments in the contact domain.
+  A [PolarityAssignments](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-polarityassignmentpyc.htm?ContextScope=all) object specifying the polarity assignments in the contact domain.
 
 
 

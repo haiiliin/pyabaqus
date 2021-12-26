@@ -1,5 +1,6 @@
-from .ContactControl import ContactControl
 from abaqusConstants import *
+from .ContactControl import ContactControl
+
 
 class StdContactControl(ContactControl):
 

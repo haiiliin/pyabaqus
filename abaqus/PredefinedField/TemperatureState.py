@@ -1,5 +1,6 @@
-from .PredefinedFieldState import PredefinedFieldState
 from abaqusConstants import *
+from .PredefinedFieldState import PredefinedFieldState
+
 
 class TemperatureState(PredefinedFieldState):
 

@@ -1,4 +1,6 @@
 from abaqusConstants import *
+from .MessageArray import MessageArray
+
 
 class Job:
 

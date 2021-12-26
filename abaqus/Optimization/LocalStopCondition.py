@@ -1,5 +1,6 @@
-from .StopCondition import StopCondition
 from abaqusConstants import *
+from .StopCondition import StopCondition
+
 
 class LocalStopCondition(StopCondition):
 

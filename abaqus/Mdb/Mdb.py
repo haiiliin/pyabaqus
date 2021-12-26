@@ -1,3 +1,4 @@
+from abaqusConstants import *
 from ..Adaptivity.AdaptivityProcess import AdaptivityProcess
 from ..Annotation.Annotation import Annotation
 from ..CustomKernel.RepositorySupport import RepositorySupport
@@ -7,7 +8,7 @@ from ..Job.Job import Job
 from ..Job.OptimizationProcess import OptimizationProcess
 from ..Model.Model import Model
 from ..UtilityAndView.Repository import Repository
-from abaqusConstants import *
+
 
 class Mdb:
 

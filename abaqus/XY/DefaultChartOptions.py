@@ -1,10 +1,11 @@
+from abaqusConstants import *
 from .Area import Area
 from .AreaStyle import AreaStyle
 from .Axis import Axis
 from .Legend import Legend
 from .LineStyle import LineStyle
 from .TextStyle import TextStyle
-from abaqusConstants import *
+
 
 class DefaultChartOptions:
 

@@ -95,7 +95,7 @@ mdb.models[name].ContactStd
 
 - *slidingTransitionAssignments*
 
-  A [SlidingTransitionAssignment](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-slidingtransitionassignmentpyc.htm?ContextScope=all) object specifying the sliding transition assignments in the contact domain.
+  A [SlidingTransitionAssignments](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-slidingtransitionassignmentpyc.htm?ContextScope=all) object specifying the sliding transition assignments in the contact domain.
 
 - *slidingFormulationAssignments*
 
@@ -305,7 +305,7 @@ The ContactStd object can have the following members:
 
 - *slidingTransitionAssignments*
 
-  A [SlidingTransitionAssignment](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-slidingtransitionassignmentpyc.htm?ContextScope=all) object specifying the sliding transition assignments in the contact domain.
+  A [SlidingTransitionAssignments](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-slidingtransitionassignmentpyc.htm?ContextScope=all) object specifying the sliding transition assignments in the contact domain.
 
 - *assignEdgeToEdgeformulation*
 

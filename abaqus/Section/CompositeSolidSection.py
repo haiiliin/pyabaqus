@@ -1,5 +1,7 @@
-from .Section import Section
 from abaqusConstants import *
+from .Section import Section
+from .SectionLayerArray import SectionLayerArray
+
 
 class CompositeSolidSection(Section):
 

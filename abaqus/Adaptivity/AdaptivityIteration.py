@@ -1,5 +1,6 @@
-from ..UtilityAndView.Repository import Repository
 from .RuleResult import RuleResult
+from ..UtilityAndView.Repository import Repository
+
 
 class AdaptivityIteration:
 

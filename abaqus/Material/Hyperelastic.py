@@ -1,10 +1,12 @@
+import typing
+
+from abaqusConstants import *
 from .BiaxialTestData import BiaxialTestData
 from .Hysteresis import Hysteresis
 from .PlanarTestData import PlanarTestData
 from .UniaxialTestData import UniaxialTestData
 from .VolumetricTestData import VolumetricTestData
-from abaqusConstants import *
-import typing
+
 
 class Hyperelastic:
 
@@ -86,7 +88,7 @@ class Hyperelastic:
 
     def __init__(self, table: tuple, type: SymbolicConstant = UNKNOWN, 
                  moduliTimeScale: SymbolicConstant = LONG_TERM, temperatureDependency: Boolean = OFF, 
-                 n: int = 1, beta: typing.Union[SymbolicConstant, float] = FITTED_VALUE, 
+                 n: int = 1, beta: typing.Union[SymbolicConstant,float] = FITTED_VALUE, 
                  testData: Boolean = ON, compressible: Boolean = OFF, properties: int = 0, 
                  deviatoricResponse: SymbolicConstant = UNIAXIAL, 
                  volumetricResponse: SymbolicConstant = DEFAULT, poissonRatio: float = 0, 

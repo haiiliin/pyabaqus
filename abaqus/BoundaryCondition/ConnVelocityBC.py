@@ -1,7 +1,9 @@
-from ..Region.Region import Region
-from .BoundaryCondition import BoundaryCondition
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .BoundaryCondition import BoundaryCondition
+from ..Region.Region import Region
+
 
 class ConnVelocityBC(BoundaryCondition):
 
@@ -53,11 +55,13 @@ class ConnVelocityBC(BoundaryCondition):
     localCsys: str = None
 
     def __init__(self, name: str, createStepName: str, region: str = '', fastenerName: str = '', 
-                 fastenerSetName: str = '', v1: typing.Union[SymbolicConstant, float] = UNSET, 
-                 v2: typing.Union[SymbolicConstant, float] = UNSET, v3: typing.Union[SymbolicConstant, 
-                 float] = UNSET, vr1: typing.Union[SymbolicConstant, float] = UNSET, 
-                 vr2: typing.Union[SymbolicConstant, float] = UNSET, vr3: typing.Union[SymbolicConstant, 
-                 float] = UNSET, amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM):
+                 fastenerSetName: str = '', v1: typing.Union[SymbolicConstant,float] = UNSET, 
+                 v2: typing.Union[SymbolicConstant,float] = UNSET, 
+                 v3: typing.Union[SymbolicConstant,float] = UNSET, 
+                 vr1: typing.Union[SymbolicConstant,float] = UNSET, 
+                 vr2: typing.Union[SymbolicConstant,float] = UNSET, 
+                 vr3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
+                 distributionType: SymbolicConstant = UNIFORM):
         """This method creates a ConnVelocityBC object on a wire region. Alternatively, the
         boundary condition may also be applied to a wire set referenced from an assembled
         fastener template model.
@@ -131,11 +135,13 @@ class ConnVelocityBC(BoundaryCondition):
         pass
 
     def setValues(self, region: str = '', fastenerName: str = '', fastenerSetName: str = '', 
-                  v1: typing.Union[SymbolicConstant, float] = UNSET, v2: typing.Union[SymbolicConstant, 
-                  float] = UNSET, v3: typing.Union[SymbolicConstant, float] = UNSET, 
-                  vr1: typing.Union[SymbolicConstant, float] = UNSET, vr2: typing.Union[SymbolicConstant, 
-                  float] = UNSET, vr3: typing.Union[SymbolicConstant, float] = UNSET, 
-                  amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM):
+                  v1: typing.Union[SymbolicConstant,float] = UNSET, 
+                  v2: typing.Union[SymbolicConstant,float] = UNSET, 
+                  v3: typing.Union[SymbolicConstant,float] = UNSET, 
+                  vr1: typing.Union[SymbolicConstant,float] = UNSET, 
+                  vr2: typing.Union[SymbolicConstant,float] = UNSET, 
+                  vr3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
+                  distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing ConnVelocityBC object in the step where it
         is created.
 
@@ -198,11 +204,12 @@ class ConnVelocityBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, v1: typing.Union[SymbolicConstant, float] = None, 
-                        v2: typing.Union[SymbolicConstant, float] = None, v3: typing.Union[SymbolicConstant, 
-                        float] = None, vr1: typing.Union[SymbolicConstant, float] = None, 
-                        vr2: typing.Union[SymbolicConstant, float] = None, vr3: typing.Union[SymbolicConstant, 
-                        float] = None, amplitude: str = ''):
+    def setValuesInStep(self, stepName: str, v1: typing.Union[SymbolicConstant,float] = None, 
+                        v2: typing.Union[SymbolicConstant,float] = None, 
+                        v3: typing.Union[SymbolicConstant,float] = None, 
+                        vr1: typing.Union[SymbolicConstant,float] = None, 
+                        vr2: typing.Union[SymbolicConstant,float] = None, 
+                        vr3: typing.Union[SymbolicConstant,float] = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing ConnVelocityBC object in the
         specified step.
 

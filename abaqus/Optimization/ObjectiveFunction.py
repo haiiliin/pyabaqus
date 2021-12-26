@@ -1,4 +1,6 @@
 from abaqusConstants import *
+from .OptimizationObjectiveArray import OptimizationObjectiveArray
+
 
 class ObjectiveFunction:
 

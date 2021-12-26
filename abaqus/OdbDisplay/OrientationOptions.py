@@ -1,5 +1,6 @@
-from ..PlotOptions.DGOrientationOptions import DGOrientationOptions
 from abaqusConstants import *
+from ..PlotOptions.DGOrientationOptions import DGOrientationOptions
+
 
 class OrientationOptions(DGOrientationOptions):
 

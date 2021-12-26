@@ -1,5 +1,7 @@
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+
 
 class FieldOutputRequest:
 
@@ -40,9 +42,10 @@ class FieldOutputRequest:
 
     def __init__(self, name: str, createStepName: str, region: SymbolicConstant = MODEL, 
                  variables: SymbolicConstant = PRESELECT, frequency: SymbolicConstant = 1, 
-                 modes: SymbolicConstant = ALL, timeInterval: typing.Union[SymbolicConstant, 
-                 float] = EVERY_TIME_INCREMENT, numIntervals: int = 20, timeMarks: Boolean = OFF, 
-                 boltLoad: str = '', sectionPoints: SymbolicConstant = DEFAULT, interactions: str = None, 
+                 modes: SymbolicConstant = ALL, 
+                 timeInterval: typing.Union[SymbolicConstant,float] = EVERY_TIME_INCREMENT, 
+                 numIntervals: int = 20, timeMarks: Boolean = OFF, boltLoad: str = '', 
+                 sectionPoints: SymbolicConstant = DEFAULT, interactions: str = None, 
                  rebar: SymbolicConstant = EXCLUDE, filter: SymbolicConstant = None, 
                  directions: Boolean = ON, fasteners: str = '', assembledFastener: str = '', 
                  assembledFastenerSet: str = '', exteriorOnly: Boolean = OFF, layupNames: str = '', 
@@ -241,7 +244,7 @@ class FieldOutputRequest:
 
     def setValues(self, region: SymbolicConstant = MODEL, variables: SymbolicConstant = PRESELECT, 
                   frequency: SymbolicConstant = 1, modes: SymbolicConstant = ALL, 
-                  timeInterval: typing.Union[SymbolicConstant, float] = EVERY_TIME_INCREMENT, 
+                  timeInterval: typing.Union[SymbolicConstant,float] = EVERY_TIME_INCREMENT, 
                   numIntervals: int = 20, timeMarks: Boolean = OFF, boltLoad: str = '', 
                   sectionPoints: SymbolicConstant = DEFAULT, interactions: str = None, 
                   rebar: SymbolicConstant = EXCLUDE, filter: SymbolicConstant = None, 
@@ -339,9 +342,9 @@ class FieldOutputRequest:
         pass
 
     def setValuesInStep(self, stepName: str, variables: SymbolicConstant = None, frequency: SymbolicConstant = 1, 
-                        modes: SymbolicConstant = ALL, timeInterval: typing.Union[SymbolicConstant, 
-                        float] = EVERY_TIME_INCREMENT, numIntervals: int = 20, timePoints: str = None, 
-                        timeMarks: Boolean = OFF):
+                        modes: SymbolicConstant = ALL, 
+                        timeInterval: typing.Union[SymbolicConstant,float] = EVERY_TIME_INCREMENT, 
+                        numIntervals: int = 20, timePoints: str = None, timeMarks: Boolean = OFF):
         """This method modifies the propagating data for an existing FieldOutputRequest object in
         the specified step.
 

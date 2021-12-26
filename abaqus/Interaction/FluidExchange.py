@@ -1,5 +1,6 @@
-from .Interaction import Interaction
 from abaqusConstants import *
+from .Interaction import Interaction
+
 
 class FluidExchange(Interaction):
 

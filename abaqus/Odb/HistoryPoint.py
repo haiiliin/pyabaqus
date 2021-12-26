@@ -1,9 +1,13 @@
+import typing
+
+from abaqusConstants import *
 from .OdbAssembly import OdbAssembly
 from .OdbInstance import OdbInstance
 from .OdbMeshElement import OdbMeshElement
+from .OdbMeshNode import OdbMeshNode
 from .OdbSet import OdbSet
 from .SectionPoint import SectionPoint
-from abaqusConstants import *
+
 
 class HistoryPoint:
 
@@ -79,6 +83,125 @@ class HistoryPoint:
     # An OdbInstance object specifying the instance for which the data are to be collected. 
     instance: OdbInstance = None
 
+    @typing.overload
+    def __init__(self, node: OdbMeshNode):
+        """This method creates a HistoryPoint object for a node.
+
+        Path
+        ----
+            - odbAccess.HistoryPoint
+
+        Parameters
+        ----------
+        node
+            An OdbMeshNode object specifying the node for which the data are to be collected. 
+
+        Returns
+        -------
+            A HistoryPoint object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
+    def __init__(self, element: OdbMeshElement, ipNumber: int = 0, sectionPoint: SectionPoint = None, 
+                 face: SymbolicConstant = FACE_UNKNOWN, node: OdbMeshNode = None):
+        """This method creates a HistoryPoint object for an element.
+
+        Path
+        ----
+            - odbAccess.HistoryPoint
+
+        Parameters
+        ----------
+        element
+            An OdbMeshElement object specifying the element for which the data are to be collected. 
+        ipNumber
+            An Int specifying the integration point. This argument is used to define a history 
+            output position of INTEGRATION_POINT or ELEMENT_FACE_INTEGRATION_POINT. The default 
+            value is 0. 
+        sectionPoint
+            A SectionPoint object. 
+        face
+            A SymbolicConstant specifying the element face. This argument is used to define a 
+            history output position of ELEMENT_FACE or ELEMENT_FACE_INTEGRATION_POINT. Possible 
+            values are: 
+            - FACE_UNKOWN, specifying this value indicates that no value has been specified. 
+            - FACE1, specifying this value indicates that element face 1 has been specified. 
+            - FACE2, specifying this value indicates that element face 2 has been specified. 
+            - FACE3, specifying this value indicates that element face 3 has been specified. 
+            - FACE4, specifying this value indicates that element face 4 has been specified. 
+            - FACE5, specifying this value indicates that element face 5 has been specified. 
+            - FACE6, specifying this value indicates that element face 6 has been specified. 
+            - SIDE1, specifying this value indicates that element side 1 has been specified. 
+            - SIDE2, specifying this value indicates element side 2 has been specified. 
+            - END1, specifying this value indicates that element end 1 has been specified. 
+            - END2, specifying this value indicates that element end 2 has been specified. 
+            - END3, specifying this value indicates that element end 3 has been specified. 
+            The default value is FACE_UNKNOWN. 
+        node
+            An OdbMeshNode object specifying the node for which the data are to be collected. 
+
+        Returns
+        -------
+            A HistoryPoint object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
+    def __init__(self, region: OdbSet):
+        """This method creates a HistoryPoint object for a region.
+
+        Path
+        ----
+            - odbAccess.HistoryPoint
+
+        Parameters
+        ----------
+        region
+            An OdbSet object specifying the region for which the data are to be collected. 
+
+        Returns
+        -------
+            A HistoryPoint object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
+    def __init__(self, assembly: OdbAssembly):
+        """This method creates a HistoryPoint object for the OdbAssembly object.
+
+        Path
+        ----
+            - odbAccess.HistoryPoint
+
+        Parameters
+        ----------
+        assembly
+            An OdbAssembly object specifying the assembly for which the data are to be collected. 
+
+        Returns
+        -------
+            A HistoryPoint object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
     def __init__(self, instance: OdbInstance):
         """This method creates a HistoryPoint object for the OdbInstance object.
 
@@ -99,5 +222,8 @@ class HistoryPoint:
         ----------
             None. 
         """
+        pass
+
+    def __init__(self, *args, **kwargs):
         pass
 

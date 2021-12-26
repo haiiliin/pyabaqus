@@ -1,10 +1,11 @@
-from ..UtilityAndView.Repository import Repository
+from abaqusConstants import *
 from .OdbAnalysisError import OdbAnalysisError
 from .OdbAnalysisWarning import OdbAnalysisWarning
 from .OdbDiagnosticStep import OdbDiagnosticStep
 from .OdbJobTime import OdbJobTime
 from .OdbNumericalProblemSummary import OdbNumericalProblemSummary
-from abaqusConstants import *
+from ..UtilityAndView.Repository import Repository
+
 
 class OdbDiagnosticData:
 

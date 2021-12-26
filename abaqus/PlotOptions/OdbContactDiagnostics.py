@@ -1,5 +1,6 @@
-from ..UtilityAndView.Repository import Repository
 from .OdbAuxiliaryData import OdbAuxiliaryData
+from ..UtilityAndView.Repository import Repository
+
 
 class OdbContactDiagnostics:
 

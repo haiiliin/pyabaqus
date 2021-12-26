@@ -1,6 +1,8 @@
-from .Section import Section
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .Section import Section
+
 
 class GasketSection(Section):
 
@@ -24,9 +26,9 @@ class GasketSection(Section):
     """
 
     def __init__(self, name: str, material: str, crossSection: float = 1, initialGap: float = 0, 
-                 initialThickness: typing.Union[SymbolicConstant, float] = DEFAULT, 
-                 initialVoid: float = 0, stabilizationStiffness: typing.Union[SymbolicConstant, 
-                 float] = DEFAULT):
+                 initialThickness: typing.Union[SymbolicConstant,float] = DEFAULT, 
+                 initialVoid: float = 0, 
+                 stabilizationStiffness: typing.Union[SymbolicConstant,float] = DEFAULT):
         """This method creates a GasketSection object.
 
         Path
@@ -71,9 +73,9 @@ class GasketSection(Section):
         pass
 
     def setValues(self, crossSection: float = 1, initialGap: float = 0, 
-                  initialThickness: typing.Union[SymbolicConstant, float] = DEFAULT, 
-                  initialVoid: float = 0, stabilizationStiffness: typing.Union[SymbolicConstant, 
-                  float] = DEFAULT):
+                  initialThickness: typing.Union[SymbolicConstant,float] = DEFAULT, 
+                  initialVoid: float = 0, 
+                  stabilizationStiffness: typing.Union[SymbolicConstant,float] = DEFAULT):
         """This method modifies the GasketSection object.
 
         Parameters

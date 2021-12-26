@@ -1,5 +1,7 @@
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+
 
 class Movie:
 
@@ -36,7 +38,7 @@ class Movie:
 
     def __init__(self, name: str, fileName: str, startFrame: int = 0, endFrame: int = None, 
                  timelineStartFrame: int = 0, timelineEndFrame: int = None, timelineStartTime: float = 0, 
-                 timelineEndTime: typing.Union[SymbolicConstant, float] = END_FRAME_TIME):
+                 timelineEndTime: typing.Union[SymbolicConstant,float] = END_FRAME_TIME):
         """This method creates a Movie object from the contents of the specified file.
 
         Path
@@ -90,7 +92,7 @@ class Movie:
 
     def setValues(self, startFrame: int = 0, endFrame: int = None, timelineStartFrame: int = 0, 
                   timelineEndFrame: int = None, timelineStartTime: float = 0, 
-                  timelineEndTime: typing.Union[SymbolicConstant, float] = END_FRAME_TIME):
+                  timelineEndTime: typing.Union[SymbolicConstant,float] = END_FRAME_TIME):
         """This method modifies the Movie object.
 
         Parameters

@@ -1,6 +1,8 @@
-from ..Assembly.PartInstance import PartInstance
-from .Constraint import Constraint
 from abaqusConstants import *
+from .Constraint import Constraint
+from ..Assembly.PartInstance import PartInstance
+from ..BasicGeometry.ModelDotArray import ModelDotArray
+
 
 class DisplayBody(Constraint):
 

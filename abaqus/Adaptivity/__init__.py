@@ -1,14 +1,1 @@
-from .AdaptiveMeshConstraint import AdaptiveMeshConstraint
-from .AdaptiveMeshConstraintState import AdaptiveMeshConstraintState
-from .AdaptiveMeshControl import AdaptiveMeshControl
-from .AdaptiveMeshDomain import AdaptiveMeshDomain
-from .AdaptivityIteration import AdaptivityIteration
-from .AdaptivityProcess import AdaptivityProcess
-from .DisplacementAdaptiveMeshConstraint import DisplacementAdaptiveMeshConstraint
-from .DisplacementAdaptiveMeshConstraintState import DisplacementAdaptiveMeshConstraintState
-from .ErrorIndicatorResult import ErrorIndicatorResult
-from .Model import Model
-from .RemeshingRule import RemeshingRule
-from .RuleResult import RuleResult
-from .VelocityAdaptiveMeshConstraint import VelocityAdaptiveMeshConstraint
-from .VelocityAdaptiveMeshConstraintState import VelocityAdaptiveMeshConstraintState
+

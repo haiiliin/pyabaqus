@@ -1,3 +1,11 @@
+from abaqusConstants import *
+from .AutoColors import AutoColors
+from .Color import Color
+from .Drawing import Drawing
+from .Image import Image
+from .JournalOptions import JournalOptions
+from .MemoryReductionOptions import MemoryReductionOptions
+from .NetworkDatabaseConnector import NetworkDatabaseConnector
 from ..Animation.AVIOptions import AVIOptions
 from ..Animation.AnimationOptions import AnimationOptions
 from ..Animation.ImageAnimation import ImageAnimation
@@ -48,14 +56,7 @@ from ..XY.XYCurve import XYCurve
 from ..XY.XYData import XYData
 from ..XY.XYPlot import XYPlot
 from ..XY.XYReportOptions import XYReportOptions
-from .AutoColors import AutoColors
-from .Color import Color
-from .Drawing import Drawing
-from .Image import Image
-from .JournalOptions import JournalOptions
-from .MemoryReductionOptions import MemoryReductionOptions
-from .NetworkDatabaseConnector import NetworkDatabaseConnector
-from abaqusConstants import *
+
 
 class Session:
 

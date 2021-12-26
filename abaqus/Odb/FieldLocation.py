@@ -1,4 +1,6 @@
 from abaqusConstants import *
+from .SectionPointArray import SectionPointArray
+
 
 class FieldLocation:
 

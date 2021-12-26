@@ -1,6 +1,7 @@
-from ..UtilityAndView.Repository import Repository
-from .Job import Job
 from abaqusConstants import *
+from .Job import Job
+from ..UtilityAndView.Repository import Repository
+
 
 class Coexecution:
 

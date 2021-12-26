@@ -28,7 +28,7 @@ class DiscreteFastener(Fastener):
     # OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, region: Region, influenceRadius: typing.Union[SymbolicConstant, float], 
+    def __init__(self, name: str, region: Region, influenceRadius: typing.Union[SymbolicConstant,float], 
                  ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON, 
                  coupling: SymbolicConstant = CONTINUUM, weightingMethod: SymbolicConstant = UNIFORM, 
                  localCsys: int = None):

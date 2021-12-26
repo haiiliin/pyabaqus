@@ -1,5 +1,6 @@
-from ..Assembly.Assembly import Assembly as BaseAssembly
 from abaqusConstants import *
+from ..Assembly.Assembly import Assembly as BaseAssembly
+
 
 class Assembly(BaseAssembly):
     """The following commands operate on Assembly objects. For more information about the 

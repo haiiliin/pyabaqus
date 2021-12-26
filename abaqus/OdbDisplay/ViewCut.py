@@ -1,5 +1,7 @@
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+
 
 class ViewCut:
 
@@ -68,10 +70,10 @@ class ViewCut:
     crossSectionalArea: float = None
 
     def __init__(self, name: str, shape: SymbolicConstant, origin: tuple, 
-                 normal: typing.Union[SymbolicConstant, float], axis2: typing.Union[SymbolicConstant, 
-                 float], csysName: str, cylinderAxis: typing.Union[SymbolicConstant, float], 
-                 followDeformation: Boolean = OFF, overrideAveraging: Boolean = ON, 
-                 referenceFrame: SymbolicConstant = FIRST_FRAME):
+                 normal: typing.Union[SymbolicConstant,float], 
+                 axis2: typing.Union[SymbolicConstant,float], csysName: str, 
+                 cylinderAxis: typing.Union[SymbolicConstant,float], followDeformation: Boolean = OFF, 
+                 overrideAveraging: Boolean = ON, referenceFrame: SymbolicConstant = FIRST_FRAME):
         """This method creates a ViewCut object.
 
         Path
@@ -138,9 +140,9 @@ class ViewCut:
                   radius: float = None, rotationAxis: SymbolicConstant = AXIS_2, value: float = None, 
                   showModelAboveCut: Boolean = OFF, showModelOnCut: Boolean = ON, 
                   showModelBelowCut: Boolean = ON, showFreeBodyCut: Boolean = OFF, csysName: str = '', 
-                  origin: tuple = (), normal: typing.Union[SymbolicConstant, float] = None, 
-                  axis2: typing.Union[SymbolicConstant, float] = None, 
-                  cylinderAxis: typing.Union[SymbolicConstant, float] = None, 
+                  origin: tuple = (), normal: typing.Union[SymbolicConstant,float] = None, 
+                  axis2: typing.Union[SymbolicConstant,float] = None, 
+                  cylinderAxis: typing.Union[SymbolicConstant,float] = None, 
                   followDeformation: Boolean = OFF, overrideAveraging: Boolean = ON, 
                   referenceFrame: SymbolicConstant = FIRST_FRAME):
         """This method modifies the ViewCut object.

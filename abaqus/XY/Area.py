@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .AreaStyle import AreaStyle
 from .LineStyle import LineStyle
-from abaqusConstants import *
+
 
 class Area:
 

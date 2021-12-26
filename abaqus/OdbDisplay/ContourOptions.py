@@ -1,5 +1,6 @@
-from ..PlotOptions.DGContourOptions import DGContourOptions
 from abaqusConstants import *
+from ..PlotOptions.DGContourOptions import DGContourOptions
+
 
 class ContourOptions(DGContourOptions):
 

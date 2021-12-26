@@ -52,7 +52,7 @@ The OdbDiagnosticStep object has the following members:
 
 - *contactDiagnostics*
 
-  A repository of [OdbContactDiagnostic](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-odbcontactdiagnosticspyc.htm?ContextScope=all) objects.
+  A repository of [OdbContactDiagnostics](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-odbcontactdiagnosticspyc.htm?ContextScope=all) objects.
 
 - *explicitIncrementStatus*
 

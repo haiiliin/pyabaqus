@@ -1,6 +1,6 @@
-from ..Amplitude.ConstrainedSketchGeometryArray import ConstrainedSketchGeometryArray
-from ..Part.AcisFile import AcisFile
-from ..UtilityAndView.Repository import Repository
+import typing
+
+from abaqusConstants import *
 from .ConstrainedSketchConstraint import ConstrainedSketchConstraint
 from .ConstrainedSketchDimension import ConstrainedSketchDimension
 from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
@@ -9,7 +9,10 @@ from .ConstrainedSketchOptions import ConstrainedSketchOptions
 from .ConstrainedSketchParameter import ConstrainedSketchParameter
 from .ConstrainedSketchVertex import ConstrainedSketchVertex
 from .ConstrainedSketchVertexArray import ConstrainedSketchVertexArray
-from abaqusConstants import *
+from ..Amplitude.ConstrainedSketchGeometryArray import ConstrainedSketchGeometryArray
+from ..Part.AcisFile import AcisFile
+from ..UtilityAndView.Repository import Repository
+
 
 class ConstrainedSketch:
 
@@ -54,6 +57,43 @@ class ConstrainedSketch:
     # A ConstrainedSketchImageOptions object. 
     imageOptions: ConstrainedSketchImageOptions = None
 
+    @typing.overload
+    def __init__(self, name: str, sheetSize: float, gridSpacing: float = None, transform: tuple = ()):
+        """This method creates a ConstrainedSketch object. If the sketch cannot be created, the
+        method returns None.
+
+        Path
+        ----
+            - mdb.models[name].ConstrainedSketch
+
+        Parameters
+        ----------
+        name
+            A String specifying the repository key. 
+        sheetSize
+            A Float specifying the sheet size. 
+        gridSpacing
+            A Float specifying the spacing between gridlines. Possible values are Floats >> 0. The 
+            default value is approximately 2 percent of *sheetSize*. 
+        transform
+            A sequence of sequences of Floats specifying the three-dimensional orientation of the 
+            sketch. The sequence is a 3 × 4 transformation matrix specifying the axis of rotation 
+            and the translation vector. Possible values are any Floats.The default value for the 
+            axis of rotation is the identity matrix`(1.0, 0.0, 0.0),  (0.0, 1.0, 0.0),  (0.0, 0.0, 
+            1.0)`The default value for the translation vector is`(0.0, 0.0, 0.0)`The default values 
+            position the sketch on the *X–Y* plane centered at the origin. 
+
+        Returns
+        -------
+            A ConstrainedSketch object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
     def __init__(self, name: str, objectToCopy: 'ConstrainedSketch'):
         """This method copies one ConstrainedSketch object to a new ConstrainedSketch object. Note:
         If the name of the sketch to be copied to is __edit__, Abaqus creates an exact copy that
@@ -81,6 +121,9 @@ class ConstrainedSketch:
             InvalidNameError. 
             !img 
         """
+        pass
+
+    def __init__(self, *args, **kwargs):
         pass
 
     def ConstrainedSketchFromGeometryFile(self, name: str, geometryFile: AcisFile):

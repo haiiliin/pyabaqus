@@ -1,5 +1,7 @@
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+
 
 class PageSetupOptions:
 
@@ -19,7 +21,7 @@ class PageSetupOptions:
 
     """
 
-    def setValues(self, imageSize: typing.Union[SymbolicConstant, float] = FIT_TO_PAGE, 
+    def setValues(self, imageSize: typing.Union[SymbolicConstant,float] = FIT_TO_PAGE, 
                   units: SymbolicConstant = INCHES, quality: SymbolicConstant = MEDIUM, 
                   topMargin: float = 0, bottomMargin: float = 0, leftMargin: float = 0, 
                   rightMargin: float = 0, orientation: SymbolicConstant = PORTRAIT, logo: Boolean = ON, 

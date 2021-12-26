@@ -1,7 +1,8 @@
+from abaqusConstants import *
+from .AdaptivityIteration import AdaptivityIteration
 from ..Job.ModelJob import ModelJob
 from ..UtilityAndView.Repository import Repository
-from .AdaptivityIteration import AdaptivityIteration
-from abaqusConstants import *
+
 
 class AdaptivityProcess:
 

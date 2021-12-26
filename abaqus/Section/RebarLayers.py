@@ -1,4 +1,6 @@
 from abaqusConstants import *
+from .LayerPropertiesArray import LayerPropertiesArray
+
 
 class RebarLayers:
 

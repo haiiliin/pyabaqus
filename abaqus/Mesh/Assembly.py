@@ -1,16 +1,18 @@
+import typing
+
+from abaqusConstants import *
+from .ElemType import ElemType
+from .MeshEdge import MeshEdge
+from .MeshElement import MeshElement
+from .MeshFace import MeshFace
+from .MeshNode import MeshNode
 from ..Assembly.Assembly import Assembly as BaseAssembly
 from ..Assembly.PartInstance import PartInstance
 from ..BasicGeometry.Cell import Cell
 from ..BasicGeometry.Edge import Edge
 from ..BasicGeometry.Face import Face
 from ..BasicGeometry.IgnoredVertex import IgnoredVertex
-from .ElemType import ElemType
-from .MeshEdge import MeshEdge
-from .MeshElement import MeshElement
-from .MeshFace import MeshFace
-from .MeshNode import MeshNode
-from abaqusConstants import *
-import typing
+
 
 class Assembly(BaseAssembly):
     """The following commands operate on Assembly objects. For more information about the 
@@ -461,7 +463,7 @@ class Assembly(BaseAssembly):
         """
         pass
 
-    def getEdgeSeeds(self, edge: Edge, attribute: typing.Union[SymbolicConstant, float]):
+    def getEdgeSeeds(self, edge: Edge, attribute: typing.Union[SymbolicConstant,float]):
         """This method returns an edge seed parameter for a specified edge of an assembly.
 
         Parameters
@@ -566,14 +568,14 @@ class Assembly(BaseAssembly):
         """
         pass
 
-    def getIncompatibleMeshInterfaces(self, cells: tuple[cell] = ()):
+    def getIncompatibleMeshInterfaces(self, cells: tuple[Cell] = ()):
         """This method returns a sequence of face objects that are meshed with incompatible
         elements.
 
         Parameters
         ----------
         cells
-            A sequence of cell objects which will be used to search the incompatible faces. 
+            A sequence of Cell objects which will be used to search the incompatible faces. 
 
         Returns
         -------
@@ -662,7 +664,7 @@ class Assembly(BaseAssembly):
         """
         pass
 
-    def getPartSeeds(self, region: PartInstance, attribute: typing.Union[SymbolicConstant, float]):
+    def getPartSeeds(self, region: PartInstance, attribute: typing.Union[SymbolicConstant,float]):
         """This method returns a part seed parameter for the specified instance.
 
         Parameters

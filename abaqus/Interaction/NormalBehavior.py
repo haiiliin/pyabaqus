@@ -1,5 +1,7 @@
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+
 
 class NormalBehavior:
 
@@ -25,7 +27,7 @@ class NormalBehavior:
 
     """
 
-    def __init__(self, contactStiffness: typing.Union[SymbolicConstant, float] = DEFAULT, 
+    def __init__(self, contactStiffness: typing.Union[SymbolicConstant,float] = DEFAULT, 
                  pressureOverclosure: SymbolicConstant = HARD, allowSeparation: Boolean = ON, 
                  maxStiffness: float = None, table: tuple = (), 
                  constraintEnforcementMethod: SymbolicConstant = DEFAULT, overclosureFactor: float = 0, 

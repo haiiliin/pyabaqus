@@ -1,5 +1,7 @@
-from .PredefinedField import PredefinedField
 from abaqusConstants import *
+from .PredefinedField import PredefinedField
+from ..Assembly.PartInstanceArray import PartInstanceArray
+
 
 class InitialState(PredefinedField):
 

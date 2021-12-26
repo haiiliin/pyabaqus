@@ -1,7 +1,9 @@
-from ..Region.Region import Region
-from .BoundaryCondition import BoundaryCondition
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .BoundaryCondition import BoundaryCondition
+from ..Region.Region import Region
+
 
 class VelocityBC(BoundaryCondition):
 
@@ -46,12 +48,13 @@ class VelocityBC(BoundaryCondition):
     localCsys: str = None
 
     def __init__(self, name: str, createStepName: str, region: Region, fieldName: str = '', 
-                 v1: typing.Union[SymbolicConstant, float] = UNSET, v2: typing.Union[SymbolicConstant, 
-                 float] = UNSET, v3: typing.Union[SymbolicConstant, float] = UNSET, 
-                 vr1: typing.Union[SymbolicConstant, float] = UNSET, vr2: typing.Union[SymbolicConstant, 
-                 float] = UNSET, vr3: typing.Union[SymbolicConstant, float] = UNSET, 
-                 amplitude: str = UNSET, localCsys: str = None, 
-                 distributionType: SymbolicConstant = UNIFORM):
+                 v1: typing.Union[SymbolicConstant,float] = UNSET, 
+                 v2: typing.Union[SymbolicConstant,float] = UNSET, 
+                 v3: typing.Union[SymbolicConstant,float] = UNSET, 
+                 vr1: typing.Union[SymbolicConstant,float] = UNSET, 
+                 vr2: typing.Union[SymbolicConstant,float] = UNSET, 
+                 vr3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
+                 localCsys: str = None, distributionType: SymbolicConstant = UNIFORM):
         """This method creates a VelocityBC object.
 
         Path
@@ -117,12 +120,13 @@ class VelocityBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, fieldName: str = '', v1: typing.Union[SymbolicConstant, float] = UNSET, 
-                  v2: typing.Union[SymbolicConstant, float] = UNSET, v3: typing.Union[SymbolicConstant, 
-                  float] = UNSET, vr1: typing.Union[SymbolicConstant, float] = UNSET, 
-                  vr2: typing.Union[SymbolicConstant, float] = UNSET, vr3: typing.Union[SymbolicConstant, 
-                  float] = UNSET, amplitude: str = UNSET, localCsys: str = None, 
-                  distributionType: SymbolicConstant = UNIFORM):
+    def setValues(self, fieldName: str = '', v1: typing.Union[SymbolicConstant,float] = UNSET, 
+                  v2: typing.Union[SymbolicConstant,float] = UNSET, 
+                  v3: typing.Union[SymbolicConstant,float] = UNSET, 
+                  vr1: typing.Union[SymbolicConstant,float] = UNSET, 
+                  vr2: typing.Union[SymbolicConstant,float] = UNSET, 
+                  vr3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
+                  localCsys: str = None, distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing VelocityBC object in the step where it is
         created.
 
@@ -178,11 +182,12 @@ class VelocityBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, v1: typing.Union[SymbolicConstant, float] = None, 
-                        v2: typing.Union[SymbolicConstant, float] = None, v3: typing.Union[SymbolicConstant, 
-                        float] = None, vr1: typing.Union[SymbolicConstant, float] = None, 
-                        vr2: typing.Union[SymbolicConstant, float] = None, vr3: typing.Union[SymbolicConstant, 
-                        float] = None, amplitude: str = ''):
+    def setValuesInStep(self, stepName: str, v1: typing.Union[SymbolicConstant,float] = None, 
+                        v2: typing.Union[SymbolicConstant,float] = None, 
+                        v3: typing.Union[SymbolicConstant,float] = None, 
+                        vr1: typing.Union[SymbolicConstant,float] = None, 
+                        vr2: typing.Union[SymbolicConstant,float] = None, 
+                        vr3: typing.Union[SymbolicConstant,float] = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing VelocityBC object in the
         specified step.
 

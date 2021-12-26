@@ -1,5 +1,6 @@
-from ..Region.Region import Region
 from .Interaction import Interaction
+from ..Region.Region import Region
+
 
 class ElasticFoundation(Interaction):
 

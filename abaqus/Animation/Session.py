@@ -1,5 +1,6 @@
-from ..Session.Session import Session as BaseSession
 from abaqusConstants import *
+from ..Session.Session import Session as BaseSession
+
 
 class Session(BaseSession):
     """The following commands operate on Session objects. For more information about the 

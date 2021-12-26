@@ -1,5 +1,6 @@
-from .Potential import Potential
 from abaqusConstants import *
+from .Potential import Potential
+
 
 class Viscous:
 

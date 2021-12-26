@@ -1,6 +1,4 @@
-from ..DisplayGroup.DisplayGroup import DisplayGroup
-from ..DisplayGroup.DisplayGroupInstance import DisplayGroupInstance
-from ..UtilityAndView.Repository import Repository
+from abaqusConstants import *
 from .BCDisplayOptions import BCDisplayOptions
 from .ConstraintDisplayOptions import ConstraintDisplayOptions
 from .EngineeringFeatureDisplayOptions import EngineeringFeatureDisplayOptions
@@ -12,7 +10,10 @@ from .OptimizationTaskDisplayOptions import OptimizationTaskDisplayOptions
 from .PredefinedFieldDisplayOptions import PredefinedFieldDisplayOptions
 from .StopConditionDisplayOptions import StopConditionDisplayOptions
 from .SymbolDisplayOptions import SymbolDisplayOptions
-from abaqusConstants import *
+from ..DisplayGroup.DisplayGroup import DisplayGroup
+from ..DisplayGroup.DisplayGroupInstance import DisplayGroupInstance
+from ..UtilityAndView.Repository import Repository
+
 
 class AssemblyDisplayOptions:
 

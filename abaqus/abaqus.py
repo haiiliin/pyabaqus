@@ -1,8 +1,8 @@
 import os
 import sys
 
-from .Session import Session
 from .Mdb import Mdb as BaseMdb
+from .Session import Session
 
 
 class Mdb(BaseMdb):

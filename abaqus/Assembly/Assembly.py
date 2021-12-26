@@ -1,3 +1,7 @@
+from abaqusConstants import *
+from .ConnectorOrientationArray import ConnectorOrientationArray
+from .ModelInstance import ModelInstance
+from .PartInstance import PartInstance
 from ..BasicGeometry.EdgeArray import EdgeArray
 from ..BasicGeometry.Face import Face
 from ..BasicGeometry.ReferencePoint import ReferencePoint
@@ -10,14 +14,13 @@ from ..Mesh.MeshElementArray import MeshElementArray
 from ..Mesh.MeshFace import MeshFace
 from ..Mesh.MeshNode import MeshNode
 from ..Mesh.MeshNodeArray import MeshNodeArray
+from ..Property.SectionAssignmentArray import SectionAssignmentArray
 from ..Region.Set import Set
 from ..Region.Skin import Skin
 from ..Region.Stringer import Stringer
 from ..Region.Surface import Surface
 from ..UtilityAndView.Repository import Repository
-from .ModelInstance import ModelInstance
-from .PartInstance import PartInstance
-from abaqusConstants import *
+
 
 class Assembly:
 

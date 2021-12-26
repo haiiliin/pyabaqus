@@ -1,9 +1,10 @@
-from ..UtilityAndView.Repository import Repository
+from abaqusConstants import *
 from .Area import Area
 from .Chart import Chart
 from .Title import Title
 from .XYCurve import XYCurve
-from abaqusConstants import *
+from ..UtilityAndView.Repository import Repository
+
 
 class XYPlot:
 

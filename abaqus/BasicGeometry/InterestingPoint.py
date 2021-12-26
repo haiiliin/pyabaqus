@@ -1,5 +1,6 @@
-from .Edge import Edge
 from abaqusConstants import *
+from .Edge import Edge
+
 
 class InterestingPoint:
 

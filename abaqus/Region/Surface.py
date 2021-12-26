@@ -1,8 +1,11 @@
+import typing
+
+from abaqusConstants import *
 from ..BasicGeometry.EdgeArray import EdgeArray
 from ..BasicGeometry.FaceArray import FaceArray
 from ..Mesh.MeshElementArray import MeshElementArray
 from ..Mesh.MeshNodeArray import MeshNodeArray
-from abaqusConstants import *
+
 
 class Surface:
 
@@ -51,6 +54,65 @@ class Surface:
     # object on an output database. 
     instances: int = None
 
+    @typing.overload
+    def __init__(self, side1Faces: str, side2Faces: str, side12Faces: str, end1Edges: str, end2Edges: str, 
+                 circumEdges: str, side1Edges: str, side2Edges: str, face1Elements: str, 
+                 face2Elements: str, face3Elements: str, face4Elements: str, face5Elements: str, 
+                 face6Elements: str, side1Elements: str, side2Elements: str, side12Elements: str, 
+                 end1Elements: str, end2Elements: str, circumElements: str, name: str):
+        """This method creates a surface from a sequence of objects in a model database. The
+        surface will apply to the sides specified by the arguments.For example
+        surface=mdb.models['Model-1'].parts['Part-1'].Surface(side1Faces=side1Faces,
+        name='Surf-1')
+
+        Path
+        ----
+            - mdb.models[*name*].parts[*name*].Surface
+            - mdb.models[*name*].rootAssembly.Surface
+
+        Parameters
+        ----------
+        side1Faces
+        side2Faces
+        side12Faces
+            On three-dimensional wire edges, you can use the following arguments: 
+        end1Edges
+        end2Edges
+        circumEdges
+            On three-dimensional or two-dimensional or axisymmetric edges, you can use the following 
+            arguments: 
+        side1Edges
+        side2Edges
+            On two-dimensional or axisymmetric shell elements, you can use the following arguments: 
+        face1Elements
+        face2Elements
+        face3Elements
+        face4Elements
+        face5Elements
+        face6Elements
+            On three-dimensional shell elements, you can use the following arguments: 
+        side1Elements
+        side2Elements
+        side12Elements
+            On three-dimensional wire elements, you can use the following arguments: 
+        end1Elements
+        end2Elements
+        circumElements
+            On two-dimensional or axisymmetric wire elements, you can use the following arguments: 
+        name
+            A String specifying the repository key. The default value is an empty string. 
+
+        Returns
+        -------
+            A Surface object. 
+
+        Exceptions
+        ----------
+            InvalidNameError. 
+        """
+        pass
+
+    @typing.overload
     def __init__(self, name: str, objectToCopy: 'Surface'):
         """This method copies a surface from an existing surface.
 
@@ -74,6 +136,9 @@ class Surface:
         ----------
             InvalidNameError. 
         """
+        pass
+
+    def __init__(self, *args, **kwargs):
         pass
 
     def SurfaceByBoolean(self, name: str, surfaces: tuple[Surface], operation: SymbolicConstant = UNION):

@@ -1,6 +1,7 @@
-from ..Model.Model import Model as BaseModel
-from .PartInstance import PartInstance
 from abaqusConstants import *
+from .PartInstance import PartInstance
+from ..Model.Model import Model as BaseModel
+
 
 class Model(BaseModel):
     """The following commands operate on Model objects. For more information about the Model 

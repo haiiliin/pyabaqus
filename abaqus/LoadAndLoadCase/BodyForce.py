@@ -1,7 +1,9 @@
-from ..Region.Region import Region
-from .Load import Load
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .Load import Load
+from ..Region.Region import Region
+
 
 class BodyForce(Load):
 
@@ -122,9 +124,9 @@ class BodyForce(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, comp1: typing.Union[SymbolicConstant, float] = None, 
-                        comp2: typing.Union[SymbolicConstant, float] = None, 
-                        comp3: typing.Union[SymbolicConstant, float] = None, amplitude: str = ''):
+    def setValuesInStep(self, stepName: str, comp1: typing.Union[SymbolicConstant,float] = None, 
+                        comp2: typing.Union[SymbolicConstant,float] = None, 
+                        comp3: typing.Union[SymbolicConstant,float] = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing BodyForce object in the
         specified step.
 

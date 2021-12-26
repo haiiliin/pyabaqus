@@ -1,6 +1,8 @@
-from ..Section.GeometryShellSection import GeometryShellSection
-from .MaterialOrientation import MaterialOrientation
 from abaqusConstants import *
+from .CompositePlyArray import CompositePlyArray
+from .MaterialOrientation import MaterialOrientation
+from ..Section.GeometryShellSection import GeometryShellSection
+
 
 class CompositeLayup:
 

@@ -1,5 +1,7 @@
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+
 
 class Path:
 
@@ -26,9 +28,9 @@ class Path:
 
     def __init__(self, name: str, type: SymbolicConstant, expression: tuple, 
                  circleDefinition: SymbolicConstant, numSegments: int, startAngle: float, 
-                 endAngle: float, radius: typing.Union[SymbolicConstant, float], radialAngle: float, 
-                 startRadius: typing.Union[SymbolicConstant, float], 
-                 endRadius: typing.Union[SymbolicConstant, float]):
+                 endAngle: float, radius: typing.Union[SymbolicConstant,float], radialAngle: float, 
+                 startRadius: typing.Union[SymbolicConstant,float], 
+                 endRadius: typing.Union[SymbolicConstant,float]):
         """This method creates a Path object.
 
         Path

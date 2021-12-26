@@ -1,3 +1,4 @@
+from abaqusConstants import *
 from ..BasicGeometry.CellArray import CellArray
 from ..BasicGeometry.EdgeArray import EdgeArray
 from ..BasicGeometry.FaceArray import FaceArray
@@ -18,7 +19,7 @@ from ..Region.Skin import Skin
 from ..Region.Stringer import Stringer
 from ..Region.Surface import Surface
 from ..UtilityAndView.Repository import Repository
-from abaqusConstants import *
+
 
 class PartInstance:
 

@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .RebarLayers import RebarLayers
 from .Section import Section
-from abaqusConstants import *
+
 
 class MembraneSection(Section):
 

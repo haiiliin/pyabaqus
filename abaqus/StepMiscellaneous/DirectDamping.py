@@ -1,4 +1,4 @@
-
+from .DirectDampingComponentArray import DirectDampingComponentArray
 
 class DirectDamping:
 

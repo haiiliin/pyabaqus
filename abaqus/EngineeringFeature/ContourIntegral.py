@@ -1,3 +1,4 @@
+from ..Region.RegionArray import RegionArray
 from .Crack import Crack
 from abaqusConstants import *
 

@@ -1,10 +1,11 @@
-from ..DisplayGroup.DisplayGroup import DisplayGroup
-from ..DisplayGroup.DisplayGroupInstance import DisplayGroupInstance
-from ..UtilityAndView.Repository import Repository
+from abaqusConstants import *
 from .EngineeringFeatureDisplayOptions import EngineeringFeatureDisplayOptions
 from .GeometryDisplayOptions import GeometryDisplayOptions
 from .MeshDisplayOptions import MeshDisplayOptions
-from abaqusConstants import *
+from ..DisplayGroup.DisplayGroup import DisplayGroup
+from ..DisplayGroup.DisplayGroupInstance import DisplayGroupInstance
+from ..UtilityAndView.Repository import Repository
+
 
 class PartDisplayOptions:
 

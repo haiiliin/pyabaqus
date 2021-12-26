@@ -1,7 +1,14 @@
 import os
 import time
 
-from ObjectParser import ObjectParser
+from ObjectParser.ObjectParser import ObjectParser
+
+# parser = ObjectParser(filePath='AbaqusScriptingReferenceGuide-Markdown-2022\\Python\\Part\\Part.md')
+# parser.parse().toAbaqusObject(searchParentDir='abaqus').toPythonScript(fileDir='abaqus\\Part', searchDir='abaqus')
+#
+#
+# parser = ObjectParser(filePath='AbaqusScriptingReferenceGuide-Markdown-2022\\Python\\BoundaryCondition\\AccelerationBC.md')
+# parser.parse().toAbaqusObject(searchParentDir='AbaqusScriptingReferenceGuide-Markdown-2022\\Python').toPythonScript(fileDir='abaqus\\BoundaryCondition', searchDir='abaqus')
 
 start_time = time.time()
 
@@ -50,6 +57,10 @@ for module in modules:
             continue
         filePath = os.path.join(moduleMDDir, file)
         parser = ObjectParser(filePath=filePath)
-        parser.parse().toAbaqusObject().toPythonScript(fileDir=moduleAbqDir, searchDir='abaqus')
+        parser.parse().toAbaqusObject(
+            searchParentDir='AbaqusScriptingReferenceGuide-Markdown-2022\\Python'
+        ).toPythonScript(
+            fileDir=moduleAbqDir, searchDir='abaqus'
+        )
 
     print('\n  # Finished processing {} module, took {:.2f} seconds'.format(module, time.time() - start_time))

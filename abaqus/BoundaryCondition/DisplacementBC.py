@@ -1,7 +1,9 @@
-from ..Region.Region import Region
-from .BoundaryCondition import BoundaryCondition
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .BoundaryCondition import BoundaryCondition
+from ..Region.Region import Region
+
 
 class DisplacementBC(BoundaryCondition):
 
@@ -58,13 +60,14 @@ class DisplacementBC(BoundaryCondition):
     localCsys: str = None
 
     def __init__(self, name: str, createStepName: str, region: Region, fieldName: str = '', 
-                 u1: typing.Union[SymbolicConstant, float] = UNSET, u2: typing.Union[SymbolicConstant, 
-                 float] = UNSET, u3: typing.Union[SymbolicConstant, float] = UNSET, 
-                 ur1: typing.Union[SymbolicConstant, float] = UNSET, ur2: typing.Union[SymbolicConstant, 
-                 float] = UNSET, ur3: typing.Union[SymbolicConstant, float] = UNSET, 
-                 fixed: Boolean = OFF, amplitude: str = UNSET, 
-                 distributionType: SymbolicConstant = UNIFORM, localCsys: str = None, 
-                 buckleCase: SymbolicConstant = NOT_APPLICABLE):
+                 u1: typing.Union[SymbolicConstant,float] = UNSET, 
+                 u2: typing.Union[SymbolicConstant,float] = UNSET, 
+                 u3: typing.Union[SymbolicConstant,float] = UNSET, 
+                 ur1: typing.Union[SymbolicConstant,float] = UNSET, 
+                 ur2: typing.Union[SymbolicConstant,float] = UNSET, 
+                 ur3: typing.Union[SymbolicConstant,float] = UNSET, fixed: Boolean = OFF, 
+                 amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM, 
+                 localCsys: str = None, buckleCase: SymbolicConstant = NOT_APPLICABLE):
         """This method creates a DisplacementBC object.
 
         Path
@@ -141,13 +144,14 @@ class DisplacementBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, fieldName: str = '', u1: typing.Union[SymbolicConstant, float] = UNSET, 
-                  u2: typing.Union[SymbolicConstant, float] = UNSET, u3: typing.Union[SymbolicConstant, 
-                  float] = UNSET, ur1: typing.Union[SymbolicConstant, float] = UNSET, 
-                  ur2: typing.Union[SymbolicConstant, float] = UNSET, ur3: typing.Union[SymbolicConstant, 
-                  float] = UNSET, fixed: Boolean = OFF, amplitude: str = UNSET, 
-                  distributionType: SymbolicConstant = UNIFORM, localCsys: str = None, 
-                  buckleCase: SymbolicConstant = NOT_APPLICABLE):
+    def setValues(self, fieldName: str = '', u1: typing.Union[SymbolicConstant,float] = UNSET, 
+                  u2: typing.Union[SymbolicConstant,float] = UNSET, 
+                  u3: typing.Union[SymbolicConstant,float] = UNSET, 
+                  ur1: typing.Union[SymbolicConstant,float] = UNSET, 
+                  ur2: typing.Union[SymbolicConstant,float] = UNSET, 
+                  ur3: typing.Union[SymbolicConstant,float] = UNSET, fixed: Boolean = OFF, 
+                  amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM, 
+                  localCsys: str = None, buckleCase: SymbolicConstant = NOT_APPLICABLE):
         """This method modifies the data for an existing DisplacementBC object in the step where it
         is created.
 
@@ -214,11 +218,13 @@ class DisplacementBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, u1: typing.Union[SymbolicConstant, float] = None, 
-                        u2: typing.Union[SymbolicConstant, float] = None, u3: typing.Union[SymbolicConstant, 
-                        float] = None, ur1: typing.Union[SymbolicConstant, float] = None, 
-                        ur2: typing.Union[SymbolicConstant, float] = None, ur3: typing.Union[SymbolicConstant, 
-                        float] = None, amplitude: str = '', buckleCase: SymbolicConstant = NOT_APPLICABLE):
+    def setValuesInStep(self, stepName: str, u1: typing.Union[SymbolicConstant,float] = None, 
+                        u2: typing.Union[SymbolicConstant,float] = None, 
+                        u3: typing.Union[SymbolicConstant,float] = None, 
+                        ur1: typing.Union[SymbolicConstant,float] = None, 
+                        ur2: typing.Union[SymbolicConstant,float] = None, 
+                        ur3: typing.Union[SymbolicConstant,float] = None, amplitude: str = '', 
+                        buckleCase: SymbolicConstant = NOT_APPLICABLE):
         """This method modifies the propagating data for an existing DisplacementBC object in the
         specified step.
 

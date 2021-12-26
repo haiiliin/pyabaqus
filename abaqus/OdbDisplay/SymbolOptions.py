@@ -1,6 +1,8 @@
-from ..PlotOptions.DGSymbolOptions import DGSymbolOptions
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from ..PlotOptions.DGSymbolOptions import DGSymbolOptions
+
 
 class SymbolOptions(DGSymbolOptions):
 
@@ -81,19 +83,19 @@ class SymbolOptions(DGSymbolOptions):
 
     # The SymbolicConstant NOT_SET or a Float specifying the vector maximum value when 
     # *vectorMaxValueAutoCompute*=ON. This value is read-only. The default value is NOT_SET. 
-    autoVectorMaxValue: typing.Union[SymbolicConstant, float] = NOT_SET
+    autoVectorMaxValue: typing.Union[SymbolicConstant,float] = NOT_SET
 
     # The SymbolicConstant NOT_SET or a Float specifying the vector minimum value when 
     # *vectorMinValueAutoCompute*=ON. This value is read-only. The default value is NOT_SET. 
-    autoVectorMinValue: typing.Union[SymbolicConstant, float] = NOT_SET
+    autoVectorMinValue: typing.Union[SymbolicConstant,float] = NOT_SET
 
     # The SymbolicConstant NOT_SET or a Float specifying the tensor maximum value when 
     # *tensorMaxValueAutoCompute*=ON. This value is read-only. The default value is NOT_SET. 
-    autoTensorMaxValue: typing.Union[SymbolicConstant, float] = NOT_SET
+    autoTensorMaxValue: typing.Union[SymbolicConstant,float] = NOT_SET
 
     # The SymbolicConstant NOT_SET or a Float specifying the tensor minimum value when 
     # *tensorMinValueAutoCompute*=ON. This value is read-only. The default value is NOT_SET. 
-    autoTensorMinValue: typing.Union[SymbolicConstant, float] = NOT_SET
+    autoTensorMinValue: typing.Union[SymbolicConstant,float] = NOT_SET
 
     # A SymbolicConstant specifying the vector line thickness. Possible values are VERY_THIN, 
     # THIN, MEDIUM, and THICK. The default value is VERY_THIN. 

@@ -1,5 +1,6 @@
-from .NumberFormat import NumberFormat
 from abaqusConstants import *
+from .NumberFormat import NumberFormat
+
 
 class JournalOptions:
 

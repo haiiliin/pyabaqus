@@ -1,11 +1,21 @@
-from ..Section.Section import Section
-from ..UtilityAndView.Repository import Repository
+import typing
+
+from abaqusConstants import *
 from .AnalyticSurface import AnalyticSurface
 from .AnalyticSurfaceSegment import AnalyticSurfaceSegment
+from .BeamOrientationArray import BeamOrientationArray
 from .OdbDatumCsys import OdbDatumCsys
+from .OdbMeshElementArray import OdbMeshElementArray
+from .OdbMeshNodeArray import OdbMeshNodeArray
 from .OdbPart import OdbPart
+from .OdbRigidBodyArray import OdbRigidBodyArray
 from .OdbSet import OdbSet
-from abaqusConstants import *
+from .RebarOrientationArray import RebarOrientationArray
+from ..Property.MaterialOrientationArray import MaterialOrientationArray
+from ..Property.SectionAssignmentArray import SectionAssignmentArray
+from ..Section.Section import Section
+from ..UtilityAndView.Repository import Repository
+
 
 class OdbInstance:
 
@@ -230,7 +240,7 @@ class OdbInstance:
 
         Returns
         -------
-            An OdbMeshNode object. 
+            AnOdbMeshNode object. 
 
         Exceptions
         ----------
@@ -382,5 +392,48 @@ class OdbInstance:
             - If *referenceNode* is not a node set: 
               OdbError: Rigid body definition requires a node set. 
         """
+        pass
+
+    @typing.overload
+    def getNodeFromLabel(self, label: int):
+        """This method is used to retrieved a node with a specific label from an instance object.
+
+        Parameters
+        ----------
+        label
+            An Int specifying the node label. 
+
+        Returns
+        -------
+            An OdbMeshNode object. 
+
+        Exceptions
+        ----------
+            - If no node with the specified label exists: 
+              OdbError: Invalid node label 
+        """
+        pass
+
+    @typing.overload
+    def getNodeFromLabel(self, label: int):
+        """This method is used to retrieved a node with a specific label from an instance object.
+
+        Parameters
+        ----------
+        label
+            An Int specifying the node label. 
+
+        Returns
+        -------
+            An OdbMeshNode object. 
+
+        Exceptions
+        ----------
+            - If no node with the specified label exists: 
+              OdbError: Invalid node label 
+        """
+        pass
+
+    def getNodeFromLabel(self, *args, **kwargs):
         pass
 

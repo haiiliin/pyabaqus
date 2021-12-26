@@ -1,6 +1,8 @@
-from .Annotation import Annotation
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .Annotation import Annotation
+
 
 class Text(Annotation):
 
@@ -29,8 +31,8 @@ class Text(Annotation):
     height: float = None
 
     def __init__(self, name: str, text: str = '', offset: tuple[float] = (), 
-                 anchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT, 
-                 referencePoint: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT, 
+                 anchor: typing.Union[SymbolicConstant,float] = BOTTOM_LEFT, 
+                 referencePoint: typing.Union[SymbolicConstant,float] = BOTTOM_LEFT, 
                  rotationAngle: float = 0, color: str = '', font: str = '', 
                  backgroundStyle: SymbolicConstant = TRANSPARENT, backgroundColor: str = '', 
                  box: Boolean = OFF, justification: SymbolicConstant = JUSTIFY_LEFT):
@@ -99,9 +101,10 @@ class Text(Annotation):
         super().__init__()
         pass
 
-    def setValues(self, text: str = '', offset: tuple[float] = (), anchor: typing.Union[SymbolicConstant, 
-                  float] = BOTTOM_LEFT, referencePoint: typing.Union[SymbolicConstant, 
-                  float] = BOTTOM_LEFT, rotationAngle: float = 0, color: str = '', font: str = '', 
+    def setValues(self, text: str = '', offset: tuple[float] = (), 
+                  anchor: typing.Union[SymbolicConstant,float] = BOTTOM_LEFT, 
+                  referencePoint: typing.Union[SymbolicConstant,float] = BOTTOM_LEFT, 
+                  rotationAngle: float = 0, color: str = '', font: str = '', 
                   backgroundStyle: SymbolicConstant = TRANSPARENT, backgroundColor: str = '', 
                   box: Boolean = OFF, justification: SymbolicConstant = JUSTIFY_LEFT):
         """This method modifies the Text object.

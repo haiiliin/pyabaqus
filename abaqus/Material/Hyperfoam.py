@@ -1,9 +1,10 @@
+from abaqusConstants import *
 from .BiaxialTestData import BiaxialTestData
 from .PlanarTestData import PlanarTestData
 from .SimpleShearTestData import SimpleShearTestData
 from .UniaxialTestData import UniaxialTestData
 from .VolumetricTestData import VolumetricTestData
-from abaqusConstants import *
+
 
 class Hyperfoam:
 

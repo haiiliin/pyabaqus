@@ -1,5 +1,6 @@
-from ..PlotOptions.DGCommonOptions import DGCommonOptions
 from abaqusConstants import *
+from ..PlotOptions.DGCommonOptions import DGCommonOptions
+
 
 class CommonOptions(DGCommonOptions):
 

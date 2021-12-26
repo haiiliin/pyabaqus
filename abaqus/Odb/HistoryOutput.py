@@ -1,4 +1,7 @@
+import typing
+
 from abaqusConstants import *
+
 
 class HistoryOutput:
 
@@ -59,6 +62,53 @@ class HistoryOutput:
         """
         pass
 
+    @typing.overload
+    def addData(self, frame: str, value: str):
+        """This method adds data to the *data* member of the HistoryOutput object.
+
+        Parameters
+        ----------
+        frame
+            A Double specifying the frame value. *frame* can be specified in step time, frequency, 
+            or mode number. 
+        value
+            A Double specifying the value of the variable at the frame value specified in *frame*. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
+    def addData(self, frame: tuple, value: tuple):
+        """This method adds data to the *data* member of the HistoryOutput object.
+
+        Parameters
+        ----------
+        frame
+            A sequence of Floats specifying the frame values. *frame* can be specified in step time, 
+            frequency, or mode number. 
+        value
+            A sequence of Floats specifying the value of the variable at the frame values specified 
+            in *frame*. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            If the length of *frame* is not the same as the length of *value* a ValueError is 
+            raised. 
+        """
+        pass
+
+    @typing.overload
     def addData(self, data: tuple):
         """This method adds data to the *data* member of the HistoryOutput object.
 
@@ -77,5 +127,8 @@ class HistoryOutput:
         ----------
             None. 
         """
+        pass
+
+    def addData(self, *args, **kwargs):
         pass
 

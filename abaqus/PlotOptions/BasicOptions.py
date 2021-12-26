@@ -1,5 +1,6 @@
-from ..Datum.DatumCsys import DatumCsys
 from abaqusConstants import *
+from ..Datum.DatumCsys import DatumCsys
+
 
 class BasicOptions:
 

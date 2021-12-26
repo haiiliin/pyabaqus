@@ -1,5 +1,6 @@
-from ..UtilityAndView.Repository import Repository
 from .ErrorIndicatorResult import ErrorIndicatorResult
+from ..UtilityAndView.Repository import Repository
+
 
 class RuleResult:
 

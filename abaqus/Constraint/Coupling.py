@@ -1,7 +1,9 @@
-from ..Region.Region import Region
-from .Constraint import Constraint
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .Constraint import Constraint
+from ..Region.Region import Region
+
 
 class Coupling(Constraint):
 
@@ -28,7 +30,7 @@ class Coupling(Constraint):
     suppressed: Boolean = OFF
 
     def __init__(self, name: str, surface: Region, controlPoint: Region, 
-                 influenceRadius: typing.Union[SymbolicConstant, float], couplingType: SymbolicConstant, 
+                 influenceRadius: typing.Union[SymbolicConstant,float], couplingType: SymbolicConstant, 
                  adjust: Boolean = OFF, localCsys: str = None, u1: Boolean = ON, u2: Boolean = ON, 
                  u3: Boolean = ON, ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON, 
                  weightingMethod: SymbolicConstant = UNIFORM):

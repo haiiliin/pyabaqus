@@ -1,8 +1,10 @@
+import typing
+
+from abaqusConstants import *
+from .Interaction import Interaction
 from ..Datum.DatumAxis import DatumAxis
 from ..Region.Region import Region
-from .Interaction import Interaction
-from abaqusConstants import *
-import typing
+
 
 class SurfaceToSurfaceContactExp(Interaction):
 
@@ -27,10 +29,11 @@ class SurfaceToSurfaceContactExp(Interaction):
                  sliding: SymbolicConstant, interactionProperty: str, 
                  mechanicalConstraint: SymbolicConstant = KINEMATIC, 
                  weightingFactorType: SymbolicConstant = DEFAULT, weightingFactor: float = 0, 
-                 contactControls: str = '', initialClearance: typing.Union[SymbolicConstant, 
-                 float] = OMIT, halfThreadAngle: str = None, pitch: str = None, 
-                 majorBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED, 
-                 meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED, 
+                 contactControls: str = '', 
+                 initialClearance: typing.Union[SymbolicConstant,float] = OMIT, 
+                 halfThreadAngle: str = None, pitch: str = None, 
+                 majorBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
+                 meanBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
                  datumAxis: DatumAxis = None, useReverseDatumAxis: Boolean = OFF, 
                  clearanceRegion: Region = None):
         """This method creates a SurfaceToSurfaceContactExp object.
@@ -123,10 +126,11 @@ class SurfaceToSurfaceContactExp(Interaction):
 
     def setValues(self, mechanicalConstraint: SymbolicConstant = KINEMATIC, 
                   weightingFactorType: SymbolicConstant = DEFAULT, weightingFactor: float = 0, 
-                  contactControls: str = '', initialClearance: typing.Union[SymbolicConstant, 
-                  float] = OMIT, halfThreadAngle: str = None, pitch: str = None, 
-                  majorBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED, 
-                  meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED, 
+                  contactControls: str = '', 
+                  initialClearance: typing.Union[SymbolicConstant,float] = OMIT, 
+                  halfThreadAngle: str = None, pitch: str = None, 
+                  majorBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
+                  meanBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
                   datumAxis: DatumAxis = None, useReverseDatumAxis: Boolean = OFF, 
                   clearanceRegion: Region = None):
         """This method modifies the data for an existing SurfaceToSurfaceContactExp object in the

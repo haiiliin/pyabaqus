@@ -1,10 +1,4 @@
-from ..Amplitude.Amplitude import Amplitude
-from ..BeamSectionProfile.Profile import Profile
-from ..CustomKernel.RepositorySupport import RepositorySupport
-from ..Filter.Filter import Filter
-from ..Material.Material import Material
-from ..Section.Section import Section
-from ..UtilityAndView.Repository import Repository
+from abaqusConstants import *
 from .JobData import JobData
 from .OdbAssembly import OdbAssembly
 from .OdbPart import OdbPart
@@ -12,7 +6,14 @@ from .OdbStep import OdbStep
 from .SectionCategory import SectionCategory
 from .SectorDefinition import SectorDefinition
 from .UserData import UserData
-from abaqusConstants import *
+from ..Amplitude.Amplitude import Amplitude
+from ..BeamSectionProfile.Profile import Profile
+from ..CustomKernel.RepositorySupport import RepositorySupport
+from ..Filter.Filter import Filter
+from ..Material.Material import Material
+from ..Section.Section import Section
+from ..UtilityAndView.Repository import Repository
+
 
 class Odb:
 

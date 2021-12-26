@@ -667,7 +667,7 @@ None.
 
 - *cells*
 
-  A sequence of cell objects which will be used to search the incompatible faces.
+  A sequence of Cell objects which will be used to search the incompatible faces.
 
 ### Return value
 

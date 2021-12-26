@@ -1,9 +1,13 @@
-from ..UtilityAndView.Repository import Repository
+import typing
+
+from abaqusConstants import *
 from .FieldOutput import FieldOutput
 from .HistoryPoint import HistoryPoint
 from .HistoryRegion import HistoryRegion
+from .OdbFrameArray import OdbFrameArray
 from .OdbLoadCase import OdbLoadCase
-from abaqusConstants import *
+from ..UtilityAndView.Repository import Repository
+
 
 class OdbStep:
 
@@ -156,6 +160,55 @@ class OdbStep:
         """
         pass
 
+    @typing.overload
+    def getFrame(self, frameValue: str, match: SymbolicConstant = CLOSEST):
+        """This method retrieves an OdbFrame object associated with a given frame value.
+
+        Parameters
+        ----------
+        frameValue
+            A Double specifying the value at which the frame is required. *frameValue* can be the 
+            step time or frequency. 
+        match
+            A SymbolicConstant specifying which frame to return if there is no frame at the exact 
+            frame value. Possible values are CLOSEST, BEFORE, AFTER, and EXACT. The default value is 
+            CLOSEST.When *match*=CLOSEST, Abaqus returns the closest frame. If the frame value 
+            requested is exactly halfway between two frames, Abaqus returns the frame after the 
+            value.When *match*=EXACT, Abaqus raises an exception if the exact frame value does not 
+            exist. 
+
+        Returns
+        -------
+            An OdbFrame object. 
+
+        Exceptions
+        ----------
+            - If the OdbFrame object is not found: 
+              OdbError: Frame not found. 
+        """
+        pass
+
+    @typing.overload
+    def getFrame(self, loadCase: OdbLoadCase):
+        """This method retrieves an OdbFrame object associated with a given load case.
+
+        Parameters
+        ----------
+        loadCase
+            An OdbLoadCase object specifying a load case in the step. 
+
+        Returns
+        -------
+            An OdbFrame object. 
+
+        Exceptions
+        ----------
+            - If the OdbFrame object is not found: 
+              OdbError: Frame not found. 
+        """
+        pass
+
+    @typing.overload
     def getFrame(self, loadCase: OdbLoadCase, frameValue: str, match: SymbolicConstant = CLOSEST):
         """This method retrieves an OdbFrame object associated with a given load case and frame
         value.
@@ -184,6 +237,9 @@ class OdbStep:
             - If the OdbFrame object is not found: 
               OdbError: Frame not found. 
         """
+        pass
+
+    def getFrame(self, *args, **kwargs):
         pass
 
     def getHistoryRegion(self, point: HistoryPoint, loadCase: OdbLoadCase = None):

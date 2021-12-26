@@ -1,12 +1,14 @@
-from ..UtilityAndView.Repository import Repository
+import typing
+
+from abaqusConstants import *
 from .DesignResponse import DesignResponse
 from .GeometricRestriction import GeometricRestriction
 from .ObjectiveFunction import ObjectiveFunction
 from .OptimizationConstraint import OptimizationConstraint
 from .OptimizationTask import OptimizationTask
 from .StopCondition import StopCondition
-from abaqusConstants import *
-import typing
+from ..UtilityAndView.Repository import Repository
+
 
 class TopologyTask(OptimizationTask):
 
@@ -57,7 +59,7 @@ class TopologyTask(OptimizationTask):
                  softDeletionMethod: SymbolicConstant = STANDARD, softDeletionRadius: float = 0, 
                  softDeletionRegion: str = None, softDeletionThreshold: float = None, 
                  stepSize: SymbolicConstant = MEDIUM, 
-                 stiffnessMassDamping: typing.Union[SymbolicConstant, float] = AVERAGE_EDGE_LENGTH, 
+                 stiffnessMassDamping: typing.Union[SymbolicConstant,float] = AVERAGE_EDGE_LENGTH, 
                  stopCriteriaDesignCycle: int = 4, structuralMassDamping: float = None, 
                  viscousMassDamping: float = None, viscousStiffnessDamping: float = None, 
                  groupOperator: Boolean = OFF):
@@ -208,7 +210,7 @@ class TopologyTask(OptimizationTask):
                   softDeletionMethod: SymbolicConstant = STANDARD, softDeletionRadius: float = 0, 
                   softDeletionRegion: str = None, softDeletionThreshold: float = None, 
                   stepSize: SymbolicConstant = MEDIUM, 
-                  stiffnessMassDamping: typing.Union[SymbolicConstant, float] = AVERAGE_EDGE_LENGTH, 
+                  stiffnessMassDamping: typing.Union[SymbolicConstant,float] = AVERAGE_EDGE_LENGTH, 
                   stopCriteriaDesignCycle: int = 4, structuralMassDamping: float = None, 
                   viscousMassDamping: float = None, viscousStiffnessDamping: float = None, 
                   groupOperator: Boolean = OFF):

@@ -1,5 +1,5 @@
-from .XYData import XYData
 from abaqusConstants import *
+from .XYData import XYData
 
 """This method writes an XYData object to a user-defined ASCII file. 
 

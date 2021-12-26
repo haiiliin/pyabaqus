@@ -1,5 +1,6 @@
-from ..BasicGeometry.Vertex import Vertex
 from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
+from ..BasicGeometry.Vertex import Vertex
+
 
 class ConstrainedSketchConstraint:
 

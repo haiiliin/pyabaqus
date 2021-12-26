@@ -1,5 +1,11 @@
+import typing
+
+from ..BasicGeometry.Cell import Cell
 from ..BasicGeometry.Edge import Edge
 from ..BasicGeometry.Face import Face
+from ..BasicGeometry.ReferencePoint import ReferencePoint
+from ..BasicGeometry.Vertex import Vertex
+
 
 class Region:
 
@@ -52,6 +58,75 @@ class Region:
 
     """
 
+    @typing.overload
+    def __init__(self, elements: tuple[Element] = None, nodes: tuple[Node] = None, 
+                 vertices: tuple[Vertex] = None, edges: tuple[Edge] = None, faces: tuple[Face] = None, 
+                 cells: tuple[Cell] = None, referencePoints: tuple[ReferencePoint] = (), 
+                 xVertices: tuple[Vertex] = None, xEdges: tuple[Vertex] = None, 
+                 xFaces: tuple[Vertex] = None, skinFaces: tuple = (), skinEdges: tuple = (), 
+                 stringerEdges: tuple = ()):
+        """This command creates a set-like region. For example
+        myRegion = regionToolset.Region(vertices=v[2:4]
+            edges=e[4:5]+e[6:9])
+        The arguments are the same as the arguments to the Set method, except for the *name*
+        argument.
+        In most cases, the constructor will be called with only one argument of sequences. The
+        arguments *xVertices*, *xEdges*, and *xFaces* are used to exclude lower-dimension
+        entities and to provide finer control on the content of the region. For example, the
+        following statement defines a region enclosing a square face but without two of its
+        edges:
+        region = regionToolset.Region(faces=f[3:4], xEdges=e[1:3])
+
+        Path
+        ----
+            - Region
+
+        Parameters
+        ----------
+        elements
+            A sequence of Element objects. The default value is None. 
+        nodes
+            A sequence of Node objects. The default value is None. 
+        vertices
+            A sequence of Vertex objects. The default value is None. 
+        edges
+            A sequence of Edge objects. The default value is None. 
+        faces
+            A sequence of Face objects. The default value is None. 
+        cells
+            A sequence of Cell objects. The default value is None. 
+        referencePoints
+            A sequence of ReferencePoint objects. The default value is an empty sequence. 
+        xVertices
+            A sequence of Vertex objects that excludes specific vertices from the region. The 
+            default value is None. 
+        xEdges
+            A sequence of Vertex objects that excludes specific edges from the region. The default 
+            value is None. 
+        xFaces
+            A sequence of Vertex objects that excludes specific faces from the region. The default 
+            value is None. 
+        skinFaces
+            A tuple of tuples specifying a skin name and the sequence of faces associated with this 
+            skin. Valid only for geometric regions on 3D and 2D parts. 
+        skinEdges
+            A tuple of tuples specifying a skin name and the sequence of edges associated with this 
+            skin. Valid only for geometric regions on Axisymmetric parts. 
+        stringerEdges
+            A tuple of tuples specifying a stringer name and the sequence of edges associated with 
+            this stringer. Valid only for geometric regions on 3D and 2D parts. 
+
+        Returns
+        -------
+            A Region object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
     def __init__(self, side1Faces: tuple[Face] = None, side2Faces: tuple[Face] = None, 
                  side12Faces: tuple[Face] = None, side1Edges: tuple[Edge] = None, 
                  side2Edges: tuple[Edge] = None, end1Edges: tuple[Edge] = None, 
@@ -140,5 +215,8 @@ class Region:
         ----------
             None. 
         """
+        pass
+
+    def __init__(self, *args, **kwargs):
         pass
 

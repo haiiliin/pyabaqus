@@ -1,7 +1,9 @@
+from abaqusConstants import *
 from .GeometryShellSection import GeometryShellSection
 from .RebarLayers import RebarLayers
+from .SectionLayerArray import SectionLayerArray
 from .TransverseShearShell import TransverseShearShell
-from abaqusConstants import *
+
 
 class CompositeShellSection(GeometryShellSection):
 

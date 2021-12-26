@@ -1,3 +1,5 @@
+from abaqusConstants import *
+from .KeywordBlock import KeywordBlock
 from ..Adaptivity.AdaptiveMeshConstraint import AdaptiveMeshConstraint
 from ..Adaptivity.AdaptiveMeshControl import AdaptiveMeshControl
 from ..Adaptivity.RemeshingRule import RemeshingRule
@@ -21,15 +23,14 @@ from ..Part.Part import Part
 from ..PredefinedField.PredefinedField import PredefinedField
 from ..Section.Section import Section
 from ..Sketcher.ConstrainedSketch import ConstrainedSketch
+from ..Step.Step import Step
 from ..StepOutput.FieldOutputRequest import FieldOutputRequest
 from ..StepOutput.HistoryOutputRequest import HistoryOutputRequest
 from ..StepOutput.TimePoint import TimePoint
-from ..StepStep.Step import Step
 from ..TableCollection.EventSeriesType import EventSeriesType
 from ..TableCollection.TableCollection import TableCollection
 from ..UtilityAndView.Repository import Repository
-from .KeywordBlock import KeywordBlock
-from abaqusConstants import *
+
 
 class Model:
 

@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
 from .ConstrainedSketchVertex import ConstrainedSketchVertex
-from abaqusConstants import *
+
 
 class ConstrainedSketchDimension:
 

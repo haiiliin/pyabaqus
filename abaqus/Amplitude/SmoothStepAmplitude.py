@@ -1,5 +1,6 @@
-from .Amplitude import Amplitude
 from abaqusConstants import *
+from .Amplitude import Amplitude
+
 
 class SmoothStepAmplitude(Amplitude):
 

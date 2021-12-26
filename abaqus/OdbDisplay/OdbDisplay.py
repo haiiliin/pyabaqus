@@ -1,3 +1,13 @@
+import typing
+
+from abaqusConstants import *
+from .CommonOptions import CommonOptions
+from .ContourOptions import ContourOptions
+from .DisplayBodyOptions import DisplayBodyOptions
+from .OrientationOptions import OrientationOptions
+from .SuperimposeOptions import SuperimposeOptions
+from .SymbolOptions import SymbolOptions
+from .ViewCut import ViewCut
 from ..DisplayGroup.DisplayGroup import DisplayGroup
 from ..DisplayGroup.DisplayGroupInstanceRepository import DisplayGroupInstanceRepository
 from ..FieldReport.OdbFieldVarList import OdbFieldVarList
@@ -10,14 +20,7 @@ from ..PlotOptions.FreeBodyOptions import FreeBodyOptions
 from ..PlotOptions.StreamOptions import StreamOptions
 from ..PlotOptions.ViewCutOptions import ViewCutOptions
 from ..UtilityAndView.Repository import Repository
-from .CommonOptions import CommonOptions
-from .ContourOptions import ContourOptions
-from .DisplayBodyOptions import DisplayBodyOptions
-from .OrientationOptions import OrientationOptions
-from .SuperimposeOptions import SuperimposeOptions
-from .SymbolOptions import SymbolOptions
-from .ViewCut import ViewCut
-from abaqusConstants import *
+
 
 class OdbDisplay:
 
@@ -289,6 +292,36 @@ class OdbDisplay:
         """
         pass
 
+    @typing.overload
+    def setFrame(self, step: int, frame: int):
+        """This method specifies the step and frame for the OdbDisplay object.
+
+        Parameters
+        ----------
+        step
+            An Int specifying the step index. Possible values are 0 ≤≤ *step* ≤≤ (*numSteps* − 1). 
+        frame
+            An Int specifying the frame in the specified step. Valid values are 0 ≤≤ *frame* ≤≤ 
+            (*numFramesInStep* − 1). If *frame* ≥≥ (*numFramesInStep* − 1) the last frame will be 
+            displayed. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            - If the viewport is not associated with any Odb object: 
+              The current viewport is not associated with an ODB file. Requested operation 
+            cancelled. 
+            - If the Odb object does not contain valid step data: 
+              There are no valid step data on the odb. Requested operation cancelled. 
+            - If an invalid step index is passed in as argument: 
+              Invalid step index:step. Available step indices: 0 - n 
+        """
+        pass
+
+    @typing.overload
     def setFrame(self, frame: OdbFrame):
         """This method specifies the frame for the OdbDisplay object.
 
@@ -305,6 +338,9 @@ class OdbDisplay:
         ----------
             None. 
         """
+        pass
+
+    def setFrame(self, *args, **kwargs):
         pass
 
     def setPrimaryVariable(self, variableLabel: str, field: str, outputPosition: SymbolicConstant, 

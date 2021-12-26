@@ -1,6 +1,7 @@
-from ..UtilityAndView.Repository import Repository
-from .OdbDiagnosticAttempt import OdbDiagnosticAttempt
 from abaqusConstants import *
+from .OdbDiagnosticAttempt import OdbDiagnosticAttempt
+from ..UtilityAndView.Repository import Repository
+
 
 class OdbDiagnosticIncrement:
 

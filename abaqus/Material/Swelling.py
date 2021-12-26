@@ -1,5 +1,6 @@
-from .Ratios import Ratios
 from abaqusConstants import *
+from .Ratios import Ratios
+
 
 class Swelling:
 

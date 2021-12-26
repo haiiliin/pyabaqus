@@ -1,12 +1,14 @@
-from ..UtilityAndView.Repository import Repository
-from ..UtilityAndView.View import View
+from abaqusConstants import *
 from .Area import Area
 from .AreaStyle import AreaStyle
+from .AxisArray import AxisArray
 from .Legend import Legend
 from .LineStyle import LineStyle
 from .TextStyle import TextStyle
 from .XYCurve import XYCurve
-from abaqusConstants import *
+from ..UtilityAndView.Repository import Repository
+from ..UtilityAndView.View import View
+
 
 class Chart:
 

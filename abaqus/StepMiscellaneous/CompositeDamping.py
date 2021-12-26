@@ -1,4 +1,4 @@
-
+from .CompositeDampingComponentArray import CompositeDampingComponentArray
 
 class CompositeDamping:
 

@@ -1,6 +1,7 @@
-from ..Region.Region import Region
-from .Constraint import Constraint
 from abaqusConstants import *
+from .Constraint import Constraint
+from ..Region.Region import Region
+
 
 class EmbeddedRegion(Constraint):
 

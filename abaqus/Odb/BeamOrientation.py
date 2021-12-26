@@ -1,5 +1,6 @@
-from .OdbSet import OdbSet
 from abaqusConstants import *
+from .OdbSet import OdbSet
+
 
 class BeamOrientation:
 

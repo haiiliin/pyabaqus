@@ -1,3 +1,10 @@
+import typing
+
+from abaqusConstants import *
+from .AttributeColorMap import AttributeColorMap
+from .ImageOptions import ImageOptions
+from .Layer import Layer
+from .MovieOptions import MovieOptions
 from ..Animation.AnimationController import AnimationController
 from ..Annotation.AnnotationsToPlotArray import AnnotationsToPlotArray
 from ..DisplayGroup.Leaf import Leaf
@@ -9,10 +16,7 @@ from ..OdbDisplay.OdbDisplay import OdbDisplay
 from ..PlotOptions.DetailPlotOptions import DetailPlotOptions
 from ..UtilityAndView.Repository import Repository
 from ..UtilityAndView.View import View
-from .ImageOptions import ImageOptions
-from .Layer import Layer
-from .MovieOptions import MovieOptions
-from abaqusConstants import *
+
 
 class Viewport:
 
@@ -514,6 +518,51 @@ class Viewport:
         """
         pass
 
+    @typing.overload
+    def setColor(self, initialColor: str, translucency: str = ''):
+        """This method specifies the color assignment using *initialColor* and *translucency*. If
+        *initialColor* has a value of 'As is', *translucency* has no effect. The setColor method
+        has the following arguments:
+
+        Parameters
+        ----------
+        initialColor
+            A string specifying the initial color applied to the objects. 
+        translucency
+            A float in the range of 0.0 to 1.0 specifying how translucent the objects drawn using 
+            *initialColor* needs to be. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
+    def setColor(self, colorMapping: AttributeColorMap):
+        """This method specifies the color assignment using attributes specified by an
+        AttributeColorMap object. The setColor method has the following arguments:
+
+        Parameters
+        ----------
+        colorMapping
+            An AttributeColorMap object. Possible values are any AttributeColorMap object. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
     def setColor(self, leaf: Leaf, edgeColorWireHide: str = '', edgeColorFillShade: str = '', 
                  fillColor: str = '', nodeSymbolColor: str = '', 
                  nodeSymbolType: SymbolicConstant = HOLLOW_CIRCLE, 
@@ -552,6 +601,9 @@ class Viewport:
         ----------
             None. 
         """
+        pass
+
+    def setColor(self, *args, **kwargs):
         pass
 
     def forceRefresh(self):

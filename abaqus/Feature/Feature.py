@@ -1,3 +1,6 @@
+import typing
+
+from abaqusConstants import *
 from ..BasicGeometry.Cell import Cell
 from ..BasicGeometry.Edge import Edge
 from ..BasicGeometry.Face import Face
@@ -5,7 +8,7 @@ from ..Datum.Datum import Datum
 from ..Datum.DatumPlane import DatumPlane
 from ..Mesh.MeshFace import MeshFace
 from ..Sketcher.ConstrainedSketch import ConstrainedSketch
-from abaqusConstants import *
+
 
 class Feature:
 
@@ -383,6 +386,38 @@ class Feature:
         """
         pass
 
+    @typing.overload
+    def DatumAxisByRotation(self, line: str, axis: str, angle: float):
+        """This method creates a Feature object and a DatumAxis object in a three-dimensional model
+        by rotating a line about the specified axis through the specified angle.
+
+        Path
+        ----
+            - mdb.models[*name*].rootAssembly.DatumAxisByRotation
+            - mdb.models[*name*].parts[*name*].DatumAxisByRotation
+
+        Parameters
+        ----------
+        line
+            A straight Edge, a Datum object representing a datum axis, or an ElementEdge object 
+            specifying the line to rotate. 
+        axis
+            A straight Edge, a Datum object representing a datum axis, or an ElementEdge object 
+            specifying the axis about which to rotate the line. 
+        angle
+            A Float specifying the angle in degrees to rotate the line. 
+
+        Returns
+        -------
+            A Feature object. 
+
+        Exceptions
+        ----------
+            AbaqusException. 
+        """
+        pass
+
+    @typing.overload
     def DatumAxisByRotation(self, line: str, point: int, angle: float):
         """This method creates a Feature object and a DatumAxis object in a two-dimensional model
         by rotating a line about the specified point through the specified angle.
@@ -411,6 +446,9 @@ class Feature:
         ----------
             AbaqusException. 
         """
+        pass
+
+    def DatumAxisByRotation(self, *args, **kwargs):
         pass
 
     def DatumAxisByThreePoint(self, point1: int, point2: int, point3: int):
@@ -692,6 +730,37 @@ class Feature:
         """
         pass
 
+    @typing.overload
+    def DatumPlaneByOffset(self, plane: str, flip: SymbolicConstant, offset: float):
+        """This method creates a Feature object and a DatumPlane object offset by a specified
+        distance from an existing plane.
+
+        Path
+        ----
+            - mdb.models[*name*].rootAssembly.DatumPlaneByOffset
+            - mdb.models[*name*].parts[*name*].DatumPlaneByOffset
+
+        Parameters
+        ----------
+        plane
+            A planar Face, an ElementFace, or a Datum object representing a datum plane. 
+        flip
+            A SymbolicConstant specifying whether the normal should be flipped. Possible values are 
+            SIDE1 and SIDE2. 
+        offset
+            A Float specifying the offset from the plane. 
+
+        Returns
+        -------
+            A Feature object. 
+
+        Exceptions
+        ----------
+            AbaqusException. 
+        """
+        pass
+
+    @typing.overload
     def DatumPlaneByOffset(self, plane: str, point: int):
         """This method creates a Feature object and a DatumPlane object offset from an existing
         plane and passing through the specified point.
@@ -716,6 +785,9 @@ class Feature:
         ----------
             AbaqusException. 
         """
+        pass
+
+    def DatumPlaneByOffset(self, *args, **kwargs):
         pass
 
     def DatumPlaneByRotation(self, plane: str, axis: str, angle: float):

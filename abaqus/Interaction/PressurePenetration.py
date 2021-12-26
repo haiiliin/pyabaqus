@@ -1,4 +1,6 @@
 from .Interaction import Interaction
+from ..Region.RegionArray import RegionArray
+
 
 class PressurePenetration(Interaction):
 

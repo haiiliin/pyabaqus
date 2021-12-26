@@ -1,5 +1,7 @@
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+
 
 class HistoryOutputRequest:
 
@@ -46,15 +48,16 @@ class HistoryOutputRequest:
 
     def __init__(self, name: str, createStepName: str, region: SymbolicConstant = MODEL, 
                  variables: SymbolicConstant = PRESELECT, frequency: SymbolicConstant = 1, 
-                 modes: SymbolicConstant = ALL, timeInterval: typing.Union[SymbolicConstant, 
-                 float] = EVERY_TIME_INCREMENT, numIntervals: int = 20, boltLoad: str = '', 
-                 sectionPoints: SymbolicConstant = DEFAULT, stepName: str = '', interactions: str = None, 
-                 contourIntegral: str = None, numberOfContours: int = 0, 
-                 stressInitializationStep: str = None, contourType: SymbolicConstant = J_INTEGRAL, 
-                 kFactorDirection: SymbolicConstant = MTS, rebar: SymbolicConstant = EXCLUDE, 
-                 integratedOutputSection: str = '', springs: tuple = None, 
-                 filter: SymbolicConstant = None, fasteners: str = '', assembledFastener: str = '', 
-                 assembledFastenerSet: str = '', sensor: Boolean = OFF, useGlobal: Boolean = True):
+                 modes: SymbolicConstant = ALL, 
+                 timeInterval: typing.Union[SymbolicConstant,float] = EVERY_TIME_INCREMENT, 
+                 numIntervals: int = 20, boltLoad: str = '', sectionPoints: SymbolicConstant = DEFAULT, 
+                 stepName: str = '', interactions: str = None, contourIntegral: str = None, 
+                 numberOfContours: int = 0, stressInitializationStep: str = None, 
+                 contourType: SymbolicConstant = J_INTEGRAL, kFactorDirection: SymbolicConstant = MTS, 
+                 rebar: SymbolicConstant = EXCLUDE, integratedOutputSection: str = '', 
+                 springs: tuple = None, filter: SymbolicConstant = None, fasteners: str = '', 
+                 assembledFastener: str = '', assembledFastenerSet: str = '', sensor: Boolean = OFF, 
+                 useGlobal: Boolean = True):
         """This method creates a HistoryOutputRequest object.
 
         Path
@@ -247,7 +250,7 @@ class HistoryOutputRequest:
 
     def setValues(self, region: SymbolicConstant = MODEL, variables: SymbolicConstant = PRESELECT, 
                   frequency: SymbolicConstant = 1, modes: SymbolicConstant = ALL, 
-                  timeInterval: typing.Union[SymbolicConstant, float] = EVERY_TIME_INCREMENT, 
+                  timeInterval: typing.Union[SymbolicConstant,float] = EVERY_TIME_INCREMENT, 
                   numIntervals: int = 20, boltLoad: str = '', sectionPoints: SymbolicConstant = DEFAULT, 
                   stepName: str = '', interactions: str = None, contourIntegral: str = None, 
                   numberOfContours: int = 0, stressInitializationStep: str = None, 
@@ -345,8 +348,9 @@ class HistoryOutputRequest:
         pass
 
     def setValuesInStep(self, stepName: str, variables: SymbolicConstant = None, frequency: SymbolicConstant = 1, 
-                        modes: SymbolicConstant = ALL, timeInterval: typing.Union[SymbolicConstant, 
-                        float] = EVERY_TIME_INCREMENT, numIntervals: int = 20, timePoints: str = None):
+                        modes: SymbolicConstant = ALL, 
+                        timeInterval: typing.Union[SymbolicConstant,float] = EVERY_TIME_INCREMENT, 
+                        numIntervals: int = 20, timePoints: str = None):
         """This method modifies the propagating data for an existing HistoryOutputRequest object in
         the specified step.
 

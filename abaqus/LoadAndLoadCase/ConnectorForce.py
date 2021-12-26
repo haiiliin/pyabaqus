@@ -1,7 +1,9 @@
-from ..Region.Region import Region
-from .Load import Load
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .Load import Load
+from ..Region.Region import Region
+
 
 class ConnectorForce(Load):
 
@@ -136,9 +138,9 @@ class ConnectorForce(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, f1: typing.Union[SymbolicConstant, float] = None, 
-                        f2: typing.Union[SymbolicConstant, float] = None, f3: typing.Union[SymbolicConstant, 
-                        float] = None, amplitude: str = ''):
+    def setValuesInStep(self, stepName: str, f1: typing.Union[SymbolicConstant,float] = None, 
+                        f2: typing.Union[SymbolicConstant,float] = None, 
+                        f3: typing.Union[SymbolicConstant,float] = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing ConnectorForce object in the
         specified step.
 

@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .AnalyticSurface import AnalyticSurface
 from .OdbSet import OdbSet
-from abaqusConstants import *
+
 
 class OdbRigidBody:
 

@@ -1,7 +1,9 @@
-from ..Region.Region import Region
-from .BoundaryCondition import BoundaryCondition
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .BoundaryCondition import BoundaryCondition
+from ..Region.Region import Region
+
 
 class ConcentrationBC(BoundaryCondition):
 
@@ -128,7 +130,7 @@ class ConcentrationBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, magnitude: typing.Union[SymbolicConstant, float] = None, 
+    def setValuesInStep(self, stepName: str, magnitude: typing.Union[SymbolicConstant,float] = None, 
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ConcentrationBC object in the
         specified step.

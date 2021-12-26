@@ -48,6 +48,96 @@ class Method:
             raise ValueError('Index out of range')
         return self.args[index].argString(typeHint, objectName=objectName)
 
+    def overloadMethodString(self):
+        text = ''
+        requiredArgStrings = self.requiredArgStringsSplitLists()
+        if len(requiredArgStrings) > 0:
+            requiredArgStrings[-1] += ', *args, **kwargs'
+        text += '    def {}(self, *args, **kwargs):\n'.format(self.name)
+        # if len(self.args) == 0:
+        #     text += '    def {}(self):\n'.format(self.name)
+        # elif len(requiredArgStrings) == 1:
+        #     text += '    def {}(self, {}):\n'.format(self.name, requiredArgStrings[0])
+        # else:
+        #     text += '    def {}(self, {}\n'.format(self.name, requiredArgStrings[0])
+        #     for i in range(1, len(requiredArgStrings) - 1):
+        #         text += '         ' + ' ' * len(self.name) + '{}\n'.format(requiredArgStrings[i])
+        #     text += '         ' + ' ' * len(self.name) + '{}):\n'.format(requiredArgStrings[-1])
+        text += '        pass\n\n'
+        return text
+
+    def methodString(self, indent: int = 4, isOverloaded: bool = False, derived: bool = False,
+                     argStringsTypeHints: str = ''):
+        text = ''
+        splitDocs = self.splitDocs()
+        argStrings = self.argStringsSplitLists(objectName=self.name)
+        if isOverloaded:
+            text += indent * ' ' + '@typing.overload\n'
+
+        if len(self.args) == 0:
+            text += indent * ' ' + 'def {}(self):\n'.format(self.name)
+        elif len(argStrings) == 1:
+            text += indent * ' ' + 'def {}(self, {}):\n'.format(self.name, argStrings[0])
+        else:
+            text += indent * ' ' + 'def {}(self, {}\n'.format(self.name, argStrings[0])
+            for i in range(1, len(argStrings) - 1):
+                text += '         ' + ' ' * len(self.name) + '{}\n'.format(argStrings[i])
+            text += indent * ' ' + '     ' + ' ' * len(self.name) + '{}):\n'.format(argStrings[-1])
+        text += indent * ' ' + '    """{}\n'.format(splitDocs[0].rstrip())
+        for i in range(1, len(splitDocs)):
+            text += indent * ' ' + '    {}\n'.format(splitDocs[i].rstrip())
+        text += '\n'
+        if not len(self.paths) == 0:
+            text += indent * ' ' + '    Path\n'
+            text += indent * ' ' + '    ----\n'
+            for path in self.paths:
+                text += indent * ' ' + '        - {}\n'.format(path)
+            text += '\n'
+        text += indent * ' ' + '    Parameters\n'
+        text += indent * ' ' + '    ----------\n'
+        for idx, arg in zip(range(len(self.args)), self.args):
+            text += indent * ' ' + '    {}\n'.format(arg.name)
+            docs = self.splitArgumentDocs(idx)
+            if len(docs) > 0:
+                text += indent * ' ' + '        {}\n'.format(docs[0])
+                for i in range(1, len(docs)):
+                    text += indent * ' ' + '        {}\n'.format(docs[i])
+        text += '\n'
+        text += indent * ' ' + '    Returns\n'
+        text += indent * ' ' + '    -------\n'
+        returnsDocs = self.splitReturnDocs()
+        if len(returnsDocs) > 0:
+            text += indent * ' ' + '        {}\n'.format(returnsDocs[0])
+            for i in range(1, len(returnsDocs)):
+                text += indent * ' ' + '        {}\n'.format(returnsDocs[i])
+        text += '\n'
+        text += indent * ' ' + '    Exceptions\n'
+        text += indent * ' ' + '    ----------\n'
+        exceptionsDocs = self.splitExceptionsDocs()
+        if len(exceptionsDocs) > 0:
+            text += indent * ' ' + '        {}\n'.format(exceptionsDocs[0])
+            for i in range(1, len(exceptionsDocs)):
+                text += indent * ' ' + '        {}\n'.format(exceptionsDocs[i])
+        text += indent * ' ' + '    """\n'
+        if self.name == '__init__' and derived:
+            if argStringsTypeHints == '':
+                text += indent * ' ' + '    super().__init__()\n'
+            else:
+                text += indent * ' ' + '    super().__init__()\n'
+                # if len(self.args) == 0:
+                #     text += indent * ' ' + '    super().__init__()\n'
+                # elif len(argStringsTypeHints) == 1:
+                #     text += indent * ' ' + '    super().__init__({})\n'.format(argStringsTypeHints[0])
+                # else:
+                #     text += indent * ' ' + '    super().__init__({}\n'.format(argStringsTypeHints[0])
+                #     for i in range(1, len(argStringsTypeHints) - 1):
+                #         text += indent * ' ' + '             ' + ' ' * len(self.name) + '{}\n'.format(
+                #             argStringsTypeHints[i])
+                #     text += indent * ' ' + '             ' + ' ' * len(self.name) + '{})\n'.format(
+                #         argStringsTypeHints[-1])
+        text += indent * ' ' + '    pass\n\n'
+        return text
+
     @staticmethod
     def splitText(text: str, sep: str = ' ', maxLength: int = 90):
         lists = []
@@ -113,3 +203,4 @@ class Method:
 
     def splitArgumentDocs(self, index: int, sep: str = ' ', maxLength: int = 90):
         return self.splitStrings(self.simplifiedDocs(self.args[index].docs), sep, maxLength)
+

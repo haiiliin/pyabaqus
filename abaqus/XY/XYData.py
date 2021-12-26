@@ -1,7 +1,10 @@
+import typing
+
+from abaqusConstants import *
+from .QuantityType import QuantityType
 from ..Odb.Odb import Odb
 from ..PathAndProbe.Path import Path
-from .QuantityType import QuantityType
-from abaqusConstants import *
+
 
 class XYData:
 
@@ -50,6 +53,63 @@ class XYData:
     # A String specifying the complete description of the XYData object. 
     description: str = ''
 
+    @typing.overload
+    def __init__(self, data: tuple, name: str = '', sourceDescription: str = '', contentDescription: str = '', 
+                 positionDescription: str = '', legendLabel: str = '', xValuesLabel: str = '', 
+                 yValuesLabel: str = '', axis1QuantityType: QuantityType = None, 
+                 axis2QuantityType: QuantityType = None):
+        """This method creates an XYData object from a sequence of *X–Y* data pairs.
+
+        Path
+        ----
+            - session.XYData
+            - xyPlot.XYData
+
+        Parameters
+        ----------
+        data
+            A sequence of pairs of Floats specifying the *X–Y* data pairs. 
+        name
+            The repository key. If the name is not supplied while creating the XYData object using 
+            xyPlot.XYData, a default name in the form _temp#_ is generated and the XYData object is 
+            temporary. (This argument is required if the method is accessed from the session 
+            object.) 
+        sourceDescription
+            A String specifying the source of the *X–Y* data (e.g., “Entered from keyboard”, “Taken 
+            from ASCII file”, “Read from an ODB”, etc.). The default value is an empty string. 
+        contentDescription
+            A String specifying the content of the *X–Y* data (e.g., “field 1 vs. field 2”). The 
+            default value is an empty string. 
+        positionDescription
+            A String specifying additional information about the *X–Y* data (e.g., “for whole 
+            model”). The default value is an empty string. 
+        legendLabel
+            A String specifying the label to be used in the legend. The default value is the name of 
+            the XYData object. 
+        xValuesLabel
+            A String specifying the label for the X-values. This value may be overridden if the 
+            *X–Y* data are combined with other *X–Y* data. The default value is an empty string. 
+        yValuesLabel
+            A String specifying the label for the Y-values. This value may be overridden if the 
+            *X–Y* data are combined with other *X–Y* data. The default value is an empty string. 
+        axis1QuantityType
+            A QuantityType object specifying the QuantityType object associated to the X -axis1- 
+            values. 
+        axis2QuantityType
+            A QuantityType object specifying the QuantityType object associated to the Y -axis2- 
+            values. 
+
+        Returns
+        -------
+            An XYData object. 
+
+        Exceptions
+        ----------
+            InvalidNameError. 
+        """
+        pass
+
+    @typing.overload
     def __init__(self, objectToCopy: 'XYData'):
         """This method creates an XYData object by copying an existing XYData object.
 
@@ -72,6 +132,9 @@ class XYData:
         ----------
             InvalidNameError. 
         """
+        pass
+
+    def __init__(self, *args, **kwargs):
         pass
 
     def XYDataFromFile(self, fileName: str, name: str = '', sourceDescription: str = '', 
@@ -541,11 +604,38 @@ class XYData:
         """
         pass
 
-    def setValues(self):
+    def setValues(self, sourceDescription: str = '', contentDescription: str = '', 
+                  positionDescription: str = '', legendLabel: str = '', xValuesLabel: str = '', 
+                  yValuesLabel: str = '', axis1QuantityType: QuantityType = None, 
+                  axis2QuantityType: QuantityType = None):
         """This method modifies the XYData object.
 
         Parameters
         ----------
+        sourceDescription
+            A String specifying the source of the *X–Y* data (e.g., “Entered from keyboard”, “Taken 
+            from ASCII file”, “Read from an ODB”, etc.). The default value is an empty string. 
+        contentDescription
+            A String specifying the content of the *X–Y* data (e.g., “field 1 vs. field 2”). The 
+            default value is an empty string. 
+        positionDescription
+            A String specifying additional information about the *X–Y* data (e.g., “for whole 
+            model”). The default value is an empty string. 
+        legendLabel
+            A String specifying the label to be used in the legend. The default value is the name of 
+            the XYData object. 
+        xValuesLabel
+            A String specifying the label for the X-values. This value may be overridden if the 
+            *X–Y* data are combined with other *X–Y* data. The default value is an empty string. 
+        yValuesLabel
+            A String specifying the label for the Y-values. This value may be overridden if the 
+            *X–Y* data are combined with other *X–Y* data. The default value is an empty string. 
+        axis1QuantityType
+            A QuantityType object specifying the QuantityType object associated to the X -axis1- 
+            values. 
+        axis2QuantityType
+            A QuantityType object specifying the QuantityType object associated to the Y -axis2- 
+            values. 
 
         Returns
         -------

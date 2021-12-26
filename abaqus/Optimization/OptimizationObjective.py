@@ -1,5 +1,7 @@
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+
 
 class OptimizationObjective:
 
@@ -31,7 +33,7 @@ class OptimizationObjective:
     # evaluating a design response. For topology optimization, DEFAULT> indicates the 
     # reference value is 0. For shape optimization, DEFAULT indicates the reference value is 
     # the nodal average. The default value is DEFAULT. 
-    referenceValue: typing.Union[SymbolicConstant, float] = DEFAULT
+    referenceValue: typing.Union[SymbolicConstant,float] = DEFAULT
 
     # A String specifying the name of the design response. 
     designResponse: str = ''

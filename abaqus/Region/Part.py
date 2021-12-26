@@ -1,5 +1,6 @@
-from ..Part.Part import Part as BasePart
 from abaqusConstants import *
+from ..Part.Part import Part as BasePart
+
 
 class Part(BasePart):
     """The following commands operate on Part objects. For more information about the Part 

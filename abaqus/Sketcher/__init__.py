@@ -1,10 +1,1 @@
-from .ConstrainedSketch import ConstrainedSketch
-from .ConstrainedSketchConstraint import ConstrainedSketchConstraint
-from .ConstrainedSketchDimension import ConstrainedSketchDimension
-from .ConstrainedSketcherOptions import ConstrainedSketcherOptions
-from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
-from .ConstrainedSketchImageOptions import ConstrainedSketchImageOptions
-from .ConstrainedSketchOptions import ConstrainedSketchOptions
-from .ConstrainedSketchParameter import ConstrainedSketchParameter
-from .ConstrainedSketchVertex import ConstrainedSketchVertex
-from .ConstrainedSketchVertexArray import ConstrainedSketchVertexArray
+

@@ -1,7 +1,6 @@
 import os
 import re
 
-from . import ObjectParser
 from .Guess import Guess
 from .Keyword import Keyword
 from .Member import Member
@@ -17,10 +16,11 @@ class AbaqusObject:
         self.derived: bool = False
         self.baseDerived: bool = False
         self.parentFilePath: str = ''
+        self.parentArgTypeHints: str = ''
         self.tableData: list[str] = []
         self.parent: str = ''
         self.accesses: list[str] = []
-        self.methods: dict[str, Method] = {}
+        self.methods: list[Method] = []
         self.members: dict[str, Member] = {}
         self.keywords: dict[str, Keyword] = {}
 
@@ -29,24 +29,32 @@ class AbaqusObject:
 
         self.script = ''
 
+    def findMethodsByName(self, name: str):
+        methods = []
+        for method in self.methods:
+            if method.name == name:
+                methods.append(method)
+        return methods
+
     def splitDocs(self, sep: str = ' ', maxLength: int = 90):
         splitDocs = []
         for doc in self.docs:
             splitDocs += Method.splitText(Guess.removeMarkdownLinks(doc), sep, maxLength)
         return splitDocs
 
-    def overloadMethodIndexes(self):
+    def methodOverloadedIndexes(self):
         overload: list = len(self.methods) * [0]
         if len(self.methods) == 0:
             return []
         currentMethodName = ''
-        currentNum = 0
-        for method, index in zip(self.methods.values(), range(len(self.methods))):
+        currentNum = 1
+        for method, index in zip(self.methods, range(len(self.methods))):
             if method.name == currentMethodName:
+                overload[index-1] = currentNum
                 currentNum += 1
                 overload[index] = currentNum
             else:
-                currentNum = 0
+                currentNum = 1
                 currentMethodName = method.name
         return overload
 
@@ -76,6 +84,21 @@ class AbaqusObject:
                     f.close()
         return '', ''
 
+    def generateUserDefinedTypeImport(self, userDefinedType: str, fileDir: str, foundDir: str):
+        relPath = os.path.relpath(foundDir, fileDir)
+
+        if relPath == '.':
+            importString = 'from .{} import {}'.format(userDefinedType, userDefinedType)
+        else:
+            nParentLevels = max(len(re.findall(r"\W\\", relPath)), len(re.findall(r"\W/", relPath)))
+            folders = relPath[nParentLevels * 3:].split('\\')
+            jointFolders = '.'.join(folders)
+            importPath = '.' * (nParentLevels + 1) + jointFolders + '.{}'.format(userDefinedType)
+            importString = 'from {} import {}'.format(importPath, userDefinedType)
+        if userDefinedType == self.name and self.baseDerived:
+            importString += ' as Base{}'.format(self.name)
+        self.imports.append(importString)
+
     def searchImports(self, fileDir: str = 'abaqus', searchDir: str = None):
         if searchDir is not None:
             for userDefinedType in self.userDefinedTypes:
@@ -85,21 +108,25 @@ class AbaqusObject:
                     foundDir, foundFile = AbaqusObject.findUserDefinedType(userDefinedType, searchDir)
 
                 if foundDir == '' or foundFile == '':
-                    continue
+                    if userDefinedType.endswith('Array'):
+                        baseType = userDefinedType[:-5]
+                        foundBaseTypeDir, foundBaseTypeFile = AbaqusObject.findUserDefinedType(baseType, 'abaqus')
+                        if foundBaseTypeDir is None or foundBaseTypeFile is None:
+                            print('        {} not existed'.format(baseType))
+                            continue
 
-                relPath = os.path.relpath(foundDir, fileDir)
+                        text = 'from .{} import {}\n\n\n'.format(baseType, baseType)
+                        text += 'class {}(list[{}]):\n'.format(userDefinedType, baseType)
+                        text += '    def findAt(self):\n'
+                        text += '        pass\n'
 
-                if relPath == '.':
-                    importString = 'from .{} import {}'.format(userDefinedType, userDefinedType)
+                        with open(os.path.join(foundBaseTypeDir, userDefinedType + '.py'), 'w+', encoding='utf-8') as f:
+                            f.write(text)
+                            f.close()
+
+                        self.generateUserDefinedTypeImport(userDefinedType, fileDir, foundBaseTypeDir)
                 else:
-                    nParentLevels = max(len(re.findall(r"\W\\", relPath)), len(re.findall(r"\W/", relPath)))
-                    folders = relPath[nParentLevels*3:].split('\\')
-                    jointFolders = '.'.join(folders)
-                    importPath = '.' * (nParentLevels + 1) + jointFolders + '.{}'.format(userDefinedType)
-                    importString = 'from {} import {}'.format(importPath, userDefinedType)
-                if userDefinedType == self.name and self.baseDerived:
-                    importString += ' as Base{}'.format(self.name)
-                self.imports.append(importString)
+                    self.generateUserDefinedTypeImport(userDefinedType, fileDir, foundDir)
 
     def deClass(self):
         self.script = re.sub(r'\n\n+', r'\n\n', self.script)
@@ -182,94 +209,18 @@ class AbaqusObject:
         return self
 
     def generateMethods(self):
-        overload = self.overloadMethodIndexes()
+        overloadedIndexes = self.methodOverloadedIndexes()
         if not len(self.methods) == 0:
-            for method, index in zip(self.methods.values(), range(len(self.methods))):
-                splitDocs = method.splitDocs()
-                argStrings = method.argStringsSplitLists(objectName=self.name)
-                if overload[index] > 0:
-                    self.script += '    @typing.overload\n'
+            for method, index in zip(self.methods, range(len(self.methods))):
+                self.script += method.methodString(4, overloadedIndexes[index] > 0, self.derived, self.parentArgTypeHints)
+                if overloadedIndexes[index] > 0:
                     if not self.script.lstrip().startswith('import typing'):
                         self.script = 'import typing\n\n' + self.script
 
-                if len(method.args) == 0:
-                    self.script += '    def {}(self):\n'.format(method.name)
-                elif len(argStrings) == 1:
-                    self.script += '    def {}(self, {}):\n'.format(method.name, argStrings[0])
-                else:
-                    self.script += '    def {}(self, {}\n'.format(method.name, argStrings[0])
-                    for i in range(1, len(argStrings) - 1):
-                        self.script += '         ' + ' ' * len(method.name) + '{}\n'.format(argStrings[i])
-                    self.script += '         ' + ' ' * len(method.name) + '{}):\n'.format(argStrings[-1])
-                self.script += '        """{}\n'.format(splitDocs[0].rstrip())
-                for i in range(1, len(splitDocs)):
-                    self.script += '        {}\n'.format(splitDocs[i].rstrip())
-                self.script += '\n'
-                if not len(method.paths) == 0:
-                    self.script += '        Path\n'
-                    self.script += '        ----\n'
-                    for path in method.paths:
-                        self.script += '            - {}\n'.format(path)
-                    self.script += '\n'
-                self.script += '        Parameters\n'
-                self.script += '        ----------\n'
-                for idx, arg in zip(range(len(method.args)), method.args):
-                    self.script += '        {}\n'.format(arg.name)
-                    docs = method.splitArgumentDocs(idx)
-                    self.script += '            {}\n'.format(docs[0])
-                    for i in range(1, len(docs)):
-                        self.script += '            {}\n'.format(docs[i])
-                self.script += '\n'
-                self.script += '        Returns\n'
-                self.script += '        -------\n'
-                returnsDocs = method.splitReturnDocs()
-                if len(returnsDocs) > 0:
-                    self.script += '            {}\n'.format(returnsDocs[0])
-                    for i in range(1, len(returnsDocs)):
-                        self.script += '            {}\n'.format(returnsDocs[i])
-                self.script += '\n'
-                self.script += '        Exceptions\n'
-                self.script += '        ----------\n'
-                exceptionsDocs = method.splitExceptionsDocs()
-                if len(exceptionsDocs) > 0:
-                    self.script += '            {}\n'.format(exceptionsDocs[0])
-                    for i in range(1, len(exceptionsDocs)):
-                        self.script += '            {}\n'.format(exceptionsDocs[i])
-                self.script += '        """\n'
-                if method.name == '__init__' and self.derived:
-                    if not os.path.exists(self.parentFilePath):
-                        self.script += '        super().__init__()\n'
-                    else:
-                        parentObj = ObjectParser(filePath=self.parentFilePath).parse().toAbaqusObject()
-                        argStringsNoTypeHints = parentObj.methods['__init__'].argStringsSplitLists(typeHint=False, objectName=self.name)
-                        if len(method.args) == 0:
-                            self.script += '        super().__init__()\n'
-                        elif len(argStringsNoTypeHints) == 1:
-                            self.script += '        super().__init__({})\n'.format(argStringsNoTypeHints[0])
-                        else:
-                            self.script += '        super().__init__({}\n'.format(argStringsNoTypeHints[0])
-                            for i in range(1, len(argStringsNoTypeHints) - 1):
-                                self.script += '                 ' + ' ' * len(method.name) + '{}\n'.format(argStringsNoTypeHints[i])
-                            self.script += '                 ' + ' ' * len(method.name) + '{})\n'.format(argStringsNoTypeHints[-1])
-                self.script += '        pass\n\n'
-
-                if (index > 0 and overload[index] > overload[index - 1]) and ((index < len(self.methods) - 1 and
-                                                                               overload[index] > overload[index + 1]) or
-                                                                              index == len(self.methods) - 1):
-                    requiredArgStrings = method.requiredArgStringsSplitLists()
-                    if len(requiredArgStrings) > 0:
-                        requiredArgStrings[-1] += ', *args, **kwargs'
-                    if len(method.args) == 0:
-                        self.script += '    def {}(self):\n'.format(method.name)
-                    elif len(requiredArgStrings) == 1:
-                        self.script += '    def {}(self, {}):\n'.format(method.name, requiredArgStrings[0])
-                    else:
-                        self.script += '    def {}(self, {}\n'.format(method.name, requiredArgStrings[0])
-                        for i in range(1, len(requiredArgStrings) - 1):
-                            self.script += '         ' + ' ' * len(method.name) + '{}\n'.format(requiredArgStrings[i])
-                        self.script += '         ' + ' ' * len(method.name) + '{}):\n'.format(requiredArgStrings[-1])
-                    self.script += '        pass\n\n'
-
+                if ((index > 0 and overloadedIndexes[index] > overloadedIndexes[index - 1]) and
+                        ((index < len(self.methods) - 1 and overloadedIndexes[index] > overloadedIndexes[index + 1]) or
+                         index == len(self.methods) - 1)):
+                    self.script += method.overloadMethodString()
         return self
 
     def generate(self, fileDir: str = 'abaqus', searchDir: str = None):

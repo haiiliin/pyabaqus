@@ -1,5 +1,6 @@
-from ..Region.Region import Region
 from .GeometricRestriction import GeometricRestriction
+from ..Region.Region import Region
+
 
 class BeadGrowth(GeometricRestriction):
 

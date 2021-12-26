@@ -1,5 +1,6 @@
-from ..PlotOptions.DGDisplayBodyOptions import DGDisplayBodyOptions
 from abaqusConstants import *
+from ..PlotOptions.DGDisplayBodyOptions import DGDisplayBodyOptions
+
 
 class DisplayBodyOptions(DGDisplayBodyOptions):
 

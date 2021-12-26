@@ -1,5 +1,7 @@
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+
 
 class SurfaceFrictionAssignment:
 
@@ -49,7 +51,7 @@ class SurfaceFrictionAssignment:
         """
         pass
 
-    def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant, float]):
+    def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant,float]):
         """This method allows addition of surface friction assignments to new surfaces in a given
         step.
 

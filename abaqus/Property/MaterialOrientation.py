@@ -1,8 +1,9 @@
+from abaqusConstants import *
 from ..Datum.DatumAxis import DatumAxis
 from ..Datum.DatumCsys import DatumCsys
 from ..Region.Set import Set
 from ..Region.Surface import Surface
-from abaqusConstants import *
+
 
 class MaterialOrientation:
 

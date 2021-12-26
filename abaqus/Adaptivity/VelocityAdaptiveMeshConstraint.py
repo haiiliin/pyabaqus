@@ -1,7 +1,9 @@
-from ..Region.Region import Region
-from .AdaptiveMeshConstraint import AdaptiveMeshConstraint
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .AdaptiveMeshConstraint import AdaptiveMeshConstraint
+from ..Region.Region import Region
+
 
 class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
 
@@ -38,11 +40,13 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region, v1: typing.Union[SymbolicConstant, 
-                 float] = UNSET, v2: typing.Union[SymbolicConstant, float] = UNSET, 
-                 v3: typing.Union[SymbolicConstant, float] = UNSET, vr1: typing.Union[SymbolicConstant, 
-                 float] = UNSET, vr2: typing.Union[SymbolicConstant, float] = UNSET, 
-                 vr3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET, 
+    def __init__(self, name: str, createStepName: str, region: Region, 
+                 v1: typing.Union[SymbolicConstant,float] = UNSET, 
+                 v2: typing.Union[SymbolicConstant,float] = UNSET, 
+                 v3: typing.Union[SymbolicConstant,float] = UNSET, 
+                 vr1: typing.Union[SymbolicConstant,float] = UNSET, 
+                 vr2: typing.Union[SymbolicConstant,float] = UNSET, 
+                 vr3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
                  localCsys: str = None, motionType: SymbolicConstant = INDEPENDENT):
         """This method creates a VelocityAdaptiveMeshConstraint object.
 
@@ -107,12 +111,13 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
         super().__init__()
         pass
 
-    def setValues(self, v1: typing.Union[SymbolicConstant, float] = UNSET, v2: typing.Union[SymbolicConstant, 
-                  float] = UNSET, v3: typing.Union[SymbolicConstant, float] = UNSET, 
-                  vr1: typing.Union[SymbolicConstant, float] = UNSET, vr2: typing.Union[SymbolicConstant, 
-                  float] = UNSET, vr3: typing.Union[SymbolicConstant, float] = UNSET, 
-                  amplitude: str = UNSET, localCsys: str = None, 
-                  motionType: SymbolicConstant = INDEPENDENT):
+    def setValues(self, v1: typing.Union[SymbolicConstant,float] = UNSET, 
+                  v2: typing.Union[SymbolicConstant,float] = UNSET, 
+                  v3: typing.Union[SymbolicConstant,float] = UNSET, 
+                  vr1: typing.Union[SymbolicConstant,float] = UNSET, 
+                  vr2: typing.Union[SymbolicConstant,float] = UNSET, 
+                  vr3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
+                  localCsys: str = None, motionType: SymbolicConstant = INDEPENDENT):
         """This method modifies the data for an existing VelocityAdaptiveMeshConstraint object in
         the step where it is created.
 
@@ -165,11 +170,12 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, v1: typing.Union[SymbolicConstant, float] = None, 
-                        v2: typing.Union[SymbolicConstant, float] = None, v3: typing.Union[SymbolicConstant, 
-                        float] = None, vr1: typing.Union[SymbolicConstant, float] = None, 
-                        vr2: typing.Union[SymbolicConstant, float] = None, vr3: typing.Union[SymbolicConstant, 
-                        float] = None, amplitude: str = ''):
+    def setValuesInStep(self, stepName: str, v1: typing.Union[SymbolicConstant,float] = None, 
+                        v2: typing.Union[SymbolicConstant,float] = None, 
+                        v3: typing.Union[SymbolicConstant,float] = None, 
+                        vr1: typing.Union[SymbolicConstant,float] = None, 
+                        vr2: typing.Union[SymbolicConstant,float] = None, 
+                        vr3: typing.Union[SymbolicConstant,float] = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing VelocityAdaptiveMeshConstraint
         object in the specified step.
 

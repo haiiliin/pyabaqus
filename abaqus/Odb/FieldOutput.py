@@ -1,6 +1,12 @@
+import typing
+
+from abaqusConstants import *
+from .FieldLocation import FieldLocation
+from .FieldLocationArray import FieldLocationArray
+from .OdbInstance import OdbInstance
 from .OdbSet import OdbSet
 from .SectionPoint import SectionPoint
-from abaqusConstants import *
+
 
 class FieldOutput:
 
@@ -38,6 +44,55 @@ class FieldOutput:
     # description of the order. 
     values: int = None
 
+    @typing.overload
+    def __init__(self, name: str, description: str, type: SymbolicConstant, componentLabels: tuple = (), 
+                 validInvariants: SymbolicConstant = None, isEngineeringTensor: Boolean = OFF):
+        """This method creates a FieldOutput object.
+
+        Path
+        ----
+            - session.odbs[name].steps[name].frames[i].FieldOutput
+
+        Parameters
+        ----------
+        name
+            A String specifying the output variable name. 
+        description
+            A String specifying the output variable. Colon (:) should not be used as a part of the 
+            field output description. 
+        type
+            A SymbolicConstant specifying the output type. Possible values are SCALAR, VECTOR, 
+            TENSOR_3D_FULL, TENSOR_3D_PLANAR, TENSOR_3D_SURFACE, TENSOR_2D_PLANAR, and 
+            TENSOR_2D_SURFACE. 
+        componentLabels
+            A sequence of Strings specifying the labels for each component of the value. The length 
+            of the sequence must match the type. If *type*=TENSOR, the default value is *name* with 
+            the suffixes ('11', '22', '33', '12', '13', '23'). If *type*=VECTOR, the default value 
+            is *name* with the suffixes ('1', '2', '3'). If *type*=SCALAR, the default value is an 
+            empty sequence. 
+        validInvariants
+            A sequence of SymbolicConstants specifying which invariants should be calculated for 
+            this field. An empty sequence indicates that no invariants are valid for this field. 
+            Possible values 
+            are:MAGNITUDEMISESTRESCAPRESSINV3MAX_PRINCIPALMID_PRINCIPALMIN_PRINCIPALMAX_INPLANE_PRINCIPALMIN_INPLANE_PRINCIPALOUTOFPLANE_PRINCIPALThe 
+            default value is an empty sequence. 
+        isEngineeringTensor
+            A Boolean specifying whether the field is an engineering tensor or not. Setting 
+            isEngineeringTensor to true makes a tensor field behave as a strain like quantity where 
+            the off-diagonal components of tensor are halved for invariants computation. This 
+            parameter applies only to tensor field outputs. The default value is OFF. 
+
+        Returns
+        -------
+            A FieldOutput object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
     def __init__(self, field: 'FieldOutput', name: str = '', description: str = ''):
         """This method creates a FieldOutput object from an existing FieldOutput object of the same
         output database.
@@ -66,6 +121,96 @@ class FieldOutput:
         """
         pass
 
+    def __init__(self, *args, **kwargs):
+        pass
+
+    @typing.overload
+    def addData(self, position: SymbolicConstant, instance: OdbInstance, labels: tuple, data: tuple, 
+                sectionPoint: SectionPoint = None, localCoordSystem: tuple = ()):
+        """This method adds data to a FieldOutput object.
+
+        Parameters
+        ----------
+        position
+            A SymbolicConstant specifying the position of the output. Possible values are: 
+            - NODAL, specifying the values calculated at the nodes. 
+            - INTEGRATION_POINT, specifying the values calculated at the integration points. 
+            - ELEMENT_NODAL, specifying the values obtained by extrapolating results calculated at 
+            the integration points. 
+            - CENTROID, specifying the value at the centroid obtained by extrapolating results 
+            calculated at the integration points. 
+            - ELEMENT_FACE_INTEGRATION_POINT, specifying the values calculated at the element face 
+            integration points. 
+            - SURFACE_INTEGRATION_POINT, specifying the values calculated at the surface integration 
+            points. Selecting this value prompts the Visualization module to calculate the sum of 
+            the values at the ELEMENT_FACE_INTEGRATION_POINT position from multiple surfaces. 
+        instance
+            An OdbInstance object specifying the namespace for labels. 
+        labels
+            A sequence of Ints specifying the labels of the nodes or elements where the values in 
+            *data* are located. For better performance, the node or element labels are preferred to 
+            be sorted in ascending order and must be specified in the same order as the values 
+            provided for the *data* argument. 
+        data
+            A sequence of sequences of Floats specifying the data values for the specified 
+            *position*, *instance*, and *labels*. The values must be given in the correct order. 
+            Element nodal data follow the order of nodal connectivity defined in the Abaqus 
+            documentation. Integration point data follow the order defined in the Abaqus 
+            documentation. Section point data for beams and shells follow the convention given in 
+            the Abaqus documentation. For more information, see the Abaqus Elements Guide. These 
+            data create FieldValue objects internally. 
+        sectionPoint
+            A SectionPoint object specifying the location in the section. Although *sectionPoint* is 
+            an optional argument to the addData method, omitting the argument does have consequences 
+            for visualization. If you omit the argument when you are writing field output data for a 
+            shell or a beam, you cannot subsequently select the section point to display when you 
+            are displaying the field output data using the Visualization module. 
+        localCoordSystem
+            The *localCoordSystem* parameter can be specified using either of the following:A 
+            sequence of sequences of Floats specifying the 3 × 3 matrix of direction cosines of the 
+            local coordinate system. This argument is available only for fields with type=TENSOR or 
+            VECTOR.A sequence of matrices of floats specifying the direction cosines of the local 
+            coordinates systems, where the sequence is the same length as *data*. If 
+            *localCoordSystem* is a matrix, a different local coordinate system applies to each data 
+            value.User supplied values of localCoordSystem are transposed before storing in the 
+            database. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            - The addData method throws many exceptions of type odbException. For example, if the 
+            local coordinate system is specified for scalar data: 
+              odbException: Transformation not allowed for scalar data. 
+        """
+        pass
+
+    @typing.overload
+    def addData(self, field: 'FieldOutput'):
+        """This method adds the data from a field created using the getSubset method and
+        mathematical operators to the database. The user must create a field to contain the new
+        data and then use the addData method to assign the data from the fields.
+
+        Parameters
+        ----------
+        field
+            A FieldOutput object specifying the data to add. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            - The addData method throws many exceptions of type odbException. For example, if the 
+            local coordinate system is specified for scalar data: 
+              odbException: Transformation not allowed for scalar data. 
+        """
+        pass
+
+    @typing.overload
     def addData(self, position: SymbolicConstant, set: OdbSet, data: tuple, sectionPoint: SectionPoint = None, 
                 conjugateData: float = None):
         """This method adds data to a FieldOutput object.
@@ -122,6 +267,35 @@ class FieldOutput:
         """
         pass
 
+    def addData(self, *args, **kwargs):
+        pass
+
+    @typing.overload
+    def getScalarField(self, invariant: SymbolicConstant):
+        """This method generates a scalar field containing the extracted component or calculated
+        invariant values. The new field will hold values for the same nodes or elements as the
+        parent field. Abaqus will perform this operation on only the real part of the
+        FieldOutput object. The operation is not performed on the conjugate data (the imaginary
+        portion of a complex result).
+
+        Parameters
+        ----------
+        invariant
+            A SymbolicConstant specifying the invariant. Possible values areMAGNITUDE, MISES, 
+            TRESCA, PRESS, INV3, MAX_PRINCIPAL, MID_PRINCIPAL, MIN_PRINCIPAL, MAX_INPLANE_PRINCIPAL, 
+            MIN_INPLANE_PRINCIPAL, and OUTOFPLANE_PRINCIPAL. 
+
+        Returns
+        -------
+            AFieldOutput object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
     def getScalarField(self, componentLabel: str):
         """This method generates a scalar field containing the extracted component or calculated
         invariant values. The new field will hold values for the same nodes or elements as the
@@ -144,6 +318,181 @@ class FieldOutput:
         """
         pass
 
+    def getScalarField(self, *args, **kwargs):
+        pass
+
+    @typing.overload
+    def getSubset(self, position: SymbolicConstant = None, readOnly: Boolean = OFF):
+        """A FieldOutput object with a subset of the field values.
+
+        Parameters
+        ----------
+        position
+            *position* 
+            A SymbolicConstant specifying the position of the output in the element. Possible values 
+            are: 
+            - NODAL, specifying the values calculated at the nodes. 
+            - INTEGRATION_POINT, specifying the values calculated at the integration points. 
+            - ELEMENT_NODAL, specifying the values obtained by extrapolating results calculated at 
+            the integration points. 
+            - CENTROID, specifying the value at the centroid obtained by extrapolating results 
+            calculated at the integration points. 
+            If the requested field values are not found in the output database at the specified 
+            ELEMENT_NODAL or CENTROID positions, they are extrapolated from the field data at the 
+            INTEGRATION_POINT position for the entire field region. If the field values are found at 
+            the specified positions, only these field values are returned without any extrapolation. 
+            This could potentially be only for a subset of the field region, depending on the output 
+            request. 
+        readOnly
+            A Boolean specifying whether the extrapolated data returned by this call is written to 
+            the output database. The default value is OFF. 
+
+        Returns
+        -------
+            A FieldOutput object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
+    def getSubset(self, region: str = ''):
+        """A FieldOutput object with a subset of the field values.
+
+        Parameters
+        ----------
+        region
+            An OdbSet specifying the region for which to extract values. For better performance, the 
+            node or element labels in the sets are preferred to be sorted in ascending order. 
+
+        Returns
+        -------
+            A FieldOutput object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
+    def getSubset(self, localCoordSystem: tuple = ()):
+        """A FieldOutput object with a subset of the field values.
+
+        Parameters
+        ----------
+        localCoordSystem
+            A sequence of sequences of Floats specifying the 3 × 3 matrix of direction cosines. 
+            Field values associated with the supplied coordinate system will be extracted. 
+
+        Returns
+        -------
+            A FieldOutput object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
+    def getSubset(self, sectionPoint: SectionPoint = None):
+        """A FieldOutput object with a subset of the field values.
+
+        Parameters
+        ----------
+        sectionPoint
+            A SectionPoint object. 
+
+        Returns
+        -------
+            A FieldOutput object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
+    def getSubset(self, location: FieldLocation = None):
+        """A FieldOutput object with a subset of the field values.
+
+        Parameters
+        ----------
+        location
+            A FieldLocation object. 
+
+        Returns
+        -------
+            A FieldOutput object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
+    def getSubset(self, region: str = ''):
+        """A FieldOutput object with a subset of the field values.
+
+        Parameters
+        ----------
+        region
+            An OdbMeshElement specifying the region for which to extract values. 
+
+        Returns
+        -------
+            A FieldOutput object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
+    def getSubset(self, region: str = ''):
+        """A FieldOutput object with a subset of the field values.
+
+        Parameters
+        ----------
+        region
+            An OdbMeshNode specifying the region for which to extract values. 
+
+        Returns
+        -------
+            A FieldOutput object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
+    def getSubset(self, region: str = ''):
+        """A FieldOutput object with a subset of the field values.
+
+        Parameters
+        ----------
+        region
+            An OdbInstance specifying the region for which to extract values. 
+
+        Returns
+        -------
+            A FieldOutput object. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
     def getSubset(self, elementType: str = ''):
         """A FieldOutput object with a subset of the field values.
 
@@ -163,6 +512,86 @@ class FieldOutput:
         """
         pass
 
+    def getSubset(self, *args, **kwargs):
+        pass
+
+    @typing.overload
+    def getTransformedField(self, datumCsys: str, projected22Axis: int = None, projectionTol: str = ''):
+        """This method generates a new vector or tensor field containing the transformed component
+        values of the parent field. The new field will hold values for the same nodes or
+        elements as the parent field. Results will be transformed based on the orientations
+        specified by the input DatumCsys object. Abaqus will perform this operation on only the
+        real part of the FieldOutput object. The operation is not performed on the conjugate
+        data (the imaginary portion of a complex result).
+
+        Parameters
+        ----------
+        datumCsys
+            A valid DatumCsys object designating the coordinate system. Valid systems can be fixed 
+            or positioned with respect to nodes on the model and can be cartesian, cylindrical, or 
+            spherical. 
+        projected22Axis
+            An Int specifying which axis of the coordinate system will be projected as the second 
+            component for local result orientations. Valid values are 1, 2, or 3; the default value 
+            is 2. 
+        projectionTol
+            A Double specifying the minimum allowable angle (radians) between the specified 
+            projection axis and the element normal. The next axis will be used for projection if 
+            this tolerance test fails. 
+
+        Returns
+        -------
+            A FieldOutput object. 
+
+        Exceptions
+        ----------
+            - The getTransformedField method throws an exception if the field contains any assembly 
+            level nodes. 
+              odbException: Cannot apply transformation to field containing assembly level nodes. 
+        """
+        pass
+
+    @typing.overload
+    def getTransformedField(self, datumCsys: str, deformationField: 'FieldOutput' = None, projected22Axis: int = None, 
+                            projectionTol: str = ''):
+        """This method generates a new vector or tensor field containing the transformed component
+        values of the parent field. The new field will hold values for the same nodes or
+        elements as the parent field. Results will be transformed based on the orientations
+        specified by the input DatumCsys object. Abaqus will perform this operation on only the
+        real part of the FieldOutput object. The operation is not performed on the conjugate
+        data (the imaginary portion of a complex result).
+
+        Parameters
+        ----------
+        datumCsys
+            A valid DatumCsys object designating the coordinate system. Valid systems can be fixed 
+            or positioned with respect to nodes on the model and can be cartesian, cylindrical, or 
+            spherical. 
+        deformationField
+            A FieldOutput object specifying the nodal displacement vectors required by moving 
+            coordinate systems to determine instantaneous configurations. 
+        projected22Axis
+            An Int specifying which axis of the coordinate system will be projected as the second 
+            component for local result orientations. Valid values are 1, 2, or 3; the default value 
+            is 2. 
+        projectionTol
+            A Double specifying the minimum allowable angle (radians) between the specified 
+            projection axis and the element normal. The next axis will be used for projection if 
+            this tolerance test fails. 
+
+        Returns
+        -------
+            A FieldOutput object. 
+
+        Exceptions
+        ----------
+            - The getTransformedField method throws an exception if the field contains any assembly 
+            level nodes. 
+              odbException: Cannot apply transformation to field containing assembly level nodes. 
+        """
+        pass
+
+    @typing.overload
     def getTransformedField(self, datumCsys: str, deformationField: 'FieldOutput' = None, 
                             rotationField: 'FieldOutput' = None, projected22Axis: int = None, 
                             projectionTol: str = ''):
@@ -205,6 +634,9 @@ class FieldOutput:
             level nodes. 
               odbException: Cannot apply transformation to field containing assembly level nodes. 
         """
+        pass
+
+    def getTransformedField(self, *args, **kwargs):
         pass
 
     def getConnectorFieldXformedToNodeA(self, deformationField: 'FieldOutput' = None):

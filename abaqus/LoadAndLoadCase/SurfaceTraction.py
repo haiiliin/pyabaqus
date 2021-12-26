@@ -1,7 +1,9 @@
-from ..Region.Region import Region
-from .Load import Load
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .Load import Load
+from ..Region.Region import Region
+
 
 class SurfaceTraction(Load):
 
@@ -219,7 +221,7 @@ class SurfaceTraction(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, magnitude: typing.Union[SymbolicConstant, float] = None, 
+    def setValuesInStep(self, stepName: str, magnitude: typing.Union[SymbolicConstant,float] = None, 
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing SurfaceTraction object in the
         specified step.

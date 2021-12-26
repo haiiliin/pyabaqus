@@ -1,5 +1,6 @@
-from .ConnectorOptions import ConnectorOptions
 from abaqusConstants import *
+from .ConnectorOptions import ConnectorOptions
+
 
 class CDCTerm:
 

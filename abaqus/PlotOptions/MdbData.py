@@ -1,6 +1,7 @@
-from ..UtilityAndView.Repository import Repository
 from .MdbDataInstance import MdbDataInstance
 from .MdbDataStep import MdbDataStep
+from ..UtilityAndView.Repository import Repository
+
 
 class MdbData:
 

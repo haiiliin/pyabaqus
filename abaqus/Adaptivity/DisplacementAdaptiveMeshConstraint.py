@@ -1,6 +1,8 @@
-from ..Region.Region import Region
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from ..Region.Region import Region
+
 
 class DisplacementAdaptiveMeshConstraint:
 
@@ -35,11 +37,13 @@ class DisplacementAdaptiveMeshConstraint:
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region, u1: typing.Union[SymbolicConstant, 
-                 float] = UNSET, u2: typing.Union[SymbolicConstant, float] = UNSET, 
-                 u3: typing.Union[SymbolicConstant, float] = UNSET, ur1: typing.Union[SymbolicConstant, 
-                 float] = UNSET, ur2: typing.Union[SymbolicConstant, float] = UNSET, 
-                 ur3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET, 
+    def __init__(self, name: str, createStepName: str, region: Region, 
+                 u1: typing.Union[SymbolicConstant,float] = UNSET, 
+                 u2: typing.Union[SymbolicConstant,float] = UNSET, 
+                 u3: typing.Union[SymbolicConstant,float] = UNSET, 
+                 ur1: typing.Union[SymbolicConstant,float] = UNSET, 
+                 ur2: typing.Union[SymbolicConstant,float] = UNSET, 
+                 ur3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
                  motionType: SymbolicConstant = INDEPENDENT, localCsys: str = None):
         """This method creates a DisplacementAdaptiveMeshConstraint object.
 
@@ -103,12 +107,13 @@ class DisplacementAdaptiveMeshConstraint:
         """
         pass
 
-    def setValues(self, u1: typing.Union[SymbolicConstant, float] = UNSET, u2: typing.Union[SymbolicConstant, 
-                  float] = UNSET, u3: typing.Union[SymbolicConstant, float] = UNSET, 
-                  ur1: typing.Union[SymbolicConstant, float] = UNSET, ur2: typing.Union[SymbolicConstant, 
-                  float] = UNSET, ur3: typing.Union[SymbolicConstant, float] = UNSET, 
-                  amplitude: str = UNSET, motionType: SymbolicConstant = INDEPENDENT, 
-                  localCsys: str = None):
+    def setValues(self, u1: typing.Union[SymbolicConstant,float] = UNSET, 
+                  u2: typing.Union[SymbolicConstant,float] = UNSET, 
+                  u3: typing.Union[SymbolicConstant,float] = UNSET, 
+                  ur1: typing.Union[SymbolicConstant,float] = UNSET, 
+                  ur2: typing.Union[SymbolicConstant,float] = UNSET, 
+                  ur3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
+                  motionType: SymbolicConstant = INDEPENDENT, localCsys: str = None):
         """This method modifies the data for an existing DisplacementAdaptiveMeshConstraint object
         in the step where it is created.
 
@@ -161,11 +166,12 @@ class DisplacementAdaptiveMeshConstraint:
         """
         pass
 
-    def setValuesInStep(self, stepName: str, u1: typing.Union[SymbolicConstant, float] = None, 
-                        u2: typing.Union[SymbolicConstant, float] = None, u3: typing.Union[SymbolicConstant, 
-                        float] = None, ur1: typing.Union[SymbolicConstant, float] = None, 
-                        ur2: typing.Union[SymbolicConstant, float] = None, ur3: typing.Union[SymbolicConstant, 
-                        float] = None, amplitude: str = ''):
+    def setValuesInStep(self, stepName: str, u1: typing.Union[SymbolicConstant,float] = None, 
+                        u2: typing.Union[SymbolicConstant,float] = None, 
+                        u3: typing.Union[SymbolicConstant,float] = None, 
+                        ur1: typing.Union[SymbolicConstant,float] = None, 
+                        ur2: typing.Union[SymbolicConstant,float] = None, 
+                        ur3: typing.Union[SymbolicConstant,float] = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing
         DisplacementAdaptiveMeshConstraint object in the specified step.
 

@@ -1,4 +1,4 @@
-
+from .RayleighDampingComponentArray import RayleighDampingComponentArray
 
 class RayleighDamping:
 

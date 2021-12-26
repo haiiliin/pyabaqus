@@ -1,4 +1,4 @@
-
+from .CDCTermArray import CDCTermArray
 
 class DerivedComponent:
 

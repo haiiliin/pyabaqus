@@ -1,7 +1,8 @@
+from abaqusConstants import *
 from ..BasicGeometry.Face import Face
 from ..Feature.Feature import Feature as BaseFeature
 from ..Mesh.MeshFace import MeshFace
-from abaqusConstants import *
+
 
 class Feature(BaseFeature):
     """The following commands operate on Feature objects. For more information about the 

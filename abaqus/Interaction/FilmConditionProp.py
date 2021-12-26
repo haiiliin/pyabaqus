@@ -1,5 +1,6 @@
-from .InteractionProperty import InteractionProperty
 from abaqusConstants import *
+from .InteractionProperty import InteractionProperty
+
 
 class FilmConditionProp(InteractionProperty):
 

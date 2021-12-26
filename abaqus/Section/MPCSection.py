@@ -1,5 +1,6 @@
-from .Section import Section
 from abaqusConstants import *
+from .Section import Section
+
 
 class MPCSection(Section):
 

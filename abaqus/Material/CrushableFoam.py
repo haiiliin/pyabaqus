@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .CrushableFoamHardening import CrushableFoamHardening
 from .RateDependent import RateDependent
-from abaqusConstants import *
+
 
 class CrushableFoam:
 

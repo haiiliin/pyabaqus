@@ -1,12 +1,1 @@
-from .ArbitraryProfile import ArbitraryProfile
-from .BoxProfile import BoxProfile
-from .CircularProfile import CircularProfile
-from .GeneralizedProfile import GeneralizedProfile
-from .HexagonalProfile import HexagonalProfile
-from .IProfile import IProfile
-from .LProfile import LProfile
-from .PipeProfile import PipeProfile
-from .Profile import Profile
-from .RectangularProfile import RectangularProfile
-from .TProfile import TProfile
-from .TrapezoidalProfile import TrapezoidalProfile
+

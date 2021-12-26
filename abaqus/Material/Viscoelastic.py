@@ -1,8 +1,9 @@
+from abaqusConstants import *
 from .CombinedTestData import CombinedTestData
 from .ShearTestData import ShearTestData
 from .Trs import Trs
 from .VolumetricTestData import VolumetricTestData
-from abaqusConstants import *
+
 
 class Viscoelastic:
 

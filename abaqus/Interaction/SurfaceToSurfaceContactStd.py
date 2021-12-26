@@ -1,8 +1,10 @@
+import typing
+
+from abaqusConstants import *
+from .Interaction import Interaction
 from ..Datum.DatumAxis import DatumAxis
 from ..Region.Region import Region
-from .Interaction import Interaction
-from abaqusConstants import *
-import typing
+
 
 class SurfaceToSurfaceContactStd(Interaction):
 
@@ -44,10 +46,10 @@ class SurfaceToSurfaceContactStd(Interaction):
                  adjustMethod: SymbolicConstant = NONE, adjustTolerance: float = 0, 
                  adjustSet: Region = None, enforcement: SymbolicConstant = SURFACE_TO_SURFACE, 
                  thickness: Boolean = ON, contactControls: str = '', tied: Boolean = OFF, 
-                 initialClearance: typing.Union[SymbolicConstant, float] = OMIT, 
+                 initialClearance: typing.Union[SymbolicConstant,float] = OMIT, 
                  halfThreadAngle: str = None, pitch: str = None, 
-                 majorBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED, 
-                 meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED, 
+                 majorBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
+                 meanBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
                  datumAxis: DatumAxis = None, useReverseDatumAxis: Boolean = OFF, 
                  clearanceRegion: Region = None, surfaceSmoothing: SymbolicConstant = NONE, 
                  bondingSet: Region = None, handedness: SymbolicConstant = RIGHT, 
@@ -204,10 +206,10 @@ class SurfaceToSurfaceContactStd(Interaction):
                   adjustMethod: SymbolicConstant = NONE, adjustTolerance: float = 0, 
                   adjustSet: Region = None, enforcement: SymbolicConstant = SURFACE_TO_SURFACE, 
                   thickness: Boolean = ON, contactControls: str = '', tied: Boolean = OFF, 
-                  initialClearance: typing.Union[SymbolicConstant, float] = OMIT, 
+                  initialClearance: typing.Union[SymbolicConstant,float] = OMIT, 
                   halfThreadAngle: str = None, pitch: str = None, 
-                  majorBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED, 
-                  meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED, 
+                  majorBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
+                  meanBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
                   datumAxis: DatumAxis = None, useReverseDatumAxis: Boolean = OFF, 
                   clearanceRegion: Region = None, surfaceSmoothing: SymbolicConstant = NONE, 
                   bondingSet: Region = None, handedness: SymbolicConstant = RIGHT, 

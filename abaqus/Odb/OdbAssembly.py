@@ -1,10 +1,17 @@
-from ..Section.Section import Section
-from ..UtilityAndView.Repository import Repository
+from abaqusConstants import *
 from .OdbDatumCsys import OdbDatumCsys
 from .OdbInstance import OdbInstance
+from .OdbMeshElementArray import OdbMeshElementArray
+from .OdbMeshNodeArray import OdbMeshNodeArray
+from .OdbPretensionSectionArray import OdbPretensionSectionArray
+from .OdbRigidBodyArray import OdbRigidBodyArray
 from .OdbSet import OdbSet
 from .SectionCategory import SectionCategory
-from abaqusConstants import *
+from ..Assembly.ConnectorOrientationArray import ConnectorOrientationArray
+from ..Property.SectionAssignmentArray import SectionAssignmentArray
+from ..Section.Section import Section
+from ..UtilityAndView.Repository import Repository
+
 
 class OdbAssembly:
 

@@ -1,7 +1,8 @@
+from abaqusConstants import *
 from .AxisData import AxisData
 from .LineStyle import LineStyle
 from .TextStyle import TextStyle
-from abaqusConstants import *
+
 
 class Axis:
 

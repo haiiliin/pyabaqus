@@ -1,5 +1,6 @@
-from .Constraint import Constraint
 from abaqusConstants import *
+from .Constraint import Constraint
+
 
 class Equation(Constraint):
 

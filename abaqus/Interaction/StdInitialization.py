@@ -1,5 +1,6 @@
-from .ContactInitialization import ContactInitialization
 from abaqusConstants import *
+from .ContactInitialization import ContactInitialization
+
 
 class StdInitialization(ContactInitialization):
 

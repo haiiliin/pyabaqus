@@ -1,5 +1,6 @@
-from ..Region.Region import Region
 from abaqusConstants import *
+from ..Region.Region import Region
+
 
 class BoundaryCondition:
 

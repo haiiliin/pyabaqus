@@ -1,3 +1,4 @@
+from abaqusConstants import *
 from ..Datum.DatumCsys import DatumCsys
 from ..Mesh.MeshEdge import MeshEdge
 from ..Mesh.MeshElement import MeshElement
@@ -5,7 +6,7 @@ from ..Mesh.MeshFace import MeshFace
 from ..Mesh.MeshNode import MeshNode
 from ..Part.Part import Part as BasePart
 from ..Region.Region import Region
-from abaqusConstants import *
+
 
 class Part(BasePart):
     """The following commands operate on Part objects. For more information about the Part 
@@ -293,7 +294,7 @@ class Part(BasePart):
         pass
 
     def generateMeshByOffset(self, region: Region, meshType: str, totalThickness: float, distanceBetweenLayers: float, 
-                             numLayers: int, offsetDirection: str = OUTWARD, initialOffset: float = zero, 
+                             numLayers: int, offsetDirection: str = OUTWARD, initialOffset: float = 0.0, 
                              shareNodes: str = False, deleteBaseElements: Boolean = False, 
                              constantThicknessCorners: Boolean = False, extendElementSets: Boolean = False):
         """This method generates a solid or shell mesh from an orphan mesh surface by generating
@@ -343,25 +344,26 @@ class Part(BasePart):
         """
         pass
 
-    def mergeNodes(self, node1: MeshNode, node2: MeshNode, removeDuplicateElements: Boolean = True, 
+    def mergeNodes(self, nodes: tuple[Node], tolerance: float = None, removeDuplicateElements: Boolean = True, 
                    keepHighLabels: Boolean = False):
-        """Merge two nodes of an orphan mesh part or an Abaqus native mesh. If the nodes belong to
-        an Abaqus native mesh then at least one of the two nodes must have been generated using
-        the bottom-up meshing technique.
+        """Merge the nodes of an orphan mesh part, or nodes that were generated using the bottom-up
+        meshing technique.
 
         Parameters
         ----------
-        node1
-            A MeshNode object specifying the first node to merge. 
-        node2
-            A MeshNode object specifying the second node to merge. 
+        nodes
+            A sequence of Node objects specifying the nodes to merge. 
+        tolerance
+            A Float specifying the maximum distance between nodes that will be merged to a single 
+            node. The location of the new node is the average position of the merged nodes. The 
+            default value is 10–6. 
         removeDuplicateElements
             A Boolean specifying whether elements with the same connectivity after the merge will 
             merged into a single element. The default value is True. 
         keepHighLabels
-            A Boolean specifying which node label will remain after nodes are merged. If True then 
-            the higher node label is kept; when False the lower node label is kept. The default 
-            value is False. This argument applies only to merging of orphan mesh nodes. 
+            A Boolean specifying which node labels will remain after nodes are merged. If True then 
+            the highest node labels are kept; when False the lowest node labels are kept. The 
+            default value is False. This argument applies only to merging of orphan mesh nodes. 
 
         Returns
         -------
@@ -387,6 +389,36 @@ class Part(BasePart):
         elements
             A MeshElementArray, a list of MeshElement objects, a Set, or a list of Set objects 
             containing the elements to be included in the merge operation. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    def mergeNodes(self, node1: MeshNode, node2: MeshNode, removeDuplicateElements: Boolean = True, 
+                   keepHighLabels: Boolean = False):
+        """Merge two nodes of an orphan mesh part or an Abaqus native mesh. If the nodes belong to
+        an Abaqus native mesh then at least one of the two nodes must have been generated using
+        the bottom-up meshing technique.
+
+        Parameters
+        ----------
+        node1
+            A MeshNode object specifying the first node to merge. 
+        node2
+            A MeshNode object specifying the second node to merge. 
+        removeDuplicateElements
+            A Boolean specifying whether elements with the same connectivity after the merge will 
+            merged into a single element. The default value is True. 
+        keepHighLabels
+            A Boolean specifying which node label will remain after nodes are merged. If True then 
+            the higher node label is kept; when False the lower node label is kept. The default 
+            value is False. This argument applies only to merging of orphan mesh nodes. 
 
         Returns
         -------

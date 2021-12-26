@@ -1,5 +1,6 @@
-from ..PlotOptions.DGSuperimposeOptions import DGSuperimposeOptions
 from abaqusConstants import *
+from ..PlotOptions.DGSuperimposeOptions import DGSuperimposeOptions
+
 
 class SuperimposeOptions(DGSuperimposeOptions):
 

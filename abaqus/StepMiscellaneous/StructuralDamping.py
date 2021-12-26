@@ -1,4 +1,4 @@
-
+from .StructuralDampingComponentArray import StructuralDampingComponentArray
 
 class StructuralDamping:
 

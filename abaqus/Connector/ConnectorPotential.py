@@ -1,5 +1,6 @@
-from .DerivedComponent import DerivedComponent
 from abaqusConstants import *
+from .DerivedComponent import DerivedComponent
+
 
 class ConnectorPotential:
 

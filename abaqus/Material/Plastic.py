@@ -1,3 +1,4 @@
+from abaqusConstants import *
 from .AnnealTemperature import AnnealTemperature
 from .CycledPlastic import CycledPlastic
 from .CyclicHardening import CyclicHardening
@@ -5,7 +6,7 @@ from .Ornl import Ornl
 from .Potential import Potential
 from .RateDependent import RateDependent
 from .TensileFailure import TensileFailure
-from abaqusConstants import *
+
 
 class Plastic:
 

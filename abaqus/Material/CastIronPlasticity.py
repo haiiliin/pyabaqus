@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .CastIronCompressionHardening import CastIronCompressionHardening
 from .CastIronTensionHardening import CastIronTensionHardening
-from abaqusConstants import *
+
 
 class CastIronPlasticity:
 

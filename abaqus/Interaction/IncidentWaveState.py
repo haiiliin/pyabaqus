@@ -1,5 +1,6 @@
-from .InteractionState import InteractionState
 from abaqusConstants import *
+from .InteractionState import InteractionState
+
 
 class IncidentWaveState(InteractionState):
 

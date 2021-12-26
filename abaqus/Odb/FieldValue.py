@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .OdbInstance import OdbInstance
 from .SectionPoint import SectionPoint
-from abaqusConstants import *
+
 
 class FieldValue:
 

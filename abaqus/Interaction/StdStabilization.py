@@ -1,5 +1,6 @@
-from .ContactStabilization import ContactStabilization
 from abaqusConstants import *
+from .ContactStabilization import ContactStabilization
+
 
 class StdStabilization(ContactStabilization):
 

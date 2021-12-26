@@ -1,5 +1,7 @@
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+
 
 class FractureCriterion:
 
@@ -69,7 +71,7 @@ class FractureCriterion:
                  mixedModeBehavior: SymbolicConstant = BK, temperatureDependency: Boolean = OFF, 
                  dependencies: int = 0, tolerance: float = 0, 
                  specifyUnstableCrackProp: SymbolicConstant = OFF, 
-                 unstableTolerance: typing.Union[SymbolicConstant, float] = DEFAULT):
+                 unstableTolerance: typing.Union[SymbolicConstant,float] = DEFAULT):
         """This method creates a FractureCriterion object.
 
         Path

@@ -1,6 +1,9 @@
-from .OdbMeshElement import OdbMeshElement
-from .OdbMeshNode import OdbMeshNode
 from abaqusConstants import *
+from .OdbMeshElement import OdbMeshElement
+from .OdbMeshElementArray import OdbMeshElementArray
+from .OdbMeshNode import OdbMeshNode
+from .OdbMeshNodeArray import OdbMeshNodeArray
+
 
 class OdbSet:
 

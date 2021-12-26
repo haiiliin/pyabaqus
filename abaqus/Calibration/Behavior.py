@@ -1,5 +1,6 @@
-from .DataSet import DataSet
 from abaqusConstants import *
+from .DataSet import DataSet
+
 
 class Behavior:
 

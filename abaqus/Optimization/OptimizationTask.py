@@ -1,10 +1,11 @@
-from ..UtilityAndView.Repository import Repository
+from abaqusConstants import *
 from .DesignResponse import DesignResponse
 from .GeometricRestriction import GeometricRestriction
 from .ObjectiveFunction import ObjectiveFunction
 from .OptimizationConstraint import OptimizationConstraint
 from .StopCondition import StopCondition
-from abaqusConstants import *
+from ..UtilityAndView.Repository import Repository
+
 
 class OptimizationTask:
 

@@ -1,6 +1,7 @@
-from ..Part.Part import Part
-from .Leaf import Leaf
 from abaqusConstants import *
+from .Leaf import Leaf
+from ..Part.Part import Part
+
 
 class LeafFromPartElementLabels(Leaf):
 

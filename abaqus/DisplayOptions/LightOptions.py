@@ -1,4 +1,6 @@
 from abaqusConstants import *
+from .LightArray import LightArray
+
 
 class LightOptions:
 

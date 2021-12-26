@@ -1,7 +1,9 @@
-from ..Region.Region import Region
-from .BoundaryCondition import BoundaryCondition
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+from .BoundaryCondition import BoundaryCondition
+from ..Region.Region import Region
+
 
 class AccelerationBC(BoundaryCondition):
 
@@ -46,12 +48,13 @@ class AccelerationBC(BoundaryCondition):
     localCsys: str = None
 
     def __init__(self, name: str, createStepName: str, region: Region, fieldName: str = '', 
-                 a1: typing.Union[SymbolicConstant, float] = UNSET, a2: typing.Union[SymbolicConstant, 
-                 float] = UNSET, a3: typing.Union[SymbolicConstant, float] = UNSET, 
-                 ar1: typing.Union[SymbolicConstant, float] = UNSET, ar2: typing.Union[SymbolicConstant, 
-                 float] = UNSET, ar3: typing.Union[SymbolicConstant, float] = UNSET, 
-                 amplitude: str = UNSET, localCsys: str = None, 
-                 distributionType: SymbolicConstant = UNIFORM):
+                 a1: typing.Union[SymbolicConstant,float] = UNSET, 
+                 a2: typing.Union[SymbolicConstant,float] = UNSET, 
+                 a3: typing.Union[SymbolicConstant,float] = UNSET, 
+                 ar1: typing.Union[SymbolicConstant,float] = UNSET, 
+                 ar2: typing.Union[SymbolicConstant,float] = UNSET, 
+                 ar3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
+                 localCsys: str = None, distributionType: SymbolicConstant = UNIFORM):
         """This method creates an AccelerationBC object.
 
         Path
@@ -117,12 +120,13 @@ class AccelerationBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, fieldName: str = '', a1: typing.Union[SymbolicConstant, float] = UNSET, 
-                  a2: typing.Union[SymbolicConstant, float] = UNSET, a3: typing.Union[SymbolicConstant, 
-                  float] = UNSET, ar1: typing.Union[SymbolicConstant, float] = UNSET, 
-                  ar2: typing.Union[SymbolicConstant, float] = UNSET, ar3: typing.Union[SymbolicConstant, 
-                  float] = UNSET, amplitude: str = UNSET, localCsys: str = None, 
-                  distributionType: SymbolicConstant = UNIFORM):
+    def setValues(self, fieldName: str = '', a1: typing.Union[SymbolicConstant,float] = UNSET, 
+                  a2: typing.Union[SymbolicConstant,float] = UNSET, 
+                  a3: typing.Union[SymbolicConstant,float] = UNSET, 
+                  ar1: typing.Union[SymbolicConstant,float] = UNSET, 
+                  ar2: typing.Union[SymbolicConstant,float] = UNSET, 
+                  ar3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
+                  localCsys: str = None, distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing AccelerationBC object in the step where it
         is created.
 
@@ -178,11 +182,12 @@ class AccelerationBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, a1: typing.Union[SymbolicConstant, float] = None, 
-                        a2: typing.Union[SymbolicConstant, float] = None, a3: typing.Union[SymbolicConstant, 
-                        float] = None, ar1: typing.Union[SymbolicConstant, float] = None, 
-                        ar2: typing.Union[SymbolicConstant, float] = None, ar3: typing.Union[SymbolicConstant, 
-                        float] = None, amplitude: str = ''):
+    def setValuesInStep(self, stepName: str, a1: typing.Union[SymbolicConstant,float] = None, 
+                        a2: typing.Union[SymbolicConstant,float] = None, 
+                        a3: typing.Union[SymbolicConstant,float] = None, 
+                        ar1: typing.Union[SymbolicConstant,float] = None, 
+                        ar2: typing.Union[SymbolicConstant,float] = None, 
+                        ar3: typing.Union[SymbolicConstant,float] = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing AccelerationBC object in the
         specified step.
 

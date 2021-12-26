@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .Ornl import Ornl
 from .Potential import Potential
-from abaqusConstants import *
+
 
 class Creep:
 

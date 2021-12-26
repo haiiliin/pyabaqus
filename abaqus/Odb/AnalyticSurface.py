@@ -1,5 +1,6 @@
-from .OdbSequenceAnalyticSurfaceSegment import OdbSequenceAnalyticSurfaceSegment
 from abaqusConstants import *
+from .OdbSequenceAnalyticSurfaceSegment import OdbSequenceAnalyticSurfaceSegment
+
 
 class AnalyticSurface:
 

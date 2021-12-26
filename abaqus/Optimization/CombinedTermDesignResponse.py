@@ -1,5 +1,6 @@
-from .DesignResponse import DesignResponse
 from abaqusConstants import *
+from .DesignResponse import DesignResponse
+
 
 class CombinedTermDesignResponse(DesignResponse):
 

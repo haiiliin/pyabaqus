@@ -1,5 +1,6 @@
-from .UniaxialTestData import UniaxialTestData
 from abaqusConstants import *
+from .UniaxialTestData import UniaxialTestData
+
 
 class LowDensityFoam:
 

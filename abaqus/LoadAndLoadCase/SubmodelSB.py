@@ -1,6 +1,7 @@
-from ..Region.Region import Region
-from .Load import Load
 from abaqusConstants import *
+from .Load import Load
+from ..Region.Region import Region
+
 
 class SubmodelSB(Load):
 

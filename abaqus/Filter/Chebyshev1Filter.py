@@ -1,5 +1,6 @@
-from .Filter import Filter
 from abaqusConstants import *
+from .Filter import Filter
+
 
 class Chebyshev1Filter(Filter):
 

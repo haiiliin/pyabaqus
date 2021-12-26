@@ -1,5 +1,5 @@
-from ..Odb.Odb import Odb
 from abaqusConstants import *
+from ..Odb.Odb import Odb
 
 """This command writes a free body output report to a file. 
 

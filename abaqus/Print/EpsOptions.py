@@ -1,5 +1,7 @@
-from abaqusConstants import *
 import typing
+
+from abaqusConstants import *
+
 
 class EpsOptions:
 
@@ -19,7 +21,7 @@ class EpsOptions:
 
     """
 
-    def setValues(self, imageSize: typing.Union[SymbolicConstant, float] = SIZE_ON_SCREEN, 
+    def setValues(self, imageSize: typing.Union[SymbolicConstant,float] = SIZE_ON_SCREEN, 
                   units: SymbolicConstant = INCHES, resolution: SymbolicConstant = DPI_150, 
                   fontType: SymbolicConstant = PS_IF_AVAILABLE, imageFormat: SymbolicConstant = VECTOR, 
                   shadingQuality: SymbolicConstant = MEDIUM):

@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .FailStrain import FailStrain
 from .FailStress import FailStress
-from abaqusConstants import *
+
 
 class Elastic:
 

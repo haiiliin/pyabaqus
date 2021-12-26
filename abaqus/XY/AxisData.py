@@ -1,5 +1,7 @@
-from .QuantityType import QuantityType
 from abaqusConstants import *
+from .QuantityType import QuantityType
+from .XYCurveArray import XYCurveArray
+
 
 class AxisData:
 

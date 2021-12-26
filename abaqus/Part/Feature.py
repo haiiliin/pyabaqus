@@ -1,3 +1,4 @@
+from abaqusConstants import *
 from ..BasicGeometry.Cell import Cell
 from ..BasicGeometry.Edge import Edge
 from ..BasicGeometry.Face import Face
@@ -5,7 +6,7 @@ from ..BasicGeometry.Vertex import Vertex
 from ..Feature.Feature import Feature as BaseFeature
 from ..Region.Region import Region
 from ..Sketcher.ConstrainedSketch import ConstrainedSketch
-from abaqusConstants import *
+
 
 class Feature(BaseFeature):
     """The following commands operate on Feature objects. For more information about the 

@@ -1,11 +1,12 @@
-from ..UtilityAndView.Repository import Repository
+from abaqusConstants import *
 from .DesignResponse import DesignResponse
 from .GeometricRestriction import GeometricRestriction
 from .ObjectiveFunction import ObjectiveFunction
 from .OptimizationConstraint import OptimizationConstraint
 from .OptimizationTask import OptimizationTask
 from .StopCondition import StopCondition
-from abaqusConstants import *
+from ..UtilityAndView.Repository import Repository
+
 
 class ShapeTask(OptimizationTask):
 

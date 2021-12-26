@@ -1,6 +1,7 @@
-from ..Assembly.PartInstance import PartInstance
-from .Leaf import Leaf
 from abaqusConstants import *
+from .Leaf import Leaf
+from ..Assembly.PartInstance import PartInstance
+
 
 class LeafFromInstance(Leaf):
 

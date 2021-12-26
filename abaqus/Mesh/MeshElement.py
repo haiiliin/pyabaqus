@@ -1,5 +1,6 @@
-from .MeshNode import MeshNode
 from abaqusConstants import *
+from .MeshNode import MeshNode
+
 
 class MeshElement:
 

@@ -1,5 +1,6 @@
-from .SectionCategory import SectionCategory
 from abaqusConstants import *
+from .SectionCategory import SectionCategory
+
 
 class OdbMeshElement:
 

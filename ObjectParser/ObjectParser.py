@@ -103,12 +103,10 @@ class SubSection(SectionBaseDocument):
     def __init__(self, subHeader: str = ''):
         super(SubSection, self).__init__()
         self.subHeader = subHeader
-        self.subSubSections: dict[str, SubSubSection] = {}
+        self.subSubSections: list[SubSubSection] = []
 
-    def addSubSubSection(self, subSubSection: SubSubSection, subSubHeader: str = None):
-        if subSubHeader is None:
-            subSubHeader = subSubSection.subSubHeader
-        self.subSubSections[subSubHeader] = subSubSection
+    def addSubSubSection(self, subSubSection: SubSubSection):
+        self.subSubSections.append(subSubSection)
 
     def setSubHeader(self, subHeader: str):
         self.subHeader = subHeader
@@ -124,8 +122,8 @@ class SubSection(SectionBaseDocument):
     def toDict(self) -> dict:
         superDict = super(SubSection, self).toDict()
         superDict.update({'subHeader': self.subHeader,
-                          'subSubSections': {subSubHeader: subSubSection.toDict()
-                                             for subSubHeader, subSubSection in self.subSubSections.items()}})
+                          'subSubSections': {subSubSection.subSubHeader: subSubSection.toDict()
+                                             for subSubSection in self.subSubSections}})
         return superDict
 
 
@@ -134,12 +132,11 @@ class Section(SectionBaseDocument):
     def __init__(self, header: str = ''):
         super(Section, self).__init__()
         self.header = header
-        self.subSections: dict[str, SubSection] = {}
+        # self.subSections: dict[str, SubSection] = {}
+        self.subSections: list[SubSection] = []
 
-    def addSubSection(self, subSection: SubSection, subHeader: str = None):
-        if subHeader is None:
-            subHeader = subSection.subHeader
-        self.subSections[subHeader] = subSection
+    def addSubSection(self, subSection: SubSection):
+        self.subSections.append(subSection)
 
     def setHeader(self, header: str):
         self.header = header
@@ -155,8 +152,8 @@ class Section(SectionBaseDocument):
     def toDict(self) -> dict:
         superDict = super(Section, self).toDict()
         superDict.update({'header': self.header,
-                          'subSections': {subHeader: subSection.toDict()
-                                          for subHeader, subSection in self.subSections.items()}})
+                          'subSections': {subSection.subHeader: subSection.toDict()
+                                          for subSection in self.subSections}})
         return superDict
 
 
@@ -327,7 +324,7 @@ class ObjectParser:
 
         return self
 
-    def toAbaqusObject(self) -> AbaqusObject:
+    def toAbaqusObject(self, searchParentDir: str = '') -> AbaqusObject:
         obj = AbaqusObject()
         if self.document.isEmpty():
             self.parse()
@@ -344,10 +341,17 @@ class ObjectParser:
             obj.baseDerived = True
             obj.parent = obj.name
             obj.userDefinedTypes.append(obj.name)
+        parentFilePath = Guess.findParentFilePath(obj.parent, searchDir=searchParentDir)
+        if not parentFilePath == '':
+            parentObj = ObjectParser(filePath=parentFilePath).parse().toAbaqusObject()
+            methods = parentObj.findMethodsByName('__init__')
+            if len(methods) > 0:
+                obj.parentArgTypeHints = methods[0].argStringsSplitLists(typeHint=False, objectName=obj.name)
         if obj.parent not in obj.userDefinedTypes and not obj.parent == '':
             obj.derived = True
             obj.userDefinedTypes.append(obj.parent)
-        for subHeader, subSection in self.document.sections[title].subSections.items():
+        for subSection in self.document.sections[title].subSections:
+            subHeader = subSection.subHeader
             if 'Access' in subHeader:
                 accesses = []
                 wordWrapped = False
@@ -386,7 +390,8 @@ class ObjectParser:
                 methodName = '__init__' if obj.name == methodName else methodName
                 method = Method(methodName)
                 method.docs = subSection.lines
-                for subSubHeader, subSubSection in subSection.subSubSections.items():
+                for subSubSection in subSection.subSubSections:
+                    subSubHeader = subSubSection.subSubHeader
                     if 'Path' in subSubHeader:
                         method.paths = subSubSection.lines
                     elif 'Required arguments' in subSubHeader or 'Optional arguments' in subSubHeader:
@@ -398,7 +403,7 @@ class ObjectParser:
                                    simplifiedLines)) > 0:
                                 excludedStrings = re.findall('except.+ argument', '\n'.join(subSubSection.lines))
                                 if len(excludedStrings) > 0:
-                                    for arg in obj.methods['__init__'].args:
+                                    for arg in obj.findMethodsByName('__init__')[0].args:
                                         if arg.required or arg.name in excludedStrings[0]:
                                             continue
                                         method.addOptionalArgument(arg.name, arg.argType, arg.default, arg.docs)
@@ -407,6 +412,8 @@ class ObjectParser:
                         for label, itemize in subSubSection.itemizes.items():
                             argDocs = itemize.lines
                             argType, default, userDefinedType = Guess.guessType(''.join(argDocs))
+                            if argType == obj.name:
+                                argType = "'{}'".format(argType)
                             if userDefinedType is not None and userDefinedType not in obj.userDefinedTypes:
                                 for Type in userDefinedType.split():
                                     if Type not in obj.userDefinedTypes and not Type == '' and not Type == obj.name:
@@ -425,6 +432,6 @@ class ObjectParser:
                         method.returnDocs = subSubSection.lines
                     elif 'Exceptions' in subSubHeader:
                         method.exceptions = subSubSection.lines
-                obj.methods[method.name] = method
+                obj.methods.append(method)
 
         return obj

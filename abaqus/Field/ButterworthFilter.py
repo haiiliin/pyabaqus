@@ -1,5 +1,6 @@
-from ..Filter.Filter import Filter
 from abaqusConstants import *
+from ..Filter.Filter import Filter
+
 
 class ButterworthFilter(Filter):
 

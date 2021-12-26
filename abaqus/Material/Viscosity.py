@@ -1,5 +1,6 @@
-from .Trs import Trs
 from abaqusConstants import *
+from .Trs import Trs
+
 
 class Viscosity:
 

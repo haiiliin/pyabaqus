@@ -1,6 +1,7 @@
+from abaqusConstants import *
 from .Section import Section
 from .TransverseShearBeam import TransverseShearBeam
-from abaqusConstants import *
+
 
 class BeamSection(Section):
 

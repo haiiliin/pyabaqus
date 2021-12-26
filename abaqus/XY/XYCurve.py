@@ -1,7 +1,8 @@
+from abaqusConstants import *
 from .LineStyle import LineStyle
 from .SymbolStyle import SymbolStyle
 from .XYData import XYData
-from abaqusConstants import *
+
 
 class XYCurve:
 

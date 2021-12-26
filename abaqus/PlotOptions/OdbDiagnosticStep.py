@@ -1,6 +1,8 @@
-from ..UtilityAndView.Repository import Repository
-from .OdbDiagnosticIncrement import OdbDiagnosticIncrement
 from abaqusConstants import *
+from .OdbContactDiagnostics import OdbContactDiagnostics
+from .OdbDiagnosticIncrement import OdbDiagnosticIncrement
+from ..UtilityAndView.Repository import Repository
+
 
 class OdbDiagnosticStep:
 
@@ -26,8 +28,8 @@ class OdbDiagnosticStep:
     # read-only. 
     characteristicElementLength: str = ''
 
-    # A repository of OdbContactDiagnostic objects. 
-    contactDiagnostics: Repository[str, OdbContactDiagnostic] = None
+    # A repository of OdbContactDiagnostics objects. 
+    contactDiagnostics: Repository[str, OdbContactDiagnostics] = None
 
     # A sequence of string specifying the explicit increment status. This attribute is 
     # read-only. 

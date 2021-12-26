@@ -1,9 +1,12 @@
+import typing
+
+from abaqusConstants import *
 from ..Assembly.Assembly import Assembly as BaseAssembly
 from ..Datum.DatumCsys import DatumCsys
 from ..Mesh.MeshElement import MeshElement
 from ..Mesh.MeshNode import MeshNode
 from ..Region.Region import Region
-from abaqusConstants import *
+
 
 class Assembly(BaseAssembly):
     """The following commands operate on Assembly objects. For more information about the 
@@ -158,6 +161,35 @@ class Assembly(BaseAssembly):
         """
         pass
 
+    @typing.overload
+    def mergeNodes(self, nodes: tuple[MeshNode], tolerance: float = None, 
+                   removeDuplicateElements: Boolean = True):
+        """Merge the nodes of a part instance. The nodes must have been generated using the
+        bottom-up meshing technique.
+
+        Parameters
+        ----------
+        nodes
+            A sequence of MeshNode objects specifying the nodes to merge. 
+        tolerance
+            A Float specifying the maximum distance between nodes that will be merged to a single 
+            node. The location of the new node is the average position of the merged nodes. The 
+            default value is 10–6. 
+        removeDuplicateElements
+            A Boolean specifying whether elements with the same connectivity after the merge will 
+            merged into a single element. The default value is True. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
     def mergeNodes(self, node1: MeshNode, node2: MeshNode, removeDuplicateElements: Boolean = True):
         """Merge two nodes of a part instance. At least one of the two nodes must have been
         generated using the bottom-up meshing technique.
@@ -180,6 +212,9 @@ class Assembly(BaseAssembly):
         ----------
             None. 
         """
+        pass
+
+    def mergeNodes(self, *args, **kwargs):
         pass
 
     def splitElement(self, elements: tuple):
@@ -241,7 +276,7 @@ class Assembly(BaseAssembly):
         pass
 
     def generateMeshByOffset(self, region: Region, meshType: str, totalThickness: float, distanceBetweenLayers: float, 
-                             numLayers: int, offsetDirection: str = OUTWARD, initialOffset: float = zero, 
+                             numLayers: int, offsetDirection: str = OUTWARD, initialOffset: float = 0.0, 
                              shareNodes: str = False, deleteBaseElements: Boolean = False, 
                              constantThicknessCorners: Boolean = False, extendElementSets: Boolean = False):
         """This method generates a solid or shell mesh from an orphan mesh surface by generating

@@ -1,6 +1,7 @@
-from ..Region.Region import Region
-from .BoundaryCondition import BoundaryCondition
 from abaqusConstants import *
+from .BoundaryCondition import BoundaryCondition
+from ..Region.Region import Region
+
 
 class RetainedNodalDofsBC(BoundaryCondition):
 

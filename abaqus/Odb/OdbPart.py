@@ -1,10 +1,20 @@
-from ..UtilityAndView.Repository import Repository
+import typing
+
+from abaqusConstants import *
 from .AnalyticSurface import AnalyticSurface
 from .AnalyticSurfaceSegment import AnalyticSurfaceSegment
+from .BeamOrientationArray import BeamOrientationArray
 from .OdbDatumCsys import OdbDatumCsys
+from .OdbMeshElementArray import OdbMeshElementArray
+from .OdbMeshNodeArray import OdbMeshNodeArray
+from .OdbRigidBodyArray import OdbRigidBodyArray
 from .OdbSet import OdbSet
+from .RebarOrientationArray import RebarOrientationArray
 from .SectionCategory import SectionCategory
-from abaqusConstants import *
+from ..Property.MaterialOrientationArray import MaterialOrientationArray
+from ..Property.SectionAssignmentArray import SectionAssignmentArray
+from ..UtilityAndView.Repository import Repository
+
 
 class OdbPart:
 
@@ -86,6 +96,38 @@ class OdbPart:
         """
         pass
 
+    @typing.overload
+    def addElements(self, labels: tuple, connectivity: tuple, type: str, elementSetName: str = '', 
+                    sectionCategory: SectionCategory = None):
+        """This method adds elements to an OdbPart object using element labels and nodal
+        connectivity.
+        Warning:Adding elements not in ascending order of their labels may cause Abaqus/Viewer
+        to plot contours incorrectly.
+
+        Parameters
+        ----------
+        labels
+            A sequence of Ints specifying the element labels. 
+        connectivity
+            A sequence of sequences of Ints specifying the nodal connectivity. 
+        type
+            A String specifying the element type. 
+        elementSetName
+            A String specifying a name for this element set. The default value is the empty string. 
+        sectionCategory
+            A SectionCategory object for this element set. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
     def addElements(self, elementData: tuple, type: str, elementSetName: str = None, 
                     sectionCategory: SectionCategory = None):
         """This method adds elements to an OdbPart object using a sequence of element labels and
@@ -115,6 +157,35 @@ class OdbPart:
         """
         pass
 
+    def addElements(self, *args, **kwargs):
+        pass
+
+    @typing.overload
+    def addNodes(self, labels: tuple, coordinates: tuple, nodeSetName: str = None):
+        """This method adds nodes to an OdbPart object using node labels and coordinates.
+        Warning:Adding nodes not in ascending order of their labels may cause Abaqus/Viewer to
+        plot contours incorrectly.
+
+        Parameters
+        ----------
+        labels
+            A sequence of Ints specifying the node labels. 
+        coordinates
+            A sequence of sequences of Floats specifying the nodal coordinates. 
+        nodeSetName
+            A String specifying a name for this node set. The default value is None. 
+
+        Returns
+        -------
+            None. 
+
+        Exceptions
+        ----------
+            None. 
+        """
+        pass
+
+    @typing.overload
     def addNodes(self, nodeData: tuple, nodeSetName: str = None):
         """This method adds nodes to an OdbPart object using a sequence of node labels and
         coordinates.
@@ -137,6 +208,9 @@ class OdbPart:
         ----------
             None. 
         """
+        pass
+
+    def addNodes(self, *args, **kwargs):
         pass
 
     def assignBeamOrientation(self, region: str, method: SymbolicConstant, vector: tuple):

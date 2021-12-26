@@ -1,4 +1,5 @@
 from ..Region.Region import Region
+from ..Region.RegionArray import RegionArray
 from .Fastener import Fastener
 from abaqusConstants import *
 import typing
@@ -31,8 +32,8 @@ class PointFastener(Fastener):
     def __init__(self, name: str, region: Region, physicalRadius: float, directionVector: tuple = None, 
                  targetSurfaces: RegionArray = MODEL, ur1: Boolean = ON, ur2: Boolean = ON, 
                  ur3: Boolean = ON, attachmentMethod: SymbolicConstant = FACETOFACE, 
-                 influenceRadius: typing.Union[SymbolicConstant, float] = DEFAULT, 
-                 searchRadius: typing.Union[SymbolicConstant, float] = DEFAULT, 
+                 influenceRadius: typing.Union[SymbolicConstant,float] = DEFAULT, 
+                 searchRadius: typing.Union[SymbolicConstant,float] = DEFAULT, 
                  maximumLayers: SymbolicConstant = ALL, coupling: SymbolicConstant = CONTINUUM, 
                  weightingMethod: SymbolicConstant = UNIFORM, additionalMass: float = 0, 
                  adjustOrientation: Boolean = ON, localCsys: int = None, 
@@ -165,8 +166,8 @@ class PointFastener(Fastener):
 
     def setValues(self, directionVector: tuple = None, targetSurfaces: RegionArray = MODEL, ur1: Boolean = ON, 
                   ur2: Boolean = ON, ur3: Boolean = ON, attachmentMethod: SymbolicConstant = FACETOFACE, 
-                  influenceRadius: typing.Union[SymbolicConstant, float] = DEFAULT, 
-                  searchRadius: typing.Union[SymbolicConstant, float] = DEFAULT, 
+                  influenceRadius: typing.Union[SymbolicConstant,float] = DEFAULT, 
+                  searchRadius: typing.Union[SymbolicConstant,float] = DEFAULT, 
                   maximumLayers: SymbolicConstant = ALL, coupling: SymbolicConstant = CONTINUUM, 
                   weightingMethod: SymbolicConstant = UNIFORM, additionalMass: float = 0, 
                   adjustOrientation: Boolean = ON, localCsys: int = None, 
