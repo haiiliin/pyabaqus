@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class ConcentratedForce(Load):
-
-    """The ConcentratedForce object defines a concentrated force. 
+    """The ConcentratedForce object defines a concentrated force.
     The ConcentratedForce object is derived from the Load object. 
 
     Access
@@ -49,9 +48,9 @@ class ConcentratedForce(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, 
-                 distributionType: SymbolicConstant = UNIFORM, field: str = '', cf1: float = None, 
-                 cf2: float = None, cf3: float = None, amplitude: str = UNSET, follower: Boolean = OFF, 
+    def __init__(self, name: str, createStepName: str, region: Region,
+                 distributionType: SymbolicConstant = UNIFORM, field: str = '', cf1: float = None,
+                 cf2: float = None, cf3: float = None, amplitude: str = UNSET, follower: Boolean = OFF,
                  localCsys: int = None):
         """This method creates a ConcentratedForce object.
 
@@ -107,8 +106,8 @@ class ConcentratedForce(Load):
         super().__init__()
         pass
 
-    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', cf1: float = None, 
-                  cf2: float = None, cf3: float = None, amplitude: str = UNSET, follower: Boolean = OFF, 
+    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', cf1: float = None,
+                  cf2: float = None, cf3: float = None, amplitude: str = UNSET, follower: Boolean = OFF,
                   localCsys: int = None):
         """This method modifies the data for an existing ConcentratedForce object in the step where
         it is created.
@@ -154,10 +153,10 @@ class ConcentratedForce(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        cf1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        cf2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        cf3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+    def setValuesInStep(self, stepName: str,
+                        cf1: typing.Union[SymbolicConstant, float] = None,
+                        cf2: typing.Union[SymbolicConstant, float] = None,
+                        cf3: typing.Union[SymbolicConstant, float] = None,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ConcentratedForce object in
         the specified step.
@@ -194,4 +193,3 @@ class ConcentratedForce(Load):
             None. 
         """
         pass
-

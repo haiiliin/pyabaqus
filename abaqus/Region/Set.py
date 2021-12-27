@@ -25,17 +25,15 @@ class Set:
     vertices/edges/faces/celss/elements/nodes respectively for each part instance contained 
     in the set. For example: 
     assembly=mdb.models['Transmission'].rootAssembly 
-        clutchElements=assembly.instances['Clutch'].elements  
-        clutchSet=clutchElements[16:18]+clutchElements[78:80]  
-        housingElements=assembly.instances['Housing'].elements  
-        housingSet=housingElements[45:48]  
-        transmissionSet=assembly.Set(name='TransmissionSet', \ 
-                                     elements=(clutchSet, housingSet)) 
-        len(transmissionSet.elements)=7  
+    clutchElements=assembly.instances['Clutch'].elements
+    clutchSet=clutchElements[16:18]+clutchElements[78:80]
+    housingElements=assembly.instances['Housing'].elements
+    housingSet=housingElements[45:48]
+    transmissionSet=assembly.Set(name='TransmissionSet', elements=(clutchSet, housingSet))
+    len(transmissionSet.elements)=7
         
     transmissionSet.elements[0]=mdb.models['Transmission'].rootAssembly.instances['Clutch-1'].elements[16] 
-     
-        
+
     transmissionSet.elements[6]=mdb.models['Transmission'].rootAssembly.instances['housing-'].elements[47] 
 
     Access

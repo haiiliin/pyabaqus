@@ -137,9 +137,9 @@ class ConnectorMoment(Load):
         pass
 
     def setValuesInStep(self, stepName: str, 
-                        m1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        m2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        m3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        m1: typing.Union[SymbolicConstant,float] = None, 
+                        m2: typing.Union[SymbolicConstant,float] = None, 
+                        m3: typing.Union[SymbolicConstant,float] = None, 
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ConnectorMoment object in the
         specified step.

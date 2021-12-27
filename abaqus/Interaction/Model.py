@@ -1,5 +1,5 @@
 from abaqusConstants import *
-from ..Model.Model import Model as BaseModel
+from ..Model.BaseModel import BaseModel
 
 
 class Model(BaseModel):

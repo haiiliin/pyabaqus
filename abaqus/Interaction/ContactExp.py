@@ -15,8 +15,7 @@ from .SurfaceThicknessAssignment import SurfaceThicknessAssignment
 
 
 class ContactExp(Interaction):
-
-    """The ContactExp object defines the contact domain and associated properties during 
+    """The ContactExp object defines the contact domain and associated properties during
     contact in an Abaqus/Explicit analysis. 
     The ContactExp object is derived from the Interaction object. 
 
@@ -75,18 +74,18 @@ class ContactExp(Interaction):
     polarityAssignments: PolarityAssignments = PolarityAssignments()
 
     @typing.overload
-    def __init__(self, name: str, createStepName: str, useAllstar: Boolean = OFF, 
-                 globalSmoothing: Boolean = ON, includedPairs: RegionPairs = RegionPairs(), 
-                 excludedPairs: RegionPairs = RegionPairs(), 
-                 contactPropertyAssignments: ContactPropertyAssignment = ContactPropertyAssignment(), 
-                 surfaceThicknessAssignments: SurfaceThicknessAssignment = SurfaceThicknessAssignment(), 
-                 surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(), 
-                 surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(), 
-                 smoothingAssignments: SmoothingAssignment = SmoothingAssignment(), 
-                 surfaceCrushTriggerAssignments: SurfaceCrushTriggerAssignment = SurfaceCrushTriggerAssignment(), 
-                 surfaceFrictionAssignments: SurfaceFrictionAssignment = SurfaceFrictionAssignment(), 
-                 mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(), 
-                 PolarityAssignments: PolarityAssignments = PolarityAssignments()):
+    def __init__(self, name: str, createStepName: str, useAllstar: Boolean = OFF,
+                 globalSmoothing: Boolean = ON, includedPairs: RegionPairs = RegionPairs(),
+                 excludedPairs: RegionPairs = RegionPairs(),
+                 contactPropertyAssignments: ContactPropertyAssignment = ContactPropertyAssignment(),
+                 surfaceThicknessAssignments: SurfaceThicknessAssignment = SurfaceThicknessAssignment(),
+                 surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
+                 surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
+                 smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
+                 surfaceCrushTriggerAssignments: SurfaceCrushTriggerAssignment = SurfaceCrushTriggerAssignment(),
+                 surfaceFrictionAssignments: SurfaceFrictionAssignment = SurfaceFrictionAssignment(),
+                 mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
+                 polarityAssignments: PolarityAssignments = PolarityAssignments()):
         """This method creates a ContactExp object.
 
         Path
@@ -134,7 +133,7 @@ class ContactExp(Interaction):
         mainSecondaryAssignments
             A MainSecondaryAssignment object specifying the main-secondary assignments in the 
             contact domain. 
-        PolarityAssignments
+        polarityAssignments
             A PolarityAssignments object specifying the polarity assignments in the contact domain. 
 
         Returns
@@ -149,17 +148,17 @@ class ContactExp(Interaction):
         pass
 
     @typing.overload
-    def __init__(self, name: str, createStepName: str, globalSmoothing: Boolean = ON, 
-                 surfaceCrushTriggerAssignments: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                 surfaceFrictionAssignments: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                 useAllstar: Boolean = OFF, includedPairs: SymbolicConstant = None, 
-                 excludedPairs: SymbolicConstant = None, 
-                 contactPropertyAssignments: SymbolicConstant = None, 
-                 surfaceThicknessAssignments: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                 surfaceOffsetAssignments: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                 surfaceFeatureAssignments: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                 smoothingAssignments: SymbolicConstant = None, 
-                 mainSecondaryAssignments: SymbolicConstant = None, 
+    def __init__(self, name: str, createStepName: str, globalSmoothing: Boolean = ON,
+                 surfaceCrushTriggerAssignments: typing.Union[SymbolicConstant, float] = TRIGGER,
+                 surfaceFrictionAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
+                 useAllstar: Boolean = OFF, includedPairs: SymbolicConstant = None,
+                 excludedPairs: SymbolicConstant = None,
+                 contactPropertyAssignments: SymbolicConstant = None,
+                 surfaceThicknessAssignments: typing.Union[SymbolicConstant, float] = ORIGINAL,
+                 surfaceOffsetAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
+                 surfaceFeatureAssignments: typing.Union[SymbolicConstant, float] = PERIMETER,
+                 smoothingAssignments: SymbolicConstant = None,
+                 mainSecondaryAssignments: SymbolicConstant = None,
                  polarityAssignments: SymbolicConstant = None):
         """This method creates a ContactExp object.
 
@@ -275,4 +274,3 @@ class ContactExp(Interaction):
 
     def __init__(self, *args, **kwargs):
         pass
-

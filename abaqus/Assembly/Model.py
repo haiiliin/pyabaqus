@@ -1,6 +1,11 @@
 from abaqusConstants import *
 from .PartInstance import PartInstance
-from ..Model.Model import Model as BaseModel
+# from ..Model.Model import Model as BaseModel
+
+
+# prevent circular import
+class BaseModel:
+    pass
 
 
 class Model(BaseModel):

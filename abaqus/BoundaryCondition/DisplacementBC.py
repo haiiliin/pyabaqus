@@ -219,12 +219,12 @@ class DisplacementBC(BoundaryCondition):
         pass
 
     def setValuesInStep(self, stepName: str, 
-                        u1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        u2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        u3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        ur1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        ur2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        ur3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        u1: typing.Union[SymbolicConstant,float] = SET, 
+                        u2: typing.Union[SymbolicConstant,float] = SET, 
+                        u3: typing.Union[SymbolicConstant,float] = SET, 
+                        ur1: typing.Union[SymbolicConstant,float] = SET, 
+                        ur2: typing.Union[SymbolicConstant,float] = SET, 
+                        ur3: typing.Union[SymbolicConstant,float] = SET, 
                         amplitude: str = '', buckleCase: SymbolicConstant = NOT_APPLICABLE):
         """This method modifies the propagating data for an existing DisplacementBC object in the
         specified step.

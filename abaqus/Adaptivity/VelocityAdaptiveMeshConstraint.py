@@ -171,12 +171,12 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
         pass
 
     def setValuesInStep(self, stepName: str, 
-                        v1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        v2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        v3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        vr1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        vr2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        vr3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        v1: typing.Union[SymbolicConstant,float] = None, 
+                        v2: typing.Union[SymbolicConstant,float] = None, 
+                        v3: typing.Union[SymbolicConstant,float] = None, 
+                        vr1: typing.Union[SymbolicConstant,float] = None, 
+                        vr2: typing.Union[SymbolicConstant,float] = None, 
+                        vr3: typing.Union[SymbolicConstant,float] = None, 
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing VelocityAdaptiveMeshConstraint
         object in the specified step.

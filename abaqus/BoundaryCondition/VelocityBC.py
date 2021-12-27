@@ -183,12 +183,12 @@ class VelocityBC(BoundaryCondition):
         pass
 
     def setValuesInStep(self, stepName: str, 
-                        v1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        v2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        v3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        vr1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        vr2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        vr3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        v1: typing.Union[SymbolicConstant,float] = SET, 
+                        v2: typing.Union[SymbolicConstant,float] = SET, 
+                        v3: typing.Union[SymbolicConstant,float] = SET, 
+                        vr1: typing.Union[SymbolicConstant,float] = SET, 
+                        vr2: typing.Union[SymbolicConstant,float] = SET, 
+                        vr3: typing.Union[SymbolicConstant,float] = SET, 
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing VelocityBC object in the
         specified step.

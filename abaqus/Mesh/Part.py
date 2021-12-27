@@ -10,7 +10,7 @@ from ..BasicGeometry.Cell import Cell
 from ..BasicGeometry.Edge import Edge
 from ..BasicGeometry.Face import Face
 from ..BasicGeometry.IgnoredVertex import IgnoredVertex
-from ..Part.Part import Part as BasePart
+from ..Part.BasePart import BasePart
 
 
 class Part(BasePart):

@@ -124,17 +124,6 @@ class Method:
                 text += indent * ' ' + '    super().__init__()\n'
             else:
                 text += indent * ' ' + '    super().__init__()\n'
-                # if len(self.args) == 0:
-                #     text += indent * ' ' + '    super().__init__()\n'
-                # elif len(argStringsTypeHints) == 1:
-                #     text += indent * ' ' + '    super().__init__({})\n'.format(argStringsTypeHints[0])
-                # else:
-                #     text += indent * ' ' + '    super().__init__({}\n'.format(argStringsTypeHints[0])
-                #     for i in range(1, len(argStringsTypeHints) - 1):
-                #         text += indent * ' ' + '             ' + ' ' * len(self.name) + '{}\n'.format(
-                #             argStringsTypeHints[i])
-                #     text += indent * ' ' + '             ' + ' ' * len(self.name) + '{})\n'.format(
-                #         argStringsTypeHints[-1])
         text += indent * ' ' + '    pass\n\n'
         return text
 

@@ -2337,6 +2337,7 @@ TRANSVERSE_SHEAR_FORCE_CONSTRAINT = SymbolicConstant('TRANSVERSE_SHEAR_FORCE_CON
 TRAPEZOID = SymbolicConstant('TRAPEZOID')
 TRESCA = SymbolicConstant('TRESCA')
 TRI = SymbolicConstant('TRI')
+TRIGGER = SymbolicConstant('TRIGGER')
 TRI3 = SymbolicConstant('TRI3')
 TRI6 = SymbolicConstant('TRI6')
 TRIANGLES = SymbolicConstant('TRIANGLES')

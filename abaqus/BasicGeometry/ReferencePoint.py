@@ -1,3 +1,9 @@
+import typing
+
+from abaqus.BasicGeometry.InterestingPoint import InterestingPoint
+from abaqus.BasicGeometry.Vertex import Vertex
+from abaqus.Datum.Datum import Datum
+from abaqus.Mesh.MeshNode import MeshNode
 
 
 class ReferencePoint:
@@ -33,4 +39,29 @@ class ReferencePoint:
 
     """
 
-    pass
+    def __init__(self, point: typing.Union[tuple, Vertex, InterestingPoint, MeshNode, Datum], instanceName: str = ''):
+        """This method creates a Feature object and a ReferencePoint object at the specified
+        location.
+
+        Path
+        ----
+            - mdb.models[*name*].rootAssembly.ReferencePoint
+            - mdb.models[*name*].parts[name].ReferencePoint
+
+        Parameters
+        ----------
+        point
+            A Vertex, InterestingPoint, a MeshNode, or a Datum object specifying a reference point.
+            *point* can also be a sequence of three Floats representing the *X*-, *Y*-, and
+            *Z*-coordinates of the point.
+        instanceName
+            Used internally by the input file writer.
+
+        Returns
+        -------
+            A Feature Object.
+
+        Exceptions
+        ----------
+            None.
+        """

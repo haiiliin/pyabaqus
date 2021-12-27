@@ -6,7 +6,7 @@ from ..Mesh.MeshEdge import MeshEdge
 from ..Mesh.MeshElement import MeshElement
 from ..Mesh.MeshFace import MeshFace
 from ..Mesh.MeshNode import MeshNode
-from ..Part.Part import Part as BasePart
+from ..Part.BasePart import BasePart
 from ..Region.Region import Region
 
 

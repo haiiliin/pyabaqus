@@ -167,12 +167,12 @@ class DisplacementAdaptiveMeshConstraint:
         pass
 
     def setValuesInStep(self, stepName: str, 
-                        u1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        u2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        u3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        ur1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        ur2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        ur3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        u1: typing.Union[SymbolicConstant,float] = None, 
+                        u2: typing.Union[SymbolicConstant,float] = None, 
+                        u3: typing.Union[SymbolicConstant,float] = None, 
+                        ur1: typing.Union[SymbolicConstant,float] = None, 
+                        ur2: typing.Union[SymbolicConstant,float] = None, 
+                        ur3: typing.Union[SymbolicConstant,float] = None, 
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing
         DisplacementAdaptiveMeshConstraint object in the specified step.

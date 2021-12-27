@@ -1,7 +1,7 @@
 import typing
 
 from abaqusConstants import *
-from ..Assembly.Assembly import Assembly as BaseAssembly
+from ..Assembly.BaseAssembly import BaseAssembly
 from ..Datum.DatumCsys import DatumCsys
 from ..Mesh.MeshElement import MeshElement
 from ..Mesh.MeshNode import MeshNode

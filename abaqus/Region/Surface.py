@@ -2,6 +2,7 @@ import typing
 
 from abaqusConstants import *
 from ..BasicGeometry.EdgeArray import EdgeArray
+from ..BasicGeometry.Face import Face
 from ..BasicGeometry.FaceArray import FaceArray
 from ..Mesh.MeshElementArray import MeshElementArray
 from ..Mesh.MeshNodeArray import MeshNodeArray
@@ -55,11 +56,13 @@ class Surface:
     instances: int = None
 
     @typing.overload
-    def __init__(self, side1Faces: str, side2Faces: str, side12Faces: str, end1Edges: str, end2Edges: str, 
-                 circumEdges: str, side1Edges: str, side2Edges: str, face1Elements: str, 
-                 face2Elements: str, face3Elements: str, face4Elements: str, face5Elements: str, 
-                 face6Elements: str, side1Elements: str, side2Elements: str, side12Elements: str, 
-                 end1Elements: str, end2Elements: str, circumElements: str, name: str):
+    def __init__(self, side1Faces: tuple[Face] = None, side2Faces: tuple[Face] = None, side12Faces: tuple[Face] = None,
+                 end1Edges: tuple[Face] = None, end2Edges: tuple[Face] = None,  circumEdges: tuple[Face] = None,
+                 side1Edges: tuple[Face] = None, side2Edges: tuple[Face] = None, face1Elements: tuple[Face] = None,
+                 face2Elements: tuple[Face] = None, face3Elements: tuple[Face] = None, face4Elements: tuple[Face] = None,
+                 face5Elements: tuple[Face] = None, face6Elements: tuple[Face] = None, side1Elements: tuple[Face] = None,
+                 side2Elements: tuple[Face] = None, side12Elements: tuple[Face] = None, end1Elements: tuple[Face] = None,
+                 end2Elements: tuple[Face] = None, circumElements: tuple[Face] = None, name: str = ''):
         """This method creates a surface from a sequence of objects in a model database. The
         surface will apply to the sides specified by the arguments.For example
         surface=mdb.models['Model-1'].parts['Part-1'].Surface(side1Faces=side1Faces,
@@ -72,32 +75,32 @@ class Surface:
 
         Parameters
         ----------
-        side1Faces
-        side2Faces
-        side12Faces
+                side1Faces
+                side2Faces
+                side12Faces
             On three-dimensional wire edges, you can use the following arguments: 
-        end1Edges
-        end2Edges
-        circumEdges
+                end1Edges
+                end2Edges
+                circumEdges
             On three-dimensional or two-dimensional or axisymmetric edges, you can use the following 
             arguments: 
-        side1Edges
-        side2Edges
+                side1Edges
+                side2Edges
             On two-dimensional or axisymmetric shell elements, you can use the following arguments: 
-        face1Elements
-        face2Elements
-        face3Elements
-        face4Elements
-        face5Elements
-        face6Elements
+                face1Elements
+                face2Elements
+                face3Elements
+                face4Elements
+                face5Elements
+                face6Elements
             On three-dimensional shell elements, you can use the following arguments: 
-        side1Elements
-        side2Elements
-        side12Elements
+                side1Elements
+                side2Elements
+                side12Elements
             On three-dimensional wire elements, you can use the following arguments: 
-        end1Elements
-        end2Elements
-        circumElements
+                end1Elements
+                end2Elements
+                circumElements
             On two-dimensional or axisymmetric wire elements, you can use the following arguments: 
         name
             A String specifying the repository key. The default value is an empty string. 

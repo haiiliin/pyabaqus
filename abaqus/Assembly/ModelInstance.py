@@ -61,7 +61,7 @@ class ModelInstance:
     # A repository of ReferencePoint objects. 
     referencePoints: Repository[str, ReferencePoint] = Repository[str, ReferencePoint]()
 
-    def Instance(self, name: str, model: Model, autoOffset: Boolean = OFF):
+    def __init__(self, name: str, model: Model, autoOffset: Boolean = OFF):
         """This method creates a ModelInstance object and puts it into the instances repository.
 
         Path

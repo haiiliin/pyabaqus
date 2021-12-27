@@ -37,8 +37,8 @@ class Pressure(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, hZero: float, 
-                 hReference: float, field: str = '', refPoint: str = '', 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float = 0.0, hZero: float = 0.0,
+                 hReference: float = 0.0, field: str = '', refPoint: str = '',
                  distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):
         """This method creates a Pressure object.
 

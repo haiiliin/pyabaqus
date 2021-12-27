@@ -1,5 +1,5 @@
 from abaqusConstants import *
-from ..Assembly.Assembly import Assembly as BaseAssembly
+from ..Assembly.BaseAssembly import BaseAssembly
 
 
 class Assembly(BaseAssembly):

@@ -4,9 +4,12 @@ from abaqusConstants import *
 from ..BasicGeometry.Cell import Cell
 from ..BasicGeometry.Edge import Edge
 from ..BasicGeometry.Face import Face
+from ..BasicGeometry.InterestingPoint import InterestingPoint
+from ..BasicGeometry.Vertex import Vertex
 from ..Datum.Datum import Datum
 from ..Datum.DatumPlane import DatumPlane
 from ..Mesh.MeshFace import MeshFace
+from ..Mesh.MeshNode import MeshNode
 from ..Sketcher.ConstrainedSketch import ConstrainedSketch
 
 
@@ -1862,7 +1865,8 @@ class Feature:
         """
         pass
 
-    def ReferencePoint(self, point: str, instanceName: str = ''):
+    def ReferencePoint(self, point: typing.Union[tuple, Vertex, InterestingPoint, MeshNode, Datum],
+                       instanceName: str = '') -> 'Feature':
         """This method creates a Feature object and a ReferencePoint object at the specified
         location.
 
@@ -1888,7 +1892,7 @@ class Feature:
         ----------
             None. 
         """
-        pass
+        return self
 
     def RemoveWireEdges(self, wireEdgeList: tuple[Edge]):
         """This method removes wire edges.

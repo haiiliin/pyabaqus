@@ -139,9 +139,9 @@ class ConnectorForce(Load):
         pass
 
     def setValuesInStep(self, stepName: str, 
-                        f1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        f2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        f3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        f1: typing.Union[SymbolicConstant,float] = None, 
+                        f2: typing.Union[SymbolicConstant,float] = None, 
+                        f3: typing.Union[SymbolicConstant,float] = None, 
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ConnectorForce object in the
         specified step.

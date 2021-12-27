@@ -85,7 +85,7 @@ mdb.models[name].ContactExp
 
   A [MainSecondaryAssignment](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-masterslaveassignmentpyc.htm?ContextScope=all) object specifying the main-secondary assignments in the contact domain.
 
-- *PolarityAssignments*
+- *polarityAssignments*
 
   A [PolarityAssignments](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-polarityassignmentpyc.htm?ContextScope=all) object specifying the polarity assignments in the contact domain.
 

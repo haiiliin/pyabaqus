@@ -79,7 +79,7 @@ class ImplicitDynamicsStep(AnalysisStep):
     minInc: float = None
 
     # The SymbolicConstant DEFAULT or a Float specifying the maximum time increment allowed. 
-    maxInc: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float]()
+    maxInc: typing.Union[SymbolicConstant,float] = None
 
     # A SymbolicConstant specifying the way of specifying half-increment residual tolerance 
     # with the automatic time incrementation scheme. Possible values are 
@@ -233,7 +233,7 @@ class ImplicitDynamicsStep(AnalysisStep):
                  application: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT, adiabatic: Boolean = OFF, 
                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
                  initialInc: float = None, minInc: float = None, 
-                 maxInc: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                 maxInc: typing.Union[SymbolicConstant,float] = DEFAULT,
                  hafTolMethod: SymbolicConstant = VALUE, haftol: float = None, 
                  halfIncScaleFactor: float = None, nohaf: Boolean = OFF, 
                  amplitude: SymbolicConstant = STEP, 
@@ -349,7 +349,7 @@ class ImplicitDynamicsStep(AnalysisStep):
                   application: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT, adiabatic: Boolean = OFF, 
                   timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
                   initialInc: float = None, minInc: float = None, 
-                  maxInc: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                  maxInc: typing.Union[SymbolicConstant,float] = DEFAULT,
                   hafTolMethod: SymbolicConstant = VALUE, haftol: float = None, 
                   halfIncScaleFactor: float = None, nohaf: Boolean = OFF, 
                   amplitude: SymbolicConstant = STEP, 

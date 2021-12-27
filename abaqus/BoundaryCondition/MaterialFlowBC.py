@@ -132,7 +132,7 @@ class MaterialFlowBC(BoundaryCondition):
         pass
 
     def setValuesInStep(self, stepName: str, 
-                        magnitude: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        magnitude: typing.Union[SymbolicConstant,float] = UNCHANGED, 
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing MaterialFlowBC object in the
         specified step.

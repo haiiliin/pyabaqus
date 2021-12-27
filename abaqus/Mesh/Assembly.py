@@ -6,7 +6,7 @@ from .MeshEdge import MeshEdge
 from .MeshElement import MeshElement
 from .MeshFace import MeshFace
 from .MeshNode import MeshNode
-from ..Assembly.Assembly import Assembly as BaseAssembly
+from ..Assembly.BaseAssembly import BaseAssembly
 from ..Assembly.PartInstance import PartInstance
 from ..BasicGeometry.Cell import Cell
 from ..BasicGeometry.Edge import Edge

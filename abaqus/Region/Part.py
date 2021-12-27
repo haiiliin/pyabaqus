@@ -1,5 +1,5 @@
 from abaqusConstants import *
-from ..Part.Part import Part as BasePart
+from ..Part.BasePart import BasePart
 
 
 class Part(BasePart):

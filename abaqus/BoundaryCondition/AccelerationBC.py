@@ -6,7 +6,6 @@ from ..Region.Region import Region
 
 
 class AccelerationBC(BoundaryCondition):
-
     """The AccelerationBC object stores the data for an acceleration boundary condition. 
     The AccelerationBC object is derived from the BoundaryCondition object. 
 
@@ -47,13 +46,13 @@ class AccelerationBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region, fieldName: str = '', 
-                 a1: typing.Union[SymbolicConstant,float] = UNSET, 
-                 a2: typing.Union[SymbolicConstant,float] = UNSET, 
-                 a3: typing.Union[SymbolicConstant,float] = UNSET, 
-                 ar1: typing.Union[SymbolicConstant,float] = UNSET, 
-                 ar2: typing.Union[SymbolicConstant,float] = UNSET, 
-                 ar3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
+    def __init__(self, name: str, createStepName: str, region: Region, fieldName: str = '',
+                 a1: typing.Union[SymbolicConstant, float] = UNSET,
+                 a2: typing.Union[SymbolicConstant, float] = UNSET,
+                 a3: typing.Union[SymbolicConstant, float] = UNSET,
+                 ar1: typing.Union[SymbolicConstant, float] = UNSET,
+                 ar2: typing.Union[SymbolicConstant, float] = UNSET,
+                 ar3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
                  localCsys: str = None, distributionType: SymbolicConstant = UNIFORM):
         """This method creates an AccelerationBC object.
 
@@ -120,12 +119,12 @@ class AccelerationBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, fieldName: str = '', a1: typing.Union[SymbolicConstant,float] = UNSET, 
-                  a2: typing.Union[SymbolicConstant,float] = UNSET, 
-                  a3: typing.Union[SymbolicConstant,float] = UNSET, 
-                  ar1: typing.Union[SymbolicConstant,float] = UNSET, 
-                  ar2: typing.Union[SymbolicConstant,float] = UNSET, 
-                  ar3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
+    def setValues(self, fieldName: str = '', a1: typing.Union[SymbolicConstant, float] = UNSET,
+                  a2: typing.Union[SymbolicConstant, float] = UNSET,
+                  a3: typing.Union[SymbolicConstant, float] = UNSET,
+                  ar1: typing.Union[SymbolicConstant, float] = UNSET,
+                  ar2: typing.Union[SymbolicConstant, float] = UNSET,
+                  ar3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
                   localCsys: str = None, distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing AccelerationBC object in the step where it
         is created.
@@ -182,13 +181,13 @@ class AccelerationBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        a1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        a2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        a3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        ar1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        ar2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        ar3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+    def setValuesInStep(self, stepName: str,
+                        a1: typing.Union[SymbolicConstant, float] = SET,
+                        a2: typing.Union[SymbolicConstant, float] = SET,
+                        a3: typing.Union[SymbolicConstant, float] = SET,
+                        ar1: typing.Union[SymbolicConstant, float] = SET,
+                        ar2: typing.Union[SymbolicConstant, float] = SET,
+                        ar3: typing.Union[SymbolicConstant, float] = SET,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing AccelerationBC object in the
         specified step.
@@ -231,4 +230,3 @@ class AccelerationBC(BoundaryCondition):
             None. 
         """
         pass
-

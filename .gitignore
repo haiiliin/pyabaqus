@@ -112,3 +112,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# User Defined
+addMethods.py
+addMaterialMethods.py
+dst.py
+pullout.py

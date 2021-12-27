@@ -135,7 +135,7 @@ class TemperatureBC(BoundaryCondition):
         pass
 
     def setValuesInStep(self, stepName: str, 
-                        magnitude: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        magnitude: typing.Union[SymbolicConstant,float] = UNCHANGED, 
                         dof: tuple = (), amplitude: str = ''):
         """This method modifies the propagating data for an existing TemperatureBC object in the
         specified step.

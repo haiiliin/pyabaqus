@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ContactDamage:
 
-    """The ContactDamage object specifies damage options for a contact interaction property. 
+class ContactDamage:
+    """The ContactDamage object specifies damage options for a contact interaction property.
 
     Access
     ------
@@ -178,13 +178,13 @@ class ContactDamage:
     # *useEvolution*=ON. 
     evolTable: float = None
 
-    def Damage(self, initTable: tuple, criterion: SymbolicConstant = MAX_STRESS, initTempDep: Boolean = OFF, 
-               initDependencies: int = 0, useEvolution: Boolean = OFF, 
-               evolutionType: SymbolicConstant = DISPLACEMENT, softening: SymbolicConstant = LINEAR, 
-               useMixedMode: Boolean = OFF, mixedModeType: SymbolicConstant = TABULAR, 
-               modeMixRatio: SymbolicConstant = ENERGY, exponent: float = None, 
-               evolTempDep: Boolean = OFF, evolDependencies: int = 0, evolTable: tuple = (), 
-               useStabilization: Boolean = OFF, viscosityCoef: float = None):
+    def __init__(self, initTable: tuple, criterion: SymbolicConstant = MAX_STRESS, initTempDep: Boolean = OFF,
+                 initDependencies: int = 0, useEvolution: Boolean = OFF,
+                 evolutionType: SymbolicConstant = DISPLACEMENT, softening: SymbolicConstant = LINEAR,
+                 useMixedMode: Boolean = OFF, mixedModeType: SymbolicConstant = TABULAR,
+                 modeMixRatio: SymbolicConstant = ENERGY, exponent: float = None,
+                 evolTempDep: Boolean = OFF, evolDependencies: int = 0, evolTable: tuple = (),
+                 useStabilization: Boolean = OFF, viscosityCoef: float = None):
         """This method creates a ContactDamage object.
 
         Path
@@ -275,4 +275,3 @@ class ContactDamage:
             None. 
         """
         pass
-

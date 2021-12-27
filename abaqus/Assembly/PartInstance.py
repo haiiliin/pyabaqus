@@ -140,7 +140,7 @@ class PartInstance:
     # A String specifying the name of the part from which the instance was created. 
     partName: str = ''
 
-    def Instance(self, name: str, part: Part, autoOffset: Boolean = OFF, dependent: Boolean = OFF):
+    def __init__(self, name: str, part: Part, autoOffset: Boolean = OFF, dependent: Boolean = OFF):
         """This method creates a PartInstance object and puts it into the instances repository.
 
         Path
@@ -169,7 +169,22 @@ class PartInstance:
         ----------
             None. 
         """
-        pass
+        self.vertices = part.vertices
+        self.ignoredEdges = part.ignoredEdges
+        self.faces = part.faces
+        self.cells = part.cells
+        self.datums = part.datums
+        self.elements = part.elements
+        self.elemFaces = part.elemFaces
+        self.elementFaces = part.elementFaces
+        self.nodes = part.nodes
+        self.sets = part.sets
+        self.surfaces = part.surfaces
+        self.skins = part.skins
+        self.stringers = part.stringers
+        self.referencePoints = part.referencePoints
+        self.elemEdges = part.elemEdges
+        self.elementEdges = part.elementEdges
 
     def InstanceFromBooleanCut(self, name: str, instanceToBeCut: str, cuttingInstances: tuple['PartInstance'],
                                originalInstances: SymbolicConstant = SUPPRESS):

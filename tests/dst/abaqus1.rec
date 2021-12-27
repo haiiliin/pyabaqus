@@ -1,0 +1,134 @@
+# -*- coding: mbcs -*-
+from mesh import *
+mdb.models['Model-1'].ConstrainedSketch(name='SKETCH-SOIL', sheetSize=0.1)
+mdb.models['Model-1'].sketches['SKETCH-SOIL'].rectangle(point1=(0.0, 0.0), 
+    point2=(0.025, 0.025))
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='PART-SOIL', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['PART-SOIL'].BaseSolidExtrude(depth=0.025, sketch=
+    mdb.models['Model-1'].sketches['SKETCH-SOIL'])
+del mdb.models['Model-1'].sketches['SKETCH-SOIL']
+mdb.models['Model-1'].ConstrainedSketch(name='SKETCH-SOLID', sheetSize=0.1)
+mdb.models['Model-1'].sketches['SKETCH-SOLID'].rectangle(point1=(0.0, 0.0), 
+    point2=(0.05, 0.05))
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='PART-SOLID', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['PART-SOLID'].BaseSolidExtrude(depth=0.05, sketch=
+    mdb.models['Model-1'].sketches['SKETCH-SOLID'])
+del mdb.models['Model-1'].sketches['SKETCH-SOLID']
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='INSTANCE-SOIL', 
+    part=mdb.models['Model-1'].parts['PART-SOIL'])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='INSTANCE-SOLID'
+    , part=mdb.models['Model-1'].parts['PART-SOLID'])
+mdb.models['Model-1'].rootAssembly.translate(instanceList=('INSTANCE-SOIL', ), 
+    vector=(0.0125, 0.0125, 0.05))
+mdb.models['Model-1'].parts['PART-SOIL'].Surface(name='SURFACE-SOIL-Z0', 
+    side1Faces=
+    mdb.models['Model-1'].parts['PART-SOIL'].faces.getSequenceFromMask(mask=(
+    '[#20 ]', ), ))
+mdb.models['Model-1'].parts['PART-SOIL'].Surface(name='SURFACE-SOIL-Z1', 
+    side1Faces=
+    mdb.models['Model-1'].parts['PART-SOIL'].faces.getSequenceFromMask(mask=(
+    '[#10 ]', ), ))
+mdb.models['Model-1'].parts['PART-SOIL'].Set(cells=
+    mdb.models['Model-1'].parts['PART-SOIL'].cells.getSequenceFromMask(mask=(
+    '[#1 ]', ), ), name='SET-SOIL')
+mdb.models['Model-1'].parts['PART-SOIL'].Set(faces=
+    mdb.models['Model-1'].parts['PART-SOIL'].faces.getSequenceFromMask(mask=(
+    '[#1 ]', ), ), name='SET-SOIL-X0')
+mdb.models['Model-1'].parts['PART-SOIL'].Set(faces=
+    mdb.models['Model-1'].parts['PART-SOIL'].faces.getSequenceFromMask(mask=(
+    '[#8 ]', ), ), name='SET-SOIL-Y0')
+mdb.models['Model-1'].parts['PART-SOIL'].Set(faces=
+    mdb.models['Model-1'].parts['PART-SOIL'].faces.getSequenceFromMask(mask=(
+    '[#20 ]', ), ), name='SET-SOIL-Z0')
+mdb.models['Model-1'].parts['PART-SOIL'].Set(faces=
+    mdb.models['Model-1'].parts['PART-SOIL'].faces.getSequenceFromMask(mask=(
+    '[#4 ]', ), ), name='SET-SOIL-X1')
+mdb.models['Model-1'].parts['PART-SOIL'].Set(faces=
+    mdb.models['Model-1'].parts['PART-SOIL'].faces.getSequenceFromMask(mask=(
+    '[#2 ]', ), ), name='SET-SOIL-Y1')
+mdb.models['Model-1'].parts['PART-SOIL'].Set(faces=
+    mdb.models['Model-1'].parts['PART-SOIL'].faces.getSequenceFromMask(mask=(
+    '[#10 ]', ), ), name='SET-SOIL-Z1')
+mdb.models['Model-1'].parts['PART-SOLID'].Surface(name='SURFACE-SOLID-Z0', 
+    side1Faces=
+    mdb.models['Model-1'].parts['PART-SOLID'].faces.getSequenceFromMask(mask=(
+    '[#20 ]', ), ))
+mdb.models['Model-1'].parts['PART-SOLID'].Surface(name='SURFACE-SOLID-Z1', 
+    side1Faces=
+    mdb.models['Model-1'].parts['PART-SOLID'].faces.getSequenceFromMask(mask=(
+    '[#10 ]', ), ))
+mdb.models['Model-1'].parts['PART-SOLID'].Set(cells=
+    mdb.models['Model-1'].parts['PART-SOLID'].cells.getSequenceFromMask(mask=(
+    '[#1 ]', ), ), name='SET-SOLID')
+mdb.models['Model-1'].parts['PART-SOLID'].Set(faces=
+    mdb.models['Model-1'].parts['PART-SOLID'].faces.getSequenceFromMask(mask=(
+    '[#1 ]', ), ), name='SET-SOLID-X0')
+mdb.models['Model-1'].parts['PART-SOLID'].Set(faces=
+    mdb.models['Model-1'].parts['PART-SOLID'].faces.getSequenceFromMask(mask=(
+    '[#8 ]', ), ), name='SET-SOLID-Y0')
+mdb.models['Model-1'].parts['PART-SOLID'].Set(faces=
+    mdb.models['Model-1'].parts['PART-SOLID'].faces.getSequenceFromMask(mask=(
+    '[#20 ]', ), ), name='SET-SOLID-Z0')
+mdb.models['Model-1'].parts['PART-SOLID'].Set(faces=
+    mdb.models['Model-1'].parts['PART-SOLID'].faces.getSequenceFromMask(mask=(
+    '[#4 ]', ), ), name='SET-SOLID-X1')
+mdb.models['Model-1'].parts['PART-SOLID'].Set(faces=
+    mdb.models['Model-1'].parts['PART-SOLID'].faces.getSequenceFromMask(mask=(
+    '[#2 ]', ), ), name='SET-SOLID-Y1')
+mdb.models['Model-1'].parts['PART-SOLID'].Set(faces=
+    mdb.models['Model-1'].parts['PART-SOLID'].faces.getSequenceFromMask(mask=(
+    '[#10 ]', ), ), name='SET-SOLID-Z1')
+mdb.models['Model-1'].Material(name='MATERIAL-SOIL')
+mdb.models['Model-1'].materials['MATERIAL-SOIL'].Elastic(table=((40000.0, 0.0), 
+    ))
+mdb.models['Model-1'].materials['MATERIAL-SOIL'].Density(table=((1700, ), ))
+mdb.models['Model-1'].Material(name='MATERIAL-SOLID')
+mdb.models['Model-1'].materials['MATERIAL-SOLID'].Elastic(table=((200000000.0, 
+    0.0), ))
+mdb.models['Model-1'].materials['MATERIAL-SOLID'].Density(table=((2000, ), ))
+mdb.models['Model-1'].HomogeneousSolidSection(material='MATERIAL-SOIL', name=
+    'SECTION-SOIL', thickness=None)
+mdb.models['Model-1'].HomogeneousSolidSection(material='MATERIAL-SOLID', name=
+    'SECTION-SOLID', thickness=None)
+mdb.models['Model-1'].parts['PART-SOIL'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['PART-SOIL'].sets['SET-SOIL'], sectionName=
+    'SECTION-SOIL', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].parts['PART-SOLID'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['PART-SOLID'].sets['SET-SOLID'], sectionName=
+    'SECTION-SOLID', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].StaticStep(initialInc=1, matrixSolver=DIRECT, 
+    matrixStorage=UNSYMMETRIC, maxInc=1, maxNumInc=100, minInc=1e-05, name=
+    'INITIAL-STRESS', previous='Initial')
+mdb.models['Model-1'].StaticStep(initialInc=1, matrixSolver=DIRECT, 
+    matrixStorage=UNSYMMETRIC, maxInc=1, maxNumInc=100, minInc=1e-05, name=
+    'SHEAR', previous='INITIAL-STRESS')
+mdb.models['Model-1'].ContactProperty('IntProp-1')
+mdb.models['Model-1'].interactionProperties['IntProp-1'].NormalBehavior(
+    allowSeparation=ON, constraintEnforcementMethod=DEFAULT, 
+    pressureOverclosure=HARD)
+mdb.models['Model-1'].interactionProperties['IntProp-1'].TangentialBehavior(
+    formulation=FRICTIONLESS)
+mdb.models['Model-1'].SurfaceToSurfaceContactStd(adjustMethod=NONE, 
+    clearanceRegion=None, createStepName='Initial', datumAxis=None, 
+    initialClearance=OMIT, interactionProperty='IntProp-1', master=
+    mdb.models['Model-1'].rootAssembly.instances['INSTANCE-SOLID'].surfaces['SURFACE-SOLID-Z1']
+    , name='Int-1', slave=
+    mdb.models['Model-1'].rootAssembly.instances['INSTANCE-SOIL'].surfaces['SURFACE-SOIL-Z0']
+    , sliding=FINITE, thickness=ON)
+mdb.models['Model-1'].Pressure(amplitude=UNSET, createStepName='INITIAL-STRESS'
+    , distributionType=UNIFORM, field='', magnitude=310, name=
+    'SOIL-VERTICAL-PRESSURE', region=
+    mdb.models['Model-1'].rootAssembly.instances['INSTANCE-SOIL'].surfaces['SURFACE-SOIL-Z1'])
+mdb.models['Model-1'].Stress(distributionType=UNIFORM, name=
+    'SOIL-PREDEFINED-STRESS', region=
+    mdb.models['Model-1'].rootAssembly.instances['INSTANCE-SOIL'].sets['SET-SOIL']
+    , sigma11=-310, sigma12=0, sigma13=0, sigma22=-310, sigma23=0, sigma33=
+    -310)
+mdb.models['Model-1'].parts['PART-SOLID'].ReferencePoint(point=(0.0, 0.0, 0.0))
+mdb.models['Model-1'].parts['PART-SOLID'].Set(name='SET-RP', referencePoints=(
+    mdb.models['Model-1'].parts['PART-SOLID'].referencePoints[11], ))

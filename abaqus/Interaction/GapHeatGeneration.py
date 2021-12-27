@@ -27,7 +27,7 @@ class GapHeatGeneration:
     # The default value is 0.5. 
     secondaryFraction: float = 0
 
-    def HeatGeneration(self, conversionFraction: float = 1, secondaryFraction: float = 0):
+    def __init__(self, conversionFraction: float = 1, secondaryFraction: float = 0):
         """This method creates a GapHeatGeneration object.
 
         Path

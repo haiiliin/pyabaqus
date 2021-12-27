@@ -146,3 +146,8 @@ class BoundaryCondition:
         """
         pass
 
+    def setValues(self, *args, **kwargs):
+        pass
+
+    def setValuesInStep(self, *args, **kwargs):
+        pass

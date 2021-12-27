@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ContactTangentialBehavior:
 
-    """The ContactTangentialBehavior object specifies tangential behavior for a contact 
+class ContactTangentialBehavior:
+    """The ContactTangentialBehavior object specifies tangential behavior for a contact
     interaction property. 
 
     Access
@@ -93,14 +93,14 @@ class ContactTangentialBehavior:
     # are described below. 
     table: float = None
 
-    def TangentialBehavior(self, formulation: SymbolicConstant = FRICTIONLESS, 
-                           directionality: SymbolicConstant = ISOTROPIC, slipRateDependency: Boolean = OFF, 
-                           pressureDependency: Boolean = OFF, temperatureDependency: Boolean = OFF, 
-                           dependencies: int = 0, exponentialDecayDefinition: SymbolicConstant = COEFFICIENTS, 
-                           table: tuple = (), shearStressLimit: float = None, 
-                           maximumElasticSlip: SymbolicConstant = FRACTION, fraction: float = 0, 
-                           absoluteDistance: float = 0, elasticSlipStiffness: float = None, 
-                           nStateDependentVars: int = 0, useProperties: Boolean = OFF):
+    def __init__(self, formulation: SymbolicConstant = FRICTIONLESS,
+                 directionality: SymbolicConstant = ISOTROPIC, slipRateDependency: Boolean = OFF,
+                 pressureDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0, exponentialDecayDefinition: SymbolicConstant = COEFFICIENTS,
+                 table: tuple = (), shearStressLimit: float = None,
+                 maximumElasticSlip: SymbolicConstant = FRACTION, fraction: float = 0,
+                 absoluteDistance: float = 0, elasticSlipStiffness: float = None,
+                 nStateDependentVars: int = 0, useProperties: Boolean = OFF):
         """This method creates a ContactTangentialBehavior object.
 
         Path
@@ -175,4 +175,3 @@ class ContactTangentialBehavior:
             None. 
         """
         pass
-

@@ -138,9 +138,9 @@ class LineLoad(Load):
         pass
 
     def setValuesInStep(self, stepName: str, 
-                        comp1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        comp2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        comp3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        comp1: typing.Union[SymbolicConstant,float] = None, 
+                        comp2: typing.Union[SymbolicConstant,float] = None, 
+                        comp3: typing.Union[SymbolicConstant,float] = None, 
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing LineLoad object in the
         specified step.

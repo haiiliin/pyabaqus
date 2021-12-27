@@ -206,12 +206,12 @@ class ConnAccelerationBC(BoundaryCondition):
         pass
 
     def setValuesInStep(self, stepName: str, 
-                        a1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        a2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        a3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        ar1: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        ar2: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
-                        ar3: typing.Union[SymbolicConstant,float] = typing.Union[SymbolicConstant,float](), 
+                        a1: typing.Union[SymbolicConstant,float] = SET, 
+                        a2: typing.Union[SymbolicConstant,float] = SET, 
+                        a3: typing.Union[SymbolicConstant,float] = SET, 
+                        ar1: typing.Union[SymbolicConstant,float] = SET, 
+                        ar2: typing.Union[SymbolicConstant,float] = SET, 
+                        ar3: typing.Union[SymbolicConstant,float] = SET, 
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ConnAccelerationBC object in
         the specified step.
