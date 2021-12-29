@@ -113,10 +113,10 @@ mdb.models['Model-1'].parts['PART-SOLID'].SectionAssignment(offset=0.0,
     offsetField='', offsetType=MIDDLE_SURFACE, region=
     mdb.models['Model-1'].parts['PART-SOLID'].sets['SET-SOLID'], sectionName=
     'SECTION-SOLID', thicknessAssignment=FROM_SECTION)
-mdb.models['Model-1'].StaticStep(initialInc=1, matrixSolver=DIRECT, 
+mdb.models['Model-1'].StaticStep(initialInc=0.001, matrixSolver=DIRECT, 
     matrixStorage=UNSYMMETRIC, maxInc=1, maxNumInc=100, minInc=1e-05, name=
     'INITIAL-STRESS', previous='Initial')
-mdb.models['Model-1'].StaticStep(initialInc=1, matrixSolver=DIRECT, 
+mdb.models['Model-1'].StaticStep(initialInc=0.001, matrixSolver=DIRECT, 
     matrixStorage=UNSYMMETRIC, maxInc=1, maxNumInc=100, minInc=1e-05, name=
     'SHEAR', previous='INITIAL-STRESS')
 mdb.models['Model-1'].ContactProperty('IntProp-1')
@@ -208,6 +208,4 @@ mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF,
     multiprocessingMode=DEFAULT, name='Job-1', nodalOutputPrecision=SINGLE, 
     numCpus=1, numGPUs=0, queue=None, resultsFormat=ODB, scratch='', type=
     ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
-mdb.jobs['Job-1'].submit()
-mdb.jobs['Job-1'].waitForCompletion()
-# Save by Hailin on 2021_12_27-19.44.52; build 2021 2020_03_06-22.50.37 167380
+# Save by Hailin on 2021_12_29-00.57.17; build 2021 2020_03_06-22.50.37 167380

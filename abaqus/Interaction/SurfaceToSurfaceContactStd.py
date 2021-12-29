@@ -38,7 +38,7 @@ class SurfaceToSurfaceContactStd(Interaction):
     # argument is not valid when *sliding*=FINITE and *enforcement*=SURFACE_TO_SURFACE. 
     supplementaryContact: SymbolicConstant = SELECTIVE
 
-    def __init__(self, name: str, createStepName: str, master: Region, salve: Region,
+    def __init__(self, name: str, createStepName: str, master: Region, slave: Region,
                  sliding: SymbolicConstant, interactionProperty: str, 
                  interferenceType: SymbolicConstant = NONE, overclosure: float = 0, 
                  interferenceDirectionType: SymbolicConstant = COMPUTED, direction: tuple = (), 
@@ -69,7 +69,7 @@ class SurfaceToSurfaceContactStd(Interaction):
             is created. 
         master
             A Region object specifying the main surface. 
-        salve
+        slave
             A Region object specifying the secondary surface. 
         sliding
             A SymbolicConstant specifying the contact formulation. Possible values are FINITE and 

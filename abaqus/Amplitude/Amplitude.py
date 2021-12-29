@@ -1,5 +1,6 @@
 from abaqusConstants import *
 
+
 class Amplitude:
 
     """The Amplitude object is the abstract base type for other Amplitude objects. The 

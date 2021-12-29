@@ -38,7 +38,7 @@ class TopologyOverhangControl(GeometricRestriction):
             A String specifying the geometric restriction repository key. 
         pullDirection
             A VertexArray object of length 2 specifying the overhang control print direction. 
-            Instead of through a Vertex, each point can be specified through a tuple of coordinates. 
+            Instead of through a ConstrainedSketchVertex, each point can be specified through a tuple of coordinates.
         region
             A Region object specifying the region to which the geometric restriction is applied. 
         csys

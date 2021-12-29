@@ -28,7 +28,7 @@ def highligh(object: str):
         specify only a single object. Abaqus/CAE highlights only the edges of a face when 
         highlighting a surface and a face together. The following objects are supported: 
         **For the MDB** 
-        - Vertex 
+        - ConstrainedSketchVertex
         - Edge 
         - Face 
         - Surface 

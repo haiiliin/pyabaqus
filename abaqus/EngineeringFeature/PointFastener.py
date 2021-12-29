@@ -63,7 +63,7 @@ class PointFastener(Fastener):
             A Float specifying the physical fastener radius. 
         directionVector
             A VertexArray object of length 2 specifying the direction of projection. Instead of 
-            through a Vertex, each point may be specified through a tuple of coordinates. The 
+            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. The
             default value is None. 
         targetSurfaces
             A RegionArray object specifying surfaces to be fastened. The default value is MODEL. 
@@ -184,7 +184,7 @@ class PointFastener(Fastener):
         ----------
         directionVector
             A VertexArray object of length 2 specifying the direction of projection. Instead of 
-            through a Vertex, each point may be specified through a tuple of coordinates. The 
+            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. The
             default value is None. 
         targetSurfaces
             A RegionArray object specifying surfaces to be fastened. The default value is MODEL. 

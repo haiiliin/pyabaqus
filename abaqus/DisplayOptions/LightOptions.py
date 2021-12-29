@@ -7,7 +7,7 @@ class LightOptions:
     """The LightOptions object stores settings that control how objects are lit when the 
     *renderStyle* is set to SHADED. LightOptions objects are accessed in one of two ways: 
     - The default light options. These settings are used as defaults when you start a 
-    session and by the Defaults button on the Light Options dialog box. 
+    session and by the Defaults button on the Light ConstrainedSketchOptions dialog box.
     - The light options associated with a particular viewport. 
     The LightOptions object has no constructor; Abaqus creates the *defaultLightOptions* 
     member when a session is started. When a new viewport is created, the *lightOptions* 

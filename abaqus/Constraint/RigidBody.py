@@ -7,7 +7,7 @@ class RigidBody(Constraint):
 
     """The RigidBody object constrains all the degrees of freedom on the specified regions to 
     the degree of freedom of its associated reference point. 
-    The RigidBody object is derived from the Constraint object. 
+    The RigidBody object is derived from the ConstrainedSketchConstraint object.
 
     Access
     ------

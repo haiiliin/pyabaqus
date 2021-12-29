@@ -7,7 +7,7 @@ class Tie(Constraint):
 
     """The Tie object defines two surfaces to be tied together for the duration of a 
     simulation. 
-    The Tie object is derived from the Constraint object. 
+    The Tie object is derived from the ConstrainedSketchConstraint object.
 
     Access
     ------

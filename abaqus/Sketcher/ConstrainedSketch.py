@@ -1,61 +1,19 @@
 import typing
 
 from abaqusConstants import *
-from .ConstrainedSketchConstraint import ConstrainedSketchConstraint
-from .ConstrainedSketchDimension import ConstrainedSketchDimension
-from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
-from .ConstrainedSketchImageOptions import ConstrainedSketchImageOptions
-from .ConstrainedSketchOptions import ConstrainedSketchOptions
-from .ConstrainedSketchParameter import ConstrainedSketchParameter
-from .ConstrainedSketchVertex import ConstrainedSketchVertex
-from .ConstrainedSketchVertexArray import ConstrainedSketchVertexArray
-from ..Amplitude.ConstrainedSketchGeometryArray import ConstrainedSketchGeometryArray
+from .ConstrainedSketchConstraint.ConstrainedSketchConstraintModel import ConstrainedSketchConstraintModel
+from .ConstrainedSketchDimension.ConstrainedSketchDimensionModel import ConstrainedSketchDimensionModel
+from .ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
+from .ConstrainedSketchGeometry.ConstrainedSketchGeometryModel import ConstrainedSketchGeometryModel
+from .ConstrainedSketchParameter.ConstrainedSketchParameterModel import ConstrainedSketchParameterModel
+from .ConstrainedSketchVertex.ConstrainedSketchVertex import ConstrainedSketchVertex
+from .ConstrainedSketchVertex.ConstrainedSketchVertexModel import ConstrainedSketchVertexModel
 from ..Part.AcisFile import AcisFile
-from ..UtilityAndView.Repository import Repository
 
 
-class ConstrainedSketch:
-
-    """A ConstrainedSketch object contains the entities that are used to create a sketch. The 
-    objects include ConstrainedSketchGeometry objects contained in the Geometry Repository, 
-    such as Line, Arc, and Spline. Vertex, Dimension, Constraint, and Parameter objects are 
-    contained in their respective repositories. 
-
-    Access
-    ------
-        - import sketch
-        - mdb.models[name].sketches[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
-
-    """
-
-    # A repository of ConstrainedSketchConstraint objects. 
-    constraints: Repository[str, ConstrainedSketchConstraint] = Repository[str, ConstrainedSketchConstraint]()
-
-    # A repository of ConstrainedSketchDimension objects. 
-    dimensions: Repository[str, ConstrainedSketchDimension] = Repository[str, ConstrainedSketchDimension]()
-
-    # A ConstrainedSketchGeometryArray object specifying the sketch geometry, such as lines, 
-    # arcs, circles, and splines. 
-    geometry: ConstrainedSketchGeometryArray = ConstrainedSketchGeometryArray()
-
-    # A repository of ConstrainedSketchParameter objects specifying sketch parameters, which 
-    # may be associated with dimensions. 
-    parameters: Repository[str, ConstrainedSketchParameter] = Repository[str, ConstrainedSketchParameter]()
-
-    # A ConstrainedSketchOptions object specifying the sketch option settings. 
-    sketchOptions: ConstrainedSketchOptions = ConstrainedSketchOptions()
-
-    # A ConstrainedSketchVertexArray object. 
-    vertices: ConstrainedSketchVertexArray = ConstrainedSketchVertexArray()
-
-    # A ConstrainedSketchImageOptions object. 
-    imageOptions: ConstrainedSketchImageOptions = ConstrainedSketchImageOptions()
+class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimensionModel,
+                        ConstrainedSketchGeometryModel, ConstrainedSketchParameterModel,
+                        ConstrainedSketchVertexModel):
 
     @typing.overload
     def __init__(self, name: str, sheetSize: float, gridSpacing: float = None, transform: tuple = ()):
@@ -69,27 +27,27 @@ class ConstrainedSketch:
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         sheetSize
-            A Float specifying the sheet size. 
+            A Float specifying the sheet size.
         gridSpacing
-            A Float specifying the spacing between gridlines. Possible values are Floats >> 0. The 
-            default value is approximately 2 percent of *sheetSize*. 
+            A Float specifying the spacing between gridlines. Possible values are Floats >> 0. The
+            default value is approximately 2 percent of *sheetSize*.
         transform
-            A sequence of sequences of Floats specifying the three-dimensional orientation of the 
-            sketch. The sequence is a 3 × 4 transformation matrix specifying the axis of rotation 
-            and the translation vector. Possible values are any Floats.The default value for the 
-            axis of rotation is the identity matrix`(1.0, 0.0, 0.0),  (0.0, 1.0, 0.0),  (0.0, 0.0, 
-            1.0)`The default value for the translation vector is`(0.0, 0.0, 0.0)`The default values 
-            position the sketch on the *X–Y* plane centered at the origin. 
+            A sequence of sequences of Floats specifying the three-dimensional orientation of the
+            sketch. The sequence is a 3 × 4 transformation matrix specifying the axis of rotation
+            and the translation vector. Possible values are any Floats.The default value for the
+            axis of rotation is the identity matrix`(1.0, 0.0, 0.0),  (0.0, 1.0, 0.0),  (0.0, 0.0,
+            1.0)`The default value for the translation vector is`(0.0, 0.0, 0.0)`The default values
+            position the sketch on the *X–Y* plane centered at the origin.
 
         Returns
         -------
-            A ConstrainedSketch object. 
+            A ConstrainedSketch object.
 
         Exceptions
         ----------
-            None. 
+            None.
         """
         pass
 
@@ -108,18 +66,18 @@ class ConstrainedSketch:
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         objectToCopy
-            A ConstrainedSketch object to be copied. 
+            A ConstrainedSketch object to be copied.
 
         Returns
         -------
-            A ConstrainedSketch object. 
+            A ConstrainedSketch object.
 
         Exceptions
         ----------
-            InvalidNameError. 
-            !img 
+            InvalidNameError.
+            !img
         """
         pass
 
@@ -136,19 +94,19 @@ class ConstrainedSketch:
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         geometryFile
-            An AcisFile object specifying a file containing geometry. The geometry in the file is 
-            converted to two-dimensional sketch geometry in the *X–Y* plane. 
+            An AcisFile object specifying a file containing geometry. The geometry in the file is
+            converted to two-dimensional sketch geometry in the *X–Y* plane.
 
         Returns
         -------
-            A ConstrainedSketch object. 
+            A ConstrainedSketch object.
 
         Exceptions
         ----------
-            InvalidNameError. 
-            !img 
+            InvalidNameError.
+            !img
         """
         pass
 
@@ -164,12 +122,12 @@ class ConstrainedSketch:
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -180,17 +138,17 @@ class ConstrainedSketch:
         Parameters
         ----------
         line
-            A ConstrainedSketchGeometry object specifying a construction line that indicates the 
-            centerline of revolved features. 
+            A ConstrainedSketchGeometry object specifying a construction line that indicates the
+            centerline of revolved features.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -201,17 +159,17 @@ class ConstrainedSketch:
         Parameters
         ----------
         point
-            A ConstrainedSketchVertex object specifying an isolated point that indicates the center 
-            of twist for extruded features that use a twist angle. 
+            A ConstrainedSketchVertex object specifying an isolated point that indicates the center
+            of twist for extruded features that use a twist angle.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -222,16 +180,16 @@ class ConstrainedSketch:
         Parameters
         ----------
         objectList
-            A sequence specifying the ConstrainedSketchGeometry objects to dimension. 
+            A sequence specifying the ConstrainedSketchGeometry objects to dimension.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -243,26 +201,26 @@ class ConstrainedSketch:
         Parameters
         ----------
         curve1
-            The ConstrainedSketchGeometry object to be trimmed. 
+            The ConstrainedSketchGeometry object to be trimmed.
         point1
-            A pair of Floats specifying the location on ConstrainedSketchGeometry where the trimming 
-            should be applied. *point1* and *parameter1* are mutually exclusive. 
+            A pair of Floats specifying the location on ConstrainedSketchGeometry where the trimming
+            should be applied. *point1* and *parameter1* are mutually exclusive.
         parameter1
-            A Float specifying the parameter location on the ConstrainedSketchGeometry where the 
-            trimming should be applied. *point1* and *parameter1* are mutually exclusive. 
+            A Float specifying the parameter location on the ConstrainedSketchGeometry where the
+            trimming should be applied. *point1* and *parameter1* are mutually exclusive.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
-    def breakCurve(self, curve1: ConstrainedSketchGeometry, point1: tuple[float], 
+    def breakCurve(self, curve1: ConstrainedSketchGeometry, point1: tuple[float],
                    curve2: ConstrainedSketchGeometry, point2: tuple[float]):
         """This method breaks a specified ConstrainedSketchGeometry object (*curve1*) using another
         specified ConstrainedSketchGeometry object (*curve2*). If the selected
@@ -273,24 +231,24 @@ class ConstrainedSketch:
         Parameters
         ----------
         curve1
-            A ConstrainedSketchGeometry object specifying the object to be broken. 
+            A ConstrainedSketchGeometry object specifying the object to be broken.
         point1
-            A pair of Floats specifying the location on *curve1* near where the break should be 
-            applied. 
+            A pair of Floats specifying the location on *curve1* near where the break should be
+            applied.
         curve2
-            A ConstrainedSketchGeometry object specifying where *curve1* should be broken. 
+            A ConstrainedSketchGeometry object specifying where *curve1* should be broken.
         point2
-            A pair of Floats specifying the location on *curve2* near where *curve1* should be 
-            broken. 
+            A pair of Floats specifying the location on *curve2* near where *curve1* should be
+            broken.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -302,20 +260,20 @@ class ConstrainedSketch:
         Parameters
         ----------
         mirrorLine
-            A ConstrainedSketchGeometry object specifying the line about which Abaqus will mirror 
-            the sketch. 
+            A ConstrainedSketchGeometry object specifying the line about which Abaqus will mirror
+            the sketch.
         objectList
-            A sequence of ConstrainedSketchGeometry objects specifying the sketch to be copied and 
-            mirrored. 
+            A sequence of ConstrainedSketchGeometry objects specifying the sketch to be copied and
+            mirrored.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -327,18 +285,18 @@ class ConstrainedSketch:
         Parameters
         ----------
         vector
-            A sequence of two Floats specifying the translation vector. 
+            A sequence of two Floats specifying the translation vector.
         objectList
-            A sequence of ConstrainedSketchGeometry objects to be copied and moved. 
+            A sequence of ConstrainedSketchGeometry objects to be copied and moved.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -349,24 +307,24 @@ class ConstrainedSketch:
         Parameters
         ----------
         centerPoint
-            A pair of Floats specifying the center of rotation. 
+            A pair of Floats specifying the center of rotation.
         angle
-            A Float specifying the angle of rotation in degrees. 
+            A Float specifying the angle of rotation in degrees.
         objectList
-            A sequence of ConstrainedSketchGeometry objects to be copied and moved. 
+            A sequence of ConstrainedSketchGeometry objects to be copied and moved.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
-    def copyScale(self, scaleValue: float, scaleCenter: tuple[float], 
+    def copyScale(self, scaleValue: float, scaleCenter: tuple[float],
                   objectList: tuple[ConstrainedSketchGeometry]):
         """This method creates copies of the given ConstrainedSketchGeometry objects, scales them
         by the specified value about a selected point, and inserts them into the appropriate
@@ -375,20 +333,20 @@ class ConstrainedSketch:
         Parameters
         ----------
         scaleValue
-            A Float specifying the value for scaling. 
+            A Float specifying the value for scaling.
         scaleCenter
-            A pair of Floats specifying the center of scaling. 
+            A pair of Floats specifying the center of scaling.
         objectList
-            A sequence of ConstrainedSketchGeometry objects to be copied and scaled. 
+            A sequence of ConstrainedSketchGeometry objects to be copied and scaled.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -399,17 +357,17 @@ class ConstrainedSketch:
         Parameters
         ----------
         objectList
-            A sequence of ConstrainedSketchGeometry, ConstrainedSketchDimension, or 
-            ConstrainedSketchConstraint objects to be deleted. 
+            A sequence of ConstrainedSketchGeometry, ConstrainedSketchDimension, or
+            ConstrainedSketchConstraint objects to be deleted.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -419,16 +377,16 @@ class ConstrainedSketch:
         Parameters
         ----------
         name
-            A String specifying the name of the parameter to delete. 
+            A String specifying the name of the parameter to delete.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -439,27 +397,27 @@ class ConstrainedSketch:
         Parameters
         ----------
         entity
-            A ConstrainedSketchGeometry or ConstrainedSketchVertex object specifying the object to 
-            drag. 
+            A ConstrainedSketchGeometry or ConstrainedSketchVertex object specifying the object to
+            drag.
         points
-            A sequence of sequences of three Floats specifying a sequence of points along which to 
-            drag the entity. The order of points in the sequence defines a path that determines the 
-            solution. 
+            A sequence of sequences of three Floats specifying a sequence of points along which to
+            drag the entity. The order of points in the sequence defines a path that determines the
+            solution.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
-    def linearPattern(self, number1: int, spacing1: float, angle1: float, 
-                      vertexList: tuple[ConstrainedSketchVertex] = (), 
-                      geomList: tuple[ConstrainedSketchGeometry] = (), number2: str = 1, 
+    def linearPattern(self, number1: int, spacing1: float, angle1: float,
+                      vertexList: tuple[ConstrainedSketchVertex] = (),
+                      geomList: tuple[ConstrainedSketchGeometry] = (), number2: str = 1,
                       spacing2: float = None, angle2: float = None):
         """This method copies ConstrainedSketchGeometry objects in a linear pattern along one or
         two directions. This method also copies any associated dimension or constraint objects
@@ -468,41 +426,41 @@ class ConstrainedSketch:
         Parameters
         ----------
         number1
-            An Integer specifying the total number of copies, including the original objects, that 
-            appear along the first direction in the pattern. Possible values are 1 ≤≤ *number1* ≤≤ 
-            1000. 
+            An Integer specifying the total number of copies, including the original objects, that
+            appear along the first direction in the pattern. Possible values are 1 ≤≤ *number1* ≤≤
+            1000.
         spacing1
-            A Float specifying the spacing between copies along the first direction in the pattern. 
-            Possible values are 0.0 ≤≤ *spacing1* . 
+            A Float specifying the spacing between copies along the first direction in the pattern.
+            Possible values are 0.0 ≤≤ *spacing1* .
         angle1
-            A Float specifying the angle in degrees of the first direction in the pattern. Possible 
-            values are –360.0 ≤≤ *angle1* ≤≤ 360.0. 
+            A Float specifying the angle in degrees of the first direction in the pattern. Possible
+            values are –360.0 ≤≤ *angle1* ≤≤ 360.0.
         vertexList
-            A sequence of ConstrainedSketchVertex objects to copy. 
+            A sequence of ConstrainedSketchVertex objects to copy.
         geomList
-            A sequence of ConstrainedSketchGeometry objects to copy. 
+            A sequence of ConstrainedSketchGeometry objects to copy.
         number2
-            An integer specifying the total number of copies, including the original objects, that 
-            appear along the second direction in the pattern. Possible values are 1 ≤≤ *number2* ≤≤ 
-            1000. The default value is 1. The value of either *number1* or *number2* must be greater 
-            than one. 
+            An integer specifying the total number of copies, including the original objects, that
+            appear along the second direction in the pattern. Possible values are 1 ≤≤ *number2* ≤≤
+            1000. The default value is 1. The value of either *number1* or *number2* must be greater
+            than one.
         spacing2
-            A Float specifying the spacing between copies along the first direction in the pattern. 
-            Possible values are 0.0 ≤≤ *spacing2*. The default value is *spacing1*. 
+            A Float specifying the spacing between copies along the first direction in the pattern.
+            Possible values are 0.0 ≤≤ *spacing2*. The default value is *spacing1*.
         angle2
-            A Float specifying the angle in degrees of the first direction in the pattern. Possible 
-            values are –360.0 ≤≤ *angle2* ≤≤ 360.0. The default value is 90° beyond the value of 
-            *angle1*. 
+            A Float specifying the angle in degrees of the first direction in the pattern. Possible
+            values are –360.0 ≤≤ *angle2* ≤≤ 360.0. The default value is 90° beyond the value of
+            *angle1*.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            - AbaqusException 
-              Number must be greater than 1 for at least one direction 
-            !img 
+            - AbaqusException
+              Number must be greater than 1 for at least one direction
+            !img
         """
         pass
 
@@ -516,18 +474,18 @@ class ConstrainedSketch:
         Parameters
         ----------
         value
-            A Float specifying the search radius. 
+            A Float specifying the search radius.
         vertexList
-            A sequence of ConstrainedSketchVertex objects to be merged. 
+            A sequence of ConstrainedSketchVertex objects to be merged.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -537,22 +495,22 @@ class ConstrainedSketch:
         Parameters
         ----------
         vector
-            A sequence of two Floats specifying the translation vector. 
+            A sequence of two Floats specifying the translation vector.
         objectList
-            A sequence of ConstrainedSketchGeometry objects specifying the objects to be translated. 
+            A sequence of ConstrainedSketchGeometry objects specifying the objects to be translated.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
-    def offset(self, distance: float, objectList: tuple[ConstrainedSketchGeometry], side: SymbolicConstant, 
+    def offset(self, distance: float, objectList: tuple[ConstrainedSketchGeometry], side: SymbolicConstant,
                filletCorners: Boolean = OFF):
         """This method creates copies of the selected ConstrainedSketchGeometry objects, offsets
         them by the specified distance in the specified direction, and inserts them into the
@@ -562,28 +520,28 @@ class ConstrainedSketch:
         Parameters
         ----------
         distance
-            A Float specifying the distance to be offset. 
+            A Float specifying the distance to be offset.
         objectList
-            A sequence of ConstrainedSketchGeometry objects to be copied and offset. 
+            A sequence of ConstrainedSketchGeometry objects to be copied and offset.
         side
-            A SymbolicConstant specifying which side the offset should occur. Possible values are 
-            LEFT and RIGHT. 
+            A SymbolicConstant specifying which side the offset should occur. Possible values are
+            LEFT and RIGHT.
         filletCorners
-            A Boolean specifying whether the corners need to be rounded instead of being extended. 
+            A Boolean specifying whether the corners need to be rounded instead of being extended.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
-    def radialPattern(self, number: int, totalAngle: float, centerPoint: tuple[float], 
-                      vertexList: tuple[ConstrainedSketchVertex] = (), 
+    def radialPattern(self, number: int, totalAngle: float, centerPoint: tuple[float],
+                      vertexList: tuple[ConstrainedSketchVertex] = (),
                       geomList: tuple[ConstrainedSketchGeometry] = ()):
         """This method copies ConstrainedSketchGeometry objects in a radial pattern about a
         specified center point.
@@ -591,29 +549,29 @@ class ConstrainedSketch:
         Parameters
         ----------
         number
-            An Int specifying the total number of copies, including the original objects, that 
-            appear in the radial pattern. Possible values are 2 ≤≤ *number2* ≤≤ 1000. 
+            An Int specifying the total number of copies, including the original objects, that
+            appear in the radial pattern. Possible values are 2 ≤≤ *number2* ≤≤ 1000.
         totalAngle
-            A Float specifying the total angle in degrees between the first and last instance in the 
-            pattern. A positive angle corresponds to a counter-clockwise direction. The values 360° 
-            and -360° represent a special case where the pattern makes a full circle. In this case, 
-            because the copy would overlay the original, the copy is not placed at the last 
-            position. Possible values are –360.0 ≤≤ *totalAngle* ≤≤ 360.0. 
+            A Float specifying the total angle in degrees between the first and last instance in the
+            pattern. A positive angle corresponds to a counter-clockwise direction. The values 360°
+            and -360° represent a special case where the pattern makes a full circle. In this case,
+            because the copy would overlay the original, the copy is not placed at the last
+            position. Possible values are –360.0 ≤≤ *totalAngle* ≤≤ 360.0.
         centerPoint
-            A pair of Floats specifying the center of the radial pattern. 
+            A pair of Floats specifying the center of the radial pattern.
         vertexList
-            A sequence of ConstrainedSketchVertex objects to copy. 
+            A sequence of ConstrainedSketchVertex objects to copy.
         geomList
-            A sequence of ConstrainedSketchGeometry objects to copy. 
+            A sequence of ConstrainedSketchGeometry objects to copy.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -625,12 +583,12 @@ class ConstrainedSketch:
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -642,18 +600,18 @@ class ConstrainedSketch:
         Parameters
         ----------
         point1
-            A pair of Floats specifying the first corner of the rectangle. 
+            A pair of Floats specifying the first corner of the rectangle.
         point2
-            A pair of Floats specifying the second corner of the rectangle. 
+            A pair of Floats specifying the second corner of the rectangle.
 
         Returns
         -------
-            An Int specifying the success or failure of the method. A value of 0 indicates failure. 
+            An Int specifying the success or failure of the method. A value of 0 indicates failure.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -664,22 +622,22 @@ class ConstrainedSketch:
         Parameters
         ----------
         tolerance
-            A float value which specifies the largest size of the gap or overlap between entities 
-            that is to be removed. Typically this value is small and is used to close gaps and 
-            overlaps which may not exist in the originating program but exist in the sketch because 
-            of mismatched tolerances between the two programs. 
+            A float value which specifies the largest size of the gap or overlap between entities
+            that is to be removed. Typically this value is small and is used to close gaps and
+            overlaps which may not exist in the originating program but exist in the sketch because
+            of mismatched tolerances between the two programs.
         geomList
-            A sequence of ConstrainedSketchGeometry objects where the gaps and overlaps are to be 
-            removed. 
+            A sequence of ConstrainedSketchGeometry objects where the gaps and overlaps are to be
+            removed.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -692,25 +650,25 @@ class ConstrainedSketch:
         Parameters
         ----------
         geomList
-            A sequence of ConstrainedSketchGeometry objects where the short edges are to be removed. 
+            A sequence of ConstrainedSketchGeometry objects where the short edges are to be removed.
         tolerance
-            A float value that is used to select and delete only those edges specified in *geomList* 
-            whose lengths are smaller than the given value. The default value is –1.0. This value 
-            implies that all edges specified in *geomList* will be removed and the sketch healed to 
-            remove gaps left by their removal. 
+            A float value that is used to select and delete only those edges specified in *geomList*
+            whose lengths are smaller than the given value. The default value is –1.0. This value
+            implies that all edges specified in *geomList* will be removed and the sketch healed to
+            remove gaps left by their removal.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
-    def retrieveSketch(self, sketch: 'ConstrainedSketch'):
+    def retrieveSketch(self, sketch: 'ConstrainedSketchBase'):
         """This method copies all ConstrainedSketchGeometry, ConstrainedSketchDimension,
         ConstrainedSketchConstraint, and ConstrainedSketchParameter objects from the specified
         ConstrainedSketch object. The new objects are added to the existing objects (if any).
@@ -720,16 +678,16 @@ class ConstrainedSketch:
         Parameters
         ----------
         sketch
-            A ConstrainedSketch object specifying the object from which to copy. 
+            A ConstrainedSketch object specifying the object from which to copy.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -740,24 +698,24 @@ class ConstrainedSketch:
         Parameters
         ----------
         centerPoint
-            A pair of Floats specifying the center of rotation. 
+            A pair of Floats specifying the center of rotation.
         angle
-            A Float specifying the angle of rotation in degrees. 
+            A Float specifying the angle of rotation in degrees.
         objectList
-            A sequence of ConstrainedSketchGeometry specifying the objects to be rotated. 
+            A sequence of ConstrainedSketchGeometry specifying the objects to be rotated.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
-    def scale(self, scaleValue: float, scaleCenter: tuple[float], 
+    def scale(self, scaleValue: float, scaleCenter: tuple[float],
               objectList: tuple[ConstrainedSketchGeometry]):
         """This method scales the given ConstrainedSketchGeometry objects by the given scale factor
         and about the given point.
@@ -765,20 +723,20 @@ class ConstrainedSketch:
         Parameters
         ----------
         scaleValue
-            A Float specifying the value of scale. 
+            A Float specifying the value of scale.
         scaleCenter
-            A pair of Floats specifying the center of scale. 
+            A pair of Floats specifying the center of scale.
         objectList
-            A sequence of ConstrainedSketchGeometry objects specifying the objects to be scaled. 
+            A sequence of ConstrainedSketchGeometry objects specifying the objects to be scaled.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -790,21 +748,21 @@ class ConstrainedSketch:
         Parameters
         ----------
         option
-            A SymbolicConstant specifying how the sketch is displayed. Possible values 
-            are:STANDALONE: Indicates a new stand-alone sketch. The current viewport is cleared and 
-            is replaced by the stand-alone sketch. The view direction is set to −ZZ.SUPERIMPOSE: 
-            Indicates that the sketch is superimposed on the current viewport. The view direction is 
-            changed to be perpendicular to the sketch plane. The change is effected smoothly as an 
-            animated sequence of many small viewing steps. 
+            A SymbolicConstant specifying how the sketch is displayed. Possible values
+            are:STANDALONE: Indicates a new stand-alone sketch. The current viewport is cleared and
+            is replaced by the stand-alone sketch. The view direction is set to −ZZ.SUPERIMPOSE:
+            Indicates that the sketch is superimposed on the current viewport. The view direction is
+            changed to be perpendicular to the sketch plane. The change is effected smoothly as an
+            animated sequence of many small viewing steps.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -817,25 +775,25 @@ class ConstrainedSketch:
         Parameters
         ----------
         curve1
-            The ConstrainedSketchGeometry object specifying the object to be trimmed or extended. 
+            The ConstrainedSketchGeometry object specifying the object to be trimmed or extended.
         point1
-            A pair of Floats specifying the location on *curve1* where trim or extend should be 
-            applied. 
+            A pair of Floats specifying the location on *curve1* where trim or extend should be
+            applied.
         curve2
-            The ConstrainedSketchGeometry object specifying the object to which *curve1* is trimmed 
-            or extended. *curve2* is not trimmed or extended. 
+            The ConstrainedSketchGeometry object specifying the object to which *curve1* is trimmed
+            or extended. *curve2* is not trimmed or extended.
         point2
-            A pair of Floats specifying the location on *curve2* near where *curve1* should be 
-            trimmed or extended. 
+            A pair of Floats specifying the location on *curve2* near where *curve1* should be
+            trimmed or extended.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -847,12 +805,12 @@ class ConstrainedSketch:
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -868,12 +826,12 @@ class ConstrainedSketch:
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            None. 
-            !img 
+            None.
+            !img
         """
         pass
 
@@ -883,19 +841,19 @@ class ConstrainedSketch:
         Parameters
         ----------
         fileName
-            A String specifying the file name. 
+            A String specifying the file name.
         version
-            A Float specifying the ACIS version. For example, the Float 12.0 corresponds to ACIS 
-            Version 12.0. The default value is the current version of ACIS. 
+            A Float specifying the ACIS version. For example, the Float 12.0 corresponds to ACIS
+            Version 12.0. The default value is the current version of ACIS.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            InvalidNameError. 
-            !img 
+            InvalidNameError.
+            !img
         """
         pass
 
@@ -905,19 +863,18 @@ class ConstrainedSketch:
         Parameters
         ----------
         filename
-            A String specifying the file name. 
+            A String specifying the file name.
         flavor
-            A SymbolicConstant specifying a particular flavor of IGES to export. Possible values 
-            areSTANDARD, AUTOCAD, SOLIDWORKS, JAMA, and MSBO. 
+            A SymbolicConstant specifying a particular flavor of IGES to export. Possible values
+            areSTANDARD, AUTOCAD, SOLIDWORKS, JAMA, and MSBO.
 
         Returns
         -------
-            None. 
+            None.
 
         Exceptions
         ----------
-            InvalidNameError. 
-            !img 
+            InvalidNameError.
+            !img
         """
         pass
-

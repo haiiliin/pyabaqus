@@ -38,7 +38,7 @@ class StampControl(GeometricRestriction):
             A String specifying the geometric restriction repository key. 
         clientDirection
             A VertexArray object of length 2 specifying the stamping direction. Instead of through a 
-            Vertex, each point may be specified through a tuple of coordinates. 
+            ConstrainedSketchVertex, each point may be specified through a tuple of coordinates.
         region
             A Region object specifying the region to which the geometric restriction is applied. 
             When used with a TopologyTask, there is no default value. When used with a ShapeTask, 

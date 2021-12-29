@@ -1,8 +1,8 @@
 from abaqusConstants import *
-from ..Part.BasePart import BasePart
+from ..Part.PartBase import PartBase
 
 
-class Part(BasePart):
+class Part(PartBase):
     """The following commands operate on Part objects. For more information about the Part 
     object, see Part object. 
 

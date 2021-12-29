@@ -10,7 +10,7 @@ class DisplayBody(Constraint):
     display only and does not take part in the analysis. However it will still be visible 
     during postprocessing and its position at any frame will be defined by the translation 
     and rotation of the specified control points. 
-    The DisplayBody object is derived from the Constraint object. 
+    The DisplayBody object is derived from the ConstrainedSketchConstraint object.
 
     Access
     ------
@@ -45,7 +45,7 @@ class DisplayBody(Constraint):
             A PartInstance object specifying the part instance that is to be used for display only. 
         controlPoints
             A ModelDotArray object specifying the motion of the PartInstance. The control points may 
-            be Vertex, ReferencePoint, or MeshNode objects. Their motion will control the motion of 
+            be ConstrainedSketchVertex, ReferencePoint, or MeshNode objects. Their motion will control the motion of
             the PartInstance. If this argument is set to an empty sequence, the PartInstance will 
             remain fixed in space during the analysis. The sequence can have either one object or 
             three objects. 

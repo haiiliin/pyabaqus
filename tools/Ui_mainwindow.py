@@ -14,7 +14,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(781, 442)
+        MainWindow.resize(599, 346)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        MainWindow.setFont(font)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
@@ -35,12 +38,21 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.replaced)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 781, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 599, 20))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.toolBar = QtWidgets.QToolBar(MainWindow)
+        self.toolBar.setObjectName("toolBar")
+        MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
+        self.actionSetupSubModule = QtWidgets.QAction(MainWindow)
+        self.actionSetupSubModule.setObjectName("actionSetupSubModule")
+        self.actionSetupSketch = QtWidgets.QAction(MainWindow)
+        self.actionSetupSketch.setObjectName("actionSetupSketch")
+        self.toolBar.addAction(self.actionSetupSubModule)
+        self.toolBar.addAction(self.actionSetupSketch)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -48,3 +60,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))
+        self.actionSetupSubModule.setText(_translate("MainWindow", "Setup SubModule"))
+        self.actionSetupSubModule.setToolTip(_translate("MainWindow", "Setup SubModule"))
+        self.actionSetupSketch.setText(_translate("MainWindow", "Setup Sketch"))
+        self.actionSetupSketch.setToolTip(_translate("MainWindow", "Setup Sketch"))

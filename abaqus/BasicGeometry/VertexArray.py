@@ -3,7 +3,7 @@ from abaqusConstants import *
 
 class VertexArray:
 
-    """The VertexArray is a sequence of Vertex objects. If the part is modified, then 
+    """The VertexArray is a sequence of ConstrainedSketchVertex objects. If the part is modified, then
     VertexArray must be updated for that part. 
 
     Access
@@ -43,7 +43,7 @@ class VertexArray:
         Parameters
         ----------
         vertices
-            A list of Vertex objects. 
+            A list of ConstrainedSketchVertex objects.
 
         Returns
         -------
@@ -59,7 +59,7 @@ class VertexArray:
     def findAt(self, coordinates: tuple, printWarning: Boolean = True):
         """This method returns the object or objects in the VertexArray located at the given
         coordinates.
-        findAt initially uses the ACIS tolerance of 1E-6. As a result, findAt returns any Vertex
+        findAt initially uses the ACIS tolerance of 1E-6. As a result, findAt returns any ConstrainedSketchVertex
         object that is at the arbitrary point specified or at a distance of less than 1E-6 from
         the arbitrary point. If nothing is found, findAt uses the tolerance for imprecise
         geometry (applicable only for imprecise geometric entities).
@@ -71,8 +71,8 @@ class VertexArray:
         ----------
         coordinates
             A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the object to 
-            find.findAt returns either a Vertex object or a sequence of Vertex objects based on the 
-            type of input.If *coordinates* is a sequence of Floats, findAt returns the Vertex object 
+            find.findAt returns either a ConstrainedSketchVertex object or a sequence of ConstrainedSketchVertex objects based on the
+            type of input.If *coordinates* is a sequence of Floats, findAt returns the ConstrainedSketchVertex object
             at that point.If you omit the *coordinates* keyword argument, findAt accepts as 
             arguments a sequence of sequence of floats in the following format:`verts = 
             v.findAt(((20.19686, -169.513997, 27.798593), ),                 ((19.657627, 
@@ -83,7 +83,7 @@ class VertexArray:
 
         Returns
         -------
-            A Vertex object or a sequence of Vertex objects. 
+            A ConstrainedSketchVertex object or a sequence of ConstrainedSketchVertex objects.
 
         Exceptions
         ----------
@@ -105,7 +105,7 @@ class VertexArray:
 
         Returns
         -------
-            A Vertex object or a sequence of Vertex objects. 
+            A ConstrainedSketchVertex object or a sequence of ConstrainedSketchVertex objects.
 
         Exceptions
         ----------
@@ -153,7 +153,7 @@ class VertexArray:
 
         Returns
         -------
-            A VertexArray object, which is a sequence of Vertex objects. 
+            A VertexArray object, which is a sequence of ConstrainedSketchVertex objects.
 
         Exceptions
         ----------
@@ -179,7 +179,7 @@ class VertexArray:
 
         Returns
         -------
-            A VertexArray object, which is a sequence of Vertex objects. 
+            A VertexArray object, which is a sequence of ConstrainedSketchVertex objects.
 
         Exceptions
         ----------
@@ -201,7 +201,7 @@ class VertexArray:
 
         Returns
         -------
-            A VertexArray object, which is a sequence of Vertex objects. 
+            A VertexArray object, which is a sequence of ConstrainedSketchVertex objects.
 
         Exceptions
         ----------
@@ -234,7 +234,7 @@ class VertexArray:
 
     def getClosest(self, coordinates: tuple, searchTolerance: str = ''):
         """This method returns a object or objects in the VertexArray closest to the given set of
-        points, where the given points need not lie on Vertex objects in the VertexArray.
+        points, where the given points need not lie on ConstrainedSketchVertex objects in the VertexArray.
 
         Parameters
         ----------
@@ -253,9 +253,9 @@ class VertexArray:
             This method returns a dictionary object. The key to the dictionary object is the 
             position of the input point in the tuple specified in the *coordinates* starting at 
             index 0. If a closest vertex could be found then the value is a sequence consisting of 
-            two objects. The first object in the sequence is a Vertex that is close to the input 
+            two objects. The first object in the sequence is a ConstrainedSketchVertex that is close to the input
             point referred to by the key. The second object in the sequence is a sequence of floats 
-            that specifies the *X*-, *Y*-, and *Z*-location of the Vertex. See program listing 
+            that specifies the *X*-, *Y*-, and *Z*-location of the ConstrainedSketchVertex. See program listing
             above. 
 
         Exceptions

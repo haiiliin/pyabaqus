@@ -37,7 +37,7 @@ class SlideRegionControl(GeometricRestriction):
             A String specifying the geometric restriction repository key. 
         clientDirection
             A VertexArray object of length 2 specifying the axis of revolution. Instead of through a 
-            Vertex, each point may be specified through a tuple of coordinates. This is used when 
+            ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. This is used when
             *approach* is TURN. 
         region
             A Region object specifying the region to which the geometric restriction is applied. 

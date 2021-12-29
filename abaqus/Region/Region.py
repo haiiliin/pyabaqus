@@ -98,7 +98,7 @@ class Region:
         nodes
             A sequence of Node objects. The default value is None. 
         vertices
-            A sequence of Vertex objects. The default value is None. 
+            A sequence of ConstrainedSketchVertex objects. The default value is None.
         edges
             A sequence of Edge objects. The default value is None. 
         faces
@@ -108,13 +108,13 @@ class Region:
         referencePoints
             A sequence of ReferencePoint objects. The default value is an empty sequence. 
         xVertices
-            A sequence of Vertex objects that excludes specific vertices from the region. The 
+            A sequence of ConstrainedSketchVertex objects that excludes specific vertices from the region. The
             default value is None. 
         xEdges
-            A sequence of Vertex objects that excludes specific edges from the region. The default 
+            A sequence of ConstrainedSketchVertex objects that excludes specific edges from the region. The default
             value is None. 
         xFaces
-            A sequence of Vertex objects that excludes specific faces from the region. The default 
+            A sequence of ConstrainedSketchVertex objects that excludes specific faces from the region. The default
             value is None. 
         skinFaces
             A tuple of tuples specifying a skin name and the sequence of faces associated with this 

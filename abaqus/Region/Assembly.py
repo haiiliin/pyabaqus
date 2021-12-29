@@ -1,8 +1,8 @@
 from abaqusConstants import *
-from ..Assembly.BaseAssembly import BaseAssembly
+from ..Assembly.AssemblyBase import AssemblyBase
 
 
-class Assembly(BaseAssembly):
+class Assembly(AssemblyBase):
     """The following commands operate on Assembly objects. For more information about the 
     Assembly object, see Assembly object. 
 

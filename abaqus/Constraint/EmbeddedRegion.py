@@ -7,7 +7,7 @@ class EmbeddedRegion(Constraint):
 
     """The EmbeddedRegion object allows you to embed a region of the model within a “host” 
     region of the model or within the whole model. 
-    The EmbeddedRegion object is derived from the Constraint object. 
+    The EmbeddedRegion object is derived from the ConstrainedSketchConstraint object.
 
     Access
     ------

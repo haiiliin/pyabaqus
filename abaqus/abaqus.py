@@ -20,7 +20,19 @@ class Mdb(BaseMdb):
             self.abaqus_bat_path = os.environ['ABAQUS_BAT_PATH']
         if 'ABAQUS_BAT_PATH' in os.environ.keys():
             self.abaqus_bat_setting = os.environ['ABAQUS_BAT_SETTING']
-        os.system(self.abaqus_bat_path + ' cae -' + self.abaqus_bat_setting + ' ' + os.path.abspath(sys.argv[0]))
+        os.system('{} cae -{} {}'.format(self.abaqus_bat_path, self.abaqus_bat_setting, os.path.abspath(sys.argv[0])))
+
+    def submitInputFile(self, inputFile: str, options: str = 'int', showStatus: bool = True):
+        absInputFilepath = os.path.abspath(inputFile)
+        os.system('cd {}'.format(os.path.dirname(absInputFilepath)))
+        if showStatus is True:
+            staFile = os.path.basename(absInputFilepath.replace('.inp', '')) + '.sta'
+            if not os.path.exists(staFile):
+                with open(staFile, 'w+') as f:
+                    f.write('')
+                    f.close()
+            os.startfile(staFile)
+        os.system("{} job={} {}".format(self.abaqus_bat_path, os.path.basename(absInputFilepath.replace('.inp', '')), options))
 
 
 session = Session()

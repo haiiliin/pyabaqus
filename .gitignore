@@ -114,6 +114,7 @@ dmypy.json
 .pyre/
 
 # User Defined
+/tools
 addMethods.py
 addMaterialMethods.py
 dst.py

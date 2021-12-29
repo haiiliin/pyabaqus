@@ -5,7 +5,7 @@ class GraphicsOptions:
     """The GraphicsOptions object stores settings that control how objects are rendered in all 
     viewports. GraphicsOptions objects are accessed in one of two ways: 
     - The default graphics options. These settings are used as defaults when you start a 
-    session and by the Defaults button on the Graphics Options dialog box. 
+    session and by the Defaults button on the Graphics ConstrainedSketchOptions dialog box.
     - The current graphics options. 
     The GraphicsOptions object has no constructor; Abaqus creates both the 
     *defaultGraphicsOptions* and the *graphicsOptions* members when a session is started. 

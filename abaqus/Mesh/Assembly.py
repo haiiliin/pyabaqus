@@ -6,7 +6,7 @@ from .MeshEdge import MeshEdge
 from .MeshElement import MeshElement
 from .MeshFace import MeshFace
 from .MeshNode import MeshNode
-from ..Assembly.BaseAssembly import BaseAssembly
+from ..Assembly.AssemblyBase import AssemblyBase
 from ..Assembly.PartInstance import PartInstance
 from ..BasicGeometry.Cell import Cell
 from ..BasicGeometry.Edge import Edge
@@ -14,7 +14,7 @@ from ..BasicGeometry.Face import Face
 from ..BasicGeometry.IgnoredVertex import IgnoredVertex
 
 
-class Assembly(BaseAssembly):
+class Assembly(AssemblyBase):
     """The following commands operate on Assembly objects. For more information about the 
     Assembly object, see Assembly object. 
 
@@ -60,11 +60,11 @@ class Assembly(BaseAssembly):
         Parameters
         ----------
         geometricEntity
-            A Cell , a Face, an Edge, or a Vertex object specifying geometric entity to be 
+            A Cell , a Face, an Edge, or a ConstrainedSketchVertex object specifying geometric entity to be
             associated with one or more mesh entities.If the geometric entity is a Cell object then 
             the argument *elements* must be specified.If the geometric entity is a Face object then 
             the argument *elemFaces* must be specified.If the geometric entity is an Edge object 
-            then the argument *elemEdges* must be specified.If the geometric entity is a Vertex 
+            then the argument *elemEdges* must be specified.If the geometric entity is a ConstrainedSketchVertex
             object then the argument *node* must be specified. 
         elements
             A sequence of MeshElement objects specifying the elements to be associated with the 
@@ -224,7 +224,7 @@ class Assembly(BaseAssembly):
         Parameters
         ----------
         geometricEntities
-            A sequence of Cell objects, Face objects, Edge objects, or Vertex objects specifying the 
+            A sequence of Cell objects, Face objects, Edge objects, or ConstrainedSketchVertex objects specifying the
             geometric entities that will be disassociated from the mesh. 
         addBoundingEntities
             A Boolean specifying whether the mesh will also be disassociated from the geometric 
@@ -653,7 +653,7 @@ class Assembly(BaseAssembly):
         Parameters
         ----------
         regions
-            A sequence or tuple of PartInstance objects or Geometry regions for which mesh 
+            A sequence or tuple of PartInstance objects or ConstrainedSketchGeometry regions for which mesh
             statistics should be returned. 
 
         Returns
@@ -961,7 +961,7 @@ class Assembly(BaseAssembly):
         Parameters
         ----------
         regions
-            A sequence of Geometry regions or MeshElement objects, or a Set object containing either 
+            A sequence of ConstrainedSketchGeometry regions or MeshElement objects, or a Set object containing either
             geometry regions or elements, specifying the regions to which element types are to be 
             assigned. 
         elemTypes
@@ -995,7 +995,7 @@ class Assembly(BaseAssembly):
         region
             A Face region. 
         corners
-            Three, four, or five Vertex objects defining the logical corners for a given mappable 
+            Three, four, or five ConstrainedSketchVertex objects defining the logical corners for a given mappable
             face region. 
 
         Returns

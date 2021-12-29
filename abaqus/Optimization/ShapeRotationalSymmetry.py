@@ -39,7 +39,7 @@ class ShapeRotationalSymmetry(GeometricRestriction):
             A String specifying the geometric restriction repository key. 
         clientDirection
             A VertexArray object of length 2 specifying the vector positioned at the *csys* origin, 
-            used as the axis of symmetry. Instead of through a Vertex, each point might be specified 
+            used as the axis of symmetry. Instead of through a ConstrainedSketchVertex, each point might be specified
             through a tuple of coordinates. 
         region
             A Region object specifying the region to which the geometric restriction is applied. 

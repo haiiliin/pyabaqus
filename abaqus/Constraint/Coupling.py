@@ -9,7 +9,7 @@ class Coupling(Constraint):
 
     """The Coupling object defines a constraint between a group of coupling nodes located on a 
     region and a reference point. 
-    The Coupling object is derived from the Constraint object. 
+    The Coupling object is derived from the ConstrainedSketchConstraint object.
 
     Access
     ------

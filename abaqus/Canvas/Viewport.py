@@ -90,7 +90,7 @@ class Viewport:
     # set""Material""Section""Default""Part""Part instance""Element type""Averaging 
     # region""Assembly""Property""Set""Surface""Skin""Profile""Part shape""Part status""Part 
     # geometry""Meshability""Instance type""Load""Boundary 
-    # condition""Interaction""Constraint""Interaction type""Constraint type""Display 
+    # condition""Interaction""ConstrainedSketchConstraint""Interaction type""ConstrainedSketchConstraint type""Display
     # group""Selection group""Interaction property""Connector""Connector type""Connector 
     # property""Internal set""Internal 
     # surface""mapColors""autoColors""overrides""defaultAutoColors""defaultOverrides""objectToCopy""colorMapping""colorMappings""colorMode""attributeColors""updateOverrides""colorCodeOverride""initialColor""Layup""Ply" 

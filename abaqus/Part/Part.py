@@ -106,7 +106,7 @@ class Part(EditMeshPart, MeshPart, RegionPart):
             A Region object specifying other objects to be included in the set. The default value is
             None.
         vertices
-            A sequence of Vertex objects. The default value is None.
+            A sequence of ConstrainedSketchVertex objects. The default value is None.
         edges
             A sequence of Edge objects. The default value is None.
         faces
@@ -114,7 +114,7 @@ class Part(EditMeshPart, MeshPart, RegionPart):
         cells
             A sequence of Cell objects. The default value is None.
         xVertices
-            A sequence of Vertex objects that excludes specific vertices from the set. The default
+            A sequence of ConstrainedSketchVertex objects that excludes specific vertices from the set. The default
             value is None.
         xEdges
             A sequence of Edge objects that excludes specific edges from the set. The default value

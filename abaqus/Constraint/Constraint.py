@@ -2,9 +2,9 @@ from abaqusConstants import *
 
 class Constraint:
 
-    """The Constraint object is the abstract base type for other Constraint objects. The 
-    Constraint object has no explicit constructor. The members of the Constraint object are 
-    common to all objects derived from the Constraint. 
+    """The ConstrainedSketchConstraint object is the abstract base type for other ConstrainedSketchConstraint objects. The
+    ConstrainedSketchConstraint object has no explicit constructor. The members of the ConstrainedSketchConstraint object are
+    common to all objects derived from the ConstrainedSketchConstraint.
 
     Access
     ------

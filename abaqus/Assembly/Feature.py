@@ -44,7 +44,7 @@ class Feature(BaseFeature):
         name
             A String specifying a unique Feature name. 
         points
-            A tuple of points. Each point can be a Vertex, Datum point, Reference point, an 
+            A tuple of points. Each point can be a ConstrainedSketchVertex, Datum point, Reference point, an
             Attachment point, orphan mesh Node, or an Interesting point object. 
         sourceFaces
             A sequence of Face objects specifying the geometry faces onto which the points are to be 
@@ -64,12 +64,12 @@ class Feature(BaseFeature):
             PROJECT_BY_PROXIMITY. 
         projectionDirStartPt
             A point specifying the start point of the projection direction to project onto source 
-            faces. The point can be a Vertex, Datum point, Reference point, Attachment point, orphan 
+            faces. The point can be a ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan
             mesh Node, Interesting Point object, or a tuple of Floats representing the coordinates 
             of a point. 
         projectionDirEndPt
             A point specifying the end point of the projection direction to project onto source 
-            faces. The point can be a Vertex, Datum point, Reference point, Attachment point, orphan 
+            faces. The point can be a ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan
             mesh Node, Interesting point object, or a tuple of Floats representing the coordinates 
             of a point. 
         sourceToTargetProjMethod
@@ -136,10 +136,10 @@ class Feature(BaseFeature):
         Parameters
         ----------
         movablePoint
-            A Vertex, a Datum point, or a ReferencePoint or a mesh node from an orphan mesh on the 
+            A ConstrainedSketchVertex, a Datum point, or a ReferencePoint or a mesh node from an orphan mesh on the
             part instance to be moved. 
         fixedPoint
-            A Vertex, a Datum point, or a ReferencePoint or a mesh node from an orphan mesh on the 
+            A ConstrainedSketchVertex, a Datum point, or a ReferencePoint or a mesh node from an orphan mesh on the
             part instance to remain fixed. 
 
         Returns

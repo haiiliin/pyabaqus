@@ -2,7 +2,7 @@
 #
 # Abaqus/CAE Release 2021 replay file
 # Internal Version: 2020_03_06-22.50.37 167380
-# Run by Hailin on Mon Dec 27 19:44:30 2021
+# Run by Hailin on Wed Dec 29 13:49:45 2021
 #
 
 # from driverUtils import executeOnCaeGraphicsStartup
@@ -16,7 +16,7 @@ session.viewports['Viewport: 1'].makeCurrent()
 from driverUtils import executeOnCaeStartup
 executeOnCaeStartup()
 #: Executing "onCaeStartup()" in the site directory ...
-execfile('C:/Users/user/OneDrive/Documents/GitHub/PyAbaqusBase/test.py', 
+execfile('C:/Users/user/OneDrive/Documents/GitHub/PyAbaqusBase/test-dst.py', 
     __main__.__dict__)
 #: Executing "onCaeStartup()" in the site directory ...
 #: The interaction property "IntProp-1" has been created.
@@ -26,11 +26,9 @@ execfile('C:/Users/user/OneDrive/Documents/GitHub/PyAbaqusBase/test.py',
 #: 
 #: History output is not requested in the following steps:
 #: INITIAL-STRESS
-#: Warning: Field output is not requested in the following steps:
-#: INITIAL-STRESS
-#: 
-#: History output is not requested in the following steps:
-#: INITIAL-STRESS
-#: The model database has been saved to "C:\Users\user\OneDrive\Documents\GitHub\PyAbaqusBase\tests\dst\dst.cae".
-print 'RT script done'
-#: RT script done
+#* IOError: C:/Users/Hailin/OneDrive/Documents/GitHub/PyAbaqusBase/tests/dst: 
+#* Directory not found
+#* File "C:/Users/user/OneDrive/Documents/GitHub/PyAbaqusBase/test-dst.py", 
+#* line 168, in <module>
+#*     
+#* mdb.saveAs('C:\\Users\\Hailin\\OneDrive\\Documents\\GitHub\\PyAbaqusBase\\tests\\dst\\dst.cae')

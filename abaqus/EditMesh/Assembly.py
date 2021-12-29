@@ -1,14 +1,14 @@
 import typing
 
 from abaqusConstants import *
-from ..Assembly.BaseAssembly import BaseAssembly
+from ..Assembly.AssemblyBase import AssemblyBase
 from ..Datum.DatumCsys import DatumCsys
 from ..Mesh.MeshElement import MeshElement
 from ..Mesh.MeshNode import MeshNode
 from ..Region.Region import Region
 
 
-class Assembly(BaseAssembly):
+class Assembly(AssemblyBase):
     """The following commands operate on Assembly objects. For more information about the 
     Assembly object, see Assembly object. 
 
@@ -97,7 +97,7 @@ class Assembly(BaseAssembly):
         projectionReference
             An object specifying the target for the node projection operation. The 
             *projectionReference* can be any one of the following objects: MeshNode, MeshEdge, 
-            MeshFace, Vertex, Edge, Face, DatumPoint, DatumAxis, or DatumPlane. 
+            MeshFace, ConstrainedSketchVertex, Edge, Face, DatumPoint, DatumAxis, or DatumPlane.
 
         Returns
         -------

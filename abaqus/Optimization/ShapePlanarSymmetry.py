@@ -38,7 +38,7 @@ class ShapePlanarSymmetry(GeometricRestriction):
             A String specifying the geometric restriction repository key. 
         clientDirection
             A VertexArray object of length 2 specifying the vector positioned at the *csys* origin 
-            that is normal to the symmetry plane. Instead of through a Vertex, each point may be 
+            that is normal to the symmetry plane. Instead of through a ConstrainedSketchVertex, each point may be
             specified through a tuple of coordinates. 
         region
             A Region object specifying the region to which the geometric restriction is applied. 

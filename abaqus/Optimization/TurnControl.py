@@ -37,7 +37,7 @@ class TurnControl(GeometricRestriction):
             A String specifying the geometric restriction repository key. 
         clientDirection
             A VertexArray object of length 2 specifying the direction of the rotation axis as a 
-            vector positioned at the *csys* origin. Instead of through a Vertex, each point might be 
+            vector positioned at the *csys* origin. Instead of through a ConstrainedSketchVertex, each point might be
             specified through a tuple of coordinates. 
         region
             A Region object specifying the region to which the geometric restriction is applied. 

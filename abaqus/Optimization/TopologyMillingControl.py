@@ -36,7 +36,7 @@ class TopologyMillingControl(GeometricRestriction):
             A String specifying the geometric restriction repository key. 
         millingDirections
             A tuple of VertexArray objects of length 2 specifying the milling directions. Each point 
-            can be specified through a tuple of coordinates instead of through a Vertex. 
+            can be specified through a tuple of coordinates instead of through a ConstrainedSketchVertex.
         region
             A Region object specifying the region to which the geometric restriction is applied. 
         csys

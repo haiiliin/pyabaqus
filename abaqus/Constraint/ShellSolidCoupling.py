@@ -7,7 +7,7 @@ class ShellSolidCoupling(Constraint):
 
     """The ShellSolidCoupling object defines two surfaces to be tied together for the duration 
     of a simulation. 
-    The ShellSolidCoupling object is derived from the Constraint object. 
+    The ShellSolidCoupling object is derived from the ConstrainedSketchConstraint object.
 
     Access
     ------

@@ -1212,7 +1212,7 @@ class Feature(BaseFeature):
         Exceptions
         ----------
             - If the intended volume to be turned into a shell entity is not three-dimensional. 
-              Parterror: Geometry that is not 3-dimensional does not contain cells. 
+              Parterror: ConstrainedSketchGeometry that is not 3-dimensional does not contain cells.
         """
         pass
 
@@ -1276,7 +1276,7 @@ class Feature(BaseFeature):
         Parameters
         ----------
         vertexList
-            A sequence of Vertex objects specifying the vertices to be removed. 
+            A sequence of ConstrainedSketchVertex objects specifying the vertices to be removed.
         edgeList
             A sequence of Edge objects specifying the edges to be removed. 
         removeEdgeVertices
@@ -1357,10 +1357,10 @@ class Feature(BaseFeature):
         face
             A Face object specifying the face on which the sliver is located. 
         point1
-            A point specifying the location for partition creation. It can be a Vertex object, an 
+            A point specifying the location for partition creation. It can be a ConstrainedSketchVertex object, an
             Interesting Point or three coordinates specifying the point on an edge of the *face*. 
         point2
-            A point specifying the location for partition creation. It can be a Vertex object, an 
+            A point specifying the location for partition creation. It can be a ConstrainedSketchVertex object, an
             Interesting Point or three coordinates specifying the point on an edge of the *face*. 
         toleranceChecks
             A Boolean specifying whether to use internal tolerance checks to restrict the size of 
@@ -1473,7 +1473,7 @@ class Feature(BaseFeature):
             operation will fail for non-manifold edges. The *edgeList* and *vertexList* arguments 
             are mutually exclusive. One of them must be specified. 
         vertexList
-            A sequence of Vertex objects. Vertices that are connected to two wire edges can be 
+            A sequence of ConstrainedSketchVertex objects. Vertices that are connected to two wire edges can be
             rounded. The operation will fail for a vertex connected to a face. The *edgeList* and 
             *vertexList* arguments are mutually exclusive. One of them must be specified. 
 
@@ -2188,7 +2188,7 @@ class Feature(BaseFeature):
         Parameters
         ----------
         points
-            A sequence of Vertex, Datum point, or InterestingPoint objects specifying the points 
+            A sequence of ConstrainedSketchVertex, Datum point, or InterestingPoint objects specifying the points
             through which the spline wire will pass. *points* can also be a sequence of tuples of 
             Floats. You must specify at least two values in the sequence. 
         mergeType
@@ -2227,7 +2227,7 @@ class Feature(BaseFeature):
         Parameters
         ----------
         points
-            A sequence of Vertex, Datum point, or InterestingPoint objects specifying the points 
+            A sequence of ConstrainedSketchVertex, Datum point, or InterestingPoint objects specifying the points
             through which the polyline wire will pass. *points* can also be a sequence of tuples of 
             Floats. You must specify at least two values in the sequence. 
         mergeType

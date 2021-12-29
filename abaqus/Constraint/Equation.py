@@ -6,7 +6,7 @@ class Equation(Constraint):
 
     """The Equation object defines a linear multi-point constraint between a set of degrees of 
     freedom. 
-    The Equation object is derived from the Constraint object. 
+    The Equation object is derived from the ConstrainedSketchConstraint object.
 
     Access
     ------

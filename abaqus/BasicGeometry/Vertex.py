@@ -31,7 +31,7 @@ class Vertex:
 
     """
 
-    # An Int specifying the index of the Vertex in the VertexArray. 
+    # An Int specifying the index of the ConstrainedSketchVertex in the VertexArray.
     index: int = None
 
     # A Boolean specifying whether the vertex belongs to the reference representation of the 

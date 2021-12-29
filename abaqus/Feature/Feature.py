@@ -62,7 +62,7 @@ class Feature:
         name
             A String specifying a unique Feature name. 
         points
-            A tuple of points. Each point can be a Vertex, Datum point, Reference point, Attachment 
+            A tuple of points. Each point can be a ConstrainedSketchVertex, Datum point, Reference point, Attachment
             point, orphan mesh Node, Interesting point object, or a tuple of Floats representing the 
             coordinates of a point. 
         projectionMethod
@@ -77,10 +77,10 @@ class Feature:
             points are to be projected. 
         projectionDirStartPt
             A point specifying the start point of the projection direction. The point can be a 
-            Vertex, Datum point, Reference point, Attachment point, orphan mesh Node, Interesting 
+            ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan mesh Node, Interesting
             point object, or a tuple of Floats representing the coordinates of a point. 
         projectionDirEndPt
-            A point specifying the end point of the projection direction. The point can be a Vertex, 
+            A point specifying the end point of the projection direction. The point can be a ConstrainedSketchVertex,
             Datum point, Reference point, Attachment point, orphan mesh Node, Interesting point 
             object, or a tuple of Floats representing the coordinates of a point. 
         setName
@@ -105,7 +105,7 @@ class Feature:
                                        projectionDirStartPt: float = None, projectionDirEndPt: float = None, 
                                        flipDirection: Boolean = OFF, setName: str = ''):
         """This method creates a Feature object by creating attachment points along a direction or
-        between two points. A Datum point, a Vertex, a Reference point, an Attachment point, an
+        between two points. A Datum point, a ConstrainedSketchVertex, a Reference point, an Attachment point, an
         Interesting point, or an orphan mesh Node can be specified as the start or end point.
         The direction can be specified using a straight edge or a datum axis.
 
@@ -120,14 +120,14 @@ class Feature:
             A String specifying a unique Feature name. 
         startPoint
             A point specifying the start point of the direction along which to create points. The 
-            point can be a Vertex, Datum point, Reference point, Attachment point, orphan mesh Node, 
+            point can be a ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan mesh Node,
             Interesting point object, or a tuple of Floats representing the coordinates of a point. 
         pointCreationMethod
             A SymbolicConstant specifying the point creation method. Possible values are AUTO_FIT, 
             NUM_PTS_ALONG_DIR, and NUM_PTS_BETWEEN_PTS. 
         endPoint
             A point specifying the end point if creating points between two points. The point can be 
-            a Vertex, Datum point, Reference point, Attachment point, orphan mesh Node, Interesting 
+            a ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan mesh Node, Interesting
             point object, or a tuple of Floats representing the coordinates of a point. 
         direction
             The direction can be specified by a straight edge or a datum axis. 
@@ -156,10 +156,10 @@ class Feature:
             points are to be projected. 
         projectionDirStartPt
             A point specifying the start point of the projection direction. The point can be a 
-            Vertex, Datum point, Reference point, Attachment point, orphan mesh Node, Interesting 
+            ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan mesh Node, Interesting
             point object, or a tuple of Floats representing the coordinates of a point. 
         projectionDirEndPt
-            A point specifying the end point of the projection direction. The point can be a Vertex, 
+            A point specifying the end point of the projection direction. The point can be a ConstrainedSketchVertex,
             Datum point, Reference point, Attachment point, orphan mesh Node, Interesting point 
             object, or a tuple of Floats representing the coordinates of a point. 
         flipDirection
@@ -205,7 +205,7 @@ class Feature:
             A sequence of connected Edge objects specifying the geometry edges from which to offset 
             the points. 
         startPoint
-            A Vertex of the selected edges that specifies the point from which to create points. 
+            A ConstrainedSketchVertex of the selected edges that specifies the point from which to create points.
             This point can be one of the two end vertices of the connected edges. In case of edges 
             forming a closed loop and having multiple vertices, this point can be any one of the 
             vertices on the edges. 
@@ -241,12 +241,12 @@ class Feature:
         startPointForPatternDirection
             A point specifying the start point of the direction along which to create a pattern of 
             points when the PATTERN_ALONG_DIRECTION method is chosen for patterning. The point can 
-            be a Vertex, Datum point, Reference point, Attachment point, orphan mesh Node, 
+            be a ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan mesh Node,
             Interesting point object, or a tuple of Floats representing the coordinates of a point. 
         endPointForPatternDirection
             A point specifying the end point of the direction along which to create a pattern of 
             points when the PATTERN_ALONG_DIRECTION method is chosen for patterning. The point can 
-            be a Vertex, Datum point, Reference point, Attachment point, orphan mesh Node, 
+            be a ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan mesh Node,
             Interesting point object, or a tuple of Floats representing the coordinates of a point. 
         offsetFromEdges
             A float specifying the distance by which to offset the first row of points from the 
@@ -269,10 +269,10 @@ class Feature:
             points are to be projected. 
         projectionDirStartPt
             A point specifying the start point of the projection direction. The point can be a 
-            Vertex, Datum point, Reference point, Attachment point, orphan mesh Node, Interesting 
+            ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan mesh Node, Interesting
             point object, or a tuple of Floats representing the coordinates of a point. 
         projectionDirEndPt
-            A point specifying the end point of the projection direction. The point can be a Vertex, 
+            A point specifying the end point of the projection direction. The point can be a ConstrainedSketchVertex,
             Datum point, Reference point, Attachment point, orphan mesh Node, Interesting point 
             object, or a tuple of Floats representing the coordinates of a point. 
         setName
@@ -326,7 +326,7 @@ class Feature:
         plane
             A planar Face, an ElementFace, or a Datum object representing a datum plane. 
         point
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
 
         Returns
         -------
@@ -352,7 +352,7 @@ class Feature:
         edge
             A straight Edge, an ElementEdge, or a Datum object representing a datum axis. 
         point
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
 
         Returns
         -------
@@ -436,7 +436,7 @@ class Feature:
             A straight Edge, a Datum object representing a datum axis, or an ElementEdge object 
             specifying the line to rotate. 
         point
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point
             specifying the point about which to rotate the line. 
         angle
             A Float specifying the angle in degrees to rotate the line. 
@@ -466,13 +466,13 @@ class Feature:
         Parameters
         ----------
         point1
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point
             specifying the first point on the circle. 
         point2
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point
             specifying the second point on the circle. 
         point3
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point
             specifying the third point on the circle. 
 
         Returns
@@ -546,9 +546,9 @@ class Feature:
         Parameters
         ----------
         point1
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         point2
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
 
         Returns
         -------
@@ -609,7 +609,7 @@ class Feature:
             *datumCoordSys*. The arguments *vector* and *point* are mutually exclusive, and one of 
             them must be specified. 
         point
-            A Vertex, InterestingPoint, DatumPoint object or a sequence of three Floats specifying 
+            A ConstrainedSketchVertex, InterestingPoint, DatumPoint object or a sequence of three Floats specifying
             the *X*-, *Y*-, and *Z*-coordinates of a point in space. The point represents the origin 
             of the new datum coordinate system. The arguments *vector* and *point* are mutually 
             exclusive, and one of them must be specified. 
@@ -641,14 +641,14 @@ class Feature:
             A SymbolicConstant specifying the type of coordinate system. Possible values are 
             CARTESIAN, CYLINDRICAL, and SPHERICAL. 
         origin
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point
             specifying the origin of the coordinate system. 
         point1
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point
             specifying a point on the *X*-axis or the rr-axis. The *point1* and *line1* arguments 
             are mutually exclusive. One of them must be specified. 
         point2
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point
             specifying a point in the *X–Y* plane or the rr–θθ plane. The *point2* and *line2* 
             arguments are mutually exclusive. One of them must be specified. 
         line1
@@ -778,7 +778,7 @@ class Feature:
         plane
             A planar Face, an ElementFace, or a Datum object representing a datum plane. 
         point
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
 
         Returns
         -------
@@ -833,11 +833,11 @@ class Feature:
         Parameters
         ----------
         point1
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         point2
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         point3
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
 
         Returns
         -------
@@ -863,7 +863,7 @@ class Feature:
         line
             A straight Edge, an ElementEdge, or a Datum object representing a datum axis. 
         point
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
 
         Returns
         -------
@@ -887,7 +887,7 @@ class Feature:
         Parameters
         ----------
         point
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         normal
             A straight Edge, an ElementEdge, or a Datum object representing a datum axis. 
 
@@ -913,9 +913,9 @@ class Feature:
         Parameters
         ----------
         point1
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         point2
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
 
         Returns
         -------
@@ -964,7 +964,7 @@ class Feature:
         Parameters
         ----------
         point
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         vector
             A sequence of three Floats specifying the *X*-, *Y*-, and *Z*-offsets from *point*. 
 
@@ -989,9 +989,9 @@ class Feature:
         Parameters
         ----------
         point1
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         point2
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
 
         Returns
         -------
@@ -1074,7 +1074,7 @@ class Feature:
         Parameters
         ----------
         point
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         edge
             An Edge, an ElementEdge or a Datum object representing a datum axis. 
 
@@ -1100,7 +1100,7 @@ class Feature:
         Parameters
         ----------
         point
-            A Vertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point. 
+            A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         face
             A Face object or a Datum object representing a datum plane.Note:Any other types of 
             planes are not supported. 
@@ -1253,7 +1253,7 @@ class Feature:
         cell
             A Cell object specifying the cell to partition. 
         cornerPoints
-            A sequence of Vertex, InterestingPoint, or DatumPoint objects. 3 ≤≤ len(*cornerPoints*) 
+            A sequence of ConstrainedSketchVertex, InterestingPoint, or DatumPoint objects. 3 ≤≤ len(*cornerPoints*)
             ≤≤ 5. The corner points must not coincide. 
 
         Returns
@@ -1308,7 +1308,7 @@ class Feature:
         edge
             An Edge object specifying the normal to the plane. 
         point
-            A Vertex, InterestingPoint, or DatumPoint object specifying a point on *edge*. 
+            A ConstrainedSketchVertex, InterestingPoint, or DatumPoint object specifying a point on *edge*.
 
         Returns
         -------
@@ -1334,7 +1334,7 @@ class Feature:
         cells
             A sequence of Cell objects specifying the cells to partition. 
         point
-            A Vertex, InterestingPoint, or DatumPoint object specifying a point on the plane. 
+            A ConstrainedSketchVertex, InterestingPoint, or DatumPoint object specifying a point on the plane.
         normal
             A straight Edge or DatumAxis object specifying the normal to the plane. 
 
@@ -1361,11 +1361,11 @@ class Feature:
         cells
             A sequence of Cell objects specifying the cells to partition. 
         point1
-            A Vertex, InterestingPoint, or DatumPoint object specifying a point on the plane. 
+            A ConstrainedSketchVertex, InterestingPoint, or DatumPoint object specifying a point on the plane.
         point2
-            A Vertex, InterestingPoint, or DatumPoint object specifying a point on the plane. 
+            A ConstrainedSketchVertex, InterestingPoint, or DatumPoint object specifying a point on the plane.
         point3
-            A Vertex, InterestingPoint, or DatumPoint object specifying a point on the 
+            A ConstrainedSketchVertex, InterestingPoint, or DatumPoint object specifying a point on the
             plane.Note:*point1*, *point2*, and *point3* must not be colinear and must not coincide. 
 
         Returns
@@ -1559,11 +1559,11 @@ class Feature:
         edge1
             An Edge object specifying the start of the partition. The edge must belong to *face*. 
         point1
-            A Vertex, InterestingPoint, or DatumPoint object specifying a point on *edge1*. 
+            A ConstrainedSketchVertex, InterestingPoint, or DatumPoint object specifying a point on *edge1*.
         edge2
             An Edge object specifying the end of the partition. The edge must belong to *face*. 
         point2
-            A Vertex, InterestingPoint, or DatumPoint object specifying a point on *edge2*. 
+            A ConstrainedSketchVertex, InterestingPoint, or DatumPoint object specifying a point on *edge2*.
 
         Returns
         -------
@@ -1697,9 +1697,9 @@ class Feature:
         faces
             A sequence of Face objects specifying the face to partition. 
         point1
-            A Vertex, InterestingPoint, or DatumPoint object. 
+            A ConstrainedSketchVertex, InterestingPoint, or DatumPoint object.
         point2
-            A Vertex, InterestingPoint, or DatumPoint object.Note:*point1* and *point2* must not 
+            A ConstrainedSketchVertex, InterestingPoint, or DatumPoint object.Note:*point1* and *point2* must not
             coincide, and they must both lie on the underlying surface geometry of at least one of 
             the target faces. 
 
@@ -1810,7 +1810,7 @@ class Feature:
         sketch
             A ConstrainedSketch object specifying the partition. 
         point
-            A Vertex, InterestingPoint, or DatumPoint object specifying the distance to project 
+            A ConstrainedSketchVertex, InterestingPoint, or DatumPoint object specifying the distance to project
             *sketch*. The point must not lie on *sketchPlane*. 
         sketchOrientation
             A SymbolicConstant specifying the orientation of *sketchUpEdge* on the sketch. Possible 
@@ -1878,7 +1878,7 @@ class Feature:
         Parameters
         ----------
         point
-            A Vertex, InterestingPoint, a MeshNode, or a Datum object specifying a reference point. 
+            A ConstrainedSketchVertex, InterestingPoint, a MeshNode, or a Datum object specifying a reference point.
             *point* can also be a sequence of three Floats representing the *X*-, *Y*-, and 
             *Z*-coordinates of the point. 
         instanceName
@@ -1934,10 +1934,10 @@ class Feature:
         ----------
         points
             A tuple of point pairs, each pair being itself represented by a tuple. For part level 
-            features each point can be a Vertex, Datum point, Reference point, orphan mesh Node, or 
+            features each point can be a ConstrainedSketchVertex, Datum point, Reference point, orphan mesh Node, or
             InterestingPoint object specifying the points through which the polyline wire will pass. 
             Each point can also be a tuple of Floats representing the coordinates of a point. For 
-            assembly level features each point can only be a Vertex, Reference point, or orphan mesh 
+            assembly level features each point can only be a ConstrainedSketchVertex, Reference point, or orphan mesh
             Node specifying the points through which the polyline wire will pass (coordinates cannot 
             be specified). In any of the pairs, the first or second point can be NONE. In that case, 
             the point pair will create a zero-length wire, which is required for certain types of 

@@ -38,7 +38,7 @@ class DrillControl(GeometricRestriction):
             A String specifying the geometric restriction repository key. 
         clientDirection
             A VertexArray object of length 2 specifying the direction of the drill axis positioned 
-            at the *csys* origin. Instead of through a Vertex, each point may be specified through a 
+            at the *csys* origin. Instead of through a ConstrainedSketchVertex, each point may be specified through a
             tuple of coordinates. 
         region
             A Region object specifying the region to which the geometric restriction is applied. 

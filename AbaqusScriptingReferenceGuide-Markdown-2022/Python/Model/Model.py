@@ -92,7 +92,7 @@ class Model:
     # A repository of BoundaryCondition objects. 
     boundaryConditions: Repository[str, BoundaryCondition] = None
 
-    # A repository of Constraint objects. 
+    # A repository of ConstrainedSketchConstraint objects.
     constraints: Repository[str, Constraint] = None
 
     # A repository of AnalyticalField objects. 

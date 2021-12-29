@@ -58,7 +58,7 @@ def assignMaterialOrientatio(region: tuple, localCsys: Datum, axis: SymbolicCons
     Parameters
     ----------
     region
-        A sequence of geomSequences of Vertex, Edge, Face, and Cell objects or a sequence of 
+        A sequence of geomSequences of ConstrainedSketchVertex, Edge, Face, and Cell objects or a sequence of
         sequences of elements. 
     localCsys
         A Datum object specifying the local coordinate system or None, indicating the global 
@@ -91,7 +91,7 @@ def assignRebarOrientatio(region: tuple, localCsys: Datum, axis: SymbolicConstan
     Parameters
     ----------
     region
-        A sequence of geomSequences of Vertex, Edge, Face, and Cell objects or a sequence of 
+        A sequence of geomSequences of ConstrainedSketchVertex, Edge, Face, and Cell objects or a sequence of
         sequences of elements. 
     localCsys
         A Datum object specifying the local coordinate system or None, indicating the global 

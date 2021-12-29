@@ -621,7 +621,7 @@ INSTANCE-SOIL.SURFACE-SOIL-Z0, INSTANCE-SOLID.SURFACE-SOLID-Z1
 ** 
 *Step, name=INITIAL-STRESS, nlgeom=NO, unsymm=YES
 *Static
-1., 1., 1e-05, 1.
+0.001, 1., 1e-05, 1.
 ** 
 ** LOADS
 ** 
@@ -641,7 +641,7 @@ INSTANCE-SOIL.SURFACE-SOIL-Z1, P, 310.
 ** 
 *Step, name=SHEAR, nlgeom=NO, unsymm=YES
 *Static
-1., 1., 1e-05, 1.
+0.001, 1., 1e-05, 1.
 ** 
 ** BOUNDARY CONDITIONS
 ** 

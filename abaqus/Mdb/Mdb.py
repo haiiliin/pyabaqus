@@ -1,9 +1,63 @@
 from abaqusConstants import *
 from ..Job.ModelJob import ModelJob
-from .BaseMdb import BaseMdb
+from .MdbBase import MdbBase
+from ..Model.Model import Model
 
 
-class Mdb(BaseMdb):
+class Mdb(MdbBase):
+
+    def Model(self, name: str, description: str = '', stefanBoltzmann: float = None,
+              absoluteZero: float = None, waveFormulation: SymbolicConstant = NOT_SET,
+              modelType: SymbolicConstant = STANDARD_EXPLICIT, universalGas: float = None,
+              copyConstraints: Boolean = ON, copyConnectors: Boolean = ON,
+              copyInteractions: Boolean = ON) -> Model:
+        """This method creates a Model object.
+
+        Path
+        ----
+            - mdb.Model
+
+        Parameters
+        ----------
+        name
+            A String specifying the repository key.
+        description
+            A String specifying the purpose and contents of the Model object. The default value is
+            an empty string.
+        stefanBoltzmann
+            None or a Float specifying the Stefan-Boltzmann constant. The default value is None.
+        absoluteZero
+            None or a Float specifying the absolute zero constant. The default value is None.
+        waveFormulation
+            A SymbolicConstant specifying the type of incident wave formulation to be used in
+            acoustic problems. Possible values are NOT_SET, SCATTERED, and TOTAL. The default value
+            is NOT_SET.
+        modelType
+            A SymbolicConstant specifying the analysis model type. Possible values are
+            STANDARD_EXPLICIT and ELECTROMAGNETIC. The default is STANDARD_EXPLICIT.
+        universalGas
+            None or a Float specifying the universal gas constant. The default value is None.
+        copyConstraints
+            A boolean specifying whether to copy the constraints created in the model to the model
+            that instances this model. The default value is ON.
+        copyConnectors
+            A boolean specifying whether to copy the connectors created in the model to the model
+            that instances this model. The default value is ON.
+        copyInteractions
+            A boolean specifying whether to copy the interactions created in the model to the model
+            that instances this model. The default value is ON.
+
+        Returns
+        -------
+            A Model object.
+
+        Exceptions
+        ----------
+            None.
+        """
+        self.models[name] = model = Model(name, description, stefanBoltzmann, absoluteZero, waveFormulation, modelType,
+                                          universalGas, copyConstraints, copyConnectors, copyInteractions)
+        return model
 
     def Job(self, name: str, model: str, description: str = '', type: SymbolicConstant = ANALYSIS,
             queue: str = '', waitHours: int = 0, waitMinutes: int = 0, atTime: str = '',
@@ -14,7 +68,7 @@ class Mdb(BaseMdb):
             nodalOutputPrecision: SymbolicConstant = SINGLE,
             parallelizationMethodExplicit: SymbolicConstant = DOMAIN, numDomains: int = 1,
             activateLoadBalancing: Boolean = OFF, multiprocessingMode: SymbolicConstant = DEFAULT,
-            licenseType: SymbolicConstant = DEFAULT, *args, **kwargs):
+            licenseType: SymbolicConstant = DEFAULT, *args, **kwargs) -> ModelJob:
         """This method creates an analysis job using a model on a model database (MDB) for the
         model definition.
 

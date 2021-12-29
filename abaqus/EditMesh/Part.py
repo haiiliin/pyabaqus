@@ -6,7 +6,7 @@ from ..Mesh.MeshEdge import MeshEdge
 from ..Mesh.MeshElement import MeshElement
 from ..Mesh.MeshFace import MeshFace
 from ..Mesh.MeshNode import MeshNode
-from ..Part.BasePart import BasePart
+from ..Part.PartBase import PartBase
 from ..Region.Region import Region
 
 
@@ -14,7 +14,7 @@ class Node(MeshNode):
     pass
 
 
-class Part(BasePart):
+class Part(PartBase):
     """The following commands operate on Part objects. For more information about the Part 
     object, see Part object. 
 
@@ -266,7 +266,7 @@ class Part(BasePart):
         projectionReference
             An object specifying the target for the node projection operation. The 
             *projectionReference* can be any one of the following objects: MeshNode, MeshEdge, 
-            MeshFace, Vertex, Edge, Face, DatumPoint, DatumAxis, or DatumPlane. 
+            MeshFace, ConstrainedSketchVertex, Edge, Face, DatumPoint, DatumAxis, or DatumPlane.
 
         Returns
         -------

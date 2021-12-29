@@ -54,10 +54,10 @@ from .BrittleCracking import BrittleCracking
 from .AcousticMedium import AcousticMedium
 import typing
 from abaqusConstants import *
-from .BaseMaterial import BaseMaterial
+from .MaterialBase import MaterialBase
 
 
-class Material(BaseMaterial):
+class Material(MaterialBase):
 
     def AcousticMedium(self, acousticVolumetricDrag: Boolean = OFF, temperatureDependencyB: Boolean = OFF,
                        temperatureDependencyV: Boolean = OFF, dependenciesB: int = 0, dependenciesV: int = 0,

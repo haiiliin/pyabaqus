@@ -71,7 +71,7 @@ class SurfaceTraction(Load):
     localCsys: int = None
 
     # A VertexArray object of length 2 specifying the direction of the load. Instead of 
-    # through a Vertex, each point may be specified through a tuple of coordinates. If 
+    # through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. If
     # *traction* is SHEAR, then *directionVector* will be projected onto the region surface. 
     # This parameter is available only if *traction* is GENERAL or SHEAR. 
     directionVector: tuple = ()
@@ -130,7 +130,7 @@ class SurfaceTraction(Load):
             if defined. The default value is "None". 
         directionVector
             A VertexArray object of length 2 specifying the direction of the load. Instead of 
-            through a Vertex, each point may be specified through a tuple of coordinates. If 
+            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. If
             *traction* is SHEAR, then *directionVector* will be projected onto the region surface. 
             This parameter is available only if *traction* is GENERAL or SHEAR. 
         follower
@@ -195,7 +195,7 @@ class SurfaceTraction(Load):
             if defined. The default value is "None". 
         directionVector
             A VertexArray object of length 2 specifying the direction of the load. Instead of 
-            through a Vertex, each point may be specified through a tuple of coordinates. If 
+            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. If
             *traction* is SHEAR, then *directionVector* will be projected onto the region surface. 
             This parameter is available only if *traction* is GENERAL or SHEAR. 
         follower

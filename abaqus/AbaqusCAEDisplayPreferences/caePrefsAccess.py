@@ -124,7 +124,7 @@ def openGuiPreferences(displayName: str, fileName: str = ''):
 def openSessionOptions(fileName: str = '', directory: SymbolicConstant = HOME):
     """This function enables you to examine and change the default behavior for many session
     options Abaqus/CAE; that is, the settings that you can save in Abaqus/CAE from the
-    FileSave Display Options menu option. Abaqus stores default session options in the
+    FileSave Display ConstrainedSketchOptions menu option. Abaqus stores default session options in the
     sessionOptions section of the abaqus_2021.gpr file.
 
     Path

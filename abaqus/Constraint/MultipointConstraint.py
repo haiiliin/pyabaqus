@@ -7,7 +7,7 @@ class MultipointConstraint(Constraint):
 
     """The MultipointConstraint object defines a constraint between a group of 
     MultipointConstraint nodes located on a region and a reference point. 
-    The MultipointConstraint object is derived from the Constraint object. 
+    The MultipointConstraint object is derived from the ConstrainedSketchConstraint object.
 
     Access
     ------

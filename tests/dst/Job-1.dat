@@ -1,6 +1,6 @@
 1
 
-   Abaqus 2021                                  Date 27-Dec-2021   Time 19:44:34
+   Abaqus 2021                                  Date 29-Dec-2021   Time 13:49:50
    For use by Supplied by Team-SolidSQUAD under license from Dassault Systemes or its subsidiary.
 
 
@@ -277,7 +277,7 @@
        WALLCLOCK TIME (SEC) =          0
 1
 
-   Abaqus 2021                                  Date 27-Dec-2021   Time 19:44:36
+   Abaqus 2021                                  Date 29-Dec-2021   Time 13:49:53
    For use by Supplied by Team-SolidSQUAD under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    1  INCREMENT    1
@@ -290,7 +290,7 @@
                                                                                           
 
      AUTOMATIC TIME CONTROL WITH -
-          A SUGGESTED INITIAL TIME INCREMENT OF                 1.00    
+          A SUGGESTED INITIAL TIME INCREMENT OF                1.000E-03
           AND A TOTAL TIME PERIOD OF                            1.00    
           THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-05
           THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
@@ -338,7 +338,7 @@
       (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
 1
 
-   Abaqus 2021                                  Date 27-Dec-2021   Time 19:44:37
+   Abaqus 2021                                  Date 29-Dec-2021   Time 13:49:53
    For use by Supplied by Team-SolidSQUAD under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    2  INCREMENT    1
@@ -351,7 +351,7 @@
                                                                                           
 
      AUTOMATIC TIME CONTROL WITH -
-          A SUGGESTED INITIAL TIME INCREMENT OF                 1.00    
+          A SUGGESTED INITIAL TIME INCREMENT OF                1.000E-03
           AND A TOTAL TIME PERIOD OF                            1.00    
           THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-05
           THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
@@ -409,7 +409,7 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =  0.10000    
+       USER TIME (SEC)      =  0.70000    
        SYSTEM TIME (SEC)    =  0.10000    
-       TOTAL CPU TIME (SEC) =  0.20000    
+       TOTAL CPU TIME (SEC) =  0.80000    
        WALLCLOCK TIME (SEC) =          1
