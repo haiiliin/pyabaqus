@@ -1,6 +1,6 @@
 1
 
-   Abaqus 2021                                  Date 29-Dec-2021   Time 13:49:50
+   Abaqus 2021                                  Date 29-Dec-2021   Time 15:44:26
    For use by Supplied by Team-SolidSQUAD under license from Dassault Systemes or its subsidiary.
 
 
@@ -271,13 +271,13 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =  0.10000    
-       SYSTEM TIME (SEC)    =   0.0000    
+       USER TIME (SEC)      =   0.0000    
+       SYSTEM TIME (SEC)    =  0.10000    
        TOTAL CPU TIME (SEC) =  0.10000    
        WALLCLOCK TIME (SEC) =          0
 1
 
-   Abaqus 2021                                  Date 29-Dec-2021   Time 13:49:53
+   Abaqus 2021                                  Date 29-Dec-2021   Time 15:44:29
    For use by Supplied by Team-SolidSQUAD under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    1  INCREMENT    1
@@ -338,7 +338,7 @@
       (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
 1
 
-   Abaqus 2021                                  Date 29-Dec-2021   Time 13:49:53
+   Abaqus 2021                                  Date 29-Dec-2021   Time 15:44:29
    For use by Supplied by Team-SolidSQUAD under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    2  INCREMENT    1
@@ -409,7 +409,7 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =  0.70000    
-       SYSTEM TIME (SEC)    =  0.10000    
+       USER TIME (SEC)      =  0.60000    
+       SYSTEM TIME (SEC)    =  0.20000    
        TOTAL CPU TIME (SEC) =  0.80000    
        WALLCLOCK TIME (SEC) =          1

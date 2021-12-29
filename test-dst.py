@@ -13,13 +13,13 @@ executeOnCaeStartup()
 os.chdir('C:\\Users\\user\\OneDrive\\Documents\\GitHub\\PyAbaqusBase\\tests\\dst')
 
 # PART
-sketch = mdb.models['Model-1'].ConstrainedSketchBase(name='SKETCH-SOIL', sheetSize=0.1)
+sketch = mdb.models['Model-1'].ConstrainedSketch(name='SKETCH-SOIL', sheetSize=0.1)
 sketch.rectangle(point1=(0.0, 0.0), point2=(0.025, 0.025))
 mdb.models['Model-1'].Part(name='PART-SOIL', dimensionality=THREE_D, type=DEFORMABLE_BODY)
 mdb.models['Model-1'].parts['PART-SOIL'].BaseSolidExtrude(sketch=sketch, depth=0.025)
 del mdb.models['Model-1'].sketches['SKETCH-SOIL']
 
-sketch = mdb.models['Model-1'].ConstrainedSketchBase(name='SKETCH-SOLID', sheetSize=0.1)
+sketch = mdb.models['Model-1'].ConstrainedSketch(name='SKETCH-SOLID', sheetSize=0.1)
 sketch.rectangle(point1=(0.0, 0.0), point2=(0.05, 0.05))
 mdb.models['Model-1'].Part(name='PART-SOLID', dimensionality=THREE_D, type=DEFORMABLE_BODY)
 mdb.models['Model-1'].parts['PART-SOLID'].BaseSolidExtrude(sketch=sketch, depth=0.05)
@@ -165,7 +165,7 @@ mdb.jobs['Job-1'].writeInput()
 # mdb.jobs['Job-1'].submit()
 # mdb.jobs['Job-1'].waitForCompletion()
 
-mdb.saveAs('C:\\Users\\Hailin\\OneDrive\\Documents\\GitHub\\PyAbaqusBase\\tests\\dst\\dst.cae')
+mdb.saveAs('C:\\Users\\user\\OneDrive\\Documents\\GitHub\\PyAbaqusBase\\tests\\dst\\dst.cae')
 
 if 'SIMULIA' not in sys.executable:
-    mdb.submitInputFile('tests\\dst\\Job-1.inp')
+    submitJobByInputFile('tests\\dst\\Job-1.inp')
