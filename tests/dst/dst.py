@@ -77,7 +77,11 @@ mdb.models['Model-1'].StaticStep(name='SHEAR', previous='INITIAL-STRESS', maxNum
 mdb.models['Model-1'].ContactProperty('IntProp-1')
 mdb.models['Model-1'].interactionProperties['IntProp-1'].NormalBehavior(pressureOverclosure=HARD, allowSeparation=ON,
                                                                         constraintEnforcementMethod=DEFAULT)
-mdb.models['Model-1'].interactionProperties['IntProp-1'].TangentialBehavior(formulation=FRICTIONLESS)
+mdb.models['Model-1'].interactionProperties['IntProp-1'].TangentialBehavior(
+    formulation=PENALTY, directionality=ISOTROPIC, slipRateDependency=OFF, pressureDependency=OFF,
+    temperatureDependency=OFF, dependencies=0, table=((0.1, ), ), shearStressLimit=None, maximumElasticSlip=FRACTION,
+    fraction=0.005, elasticSlipStiffness=None)
+
 assembly = mdb.models['Model-1'].rootAssembly
 solid = assembly.instances['INSTANCE-SOLID'].surfaces['SURFACE-SOLID-Z1']
 soil = assembly.instances['INSTANCE-SOIL'].surfaces['SURFACE-SOIL-Z0']
@@ -156,7 +160,7 @@ mdb.Job(name='Job-1', model='Model-1', description='', type=ANALYSIS, atTime=Non
         nodalOutputPrecision=SINGLE, echoPrint=OFF, modelPrint=OFF, contactPrint=OFF, historyPrint=OFF,
         userSubroutine='', scratch='', resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, numGPUs=0)
 mdb.jobs['Job-1'].writeInput()
-mdb.jobs['Job-1'].submit()
-mdb.jobs['Job-1'].waitForCompletion()
+# mdb.jobs['Job-1'].submit()
+# mdb.jobs['Job-1'].waitForCompletion()
 
 mdb.saveAs('dst.cae')
