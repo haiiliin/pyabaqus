@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class SurfaceToSurfaceStdState(InteractionState):
-
-    """The SurfaceToSurfaceStdState object stores the propagating data for a 
+    """The SurfaceToSurfaceStdState object stores the propagating data for a
     SurfaceToSurfaceContactStd object. One instance of this object is created internally by 
     the SurfaceToSurfaceContactStd object for each step. The instance is also deleted 
     internally by the SurfaceToSurfaceContactStd object. 
@@ -96,4 +95,3 @@ class SurfaceToSurfaceStdState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

@@ -1,12 +1,12 @@
 from abaqusConstants import *
+from .LayerPropertiesArray import LayerPropertiesArray
 from .RebarLayers import RebarLayers
 from .ShellSection import ShellSection
 from .TransverseShearShell import TransverseShearShell
 
 
 class GeometryShellSection(ShellSection):
-
-    """The GeometryShellSection object defines the properties of a geometry shell section. The 
+    """The GeometryShellSection object defines the properties of a geometry shell section. The
     GeometryShellSection object has no explicit constructor and no methods. The 
     GeometryShellSection object is an abstract base type. 
     The GeometryShellSection object is derived from the ShellSection object. 
@@ -90,7 +90,7 @@ class GeometryShellSection(ShellSection):
     thicknessField: str = ''
 
     # A RebarLayers object specifying reinforcement properties. 
-    rebarLayers: RebarLayers = None
+    rebarLayers: RebarLayers = RebarLayers(CONSTANT, LayerPropertiesArray())
 
     # A String specifying the name of the AnalyticalField or DiscreteField object used to 
     # define the thickness of the shell elements at each node. The *nodalThicknessField* 
@@ -101,12 +101,12 @@ class GeometryShellSection(ShellSection):
     # A TransverseShearShell object specifying the transverse shear stiffness properties. 
     transverseShear: TransverseShearShell = None
 
-    def Section(self, nodalThicknessField: str = '', thicknessField: str = '', 
-                thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF, 
-                poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0, 
-                integrationRule: SymbolicConstant = SIMPSON, temperature: SymbolicConstant = GRADIENT, 
-                nTemp: int = None, thicknessModulus: float = None, useDensity: Boolean = OFF, 
-                density: float = 0):
+    def __init__(self, nodalThicknessField: str = '', thicknessField: str = '',
+                 thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF,
+                 poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
+                 integrationRule: SymbolicConstant = SIMPSON, temperature: SymbolicConstant = GRADIENT,
+                 nTemp: int = None, thicknessModulus: float = None, useDensity: Boolean = OFF,
+                 density: float = 0):
         """This method creates a GeometryShellSection object.
 
         Path
@@ -173,3 +173,30 @@ class GeometryShellSection(ShellSection):
         """
         pass
 
+    def RebarLayers(self, rebarSpacing: SymbolicConstant, layerTable: LayerPropertiesArray) -> RebarLayers:
+        """This method creates a RebarLayers object.
+
+        Path
+        ----
+            - mdb.models[name].parts[name].compositeLayups[i].section.RebarLayers
+            - mdb.models[name].sections[name].RebarLayers
+            - session.odbs[name].sections[name].RebarLayers
+
+        Parameters
+        ----------
+        rebarSpacing
+            A SymbolicConstant specifying the type of rebar geometry. Possible values are CONSTANT,
+            ANGULAR, and LIFT_EQUATION.
+        layerTable
+            A LayerPropertiesArray object specifying the layers of reinforcement.
+
+        Returns
+        -------
+            A RebarLayers object.
+
+        Exceptions
+        ----------
+            None.
+        """
+        self.rebarLayers = rebarLayers = RebarLayers(rebarSpacing, layerTable)
+        return rebarLayers

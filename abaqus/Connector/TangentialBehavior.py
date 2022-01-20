@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class TangentialBehavior:
 
-    """The TangentialBehavior object specifies tangential behavior for a connector friction 
+class TangentialBehavior:
+    """The TangentialBehavior object specifies tangential behavior for a connector friction
     behavior option. 
 
     Access
@@ -38,18 +38,17 @@ class TangentialBehavior:
 
     """
 
-    def __init__(self, formulation: SymbolicConstant = PENALTY, slipRateDependency: Boolean = OFF, 
-                 pressureDependency: Boolean = OFF, temperatureDependency: Boolean = OFF, 
-                 dependencies: int = 0, exponentialDecayDefinition: SymbolicConstant = COEFFICIENTS, 
-                 shearStressLimit: float = None, maximumElasticSlip: SymbolicConstant = FRACTION, 
+    def __init__(self, formulation: SymbolicConstant = PENALTY, slipRateDependency: Boolean = OFF,
+                 pressureDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0, exponentialDecayDefinition: SymbolicConstant = COEFFICIENTS,
+                 shearStressLimit: float = None, maximumElasticSlip: SymbolicConstant = FRACTION,
                  fraction: float = None, absoluteDistance: float = None, table: tuple = ()):
         """This method creates a TangentialBehavior object.
 
         Path
         ----
             - mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior
-            - session.odbs[name].sections[name].behaviorOptions[i]\
-            - .TangentialBehavior
+            - session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior
 
         Parameters
         ----------
@@ -111,4 +110,3 @@ class TangentialBehavior:
             None. 
         """
         pass
-

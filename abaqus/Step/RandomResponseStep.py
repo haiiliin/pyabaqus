@@ -25,8 +25,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class RandomResponseStep(AnalysisStep):
-
-    """The RandomResponseStep object is used to give the linearized response of a model to 
+    """The RandomResponseStep object is used to give the linearized response of a model to
     random excitation. 
     The RandomResponseStep object is derived from the AnalysisStep object. 
 
@@ -143,7 +142,8 @@ class RandomResponseStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -169,14 +169,14 @@ class RandomResponseStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, freq: RandomResponseFrequencyArray, description: str = '', 
-                 scale: SymbolicConstant = LOG, directDamping: DirectDamping = DirectDamping(), 
-                 compositeDamping: CompositeDamping = CompositeDamping(), 
-                 rayleighDamping: RayleighDamping = RayleighDamping(), 
-                 structuralDamping: StructuralDamping = StructuralDamping(), 
-                 directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(), 
-                 rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(), 
-                 structuralDampingByFrequency: StructuralDampingByFrequency = StructuralDampingByFrequency(), 
+    def __init__(self, name: str, previous: str, freq: RandomResponseFrequencyArray, description: str = '',
+                 scale: SymbolicConstant = LOG, directDamping: DirectDamping = DirectDamping(),
+                 compositeDamping: CompositeDamping = CompositeDamping(),
+                 rayleighDamping: RayleighDamping = RayleighDamping(),
+                 structuralDamping: StructuralDamping = StructuralDamping(),
+                 directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
+                 rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(),
+                 structuralDampingByFrequency: StructuralDampingByFrequency = StructuralDampingByFrequency(),
                  maintainAttributes: Boolean = False):
         """This method creates a RandomResponseStep object.
 
@@ -227,13 +227,13 @@ class RandomResponseStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', scale: SymbolicConstant = LOG, 
-                  directDamping: DirectDamping = DirectDamping(), 
-                  compositeDamping: CompositeDamping = CompositeDamping(), 
-                  rayleighDamping: RayleighDamping = RayleighDamping(), 
-                  structuralDamping: StructuralDamping = StructuralDamping(), 
-                  directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(), 
-                  rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(), 
+    def setValues(self, description: str = '', scale: SymbolicConstant = LOG,
+                  directDamping: DirectDamping = DirectDamping(),
+                  compositeDamping: CompositeDamping = CompositeDamping(),
+                  rayleighDamping: RayleighDamping = RayleighDamping(),
+                  structuralDamping: StructuralDamping = StructuralDamping(),
+                  directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
+                  rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(),
                   structuralDampingByFrequency: StructuralDampingByFrequency = StructuralDampingByFrequency()):
         """This method modifies the RandomResponseStep object.
 
@@ -268,4 +268,3 @@ class RandomResponseStep(AnalysisStep):
             RangeError. 
         """
         pass
-

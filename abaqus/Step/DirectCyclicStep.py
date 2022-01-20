@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class DirectCyclicStep(AnalysisStep):
-
-    """The DirectCyclicStep object is used to provide a direct cyclic procedure for nonlinear, 
+    """The DirectCyclicStep object is used to provide a direct cyclic procedure for nonlinear,
     non-isothermal quasi-static analysis. It can also be used to predict progressive damage 
     and failure for ductile bulk materials and/or to predict delamination/debonding growth 
     at the interfaces in laminated composites in a low-cycle fatigue analysis. 
@@ -197,7 +196,8 @@ class DirectCyclicStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -223,16 +223,16 @@ class DirectCyclicStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1, 
-                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
-                 initialInc: float = None, minInc: float = None, maxInc: float = None, 
-                 maxNumIterations: int = 200, initialTerms: int = 11, maxTerms: int = 25, 
-                 termsIncrement: int = 5, deltmx: float = 0, cetol: float = 0, timePoints: str = NONE, 
-                 fatigue: Boolean = OFF, continueAnalysis: Boolean = OFF, minCycleInc: int = 100, 
-                 maxCycleInc: int = 1000, maxNumCycles: SymbolicConstant = DEFAULT, 
-                 damageExtrapolationTolerance: float = 1, 
-                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
-                 extrapolation: SymbolicConstant = LINEAR, maintainAttributes: Boolean = False, 
+    def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1,
+                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                 initialInc: float = None, minInc: float = None, maxInc: float = None,
+                 maxNumIterations: int = 200, initialTerms: int = 11, maxTerms: int = 25,
+                 termsIncrement: int = 5, deltmx: float = 0, cetol: float = 0, timePoints: str = NONE,
+                 fatigue: Boolean = OFF, continueAnalysis: Boolean = OFF, minCycleInc: int = 100,
+                 maxCycleInc: int = 1000, maxNumCycles: SymbolicConstant = DEFAULT,
+                 damageExtrapolationTolerance: float = 1,
+                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+                 extrapolation: SymbolicConstant = LINEAR, maintainAttributes: Boolean = False,
                  convertSDI: SymbolicConstant = PROPAGATED):
         """This method creates a DirectCyclicStep object.
 
@@ -332,15 +332,15 @@ class DirectCyclicStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', timePeriod: float = 1, 
-                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
-                  initialInc: float = None, minInc: float = None, maxInc: float = None, 
-                  maxNumIterations: int = 200, initialTerms: int = 11, maxTerms: int = 25, 
-                  termsIncrement: int = 5, deltmx: float = 0, cetol: float = 0, timePoints: str = NONE, 
-                  fatigue: Boolean = OFF, continueAnalysis: Boolean = OFF, minCycleInc: int = 100, 
-                  maxCycleInc: int = 1000, maxNumCycles: SymbolicConstant = DEFAULT, 
-                  damageExtrapolationTolerance: float = 1, 
-                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
+    def setValues(self, description: str = '', timePeriod: float = 1,
+                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                  initialInc: float = None, minInc: float = None, maxInc: float = None,
+                  maxNumIterations: int = 200, initialTerms: int = 11, maxTerms: int = 25,
+                  termsIncrement: int = 5, deltmx: float = 0, cetol: float = 0, timePoints: str = NONE,
+                  fatigue: Boolean = OFF, continueAnalysis: Boolean = OFF, minCycleInc: int = 100,
+                  maxCycleInc: int = 1000, maxNumCycles: SymbolicConstant = DEFAULT,
+                  damageExtrapolationTolerance: float = 1,
+                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
                   extrapolation: SymbolicConstant = LINEAR, convertSDI: SymbolicConstant = PROPAGATED):
         """This method modifies the DirectCyclicStep object.
 
@@ -426,4 +426,3 @@ class DirectCyclicStep(AnalysisStep):
             RangeError. 
         """
         pass
-

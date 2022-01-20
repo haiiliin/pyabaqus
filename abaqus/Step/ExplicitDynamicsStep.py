@@ -18,8 +18,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class ExplicitDynamicsStep(AnalysisStep):
-
-    """The ExplicitDynamicsStep object is used to perform a dynamic stress/displacement 
+    """The ExplicitDynamicsStep object is used to perform a dynamic stress/displacement
     analysis using explicit integration in Abaqus/Explicit. 
     The ExplicitDynamicsStep object is derived from the AnalysisStep object. 
 
@@ -157,7 +156,8 @@ class ExplicitDynamicsStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -183,12 +183,12 @@ class ExplicitDynamicsStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1, 
-                 nlgeom: Boolean = ON, adiabatic: Boolean = OFF, 
-                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC_GLOBAL, 
-                 maxIncrement: float = None, scaleFactor: float = 1, 
-                 massScaling: MassScalingArray = PREVIOUS_STEP, linearBulkViscosity: float = 0, 
-                 quadBulkViscosity: float = 1, userDefinedInc: float = None, 
+    def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1,
+                 nlgeom: Boolean = ON, adiabatic: Boolean = OFF,
+                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC_GLOBAL,
+                 maxIncrement: float = None, scaleFactor: float = 1,
+                 massScaling: MassScalingArray = PREVIOUS_STEP, linearBulkViscosity: float = 0,
+                 quadBulkViscosity: float = 1, userDefinedInc: float = None,
                  maintainAttributes: Boolean = False, improvedDtMethod: Boolean = ON):
         """This method creates an ExplicitDynamicsStep object.
 
@@ -257,11 +257,11 @@ class ExplicitDynamicsStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', timePeriod: float = 1, nlgeom: Boolean = ON, 
-                  adiabatic: Boolean = OFF, timeIncrementationMethod: SymbolicConstant = AUTOMATIC_GLOBAL, 
-                  maxIncrement: float = None, scaleFactor: float = 1, 
-                  massScaling: MassScalingArray = PREVIOUS_STEP, linearBulkViscosity: float = 0, 
-                  quadBulkViscosity: float = 1, userDefinedInc: float = None, 
+    def setValues(self, description: str = '', timePeriod: float = 1, nlgeom: Boolean = ON,
+                  adiabatic: Boolean = OFF, timeIncrementationMethod: SymbolicConstant = AUTOMATIC_GLOBAL,
+                  maxIncrement: float = None, scaleFactor: float = 1,
+                  massScaling: MassScalingArray = PREVIOUS_STEP, linearBulkViscosity: float = 0,
+                  quadBulkViscosity: float = 1, userDefinedInc: float = None,
                   improvedDtMethod: Boolean = ON):
         """This method modifies the ExplicitDynamicsStep object.
 
@@ -316,4 +316,3 @@ class ExplicitDynamicsStep(AnalysisStep):
             RangeError. 
         """
         pass
-

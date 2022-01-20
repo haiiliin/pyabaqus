@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class OptimizationConstraint:
 
-    """The OptimizationConstraint object constrains an optimization from making changes to the 
+class OptimizationConstraint:
+    """The OptimizationConstraint object constrains an optimization from making changes to the
     topology of the model. 
 
     Access
@@ -18,7 +18,7 @@ class OptimizationConstraint:
 
     """
 
-    def __init__(self, name: str, designResponse: str, restrictionValue: float, 
+    def __init__(self, name: str, designResponse: str, restrictionValue: float,
                  restrictionMethod: SymbolicConstant = ABSOLUTE_EQUAL):
         """This method creates an OptimizationConstraint object.
 
@@ -70,4 +70,3 @@ class OptimizationConstraint:
             RangeError. 
         """
         pass
-

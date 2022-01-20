@@ -1,8 +1,5 @@
-
-
 class TieConstraint:
-
-    """The TieConstraint object. 
+    """The TieConstraint object.
 
     Access
     ------
@@ -35,4 +32,3 @@ class TieConstraint:
             None. 
         """
         pass
-

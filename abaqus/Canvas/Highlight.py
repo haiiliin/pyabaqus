@@ -1,6 +1,4 @@
-
-
-"""The Highlight commands are used to highlight objects in the current viewport and to 
+"""The Highlight commands are used to highlight objects in the current viewport and to
 remove the highlighting. 
 
 Access
@@ -14,7 +12,8 @@ Corresponding analysis keywords
 
 """
 
-def highligh(object: str):
+
+def highlight(object: str):
     """This method highlights an object in the current viewport.
 
     Path
@@ -58,7 +57,8 @@ def highligh(object: str):
     """
     pass
 
-def unhighligh(object: str):
+
+def unhighlight(object: str):
     """This method removes highlighting from an object in the current viewport.
 
     Path
@@ -79,4 +79,3 @@ def unhighligh(object: str):
     ----------
     """
     pass
-

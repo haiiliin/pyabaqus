@@ -1,8 +1,5 @@
-
-
 class RandomResponseFrequency:
-
-    """A RandomResponseFrequency is an object used to define frequency over a range of modes. 
+    """A RandomResponseFrequency is an object used to define frequency over a range of modes.
     This page discusses: 
 
     Access
@@ -30,4 +27,3 @@ class RandomResponseFrequency:
 
     # A Float specifying the bias parameter. 
     bias: float = None
-

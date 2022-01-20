@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Leaf:
 
-    """Leaf objects are used to specify the items in a display group. Leaf objects are 
+class Leaf:
+    """Leaf objects are used to specify the items in a display group. Leaf objects are
     constructed as temporary objects, which are then used as arguments to DisplayGroup 
     commands. 
     Leaf objects have similarities to Set objects; however, Leaf objects are evaluated when 
@@ -44,4 +44,3 @@ class Leaf:
             None. 
         """
         pass
-

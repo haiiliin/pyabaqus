@@ -1,0 +1,24 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2021 replay file
+# Internal Version: 2020_03_06-22.50.37 167380
+# Run by Hailin on Thu Jan 20 14:24:21 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.789474, 0.789692), 
+    width=116.211, height=78.3375)
+session.viewports['Viewport: 1'].makeCurrent()
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+execfile('output.py', __main__.__dict__)
+#* OdbError: Cannot open file 
+#* C:/Users/Hailin/OneDrive/Documents/GitHub/PyAbaqusBase/tests/dst/Job-1.odb. 
+#* *** ERROR: No such file: 
+#* C:/Users/Hailin/OneDrive/Documents/GitHub/PyAbaqusBase/tests/dst/Job-1.odb.
+#* File "output.py", line 9, in <module>
+#*     odb = session.openOdb(name='Job-1.odb')

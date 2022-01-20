@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class ConcentratedForceState(LoadState):
-
-    """The ConcentratedForceState object stores the propagating data for a concentrated force 
+    """The ConcentratedForceState object stores the propagating data for a concentrated force
     in a step. One instance of this object is created internally by the ConcentratedForce 
     object for each step. The instance is also deleted internally by the ConcentratedForce 
     object. 
@@ -68,4 +67,3 @@ class ConcentratedForceState(LoadState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     amplitude: str = ''
-

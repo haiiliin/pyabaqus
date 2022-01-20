@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class HydrostaticFluidFlowState(LoadState):
-
-    """The HydrostaticFluidFlowState object stores the propagating data for a concentrated 
+    """The HydrostaticFluidFlowState object stores the propagating data for a concentrated
     HydrostaticFluidFlow object in a step. One instance of this object is created internally 
     by the HydrostaticFluidFlow object for each step. The instance is also deleted 
     internally by the HydrostaticFluidFlow object. 
@@ -52,4 +51,3 @@ class HydrostaticFluidFlowState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

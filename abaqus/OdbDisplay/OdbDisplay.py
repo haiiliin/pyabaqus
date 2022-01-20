@@ -10,6 +10,7 @@ from .SymbolOptions import SymbolOptions
 from .ViewCut import ViewCut
 from ..DisplayGroup.DisplayGroup import DisplayGroup
 from ..DisplayGroup.DisplayGroupInstanceRepository import DisplayGroupInstanceRepository
+from ..DisplayGroup.Leaf import Leaf
 from ..FieldReport.OdbFieldVarList import OdbFieldVarList
 from ..FieldReport.OdbModelFieldVarList import OdbModelFieldVarList
 from ..Odb.OdbFrame import OdbFrame
@@ -23,8 +24,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class OdbDisplay:
-
-    """The OdbDisplay object stores the context of an output database for a viewport. The 
+    """The OdbDisplay object stores the context of an output database for a viewport. The
     OdbDisplay object has no constructor. Abaqus creates the *defaultOdbDisplay* member when 
     you import the Visualization module. Abaqus creates the *odbDisplay* member when a 
     viewport is created, using the attributes from the previous active viewport. The 
@@ -126,7 +126,7 @@ class OdbDisplay:
 
     # A DisplayGroup object specifying the current display group and referring to an object in 
     # the *displayGroups* member of Session. 
-    displayGroup: DisplayGroup = None
+    displayGroup: DisplayGroup = DisplayGroup('dg', Leaf(EMPTY_LEAF))
 
     # A DisplayGroupInstanceRepository object. 
     displayGroupInstances: DisplayGroupInstanceRepository = DisplayGroupInstanceRepository()
@@ -140,7 +140,7 @@ class OdbDisplay:
     # A tuple of Strings specifying the step label and the frame label when the current step 
     # is user defined. Alternatively, *fieldFrame* maybe specified as a pair of Ints with the 
     # step index and the frame index, when the current step is defined in the analysis. 
-    fieldFrame: int = None
+    fieldFrame: tuple[str] = ()
 
     # A tuple specifying variables. 
     # Each item in the sequence consists of a tuple containing the following elements: 
@@ -343,7 +343,7 @@ class OdbDisplay:
     def setFrame(self, *args, **kwargs):
         pass
 
-    def setPrimaryVariable(self, variableLabel: str, field: str, outputPosition: SymbolicConstant, 
+    def setPrimaryVariable(self, variableLabel: str, field: str, outputPosition: SymbolicConstant,
                            refinement: SymbolicConstant = None, sectionPoint: dict = None):
         """This method specifies the field output variable for which to obtain results.
 
@@ -410,10 +410,10 @@ class OdbDisplay:
         """
         pass
 
-    def setStatusVariable(self, variableLabel: str, field: str, outputPosition: SymbolicConstant, 
-                          refinement: SymbolicConstant = None, sectionPoint: dict = None, 
-                          statusMinimum: float = None, statusMaximum: float = None, 
-                          statusInsideRange: Boolean = OFF, useStatus: Boolean = OFF, 
+    def setStatusVariable(self, variableLabel: str, field: str, outputPosition: SymbolicConstant,
+                          refinement: SymbolicConstant = None, sectionPoint: dict = None,
+                          statusMinimum: float = None, statusMaximum: float = None,
+                          statusInsideRange: Boolean = OFF, useStatus: Boolean = OFF,
                           applyStatusToUndeformed: Boolean = False):
         """This method specifies the field output variable for filtering element display based on a
         status criteria.
@@ -469,8 +469,8 @@ class OdbDisplay:
         """
         pass
 
-    def setSymbolVariable(self, variableLabel: str, field: str, outputPosition: SymbolicConstant, 
-                          refinement: SymbolicConstant = None, sectionPoint: dict = None, 
+    def setSymbolVariable(self, variableLabel: str, field: str, outputPosition: SymbolicConstant,
+                          refinement: SymbolicConstant = None, sectionPoint: dict = None,
                           tensorQuantity: SymbolicConstant = None, vectorQuantity: SymbolicConstant = None):
         """This method specifies the field output variable for which to obtain results used for
         symbol plots. This variable must be in the form of vector or tensor data. The output
@@ -563,3 +563,71 @@ class OdbDisplay:
         """
         pass
 
+    def ViewCut(self, name: str, shape: SymbolicConstant, origin: tuple,
+                normal: typing.Union[SymbolicConstant, float],
+                axis2: typing.Union[SymbolicConstant, float], csysName: str,
+                cylinderAxis: typing.Union[SymbolicConstant, float], followDeformation: Boolean = OFF,
+                overrideAveraging: Boolean = ON, referenceFrame: SymbolicConstant = FIRST_FRAME) -> ViewCut:
+        """This method creates a ViewCut object.
+
+        Path
+        ----
+            - session.viewports[name].layers[name].odbDisplay.ViewCut
+            - session.viewports[name].odbDisplay.ViewCut
+
+        Parameters
+        ----------
+        name
+            A String specifying the repository key.
+        shape
+            A SymbolicConstant specifying the shape of the ViewCut object. Possible values are
+            PLANE, CYLINDER, SPHERE, and ISOSURFACE.
+        origin
+            A sequence of three Floats specifying the X-, Y-, and Z-coordinates of the origin of the
+            plane, cylinder or sphere cut. This origin is not required if the cut shape is
+            ISOSURFACE or if the cut is defined by the *csysName* argument.
+        normal
+            A sequence of Floats specifying the X-, Y-, and Z-coordinates of the normal axis to the
+            plane defining the cut, when the plane is defined using the *origin* argument or a
+            SymbolicConstant defining this normal axis, when the cut is defined by the *csysName*
+            argument. Possible values are AXIS_1, AXIS_2, AXIS_3. This axis is not required if the
+            cut *shape* is CYLINDER, SPHERE or ISOSURFACE.
+        axis2
+            A sequence of three Floats specifying the X-, Y-, and Z-coordinates of the second axis
+            of the plane defining the cut, when the plane is defined using the *origin* argument or
+            a SymbolicConstant defining this second axis, when the cut is defined by the *csysName*
+            argument. Possible values are AXIS_1, AXIS_2, AXIS_3. This axis is used to rotate the
+            plane cut. It is not required if the cut *shape* is CYLINDER, SPHERE or ISOSURFACE.
+        csysName
+            A String specifying the name of the DatumCsys object to be used to define the cut. This
+            name is not required if the cut *shape* is ISOSURFACE or if the cut is defined by the
+            *origin* argument.
+        cylinderAxis
+            A sequence of Floats specifying the X-, Y-, and Z-coordinates of the cylinder axis
+            defining the cut, when the cut is defined using the *origin* argument or a
+            SymbolicConstant defining this cylinder axis, when the cut is defined by the *csysName*
+            argument. Possible values are AXIS_1, AXIS_2, AXIS_3. This axis is not required if the
+            cut *shape* is PLANE, SPHERE, or ISOSURFACE.
+        followDeformation
+            A Boolean specifying whether the cut will follow the deformation or be static. The
+            default value is OFF.
+        overrideAveraging
+            A Boolean specifying averaging for element based fields associated with isosurface cuts
+            will be set to compute-average with a threshold of 100% when true. The current field
+            options will be used when false. The default value is ON.
+        referenceFrame
+            A SymbolicConstant specifying which reference frame will be used when the cut follows
+            the deformation. Possible values are FIRST_FRAME, LAST_FRAME, and CURRENT_FRAME. The
+            default value is FIRST_FRAME.
+
+        Returns
+        -------
+            A ViewCut object.
+
+        Exceptions
+        ----------
+            None.
+        """
+        self.viewCuts[name] = viewCut = ViewCut(name, shape, origin, normal, axis2, csysName, cylinderAxis,
+                                                followDeformation, overrideAveraging, referenceFrame)
+        return viewCut

@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class ElasticFoundationState(InteractionState):
-
-    """The ElasticFoundationState object stores the propagating data for an ElasticFoundation 
+    """The ElasticFoundationState object stores the propagating data for an ElasticFoundation
     object. One instance of this object is created internally by the ElasticFoundation 
     object for each step. The instance is also deleted internally by the ElasticFoundation 
     object. 
@@ -43,4 +42,3 @@ class ElasticFoundationState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

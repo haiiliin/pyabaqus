@@ -4,8 +4,7 @@ from ..Region.Surface import Surface
 
 
 class LeafFromMeshSurfaceSets(Leaf):
-
-    """The LeafFromMeshSurfaceSets object can be used whenever a Leaf object is expected as an 
+    """The LeafFromMeshSurfaceSets object can be used whenever a Leaf object is expected as an
     argument. Leaf objects are used to specify the items in a display group. Leaf objects 
     are constructed as temporary objects, which are then used as arguments to DisplayGroup 
     commands. 
@@ -49,4 +48,3 @@ class LeafFromMeshSurfaceSets(Leaf):
         """
         super().__init__(DEFAULT_MODEL)
         pass
-

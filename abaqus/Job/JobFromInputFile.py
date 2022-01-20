@@ -4,8 +4,7 @@ from .MessageArray import MessageArray
 
 
 class JobFromInputFile(Job):
-
-    """The JobFromInputFile object defines a Job object which analyzes a model contained in an 
+    """The JobFromInputFile object defines a Job object which analyzes a model contained in an
     input file. 
     The JobFromInputFile object is derived from the Job object. 
 
@@ -43,14 +42,14 @@ class JobFromInputFile(Job):
     # A tuple of Strings specifying the environment variables and their values. 
     environment: tuple = ()
 
-    def __init__(self, name: str, inputFileName: str, type: SymbolicConstant = ANALYSIS, queue: str = '', 
-                 waitHours: int = 0, waitMinutes: int = 0, atTime: str = '', scratch: str = '', 
-                 userSubroutine: str = '', numCpus: int = 1, memory: int = 90, 
-                 memoryUnits: SymbolicConstant = PERCENTAGE, 
-                 explicitPrecision: SymbolicConstant = SINGLE, 
-                 nodalOutputPrecision: SymbolicConstant = SINGLE, 
-                 parallelizationMethodExplicit: SymbolicConstant = DOMAIN, numDomains: int = 1, 
-                 activateLoadBalancing: Boolean = OFF, multiprocessingMode: SymbolicConstant = DEFAULT, 
+    def __init__(self, name: str, inputFileName: str, type: SymbolicConstant = ANALYSIS, queue: str = '',
+                 waitHours: int = 0, waitMinutes: int = 0, atTime: str = '', scratch: str = '',
+                 userSubroutine: str = '', numCpus: int = 1, memory: int = 90,
+                 memoryUnits: SymbolicConstant = PERCENTAGE,
+                 explicitPrecision: SymbolicConstant = SINGLE,
+                 nodalOutputPrecision: SymbolicConstant = SINGLE,
+                 parallelizationMethodExplicit: SymbolicConstant = DOMAIN, numDomains: int = 1,
+                 activateLoadBalancing: Boolean = OFF, multiprocessingMode: SymbolicConstant = DEFAULT,
                  licenseType: SymbolicConstant = DEFAULT):
         """This method creates an analysis job using an input file for the model definition.
 
@@ -147,13 +146,13 @@ class JobFromInputFile(Job):
         super().__init__()
         pass
 
-    def setValues(self, type: SymbolicConstant = ANALYSIS, queue: str = '', waitHours: int = 0, 
-                  waitMinutes: int = 0, atTime: str = '', scratch: str = '', userSubroutine: str = '', 
-                  numCpus: int = 1, memory: int = 90, memoryUnits: SymbolicConstant = PERCENTAGE, 
-                  explicitPrecision: SymbolicConstant = SINGLE, 
-                  nodalOutputPrecision: SymbolicConstant = SINGLE, 
-                  parallelizationMethodExplicit: SymbolicConstant = DOMAIN, numDomains: int = 1, 
-                  activateLoadBalancing: Boolean = OFF, multiprocessingMode: SymbolicConstant = DEFAULT, 
+    def setValues(self, type: SymbolicConstant = ANALYSIS, queue: str = '', waitHours: int = 0,
+                  waitMinutes: int = 0, atTime: str = '', scratch: str = '', userSubroutine: str = '',
+                  numCpus: int = 1, memory: int = 90, memoryUnits: SymbolicConstant = PERCENTAGE,
+                  explicitPrecision: SymbolicConstant = SINGLE,
+                  nodalOutputPrecision: SymbolicConstant = SINGLE,
+                  parallelizationMethodExplicit: SymbolicConstant = DOMAIN, numDomains: int = 1,
+                  activateLoadBalancing: Boolean = OFF, multiprocessingMode: SymbolicConstant = DEFAULT,
                   licenseType: SymbolicConstant = DEFAULT):
         """This method modifies the JobFromInputFile object.
 
@@ -234,4 +233,3 @@ class JobFromInputFile(Job):
             None. 
         """
         pass
-

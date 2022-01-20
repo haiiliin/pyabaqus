@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class MultipointConstraint(Constraint):
-
-    """The MultipointConstraint object defines a constraint between a group of 
+    """The MultipointConstraint object defines a constraint between a group of
     MultipointConstraint nodes located on a region and a reference point. 
     The MultipointConstraint object is derived from the ConstrainedSketchConstraint object.
 
@@ -27,7 +26,7 @@ class MultipointConstraint(Constraint):
     # OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, surface: Region, controlPoint: Region, mpcType: SymbolicConstant, 
+    def __init__(self, name: str, surface: Region, controlPoint: Region, mpcType: SymbolicConstant,
                  csys: str = None, userType: int = 0, userMode: SymbolicConstant = DOF_MODE_MPC):
         """This method creates a MultipointConstraint object.
 
@@ -100,4 +99,3 @@ class MultipointConstraint(Constraint):
             None. 
         """
         pass
-

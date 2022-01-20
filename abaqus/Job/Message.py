@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Message:
 
-    """The Message object contains information about a given phase of the simulation. Job 
+class Message:
+    """The Message object contains information about a given phase of the simulation. Job
     messages are not returned if a script is run without the Abaqus/CAE GUI (using the noGUI 
     option). 
 
@@ -50,4 +50,3 @@ class Message:
     # depends on the message returned. For a list of the possible entries, see the members of 
     # DataObject. 
     data: dict = None
-

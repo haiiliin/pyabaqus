@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class TextStyle:
 
-    """The TextStyle object is used to store the text properties to be used for drawing XY-plot 
+class TextStyle:
+    """The TextStyle object is used to store the text properties to be used for drawing XY-plot
     text objects. 
     TextStyle objects are automatically created when creating a chart or can be created with 
     methods described below. 
@@ -102,4 +102,3 @@ class TextStyle:
             None. 
         """
         pass
-

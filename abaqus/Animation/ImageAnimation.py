@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ImageAnimation:
 
-    """The ImageAnimation object is used to build frame by frame animation. 
+class ImageAnimation:
+    """The ImageAnimation object is used to build frame by frame animation.
 
     Access
     ------
@@ -96,4 +96,3 @@ class ImageAnimation:
             None. 
         """
         pass
-

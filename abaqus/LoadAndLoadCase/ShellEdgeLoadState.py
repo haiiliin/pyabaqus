@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class ShellEdgeLoadState(LoadState):
-
-    """The ShellEdgeLoadState object stores the propagating data for a ShellEdgeLoad object in 
+    """The ShellEdgeLoadState object stores the propagating data for a ShellEdgeLoad object in
     a step. One instance of this object is created internally by the ShellEdgeLoad object 
     for each step. The instance is also deleted internally by the ShellEdgeLoad object. 
     The ShellEdgeLoadState object has no constructor or methods. 
@@ -52,4 +51,3 @@ class ShellEdgeLoadState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

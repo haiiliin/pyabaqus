@@ -1,8 +1,5 @@
-
-
 class OdbDataSurfaceSet:
-
-    """The OdbDataSurfaceSet object stores surface set data. 
+    """The OdbDataSurfaceSet object stores surface set data.
 
     Access
     ------
@@ -27,4 +24,3 @@ class OdbDataSurfaceSet:
     # A String-to-tuple-of-Ints Dictionary specifying the facets corresponding to the 
     # *elements*. This attribute is read-only. 
     facets: str = ''
-

@@ -3,8 +3,7 @@ from .ConnectorBehaviorOption import ConnectorBehaviorOption
 
 
 class ConnectorLock(ConnectorBehaviorOption):
-
-    """The ConnectorLock object defines locking criteria for one or more available components 
+    """The ConnectorLock object defines locking criteria for one or more available components
     of a connector's relative motion. 
     The ConnectorLock object is derived from the ConnectorBehaviorOption object. 
 
@@ -24,8 +23,8 @@ class ConnectorLock(ConnectorBehaviorOption):
 
     """
 
-    def __init__(self, lockingComponent: SymbolicConstant = ALL, minMotion: float = None, 
-                 maxMotion: float = None, minForce: float = None, maxForce: float = None, 
+    def __init__(self, lockingComponent: SymbolicConstant = ALL, minMotion: float = None,
+                 maxMotion: float = None, minForce: float = None, maxForce: float = None,
                  components: tuple = ()):
         """This method creates a connector lock behavior option for a ConnectorSection.
 
@@ -88,4 +87,3 @@ class ConnectorLock(ConnectorBehaviorOption):
             ValueError. 
         """
         pass
-

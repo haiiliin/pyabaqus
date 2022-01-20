@@ -1,6 +1,6 @@
+from abaqus.BasicGeometry.Vertex import Vertex
 from abaqus.Sketcher.ConstrainedSketchBase import ConstrainedSketchBase
 from abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
-from abaqus.BasicGeometry.Vertex import Vertex
 
 
 class ConstrainedSketchConstraintModel(ConstrainedSketchBase):

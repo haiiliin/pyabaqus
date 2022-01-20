@@ -1,10 +1,10 @@
+from .ErrorIndicatorResult import ErrorIndicatorResult
 from .RuleResult import RuleResult
 from ..UtilityAndView.Repository import Repository
 
 
 class AdaptivityIteration:
-
-    """The AdaptivityIteration object contains information about a given iteration of the 
+    """The AdaptivityIteration object contains information about a given iteration of the
     varying topology adaptivity process (adaptive remeshing). 
 
     Access
@@ -25,7 +25,7 @@ class AdaptivityIteration:
     # process. 
     ruleResults: Repository[str, RuleResult] = Repository[str, RuleResult]()
 
-    def __init__(self, iteration: str, jobName: str, modelName: str, odbPath: str, remeshingErrors: int):
+    def __init__(self, iteration: int, jobName: str, modelName: str, odbPath: str, remeshingErrors: int):
         """This method creates an AdaptivityIteration object.
 
         Path
@@ -57,3 +57,68 @@ class AdaptivityIteration:
         """
         pass
 
+    def ErrorIndicatorResult(self, name: str, results: str) -> ErrorIndicatorResult:
+        """This method creates an ErrorIndicatorResult with data for an error indicator variable in
+        a RemeshingRule for a given adaptivity iteration.
+
+        Path
+        ----
+            - mdb.adaptivityProcesses[name].iterations[i].ruleResults[name].ErrorIndicatorResult
+
+        Parameters
+        ----------
+        name
+            A String specifying the name of the error indicator variable to which these results
+            correspond.
+        results
+            A String-to-Float Dictionary specifying the calculated results from the sizing function
+            corresponding to the error indicator variable represented by this ErrorIndicatorResult.
+
+        Returns
+        -------
+            An ErrorIndicatorResult object.
+
+        Exceptions
+        ----------
+            AbaqusException.
+        """
+        self.ruleResults[name] = ruleResult = ErrorIndicatorResult(name, results)
+        return ruleResult
+
+    def RuleResult(self, name: str, indicatorResults: Repository[str, ErrorIndicatorResult], numElems: int,
+                   minSizeElemCount: int, satisfiedVars: tuple = ()) -> RuleResult:
+        """This method creates a RuleResult with data for a RemeshingRule for a given adaptivity
+        iteration.
+
+        Path
+        ----
+            - mdb.adaptivityProcesses[name].iterations[i].RuleResult
+
+        Parameters
+        ----------
+        name
+            A String specifying the name of the Remeshing Rule to which these results correspond.
+        indicatorResults
+            A repository of ErrorIndicatorResult objects specifying the calculated results from the
+            sizing function corresponding to the error indicator variables for the Remeshing Rule.
+        numElems
+            An Int specifying the number of elements before remeshing in the region of the Remeshing
+            Rule.
+        minSizeElemCount
+            An Int specifying the number of elements that were constrained to the minimum element
+            size by the Remeshing Rule.
+        satisfiedVars
+            A sequence of Strings specifying the error indicator variables that have satisfied the
+            Remeshing Rule.
+
+        Returns
+        -------
+            A RuleResult object.
+
+        Exceptions
+        ----------
+            AbaqusException.
+        """
+        self.ruleResults[name] = ruleResult = RuleResult(name, indicatorResults, numElems, minSizeElemCount,
+                                                         satisfiedVars)
+        return ruleResult

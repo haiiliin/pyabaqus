@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class FluidCavityPressureBC(BoundaryCondition):
-
-    """The FluidCavityPressureBC object stores the data for a fluid cavity pressure boundary 
+    """The FluidCavityPressureBC object stores the data for a fluid cavity pressure boundary
     condition. 
     The FluidCavityPressureBC object is derived from the BoundaryCondition object. 
 
@@ -42,7 +41,7 @@ class FluidCavityPressureBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, fluidCavity: str, magnitude: float = 0, 
+    def __init__(self, name: str, createStepName: str, fluidCavity: str, magnitude: float = 0,
                  amplitude: str = UNSET, fixed: Boolean = OFF):
         """This method creates a FluidCavityPressureBC object.
 
@@ -107,8 +106,8 @@ class FluidCavityPressureBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        magnitude: typing.Union[SymbolicConstant,float] = UNCHANGED, 
+    def setValuesInStep(self, stepName: str,
+                        magnitude: typing.Union[SymbolicConstant, float] = UNCHANGED,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing FluidCavityPressureBC object
         in the specified step.
@@ -135,4 +134,3 @@ class FluidCavityPressureBC(BoundaryCondition):
             None. 
         """
         pass
-

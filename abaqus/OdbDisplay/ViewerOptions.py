@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ViewerOptions:
 
-    """The ViewerOptions object specifies options to set the result caching parameters. The 
+class ViewerOptions:
+    """The ViewerOptions object specifies options to set the result caching parameters. The
     ViewerOptions object has no constructor. Abaqus creates the *viewerOptions* member when 
     a session is started. 
 
@@ -19,8 +19,8 @@ class ViewerOptions:
 
     """
 
-    def setValues(self, primaryVariableCaching: Boolean = ON, deformedVariableCaching: Boolean = ON, 
-                  cutVariableCaching: Boolean = ON, odbUpdateChecking: Boolean = ON, 
+    def setValues(self, primaryVariableCaching: Boolean = ON, deformedVariableCaching: Boolean = ON,
+                  cutVariableCaching: Boolean = ON, odbUpdateChecking: Boolean = ON,
                   odbUpdateCheckInterval: int = 0):
         """This method modifies the ViewerOptions object.
 
@@ -52,4 +52,3 @@ class ViewerOptions:
             None. 
         """
         pass
-

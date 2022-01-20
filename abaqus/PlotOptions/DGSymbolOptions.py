@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class DGSymbolOptions:
 
-    """The DGSymbolOptions object stores values and attributes associated with a symbol plot. 
+class DGSymbolOptions:
+    """The DGSymbolOptions object stores values and attributes associated with a symbol plot.
     The DGSymbolOptions object has no constructor command. Abaqus creates an 
     *odbDisplayOptions.symbolOptions* member when a display group instance is created, using 
     values from *odbDisplay.symbolOptions*. 
@@ -126,4 +126,3 @@ class DGSymbolOptions:
     # A String specifying the color of the selected principal tensor symbols. The default 
     # value is "Red". 
     tensorSelectedPrinColor: str = ''
-

@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class RotationalBodyForce(Load):
-
-    """The RotationalBodyForce object stores the data for a rotational body force. 
+    """The RotationalBodyForce object stores the data for a rotational body force.
     The RotationalBodyForce object is derived from the Load object. 
 
     Access
@@ -52,8 +51,8 @@ class RotationalBodyForce(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, point1: tuple, 
-                 point2: tuple, distributionType: SymbolicConstant = UNIFORM, field: str = '', 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, point1: tuple,
+                 point2: tuple, distributionType: SymbolicConstant = UNIFORM, field: str = '',
                  centrifugal: Boolean = OFF, rotaryAcceleration: Boolean = OFF, amplitude: str = UNSET):
         """This method creates a RotationalBodyForce object.
 
@@ -107,7 +106,7 @@ class RotationalBodyForce(Load):
         super().__init__()
         pass
 
-    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', 
+    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '',
                   centrifugal: Boolean = OFF, rotaryAcceleration: Boolean = OFF, amplitude: str = UNSET):
         """This method modifies the data for an existing RotationalBodyForce object in the step
         where it is created.
@@ -170,4 +169,3 @@ class RotationalBodyForce(Load):
             None. 
         """
         pass
-

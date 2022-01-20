@@ -3,8 +3,7 @@ from ..Region.Region import Region
 
 
 class ElementProgressiveActivation:
-
-    """The ElementProgressiveActivation object is used to specify elements that can be 
+    """The ElementProgressiveActivation object is used to specify elements that can be
     activated during an analysis. 
 
     Access
@@ -20,7 +19,7 @@ class ElementProgressiveActivation:
 
     """
 
-    def __init__(self, name: str, elset: Region = Region(), deformation: Boolean = OFF, 
+    def __init__(self, name: str, elset: Region = Region(), deformation: Boolean = OFF,
                  freeSurfaceType: SymbolicConstant = NONE):
         """This method creates an ElementProgressiveActivation object and places it in the
         elementProgressiveActivation repository.
@@ -70,4 +69,3 @@ class ElementProgressiveActivation:
         ----------
         """
         pass
-

@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class SmoothingAssignment:
 
-    """The SmoothingAssignment object stores the surface smoothing assignment definition for 
+class SmoothingAssignment:
+    """The SmoothingAssignment object stores the surface smoothing assignment definition for
     surfaces in ContactExp and ContactStd objects. The SmoothingAssignment object has no 
     constructor or members. 
 
@@ -92,4 +92,3 @@ class SmoothingAssignment:
             None. 
         """
         pass
-

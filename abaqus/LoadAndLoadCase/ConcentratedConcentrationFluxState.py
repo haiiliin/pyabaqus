@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class ConcentratedConcentrationFluxState(LoadState):
-
-    """The ConcentratedConcentrationFluxState object stores the propagating data of a 
+    """The ConcentratedConcentrationFluxState object stores the propagating data of a
     concentrated concentration flux in a step. One instance of this object is created 
     internally by the ConcConcFlux object for each step. The instance is also deleted 
     internally by the ConcConcFlux object. 
@@ -52,4 +51,3 @@ class ConcentratedConcentrationFluxState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

@@ -1,8 +1,5 @@
-
-
 class SteadyStateModalFrequency:
-
-    """A SteadyStateModalFrequency is an object used to define frequency over a range of modes. 
+    """A SteadyStateModalFrequency is an object used to define frequency over a range of modes.
 
     Access
     ------
@@ -32,4 +29,3 @@ class SteadyStateModalFrequency:
     # frequency points, Abaqus biases the results toward the ends of the intervals to obtain 
     # better resolution. The default value is 3.0. 
     bias: float = 3
-

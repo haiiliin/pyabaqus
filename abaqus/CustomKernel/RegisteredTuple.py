@@ -1,8 +1,8 @@
 from .CommandRegister import CommandRegister
 
-class RegisteredTuple(CommandRegister):
 
-    """This class allows you to create a tuple that can be queried from the GUI and is capable 
+class RegisteredTuple(CommandRegister):
+    """This class allows you to create a tuple that can be queried from the GUI and is capable
     of notifying the GUI when the contents of any of the tuple's members change. 
     The RegisteredTuple object is derived from the CommandRegister object. 
 
@@ -56,4 +56,3 @@ class RegisteredTuple(CommandRegister):
             None. 
         """
         pass
-

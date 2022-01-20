@@ -1,8 +1,8 @@
 from .RayleighDampingByFrequencyComponentArray import RayleighDampingByFrequencyComponentArray
 
-class RayleighDampingByFrequency:
 
-    """A RayleighDampingByFrequency object contains Rayleigh Damping parameters. 
+class RayleighDampingByFrequency:
+    """A RayleighDampingByFrequency object contains Rayleigh Damping parameters.
 
     Access
     ------
@@ -19,4 +19,3 @@ class RayleighDampingByFrequency:
 
     # A RayleighDampingByFrequencyComponentArray object. 
     components: RayleighDampingByFrequencyComponentArray = RayleighDampingByFrequencyComponentArray()
-

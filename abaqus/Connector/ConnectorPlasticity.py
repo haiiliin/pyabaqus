@@ -5,8 +5,7 @@ from .ConnectorPotentialArray import ConnectorPotentialArray
 
 
 class ConnectorPlasticity(ConnectorBehaviorOption):
-
-    """The ConnectorPlasticity object defines plastic behavior for one or more components of a 
+    """The ConnectorPlasticity object defines Plastic behavior for one or more components of a
     connector's relative motion. 
     The ConnectorPlasticity object is derived from the ConnectorBehaviorOption object. 
 
@@ -22,14 +21,14 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
         Table data for *isotropicTable*:
         If *isotropicType*=TABULAR, then each sequence of the table data specifies the following:
         - Equivalent yield force or moment defining the size of the elastic range.
-        - Equivalent relative plastic motion.
-        - Equivalent relative plastic motion rate.
+        - Equivalent relative Plastic motion.
+        - Equivalent relative Plastic motion rate.
         - Temperature, if the data depend on temperature.
         - Value of the first field variable, if the data depend on field variables.
         - Value of the second field variable.
         - Etc.
         If *isotropicType*=EXPONENTIAL_LAW, then each sequence of the table data specifies the following:
-        - Equivalent force or moment defining the size of the elastic range at zero plastic motion.
+        - Equivalent force or moment defining the size of the elastic range at zero Plastic motion.
         - Isotropic hardening parameter QinfQinf.
         - Isotropic hardening parameter bb.
         - Temperature, if the data depend on temperature.
@@ -39,21 +38,21 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
         Table data for *kinematicTable*:
         If *kinematicType*=HALF_CYCLE, then each sequence of the table data specifies the following:
         - Yield force or moment.
-        - Connector relative plastic motion.
+        - Connector relative Plastic motion.
         - Temperature, if the data depend on temperature.
         - Value of the first field variable, if the data depend on field variables.
         - Value of the second field variable.
         - Etc.
         If *kinematicType*=STABILIZED, then each sequence of the table data specifies the following:
         - Yield force or moment.
-        - Connector relative plastic motion.
+        - Connector relative Plastic motion.
         - Connector relative constitutive motion range.
         - Temperature, if the data depend on temperature.
         - Value of the first field variable, if the data depend on field variables.
         - Value of the second field variable.
         - Etc.
         If *kinematicType*=PARAMETERS, then each sequence of the table data specifies the following:
-        - Yield force or moment at zero relative plastic motion.
+        - Yield force or moment at zero relative Plastic motion.
         - Kinematic hardening parameter CC.
         - Kinematic hardening parameter γγ. Set γγ=0 to specify linear Ziegler kinematic hardening.
         - Temperature, if the data depend on temperature.
@@ -77,12 +76,12 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
     # for the kinematic hardening table. 
     kinematicOptions: ConnectorOptions = ConnectorOptions()
 
-    def __init__(self, coupling: SymbolicConstant = UNCOUPLED, isotropic: Boolean = ON, 
-                 isotropicType: SymbolicConstant = TABULAR, isotropicTemperature: Boolean = OFF, 
-                 isotropicDependencies: int = 0, kinematic: Boolean = OFF, 
-                 kinematicType: SymbolicConstant = HALF_CYCLE, kinematicTemperature: Boolean = OFF, 
-                 kinematicDependencies: int = 0, forcePotentialOperator: SymbolicConstant = SUM, 
-                 forcePotentialExponent: float = 2, 
+    def __init__(self, coupling: SymbolicConstant = UNCOUPLED, isotropic: Boolean = ON,
+                 isotropicType: SymbolicConstant = TABULAR, isotropicTemperature: Boolean = OFF,
+                 isotropicDependencies: int = 0, kinematic: Boolean = OFF,
+                 kinematicType: SymbolicConstant = HALF_CYCLE, kinematicTemperature: Boolean = OFF,
+                 kinematicDependencies: int = 0, forcePotentialOperator: SymbolicConstant = SUM,
+                 forcePotentialExponent: float = 2,
                  connectorPotentials: ConnectorPotentialArray = None,
                  isotropicTable: tuple = (), kinematicTable: tuple = (), components: tuple = ()):
         """This method creates a connector plasticity behavior option for a ConnectorSection
@@ -177,4 +176,3 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
             ValueError. 
         """
         pass
-

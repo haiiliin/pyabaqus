@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Drawing:
 
-    """A drawing is the container for a geometric object. The Drawing object stores the vertex 
+class Drawing:
+    """A drawing is the container for a geometric object. The Drawing object stores the vertex
     data and various settings that determine how the drawing will be displayed. 
 
     Access
@@ -257,7 +257,7 @@ class Drawing:
         """
         pass
 
-    def addArrayDraw(self, type: SymbolicConstant, startIndex: int, numVertices: int, 
+    def addArrayDraw(self, type: SymbolicConstant, startIndex: int, numVertices: int,
                      polygonMode: SymbolicConstant = FILL):
         """This method adds a rendering command to the drawing and can be called multiple times to
         add additional rendering commands. When the drawing is referenced by a Viewport, the
@@ -336,9 +336,9 @@ class Drawing:
         """
         pass
 
-    def setValues(self, show: Boolean = OFF, cullBackfaces: Boolean = OFF, 
-                  frontFaceOrder: SymbolicConstant = CCW, smoothShade: Boolean = ON, 
-                  edgesInShaded: Boolean = ON, translucency: float = 1, lineSize: float = 0, 
+    def setValues(self, show: Boolean = OFF, cullBackfaces: Boolean = OFF,
+                  frontFaceOrder: SymbolicConstant = CCW, smoothShade: Boolean = ON,
+                  edgesInShaded: Boolean = ON, translucency: float = 1, lineSize: float = 0,
                   pointSize: float = 0, depthTest: Boolean = ON):
         """This method modifies the rendering of the Drawing object.
 
@@ -404,4 +404,3 @@ class Drawing:
               RangeError: *pointSize* must be in the range 0.0 <= value <= 5.0 
         """
         pass
-

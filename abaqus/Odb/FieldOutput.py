@@ -9,8 +9,7 @@ from .SectionPoint import SectionPoint
 
 
 class FieldOutput:
-
-    """A FieldOutput object contains field data for a specific output variable. 
+    """A FieldOutput object contains field data for a specific output variable.
 
     Access
     ------
@@ -45,7 +44,7 @@ class FieldOutput:
     values: int = None
 
     @typing.overload
-    def __init__(self, name: str, description: str, type: SymbolicConstant, componentLabels: tuple = (), 
+    def __init__(self, name: str, description: str, type: SymbolicConstant, componentLabels: tuple = (),
                  validInvariants: SymbolicConstant = None, isEngineeringTensor: Boolean = OFF):
         """This method creates a FieldOutput object.
 
@@ -125,7 +124,7 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def addData(self, position: SymbolicConstant, instance: OdbInstance, labels: tuple, data: tuple, 
+    def addData(self, position: SymbolicConstant, instance: OdbInstance, labels: tuple, data: tuple,
                 sectionPoint: SectionPoint = None, localCoordSystem: tuple = ()):
         """This method adds data to a FieldOutput object.
 
@@ -211,7 +210,7 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def addData(self, position: SymbolicConstant, set: OdbSet, data: tuple, 
+    def addData(self, position: SymbolicConstant, set: OdbSet, data: tuple,
                 sectionPoint: SectionPoint = None, conjugateData: float = None):
         """This method adds data to a FieldOutput object.
 
@@ -737,4 +736,3 @@ class FieldOutput:
             None. 
         """
         pass
-

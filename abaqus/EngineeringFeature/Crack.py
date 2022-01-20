@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Crack:
 
-    """The Crack object is the abstract base type for ContourIntegral and future crack objects. 
+class Crack:
+    """The Crack object is the abstract base type for ContourIntegral and future crack objects.
 
     Access
     ------
@@ -56,4 +56,3 @@ class Crack:
             None. 
         """
         pass
-

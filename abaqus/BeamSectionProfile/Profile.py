@@ -1,7 +1,6 @@
 
 
 class Profile:
-
     """The Profile object defines the geometrical properties of a beam cross-section. Profile 
     is an abstract base type. 
 
@@ -48,4 +47,3 @@ class Profile:
             !img 
         """
         pass
-

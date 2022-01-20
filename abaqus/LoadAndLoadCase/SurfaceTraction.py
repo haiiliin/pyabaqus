@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class SurfaceTraction(Load):
-
-    """The SurfaceTraction object defines surface traction on a region. 
+    """The SurfaceTraction object defines surface traction on a region.
     The SurfaceTraction object is derived from the Load object. 
 
     Access
@@ -79,10 +78,10 @@ class SurfaceTraction(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, 
-                 distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET, 
-                 angle: float = 0, axis: SymbolicConstant = AXIS_1, localCsys: int = None, 
-                 userCsys: str = '', directionVector: tuple = (), follower: Boolean = ON, 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float,
+                 distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET,
+                 angle: float = 0, axis: SymbolicConstant = AXIS_1, localCsys: int = None,
+                 userCsys: str = '', directionVector: tuple = (), follower: Boolean = ON,
                  resultant: Boolean = OFF, traction: SymbolicConstant = SHEAR):
         """This method creates a SurfaceTraction object.
 
@@ -157,9 +156,9 @@ class SurfaceTraction(Load):
         super().__init__()
         pass
 
-    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET, 
-                  angle: float = 0, axis: SymbolicConstant = AXIS_1, localCsys: int = None, 
-                  userCsys: str = '', directionVector: tuple = (), follower: Boolean = ON, 
+    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET,
+                  angle: float = 0, axis: SymbolicConstant = AXIS_1, localCsys: int = None,
+                  userCsys: str = '', directionVector: tuple = (), follower: Boolean = ON,
                   resultant: Boolean = OFF, traction: SymbolicConstant = SHEAR):
         """This method modifies the data for an existing SurfaceTraction object in the step where
         it is created.
@@ -221,8 +220,8 @@ class SurfaceTraction(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        magnitude: typing.Union[SymbolicConstant,float] = None, 
+    def setValuesInStep(self, stepName: str,
+                        magnitude: typing.Union[SymbolicConstant, float] = None,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing SurfaceTraction object in the
         specified step.
@@ -250,4 +249,3 @@ class SurfaceTraction(Load):
             None. 
         """
         pass
-

@@ -9,8 +9,7 @@ from ..Mesh.MeshNodeArray import MeshNodeArray
 
 
 class Surface:
-
-    """The Surface object stores surfaces selected from the assembly. A surface is comprised of 
+    """The Surface object stores surfaces selected from the assembly. A surface is comprised of
     geometric or discrete entities but not both. An instance of a Surface object is 
     available from the *surface* member of the Assembly object. 
 
@@ -57,11 +56,14 @@ class Surface:
 
     @typing.overload
     def __init__(self, side1Faces: tuple[Face] = None, side2Faces: tuple[Face] = None, side12Faces: tuple[Face] = None,
-                 end1Edges: tuple[Face] = None, end2Edges: tuple[Face] = None,  circumEdges: tuple[Face] = None,
+                 end1Edges: tuple[Face] = None, end2Edges: tuple[Face] = None, circumEdges: tuple[Face] = None,
                  side1Edges: tuple[Face] = None, side2Edges: tuple[Face] = None, face1Elements: tuple[Face] = None,
-                 face2Elements: tuple[Face] = None, face3Elements: tuple[Face] = None, face4Elements: tuple[Face] = None,
-                 face5Elements: tuple[Face] = None, face6Elements: tuple[Face] = None, side1Elements: tuple[Face] = None,
-                 side2Elements: tuple[Face] = None, side12Elements: tuple[Face] = None, end1Elements: tuple[Face] = None,
+                 face2Elements: tuple[Face] = None, face3Elements: tuple[Face] = None,
+                 face4Elements: tuple[Face] = None,
+                 face5Elements: tuple[Face] = None, face6Elements: tuple[Face] = None,
+                 side1Elements: tuple[Face] = None,
+                 side2Elements: tuple[Face] = None, side12Elements: tuple[Face] = None,
+                 end1Elements: tuple[Face] = None,
                  end2Elements: tuple[Face] = None, circumElements: tuple[Face] = None, name: str = ''):
         """This method creates a surface from a sequence of objects in a model database. The
         surface will apply to the sides specified by the arguments.For example
@@ -200,4 +202,3 @@ class Surface:
             InvalidNameError. 
         """
         pass
-

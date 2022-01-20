@@ -1,8 +1,8 @@
 from .Section import Section
 
-class PEGSection(Section):
 
-    """The PEGSection object defines the properties of a solid section. 
+class PEGSection(Section):
+    """The PEGSection object defines the properties of a solid section.
     The PEGSection object is derived from the Section object. 
 
     Access
@@ -21,7 +21,7 @@ class PEGSection(Section):
 
     """
 
-    def __init__(self, name: str, material: str, thickness: float = 1, wedgeAngle1: float = 0, 
+    def __init__(self, name: str, material: str, thickness: float = 1, wedgeAngle1: float = 0,
                  wedgeAngle2: float = 0):
         """This method creates a PEGSection object.
 
@@ -81,4 +81,3 @@ class PEGSection(Section):
             RangeError. 
         """
         pass
-

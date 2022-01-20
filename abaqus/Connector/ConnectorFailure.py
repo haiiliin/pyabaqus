@@ -3,8 +3,7 @@ from .ConnectorBehaviorOption import ConnectorBehaviorOption
 
 
 class ConnectorFailure(ConnectorBehaviorOption):
-
-    """The ConnectorFailure object defines failure criteria for one or more components of a 
+    """The ConnectorFailure object defines failure criteria for one or more components of a
     connector's relative motion. 
     The ConnectorFailure object is derived from the ConnectorBehaviorOption object. 
 
@@ -24,8 +23,8 @@ class ConnectorFailure(ConnectorBehaviorOption):
 
     """
 
-    def __init__(self, releaseComponent: SymbolicConstant = ALL, minMotion: float = None, 
-                 maxMotion: float = None, minForce: float = None, maxForce: float = None, 
+    def __init__(self, releaseComponent: SymbolicConstant = ALL, minMotion: float = None,
+                 maxMotion: float = None, minForce: float = None, maxForce: float = None,
                  components: tuple = ()):
         """This method creates a connector failure behavior option for a ConnectorSection object.
 
@@ -87,4 +86,3 @@ class ConnectorFailure(ConnectorBehaviorOption):
             ValueError. 
         """
         pass
-

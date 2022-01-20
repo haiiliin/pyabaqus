@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SurfaceHeatFlux(Load):
-
-    """The SurfaceHeatFlux object defines surface heat flux from a region or into a region. 
+    """The SurfaceHeatFlux object defines surface heat flux from a region or into a region.
     The SurfaceHeatFlux object is derived from the Load object. 
 
     Access
@@ -36,7 +35,7 @@ class SurfaceHeatFlux(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, field: str = '', 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, field: str = '',
                  distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):
         """This method creates a SurfaceHeatFlux object.
 
@@ -132,4 +131,3 @@ class SurfaceHeatFlux(Load):
             None. 
         """
         pass
-

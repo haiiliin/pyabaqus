@@ -1,8 +1,8 @@
 from .DirectDampingByFrequencyComponentArray import DirectDampingByFrequencyComponentArray
 
-class DirectDampingByFrequency:
 
-    """A DirectDampingByFrequency object contains direct damping parameters. 
+class DirectDampingByFrequency:
+    """A DirectDampingByFrequency object contains direct damping parameters.
 
     Access
     ------
@@ -19,4 +19,3 @@ class DirectDampingByFrequency:
 
     # A DirectDampingByFrequencyComponentArray object. 
     components: DirectDampingByFrequencyComponentArray = DirectDampingByFrequencyComponentArray()
-

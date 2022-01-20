@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class ActuatorSensorState(InteractionState):
-
-    """The ActuatorSensorState object stores the propagating data of an actuator sensor in a 
+    """The ActuatorSensorState object stores the propagating data of an actuator sensor in a
     step. One instance of this object is created internally by the ActuatorSensor object for 
     each step. The instance is also deleted internally by the ActuatorSensor object. 
     The ActuatorSensorState object has no constructor, methods, or members. 
@@ -35,4 +34,3 @@ class ActuatorSensorState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

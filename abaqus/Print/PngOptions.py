@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class PngOptions:
 
-    """The PngOptions object stores the settings that Abaqus uses when printing in PNG format. 
+class PngOptions:
+    """The PngOptions object stores the settings that Abaqus uses when printing in PNG format.
     The PngOptions object has no constructor. Abaqus creates the *pngOptions* member when a 
     session is started. 
 
@@ -62,4 +62,3 @@ class PngOptions:
             (minWidth, minHeight) <= (width, height) <= (maxWidth, maxHeight). 
         """
         pass
-

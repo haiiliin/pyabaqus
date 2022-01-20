@@ -1,8 +1,5 @@
-
-
 class CompositeDampingComponent:
-
-    """A CompositeDampingComponent object is used to define composite damping over a range of 
+    """A CompositeDampingComponent object is used to define composite damping over a range of
     modes. 
 
     Access
@@ -23,4 +20,3 @@ class CompositeDampingComponent:
 
     # An Int specifying the mode number of the highest mode of a range. 
     end: int = None
-

@@ -1,8 +1,8 @@
 from .ConnectorBehaviorOption import ConnectorBehaviorOption
 
-class ConnectorStop(ConnectorBehaviorOption):
 
-    """The ConnectorStop object defines connector stops for one or more components of a 
+class ConnectorStop(ConnectorBehaviorOption):
+    """The ConnectorStop object defines connector stops for one or more components of a
     connector's relative motion. 
     The ConnectorStop object is derived from the ConnectorBehaviorOption object. 
 
@@ -71,4 +71,3 @@ class ConnectorStop(ConnectorBehaviorOption):
             ValueError. 
         """
         pass
-

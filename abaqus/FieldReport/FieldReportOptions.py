@@ -3,8 +3,7 @@ from ..Session.NumberFormat import NumberFormat
 
 
 class FieldReportOptions:
-
-    """The FieldReportOptions object stores settings used by the writeFieldReport method when 
+    """The FieldReportOptions object stores settings used by the writeFieldReport method when
     you write a FieldOutput object to an ASCII file. The FieldReportOptions object has no 
     constructor. Abaqus creates the *fieldReportOptions* member when you import the 
     Visualization module. 
@@ -22,10 +21,12 @@ class FieldReportOptions:
     -------------------------------
 
     """
+    # Format of the number
+    numberFormat: NumberFormat = NumberFormat()
 
-    def setValues(self, numColumns: int = 80, numberFormat: NumberFormat = NumberFormat(), 
-                  printXYData: Boolean = ON, printTotal: Boolean = ON, printMinMax: Boolean = ON, 
-                  pageWidth: SymbolicConstant = NO_LIMIT, columnLayout: SymbolicConstant = SINGLE_TABLE, 
+    def setValues(self, numColumns: int = 80, numberFormat: NumberFormat = NumberFormat(),
+                  printXYData: Boolean = ON, printTotal: Boolean = ON, printMinMax: Boolean = ON,
+                  pageWidth: SymbolicConstant = NO_LIMIT, columnLayout: SymbolicConstant = SINGLE_TABLE,
                   sort: SymbolicConstant = ASCENDING, printLocalCSYS: Boolean = OFF):
         """This method modifies the FieldReportOptions object.
 
@@ -70,3 +71,40 @@ class FieldReportOptions:
         """
         pass
 
+    def NumberFormat(self, blankPad: Boolean = ON, format: SymbolicConstant = ENGINEERING, numDigits: int = 6,
+                     precision: int = 0) -> NumberFormat:
+        """This method creates a NumberFormat object.
+
+        Path
+        ----
+            - session.defaultFieldReportOptions.NumberFormat
+            - session.fieldReportOptions.NumberFormat
+            - session.journalOptions.NumberFormat
+
+        Parameters
+        ----------
+        blankPad
+            A Boolean specifying whether the printed digits should be padded with blank characters
+            to ensure equal sized fields. The *blankPad* argument is useful when your printed output
+            includes columns. The default value is ON.
+        format
+            A SymbolicConstant specifying the formatting type. Possible values are ENGINEERING,
+            SCIENTIFIC, and AUTOMATIC. The default value is ENGINEERING.
+        numDigits
+            An Int specifying the number of digits to be displayed in the result. *numDigits* >0>0.
+            The default value is 6.
+        precision
+            An Int specifying the number of decimal places to which the number is to be truncated
+            for display. *precision* ≤0≤0. If *precision* =0, no truncation is applied. The default
+            value is 0.
+
+        Returns
+        -------
+            A NumberFormat object.
+
+        Exceptions
+        ----------
+            None.
+        """
+        self.numberFormat = numberFormat = NumberFormat(blankPad, format, numDigits, precision)
+        return numberFormat

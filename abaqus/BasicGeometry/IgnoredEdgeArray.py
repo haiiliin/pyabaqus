@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class IgnoredEdgeArray:
 
-    """The IgnoredEdgeArray is a sequence of IgnoredEdge objects. If the part is modified, then 
+class IgnoredEdgeArray:
+    """The IgnoredEdgeArray is a sequence of IgnoredEdge objects. If the part is modified, then
     IgnoredEdgeArray must be updated for that part. 
 
     Access
@@ -133,4 +133,3 @@ class IgnoredEdgeArray:
             !img 
         """
         pass
-

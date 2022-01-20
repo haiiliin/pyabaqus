@@ -1,6 +1,9 @@
 import typing
 
 from abaqusConstants import *
+from .InteractionContactControlModel import InteractionContactControlModel
+from .InteractionContactInitializationModel import InteractionContactInitializationModel
+from .InteractionPropertyModel import InteractionPropertyModel
 from .PolarityAssignments import PolarityAssignments
 from ..BasicGeometry.ModelDot import ModelDot
 from ..Datum.DatumAxis import DatumAxis
@@ -39,7 +42,7 @@ from ..Interaction.RegionPairs import RegionPairs
 from ..Interaction.SelfContactExp import SelfContactExp
 from ..Interaction.SelfContactStd import SelfContactStd
 from ..Interaction.SlidingFormulationAssignment import SlidingFormulationAssignment
-from ..Interaction.SlidingTransitionAssignments import SlidingTransitionAssignments
+from ..Interaction.SlidingTransitionAssignment import SlidingTransitionAssignment
 from ..Interaction.SmoothingAssignment import SmoothingAssignment
 from ..Interaction.StabilizationAssignment import StabilizationAssignment
 from ..Interaction.StdContactControl import StdContactControl
@@ -56,12 +59,13 @@ from ..Interaction.SurfaceToSurfaceContactExp import SurfaceToSurfaceContactExp
 from ..Interaction.SurfaceToSurfaceContactStd import SurfaceToSurfaceContactStd
 from ..Interaction.SurfaceVertexCriteriaAssignment import SurfaceVertexCriteriaAssignment
 from ..Interaction.XFEMCrackGrowth import XFEMCrackGrowth
-from ..Model.ModelBase import ModelBase
 from ..Region.Region import Region
 from ..Region.RegionArray import RegionArray
 
 
-class InteractionModel(ModelBase):
+class InteractionModel(InteractionContactControlModel,
+                       InteractionContactInitializationModel,
+                       InteractionPropertyModel):
     """The following commands operate on Model objects. For more information about the Model
         object, see Model object.
 
@@ -879,7 +883,7 @@ class InteractionModel(ModelBase):
                    initializationAssignments: InitializationAssignment = InitializationAssignment(),
                    stabilizationAssignments: StabilizationAssignment = StabilizationAssignment(),
                    smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
-                   slidingTransitionAssignments: SlidingTransitionAssignments = SlidingTransitionAssignments(),
+                   slidingTransitionAssignments: SlidingTransitionAssignment = SlidingTransitionAssignment(),
                    slidingFormulationAssignments: SlidingFormulationAssignment = SlidingFormulationAssignment()) -> ContactStd:
         """This method creates a ContactStd object.
 

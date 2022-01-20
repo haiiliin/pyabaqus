@@ -1,8 +1,8 @@
 from .Interaction import Interaction
 
-class FluidInflator(Interaction):
 
-    """The FluidInflator object is used to define a fluid inflator to model deployment of an 
+class FluidInflator(Interaction):
+    """The FluidInflator object is used to define a fluid inflator to model deployment of an
     airbag. 
     The FluidInflator object is derived from the Interaction object. 
 
@@ -20,7 +20,7 @@ class FluidInflator(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, cavity: str, interactionProperty: str, 
+    def __init__(self, name: str, createStepName: str, cavity: str, interactionProperty: str,
                  inflationTimeAmplitude: str = '', massFlowAmplitude: str = ''):
         """This method creates a FluidInflator object.
 
@@ -77,4 +77,3 @@ class FluidInflator(Interaction):
             None. 
         """
         pass
-

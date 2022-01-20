@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class MonitorMgr:
 
-    """An instance of the MonitorMgr object is created when you import the abaqus module. No 
+class MonitorMgr:
+    """An instance of the MonitorMgr object is created when you import the abaqus module. No
     other instance of the MonitorMgr object is required. (This MonitorMgr object is not to 
     be confused with the degree of freedom (DOF) monitor that is constructed from the Step 
     object.) 
@@ -19,7 +19,7 @@ class MonitorMgr:
 
     """
 
-    def addMessageCallback(self, jobName: str, messageType: SymbolicConstant, callback: SymbolicConstant, 
+    def addMessageCallback(self, jobName: str, messageType: SymbolicConstant, callback: SymbolicConstant,
                            userData: str = ''):
         """This method specifies a callback function that will be called when the specified message
         is received from the analysis product.
@@ -122,4 +122,3 @@ class MonitorMgr:
               Status is not ENABLED 
         """
         pass
-

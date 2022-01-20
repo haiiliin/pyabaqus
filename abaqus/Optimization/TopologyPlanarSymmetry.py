@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class TopologyPlanarSymmetry(GeometricRestriction):
-
-    """The TopologyPlanarSymmetry object defines a topology planar symmetry geometric 
+    """The TopologyPlanarSymmetry object defines a topology planar symmetry geometric
     restriction. 
     The TopologyPlanarSymmetry object is derived from the GeometricRestriction object. 
 
@@ -22,7 +21,7 @@ class TopologyPlanarSymmetry(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, region: Region, axis: SymbolicConstant = AXIS_1, csys: int = None, 
+    def __init__(self, name: str, region: Region, axis: SymbolicConstant = AXIS_1, csys: int = None,
                  ignoreFrozenArea: Boolean = OFF):
         """This method creates a TopologyPlanarSymmetry object.
 
@@ -83,4 +82,3 @@ class TopologyPlanarSymmetry(GeometricRestriction):
             None. 
         """
         pass
-

@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class LoadState:
 
-    """The LoadState object is the abstract base type for other LoadState objects. The 
+class LoadState:
+    """The LoadState object is the abstract base type for other LoadState objects. The
     LoadState object has no explicit constructor or methods. The members of the LoadState 
     object are common to all objects derived from LoadState. 
 
@@ -39,4 +39,3 @@ class LoadState:
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

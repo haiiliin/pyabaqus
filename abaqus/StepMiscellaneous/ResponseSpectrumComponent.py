@@ -1,8 +1,5 @@
-
-
 class ResponseSpectrumComponent:
-
-    """A ResponseSpectrumComponent is an element of the ResponseSpectrumComponentArray. 
+    """A ResponseSpectrumComponent is an element of the ResponseSpectrumComponentArray.
 
     Access
     ------
@@ -36,4 +33,3 @@ class ResponseSpectrumComponent:
     # A String specifying the name of the response spectrum specified with the keyword 
     # SPECTRUM. 
     respSpectrum: str = ''
-

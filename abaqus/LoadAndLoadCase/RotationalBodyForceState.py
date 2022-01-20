@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class RotationalBodyForceState(LoadState):
-
-    """The RotationalBodyForceState object stores the propagating data of a rotational body 
+    """The RotationalBodyForceState object stores the propagating data of a rotational body
     force in a step. One instance of this object is created internally by the 
     RotationalBodyForce object for each step. The instance is also deleted internally by the 
     RotationalBodyForce object. 
@@ -52,4 +51,3 @@ class RotationalBodyForceState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

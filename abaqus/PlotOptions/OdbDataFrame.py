@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class OdbDataFrame:
 
-    """The OdbDataFrame object. 
+class OdbDataFrame:
+    """The OdbDataFrame object.
 
     Access
     ------
@@ -36,4 +36,3 @@ class OdbDataFrame:
             None. 
         """
         pass
-

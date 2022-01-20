@@ -5,8 +5,7 @@ from ..Region.Region import Region
 
 
 class BoltLoad(Load):
-
-    """The BoltLoad object defines a bolt load. 
+    """The BoltLoad object defines a bolt load.
     The BoltLoad object is derived from the Load object. 
 
     Access
@@ -36,8 +35,8 @@ class BoltLoad(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, 
-                 boltMethod: SymbolicConstant = APPLY_FORCE, datumAxis: DatumAxis = DatumAxis(), 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float,
+                 boltMethod: SymbolicConstant = APPLY_FORCE, datumAxis: DatumAxis = DatumAxis(),
                  amplitude: str = UNSET, preTenSecPartLevel: Boolean = False):
         """This method creates a BoltLoad object.
 
@@ -84,7 +83,7 @@ class BoltLoad(Load):
         super().__init__()
         pass
 
-    def setValues(self, boltMethod: SymbolicConstant = APPLY_FORCE, datumAxis: DatumAxis = DatumAxis(), 
+    def setValues(self, boltMethod: SymbolicConstant = APPLY_FORCE, datumAxis: DatumAxis = DatumAxis(),
                   amplitude: str = UNSET, preTenSecPartLevel: Boolean = False):
         """This method modifies the data for an existing BoltLoad object in the step where it is
         created.
@@ -118,7 +117,7 @@ class BoltLoad(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, boltMethod: SymbolicConstant = APPLY_FORCE, magnitude: float = None, 
+    def setValuesInStep(self, stepName: str, boltMethod: SymbolicConstant = APPLY_FORCE, magnitude: float = None,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing BoltLoad object in the
         specified step.
@@ -148,4 +147,3 @@ class BoltLoad(Load):
             None. 
         """
         pass
-

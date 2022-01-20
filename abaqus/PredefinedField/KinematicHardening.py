@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class KinematicHardening(PredefinedField):
-
-    """The KinematicHardening object stores the data for initial equivalent plastic strains 
+    """The KinematicHardening object stores the data for initial equivalent Plastic strains
     and, if relevant, the initial backstress tensor. 
     The KinematicHardening object is derived from the PredefinedField object. 
 
@@ -28,9 +27,9 @@ class KinematicHardening(PredefinedField):
     # *distributionType*=ANALYTICAL_FIELD. The default value is an empty string. 
     field: str = ''
 
-    def __init__(self, name: str, region: Region, numBackStress: int = 1, equivPlasticStrain: tuple = (), 
-                 backStress: tuple = (), sectPtNum: tuple = (), 
-                 definition: SymbolicConstant = KINEMATIC_HARDENING, rebarLayerNames: tuple = (), 
+    def __init__(self, name: str, region: Region, numBackStress: int = 1, equivPlasticStrain: tuple = (),
+                 backStress: tuple = (), sectPtNum: tuple = (),
+                 definition: SymbolicConstant = KINEMATIC_HARDENING, rebarLayerNames: tuple = (),
                  distributionType: SymbolicConstant = MAGNITUDE):
         """This method creates a KinematicHardening object.
 
@@ -47,7 +46,7 @@ class KinematicHardening(PredefinedField):
         numBackStress
             An Int specifying the number of backstresses. The default value is 1. 
         equivPlasticStrain
-            A sequence of Floats specifying the initial equivalent plastic strain. 
+            A sequence of Floats specifying the initial equivalent Plastic strain.
         backStress
             A sequence of sequences of Floats specifying the initial backstress tensor for kinematic 
             hardening models. The default value is an empty sequence. 
@@ -76,8 +75,8 @@ class KinematicHardening(PredefinedField):
         super().__init__()
         pass
 
-    def setValues(self, numBackStress: int = 1, equivPlasticStrain: tuple = (), backStress: tuple = (), 
-                  sectPtNum: tuple = (), definition: SymbolicConstant = KINEMATIC_HARDENING, 
+    def setValues(self, numBackStress: int = 1, equivPlasticStrain: tuple = (), backStress: tuple = (),
+                  sectPtNum: tuple = (), definition: SymbolicConstant = KINEMATIC_HARDENING,
                   rebarLayerNames: tuple = (), distributionType: SymbolicConstant = MAGNITUDE):
         """This method modifies the KinematicHardening object.
 
@@ -86,7 +85,7 @@ class KinematicHardening(PredefinedField):
         numBackStress
             An Int specifying the number of backstresses. The default value is 1. 
         equivPlasticStrain
-            A sequence of Floats specifying the initial equivalent plastic strain. 
+            A sequence of Floats specifying the initial equivalent Plastic strain.
         backStress
             A sequence of sequences of Floats specifying the initial backstress tensor for kinematic 
             hardening models. The default value is an empty sequence. 
@@ -113,4 +112,3 @@ class KinematicHardening(PredefinedField):
             None. 
         """
         pass
-

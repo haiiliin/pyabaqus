@@ -1,8 +1,7 @@
 
 
 class EventSeriesType:
-
-    """The EventSeriesType object is used to define a type of event in a process. 
+    """The EventSeriesType object is used to define a type of event in a process.
 
     Access
     ------
@@ -60,4 +59,3 @@ class EventSeriesType:
             RangeError. 
         """
         pass
-

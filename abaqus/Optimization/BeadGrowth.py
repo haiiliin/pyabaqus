@@ -3,8 +3,7 @@ from ..Region.Region import Region
 
 
 class BeadGrowth(GeometricRestriction):
-
-    """The BeadGrowth object defines a growth geometric restriction. 
+    """The BeadGrowth object defines a growth geometric restriction.
     The BeadGrowth object is derived from the GeometricRestriction object. 
 
     Access
@@ -72,4 +71,3 @@ class BeadGrowth(GeometricRestriction):
             None. 
         """
         pass
-

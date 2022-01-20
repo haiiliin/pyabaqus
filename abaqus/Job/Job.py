@@ -3,8 +3,7 @@ from .MessageArray import MessageArray
 
 
 class Job:
-
-    """The Job object is the abstract base type for other Job objects. The Job object has no 
+    """The Job object is the abstract base type for other Job objects. The Job object has no
     explicit constructor. The methods and members of the Job object are common to all 
     objects derived from Job. 
 
@@ -152,7 +151,7 @@ class Job:
         """
         pass
 
-    def submit(self, consistencyChecking: Boolean = ON, datacheckJob: Boolean = False, 
+    def submit(self, consistencyChecking: Boolean = ON, datacheckJob: Boolean = False,
                continueJob: Boolean = False):
         """This method submits a job for analysis.
 
@@ -213,4 +212,3 @@ class Job:
             None. 
         """
         pass
-

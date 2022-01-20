@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Filter:
 
-    """The Filter object is the abstract base type for other Filter objects. The Filter object 
+class Filter:
+    """The Filter object is the abstract base type for other Filter objects. The Filter object
     has no explicit constructor. The methods and members of the Filter object are common to 
     all objects derived from the Filter. 
 
@@ -50,4 +50,3 @@ class Filter:
     # A SymbolicConstant specifying the invariant to which filtering is applied. Possible 
     # values are NONE, FIRST, and SECOND. The default value is NONE. 
     invariant: SymbolicConstant = NONE
-

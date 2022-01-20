@@ -5,21 +5,12 @@ from ..BasicGeometry.Edge import Edge
 from ..BasicGeometry.Face import Face
 from ..BasicGeometry.ReferencePoint import ReferencePoint
 from ..BasicGeometry.Vertex import Vertex
-from ..Mesh.MeshElement import MeshElement
-from ..Mesh.MeshNode import MeshNode
-
-
-class Element(MeshElement):
-    pass
-
-
-class Node(MeshNode):
-    pass
+from ..Mesh.MeshElement import MeshElement as Element
+from ..Mesh.MeshNode import MeshNode as Node
 
 
 class Region:
-
-    """The purpose of the Region object is to provide a link between an attribute and the 
+    """The purpose of the Region object is to provide a link between an attribute and the
     geometric or discrete entities to which the attribute is applied. An attribute (Load, 
     BC, IC, etc.) is applied to one or more Region objects; each Region object in turn is 
     associated with a picked Set or Surface or with a named Set or Surface. The Region 
@@ -69,11 +60,11 @@ class Region:
     """
 
     @typing.overload
-    def __init__(self, elements: tuple[Element] = None, nodes: tuple[Node] = None, 
-                 vertices: tuple[Vertex] = None, edges: tuple[Edge] = None, faces: tuple[Face] = None, 
-                 cells: tuple[Cell] = None, referencePoints: tuple[ReferencePoint] = (), 
-                 xVertices: tuple[Vertex] = None, xEdges: tuple[Vertex] = None, 
-                 xFaces: tuple[Vertex] = None, skinFaces: tuple = (), skinEdges: tuple = (), 
+    def __init__(self, elements: tuple[Element] = None, nodes: tuple[Node] = None,
+                 vertices: tuple[Vertex] = None, edges: tuple[Edge] = None, faces: tuple[Face] = None,
+                 cells: tuple[Cell] = None, referencePoints: tuple[ReferencePoint] = (),
+                 xVertices: tuple[Vertex] = None, xEdges: tuple[Vertex] = None,
+                 xFaces: tuple[Vertex] = None, skinFaces: tuple = (), skinEdges: tuple = (),
                  stringerEdges: tuple = ()):
         """This command creates a set-like region. For example
         myRegion = regionToolset.Region(vertices=v[2:4]
@@ -137,15 +128,15 @@ class Region:
         pass
 
     @typing.overload
-    def __init__(self, side1Faces: tuple[Face] = None, side2Faces: tuple[Face] = None, 
-                 side12Faces: tuple[Face] = None, side1Edges: tuple[Edge] = None, 
-                 side2Edges: tuple[Edge] = None, end1Edges: tuple[Edge] = None, 
-                 end2Edges: tuple[Edge] = None, circumEdges: tuple[Edge] = None, 
-                 face1Elements: tuple[Element] = None, face2Elements: tuple[Element] = None, 
-                 face3Elements: tuple[Element] = None, face4Elements: tuple[Element] = None, 
-                 face5Elements: tuple[Element] = None, face6Elements: tuple[Element] = None, 
-                 side1Elements: tuple[Element] = None, side2Elements: tuple[Element] = None, 
-                 side12Elements: tuple[Element] = None, end1Elements: tuple[Element] = None, 
+    def __init__(self, side1Faces: tuple[Face] = None, side2Faces: tuple[Face] = None,
+                 side12Faces: tuple[Face] = None, side1Edges: tuple[Edge] = None,
+                 side2Edges: tuple[Edge] = None, end1Edges: tuple[Edge] = None,
+                 end2Edges: tuple[Edge] = None, circumEdges: tuple[Edge] = None,
+                 face1Elements: tuple[Element] = None, face2Elements: tuple[Element] = None,
+                 face3Elements: tuple[Element] = None, face4Elements: tuple[Element] = None,
+                 face5Elements: tuple[Element] = None, face6Elements: tuple[Element] = None,
+                 side1Elements: tuple[Element] = None, side2Elements: tuple[Element] = None,
+                 side12Elements: tuple[Element] = None, end1Elements: tuple[Element] = None,
                  end2Elements: tuple[Element] = None, circumElements: tuple[Element] = None):
         """This command creates a surface-like region. For example
         myRegion = regionToolset.Region(side1Faces=f[12:14])
@@ -229,4 +220,3 @@ class Region:
 
     def __init__(self, *args, **kwargs):
         pass
-

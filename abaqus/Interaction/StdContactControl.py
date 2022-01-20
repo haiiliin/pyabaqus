@@ -3,8 +3,7 @@ from .ContactControl import ContactControl
 
 
 class StdContactControl(ContactControl):
-
-    """The StdContactControl object is used in Abaqus/Standard analyses to specify optional 
+    """The StdContactControl object is used in Abaqus/Standard analyses to specify optional
     solution controls for problems involving contact between bodies. 
     The StdContactControl object is derived from the ContactControl object. 
 
@@ -22,14 +21,14 @@ class StdContactControl(ContactControl):
 
     """
 
-    def __init__(self, name: str, stiffnessScaleFactor: float = 1, 
-                 penetrationTolChoice: SymbolicConstant = RELATIVE, 
-                 relativePenetrationTolerance: float = None, absolutePenetrationTolerance: float = None, 
-                 frictionOnset: SymbolicConstant = None, automaticTolerances: Boolean = OFF, 
-                 maxchp: int = 0, perrmx: float = 0, uerrmx: float = 0, 
-                 stabilizeChoice: SymbolicConstant = NONE, dampFactor: float = 1, dampCoef: float = 0, 
-                 tangFraction: float = 1, eosFraction: float = 0, 
-                 zeroDampingChoice: SymbolicConstant = COMPUTE, zeroDamping: float = None, 
+    def __init__(self, name: str, stiffnessScaleFactor: float = 1,
+                 penetrationTolChoice: SymbolicConstant = RELATIVE,
+                 relativePenetrationTolerance: float = None, absolutePenetrationTolerance: float = None,
+                 frictionOnset: SymbolicConstant = None, automaticTolerances: Boolean = OFF,
+                 maxchp: int = 0, perrmx: float = 0, uerrmx: float = 0,
+                 stabilizeChoice: SymbolicConstant = NONE, dampFactor: float = 1, dampCoef: float = 0,
+                 tangFraction: float = 1, eosFraction: float = 0,
+                 zeroDampingChoice: SymbolicConstant = COMPUTE, zeroDamping: float = None,
                  enforceWithLagrangeMultipliers: SymbolicConstant = DEFAULT):
         """This method creates an StdContactControl object.
 
@@ -132,13 +131,13 @@ class StdContactControl(ContactControl):
         super().__init__()
         pass
 
-    def setValues(self, stiffnessScaleFactor: float = 1, penetrationTolChoice: SymbolicConstant = RELATIVE, 
-                  relativePenetrationTolerance: float = None, absolutePenetrationTolerance: float = None, 
-                  frictionOnset: SymbolicConstant = None, automaticTolerances: Boolean = OFF, 
-                  maxchp: int = 0, perrmx: float = 0, uerrmx: float = 0, 
-                  stabilizeChoice: SymbolicConstant = NONE, dampFactor: float = 1, dampCoef: float = 0, 
-                  tangFraction: float = 1, eosFraction: float = 0, 
-                  zeroDampingChoice: SymbolicConstant = COMPUTE, zeroDamping: float = None, 
+    def setValues(self, stiffnessScaleFactor: float = 1, penetrationTolChoice: SymbolicConstant = RELATIVE,
+                  relativePenetrationTolerance: float = None, absolutePenetrationTolerance: float = None,
+                  frictionOnset: SymbolicConstant = None, automaticTolerances: Boolean = OFF,
+                  maxchp: int = 0, perrmx: float = 0, uerrmx: float = 0,
+                  stabilizeChoice: SymbolicConstant = NONE, dampFactor: float = 1, dampCoef: float = 0,
+                  tangFraction: float = 1, eosFraction: float = 0,
+                  zeroDampingChoice: SymbolicConstant = COMPUTE, zeroDamping: float = None,
                   enforceWithLagrangeMultipliers: SymbolicConstant = DEFAULT):
         """This method modifies the StdContactControl object.
 
@@ -233,4 +232,3 @@ class StdContactControl(ContactControl):
             RangeError. 
         """
         pass
-

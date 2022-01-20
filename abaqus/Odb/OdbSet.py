@@ -6,8 +6,7 @@ from .OdbMeshNodeArray import OdbMeshNodeArray
 
 
 class OdbSet:
-
-    """The set objects are used to identify regions of a model. 
+    """The set objects are used to identify regions of a model.
 
     Access
     ------
@@ -58,7 +57,7 @@ class OdbSet:
     # A Boolean specifying whether the set is internal. 
     isInternal: Boolean = OFF
 
-    def NodeSet(self, name: str, nodes: tuple[OdbMeshNode]):
+    def __init__(self, name: str, nodes: tuple[OdbMeshNode]):
         """This method creates a node set from an array of OdbMeshNode objects (for part
         instance-level sets) or from a sequence of arrays of OdbMeshNode objects (for
         assembly-level sets).
@@ -270,4 +269,3 @@ class OdbSet:
             InvalidNameError. 
         """
         pass
-

@@ -3,8 +3,7 @@ from ..Region.Region import Region
 
 
 class BoundaryCondition:
-
-    """The BoundaryCondition object is the abstract base type for other BoundaryCondition 
+    """The BoundaryCondition object is the abstract base type for other BoundaryCondition
     objects. The BoundaryCondition object has no explicit constructor. The methods and 
     members of the BoundaryCondition object are common to all objects derived from the 
     BoundaryCondition. 

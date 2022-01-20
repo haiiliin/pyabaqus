@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ConstrainedSketchImageOptions:
 
-    """The ConstrainedSketchImageOptions object is used to store values and attributes 
+class ConstrainedSketchImageOptions:
+    """The ConstrainedSketchImageOptions object is used to store values and attributes
     associated with the background image for a particular sketch. The 
     ConstrainedSketchImageOptions object has no constructor. 
 
@@ -19,7 +19,7 @@ class ConstrainedSketchImageOptions:
 
     """
 
-    def setValues(self, imageName: str = '', showImage: Boolean = OFF, origin: tuple[float] = (), 
+    def setValues(self, imageName: str = '', showImage: Boolean = OFF, origin: tuple[float] = (),
                   xScale: float = 1, yScale: float = 1, translucency: float = 1):
         """This method modifies the ConstrainedSketchOptions object.
 
@@ -57,4 +57,3 @@ class ConstrainedSketchImageOptions:
             !img 
         """
         pass
-

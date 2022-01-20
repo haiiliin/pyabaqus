@@ -1,31 +1,31 @@
 from abaqusConstants import *
 
-class CohesiveBehavior:
 
-    """The CohesiveBAccess 
-    import interaction 
-    mdb.models[name].interactionProperties[name].cohesiveBehavior 
+class CohesiveBehavior:
+    """The CohesiveBehaviour
 
     Access
     ------
+        - import interaction
+        - mdb.models[name].interactionProperties[name].cohesiveBehavior
 
     Table Data
     ----------
         If *coupling*=UNCOUPLED, the table data specify the following:
-        - Stiffness coefficient in the normal direction, KnnKn⁢n.
-        - Stiffness coefficient in the first shear direction, KssKs⁢s.
-        - Stiffness coefficient in the second shear direction, KttKt⁢t.
+        - Stiffness coefficient in the normal direction, Knn.
+        - Stiffness coefficient in the first shear direction, Kss.
+        - Stiffness coefficient in the second shear direction, Ktt.
         - Temperature, if the data depend on temperature.
         - Value of the first field variable, if the data depend on field variables.
         - Value of the second field variable.
         - Etc.
         If *coupling*=COUPLED, the table data specify the following:
-        - Stiffness coefficient in the normal direction, KnnKn⁢n.
-        - Stiffness coefficient in the first shear direction, KssKs⁢s.
-        - Stiffness coefficient in the second shear direction, KttKt⁢t.
-        - Coupled stiffness coefficient, KnsKn⁢s.
-        - Coupled stiffness coefficient, KntKn⁢t.
-        - Coupled stiffness coefficient, KstKs⁢t.
+        - Stiffness coefficient in the normal direction, Knn.
+        - Stiffness coefficient in the first shear direction, Kss.
+        - Stiffness coefficient in the second shear direction, Ktt.
+        - Coupled stiffness coefficient, Kns.
+        - Coupled stiffness coefficient, Knt.
+        - Coupled stiffness coefficient, Kst.
         - Temperature, if the data depend on temperature.
         - Value of the first field variable, if the data depend on field variables.
         - Value of the second field variable.
@@ -37,8 +37,8 @@ class CohesiveBehavior:
 
     """
 
-    def __init__(self, repeatedContacts: Boolean = OFF, eligibility: SymbolicConstant = ALL_NODES, 
-                 defaultPenalties: Boolean = ON, coupling: SymbolicConstant = UNCOUPLED, 
+    def __init__(self, repeatedContacts: Boolean = OFF, eligibility: SymbolicConstant = ALL_NODES,
+                 defaultPenalties: Boolean = ON, coupling: SymbolicConstant = UNCOUPLED,
                  temperatureDependency: Boolean = OFF, dependencies: int = 0, table: tuple = ()):
         """This method creates a CohesiveBehavior object.
 
@@ -97,4 +97,3 @@ class CohesiveBehavior:
             None. 
         """
         pass
-

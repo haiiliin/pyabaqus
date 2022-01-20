@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class SurfacePoreFluidState(LoadState):
-
-    """The SurfacePoreFluidState object stores the propagating data for a SurfacePoreFluid 
+    """The SurfacePoreFluidState object stores the propagating data for a SurfacePoreFluid
     object in a step. One instance of this object is created internally by the 
     SurfacePoreFluid object for each step. The instance is also deleted internally by the 
     SurfacePoreFluid object. 
@@ -52,4 +51,3 @@ class SurfacePoreFluidState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

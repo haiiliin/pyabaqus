@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class ConcentratedRadiationToAmbientState(InteractionState):
-
-    """The ConcentratedRadiationToAmbientState object stores the propagating data for a 
+    """The ConcentratedRadiationToAmbientState object stores the propagating data for a
     ConcentratedRadiationToAmbient object. One instance of this object is created internally 
     by the ConcentratedRadiationToAmbient object for each step. The instance is also deleted 
     internally by the ConcentratedRadiationToAmbient object. 
@@ -68,4 +67,3 @@ class ConcentratedRadiationToAmbientState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

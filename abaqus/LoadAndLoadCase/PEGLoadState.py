@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class PEGLoadState(LoadState):
-
-    """The PEGLoadState object stores the propagating data for a concentrated force in a step. 
+    """The PEGLoadState object stores the propagating data for a concentrated force in a step.
     One instance of this object is created internally by the PEGLoad object for each step. 
     The instance is also deleted internally by the PEGLoad object. 
     The PEGLoadState object has no constructor or methods. 
@@ -65,4 +64,3 @@ class PEGLoadState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

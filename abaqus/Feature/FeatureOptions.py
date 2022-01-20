@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class FeatureOptions:
 
-    """The FeatureOptions object stores the options that control the behavior of feature 
+class FeatureOptions:
+    """The FeatureOptions object stores the options that control the behavior of feature
     regeneration for all features in a model. 
 
     Access
@@ -18,7 +18,7 @@ class FeatureOptions:
 
     """
 
-    def setValues(self, checkSelfIntersection: Boolean = ON, autoCaching: Boolean = ON, 
+    def setValues(self, checkSelfIntersection: Boolean = ON, autoCaching: Boolean = ON,
                   maxCachedStates: int = 5):
         """This method modifies the FeatureOptions object for the specified model.
 
@@ -43,4 +43,3 @@ class FeatureOptions:
             None. 
         """
         pass
-

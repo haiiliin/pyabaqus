@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class TopologyDemoldControl(GeometricRestriction):
-
-    """The TopologyDemoldControl object defines a topology demold control geometric 
+    """The TopologyDemoldControl object defines a topology demold control geometric
     restriction. 
     The TopologyDemoldControl object is derived from the GeometricRestriction object. 
 
@@ -22,8 +21,8 @@ class TopologyDemoldControl(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, region: Region, csys: int = None, draftAngle: float = 0, 
-                 collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, pointRegion: Region = Region(), 
+    def __init__(self, name: str, region: Region, csys: int = None, draftAngle: float = 0,
+                 collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, pointRegion: Region = Region(),
                  pullDirection: tuple = (), technique: SymbolicConstant = AUTO):
         """This method creates a TopologyDemoldControl object.
 
@@ -71,8 +70,8 @@ class TopologyDemoldControl(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, draftAngle: float = 0, 
-                  collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, pointRegion: Region = Region(), 
+    def setValues(self, csys: int = None, draftAngle: float = 0,
+                  collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, pointRegion: Region = Region(),
                   pullDirection: tuple = (), technique: SymbolicConstant = AUTO):
         """This method modifies the TopologyDemoldControl object.
 
@@ -108,4 +107,3 @@ class TopologyDemoldControl(GeometricRestriction):
             None. 
         """
         pass
-

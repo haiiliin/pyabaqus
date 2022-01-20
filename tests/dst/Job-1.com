@@ -97,7 +97,7 @@ options = {
     'symmetricModelGeneration':OFF,
     'tempNoInterpolExtList':['.fil', '.odb', '.sim', '.SMAManifest'],
     'thermal':OFF,
-    'tmpdir':'C:\\Users\\user\\AppData\\Local\\Temp',
+    'tmpdir':'C:\\Users\\Hailin\\AppData\\Local\\Temp',
     'tracer':OFF,
     'transientSensitivity':OFF,
     'unfold_param':OFF,

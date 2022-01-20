@@ -5,8 +5,7 @@ from ..Region.Region import Region
 
 
 class DisplacementBaseMotionBC(BoundaryCondition):
-
-    """The DisplacementBaseMotionBC object stores the data for a displacement base motion 
+    """The DisplacementBaseMotionBC object stores the data for a displacement base motion
     boundary condition. 
     The DisplacementBaseMotionBC object is derived from the BoundaryCondition object. 
 
@@ -56,7 +55,7 @@ class DisplacementBaseMotionBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, dof: SymbolicConstant, amplitudeScaleFactor: float = 1, 
+    def __init__(self, name: str, createStepName: str, dof: SymbolicConstant, amplitudeScaleFactor: float = 1,
                  centerOfRotation: tuple = (), correlation: CorrelationArray = None,
                  secondaryBase: str = '', useComplex: Boolean = OFF, amplitude: str = UNSET):
         """This method creates a DisplacementBaseMotionBC object.
@@ -104,7 +103,7 @@ class DisplacementBaseMotionBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, amplitudeScaleFactor: float = 1, centerOfRotation: tuple = (), 
+    def setValues(self, amplitudeScaleFactor: float = 1, centerOfRotation: tuple = (),
                   correlation: CorrelationArray = None, secondaryBase: str = '',
                   useComplex: Boolean = OFF, amplitude: str = UNSET):
         """This method modifies the data for an existing DisplacementBaseMotionBC object in the
@@ -165,4 +164,3 @@ class DisplacementBaseMotionBC(BoundaryCondition):
             None. 
         """
         pass
-

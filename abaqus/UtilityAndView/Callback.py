@@ -1,6 +1,4 @@
-
-
-"""These functions execute Python commands or functions. 
+"""These functions execute Python commands or functions.
 
 Access
 ------
@@ -13,7 +11,8 @@ Corresponding analysis keywords
 
 """
 
-def addImportCallbac(moduleName: str, callback: str, userData: str = ''):
+
+def addImportCallback(moduleName: str, callback: str, userData: str = ''):
     """This function defines a function to be called when a specified Abaqus/CAE module is
     imported. You cannot specify a custom module.
     For more information, see An example of a callback function.
@@ -43,7 +42,8 @@ def addImportCallbac(moduleName: str, callback: str, userData: str = ''):
     """
     pass
 
-def removeImportCallbac(callback: str, userData: str):
+
+def removeImportCallback(callback: str, userData: str):
     """This function removes a callback added in addImportCallback.
 
     Path
@@ -68,4 +68,3 @@ def removeImportCallbac(callback: str, userData: str):
         None. 
     """
     pass
-

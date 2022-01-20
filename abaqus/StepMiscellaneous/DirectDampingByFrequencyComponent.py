@@ -1,8 +1,5 @@
-
-
 class DirectDampingByFrequencyComponent:
-
-    """A DirectDampingByFrequencyComponent object is used to define direct damping over a range 
+    """A DirectDampingByFrequencyComponent object is used to define direct damping over a range
     of frequencies. 
 
     Access
@@ -23,4 +20,3 @@ class DirectDampingByFrequencyComponent:
 
     # A Float specifying the fraction of critical damping. 
     fraction: float = None
-

@@ -1,190 +1,164 @@
 from abaqusConstants import *
-from .JobData import JobData
-from .OdbAssembly import OdbAssembly
 from .OdbPart import OdbPart
 from .OdbStep import OdbStep
 from .SectionCategory import SectionCategory
-from .SectorDefinition import SectorDefinition
-from .UserData import UserData
-from ..Amplitude.Amplitude import Amplitude
-from ..BeamSectionProfile.Profile import Profile
-from ..CustomKernel.RepositorySupport import RepositorySupport
-from ..Filter.Filter import Filter
-from ..Material.Material import Material
-from ..Section.Section import Section
-from ..UtilityAndView.Repository import Repository
+from ..Amplitude.AmplitudeOdb import AmplitudeOdb
+from ..BeamSectionProfile.BeamSectionProfileOdb import BeamSectionProfileOdb
+from ..Filter.FilterOdb import FilterOdb
+from ..Material.MaterialOdb import MaterialOdb
 
 
-class Odb:
+class Odb(AmplitudeOdb,
+          FilterOdb,
+          MaterialOdb,
+          BeamSectionProfileOdb):
 
-    """The Odb object is the in-memory representation of an output database (ODB) file. 
-
-    Access
-    ------
-        - import odbAccess
-        - session.odbs[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
-
-    """
-
-    # A Boolean specifying whether the output database was opened with read-only access. 
-    isReadOnly: Boolean = OFF
-
-    # A repository of Amplitude objects. 
-    amplitudes: Repository[str, Amplitude] = Repository[str, Amplitude]()
-
-    # A repository of Filter objects. 
-    filters: Repository[str, Filter] = Repository[str, Filter]()
-
-    # An OdbAssembly object. 
-    rootAssembly: OdbAssembly = OdbAssembly()
-
-    # A JobData object. 
-    jobData: JobData = JobData()
-
-    # A repository of OdbPart objects. 
-    parts: Repository[str, OdbPart] = Repository[str, OdbPart]()
-
-    # A repository of Material objects. 
-    materials: Repository[str, Material] = Repository[str, Material]()
-
-    # A repository of OdbStep objects. 
-    steps: Repository[str, OdbStep] = Repository[str, OdbStep]()
-
-    # A repository of Section objects. 
-    sections: Repository[str, Section] = Repository[str, Section]()
-
-    # A repository of SectionCategory objects. 
-    sectionCategories: Repository[str, SectionCategory] = Repository[str, SectionCategory]()
-
-    # A SectorDefinition object. 
-    sectorDefinition: SectorDefinition = SectorDefinition()
-
-    # A UserData object. 
-    userData: UserData = UserData()
-
-    # A RepositorySupport object. 
-    customData: RepositorySupport = RepositorySupport()
-
-    # A repository of Profile objects. 
-    profiles: Repository[str, Profile] = Repository[str, Profile]()
-
-    def __init__(self, name: str, analysisTitle: str = '', description: str = '', path: str = ''):
-        """This method creates a new Odb object.
+    def Part(self, name: str, embeddedSpace: SymbolicConstant, type: SymbolicConstant) -> OdbPart:
+        """This method creates an OdbPart object. Nodes and elements are added to this object at a
+        later stage.
 
         Path
         ----
-            - session.Odb
+            - session.odbs[name].Part
 
         Parameters
         ----------
         name
-            A String specifying the repository key. 
-        analysisTitle
-            A String specifying the title of the output database. The default value is an empty 
-            string. 
+            A String specifying the part name.
+        embeddedSpace
+            A SymbolicConstant specifying the dimensionality of the Part object. Possible values are
+            THREE_D, TWO_D_PLANAR, and AXISYMMETRIC.
+        type
+            A SymbolicConstant specifying the type of the Part object. Possible values are
+            DEFORMABLE_BODY and ANALYTIC_RIGID_SURFACE.
+
+        Returns
+        -------
+            An OdbPart object.
+
+        Exceptions
+        ----------
+            None.
+        """
+        self.parts[name] = odbPart = OdbPart(name, embeddedSpace, type)
+        return odbPart
+
+    def Step(self, name: str, description: str, domain: SymbolicConstant, timePeriod: float = 0,
+             previousStepName: str = '', procedure: str = '', totalTime: float = None) -> OdbStep:
+        """This method creates an OdbStep object.
+
+        Path
+        ----
+            - session.odbs[name].Step
+
+        Parameters
+        ----------
+        name
+            A String specifying the repository key.
         description
-            A String specifying the description of the output database. The default value is an 
-            empty string. 
-        path
-            A String specifying the path to the file where the new output database (.odb ) file will 
-            be written. The default value is an empty string. 
+            A String specifying the step description.
+        domain
+            A SymbolicConstant specifying the domain of the step. Possible values are TIME,
+            FREQUENCY, ARC_LENGTH, and MODAL.The type of OdbFrame object that can be created for
+            this step is based on the value of the *domain* argument.
+        timePeriod
+            A Float specifying the time period of the step. *timePeriod* is required if
+            *domain*=TIME; otherwise, this argument is not applicable. The default value is 0.0.
+        previousStepName
+            A String specifying the preceding step. If *previousStepName* is the empty string, the
+            last step in the repository is used. If *previousStepName* is not the last step, this
+            will result in a change to the *previousStepName* member of the step that was in that
+            position. A special value 'Initial' refers to the internal initial model step and may be
+            used exclusively for inserting a new step at the first position before any other
+            existing steps. The default value is an empty string.
+        procedure
+            A String specifying the step procedure. The default value is an empty string. The
+            following is the list of valid procedures:
+            ```
+            *ANNEAL
+            *BUCKLE
+            *COMPLEX FREQUENCY
+            *COUPLED TEMPERATURE-DISPLACEMENT
+            *COUPLED TEMPERATURE-DISPLACEMENT, CETOL
+            *COUPLED TEMPERATURE-DISPLACEMENT, STEADY STATE
+            *COUPLED THERMAL-ELECTRICAL, STEADY STATE
+            *COUPLED THERMAL-ELECTRICAL
+            *COUPLED THERMAL-ELECTRICAL, DELTMX
+            *DYNAMIC
+            *DYNAMIC, DIRECT
+            *DYNAMIC, EXPLICIT
+            *DYNAMIC, SUBSPACE
+            *DYNAMIC TEMPERATURE-DISPLACEMENT, EXPLICT
+            *ELECTROMAGNETIC, HIGH FREQUENCY, TIME HARMONIC
+            *ELECTROMAGNETIC, LOW FREQUENCY, TIME DOMAIN
+            *ELECTROMAGNETIC, LOW FREQUENCY, TIME DOMAIN, DIRECT
+            *ELECTROMAGNETIC, LOW FREQUENCY, TIME HARMONIC
+            *FREQUENCY
+            *GEOSTATIC
+            *HEAT TRANSFER
+            *HEAT TRANSFER, DELTAMX=__
+            *HEAT TRANSFER, STEADY STATE
+            *MAGNETOSTATIC
+            *MAGNETOSTATIC, DIRECT
+            *MASS DIFFUSION
+            *MASS DIFFUSION, DCMAX=
+            *MASS DIFFUSION, STEADY STATE
+            *MODAL DYNAMIC
+            *RANDOM RESPONSE
+            *RESPONSE SPECTRUM
+            *SOILS
+            *SOILS, CETOL/UTOL
+            *SOILS, CONSOLIDATION
+            *SOILS, CONSOLIDATION, CETOL/UTOL
+            *STATIC
+            *STATIC, DIRECT
+            *STATIC, RIKS
+            *STEADY STATE DYNAMICS
+            *STEADY STATE TRANSPORT
+            *STEADY STATE TRANSPORT, DIRECT
+            *STEP PERTURBATION, *STATIC
+            *SUBSTRUCTURE GENERATE
+            *USA ADDDED MASS GENERATION
+            *VISCO
+            ```
+        totalTime
+            A Float specifying the analysis time spend in all the steps previous to this step. The
+            default value is −1.0.
 
         Returns
         -------
-            An Odb object. 
+            An OdbStep object.
 
         Exceptions
         ----------
-            None. 
+            - If *previousStepName* is invalid:
+              ValueError: previousStepName is invalid
         """
-        pass
+        self.steps[name] = odbStep = OdbStep(name, description, domain, timePeriod, previousStepName, procedure,
+                                             totalTime)
+        return odbStep
 
-    def close(self):
-        """This method closes an output database.
+    def SectionCategory(self, name: str, description: str) -> SectionCategory:
+        """This method creates a SectionCategory object.
+
+        Path
+        ----
+            - session.odbs[*name*].SectionCategory
 
         Parameters
         ----------
+        name
+            A String specifying the name of the category.
+        description
+            A String specifying the description of the category.
 
         Returns
         -------
-            None. 
+            A SectionCategory object.
 
         Exceptions
         ----------
-            None. 
+            None.
         """
-        pass
-
-    def getFrame(self, frameValue: str, match: SymbolicConstant = CLOSEST):
-        """This method returns the frame at the specified time, frequency, or mode. It will not
-        interpolate values between frames. The method is not applicable to an Odb object
-        containing steps with different domains or to an Odb object containing a step with load
-        case specific data.
-
-        Parameters
-        ----------
-        frameValue
-            A Double specifying the value at which the frame is required. *frameValue* can be the 
-            total time or frequency. 
-        match
-            A SymbolicConstant specifying which frame to return if there is no frame at the exact 
-            frame value. Possible values are CLOSEST, BEFORE, AFTER, and EXACT. The default value is 
-            CLOSEST.When *match*=CLOSEST, Abaqus returns the closest frame. If the frame value 
-            requested is exactly halfway between two frames, Abaqus returns the frame after the 
-            value.When *match*=EXACT, Abaqus raises an exception if the exact frame value does not 
-            exist. 
-
-        Returns
-        -------
-            An OdbFrame object. 
-
-        Exceptions
-        ----------
-            - If the exact frame is not found: 
-              OdbError: Frame not found. 
-        """
-        pass
-
-    def save(self):
-        """This method saves output to an output database (.odb ) file.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            - OdbError 
-              Database save failed. The database was opened as read-only. Modification of data is 
-            not permitted. 
-        """
-        pass
-
-    def update(self):
-        """This method is used to update an Odb object in memory while an Abaqus analysis writes
-        data to the associated output database. update checks if additional steps have been
-        written to the output database since it was opened or last updated. If additional steps
-        have been written to the output database, update adds them to the Odb object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            A Boolean specifying whether additional steps or frames were added to the Odb object. 
-
-        Exceptions
-        ----------
-            None. 
-        """
-        pass
-
+        self.sectionCategories[name] = sectionCategory = SectionCategory(name, description)
+        return sectionCategory

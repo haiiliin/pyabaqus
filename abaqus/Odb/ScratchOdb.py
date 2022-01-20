@@ -1,8 +1,8 @@
 from .Odb import Odb
 
-class ScratchOdb:
 
-    """A scratch output database is associated with an open output database and is used to 
+class ScratchOdb:
+    """A scratch output database is associated with an open output database and is used to
     store session-related, non-persistent objects, such as Step, Frame and FieldOutput 
     objects. Abaqus creates a scratch output database when needed for these non-persistent 
     objects during an Abaqus/CAE session. Abaqus deletes the scratch output database when 
@@ -42,4 +42,3 @@ class ScratchOdb:
             None. 
         """
         pass
-

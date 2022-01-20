@@ -1,8 +1,8 @@
 from .GeometricRestriction import GeometricRestriction
 
-class SizingClusterAreas(GeometricRestriction):
 
-    """The SizingClusterAreas object defines a sizing cluster areas geometric restriction. 
+class SizingClusterAreas(GeometricRestriction):
+    """The SizingClusterAreas object defines a sizing cluster areas geometric restriction.
     The SizingClusterAreas object is derived from the GeometricRestriction object. 
 
     Access
@@ -59,4 +59,3 @@ class SizingClusterAreas(GeometricRestriction):
             None. 
         """
         pass
-

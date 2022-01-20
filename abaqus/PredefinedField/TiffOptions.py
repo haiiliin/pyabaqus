@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class TiffOptions:
 
-    """The TiffOptions object stores the settings that Abaqus uses when printing in TIFF 
+class TiffOptions:
+    """The TiffOptions object stores the settings that Abaqus uses when printing in TIFF
     format. The TiffOptions object has no constructor. Abaqus creates the *tiffOptions* 
     member when a session is started. 
 
@@ -49,4 +49,3 @@ class TiffOptions:
             (minWidth, minHeight) <= (width, height) <= (maxWidth, maxHeight). 
         """
         pass
-

@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class NumberFormat:
 
-    """The NumberFormat object is a formatting template used to define formatting options for 
+class NumberFormat:
+    """The NumberFormat object is a formatting template used to define formatting options for
     certain numeric output.This page 
     discusses:Access[NumberFormat(...)](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-numberformatpyc.htm?ContextScope=all#simaker-numberformatnumberformatpyc)Members 
 
@@ -23,7 +23,7 @@ class NumberFormat:
 
     """
 
-    def __init__(self, blankPad: Boolean = ON, format: SymbolicConstant = ENGINEERING, numDigits: int = 6, 
+    def __init__(self, blankPad: Boolean = ON, format: SymbolicConstant = ENGINEERING, numDigits: int = 6,
                  precision: int = 0):
         """This method creates a NumberFormat object.
 
@@ -59,4 +59,3 @@ class NumberFormat:
             None. 
         """
         pass
-

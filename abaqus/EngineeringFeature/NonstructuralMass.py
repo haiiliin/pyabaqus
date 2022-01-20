@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class NonstructuralMass(Inertia):
-
-    """The NonstructuralMass object defines the mass contribution from nonstructural features 
+    """The NonstructuralMass object defines the mass contribution from nonstructural features
     into the model. 
     The NonstructuralMass object is derived from the Inertia object. 
 
@@ -28,7 +27,7 @@ class NonstructuralMass(Inertia):
     # A Boolean specifying whether the inertia is suppressed or not. The default value is OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, region: Region, units: SymbolicConstant, magnitude: float, 
+    def __init__(self, name: str, region: Region, units: SymbolicConstant, magnitude: float,
                  distribution: SymbolicConstant = MASS_PROPORTIONAL):
         """This method creates a NonstructuralMass object.
 
@@ -83,4 +82,3 @@ class NonstructuralMass(Inertia):
             None. 
         """
         pass
-

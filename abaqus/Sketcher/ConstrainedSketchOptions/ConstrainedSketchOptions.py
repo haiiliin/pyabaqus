@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ConstrainedSketchOptions:
 
-    """The ConstrainedSketchOptions object is used to store values and attributes associated 
+class ConstrainedSketchOptions:
+    """The ConstrainedSketchOptions object is used to store values and attributes associated
     with a particular sketch. The ConstrainedSketchOptions object has no constructor. 
 
     Access
@@ -18,14 +18,14 @@ class ConstrainedSketchOptions:
 
     """
 
-    def setValues(self, sheetSize: float = None, gridSpacing: float = None, grid: Boolean = ON, 
-                  gridFrequency: int = 1, dimensionTextHeight: float = 12, decimalPlaces: int = None, 
-                  constructionGeometry: Boolean = ON, gridSnap: Boolean = ON, preselection: Boolean = ON, 
-                  sheetAuto: Boolean = ON, gridOrigin: tuple = (), gridAngle: float = 0, 
-                  viewStyle: SymbolicConstant = REGULAR, addImpliedConstraints: Boolean = ON, 
-                  maxCoplanarEntities: int = 300, autoConstrainAngularTolerance: float = 0, 
-                  autoConstrainLinearTolerance: float = None, 
-                  autoConstrainOptions: SymbolicConstant = None, 
+    def setValues(self, sheetSize: float = None, gridSpacing: float = None, grid: Boolean = ON,
+                  gridFrequency: int = 1, dimensionTextHeight: float = 12, decimalPlaces: int = None,
+                  constructionGeometry: Boolean = ON, gridSnap: Boolean = ON, preselection: Boolean = ON,
+                  sheetAuto: Boolean = ON, gridOrigin: tuple = (), gridAngle: float = 0,
+                  viewStyle: SymbolicConstant = REGULAR, addImpliedConstraints: Boolean = ON,
+                  maxCoplanarEntities: int = 300, autoConstrainAngularTolerance: float = 0,
+                  autoConstrainLinearTolerance: float = None,
+                  autoConstrainOptions: SymbolicConstant = None,
                   dragMethod: SymbolicConstant = MINIMUM_MOVE, editMethod: SymbolicConstant = STANDARD):
         """This method modifies the ConstrainedSketchOptions object.
 
@@ -108,4 +108,3 @@ class ConstrainedSketchOptions:
             !img 
         """
         pass
-

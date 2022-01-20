@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SubstructureLoad(Load):
-
-    """The SubstructureLoad object defines a substructure load. 
+    """The SubstructureLoad object defines a substructure load.
     The SubstructureLoad object is derived from the Load object. 
 
     Access
@@ -27,7 +26,7 @@ class SubstructureLoad(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, loadCaseNames: str, magnitude: float, 
+    def __init__(self, name: str, createStepName: str, region: Region, loadCaseNames: str, magnitude: float,
                  amplitude: str = UNSET):
         """This method creates a SubstructureLoad object.
 
@@ -112,4 +111,3 @@ class SubstructureLoad(Load):
             None. 
         """
         pass
-

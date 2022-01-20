@@ -22,7 +22,8 @@ Corresponding analysis keywords
 
 """
 
-def deleteObjectCallbac(callback: str, path: str, userData: str = None, includeChildren: Boolean = False):
+
+def deleteObjectCallback(callback: str, path: str, userData: str = None, includeChildren: Boolean = False):
     """This method adds a callback function that will be invoked when the specified Abaqus
     Scripting Interface objects are about to be deleted. The callback is invoked only when
     the object is deleted using the Python statement del object. The callback is not invoked
@@ -62,4 +63,3 @@ def deleteObjectCallbac(callback: str, path: str, userData: str = None, includeC
         None. 
     """
     pass
-

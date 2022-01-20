@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class BeadRotationalSymmetry(GeometricRestriction):
-
-    """The BeadRotationalSymmetry object defines a bead rotational symmetry geometric 
+    """The BeadRotationalSymmetry object defines a bead rotational symmetry geometric
     restriction. 
     The BeadRotationalSymmetry object is derived from the GeometricRestriction object. 
 
@@ -22,7 +21,7 @@ class BeadRotationalSymmetry(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, angle: float, region: Region, axis: SymbolicConstant = AXIS_1, 
+    def __init__(self, name: str, angle: float, region: Region, axis: SymbolicConstant = AXIS_1,
                  csys: int = None):
         """This method creates a BeadRotationalSymmetry object.
 
@@ -79,4 +78,3 @@ class BeadRotationalSymmetry(GeometricRestriction):
             None. 
         """
         pass
-

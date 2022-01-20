@@ -1,11 +1,11 @@
 from abaqusConstants import *
 from .OdbDatumCsys import OdbDatumCsys
+from .OdbMeshNode import OdbMeshNode
 from .OdbSet import OdbSet
 
 
 class RebarOrientation:
-
-    """The RebarOrientation object represents the orientation of the rebar reference. 
+    """The RebarOrientation object represents the orientation of the rebar reference.
 
     Access
     ------
@@ -31,8 +31,7 @@ class RebarOrientation:
     angle: float = None
 
     # An OdbSet object specifying a region for which the rebar orientation is defined. 
-    region: OdbSet = OdbSet()
+    region: OdbSet = OdbSet('set', tuple[OdbMeshNode]())
 
     # An OdbDatumCsys object specifying a datum coordinates system. 
     csys: OdbDatumCsys = OdbDatumCsys()
-

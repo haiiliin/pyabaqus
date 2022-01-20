@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class GraphicsOptions:
 
-    """The GraphicsOptions object stores settings that control how objects are rendered in all 
+class GraphicsOptions:
+    """The GraphicsOptions object stores settings that control how objects are rendered in all
     viewports. GraphicsOptions objects are accessed in one of two ways: 
     - The default graphics options. These settings are used as defaults when you start a 
     session and by the Defaults button on the Graphics ConstrainedSketchOptions dialog box.
@@ -262,20 +262,20 @@ class GraphicsOptions:
     # valid color strings is in the *colors* map in the Session object. 
     backgroundBottomColor: str = ''
 
-    def setValues(self, graphicsDriver: SymbolicConstant = None, doubleBuffering: Boolean = ON, 
-                  displayLists: Boolean = ON, highlightMethodHint: SymbolicConstant = None, 
-                  dragMode: SymbolicConstant = AS_IS, antiAlias: Boolean = ON, 
-                  autoFitAfterRotate: Boolean = OFF, polygonOffsetConstant: float = None, 
-                  polygonOffsetSlope: float = None, printPolygonOffsetConstant: float = None, 
-                  printPolygonOffsetSlope: float = None, vertexArrays: Boolean = ON, 
-                  vertexArraysInDisplayLists: Boolean = ON, viewManipDisplayListThreshold: int = 40, 
-                  directRendering: Boolean = OFF, hardwareAcceleration: Boolean = ON, 
-                  hardwareOverlay: Boolean = OFF, textureMapping: Boolean = ON, 
-                  printTextureMapping: Boolean = ON, backgroundStyle: SymbolicConstant = SOLID, 
-                  backgroundColor: str = '', backgroundBottomColor: str = '', 
-                  backgroundOverride: Boolean = OFF, backfaceCulling: Boolean = ON, 
-                  accelerateOffScreen: Boolean = OFF, backingStore: Boolean = ON, 
-                  shadersAvailable: Boolean = OFF, translucencyMode: int = 4, options: str = None, 
+    def setValues(self, graphicsDriver: SymbolicConstant = None, doubleBuffering: Boolean = ON,
+                  displayLists: Boolean = ON, highlightMethodHint: SymbolicConstant = None,
+                  dragMode: SymbolicConstant = AS_IS, antiAlias: Boolean = ON,
+                  autoFitAfterRotate: Boolean = OFF, polygonOffsetConstant: float = None,
+                  polygonOffsetSlope: float = None, printPolygonOffsetConstant: float = None,
+                  printPolygonOffsetSlope: float = None, vertexArrays: Boolean = ON,
+                  vertexArraysInDisplayLists: Boolean = ON, viewManipDisplayListThreshold: int = 40,
+                  directRendering: Boolean = OFF, hardwareAcceleration: Boolean = ON,
+                  hardwareOverlay: Boolean = OFF, textureMapping: Boolean = ON,
+                  printTextureMapping: Boolean = ON, backgroundStyle: SymbolicConstant = SOLID,
+                  backgroundColor: str = '', backgroundBottomColor: str = '',
+                  backgroundOverride: Boolean = OFF, backfaceCulling: Boolean = ON,
+                  accelerateOffScreen: Boolean = OFF, backingStore: Boolean = ON,
+                  shadersAvailable: Boolean = OFF, translucencyMode: int = 4, options: str = None,
                   contourRangeTexturePrecision: float = 0):
         """This method modifies the GraphicsOptions object.
 
@@ -488,4 +488,3 @@ class GraphicsOptions:
             RangeError. 
         """
         pass
-

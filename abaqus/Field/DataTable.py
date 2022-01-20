@@ -1,8 +1,7 @@
 
 
 class DataTable:
-
-    """A DataTable is an object used to define the domain and data for a DiscreteField. 
+    """A DataTable is an object used to define the domain and data for a DiscreteField.
 
     Access
     ------
@@ -32,4 +31,3 @@ class DataTable:
 
     # A tuple of Floats specifying the data within the domain. 
     table: float = None
-

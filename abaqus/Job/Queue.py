@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Queue:
 
-    """A Queue object tells the job where and how to submit a job remotely. A Queue object can 
+class Queue:
+    """A Queue object tells the job where and how to submit a job remotely. A Queue object can
     be used as the *queue* argument to the Job method. 
 
     Access
@@ -18,7 +18,7 @@ class Queue:
 
     """
 
-    def __init__(self, name: str, queueName: str, hostName: str = '', fileCopy: Boolean = ON, 
+    def __init__(self, name: str, queueName: str, hostName: str = '', fileCopy: Boolean = ON,
                  directory: str = '', driver: str = '', remotePlatform: SymbolicConstant = 'Linux',
                  filesToCopy: str = ALL, deleteAfterCopy: Boolean = OFF, description: str = ''):
         """This method creates a Queue object.
@@ -70,4 +70,3 @@ class Queue:
               Directory in which to run the job on the remote computer is not set. 
         """
         pass
-

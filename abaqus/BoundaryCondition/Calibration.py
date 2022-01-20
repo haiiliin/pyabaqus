@@ -1,9 +1,9 @@
 from ..Calibration.Behavior import Behavior
 from ..Calibration.DataSet import DataSet
 
-class Calibration:
 
-    """A Calibration object is the object used to specify a material calibration. The 
+class Calibration:
+    """A Calibration object is the object used to specify a material calibration. The
     Calibration object stores the data that is used for specifying materials from test data. 
 
     Access
@@ -46,4 +46,3 @@ class Calibration:
             InvalidNameError. 
         """
         pass
-

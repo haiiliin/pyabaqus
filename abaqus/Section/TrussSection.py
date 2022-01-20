@@ -1,8 +1,8 @@
 from .Section import Section
 
-class TrussSection(Section):
 
-    """The TrussSection object defines the properties of a truss section. 
+class TrussSection(Section):
+    """The TrussSection object defines the properties of a truss section.
     The TrussSection object is derived from the Section object. 
 
     Access
@@ -68,4 +68,3 @@ class TrussSection(Section):
             RangeError. 
         """
         pass
-

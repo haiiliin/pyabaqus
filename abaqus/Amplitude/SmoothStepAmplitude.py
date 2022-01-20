@@ -3,8 +3,7 @@ from .Amplitude import Amplitude
 
 
 class SmoothStepAmplitude(Amplitude):
-
-    """The SmoothStepAmplitude object defines an amplitude that ramps up or down smoothly from 
+    """The SmoothStepAmplitude object defines an amplitude that ramps up or down smoothly from
     one data point to another. 
     The SmoothStepAmplitude object is derived from the Amplitude object. 
 
@@ -72,4 +71,3 @@ class SmoothStepAmplitude(Amplitude):
             RangeError. 
         """
         pass
-

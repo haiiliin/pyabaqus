@@ -1,8 +1,5 @@
-
-
 class MpcConstraint:
-
-    """The MpcConstraint object. 
+    """The MpcConstraint object.
 
     Access
     ------
@@ -35,4 +32,3 @@ class MpcConstraint:
             None. 
         """
         pass
-

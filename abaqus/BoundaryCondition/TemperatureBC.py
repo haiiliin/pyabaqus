@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class TemperatureBC(BoundaryCondition):
-
-    """The TemperatureBC object stores the data for a temperature boundary condition. 
+    """The TemperatureBC object stores the data for a temperature boundary condition.
     The TemperatureBC object is derived from the BoundaryCondition object. 
 
     Access
@@ -47,8 +46,8 @@ class TemperatureBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region, fieldName: str = '', 
-                 magnitude: float = 0, dof: tuple = (), amplitude: str = UNSET, 
+    def __init__(self, name: str, createStepName: str, region: Region, fieldName: str = '',
+                 magnitude: float = 0, dof: tuple = (), amplitude: str = UNSET,
                  distributionType: SymbolicConstant = UNIFORM, fixed: Boolean = OFF):
         """This method creates a TemperatureBC object.
 
@@ -96,7 +95,7 @@ class TemperatureBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, fieldName: str = '', magnitude: float = 0, dof: tuple = (), amplitude: str = UNSET, 
+    def setValues(self, fieldName: str = '', magnitude: float = 0, dof: tuple = (), amplitude: str = UNSET,
                   distributionType: SymbolicConstant = UNIFORM, fixed: Boolean = OFF):
         """This method modifies the data for an existing TemperatureBC object in the step where it
         is created.
@@ -134,8 +133,8 @@ class TemperatureBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        magnitude: typing.Union[SymbolicConstant,float] = UNCHANGED, 
+    def setValuesInStep(self, stepName: str,
+                        magnitude: typing.Union[SymbolicConstant, float] = UNCHANGED,
                         dof: tuple = (), amplitude: str = ''):
         """This method modifies the propagating data for an existing TemperatureBC object in the
         specified step.
@@ -165,4 +164,3 @@ class TemperatureBC(BoundaryCondition):
             None. 
         """
         pass
-

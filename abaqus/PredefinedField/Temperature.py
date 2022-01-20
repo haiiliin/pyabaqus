@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class Temperature(PredefinedField):
-
-    """The Temperature object stores the data for temperature predefined fields. 
+    """The Temperature object stores the data for temperature predefined fields.
     The Temperature object is derived from the PredefinedField object. 
 
     Access
@@ -43,13 +42,13 @@ class Temperature(PredefinedField):
     # *distributionType*=FROM_FILE or FROM_FILE_AND_USER_DEFINED. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, 
-                 distributionType: SymbolicConstant = UNIFORM, 
-                 crossSectionDistribution: SymbolicConstant = CONSTANT_THROUGH_THICKNESS, 
-                 field: str = '', amplitude: str = UNSET, fileName: str = '', 
-                 beginStep: SymbolicConstant = None, beginIncrement: SymbolicConstant = None, 
-                 endStep: SymbolicConstant = None, endIncrement: SymbolicConstant = None, 
-                 interpolate: SymbolicConstant = OFF, magnitudes: str = '', 
+    def __init__(self, name: str, createStepName: str, region: Region,
+                 distributionType: SymbolicConstant = UNIFORM,
+                 crossSectionDistribution: SymbolicConstant = CONSTANT_THROUGH_THICKNESS,
+                 field: str = '', amplitude: str = UNSET, fileName: str = '',
+                 beginStep: SymbolicConstant = None, beginIncrement: SymbolicConstant = None,
+                 endStep: SymbolicConstant = None, endIncrement: SymbolicConstant = None,
+                 interpolate: SymbolicConstant = OFF, magnitudes: str = '',
                  absoluteExteriorTolerance: float = 0, exteriorTolerance: float = 0):
         """This method creates a Temperature object.
 
@@ -170,12 +169,12 @@ class Temperature(PredefinedField):
         """
         pass
 
-    def setValues(self, distributionType: SymbolicConstant = UNIFORM, 
-                  crossSectionDistribution: SymbolicConstant = CONSTANT_THROUGH_THICKNESS, 
-                  field: str = '', amplitude: str = UNSET, fileName: str = '', 
-                  beginStep: SymbolicConstant = None, beginIncrement: SymbolicConstant = None, 
-                  endStep: SymbolicConstant = None, endIncrement: SymbolicConstant = None, 
-                  interpolate: SymbolicConstant = OFF, magnitudes: str = '', 
+    def setValues(self, distributionType: SymbolicConstant = UNIFORM,
+                  crossSectionDistribution: SymbolicConstant = CONSTANT_THROUGH_THICKNESS,
+                  field: str = '', amplitude: str = UNSET, fileName: str = '',
+                  beginStep: SymbolicConstant = None, beginIncrement: SymbolicConstant = None,
+                  endStep: SymbolicConstant = None, endIncrement: SymbolicConstant = None,
+                  interpolate: SymbolicConstant = OFF, magnitudes: str = '',
                   absoluteExteriorTolerance: float = 0, exteriorTolerance: float = 0):
         """This method modifies the data for an existing Temperature object in the step where it is
         created.
@@ -264,10 +263,10 @@ class Temperature(PredefinedField):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, field: str = '', amplitude: str = UNSET, fileName: str = '', 
-                        beginStep: SymbolicConstant = None, beginIncrement: SymbolicConstant = None, 
-                        endStep: SymbolicConstant = None, endIncrement: SymbolicConstant = None, 
-                        interpolate: SymbolicConstant = OFF, magnitudes: str = '', 
+    def setValuesInStep(self, stepName: str, field: str = '', amplitude: str = UNSET, fileName: str = '',
+                        beginStep: SymbolicConstant = None, beginIncrement: SymbolicConstant = None,
+                        endStep: SymbolicConstant = None, endIncrement: SymbolicConstant = None,
+                        interpolate: SymbolicConstant = OFF, magnitudes: str = '',
                         absoluteExteriorTolerance: float = 0, exteriorTolerance: float = 0):
         """This method modifies the propagating data for an existing Temperature object in the
         specified step.
@@ -345,4 +344,3 @@ class Temperature(PredefinedField):
             None. 
         """
         pass
-

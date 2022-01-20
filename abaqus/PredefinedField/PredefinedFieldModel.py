@@ -211,7 +211,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         numBackStress
             An Int specifying the number of backstresses. The default value is 1.
         equivPlasticStrain
-            A sequence of Floats specifying the initial equivalent plastic strain.
+            A sequence of Floats specifying the initial equivalent Plastic strain.
         backStress
             A sequence of sequences of Floats specifying the initial backstress tensor for kinematic
             hardening models. The default value is an empty sequence.

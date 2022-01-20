@@ -1,11 +1,11 @@
 from abaqusConstants import *
 from .OdbInstance import OdbInstance
+from .OdbPart import OdbPart
 from .SectionPoint import SectionPoint
 
 
 class FieldBulkData:
-
-    """The FieldBulkData object represents the entire field data for a class of elements or 
+    """The FieldBulkData object represents the entire field data for a class of elements or
     nodes. All elements in a class correspond to the same element type and material. 
 
     Access
@@ -38,7 +38,7 @@ class FieldBulkData:
     type: SymbolicConstant = None
 
     # An OdbInstance object specifying the part to which the labels belong. 
-    instance: OdbInstance = OdbInstance()
+    instance: OdbInstance = OdbInstance('instance', OdbPart('part', THREE_D, DEFORMABLE_BODY))
 
     # A SectionPoint object specifying the section point number of the current block of data. 
     sectionPoint: SectionPoint = None
@@ -87,4 +87,3 @@ class FieldBulkData:
     # local to global. If the underlying data are in double precision, an exception will be 
     # thrown. 
     localCoordSystem: float = None
-

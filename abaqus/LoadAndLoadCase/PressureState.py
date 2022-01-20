@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class PressureState(LoadState):
-
-    """The PressureState object stores the propagating data for a pressure in a step. One 
+    """The PressureState object stores the propagating data for a pressure in a step. One
     instance of this object is created internally by the Pressure object for each step. The 
     instance is also deleted internally by the Pressure object. 
     The PressureState object has no constructor or methods. 
@@ -68,4 +67,3 @@ class PressureState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

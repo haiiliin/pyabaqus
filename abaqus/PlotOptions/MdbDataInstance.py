@@ -1,8 +1,5 @@
-
-
 class MdbDataInstance:
-
-    """The MdbDataInstance object instance data. It corresponds to same named part instance 
+    """The MdbDataInstance object instance data. It corresponds to same named part instance
     with a mesh in the cae model. 
 
     Access
@@ -20,4 +17,3 @@ class MdbDataInstance:
 
     # A String specifying the instance name. This attribute is read-only. 
     name: str = ''
-

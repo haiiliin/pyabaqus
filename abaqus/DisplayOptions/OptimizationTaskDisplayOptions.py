@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class OptimizationTaskDisplayOptions:
 
-    """The OptimizationTaskDisplayOptions object stores settings that specify how assemblies 
+class OptimizationTaskDisplayOptions:
+    """The OptimizationTaskDisplayOptions object stores settings that specify how assemblies
     are to be displayed in a particular viewport when 
     session.viewports[name].assemblyDisplay.optimizationTasks=ON 
     The OptimizationTaskDisplayOptions object has no constructor. When you create a new 
@@ -40,4 +40,3 @@ class OptimizationTaskDisplayOptions:
             RangeError. 
         """
         pass
-

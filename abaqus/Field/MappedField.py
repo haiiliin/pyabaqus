@@ -4,8 +4,7 @@ from .OdbMeshRegionData import OdbMeshRegionData
 
 
 class MappedField(AnalyticalField):
-
-    """The MappedField object defines a spatially varying field whose value is calculated from 
+    """The MappedField object defines a spatially varying field whose value is calculated from
     an external source data. 
     The MappedField object is derived from the AnalyticalField object. 
 
@@ -109,13 +108,13 @@ class MappedField(AnalyticalField):
     # A String specifying the description of the field. The default value is an empty string. 
     description: str = ''
 
-    def __init__(self, name: str, regionType: SymbolicConstant = POINT, partLevelData: Boolean = OFF, 
-                 pointDataFormat: SymbolicConstant = XYZ, gridPointPlane: SymbolicConstant = XYPLANE, 
-                 defaultUnMappedValue: float = 0, mappingAlgorithm: SymbolicConstant = SURFACE, 
-                 searchTolType: SymbolicConstant = RELATIVE, boundarySearchTol: float = 0, 
-                 neighborhoodSearchTol: float = 1000000, negativeNormalSearchTol: float = 0, 
-                 positiveNormalSearchTol: float = 0, scaleCoordinates: Boolean = OFF, 
-                 gridPointData: tuple = (), xyzPointData: tuple = (), 
+    def __init__(self, name: str, regionType: SymbolicConstant = POINT, partLevelData: Boolean = OFF,
+                 pointDataFormat: SymbolicConstant = XYZ, gridPointPlane: SymbolicConstant = XYPLANE,
+                 defaultUnMappedValue: float = 0, mappingAlgorithm: SymbolicConstant = SURFACE,
+                 searchTolType: SymbolicConstant = RELATIVE, boundarySearchTol: float = 0,
+                 neighborhoodSearchTol: float = 1000000, negativeNormalSearchTol: float = 0,
+                 positiveNormalSearchTol: float = 0, scaleCoordinates: Boolean = OFF,
+                 gridPointData: tuple = (), xyzPointData: tuple = (),
                  coordinateScalingFactors: tuple = (), localCsys: str = None, description: str = ''):
         """This method creates an MappedField object.
 
@@ -203,13 +202,13 @@ class MappedField(AnalyticalField):
         super().__init__()
         pass
 
-    def setValues(self, regionType: SymbolicConstant = POINT, partLevelData: Boolean = OFF, 
-                  pointDataFormat: SymbolicConstant = XYZ, gridPointPlane: SymbolicConstant = XYPLANE, 
-                  defaultUnMappedValue: float = 0, mappingAlgorithm: SymbolicConstant = SURFACE, 
-                  searchTolType: SymbolicConstant = RELATIVE, boundarySearchTol: float = 0, 
-                  neighborhoodSearchTol: float = 1000000, negativeNormalSearchTol: float = 0, 
-                  positiveNormalSearchTol: float = 0, scaleCoordinates: Boolean = OFF, 
-                  gridPointData: tuple = (), xyzPointData: tuple = (), 
+    def setValues(self, regionType: SymbolicConstant = POINT, partLevelData: Boolean = OFF,
+                  pointDataFormat: SymbolicConstant = XYZ, gridPointPlane: SymbolicConstant = XYPLANE,
+                  defaultUnMappedValue: float = 0, mappingAlgorithm: SymbolicConstant = SURFACE,
+                  searchTolType: SymbolicConstant = RELATIVE, boundarySearchTol: float = 0,
+                  neighborhoodSearchTol: float = 1000000, negativeNormalSearchTol: float = 0,
+                  positiveNormalSearchTol: float = 0, scaleCoordinates: Boolean = OFF,
+                  gridPointData: tuple = (), xyzPointData: tuple = (),
                   coordinateScalingFactors: tuple = (), localCsys: str = None, description: str = ''):
         """This method modifies the MappedField object.
 
@@ -289,4 +288,3 @@ class MappedField(AnalyticalField):
             None. 
         """
         pass
-

@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class PipePressure(Load):
-
-    """The PipePressure object stores the data for a pressure applied to pipe or elbow 
+    """The PipePressure object stores the data for a pressure applied to pipe or elbow
     elements. 
     The PipePressure object is derived from the Load object. 
 
@@ -44,8 +43,8 @@ class PipePressure(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, diameter: float, 
-                 hZero: float, hReference: float, field: str = '', amplitude: str = UNSET, 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, diameter: float,
+                 hZero: float, hReference: float, field: str = '', amplitude: str = UNSET,
                  distributionType: SymbolicConstant = UNIFORM, side: SymbolicConstant = INTERNAL):
         """This method creates a Pressure object.
 
@@ -98,7 +97,7 @@ class PipePressure(Load):
         super().__init__()
         pass
 
-    def setValues(self, field: str = '', amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM, 
+    def setValues(self, field: str = '', amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM,
                   side: SymbolicConstant = INTERNAL):
         """This method modifies the data for an existing PipePressure object in the step where it
         is created.
@@ -130,7 +129,7 @@ class PipePressure(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, magnitude: float = None, hZero: float = None, hReference: float = None, 
+    def setValuesInStep(self, stepName: str, magnitude: float = None, hZero: float = None, hReference: float = None,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing PipePressure object in the
         specified step.
@@ -163,4 +162,3 @@ class PipePressure(Load):
             None. 
         """
         pass
-

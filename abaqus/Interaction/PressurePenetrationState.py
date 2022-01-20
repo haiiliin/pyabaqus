@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class PressurePenetrationState(InteractionState):
-
-    """The PressurePenetrationState object stores the propagating data of a PressurePenetration 
+    """The PressurePenetrationState object stores the propagating data of a PressurePenetration
     object in a step. One instance of this object is created internally by the 
     PressurePenetration object for each step. The instance is also deleted internally by the 
     PressurePenetration object. 
@@ -70,4 +69,3 @@ class PressurePenetrationState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SubmodelBC(BoundaryCondition):
-
-    """The SubmodelBC object stores the data for a submodel boundary condition. 
+    """The SubmodelBC object stores the data for a submodel boundary condition.
     The SubmodelBC object is derived from the BoundaryCondition object. 
 
     Access
@@ -55,10 +54,10 @@ class SubmodelBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region, dof: tuple, globalStep: str, 
-                 timeScale: Boolean, shellThickness: float, globalDrivingRegion: str = '', 
-                 absoluteExteriorTolerance: float = None, exteriorTolerance: float = 0, 
-                 localCsys: str = None, globalIncrement: int = 0, centerZoneSize: float = None, 
+    def __init__(self, name: str, createStepName: str, region: Region, dof: tuple, globalStep: str,
+                 timeScale: Boolean, shellThickness: float, globalDrivingRegion: str = '',
+                 absoluteExteriorTolerance: float = None, exteriorTolerance: float = 0,
+                 localCsys: str = None, globalIncrement: int = 0, centerZoneSize: float = None,
                  intersectionOnly: Boolean = OFF):
         """This method creates a SubmodelBC object.
 
@@ -128,8 +127,8 @@ class SubmodelBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, globalDrivingRegion: str = '', absoluteExteriorTolerance: float = None, 
-                  exteriorTolerance: float = 0, localCsys: str = None, globalIncrement: int = 0, 
+    def setValues(self, globalDrivingRegion: str = '', absoluteExteriorTolerance: float = None,
+                  exteriorTolerance: float = 0, localCsys: str = None, globalIncrement: int = 0,
                   centerZoneSize: float = None, intersectionOnly: Boolean = OFF):
         """This method modifies the data for an existing SubmodelBC object in the step where it is
         created.
@@ -174,7 +173,7 @@ class SubmodelBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, fixed: Boolean = ON, dof: tuple = (), globalStep: str = '', 
+    def setValuesInStep(self, stepName: str, fixed: Boolean = ON, dof: tuple = (), globalStep: str = '',
                         globalIncrement: int = 0, centerZoneSize: float = None):
         """This method modifies the propagating data for an existing SubmodelBC object in the
         specified step.
@@ -214,4 +213,3 @@ class SubmodelBC(BoundaryCondition):
             None. 
         """
         pass
-

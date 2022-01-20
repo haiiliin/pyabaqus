@@ -4,8 +4,7 @@ from abaqusConstants import *
 
 
 class Movie:
-
-    """The Movie object is used to store values and attributes associated with a movie file. 
+    """The Movie object is used to store values and attributes associated with a movie file.
     Upon creation, the Movie object is added to the session.movies repository. 
 
     Access
@@ -36,9 +35,9 @@ class Movie:
     # An Int specifying the memory taken by the movie frames as selected. 
     memory: int = None
 
-    def __init__(self, name: str, fileName: str, startFrame: int = 0, endFrame: int = None, 
-                 timelineStartFrame: int = 0, timelineEndFrame: int = None, timelineStartTime: float = 0, 
-                 timelineEndTime: typing.Union[SymbolicConstant,float] = END_FRAME_TIME):
+    def __init__(self, name: str, fileName: str, startFrame: int = 0, endFrame: int = None,
+                 timelineStartFrame: int = 0, timelineEndFrame: int = None, timelineStartTime: float = 0,
+                 timelineEndTime: typing.Union[SymbolicConstant, float] = END_FRAME_TIME):
         """This method creates a Movie object from the contents of the specified file.
 
         Path
@@ -90,9 +89,9 @@ class Movie:
         """
         pass
 
-    def setValues(self, startFrame: int = 0, endFrame: int = None, timelineStartFrame: int = 0, 
-                  timelineEndFrame: int = None, timelineStartTime: float = 0, 
-                  timelineEndTime: typing.Union[SymbolicConstant,float] = END_FRAME_TIME):
+    def setValues(self, startFrame: int = 0, endFrame: int = None, timelineStartFrame: int = 0,
+                  timelineEndFrame: int = None, timelineStartTime: float = 0,
+                  timelineEndTime: typing.Union[SymbolicConstant, float] = END_FRAME_TIME):
         """This method modifies the Movie object.
 
         Parameters
@@ -132,4 +131,3 @@ class Movie:
               RangeError: startFrame must be an Integer in the range: 0 to numFrames-1 
         """
         pass
-

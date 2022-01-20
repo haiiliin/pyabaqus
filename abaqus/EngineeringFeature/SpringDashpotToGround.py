@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SpringDashpotToGround(SpringDashpot):
-
-    """The SpringDashpotToGround object defines springs and/or dashpots between points and 
+    """The SpringDashpotToGround object defines springs and/or dashpots between points and
     ground on a part or an assembly region. 
     The SpringDashpotToGround object is derived from the SpringDashpot object. 
 
@@ -31,8 +30,8 @@ class SpringDashpotToGround(SpringDashpot):
     # is OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, region: Region, dof: int, orientation: str = None, 
-                 springBehavior: Boolean = OFF, dashpotBehavior: Boolean = OFF, 
+    def __init__(self, name: str, region: Region, dof: int, orientation: str = None,
+                 springBehavior: Boolean = OFF, dashpotBehavior: Boolean = OFF,
                  springStiffness: float = 0, dashpotCoefficient: float = 0):
         """This method creates a SpringDashpotToGround object.
 
@@ -81,7 +80,7 @@ class SpringDashpotToGround(SpringDashpot):
         super().__init__()
         pass
 
-    def setValues(self, orientation: str = None, springBehavior: Boolean = OFF, dashpotBehavior: Boolean = OFF, 
+    def setValues(self, orientation: str = None, springBehavior: Boolean = OFF, dashpotBehavior: Boolean = OFF,
                   springStiffness: float = 0, dashpotCoefficient: float = 0):
         """This method modifies the SpringDashpotToGround object.
 
@@ -115,4 +114,3 @@ class SpringDashpotToGround(SpringDashpot):
             None. 
         """
         pass
-

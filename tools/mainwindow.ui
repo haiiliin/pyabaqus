@@ -63,8 +63,10 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionSetupClass"/>
    <addaction name="actionSetupSubModule"/>
    <addaction name="actionSetupSketch"/>
+   <addaction name="actionSetupInitialMethod"/>
   </widget>
   <action name="actionSetupSubModule">
    <property name="text">
@@ -80,6 +82,22 @@
    </property>
    <property name="toolTip">
     <string>Setup Sketch</string>
+   </property>
+  </action>
+  <action name="actionSetupInitialMethod">
+   <property name="text">
+    <string>Setup Initial Method</string>
+   </property>
+   <property name="toolTip">
+    <string>Setup Initial Method</string>
+   </property>
+  </action>
+  <action name="actionSetupClass">
+   <property name="text">
+    <string>Setup Class</string>
+   </property>
+   <property name="toolTip">
+    <string>Setup Class</string>
    </property>
   </action>
  </widget>

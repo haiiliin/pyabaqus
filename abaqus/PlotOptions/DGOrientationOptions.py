@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class DGOrientationOptions:
 
-    """The DGOrientationOptions object stores values and attributes associated with a material 
+class DGOrientationOptions:
+    """The DGOrientationOptions object stores values and attributes associated with a material
     orientation plot. The DGOrientationOptions object has no constructor command. Abaqus 
     creates an *odbDisplayOptions.materialOrientationOptions* member when a display group 
     instance is created, using values from *odbDisplay.materialOrientationOptions*. 
@@ -66,4 +66,3 @@ class DGOrientationOptions:
     # A String specifying the color of axis 3 of the material orientation triad. The default 
     # value is "Red". 
     axis3Color: str = ''
-

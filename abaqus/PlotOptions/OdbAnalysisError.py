@@ -1,8 +1,8 @@
 from .OdbAuxiliaryData import OdbAuxiliaryData
 
-class OdbAnalysisError:
 
-    """The OdbAnalysisError object stores the description of different errors encountered 
+class OdbAnalysisError:
+    """The OdbAnalysisError object stores the description of different errors encountered
     during the analysis. 
 
     Access
@@ -52,4 +52,3 @@ class OdbAnalysisError:
     # An int specifying the step number on which the error was encountered. This attribute is 
     # read-only. 
     stepNumber: str = ''
-

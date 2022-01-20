@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class InwardVolAccel(Load):
-
-    """The InwardVolAccel object stores the data for an inward volume acceleration acoustic 
+    """The InwardVolAccel object stores the data for an inward volume acceleration acoustic
     load. 
     The InwardVolAccel object is derived from the Load object. 
 
@@ -37,7 +36,7 @@ class InwardVolAccel(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float,
                  distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET):
         """This method creates a InwardVolAccel object.
 
@@ -133,4 +132,3 @@ class InwardVolAccel(Load):
             None. 
         """
         pass
-

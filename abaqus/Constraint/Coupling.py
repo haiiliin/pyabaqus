@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class Coupling(Constraint):
-
-    """The Coupling object defines a constraint between a group of coupling nodes located on a 
+    """The Coupling object defines a constraint between a group of coupling nodes located on a
     region and a reference point. 
     The Coupling object is derived from the ConstrainedSketchConstraint object.
 
@@ -29,10 +28,10 @@ class Coupling(Constraint):
     # OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, surface: Region, controlPoint: Region, 
-                 influenceRadius: typing.Union[SymbolicConstant,float], couplingType: SymbolicConstant, 
-                 adjust: Boolean = OFF, localCsys: str = None, u1: Boolean = ON, u2: Boolean = ON, 
-                 u3: Boolean = ON, ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON, 
+    def __init__(self, name: str, surface: Region, controlPoint: Region,
+                 influenceRadius: typing.Union[SymbolicConstant, float], couplingType: SymbolicConstant,
+                 adjust: Boolean = OFF, localCsys: str = None, u1: Boolean = ON, u2: Boolean = ON,
+                 u3: Boolean = ON, ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON,
                  weightingMethod: SymbolicConstant = UNIFORM):
         """This method creates a Coupling object.
 
@@ -102,8 +101,8 @@ class Coupling(Constraint):
         super().__init__()
         pass
 
-    def setValues(self, adjust: Boolean = OFF, localCsys: str = None, u1: Boolean = ON, u2: Boolean = ON, 
-                  u3: Boolean = ON, ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON, 
+    def setValues(self, adjust: Boolean = OFF, localCsys: str = None, u1: Boolean = ON, u2: Boolean = ON,
+                  u3: Boolean = ON, ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON,
                   weightingMethod: SymbolicConstant = UNIFORM):
         """This method modifies the Coupling object.
 
@@ -156,4 +155,3 @@ class Coupling(Constraint):
             None. 
         """
         pass
-

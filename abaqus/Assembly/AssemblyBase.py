@@ -1,9 +1,9 @@
 import typing
 
 from abaqusConstants import *
+from .AssemblyModel import AssemblyModel
 from .ConnectorOrientationArray import ConnectorOrientationArray
 from .Feature import Feature
-from .AssemblyModel import AssemblyModel
 from .ModelInstance import ModelInstance
 from .PartInstance import PartInstance
 from ..BasicGeometry.EdgeArray import EdgeArray
@@ -27,8 +27,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class AssemblyBase(Feature):
-
-    """An Assembly object is a container for instances of parts. The Assembly object has no 
+    """An Assembly object is a container for instances of parts. The Assembly object has no
     constructor command. Abaqus creates the *rootAssembly* member when a Model object is 
     created. 
 
@@ -81,7 +80,7 @@ class AssemblyBase(Feature):
     instances: Repository[str, PartInstance] = Repository[str, PartInstance]()
 
     # A repository of Datum objects specifying all Datum objects in the assembly. 
-    datums: Repository[str, Datum] = Repository[str, Datum]()
+    datums: list[Datum] = list[Datum]()
 
     # A repository of Feature objects specifying all Feature objects in the assembly. 
     features: Repository[str, Feature] = Repository[str, Feature]()
@@ -128,7 +127,8 @@ class AssemblyBase(Feature):
 
     # A PartInstance object specifying the PartInstances and A ModelInstance object specifying 
     # the ModelInstances. 
-    allInstances: Repository[str, typing.Union[PartInstance, ModelInstance]] = Repository[str, typing.Union[PartInstance, ModelInstance]]()
+    allInstances: Repository[str, typing.Union[PartInstance, ModelInstance]] = Repository[
+        str, typing.Union[PartInstance, ModelInstance]]()
 
     # An EngineeringFeature object. 
     engineeringFeatures: EngineeringFeature = EngineeringFeature()
@@ -144,10 +144,63 @@ class AssemblyBase(Feature):
 
     @typing.overload
     def Instance(self, name: str, part: Part, autoOffset: Boolean = OFF, dependent: Boolean = OFF) -> PartInstance:
+        """This method creates a PartInstance object and puts it into the instances repository.
+
+        Path
+        ----
+            - mdb.models[name].rootAssembly.Instance
+
+        Parameters
+        ----------
+        name
+            A String specifying the repository key. The name must be a valid Abaqus object name.
+        part
+            A Part object to be instanced. If the part does not exist, no PartInstance object is
+            created.
+        autoOffset
+            A Boolean specifying whether to apply an auto offset to the new part instance that will
+            offset it from existing part instances. The default value is OFF.
+        dependent
+            A Boolean specifying whether the part instance is dependent or independent. If
+            *dependent*=OFF, the part instance is independent. The default value is OFF.
+
+        Returns
+        -------
+            A PartInstance object.
+
+        Exceptions
+        ----------
+            None.
+        """
         pass
 
     @typing.overload
     def Instance(self, name: str, model: AssemblyModel, autoOffset: Boolean = OFF) -> ModelInstance:
+        """This method creates a ModelInstance object and puts it into the instances repository.
+
+        Path
+        ----
+            - mdb.models[name].rootAssembly.Instance
+
+        Parameters
+        ----------
+        name
+            The repository key. The name must be a valid Abaqus object name.
+        model
+            A Model object to be instanced. If the model does not exist, no ModelInstance object is
+            created.
+        autoOffset
+            A Boolean specifying whether to apply an auto offset to the new instance that will
+            offset it from existing instances. The default value is OFF.
+
+        Returns
+        -------
+            A ModelInstance object.
+
+        Exceptions
+        ----------
+            None.
+        """
         pass
 
     def Instance(self, name: str, *args, **kwargs) -> typing.Union[PartInstance, ModelInstance]:
@@ -266,8 +319,8 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def getMassProperties(self, regions: str = '', relativeAccuracy: SymbolicConstant = LOW, useMesh: Boolean = False, 
-                          specifyDensity: Boolean = False, density: str = '', specifyThickness: Boolean = False, 
+    def getMassProperties(self, regions: str = '', relativeAccuracy: SymbolicConstant = LOW, useMesh: Boolean = False,
+                          specifyDensity: Boolean = False, density: str = '', specifyThickness: Boolean = False,
                           thickness: str = '', miAboutCenterOfMass: Boolean = True, miAboutPoint: tuple = ()):
         """This method returns the mass properties of the assembly, or instances or regions. Only
         beams, trusses, shells, solids, point, nonstructural mass, and rotary inertia elements
@@ -724,7 +777,8 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def projectReferencesOntoSketch(self, sketch: str, filter: SymbolicConstant = ALL_EDGES, upToFeature: Feature = Feature(), 
+    def projectReferencesOntoSketch(self, sketch: str, filter: SymbolicConstant = ALL_EDGES,
+                                    upToFeature: Feature = Feature(),
                                     edges: tuple = (), vertices: tuple = ()):
         """This method projects the specified edges, vertices, and datum points from the assembly
         onto the specified ConstrainedSketch object. The edges, vertices, and datum points
@@ -1088,7 +1142,8 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def setMeshNumberingControl(self, instances: tuple[PartInstance], startNodeLabel: int = None, startElemLabel: int = None):
+    def setMeshNumberingControl(self, instances: tuple[PartInstance], startNodeLabel: int = None,
+                                startElemLabel: int = None):
         """This method changes the start node and/or element labels on the specified independent
         part instances before or after Abaqus/CAE generates the meshes. For the meshed
         instances, Abaqus/CAE changes the node and/or element labels while preserving the
@@ -1113,8 +1168,8 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def copyMeshPattern(self, elements: tuple[MeshElement] = (), faces: tuple[Face] = (), 
-                        elemFaces: tuple[MeshFace] = (), targetFace: MeshFace = MeshFace(), 
+    def copyMeshPattern(self, elements: tuple[MeshElement] = (), faces: tuple[Face] = (),
+                        elemFaces: tuple[MeshFace] = (), targetFace: MeshFace = MeshFace(),
                         nodes: tuple[MeshNode] = (), coordinates: tuple = ()):
         """This method copies a mesh pattern from a source region consisting of a set of shell
         elements or element faces onto a target face, mapping nodes and elements in a one-one

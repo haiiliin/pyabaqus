@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ContactPropertyAssignment:
 
-    """The ContactPropertyAssignment object stores the contact property assignment definition 
+class ContactPropertyAssignment:
+    """The ContactPropertyAssignment object stores the contact property assignment definition
     for domain pairs in ContactExp and ContactStd objects. The ContactPropertyAssignment 
     object has no constructor or members. 
 
@@ -97,4 +97,3 @@ class ContactPropertyAssignment:
             None. 
         """
         pass
-

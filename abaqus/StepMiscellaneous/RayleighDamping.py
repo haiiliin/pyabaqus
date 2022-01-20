@@ -1,8 +1,8 @@
 from .RayleighDampingComponentArray import RayleighDampingComponentArray
 
-class RayleighDamping:
 
-    """A RayleighDamping object contains Rayleigh Damping parameters. 
+class RayleighDamping:
+    """A RayleighDamping object contains Rayleigh Damping parameters.
 
     Access
     ------
@@ -19,4 +19,3 @@ class RayleighDamping:
 
     # A RayleighDampingComponentArray object. 
     components: RayleighDampingComponentArray = RayleighDampingComponentArray()
-

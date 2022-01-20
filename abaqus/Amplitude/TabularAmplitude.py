@@ -6,8 +6,7 @@ from .BaselineCorrection import BaselineCorrection
 
 
 class TabularAmplitude(Amplitude):
-
-    """The TabularAmplitude object defines an amplitude curve as a table of values at 
+    """The TabularAmplitude object defines an amplitude curve as a table of values at
     convenient points on the time scale. 
     The TabularAmplitude object is derived from the Amplitude object. 
 
@@ -30,7 +29,7 @@ class TabularAmplitude(Amplitude):
     # A BaselineCorrection object. 
     baselineCorrection: BaselineCorrection = BaselineCorrection()
 
-    def __init__(self, name: str, data: tuple, smooth: typing.Union[SymbolicConstant,float] = SOLVER_DEFAULT, 
+    def __init__(self, name: str, data: tuple, smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
                  timeSpan: SymbolicConstant = STEP):
         """This method creates a TabularAmplitude object.
 
@@ -66,7 +65,7 @@ class TabularAmplitude(Amplitude):
         super().__init__()
         pass
 
-    def setValues(self, smooth: typing.Union[SymbolicConstant,float] = SOLVER_DEFAULT, 
+    def setValues(self, smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
                   timeSpan: SymbolicConstant = STEP):
         """This method modifies the TabularAmplitude object.
 
@@ -90,4 +89,3 @@ class TabularAmplitude(Amplitude):
             RangeError. 
         """
         pass
-

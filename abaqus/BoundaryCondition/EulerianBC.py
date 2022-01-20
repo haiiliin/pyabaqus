@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class EulerianBC(BoundaryCondition):
-
-    """The EulerianBC object stores the data for an Eulerian boundary condition. 
+    """The EulerianBC object stores the data for an Eulerian boundary condition.
     The EulerianBC object is derived from the BoundaryCondition object. 
 
     Access
@@ -49,7 +48,7 @@ class EulerianBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region, definition: SymbolicConstant = INFLOW, 
+    def __init__(self, name: str, createStepName: str, region: Region, definition: SymbolicConstant = INFLOW,
                  inflowType: SymbolicConstant = FREE, outflowType: SymbolicConstant = ZERO_PRESSURE):
         """This method creates a EulerianBC object.
 
@@ -87,7 +86,7 @@ class EulerianBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, region: Region = Region(), definition: SymbolicConstant = INFLOW, 
+    def setValues(self, region: Region = Region(), definition: SymbolicConstant = INFLOW,
                   inflowType: SymbolicConstant = FREE, outflowType: SymbolicConstant = ZERO_PRESSURE):
         """This method modifies the data for an existing EulerianBC object in the step where it is
         created.
@@ -117,7 +116,7 @@ class EulerianBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, definition: SymbolicConstant = INFLOW, 
+    def setValuesInStep(self, stepName: str, definition: SymbolicConstant = INFLOW,
                         inflowType: SymbolicConstant = FREE, outflowType: SymbolicConstant = ZERO_PRESSURE):
         """This method modifies the propagating data for an existing EulerianBC object in the
         specified step.
@@ -146,4 +145,3 @@ class EulerianBC(BoundaryCondition):
             None. 
         """
         pass
-

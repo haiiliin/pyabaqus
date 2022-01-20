@@ -1,8 +1,8 @@
+from .RuleResult import RuleResult
 
 
-class ErrorIndicatorResult:
-
-    """The ErrorIndicatorResult object contains result information corresponding to an error 
+class ErrorIndicatorResult(RuleResult):
+    """The ErrorIndicatorResult object contains result information corresponding to an error
     indicator variable in a RemeshingRule object for an adaptivity iteration. 
 
     Access
@@ -24,8 +24,7 @@ class ErrorIndicatorResult:
 
         Path
         ----
-            - mdb.adaptivityProcesses[name].iterations[i].ruleResults[name]\
-            - .ErrorIndicatorResult
+            - mdb.adaptivityProcesses[name].iterations[i].ruleResults[name].ErrorIndicatorResult
 
         Parameters
         ----------
@@ -45,4 +44,3 @@ class ErrorIndicatorResult:
             AbaqusException. 
         """
         pass
-

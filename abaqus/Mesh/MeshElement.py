@@ -3,8 +3,7 @@ from .MeshNode import MeshNode
 
 
 class MeshElement:
-
-    """The MeshElement object refers to an element of a native mesh or an orphan mesh. A 
+    """The MeshElement object refers to an element of a native mesh or an orphan mesh. A
     MeshElement object can be accessed via a part or part instance using an index that 
     refers to the internal numbering of the element repository. The index does not refer to 
     the element label. 
@@ -189,4 +188,3 @@ class MeshElement:
             None. 
         """
         pass
-

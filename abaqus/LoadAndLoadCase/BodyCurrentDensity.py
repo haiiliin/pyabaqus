@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class BodyCurrentDensity(Load):
-
-    """The BodyCurrentDensity object stores the data for a body current. 
+    """The BodyCurrentDensity object stores the data for a body current.
     The BodyCurrentDensity object is derived from the Load object. 
 
     Access
@@ -31,7 +30,7 @@ class BodyCurrentDensity(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, comp1: str, comp2: str, comp3: str, 
+    def __init__(self, name: str, createStepName: str, region: Region, comp1: str, comp2: str, comp3: str,
                  amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM):
         """This method creates a BodyCurrentDensity object.
 
@@ -127,4 +126,3 @@ class BodyCurrentDensity(Load):
             None. 
         """
         pass
-

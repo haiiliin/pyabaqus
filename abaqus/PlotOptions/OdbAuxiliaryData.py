@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class OdbAuxiliaryData:
 
-    """The OdbAuxiliaryData object stores auxiliary data related to the steps in the analysis. 
+class OdbAuxiliaryData:
+    """The OdbAuxiliaryData object stores auxiliary data related to the steps in the analysis.
 
     Access
     ------
@@ -34,4 +34,3 @@ class OdbAuxiliaryData:
 
     # A tuple consisting of node label names. This attribute is read-only. 
     nodeLables: tuple = ()
-

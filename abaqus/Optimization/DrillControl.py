@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class DrillControl(GeometricRestriction):
-
-    """The DrillControl object defines a drill control geometric restriction. 
+    """The DrillControl object defines a drill control geometric restriction.
     The DrillControl object is derived from the GeometricRestriction object. 
 
     Access
@@ -21,10 +20,10 @@ class DrillControl(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, clientDirection: tuple, region: Region, csys: int = None, 
-                 drawAngle: float = 0, mainPoint: str = None, 
-                 mainPointDetermination: SymbolicConstant = MAXIMUM, 
-                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0, 
+    def __init__(self, name: str, clientDirection: tuple, region: Region, csys: int = None,
+                 drawAngle: float = 0, mainPoint: str = None,
+                 mainPointDetermination: SymbolicConstant = MAXIMUM,
+                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                  tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0):
         """This method creates a DrillControl object.
 
@@ -82,9 +81,9 @@ class DrillControl(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, drawAngle: float = 0, mainPoint: str = None, 
-                  mainPointDetermination: SymbolicConstant = MAXIMUM, 
-                  presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0, 
+    def setValues(self, csys: int = None, drawAngle: float = 0, mainPoint: str = None,
+                  mainPointDetermination: SymbolicConstant = MAXIMUM,
+                  presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                   tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0):
         """This method modifies the DrillControl object.
 
@@ -126,4 +125,3 @@ class DrillControl(GeometricRestriction):
             None. 
         """
         pass
-

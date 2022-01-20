@@ -3,8 +3,7 @@ from .SpringDashpot import SpringDashpot
 
 
 class TwoPointSpringDashpot(SpringDashpot):
-
-    """The TwoPointSpringDashpot object defines springs and/or dashpots between two points on a 
+    """The TwoPointSpringDashpot object defines springs and/or dashpots between two points on a
     part or an assembly. 
     The TwoPointSpringDashpot object is derived from the SpringDashpot object. 
 
@@ -30,8 +29,8 @@ class TwoPointSpringDashpot(SpringDashpot):
     # is OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, regionPairs: tuple, axis: SymbolicConstant, dof1: int = 0, dof2: int = 0, 
-                 orientation: str = None, springBehavior: Boolean = OFF, dashpotBehavior: Boolean = OFF, 
+    def __init__(self, name: str, regionPairs: tuple, axis: SymbolicConstant, dof1: int = 0, dof2: int = 0,
+                 orientation: str = None, springBehavior: Boolean = OFF, dashpotBehavior: Boolean = OFF,
                  springStiffness: float = 0, dashpotCoefficient: float = 0):
         """This method creates a TwoPointSpringDashpot object.
 
@@ -91,8 +90,8 @@ class TwoPointSpringDashpot(SpringDashpot):
         super().__init__()
         pass
 
-    def setValues(self, dof1: int = 0, dof2: int = 0, orientation: str = None, springBehavior: Boolean = OFF, 
-                  dashpotBehavior: Boolean = OFF, springStiffness: float = 0, 
+    def setValues(self, dof1: int = 0, dof2: int = 0, orientation: str = None, springBehavior: Boolean = OFF,
+                  dashpotBehavior: Boolean = OFF, springStiffness: float = 0,
                   dashpotCoefficient: float = 0):
         """This method modifies the TwoPointSpringDashpot object.
 
@@ -135,4 +134,3 @@ class TwoPointSpringDashpot(SpringDashpot):
             None. 
         """
         pass
-

@@ -1,9 +1,8 @@
 from .MeshFace import MeshFace
 
 
-class MeshFaceArray:
-
-    """The MeshFaceArray is a sequence of MeshFace objects. 
+class MeshFaceArray(list[MeshFace]):
+    """The MeshFaceArray is a sequence of MeshFace objects.
 
     Access
     ------
@@ -41,7 +40,7 @@ class MeshFaceArray:
         ----------
             None. 
         """
-        pass
+        super().__init__()
 
     def getSequenceFromMask(self, mask: str):
         """This method returns the objects in the MeshFaceArray identified using the specified
@@ -78,4 +77,3 @@ class MeshFaceArray:
             None. 
         """
         pass
-

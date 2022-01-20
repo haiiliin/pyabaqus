@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class AnimationController:
 
-    """The AnimationController object controls all object-based animation to be displayed in 
+class AnimationController:
+    """The AnimationController object controls all object-based animation to be displayed in
     the viewports. The AnimationController object has no constructor. Abaqus creates the 
     *animationController* member when it creates the Session object. 
 
@@ -168,4 +168,3 @@ class AnimationController:
             RangeError. 
         """
         pass
-

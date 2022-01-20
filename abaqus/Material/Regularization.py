@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Regularization:
 
-    """The Regularization object defines the tolerance to be used for regularizing material 
+class Regularization:
+    """The Regularization object defines the tolerance to be used for regularizing material
     data. 
 
     Access
@@ -64,4 +64,3 @@ class Regularization:
             RangeError. 
         """
         pass
-

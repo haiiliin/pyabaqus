@@ -15,6 +15,7 @@ Corresponding analysis keywords
 
 """
 
+
 def getGuiPrefsFileName():
     """This function enables you to retrieve the location of your abaqus_2021.gpr file.
 
@@ -33,6 +34,7 @@ def getGuiPrefsFileName():
     ----------
     """
     pass
+
 
 def getDisplayNamesInGuiPreferences(fileName: str):
     """The abaqus_2021.gpr file stores a separate guiPreferences record for each display that
@@ -57,6 +59,7 @@ def getDisplayNamesInGuiPreferences(fileName: str):
         None. 
     """
     pass
+
 
 def printValuesList(object: str, maxRecursionDepth: SymbolicConstant = None, asString: Boolean = False):
     """This function enables you to print all of the options and their values for a set of
@@ -90,6 +93,7 @@ def printValuesList(object: str, maxRecursionDepth: SymbolicConstant = None, asS
     """
     pass
 
+
 def openGuiPreferences(displayName: str, fileName: str = ''):
     """This function enables you to examine and change many default behaviors in the Abaqus/CAE
     graphical user interface. Abaqus stores preferences for each display you use in a
@@ -120,6 +124,7 @@ def openGuiPreferences(displayName: str, fileName: str = ''):
         None. 
     """
     pass
+
 
 def openSessionOptions(fileName: str = '', directory: SymbolicConstant = HOME):
     """This function enables you to examine and change the default behavior for many session
@@ -154,4 +159,3 @@ def openSessionOptions(fileName: str = '', directory: SymbolicConstant = HOME):
         None. 
     """
     pass
-

@@ -1,8 +1,8 @@
 from .Section import Section
 
-class AcousticInfiniteSection(Section):
 
-    """The AcousticInfiniteSection object defines the properties of an acoustic section. 
+class AcousticInfiniteSection(Section):
+    """The AcousticInfiniteSection object defines the properties of an acoustic section.
     The AcousticInfiniteSection object is derived from the Section object. 
 
     Access
@@ -76,4 +76,3 @@ class AcousticInfiniteSection(Section):
             RangeError. 
         """
         pass
-

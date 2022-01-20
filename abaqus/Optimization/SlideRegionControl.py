@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SlideRegionControl(GeometricRestriction):
-
-    """The SlideRegionControl object defines a slide region control geometric restriction. 
+    """The SlideRegionControl object defines a slide region control geometric restriction.
     The SlideRegionControl object is derived from the GeometricRestriction object. 
 
     Access
@@ -21,9 +20,9 @@ class SlideRegionControl(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, clientDirection: tuple, region: Region, 
-                 approach: SymbolicConstant = FREE_FORM, csys: int = None, freeFormRegion: str = None, 
-                 presumeFeasibleRegionAtStart: Boolean = ON, revolvedRegion: str = None, 
+    def __init__(self, name: str, clientDirection: tuple, region: Region,
+                 approach: SymbolicConstant = FREE_FORM, csys: int = None, freeFormRegion: str = None,
+                 presumeFeasibleRegionAtStart: Boolean = ON, revolvedRegion: str = None,
                  tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0):
         """This method creates a SlideRegionControl object.
 
@@ -82,8 +81,8 @@ class SlideRegionControl(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, approach: SymbolicConstant = FREE_FORM, csys: int = None, freeFormRegion: str = None, 
-                  presumeFeasibleRegionAtStart: Boolean = ON, revolvedRegion: str = None, 
+    def setValues(self, approach: SymbolicConstant = FREE_FORM, csys: int = None, freeFormRegion: str = None,
+                  presumeFeasibleRegionAtStart: Boolean = ON, revolvedRegion: str = None,
                   tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0):
         """This method modifies the SlideRegionControl object.
 
@@ -126,4 +125,3 @@ class SlideRegionControl(GeometricRestriction):
             None. 
         """
         pass
-

@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class PolarityAssignments:
 
-    """The PolarityAssignments object stores the polarity assignment definition for surfaces in 
+class PolarityAssignments:
+    """The PolarityAssignments object stores the polarity assignment definition for surfaces in
     ContactExp objects. The PolarityAssignments object has no constructor or members. 
 
     Access
@@ -87,4 +87,3 @@ class PolarityAssignments:
             None. 
         """
         pass
-

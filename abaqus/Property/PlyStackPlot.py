@@ -2,15 +2,15 @@ from ..Odb.Odb import Odb
 from ..Part.Part import Part
 from ..Region.Region import Region
 
-class PlyStackPlot:
 
-    """The PlyStackPlot object is used to plot the stacking of plies in a composite layup or in 
-    a composite shell section. 
+class PlyStackPlot:
+    """The PlyStackPlot object is used to plot the stacking of plies in a composite layup or in
+    a composite shell section.
 
     Access
     ------
-        - import
-        - section import visualization
+        - import section
+        - import visualization
 
     Table Data
     ----------
@@ -20,55 +20,56 @@ class PlyStackPlot:
 
     """
 
-    def MdbPlyStackPlot(self, part: Part, region: Region):
-        """This method creates a PlyStackPlot object from a region of a part that contains a
-        composite shell layup.
 
-        Path
-        ----
-            - section.MdbPlyStackPlot
+def MdbPlyStackPlot(part: Part, region: Region):
+    """This method creates a PlyStackPlot object from a region of a part that contains a
+    composite shell layup.
 
-        Parameters
-        ----------
-        part
-            A Part object. 
-        region
-            A Region object which contains a composite shell layup. 
+    Path
+    ----
+        - section.MdbPlyStackPlot
 
-        Returns
-        -------
-            A PlyStackPlot object. 
+    Parameters
+    ----------
+    part
+        A Part object.
+    region
+        A Region object which contains a composite shell layup.
 
-        Exceptions
-        ----------
-            None. 
-        """
-        pass
+    Returns
+    -------
+        A PlyStackPlot object.
 
-    def OdbPlyStackPlot(self, odb: Odb, sectionName: str, offset: float = 0):
-        """This method creates a PlyStackPlot object from a composite shell section of an Odb
-        object.
+    Exceptions
+    ----------
+        None.
+    """
+    return PlyStackPlot()
 
-        Path
-        ----
-            - visualization.OdbPlyStackPlot
 
-        Parameters
-        ----------
-        odb
-            An Odb object. 
-        sectionName
-            A String specifying the section name that contains a composite shell section. 
-        offset
-            A Float specifying the shell offset. The default value is 0.0. 
+def OdbPlyStackPlot(odb: Odb, sectionName: str, offset: float = 0):
+    """This method creates a PlyStackPlot object from a composite shell section of an Odb
+    object.
 
-        Returns
-        -------
-            A PlyStackPlot object. 
+    Path
+    ----
+        - visualization.OdbPlyStackPlot
 
-        Exceptions
-        ----------
-            None. 
-        """
-        pass
+    Parameters
+    ----------
+    odb
+        An Odb object.
+    sectionName
+        A String specifying the section name that contains a composite shell section.
+    offset
+        A Float specifying the shell offset. The default value is 0.0.
 
+    Returns
+    -------
+        A PlyStackPlot object.
+
+    Exceptions
+    ----------
+        None.
+    """
+    return PlyStackPlot()

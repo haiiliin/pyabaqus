@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class ConcentratedHeatFluxState(LoadState):
-
-    """The ConcentratedHeatFluxState object stores the propagating data of a concentrated heat 
+    """The ConcentratedHeatFluxState object stores the propagating data of a concentrated heat
     flux load in a step. One instance of this object is created internally by the 
     ConcentratedHeatFlux object for each step. The instance is also deleted internally by 
     the ConcentratedHeatFlux object. 
@@ -52,4 +51,3 @@ class ConcentratedHeatFluxState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

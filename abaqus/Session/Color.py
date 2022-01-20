@@ -1,8 +1,5 @@
-
-
 class Color:
-
-    """The Color object contains the RGB definition of a system color. 
+    """The Color object contains the RGB definition of a system color.
 
     Access
     ------
@@ -42,4 +39,3 @@ class Color:
             None. 
         """
         pass
-

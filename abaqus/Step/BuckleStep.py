@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class BuckleStep(AnalysisStep):
-
-    """The BuckleStep object controls eigenvalue buckling estimation. 
+    """The BuckleStep object controls eigenvalue buckling estimation.
     The BuckleStep object is derived from the AnalysisStep object. 
 
     Access
@@ -139,7 +138,8 @@ class BuckleStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -165,10 +165,10 @@ class BuckleStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, numEigen: int, description: str = '', 
-                 eigensolver: SymbolicConstant = SUBSPACE, minEigen: float = None, 
-                 maxEigen: float = None, vectors: int = None, maxIterations: int = 30, 
-                 blockSize: SymbolicConstant = DEFAULT, maxBlocks: SymbolicConstant = DEFAULT, 
+    def __init__(self, name: str, previous: str, numEigen: int, description: str = '',
+                 eigensolver: SymbolicConstant = SUBSPACE, minEigen: float = None,
+                 maxEigen: float = None, vectors: int = None, maxIterations: int = 30,
+                 blockSize: SymbolicConstant = DEFAULT, maxBlocks: SymbolicConstant = DEFAULT,
                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False):
         """This method creates a BuckleStep object.
 
@@ -226,9 +226,9 @@ class BuckleStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', eigensolver: SymbolicConstant = SUBSPACE, minEigen: float = None, 
-                  maxEigen: float = None, vectors: int = None, maxIterations: int = 30, 
-                  blockSize: SymbolicConstant = DEFAULT, maxBlocks: SymbolicConstant = DEFAULT, 
+    def setValues(self, description: str = '', eigensolver: SymbolicConstant = SUBSPACE, minEigen: float = None,
+                  maxEigen: float = None, vectors: int = None, maxIterations: int = 30,
+                  blockSize: SymbolicConstant = DEFAULT, maxBlocks: SymbolicConstant = DEFAULT,
                   matrixStorage: SymbolicConstant = SOLVER_DEFAULT):
         """This method modifies the BuckleStep object.
 
@@ -270,4 +270,3 @@ class BuckleStep(AnalysisStep):
             RangeError. 
         """
         pass
-

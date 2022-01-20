@@ -4,8 +4,7 @@ from abaqusConstants import *
 
 
 class SurfaceThicknessAssignment:
-
-    """The SurfaceThicknessAssignment object stores the surface thickness assignment definition 
+    """The SurfaceThicknessAssignment object stores the surface thickness assignment definition
     for surfaces in ContactExp and ContactStd objects. The SurfaceThicknessAssignment object 
     has no constructor or members. 
 
@@ -23,7 +22,7 @@ class SurfaceThicknessAssignment:
 
     """
 
-    def changeValuesInStep(self, stepName: str, index: int, value: typing.Union[SymbolicConstant,float]):
+    def changeValuesInStep(self, stepName: str, index: int, value: typing.Union[SymbolicConstant, float]):
         """This method allows modification of surface thickness assignments already defined on
         surfaces in a given step.
 
@@ -55,7 +54,7 @@ class SurfaceThicknessAssignment:
         """
         pass
 
-    def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant,float]):
+    def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant, float]):
         """This method allows addition of surface thickness assignments to new surfaces in a given
         step.
 
@@ -103,4 +102,3 @@ class SurfaceThicknessAssignment:
             None. 
         """
         pass
-

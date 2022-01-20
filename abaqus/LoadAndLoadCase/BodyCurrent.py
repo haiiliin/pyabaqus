@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class BodyCurrent(Load):
-
-    """The BodyCurrent object stores the data for a body current. 
+    """The BodyCurrent object stores the data for a body current.
     The BodyCurrent object is derived from the Load object. 
 
     Access
@@ -36,7 +35,7 @@ class BodyCurrent(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float,
                  amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM, field: str = ''):
         """This method creates a BodyCurrent object.
 
@@ -132,4 +131,3 @@ class BodyCurrent(Load):
             None. 
         """
         pass
-

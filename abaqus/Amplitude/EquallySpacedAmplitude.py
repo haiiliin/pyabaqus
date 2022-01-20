@@ -6,8 +6,7 @@ from .BaselineCorrection import BaselineCorrection
 
 
 class EquallySpacedAmplitude(Amplitude):
-
-    """The EquallySpacedAmplitude object defines a list of amplitude values at fixed time 
+    """The EquallySpacedAmplitude object defines a list of amplitude values at fixed time
     intervals beginning at a specified value of time. 
     The EquallySpacedAmplitude object is derived from the Amplitude object. 
 
@@ -30,8 +29,8 @@ class EquallySpacedAmplitude(Amplitude):
     # A BaselineCorrection object. 
     baselineCorrection: BaselineCorrection = BaselineCorrection()
 
-    def __init__(self, name: str, fixedInterval: float, data: tuple, begin: float = 0, 
-                 smooth: typing.Union[SymbolicConstant,float] = SOLVER_DEFAULT, 
+    def __init__(self, name: str, fixedInterval: float, data: tuple, begin: float = 0,
+                 smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
                  timeSpan: SymbolicConstant = STEP):
         """This method creates an EquallySpacedAmplitude object.
 
@@ -72,7 +71,7 @@ class EquallySpacedAmplitude(Amplitude):
         super().__init__()
         pass
 
-    def setValues(self, begin: float = 0, smooth: typing.Union[SymbolicConstant,float] = SOLVER_DEFAULT, 
+    def setValues(self, begin: float = 0, smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
                   timeSpan: SymbolicConstant = STEP):
         """This method modifies the EquallySpacedAmplitude object.
 
@@ -99,4 +98,3 @@ class EquallySpacedAmplitude(Amplitude):
             RangeError. 
         """
         pass
-

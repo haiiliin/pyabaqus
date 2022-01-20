@@ -3,8 +3,7 @@ from ..PlotOptions.DGSuperimposeOptions import DGSuperimposeOptions
 
 
 class SuperimposeOptions(DGSuperimposeOptions):
-
-    """The SuperimposeOptions object stores values and attributes associated with the 
+    """The SuperimposeOptions object stores values and attributes associated with the
     undeformed shape when the display contains both the deformed shape and the undeformed 
     shape. The SuperimposeOptions object has no constructor command. Abaqus creates a 
     *defaultOdbDisplay.superimposeOptions* member when you import the Visualization module. 
@@ -186,23 +185,23 @@ class SuperimposeOptions(DGSuperimposeOptions):
     # coordinate directions when *coordinateScale*=ON. The default value is (1, 1, 1). 
     coordinateScaleFactors: float = None
 
-    def setValues(self, options: 'SuperimposeOptions' = None, renderStyle: SymbolicConstant = WIREFRAME, 
-                  visibleEdges: SymbolicConstant = FEATURE, edgeColorWireHide: str = '', 
-                  edgeColorFillShade: str = '', edgeLineStyle: SymbolicConstant = SOLID, 
-                  edgeLineThickness: SymbolicConstant = VERY_THIN, colorCodeOverride: Boolean = ON, 
-                  fillColor: str = '', labelFont: str = '', elemLabels: Boolean = OFF, 
-                  elemLabelColor: str = '', faceLabels: Boolean = OFF, faceLabelColor: str = '', 
-                  nodeLabels: Boolean = OFF, nodeLabelColor: str = '', nodeSymbols: Boolean = OFF, 
-                  nodeSymbolType: SymbolicConstant = HOLLOW_CIRCLE, nodeSymbolColor: str = '', 
-                  nodeSymbolSize: SymbolicConstant = SMALL, elementShrink: Boolean = OFF, 
-                  elementShrinkFactor: int = 5, coordinateScale: Boolean = OFF, 
-                  coordinateScaleFactors: tuple = (), normals: Boolean = OFF, 
-                  normalDisplay: SymbolicConstant = ELEMENT, faceNormalColor: str = '', 
-                  beamN1Color: str = '', beamN2Color: str = '', beamTangentColor: str = '', 
-                  normalArrowLength: SymbolicConstant = MEDIUM, 
-                  normalLineThickness: SymbolicConstant = VERY_THIN, 
-                  normalArrowheadStyle: SymbolicConstant = WIRE, translucency: Boolean = OFF, 
-                  translucencyFactor: float = 0, deformedOffsetMode: SymbolicConstant = NONE, 
+    def setValues(self, options: 'SuperimposeOptions' = None, renderStyle: SymbolicConstant = WIREFRAME,
+                  visibleEdges: SymbolicConstant = FEATURE, edgeColorWireHide: str = '',
+                  edgeColorFillShade: str = '', edgeLineStyle: SymbolicConstant = SOLID,
+                  edgeLineThickness: SymbolicConstant = VERY_THIN, colorCodeOverride: Boolean = ON,
+                  fillColor: str = '', labelFont: str = '', elemLabels: Boolean = OFF,
+                  elemLabelColor: str = '', faceLabels: Boolean = OFF, faceLabelColor: str = '',
+                  nodeLabels: Boolean = OFF, nodeLabelColor: str = '', nodeSymbols: Boolean = OFF,
+                  nodeSymbolType: SymbolicConstant = HOLLOW_CIRCLE, nodeSymbolColor: str = '',
+                  nodeSymbolSize: SymbolicConstant = SMALL, elementShrink: Boolean = OFF,
+                  elementShrinkFactor: int = 5, coordinateScale: Boolean = OFF,
+                  coordinateScaleFactors: tuple = (), normals: Boolean = OFF,
+                  normalDisplay: SymbolicConstant = ELEMENT, faceNormalColor: str = '',
+                  beamN1Color: str = '', beamN2Color: str = '', beamTangentColor: str = '',
+                  normalArrowLength: SymbolicConstant = MEDIUM,
+                  normalLineThickness: SymbolicConstant = VERY_THIN,
+                  normalArrowheadStyle: SymbolicConstant = WIRE, translucency: Boolean = OFF,
+                  translucencyFactor: float = 0, deformedOffsetMode: SymbolicConstant = NONE,
                   uniformOffset: float = 0, nonuniformOffset: tuple = ()):
         """This method modifies the SuperimposeOptions object.
 
@@ -331,4 +330,3 @@ class SuperimposeOptions(DGSuperimposeOptions):
             RangeError. 
         """
         pass
-

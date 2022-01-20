@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class AcousticImpedance(Interaction):
-
-    """The AcousticImpedance object defines surface impedance information or nonreflecting 
+    """The AcousticImpedance object defines surface impedance information or nonreflecting
     boundaries for acoustic and coupled acoustic-structural analyses. 
     The AcousticImpedance object is derived from the Interaction object. 
 
@@ -23,9 +22,9 @@ class AcousticImpedance(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, surface: Region, definition: SymbolicConstant = TABULAR, 
-                 interactionProperty: str = '', nonreflectingType: SymbolicConstant = PLANE, 
-                 radius: float = 1, semimajorAxis: float = 1, eccentricity: float = 0, 
+    def __init__(self, name: str, createStepName: str, surface: Region, definition: SymbolicConstant = TABULAR,
+                 interactionProperty: str = '', nonreflectingType: SymbolicConstant = PLANE,
+                 radius: float = 1, semimajorAxis: float = 1, eccentricity: float = 0,
                  centerCoordinates: tuple = (), directionCosine: tuple = ()):
         """This method creates an AcousticImpedance object.
 
@@ -85,9 +84,9 @@ class AcousticImpedance(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, definition: SymbolicConstant = TABULAR, interactionProperty: str = '', 
-                  nonreflectingType: SymbolicConstant = PLANE, radius: float = 1, 
-                  semimajorAxis: float = 1, eccentricity: float = 0, centerCoordinates: tuple = (), 
+    def setValues(self, definition: SymbolicConstant = TABULAR, interactionProperty: str = '',
+                  nonreflectingType: SymbolicConstant = PLANE, radius: float = 1,
+                  semimajorAxis: float = 1, eccentricity: float = 0, centerCoordinates: tuple = (),
                   directionCosine: tuple = ()):
         """This method modifies the data for an existing AcousticImpedance object in the step where
         it is created.
@@ -156,4 +155,3 @@ class AcousticImpedance(Interaction):
             None. 
         """
         pass
-

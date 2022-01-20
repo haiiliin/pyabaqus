@@ -3,8 +3,7 @@ from .ContactStabilization import ContactStabilization
 
 
 class StdStabilization(ContactStabilization):
-
-    """The StdStabilization object is used in conjunction with ContactStd in Abaqus/Standard 
+    """The StdStabilization object is used in conjunction with ContactStd in Abaqus/Standard
     analyses to specify contact stabilization. 
     The StdStabilization object is derived from the ContactStabilization object. 
 
@@ -22,8 +21,8 @@ class StdStabilization(ContactStabilization):
 
     """
 
-    def __init__(self, name: str, zeroDistance: float = None, reductionFactor: float = 0, 
-                 scaleFactor: float = 1, tangentialFactor: float = 0, amplitude: str = '', 
+    def __init__(self, name: str, zeroDistance: float = None, reductionFactor: float = 0,
+                 scaleFactor: float = 1, tangentialFactor: float = 0, amplitude: str = '',
                  reset: Boolean = OFF):
         """This method creates a StdStabilization object.
 
@@ -66,7 +65,7 @@ class StdStabilization(ContactStabilization):
         super().__init__()
         pass
 
-    def setValues(self, zeroDistance: float = None, reductionFactor: float = 0, scaleFactor: float = 1, 
+    def setValues(self, zeroDistance: float = None, reductionFactor: float = 0, scaleFactor: float = 1,
                   tangentialFactor: float = 0, amplitude: str = '', reset: Boolean = OFF):
         """This method modifies the StdStabilization object.
 
@@ -101,4 +100,3 @@ class StdStabilization(ContactStabilization):
             RangeError. 
         """
         pass
-

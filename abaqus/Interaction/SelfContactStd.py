@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SelfContactStd(Interaction):
-
-    """The SelfContactStd object defines self-contact during an Abaqus/Standard analysis. 
+    """The SelfContactStd object defines self-contact during an Abaqus/Standard analysis.
     The SelfContactStd object is derived from the Interaction object. 
 
     Access
@@ -33,8 +32,8 @@ class SelfContactStd(Interaction):
     # argument is valid only when *enforcement*=NODE_TO_SURFACE. 
     supplementaryContact: SymbolicConstant = SELECTIVE
 
-    def __init__(self, name: str, createStepName: str, surface: Region, interactionProperty: str, 
-                 enforcement: SymbolicConstant = SURFACE_TO_SURFACE, thickness: Boolean = ON, 
+    def __init__(self, name: str, createStepName: str, surface: Region, interactionProperty: str,
+                 enforcement: SymbolicConstant = SURFACE_TO_SURFACE, thickness: Boolean = ON,
                  smooth: float = 0, contactControls: str = ''):
         """This method creates a SelfContactStd object.
 
@@ -79,7 +78,7 @@ class SelfContactStd(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, enforcement: SymbolicConstant = SURFACE_TO_SURFACE, thickness: Boolean = ON, 
+    def setValues(self, enforcement: SymbolicConstant = SURFACE_TO_SURFACE, thickness: Boolean = ON,
                   smooth: float = 0, contactControls: str = ''):
         """This method modifies the data for an existing SelfContactStd object in the step where it
         is created.
@@ -136,4 +135,3 @@ class SelfContactStd(Interaction):
             None. 
         """
         pass
-

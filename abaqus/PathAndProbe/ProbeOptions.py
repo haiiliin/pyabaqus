@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ProbeOptions:
 
-    """The ProbeOptions object is used to store settings associated with probing a model or an 
+class ProbeOptions:
+    """The ProbeOptions object is used to store settings associated with probing a model or an
     *X–Y* plot. The ProbeOptions object has no constructor. Abaqus creates the 
     *defaultProbeOptions* and the *probeOptions* members when you import the Visualization 
     module. When probing is initiated for the first time, the values in the *probeOptions* 
@@ -107,12 +107,12 @@ class ProbeOptions:
     # "ODB" and "XYPlot". This member is read-only. 
     probeObject: str = ''
 
-    def setValues(self, options: 'ProbeOptions' = None, probeEntity: SymbolicConstant = ELEMENT, 
-                  probeOutputPosition: SymbolicConstant = None, partInstance: Boolean = ON, 
-                  elementID: Boolean = ON, elementType: Boolean = ON, elementConnectivity: Boolean = ON, 
-                  elementFieldResults: Boolean = ON, nodeId: Boolean = ON, baseCoordinates: Boolean = ON, 
-                  deformedCoordinates: Boolean = ON, attachedElements: Boolean = ON, 
-                  nodeFieldResults: Boolean = ON, legend: Boolean = ON, xValue: Boolean = ON, 
+    def setValues(self, options: 'ProbeOptions' = None, probeEntity: SymbolicConstant = ELEMENT,
+                  probeOutputPosition: SymbolicConstant = None, partInstance: Boolean = ON,
+                  elementID: Boolean = ON, elementType: Boolean = ON, elementConnectivity: Boolean = ON,
+                  elementFieldResults: Boolean = ON, nodeId: Boolean = ON, baseCoordinates: Boolean = ON,
+                  deformedCoordinates: Boolean = ON, attachedElements: Boolean = ON,
+                  nodeFieldResults: Boolean = ON, legend: Boolean = ON, xValue: Boolean = ON,
                   yValue: Boolean = ON, sequenceID: Boolean = ON, interpolateXy: Boolean = OFF):
         """This method modifies the settings on the ProbeOptions object.
 
@@ -192,4 +192,3 @@ class ProbeOptions:
             None. 
         """
         pass
-

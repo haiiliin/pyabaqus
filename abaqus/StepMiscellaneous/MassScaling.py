@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class MassScaling:
 
-    """A MassScaling object defines the region and controls that govern mass scaling. 
+class MassScaling:
+    """A MassScaling object defines the region and controls that govern mass scaling.
 
     Access
     ------
@@ -61,4 +61,3 @@ class MassScaling:
     # The SymbolicConstant MODEL or a Region object specifying where the mass scaling is 
     # applied. The default value is MODEL. 
     region: SymbolicConstant = MODEL
-

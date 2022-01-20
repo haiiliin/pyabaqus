@@ -1,66 +1,66 @@
 from abaqusConstants import *
-from .AcousticMedium import AcousticMedium
-from .BrittleCracking import BrittleCracking
-from .CapPlasticity import CapPlasticity
-from .CastIronPlasticity import CastIronPlasticity
-from .ClayPlasticity import ClayPlasticity
-from .Concrete import Concrete
-from .ConcreteDamagedPlasticity import ConcreteDamagedPlasticity
-from .Conductivity import Conductivity
-from .Creep import Creep
-from .CrushableFoam import CrushableFoam
-from .DamageInitiation import DamageInitiation
-from .Damping import Damping
-from .DeformationPlasticity import DeformationPlasticity
-from .Density import Density
-from .Depvar import Depvar
-from .Dielectric import Dielectric
-from .Diffusivity import Diffusivity
-from .DruckerPrager import DruckerPrager
-from .Elastic import Elastic
-from .ElectricalConductivity import ElectricalConductivity
-from .Eos import Eos
-from .Expansion import Expansion
-from .FluidLeakoff import FluidLeakoff
-from .GapFlow import GapFlow
-from .GasketMembraneElastic import GasketMembraneElastic
-from .GasketThicknessBehavior import GasketThicknessBehavior
-from .GasketTransverseShearElastic import GasketTransverseShearElastic
-from .Gel import Gel
-from .HeatGeneration import HeatGeneration
-from .Hyperelastic import Hyperelastic
-from .Hyperfoam import Hyperfoam
-from .Hypoelastic import Hypoelastic
-from .InelasticHeatFraction import InelasticHeatFraction
-from .JouleHeatFraction import JouleHeatFraction
-from .LatentHeat import LatentHeat
-from .LowDensityFoam import LowDensityFoam
-from .MagneticPermeability import MagneticPermeability
-from .MohrCoulombPlasticity import MohrCoulombPlasticity
-from .MoistureSwelling import MoistureSwelling
-from .MullinsEffect import MullinsEffect
-from .Permeability import Permeability
-from .Piezoelectric import Piezoelectric
-from .Plastic import Plastic
-from .PoreFluidExpansion import PoreFluidExpansion
-from .PorousBulkModuli import PorousBulkModuli
-from .PorousElastic import PorousElastic
-from .PorousMetalPlasticity import PorousMetalPlasticity
+from .Density.Density import Density
+from .Elastic.HyperElastic.HyperFoam.Hyperfoam import Hyperfoam
+from .Elastic.HyperElastic.Hyperelastic import Hyperelastic
+from .Elastic.HyperElastic.ViscoElastic.Viscoelastic import Viscoelastic
+from .Elastic.HypoElastic.Hypoelastic import Hypoelastic
+from .Elastic.Linear.Elastic import Elastic
+from .Elastic.LowDensityFoam.LowDensityFoam import LowDensityFoam
+from .Elastic.Porous.PorousElastic import PorousElastic
+from .Eos.Eos import Eos
+from .Gap.GapFlow import GapFlow
+from .Gasket.GasketMembraneElastic import GasketMembraneElastic
+from .Gasket.GasketThicknessBehavior import GasketThicknessBehavior
+from .Gasket.GasketTransverseShearElastic import GasketTransverseShearElastic
+from .Others.Acoustic.AcousticMedium import AcousticMedium
+from .Others.Electromagnetic.Dielectric import Dielectric
+from .Others.Electromagnetic.ElectricalConductivity import ElectricalConductivity
+from .Others.Electromagnetic.MagneticPermeability import MagneticPermeability
+from .Others.Electromagnetic.Piezoelectric import Piezoelectric
+from .Others.HeatTransfer.Conductivity import Conductivity
+from .Others.HeatTransfer.HeatGeneration import HeatGeneration
+from .Others.HeatTransfer.InelasticHeatFraction import InelasticHeatFraction
+from .Others.HeatTransfer.JouleHeatFraction import JouleHeatFraction
+from .Others.HeatTransfer.LatentHeat import LatentHeat
+from .Others.HeatTransfer.SpecificHeat import SpecificHeat
+from .Others.MassDiffusion.Diffusivity import Diffusivity
+from .Others.MassDiffusion.Solubility import Solubility
+from .Others.Mechanical.Damping import Damping
+from .Others.Mechanical.Expansion import Expansion
+from .Others.Mechanical.PoreFluidExpansion import PoreFluidExpansion
+from .Others.Mechanical.Viscosity.Viscosity import Viscosity
+from .Others.PoreFluidFlow.FluidLeakoff import FluidLeakoff
+from .Others.PoreFluidFlow.Gel import Gel
+from .Others.PoreFluidFlow.MoistureSwelling.MoistureSwelling import MoistureSwelling
+from .Others.PoreFluidFlow.Permeability.Permeability import Permeability
+from .Others.PoreFluidFlow.PorousBulkModuli import PorousBulkModuli
+from .Others.PoreFluidFlow.Sorption import Sorption
+from .Others.User.Depvar import Depvar
+from .Others.User.UserDefinedField import UserDefinedField
+from .Others.User.UserMaterial import UserMaterial
+from .Others.User.UserOutputVariables import UserOutputVariables
+from .Plastic.Concrete.BrittleCracking import BrittleCracking
+from .Plastic.Concrete.Concrete import Concrete
+from .Plastic.Concrete.ConcreteDamagedPlasticity import ConcreteDamagedPlasticity
+from .Plastic.Creep.Creep import Creep
+from .Plastic.CriticalStateClay.ClayPlasticity import ClayPlasticity
+from .Plastic.CrushableFoam.CrushableFoam import CrushableFoam
+from .Plastic.DruckerPrager.Extended.DruckerPrager import DruckerPrager
+from .Plastic.DruckerPrager.ModifiedCap.CapPlasticity import CapPlasticity
+from .Plastic.Metal.CastIron.CastIronPlasticity import CastIronPlasticity
+from .Plastic.Metal.Deformation.DeformationPlasticity import DeformationPlasticity
+from .Plastic.Metal.Porous.PorousMetalPlasticity import PorousMetalPlasticity
+from .Plastic.Metal.TwoLayerViscoPlasticity.Viscous import Viscous
+from .Plastic.MohrCoulomb.MohrCoulombPlasticity import MohrCoulombPlasticity
+from .Plastic.Plastic import Plastic
+from .Plastic.Swelling.Swelling import Swelling
+from .ProgressiveDamageFailure.DamageInitiation import DamageInitiation
 from .Regularization import Regularization
-from .Solubility import Solubility
-from .Sorption import Sorption
-from .SpecificHeat import SpecificHeat
-from .Swelling import Swelling
-from .UserDefinedField import UserDefinedField
-from .UserMaterial import UserMaterial
-from .UserOutputVariables import UserOutputVariables
-from .Viscoelastic import Viscoelastic
-from .Viscosity import Viscosity
-from .Viscous import Viscous
+from .TestData.MullinsEffect import MullinsEffect
+
 
 class MaterialBase:
-
-    """A Material object is the object used to specify a material. The Material object stores 
+    """A Material object is the object used to specify a material. The Material object stores
     the various settings that determine how a material behaves. 
     A material is created by combining one or more individual material options and sub 
     options. A particular material option is associated with the Material object through a 
@@ -89,31 +89,31 @@ class MaterialBase:
     acousticMedium: AcousticMedium = AcousticMedium()
 
     # A BrittleCracking object. 
-    brittleCracking: BrittleCracking = BrittleCracking(((), ))
+    brittleCracking: BrittleCracking = BrittleCracking(((),))
 
     # A CapPlasticity object. 
-    capPlasticity: CapPlasticity = CapPlasticity(((), ))
+    capPlasticity: CapPlasticity = CapPlasticity(((),))
 
     # A CastIronPlasticity object. 
-    castIronPlasticity: CastIronPlasticity = CastIronPlasticity(((), ))
+    castIronPlasticity: CastIronPlasticity = CastIronPlasticity(((),))
 
     # A ClayPlasticity object. 
-    clayPlasticity: ClayPlasticity = ClayPlasticity(((), ))
+    clayPlasticity: ClayPlasticity = ClayPlasticity(((),))
 
     # A Concrete object. 
-    concrete: Concrete = Concrete(((), ))
+    concrete: Concrete = Concrete(((),))
 
     # A ConcreteDamagedPlasticity object. 
-    concreteDamagedPlasticity: ConcreteDamagedPlasticity = ConcreteDamagedPlasticity(((), ))
+    concreteDamagedPlasticity: ConcreteDamagedPlasticity = ConcreteDamagedPlasticity(((),))
 
     # A Conductivity object. 
-    conductivity: Conductivity = Conductivity(((), ))
+    conductivity: Conductivity = Conductivity(((),))
 
     # A Creep object. 
-    creep: Creep = Creep(((), ))
+    creep: Creep = Creep(((),))
 
     # A CrushableFoam object. 
-    crushableFoam: CrushableFoam = CrushableFoam(((), ))
+    crushableFoam: CrushableFoam = CrushableFoam(((),))
 
     # A DamageInitiation object. 
     ductileDamageInitiation: DamageInitiation = DamageInitiation()
@@ -161,28 +161,28 @@ class MaterialBase:
     damping: Damping = Damping()
 
     # A DeformationPlasticity object. 
-    deformationPlasticity: DeformationPlasticity = DeformationPlasticity(((), ))
+    deformationPlasticity: DeformationPlasticity = DeformationPlasticity(((),))
 
     # A Density object. 
-    density: Density = Density(((), ))
+    density: Density = Density(((),))
 
     # A Depvar object. 
     depvar: Depvar = Depvar()
 
     # A Dielectric object. 
-    dielectric: Dielectric = Dielectric(((), ))
+    dielectric: Dielectric = Dielectric(((),))
 
     # A Diffusivity object. 
-    diffusivity: Diffusivity = Diffusivity(((), ))
+    diffusivity: Diffusivity = Diffusivity(((),))
 
     # A DruckerPrager object. 
-    druckerPrager: DruckerPrager = DruckerPrager(((), ))
+    druckerPrager: DruckerPrager = DruckerPrager(((),))
 
     # An Elastic object. 
-    elastic: Elastic = Elastic(((), ))
+    elastic: Elastic = Elastic(((),))
 
     # An ElectricalConductivity object. 
-    electricalConductivity: ElectricalConductivity = ElectricalConductivity(((), ))
+    electricalConductivity: ElectricalConductivity = ElectricalConductivity(((),))
 
     # An Eos object. 
     eos: Eos = Eos()
@@ -194,31 +194,31 @@ class MaterialBase:
     fluidLeakoff: FluidLeakoff = FluidLeakoff()
 
     # A GapFlow object. 
-    gapFlow: GapFlow = GapFlow(((), ))
+    gapFlow: GapFlow = GapFlow(((),))
 
     # A GasketThicknessBehavior object. 
-    gasketThicknessBehavior: GasketThicknessBehavior = GasketThicknessBehavior(((), ))
+    gasketThicknessBehavior: GasketThicknessBehavior = GasketThicknessBehavior(((),))
 
     # A GasketTransverseShearElastic object. 
-    gasketTransverseShearElastic: GasketTransverseShearElastic = GasketTransverseShearElastic(((), ))
+    gasketTransverseShearElastic: GasketTransverseShearElastic = GasketTransverseShearElastic(((),))
 
     # A GasketMembraneElastic object. 
-    gasketMembraneElastic: GasketMembraneElastic = GasketMembraneElastic(((), ))
+    gasketMembraneElastic: GasketMembraneElastic = GasketMembraneElastic(((),))
 
     # A Gel object. 
-    gel: Gel = Gel(((), ))
+    gel: Gel = Gel(((),))
 
     # A HeatGeneration object. 
     heatGeneration: HeatGeneration = HeatGeneration()
 
     # A Hyperelastic object. 
-    hyperelastic: Hyperelastic = Hyperelastic(((), ))
+    hyperelastic: Hyperelastic = Hyperelastic(((),))
 
     # A Hyperfoam object. 
     hyperfoam: Hyperfoam = Hyperfoam()
 
     # A Hypoelastic object. 
-    hypoelastic: Hypoelastic = Hypoelastic(((), ))
+    hypoelastic: Hypoelastic = Hypoelastic(((),))
 
     # An InelasticHeatFraction object. 
     inelasticHeatFraction: InelasticHeatFraction = InelasticHeatFraction()
@@ -227,58 +227,58 @@ class MaterialBase:
     jouleHeatFraction: JouleHeatFraction = JouleHeatFraction()
 
     # A LatentHeat object. 
-    latentHeat: LatentHeat = LatentHeat(((), ))
+    latentHeat: LatentHeat = LatentHeat(((),))
 
     # A LowDensityFoam object. 
     lowDensityFoam: LowDensityFoam = LowDensityFoam()
 
     # A MagneticPermeability object. 
-    magneticPermeability: MagneticPermeability = MagneticPermeability(((), ), ((), ), ((), ))
+    magneticPermeability: MagneticPermeability = MagneticPermeability(((),), ((),), ((),))
 
     # A MohrCoulombPlasticity object. 
-    mohrCoulombPlasticity: MohrCoulombPlasticity = MohrCoulombPlasticity(((), ))
+    mohrCoulombPlasticity: MohrCoulombPlasticity = MohrCoulombPlasticity(((),))
 
     # A MoistureSwelling object. 
-    moistureSwelling: MoistureSwelling = MoistureSwelling(((), ))
+    moistureSwelling: MoistureSwelling = MoistureSwelling(((),))
 
     # A MullinsEffect object. 
     mullinsEffect: MullinsEffect = MullinsEffect()
 
     # A Permeability object. 
-    permeability: Permeability = Permeability(0, 0, ((), ))
+    permeability: Permeability = Permeability(0, 0, ((),))
 
     # A Piezoelectric object. 
-    piezoelectric: Piezoelectric = Piezoelectric(((), ))
+    piezoelectric: Piezoelectric = Piezoelectric(((),))
 
     # A Plastic object. 
-    plastic: Plastic = Plastic(((), ))
+    plastic: Plastic = Plastic(((),))
 
     # A PoreFluidExpansion object. 
-    poreFluidExpansion: PoreFluidExpansion = PoreFluidExpansion(((), ))
+    poreFluidExpansion: PoreFluidExpansion = PoreFluidExpansion(((),))
 
     # A PorousBulkModuli object. 
-    porousBulkModuli: PorousBulkModuli = PorousBulkModuli(((), ))
+    porousBulkModuli: PorousBulkModuli = PorousBulkModuli(((),))
 
     # A PorousElastic object. 
-    porousElastic: PorousElastic = PorousElastic(((), ))
+    porousElastic: PorousElastic = PorousElastic(((),))
 
     # A PorousMetalPlasticity object. 
-    porousMetalPlasticity: PorousMetalPlasticity = PorousMetalPlasticity(((), ))
+    porousMetalPlasticity: PorousMetalPlasticity = PorousMetalPlasticity(((),))
 
     # A Regularization object. 
     regularization: Regularization = Regularization()
 
     # A Solubility object. 
-    solubility: Solubility = Solubility(((), ))
+    solubility: Solubility = Solubility(((),))
 
     # A Sorption object. 
-    sorption: Sorption = Sorption(((), ))
+    sorption: Sorption = Sorption(((),))
 
     # A SpecificHeat object. 
-    specificHeat: SpecificHeat = SpecificHeat(((), ))
+    specificHeat: SpecificHeat = SpecificHeat(((),))
 
     # A Swelling object. 
-    swelling: Swelling = Swelling(((), ))
+    swelling: Swelling = Swelling(((),))
 
     # A UserDefinedField object. 
     userDefinedField: UserDefinedField = UserDefinedField()
@@ -290,13 +290,13 @@ class MaterialBase:
     userOutputVariables: UserOutputVariables = UserOutputVariables()
 
     # A Viscoelastic object. 
-    viscoelastic: Viscoelastic = Viscoelastic(FREQUENCY, ((), ))
+    viscoelastic: Viscoelastic = Viscoelastic(FREQUENCY, ((),))
 
     # A Viscosity object. 
-    viscosity: Viscosity = Viscosity(((), ))
+    viscosity: Viscosity = Viscosity(((),))
 
     # A Viscous object. 
-    viscous: Viscous = Viscous(((), ))
+    viscous: Viscous = Viscous(((),))
 
     def __init__(self, name: str, description: str = '', materialIdentifier: str = ''):
         """This method creates a Material object.

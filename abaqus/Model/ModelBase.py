@@ -26,9 +26,11 @@ from ..Part.Part import Part
 from ..PredefinedField.PredefinedField import PredefinedField
 from ..Section.Section import Section
 from ..Sketcher.ConstrainedSketch import ConstrainedSketch
+from ..Step.InitialStep import InitialStep
 from ..Step.Step import Step
 from ..StepOutput.FieldOutputRequest import FieldOutputRequest
 from ..StepOutput.HistoryOutputRequest import HistoryOutputRequest
+from ..StepOutput.IntegratedOutputSection import IntegratedOutputSection
 from ..StepOutput.TimePoint import TimePoint
 from ..TableCollection.EventSeriesData import EventSeriesData
 from ..TableCollection.EventSeriesType import EventSeriesType
@@ -202,7 +204,7 @@ class ModelBase:
     filters: Repository[str, Filter] = Repository[str, Filter]()
 
     # A repository of IntegratedOutputSection objects. 
-    integratedOutputSections: int = None
+    integratedOutputSections: Repository[str, IntegratedOutputSection] = Repository[str, IntegratedOutputSection]()
 
     # A repository of FieldOutputRequest objects. 
     fieldOutputRequests: Repository[str, FieldOutputRequest] = Repository[str, FieldOutputRequest]()
@@ -271,7 +273,7 @@ class ModelBase:
         ----------
             None. 
         """
-        pass
+        self.steps['Initial'] = InitialStep()
 
     def ModelFromInputFile(self, name: str, inputFileName: str):
         """This method creates a Model object by reading the keywords in an input file and creating

@@ -212,8 +212,8 @@ class Feature(BaseFeature):
         """
         pass
 
-    def BaseSolidRevolve(self, sketch: ConstrainedSketch, angle: float, pitch: float = None, 
-                         flipRevolveDirection: Boolean = OFF, flipPitchDirection: Boolean = OFF, 
+    def BaseSolidRevolve(self, sketch: ConstrainedSketch, angle: float, pitch: float = None,
+                         flipRevolveDirection: Boolean = OFF, flipPitchDirection: Boolean = OFF,
                          moveSketchNormalToPath: Boolean = OFF):
         """This method creates a first Feature object by revolving the given ConstrainedSketch
         object by the given angle, creating a solid. The ConstrainedSketch object must define a
@@ -352,8 +352,8 @@ class Feature(BaseFeature):
         """
         pass
 
-    def BaseShellRevolve(self, sketch: ConstrainedSketch, angle: float, pitch: float = None, 
-                         flipRevolveDirection: Boolean = OFF, flipPitchDirection: Boolean = OFF, 
+    def BaseShellRevolve(self, sketch: ConstrainedSketch, angle: float, pitch: float = None,
+                         flipRevolveDirection: Boolean = OFF, flipPitchDirection: Boolean = OFF,
                          moveSketchNormalToPath: Boolean = OFF):
         """This method creates a first Feature object by revolving the given ConstrainedSketch
         object by the given angle, creating a shell. The ConstrainedSketch object can define
@@ -619,7 +619,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def Cut(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge, 
+    def Cut(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge,
             sketch: ConstrainedSketch, sketchOrientation: SymbolicConstant = None):
         """This method creates an additional Feature object by cutting a hole using the given
         ConstrainedSketch object.
@@ -654,9 +654,9 @@ class Feature(BaseFeature):
         """
         pass
 
-    def CutExtrude(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge, 
-                   sketchOrientation: SymbolicConstant, sketch: ConstrainedSketch, depth: float = None, 
-                   upToFace: str = '', draftAngle: float = None, pitch: float = None, 
+    def CutExtrude(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge,
+                   sketchOrientation: SymbolicConstant, sketch: ConstrainedSketch, depth: float = None,
+                   upToFace: str = '', draftAngle: float = None, pitch: float = None,
                    flipExtrudeDirection: Boolean = OFF):
         """This method creates an additional Feature object by extruding the given
         ConstrainedSketch object by the given depth and cutting away material in the solid and
@@ -719,9 +719,9 @@ class Feature(BaseFeature):
         """
         pass
 
-    def CutLoft(self, loftsections: tuple, startCondition: SymbolicConstant = None, 
-                endCondition: SymbolicConstant = None, startTangent: float = None, 
-                startMagnitude: float = None, endTangent: float = None, endMagnitude: float = None, 
+    def CutLoft(self, loftsections: tuple, startCondition: SymbolicConstant = None,
+                endCondition: SymbolicConstant = None, startTangent: float = None,
+                startMagnitude: float = None, endTangent: float = None, endMagnitude: float = None,
                 globalSmoothing: Boolean = OFF):
         """This method creates an additional Feature object by lofting between the given sections
         and cutting away material from the part. You define the sections using a sequence of
@@ -785,9 +785,9 @@ class Feature(BaseFeature):
         """
         pass
 
-    def CutRevolve(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge, 
-                   sketchOrientation: SymbolicConstant, sketch: ConstrainedSketch, angle: float, 
-                   pitch: float = None, flipRevolveDirection: Boolean = OFF, 
+    def CutRevolve(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge,
+                   sketchOrientation: SymbolicConstant, sketch: ConstrainedSketch, angle: float,
+                   pitch: float = None, flipRevolveDirection: Boolean = OFF,
                    flipPitchDirection: Boolean = OFF, moveSketchNormalToPath: Boolean = OFF):
         """This method creates an additional Feature object by revolving the given
         ConstrainedSketch object by the given angle and cutting away material from the part. The
@@ -845,10 +845,10 @@ class Feature(BaseFeature):
         """
         pass
 
-    def CutSweep(self, path: str, profile: str, pathPlane: str = '', pathUpEdge: Edge = Edge(), 
-                 pathOrientation: SymbolicConstant = None, sketchPlane: str = '', 
-                 sketchUpEdge: Edge = Edge(), sketchOrientation: SymbolicConstant = None, 
-                 draftAngle: float = None, pitch: float = None, profileNormal: Boolean = OFF, 
+    def CutSweep(self, path: str, profile: str, pathPlane: str = '', pathUpEdge: Edge = Edge(),
+                 pathOrientation: SymbolicConstant = None, sketchPlane: str = '',
+                 sketchUpEdge: Edge = Edge(), sketchOrientation: SymbolicConstant = None,
+                 draftAngle: float = None, pitch: float = None, profileNormal: Boolean = OFF,
                  flipSweepDirection: Boolean = OFF):
         """This method creates an additional Feature object by sweeping the given ConstrainedSketch
         object along a path which may be a ConstrainedSketch or a sequence of Edge objects and
@@ -925,8 +925,8 @@ class Feature(BaseFeature):
         """
         pass
 
-    def ExtendFaces(self, faces: tuple[Face] = (), extendAlong: tuple[Edge] = (), distance: float = None, 
-                    upToFaces: tuple[Face] = (), trimToExtendedTargetSurfaces: Boolean = True, 
+    def ExtendFaces(self, faces: tuple[Face] = (), extendAlong: tuple[Edge] = (), distance: float = None,
+                    upToFaces: tuple[Face] = (), trimToExtendedTargetSurfaces: Boolean = True,
                     upToReferenceRep: Boolean = OFF):
         """This method extends faces along its free edges by offsetting the external edges along
         the surfaces. One of *distance*, *upToReferenceRep*, or *upToFaces* must be used to
@@ -969,7 +969,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def FaceFromElementFaces(self, elementFaces: Region, stitch: Boolean = OFF, stitchTolerance: float = None, 
+    def FaceFromElementFaces(self, elementFaces: Region, stitch: Boolean = OFF, stitchTolerance: float = None,
                              analyticFitTolerance: float = None, associateFace: Boolean = OFF):
         """This method creates a geometry face from a collection of orphan element faces.
 
@@ -1007,7 +1007,8 @@ class Feature(BaseFeature):
         """
         pass
 
-    def HoleBlindFromEdges(self, plane: str, planeSide: SymbolicConstant, diameter: float, edge1: Edge, distance1: float, 
+    def HoleBlindFromEdges(self, plane: str, planeSide: SymbolicConstant, diameter: float, edge1: Edge,
+                           distance1: float,
                            edge2: Edge, distance2: float, depth: float):
         """This method creates an additional Feature object by creating a circular blind hole of
         the given diameter and depth and cutting away material in the solid and shell regions of
@@ -1081,7 +1082,8 @@ class Feature(BaseFeature):
         """
         pass
 
-    def HoleThruAllFromEdges(self, plane: str, planeSide: SymbolicConstant, diameter: float, edge1: Edge, distance1: float, 
+    def HoleThruAllFromEdges(self, plane: str, planeSide: SymbolicConstant, diameter: float, edge1: Edge,
+                             distance1: float,
                              edge2: Edge, distance2: float):
         """This method creates an additional Feature object by creating a circular through hole of
         the given diameter and cutting away material in the solid and shell regions of the part.
@@ -1147,8 +1149,8 @@ class Feature(BaseFeature):
         """
         pass
 
-    def OffsetFaces(self, faceList: tuple[Face], distance: float = None, targetFaces: tuple[Face] = (), 
-                    targetFacesMethod: SymbolicConstant = None, fractionDistance: float = None, 
+    def OffsetFaces(self, faceList: tuple[Face], distance: float = None, targetFaces: tuple[Face] = (),
+                    targetFacesMethod: SymbolicConstant = None, fractionDistance: float = None,
                     trimToReferenceRep: Boolean = OFF):
         """This method creates new faces by offsetting existing faces.
 
@@ -1264,7 +1266,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def RemoveRedundantEntities(self, vertexList: tuple[Vertex] = (), edgeList: tuple[Edge] = (), 
+    def RemoveRedundantEntities(self, vertexList: tuple[Vertex] = (), edgeList: tuple[Edge] = (),
                                 removeEdgeVertices: Boolean = True):
         """This method removes redundant edges and vertices from a solid or a shell entity. One of
         the two arguments is required.
@@ -1487,7 +1489,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def Shell(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge, 
+    def Shell(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge,
               sketch: ConstrainedSketch, sketchOrientation: SymbolicConstant = RIGHT):
         """This method creates an additional Feature object by creating a planar shell from the
         given ConstrainedSketch object. The ConstrainedSketch object must define a closed
@@ -1523,10 +1525,10 @@ class Feature(BaseFeature):
         """
         pass
 
-    def ShellExtrude(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge, 
-                     sketch: ConstrainedSketch, depth: float = None, upToFace: str = '', 
-                     sketchOrientation: SymbolicConstant = RIGHT, draftAngle: float = None, 
-                     pitch: float = None, flipExtrudeDirection: Boolean = OFF, 
+    def ShellExtrude(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge,
+                     sketch: ConstrainedSketch, depth: float = None, upToFace: str = '',
+                     sketchOrientation: SymbolicConstant = RIGHT, draftAngle: float = None,
+                     pitch: float = None, flipExtrudeDirection: Boolean = OFF,
                      keepInternalBoundaries: Boolean = OFF):
         """This method creates an additional Feature object by extruding the given
         ConstrainedSketch object by the given depth, creating a shell protrusion. The
@@ -1590,10 +1592,10 @@ class Feature(BaseFeature):
         """
         pass
 
-    def ShellLoft(self, loftsections: tuple, startCondition: SymbolicConstant = None, 
-                  endCondition: SymbolicConstant = None, startTangent: float = None, 
-                  startMagnitude: float = None, endTangent: float = None, endMagnitude: float = None, 
-                  paths: tuple = (), globalSmoothing: Boolean = OFF, 
+    def ShellLoft(self, loftsections: tuple, startCondition: SymbolicConstant = None,
+                  endCondition: SymbolicConstant = None, startTangent: float = None,
+                  startMagnitude: float = None, endTangent: float = None, endMagnitude: float = None,
+                  paths: tuple = (), globalSmoothing: Boolean = OFF,
                   keepInternalBoundaries: Boolean = OFF):
         """This method creates an additional Feature object by lofting between the given sections
         and adding shell faces to the part. You define the sections using a sequence of edges
@@ -1669,10 +1671,10 @@ class Feature(BaseFeature):
         """
         pass
 
-    def ShellRevolve(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge, 
-                     sketch: ConstrainedSketch, angle: float, sketchOrientation: SymbolicConstant = RIGHT, 
-                     pitch: float = None, flipRevolveDirection: Boolean = OFF, 
-                     flipPitchDirection: Boolean = OFF, moveSketchNormalToPath: Boolean = OFF, 
+    def ShellRevolve(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge,
+                     sketch: ConstrainedSketch, angle: float, sketchOrientation: SymbolicConstant = RIGHT,
+                     pitch: float = None, flipRevolveDirection: Boolean = OFF,
+                     flipPitchDirection: Boolean = OFF, moveSketchNormalToPath: Boolean = OFF,
                      keepInternalBoundaries: Boolean = OFF):
         """This method creates an additional Feature object by revolving the given
         ConstrainedSketch object by the given angle, creating a shell protrusion. The
@@ -1735,10 +1737,10 @@ class Feature(BaseFeature):
         """
         pass
 
-    def ShellSweep(self, path: str, profile: str, pathPlane: str = '', pathUpEdge: Edge = Edge(), 
-                   pathOrientation: SymbolicConstant = None, sketchPlane: str = '', 
-                   sketchUpEdge: Edge = Edge(), sketchOrientation: SymbolicConstant = None, 
-                   draftAngle: float = None, pitch: float = None, profileNormal: Boolean = OFF, 
+    def ShellSweep(self, path: str, profile: str, pathPlane: str = '', pathUpEdge: Edge = Edge(),
+                   pathOrientation: SymbolicConstant = None, sketchPlane: str = '',
+                   sketchUpEdge: Edge = Edge(), sketchOrientation: SymbolicConstant = None,
+                   draftAngle: float = None, pitch: float = None, profileNormal: Boolean = OFF,
                    flipSweepDirection: Boolean = OFF, keepInternalBoundaries: Boolean = OFF):
         """This method creates an additional Feature object by sweeping the given ConstrainedSketch
         object or a sequence of Edge objects along a path which may be a ConstrainedSketch or a
@@ -1818,10 +1820,10 @@ class Feature(BaseFeature):
         """
         pass
 
-    def SolidExtrude(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge, 
-                     sketch: ConstrainedSketch, depth: float = None, upToFace: str = '', 
-                     sketchOrientation: SymbolicConstant = RIGHT, draftAngle: float = None, 
-                     pitch: float = None, flipExtrudeDirection: Boolean = OFF, 
+    def SolidExtrude(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge,
+                     sketch: ConstrainedSketch, depth: float = None, upToFace: str = '',
+                     sketchOrientation: SymbolicConstant = RIGHT, draftAngle: float = None,
+                     pitch: float = None, flipExtrudeDirection: Boolean = OFF,
                      keepInternalBoundaries: Boolean = OFF):
         """This method creates an additional Feature object by extruding the given
         ConstrainedSketch object by the given depth, creating a solid protrusion. The
@@ -1885,10 +1887,10 @@ class Feature(BaseFeature):
         """
         pass
 
-    def SolidLoft(self, loftsections: tuple, startCondition: SymbolicConstant = None, 
-                  endCondition: SymbolicConstant = None, startTangent: float = None, 
-                  startMagnitude: float = None, endTangent: float = None, endMagnitude: float = None, 
-                  paths: tuple = (), globalSmoothing: Boolean = OFF, 
+    def SolidLoft(self, loftsections: tuple, startCondition: SymbolicConstant = None,
+                  endCondition: SymbolicConstant = None, startTangent: float = None,
+                  startMagnitude: float = None, endTangent: float = None, endMagnitude: float = None,
+                  paths: tuple = (), globalSmoothing: Boolean = OFF,
                   keepInternalBoundaries: Boolean = OFF):
         """This method creates an additional Feature object by lofting between the given sections
         and adding material to the part. You define the sections using a sequence of edges from
@@ -1963,10 +1965,10 @@ class Feature(BaseFeature):
         """
         pass
 
-    def SolidRevolve(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge, 
-                     sketch: ConstrainedSketch, angle: float, sketchOrientation: SymbolicConstant = RIGHT, 
-                     pitch: float = None, flipRevolveDirection: Boolean = OFF, 
-                     flipPitchDirection: Boolean = OFF, moveSketchNormalToPath: Boolean = OFF, 
+    def SolidRevolve(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge,
+                     sketch: ConstrainedSketch, angle: float, sketchOrientation: SymbolicConstant = RIGHT,
+                     pitch: float = None, flipRevolveDirection: Boolean = OFF,
+                     flipPitchDirection: Boolean = OFF, moveSketchNormalToPath: Boolean = OFF,
                      keepInternalBoundaries: Boolean = OFF):
         """This method creates an additional Feature object by revolving the given
         ConstrainedSketch object by the given angle, creating a solid protrusion. The
@@ -2028,10 +2030,10 @@ class Feature(BaseFeature):
         """
         pass
 
-    def SolidSweep(self, path: str, profile: str, pathPlane: str = '', pathUpEdge: Edge = Edge(), 
-                   pathOrientation: SymbolicConstant = None, sketchPlane: str = '', 
-                   sketchUpEdge: Edge = Edge(), sketchOrientation: SymbolicConstant = None, 
-                   draftAngle: float = None, pitch: float = None, profileNormal: Boolean = OFF, 
+    def SolidSweep(self, path: str, profile: str, pathPlane: str = '', pathUpEdge: Edge = Edge(),
+                   pathOrientation: SymbolicConstant = None, sketchPlane: str = '',
+                   sketchUpEdge: Edge = Edge(), sketchOrientation: SymbolicConstant = None,
+                   draftAngle: float = None, pitch: float = None, profileNormal: Boolean = OFF,
                    flipSweepDirection: Boolean = OFF, keepInternalBoundaries: Boolean = OFF):
         """This method creates an additional Feature object by sweeping the given ConstrainedSketch
         object or a Face object along a path which may be a ConstrainedSketch or a sequence of
@@ -2140,7 +2142,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def Wire(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge, 
+    def Wire(self, sketchPlane: str, sketchPlaneSide: SymbolicConstant, sketchUpEdge: Edge,
              sketch: ConstrainedSketch, sketchOrientation: SymbolicConstant = RIGHT):
         """This method creates an additional Feature object by creating a planar wire from the
         given ConstrainedSketch object. The ConstrainedSketch object must define a closed
@@ -2274,4 +2276,3 @@ class Feature(BaseFeature):
             None. 
         """
         pass
-

@@ -6,8 +6,7 @@ from ..UtilityAndView.View import View
 
 
 class Layer:
-
-    """Objects can be superimposed by displaying them in different layers of a viewport. 
+    """Objects can be superimposed by displaying them in different layers of a viewport.
 
     Access
     ------
@@ -97,4 +96,3 @@ class Layer:
             None. 
         """
         pass
-

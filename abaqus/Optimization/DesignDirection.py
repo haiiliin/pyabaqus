@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class DesignDirection(GeometricRestriction):
-
-    """The DesignDirection object defines a design direction geometric restriction. 
+    """The DesignDirection object defines a design direction geometric restriction.
     The DesignDirection object is derived from the GeometricRestriction object. 
 
     Access
@@ -21,10 +20,10 @@ class DesignDirection(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, region: Region, csys: int = None, mainPoint: str = None, 
-                 mainPointDetermination: SymbolicConstant = MAXIMUM, 
-                 movementRestriction: SymbolicConstant = VECTOR, 
-                 presumeFeasibleRegionAtStart: Boolean = ON, u1: Boolean = ON, u2: Boolean = ON, 
+    def __init__(self, name: str, region: Region, csys: int = None, mainPoint: str = None,
+                 mainPointDetermination: SymbolicConstant = MAXIMUM,
+                 movementRestriction: SymbolicConstant = VECTOR,
+                 presumeFeasibleRegionAtStart: Boolean = ON, u1: Boolean = ON, u2: Boolean = ON,
                  u3: Boolean = ON):
         """This method creates a DesignDirection object.
 
@@ -82,10 +81,10 @@ class DesignDirection(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, mainPoint: str = None, 
-                  mainPointDetermination: SymbolicConstant = MAXIMUM, 
-                  movementRestriction: SymbolicConstant = VECTOR, 
-                  presumeFeasibleRegionAtStart: Boolean = ON, u1: Boolean = ON, u2: Boolean = ON, 
+    def setValues(self, csys: int = None, mainPoint: str = None,
+                  mainPointDetermination: SymbolicConstant = MAXIMUM,
+                  movementRestriction: SymbolicConstant = VECTOR,
+                  presumeFeasibleRegionAtStart: Boolean = ON, u1: Boolean = ON, u2: Boolean = ON,
                   u3: Boolean = ON):
         """This method modifies the DesignDirection object.
 
@@ -131,4 +130,3 @@ class DesignDirection(GeometricRestriction):
             None. 
         """
         pass
-

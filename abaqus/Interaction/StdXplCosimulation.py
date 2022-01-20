@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class StdXplCosimulation(Interaction):
-
-    """The StdXplCosimulation object defines co-simulation behavior between Abaqus/Standard and 
+    """The StdXplCosimulation object defines co-simulation behavior between Abaqus/Standard and
     Abaqus/Explicit. 
     The StdXplCosimulation object is derived from the Interaction object. 
 
@@ -22,8 +21,8 @@ class StdXplCosimulation(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, region: Region, 
-                 incrementation: SymbolicConstant = ALLOW_SUBCYCLING, stepSize: float = 0, 
+    def __init__(self, name: str, createStepName: str, region: Region,
+                 incrementation: SymbolicConstant = ALLOW_SUBCYCLING, stepSize: float = 0,
                  stepSizeDefinition: SymbolicConstant = DEFAULT):
         """This method creates a StdXplCosimulation object.
 
@@ -65,7 +64,7 @@ class StdXplCosimulation(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, incrementation: SymbolicConstant = ALLOW_SUBCYCLING, stepSize: float = 0, 
+    def setValues(self, incrementation: SymbolicConstant = ALLOW_SUBCYCLING, stepSize: float = 0,
                   stepSizeDefinition: SymbolicConstant = DEFAULT):
         """This method modifies the StdXplCosimulation object.
 
@@ -93,4 +92,3 @@ class StdXplCosimulation(Interaction):
             None. 
         """
         pass
-

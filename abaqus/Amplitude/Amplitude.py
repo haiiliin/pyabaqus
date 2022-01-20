@@ -2,8 +2,7 @@ from abaqusConstants import *
 
 
 class Amplitude:
-
-    """The Amplitude object is the abstract base type for other Amplitude objects. The 
+    """The Amplitude object is the abstract base type for other Amplitude objects. The
     Amplitude object has no explicit constructor. The methods and members of the Amplitude 
     object are common to all objects derived from the Amplitude. 
 
@@ -28,4 +27,3 @@ class Amplitude:
     # A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
     # and TOTAL. The default value is STEP. 
     timeSpan: SymbolicConstant = STEP
-

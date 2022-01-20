@@ -3,8 +3,7 @@ from .OptimizationObjectiveArray import OptimizationObjectiveArray
 
 
 class ObjectiveFunction:
-
-    """The ObjectiveFunction object defines the objective of the optimization. 
+    """The ObjectiveFunction object defines the objective of the optimization.
 
     Access
     ------
@@ -18,6 +17,8 @@ class ObjectiveFunction:
     -------------------------------
 
     """
+    # Optimization objectives
+    objectives: OptimizationObjectiveArray = OptimizationObjectiveArray()
 
     def __init__(self, name: str, objectives: OptimizationObjectiveArray, target: SymbolicConstant = MINIMIZE):
         """This method creates an ObjectiveFunction object.
@@ -64,4 +65,3 @@ class ObjectiveFunction:
             RangeError. 
         """
         pass
-

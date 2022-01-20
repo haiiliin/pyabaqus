@@ -1,8 +1,5 @@
-
-
 class MdbDataFrame:
-
-    """The MdbDataFrame object. There is one and only MdbDataFrame in a MdbDataStep. 
+    """The MdbDataFrame object. There is one and only MdbDataFrame in a MdbDataStep.
 
     Access
     ------
@@ -16,5 +13,4 @@ class MdbDataFrame:
     -------------------------------
 
     """
-
     pass

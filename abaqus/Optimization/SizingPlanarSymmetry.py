@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SizingPlanarSymmetry(GeometricRestriction):
-
-    """The SizingPlanarSymmetry object defines a sizing planar symmetry geometric restriction. 
+    """The SizingPlanarSymmetry object defines a sizing planar symmetry geometric restriction.
     The SizingPlanarSymmetry object is derived from the GeometricRestriction object. 
 
     Access
@@ -21,7 +20,7 @@ class SizingPlanarSymmetry(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, region: Region, axis: SymbolicConstant = AXIS_1, csys: int = None, 
+    def __init__(self, name: str, region: Region, axis: SymbolicConstant = AXIS_1, csys: int = None,
                  ignoreFrozenArea: Boolean = OFF):
         """This method creates a SizingPlanarSymmetry object.
 
@@ -71,4 +70,3 @@ class SizingPlanarSymmetry(GeometricRestriction):
             None. 
         """
         pass
-

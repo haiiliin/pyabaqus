@@ -1,8 +1,8 @@
 from .Datum import Datum
 
-class DatumPlane(Datum):
 
-    """The DatumPlane object has no direct constructor; it is created when a Feature object is 
+class DatumPlane(Datum):
+    """The DatumPlane object has no direct constructor; it is created when a Feature object is
     created. For example, the DatumPlaneByPrincipalPlane method creates a Feature object 
     that creates a DatumPlane object. 
     The DatumPlane object is derived from the Datum object. 
@@ -30,4 +30,3 @@ class DatumPlane(Datum):
 
     # A tuple of Floats specifying a sequence of three Floats specifying the normal. 
     normal: tuple = ()
-

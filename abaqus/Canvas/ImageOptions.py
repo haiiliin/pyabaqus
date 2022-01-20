@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ImageOptions:
 
-    """The ImageOptions object stores settings that control how an image is rendered in a 
+class ImageOptions:
+    """The ImageOptions object stores settings that control how an image is rendered in a
     particular viewport. ImageOptions objects are accessed from the image options associated 
     with a particular viewport. 
     The ImageOptions object has no constructor; Abaqus creates the *imageOptions* member for 
@@ -21,10 +21,10 @@ class ImageOptions:
 
     """
 
-    def setValues(self, imageName: str = '', showImage: Boolean = OFF, 
-                  positionMethod: SymbolicConstant = FIT_TO_VIEWPORT, 
-                  fitMethod: SymbolicConstant = BEST_FIT, alignment: SymbolicConstant = CENTER, 
-                  xScale: float = 1, yScale: float = 1, origin: tuple[float] = (), 
+    def setValues(self, imageName: str = '', showImage: Boolean = OFF,
+                  positionMethod: SymbolicConstant = FIT_TO_VIEWPORT,
+                  fitMethod: SymbolicConstant = BEST_FIT, alignment: SymbolicConstant = CENTER,
+                  xScale: float = 1, yScale: float = 1, origin: tuple[float] = (),
                   translucency: float = 1, options: str = None):
         """This method modifies the ImageOptions object.
 
@@ -87,4 +87,3 @@ class ImageOptions:
             RangeError. 
         """
         pass
-

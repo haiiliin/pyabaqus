@@ -11,8 +11,7 @@ from ..PlotOptions.ViewCutOptions import ViewCutOptions
 
 
 class DefaultOdbDisplay:
-
-    """The DefaultOdbDisplay object is a limited-functionality version of the OdbDisplay 
+    """The DefaultOdbDisplay object is a limited-functionality version of the OdbDisplay
     object. 
 
     Access
@@ -57,4 +56,3 @@ class DefaultOdbDisplay:
 
     # A ViewCutOptions object. 
     viewCutOptions: ViewCutOptions = ViewCutOptions()
-

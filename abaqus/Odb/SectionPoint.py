@@ -1,8 +1,5 @@
-
-
 class SectionPoint:
-
-    """The SectionPoint object describes the location of a section point within a section 
+    """The SectionPoint object describes the location of a section point within a section
     category. 
 
     Access
@@ -62,4 +59,3 @@ class SectionPoint:
             None. 
         """
         pass
-

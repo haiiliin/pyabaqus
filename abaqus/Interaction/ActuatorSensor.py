@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class ActuatorSensor(Interaction):
-
-    """The ActuatorSensor object defines a single point actuator where the actuation is 
+    """The ActuatorSensor object defines a single point actuator where the actuation is
     determined by a user subroutine (UEL). The subroutine senses the data at the same point 
     as the actuator. 
     The ActuatorSensor object is derived from the Interaction object. 
@@ -26,8 +25,8 @@ class ActuatorSensor(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, point: Region, interactionProperty: str, 
-                 noCoordComponents: int, unsymm: Boolean, noSolutionDepVar: int, userSubUel: str, 
+    def __init__(self, name: str, createStepName: str, point: Region, interactionProperty: str,
+                 noCoordComponents: int, unsymm: Boolean, noSolutionDepVar: int, userSubUel: str,
                  dof: str, solutionDepVars: tuple):
         """This method creates an ActuatorSensor object.
 
@@ -87,4 +86,3 @@ class ActuatorSensor(Interaction):
             None. 
         """
         pass
-

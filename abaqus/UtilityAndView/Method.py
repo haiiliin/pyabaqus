@@ -25,7 +25,8 @@ Corresponding analysis keywords
 
 """
 
-def addCallbac(caller: str, methodName: str, callback: str, userData: str = None, 
+
+def addCallback(caller: str, methodName: str, callback: str, userData: str = None,
                callAfter: Boolean = OFF):
     """This method adds a callback function that will be invoked when certain Abaqus/CAE
     commands are about to be executed.
@@ -71,7 +72,8 @@ def addCallbac(caller: str, methodName: str, callback: str, userData: str = None
     """
     pass
 
-def removeCallbac(caller: str, methodName: str, callback: str, userData: str = None):
+
+def removeCallback(caller: str, methodName: str, callback: str, userData: str = None):
     """This method removes a callback added by the addCallback method. To successfully remove a
     callback, all arguments must exactly match those used when the callback was added.
 
@@ -108,4 +110,3 @@ def removeCallbac(caller: str, methodName: str, callback: str, userData: str = N
         None. 
     """
     pass
-

@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class AnalyticSurfaceSegment:
 
-    """An individual segment of the analytic surface. 
+class AnalyticSurfaceSegment:
+    """An individual segment of the analytic surface.
 
     Access
     ------
@@ -48,4 +48,3 @@ class AnalyticSurfaceSegment:
             None. 
         """
         pass
-

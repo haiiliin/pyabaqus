@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class ShapeMemberSize(GeometricRestriction):
-
-    """The ShapeMemberSize object defines a shape member size geometric restriction. 
+    """The ShapeMemberSize object defines a shape member size geometric restriction.
     The ShapeMemberSize object is derived from the GeometricRestriction object. 
 
     Access
@@ -21,8 +20,8 @@ class ShapeMemberSize(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, region: Region, maxThickness: float = 0, minThickness: float = 0, 
-                 sizeRestriction: SymbolicConstant = MINIMUM, assignNodeGroupRegion: str = OFF, 
+    def __init__(self, name: str, region: Region, maxThickness: float = 0, minThickness: float = 0,
+                 sizeRestriction: SymbolicConstant = MINIMUM, assignNodeGroupRegion: str = OFF,
                  nodeGroupRegion: str = ''):
         """This method creates a ShapeMemberSize object.
 
@@ -61,8 +60,8 @@ class ShapeMemberSize(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, maxThickness: float = 0, minThickness: float = 0, 
-                  sizeRestriction: SymbolicConstant = MINIMUM, assignNodeGroupRegion: str = OFF, 
+    def setValues(self, maxThickness: float = 0, minThickness: float = 0,
+                  sizeRestriction: SymbolicConstant = MINIMUM, assignNodeGroupRegion: str = OFF,
                   nodeGroupRegion: str = ''):
         """This method modifies the ShapeMemberSize object.
 
@@ -89,4 +88,3 @@ class ShapeMemberSize(GeometricRestriction):
             None. 
         """
         pass
-

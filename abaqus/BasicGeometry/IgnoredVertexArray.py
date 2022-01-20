@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class IgnoredVertexArray:
 
-    """The IgnoredVertexArray is a sequence of IgnoredVertex objects. If the part is modified, 
+class IgnoredVertexArray:
+    """The IgnoredVertexArray is a sequence of IgnoredVertex objects. If the part is modified,
     then IgnoredVertexArray must be updated for that part. 
 
     Access
@@ -131,4 +131,3 @@ class IgnoredVertexArray:
             !img 
         """
         pass
-

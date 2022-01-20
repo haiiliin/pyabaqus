@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class ConnectorMomentState(LoadState):
-
-    """The ConnectorMomentState object stores the propagating data for a connector moment in a 
+    """The ConnectorMomentState object stores the propagating data for a connector moment in a
     step. One instance of this object is created internally by the ConnectorMoment object 
     for each step. The instance is also deleted internally by the ConnectorMoment object. 
     The ConnectorMomentState object has no constructor or methods. 
@@ -69,4 +68,3 @@ class ConnectorMomentState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

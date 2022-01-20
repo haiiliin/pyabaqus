@@ -4,8 +4,7 @@ from .StepOptionArray import StepOptionArray
 
 
 class SingleTermDesignResponse(DesignResponse):
-
-    """The SingleTermDesignResponse object defines a single-term design response. 
+    """The SingleTermDesignResponse object defines a single-term design response.
     The SingleTermDesignResponse object is derived from the DesignResponse object. 
 
     Access
@@ -21,9 +20,9 @@ class SingleTermDesignResponse(DesignResponse):
 
     """
 
-    def __init__(self, name: str, identifier: str, csys: int = None, drivingRegion: str = None, 
-                 operation: SymbolicConstant = SUM, region: SymbolicConstant = MODEL, 
-                 shellLayer: SymbolicConstant = MAXIMUM, stepOperation: SymbolicConstant = SUM, 
+    def __init__(self, name: str, identifier: str, csys: int = None, drivingRegion: str = None,
+                 operation: SymbolicConstant = SUM, region: SymbolicConstant = MODEL,
+                 shellLayer: SymbolicConstant = MAXIMUM, stepOperation: SymbolicConstant = SUM,
                  stepOptions: StepOptionArray = None):
         """This method creates a SingleTermDesignResponse object.
 
@@ -70,8 +69,8 @@ class SingleTermDesignResponse(DesignResponse):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, drivingRegion: str = None, operation: SymbolicConstant = SUM, 
-                  region: SymbolicConstant = MODEL, shellLayer: SymbolicConstant = MAXIMUM, 
+    def setValues(self, csys: int = None, drivingRegion: str = None, operation: SymbolicConstant = SUM,
+                  region: SymbolicConstant = MODEL, shellLayer: SymbolicConstant = MAXIMUM,
                   stepOperation: SymbolicConstant = SUM, stepOptions: StepOptionArray = None):
         """This method modifies the SingleTermDesignResponse object.
 
@@ -108,4 +107,3 @@ class SingleTermDesignResponse(DesignResponse):
             None. 
         """
         pass
-

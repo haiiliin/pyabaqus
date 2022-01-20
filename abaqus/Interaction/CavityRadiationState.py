@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class CavityRadiationState(InteractionState):
-
-    """The CavityRadiationState object stores the propagating data for a CavityRadiation 
+    """The CavityRadiationState object stores the propagating data for a CavityRadiation
     object. One instance of this object is created internally by the CavityRadiation object 
     for each step. The instance is also deleted internally by the CavityRadiation object. 
     The CavityRadiationState object has no constructor or methods. 
@@ -67,4 +66,3 @@ class CavityRadiationState(InteractionState):
     # Possible values 
     # are:NOT_YET_ACTIVECREATEDPROPAGATEDMODIFIEDDEACTIVATEDNO_LONGER_ACTIVETYPE_NOT_APPLICABLEINSTANCE_NOT_APPLICABLEBUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

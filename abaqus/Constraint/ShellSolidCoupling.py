@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class ShellSolidCoupling(Constraint):
-
-    """The ShellSolidCoupling object defines two surfaces to be tied together for the duration 
+    """The ShellSolidCoupling object defines two surfaces to be tied together for the duration
     of a simulation. 
     The ShellSolidCoupling object is derived from the ConstrainedSketchConstraint object.
 
@@ -27,8 +26,8 @@ class ShellSolidCoupling(Constraint):
     # OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, shellEdge: Region, solidFace: Region, 
-                 positionToleranceMethod: SymbolicConstant = COMPUTED, positionTolerance: float = 0, 
+    def __init__(self, name: str, shellEdge: Region, solidFace: Region,
+                 positionToleranceMethod: SymbolicConstant = COMPUTED, positionTolerance: float = 0,
                  influenceDistanceMethod: SymbolicConstant = DEFAULT, influenceDistance: float = 0):
         """This method creates a ShellSolidCoupling object.
 
@@ -70,7 +69,7 @@ class ShellSolidCoupling(Constraint):
         super().__init__()
         pass
 
-    def setValues(self, positionToleranceMethod: SymbolicConstant = COMPUTED, positionTolerance: float = 0, 
+    def setValues(self, positionToleranceMethod: SymbolicConstant = COMPUTED, positionTolerance: float = 0,
                   influenceDistanceMethod: SymbolicConstant = DEFAULT, influenceDistance: float = 0):
         """This method modifies the ShellSolidCoupling object.
 
@@ -100,4 +99,3 @@ class ShellSolidCoupling(Constraint):
             None. 
         """
         pass
-

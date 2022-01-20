@@ -22,8 +22,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class ModalDynamicsStep(AnalysisStep):
-
-    """The ModalDynamicsStep object is used to provide dynamic time history response as a 
+    """The ModalDynamicsStep object is used to provide dynamic time history response as a
     linear perturbation procedure using modal superposition. 
     The ModalDynamicsStep object is derived from the AnalysisStep object. 
 
@@ -141,7 +140,8 @@ class ModalDynamicsStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -167,13 +167,13 @@ class ModalDynamicsStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', continueAnalysis: Boolean = OFF, 
-                 timePeriod: float = 1, incSize: float = 1, 
-                 directDamping: DirectDamping = DirectDamping(), 
-                 compositeDamping: CompositeDamping = CompositeDamping(), 
-                 rayleighDamping: RayleighDamping = RayleighDamping(), 
-                 amplitude: SymbolicConstant = STEP, maintainAttributes: Boolean = False, 
-                 directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(), 
+    def __init__(self, name: str, previous: str, description: str = '', continueAnalysis: Boolean = OFF,
+                 timePeriod: float = 1, incSize: float = 1,
+                 directDamping: DirectDamping = DirectDamping(),
+                 compositeDamping: CompositeDamping = CompositeDamping(),
+                 rayleighDamping: RayleighDamping = RayleighDamping(),
+                 amplitude: SymbolicConstant = STEP, maintainAttributes: Boolean = False,
+                 directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
                  rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency()):
         """This method creates a ModalDynamicsStep object.
 
@@ -225,12 +225,12 @@ class ModalDynamicsStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', continueAnalysis: Boolean = OFF, timePeriod: float = 1, 
-                  incSize: float = 1, directDamping: DirectDamping = DirectDamping(), 
-                  compositeDamping: CompositeDamping = CompositeDamping(), 
-                  rayleighDamping: RayleighDamping = RayleighDamping(), 
-                  amplitude: SymbolicConstant = STEP, 
-                  directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(), 
+    def setValues(self, description: str = '', continueAnalysis: Boolean = OFF, timePeriod: float = 1,
+                  incSize: float = 1, directDamping: DirectDamping = DirectDamping(),
+                  compositeDamping: CompositeDamping = CompositeDamping(),
+                  rayleighDamping: RayleighDamping = RayleighDamping(),
+                  amplitude: SymbolicConstant = STEP,
+                  directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
                   rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency()):
         """This method modifies the ModalDynamicsStep object.
 
@@ -268,4 +268,3 @@ class ModalDynamicsStep(AnalysisStep):
             RangeError. 
         """
         pass
-

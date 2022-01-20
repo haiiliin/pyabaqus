@@ -3,8 +3,7 @@ from ..Region.Region import Region
 
 
 class FrozenArea(GeometricRestriction):
-
-    """The FrozenArea object defines a frozen area geometric restriction. 
+    """The FrozenArea object defines a frozen area geometric restriction.
     The FrozenArea object is derived from the GeometricRestriction object. 
 
     Access
@@ -66,4 +65,3 @@ class FrozenArea(GeometricRestriction):
             None. 
         """
         pass
-

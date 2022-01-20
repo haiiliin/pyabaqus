@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class StreamOptions:
 
-    """The StreamOptions object stores values and attributes associated with a stream plot. The 
+class StreamOptions:
+    """The StreamOptions object stores values and attributes associated with a stream plot. The
     StreamOptions object has no constructor command. Abaqus creates a 
     *defaultOdbDisplay.streamOptions* member when you import the Visualization module. 
     Abaqus creates a *StreamOptions* member when it creates the OdbDisplay object, using the 
@@ -29,7 +29,7 @@ class StreamOptions:
 
     """
 
-    def setValues(self, colorMethod: SymbolicConstant = UNIFORM, uniformColor: str = '', 
+    def setValues(self, colorMethod: SymbolicConstant = UNIFORM, uniformColor: str = '',
                   lineThickness: float = 6, showArrow: Boolean = OFF, numArrows: int = 10):
         """This method modifies the StreamOptions object.
 
@@ -56,4 +56,3 @@ class StreamOptions:
             None. 
         """
         pass
-

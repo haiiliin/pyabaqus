@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class FluidCavity(Interaction):
-
-    """The FluidCavity object defines a surface-based cavity. 
+    """The FluidCavity object defines a surface-based cavity.
     The FluidCavity object is derived from the Interaction object. 
 
     Access
@@ -22,8 +21,8 @@ class FluidCavity(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, cavityPoint: Region, cavitySurface: Region, 
-                 interactionProperty: str, ambientPressure: float = 0, thickness: float = 1, 
+    def __init__(self, name: str, createStepName: str, cavityPoint: Region, cavitySurface: Region,
+                 interactionProperty: str, ambientPressure: float = 0, thickness: float = 1,
                  useAdiabatic: Boolean = OFF, checkNormals: Boolean = ON):
         """This method creates an FluidCavity object.
 
@@ -67,7 +66,7 @@ class FluidCavity(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, ambientPressure: float = 0, thickness: float = 1, useAdiabatic: Boolean = OFF, 
+    def setValues(self, ambientPressure: float = 0, thickness: float = 1, useAdiabatic: Boolean = OFF,
                   checkNormals: Boolean = ON):
         """This method modifies the FluidCavity object.
 
@@ -95,4 +94,3 @@ class FluidCavity(Interaction):
             None. 
         """
         pass
-

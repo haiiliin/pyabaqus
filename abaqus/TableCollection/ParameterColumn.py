@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ParameterColumn:
 
-    """The ParameterColumn object is used to define the type of parameters that will 
+class ParameterColumn:
+    """The ParameterColumn object is used to define the type of parameters that will
     collectively build the type of parameter table. Once the object is created, it is 
     noneditable. 
 
@@ -20,7 +20,7 @@ class ParameterColumn:
 
     """
 
-    def __init__(self, type: SymbolicConstant, unit: str = '', description: str = '', default: str = '', 
+    def __init__(self, type: SymbolicConstant, unit: str = '', description: str = '', default: str = '',
                  allowedValues: str = ''):
         """ParameterColumn is a constructor method that creates a ParameterColumn object and stores
         it in the array data structure. It is accessible from the ParameterTable object using a
@@ -54,4 +54,3 @@ class ParameterColumn:
             Incompatible data are given. 
         """
         pass
-

@@ -5,8 +5,7 @@ from .TransverseShearShell import TransverseShearShell
 
 
 class HomogeneousShellSection(GeometryShellSection):
-
-    """The HomogeneousShellSection object defines the properties of a shell section. 
+    """The HomogeneousShellSection object defines the properties of a shell section.
     The HomogeneousShellSection object is derived from the GeometryShellSection object. 
 
     Access
@@ -33,12 +32,12 @@ class HomogeneousShellSection(GeometryShellSection):
     # A TransverseShearShell object specifying the transverse shear stiffness properties. 
     transverseShear: TransverseShearShell = None
 
-    def __init__(self, name: str, material: str, thickness: float = 0, numIntPts: int = 5, 
-                 thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF, 
-                 poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0, 
-                 integrationRule: SymbolicConstant = SIMPSON, temperature: SymbolicConstant = GRADIENT, 
-                 idealization: SymbolicConstant = NO_IDEALIZATION, nTemp: int = None, 
-                 thicknessModulus: float = None, useDensity: Boolean = OFF, density: float = 0, 
+    def __init__(self, name: str, material: str, thickness: float = 0, numIntPts: int = 5,
+                 thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF,
+                 poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
+                 integrationRule: SymbolicConstant = SIMPSON, temperature: SymbolicConstant = GRADIENT,
+                 idealization: SymbolicConstant = NO_IDEALIZATION, nTemp: int = None,
+                 thicknessModulus: float = None, useDensity: Boolean = OFF, density: float = 0,
                  thicknessField: str = '', nodalThicknessField: str = ''):
         """This method creates a HomogeneousShellSection object.
 
@@ -127,12 +126,12 @@ class HomogeneousShellSection(GeometryShellSection):
         super().__init__()
         pass
 
-    def setValues(self, thickness: float = 0, numIntPts: int = 5, thicknessType: SymbolicConstant = UNIFORM, 
-                  preIntegrate: Boolean = OFF, poissonDefinition: SymbolicConstant = DEFAULT, 
-                  poisson: float = 0, integrationRule: SymbolicConstant = SIMPSON, 
-                  temperature: SymbolicConstant = GRADIENT, 
-                  idealization: SymbolicConstant = NO_IDEALIZATION, nTemp: int = None, 
-                  thicknessModulus: float = None, useDensity: Boolean = OFF, density: float = 0, 
+    def setValues(self, thickness: float = 0, numIntPts: int = 5, thicknessType: SymbolicConstant = UNIFORM,
+                  preIntegrate: Boolean = OFF, poissonDefinition: SymbolicConstant = DEFAULT,
+                  poisson: float = 0, integrationRule: SymbolicConstant = SIMPSON,
+                  temperature: SymbolicConstant = GRADIENT,
+                  idealization: SymbolicConstant = NO_IDEALIZATION, nTemp: int = None,
+                  thicknessModulus: float = None, useDensity: Boolean = OFF, density: float = 0,
                   thicknessField: str = '', nodalThicknessField: str = ''):
         """This method modifies the HomogeneousShellSection object.
 
@@ -208,4 +207,3 @@ class HomogeneousShellSection(GeometryShellSection):
             None. 
         """
         pass
-

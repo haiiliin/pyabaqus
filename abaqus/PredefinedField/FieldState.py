@@ -3,8 +3,7 @@ from .PredefinedFieldState import PredefinedFieldState
 
 
 class FieldState(PredefinedFieldState):
-
-    """The FieldState object stores the propagating data of a field in a step. One instance of 
+    """The FieldState object stores the propagating data of a field in a step. One instance of
     this object is created internally by the Field object for each step. 
     The FieldState object has no constructor or methods. 
     The FieldState object is derived from the PredefinedFieldState object. 
@@ -123,4 +122,3 @@ class FieldState(PredefinedFieldState):
     # use different subsets of the entire list of possible values depending on propagation 
     # rules. 
     status: SymbolicConstant = None
-

@@ -3,8 +3,7 @@ from .Amplitude import Amplitude
 
 
 class ModulatedAmplitude(Amplitude):
-
-    """The ModulatedAmplitude object defines a modulated amplitude curve. 
+    """The ModulatedAmplitude object defines a modulated amplitude curve.
     The ModulatedAmplitude object is derived from the Amplitude object. 
 
     Access
@@ -23,7 +22,7 @@ class ModulatedAmplitude(Amplitude):
 
     """
 
-    def __init__(self, name: str, initial: float, magnitude: float, start: float, frequency1: float, 
+    def __init__(self, name: str, initial: float, magnitude: float, start: float, frequency1: float,
                  frequency2: float, timeSpan: SymbolicConstant = STEP):
         """This method creates a ModulatedAmplitude object.
 
@@ -81,4 +80,3 @@ class ModulatedAmplitude(Amplitude):
             RangeError. 
         """
         pass
-

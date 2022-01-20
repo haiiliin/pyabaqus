@@ -1,8 +1,7 @@
 
 
 class Annotation:
-
-    """The Annotation object is the abstract base type for other Annotation objects. The 
+    """The Annotation object is the abstract base type for other Annotation objects. The
     Annotation object has no explicit constructor. The methods and members of the Annotation 
     object are common to all objects derived from Annotation. 
 
@@ -150,4 +149,3 @@ class Annotation:
             !img 
         """
         pass
-

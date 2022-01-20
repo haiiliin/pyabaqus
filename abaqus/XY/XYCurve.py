@@ -5,8 +5,7 @@ from .XYData import XYData
 
 
 class XYCurve:
-
-    """The XYCurve object is used to plot *X–Y* data and to store its display attributes. 
+    """The XYCurve object is used to plot *X–Y* data and to store its display attributes.
 
     Access
     ------
@@ -88,7 +87,7 @@ class XYCurve:
         """
         pass
 
-    def setValues(self, displayTypes: SymbolicConstant = None, legendLabel: str = '', symbolFrequency: int = 1, 
+    def setValues(self, displayTypes: SymbolicConstant = None, legendLabel: str = '', symbolFrequency: int = 1,
                   useDefault: Boolean = ON):
         """This method modifies the XYCurve object.
 
@@ -117,4 +116,3 @@ class XYCurve:
             None. 
         """
         pass
-

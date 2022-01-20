@@ -1,9 +1,9 @@
 from .Area import Area
 from .Title import Title
 
-class DefaultPlot:
 
-    """The DefaultPlot object is used to hold on default plot attributes. The DefaultPlot 
+class DefaultPlot:
+    """The DefaultPlot object is used to hold on default plot attributes. The DefaultPlot
     object attributes are used whenever an XYPlot object is created. A DefaultPlot object is 
     automatically created when opening a session. 
 
@@ -27,4 +27,3 @@ class DefaultPlot:
     # A Title object specifying a Title object used to hold on to the default properties of 
     # the XY-Plot title. 
     title: Title = Title()
-

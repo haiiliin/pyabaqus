@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class ShapeDemoldControl(GeometricRestriction):
-
-    """The ShapeDemoldControl object defines a shape demold control geometric restriction. 
+    """The ShapeDemoldControl object defines a shape demold control geometric restriction.
     The ShapeDemoldControl object is derived from the GeometricRestriction object. 
 
     Access
@@ -21,10 +20,10 @@ class ShapeDemoldControl(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, pullDirection: tuple, region: Region, 
-                 collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, csys: int = None, 
-                 drawAngle: float = 0, mainPointDetermination: SymbolicConstant = MAXIMUM, 
-                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0, 
+    def __init__(self, name: str, pullDirection: tuple, region: Region,
+                 collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, csys: int = None,
+                 drawAngle: float = 0, mainPointDetermination: SymbolicConstant = MAXIMUM,
+                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                  tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0):
         """This method creates a ShapeDemoldControl object.
 
@@ -83,9 +82,9 @@ class ShapeDemoldControl(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, csys: int = None, 
-                  drawAngle: float = 0, mainPointDetermination: SymbolicConstant = MAXIMUM, 
-                  presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0, 
+    def setValues(self, collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, csys: int = None,
+                  drawAngle: float = 0, mainPointDetermination: SymbolicConstant = MAXIMUM,
+                  presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                   tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0):
         """This method modifies the ShapeDemoldControl object.
 
@@ -129,4 +128,3 @@ class ShapeDemoldControl(GeometricRestriction):
             None. 
         """
         pass
-

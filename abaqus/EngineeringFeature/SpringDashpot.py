@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class SpringDashpot:
 
-    """The SpringDashpot object is the abstract base type for the SpringDashpotToGround and 
+class SpringDashpot:
+    """The SpringDashpot object is the abstract base type for the SpringDashpotToGround and
     TwoPointSpringDashpot objects. 
 
     Access
@@ -58,4 +58,3 @@ class SpringDashpot:
             None. 
         """
         pass
-

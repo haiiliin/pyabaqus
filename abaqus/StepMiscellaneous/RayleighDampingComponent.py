@@ -1,8 +1,5 @@
-
-
 class RayleighDampingComponent:
-
-    """A RayleighDampingComponent object is used to define Rayleigh damping over a range of 
+    """A RayleighDampingComponent object is used to define Rayleigh damping over a range of
     modes. 
 
     Access
@@ -29,4 +26,3 @@ class RayleighDampingComponent:
 
     # A Float specifying the stiffness proportional damping, βM. 
     beta: float = None
-

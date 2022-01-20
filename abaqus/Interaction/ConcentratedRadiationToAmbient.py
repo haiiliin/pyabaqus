@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class ConcentratedRadiationToAmbient(Interaction):
-
-    """The ConcentratedRadiationToAmbient object defines radiant heat transfer between a point 
+    """The ConcentratedRadiationToAmbient object defines radiant heat transfer between a point
     and its nonreflecting environment. 
     The ConcentratedRadiationToAmbient object is derived from the Interaction object. 
 
@@ -22,9 +21,9 @@ class ConcentratedRadiationToAmbient(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, region: Region, ambientTemperature: float, 
-                 ambientTemperatureAmp: str, emissivity: float, nodalArea: float = 1, 
-                 explicitRegionType: SymbolicConstant = LAGRANGIAN, field: str = '', 
+    def __init__(self, name: str, createStepName: str, region: Region, ambientTemperature: float,
+                 ambientTemperatureAmp: str, emissivity: float, nodalArea: float = 1,
+                 explicitRegionType: SymbolicConstant = LAGRANGIAN, field: str = '',
                  distributionType: SymbolicConstant = UNIFORM):
         """This method creates a ConcentratedRadiationToAmbient object.
 
@@ -79,7 +78,7 @@ class ConcentratedRadiationToAmbient(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, nodalArea: float = 1, explicitRegionType: SymbolicConstant = LAGRANGIAN, 
+    def setValues(self, nodalArea: float = 1, explicitRegionType: SymbolicConstant = LAGRANGIAN,
                   field: str = '', distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing ConcentratedRadiationToAmbient object in
         the step where it is created.
@@ -112,7 +111,7 @@ class ConcentratedRadiationToAmbient(Interaction):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, nodalArea: float = 1, field: str = '', 
+    def setValuesInStep(self, stepName: str, nodalArea: float = 1, field: str = '',
                         distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the propagating data of an existing ConcentratedRadiationToAmbient
         object in the specified step.
@@ -141,4 +140,3 @@ class ConcentratedRadiationToAmbient(Interaction):
             None. 
         """
         pass
-

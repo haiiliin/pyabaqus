@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class JobData:
 
-    """The JobData object describes the context in which the analysis was run. 
+class JobData:
+    """The JobData object describes the context in which the analysis was run.
 
     Access
     ------
@@ -43,4 +43,3 @@ class JobData:
     # A String specifying an odb_Sequence of productAddOns. Possible values are: Possible 
     # values are AQUA, DESIGN, BIORID, CEL, SOLITER, and CAVPARALLEL. 
     productAddOns: str = ''
-

@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ImageAnimationOptions:
 
-    """The ImageAnimationOptions object is used to store values and attributes associated with 
+class ImageAnimationOptions:
+    """The ImageAnimationOptions object is used to store values and attributes associated with
     saving viewport animations. The ImageAnimationOptions object has no constructor. Abaqus 
     creates the *imageAnimationOptions* member when the animation module is imported. 
 
@@ -19,7 +19,7 @@ class ImageAnimationOptions:
 
     """
 
-    def setValues(self, frameRate: int = None, timeScale: int = None, vpDecorations: Boolean = ON, 
+    def setValues(self, frameRate: int = None, timeScale: int = None, vpDecorations: Boolean = ON,
                   vpBackground: Boolean = OFF, compass: Boolean = OFF):
         """This method modifies the ImageAnimationOptions object.
 
@@ -48,4 +48,3 @@ class ImageAnimationOptions:
             None. 
         """
         pass
-

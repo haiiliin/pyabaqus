@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ProbeReport:
 
-    """The ProbeReport object is used to store settings associated with tabular reports of 
+class ProbeReport:
+    """The ProbeReport object is used to store settings associated with tabular reports of
     probe data. The ProbeReport object has no constructor. Abaqus creates the 
     *defaultProbeReport* and the *probeReport* members when you import the Visualization 
     module. When probing is initiated for the first time, the values in the *probeReport* 
@@ -22,8 +22,8 @@ class ProbeReport:
 
     """
 
-    def setValues(self, options: str = None, numColumns: int = 80, numDigits: int = 6, 
-                  numFormat: SymbolicConstant = ENGINEERING, pageWidth: SymbolicConstant = NO_LIMIT, 
+    def setValues(self, options: str = None, numColumns: int = 80, numDigits: int = 6,
+                  numFormat: SymbolicConstant = ENGINEERING, pageWidth: SymbolicConstant = NO_LIMIT,
                   printTotal: Boolean = OFF, printMinMax: Boolean = OFF):
         """This method modifies the ProbeReport object.
 
@@ -64,4 +64,3 @@ class ProbeReport:
             None. 
         """
         pass
-

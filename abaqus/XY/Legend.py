@@ -4,8 +4,7 @@ from .TextStyle import TextStyle
 
 
 class Legend:
-
-    """The Legend object is used to store the display attributes of the chart legend. A legend 
+    """The Legend object is used to store the display attributes of the chart legend. A legend
     object is automatically created when creating a Chart object. 
 
     Access
@@ -53,7 +52,7 @@ class Legend:
     titleStyle: TextStyle = TextStyle()
 
     def setValues(self, legend: 'Legend' = None, show: Boolean = ON, showMinMax: Boolean = OFF,
-                  title: str = '', numberFormat: SymbolicConstant = AUTOMATIC, numDigits: int = 2, 
+                  title: str = '', numberFormat: SymbolicConstant = AUTOMATIC, numDigits: int = 2,
                   textStyle: TextStyle = TextStyle(), titleStyle: TextStyle = TextStyle()):
         """This method modifies the Legend object.
 
@@ -90,4 +89,3 @@ class Legend:
             None. 
         """
         pass
-

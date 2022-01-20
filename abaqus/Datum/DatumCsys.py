@@ -5,8 +5,7 @@ from .DatumPoint import DatumPoint
 
 
 class DatumCsys(Datum):
-
-    """The DatumCsys object has no direct constructor; it is created when a Feature object is 
+    """The DatumCsys object has no direct constructor; it is created when a Feature object is
     created. For example, the DatumCsysByOffset method creates a Feature object that creates 
     a DatumCsys object. 
     The DatumCsys object is derived from the Datum object. 
@@ -48,4 +47,3 @@ class DatumCsys(Datum):
 
     # A DatumAxis object specifying the 3-direction of the coordinate system. 
     axis3: DatumAxis = DatumAxis()
-

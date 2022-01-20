@@ -3,8 +3,7 @@ from .OdbMeshNode import OdbMeshNode
 
 
 class OdbDatumCsys:
-
-    """The OdbDatumCsys object contains a coordinate system that can be stored in an output 
+    """The OdbDatumCsys object contains a coordinate system that can be stored in an output
     database. You can create the datum coordinate system in the Visualization module during 
     an Abaqus/CAE session and save the datum coordinate system to the output database before 
     you exit Abaqus/CAE. Alternatively, the analysis code can write the datum coordinate 
@@ -43,7 +42,8 @@ class OdbDatumCsys:
     # A tuple of Floats specifying a point on the *Z*-axis. 
     zAxis: float = None
 
-    def DatumCsysByThreePoints(self, name: str, coordSysType: SymbolicConstant, origin: tuple, point1: tuple, point2: tuple):
+    def DatumCsysByThreePoints(self, name: str, coordSysType: SymbolicConstant, origin: tuple, point1: tuple,
+                               point2: tuple):
         """This method creates an OdbDatumCsys object using three points. A datum coordinate system
         created with this method results in a fixed system.
 
@@ -76,7 +76,7 @@ class OdbDatumCsys:
         """
         pass
 
-    def DatumCsysByThreeNodes(self, name: str, coordSysType: SymbolicConstant, origin: OdbMeshNode, point1: OdbMeshNode, 
+    def DatumCsysByThreeNodes(self, name: str, coordSysType: SymbolicConstant, origin: OdbMeshNode, point1: OdbMeshNode,
                               point2: OdbMeshNode):
         """This method creates an OdbDatumCsys object using the coordinates of three OdbMeshNode
         objects. A datum coordinate system created with this method results in a system that
@@ -113,7 +113,8 @@ class OdbDatumCsys:
         """
         pass
 
-    def DatumCsysByThreeCircNodes(self, name: str, coordSysType: SymbolicConstant, node1Arc: OdbMeshNode, node2Arc: OdbMeshNode, 
+    def DatumCsysByThreeCircNodes(self, name: str, coordSysType: SymbolicConstant, node1Arc: OdbMeshNode,
+                                  node2Arc: OdbMeshNode,
                                   node3Arc: OdbMeshNode):
         """This method is convenient to use where there are no nodes along the axis of a hollow
         cylinder or at the center of a hollow sphere. The three nodes that you provide as
@@ -205,4 +206,3 @@ class OdbDatumCsys:
             None. 
         """
         pass
-

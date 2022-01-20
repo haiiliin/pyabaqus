@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class StaticLinearPerturbationStep(AnalysisStep):
-
-    """The StaticLinearPerturbationStep object is used to indicate that the static step should 
+    """The StaticLinearPerturbationStep object is used to indicate that the static step should
     be analyzed as a linear perturbation load step. 
     The StaticLinearPerturbationStep object is derived from the AnalysisStep object. 
 
@@ -113,7 +112,8 @@ class StaticLinearPerturbationStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -139,8 +139,8 @@ class StaticLinearPerturbationStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', 
-                 matrixSolver: SymbolicConstant = DIRECT, 
+    def __init__(self, name: str, previous: str, description: str = '',
+                 matrixSolver: SymbolicConstant = DIRECT,
                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False):
         """This method creates a StaticLinearPerturbationStep object.
 
@@ -178,7 +178,7 @@ class StaticLinearPerturbationStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', matrixSolver: SymbolicConstant = DIRECT, 
+    def setValues(self, description: str = '', matrixSolver: SymbolicConstant = DIRECT,
                   matrixStorage: SymbolicConstant = SOLVER_DEFAULT):
         """This method modifies the StaticLinearPerturbationStep object.
 
@@ -202,4 +202,3 @@ class StaticLinearPerturbationStep(AnalysisStep):
             RangeError. 
         """
         pass
-

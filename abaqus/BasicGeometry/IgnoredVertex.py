@@ -1,8 +1,5 @@
-
-
 class IgnoredVertex:
-
-    """An IgnoredVertex object is a point region of the geometry that was abstracted away by a 
+    """An IgnoredVertex object is a point region of the geometry that was abstracted away by a
     virtual topology feature. 
 
     Access
@@ -26,4 +23,3 @@ class IgnoredVertex:
 
     # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the vertex. 
     pointOn: float = None
-

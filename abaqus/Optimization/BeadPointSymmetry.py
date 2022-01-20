@@ -3,8 +3,7 @@ from ..Region.Region import Region
 
 
 class BeadPointSymmetry(GeometricRestriction):
-
-    """The BeadPointSymmetry object defines a point symmetry geometric restriction. 
+    """The BeadPointSymmetry object defines a point symmetry geometric restriction.
     The BeadPointSymmetry object is derived from the GeometricRestriction object. 
 
     Access
@@ -68,4 +67,3 @@ class BeadPointSymmetry(GeometricRestriction):
             None. 
         """
         pass
-

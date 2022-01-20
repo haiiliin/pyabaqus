@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class SvgOptions:
 
-    """The SvgOptions object stores the settings that Abaqus uses when printing in SVG format. 
+class SvgOptions:
+    """The SvgOptions object stores the settings that Abaqus uses when printing in SVG format.
     The SvgOptions object has no constructor. Abaqus creates the *svgOptions* member when a 
     session is started. 
 
@@ -48,4 +48,3 @@ class SvgOptions:
             (minWidth, minHeight) <= (width, height) <= (maxWidth, maxHeight). 
         """
         pass
-

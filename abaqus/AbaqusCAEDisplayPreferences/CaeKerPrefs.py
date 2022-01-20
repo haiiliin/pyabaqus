@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class CaeKerPrefs:
 
-    """The CaeKerPrefs object contains the details of the sessionOptions. 
+class CaeKerPrefs:
+    """The CaeKerPrefs object contains the details of the sessionOptions.
 
     Access
     ------
@@ -63,4 +63,3 @@ class CaeKerPrefs:
             None. 
         """
         pass
-

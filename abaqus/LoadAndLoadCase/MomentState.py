@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class MomentState(LoadState):
-
-    """The MomentState object stores the propagating data for a moment in a step. One instance 
+    """The MomentState object stores the propagating data for a moment in a step. One instance
     of this object is created internally by the Moment object for each step. The instance is 
     also deleted internally by the Moment object. 
     The MomentState object has no constructor or methods. 
@@ -65,4 +64,3 @@ class MomentState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

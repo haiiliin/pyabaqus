@@ -1,8 +1,5 @@
-
-
 class BaselineCorrection:
-
-    """The BaselineCorrection object modifies an acceleration history to minimize the overall 
+    """The BaselineCorrection object modifies an acceleration history to minimize the overall
     drift of the displacement obtained from the time integration of the given acceleration. 
 
     Access
@@ -61,4 +58,3 @@ class BaselineCorrection:
             RangeError. 
         """
         pass
-

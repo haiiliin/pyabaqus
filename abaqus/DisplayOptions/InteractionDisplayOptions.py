@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class InteractionDisplayOptions:
 
-    """The InteractionDisplayOptions object stores settings that specify how assemblies are to 
+class InteractionDisplayOptions:
+    """The InteractionDisplayOptions object stores settings that specify how assemblies are to
     be displayed in a particular viewport when 
     session.viewports[name].assemblyDisplay.interactions=ON 
     The InteractionDisplayOptions object has no constructor. When you create a new viewport, 
@@ -21,9 +21,9 @@ class InteractionDisplayOptions:
 
     """
 
-    def setValues(self, surfaceContact: Boolean = ON, selfContact: Boolean = ON, 
-                  elasticFoundation: Boolean = ON, actuatorSensor: Boolean = ON, 
-                  radiationAmbient: Boolean = ON, filmCondition: Boolean = ON, 
+    def setValues(self, surfaceContact: Boolean = ON, selfContact: Boolean = ON,
+                  elasticFoundation: Boolean = ON, actuatorSensor: Boolean = ON,
+                  radiationAmbient: Boolean = ON, filmCondition: Boolean = ON,
                   concentratedRadiationToAmbient: Boolean = ON, concentratedFilmCondition: Boolean = ON):
         """This method modifies the InteractionDisplayOptions object.
 
@@ -60,4 +60,3 @@ class InteractionDisplayOptions:
             RangeError. 
         """
         pass
-

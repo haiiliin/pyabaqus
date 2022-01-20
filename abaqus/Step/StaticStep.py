@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class StaticStep(AnalysisStep):
-
-    """The StaticStep object is used to indicate that the step should be analyzed as a static 
+    """The StaticStep object is used to indicate that the step should be analyzed as a static
     load step. 
     The StaticStep object is derived from the AnalysisStep object. 
 
@@ -103,7 +102,7 @@ class StaticStep(AnalysisStep):
     noStop: Boolean = OFF
 
     # A Boolean specifying wether to obtain the fully relaxed long-term elastic solution with 
-    # time-domain viscoelasticity or the long-term elastic-plastic solution for two-layer 
+    # time-domain viscoelasticity or the long-term elastic-Plastic solution for two-layer
     # viscoplasticity. The default value is OFF. 
     useLongTermSolution: Boolean = OFF
 
@@ -137,7 +136,7 @@ class StaticStep(AnalysisStep):
     # A String specifying a description of the new step. The default value is an empty string. 
     description: str = ''
 
-    # A String specifying the region being monitored for fully plastic behavior. The default 
+    # A String specifying the region being monitored for fully Plastic behavior. The default
     # value is an empty string. 
     fullyPlastic: str = ''
 
@@ -199,7 +198,8 @@ class StaticStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -225,17 +225,17 @@ class StaticStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1, 
-                 nlgeom: Boolean = OFF, stabilizationMethod: SymbolicConstant = NONE, 
-                 stabilizationMagnitude: float = None, adiabatic: Boolean = OFF, 
-                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
-                 initialInc: float = None, minInc: float = None, maxInc: float = None, 
-                 matrixSolver: SymbolicConstant = DIRECT, 
-                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = RAMP, 
-                 extrapolation: SymbolicConstant = LINEAR, fullyPlastic: str = '', noStop: Boolean = OFF, 
-                 maintainAttributes: Boolean = False, useLongTermSolution: Boolean = OFF, 
-                 solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8, 
-                 convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0, 
+    def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1,
+                 nlgeom: Boolean = OFF, stabilizationMethod: SymbolicConstant = NONE,
+                 stabilizationMagnitude: float = None, adiabatic: Boolean = OFF,
+                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                 initialInc: float = None, minInc: float = None, maxInc: float = None,
+                 matrixSolver: SymbolicConstant = DIRECT,
+                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = RAMP,
+                 extrapolation: SymbolicConstant = LINEAR, fullyPlastic: str = '', noStop: Boolean = OFF,
+                 maintainAttributes: Boolean = False, useLongTermSolution: Boolean = OFF,
+                 solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
+                 convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0,
                  continueDampingFactors: Boolean = OFF):
         """This method creates a StaticStep object.
 
@@ -295,7 +295,7 @@ class StaticStep(AnalysisStep):
             incremental solution for a nonlinear analysis. Possible values are NONE, LINEAR, and 
             PARABOLIC. The default value is LINEAR. 
         fullyPlastic
-            A String specifying the region being monitored for fully plastic behavior. The default 
+            A String specifying the region being monitored for fully Plastic behavior. The default
             value is an empty string. 
         noStop
             A Boolean specifying whether to accept the solution to an increment after the maximum 
@@ -307,7 +307,7 @@ class StaticStep(AnalysisStep):
             name. The default value is False. 
         useLongTermSolution
             A Boolean specifying wether to obtain the fully relaxed long-term elastic solution with 
-            time-domain viscoelasticity or the long-term elastic-plastic solution for two-layer 
+            time-domain viscoelasticity or the long-term elastic-Plastic solution for two-layer
             viscoplasticity. The default value is OFF. 
         solutionTechnique
             A SymbolicConstant specifying the technique used to for solving nonlinear equations. 
@@ -339,15 +339,15 @@ class StaticStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', timePeriod: float = 1, nlgeom: Boolean = OFF, 
-                  stabilizationMethod: SymbolicConstant = NONE, stabilizationMagnitude: float = None, 
-                  adiabatic: Boolean = OFF, timeIncrementationMethod: SymbolicConstant = AUTOMATIC, 
-                  maxNumInc: int = 100, initialInc: float = None, minInc: float = None, 
-                  maxInc: float = None, matrixSolver: SymbolicConstant = DIRECT, 
-                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = RAMP, 
-                  extrapolation: SymbolicConstant = LINEAR, fullyPlastic: str = '', noStop: Boolean = OFF, 
-                  useLongTermSolution: Boolean = OFF, solutionTechnique: SymbolicConstant = FULL_NEWTON, 
-                  reformKernel: int = 8, convertSDI: SymbolicConstant = PROPAGATED, 
+    def setValues(self, description: str = '', timePeriod: float = 1, nlgeom: Boolean = OFF,
+                  stabilizationMethod: SymbolicConstant = NONE, stabilizationMagnitude: float = None,
+                  adiabatic: Boolean = OFF, timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+                  maxNumInc: int = 100, initialInc: float = None, minInc: float = None,
+                  maxInc: float = None, matrixSolver: SymbolicConstant = DIRECT,
+                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = RAMP,
+                  extrapolation: SymbolicConstant = LINEAR, fullyPlastic: str = '', noStop: Boolean = OFF,
+                  useLongTermSolution: Boolean = OFF, solutionTechnique: SymbolicConstant = FULL_NEWTON,
+                  reformKernel: int = 8, convertSDI: SymbolicConstant = PROPAGATED,
                   adaptiveDampingRatio: float = 0, continueDampingFactors: Boolean = OFF):
         """This method modifies the StaticStep object.
 
@@ -398,7 +398,7 @@ class StaticStep(AnalysisStep):
             incremental solution for a nonlinear analysis. Possible values are NONE, LINEAR, and 
             PARABOLIC. The default value is LINEAR. 
         fullyPlastic
-            A String specifying the region being monitored for fully plastic behavior. The default 
+            A String specifying the region being monitored for fully Plastic behavior. The default
             value is an empty string. 
         noStop
             A Boolean specifying whether to accept the solution to an increment after the maximum 
@@ -407,7 +407,7 @@ class StaticStep(AnalysisStep):
             special cases when you have a thorough understanding of how to interpret the results. 
         useLongTermSolution
             A Boolean specifying wether to obtain the fully relaxed long-term elastic solution with 
-            time-domain viscoelasticity or the long-term elastic-plastic solution for two-layer 
+            time-domain viscoelasticity or the long-term elastic-Plastic solution for two-layer
             viscoplasticity. The default value is OFF. 
         solutionTechnique
             A SymbolicConstant specifying the technique used to for solving nonlinear equations. 
@@ -437,4 +437,3 @@ class StaticStep(AnalysisStep):
             RangeError. 
         """
         pass
-

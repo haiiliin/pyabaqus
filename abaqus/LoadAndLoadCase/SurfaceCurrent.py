@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SurfaceCurrent(Load):
-
-    """The SurfaceCurrent object stores the data for a surface current. 
+    """The SurfaceCurrent object stores the data for a surface current.
     The SurfaceCurrent object is derived from the Load object. 
 
     Access
@@ -36,7 +35,7 @@ class SurfaceCurrent(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float,
                  distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET):
         """This method creates a SurfaceCurrent object.
 
@@ -132,4 +131,3 @@ class SurfaceCurrent(Load):
             None. 
         """
         pass
-

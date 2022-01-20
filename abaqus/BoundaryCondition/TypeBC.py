@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class TypeBC(BoundaryCondition):
-
-    """The TypeBC object stores the data for several types of predefined boundary conditions 
+    """The TypeBC object stores the data for several types of predefined boundary conditions
     that are commonly used in stress/displacement analyses. 
     The TypeBC object is derived from the BoundaryCondition object. 
 
@@ -42,7 +41,7 @@ class TypeBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def EncastreBC(self, name: str, createStepName: str, region: Region, 
+    def EncastreBC(self, name: str, createStepName: str, region: Region,
                    buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates an encastre TypeBC object.
 
@@ -77,7 +76,7 @@ class TypeBC(BoundaryCondition):
         """
         pass
 
-    def PinnedBC(self, name: str, createStepName: str, region: Region, 
+    def PinnedBC(self, name: str, createStepName: str, region: Region,
                  buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates a pinned TypeBC object.
 
@@ -112,7 +111,7 @@ class TypeBC(BoundaryCondition):
         """
         pass
 
-    def XsymmBC(self, name: str, createStepName: str, region: Region, 
+    def XsymmBC(self, name: str, createStepName: str, region: Region,
                 buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates a TypeBC object that specifies symmetry about the *X*-axis.
 
@@ -147,7 +146,7 @@ class TypeBC(BoundaryCondition):
         """
         pass
 
-    def YsymmBC(self, name: str, createStepName: str, region: Region, 
+    def YsymmBC(self, name: str, createStepName: str, region: Region,
                 buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates a TypeBC object that specifies symmetry about the *Y*-axis.
 
@@ -182,7 +181,7 @@ class TypeBC(BoundaryCondition):
         """
         pass
 
-    def ZsymmBC(self, name: str, createStepName: str, region: Region, 
+    def ZsymmBC(self, name: str, createStepName: str, region: Region,
                 buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates a TypeBC object that specifies symmetry about the *Z*-axis.
 
@@ -217,7 +216,7 @@ class TypeBC(BoundaryCondition):
         """
         pass
 
-    def XasymmBC(self, name: str, createStepName: str, region: Region, 
+    def XasymmBC(self, name: str, createStepName: str, region: Region,
                  buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates a TypeBC object that specifies antisymmetry about the *X*-axis.
 
@@ -252,7 +251,7 @@ class TypeBC(BoundaryCondition):
         """
         pass
 
-    def YasymmBC(self, name: str, createStepName: str, region: Region, 
+    def YasymmBC(self, name: str, createStepName: str, region: Region,
                  buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates a TypeBC object that specifies antisymmetry about the *Y*-axis.
 
@@ -287,7 +286,7 @@ class TypeBC(BoundaryCondition):
         """
         pass
 
-    def ZasymmBC(self, name: str, createStepName: str, region: Region, 
+    def ZasymmBC(self, name: str, createStepName: str, region: Region,
                  buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates a TypeBC object that specifies antisymmetry about the *Z*-axis.
 
@@ -322,7 +321,7 @@ class TypeBC(BoundaryCondition):
         """
         pass
 
-    def setValues(self, region: Region = Region(), typeName: SymbolicConstant = None, 
+    def setValues(self, region: Region = Region(), typeName: SymbolicConstant = None,
                   buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method modifies the data for an existing TypeBC object in the step where it is
         created.
@@ -375,4 +374,3 @@ class TypeBC(BoundaryCondition):
               A Symmetry/Antisymmetry/Encastre BC cannot be edited in a propagated step. 
         """
         pass
-

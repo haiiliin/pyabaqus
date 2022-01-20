@@ -4,8 +4,7 @@ from ..Region.RegionArray import RegionArray
 
 
 class PressurePenetration(Interaction):
-
-    """The PressurePenetration object defines pressure penetration loading simulated with 
+    """The PressurePenetration object defines pressure penetration loading simulated with
     surface-to-surface contact. 
     The PressurePenetration object is derived from the Interaction object. 
 
@@ -41,8 +40,8 @@ class PressurePenetration(Interaction):
     # the fluid. 
     secondaryPoints: RegionArray = RegionArray()
 
-    def __init__(self, name: str, createStepName: str, contactInteraction: str, mainPoints: RegionArray, 
-                 secondaryPoints: RegionArray, penetrationPressure: float, criticalPressure: float, 
+    def __init__(self, name: str, createStepName: str, contactInteraction: str, mainPoints: RegionArray,
+                 secondaryPoints: RegionArray, penetrationPressure: float, criticalPressure: float,
                  amplitude: str = UNSET, penetrationTime: float = 0):
         """This method creates a PressurePenetration object.
 
@@ -116,7 +115,7 @@ class PressurePenetration(Interaction):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, penetrationPressure: float = None, criticalPressure: float = None, 
+    def setValuesInStep(self, stepName: str, penetrationPressure: float = None, criticalPressure: float = None,
                         amplitude: str = '', penetrationTime: float = 0):
         """This method modifies the propagating data for an existing PressurePenetration object in
         the specified step.
@@ -151,4 +150,3 @@ class PressurePenetration(Interaction):
             None. 
         """
         pass
-

@@ -1,8 +1,9 @@
+from .SectionPoint import SectionPoint
 from .SectionPointArray import SectionPointArray
 
-class SectionCategory:
 
-    """The SectionCategory object is used to group regions of the model with like sections. 
+class SectionCategory:
+    """The SectionCategory object is used to group regions of the model with like sections.
     Section definitions that contain the same number of section points or integration points 
     are grouped together. 
     To access data for a particular section definition, use the individual Section objects 
@@ -66,3 +67,29 @@ class SectionCategory:
         """
         pass
 
+    def SectionPoint(self, number: int, description: str) -> SectionPoint:
+        """This method creates a SectionPoint object.
+
+        Path
+        ----
+            - session.odbs[*name*].sectionCategories[*name*].SectionPoint
+
+        Parameters
+        ----------
+        number
+            An Int specifying the number of the section point. See Beam elements and Shell elements
+            for the numbering convention.
+        description
+            A String specifying the description of the section point.
+
+        Returns
+        -------
+            A SectionPoint object.
+
+        Exceptions
+        ----------
+            None.
+        """
+        sectionPoint = SectionPoint(number, description)
+        self.sectionPoints.append(sectionPoint)
+        return sectionPoint

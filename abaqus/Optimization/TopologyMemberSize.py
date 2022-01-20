@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class TopologyMemberSize(GeometricRestriction):
-
-    """The TopologyMemberSize object defines a topology member size geometric restriction. 
+    """The TopologyMemberSize object defines a topology member size geometric restriction.
     The TopologyMemberSize object is derived from the GeometricRestriction object. 
 
     Access
@@ -21,7 +20,7 @@ class TopologyMemberSize(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, region: Region, maxThickness: float = 0, minThickness: float = 0, 
+    def __init__(self, name: str, region: Region, maxThickness: float = 0, minThickness: float = 0,
                  separation: float = 0, sizeRestriction: SymbolicConstant = MINIMUM):
         """This method creates a TopologyMemberSize object.
 
@@ -59,7 +58,7 @@ class TopologyMemberSize(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, maxThickness: float = 0, minThickness: float = 0, separation: float = 0, 
+    def setValues(self, maxThickness: float = 0, minThickness: float = 0, separation: float = 0,
                   sizeRestriction: SymbolicConstant = MINIMUM):
         """This method modifies the TopologyMemberSize object.
 
@@ -85,4 +84,3 @@ class TopologyMemberSize(GeometricRestriction):
             None. 
         """
         pass
-

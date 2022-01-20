@@ -5,8 +5,7 @@ from ..PlotOptions.DGSymbolOptions import DGSymbolOptions
 
 
 class SymbolOptions(DGSymbolOptions):
-
-    """The SymbolOptions object stores values and attributes associated with a symbol plot. The 
+    """The SymbolOptions object stores values and attributes associated with a symbol plot. The
     SymbolOptions object has no constructor command. Abaqus creates a 
     *defaultOdbDisplay.symbolOptions* member when you import the Visualization module. 
     Abaqus creates a *symbolOptions* member when it creates the OdbDisplay object, using the 
@@ -83,19 +82,19 @@ class SymbolOptions(DGSymbolOptions):
 
     # The SymbolicConstant NOT_SET or a Float specifying the vector maximum value when 
     # *vectorMaxValueAutoCompute*=ON. This value is read-only. The default value is NOT_SET. 
-    autoVectorMaxValue: typing.Union[SymbolicConstant,float] = NOT_SET
+    autoVectorMaxValue: typing.Union[SymbolicConstant, float] = NOT_SET
 
     # The SymbolicConstant NOT_SET or a Float specifying the vector minimum value when 
     # *vectorMinValueAutoCompute*=ON. This value is read-only. The default value is NOT_SET. 
-    autoVectorMinValue: typing.Union[SymbolicConstant,float] = NOT_SET
+    autoVectorMinValue: typing.Union[SymbolicConstant, float] = NOT_SET
 
     # The SymbolicConstant NOT_SET or a Float specifying the tensor maximum value when 
     # *tensorMaxValueAutoCompute*=ON. This value is read-only. The default value is NOT_SET. 
-    autoTensorMaxValue: typing.Union[SymbolicConstant,float] = NOT_SET
+    autoTensorMaxValue: typing.Union[SymbolicConstant, float] = NOT_SET
 
     # The SymbolicConstant NOT_SET or a Float specifying the tensor minimum value when 
     # *tensorMinValueAutoCompute*=ON. This value is read-only. The default value is NOT_SET. 
-    autoTensorMinValue: typing.Union[SymbolicConstant,float] = NOT_SET
+    autoTensorMinValue: typing.Union[SymbolicConstant, float] = NOT_SET
 
     # A SymbolicConstant specifying the vector line thickness. Possible values are VERY_THIN, 
     # THIN, MEDIUM, and THICK. The default value is VERY_THIN. 
@@ -200,21 +199,21 @@ class SymbolOptions(DGSymbolOptions):
     # value is "Red". 
     tensorSelectedPrinColor: str = ''
 
-    def setValues(self, options: 'SymbolOptions' = None, vectorQuantity: SymbolicConstant = RESULTANT, 
-                  vectorLineThickness: SymbolicConstant = VERY_THIN, 
-                  vectorArrowheadStyle: SymbolicConstant = WIRE, vectorColor: str = '', 
-                  vectorColorMethod: SymbolicConstant = SPECTRUM, vectorColorSpectrum: str = '', 
-                  vectorIntervalNumber: int = 12, symbolDensity: float = 1, 
-                  constantLengthArrows: Boolean = OFF, tensorColorMethod: SymbolicConstant = SPECTRUM, 
-                  tensorColorSpectrum: str = '', tensorIntervalNumber: int = 12, 
-                  vectorMaxValueAutoCompute: Boolean = ON, vectorMaxValue: float = None, 
-                  vectorMinValueAutoCompute: Boolean = ON, vectorMinValue: float = None, 
-                  tensorQuantity: SymbolicConstant = ALL_PRINCIPAL_COMPONENTS, arrowSymbolSize: int = 6, 
-                  tensorMaxPrinColor: str = '', tensorMinPrinColor: str = '', 
-                  tensorMidPrinColor: str = '', tensorSelectedPrinColor: str = '', 
-                  tensorLineThickness: SymbolicConstant = VERY_THIN, 
-                  tensorArrowheadStyle: SymbolicConstant = WIRE, tensorMaxValueAutoCompute: Boolean = ON, 
-                  tensorMaxValue: float = None, tensorMinValueAutoCompute: Boolean = ON, 
+    def setValues(self, options: 'SymbolOptions' = None, vectorQuantity: SymbolicConstant = RESULTANT,
+                  vectorLineThickness: SymbolicConstant = VERY_THIN,
+                  vectorArrowheadStyle: SymbolicConstant = WIRE, vectorColor: str = '',
+                  vectorColorMethod: SymbolicConstant = SPECTRUM, vectorColorSpectrum: str = '',
+                  vectorIntervalNumber: int = 12, symbolDensity: float = 1,
+                  constantLengthArrows: Boolean = OFF, tensorColorMethod: SymbolicConstant = SPECTRUM,
+                  tensorColorSpectrum: str = '', tensorIntervalNumber: int = 12,
+                  vectorMaxValueAutoCompute: Boolean = ON, vectorMaxValue: float = None,
+                  vectorMinValueAutoCompute: Boolean = ON, vectorMinValue: float = None,
+                  tensorQuantity: SymbolicConstant = ALL_PRINCIPAL_COMPONENTS, arrowSymbolSize: int = 6,
+                  tensorMaxPrinColor: str = '', tensorMinPrinColor: str = '',
+                  tensorMidPrinColor: str = '', tensorSelectedPrinColor: str = '',
+                  tensorLineThickness: SymbolicConstant = VERY_THIN,
+                  tensorArrowheadStyle: SymbolicConstant = WIRE, tensorMaxValueAutoCompute: Boolean = ON,
+                  tensorMaxValue: float = None, tensorMinValueAutoCompute: Boolean = ON,
                   tensorMinValue: float = None):
         """This method modifies the SymbolOptions object.
 
@@ -314,4 +313,3 @@ class SymbolOptions(DGSymbolOptions):
             RangeError. 
         """
         pass
-

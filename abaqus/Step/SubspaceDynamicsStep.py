@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class SubspaceDynamicsStep(AnalysisStep):
-
-    """The SubspaceDynamicsStep object is used to calculate the linearized steady-state 
+    """The SubspaceDynamicsStep object is used to calculate the linearized steady-state
     response of the system to harmonic excitation on the basis of the subspace projection 
     method. 
     The SubspaceDynamicsStep object is derived from the AnalysisStep object. 
@@ -128,7 +127,8 @@ class SubspaceDynamicsStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -154,9 +154,9 @@ class SubspaceDynamicsStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1, 
-                 vectors: SymbolicConstant = ALL, nlgeom: Boolean = OFF, maxNumInc: int = 100, 
-                 incSize: float = 0, amplitude: SymbolicConstant = STEP, 
+    def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1,
+                 vectors: SymbolicConstant = ALL, nlgeom: Boolean = OFF, maxNumInc: int = 100,
+                 incSize: float = 0, amplitude: SymbolicConstant = STEP,
                  maintainAttributes: Boolean = False):
         """This method creates a SubspaceDynamicsStep object.
 
@@ -204,8 +204,8 @@ class SubspaceDynamicsStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', timePeriod: float = 1, vectors: SymbolicConstant = ALL, 
-                  nlgeom: Boolean = OFF, maxNumInc: int = 100, incSize: float = 0, 
+    def setValues(self, description: str = '', timePeriod: float = 1, vectors: SymbolicConstant = ALL,
+                  nlgeom: Boolean = OFF, maxNumInc: int = 100, incSize: float = 0,
                   amplitude: SymbolicConstant = STEP):
         """This method modifies the SubspaceDynamicsStep object.
 
@@ -239,4 +239,3 @@ class SubspaceDynamicsStep(AnalysisStep):
             RangeError. 
         """
         pass
-

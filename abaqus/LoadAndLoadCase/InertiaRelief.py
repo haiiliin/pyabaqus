@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class InertiaRelief(Load):
-
-    """The InertiaRelief object defines an inertia relief load. 
+    """The InertiaRelief object defines an inertia relief load.
     The InertiaRelief object is derived from the Load object. 
 
     Access
@@ -33,8 +32,8 @@ class InertiaRelief(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF, 
-                 ur1: Boolean = OFF, ur2: Boolean = OFF, ur3: Boolean = OFF, referencePoint: tuple = (), 
+    def __init__(self, name: str, createStepName: str, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF,
+                 ur1: Boolean = OFF, ur2: Boolean = OFF, ur3: Boolean = OFF, referencePoint: tuple = (),
                  localCoordinates: int = None):
         """This method creates an InertiaRelief object.
 
@@ -85,8 +84,8 @@ class InertiaRelief(Load):
         super().__init__()
         pass
 
-    def setValues(self, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF, ur1: Boolean = OFF, 
-                  ur2: Boolean = OFF, ur3: Boolean = OFF, referencePoint: tuple = (), 
+    def setValues(self, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF, ur1: Boolean = OFF,
+                  ur2: Boolean = OFF, ur3: Boolean = OFF, referencePoint: tuple = (),
                   localCoordinates: int = None):
         """This method modifies the data for an existing InertiaRelief object in the step where it
         is created.
@@ -129,8 +128,8 @@ class InertiaRelief(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF, 
-                        ur1: Boolean = OFF, ur2: Boolean = OFF, ur3: Boolean = OFF, referencePoint: tuple = (), 
+    def setValuesInStep(self, stepName: str, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF,
+                        ur1: Boolean = OFF, ur2: Boolean = OFF, ur3: Boolean = OFF, referencePoint: tuple = (),
                         fixed: Boolean = OFF):
         """This method modifies the propagating data for an existing InertiaRelief object in the
         specified step.
@@ -171,4 +170,3 @@ class InertiaRelief(Load):
             None. 
         """
         pass
-

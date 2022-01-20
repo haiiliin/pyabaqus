@@ -1,6 +1,4 @@
-
-
-"""The following commands are used to request data entry from a user. 
+"""The following commands are used to request data entry from a user.
 
 Access
 ------
@@ -12,8 +10,11 @@ Corresponding analysis keywords
 -------------------------------
 
 """
+import typing
 
-def getInpu(prompt: str, default: str = ''):
+
+@typing.overload
+def getInput(prompt: str, default: str = ''):
     """This method is used to obtain a single input from a user from a dialog box. The method
     displays a modal dialog box with a text field prefaced by the specified label. The user
     enters data in the text field or accepts the optional default value that is displayed in
@@ -46,6 +47,8 @@ def getInpu(prompt: str, default: str = ''):
     """
     pass
 
+
+@typing.overload
 def getInput(fields: tuple, label: str = '', dialogTitle: str = ''):
     """This method is used to obtain multiple inputs from a user from a dialog box. The method
     displays a modal dialog box with a column of text fields prefaced by the specified
@@ -86,7 +89,12 @@ def getInput(fields: tuple, label: str = '', dialogTitle: str = ''):
     """
     pass
 
-def getWarningRepl(message: str, buttons: str):
+
+def getInput(*args, **kwargs):
+    pass
+
+
+def getWarningReply(message: str, buttons: str):
     """This method is used to obtain a reply from a user from a warning dialog box. The method
     displays a modal warning dialog box with a message and standard buttons. The user clicks
     the one of the standard buttons, the getWarningReply returns the corresponding button
@@ -118,4 +126,3 @@ def getWarningRepl(message: str, buttons: str):
         None. 
     """
     pass
-

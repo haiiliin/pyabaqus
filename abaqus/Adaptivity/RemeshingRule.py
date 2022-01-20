@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class RemeshingRule:
 
-    """The RemeshingRule object controls the adaptive remeshing resizing and the error 
+class RemeshingRule:
+    """The RemeshingRule object controls the adaptive remeshing resizing and the error
     indicators written to the output database for a specified region of the model. 
 
     Access
@@ -22,13 +22,13 @@ class RemeshingRule:
     # remeshing rule's region will not occur if you suppress a rule. The default value is OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, stepName: str, variables: tuple, description: str = '', 
-                 region: SymbolicConstant = MODEL, sizingMethod: SymbolicConstant = DEFAULT, 
-                 errorTarget: float = 0, maxSolutionErrorTarget: float = 0, 
-                 minSolutionErrorTarget: float = 0, meshBias: int = 0, minElementSize: float = 0, 
-                 maxElementSize: float = 0, outputFrequency: SymbolicConstant = LAST_INCREMENT, 
-                 specifyMinSize: Boolean = OFF, specifyMaxSize: Boolean = ON, 
-                 coarseningFactor: SymbolicConstant = DEFAULT_LIMIT, 
+    def __init__(self, name: str, stepName: str, variables: tuple, description: str = '',
+                 region: SymbolicConstant = MODEL, sizingMethod: SymbolicConstant = DEFAULT,
+                 errorTarget: float = 0, maxSolutionErrorTarget: float = 0,
+                 minSolutionErrorTarget: float = 0, meshBias: int = 0, minElementSize: float = 0,
+                 maxElementSize: float = 0, outputFrequency: SymbolicConstant = LAST_INCREMENT,
+                 specifyMinSize: Boolean = OFF, specifyMaxSize: Boolean = ON,
+                 coarseningFactor: SymbolicConstant = DEFAULT_LIMIT,
                  refinementFactor: SymbolicConstant = DEFAULT_LIMIT, elementCountLimit: int = None):
         """This method creates a RemeshingRule object.
 
@@ -147,12 +147,12 @@ class RemeshingRule:
         """
         pass
 
-    def setValues(self, description: str = '', region: SymbolicConstant = MODEL, 
-                  sizingMethod: SymbolicConstant = DEFAULT, errorTarget: float = 0, 
-                  maxSolutionErrorTarget: float = 0, minSolutionErrorTarget: float = 0, meshBias: int = 0, 
-                  minElementSize: float = 0, maxElementSize: float = 0, 
-                  outputFrequency: SymbolicConstant = LAST_INCREMENT, specifyMinSize: Boolean = OFF, 
-                  specifyMaxSize: Boolean = ON, coarseningFactor: SymbolicConstant = DEFAULT_LIMIT, 
+    def setValues(self, description: str = '', region: SymbolicConstant = MODEL,
+                  sizingMethod: SymbolicConstant = DEFAULT, errorTarget: float = 0,
+                  maxSolutionErrorTarget: float = 0, minSolutionErrorTarget: float = 0, meshBias: int = 0,
+                  minElementSize: float = 0, maxElementSize: float = 0,
+                  outputFrequency: SymbolicConstant = LAST_INCREMENT, specifyMinSize: Boolean = OFF,
+                  specifyMaxSize: Boolean = ON, coarseningFactor: SymbolicConstant = DEFAULT_LIMIT,
                   refinementFactor: SymbolicConstant = DEFAULT_LIMIT, elementCountLimit: int = None):
         """This method modifies the RemeshingRule object.
 
@@ -226,4 +226,3 @@ class RemeshingRule:
             None. 
         """
         pass
-

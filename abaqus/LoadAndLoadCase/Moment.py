@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class Moment(Load):
-
-    """The Moment object stores the data for a moment. 
+    """The Moment object stores the data for a moment.
     The Moment object is derived from the Load object. 
 
     Access
@@ -49,8 +48,8 @@ class Moment(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, cm1: float = None, cm2: float = None, 
-                 cm3: float = None, amplitude: str = UNSET, follower: Boolean = OFF, 
+    def __init__(self, name: str, createStepName: str, region: Region, cm1: float = None, cm2: float = None,
+                 cm3: float = None, amplitude: str = UNSET, follower: Boolean = OFF,
                  localCsys: int = None, distributionType: SymbolicConstant = UNIFORM, field: str = ''):
         """This method creates a Moment object.
 
@@ -106,8 +105,8 @@ class Moment(Load):
         super().__init__()
         pass
 
-    def setValues(self, cm1: float = None, cm2: float = None, cm3: float = None, amplitude: str = UNSET, 
-                  follower: Boolean = OFF, localCsys: int = None, 
+    def setValues(self, cm1: float = None, cm2: float = None, cm3: float = None, amplitude: str = UNSET,
+                  follower: Boolean = OFF, localCsys: int = None,
                   distributionType: SymbolicConstant = UNIFORM, field: str = ''):
         """This method modifies the data for an existing Moment object in the step where it is
         created.
@@ -153,10 +152,10 @@ class Moment(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        comp1: typing.Union[SymbolicConstant,float] = None, 
-                        comp2: typing.Union[SymbolicConstant,float] = None, 
-                        comp3: typing.Union[SymbolicConstant,float] = None, 
+    def setValuesInStep(self, stepName: str,
+                        comp1: typing.Union[SymbolicConstant, float] = None,
+                        comp2: typing.Union[SymbolicConstant, float] = None,
+                        comp3: typing.Union[SymbolicConstant, float] = None,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing Moment object in the specified
         step.
@@ -192,4 +191,3 @@ class Moment(Load):
             None. 
         """
         pass
-

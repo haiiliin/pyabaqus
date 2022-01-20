@@ -3,8 +3,7 @@ from .Leaf import Leaf
 
 
 class DisplayGroup:
-
-    """DisplayGroup objects are used to select a subset of the entities displayed in the 
+    """DisplayGroup objects are used to select a subset of the entities displayed in the
     viewport. 
 
     Access
@@ -197,4 +196,3 @@ class DisplayGroup:
             None. 
         """
         pass
-

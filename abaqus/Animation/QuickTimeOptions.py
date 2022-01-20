@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class QuickTimeOptions:
 
-    """The QuickTimeOptions object is used to store values and attributes to be used in 
+class QuickTimeOptions:
+    """The QuickTimeOptions object is used to store values and attributes to be used in
     generating QuickTime animation. The QuickTimeOptions object has no constructor. Abaqus 
     creates the *quickTimeOptions* member when the animation module is imported. 
 
@@ -19,7 +19,7 @@ class QuickTimeOptions:
 
     """
 
-    def setValues(self, compressionMethod: SymbolicConstant = RLE24, 
+    def setValues(self, compressionMethod: SymbolicConstant = RLE24,
                   sizeDefinition: SymbolicConstant = SIZE_ON_SCREEN, imageSize: int = None):
         """This method modifies the QuickTimeOptions object.
 
@@ -56,4 +56,3 @@ class QuickTimeOptions:
             None. 
         """
         pass
-

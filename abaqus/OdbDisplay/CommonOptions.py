@@ -3,8 +3,7 @@ from ..PlotOptions.DGCommonOptions import DGCommonOptions
 
 
 class CommonOptions(DGCommonOptions):
-
-    """The CommonOptions object stores values and attributes that are common to all plot 
+    """The CommonOptions object stores values and attributes that are common to all plot
     states. The CommonOptions object has no constructor command. Abaqus creates a 
     *defaultOdbDisplay.commonOptions* member when you import the Visualization module. 
     Abaqus creates a *commonOptions* member when it creates the OdbDisplay object, using the 
@@ -196,24 +195,24 @@ class CommonOptions(DGCommonOptions):
     # coordinate directions when *coordinateScale*=ON. The default value is (1, 1, 1). 
     coordinateScaleFactors: float = None
 
-    def setValues(self, options: 'CommonOptions' = None, renderStyle: SymbolicConstant = SHADED, 
-                  visibleEdges: SymbolicConstant = EXTERIOR, deformationScaling: SymbolicConstant = AUTO, 
-                  uniformScaleFactor: float = None, nonuniformScaleFactor: tuple = (), 
-                  edgeColorWireHide: str = '', edgeColorFillShade: str = '', 
-                  edgeLineStyle: SymbolicConstant = SOLID, 
-                  edgeLineThickness: SymbolicConstant = VERY_THIN, fillColor: str = '', 
-                  colorCodeOverride: Boolean = ON, labelFont: str = '', elemLabels: Boolean = OFF, 
-                  elemLabelColor: str = '', faceLabels: Boolean = OFF, faceLabelColor: str = '', 
-                  nodeLabels: Boolean = OFF, nodeLabelColor: str = '', nodeSymbols: Boolean = OFF, 
-                  nodeSymbolType: SymbolicConstant = HOLLOW_CIRCLE, nodeSymbolColor: str = '', 
-                  nodeSymbolSize: SymbolicConstant = SMALL, elementShrink: Boolean = OFF, 
-                  elementShrinkFactor: int = 5, coordinateScale: Boolean = OFF, 
-                  coordinateScaleFactors: tuple = (), normals: Boolean = OFF, 
-                  normalDisplay: SymbolicConstant = ELEMENT, faceNormalColor: str = '', 
-                  beamN1Color: str = '', beamN2Color: str = '', beamTangentColor: str = '', 
-                  normalArrowLength: SymbolicConstant = MEDIUM, 
-                  normalLineThickness: SymbolicConstant = VERY_THIN, 
-                  normalArrowheadStyle: SymbolicConstant = WIRE, translucency: Boolean = OFF, 
+    def setValues(self, options: 'CommonOptions' = None, renderStyle: SymbolicConstant = SHADED,
+                  visibleEdges: SymbolicConstant = EXTERIOR, deformationScaling: SymbolicConstant = AUTO,
+                  uniformScaleFactor: float = None, nonuniformScaleFactor: tuple = (),
+                  edgeColorWireHide: str = '', edgeColorFillShade: str = '',
+                  edgeLineStyle: SymbolicConstant = SOLID,
+                  edgeLineThickness: SymbolicConstant = VERY_THIN, fillColor: str = '',
+                  colorCodeOverride: Boolean = ON, labelFont: str = '', elemLabels: Boolean = OFF,
+                  elemLabelColor: str = '', faceLabels: Boolean = OFF, faceLabelColor: str = '',
+                  nodeLabels: Boolean = OFF, nodeLabelColor: str = '', nodeSymbols: Boolean = OFF,
+                  nodeSymbolType: SymbolicConstant = HOLLOW_CIRCLE, nodeSymbolColor: str = '',
+                  nodeSymbolSize: SymbolicConstant = SMALL, elementShrink: Boolean = OFF,
+                  elementShrinkFactor: int = 5, coordinateScale: Boolean = OFF,
+                  coordinateScaleFactors: tuple = (), normals: Boolean = OFF,
+                  normalDisplay: SymbolicConstant = ELEMENT, faceNormalColor: str = '',
+                  beamN1Color: str = '', beamN2Color: str = '', beamTangentColor: str = '',
+                  normalArrowLength: SymbolicConstant = MEDIUM,
+                  normalLineThickness: SymbolicConstant = VERY_THIN,
+                  normalArrowheadStyle: SymbolicConstant = WIRE, translucency: Boolean = OFF,
                   translucencyFactor: float = 0):
         """This method modifies the CommonOptions object.
 
@@ -350,4 +349,3 @@ class CommonOptions(DGCommonOptions):
             RangeError. 
         """
         pass
-

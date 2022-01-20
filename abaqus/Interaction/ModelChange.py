@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class ModelChange(Interaction):
-
-    """The ModelChange object defines model change interactions for element removal and 
+    """The ModelChange object defines model change interactions for element removal and
     reactivation. 
     The ModelChange object is derived from the Interaction object. 
 
@@ -23,8 +22,8 @@ class ModelChange(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, isRestart: Boolean = OFF, 
-                 regionType: SymbolicConstant = GEOMETRY, region: Region = Region(), 
+    def __init__(self, name: str, createStepName: str, isRestart: Boolean = OFF,
+                 regionType: SymbolicConstant = GEOMETRY, region: Region = Region(),
                  activeInStep: Boolean = OFF, includeStrain: Boolean = OFF):
         """This method creates a ModelChange object.
 
@@ -68,7 +67,7 @@ class ModelChange(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, isRestart: Boolean = OFF, regionType: SymbolicConstant = GEOMETRY, 
+    def setValues(self, isRestart: Boolean = OFF, regionType: SymbolicConstant = GEOMETRY,
                   region: Region = Region(), activeInStep: Boolean = OFF, includeStrain: Boolean = OFF):
         """This method modifies the data for an existing ModelChange object in the step where it is
         created.
@@ -129,4 +128,3 @@ class ModelChange(Interaction):
             None. 
         """
         pass
-

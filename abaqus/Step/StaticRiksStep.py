@@ -18,8 +18,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class StaticRiksStep(AnalysisStep):
-
-    """The StaticRiksStep object is used to indicate that the step should be analyzed as a 
+    """The StaticRiksStep object is used to indicate that the step should be analyzed as a
     static load step using the modified Riks method for proportional loading cases. 
     The StaticRiksStep object is derived from the AnalysisStep object. 
 
@@ -106,7 +105,7 @@ class StaticRiksStep(AnalysisStep):
     noStop: Boolean = OFF
 
     # A Boolean specifying wether to obtain the fully relaxed long-term elastic solution with 
-    # time-domain viscoelasticity or the long-term elastic-plastic solution for two-layer 
+    # time-domain viscoelasticity or the long-term elastic-Plastic solution for two-layer
     # viscoplasticity. The default value is OFF. 
     useLongTermSolution: Boolean = OFF
 
@@ -122,7 +121,7 @@ class StaticRiksStep(AnalysisStep):
     # A String specifying a description of the new step. The default value is an empty string. 
     description: str = ''
 
-    # A String specifying the name of the region being monitored for fully plastic behavior. 
+    # A String specifying the name of the region being monitored for fully Plastic behavior.
     # The default value is an empty string. 
     fullyPlastic: str = ''
 
@@ -188,7 +187,8 @@ class StaticRiksStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -214,14 +214,14 @@ class StaticRiksStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', nlgeom: Boolean = OFF, 
-                 adiabatic: Boolean = OFF, maxLPF: float = None, nodeOn: Boolean = OFF, 
-                 maximumDisplacement: float = 0, dof: int = 0, region: Region = Region(), 
-                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
-                 totalArcLength: float = 1, initialArcInc: float = None, minArcInc: float = None, 
-                 maxArcInc: float = None, matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
-                 extrapolation: SymbolicConstant = LINEAR, fullyPlastic: str = '', noStop: Boolean = OFF, 
-                 maintainAttributes: Boolean = False, useLongTermSolution: Boolean = OFF, 
+    def __init__(self, name: str, previous: str, description: str = '', nlgeom: Boolean = OFF,
+                 adiabatic: Boolean = OFF, maxLPF: float = None, nodeOn: Boolean = OFF,
+                 maximumDisplacement: float = 0, dof: int = 0, region: Region = Region(),
+                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                 totalArcLength: float = 1, initialArcInc: float = None, minArcInc: float = None,
+                 maxArcInc: float = None, matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+                 extrapolation: SymbolicConstant = LINEAR, fullyPlastic: str = '', noStop: Boolean = OFF,
+                 maintainAttributes: Boolean = False, useLongTermSolution: Boolean = OFF,
                  convertSDI: SymbolicConstant = PROPAGATED):
         """This method creates a StaticRiksStep object.
 
@@ -286,7 +286,7 @@ class StaticRiksStep(AnalysisStep):
             incremental solution for a nonlinear analysis. Possible values are NONE, LINEAR, and 
             PARABOLIC. The default value is LINEAR. 
         fullyPlastic
-            A String specifying the name of the region being monitored for fully plastic behavior. 
+            A String specifying the name of the region being monitored for fully Plastic behavior.
             The default value is an empty string. 
         noStop
             A Boolean specifying whether to accept the solution to an increment after the maximum 
@@ -298,7 +298,7 @@ class StaticRiksStep(AnalysisStep):
             name. The default value is False. 
         useLongTermSolution
             A Boolean specifying wether to obtain the fully relaxed long-term elastic solution with 
-            time-domain viscoelasticity or the long-term elastic-plastic solution for two-layer 
+            time-domain viscoelasticity or the long-term elastic-Plastic solution for two-layer
             viscoplasticity. The default value is OFF. 
         convertSDI
             A SymbolicConstant specifying whether to force a new iteration if severe discontinuities 
@@ -316,13 +316,13 @@ class StaticRiksStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', nlgeom: Boolean = OFF, adiabatic: Boolean = OFF, 
-                  maxLPF: float = None, nodeOn: Boolean = OFF, maximumDisplacement: float = 0, 
-                  dof: int = 0, region: Region = Region(), 
-                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
-                  totalArcLength: float = 1, initialArcInc: float = None, minArcInc: float = None, 
-                  maxArcInc: float = None, matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
-                  extrapolation: SymbolicConstant = LINEAR, fullyPlastic: str = '', noStop: Boolean = OFF, 
+    def setValues(self, description: str = '', nlgeom: Boolean = OFF, adiabatic: Boolean = OFF,
+                  maxLPF: float = None, nodeOn: Boolean = OFF, maximumDisplacement: float = 0,
+                  dof: int = 0, region: Region = Region(),
+                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                  totalArcLength: float = 1, initialArcInc: float = None, minArcInc: float = None,
+                  maxArcInc: float = None, matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+                  extrapolation: SymbolicConstant = LINEAR, fullyPlastic: str = '', noStop: Boolean = OFF,
                   useLongTermSolution: Boolean = OFF, convertSDI: SymbolicConstant = PROPAGATED):
         """This method modifies the StaticRiksStep object.
 
@@ -378,7 +378,7 @@ class StaticRiksStep(AnalysisStep):
             incremental solution for a nonlinear analysis. Possible values are NONE, LINEAR, and 
             PARABOLIC. The default value is LINEAR. 
         fullyPlastic
-            A String specifying the name of the region being monitored for fully plastic behavior. 
+            A String specifying the name of the region being monitored for fully Plastic behavior.
             The default value is an empty string. 
         noStop
             A Boolean specifying whether to accept the solution to an increment after the maximum 
@@ -387,7 +387,7 @@ class StaticRiksStep(AnalysisStep):
             special cases when you have a thorough understanding of how to interpret the results. 
         useLongTermSolution
             A Boolean specifying wether to obtain the fully relaxed long-term elastic solution with 
-            time-domain viscoelasticity or the long-term elastic-plastic solution for two-layer 
+            time-domain viscoelasticity or the long-term elastic-Plastic solution for two-layer
             viscoplasticity. The default value is OFF. 
         convertSDI
             A SymbolicConstant specifying whether to force a new iteration if severe discontinuities 
@@ -403,4 +403,3 @@ class StaticRiksStep(AnalysisStep):
             RangeError. 
         """
         pass
-

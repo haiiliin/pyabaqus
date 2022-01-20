@@ -1,8 +1,8 @@
 from .Section import Section
 
-class SolidSection(Section):
 
-    """The ShellSection object defines the properties of a shell section. The ShellSection 
+class SolidSection(Section):
+    """The ShellSection object defines the properties of a shell section. The ShellSection
     object is derived from the Section object. The ShellSection object has no explicit 
     constructor and no methods or members. 
     The ShellSection object is derived from the Section object. 
@@ -24,4 +24,3 @@ class SolidSection(Section):
 
     # A String specifying the repository key. 
     name: str = ''
-

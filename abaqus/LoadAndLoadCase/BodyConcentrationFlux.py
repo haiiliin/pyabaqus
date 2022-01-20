@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class BodyConcentrationFlux(Load):
-
-    """The BodyConcentrationFlux object defines body concentration flux from a region or into a 
+    """The BodyConcentrationFlux object defines body concentration flux from a region or into a
     region. 
     The BodyConcentrationFlux object is derived from the Load object. 
 
@@ -37,7 +36,7 @@ class BodyConcentrationFlux(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, field: str = '', 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, field: str = '',
                  distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):
         """This method creates a BodyConcentrationFlux object.
 
@@ -133,4 +132,3 @@ class BodyConcentrationFlux(Load):
             None. 
         """
         pass
-

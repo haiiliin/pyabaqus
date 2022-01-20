@@ -1684,7 +1684,7 @@ class StepModel(ModelBase):
             incremental solution for a nonlinear analysis. Possible values are NONE, LINEAR, and
             PARABOLIC. The default value is LINEAR.
         fullyPlastic
-            A String specifying the name of the region being monitored for fully plastic behavior.
+            A String specifying the name of the region being monitored for fully Plastic behavior.
             The default value is an empty string.
         noStop
             A Boolean specifying whether to accept the solution to an increment after the maximum
@@ -1696,7 +1696,7 @@ class StepModel(ModelBase):
             name. The default value is False.
         useLongTermSolution
             A Boolean specifying wether to obtain the fully relaxed long-term elastic solution with
-            time-domain viscoelasticity or the long-term elastic-plastic solution for two-layer
+            time-domain viscoelasticity or the long-term elastic-Plastic solution for two-layer
             viscoplasticity. The default value is OFF.
         convertSDI
             A SymbolicConstant specifying whether to force a new iteration if severe discontinuities
@@ -1788,7 +1788,7 @@ class StepModel(ModelBase):
             incremental solution for a nonlinear analysis. Possible values are NONE, LINEAR, and
             PARABOLIC. The default value is LINEAR.
         fullyPlastic
-            A String specifying the region being monitored for fully plastic behavior. The default
+            A String specifying the region being monitored for fully Plastic behavior. The default
             value is an empty string.
         noStop
             A Boolean specifying whether to accept the solution to an increment after the maximum
@@ -1800,7 +1800,7 @@ class StepModel(ModelBase):
             name. The default value is False.
         useLongTermSolution
             A Boolean specifying wether to obtain the fully relaxed long-term elastic solution with
-            time-domain viscoelasticity or the long-term elastic-plastic solution for two-layer
+            time-domain viscoelasticity or the long-term elastic-Plastic solution for two-layer
             viscoplasticity. The default value is OFF.
         solutionTechnique
             A SymbolicConstant specifying the technique used to for solving nonlinear equations.

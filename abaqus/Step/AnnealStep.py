@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class AnnealStep(AnalysisStep):
-
-    """The AnnealStep object anneals a structure by setting the velocities and all appropriate 
+    """The AnnealStep object anneals a structure by setting the velocities and all appropriate
     state variables to zero. 
     The AnnealStep object is derived from the AnalysisStep object. 
 
@@ -109,7 +108,8 @@ class AnnealStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -135,7 +135,7 @@ class AnnealStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', refTemp: float = None, 
+    def __init__(self, name: str, previous: str, description: str = '', refTemp: float = None,
                  maintainAttributes: Boolean = False):
         """This method creates an AnnealStep object.
 
@@ -190,4 +190,3 @@ class AnnealStep(AnalysisStep):
             RangeError. 
         """
         pass
-

@@ -3,8 +3,7 @@ from ..Region.Region import Region
 
 
 class SizingFrozenArea(GeometricRestriction):
-
-    """The SizingFrozenArea object defines a sizing frozen area geometric restriction. 
+    """The SizingFrozenArea object defines a sizing frozen area geometric restriction.
     The SizingFrozenArea object is derived from the GeometricRestriction object. 
 
     Access
@@ -60,4 +59,3 @@ class SizingFrozenArea(GeometricRestriction):
             None. 
         """
         pass
-

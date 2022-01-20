@@ -1,8 +1,5 @@
-
-
 class Stream:
-
-    """TheStream object defines a set of streamlines in fluid mechanics. 
+    """TheStream object defines a set of streamlines in fluid mechanics.
 
     Access
     ------
@@ -48,4 +45,3 @@ class Stream:
             None. 
         """
         pass
-

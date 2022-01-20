@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class ConcentrationBC(BoundaryCondition):
-
-    """The ConcentrationBC object stores the data for a concentration boundary condition. 
+    """The ConcentrationBC object stores the data for a concentration boundary condition.
     The ConcentrationBC object is derived from the BoundaryCondition object. 
 
     Access
@@ -47,8 +46,8 @@ class ConcentrationBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region, fieldName: str = '', 
-                 magnitude: float = 0, distributionType: SymbolicConstant = UNIFORM, 
+    def __init__(self, name: str, createStepName: str, region: Region, fieldName: str = '',
+                 magnitude: float = 0, distributionType: SymbolicConstant = UNIFORM,
                  amplitude: str = UNSET, fixed: Boolean = OFF):
         """This method creates a ConcentrationBC object.
 
@@ -94,7 +93,7 @@ class ConcentrationBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, fieldName: str = '', magnitude: float = 0, distributionType: SymbolicConstant = UNIFORM, 
+    def setValues(self, fieldName: str = '', magnitude: float = 0, distributionType: SymbolicConstant = UNIFORM,
                   amplitude: str = UNSET, fixed: Boolean = OFF):
         """This method modifies the data for an existing ConcentrationBC object in the step where
         it is created.
@@ -130,8 +129,8 @@ class ConcentrationBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        magnitude: typing.Union[SymbolicConstant,float] = UNCHANGED,
+    def setValuesInStep(self, stepName: str,
+                        magnitude: typing.Union[SymbolicConstant, float] = UNCHANGED,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ConcentrationBC object in the
         specified step.
@@ -158,4 +157,3 @@ class ConcentrationBC(BoundaryCondition):
             None. 
         """
         pass
-

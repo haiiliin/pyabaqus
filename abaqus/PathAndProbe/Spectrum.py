@@ -1,8 +1,5 @@
-
-
 class Spectrum:
-
-    """The Spectrum object defines a color spectrum for the contour display. 
+    """The Spectrum object defines a color spectrum for the contour display.
 
     Access
     ------
@@ -40,4 +37,3 @@ class Spectrum:
             None. 
         """
         pass
-

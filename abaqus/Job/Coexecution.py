@@ -4,8 +4,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class Coexecution:
-
-    """The Coexecution object contains a set of jobs as associated parameters to define a 
+    """The Coexecution object contains a set of jobs as associated parameters to define a
     co-simulation analysis. 
 
     Access
@@ -101,7 +100,7 @@ class Coexecution:
         """
         pass
 
-    def submit(self, consistencyChecking: Boolean = ON, datacheckJob: Boolean = False, 
+    def submit(self, consistencyChecking: Boolean = ON, datacheckJob: Boolean = False,
                continueJob: Boolean = False):
         """This method submits a co-execution for analysis.
 
@@ -168,4 +167,3 @@ class Coexecution:
             None. 
         """
         pass
-

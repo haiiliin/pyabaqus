@@ -6,8 +6,7 @@ from ..Region.Surface import Surface
 
 
 class MaterialOrientation:
-
-    """The MaterialOrientation object represents the orientation of the material properties and 
+    """The MaterialOrientation object represents the orientation of the material properties and
     composite layups. 
 
     Access
@@ -38,15 +37,15 @@ class MaterialOrientation:
     additionalRotationField: str = ''
 
     def __init__(self, region: Set = None, localCsys: DatumCsys = DatumCsys(),
-                 axis: SymbolicConstant = AXIS_1, angle: float = 0, 
-                 stackDirection: SymbolicConstant = STACK_3, fieldName: str = '', 
-                 orientationType: SymbolicConstant = GLOBAL, 
-                 normalAxisDirection: SymbolicConstant = AXIS_3, 
-                 normalAxisDefinition: SymbolicConstant = NORMAL_VECTOR, 
+                 axis: SymbolicConstant = AXIS_1, angle: float = 0,
+                 stackDirection: SymbolicConstant = STACK_3, fieldName: str = '',
+                 orientationType: SymbolicConstant = GLOBAL,
+                 normalAxisDirection: SymbolicConstant = AXIS_3,
+                 normalAxisDefinition: SymbolicConstant = NORMAL_VECTOR,
                  normalAxisRegion: Surface = None, normalAxisDatum: DatumAxis = DatumAxis(),
-                 flipNormalDirection: Boolean = OFF, normalAxisVector: tuple = (), 
-                 primaryAxisDirection: SymbolicConstant = AXIS_1, 
-                 primaryAxisDefinition: SymbolicConstant = PRIMARY_VECTOR, 
+                 flipNormalDirection: Boolean = OFF, normalAxisVector: tuple = (),
+                 primaryAxisDirection: SymbolicConstant = AXIS_1,
+                 primaryAxisDefinition: SymbolicConstant = PRIMARY_VECTOR,
                  primaryAxisRegion: Set = None, primaryAxisDatum: DatumAxis = DatumAxis(),
                  flipPrimaryDirection: Boolean = OFF, primaryAxisVector: tuple = ()):
         """This method creates a MaterialOrientation object.
@@ -133,16 +132,17 @@ class MaterialOrientation:
         """
         pass
 
-    def ReferenceOrientation(self, localCsys: DatumCsys = DatumCsys(), axis: SymbolicConstant = AXIS_1, angle: float = 0, 
-                             stackDirection: SymbolicConstant = STACK_3, fieldName: str = '', 
-                             orientationType: SymbolicConstant = GLOBAL, additionalRotationField: str = '', 
-                             additionalRotationType: SymbolicConstant = ROTATION_NONE, 
-                             normalAxisDirection: SymbolicConstant = AXIS_3, 
+    def ReferenceOrientation(self, localCsys: DatumCsys = DatumCsys(), axis: SymbolicConstant = AXIS_1,
+                             angle: float = 0,
+                             stackDirection: SymbolicConstant = STACK_3, fieldName: str = '',
+                             orientationType: SymbolicConstant = GLOBAL, additionalRotationField: str = '',
+                             additionalRotationType: SymbolicConstant = ROTATION_NONE,
+                             normalAxisDirection: SymbolicConstant = AXIS_3,
                              normalAxisDefinition: SymbolicConstant = VECTOR, normalAxisRegion: Surface = None,
-                             normalAxisDatum: DatumAxis = DatumAxis(), flipNormalDirection: Boolean = OFF, 
-                             normalAxisVector: tuple = (), primaryAxisDirection: SymbolicConstant = AXIS_1, 
+                             normalAxisDatum: DatumAxis = DatumAxis(), flipNormalDirection: Boolean = OFF,
+                             normalAxisVector: tuple = (), primaryAxisDirection: SymbolicConstant = AXIS_1,
                              primaryAxisDefinition: SymbolicConstant = VECTOR, primaryAxisRegion: Set = None,
-                             primaryAxisDatum: DatumAxis = DatumAxis(), flipPrimaryDirection: Boolean = OFF, 
+                             primaryAxisDatum: DatumAxis = DatumAxis(), flipPrimaryDirection: Boolean = OFF,
                              primaryAxisVector: tuple = ()):
         """This method creates a MaterialOrientation object.
 
@@ -248,4 +248,3 @@ class MaterialOrientation:
             None. 
         """
         pass
-

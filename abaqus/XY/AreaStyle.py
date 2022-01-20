@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class AreaStyle:
 
-    """The AreaStyle object is used to define how areas are to be filled when drawing XY-plot 
+class AreaStyle:
+    """The AreaStyle object is used to define how areas are to be filled when drawing XY-plot
     objects. 
     AreaStyle objects are automatically created whenever an Area object is created. 
     AreaStyle objects can be created using the methods described below. 
@@ -89,4 +89,3 @@ class AreaStyle:
             None. 
         """
         pass
-

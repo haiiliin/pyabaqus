@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class DGContourOptions:
 
-    """The DGContourOptions object stores values and attributes associated with a contour plot. 
+class DGContourOptions:
+    """The DGContourOptions object stores values and attributes associated with a contour plot.
     The DGContourOptions object has no constructor command. Abaqus creates an 
     *odbDisplayOptions.contourOptions* member when a display group instance is created, 
     using values from *odbDisplay.contourOptions*. 
@@ -99,4 +99,3 @@ class DGContourOptions:
     # *edgeLineStyle* and *edgeLineThickness* members of the DGCommonOptions object. The 
     # default is ((SOLID, VERY_THIN), ). 
     intervalLineAttributes: SymbolicConstant = None
-

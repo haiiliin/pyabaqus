@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SelfContactExp(Interaction):
-
-    """The SelfContactExp object defines self-contact during an Abaqus/Explicit analysis. 
+    """The SelfContactExp object defines self-contact during an Abaqus/Explicit analysis.
     The SelfContactExp object is derived from the Interaction object. 
 
     Access
@@ -21,7 +20,7 @@ class SelfContactExp(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, surface: Region, interactionProperty: str, 
+    def __init__(self, name: str, createStepName: str, surface: Region, interactionProperty: str,
                  mechanicalConstraint: SymbolicConstant = KINEMATIC, contactControls: str = ''):
         """This method creates a SelfContactExp object.
 
@@ -108,4 +107,3 @@ class SelfContactExp(Interaction):
             None. 
         """
         pass
-

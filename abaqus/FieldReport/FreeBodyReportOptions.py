@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class FreeBodyReportOptions:
 
-    """The FreeBodyReportOptions object stores settings used by the writeFreeBodyReport method 
+class FreeBodyReportOptions:
+    """The FreeBodyReportOptions object stores settings used by the writeFreeBodyReport method
     when you write free body computational results to an ASCII file. The 
     FreeBodyReportOptions object has no constructor. Abaqus creates the 
     *freeBodyReportOptions* member when you import the Visualization module. 
@@ -21,8 +21,8 @@ class FreeBodyReportOptions:
 
     """
 
-    def setValues(self, numDigits: int = 3, forceThreshold: float = None, momentThreshold: float = None, 
-                  numberFormat: SymbolicConstant = SCIENTIFIC, 
+    def setValues(self, numDigits: int = 3, forceThreshold: float = None, momentThreshold: float = None,
+                  numberFormat: SymbolicConstant = SCIENTIFIC,
                   reportFormat: SymbolicConstant = NORMAL_ANNOTATED, csysType: SymbolicConstant = GLOBAL):
         """This method modifies the FreeBodyReportOptions object.
 
@@ -53,4 +53,3 @@ class FreeBodyReportOptions:
             None. 
         """
         pass
-

@@ -1,11 +1,10 @@
-from abaqusConstants import *
 from abaqus.Sketcher.ConstrainedSketchBase import ConstrainedSketchBase
 from abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 from abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex import ConstrainedSketchVertex
+from abaqusConstants import *
 
 
 class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
-
     """The ConstrainedSketchDimension object stores the dimensions associated with a sketch.
 
     Access
@@ -231,4 +230,3 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
             !img
         """
         pass
-

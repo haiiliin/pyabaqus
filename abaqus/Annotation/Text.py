@@ -5,8 +5,7 @@ from .Annotation import Annotation
 
 
 class Text(Annotation):
-
-    """The Text object stores the text settings and location of a text annotation. 
+    """The Text object stores the text settings and location of a text annotation.
     The Text object is derived from the Annotation object. 
 
     Access
@@ -30,11 +29,11 @@ class Text(Annotation):
     # A Float specifying the height in millimeters of the Text object. 
     height: float = None
 
-    def __init__(self, name: str, text: str = '', offset: tuple[float] = (), 
-                 anchor: typing.Union[SymbolicConstant,float] = BOTTOM_LEFT, 
-                 referencePoint: typing.Union[SymbolicConstant,float] = BOTTOM_LEFT, 
-                 rotationAngle: float = 0, color: str = '', font: str = '', 
-                 backgroundStyle: SymbolicConstant = TRANSPARENT, backgroundColor: str = '', 
+    def __init__(self, name: str, text: str = '', offset: tuple[float] = (),
+                 anchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
+                 referencePoint: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
+                 rotationAngle: float = 0, color: str = '', font: str = '',
+                 backgroundStyle: SymbolicConstant = TRANSPARENT, backgroundColor: str = '',
                  box: Boolean = OFF, justification: SymbolicConstant = JUSTIFY_LEFT):
         """This method creates a Text object.
 
@@ -57,16 +56,32 @@ class Text(Annotation):
             specifies the *X*- and *Y* coordinates as percentages of the viewport width and height. 
             A Sequence of three Floats specifies the *X*-, *Y*-, and *Z*-coordinates of a point in 
             the model coordinate system. A SymbolicConstant specifies a relative position. Possible 
-            values 
-            are:BOTTOM_LEFTBOTTOM_CENTERBOTTOM_RIGHTCENTER_LEFTCENTERCENTER_RIGHTTOP_LEFTTOP_CENTERTOP_RIGHTThe 
-            default value is BOTTOM_LEFT. 
+            values are:
+                BOTTOM_LEFT
+                BOTTOM_CENTER
+                BOTTOM_RIGHT
+                CENTER_LEFT
+                CENTER
+                CENTER_RIGHT
+                TOP_LEFT
+                TOP_CENTER
+                TOP_RIGHT
+            The default value is BOTTOM_LEFT.
         referencePoint
             A SymbolicConstant or a sequence of Floats specifying a point. The sequence of two 
             Floats specifies the *X*- and *Y*-coordinates of the reference point of the Text 
             annotation given as percentages of its width and height. The SymbolicConstant indicates 
-            a relative position. Possible values 
-            are:BOTTOM_LEFTBOTTOM_CENTERBOTTOM_RIGHTCENTER_LEFTCENTERCENTER_RIGHTTOP_LEFTTOP_CENTERTOP_RIGHTThe 
-            default value is BOTTOM_LEFT. 
+            a relative position. Possible values are:
+                BOTTOM_LEFT
+                BOTTOM_CENTER
+                BOTTOM_RIGHT
+                CENTER_LEFT
+                CENTER
+                CENTER_RIGHT
+                TOP_LEFT
+                TOP_CENTER
+                TOP_RIGHT
+            The default value is BOTTOM_LEFT.
         rotationAngle
             A Float specifying the amount of rotation in degrees about *referencePoint*. The default 
             value is 0.0. 
@@ -101,11 +116,11 @@ class Text(Annotation):
         super().__init__()
         pass
 
-    def setValues(self, text: str = '', offset: tuple[float] = (), 
-                  anchor: typing.Union[SymbolicConstant,float] = BOTTOM_LEFT, 
-                  referencePoint: typing.Union[SymbolicConstant,float] = BOTTOM_LEFT, 
-                  rotationAngle: float = 0, color: str = '', font: str = '', 
-                  backgroundStyle: SymbolicConstant = TRANSPARENT, backgroundColor: str = '', 
+    def setValues(self, text: str = '', offset: tuple[float] = (),
+                  anchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
+                  referencePoint: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
+                  rotationAngle: float = 0, color: str = '', font: str = '',
+                  backgroundStyle: SymbolicConstant = TRANSPARENT, backgroundColor: str = '',
                   box: Boolean = OFF, justification: SymbolicConstant = JUSTIFY_LEFT):
         """This method modifies the Text object.
 
@@ -163,4 +178,3 @@ class Text(Annotation):
             !img 
         """
         pass
-

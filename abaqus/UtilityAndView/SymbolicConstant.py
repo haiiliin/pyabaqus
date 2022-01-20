@@ -1,8 +1,7 @@
 
 
 class SymbolicConstant:
-
-    """The SymbolicConstant object represents a string in a way that can be stored in a replay 
+    """The SymbolicConstant object represents a string in a way that can be stored in a replay
     file and used as an argument to Abaqus Scripting Interface methods and functions. By 
     convention the string representation of the SymbolicConstant object is the same as its 
     variable name. If you pass a SymbolicConstant object to the Python repr() function, the 
@@ -50,4 +49,3 @@ class SymbolicConstant:
             None. 
         """
         pass
-

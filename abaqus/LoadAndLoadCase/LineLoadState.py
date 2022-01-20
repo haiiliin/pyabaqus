@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class LineLoadState(LoadState):
-
-    """The LineLoadState object stores the propagating data of a line load in a step. One 
+    """The LineLoadState object stores the propagating data of a line load in a step. One
     instance of this object is created internally by the LineLoad object for each step. The 
     instance is also deleted internally by the LineLoad object. 
     The LineLoadState object has no constructor or methods. 
@@ -67,4 +66,3 @@ class LineLoadState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

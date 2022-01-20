@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class DisplayGroupInstanceRepository:
 
-    """The DisplayGroupInstanceRepository object stores DisplayGroupInstance objects. In 
+class DisplayGroupInstanceRepository:
+    """The DisplayGroupInstanceRepository object stores DisplayGroupInstance objects. In
     addition to all the standard Python repository methods, the DisplayGroupInstance 
     repository defines additional methods as described below. 
 
@@ -42,4 +42,3 @@ class DisplayGroupInstanceRepository:
             None. 
         """
         pass
-

@@ -1,52 +1,73 @@
+import typing
+
+from abaqus.Section.TransverseShearBeam import TransverseShearBeam
+from abaqus.Section.TransverseShearShell import TransverseShearShell
+from abaqusConstants import *
+from abaqus.Section.SectionBase import SectionBase
 
 
-class Section:
+class Section(SectionBase):
 
-    """The Section object defines the properties of a section. The Section object is the 
-    abstract base type for other Section objects. The Section object has no explicit 
-    constructor. The methods and members of the Section object are common to all objects 
-    derived from the Section. 
-
-    Access
-    ------
-        - import section
-        - mdb.models[name].sections[name]
-        - import odbSection
-        - session.odbs[name].sections[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
-
-    """
-
-    # A String specifying the repository key. 
-    name: str = ''
-
-    def sectionsFromOdb(self, fileName: str):
-        """This method creates Section objects by reading an output database. The new sections are
-        placed in the sections repository.
+    def TransverseShearBeam(self, scfDefinition: SymbolicConstant, k23: float = None, k13: float = None,
+                            slendernessCompensation: typing.Union[SymbolicConstant, float] = 0) -> TransverseShearBeam:
+        """This method creates a TransverseShearBeam object.
 
         Path
         ----
-            - mdb.models[*name*].sectionsFromOdb
+            - mdb.models[name].sections[name].TransverseShearBeam
+            - session.odbs[name].sections[name].TransverseShearBeam
 
         Parameters
         ----------
-        fileName
-            A String specifying the name of the output database file (including the .odb extension) 
-            to be read. This String can also be the full path to the output database file if it is 
-            located in another directory. 
+        scfDefinition
+            A SymbolicConstant specifying how slenderness compensation factor of the section is
+            given. Possible values are ANALYSIS_DEFAULT, COMPUTED, and VALUE.
+        k23
+            None or a Float specifying the k23 shear stiffness of the section. The default value is
+            None.
+        k13
+            None or a Float specifying the k13 shear stiffness of the section. The default value is
+            None.
+        slendernessCompensation
+            The SymbolicConstant COMPUTED or a Float specifying the slenderness compensation factor
+            of the section. The default value is 0.25.
 
         Returns
         -------
-            A list of Section objects. 
+            A TransverseShearBeam object.
 
         Exceptions
         ----------
-            None. 
+            None.
         """
-        pass
+        self.beamTransverseShear = transverseShearBeam = TransverseShearBeam(scfDefinition, k23, k13,
+                                                                             slendernessCompensation)
+        return transverseShearBeam
 
+    def TransverseShearShell(self, k11: float, k22: float, k12: float) -> TransverseShearShell:
+        """This method creates a TransverseShearShell object.
+
+        Path
+        ----
+            - mdb.models[name].sections[name].TransverseShearShell
+            - session.odbs[name].sections[name].TransverseShearShell
+
+        Parameters
+        ----------
+        k11
+            A Float specifying the shear stiffness of the section in the first direction.
+        k22
+            A Float specifying the shear stiffness of the section in the second direction.
+        k12
+            A Float specifying the coupling term in the shear stiffness of the section.
+
+        Returns
+        -------
+            A TransverseShearShell object.
+
+        Exceptions
+        ----------
+            None.
+        """
+        self.transverseShear = transverseShearShell = TransverseShearShell(k11, k22, k12)
+        return transverseShearShell

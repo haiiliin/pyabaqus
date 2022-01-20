@@ -1,11 +1,11 @@
 from abaqusConstants import *
 from .OdbInstance import OdbInstance
+from .OdbPart import OdbPart
 from .SectionPoint import SectionPoint
 
 
 class FieldValue:
-
-    """The FieldValue object represents the field data at a point. The FieldValue object has no 
+    """The FieldValue object represents the field data at a point. The FieldValue object has no
     constructor; it is created by the Odb object when data are added to the FieldOutput 
     object using the addData method. For faster, bulk-data access, see Using bulk data 
     access to an output database. 
@@ -103,22 +103,22 @@ class FieldValue:
     minPrincipal: float = None
 
     # A Float specifying the maximum principal in-plane stress. The value is valid only when 
-    # the *validInvariants* member includes MAX_INPLANE_PRINCIPAL; otherwise, the value is 
+    # the *validInvariants* member includes MAX_INPLANE_PRINCIPAL; otherwise, the value is
     # indeterminate. Conjugate data will be ignored in invariant calculation. 
     maxInPlanePrincipal: float = None
 
     # A Float specifying the calculated minimum principal in-plane stress. The value is valid 
-    # only when the *validInvariants* member includes MIN_INPLANE_PRINCIPAL; otherwise, the 
+    # only when the *validInvariants* member includes MIN_INPLANE_PRINCIPAL; otherwise, the
     # value is indeterminate. Conjugate data will be ignored in invariant calculation. 
     minInPlanePrincipal: float = None
 
     # A Float specifying the calculated principal out-of-plane stress. The value is valid only 
-    # when the *validInvariants* member includes OUTOFPLANE_PRINCIPAL; otherwise, the value is 
+    # when the *validInvariants* member includes OUTOFPLANE_PRINCIPAL; otherwise, the value is
     # indeterminate. Conjugate data will be ignored in invariant calculation. 
     outOfPlanePrincipal: float = None
 
     # An OdbInstance object specifying the part to which the labels belong. 
-    instance: OdbInstance = OdbInstance()
+    instance: OdbInstance = OdbInstance('instance', OdbPart('part', THREE_D, DEFORMABLE_BODY))
 
     # A SectionPoint object. 
     sectionPoint: SectionPoint = None
@@ -160,4 +160,3 @@ class FieldValue:
     # VECTOR, *conjugateData* is a sequence containing the components. If the underlying data 
     # are in single precision, an exception will be thrown. 
     conjugateDataDouble: tuple = ()
-

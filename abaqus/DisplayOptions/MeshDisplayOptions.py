@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class MeshDisplayOptions:
 
-    """The MeshDisplayOptions object stores settings that specify how the assembly is displayed 
+class MeshDisplayOptions:
+    """The MeshDisplayOptions object stores settings that specify how the assembly is displayed
     in a particular viewport when 
     session.viewports[name].assemblyDisplay.mesh=ON 
     The MeshDisplayOptions object has no constructor. When you create a new viewport, the 
@@ -23,8 +23,8 @@ class MeshDisplayOptions:
 
     """
 
-    def setValues(self, nodeLabels: Boolean = OFF, elementLabels: Boolean = OFF, 
-                  meshVisibleEdges: SymbolicConstant = EXTERIOR, featureAngle: float = 20, 
+    def setValues(self, nodeLabels: Boolean = OFF, elementLabels: Boolean = OFF,
+                  meshVisibleEdges: SymbolicConstant = EXTERIOR, featureAngle: float = 20,
                   meshEdgesInShaded: Boolean = ON, meshTechnique: Boolean = OFF, seeds: Boolean = OFF):
         """This method modifies the MeshDisplayOptions object.
 
@@ -65,4 +65,3 @@ class MeshDisplayOptions:
             RangeError. 
         """
         pass
-

@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class BodyForceState(LoadState):
-
-    """The BodyForceState object stores the propagating data of a body force in a step. One 
+    """The BodyForceState object stores the propagating data of a body force in a step. One
     instance of this object is created internally by the BodyForce object for each step. The 
     instance is also deleted internally by the BodyForce object. 
     The BodyForceState object has no constructor or methods. 
@@ -65,4 +64,3 @@ class BodyForceState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

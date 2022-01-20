@@ -1,10 +1,9 @@
 from abaqusConstants import *
-from .InteractionProperty import InteractionProperty
+from .ContactProperty import ContactProperty
 
 
-class FluidExchangeProperty(InteractionProperty):
-
-    """The FluidExchangeProperty object is an interaction property that defines the fluid 
+class FluidExchangeProperty(ContactProperty):
+    """The FluidExchangeProperty object is an interaction property that defines the fluid
     exchange property for a flow between two fluid cavities or between a fluid cavity and 
     its environment. 
     The FluidExchangeProperty object is derived from the InteractionProperty object. 
@@ -23,8 +22,8 @@ class FluidExchangeProperty(InteractionProperty):
 
     """
 
-    def __init__(self, name: str, dataTable: tuple, definition: SymbolicConstant = BULK_VISCOSITY, 
-                 pressureDependency: Boolean = OFF, temperatureDependency: Boolean = OFF, 
+    def __init__(self, name: str, dataTable: tuple, definition: SymbolicConstant = BULK_VISCOSITY,
+                 pressureDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
                  fieldDependencies: int = 0):
         """This method creates a FluidExchangeProperty object.
 
@@ -102,10 +101,10 @@ class FluidExchangeProperty(InteractionProperty):
         ----------
             None. 
         """
-        super().__init__()
+        super().__init__(name)
         pass
 
-    def setValues(self, definition: SymbolicConstant = BULK_VISCOSITY, pressureDependency: Boolean = OFF, 
+    def setValues(self, definition: SymbolicConstant = BULK_VISCOSITY, pressureDependency: Boolean = OFF,
                   temperatureDependency: Boolean = OFF, fieldDependencies: int = 0):
         """This method modifies the FluidExchangeProperty object.
 
@@ -137,4 +136,3 @@ class FluidExchangeProperty(InteractionProperty):
             None. 
         """
         pass
-

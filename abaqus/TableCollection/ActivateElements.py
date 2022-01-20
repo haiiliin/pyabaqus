@@ -1,8 +1,6 @@
 
-
 class ActivateElements:
-
-    """The ActivateElements object is used turn on progressive element activation within a step 
+    """The ActivateElements object is used turn on progressive element activation within a step
     definition. 
 
     Access
@@ -19,7 +17,7 @@ class ActivateElements:
 
     """
 
-    def __init__(self, tableCollection: str, activation: str, eigenTimeConst: str = '', 
+    def __init__(self, tableCollection: str, activation: str, eigenTimeConst: str = '',
                  expansionTimeConstant: str = ''):
         """This method creates an ActivateElements object.
 
@@ -64,4 +62,3 @@ class ActivateElements:
             RangeError. 
         """
         pass
-

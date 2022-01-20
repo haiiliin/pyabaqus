@@ -3,8 +3,7 @@ from .Section import Section
 
 
 class MPCSection(Section):
-
-    """The MPCSection object defines the properties of a multi-point constraint section. 
+    """The MPCSection object defines the properties of a multi-point constraint section.
     The MPCSection object is derived from the Section object. 
 
     Access
@@ -23,7 +22,7 @@ class MPCSection(Section):
 
     """
 
-    def __init__(self, name: str, mpcType: SymbolicConstant, userMode: SymbolicConstant = DOF_MODE, 
+    def __init__(self, name: str, mpcType: SymbolicConstant, userMode: SymbolicConstant = DOF_MODE,
                  userType: int = 0):
         """This method creates a MPCSection object.
 
@@ -58,4 +57,3 @@ class MPCSection(Section):
         """
         super().__init__()
         pass
-

@@ -1,8 +1,5 @@
-
-
 class SteadyStateSubspaceFrequency:
-
-    """A SteadyStateSubspaceFrequency is an object used to define frequency over range of 
+    """A SteadyStateSubspaceFrequency is an object used to define frequency over range of
     modes. 
 
     Access
@@ -33,4 +30,3 @@ class SteadyStateSubspaceFrequency:
     # frequency points, Abaqus biases the results toward the ends of the intervals to obtain 
     # better resolution. The default value is 3.0. 
     bias: float = 3
-

@@ -5,8 +5,7 @@ from ..Region.Region import Region
 
 
 class AccelerationBaseMotionBC(BoundaryCondition):
-
-    """The AccelerationBaseMotionBC object stores the data for an acceleration base motion 
+    """The AccelerationBaseMotionBC object stores the data for an acceleration base motion
     boundary condition. 
     The AccelerationBaseMotionBC object is derived from the BoundaryCondition object. 
 
@@ -56,7 +55,7 @@ class AccelerationBaseMotionBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, dof: SymbolicConstant, amplitudeScaleFactor: float = 1, 
+    def __init__(self, name: str, createStepName: str, dof: SymbolicConstant, amplitudeScaleFactor: float = 1,
                  centerOfRotation: tuple = (), correlation: CorrelationArray = None,
                  secondaryBase: str = '', useComplex: Boolean = OFF, amplitude: str = UNSET):
         """This method creates a AccelerationBaseMotionBC object.
@@ -104,7 +103,7 @@ class AccelerationBaseMotionBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, amplitudeScaleFactor: float = 1, centerOfRotation: tuple = (), 
+    def setValues(self, amplitudeScaleFactor: float = 1, centerOfRotation: tuple = (),
                   correlation: CorrelationArray = None, secondaryBase: str = '',
                   useComplex: Boolean = OFF, amplitude: str = UNSET):
         """This method modifies the data for an existing AccelerationBaseMotionBC object in the
@@ -165,4 +164,3 @@ class AccelerationBaseMotionBC(BoundaryCondition):
             None. 
         """
         pass
-

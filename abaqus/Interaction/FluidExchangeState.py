@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class FluidExchangeState(InteractionState):
-
-    """The FluidExchangeState object stores the propagating data for an FluidExchange object. 
+    """The FluidExchangeState object stores the propagating data for an FluidExchange object.
     One instance of this object is created internally by the FluidExchange object for each 
     step. The instance is also deleted internally by the FluidExchange object. 
     The FluidExchangeState object has no constructor or methods. 
@@ -35,4 +34,3 @@ class FluidExchangeState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

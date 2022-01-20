@@ -1,8 +1,5 @@
-
-
 class OdbJobTime:
-
-    """The OdbJobTime object stores the analysis time of a job. 
+    """The OdbJobTime object stores the analysis time of a job.
 
     Access
     ------
@@ -25,4 +22,3 @@ class OdbJobTime:
 
     # A float specifying the wallclocktime for the analysis. This attribute is read-only. 
     wallclockTime: str = ''
-

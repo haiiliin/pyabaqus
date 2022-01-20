@@ -9,8 +9,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class ShapeTask(OptimizationTask):
-
-    """The ShapeTask object defines a shape task. 
+    """The ShapeTask object defines a shape task.
     The ShapeTask object is derived from the OptimizationTask object. 
 
     Access
@@ -41,32 +40,32 @@ class ShapeTask(OptimizationTask):
     # A repository of StopCondition objects. 
     stopConditions: Repository[str, StopCondition] = Repository[str, StopCondition]()
 
-    def __init__(self, name: str, abaqusSensitivities: Boolean = True, 
-                 absoluteStepSizeControl: SymbolicConstant = MINIMUM, activateDurability: Boolean = ON, 
-                 additionalDurabilityFiles: str = '', 
-                 algorithm: SymbolicConstant = CONDITION_BASED_OPTIMIZATION, 
-                 constrainedLaplacianConvergenceLevel: SymbolicConstant = NORMAL, 
-                 curvatureSmoothingEdgeLength: float = 5, durabilityInputfile: str = '', 
-                 durabilitySolver: str = FE_SAFE, equalityConstraintTolerance: float = None, 
-                 featureRecognitionAngle: float = 30, filterExponent: float = 1, 
-                 filterMaxRadius: float = None, filterRadiusReduction: float = None, 
-                 firstCycleDeletedVolumeTechnique: SymbolicConstant = OFF, 
-                 freezeBoundaryConditionRegions: Boolean = OFF, 
-                 frozenBoundaryConditionRegion: SymbolicConstant = MODEL, 
-                 geometricRestrictionEvaluationFrequency: SymbolicConstant = LOW, 
-                 growthScaleFactor: float = 1, haltUponViolation: Boolean = OFF, 
-                 layerReferenceRegion: str = None, 
-                 meshSmoothingRegionMethod: SymbolicConstant = TASK_REGION_LAYERS, 
-                 meshSmoothingStrategy: SymbolicConstant = CONSTRAINED_LAPLACIAN, 
-                 midsideInterpolation: SymbolicConstant = POSITIONS, 
-                 numFreeNodeLayers: SymbolicConstant = 0, numSmoothedElementLayers: int = None, 
-                 presumeFeasibleBCRegionAtStart: Boolean = ON, quadMaxAngle: float = 160, 
-                 quadMinAngle: float = 20, quadSkew: float = 30, quadTaper: float = 0, 
-                 region: SymbolicConstant = MODEL, reportPoorQualityElements: Boolean = OFF, 
-                 reportQualityViolation: Boolean = OFF, shrinkScaleFactor: float = 1, 
-                 smoothingRegion: str = None, targetMeshQuality: SymbolicConstant = LOW, 
-                 tetAspectRatio: float = 100, tetMaxAspect: float = 8, tetMinAspect: float = 0, 
-                 tetSkew: float = 100, triMaxAngle: float = 140, triMinAngle: float = 20, 
+    def __init__(self, name: str, abaqusSensitivities: Boolean = True,
+                 absoluteStepSizeControl: SymbolicConstant = MINIMUM, activateDurability: Boolean = ON,
+                 additionalDurabilityFiles: str = '',
+                 algorithm: SymbolicConstant = CONDITION_BASED_OPTIMIZATION,
+                 constrainedLaplacianConvergenceLevel: SymbolicConstant = NORMAL,
+                 curvatureSmoothingEdgeLength: float = 5, durabilityInputfile: str = '',
+                 durabilitySolver: str = FE_SAFE, equalityConstraintTolerance: float = None,
+                 featureRecognitionAngle: float = 30, filterExponent: float = 1,
+                 filterMaxRadius: float = None, filterRadiusReduction: float = None,
+                 firstCycleDeletedVolumeTechnique: SymbolicConstant = OFF,
+                 freezeBoundaryConditionRegions: Boolean = OFF,
+                 frozenBoundaryConditionRegion: SymbolicConstant = MODEL,
+                 geometricRestrictionEvaluationFrequency: SymbolicConstant = LOW,
+                 growthScaleFactor: float = 1, haltUponViolation: Boolean = OFF,
+                 layerReferenceRegion: str = None,
+                 meshSmoothingRegionMethod: SymbolicConstant = TASK_REGION_LAYERS,
+                 meshSmoothingStrategy: SymbolicConstant = CONSTRAINED_LAPLACIAN,
+                 midsideInterpolation: SymbolicConstant = POSITIONS,
+                 numFreeNodeLayers: SymbolicConstant = 0, numSmoothedElementLayers: int = None,
+                 presumeFeasibleBCRegionAtStart: Boolean = ON, quadMaxAngle: float = 160,
+                 quadMinAngle: float = 20, quadSkew: float = 30, quadTaper: float = 0,
+                 region: SymbolicConstant = MODEL, reportPoorQualityElements: Boolean = OFF,
+                 reportQualityViolation: Boolean = OFF, shrinkScaleFactor: float = 1,
+                 smoothingRegion: str = None, targetMeshQuality: SymbolicConstant = LOW,
+                 tetAspectRatio: float = 100, tetMaxAspect: float = 8, tetMinAspect: float = 0,
+                 tetSkew: float = 100, triMaxAngle: float = 140, triMinAngle: float = 20,
                  updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF):
         """This method creates a ShapeTask object.
 
@@ -239,32 +238,32 @@ class ShapeTask(OptimizationTask):
         super().__init__()
         pass
 
-    def setValues(self, abaqusSensitivities: Boolean = True, 
-                  absoluteStepSizeControl: SymbolicConstant = MINIMUM, activateDurability: Boolean = ON, 
-                  additionalDurabilityFiles: str = '', 
-                  algorithm: SymbolicConstant = CONDITION_BASED_OPTIMIZATION, 
-                  constrainedLaplacianConvergenceLevel: SymbolicConstant = NORMAL, 
-                  curvatureSmoothingEdgeLength: float = 5, durabilityInputfile: str = '', 
-                  durabilitySolver: str = FE_SAFE, equalityConstraintTolerance: float = None, 
-                  featureRecognitionAngle: float = 30, filterExponent: float = 1, 
-                  filterMaxRadius: float = None, filterRadiusReduction: float = None, 
-                  firstCycleDeletedVolumeTechnique: SymbolicConstant = OFF, 
-                  freezeBoundaryConditionRegions: Boolean = OFF, 
-                  frozenBoundaryConditionRegion: SymbolicConstant = MODEL, 
-                  geometricRestrictionEvaluationFrequency: SymbolicConstant = LOW, 
-                  growthScaleFactor: float = 1, haltUponViolation: Boolean = OFF, 
-                  layerReferenceRegion: str = None, 
-                  meshSmoothingRegionMethod: SymbolicConstant = TASK_REGION_LAYERS, 
-                  meshSmoothingStrategy: SymbolicConstant = CONSTRAINED_LAPLACIAN, 
-                  midsideInterpolation: SymbolicConstant = POSITIONS, 
-                  numFreeNodeLayers: SymbolicConstant = 0, numSmoothedElementLayers: int = None, 
-                  presumeFeasibleBCRegionAtStart: Boolean = ON, quadMaxAngle: float = 160, 
-                  quadMinAngle: float = 20, quadSkew: float = 30, quadTaper: float = 0, 
-                  region: SymbolicConstant = MODEL, reportPoorQualityElements: Boolean = OFF, 
-                  reportQualityViolation: Boolean = OFF, shrinkScaleFactor: float = 1, 
-                  smoothingRegion: str = None, targetMeshQuality: SymbolicConstant = LOW, 
-                  tetAspectRatio: float = 100, tetMaxAspect: float = 8, tetMinAspect: float = 0, 
-                  tetSkew: float = 100, triMaxAngle: float = 140, triMinAngle: float = 20, 
+    def setValues(self, abaqusSensitivities: Boolean = True,
+                  absoluteStepSizeControl: SymbolicConstant = MINIMUM, activateDurability: Boolean = ON,
+                  additionalDurabilityFiles: str = '',
+                  algorithm: SymbolicConstant = CONDITION_BASED_OPTIMIZATION,
+                  constrainedLaplacianConvergenceLevel: SymbolicConstant = NORMAL,
+                  curvatureSmoothingEdgeLength: float = 5, durabilityInputfile: str = '',
+                  durabilitySolver: str = FE_SAFE, equalityConstraintTolerance: float = None,
+                  featureRecognitionAngle: float = 30, filterExponent: float = 1,
+                  filterMaxRadius: float = None, filterRadiusReduction: float = None,
+                  firstCycleDeletedVolumeTechnique: SymbolicConstant = OFF,
+                  freezeBoundaryConditionRegions: Boolean = OFF,
+                  frozenBoundaryConditionRegion: SymbolicConstant = MODEL,
+                  geometricRestrictionEvaluationFrequency: SymbolicConstant = LOW,
+                  growthScaleFactor: float = 1, haltUponViolation: Boolean = OFF,
+                  layerReferenceRegion: str = None,
+                  meshSmoothingRegionMethod: SymbolicConstant = TASK_REGION_LAYERS,
+                  meshSmoothingStrategy: SymbolicConstant = CONSTRAINED_LAPLACIAN,
+                  midsideInterpolation: SymbolicConstant = POSITIONS,
+                  numFreeNodeLayers: SymbolicConstant = 0, numSmoothedElementLayers: int = None,
+                  presumeFeasibleBCRegionAtStart: Boolean = ON, quadMaxAngle: float = 160,
+                  quadMinAngle: float = 20, quadSkew: float = 30, quadTaper: float = 0,
+                  region: SymbolicConstant = MODEL, reportPoorQualityElements: Boolean = OFF,
+                  reportQualityViolation: Boolean = OFF, shrinkScaleFactor: float = 1,
+                  smoothingRegion: str = None, targetMeshQuality: SymbolicConstant = LOW,
+                  tetAspectRatio: float = 100, tetMaxAspect: float = 8, tetMinAspect: float = 0,
+                  tetSkew: float = 100, triMaxAngle: float = 140, triMinAngle: float = 20,
                   updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF):
         """This method modifies the ShapeTask object.
 
@@ -429,4 +428,3 @@ class ShapeTask(OptimizationTask):
             None. 
         """
         pass
-

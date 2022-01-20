@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class TopologyPointSymmetry(GeometricRestriction):
-
-    """The TopologyPointSymmetry object defines a topology point symmetry geometric 
+    """The TopologyPointSymmetry object defines a topology point symmetry geometric
     restriction. 
     The TopologyPointSymmetry object is derived from the GeometricRestriction object. 
 
@@ -76,4 +75,3 @@ class TopologyPointSymmetry(GeometricRestriction):
             None. 
         """
         pass
-

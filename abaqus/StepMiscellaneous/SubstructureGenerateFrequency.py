@@ -1,8 +1,5 @@
-
-
 class SubstructureGenerateFrequency:
-
-    """A SubstructureGenerateFrequency object is used to define the modes to be used in a modal 
+    """A SubstructureGenerateFrequency object is used to define the modes to be used in a modal
     dynamic analysis. These modes are selected from the specified frequency range including 
     the frequency boundary. 
 
@@ -24,4 +21,3 @@ class SubstructureGenerateFrequency:
 
     # A Float specifying the upper limit of the frequency range, in cycles/time. 
     upper: float = None
-

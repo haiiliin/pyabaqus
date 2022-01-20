@@ -5,8 +5,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class OdbDiagnosticStep:
-
-    """The OdbDiagnosticStep object stores step data. 
+    """The OdbDiagnosticStep object stores step data.
 
     Access
     ------
@@ -136,4 +135,3 @@ class OdbDiagnosticStep:
             None. 
         """
         pass
-

@@ -4,8 +4,7 @@ from .ConnectorOptions import ConnectorOptions
 
 
 class ConnectorElasticity(ConnectorBehaviorOption):
-
-    """The ConnectorElasticity object defines elastic behavior for one or more components of a 
+    """The ConnectorElasticity object defines elastic behavior for one or more components of a
     connector's relative motion. 
     The ConnectorElasticity object is derived from the ConnectorBehaviorOption object. 
 
@@ -60,9 +59,9 @@ class ConnectorElasticity(ConnectorBehaviorOption):
     # for this ConnectorBehaviorOption. 
     options: ConnectorOptions = ConnectorOptions()
 
-    def __init__(self, behavior: SymbolicConstant = LINEAR, coupling: SymbolicConstant = UNCOUPLED, 
-                 dependencies: int = 0, temperatureDependency: Boolean = OFF, 
-                 frequencyDependency: Boolean = OFF, table: tuple = (), 
+    def __init__(self, behavior: SymbolicConstant = LINEAR, coupling: SymbolicConstant = UNCOUPLED,
+                 dependencies: int = 0, temperatureDependency: Boolean = OFF,
+                 frequencyDependency: Boolean = OFF, table: tuple = (),
                  independentComponents: tuple = (), components: tuple = ()):
         """This method creates a connector elasticity behavior option for a ConnectorSection
         object.
@@ -137,4 +136,3 @@ class ConnectorElasticity(ConnectorBehaviorOption):
             ValueError. 
         """
         pass
-

@@ -3,8 +3,7 @@ from .Amplitude import Amplitude
 
 
 class Correlation(Amplitude):
-
-    """A Correlation is an object used to define the cross-correlation as part of the 
+    """A Correlation is an object used to define the cross-correlation as part of the
     definition of random loading. 
     The Correlation object is derived from the Amplitude object. 
 
@@ -37,4 +36,3 @@ class Correlation(Amplitude):
     # A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
     # and TOTAL. The default value is STEP. 
     timeSpan: SymbolicConstant = STEP
-

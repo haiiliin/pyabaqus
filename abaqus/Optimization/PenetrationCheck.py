@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class PenetrationCheck(GeometricRestriction):
-
-    """The PenetrationCheck object defines a penetration check geometric restriction. 
+    """The PenetrationCheck object defines a penetration check geometric restriction.
     The PenetrationCheck object is derived from the GeometricRestriction object. 
     This page discusses: 
 
@@ -22,7 +21,7 @@ class PenetrationCheck(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, penetrationCheckRegion: Region, region: Region, 
+    def __init__(self, name: str, penetrationCheckRegion: Region, region: Region,
                  presumeFeasibleRegionAtStart: Boolean = ON):
         """This method creates a PenetrationCheck object.
 
@@ -73,4 +72,3 @@ class PenetrationCheck(GeometricRestriction):
             None. 
         """
         pass
-

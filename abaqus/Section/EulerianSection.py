@@ -1,8 +1,8 @@
 from .Section import Section
 
-class EulerianSection(Section):
 
-    """The EulerianSection object defines the properties of a Eulerian section. 
+class EulerianSection(Section):
+    """The EulerianSection object defines the properties of a Eulerian section.
     The EulerianSection object is derived from the Section object. 
 
     Access
@@ -63,4 +63,3 @@ class EulerianSection(Section):
             None. 
         """
         pass
-

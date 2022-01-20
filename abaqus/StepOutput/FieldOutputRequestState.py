@@ -4,8 +4,7 @@ from abaqusConstants import *
 
 
 class FieldOutputRequestState:
-
-    """The FieldOutputRequestState object stores the propagating data of a field output request 
+    """The FieldOutputRequestState object stores the propagating data of a field output request
     current in a step. One instance of this object is created internally by the 
     FieldOutputRequest object for each step. The instance is also deleted internally by the 
     FieldOutputRequest object. 
@@ -42,7 +41,7 @@ class FieldOutputRequestState:
 
     # The SymbolicConstant EVERY_TIME_INCREMENT or a Float specifying the time interval at 
     # which the output states are to be written. The default value is EVERY_TIME_INCREMENT. 
-    timeInterval: typing.Union[SymbolicConstant,float] = EVERY_TIME_INCREMENT
+    timeInterval: typing.Union[SymbolicConstant, float] = EVERY_TIME_INCREMENT
 
     # A SymbolicConstant specifying the propagation state of the field output request time 
     # interval. Possible values are UNSET, SET, and UNCHANGED. 
@@ -91,4 +90,3 @@ class FieldOutputRequestState:
     # TIME_POINT and MODES. The default value depends on the procedure. The default value is 
     # an empty string. 
     frequencyType: str = ''
-

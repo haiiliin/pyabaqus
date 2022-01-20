@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class SurfaceChargeState(LoadState):
-
-    """The SurfaceChargeState object stores the propagating data of a surface charge in a step. 
+    """The SurfaceChargeState object stores the propagating data of a surface charge in a step.
     One instance of this object is created internally by the SurfaceCharge object for each 
     step. The instance is also deleted internally by the SurfaceCharge object. 
     The SurfaceChargeState object has no constructor or methods. 
@@ -51,4 +50,3 @@ class SurfaceChargeState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

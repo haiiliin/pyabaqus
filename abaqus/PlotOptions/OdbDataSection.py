@@ -1,8 +1,5 @@
-
-
 class OdbDataSection:
-
-    """The OdbDataSection object stores section data. 
+    """The OdbDataSection object stores section data.
 
     Access
     ------
@@ -23,4 +20,3 @@ class OdbDataSection:
     # A String-to-tuple-of-Ints Dictionary specifying the elements in the set. This attribute 
     # is read-only. 
     elements: str = ''
-

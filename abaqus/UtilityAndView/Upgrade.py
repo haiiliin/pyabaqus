@@ -17,10 +17,11 @@ Corresponding analysis keywords
 
 """
 
-def upgradeScrip(fileNames: str, searchSubdirectories: Boolean = True, backup: Boolean = True, 
-                 preview: Boolean = True, diffExecutable: str = False, logFileName: str = 'asiUpgrade',
-                 fromVersion: str = EARLIEST, toVersion: str = LATEST, 
-                 scriptType: SymbolicConstant = BOTH):
+
+def upgradeScript(fileNames: str, searchSubdirectories: Boolean = True, backup: Boolean = True,
+                  preview: Boolean = True, diffExecutable: str = False, logFileName: str = 'asiUpgrade',
+                  fromVersion: str = EARLIEST, toVersion: str = LATEST,
+                  scriptType: SymbolicConstant = BOTH):
     """This function can be used to upgrade a directory, a file, or a list of both directories
     and files. You can preview the changes before you choose to upgrade the file. A user
     interface to this function is available via the Plug-ins menu. For more information, see
@@ -81,4 +82,3 @@ def upgradeScrip(fileNames: str, searchSubdirectories: Boolean = True, backup: B
         None. 
     """
     pass
-

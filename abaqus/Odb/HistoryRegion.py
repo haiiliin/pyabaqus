@@ -7,8 +7,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class HistoryRegion:
-
-    """The HistoryRegion object contains history data for a single location in the model. 
+    """The HistoryRegion object contains history data for a single location in the model.
 
     Access
     ------
@@ -123,3 +122,34 @@ class HistoryRegion:
     def getSubset(self, *args, **kwargs):
         pass
 
+    def HistoryOutput(self, name: str, description: str, type: SymbolicConstant,
+                      validInvariants: SymbolicConstant = None):
+        """This method creates a HistoryOutput object.
+
+        Path
+        ----
+            - session.odbs[name].steps[name].historyRegions[name].HistoryOutput
+
+        Parameters
+        ----------
+        name
+            A String specifying the output variable name.
+        description
+            A String specifying the output variable.
+        type
+            A SymbolicConstant specifying the output type. Only SCALAR is currently supported.
+        validInvariants
+            A sequence of SymbolicConstants specifying which invariants should be calculated for
+            this field. Possible values are MAGNITUDE, MISES, TRESCA, PRESS, INV3, MAX_PRINCIPAL,
+            MID_PRINCIPAL, and MIN_PRINCIPAL. The default value is an empty sequence.
+
+        Returns
+        -------
+            A HistoryOutput object.
+
+        Exceptions
+        ----------
+            None.
+        """
+        self.historyOutputs[name] = historyOutput = HistoryOutput(name, description, type, validInvariants)
+        return historyOutput

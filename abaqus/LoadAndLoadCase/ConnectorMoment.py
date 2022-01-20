@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class ConnectorMoment(Load):
-
-    """The ConnectorMoment object stores the data for a connector moment. 
+    """The ConnectorMoment object stores the data for a connector moment.
     The ConnectorMoment object is derived from the Load object. 
 
     Access
@@ -40,8 +39,8 @@ class ConnectorMoment(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: str = '', fastenerName: str = '', 
-                 fastenerSetName: str = '', m1: float = None, m2: float = None, m3: float = None, 
+    def __init__(self, name: str, createStepName: str, region: str = '', fastenerName: str = '',
+                 fastenerSetName: str = '', m1: float = None, m2: float = None, m3: float = None,
                  amplitude: str = UNSET):
         """This method creates a ConnectorMoment object on a wire region. Alternatively, the load
         may also be applied to a wire set referenced from an assembled fastener template model.
@@ -93,7 +92,7 @@ class ConnectorMoment(Load):
         super().__init__()
         pass
 
-    def setValues(self, region: str = '', fastenerName: str = '', fastenerSetName: str = '', m1: float = None, 
+    def setValues(self, region: str = '', fastenerName: str = '', fastenerSetName: str = '', m1: float = None,
                   m2: float = None, m3: float = None, amplitude: str = UNSET):
         """This method modifies the data for an existing ConnectorMoment object in the step where
         it is created.
@@ -136,10 +135,10 @@ class ConnectorMoment(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        m1: typing.Union[SymbolicConstant,float] = None, 
-                        m2: typing.Union[SymbolicConstant,float] = None, 
-                        m3: typing.Union[SymbolicConstant,float] = None, 
+    def setValuesInStep(self, stepName: str,
+                        m1: typing.Union[SymbolicConstant, float] = None,
+                        m2: typing.Union[SymbolicConstant, float] = None,
+                        m3: typing.Union[SymbolicConstant, float] = None,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ConnectorMoment object in the
         specified step.
@@ -179,4 +178,3 @@ class ConnectorMoment(Load):
             None. 
         """
         pass
-

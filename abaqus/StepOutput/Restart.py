@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Restart:
 
-    """The Restart object defines a restart request. 
+class Restart:
+    """The Restart object defines a restart request.
 
     Access
     ------
@@ -18,7 +18,7 @@ class Restart:
 
     """
 
-    def __init__(self, numberIntervals: int = 0, timeMarks: Boolean = OFF, overlay: Boolean = OFF, 
+    def __init__(self, numberIntervals: int = 0, timeMarks: Boolean = OFF, overlay: Boolean = OFF,
                  frequency: int = 0):
         """This method creates a restart request.
 
@@ -68,4 +68,3 @@ class Restart:
             RangeError. 
         """
         pass
-

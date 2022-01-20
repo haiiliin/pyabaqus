@@ -3,8 +3,7 @@ from ..Region.Region import Region
 
 
 class FluidCavityPressure(PredefinedField):
-
-    """The FluidCavityPressure object stores the data for initial fluid cavity pressures. The 
+    """The FluidCavityPressure object stores the data for initial fluid cavity pressures. The
     base class*region* argument can not be specifed with this object. 
     The FluidCavityPressure object is derived from the PredefinedField object. 
 
@@ -67,4 +66,3 @@ class FluidCavityPressure(PredefinedField):
             None. 
         """
         pass
-

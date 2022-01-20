@@ -1,8 +1,5 @@
-
-
 class CouplingConstraint:
-
-    """The CouplingConstraint object. 
+    """The CouplingConstraint object.
 
     Access
     ------
@@ -40,4 +37,3 @@ class CouplingConstraint:
             None. 
         """
         pass
-

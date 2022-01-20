@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class MaterialFlowBC(BoundaryCondition):
-
-    """The MaterialFlowBC object stores the data for a connector material flow boundary 
+    """The MaterialFlowBC object stores the data for a connector material flow boundary
     condition. 
     The MaterialFlowBC object is derived from the BoundaryCondition object. 
 
@@ -48,8 +47,8 @@ class MaterialFlowBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region, fieldName: str = '', 
-                 magnitude: float = 0, distributionType: SymbolicConstant = UNIFORM, 
+    def __init__(self, name: str, createStepName: str, region: Region, fieldName: str = '',
+                 magnitude: float = 0, distributionType: SymbolicConstant = UNIFORM,
                  amplitude: str = UNSET, fixed: Boolean = OFF):
         """This method creates a MaterialFlowBC object.
 
@@ -95,7 +94,7 @@ class MaterialFlowBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, fieldName: str = '', magnitude: float = 0, distributionType: SymbolicConstant = UNIFORM, 
+    def setValues(self, fieldName: str = '', magnitude: float = 0, distributionType: SymbolicConstant = UNIFORM,
                   amplitude: str = UNSET, fixed: Boolean = OFF):
         """This method modifies the data for an existing MaterialFlowBC object in the step where it
         is created.
@@ -131,8 +130,8 @@ class MaterialFlowBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        magnitude: typing.Union[SymbolicConstant,float] = UNCHANGED, 
+    def setValuesInStep(self, stepName: str,
+                        magnitude: typing.Union[SymbolicConstant, float] = UNCHANGED,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing MaterialFlowBC object in the
         specified step.
@@ -159,4 +158,3 @@ class MaterialFlowBC(BoundaryCondition):
             None. 
         """
         pass
-

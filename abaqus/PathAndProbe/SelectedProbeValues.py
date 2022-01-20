@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class SelectedProbeValues:
 
-    """The SelectedProbeValues object has no constructor. The SelectedProbeValues object is 
+class SelectedProbeValues:
+    """The SelectedProbeValues object has no constructor. The SelectedProbeValues object is
     created when you import the Visualization module. 
 
     Access
@@ -30,4 +30,3 @@ class SelectedProbeValues:
 
     # A tuple of Floats specifying the last sequence of the *values* member. 
     lastValues: tuple = ()
-

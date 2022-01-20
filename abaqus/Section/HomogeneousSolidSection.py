@@ -1,8 +1,8 @@
 from .SolidSection import SolidSection
 
-class HomogeneousSolidSection(SolidSection):
 
-    """The HomogeneousSolidSection object defines the properties of a solid section. 
+class HomogeneousSolidSection(SolidSection):
+    """The HomogeneousSolidSection object defines the properties of a solid section.
     The HomogeneousSolidSection object is derived from the SolidSection object. 
 
     Access
@@ -68,4 +68,3 @@ class HomogeneousSolidSection(SolidSection):
             RangeError. 
         """
         pass
-

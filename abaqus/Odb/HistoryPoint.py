@@ -5,13 +5,13 @@ from .OdbAssembly import OdbAssembly
 from .OdbInstance import OdbInstance
 from .OdbMeshElement import OdbMeshElement
 from .OdbMeshNode import OdbMeshNode
+from .OdbPart import OdbPart
 from .OdbSet import OdbSet
 from .SectionPoint import SectionPoint
 
 
 class HistoryPoint:
-
-    """The HistoryPoint object specifies the point at which history data will be collected. The 
+    """The HistoryPoint object specifies the point at which history data will be collected. The
     HistoryPoint object is a temporary object used as an argument to the HistoryRegion 
     method. 
 
@@ -75,13 +75,13 @@ class HistoryPoint:
     sectionPoint: SectionPoint = None
 
     # An OdbSet object specifying the region for which the data are to be collected. 
-    region: OdbSet = OdbSet()
+    region: OdbSet = OdbSet('set', tuple[OdbMeshNode]())
 
     # An OdbAssembly object specifying the assembly for which the data are to be collected. 
     assembly: OdbAssembly = OdbAssembly()
 
     # An OdbInstance object specifying the instance for which the data are to be collected. 
-    instance: OdbInstance = OdbInstance()
+    instance: OdbInstance = OdbInstance('instance', OdbPart('part', THREE_D, DEFORMABLE_BODY))
 
     @typing.overload
     def __init__(self, node: OdbMeshNode):
@@ -226,4 +226,3 @@ class HistoryPoint:
 
     def __init__(self, *args, **kwargs):
         pass
-

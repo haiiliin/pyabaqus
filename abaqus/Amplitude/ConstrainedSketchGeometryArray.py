@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ConstrainedSketchGeometryArray:
 
-    """The ConstrainedSketchGeometryArray is a sequence of ConstrainedSketchGeometry objects. 
+class ConstrainedSketchGeometryArray:
+    """The ConstrainedSketchGeometryArray is a sequence of ConstrainedSketchGeometry objects.
 
     Access
     ------
@@ -38,4 +38,3 @@ class ConstrainedSketchGeometryArray:
             None. 
         """
         pass
-

@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SubmodelSB(Load):
-
-    """The SubmodelSB object stores the data for a submodel surface based load. 
+    """The SubmodelSB object stores the data for a submodel surface based load.
     The SubmodelSB object is derived from the Load object. 
 
     Access
@@ -41,8 +40,8 @@ class SubmodelSB(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, globalStep: str, 
-                 globalDrivingRegion: str = '', absoluteExteriorTolerance: float = None, 
+    def __init__(self, name: str, createStepName: str, region: Region, globalStep: str,
+                 globalDrivingRegion: str = '', absoluteExteriorTolerance: float = None,
                  exteriorTolerance: float = 0, globalIncrement: int = 0):
         """This method creates a SubmodelSB object.
 
@@ -91,7 +90,7 @@ class SubmodelSB(Load):
         super().__init__()
         pass
 
-    def setValues(self, globalDrivingRegion: str = '', absoluteExteriorTolerance: float = None, 
+    def setValues(self, globalDrivingRegion: str = '', absoluteExteriorTolerance: float = None,
                   exteriorTolerance: float = 0, globalIncrement: int = 0):
         """This method modifies the data for an existing SubmodelSB object in the step where it is
         created.
@@ -157,4 +156,3 @@ class SubmodelSB(Load):
             None. 
         """
         pass
-

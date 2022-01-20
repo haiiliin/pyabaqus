@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class XFEMCrackGrowthState(InteractionState):
-
-    """The XFEMCrackGrowthState object stores the propagating data of an XFEMCrackGrowth object 
+    """The XFEMCrackGrowthState object stores the propagating data of an XFEMCrackGrowth object
     in a step. One instance of this object is created internally by the XFEMCrackGrowth 
     object for each step. The instance is also deleted internally by the XFEMCrackGrowth 
     object. 
@@ -45,4 +44,3 @@ class XFEMCrackGrowthState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

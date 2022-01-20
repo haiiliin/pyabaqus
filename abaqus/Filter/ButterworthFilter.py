@@ -3,8 +3,7 @@ from .Filter import Filter
 
 
 class ButterworthFilter(Filter):
-
-    """The ButterworthFilter object defines a Butterworth type filter. 
+    """The ButterworthFilter object defines a Butterworth type filter.
     The ButterworthFilter object is derived from the Filter object. 
 
     Access
@@ -23,7 +22,7 @@ class ButterworthFilter(Filter):
 
     """
 
-    def __init__(self, name: str, cutoffFrequency: float, order: int = 2, operation: SymbolicConstant = NONE, 
+    def __init__(self, name: str, cutoffFrequency: float, order: int = 2, operation: SymbolicConstant = NONE,
                  halt: Boolean = OFF, limit: float = None, invariant: SymbolicConstant = NONE):
         """This method creates a ButterworthFilter object.
 
@@ -69,7 +68,7 @@ class ButterworthFilter(Filter):
         super().__init__()
         pass
 
-    def setValues(self, order: int = 2, operation: SymbolicConstant = NONE, halt: Boolean = OFF, 
+    def setValues(self, order: int = 2, operation: SymbolicConstant = NONE, halt: Boolean = OFF,
                   limit: float = None, invariant: SymbolicConstant = NONE):
         """This method modifies the ButterworthFilter object.
 
@@ -102,4 +101,3 @@ class ButterworthFilter(Filter):
             RangeError. 
         """
         pass
-

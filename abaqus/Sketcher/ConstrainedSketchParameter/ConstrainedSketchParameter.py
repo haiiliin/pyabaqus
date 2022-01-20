@@ -1,8 +1,5 @@
-
-
 class ConstrainedSketchParameter:
-
-    """The ConstrainedSketchParameter object stores the definition of a parameter in the 
+    """The ConstrainedSketchParameter object stores the definition of a parameter in the
     sketch. 
 
     Access
@@ -67,4 +64,3 @@ class ConstrainedSketchParameter:
             !img 
         """
         pass
-

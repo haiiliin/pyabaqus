@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class GeometricRestrictionDisplayOptions:
 
-    """The GeometricRestrictionDisplayOptions object stores settings that specify how 
+class GeometricRestrictionDisplayOptions:
+    """The GeometricRestrictionDisplayOptions object stores settings that specify how
     assemblies are to be displayed in a particular viewport when 
     session.viewports[name].assemblyDisplay.geometricRestrictions=ON 
     The GeometricRestrictionDisplayOptions object has no constructor. When you create a new 
@@ -21,14 +21,14 @@ class GeometricRestrictionDisplayOptions:
 
     """
 
-    def setValues(self, drillControl: Boolean = ON, fixedRegion: Boolean = ON, frozenArea: Boolean = ON, 
-                  growth: Boolean = ON, penetrationCheck: Boolean = ON, shapeDemoldControl: Boolean = ON, 
-                  designDirection: Boolean = ON, shapeMemberSize: Boolean = ON, 
-                  shapePlanarSymmetry: Boolean = ON, shapePointSymmetry: Boolean = ON, 
-                  shapeRotationalSymmetry: Boolean = ON, stampControl: Boolean = ON, 
-                  slideRegionControl: Boolean = ON, topologyCyclicSymmetry: Boolean = ON, 
-                  topologyDemoldControl: Boolean = ON, topologyMemberSize: Boolean = ON, 
-                  topologyPlanarSymmetry: Boolean = ON, topologyPointSymmetry: Boolean = ON, 
+    def setValues(self, drillControl: Boolean = ON, fixedRegion: Boolean = ON, frozenArea: Boolean = ON,
+                  growth: Boolean = ON, penetrationCheck: Boolean = ON, shapeDemoldControl: Boolean = ON,
+                  designDirection: Boolean = ON, shapeMemberSize: Boolean = ON,
+                  shapePlanarSymmetry: Boolean = ON, shapePointSymmetry: Boolean = ON,
+                  shapeRotationalSymmetry: Boolean = ON, stampControl: Boolean = ON,
+                  slideRegionControl: Boolean = ON, topologyCyclicSymmetry: Boolean = ON,
+                  topologyDemoldControl: Boolean = ON, topologyMemberSize: Boolean = ON,
+                  topologyPlanarSymmetry: Boolean = ON, topologyPointSymmetry: Boolean = ON,
                   topologyRotationalSymmetry: Boolean = ON, turnControl: Boolean = ON):
         """This method modifies the GeometricRestrictionDisplayOptions object.
 
@@ -104,4 +104,3 @@ class GeometricRestrictionDisplayOptions:
             RangeError. 
         """
         pass
-

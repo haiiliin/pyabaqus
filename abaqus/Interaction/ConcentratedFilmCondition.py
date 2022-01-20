@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class ConcentratedFilmCondition(Interaction):
-
-    """The ConcentratedFilmCondition object defines concentrated film coefficients and 
+    """The ConcentratedFilmCondition object defines concentrated film coefficients and
     associated sink temperatures. 
     The ConcentratedFilmCondition object is derived from the Interaction object. 
 
@@ -22,10 +21,10 @@ class ConcentratedFilmCondition(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, region: Region, definition: SymbolicConstant, 
-                 nodalArea: float = 1, explicitRegionType: SymbolicConstant = LAGRANGIAN, 
-                 interactionProperty: str = '', field: str = '', sinkTemperature: float = 0, 
-                 sinkAmplitude: str = '', filmCoeff: float = 0, filmCoeffAmplitude: str = '', 
+    def __init__(self, name: str, createStepName: str, region: Region, definition: SymbolicConstant,
+                 nodalArea: float = 1, explicitRegionType: SymbolicConstant = LAGRANGIAN,
+                 interactionProperty: str = '', field: str = '', sinkTemperature: float = 0,
+                 sinkAmplitude: str = '', filmCoeff: float = 0, filmCoeffAmplitude: str = '',
                  sinkFieldName: str = '', sinkDistributionType: SymbolicConstant = UNIFORM):
         """This method creates a ConcentratedFilmCondition object.
 
@@ -102,9 +101,9 @@ class ConcentratedFilmCondition(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, nodalArea: float = 1, explicitRegionType: SymbolicConstant = LAGRANGIAN, 
-                  interactionProperty: str = '', field: str = '', sinkTemperature: float = 0, 
-                  sinkAmplitude: str = '', filmCoeff: float = 0, filmCoeffAmplitude: str = '', 
+    def setValues(self, nodalArea: float = 1, explicitRegionType: SymbolicConstant = LAGRANGIAN,
+                  interactionProperty: str = '', field: str = '', sinkTemperature: float = 0,
+                  sinkAmplitude: str = '', filmCoeff: float = 0, filmCoeffAmplitude: str = '',
                   sinkFieldName: str = '', sinkDistributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing ConcentratedFilmCondition object in the
         step where it is created.
@@ -184,4 +183,3 @@ class ConcentratedFilmCondition(Interaction):
             None. 
         """
         pass
-

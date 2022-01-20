@@ -19,6 +19,7 @@ Corresponding analysis keywords
 
 """
 
+
 def assignBeamSectionOrientatio(region: tuple, method: SymbolicConstant, n1: tuple):
     """This method assigns a beam section orientation to a region of a part.
 
@@ -47,6 +48,7 @@ def assignBeamSectionOrientatio(region: tuple, method: SymbolicConstant, n1: tup
         None. 
     """
     pass
+
 
 def assignMaterialOrientatio(region: tuple, localCsys: Datum, axis: SymbolicConstant = AXIS_1, angle: float = 0):
     """This method assigns a material orientation to a region.
@@ -81,6 +83,7 @@ def assignMaterialOrientatio(region: tuple, localCsys: Datum, axis: SymbolicCons
     """
     pass
 
+
 def assignRebarOrientatio(region: tuple, localCsys: Datum, axis: SymbolicConstant = AXIS_1, angle: float = 0):
     """This method assigns a rebar reference orientation to a region.
 
@@ -114,6 +117,7 @@ def assignRebarOrientatio(region: tuple, localCsys: Datum, axis: SymbolicConstan
     """
     pass
 
+
 def flipNorma(regions: Region, referenceRegion: str = ''):
     """This method flips the normals of shell or membrane elements of an orphan mesh or of
     two-dimensional geometric regions.
@@ -145,6 +149,7 @@ def flipNorma(regions: Region, referenceRegion: str = ''):
     """
     pass
 
+
 def flipTangen(regions: Region):
     """This method flips the tangents of beam or truss elements of an orphan mesh or of
     one-dimensional geometric regions.
@@ -169,6 +174,7 @@ def flipTangen(regions: Region):
     """
     pass
 
+
 def unassignBeamSectionOrientatio(index: int):
     """This method deletes a beam section orientation assignment.
 
@@ -190,6 +196,7 @@ def unassignBeamSectionOrientatio(index: int):
         None. 
     """
     pass
+
 
 def unassignMaterialOrientatio(index: int):
     """This method deletes a material orientation assignment.
@@ -213,6 +220,7 @@ def unassignMaterialOrientatio(index: int):
     """
     pass
 
+
 def unassignRebarOrientatio(index: int):
     """This method deletes a rebar orientation assignment.
 
@@ -235,4 +243,3 @@ def unassignRebarOrientatio(index: int):
         None. 
     """
     pass
-

@@ -3,8 +3,7 @@ from .Interaction import Interaction
 
 
 class XFEMCrackGrowth(Interaction):
-
-    """The XFEMCrackGrowth object defines the enrichment activation state for an XFEMCrack. 
+    """The XFEMCrackGrowth object defines the enrichment activation state for an XFEMCrack.
     The XFEMCrackGrowth object is derived from the Interaction object. 
 
     Access
@@ -92,4 +91,3 @@ class XFEMCrackGrowth(Interaction):
             None. 
         """
         pass
-

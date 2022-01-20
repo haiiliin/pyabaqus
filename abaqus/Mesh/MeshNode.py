@@ -1,8 +1,8 @@
 from ..Datum.DatumCsys import DatumCsys
 
-class MeshNode:
 
-    """The MeshNode object refers to a node of a native mesh or an orphan mesh. A MeshNode 
+class MeshNode:
+    """The MeshNode object refers to a node of a native mesh or an orphan mesh. A MeshNode
     object can be accessed via a part or part instance using an index that refers to the 
     internal numbering of the node repository. The index does not refer to the node label. 
 
@@ -52,7 +52,7 @@ class MeshNode:
     # A tuple of three Floats specifying the coordinates of the new node. 
     coordinates: float = None
 
-    def Node(self, coordinates: tuple, localCsys: DatumCsys = DatumCsys(), label: int = None):
+    def __init__(self, coordinates: tuple, localCsys: DatumCsys = DatumCsys(), label: int = None):
         """This method creates a node on an orphan mesh part.
 
         Path
@@ -166,4 +166,3 @@ class MeshNode:
             None. 
         """
         pass
-

@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class RigidBody(Constraint):
-
-    """The RigidBody object constrains all the degrees of freedom on the specified regions to 
+    """The RigidBody object constrains all the degrees of freedom on the specified regions to
     the degree of freedom of its associated reference point. 
     The RigidBody object is derived from the ConstrainedSketchConstraint object.
 
@@ -27,8 +26,8 @@ class RigidBody(Constraint):
     # OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, refPointRegion: Region, bodyRegion: str = None, tieRegion: str = None, 
-                 pinRegion: str = None, surfaceRegion: str = None, refPointAtCOM: Boolean = OFF, 
+    def __init__(self, name: str, refPointRegion: Region, bodyRegion: str = None, tieRegion: str = None,
+                 pinRegion: str = None, surfaceRegion: str = None, refPointAtCOM: Boolean = OFF,
                  isothermal: Boolean = OFF):
         """This method creates a RigidBody object.
 
@@ -72,7 +71,7 @@ class RigidBody(Constraint):
         super().__init__()
         pass
 
-    def setValues(self, bodyRegion: str = None, tieRegion: str = None, pinRegion: str = None, 
+    def setValues(self, bodyRegion: str = None, tieRegion: str = None, pinRegion: str = None,
                   surfaceRegion: str = None, refPointAtCOM: Boolean = OFF, isothermal: Boolean = OFF):
         """This method modifies the RigidBody object.
 
@@ -106,4 +105,3 @@ class RigidBody(Constraint):
             None. 
         """
         pass
-

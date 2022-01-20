@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class LoadCase:
 
-    """The LoadCase object is used to define the loads and constraints comprising a particular 
+class LoadCase:
+    """The LoadCase object is used to define the loads and constraints comprising a particular
     loading condition and the linear response of a structure subjected to that loading 
     condition. 
 
@@ -23,7 +23,7 @@ class LoadCase:
     # OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, boundaryConditions: tuple = (), loads: tuple = (), 
+    def __init__(self, name: str, boundaryConditions: tuple = (), loads: tuple = (),
                  includeActiveBaseStateBC: Boolean = ON):
         """This method creates a load case in a step.
 
@@ -87,7 +87,7 @@ class LoadCase:
         """
         pass
 
-    def setValues(self, boundaryConditions: tuple = (), loads: tuple = (), 
+    def setValues(self, boundaryConditions: tuple = (), loads: tuple = (),
                   includeActiveBaseStateBC: Boolean = ON):
         """This method modifies the LoadCase object.
 
@@ -112,4 +112,3 @@ class LoadCase:
             RangeError. 
         """
         pass
-

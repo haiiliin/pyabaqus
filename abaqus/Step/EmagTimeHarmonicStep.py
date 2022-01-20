@@ -18,8 +18,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class EmagTimeHarmonicStep(AnalysisStep):
-
-    """The EmagTimeHarmonicStep object is used to calculate the electromagnetic response of the 
+    """The EmagTimeHarmonicStep object is used to calculate the electromagnetic response of the
     system to harmonic excitation of the model. 
     The EmagTimeHarmonicStep object is derived from the AnalysisStep object. 
 
@@ -104,7 +103,8 @@ class EmagTimeHarmonicStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -130,7 +130,7 @@ class EmagTimeHarmonicStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, frequencyRange: EmagTimeHarmonicFrequencyArray, 
+    def __init__(self, name: str, previous: str, frequencyRange: EmagTimeHarmonicFrequencyArray,
                  description: str = '', factorization: SymbolicConstant = COMPLEX):
         """This method creates a EmagTimeHarmonicStep object.
 
@@ -186,4 +186,3 @@ class EmagTimeHarmonicStep(AnalysisStep):
             RangeError. 
         """
         pass
-

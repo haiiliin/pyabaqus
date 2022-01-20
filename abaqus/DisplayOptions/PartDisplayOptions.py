@@ -4,12 +4,12 @@ from .GeometryDisplayOptions import GeometryDisplayOptions
 from .MeshDisplayOptions import MeshDisplayOptions
 from ..DisplayGroup.DisplayGroup import DisplayGroup
 from ..DisplayGroup.DisplayGroupInstance import DisplayGroupInstance
+from ..DisplayGroup.Leaf import Leaf
 from ..UtilityAndView.Repository import Repository
 
 
 class PartDisplayOptions:
-
-    """The PartDisplayOptions object stores settings that specify how parts are to be displayed 
+    """The PartDisplayOptions object stores settings that specify how parts are to be displayed
     in a particular viewport. The PartDisplayOptions object has no constructor. When you 
     create a new viewport, the settings are copied from the current viewport. 
 
@@ -46,7 +46,7 @@ class PartDisplayOptions:
 
     # A DisplayGroup object specifying the current display group and referring to an object in 
     # the *displayGroups* member of Session. 
-    displayGroup: DisplayGroup = None
+    displayGroup: DisplayGroup = DisplayGroup('dg', Leaf(EMPTY_LEAF))
 
     # A repository of DisplayGroupInstance objects. 
     displayGroupInstances: Repository[str, DisplayGroupInstance] = Repository[str, DisplayGroupInstance]()
@@ -60,8 +60,8 @@ class PartDisplayOptions:
     # A MeshDisplayOptions object. 
     meshOptions: MeshDisplayOptions = MeshDisplayOptions()
 
-    def setValues(self, renderStyle: SymbolicConstant = WIREFRAME, 
-                  visibleDisplayGroups: tuple[DisplayGroup] = (), engineeringFeatures: Boolean = OFF, 
+    def setValues(self, renderStyle: SymbolicConstant = WIREFRAME,
+                  visibleDisplayGroups: tuple[DisplayGroup] = (), engineeringFeatures: Boolean = OFF,
                   renderBeamProfiles: Boolean = OFF, beamScaleFactor: float = 1):
         """This method modifies the PartDisplayOptions object.
 
@@ -91,4 +91,3 @@ class PartDisplayOptions:
             RangeError. 
         """
         pass
-

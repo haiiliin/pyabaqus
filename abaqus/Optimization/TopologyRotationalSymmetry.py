@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class TopologyRotationalSymmetry(GeometricRestriction):
-
-    """The TopologyRotationalSymmetry object defines a topology rotational symmetry geometric 
+    """The TopologyRotationalSymmetry object defines a topology rotational symmetry geometric
     restriction. 
     The TopologyRotationalSymmetry object is derived from the GeometricRestriction object. 
 
@@ -22,7 +21,7 @@ class TopologyRotationalSymmetry(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, angle: float, region: Region, axis: SymbolicConstant = AXIS_1, 
+    def __init__(self, name: str, angle: float, region: Region, axis: SymbolicConstant = AXIS_1,
                  csys: int = None, ignoreFrozenArea: Boolean = OFF):
         """This method creates a TopologyRotationalSymmetry object.
 
@@ -85,4 +84,3 @@ class TopologyRotationalSymmetry(GeometricRestriction):
             None. 
         """
         pass
-

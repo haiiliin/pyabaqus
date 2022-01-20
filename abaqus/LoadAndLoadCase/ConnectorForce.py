@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class ConnectorForce(Load):
-
-    """The ConnectorForce object defines a connector force. 
+    """The ConnectorForce object defines a connector force.
     The ConnectorForce object is derived from the Load object. 
 
     Access
@@ -40,8 +39,8 @@ class ConnectorForce(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: str = '', fastenerName: str = '', 
-                 fastenerSetName: str = '', f1: float = None, f2: float = None, f3: float = None, 
+    def __init__(self, name: str, createStepName: str, region: str = '', fastenerName: str = '',
+                 fastenerSetName: str = '', f1: float = None, f2: float = None, f3: float = None,
                  amplitude: str = UNSET):
         """This method creates a ConnectorForce object on a wire region. Alternatively, the load
         may also be applied to a wire set referenced from an assembled fastener template model.
@@ -94,7 +93,7 @@ class ConnectorForce(Load):
         super().__init__()
         pass
 
-    def setValues(self, region: str = '', fastenerName: str = '', fastenerSetName: str = '', f1: float = None, 
+    def setValues(self, region: str = '', fastenerName: str = '', fastenerSetName: str = '', f1: float = None,
                   f2: float = None, f3: float = None, amplitude: str = UNSET):
         """This method modifies the data for an existing ConnectorForce object in the step where it
         is created.
@@ -138,10 +137,10 @@ class ConnectorForce(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        f1: typing.Union[SymbolicConstant,float] = None, 
-                        f2: typing.Union[SymbolicConstant,float] = None, 
-                        f3: typing.Union[SymbolicConstant,float] = None, 
+    def setValuesInStep(self, stepName: str,
+                        f1: typing.Union[SymbolicConstant, float] = None,
+                        f2: typing.Union[SymbolicConstant, float] = None,
+                        f3: typing.Union[SymbolicConstant, float] = None,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ConnectorForce object in the
         specified step.
@@ -178,4 +177,3 @@ class ConnectorForce(Load):
             None. 
         """
         pass
-

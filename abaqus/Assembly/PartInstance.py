@@ -22,8 +22,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class PartInstance:
-
-    """A PartInstance object is an instance of a Part object. 
+    """A PartInstance object is an instance of a Part object.
 
     Access
     ------
@@ -107,7 +106,7 @@ class PartInstance:
     cells: CellArray = CellArray([])
 
     # A repository of Datum objects. 
-    datums: Repository[str, Datum] = Repository[str, Datum]()
+    datums: list[Datum] = list[Datum]()
 
     # A MeshElementArray object. 
     elements: MeshElementArray = MeshElementArray([])
@@ -220,8 +219,8 @@ class PartInstance:
         pass
 
     def InstanceFromBooleanMerge(self, name: str, instances: tuple['PartInstance'], keepIntersections: Boolean = False,
-                                 originalInstances: SymbolicConstant = SUPPRESS, domain: SymbolicConstant = GEOMETRY, 
-                                 mergeNodes: SymbolicConstant = BOUNDARY_ONLY, nodeMergingTolerance: float = None, 
+                                 originalInstances: SymbolicConstant = SUPPRESS, domain: SymbolicConstant = GEOMETRY,
+                                 mergeNodes: SymbolicConstant = BOUNDARY_ONLY, nodeMergingTolerance: float = None,
                                  removeDuplicateElements: Boolean = True):
         """This method creates a PartInstance in the instances repository after merging two or more
         part instances.
@@ -271,7 +270,7 @@ class PartInstance:
         """
         pass
 
-    def LinearInstancePattern(self, instanceList: tuple, number1: int, spacing1: float, number2: int, spacing2: float, 
+    def LinearInstancePattern(self, instanceList: tuple, number1: int, spacing1: float, number2: int, spacing2: float,
                               direction1: tuple = (), direction2: tuple = ()):
         """This method creates multiple PartInstance objects in a linear pattern and puts them into
         the instances repository.
@@ -313,7 +312,7 @@ class PartInstance:
         """
         pass
 
-    def RadialInstancePattern(self, instanceList: tuple, number: int, totalAngle: float, point: tuple = (), 
+    def RadialInstancePattern(self, instanceList: tuple, number: int, totalAngle: float, point: tuple = (),
                               axis: tuple = ()):
         """This method creates multiple PartInstance objects in a radial pattern and puts them into
         the instances repository.
@@ -381,7 +380,7 @@ class PartInstance:
         """
         pass
 
-    def Contact(self, movableList: tuple, fixedList: tuple, direction: tuple, clearance: float, 
+    def Contact(self, movableList: tuple, fixedList: tuple, direction: tuple, clearance: float,
                 isFaceEdges: Boolean = OFF):
         """This method translates an instance along the specified direction until it is in contact
         with a fixed instance.
@@ -547,7 +546,7 @@ class PartInstance:
         """
         pass
 
-    def translateTo(self, movableList: tuple, fixedList: tuple, direction: tuple, clearance: float, 
+    def translateTo(self, movableList: tuple, fixedList: tuple, direction: tuple, clearance: float,
                     vector: tuple = ()):
         """This method translates an instance along the specified direction until it is in contact
         with a fixed instance.
@@ -576,4 +575,3 @@ class PartInstance:
             None. 
         """
         pass
-

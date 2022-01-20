@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class RetainedNodalDofsBC(BoundaryCondition):
-
-    """The RetainedNodalDofsBC object stores the data for a retained nodal dofs boundary 
+    """The RetainedNodalDofsBC object stores the data for a retained nodal dofs boundary
     condition. 
     The RetainedNodalDofsBC object is derived from the BoundaryCondition object. 
 
@@ -37,7 +36,7 @@ class RetainedNodalDofsBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region, u1: Boolean = OFF, u2: Boolean = OFF, 
+    def __init__(self, name: str, createStepName: str, region: Region, u1: Boolean = OFF, u2: Boolean = OFF,
                  u3: Boolean = OFF, ur1: Boolean = OFF, ur2: Boolean = OFF, ur3: Boolean = OFF):
         """This method creates a RetainedNodalDofsBC object.
 
@@ -86,7 +85,7 @@ class RetainedNodalDofsBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF, ur1: Boolean = OFF, 
+    def setValues(self, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF, ur1: Boolean = OFF,
                   ur2: Boolean = OFF, ur3: Boolean = OFF):
         """This method modifies the data for an existing RetainedNodalDofsBC object in the step
         where it is created.
@@ -125,7 +124,7 @@ class RetainedNodalDofsBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF, 
+    def setValuesInStep(self, stepName: str, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF,
                         ur1: Boolean = OFF, ur2: Boolean = OFF, ur3: Boolean = OFF):
         """This method modifies the propagating data for an existing RetainedNodalDofsBC object in
         the specified step.
@@ -159,4 +158,3 @@ class RetainedNodalDofsBC(BoundaryCondition):
             None. 
         """
         pass
-

@@ -5,8 +5,7 @@ from ..Region.Region import Region
 
 
 class MaterialAssignment(PredefinedField):
-
-    """The MaterialAssignment object stores the data for an initial material assignment 
+    """The MaterialAssignment object stores the data for an initial material assignment
     predefined field, for use with an Eulerian analysis. 
     The MaterialAssignment object is derived from the PredefinedField object. 
 
@@ -27,7 +26,7 @@ class MaterialAssignment(PredefinedField):
     # A Region object specifying the region to which the predefined field is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, instanceList: PartInstanceArray, useFields: Boolean = OFF, 
+    def __init__(self, name: str, instanceList: PartInstanceArray, useFields: Boolean = OFF,
                  assignmentList: tuple = (), fieldList: tuple = (), colorList: tuple = ()):
         """This method creates a MaterialAssignment predefined field object.
 
@@ -73,7 +72,7 @@ class MaterialAssignment(PredefinedField):
         super().__init__()
         pass
 
-    def setValues(self, useFields: Boolean = OFF, assignmentList: tuple = (), fieldList: tuple = (), 
+    def setValues(self, useFields: Boolean = OFF, assignmentList: tuple = (), fieldList: tuple = (),
                   colorList: tuple = ()):
         """This method modifies the MaterialAssignment object.
 
@@ -108,4 +107,3 @@ class MaterialAssignment(PredefinedField):
             None. 
         """
         pass
-

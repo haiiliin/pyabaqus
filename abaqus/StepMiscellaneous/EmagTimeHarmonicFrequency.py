@@ -1,7 +1,4 @@
-
-
 class EmagTimeHarmonicFrequency:
-
     """
 
     Access
@@ -27,4 +24,3 @@ class EmagTimeHarmonicFrequency:
     # An Int specifying the number of points in the frequency range at which results should be 
     # given. 
     nPoints: int = None
-

@@ -1,8 +1,8 @@
 from .CommandRegister import CommandRegister
 
-class RegisteredDictionary(CommandRegister):
 
-    """This class allows you to create a dictionary that can be queried from the GUI and is 
+class RegisteredDictionary(CommandRegister):
+    """This class allows you to create a dictionary that can be queried from the GUI and is
     capable of notifying the GUI when the contents of the dictionary change. The keys to a 
     RegisteredDictionary must be either strings or integers. 
     The RegisteredDictionary object is derived from the CommandRegister object. 
@@ -76,4 +76,3 @@ class RegisteredDictionary(CommandRegister):
             None. 
         """
         pass
-

@@ -2,28 +2,49 @@ import typing
 
 from abaqusConstants import *
 from .AccelerationBC import AccelerationBC
+from .AccelerationBCState import AccelerationBCState
 from .AccelerationBaseMotionBC import AccelerationBaseMotionBC
+# from .AccelerationBaseMotionBCState import AccelerationBaseMotionBCState
+from .AccelerationBaseMotionBCState import AccelerationBaseMotionBCState
 from .AcousticPressureBC import AcousticPressureBC
+from .AcousticPressureBCState import AcousticPressureBCState
 from .Calibration import Calibration
 from .ConcentrationBC import ConcentrationBC
+from .ConcentrationBCState import ConcentrationBCState
 from .ConnAccelerationBC import ConnAccelerationBC
+from .ConnAccelerationBCState import ConnAccelerationBCState
 from .ConnDisplacementBC import ConnDisplacementBC
+from .ConnDisplacementBCState import ConnDisplacementBCState
 from .ConnVelocityBC import ConnVelocityBC
+from .ConnVelocityBCState import ConnVelocityBCState
 from .DisplacementBC import DisplacementBC
+from .DisplacementBCState import DisplacementBCState
 from .DisplacementBaseMotionBC import DisplacementBaseMotionBC
+from .DisplacementBaseMotionBCState import DisplacementBaseMotionBCState
 from .ElectricPotentialBC import ElectricPotentialBC
+from .ElectricPotentialBCState import ElectricPotentialBCState
 from .EulerianBC import EulerianBC
+from .EulerianBCState import EulerianBCState
 from .EulerianMotionBC import EulerianMotionBC
+from .EulerianMotionBCState import EulerianMotionBCState
 from .FluidCavityPressureBC import FluidCavityPressureBC
+from .FluidCavityPressureBCState import FluidCavityPressureBCState
 from .MagneticVectorPotentialBC import MagneticVectorPotentialBC
 from .MaterialFlowBC import MaterialFlowBC
+from .MaterialFlowBCState import MaterialFlowBCState
 from .PorePressureBC import PorePressureBC
+from .PorePressureBCState import PorePressureBCState
 from .RetainedNodalDofsBC import RetainedNodalDofsBC
 from .SecondaryBaseBC import SecondaryBaseBC
+from .SecondaryBaseBCState import SecondaryBaseBCState
 from .SubmodelBC import SubmodelBC
+from .SubmodelBCState import SubmodelBCState
 from .TemperatureBC import TemperatureBC
+from .TemperatureBCState import TemperatureBCState
 from .VelocityBC import VelocityBC
+from .VelocityBCState import VelocityBCState
 from .VelocityBaseMotionBC import VelocityBaseMotionBC
+from .VelocityBaseMotionBCState import VelocityBaseMotionBCState
 from ..Amplitude.CorrelationArray import CorrelationArray
 from ..Model.ModelBase import ModelBase
 from ..Region.Region import Region
@@ -84,6 +105,7 @@ class BoundaryConditionModel(ModelBase):
                                                                                      centerOfRotation, correlation,
                                                                                      secondaryBase, useComplex,
                                                                                      amplitude)
+        self.steps[createStepName].boundaryConditionStates[name] = AccelerationBaseMotionBCState()
         return boundaryCondition
 
     def AccelerationBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
@@ -159,6 +181,7 @@ class BoundaryConditionModel(ModelBase):
         self.boundaryConditions[name] = boundaryCondition = AccelerationBC(name, createStepName, region, fieldName, a1,
                                                                            a2, a3, ar1, ar2, ar3, amplitude, localCsys,
                                                                            distributionType)
+        self.steps[createStepName].boundaryConditionStates[name] = AccelerationBCState()
         return boundaryCondition
 
     def AcousticPressureBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
@@ -208,6 +231,7 @@ class BoundaryConditionModel(ModelBase):
         self.boundaryConditions[name] = boundaryCondition = AcousticPressureBC(name, createStepName, region, fieldName,
                                                                                magnitude, distributionType, amplitude,
                                                                                fixed)
+        self.steps[createStepName].boundaryConditionStates[name] = AcousticPressureBCState()
         return boundaryCondition
 
     def Calibration(self, name: str) -> Calibration:
@@ -280,6 +304,7 @@ class BoundaryConditionModel(ModelBase):
         self.boundaryConditions[name] = boundaryCondition = ConcentrationBC(name, createStepName, region, fieldName,
                                                                             magnitude, distributionType, amplitude,
                                                                             fixed)
+        self.steps[createStepName].boundaryConditionStates[name] = ConcentrationBCState()
         return boundaryCondition
 
     def ConnAccelerationBC(self, name: str, createStepName: str, region: str = '', fastenerName: str = '',
@@ -363,6 +388,7 @@ class BoundaryConditionModel(ModelBase):
                                                                                fastenerName, fastenerSetName, a1, a2,
                                                                                a3, ar1, ar2, ar3, amplitude,
                                                                                distributionType)
+        self.steps[createStepName].boundaryConditionStates[name] = ConnAccelerationBCState()
         return boundaryCondition
 
     def ConnDisplacementBC(self, name: str, createStepName: str, region: str = '', fastenerName: str = '',
@@ -454,6 +480,7 @@ class BoundaryConditionModel(ModelBase):
                                                                                fastenerName, fastenerSetName, u1, u2,
                                                                                u3, ur1, ur2, ur3, fixed, amplitude,
                                                                                distributionType, buckleCase)
+        self.steps[createStepName].boundaryConditionStates[name] = ConnDisplacementBCState()
         return boundaryCondition
 
     def ConnVelocityBC(self, name: str, createStepName: str, region: str = '', fastenerName: str = '',
@@ -536,6 +563,7 @@ class BoundaryConditionModel(ModelBase):
         self.boundaryConditions[name] = boundaryCondition = ConnVelocityBC(name, createStepName, region, fastenerName,
                                                                            fastenerSetName, v1, v2, v3, vr1, vr2, vr3,
                                                                            amplitude, distributionType)
+        self.steps[createStepName].boundaryConditionStates[name] = ConnVelocityBCState()
         return boundaryCondition
 
     def DisplacementBaseMotionBC(self, name: str, createStepName: str, dof: SymbolicConstant,
@@ -590,6 +618,7 @@ class BoundaryConditionModel(ModelBase):
                                                                                      centerOfRotation, correlation,
                                                                                      secondaryBase, useComplex,
                                                                                      amplitude)
+        self.steps[createStepName].boundaryConditionStates[name] = DisplacementBaseMotionBCState()
         return boundaryCondition
 
     def DisplacementBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
@@ -677,6 +706,7 @@ class BoundaryConditionModel(ModelBase):
         self.boundaryConditions[name] = boundaryCondition = DisplacementBC(name, createStepName, region, fieldName, u1,
                                                                            u2, u3, ur1, ur2, ur3, fixed, amplitude,
                                                                            distributionType, localCsys, buckleCase)
+        self.steps[createStepName].boundaryConditionStates[name] = DisplacementBCState()
         return boundaryCondition
 
     def ElectricPotentialBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
@@ -726,6 +756,7 @@ class BoundaryConditionModel(ModelBase):
         self.boundaryConditions[name] = boundaryCondition = ElectricPotentialBC(name, createStepName, region, fieldName,
                                                                                 magnitude, distributionType, amplitude,
                                                                                 fixed)
+        self.steps[createStepName].boundaryConditionStates[name] = ElectricPotentialBCState()
         return boundaryCondition
 
     def EulerianBC(self, name: str, createStepName: str, region: Region, definition: SymbolicConstant = INFLOW,
@@ -765,6 +796,7 @@ class BoundaryConditionModel(ModelBase):
         """
         self.boundaryConditions[name] = boundaryCondition = EulerianBC(name, createStepName, region, definition,
                                                                        inflowType, outflowType)
+        self.steps[createStepName].boundaryConditionStates[name] = EulerianBCState()
         return boundaryCondition
 
     def EulerianMotionBC(self, name: str, createStepName: str, instanceName: str, followRegion: Boolean = ON,
@@ -888,6 +920,7 @@ class BoundaryConditionModel(ModelBase):
                                                                              expansionRatio3, contractRatio3,
                                                                              allowContraction, aspectLimit, vmaxFactor,
                                                                              volThreshold, bufferSize)
+        self.steps[createStepName].boundaryConditionStates[name] = EulerianMotionBCState()
         return boundaryCondition
 
     def FluidCavityPressureBC(self, name: str, createStepName: str, fluidCavity: str, magnitude: float = 0,
@@ -927,6 +960,7 @@ class BoundaryConditionModel(ModelBase):
         """
         self.boundaryConditions[name] = boundaryCondition = FluidCavityPressureBC(name, createStepName, fluidCavity,
                                                                                   magnitude, amplitude, fixed)
+        self.steps[createStepName].boundaryConditionStates[name] = FluidCavityPressureBCState()
         return boundaryCondition
 
     def MagneticVectorPotentialBC(self, name: str, createStepName: str, region: Region,
@@ -985,6 +1019,7 @@ class BoundaryConditionModel(ModelBase):
                                                                                       component1, component2,
                                                                                       component3, amplitude,
                                                                                       distributionType, localCsys)
+        # self.steps[createStepName].boundaryConditionStates[name] = MagneticVectorPotentialBCState()
         return boundaryCondition
 
     def MaterialFlowBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
@@ -1034,6 +1069,7 @@ class BoundaryConditionModel(ModelBase):
         self.boundaryConditions[name] = boundaryCondition = MaterialFlowBC(name, createStepName, region, fieldName,
                                                                            magnitude, distributionType, amplitude,
                                                                            fixed)
+        self.steps[createStepName].boundaryConditionStates[name] = MaterialFlowBCState()
         return boundaryCondition
 
     def PorePressureBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
@@ -1083,6 +1119,7 @@ class BoundaryConditionModel(ModelBase):
         self.boundaryConditions[name] = boundaryCondition = PorePressureBC(name, createStepName, region, fieldName,
                                                                            magnitude, distributionType, amplitude,
                                                                            fixed)
+        self.steps[createStepName].boundaryConditionStates[name] = PorePressureBCState()
         return boundaryCondition
 
     def RetainedNodalDofsBC(self, name: str, createStepName: str, region: Region, u1: Boolean = OFF, u2: Boolean = OFF,
@@ -1134,6 +1171,7 @@ class BoundaryConditionModel(ModelBase):
         """
         self.boundaryConditions[name] = boundaryCondition = RetainedNodalDofsBC(name, createStepName, region, u1, u2,
                                                                                 u3, ur1, ur2, ur3)
+        # self.steps[createStepName].boundaryConditionStates[name] = RetainedNodalDofsBCState()
         return boundaryCondition
 
     def SecondaryBaseBC(self, name: str, createStepName: str, regions: RegionArray, dofs: tuple) -> SecondaryBaseBC:
@@ -1164,6 +1202,7 @@ class BoundaryConditionModel(ModelBase):
             None.
         """
         self.boundaryConditions[name] = boundaryCondition = SecondaryBaseBC(name, createStepName, regions, dofs)
+        self.steps[createStepName].boundaryConditionStates[name] = SecondaryBaseBCState()
         return boundaryCondition
 
     def SubmodelBC(self, name: str, createStepName: str, region: Region, dof: tuple, globalStep: str,
@@ -1241,6 +1280,7 @@ class BoundaryConditionModel(ModelBase):
                                                                        absoluteExteriorTolerance, exteriorTolerance,
                                                                        localCsys, globalIncrement, centerZoneSize,
                                                                        intersectionOnly)
+        self.steps[createStepName].boundaryConditionStates[name] = SubmodelBCState()
         return boundaryCondition
 
     def TemperatureBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
@@ -1292,6 +1332,7 @@ class BoundaryConditionModel(ModelBase):
         self.boundaryConditions[name] = boundaryCondition = TemperatureBC(name, createStepName, region, fieldName,
                                                                           magnitude, dof, amplitude, distributionType,
                                                                           fixed)
+        self.steps[createStepName].boundaryConditionStates[name] = TemperatureBCState()
         return boundaryCondition
 
     def VelocityBaseMotionBC(self, name: str, createStepName: str, dof: SymbolicConstant,
@@ -1345,6 +1386,7 @@ class BoundaryConditionModel(ModelBase):
                                                                                  amplitudeScaleFactor, centerOfRotation,
                                                                                  correlation, secondaryBase, useComplex,
                                                                                  amplitude)
+        self.steps[createStepName].boundaryConditionStates[name] = VelocityBaseMotionBCState()
         return boundaryCondition
 
     def VelocityBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
@@ -1420,4 +1462,5 @@ class BoundaryConditionModel(ModelBase):
         self.boundaryConditions[name] = boundaryCondition = VelocityBC(name, createStepName, region, fieldName, v1, v2,
                                                                        v3, vr1, vr2, vr3, amplitude, localCsys,
                                                                        distributionType)
+        self.steps[createStepName].boundaryConditionStates[name] = VelocityBCState()
         return boundaryCondition

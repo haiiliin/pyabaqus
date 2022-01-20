@@ -1,8 +1,5 @@
-
-
 class DataSet:
-
-    """The DataSetobject specifies material test data. 
+    """The DataSetobject specifies material test data.
 
     Access
     ------
@@ -66,4 +63,3 @@ class DataSet:
             None. 
         """
         pass
-

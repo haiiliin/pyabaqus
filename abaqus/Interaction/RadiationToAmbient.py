@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class RadiationToAmbient(Interaction):
-
-    """The RadiationToAmbient object defines radiant heat transfer between a surface and its 
+    """The RadiationToAmbient object defines radiant heat transfer between a surface and its
     environment. 
     The RadiationToAmbient object is derived from the Interaction object. 
 
@@ -22,8 +21,8 @@ class RadiationToAmbient(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, surface: Region, emissivity: float, field: str = '', 
-                 distributionType: SymbolicConstant = UNIFORM, radiationType: SymbolicConstant = AMBIENT, 
+    def __init__(self, name: str, createStepName: str, surface: Region, emissivity: float, field: str = '',
+                 distributionType: SymbolicConstant = UNIFORM, radiationType: SymbolicConstant = AMBIENT,
                  ambientTemperature: float = 0, ambientTemperatureAmp: str = ''):
         """This method creates a RadiationToAmbient object.
 
@@ -76,8 +75,8 @@ class RadiationToAmbient(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, field: str = '', distributionType: SymbolicConstant = UNIFORM, 
-                  radiationType: SymbolicConstant = AMBIENT, ambientTemperature: float = 0, 
+    def setValues(self, field: str = '', distributionType: SymbolicConstant = UNIFORM,
+                  radiationType: SymbolicConstant = AMBIENT, ambientTemperature: float = 0,
                   ambientTemperatureAmp: str = ''):
         """This method modifies the data for an existing RadiationToAmbient object in the step
         where it is created.
@@ -135,4 +134,3 @@ class RadiationToAmbient(Interaction):
             None. 
         """
         pass
-

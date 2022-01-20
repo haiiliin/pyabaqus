@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class StepOption:
 
-    """A StepOption is an object used to define step options in a design response. 
+class StepOption:
+    """A StepOption is an object used to define step options in a design response.
 
     Access
     ------
@@ -39,4 +39,3 @@ class StepOption:
     # A string specifying the name of the model from which the steps are supposed to be used 
     # in the design response. Specify only if the steps are not from the current model. 
     model: str = ''
-

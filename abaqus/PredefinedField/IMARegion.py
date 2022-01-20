@@ -1,8 +1,8 @@
 from ..Region.Region import Region
 
-class IMARegion:
 
-    """A IMARegion is an object used to define material instance name volume fractions for the 
+class IMARegion:
+    """A IMARegion is an object used to define material instance name volume fractions for the
     MaterialAssignment predefined field. 
 
     Access
@@ -26,4 +26,3 @@ class IMARegion:
     # length of the tuple corresponds to the number of material instance names, as established 
     # by the assigned Eulerian section. 
     fractionList: float = None
-

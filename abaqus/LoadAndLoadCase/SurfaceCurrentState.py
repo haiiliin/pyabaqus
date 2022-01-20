@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class SurfaceCurrentState(LoadState):
-
-    """The SurfaceCurrentState object stores the propagating data of a surface current in a 
+    """The SurfaceCurrentState object stores the propagating data of a surface current in a
     step. One instance of this object is created internally by the SurfaceCurrent object for 
     each step. The instance is also deleted internally by the SurfaceCurrent object. 
     The SurfaceCurrentState object has no constructor or methods. 
@@ -51,4 +50,3 @@ class SurfaceCurrentState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

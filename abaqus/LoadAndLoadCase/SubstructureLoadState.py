@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class SubstructureLoadState(LoadState):
-
-    """The SubstructureLoadState object stores the propagating data for a substructure load in 
+    """The SubstructureLoadState object stores the propagating data for a substructure load in
     a step. One instance of this object is created internally by the SubstructureLoad object 
     for each step. The instance is also deleted internally by the SubstructureLoad object. 
     The SubstructureLoadState object has no constructor or methods. 
@@ -54,4 +53,3 @@ class SubstructureLoadState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

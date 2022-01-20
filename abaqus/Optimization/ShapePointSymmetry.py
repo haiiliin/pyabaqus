@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class ShapePointSymmetry(GeometricRestriction):
-
-    """The ShapePointSymmetry object defines a shape point symmetry geometric restriction. 
+    """The ShapePointSymmetry object defines a shape point symmetry geometric restriction.
     The ShapePointSymmetry object is derived from the GeometricRestriction object. 
 
     Access
@@ -21,9 +20,9 @@ class ShapePointSymmetry(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, region: Region, csys: int = None, 
-                 mainPointDetermination: SymbolicConstant = MAXIMUM, 
-                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0, 
+    def __init__(self, name: str, region: Region, csys: int = None,
+                 mainPointDetermination: SymbolicConstant = MAXIMUM,
+                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                  tolerance2: float = 0, tolerance3: float = 0):
         """This method creates a ShapePointSymmetry object.
 
@@ -70,8 +69,8 @@ class ShapePointSymmetry(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, mainPointDetermination: SymbolicConstant = MAXIMUM, 
-                  presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0, 
+    def setValues(self, csys: int = None, mainPointDetermination: SymbolicConstant = MAXIMUM,
+                  presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                   tolerance2: float = 0, tolerance3: float = 0):
         """This method modifies the ShapePointSymmetry object.
 
@@ -106,4 +105,3 @@ class ShapePointSymmetry(GeometricRestriction):
             None. 
         """
         pass
-

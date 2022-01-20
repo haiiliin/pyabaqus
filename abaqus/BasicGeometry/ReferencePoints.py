@@ -1,5 +1,6 @@
+from .ReferencePoint import ReferencePoint
 from ..UtilityAndView.Repository import Repository
-from.ReferencePoint import ReferencePoint
+
 
 class ReferencePoints(Repository[int, ReferencePoint]):
 

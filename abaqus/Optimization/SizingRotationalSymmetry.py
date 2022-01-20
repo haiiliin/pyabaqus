@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SizingRotationalSymmetry(GeometricRestriction):
-
-    """The SizingRotationalSymmetry object defines a sizing rotational symmetry geometric 
+    """The SizingRotationalSymmetry object defines a sizing rotational symmetry geometric
     restriction. 
     The SizingRotationalSymmetry object is derived from the GeometricRestriction object. 
 
@@ -22,7 +21,7 @@ class SizingRotationalSymmetry(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, angle: float, region: Region, axis: SymbolicConstant = AXIS_1, 
+    def __init__(self, name: str, angle: float, region: Region, axis: SymbolicConstant = AXIS_1,
                  csys: int = None, ignoreFrozenArea: Boolean = OFF):
         """This method creates a SizingRotationalSymmetry object.
 
@@ -83,4 +82,3 @@ class SizingRotationalSymmetry(GeometricRestriction):
             None. 
         """
         pass
-

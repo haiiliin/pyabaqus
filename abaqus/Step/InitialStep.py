@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class InitialStep(AnalysisStep):
-
-    """The InitialStep object is a placeholder that you cannot create, delete, or modify. The 
+    """The InitialStep object is a placeholder that you cannot create, delete, or modify. The
     InitialStep object exists in every model by default and is used to allow the preexisting 
     boundary conditions and interactions to be defined in the model. 
     The InitialStep object is derived from the AnalysisStep object. 
@@ -97,7 +96,8 @@ class InitialStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -122,4 +122,3 @@ class InitialStep(AnalysisStep):
 
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
-

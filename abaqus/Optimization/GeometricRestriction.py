@@ -1,8 +1,8 @@
 from ..Region.Region import Region
 
-class GeometricRestriction:
 
-    """The GeometricRestriction object is the abstract base type for other GeometricRestriction 
+class GeometricRestriction:
+    """The GeometricRestriction object is the abstract base type for other GeometricRestriction
     objects. The GeometricRestriction object has no explicit constructor. The methods and 
     members of the GeometricRestriction object are common to all objects derived from 
     GeometricRestriction. 
@@ -27,4 +27,3 @@ class GeometricRestriction:
     # When used with a TopologyTask, there is no default value. When used with a ShapeTask, 
     # the default value is MODEL. 
     region: Region = Region()
-

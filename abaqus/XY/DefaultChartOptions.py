@@ -8,8 +8,7 @@ from .TextStyle import TextStyle
 
 
 class DefaultChartOptions:
-
-    """The DefaultChartOptions object is used to hold on default chart and axis attributes. The 
+    """The DefaultChartOptions object is used to hold on default chart and axis attributes. The
     DefaultChartOptions object attributes are used whenever Chart or Axis are created. A 
     DefaultChartOptions object is automatically created when opening a session. 
 
@@ -25,15 +24,16 @@ class DefaultChartOptions:
     -------------------------------
 
     """
+    areaStyle: AreaStyle = AreaStyle()
 
-    def setValues(self, areaStyle: AreaStyle = AreaStyle(), aspectRatio: float = None, 
-                  defaultAxis1Options: Axis = Axis(), defaultAxis2Options: Axis = Axis(), 
-                  gridArea: Area = Area(), legend: Legend = Legend(), 
-                  majorAxis1GridStyle: LineStyle = LineStyle(), 
-                  majorAxis2GridStyle: LineStyle = LineStyle(), 
-                  minorAxis1GridStyle: LineStyle = LineStyle(), 
-                  minorAxis2GridStyle: LineStyle = LineStyle(), tagAreaStyle: AreaStyle = AreaStyle(), 
-                  tagBorder: LineStyle = LineStyle(), tagTextStyle: TextStyle = TextStyle(), 
+    def setValues(self, areaStyle: AreaStyle = AreaStyle(), aspectRatio: float = None,
+                  defaultAxis1Options: Axis = Axis(), defaultAxis2Options: Axis = Axis(),
+                  gridArea: Area = Area(), legend: Legend = Legend(),
+                  majorAxis1GridStyle: LineStyle = LineStyle(),
+                  majorAxis2GridStyle: LineStyle = LineStyle(),
+                  minorAxis1GridStyle: LineStyle = LineStyle(),
+                  minorAxis2GridStyle: LineStyle = LineStyle(), tagAreaStyle: AreaStyle = AreaStyle(),
+                  tagBorder: LineStyle = LineStyle(), tagTextStyle: TextStyle = TextStyle(),
                   useQuantityType: Boolean = ON):
         """This method modifies the DefaultChartOptions object.
 
@@ -88,4 +88,3 @@ class DefaultChartOptions:
             None. 
         """
         pass
-

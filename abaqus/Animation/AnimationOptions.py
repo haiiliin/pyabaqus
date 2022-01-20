@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class AnimationOptions:
 
-    """The AnimationOptions object is used to store values and attributes associated with an 
+class AnimationOptions:
+    """The AnimationOptions object is used to store values and attributes associated with an
     AnimationController object. 
     The AnimationOptions object has no constructor command. Abaqus creates the 
     *animationOptions* member when it creates the AnimationController object. 
@@ -122,15 +122,15 @@ class AnimationOptions:
     # the color associated to each curve. The default value is "Default". 
     xySymbolColor: str = ''
 
-    def setValues(self, mode: SymbolicConstant = LOOP, frameRate: int = 50, frameCounter: Boolean = ON, 
-                  relativeScaling: SymbolicConstant = HALF_CYCLE, numScaleFactorFrames: int = 7, 
-                  timeHistoryMode: SymbolicConstant = FRAME_BASED, maxTime: float = None, 
-                  maxTimeAutoCompute: Boolean = ON, minTime: float = None, 
-                  minTimeAutoCompute: Boolean = ON, timeIncrement: float = None, 
-                  xyUseHighlightMethod: Boolean = ON, xyShowLine: Boolean = ON, 
-                  xyLineStyle: SymbolicConstant = SOLID, xyLineThickness: SymbolicConstant = MEDIUM, 
-                  xyLineColor: str = '', xyShowSymbol: Boolean = ON, 
-                  xySymbolMarker: SymbolicConstant = DEFAULT, xySymbolSize: SymbolicConstant = MEDIUM, 
+    def setValues(self, mode: SymbolicConstant = LOOP, frameRate: int = 50, frameCounter: Boolean = ON,
+                  relativeScaling: SymbolicConstant = HALF_CYCLE, numScaleFactorFrames: int = 7,
+                  timeHistoryMode: SymbolicConstant = FRAME_BASED, maxTime: float = None,
+                  maxTimeAutoCompute: Boolean = ON, minTime: float = None,
+                  minTimeAutoCompute: Boolean = ON, timeIncrement: float = None,
+                  xyUseHighlightMethod: Boolean = ON, xyShowLine: Boolean = ON,
+                  xyLineStyle: SymbolicConstant = SOLID, xyLineThickness: SymbolicConstant = MEDIUM,
+                  xyLineColor: str = '', xyShowSymbol: Boolean = ON,
+                  xySymbolMarker: SymbolicConstant = DEFAULT, xySymbolSize: SymbolicConstant = MEDIUM,
                   xySymbolColor: str = ''):
         """This method modifies the AnimationOptions object.
 
@@ -218,4 +218,3 @@ class AnimationOptions:
             None. 
         """
         pass
-

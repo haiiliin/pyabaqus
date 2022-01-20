@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class DGSuperimposeOptions:
 
-    """The DGSuperimposeOptions object stores values and attributes associated with the 
+class DGSuperimposeOptions:
+    """The DGSuperimposeOptions object stores values and attributes associated with the
     undeformed shape when the display contains both the deformed shape and the undeformed 
     shape. The DGSuperimposeOptions object has no constructor command. Abaqus creates an 
     *odbDisplayOptions.superimposeOptions* member when a display group instance is created, 
@@ -171,4 +171,3 @@ class DGSuperimposeOptions:
     # A tuple of three Floats specifying the coordinate scaling in each of the three 
     # coordinate directions when *coordinateScale*=ON. The default value is (1, 1, 1). 
     coordinateScaleFactors: float = None
-

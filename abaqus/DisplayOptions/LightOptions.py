@@ -3,8 +3,7 @@ from .LightArray import LightArray
 
 
 class LightOptions:
-
-    """The LightOptions object stores settings that control how objects are lit when the 
+    """The LightOptions object stores settings that control how objects are lit when the
     *renderStyle* is set to SHADED. LightOptions objects are accessed in one of two ways: 
     - The default light options. These settings are used as defaults when you start a 
     session and by the Defaults button on the Light ConstrainedSketchOptions dialog box.
@@ -65,7 +64,7 @@ class LightOptions:
     # *colors* map in the *session* object. 
     ambientColor: str = ''
 
-    def setValues(self, shading: SymbolicConstant = GOURAUD, viewpoint: SymbolicConstant = INFINITE, 
+    def setValues(self, shading: SymbolicConstant = GOURAUD, viewpoint: SymbolicConstant = INFINITE,
                   ambientColor: str = '', materialShininess: float = 105):
         """This method modifies the LightOptions object.
 
@@ -113,4 +112,3 @@ class LightOptions:
             RangeError. 
         """
         pass
-

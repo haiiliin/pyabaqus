@@ -1,8 +1,9 @@
+from .IMAField import IMAField
 from ..Region.Region import Region
 
-class PredefinedField:
 
-    """The PredefinedField object is the base object for the objects in the predefined field 
+class PredefinedField:
+    """The PredefinedField object is the base object for the objects in the predefined field
     repository. The methods and members of the PredefinedField object are common to all 
     objects derived from PredefinedField. 
     An instance of any PredefinedField object can be obtained through the predefined field 
@@ -30,6 +31,9 @@ class PredefinedField:
     # ignored if the predefined field has a *distributionType* member available, and 
     # *distributionType*=FROM_FILE or FROM_FILE_AND_USER_DEFINED. 
     region: Region = Region()
+
+    # An IMAField for MaterialAssignment predefined field。
+    fieldList: IMAField = IMAField()
 
     def move(self, fromStepName: str, toStepName: str):
         """This method moves a specific PredefinedFieldState object from one step to a different
@@ -103,4 +107,3 @@ class PredefinedField:
             None. 
         """
         pass
-

@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class EngineeringFeatureDisplayOptions:
 
-    """The EngineeringFeatureDisplayOptions object stores settings that specify how assemblies 
+class EngineeringFeatureDisplayOptions:
+    """The EngineeringFeatureDisplayOptions object stores settings that specify how assemblies
     are to be displayed in a particular viewport when 
     session.viewports[name].assemblyDisplay.engineeringFeatures=ON 
     The EngineeringFeatureDisplayOptions object has no constructor. When you create a new 
@@ -24,8 +24,8 @@ class EngineeringFeatureDisplayOptions:
 
     """
 
-    def setValues(self, pointMassInertia: Boolean = ON, nonstructuralMass: Boolean = ON, 
-                  heatCapacitance: Boolean = ON, contourIntegral: Boolean = ON, 
+    def setValues(self, pointMassInertia: Boolean = ON, nonstructuralMass: Boolean = ON,
+                  heatCapacitance: Boolean = ON, contourIntegral: Boolean = ON,
                   springToGround: Boolean = ON, twoPointSpring: Boolean = ON):
         """This method modifies the EngineeringFeatureDisplayOptions object.
 
@@ -59,4 +59,3 @@ class EngineeringFeatureDisplayOptions:
             RangeError. 
         """
         pass
-

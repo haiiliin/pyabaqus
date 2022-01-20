@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class TopologyOverhangControl(GeometricRestriction):
-
-    """The TopologyOverhangControl object defines a topology overhang control geometric 
+    """The TopologyOverhangControl object defines a topology overhang control geometric
     restriction. 
     The TopologyOverhangControl object is derived from the GeometricRestriction object. 
 
@@ -22,9 +21,9 @@ class TopologyOverhangControl(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, pullDirection: tuple, region: Region, csys: int = None, 
-                 draftAngle: float = 45, overhangCheckRegion: SymbolicConstant = OVERHANG_REGION, 
-                 pointRegion: Region = Region(), radius: float = None, 
+    def __init__(self, name: str, pullDirection: tuple, region: Region, csys: int = None,
+                 draftAngle: float = 45, overhangCheckRegion: SymbolicConstant = OVERHANG_REGION,
+                 pointRegion: Region = Region(), radius: float = None,
                  technique: SymbolicConstant = AUTO):
         """This method creates a TopologyOverhangControl object.
 
@@ -74,8 +73,8 @@ class TopologyOverhangControl(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, draftAngle: float = 45, 
-                  overhangCheckRegion: SymbolicConstant = OVERHANG_REGION, pointRegion: Region = Region(), 
+    def setValues(self, csys: int = None, draftAngle: float = 45,
+                  overhangCheckRegion: SymbolicConstant = OVERHANG_REGION, pointRegion: Region = Region(),
                   radius: float = None, technique: SymbolicConstant = AUTO):
         """This method modifies the TopologyOverhangControl object.
 
@@ -112,4 +111,3 @@ class TopologyOverhangControl(GeometricRestriction):
             None. 
         """
         pass
-

@@ -1,9 +1,8 @@
 from .MeshEdge import MeshEdge
 
 
-class MeshEdgeArray:
-
-    """The MeshEdgeArray is a sequence of MeshEdge objects. 
+class MeshEdgeArray(list[MeshEdge]):
+    """The MeshEdgeArray is a sequence of MeshEdge objects.
 
     Access
     ------
@@ -41,7 +40,7 @@ class MeshEdgeArray:
         ----------
             None. 
         """
-        pass
+        super().__init__()
 
     def getSequenceFromMask(self, mask: str):
         """This method returns the objects in the MeshEdgeArray identified using the specified
@@ -78,4 +77,3 @@ class MeshEdgeArray:
             None. 
         """
         pass
-

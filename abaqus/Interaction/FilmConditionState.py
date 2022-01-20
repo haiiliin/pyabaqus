@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class FilmConditionState(InteractionState):
-
-    """The FilmConditionState object stores the propagating data for a FilmCondition object. 
+    """The FilmConditionState object stores the propagating data for a FilmCondition object.
     One instance of this object is created internally by the FilmCondition object for each 
     step. The instance is also deleted internally by the FilmCondition object. 
     The FilmConditionState object has no constructor or methods. 
@@ -74,4 +73,3 @@ class FilmConditionState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

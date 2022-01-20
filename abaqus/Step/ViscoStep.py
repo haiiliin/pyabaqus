@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class ViscoStep(AnalysisStep):
-
-    """The ViscoStep object is used to obtain a transient static response in an analysis with 
+    """The ViscoStep object is used to obtain a transient static response in an analysis with
     time-dependent material behavior (creep, swelling, and viscoelasticity). 
     The ViscoStep object is derived from the AnalysisStep object. 
 
@@ -190,7 +189,8 @@ class ViscoStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -216,17 +216,17 @@ class ViscoStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1, 
-                 nlgeom: Boolean = OFF, stabilizationMethod: SymbolicConstant = NONE, 
-                 stabilizationMagnitude: float = None, 
-                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, 
-                 matrixSolver: SymbolicConstant = DIRECT, 
-                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, initialInc: float = None, 
-                 maxNumInc: int = 100, minInc: float = None, maxInc: float = 1, 
-                 integration: SymbolicConstant = IMPLICIT_EXPLICIT, cetol: float = 0, 
-                 amplitude: SymbolicConstant = STEP, extrapolation: SymbolicConstant = LINEAR, 
-                 maintainAttributes: Boolean = False, solutionTechnique: SymbolicConstant = FULL_NEWTON, 
-                 reformKernel: int = 8, convertSDI: SymbolicConstant = PROPAGATED, 
+    def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1,
+                 nlgeom: Boolean = OFF, stabilizationMethod: SymbolicConstant = NONE,
+                 stabilizationMagnitude: float = None,
+                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+                 matrixSolver: SymbolicConstant = DIRECT,
+                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, initialInc: float = None,
+                 maxNumInc: int = 100, minInc: float = None, maxInc: float = 1,
+                 integration: SymbolicConstant = IMPLICIT_EXPLICIT, cetol: float = 0,
+                 amplitude: SymbolicConstant = STEP, extrapolation: SymbolicConstant = LINEAR,
+                 maintainAttributes: Boolean = False, solutionTechnique: SymbolicConstant = FULL_NEWTON,
+                 reformKernel: int = 8, convertSDI: SymbolicConstant = PROPAGATED,
                  adaptiveDampingRatio: float = 0, continueDampingFactors: Boolean = OFF):
         """This method creates a ViscoStep object.
 
@@ -323,16 +323,16 @@ class ViscoStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', timePeriod: float = 1, nlgeom: Boolean = OFF, 
-                  stabilizationMethod: SymbolicConstant = NONE, stabilizationMagnitude: float = None, 
-                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, 
-                  matrixSolver: SymbolicConstant = DIRECT, 
-                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, initialInc: float = None, 
-                  maxNumInc: int = 100, minInc: float = None, maxInc: float = 1, 
-                  integration: SymbolicConstant = IMPLICIT_EXPLICIT, cetol: float = 0, 
-                  amplitude: SymbolicConstant = STEP, extrapolation: SymbolicConstant = LINEAR, 
-                  solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8, 
-                  convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0, 
+    def setValues(self, description: str = '', timePeriod: float = 1, nlgeom: Boolean = OFF,
+                  stabilizationMethod: SymbolicConstant = NONE, stabilizationMagnitude: float = None,
+                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+                  matrixSolver: SymbolicConstant = DIRECT,
+                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, initialInc: float = None,
+                  maxNumInc: int = 100, minInc: float = None, maxInc: float = 1,
+                  integration: SymbolicConstant = IMPLICIT_EXPLICIT, cetol: float = 0,
+                  amplitude: SymbolicConstant = STEP, extrapolation: SymbolicConstant = LINEAR,
+                  solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
+                  convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0,
                   continueDampingFactors: Boolean = OFF):
         """This method modifies the ViscoStep object.
 
@@ -415,4 +415,3 @@ class ViscoStep(AnalysisStep):
             RangeError. 
         """
         pass
-

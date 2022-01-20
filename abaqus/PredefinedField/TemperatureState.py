@@ -3,8 +3,7 @@ from .PredefinedFieldState import PredefinedFieldState
 
 
 class TemperatureState(PredefinedFieldState):
-
-    """The TemperatureState object stores the propagating data of a temperature in a step. One 
+    """The TemperatureState object stores the propagating data of a temperature in a step. One
     instance of this object is created internally by the Temperature object for each step. 
     The TemperatureState object has no constructor or methods. 
     The TemperatureState object is derived from the PredefinedFieldState object. 
@@ -127,4 +126,3 @@ class TemperatureState(PredefinedFieldState):
     # use different subsets of the entire list of possible values depending on propagation 
     # rules. 
     status: SymbolicConstant = None
-

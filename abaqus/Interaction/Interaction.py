@@ -1,8 +1,5 @@
-
-
 class Interaction:
-
-    """The Interaction object is the abstract base type for other Interaction objects. The 
+    """The Interaction object is the abstract base type for other Interaction objects. The
     Interaction object has no explicit constructor. Each of the Interaction objects has the 
     following methods: 
     - deactivate 
@@ -136,4 +133,3 @@ class Interaction:
             None. 
         """
         pass
-

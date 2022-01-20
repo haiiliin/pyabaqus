@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class FluidInflatorState(InteractionState):
-
-    """The FluidInflatorState object stores the propagating data for a FluidInflator object. 
+    """The FluidInflatorState object stores the propagating data for a FluidInflator object.
     One instance of this object is created internally by the FluidInflator object for each 
     step. The instance is also deleted internally by the FluidInflator object. 
     The FluidInflatorState object has no constructor or methods. 
@@ -35,4 +34,3 @@ class FluidInflatorState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

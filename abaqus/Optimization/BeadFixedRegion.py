@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class BeadFixedRegion(GeometricRestriction):
-
-    """The BeadFixedRegion object defines a fixed region geometric restriction. 
+    """The BeadFixedRegion object defines a fixed region geometric restriction.
     The BeadFixedRegion object is derived from the GeometricRestriction object. 
 
     Access
@@ -21,7 +20,7 @@ class BeadFixedRegion(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, region: Region, csys: int = None, u1: Boolean = OFF, u2: Boolean = OFF, 
+    def __init__(self, name: str, region: Region, csys: int = None, u1: Boolean = OFF, u2: Boolean = OFF,
                  u3: Boolean = OFF):
         """This method creates a BeadFixedRegion object.
 
@@ -88,4 +87,3 @@ class BeadFixedRegion(GeometricRestriction):
             None. 
         """
         pass
-

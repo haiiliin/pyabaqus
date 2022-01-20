@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class SymbolStyle:
 
-    """The SymbolStyle object is used to define the marker properties to be used when drawing 
+class SymbolStyle:
+    """The SymbolStyle object is used to define the marker properties to be used when drawing
     curves. 
     SymbolStyle objects can be created using the methods described below. 
 
@@ -28,7 +28,7 @@ class SymbolStyle:
 
     """
 
-    def __init__(self, color: str = '', show: Boolean = ON, marker: SymbolicConstant = FILLED_CIRCLE, 
+    def __init__(self, color: str = '', show: Boolean = ON, marker: SymbolicConstant = FILLED_CIRCLE,
                  size: float = 2):
         """This method creates a SymbolStyle object.
 
@@ -74,7 +74,7 @@ class SymbolStyle:
         """
         pass
 
-    def setValues(self, color: str = '', show: Boolean = ON, marker: SymbolicConstant = FILLED_CIRCLE, 
+    def setValues(self, color: str = '', show: Boolean = ON, marker: SymbolicConstant = FILLED_CIRCLE,
                   size: float = 2):
         """This method modifies the SymbolStyle object.
 
@@ -114,4 +114,3 @@ class SymbolStyle:
             None. 
         """
         pass
-

@@ -1,10 +1,14 @@
-from .ErrorIndicatorResult import ErrorIndicatorResult
+# from .ErrorIndicatorResult import ErrorIndicatorResult
 from ..UtilityAndView.Repository import Repository
 
 
-class RuleResult:
+# Prevent circular import
+class ErrorIndicatorResult:
+    pass
 
-    """The RuleResult object contains result information corresponding to a RemeshingRule 
+
+class RuleResult:
+    """The RuleResult object contains result information corresponding to a RemeshingRule
     object for an adaptivity iteration. 
 
     Access
@@ -20,7 +24,7 @@ class RuleResult:
 
     """
 
-    def __init__(self, name: str, indicatorResults: Repository[str, ErrorIndicatorResult], numElems: int, 
+    def __init__(self, name: str, indicatorResults: Repository[str, ErrorIndicatorResult], numElems: int,
                  minSizeElemCount: int, satisfiedVars: tuple = ()):
         """This method creates a RuleResult with data for a RemeshingRule for a given adaptivity
         iteration.
@@ -55,4 +59,3 @@ class RuleResult:
             AbaqusException. 
         """
         pass
-

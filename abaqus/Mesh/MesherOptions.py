@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class MesherOptions:
 
-    """The MesherOptions object controls the default settings that Abaqus uses for all meshing 
+class MesherOptions:
+    """The MesherOptions object controls the default settings that Abaqus uses for all meshing
     methods. The MesherOptions object has no constructor. Abaqus creates the *MesherOptions* 
     member when a session is started. 
     MesherOptions commands are intended for use at the beginning of scripts and in the 
@@ -20,8 +20,8 @@ class MesherOptions:
 
     """
 
-    def setValues(self, elemShape2D: SymbolicConstant = QUAD_DOMINATED, elemShape3D: SymbolicConstant = HEX, 
-                  quadAlgorithm: SymbolicConstant = ADVANCING_FRONT, allowMapped: Boolean = OFF, 
+    def setValues(self, elemShape2D: SymbolicConstant = QUAD_DOMINATED, elemShape3D: SymbolicConstant = HEX,
+                  quadAlgorithm: SymbolicConstant = ADVANCING_FRONT, allowMapped: Boolean = OFF,
                   minTransition: Boolean = ON, guiPreferredElements: SymbolicConstant = None):
         """This method modifies the MesherOptions object.
 
@@ -67,4 +67,3 @@ class MesherOptions:
             None. 
         """
         pass
-

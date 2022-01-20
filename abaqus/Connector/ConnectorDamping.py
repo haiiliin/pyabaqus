@@ -4,8 +4,7 @@ from .ConnectorOptions import ConnectorOptions
 
 
 class ConnectorDamping(ConnectorBehaviorOption):
-
-    """The ConnectorDamping object defines damping behavior for one or more components of a 
+    """The ConnectorDamping object defines damping behavior for one or more components of a
     connector's relative motion. 
     The ConnectorDamping object is derived from the ConnectorBehaviorOption object. 
 
@@ -32,18 +31,23 @@ class ConnectorDamping(ConnectorBehaviorOption):
         - Value of the first field variable, if the data depend on field variables.
         - Value of the second field variable.
         - Etc.
-        If *behavior*=LINEAR and *coupling*=COUPLED, the table data specify the symmetric portion of the damping matrix for the specified components followed by any temperature data and then any field data. For example, if components 2, 3, and 5 are specified, the table portion of the command is as follows:
+        If *behavior*=LINEAR and *coupling*=COUPLED, the table data specify the symmetric portion of the damping matrix
+        for the specified components followed by any temperature data and then any field data. For example, if
+        components 2, 3, and 5 are specified, the table portion of the command is as follows:
         table=( (C22C22, C23C23, C25C25, C33C33, C35C35, C55C55,), )
         The following items should then be specified as comma-separated data:
         - Temperature, if the data depend on temperature.
         - Value of the first field variable, if the data depend on field variables.
         - Value of the second field variable.
         - Etc.
-        If *behavior*=NONLINEAR and *coupling*=COUPLED_POSITION or COUPLED_MOTION, each sequence of the table data specifies the following:
+        If *behavior*=NONLINEAR and *coupling*=COUPLED_POSITION or COUPLED_MOTION, each sequence of the table data
+        specifies the following:
         - Force or moment for the directions in the *components* list.
         - Relative velocity for the directions in the *components* list.
-        - Relative position or angle for the first *independentComponents* direction if *coupling*=COUPLED_POSITION. Relative displacement or rotation for the first *independentComponents* direction if *coupling*=COUPLED_MOTION.
-        - Relative position or angle for the second *independentComponents* direction if *coupling*=COUPLED_POSITION. Relative displacement or rotation for the second *independentComponents* direction if *coupling*=COUPLED_MOTION.
+        - Relative position or angle for the first *independentComponents* direction if *coupling*=COUPLED_POSITION.
+          Relative displacement or rotation for the first *independentComponents* direction if *coupling*=COUPLED_MOTION.
+        - Relative position or angle for the second *independentComponents* direction if *coupling*=COUPLED_POSITION.
+          Relative displacement or rotation for the second *independentComponents* direction if *coupling*=COUPLED_MOTION.
         - Etc. up to the Nth *independentComponents* direction.
         - Temperature, if the data depend on temperature.
         - Value of the first field variable, if the data depend on field variables.
@@ -60,9 +64,9 @@ class ConnectorDamping(ConnectorBehaviorOption):
     # for this ConnectorBehaviorOption. 
     options: ConnectorOptions = ConnectorOptions()
 
-    def __init__(self, behavior: SymbolicConstant = LINEAR, coupling: SymbolicConstant = UNCOUPLED, 
-                 dependencies: int = 0, temperatureDependency: Boolean = OFF, 
-                 frequencyDependency: Boolean = OFF, table: tuple = (), 
+    def __init__(self, behavior: SymbolicConstant = LINEAR, coupling: SymbolicConstant = UNCOUPLED,
+                 dependencies: int = 0, temperatureDependency: Boolean = OFF,
+                 frequencyDependency: Boolean = OFF, table: tuple = (),
                  independentComponents: tuple = (), components: tuple = ()):
         """This method creates a connector damping behavior option for a ConnectorSection object.
 
@@ -133,4 +137,3 @@ class ConnectorDamping(ConnectorBehaviorOption):
             ValueError. 
         """
         pass
-

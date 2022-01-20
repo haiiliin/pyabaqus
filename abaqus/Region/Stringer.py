@@ -3,9 +3,9 @@ from ..BasicGeometry.EdgeArray import EdgeArray
 from ..Mesh.MeshEdge import MeshEdge
 from ..Mesh.MeshElementArray import MeshElementArray
 
-class Stringer:
 
-    """The Stringer object stores information on stringer reinforcements created on entities. 
+class Stringer:
+    """The Stringer object stores information on stringer reinforcements created on entities.
 
     Access
     ------
@@ -87,4 +87,3 @@ class Stringer:
             InvalidNameError. 
         """
         pass
-

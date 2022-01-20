@@ -1,8 +1,5 @@
-
-
 class OdbDataMaterial:
-
-    """The OdbDataMaterial object stores material data. 
+    """The OdbDataMaterial object stores material data.
 
     Access
     ------
@@ -23,4 +20,3 @@ class OdbDataMaterial:
     # A String-to-tuple-of-Ints Dictionary specifying the elements in the set. This attribute 
     # is read-only. 
     elements: str = ''
-

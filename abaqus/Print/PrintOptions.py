@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class PrintOptions:
 
-    """The PrintOptions object stores the common settings that Abaqus uses for all print 
+class PrintOptions:
+    """The PrintOptions object stores the common settings that Abaqus uses for all print
     methods. The PrintOptions object has no constructor. Abaqus creates the *printOptions* 
     member when a session is started. 
 
@@ -18,8 +18,8 @@ class PrintOptions:
 
     """
 
-    def setValues(self, rendition: SymbolicConstant = COLOR, vpDecorations: Boolean = ON, 
-                  vpBackground: Boolean = OFF, compass: Boolean = OFF, printCommand: str = '', 
+    def setValues(self, rendition: SymbolicConstant = COLOR, vpDecorations: Boolean = ON,
+                  vpBackground: Boolean = OFF, compass: Boolean = OFF, printCommand: str = '',
                   deleteTemporaryFiles: Boolean = ON, reduceColors: Boolean = OFF):
         """This method modifies the PrintOptions object.
 
@@ -58,4 +58,3 @@ class PrintOptions:
             None. 
         """
         pass
-

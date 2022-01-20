@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class Gravity(Load):
-
-    """The Gravity object stores the data of a gravity load. 
+    """The Gravity object stores the data of a gravity load.
     The Gravity object is derived from the Load object. 
 
     Access
@@ -38,8 +37,8 @@ class Gravity(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, distributionType: SymbolicConstant = UNIFORM, 
-                 field: str = '', region: Region = Region(), comp1: float = None, comp2: float = None, 
+    def __init__(self, name: str, createStepName: str, distributionType: SymbolicConstant = UNIFORM,
+                 field: str = '', region: Region = Region(), comp1: float = None, comp2: float = None,
                  comp3: float = None, amplitude: str = UNSET):
         """This method creates a Gravity object.
 
@@ -86,8 +85,8 @@ class Gravity(Load):
         super().__init__()
         pass
 
-    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', 
-                  region: Region = Region(), comp1: float = None, comp2: float = None, 
+    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '',
+                  region: Region = Region(), comp1: float = None, comp2: float = None,
                   comp3: float = None, amplitude: str = UNSET):
         """This method modifies the data for an existing Gravity object in the step where it is
         created.
@@ -126,10 +125,10 @@ class Gravity(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        comp1: typing.Union[SymbolicConstant,float] = None, 
-                        comp2: typing.Union[SymbolicConstant,float] = None, 
-                        comp3: typing.Union[SymbolicConstant,float] = None, 
+    def setValuesInStep(self, stepName: str,
+                        comp1: typing.Union[SymbolicConstant, float] = None,
+                        comp2: typing.Union[SymbolicConstant, float] = None,
+                        comp3: typing.Union[SymbolicConstant, float] = None,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing Gravity object in the
         specified step.
@@ -165,4 +164,3 @@ class Gravity(Load):
             None. 
         """
         pass
-

@@ -11,8 +11,7 @@ from ..UtilityAndView.View import View
 
 
 class Chart:
-
-    """The Chart object is used to display XYCurve objects. A Chart object is automatically 
+    """The Chart object is used to display XYCurve objects. A Chart object is automatically
     created when creating an XYPlot object 
 
     Access
@@ -287,4 +286,3 @@ class Chart:
             RangeError. 
         """
         pass
-

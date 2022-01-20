@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class BeadPlanarSymmetry(GeometricRestriction):
-
-    """The BeadPlanarSymmetry object defines a bead planar symmetry geometric restriction. 
+    """The BeadPlanarSymmetry object defines a bead planar symmetry geometric restriction.
     The BeadPlanarSymmetry object is derived from the GeometricRestriction object. 
 
     Access
@@ -75,4 +74,3 @@ class BeadPlanarSymmetry(GeometricRestriction):
             None. 
         """
         pass
-

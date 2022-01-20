@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class GapElectricalConductance:
 
-    """The GapElectricalConductance object specifies electrical conductance for a contact 
+class GapElectricalConductance:
+    """The GapElectricalConductance object specifies electrical conductance for a contact
     interaction property. 
 
     Access
@@ -33,10 +33,10 @@ class GapElectricalConductance:
 
     """
 
-    def __init__(self, definition: SymbolicConstant = TABULAR, clearanceDependency: Boolean = ON, 
-                 pressureDependency: Boolean = OFF, temperatureDependencyC: Boolean = OFF, 
-                 dependenciesC: int = 0, clearanceDepTable: tuple = (), 
-                 temperatureDependencyP: Boolean = OFF, dependenciesP: int = 0, 
+    def __init__(self, definition: SymbolicConstant = TABULAR, clearanceDependency: Boolean = ON,
+                 pressureDependency: Boolean = OFF, temperatureDependencyC: Boolean = OFF,
+                 dependenciesC: int = 0, clearanceDepTable: tuple = (),
+                 temperatureDependencyP: Boolean = OFF, dependenciesP: int = 0,
                  pressureDepTable: tuple = ()):
         """This method creates a GapElectricalConductance object.
 
@@ -97,4 +97,3 @@ class GapElectricalConductance:
             None. 
         """
         pass
-

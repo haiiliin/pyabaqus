@@ -3,8 +3,7 @@ from ..Datum.DatumCsys import DatumCsys
 
 
 class BasicOptions:
-
-    """The BasicOptions object stores values and attributes associated with an OdbDisplay 
+    """The BasicOptions object stores values and attributes associated with an OdbDisplay
     object. 
     The BasicOptions object has no constructor command. Abaqus creates the 
     *defaultOdbDisplay.basicOptions* member when you import the Visualization module. Abaqus 
@@ -396,48 +395,48 @@ class BasicOptions:
     # value is an empty sequence. 
     userRegions: tuple = ()
 
-    def setValues(self, options: 'BasicOptions' = None, cameraCsysName: str = '', 
-                  cameraMovesWithCsys: Boolean = OFF, cameraFollowsRotation: Boolean = OFF, 
-                  averagingThreshold: float = 75, quantityToPlot: SymbolicConstant = FIELD_OUTPUT, 
-                  curveRefinementLevel: SymbolicConstant = COARSE, noResultsColor: str = '', 
-                  featureAngle: float = 30, otherSymbolSize: int = 6, renderBeamProfiles: Boolean = OFF, 
-                  beamScaleFactor: float = 1, renderShellThickness: Boolean = OFF, 
-                  shellScaleFactor: float = 1, accountForDeactivatedElems: Boolean = ON, 
-                  bcDisplay: Boolean = OFF, connectorDisplay: Boolean = OFF, 
-                  highlightConnectorPts: Boolean = ON, showConnectorAxes: Boolean = ON, 
-                  showConnectorType: Boolean = ON, pointElements: Boolean = ON, 
-                  referencePoints: Boolean = ON, massElements: Boolean = OFF, 
-                  springElements: Boolean = OFF, spotWelds: Boolean = OFF, tracerParticles: Boolean = OFF, 
-                  pc3dElements: Boolean = ON, pd3dElements: Boolean = ON, sweepArs: Boolean = OFF, 
-                  sweepElem: Boolean = OFF, sweepStartAngleArs: float = 0, sweepStartAngleElem: float = 0, 
-                  sweepEndAngleArs: float = 360, sweepEndAngleElem: float = 180, 
-                  numSweepSegmentsArs: int = None, numSweepSegmentsElem: int = None, 
-                  numericForm: SymbolicConstant = REAL, complexAngle: float = 0, 
-                  sectionResults: SymbolicConstant = USE_BOTTOM, 
-                  envelopeCriteria: SymbolicConstant = MAX_ABS_VALUE, 
-                  envelopeDataPosition: SymbolicConstant = INTEGRATION_POINT, 
-                  plyResultLocation: SymbolicConstant = MIDDLE, 
-                  sectionPointScheme: SymbolicConstant = CATEGORY_BASED, sweepSectors: Boolean = OFF, 
-                  sectorSelectionType: SymbolicConstant = SELECT_BY_NUMBER, 
-                  selectedSectorNumbers: tuple = (), sweepSectorStartAngle: float = 0, 
-                  sweepSectorEndAngle: float = 360, extrudeArs: Boolean = OFF, 
-                  extrudeArsDepthAutoCompute: Boolean = ON, extrudeElem: Boolean = OFF, 
-                  extrudeArsDepth: float = 1, extrudeElemDepth: float = 1, 
-                  mirrorPatternOrder: SymbolicConstant = MIRROR_RECT_CIRC, 
-                  mirrorCsysName: SymbolicConstant = GLOBAL, mirrorAboutXyPlane: Boolean = OFF, 
-                  mirrorAboutXzPlane: Boolean = OFF, mirrorAboutYzPlane: Boolean = OFF, 
-                  mirrorDisplayBodies: Boolean = OFF, patternCsysName: SymbolicConstant = GLOBAL, 
-                  patternNumX: int = 1, patternNumY: int = 1, patternNumZ: int = 1, 
-                  patternOffsetX: float = 0, patternOffsetY: float = 0, patternOffsetZ: float = 0, 
-                  patternRotationAxis: SymbolicConstant = ZAXIS, patternTotalAngle: float = 360, 
-                  patternNumCircular: int = 1, couplingDisplay: Boolean = ON, 
-                  coordSystemDisplay: Boolean = OFF, scratchCoordSystemDisplay: Boolean = OFF, 
-                  transformationType: SymbolicConstant = DEFAULT, datumCsys: DatumCsys = DatumCsys(), 
-                  rigidTransformPrimary: Boolean = OFF, rigidTransformDeformed: Boolean = OFF, 
-                  transformOnDeformed: Boolean = ON, averageElementOutput: Boolean = ON, 
-                  averageOnlyDisplayed: Boolean = ON, 
-                  computeOutput: SymbolicConstant = EXTRAPOLATE_AVERAGE_COMPUTE, 
-                  regionBoundaries: SymbolicConstant = ODB_REGIONS, useRegionBoundaries: Boolean = ON, 
+    def setValues(self, options: 'BasicOptions' = None, cameraCsysName: str = '',
+                  cameraMovesWithCsys: Boolean = OFF, cameraFollowsRotation: Boolean = OFF,
+                  averagingThreshold: float = 75, quantityToPlot: SymbolicConstant = FIELD_OUTPUT,
+                  curveRefinementLevel: SymbolicConstant = COARSE, noResultsColor: str = '',
+                  featureAngle: float = 30, otherSymbolSize: int = 6, renderBeamProfiles: Boolean = OFF,
+                  beamScaleFactor: float = 1, renderShellThickness: Boolean = OFF,
+                  shellScaleFactor: float = 1, accountForDeactivatedElems: Boolean = ON,
+                  bcDisplay: Boolean = OFF, connectorDisplay: Boolean = OFF,
+                  highlightConnectorPts: Boolean = ON, showConnectorAxes: Boolean = ON,
+                  showConnectorType: Boolean = ON, pointElements: Boolean = ON,
+                  referencePoints: Boolean = ON, massElements: Boolean = OFF,
+                  springElements: Boolean = OFF, spotWelds: Boolean = OFF, tracerParticles: Boolean = OFF,
+                  pc3dElements: Boolean = ON, pd3dElements: Boolean = ON, sweepArs: Boolean = OFF,
+                  sweepElem: Boolean = OFF, sweepStartAngleArs: float = 0, sweepStartAngleElem: float = 0,
+                  sweepEndAngleArs: float = 360, sweepEndAngleElem: float = 180,
+                  numSweepSegmentsArs: int = None, numSweepSegmentsElem: int = None,
+                  numericForm: SymbolicConstant = REAL, complexAngle: float = 0,
+                  sectionResults: SymbolicConstant = USE_BOTTOM,
+                  envelopeCriteria: SymbolicConstant = MAX_ABS_VALUE,
+                  envelopeDataPosition: SymbolicConstant = INTEGRATION_POINT,
+                  plyResultLocation: SymbolicConstant = MIDDLE,
+                  sectionPointScheme: SymbolicConstant = CATEGORY_BASED, sweepSectors: Boolean = OFF,
+                  sectorSelectionType: SymbolicConstant = SELECT_BY_NUMBER,
+                  selectedSectorNumbers: tuple = (), sweepSectorStartAngle: float = 0,
+                  sweepSectorEndAngle: float = 360, extrudeArs: Boolean = OFF,
+                  extrudeArsDepthAutoCompute: Boolean = ON, extrudeElem: Boolean = OFF,
+                  extrudeArsDepth: float = 1, extrudeElemDepth: float = 1,
+                  mirrorPatternOrder: SymbolicConstant = MIRROR_RECT_CIRC,
+                  mirrorCsysName: SymbolicConstant = GLOBAL, mirrorAboutXyPlane: Boolean = OFF,
+                  mirrorAboutXzPlane: Boolean = OFF, mirrorAboutYzPlane: Boolean = OFF,
+                  mirrorDisplayBodies: Boolean = OFF, patternCsysName: SymbolicConstant = GLOBAL,
+                  patternNumX: int = 1, patternNumY: int = 1, patternNumZ: int = 1,
+                  patternOffsetX: float = 0, patternOffsetY: float = 0, patternOffsetZ: float = 0,
+                  patternRotationAxis: SymbolicConstant = ZAXIS, patternTotalAngle: float = 360,
+                  patternNumCircular: int = 1, couplingDisplay: Boolean = ON,
+                  coordSystemDisplay: Boolean = OFF, scratchCoordSystemDisplay: Boolean = OFF,
+                  transformationType: SymbolicConstant = DEFAULT, datumCsys: DatumCsys = DatumCsys(),
+                  rigidTransformPrimary: Boolean = OFF, rigidTransformDeformed: Boolean = OFF,
+                  transformOnDeformed: Boolean = ON, averageElementOutput: Boolean = ON,
+                  averageOnlyDisplayed: Boolean = ON,
+                  computeOutput: SymbolicConstant = EXTRAPOLATE_AVERAGE_COMPUTE,
+                  regionBoundaries: SymbolicConstant = ODB_REGIONS, useRegionBoundaries: Boolean = ON,
                   userRegions: tuple = (), includeFeatureBoundaries: Boolean = ON):
         """This method modifies the BasicOptions object.
 
@@ -714,4 +713,3 @@ class BasicOptions:
               RangeError: featureAngle must be a float in the range 0-90, inclusive 
         """
         pass
-

@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class CoupledThermalElectricStep(AnalysisStep):
-
-    """The CoupledThermalElectricStep object is used to analyze problems where the electrical 
+    """The CoupledThermalElectricStep object is used to analyze problems where the electrical
     potential and temperature fields must be solved simultaneously. 
     The CoupledThermalElectricStep object is derived from the AnalysisStep object. 
 
@@ -166,7 +165,8 @@ class CoupledThermalElectricStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -192,13 +192,13 @@ class CoupledThermalElectricStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT, 
-                 timePeriod: float = 1, timeIncrementationMethod: SymbolicConstant = AUTOMATIC, 
-                 maxNumInc: int = 100, initialInc: float = None, minInc: float = None, 
-                 maxInc: float = None, end: SymbolicConstant = PERIOD, deltmx: float = 0, 
-                 mxdem: float = 0, solutionTechnique: SymbolicConstant = FULL_NEWTON, 
-                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = STEP, 
-                 extrapolation: SymbolicConstant = LINEAR, maintainAttributes: Boolean = False, 
+    def __init__(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT,
+                 timePeriod: float = 1, timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+                 maxNumInc: int = 100, initialInc: float = None, minInc: float = None,
+                 maxInc: float = None, end: SymbolicConstant = PERIOD, deltmx: float = 0,
+                 mxdem: float = 0, solutionTechnique: SymbolicConstant = FULL_NEWTON,
+                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = STEP,
+                 extrapolation: SymbolicConstant = LINEAR, maintainAttributes: Boolean = False,
                  convertSDI: SymbolicConstant = PROPAGATED):
         """This method creates a CoupledThermalElectricStep object.
 
@@ -275,12 +275,12 @@ class CoupledThermalElectricStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', response: SymbolicConstant = TRANSIENT, timePeriod: float = 1, 
-                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
-                  initialInc: float = None, minInc: float = None, maxInc: float = None, 
-                  end: SymbolicConstant = PERIOD, deltmx: float = 0, mxdem: float = 0, 
-                  solutionTechnique: SymbolicConstant = FULL_NEWTON, 
-                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = STEP, 
+    def setValues(self, description: str = '', response: SymbolicConstant = TRANSIENT, timePeriod: float = 1,
+                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                  initialInc: float = None, minInc: float = None, maxInc: float = None,
+                  end: SymbolicConstant = PERIOD, deltmx: float = 0, mxdem: float = 0,
+                  solutionTechnique: SymbolicConstant = FULL_NEWTON,
+                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = STEP,
                   extrapolation: SymbolicConstant = LINEAR, convertSDI: SymbolicConstant = PROPAGATED):
         """This method modifies the CoupledThermalElectricStep object.
 
@@ -343,4 +343,3 @@ class CoupledThermalElectricStep(AnalysisStep):
             RangeError. 
         """
         pass
-

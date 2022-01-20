@@ -25,8 +25,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class ResponseSpectrumStep(AnalysisStep):
-
-    """The ResponseSpectrumStep object is used to calculate estimates of peak values of 
+    """The ResponseSpectrumStep object is used to calculate estimates of peak values of
     displacements and stresses based on user-supplied response spectra and on the natural 
     modes of the system. 
     The ResponseSpectrumStep object is derived from the AnalysisStep object. 
@@ -148,7 +147,8 @@ class ResponseSpectrumStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -174,13 +174,13 @@ class ResponseSpectrumStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, components: ResponseSpectrumComponentArray, 
-                 description: str = '', comp: SymbolicConstant = SINGLE_DIRECTION, 
-                 sum: SymbolicConstant = ABS, directDamping: DirectDamping = DirectDamping(), 
-                 compositeDamping: CompositeDamping = CompositeDamping(), 
-                 rayleighDamping: RayleighDamping = RayleighDamping(), 
-                 directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(), 
-                 rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(), 
+    def __init__(self, name: str, previous: str, components: ResponseSpectrumComponentArray,
+                 description: str = '', comp: SymbolicConstant = SINGLE_DIRECTION,
+                 sum: SymbolicConstant = ABS, directDamping: DirectDamping = DirectDamping(),
+                 compositeDamping: CompositeDamping = CompositeDamping(),
+                 rayleighDamping: RayleighDamping = RayleighDamping(),
+                 directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
+                 rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(),
                  maintainAttributes: Boolean = False):
         """This method creates a ResponseSpectrumStep object.
 
@@ -232,11 +232,11 @@ class ResponseSpectrumStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', comp: SymbolicConstant = SINGLE_DIRECTION, 
-                  sum: SymbolicConstant = ABS, directDamping: DirectDamping = DirectDamping(), 
-                  compositeDamping: CompositeDamping = CompositeDamping(), 
-                  rayleighDamping: RayleighDamping = RayleighDamping(), 
-                  directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(), 
+    def setValues(self, description: str = '', comp: SymbolicConstant = SINGLE_DIRECTION,
+                  sum: SymbolicConstant = ABS, directDamping: DirectDamping = DirectDamping(),
+                  compositeDamping: CompositeDamping = CompositeDamping(),
+                  rayleighDamping: RayleighDamping = RayleighDamping(),
+                  directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
                   rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency()):
         """This method modifies the ResponseSpectrumStep object.
 
@@ -272,4 +272,3 @@ class ResponseSpectrumStep(AnalysisStep):
             RangeError. 
         """
         pass
-

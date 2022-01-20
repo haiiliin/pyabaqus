@@ -21,11 +21,13 @@ class ContactTangentialBehavior:
         - Value of the first field variable, if the data depend on field variables.
         - Value of the second field variable.
         - Etc.
-        If *formulation*=EXPONENTIAL_DECAY and *exponentialDecayDefinition*=COEFFICIENTS, the table data specify the following:
+        If *formulation*=EXPONENTIAL_DECAY and *exponentialDecayDefinition*=COEFFICIENTS, the table data specify the
+        following:
         - Static friction coefficient.
         - Kinetic friction coefficient.
         - Decay coefficient.
-        If *formulation*=EXPONENTIAL_DECAY and *exponentialDecayDefinition*=TEST_DATA, the table data specify the following:
+        If *formulation*=EXPONENTIAL_DECAY and *exponentialDecayDefinition*=TEST_DATA, the table data specify the
+        following:
         - Friction coefficient.
         - Slip rate.
         If *formulation*=USER_DEFINED, the table data specify the following:

@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class GravityState(LoadState):
-
-    """The GravityState object stores the propagating data for a gravity load in a step. One 
+    """The GravityState object stores the propagating data for a gravity load in a step. One
     instance of this object is created internally by the Gravity object for each step. The 
     instance is also deleted internally by the Gravity object. 
     The GravityState object has no constructor or methods. 
@@ -65,4 +64,3 @@ class GravityState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

@@ -3,8 +3,7 @@ from .SectionCategory import SectionCategory
 
 
 class OdbMeshElement:
-
-    """OdbMeshElement objects are created with the part.addElements or rootAssembly.addElements 
+    """OdbMeshElement objects are created with the part.addElements or rootAssembly.addElements
     methods. 
 
     Access
@@ -57,7 +56,7 @@ class OdbMeshElement:
     # A String specifying the instance name. 
     instanceName: str = ''
 
-    def getNormal(self, faceIndex: str, stepName: str = '', frameValue: str = '', 
+    def getNormal(self, faceIndex: str, stepName: str = '', frameValue: str = '',
                   match: SymbolicConstant = CLOSEST):
         """This method returns the normal direction for the element face.
 
@@ -94,4 +93,3 @@ class OdbMeshElement:
               *frameValue*OdbError: *stepName* should be specified with *frameValue*. 
         """
         pass
-

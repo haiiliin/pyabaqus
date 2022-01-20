@@ -3,8 +3,7 @@ from .Amplitude import Amplitude
 
 
 class SpectrumAmplitude(Amplitude):
-
-    """The SpectrumAmplitude object defines the spectrum of responses for displacement, 
+    """The SpectrumAmplitude object defines the spectrum of responses for displacement,
     velocity, or acceleration to be used in a response spectrum analysis. 
     The SpectrumAmplitude object is derived from the Amplitude object. 
 
@@ -24,11 +23,11 @@ class SpectrumAmplitude(Amplitude):
 
     """
 
-    def __init__(self, name: str, method: SymbolicConstant, data: tuple, 
-                 specificationUnits: SymbolicConstant = ACCELERATION, 
-                 eventUnits: SymbolicConstant = EVENT_ACCELERATION, 
-                 solution: SymbolicConstant = ABSOLUTE_VALUE, timeIncrement: float = 0, 
-                 gravity: float = 1, criticalDamping: Boolean = OFF, timeSpan: SymbolicConstant = STEP, 
+    def __init__(self, name: str, method: SymbolicConstant, data: tuple,
+                 specificationUnits: SymbolicConstant = ACCELERATION,
+                 eventUnits: SymbolicConstant = EVENT_ACCELERATION,
+                 solution: SymbolicConstant = ABSOLUTE_VALUE, timeIncrement: float = 0,
+                 gravity: float = 1, criticalDamping: Boolean = OFF, timeSpan: SymbolicConstant = STEP,
                  amplitude: str = ''):
         """This method creates a SpectrumAmplitude object.
 
@@ -89,10 +88,10 @@ class SpectrumAmplitude(Amplitude):
         super().__init__()
         pass
 
-    def setValues(self, specificationUnits: SymbolicConstant = ACCELERATION, 
-                  eventUnits: SymbolicConstant = EVENT_ACCELERATION, 
-                  solution: SymbolicConstant = ABSOLUTE_VALUE, timeIncrement: float = 0, 
-                  gravity: float = 1, criticalDamping: Boolean = OFF, timeSpan: SymbolicConstant = STEP, 
+    def setValues(self, specificationUnits: SymbolicConstant = ACCELERATION,
+                  eventUnits: SymbolicConstant = EVENT_ACCELERATION,
+                  solution: SymbolicConstant = ABSOLUTE_VALUE, timeIncrement: float = 0,
+                  gravity: float = 1, criticalDamping: Boolean = OFF, timeSpan: SymbolicConstant = STEP,
                   amplitude: str = ''):
         """This method modifies the SpectrumAmplitude object.
 
@@ -138,4 +137,3 @@ class SpectrumAmplitude(Amplitude):
             RangeError. 
         """
         pass
-

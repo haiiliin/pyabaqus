@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class AssembledFastener(Fastener):
-
-    """The AssembledFastener object defines an assembled fastener. 
+    """The AssembledFastener object defines an assembled fastener.
     The AssembledFastener object is derived from the Fastener object. 
 
     Access
@@ -27,8 +26,8 @@ class AssembledFastener(Fastener):
     # OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, region: Region, templateModel: str, controlSet: Region, 
-                 templateSurfaces: tuple, assignedSurfaces: tuple, propertyPrefix: str, 
+    def __init__(self, name: str, region: Region, templateModel: str, controlSet: Region,
+                 templateSurfaces: tuple, assignedSurfaces: tuple, propertyPrefix: str,
                  orientMethod: SymbolicConstant = NORMALS, localCsys: int = None, scriptName: str = ''):
         """This method creates an AssembledFastener object. Although the constructor is available
         both for parts and for the assembly, AssembledFastener objects are currently supported
@@ -110,4 +109,3 @@ class AssembledFastener(Fastener):
             None. 
         """
         pass
-

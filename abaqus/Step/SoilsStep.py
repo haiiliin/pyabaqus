@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class SoilsStep(AnalysisStep):
-
-    """The SoilsStep object is used to specify transient (consolidation) or steady-state 
+    """The SoilsStep object is used to specify transient (consolidation) or steady-state
     response analysis of partially or fully saturated fluid-filled porous media. 
     The SoilsStep object is derived from the AnalysisStep object. 
 
@@ -201,7 +200,8 @@ class SoilsStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -227,17 +227,17 @@ class SoilsStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT, 
-                 timePeriod: float = 1, nlgeom: Boolean = OFF, 
-                 stabilizationMethod: SymbolicConstant = NONE, stabilizationMagnitude: float = None, 
-                 creep: Boolean = ON, timeIncrementationMethod: SymbolicConstant = AUTOMATIC, 
-                 initialInc: float = None, minInc: float = None, maxInc: float = None, 
-                 maxNumInc: int = 100, end: SymbolicConstant = PERIOD, utol: float = None, 
-                 cetol: float = 0, amplitude: SymbolicConstant = STEP, 
-                 extrapolation: SymbolicConstant = LINEAR, matrixSolver: SymbolicConstant = DIRECT, 
-                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False, 
-                 solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8, 
-                 convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0, 
+    def __init__(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT,
+                 timePeriod: float = 1, nlgeom: Boolean = OFF,
+                 stabilizationMethod: SymbolicConstant = NONE, stabilizationMagnitude: float = None,
+                 creep: Boolean = ON, timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+                 initialInc: float = None, minInc: float = None, maxInc: float = None,
+                 maxNumInc: int = 100, end: SymbolicConstant = PERIOD, utol: float = None,
+                 cetol: float = 0, amplitude: SymbolicConstant = STEP,
+                 extrapolation: SymbolicConstant = LINEAR, matrixSolver: SymbolicConstant = DIRECT,
+                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False,
+                 solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
+                 convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0,
                  continueDampingFactors: Boolean = OFF):
         """This method creates a SoilsStep object.
 
@@ -342,17 +342,17 @@ class SoilsStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', response: SymbolicConstant = TRANSIENT, timePeriod: float = 1, 
-                  nlgeom: Boolean = OFF, stabilizationMethod: SymbolicConstant = NONE, 
-                  stabilizationMagnitude: float = None, creep: Boolean = ON, 
-                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, initialInc: float = None, 
-                  minInc: float = None, maxInc: float = None, maxNumInc: int = 100, 
-                  end: SymbolicConstant = PERIOD, utol: float = None, cetol: float = 0, 
-                  amplitude: SymbolicConstant = STEP, extrapolation: SymbolicConstant = LINEAR, 
-                  matrixSolver: SymbolicConstant = DIRECT, 
-                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
-                  solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8, 
-                  convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0, 
+    def setValues(self, description: str = '', response: SymbolicConstant = TRANSIENT, timePeriod: float = 1,
+                  nlgeom: Boolean = OFF, stabilizationMethod: SymbolicConstant = NONE,
+                  stabilizationMagnitude: float = None, creep: Boolean = ON,
+                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, initialInc: float = None,
+                  minInc: float = None, maxInc: float = None, maxNumInc: int = 100,
+                  end: SymbolicConstant = PERIOD, utol: float = None, cetol: float = 0,
+                  amplitude: SymbolicConstant = STEP, extrapolation: SymbolicConstant = LINEAR,
+                  matrixSolver: SymbolicConstant = DIRECT,
+                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+                  solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
+                  convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0,
                   continueDampingFactors: Boolean = OFF):
         """This method modifies the SoilsStep object.
 
@@ -443,4 +443,3 @@ class SoilsStep(AnalysisStep):
             RangeError. 
         """
         pass
-

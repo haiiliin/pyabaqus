@@ -19,10 +19,9 @@ from ..Mesh.MeshNodeArray import MeshNodeArray
 
 
 class Set:
-
-    """If a set spans more than one part instance, the members *vertices*, *edges*, *faces*, 
+    """If a set spans more than one part instance, the members *vertices*, *edges*, *faces*,
     *cells*, *elements*, or *nodes* return a sequence of all the queried 
-    vertices/edges/faces/celss/elements/nodes respectively for each part instance contained 
+    vertices/edges/faces/cells/elements/nodes respectively for each part instance contained
     in the set. For example: 
     assembly=mdb.models['Transmission'].rootAssembly 
     clutchElements=assembly.instances['Clutch'].elements
@@ -89,11 +88,11 @@ class Set:
     referencePoints: ReferencePointArray = ReferencePointArray()
 
     @typing.overload
-    def __init__(self, name: str, nodes: tuple[MeshNode] = None, elements: tuple[MeshElement] = None, 
-                 region: Region = None, vertices: tuple[Vertex] = None, edges: tuple[Edge] = None, 
-                 faces: tuple[Face] = None, cells: tuple[Cell] = None, xVertices: tuple[Vertex] = None, 
-                 xEdges: tuple[Edge] = None, xFaces: tuple[Face] = None, 
-                 referencePoints: tuple[ReferencePoint] = (), skinFaces: tuple = (), 
+    def __init__(self, name: str, nodes: tuple[MeshNode] = None, elements: tuple[MeshElement] = None,
+                 region: Region = None, vertices: tuple[Vertex] = None, edges: tuple[Edge] = None,
+                 faces: tuple[Face] = None, cells: tuple[Cell] = None, xVertices: tuple[Vertex] = None,
+                 xEdges: tuple[Edge] = None, xFaces: tuple[Face] = None,
+                 referencePoints: tuple[ReferencePoint] = (), skinFaces: tuple = (),
                  skinEdges: tuple = (), stringerEdges: tuple = ()):
         """This method creates a set from a sequence of objects in a model database.
 
@@ -325,4 +324,3 @@ class Set:
             None. 
         """
         pass
-

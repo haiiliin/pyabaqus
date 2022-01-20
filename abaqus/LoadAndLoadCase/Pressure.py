@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class Pressure(Load):
-
-    """The Pressure object defines a pressure load. 
+    """The Pressure object defines a pressure load.
     The Pressure object is derived from the Load object. 
 
     Access
@@ -90,7 +89,7 @@ class Pressure(Load):
         super().__init__()
         pass
 
-    def setValues(self, field: str = '', refPoint: str = '', distributionType: SymbolicConstant = UNIFORM, 
+    def setValues(self, field: str = '', refPoint: str = '', distributionType: SymbolicConstant = UNIFORM,
                   amplitude: str = UNSET):
         """This method modifies the data for an existing Pressure object in the step where it is
         created.
@@ -123,7 +122,7 @@ class Pressure(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, magnitude: float = None, hZero: float = None, hReference: float = None, 
+    def setValuesInStep(self, stepName: str, magnitude: float = None, hZero: float = None, hReference: float = None,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing Pressure object in the
         specified step.
@@ -156,4 +155,3 @@ class Pressure(Load):
             None. 
         """
         pass
-

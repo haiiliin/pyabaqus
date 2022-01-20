@@ -1,10 +1,10 @@
 from abaqusConstants import *
+from ..Datum.DatumCsys import DatumCsys
 from ..Region.Region import Region
 
 
 class AdaptiveMeshConstraint:
-
-    """The AdaptiveMeshConstraint object is the abstract base type for other Arbitrary 
+    """The AdaptiveMeshConstraint object is the abstract base type for other Arbitrary
     Lagrangian Eularian (ALE) style AdaptiveMeshConstraint objects. The 
     AdaptiveMeshConstraint object has no explicit constructor. The methods and members of 
     the AdaptiveMeshConstraint object are common to all objects derived from the 
@@ -36,7 +36,35 @@ class AdaptiveMeshConstraint:
     # None or a DatumCsys object specifying the local coordinate system of the adaptive mesh 
     # constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
     # in the global coordinate system. The default value is None. 
-    localCsys: str = None
+    localCsys: DatumCsys = None
+
+    def __init__(self, name: str = '', category: SymbolicConstant = None, region: Region = Region(),
+                 localCsys: DatumCsys = None):
+        """The AdaptiveMeshConstraint object is the abstract base type for other Arbitrary
+        Lagrangian Eularian (ALE) style AdaptiveMeshConstraint objects. The
+        AdaptiveMeshConstraint object has no explicit constructor. The methods and members of
+        the AdaptiveMeshConstraint object are common to all objects derived from the
+        AdaptiveMeshConstraint object.
+
+        Path
+        ----
+            - mdb.models[name].AdaptiveMeshConstraint
+
+        Parameters
+        ----------
+        name
+             A String specifying the adaptive mesh constraint repository key.
+        category
+             A SymbolicConstant specifying the category of the adaptive mesh constraint. Possible values are
+             MECHANICAL and THERMAL.
+        region
+             A Region object specifying the region to which the adaptive mesh constraint is applied.
+        localCsys
+             None or a DatumCsys object specifying the local coordinate system of the adaptive mesh  constraint's
+             degrees of freedom. If *localCsys*=None, the degrees of freedom are defined  in the global coordinate
+             system. The default value is None.
+        """
+        pass
 
     def deactivate(self, stepName: str):
         """This method deactivates the adaptive mesh constraint in the specified step and all
@@ -149,4 +177,3 @@ class AdaptiveMeshConstraint:
             None. 
         """
         pass
-

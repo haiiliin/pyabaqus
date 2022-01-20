@@ -4,8 +4,7 @@ from .Section import Section
 
 
 class SurfaceSection(Section):
-
-    """The SurfaceSection object defines the properties of a surface section. 
+    """The SurfaceSection object defines the properties of a surface section.
     The SurfaceSection object is derived from the Section object. 
 
     Access
@@ -56,4 +55,3 @@ class SurfaceSection(Section):
         """
         super().__init__()
         pass
-

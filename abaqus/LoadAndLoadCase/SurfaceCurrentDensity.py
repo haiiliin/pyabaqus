@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SurfaceCurrentDensity(Load):
-
-    """The SurfaceCurrentDensity object stores the data for a surface current. 
+    """The SurfaceCurrentDensity object stores the data for a surface current.
     The SurfaceCurrentDensity object is derived from the Load object. 
 
     Access
@@ -31,7 +30,7 @@ class SurfaceCurrentDensity(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, comp1: str, comp2: str, comp3: str, 
+    def __init__(self, name: str, createStepName: str, region: Region, comp1: str, comp2: str, comp3: str,
                  distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):
         """This method creates a SurfaceCurrentDensity object.
 
@@ -127,4 +126,3 @@ class SurfaceCurrentDensity(Load):
             None. 
         """
         pass
-

@@ -1,8 +1,6 @@
 
-
 class Datum:
-
-    """The Datum object is the abstract base type for other Datum objects. The Datum object has 
+    """The Datum object is the abstract base type for other Datum objects. The Datum object has
     no explicit constructor. The methods and members of the Datum object are common to all 
     objects derived from the Datum. 
 
@@ -23,5 +21,4 @@ class Datum:
     -------------------------------
 
     """
-
     pass

@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Edge:
 
-    """Edges are one-dimensional regions of geometry. 
+class Edge:
+    """Edges are one-dimensional regions of geometry.
 
     Access
     ------
@@ -247,4 +247,3 @@ class Edge:
             !img 
         """
         pass
-

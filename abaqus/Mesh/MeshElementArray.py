@@ -1,9 +1,8 @@
 from .MeshElement import MeshElement
 
 
-class MeshElementArray:
-
-    """The MeshElementArray is a sequence of MeshElement objects. 
+class MeshElementArray(list[MeshElement]):
+    """The MeshElementArray is a sequence of MeshElement objects.
 
     Access
     ------
@@ -61,7 +60,7 @@ class MeshElementArray:
         ----------
             None. 
         """
-        pass
+        super().__init__()
 
     def getFromLabel(self, label: int):
         """This method returns the object in the MeshElementArray with the given label.
@@ -153,7 +152,7 @@ class MeshElementArray:
         """
         pass
 
-    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '', 
+    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
                          zMax: str = ''):
         """This method returns an array of element objects that lie within the specified bounding
         box.
@@ -268,4 +267,3 @@ class MeshElementArray:
               Error: The mask results in an empty sequence 
         """
         pass
-

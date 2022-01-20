@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class ShapePlanarSymmetry(GeometricRestriction):
-
-    """The ShapePlanarSymmetry object defines a shape planar symmetry geometric restriction. 
+    """The ShapePlanarSymmetry object defines a shape planar symmetry geometric restriction.
     The ShapePlanarSymmetry object is derived from the GeometricRestriction object. 
 
     Access
@@ -21,10 +20,10 @@ class ShapePlanarSymmetry(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, clientDirection: tuple, region: Region, 
-                 allowNonSymmetricMesh: Boolean = TRUE, csys: int = None, 
-                 mainPointDetermination: SymbolicConstant = MAXIMUM, 
-                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0, 
+    def __init__(self, name: str, clientDirection: tuple, region: Region,
+                 allowNonSymmetricMesh: Boolean = TRUE, csys: int = None,
+                 mainPointDetermination: SymbolicConstant = MAXIMUM,
+                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                  tolerance2: float = 0, tolerance3: float = 0):
         """This method creates a ShapePlanarSymmetry object.
 
@@ -78,9 +77,9 @@ class ShapePlanarSymmetry(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, allowNonSymmetricMesh: Boolean = TRUE, csys: int = None, 
-                  mainPointDetermination: SymbolicConstant = MAXIMUM, 
-                  presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0, 
+    def setValues(self, allowNonSymmetricMesh: Boolean = TRUE, csys: int = None,
+                  mainPointDetermination: SymbolicConstant = MAXIMUM,
+                  presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                   tolerance2: float = 0, tolerance3: float = 0):
         """This method modifies the ShapePlanarSymmetry object.
 
@@ -118,4 +117,3 @@ class ShapePlanarSymmetry(GeometricRestriction):
             None. 
         """
         pass
-

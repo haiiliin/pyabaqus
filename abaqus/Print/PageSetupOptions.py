@@ -4,8 +4,7 @@ from abaqusConstants import *
 
 
 class PageSetupOptions:
-
-    """The PageSetupOptions object stores the settings that Abaqus uses when printing using a 
+    """The PageSetupOptions object stores the settings that Abaqus uses when printing using a
     Windows printer. The PageSetupOptions object has no constructor. Abaqus creates the 
     *pageSetupOptions* member when a session is started. 
 
@@ -21,10 +20,10 @@ class PageSetupOptions:
 
     """
 
-    def setValues(self, imageSize: typing.Union[SymbolicConstant,float] = FIT_TO_PAGE, 
-                  units: SymbolicConstant = INCHES, quality: SymbolicConstant = MEDIUM, 
-                  topMargin: float = 0, bottomMargin: float = 0, leftMargin: float = 0, 
-                  rightMargin: float = 0, orientation: SymbolicConstant = PORTRAIT, logo: Boolean = ON, 
+    def setValues(self, imageSize: typing.Union[SymbolicConstant, float] = FIT_TO_PAGE,
+                  units: SymbolicConstant = INCHES, quality: SymbolicConstant = MEDIUM,
+                  topMargin: float = 0, bottomMargin: float = 0, leftMargin: float = 0,
+                  rightMargin: float = 0, orientation: SymbolicConstant = PORTRAIT, logo: Boolean = ON,
                   date: Boolean = ON):
         """This method modifies the PageSetupOptions object.
 
@@ -78,4 +77,3 @@ class PageSetupOptions:
               RangeError: topMargin and bottomMargin must produce image height >= minHeight 
         """
         pass
-

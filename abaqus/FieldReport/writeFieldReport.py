@@ -15,9 +15,10 @@ Corresponding analysis keywords
 
 """
 
-def writeFieldRepor(filename: str, append: Boolean, sortItem: str, odb: Odb, step: int, frame: int, 
-                    outputPosition: SymbolicConstant, displayGroup: DisplayGroup, 
-                    variable: SymbolicConstant, numericForm: SymbolicConstant = None, 
+
+def writeFieldRepor(filename: str, append: Boolean, sortItem: str, odb: Odb, step: int, frame: int,
+                    outputPosition: SymbolicConstant, displayGroup: DisplayGroup,
+                    variable: SymbolicConstant, numericForm: SymbolicConstant = None,
                     complexAngle: float = None, stepFrame: SymbolicConstant = SPECIFY):
     """This method writes a FieldOutput object to a user-defined ASCII file.
 
@@ -94,4 +95,3 @@ def writeFieldRepor(filename: str, append: Boolean, sortItem: str, odb: Odb, ste
         None. 
     """
     pass
-

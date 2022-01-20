@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class ShapeRotationalSymmetry(GeometricRestriction):
-
-    """The ShapeRotationalSymmetry object defines a shape rotational symmetry geometric 
+    """The ShapeRotationalSymmetry object defines a shape rotational symmetry geometric
     restriction. 
     The ShapeRotationalSymmetry object is derived from the GeometricRestriction object. 
 
@@ -22,10 +21,10 @@ class ShapeRotationalSymmetry(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, clientDirection: tuple, region: Region, 
-                 allowNonSymmetricMesh: Boolean = TRUE, angle: float = 0, csys: int = None, 
-                 mainPoint: str = None, mainPointDetermination: SymbolicConstant = MAXIMUM, 
-                 presumeFeasibleRegionAtStart: Boolean = ON, startPoint: float = None, 
+    def __init__(self, name: str, clientDirection: tuple, region: Region,
+                 allowNonSymmetricMesh: Boolean = TRUE, angle: float = 0, csys: int = None,
+                 mainPoint: str = None, mainPointDetermination: SymbolicConstant = MAXIMUM,
+                 presumeFeasibleRegionAtStart: Boolean = ON, startPoint: float = None,
                  tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0):
         """This method creates a ShapeRotationalSymmetry object.
 
@@ -88,9 +87,9 @@ class ShapeRotationalSymmetry(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, allowNonSymmetricMesh: Boolean = TRUE, angle: float = 0, csys: int = None, 
-                  mainPoint: str = None, mainPointDetermination: SymbolicConstant = MAXIMUM, 
-                  presumeFeasibleRegionAtStart: Boolean = ON, startPoint: float = None, 
+    def setValues(self, allowNonSymmetricMesh: Boolean = TRUE, angle: float = 0, csys: int = None,
+                  mainPoint: str = None, mainPointDetermination: SymbolicConstant = MAXIMUM,
+                  presumeFeasibleRegionAtStart: Boolean = ON, startPoint: float = None,
                   tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0):
         """This method modifies the ShapeRotationalSymmetry object.
 
@@ -137,4 +136,3 @@ class ShapeRotationalSymmetry(GeometricRestriction):
             None. 
         """
         pass
-

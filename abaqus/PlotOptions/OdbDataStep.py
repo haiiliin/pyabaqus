@@ -3,8 +3,7 @@ from .OdbDataFrameArray import OdbDataFrameArray
 
 
 class OdbDataStep:
-
-    """The OdbDataStep object. 
+    """The OdbDataStep object.
 
     Access
     ------
@@ -41,4 +40,3 @@ class OdbDataStep:
             None. 
         """
         pass
-

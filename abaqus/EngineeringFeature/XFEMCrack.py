@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class XFEMCrack(Crack):
-
-    """The XFEMCrack object defines the parameters needed to model crack initiation or crack 
+    """The XFEMCrack object defines the parameters needed to model crack initiation or crack
     growth using XFEM technology. Currently only assembly regions are supported. 
     The XFEMCrack object is derived from the Crack object. 
 
@@ -29,10 +28,10 @@ class XFEMCrack(Crack):
     # A Boolean specifying whether the crack is suppressed or not. The default value is OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, crackDomain: Region, allowCrackGrowth: Boolean = ON, 
-                 crackLocation: Region = Region(), singularityCalcRadius: float = None, 
-                 interactionProperty: str = '', elemId: tuple = (), nodeId: tuple = (), 
-                 hasCrackFront: tuple = (), crackPlaneDist: tuple = (), crackFrontDist: tuple = (), 
+    def __init__(self, name: str, crackDomain: Region, allowCrackGrowth: Boolean = ON,
+                 crackLocation: Region = Region(), singularityCalcRadius: float = None,
+                 interactionProperty: str = '', elemId: tuple = (), nodeId: tuple = (),
+                 hasCrackFront: tuple = (), crackPlaneDist: tuple = (), crackFrontDist: tuple = (),
                  autoDetectValue: str = ''):
         """This method creates a XFEMCrack object. Although the constructor is available both for
         parts and for the assembly, XFEMCrack objects are currently supported only under the
@@ -95,9 +94,9 @@ class XFEMCrack(Crack):
         super().__init__()
         pass
 
-    def setValues(self, allowCrackGrowth: Boolean = ON, crackLocation: Region = Region(), 
-                  singularityCalcRadius: float = None, interactionProperty: str = '', elemId: tuple = (), 
-                  nodeId: tuple = (), hasCrackFront: tuple = (), crackPlaneDist: tuple = (), 
+    def setValues(self, allowCrackGrowth: Boolean = ON, crackLocation: Region = Region(),
+                  singularityCalcRadius: float = None, interactionProperty: str = '', elemId: tuple = (),
+                  nodeId: tuple = (), hasCrackFront: tuple = (), crackPlaneDist: tuple = (),
                   crackFrontDist: tuple = (), autoDetectValue: str = ''):
         """This method modifies the XFEMCrack object.
 
@@ -146,4 +145,3 @@ class XFEMCrack(Crack):
             None. 
         """
         pass
-

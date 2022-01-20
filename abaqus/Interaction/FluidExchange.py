@@ -3,8 +3,7 @@ from .Interaction import Interaction
 
 
 class FluidExchange(Interaction):
-
-    """The FluidExchange object is used to define fluid exchange between two fluid cavities or 
+    """The FluidExchange object is used to define fluid exchange between two fluid cavities or
     between a fluid cavity and its environment. 
     The FluidExchange object is derived from the Interaction object. 
 
@@ -22,8 +21,8 @@ class FluidExchange(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, firstCavity: str, interactionProperty: str, 
-                 definition: SymbolicConstant = TO_ENVIRONMENT, secondCavity: str = '', 
+    def __init__(self, name: str, createStepName: str, firstCavity: str, interactionProperty: str,
+                 definition: SymbolicConstant = TO_ENVIRONMENT, secondCavity: str = '',
                  exchangeArea: float = 1):
         """This method creates an FluidExchange object.
 
@@ -62,7 +61,7 @@ class FluidExchange(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, definition: SymbolicConstant = TO_ENVIRONMENT, secondCavity: str = '', 
+    def setValues(self, definition: SymbolicConstant = TO_ENVIRONMENT, secondCavity: str = '',
                   exchangeArea: float = 1):
         """This method modifies the FluidExchange object.
 
@@ -86,4 +85,3 @@ class FluidExchange(Interaction):
             None. 
         """
         pass
-

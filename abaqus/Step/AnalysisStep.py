@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class AnalysisStep(Step):
-
-    """The AnalysisStep object is the abstract base type for other Step objects, except the 
+    """The AnalysisStep object is the abstract base type for other Step objects, except the
     InitialStep object. It has no explicit constructor, no methods, and has only inherited 
     members. 
     The AnalysisStep object is derived from the Step object. 
@@ -97,7 +96,8 @@ class AnalysisStep(Step):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -122,4 +122,3 @@ class AnalysisStep(Step):
 
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
-

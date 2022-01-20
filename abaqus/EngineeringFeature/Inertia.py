@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Inertia:
 
-    """The Inertia object is the abstract base type for HeatCapacitance, NonstructuralMass, and 
+class Inertia:
+    """The Inertia object is the abstract base type for HeatCapacitance, NonstructuralMass, and
     PointMassInertia. 
 
     Access
@@ -57,4 +57,3 @@ class Inertia:
             None. 
         """
         pass
-

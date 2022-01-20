@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class SlidingFormulationAssignment:
 
-    """The SlidingFormulationAssignment object stores the sliding formulation assignment 
+class SlidingFormulationAssignment:
+    """The SlidingFormulationAssignment object stores the sliding formulation assignment
     definition for surfaces in ContactStd objects. The SlidingFormulationAssignment object 
     has no constructor or members. 
 
@@ -91,4 +91,3 @@ class SlidingFormulationAssignment:
             None. 
         """
         pass
-

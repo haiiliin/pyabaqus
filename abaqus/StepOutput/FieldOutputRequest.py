@@ -4,8 +4,7 @@ from abaqusConstants import *
 
 
 class FieldOutputRequest:
-
-    """The FieldOutputRequest object defines a field output request. 
+    """The FieldOutputRequest object defines a field output request.
 
     Access
     ------
@@ -40,17 +39,17 @@ class FieldOutputRequest:
     # None.The sequence can contain only one String. 
     interactions: tuple = None
 
-    def __init__(self, name: str, createStepName: str, region: SymbolicConstant = MODEL, 
-                 variables: SymbolicConstant = PRESELECT, frequency: SymbolicConstant = 1, 
-                 modes: SymbolicConstant = ALL, 
-                 timeInterval: typing.Union[SymbolicConstant,float] = EVERY_TIME_INCREMENT, 
-                 numIntervals: int = 20, timeMarks: Boolean = OFF, boltLoad: str = '', 
-                 sectionPoints: SymbolicConstant = DEFAULT, interactions: str = None, 
-                 rebar: SymbolicConstant = EXCLUDE, filter: SymbolicConstant = None, 
-                 directions: Boolean = ON, fasteners: str = '', assembledFastener: str = '', 
-                 assembledFastenerSet: str = '', exteriorOnly: Boolean = OFF, layupNames: str = '', 
-                 layupLocationMethod: str = SPECIFIED, outputAtPlyTop: Boolean = False, 
-                 outputAtPlyMid: Boolean = True, outputAtPlyBottom: Boolean = False, 
+    def __init__(self, name: str, createStepName: str, region: SymbolicConstant = MODEL,
+                 variables: SymbolicConstant = PRESELECT, frequency: SymbolicConstant = 1,
+                 modes: SymbolicConstant = ALL,
+                 timeInterval: typing.Union[SymbolicConstant, float] = EVERY_TIME_INCREMENT,
+                 numIntervals: int = 20, timeMarks: Boolean = OFF, boltLoad: str = '',
+                 sectionPoints: SymbolicConstant = DEFAULT, interactions: str = None,
+                 rebar: SymbolicConstant = EXCLUDE, filter: SymbolicConstant = None,
+                 directions: Boolean = ON, fasteners: str = '', assembledFastener: str = '',
+                 assembledFastenerSet: str = '', exteriorOnly: Boolean = OFF, layupNames: str = '',
+                 layupLocationMethod: str = SPECIFIED, outputAtPlyTop: Boolean = False,
+                 outputAtPlyMid: Boolean = True, outputAtPlyBottom: Boolean = False,
                  position: SymbolicConstant = INTEGRATION_POINTS):
         """This method creates a FieldOutputRequest object.
 
@@ -242,16 +241,16 @@ class FieldOutputRequest:
         """
         pass
 
-    def setValues(self, region: SymbolicConstant = MODEL, variables: SymbolicConstant = PRESELECT, 
-                  frequency: SymbolicConstant = 1, modes: SymbolicConstant = ALL, 
-                  timeInterval: typing.Union[SymbolicConstant,float] = EVERY_TIME_INCREMENT, 
-                  numIntervals: int = 20, timeMarks: Boolean = OFF, boltLoad: str = '', 
-                  sectionPoints: SymbolicConstant = DEFAULT, interactions: str = None, 
-                  rebar: SymbolicConstant = EXCLUDE, filter: SymbolicConstant = None, 
-                  directions: Boolean = ON, fasteners: str = '', assembledFastener: str = '', 
-                  assembledFastenerSet: str = '', exteriorOnly: Boolean = OFF, layupNames: str = '', 
-                  layupLocationMethod: str = SPECIFIED, outputAtPlyTop: Boolean = False, 
-                  outputAtPlyMid: Boolean = True, outputAtPlyBottom: Boolean = False, 
+    def setValues(self, region: SymbolicConstant = MODEL, variables: SymbolicConstant = PRESELECT,
+                  frequency: SymbolicConstant = 1, modes: SymbolicConstant = ALL,
+                  timeInterval: typing.Union[SymbolicConstant, float] = EVERY_TIME_INCREMENT,
+                  numIntervals: int = 20, timeMarks: Boolean = OFF, boltLoad: str = '',
+                  sectionPoints: SymbolicConstant = DEFAULT, interactions: str = None,
+                  rebar: SymbolicConstant = EXCLUDE, filter: SymbolicConstant = None,
+                  directions: Boolean = ON, fasteners: str = '', assembledFastener: str = '',
+                  assembledFastenerSet: str = '', exteriorOnly: Boolean = OFF, layupNames: str = '',
+                  layupLocationMethod: str = SPECIFIED, outputAtPlyTop: Boolean = False,
+                  outputAtPlyMid: Boolean = True, outputAtPlyBottom: Boolean = False,
                   position: SymbolicConstant = INTEGRATION_POINTS):
         """This method modifies the data for an existing FieldOutputRequest object in the step
         where it is created.
@@ -341,9 +340,9 @@ class FieldOutputRequest:
         """
         pass
 
-    def setValuesInStep(self, stepName: str, variables: SymbolicConstant = None, frequency: SymbolicConstant = 1, 
-                        modes: SymbolicConstant = ALL, 
-                        timeInterval: typing.Union[SymbolicConstant,float] = EVERY_TIME_INCREMENT, 
+    def setValuesInStep(self, stepName: str, variables: SymbolicConstant = None, frequency: SymbolicConstant = 1,
+                        modes: SymbolicConstant = ALL,
+                        timeInterval: typing.Union[SymbolicConstant, float] = EVERY_TIME_INCREMENT,
                         numIntervals: int = 20, timePoints: str = None, timeMarks: Boolean = OFF):
         """This method modifies the propagating data for an existing FieldOutputRequest object in
         the specified step.
@@ -385,4 +384,3 @@ class FieldOutputRequest:
             None. 
         """
         pass
-

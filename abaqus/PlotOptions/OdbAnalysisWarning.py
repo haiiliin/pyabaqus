@@ -1,8 +1,5 @@
-
-
 class OdbAnalysisWarning:
-
-    """The OdbAnalysisWarning object stores the description of different warnings encountered 
+    """The OdbAnalysisWarning object stores the description of different warnings encountered
     during the analysis. 
 
     Access
@@ -17,5 +14,4 @@ class OdbAnalysisWarning:
     -------------------------------
 
     """
-
     pass

@@ -4,8 +4,7 @@ from .LineStyle import LineStyle
 
 
 class Area:
-
-    """The Area object is used to display a rectangular area in an XYPlot. The Area object has 
+    """The Area object is used to display a rectangular area in an XYPlot. The Area object has
     no constructor. Area objects are automatically created whenever a XYPlot, Chart, 
     PlotTitle, or Legend objects are created. 
 
@@ -101,9 +100,9 @@ class Area:
     originOffset: tuple[float] = ()
 
     def setValues(self, area: 'Area' = None, style: AreaStyle = AreaStyle(), border: LineStyle = LineStyle(),
-                  positionMethod: SymbolicConstant = AUTO_ALIGN, 
-                  alignment: SymbolicConstant = BOTTOM_LEFT, sizeMethod: SymbolicConstant = AUTOMATIC, 
-                  originOffset: tuple[float] = (), widthScale: float = 1, heightScale: float = 1, 
+                  positionMethod: SymbolicConstant = AUTO_ALIGN,
+                  alignment: SymbolicConstant = BOTTOM_LEFT, sizeMethod: SymbolicConstant = AUTOMATIC,
+                  originOffset: tuple[float] = (), widthScale: float = 1, heightScale: float = 1,
                   inset: Boolean = OFF, pl: float = 1, pr: float = 1, pt: float = 1, pb: float = 1):
         """This method modifies the Area object.
 
@@ -165,4 +164,3 @@ class Area:
             RangeError. 
         """
         pass
-

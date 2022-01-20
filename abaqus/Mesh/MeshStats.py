@@ -1,8 +1,7 @@
 
 
 class MeshStats:
-
-    """The MeshStats object is a query object for holding mesh statistics and is returned by 
+    """The MeshStats object is a query object for holding mesh statistics and is returned by
     the getMeshStats command. The object does not have any methods. 
 
     Access
@@ -46,4 +45,3 @@ class MeshStats:
 
     # An Int specifying the number of regions that contain a mesh. 
     numMeshedRegions: int = None
-

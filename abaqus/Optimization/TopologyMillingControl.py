@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class TopologyMillingControl(GeometricRestriction):
-
-    """The TopologyMillingControl object defines a topology milling control geometric 
+    """The TopologyMillingControl object defines a topology milling control geometric
     restriction. 
     The TopologyMillingControl object is derived from the GeometricRestriction object. 
 
@@ -22,7 +21,7 @@ class TopologyMillingControl(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, millingDirections: tuple, region: Region, csys: int = None, 
+    def __init__(self, name: str, millingDirections: tuple, region: Region, csys: int = None,
                  millingCheckRegion: SymbolicConstant = MILLING_REGION, radius: float = None):
         """This method creates a TopologyMillingControl object.
 
@@ -64,7 +63,7 @@ class TopologyMillingControl(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, millingCheckRegion: SymbolicConstant = MILLING_REGION, 
+    def setValues(self, csys: int = None, millingCheckRegion: SymbolicConstant = MILLING_REGION,
                   radius: float = None):
         """This method modifies the TopologyMillingControl object.
 
@@ -93,4 +92,3 @@ class TopologyMillingControl(GeometricRestriction):
             None. 
         """
         pass
-

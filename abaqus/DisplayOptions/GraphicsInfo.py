@@ -1,8 +1,7 @@
 
 
 class GraphicsInfo:
-
-    """The GraphicsInfo object stores information about the graphics adapter installed in your 
+    """The GraphicsInfo object stores information about the graphics adapter installed in your
     system. The GraphicsInfo object has no constructor or methods; Abaqus creates the 
     *GraphicsInfo* member when a session is started. 
     If you execute Abaqus/CAE on a remote system and display the main window locally, the 
@@ -56,4 +55,3 @@ class GraphicsInfo:
 
     # A String specifying the glx developer on the client side. 
     glxClientVendor: str = ''
-

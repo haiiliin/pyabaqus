@@ -1,8 +1,7 @@
 
 
 class OdbSequenceAnalyticSurfaceSegment:
-
-    """A sequence of AnalyticSurfaceSegment describing an analytic surface profile. 
+    """A sequence of AnalyticSurfaceSegment describing an analytic surface profile.
 
     Access
     ------
@@ -19,7 +18,7 @@ class OdbSequenceAnalyticSurfaceSegment:
 
     """
 
-    def AnalyticSurfaceProfile(self):
+    def __init__(self):
         """This method creates a OdbSequenceAnalyticSurfaceSegment object.
 
         Path
@@ -119,4 +118,3 @@ class OdbSequenceAnalyticSurfaceSegment:
             None. 
         """
         pass
-

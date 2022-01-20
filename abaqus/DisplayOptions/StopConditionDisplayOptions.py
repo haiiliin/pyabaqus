@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class StopConditionDisplayOptions:
 
-    """The StopConditionDisplayOptions object stores settings that specify how assemblies are 
+class StopConditionDisplayOptions:
+    """The StopConditionDisplayOptions object stores settings that specify how assemblies are
     to be displayed in a particular viewport when 
     session.viewports[name].assemblyDisplay.stopConditions=ON 
     The StopConditionDisplayOptions object has no constructor. When you create a new 
@@ -39,4 +39,3 @@ class StopConditionDisplayOptions:
             RangeError. 
         """
         pass
-

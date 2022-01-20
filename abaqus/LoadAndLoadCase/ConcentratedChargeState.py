@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class ConcentratedChargeState(LoadState):
-
-    """The ConcentratedChargeState object stores the propagating data of a concentrated charge 
+    """The ConcentratedChargeState object stores the propagating data of a concentrated charge
     in a step. One instance of this object is created internally by the ConcCharge object 
     for each step. The instance is also deleted internally by the ConcCharge object. 
     The ConcentratedChargeState object has no constructor or methods. 
@@ -51,4 +50,3 @@ class ConcentratedChargeState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class MeshEditOptions:
 
-    """The MeshEditOptions object stores settings that specify the behavior when editing meshes 
+class MeshEditOptions:
+    """The MeshEditOptions object stores settings that specify the behavior when editing meshes
     on parts or part instances. 
     The MeshEditOptions object has no constructor. Abaqus creates the *MeshEditOptions* 
     member when a session is started. 
@@ -50,4 +50,3 @@ class MeshEditOptions:
             None. 
         """
         pass
-

@@ -1,9 +1,8 @@
 from .MeshNode import MeshNode
 
 
-class MeshNodeArray:
-
-    """The MeshNodeArray is a sequence of MeshNode objects. 
+class MeshNodeArray(list[MeshNode]):
+    """The MeshNodeArray is a sequence of MeshNode objects.
 
     Access
     ------
@@ -62,7 +61,7 @@ class MeshNodeArray:
         ----------
             None. 
         """
-        pass
+        super().__init__()
 
     def getFromLabel(self, label: int):
         """This method returns the object in the MeshNodeArray with the given label.
@@ -118,7 +117,7 @@ class MeshNodeArray:
         """
         pass
 
-    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '', 
+    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
                          zMax: str = ''):
         """This method returns an array of nodes that lie within the specified bounding box.
 
@@ -257,4 +256,3 @@ class MeshNodeArray:
               Error: The mask results in an empty sequence 
         """
         pass
-

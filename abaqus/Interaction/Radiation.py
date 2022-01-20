@@ -1,8 +1,7 @@
 
 
 class Radiation:
-
-    """The Radiation object specifies radiation for a contact interaction property. 
+    """The Radiation object specifies radiation for a contact interaction property.
 
     Access
     ------
@@ -60,4 +59,3 @@ class Radiation:
             None. 
         """
         pass
-

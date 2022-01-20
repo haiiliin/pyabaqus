@@ -4,8 +4,7 @@ from .SectionLayerArray import SectionLayerArray
 
 
 class CompositeSolidSection(Section):
-
-    """The CompositeSolidSection object defines the properties of a composite solid section. 
+    """The CompositeSolidSection object defines the properties of a composite solid section.
     The CompositeSolidSection object is derived from the Section object. 
 
     Access
@@ -77,4 +76,3 @@ class CompositeSolidSection(Section):
             None. 
         """
         pass
-

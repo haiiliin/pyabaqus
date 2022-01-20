@@ -1,8 +1,7 @@
 
 
 class GapHeatGeneration:
-
-    """The GapHeatGeneration object specifies heat generation for a contact interaction 
+    """The GapHeatGeneration object specifies heat generation for a contact interaction
     property. 
 
     Access
@@ -68,4 +67,3 @@ class GapHeatGeneration:
             None. 
         """
         pass
-

@@ -1,9 +1,9 @@
-from .Edge import Edge
 from abaqusConstants import *
+from .Edge import Edge
+
 
 class EdgeArray:
-
-    """The EdgeArray is a sequence of Edge objects. If the part is modified, then EdgeArray 
+    """The EdgeArray is a sequence of Edge objects. If the part is modified, then EdgeArray
     must be updated for that part. 
 
     Access
@@ -177,7 +177,7 @@ class EdgeArray:
         """
         pass
 
-    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '', 
+    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
                          zMax: str = ''):
         """This method returns an array of edge objects that lie within the specified bounding box.
 
@@ -276,4 +276,3 @@ class EdgeArray:
             !img 
         """
         pass
-

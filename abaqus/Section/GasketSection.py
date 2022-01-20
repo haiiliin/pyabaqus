@@ -5,8 +5,7 @@ from .Section import Section
 
 
 class GasketSection(Section):
-
-    """The GasketSection object defines the properties of a gasket section. 
+    """The GasketSection object defines the properties of a gasket section.
     The GasketSection object is derived from the Section object. 
 
     Access
@@ -25,10 +24,10 @@ class GasketSection(Section):
 
     """
 
-    def __init__(self, name: str, material: str, crossSection: float = 1, initialGap: float = 0, 
-                 initialThickness: typing.Union[SymbolicConstant,float] = DEFAULT, 
-                 initialVoid: float = 0, 
-                 stabilizationStiffness: typing.Union[SymbolicConstant,float] = DEFAULT):
+    def __init__(self, name: str, material: str, crossSection: float = 1, initialGap: float = 0,
+                 initialThickness: typing.Union[SymbolicConstant, float] = DEFAULT,
+                 initialVoid: float = 0,
+                 stabilizationStiffness: typing.Union[SymbolicConstant, float] = DEFAULT):
         """This method creates a GasketSection object.
 
         Path
@@ -72,10 +71,10 @@ class GasketSection(Section):
         super().__init__()
         pass
 
-    def setValues(self, crossSection: float = 1, initialGap: float = 0, 
-                  initialThickness: typing.Union[SymbolicConstant,float] = DEFAULT, 
-                  initialVoid: float = 0, 
-                  stabilizationStiffness: typing.Union[SymbolicConstant,float] = DEFAULT):
+    def setValues(self, crossSection: float = 1, initialGap: float = 0,
+                  initialThickness: typing.Union[SymbolicConstant, float] = DEFAULT,
+                  initialVoid: float = 0,
+                  stabilizationStiffness: typing.Union[SymbolicConstant, float] = DEFAULT):
         """This method modifies the GasketSection object.
 
         Parameters
@@ -107,4 +106,3 @@ class GasketSection(Section):
             ValueError. 
         """
         pass
-

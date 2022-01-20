@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class ConnAccelerationBC(BoundaryCondition):
-
-    """The ConnAccelerationBC object stores the data for a connector acceleration boundary 
+    """The ConnAccelerationBC object stores the data for a connector acceleration boundary
     condition. 
     The ConnAccelerationBC object is derived from the BoundaryCondition object. 
 
@@ -55,13 +54,13 @@ class ConnAccelerationBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: str = '', fastenerName: str = '', 
-                 fastenerSetName: str = '', a1: typing.Union[SymbolicConstant,float] = UNSET, 
-                 a2: typing.Union[SymbolicConstant,float] = UNSET, 
-                 a3: typing.Union[SymbolicConstant,float] = UNSET, 
-                 ar1: typing.Union[SymbolicConstant,float] = UNSET, 
-                 ar2: typing.Union[SymbolicConstant,float] = UNSET, 
-                 ar3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
+    def __init__(self, name: str, createStepName: str, region: str = '', fastenerName: str = '',
+                 fastenerSetName: str = '', a1: typing.Union[SymbolicConstant, float] = UNSET,
+                 a2: typing.Union[SymbolicConstant, float] = UNSET,
+                 a3: typing.Union[SymbolicConstant, float] = UNSET,
+                 ar1: typing.Union[SymbolicConstant, float] = UNSET,
+                 ar2: typing.Union[SymbolicConstant, float] = UNSET,
+                 ar3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
                  distributionType: SymbolicConstant = UNIFORM):
         """This method creates an ConnAccelerationBC object on a wire region. Alternatively, the
         boundary condition may also be applied to a wire set referenced from an assembled
@@ -135,13 +134,13 @@ class ConnAccelerationBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, region: str = '', fastenerName: str = '', fastenerSetName: str = '', 
-                  a1: typing.Union[SymbolicConstant,float] = UNSET, 
-                  a2: typing.Union[SymbolicConstant,float] = UNSET, 
-                  a3: typing.Union[SymbolicConstant,float] = UNSET, 
-                  ar1: typing.Union[SymbolicConstant,float] = UNSET, 
-                  ar2: typing.Union[SymbolicConstant,float] = UNSET, 
-                  ar3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
+    def setValues(self, region: str = '', fastenerName: str = '', fastenerSetName: str = '',
+                  a1: typing.Union[SymbolicConstant, float] = UNSET,
+                  a2: typing.Union[SymbolicConstant, float] = UNSET,
+                  a3: typing.Union[SymbolicConstant, float] = UNSET,
+                  ar1: typing.Union[SymbolicConstant, float] = UNSET,
+                  ar2: typing.Union[SymbolicConstant, float] = UNSET,
+                  ar3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
                   distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing ConnAccelerationBC object in the step
         where it is created.
@@ -205,13 +204,13 @@ class ConnAccelerationBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        a1: typing.Union[SymbolicConstant,float] = SET, 
-                        a2: typing.Union[SymbolicConstant,float] = SET, 
-                        a3: typing.Union[SymbolicConstant,float] = SET, 
-                        ar1: typing.Union[SymbolicConstant,float] = SET, 
-                        ar2: typing.Union[SymbolicConstant,float] = SET, 
-                        ar3: typing.Union[SymbolicConstant,float] = SET, 
+    def setValuesInStep(self, stepName: str,
+                        a1: typing.Union[SymbolicConstant, float] = SET,
+                        a2: typing.Union[SymbolicConstant, float] = SET,
+                        a3: typing.Union[SymbolicConstant, float] = SET,
+                        ar1: typing.Union[SymbolicConstant, float] = SET,
+                        ar2: typing.Union[SymbolicConstant, float] = SET,
+                        ar3: typing.Union[SymbolicConstant, float] = SET,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ConnAccelerationBC object in
         the specified step.
@@ -260,4 +259,3 @@ class ConnAccelerationBC(BoundaryCondition):
             None. 
         """
         pass
-

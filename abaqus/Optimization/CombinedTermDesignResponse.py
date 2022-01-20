@@ -3,8 +3,7 @@ from .DesignResponse import DesignResponse
 
 
 class CombinedTermDesignResponse(DesignResponse):
-
-    """The CombinedTermDesignResponse object defines a combined-term design response. 
+    """The CombinedTermDesignResponse object defines a combined-term design response.
     The CombinedTermDesignResponse object is derived from the DesignResponse object. 
 
     Access
@@ -20,8 +19,8 @@ class CombinedTermDesignResponse(DesignResponse):
 
     """
 
-    def __init__(self, name: str, terms: tuple, filterMaxRadius: str = None, filterExponent: float = 1, 
-                 filterRadiusReduction: float = 0, highCutOff: str = None, lowCutOff: float = 0, 
+    def __init__(self, name: str, terms: tuple, filterMaxRadius: str = None, filterExponent: float = 1,
+                 filterRadiusReduction: float = 0, highCutOff: str = None, lowCutOff: float = 0,
                  method: SymbolicConstant = ADD, weights: tuple = ()):
         """This method creates a CombinedTermDesignResponse object.
 
@@ -100,8 +99,8 @@ class CombinedTermDesignResponse(DesignResponse):
         super().__init__()
         pass
 
-    def setValues(self, filterMaxRadius: str = None, filterExponent: float = 1, 
-                  filterRadiusReduction: float = 0, highCutOff: str = None, lowCutOff: float = 0, 
+    def setValues(self, filterMaxRadius: str = None, filterExponent: float = 1,
+                  filterRadiusReduction: float = 0, highCutOff: str = None, lowCutOff: float = 0,
                   method: SymbolicConstant = ADD, weights: tuple = ()):
         """This method modifies the CombinedTermDesignResponse object.
 
@@ -170,4 +169,3 @@ class CombinedTermDesignResponse(DesignResponse):
             None. 
         """
         pass
-

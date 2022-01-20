@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class View:
 
-    """The Session and Viewport View objects store view settings for custom (both predefined 
+class View:
+    """The Session and Viewport View objects store view settings for custom (both predefined
     and user-defined) views. The paradigm used to define a view is based on a camera 
     analogy. Similar to taking a photograph with a camera, features such as camera position, 
     view direction, orientation, depth of field, and projection are specified to transform 
@@ -38,9 +38,9 @@ class View:
     # the Layer within a viewport. 
     layerTransform: float = None
 
-    def __init__(self, name: str, nearPlane: float, farPlane: float, width: float, height: float, 
-                 projection: SymbolicConstant, cameraPosition: tuple, cameraUpVector: tuple, 
-                 cameraTarget: tuple, viewOffsetX: float, viewOffsetY: float, autoFit: Boolean, 
+    def __init__(self, name: str, nearPlane: float, farPlane: float, width: float, height: float,
+                 projection: SymbolicConstant, cameraPosition: tuple, cameraUpVector: tuple,
+                 cameraTarget: tuple, viewOffsetX: float, viewOffsetY: float, autoFit: Boolean,
                  movieMode: Boolean = OFF):
         """This method creates a View object.
         Note:All dimensions and coordinates are specified in the model coordinate system.
@@ -151,7 +151,7 @@ class View:
         """
         pass
 
-    def pan(self, xFraction: float = 0, yFraction: float = 0, asMovie: Boolean = OFF, 
+    def pan(self, xFraction: float = 0, yFraction: float = 0, asMovie: Boolean = OFF,
             drawImmediately: Boolean = False):
         """This method pans the view in the viewport using absolute, not relative, mode.
 
@@ -208,7 +208,7 @@ class View:
         """
         pass
 
-    def rotate(self, xAngle: float = 0, yAngle: float = 0, zAngle: float = 0, mode: SymbolicConstant = MODEL, 
+    def rotate(self, xAngle: float = 0, yAngle: float = 0, zAngle: float = 0, mode: SymbolicConstant = MODEL,
                asMovie: Boolean = OFF, drawImmediately: Boolean = False):
         """This method rotates the view in the viewport. If a center of rotation has been
         previously specified and *asMovie* is OFF then this method will honor that rotation
@@ -369,7 +369,7 @@ class View:
         """
         pass
 
-    def zoom(self, zoomFactor: float, mode: SymbolicConstant = ABSOLUTE, asMovie: Boolean = OFF, 
+    def zoom(self, zoomFactor: float, mode: SymbolicConstant = ABSOLUTE, asMovie: Boolean = OFF,
              drawImmediately: Boolean = False):
         """This method magnifies the view in the viewport.
 
@@ -428,4 +428,3 @@ class View:
             None. 
         """
         pass
-

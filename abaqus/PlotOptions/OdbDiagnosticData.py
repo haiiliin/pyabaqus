@@ -8,8 +8,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class OdbDiagnosticData:
-
-    """The OdbDiagnosticData object. 
+    """The OdbDiagnosticData object.
 
     Access
     ------
@@ -60,4 +59,3 @@ class OdbDiagnosticData:
     # An int specifying the number of steps present in the analysis. This attribute is 
     # read-only. 
     numberOfSteps: str = ''
-

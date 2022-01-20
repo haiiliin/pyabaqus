@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class CyclicSymmetry(Interaction):
-
-    """The CyclicSymmetry object defines a cyclic symmetry analysis. 
+    """The CyclicSymmetry object defines a cyclic symmetry analysis.
     The CyclicSymmetry object is derived from the Interaction object. 
 
     Access
@@ -27,11 +26,11 @@ class CyclicSymmetry(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, main: Region, secondary: Region, repetitiveSectors: int, 
-                 axisPoint1: Region, axisPoint2: Region, 
-                 extractedNodalDiameter: SymbolicConstant = ALL_NODAL_DIAMETER, 
-                 lowestNodalDiameter: int = 0, highestNodalDiameter: int = 0, 
-                 excitationNodalDiameter: int = 0, adjustTie: Boolean = ON, positionTolerance: float = 0, 
+    def __init__(self, name: str, createStepName: str, main: Region, secondary: Region, repetitiveSectors: int,
+                 axisPoint1: Region, axisPoint2: Region,
+                 extractedNodalDiameter: SymbolicConstant = ALL_NODAL_DIAMETER,
+                 lowestNodalDiameter: int = 0, highestNodalDiameter: int = 0,
+                 excitationNodalDiameter: int = 0, adjustTie: Boolean = ON, positionTolerance: float = 0,
                  positionToleranceMethod: SymbolicConstant = COMPUTED_TOLERANCE):
         """This method creates a CyclicSymmetry object.
 
@@ -118,9 +117,9 @@ class CyclicSymmetry(Interaction):
         """
         pass
 
-    def setValues(self, extractedNodalDiameter: SymbolicConstant = ALL_NODAL_DIAMETER, 
-                  lowestNodalDiameter: int = 0, highestNodalDiameter: int = 0, 
-                  excitationNodalDiameter: int = 0, adjustTie: Boolean = ON, positionTolerance: float = 0, 
+    def setValues(self, extractedNodalDiameter: SymbolicConstant = ALL_NODAL_DIAMETER,
+                  lowestNodalDiameter: int = 0, highestNodalDiameter: int = 0,
+                  excitationNodalDiameter: int = 0, adjustTie: Boolean = ON, positionTolerance: float = 0,
                   positionToleranceMethod: SymbolicConstant = COMPUTED_TOLERANCE):
         """This method modifies the data for an existing CyclicSymmetry object in the step where it
         is created.
@@ -166,8 +165,8 @@ class CyclicSymmetry(Interaction):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, extractedNodalDiameter: SymbolicConstant = ALL_NODAL_DIAMETER, 
-                        lowestNodalDiameter: int = 0, highestNodalDiameter: int = 0, 
+    def setValuesInStep(self, stepName: str, extractedNodalDiameter: SymbolicConstant = ALL_NODAL_DIAMETER,
+                        lowestNodalDiameter: int = 0, highestNodalDiameter: int = 0,
                         excitationNodalDiameter: int = 0):
         """This method modifies the propagating data of an existing CyclicSymmetry object in the
         specified step.
@@ -204,4 +203,3 @@ class CyclicSymmetry(Interaction):
             None. 
         """
         pass
-

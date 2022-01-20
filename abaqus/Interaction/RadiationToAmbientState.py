@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class RadiationToAmbientState(InteractionState):
-
-    """The RadiationToAmbientState object stores the propagating data for a RadiationToAmbient 
+    """The RadiationToAmbientState object stores the propagating data for a RadiationToAmbient
     object. One instance of this object is created internally by the RadiationToAmbient 
     object for each step. The instance is also deleted internally by the RadiationToAmbient 
     object. 
@@ -59,4 +58,3 @@ class RadiationToAmbientState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

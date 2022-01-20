@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class HistoryVariable:
 
-    """The HistoryVariable object stores history data. 
+class HistoryVariable:
+    """The HistoryVariable object stores history data.
 
     Access
     ------
@@ -29,4 +29,3 @@ class HistoryVariable:
     # number.*procedureDomain*: A SymbolicConstant specifying the analysis type of the step, 
     # which can have these values: “TIME,” “FREQUENCY,” or “MODAL.” 
     steps: SymbolicConstant = None
-

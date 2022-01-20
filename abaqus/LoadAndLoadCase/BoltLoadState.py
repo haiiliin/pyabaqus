@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class BoltLoadState(LoadState):
-
-    """The BoltLoadState object stores the propagating data of a bolt load in a step. One 
+    """The BoltLoadState object stores the propagating data of a bolt load in a step. One
     instance of this object is created internally by the BoltLoad object for each step. The 
     instance is also deleted internally by the BoltLoad object. 
     The BoltLoadState object has no constructor or methods. 
@@ -60,4 +59,3 @@ class BoltLoadState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

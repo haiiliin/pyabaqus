@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class InteractionState:
 
-    """The InteractionState object is the abstract base type for other InteractionState 
+class InteractionState:
+    """The InteractionState object is the abstract base type for other InteractionState
     objects. The InteractionState object has no explicit constructor. The members of the 
     InteractionState object are common to all objects derived from InteractionState. 
 
@@ -31,4 +31,3 @@ class InteractionState:
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

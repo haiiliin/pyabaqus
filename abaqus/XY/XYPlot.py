@@ -1,183 +1,352 @@
+import typing
+
 from abaqusConstants import *
-from .Area import Area
-from .Chart import Chart
-from .Title import Title
-from .XYCurve import XYCurve
-from ..UtilityAndView.Repository import Repository
+from .AreaStyle import AreaStyle
+from .LineStyle import LineStyle
+from .QuantityType import QuantityType
+from .SymbolStyle import SymbolStyle
+from .TextStyle import TextStyle
+from .XYData import XYData
+from .XYPlotBase import XYPlotBase
 
 
-class XYPlot:
+class XYPlot(XYPlotBase):
 
-    """The XYPlot object is used to display Chart objects. 
-
-    Access
-    ------
-        - import visualization
-        - session.xyPlots[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
-
-    """
-
-    # An Area object specifying position, padding, background and borders of the XYPlot 
-    # object. 
-    area: Area = Area()
-
-    # A Title object specifying the title of the XYPlot object. 
-    title: Title = Title()
-
-    # A repository of Chart objects. 
-    charts: Repository[str, Chart] = Repository[str, Chart]()
-
-    # A repository of XYCurve objects. 
-    curves: Repository[str, XYCurve] = Repository[str, XYCurve]()
-
-    # A tuple of Floats specifying a transformation matrix used to scale or pan along the axes 
-    # of the active Chart object of this XYPlot. 
-    transform: float = None
-
-    def __init__(self, name: str):
-        """This method creates an empty XYPlot object.
+    @staticmethod
+    def AreaStyle(color: str = '', fill: Boolean = ON, style: SymbolicConstant = SOLID) -> AreaStyle:
+        """This method creates an AreaStyle.
 
         Path
         ----
-            - session.XYPlot
+            - session.AreaStyle
+            - xyPlot.AreaStyle
 
         Parameters
         ----------
+        color
+            A String specifying the color to be used when filling an area with this AreaStyle
+            object. The default value is "White".
+        fill
+            A Boolean specifying whether to fill the area when using this AreaStyle. The default
+            value is ON.
+        style
+            A SymbolicConstant specifying the area pattern style to be used when filling an area
+            using this AreaStyle. The default value is SOLID.
+
+        Returns
+        -------
+            An AreaStyle object.
+
+        Exceptions
+        ----------
+            ColorError
+        """
+        areaStyle = AreaStyle(color, fill, style)
+        return areaStyle
+
+    @staticmethod
+    def LineStyle(color: str = '', show: Boolean = ON, style: SymbolicConstant = SOLID,
+                  thickness: float = 0) -> LineStyle:
+        """This method creates a LineStyle.
+
+        Path
+        ----
+            - session.LineStyle
+            - xyPlot.LineStyle
+
+        Parameters
+        ----------
+        color
+            A String specifying the color to be used when drawing a line with this LineStyle object.
+            The default value is "White".
+        show
+            A Boolean specifying whether to draw the line when using this LineStyle. The default
+            value is ON.
+        style
+            A SymbolicConstant specifying the line style to be used when drawing lines using this
+            LineStyle. Possible values are SOLID, DASHED, DOTTED, and DOT_DASH. The default value is
+            SOLID.
+        thickness
+            A Float specifying the line thickness in mm to be used when drawing lines using this
+            LineStyle. The default value is 0.2.
+
+        Returns
+        -------
+            A LineStyle object.
+
+        Exceptions
+        ----------
+            ColorError
+        """
+        lineStyle = LineStyle(color, show, style, thickness)
+        return lineStyle
+
+    @staticmethod
+    def QuantityType(label: str = '', type: SymbolicConstant = None) -> QuantityType:
+        """This method creates a QuantityType object.
+
+        Path
+        ----
+            - session.QuantityType
+            - xyPlot.QuantityType
+
+        Parameters
+        ----------
+        label
+            A String specifying the label for this quantity type.
+        type
+            A SymbolicConstant specifying the physical dimension of the axis. Possible values are:
+            - NONE.
+            - ACCELERATION.
+            - ACOUSTIC_INTENSITY.
+            - ANGLE.
+            - ANGULAR_MOMENTUM.
+            - ARC_LENGTH.
+            - AREA.
+            - AREA_VELOCITY_SQUARED, specifying "Velocity squared per area".
+            - BIMOMENT.
+            - CURVATURE.
+            - CORIOLIS_LOAD.
+            - DAMAGE.
+            - DAMAGE_CRITERION.
+            - DENSITY.
+            - DENSITY_ROTATIONAL_ACCELERATION, specifying "Density * Angular acceleration".
+            - DISPLACEMENT.
+            - ECURRENT_AREA_TIME, specifying "Time integrated electric current per area".
+            - ELECTRIC_CHARGE.
+            - ELECTRIC_CURRENT.
+            - ELECTRIC_CURRENT_AREA, specifying "Electric current per unit area".
+            - ELECTRIC_POTENTIAL.
+            - ENERGY.
+            - ENERGY_DENSITY.
+            - ENERGY_RELEASE_RATE.
+            - EPOTENTIAL_GRADIENT, specifying "Electric potential gradient".
+            - FREQUENCY.
+            - FORCE.
+            - FORCE_VOLUME, specifying "Force per volume".
+            - HEAT_FLUX.
+            - HEAT_FLUX_AREA, specifying "Heat flux per area".
+            - HEAT_FLUX_RATE.
+            - HEAT_FLUX_VOLUME, specifying "Heat flux per volume".
+            - LENGTH.
+            - LINEAR_PRESSURE.
+            - LUMIN, specifying "Luminous intensity".
+            - MASS.
+            - MASS_FLOW_AREA, specifying "Mass flow per area".
+            - MASS_FLOW_AREA_RATE, specifying "Mass flow rate per area".
+            - MASS_FLOW_RATE.
+            - MODE_NUMBER.
+            - MOMENT.
+            - NUMBER.
+            - PATH.
+            - PHASE.
+            - POSITION.
+            - PRESSURE.
+            - PRESSURE_GRADIENT.
+            - RATE.
+            - ROTARY_INERTIA.
+            - ROTATIONAL_ACCELERATION.
+            - ROTATIONAL_VELOCITY.
+            - STATUS.
+            - STRAIN.
+            - STRAIN_RATE.
+            - STRESS.
+            - STRESS_INTENS_FACTOR, specifying "Stress intensity factor".
+            - SUBSTANCE, specifying "Amount of substance".
+            - TEMPERATURE.
+            - THICKNESS.
+            - TIME.
+            - TIME_INCREMENT.
+            - TIME_HEAT_FLUX, specifying "Time integrated heat flux".
+            - TIME_HEAT_FLUX_AREA, specifying "Time integrated heat flux per area".
+            - TIME_VOLUME, specifying "Time integrated volume".
+            - TIME_VOLUME_FLUX, specifying "Time integrated volume flux per area".
+            - TWIST.
+            - VELOCITY.
+            - VELOCITY_SQUARED.
+            - VOLUME.
+            - VOLUME_FLUX.
+            - VOLUME_FLUX_AREA, specifying "Volume flux per area".
+            - VOLUME_FRACTION.
+            The default value is NONE
+
+        Returns
+        -------
+            A QuantityType object.
+
+        Exceptions
+        ----------
+            None.
+        """
+        quantityType = QuantityType(label, type)
+        return quantityType
+
+    @staticmethod
+    def SymbolStyle(color: str = '', show: Boolean = ON, marker: SymbolicConstant = FILLED_CIRCLE,
+                    size: float = 2) -> SymbolStyle:
+        """This method creates a SymbolStyle object.
+
+        Path
+        ----
+            - session.SymbolStyle
+            - xyPlot.SymbolStyle
+
+        Parameters
+        ----------
+        color
+            A String specifying the color to be used when drawing a marker with this SymbolStyle
+            object. The default value is "White".
+        show
+            A Boolean specifying whether to draw the marker when using this SymbolStyle object. The
+            default value is ON.
+        marker
+            A SymbolicConstant specifying the marker type be used when drawing symbols using this
+            SymbolStyle object. Possible values are:
+            - FILLED_CIRCLE
+            - FILLED_SQUARE
+            - FILLED_DIAMOND
+            - FILLED_TRI
+            - HOLLOW_CIRCLE
+            - HOLLOW_SQUARE
+            - HOLLOW_DIAMOND
+            - HOLLOW_TRI
+            - CROSS
+            - XMARKER
+            - POINT
+            The default value is FILLED_CIRCLE.
+        size
+            A Float specifying the marker size to be used when drawing markers using this
+            SymbolStyle object. The default value is 2.0.
+
+        Returns
+        -------
+            A SymbolStyle object.
+
+        Exceptions
+        ----------
+            ColorError
+        """
+        symbolStyle = SymbolStyle(color, show, marker, size)
+        return symbolStyle
+
+    @staticmethod
+    def TextStyle(color: str = '', show: Boolean = ON, font: str = '', rotationAngle: float = 0) -> TextStyle:
+        """This method creates a TextStyle.
+
+        Path
+        ----
+            - session.TextStyle
+            - xyPlot.TextStyle
+
+        Parameters
+        ----------
+        color
+            A String specifying the color to be used when drawing text with this TextStyle object.
+            The default value is "White".
+        show
+            A Boolean specifying whether to draw the text when using this TextStyle object. The
+            default value is ON.
+        font
+            A String specifying the name of the font to be used when drawing text with this
+            TextStyle object. The default value is "-*-verdana-medium-r-normal-*-*-120-*-*-p-*-*-*".
+        rotationAngle
+            A Float specifying the angle in degrees used for displaying the text. The default value
+            is 0.0.
+
+        Returns
+        -------
+            A TextStyle object.
+
+        Exceptions
+        ----------
+            ColorError
+        """
+        textStyle = TextStyle(color, show, font, rotationAngle)
+        return textStyle
+
+    @staticmethod
+    @typing.overload
+    def XYData(data: tuple, name: str = '', sourceDescription: str = '', contentDescription: str = '',
+               positionDescription: str = '', legendLabel: str = '', xValuesLabel: str = '',
+               yValuesLabel: str = '', axis1QuantityType: QuantityType = None,
+               axis2QuantityType: QuantityType = None) -> XYData:
+        """This method creates an XYData object from a sequence of *X–Y* data pairs.
+
+        Path
+        ----
+            - session.XYData
+            - xyPlot.XYData
+
+        Parameters
+        ----------
+        data
+            A sequence of pairs of Floats specifying the *X–Y* data pairs.
         name
-            A String specifying the name of the XYPlot object. 
+            The repository key. If the name is not supplied while creating the XYData object using
+            xyPlot.XYData, a default name in the form _temp#_ is generated and the XYData object is
+            temporary. (This argument is required if the method is accessed from the session
+            object.)
+        sourceDescription
+            A String specifying the source of the *X–Y* data (e.g., “Entered from keyboard”, “Taken
+            from ASCII file”, “Read from an ODB”, etc.). The default value is an empty string.
+        contentDescription
+            A String specifying the content of the *X–Y* data (e.g., “field 1 vs. field 2”). The
+            default value is an empty string.
+        positionDescription
+            A String specifying additional information about the *X–Y* data (e.g., “for whole
+            model”). The default value is an empty string.
+        legendLabel
+            A String specifying the label to be used in the legend. The default value is the name of
+            the XYData object.
+        xValuesLabel
+            A String specifying the label for the X-values. This value may be overridden if the
+            *X–Y* data are combined with other *X–Y* data. The default value is an empty string.
+        yValuesLabel
+            A String specifying the label for the Y-values. This value may be overridden if the
+            *X–Y* data are combined with other *X–Y* data. The default value is an empty string.
+        axis1QuantityType
+            A QuantityType object specifying the QuantityType object associated to the X -axis1-
+            values.
+        axis2QuantityType
+            A QuantityType object specifying the QuantityType object associated to the Y -axis2-
+            values.
 
         Returns
         -------
-            An XYPlot object. 
+            An XYData object.
 
         Exceptions
         ----------
-            InvalidNameError. 
+            InvalidNameError.
         """
         pass
 
-    def autoColor(self, lines: Boolean = OFF, symbols: Boolean = OFF):
-        """This method distributes the colors on all curves displayed in the XYPlot using the color
-        palette defined by the xyColors AutoColors object.
+    @staticmethod
+    @typing.overload
+    def XYData(objectToCopy: XYData) -> XYData:
+        """This method creates an XYData object by copying an existing XYData object.
+
+        Path
+        ----
+            - session.odbs[*name*].userData.XYData
+            - session.XYData
+            - xyPlot.XYData
 
         Parameters
         ----------
-        lines
-            A Boolean defining whether color distribution affects curve lines. 
-        symbols
-            A Boolean defining whether color distribution affects curve symbols. 
+        objectToCopy
+            An XYData object to be copied.
 
         Returns
         -------
-            None. 
+            An XYData object.
 
         Exceptions
         ----------
-            None. 
+            InvalidNameError.
         """
         pass
 
-    def autoSymbol(self):
-        """This method distributes the symbols on all curves displayed in the XYPlot.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
-        """
-        pass
-
-    def fitCurves(self):
-        """This method resets the transform of all the charts of the XYPlot object. It cancels any
-        zoom or pan action.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
-        """
-        pass
-
-    def next(self, drawImmediately: Boolean = False):
-        """This method restores the *transform* member of the active Chart object to the next
-        setting in the transform list. (There is a list of eight transforms stored for each
-        chart.) If there is no next transform, no action is taken.
-
-        Parameters
-        ----------
-        drawImmediately
-            A Boolean specifying the viewport should refresh immediately after the command is 
-            processed. This is typically only used when writing a script and it is desirable to show 
-            intermediate results before the script completes. The default value is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
-        """
-        pass
-
-    def previous(self, drawImmediately: Boolean = False):
-        """This method restores the *transform* member of the active Chart object to the previous
-        setting in the transform list. (There is a list of eight transforms stored for each
-        chart.) If there is no next transform, no action is taken.
-
-        Parameters
-        ----------
-        drawImmediately
-            A Boolean specifying the viewport should refresh immediately after the command is 
-            processed. This is typically only used when writing a script and it is desirable to show 
-            intermediate results before the script completes. The default value is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
-        """
-        pass
-
-    def setValues(self, title: Title = Title(), transform: tuple = ()):
-        """This method modifies the XYPlot object.
-
-        Parameters
-        ----------
-        title
-            A Title object specifying the title of the XYPlot object. 
-        transform
-            A sequence of Floats specifying a transformation matrix used to scale or pan along the 
-            axes of the active Chart object of this XYPlot. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
-        """
-        pass
-
+    @staticmethod
+    def XYData(*args, **kwargs) -> XYData:
+        return XYData(())

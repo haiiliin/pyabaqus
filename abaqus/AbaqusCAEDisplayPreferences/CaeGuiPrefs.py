@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class CaeGuiPrefs:
 
-    """The CaeGuiPrefs object contains the details of the graphical preferences in a 
+class CaeGuiPrefs:
+    """The CaeGuiPrefs object contains the details of the graphical preferences in a
     guiPreferences section of the abaqus_2021.gpr file. 
 
     Access
@@ -57,4 +57,3 @@ class CaeGuiPrefs:
             None. 
         """
         pass
-

@@ -18,9 +18,46 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        # self.ui.original.textChanged.connect(self.onTextChanged)
+        self.ui.actionSetupClass.triggered.connect(self.setupClass)
         self.ui.actionSetupSubModule.triggered.connect(self.setupSubModule)
         self.ui.actionSetupSketch.triggered.connect(self.setupSketch)
+        self.ui.actionSetupInitialMethod.triggered.connect(self.setupInitialMethod)
+
+    def setupClass(self):
+        text = self.ui.original.toPlainText()
+
+        classDefinitions: list[str] = re.findall('class \w+', text)
+        if len(classDefinitions) == 0:
+            return
+
+        Type = classDefinitions[0].split()[1]
+        member = Type[0].lower() + Type[1:] + 's'
+
+        methodText = ''
+
+        foundMethods: list[str] = re.findall('\s\s\s\sdef __init__[\s\S]+?pass', text)  # (\s+@typing.overload)?
+        if len(foundMethods) == 0:
+            return
+
+        methodString = foundMethods[0].replace('def __init__', 'def {}'.format(Type))
+        methodString = methodString.replace('\n        super().__init__()', '')
+        argStrings = re.findall('\(self,[\s\S]+?\):', methodString)
+        args = []
+        if len(argStrings) > 0:
+            argStrings[0] = re.sub('typing.Union\[.+?\]', 'None', argStrings[0])
+            argStrings[0] = re.sub('\s+?', '', argStrings[0])
+            args = [arg.split(':')[0] for arg in argStrings[0][6:][:-2].split(',')]
+
+        methodDefinition = 'self.{}[{}] = {} = {}({})\n'.format(member, 'name', member[:-1], Type, ', '.join(args))
+        methodDefinition += 8 * ' ' + 'return {}'.format(member[:-1])
+        methodString = re.sub('({}\([\s\S]+?\)):'.format(Type), '\g<1> -> {}:'.format(Type), methodString)
+        methodString = methodString.replace('pass', methodDefinition)
+
+        if 'def {}('.format(Type) not in methodText:
+            methodText = '\n'.join([methodText, methodString])
+            methodText = re.sub('\n\n+', '\n\n', methodText)
+
+        self.ui.replaced.setPlainText(methodText)
 
     def setupSubModule(self):
         texts = self.ui.original.toPlainText().lstrip().rstrip().split()
@@ -45,7 +82,6 @@ class MainWindow(QMainWindow):
                 if len(actualBaseTypes) > 0:
                     actualBaseType = actualBaseTypes[0][len(Type) + 7:][:-2]
                 if ('class {}({})'.format(Type, baseType) not in text and
-                        ('class {}({})'.format(Type, actualBaseType) not in text and baseType in actualBaseType) and
                         'class {}'.format(baseType) not in text):
                     continue
 
@@ -105,6 +141,46 @@ class MainWindow(QMainWindow):
                 f.write(text)
                 f.close()
             self.ui.replaced.appendPlainText(text)
+
+    def setupInitialMethod(self):
+        text = self.ui.original.toPlainText()
+        members = text.split('\n\n')
+        # text = '\n\nclass :\n\n'
+        text = ''
+        docStrings, argNames, argTypes, argDefaults = [], [], [], []
+        for member in members:
+            lines = member.split('\n')
+            docString = []
+            definition = ''
+            for line in lines:
+                line = line.lstrip().rstrip()
+                if line == '':
+                    continue
+                if line.startswith('# '):
+                    docString.append(line.replace('#', ''))
+                else:
+                    definition = line.replace(' ', '')
+            docString = ' '.join(docString)
+            arg = definition.split(':')[0]
+            Type = definition[len(definition.split(':')[0]) + 1:].split('=')[0]
+            Default = definition[len(definition.split(':')[0]) + 1:].split('=')[1]
+            docStrings.append(docString)
+            argNames.append(arg)
+            argTypes.append(Type)
+            argDefaults.append(Default)
+        text += '    def __init__(self, '
+        for argName, argType, argDefault in zip(argNames, argTypes, argDefaults):
+            text += '{}: {} = {}, '.format(argName, argType, argDefault)
+        text = text[:-2]
+        text += '):\n'
+        text += '        """\n\n'
+        text += '        Parameters\n'
+        text += '        ----------\n'
+        for argName, docString in zip(argNames, docStrings):
+            text += '        {}\n            {}\n'.format(argName, docString)
+        text += '        """\n'
+        text += '        pass\n'
+        self.ui.replaced.setPlainText(text)
 
     def onTextChanged(self):
         text = self.ui.original.toPlainText()

@@ -1,11 +1,11 @@
 from abaqusConstants import *
 from .AnalyticSurface import AnalyticSurface
+from .OdbMeshNode import OdbMeshNode
 from .OdbSet import OdbSet
 
 
 class OdbRigidBody:
-
-    """The Rigid body object is used to bind a set of elements and/or a set of nodes and/or an 
+    """The Rigid body object is used to bind a set of elements and/or a set of nodes and/or an
     analytical surface with a reference node. 
 
     Access
@@ -24,9 +24,11 @@ class OdbRigidBody:
 
     """
 
-    def RigidBody(self, referenceNode: OdbSet, position: SymbolicConstant = INPUT, isothermal: Boolean = ON, 
-                  elements: OdbSet = OdbSet(), tieNodes: OdbSet = OdbSet(), pinNodes: OdbSet = OdbSet(), 
-                  analyticSurface: AnalyticSurface = AnalyticSurface()):
+    def __init__(self, referenceNode: OdbSet, position: SymbolicConstant = INPUT, isothermal: Boolean = ON,
+                 elements: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
+                 tieNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
+                 pinNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
+                 analyticSurface: AnalyticSurface = AnalyticSurface()):
         """This method creates a OdbRigidBody object.
 
         Path
@@ -68,4 +70,3 @@ class OdbRigidBody:
             None. 
         """
         pass
-

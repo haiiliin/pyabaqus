@@ -19,8 +19,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class ImplicitDynamicsStep(AnalysisStep):
-
-    """The ImplicitDynamicsStep object is used to provide direct integration of a dynamic 
+    """The ImplicitDynamicsStep object is used to provide direct integration of a dynamic
     stress/displacement response in Abaqus/Standard analyses and is generally used for 
     nonlinear cases. 
     The ImplicitDynamicsStep object is derived from the AnalysisStep object. 
@@ -79,7 +78,7 @@ class ImplicitDynamicsStep(AnalysisStep):
     minInc: float = None
 
     # The SymbolicConstant DEFAULT or a Float specifying the maximum time increment allowed. 
-    maxInc: typing.Union[SymbolicConstant,float] = None
+    maxInc: typing.Union[SymbolicConstant, float] = None
 
     # A SymbolicConstant specifying the way of specifying half-increment residual tolerance 
     # with the automatic time incrementation scheme. Possible values are 
@@ -105,7 +104,7 @@ class ImplicitDynamicsStep(AnalysisStep):
     # The SymbolicConstant DEFAULT or a Float specifying the nondefault value of the numerical 
     # (artificial) damping control parameter, αα, in the implicit operator. Possible values 
     # are −.333 <α<<α< 0. The default value is DEFAULT. 
-    alpha: typing.Union[SymbolicConstant,float] = DEFAULT
+    alpha: typing.Union[SymbolicConstant, float] = DEFAULT
 
     # A SymbolicConstant specifying whether accelerations should be calculated or recalculated 
     # at the beginning of the step. Possible values are DEFAULT, BYPASS, and ALLOW. The 
@@ -202,7 +201,8 @@ class ImplicitDynamicsStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -228,19 +228,19 @@ class ImplicitDynamicsStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1, 
-                 nlgeom: Boolean = OFF, matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
-                 application: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT, adiabatic: Boolean = OFF, 
-                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
-                 initialInc: float = None, minInc: float = None, 
-                 maxInc: typing.Union[SymbolicConstant,float] = DEFAULT,
-                 hafTolMethod: SymbolicConstant = VALUE, haftol: float = None, 
-                 halfIncScaleFactor: float = None, nohaf: Boolean = OFF, 
-                 amplitude: SymbolicConstant = STEP, 
-                 alpha: typing.Union[SymbolicConstant,float] = DEFAULT, 
-                 initialConditions: SymbolicConstant = DEFAULT, 
-                 extrapolation: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT, noStop: Boolean = OFF, 
-                 maintainAttributes: Boolean = False, solutionTechnique: SymbolicConstant = FULL_NEWTON, 
+    def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1,
+                 nlgeom: Boolean = OFF, matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+                 application: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT, adiabatic: Boolean = OFF,
+                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                 initialInc: float = None, minInc: float = None,
+                 maxInc: typing.Union[SymbolicConstant, float] = DEFAULT,
+                 hafTolMethod: SymbolicConstant = VALUE, haftol: float = None,
+                 halfIncScaleFactor: float = None, nohaf: Boolean = OFF,
+                 amplitude: SymbolicConstant = STEP,
+                 alpha: typing.Union[SymbolicConstant, float] = DEFAULT,
+                 initialConditions: SymbolicConstant = DEFAULT,
+                 extrapolation: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT, noStop: Boolean = OFF,
+                 maintainAttributes: Boolean = False, solutionTechnique: SymbolicConstant = FULL_NEWTON,
                  reformKernel: int = 8, convertSDI: SymbolicConstant = PROPAGATED):
         """This method creates an ImplicitDynamicsStep object.
 
@@ -344,19 +344,19 @@ class ImplicitDynamicsStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', timePeriod: float = 1, nlgeom: Boolean = OFF, 
-                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
-                  application: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT, adiabatic: Boolean = OFF, 
-                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
-                  initialInc: float = None, minInc: float = None, 
-                  maxInc: typing.Union[SymbolicConstant,float] = DEFAULT,
-                  hafTolMethod: SymbolicConstant = VALUE, haftol: float = None, 
-                  halfIncScaleFactor: float = None, nohaf: Boolean = OFF, 
-                  amplitude: SymbolicConstant = STEP, 
-                  alpha: typing.Union[SymbolicConstant,float] = DEFAULT, 
-                  initialConditions: SymbolicConstant = DEFAULT, 
-                  extrapolation: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT, noStop: Boolean = OFF, 
-                  solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8, 
+    def setValues(self, description: str = '', timePeriod: float = 1, nlgeom: Boolean = OFF,
+                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+                  application: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT, adiabatic: Boolean = OFF,
+                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                  initialInc: float = None, minInc: float = None,
+                  maxInc: typing.Union[SymbolicConstant, float] = DEFAULT,
+                  hafTolMethod: SymbolicConstant = VALUE, haftol: float = None,
+                  halfIncScaleFactor: float = None, nohaf: Boolean = OFF,
+                  amplitude: SymbolicConstant = STEP,
+                  alpha: typing.Union[SymbolicConstant, float] = DEFAULT,
+                  initialConditions: SymbolicConstant = DEFAULT,
+                  extrapolation: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT, noStop: Boolean = OFF,
+                  solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
                   convertSDI: SymbolicConstant = PROPAGATED):
         """This method modifies the ImplicitDynamicsStep object.
 
@@ -446,4 +446,3 @@ class ImplicitDynamicsStep(AnalysisStep):
             RangeError. 
         """
         pass
-

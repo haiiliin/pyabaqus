@@ -4,8 +4,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class OdbDiagnosticIncrement:
-
-    """The OdbDiagnosticIncrement object. 
+    """The OdbDiagnosticIncrement object.
 
     Access
     ------
@@ -44,4 +43,3 @@ class OdbDiagnosticIncrement:
     # A float specifying the amount of step time completed in the particular increment. This 
     # attribute is read-only. 
     stepTimeCompleted: str = ''
-

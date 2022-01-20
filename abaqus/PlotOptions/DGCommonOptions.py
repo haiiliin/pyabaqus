@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class DGCommonOptions:
 
-    """The DGCommonOptions object stores values and attributes that are common to all plot 
+class DGCommonOptions:
+    """The DGCommonOptions object stores values and attributes that are common to all plot
     states. The DGCommonOptions object has no constructor command. Abaqus creates an 
     *odbDisplayOptions.commonOptions* member when a display group instance is created, using 
     values from *odbDisplay.commonOptions*. 
@@ -155,4 +155,3 @@ class DGCommonOptions:
     # A tuple of three Floats specifying the coordinate scaling in each of the three 
     # coordinate directions when *coordinateScale*=ON. The default value is (1, 1, 1). 
     coordinateScaleFactors: float = None
-

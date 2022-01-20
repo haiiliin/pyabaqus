@@ -1,8 +1,5 @@
-
-
 class OdbMeshNode:
-
-    """OdbMeshNode objects are created with the part.addNodes method. 
+    """OdbMeshNode objects are created with the part.addNodes method.
 
     Access
     ------
@@ -34,4 +31,3 @@ class OdbMeshNode:
     # A tuple of Floats specifying the nodal coordinates in the global Cartesian coordinate 
     # system. 
     coordinates: float = None
-

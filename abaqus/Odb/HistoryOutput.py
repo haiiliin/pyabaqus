@@ -4,8 +4,7 @@ from abaqusConstants import *
 
 
 class HistoryOutput:
-
-    """The HistoryOutput object contains the history output at a point for the specified 
+    """The HistoryOutput object contains the history output at a point for the specified
     variable. 
 
     Access
@@ -31,7 +30,7 @@ class HistoryOutput:
     # (*frameValue*, *value*). 
     conjugateData: float = None
 
-    def __init__(self, name: str, description: str, type: SymbolicConstant, 
+    def __init__(self, name: str, description: str, type: SymbolicConstant,
                  validInvariants: SymbolicConstant = None):
         """This method creates a HistoryOutput object.
 
@@ -131,4 +130,3 @@ class HistoryOutput:
 
     def addData(self, *args, **kwargs):
         pass
-

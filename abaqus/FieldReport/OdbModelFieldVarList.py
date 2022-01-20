@@ -1,8 +1,5 @@
-
-
 class OdbModelFieldVarList:
-
-    """The read-only OdbModelFieldVarList object lists all variables available for the model in 
+    """The read-only OdbModelFieldVarList object lists all variables available for the model in
     the current OdbDisplay object. 
 
     Access
@@ -18,5 +15,4 @@ class OdbModelFieldVarList:
     -------------------------------
 
     """
-
     pass

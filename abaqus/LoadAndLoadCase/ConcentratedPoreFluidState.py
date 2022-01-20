@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class ConcentratedPoreFluidState(LoadState):
-
-    """The ConcentratedPoreFluidState object stores the propagating data of a concentrated pore 
+    """The ConcentratedPoreFluidState object stores the propagating data of a concentrated pore
     fluid flow load in a step. One instance of this object is created internally by the 
     ConcPoreFluid object for each step. The instance is also deleted internally by the 
     ConcPoreFluid object. 
@@ -52,4 +51,3 @@ class ConcentratedPoreFluidState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

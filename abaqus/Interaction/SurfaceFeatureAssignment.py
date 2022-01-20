@@ -4,8 +4,7 @@ from abaqusConstants import *
 
 
 class SurfaceFeatureAssignment:
-
-    """The SurfaceFeatureAssignment object stores the surface feature angle assignment 
+    """The SurfaceFeatureAssignment object stores the surface feature angle assignment
     definition for surfaces in ContactExp or ContactStd objects. The 
     SurfaceFeatureAssignment object has no constructor or members. 
 
@@ -23,7 +22,7 @@ class SurfaceFeatureAssignment:
 
     """
 
-    def changeValuesInStep(self, stepName: str, index: int, value: typing.Union[SymbolicConstant,float]):
+    def changeValuesInStep(self, stepName: str, index: int, value: typing.Union[SymbolicConstant, float]):
         """This method allows modification of surface feature angle assignments already defined on
         surfaces in a given step.
 
@@ -60,7 +59,7 @@ class SurfaceFeatureAssignment:
         """
         pass
 
-    def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant,float]):
+    def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant, float]):
         """This method allows addition of surface feature angle assignments to new surfaces in a
         given step.
 
@@ -114,4 +113,3 @@ class SurfaceFeatureAssignment:
             None. 
         """
         pass
-

@@ -1,8 +1,5 @@
-
-
 class ConstrainedSketchConstraint:
-
-    """The ConstrainedSketchConstraint object stores the constraints associated with a sketch. 
+    """The ConstrainedSketchConstraint object stores the constraints associated with a sketch.
 
     Access
     ------

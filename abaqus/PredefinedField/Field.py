@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class Field(PredefinedField):
-
-    """The Field object stores the data for field predefined fields. 
+    """The Field object stores the data for field predefined fields.
     The Field object is derived from the PredefinedField object. 
 
     Access
@@ -43,12 +42,12 @@ class Field(PredefinedField):
     # *distributionType*=FROM_FILE or FROM_FILE_AND_USER_DEFINED. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, outputVariable: str = '', 
-                 fieldVariableNum: int = None, distributionType: SymbolicConstant = UNIFORM, 
-                 crossSectionDistribution: SymbolicConstant = CONSTANT_THROUGH_THICKNESS, 
-                 field: str = '', amplitude: str = UNSET, fileName: str = '', 
-                 beginStep: SymbolicConstant = None, beginIncrement: SymbolicConstant = None, 
-                 endStep: SymbolicConstant = None, endIncrement: SymbolicConstant = None, 
+    def __init__(self, name: str, createStepName: str, region: Region, outputVariable: str = '',
+                 fieldVariableNum: int = None, distributionType: SymbolicConstant = UNIFORM,
+                 crossSectionDistribution: SymbolicConstant = CONSTANT_THROUGH_THICKNESS,
+                 field: str = '', amplitude: str = UNSET, fileName: str = '',
+                 beginStep: SymbolicConstant = None, beginIncrement: SymbolicConstant = None,
+                 endStep: SymbolicConstant = None, endIncrement: SymbolicConstant = None,
                  interpolate: SymbolicConstant = OFF, magnitudes: str = ''):
         """This method creates a Field object.
 
@@ -167,12 +166,12 @@ class Field(PredefinedField):
         """
         pass
 
-    def setValues(self, outputVariable: str = '', fieldVariableNum: int = None, 
-                  distributionType: SymbolicConstant = UNIFORM, 
-                  crossSectionDistribution: SymbolicConstant = CONSTANT_THROUGH_THICKNESS, 
-                  field: str = '', amplitude: str = UNSET, fileName: str = '', 
-                  beginStep: SymbolicConstant = None, beginIncrement: SymbolicConstant = None, 
-                  endStep: SymbolicConstant = None, endIncrement: SymbolicConstant = None, 
+    def setValues(self, outputVariable: str = '', fieldVariableNum: int = None,
+                  distributionType: SymbolicConstant = UNIFORM,
+                  crossSectionDistribution: SymbolicConstant = CONSTANT_THROUGH_THICKNESS,
+                  field: str = '', amplitude: str = UNSET, fileName: str = '',
+                  beginStep: SymbolicConstant = None, beginIncrement: SymbolicConstant = None,
+                  endStep: SymbolicConstant = None, endIncrement: SymbolicConstant = None,
                   interpolate: SymbolicConstant = OFF, magnitudes: str = ''):
         """This method modifies the data for an existing Field object in the step where it is
         created.
@@ -259,10 +258,10 @@ class Field(PredefinedField):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, outputVariable: str = '', fieldVariableNum: int = None, field: str = '', 
-                        amplitude: str = UNSET, fileName: str = '', beginStep: SymbolicConstant = None, 
-                        beginIncrement: SymbolicConstant = None, endStep: SymbolicConstant = None, 
-                        endIncrement: SymbolicConstant = None, interpolate: SymbolicConstant = OFF, 
+    def setValuesInStep(self, stepName: str, outputVariable: str = '', fieldVariableNum: int = None, field: str = '',
+                        amplitude: str = UNSET, fileName: str = '', beginStep: SymbolicConstant = None,
+                        beginIncrement: SymbolicConstant = None, endStep: SymbolicConstant = None,
+                        endIncrement: SymbolicConstant = None, interpolate: SymbolicConstant = OFF,
                         magnitudes: str = ''):
         """This method modifies the propagating data for an existing Field object in the specified
         step.
@@ -338,4 +337,3 @@ class Field(PredefinedField):
             None. 
         """
         pass
-

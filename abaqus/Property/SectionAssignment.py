@@ -3,8 +3,7 @@ from ..Region.Set import Set
 
 
 class SectionAssignment:
-
-    """The SectionAssignment object is used to specify a section assignment on an assembly or 
+    """The SectionAssignment object is used to specify a section assignment on an assembly or
     part. Section assignments on the assembly are limited to connector elements only. 
 
     Access
@@ -31,7 +30,7 @@ class SectionAssignment:
     # value is OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, region: Set, sectionName: str, thicknessAssignment: SymbolicConstant = FROM_SECTION, 
+    def __init__(self, region: Set, sectionName: str, thicknessAssignment: SymbolicConstant = FROM_SECTION,
                  offset: float = 0, offsetType: SymbolicConstant = SINGLE_VALUE, offsetField: str = ''):
         """This method creates a SectionAssignment object.
 
@@ -136,4 +135,3 @@ class SectionAssignment:
             None. 
         """
         pass
-

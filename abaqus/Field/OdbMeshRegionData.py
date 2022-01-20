@@ -1,14 +1,13 @@
 from abaqusConstants import *
 
-class OdbMeshRegionData:
 
-    """The OdbMeshRegionData object defines the external source data of MappedField from an ODB 
+class OdbMeshRegionData:
+    """The OdbMeshRegionData object defines the external source data of MappedField from an ODB
     file. 
 
     Access
     ------
-        - import
-        - field
+        - import field
         - mdb.models[name].analyticalFields[name].odbMeshRegionData
 
     Table Data
@@ -131,16 +130,16 @@ class OdbMeshRegionData:
     # default value is UNDEFINED_POSITION. 
     displayOutputPosition: SymbolicConstant = UNDEFINED_POSITION
 
-    def __init__(self, odbFileName: str, variableLabel: str, stepIndex: int = 0, frameIndex: int = 0, 
-                 outputPosition: SymbolicConstant = UNDEFINED_POSITION, 
-                 dataType: SymbolicConstant = SCALAR, storageType: SymbolicConstant = FLOAT, 
-                 quantityToPlot: SymbolicConstant = FIELD_OUTPUT, averageElementOutput: str = OFF, 
-                 useRegionBoundaries: str = OFF, regionBoundaries: SymbolicConstant = NONE, 
-                 includeFeatureBoundaries: str = ON, featureAngle: float = 20, 
-                 averageOnlyDisplayed: str = OFF, averagingThreshold: float = 75, 
-                 computeOrder: SymbolicConstant = EXTRAPOLATE_COMPUTE_AVERAGE, 
-                 numericForm: SymbolicConstant = REAL, complexAngle: float = 0, sectionPoint: str = '', 
-                 refinementType: SymbolicConstant = None, refinementLabel: str = '', 
+    def __init__(self, odbFileName: str, variableLabel: str, stepIndex: int = 0, frameIndex: int = 0,
+                 outputPosition: SymbolicConstant = UNDEFINED_POSITION,
+                 dataType: SymbolicConstant = SCALAR, storageType: SymbolicConstant = FLOAT,
+                 quantityToPlot: SymbolicConstant = FIELD_OUTPUT, averageElementOutput: str = OFF,
+                 useRegionBoundaries: str = OFF, regionBoundaries: SymbolicConstant = NONE,
+                 includeFeatureBoundaries: str = ON, featureAngle: float = 20,
+                 averageOnlyDisplayed: str = OFF, averagingThreshold: float = 75,
+                 computeOrder: SymbolicConstant = EXTRAPOLATE_COMPUTE_AVERAGE,
+                 numericForm: SymbolicConstant = REAL, complexAngle: float = 0, sectionPoint: str = '',
+                 refinementType: SymbolicConstant = None, refinementLabel: str = '',
                  displayOutputPosition: SymbolicConstant = None):
         """This method creates an OdbMeshRegionData object.
 
@@ -283,4 +282,3 @@ class OdbMeshRegionData:
             None. 
         """
         pass
-

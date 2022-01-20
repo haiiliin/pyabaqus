@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class ComplexFrequencyStep(AnalysisStep):
-
-    """The ComplexFrequencyStep object is used to perform eigenvalue extraction to calculate 
+    """The ComplexFrequencyStep object is used to perform eigenvalue extraction to calculate
     the complex eigenvalues and corresponding complex mode shapes of a system. 
     The ComplexFrequencyStep object is derived from the AnalysisStep object. 
 
@@ -137,7 +136,8 @@ class ComplexFrequencyStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -163,10 +163,10 @@ class ComplexFrequencyStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, numEigen: SymbolicConstant = ALL, description: str = '', 
-                 shift: float = None, frictionDamping: Boolean = OFF, 
-                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False, 
-                 minEigen: float = None, maxEigen: float = None, 
+    def __init__(self, name: str, previous: str, numEigen: SymbolicConstant = ALL, description: str = '',
+                 shift: float = None, frictionDamping: Boolean = OFF,
+                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False,
+                 minEigen: float = None, maxEigen: float = None,
                  propertyEvaluationFrequency: float = None):
         """This method creates a ComplexFrequencyStep object.
 
@@ -223,9 +223,9 @@ class ComplexFrequencyStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, numEigen: SymbolicConstant = ALL, description: str = '', shift: float = None, 
-                  frictionDamping: Boolean = OFF, matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
-                  minEigen: float = None, maxEigen: float = None, 
+    def setValues(self, numEigen: SymbolicConstant = ALL, description: str = '', shift: float = None,
+                  frictionDamping: Boolean = OFF, matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+                  minEigen: float = None, maxEigen: float = None,
                   propertyEvaluationFrequency: float = None):
         """This method modifies the ComplexFrequencyStep object.
 
@@ -268,4 +268,3 @@ class ComplexFrequencyStep(AnalysisStep):
             RangeError. 
         """
         pass
-

@@ -1,60 +1,61 @@
-from .Viscous import Viscous
-from .Viscosity import Viscosity
-from .Viscoelastic import Viscoelastic
-from .UserOutputVariables import UserOutputVariables
-from .UserMaterial import UserMaterial
-from .Swelling import Swelling
-from .SpecificHeat import SpecificHeat
-from .Sorption import Sorption
-from .Solubility import Solubility
-from .Regularization import Regularization
-from .PorousMetalPlasticity import PorousMetalPlasticity
-from .PorousElastic import PorousElastic
-from .PorousBulkModuli import PorousBulkModuli
-from .PoreFluidExpansion import PoreFluidExpansion
-from .Plastic import Plastic
-from .Piezoelectric import Piezoelectric
-from .Permeability import Permeability
-from .MoistureSwelling import MoistureSwelling
-from .MohrCoulombPlasticity import MohrCoulombPlasticity
-from .MagneticPermeability import MagneticPermeability
-from .LowDensityFoam import LowDensityFoam
-from .LatentHeat import LatentHeat
-from .JouleHeatFraction import JouleHeatFraction
-from .InelasticHeatFraction import InelasticHeatFraction
-from .Hypoelastic import Hypoelastic
-from .Hyperfoam import Hyperfoam
-from .Hyperelastic import Hyperelastic
-from .Gel import Gel
-from .GasketTransverseShearElastic import GasketTransverseShearElastic
-from .GasketThicknessBehavior import GasketThicknessBehavior
-from .GasketMembraneElastic import GasketMembraneElastic
-from .GapFlow import GapFlow
-from .FluidLeakoff import FluidLeakoff
-from .Expansion import Expansion
-from .Eos import Eos
-from .ElectricalConductivity import ElectricalConductivity
-from .Elastic import Elastic
-from .DruckerPrager import DruckerPrager
-from .Diffusivity import Diffusivity
-from .Dielectric import Dielectric
-from .Depvar import Depvar
-from .Density import Density
-from .DeformationPlasticity import DeformationPlasticity
-from .Damping import Damping
-from .CrushableFoam import CrushableFoam
-from .Creep import Creep
-from .Conductivity import Conductivity
-from .ConcreteDamagedPlasticity import ConcreteDamagedPlasticity
-from .Concrete import Concrete
-from .ClayPlasticity import ClayPlasticity
-from .CastIronPlasticity import CastIronPlasticity
-from .CapPlasticity import CapPlasticity
-from .BrittleCracking import BrittleCracking
-from .AcousticMedium import AcousticMedium
 import typing
+
 from abaqusConstants import *
+from .Density.Density import Density
+from .Elastic.HyperElastic.HyperFoam.Hyperfoam import Hyperfoam
+from .Elastic.HyperElastic.Hyperelastic import Hyperelastic
+from .Elastic.HyperElastic.ViscoElastic.Viscoelastic import Viscoelastic
+from .Elastic.HypoElastic.Hypoelastic import Hypoelastic
+from .Elastic.Linear.Elastic import Elastic
+from .Elastic.LowDensityFoam.LowDensityFoam import LowDensityFoam
+from .Elastic.Porous.PorousElastic import PorousElastic
+from .Eos.Eos import Eos
+from .Gap.GapFlow import GapFlow
+from .Gasket.GasketMembraneElastic import GasketMembraneElastic
+from .Gasket.GasketThicknessBehavior import GasketThicknessBehavior
+from .Gasket.GasketTransverseShearElastic import GasketTransverseShearElastic
 from .MaterialBase import MaterialBase
+from .Others.Acoustic.AcousticMedium import AcousticMedium
+from .Others.Electromagnetic.Dielectric import Dielectric
+from .Others.Electromagnetic.ElectricalConductivity import ElectricalConductivity
+from .Others.Electromagnetic.MagneticPermeability import MagneticPermeability
+from .Others.Electromagnetic.Piezoelectric import Piezoelectric
+from .Others.HeatTransfer.Conductivity import Conductivity
+from .Others.HeatTransfer.InelasticHeatFraction import InelasticHeatFraction
+from .Others.HeatTransfer.JouleHeatFraction import JouleHeatFraction
+from .Others.HeatTransfer.LatentHeat import LatentHeat
+from .Others.HeatTransfer.SpecificHeat import SpecificHeat
+from .Others.MassDiffusion.Diffusivity import Diffusivity
+from .Others.MassDiffusion.Solubility import Solubility
+from .Others.Mechanical.Damping import Damping
+from .Others.Mechanical.Expansion import Expansion
+from .Others.Mechanical.PoreFluidExpansion import PoreFluidExpansion
+from .Others.Mechanical.Viscosity.Viscosity import Viscosity
+from .Others.PoreFluidFlow.FluidLeakoff import FluidLeakoff
+from .Others.PoreFluidFlow.Gel import Gel
+from .Others.PoreFluidFlow.MoistureSwelling.MoistureSwelling import MoistureSwelling
+from .Others.PoreFluidFlow.Permeability.Permeability import Permeability
+from .Others.PoreFluidFlow.PorousBulkModuli import PorousBulkModuli
+from .Others.PoreFluidFlow.Sorption import Sorption
+from .Others.User.Depvar import Depvar
+from .Others.User.UserMaterial import UserMaterial
+from .Others.User.UserOutputVariables import UserOutputVariables
+from .Plastic.Concrete.BrittleCracking import BrittleCracking
+from .Plastic.Concrete.Concrete import Concrete
+from .Plastic.Concrete.ConcreteDamagedPlasticity import ConcreteDamagedPlasticity
+from .Plastic.Creep.Creep import Creep
+from .Plastic.CriticalStateClay.ClayPlasticity import ClayPlasticity
+from .Plastic.CrushableFoam.CrushableFoam import CrushableFoam
+from .Plastic.DruckerPrager.Extended.DruckerPrager import DruckerPrager
+from .Plastic.DruckerPrager.ModifiedCap.CapPlasticity import CapPlasticity
+from .Plastic.Metal.CastIron.CastIronPlasticity import CastIronPlasticity
+from .Plastic.Metal.Deformation.DeformationPlasticity import DeformationPlasticity
+from .Plastic.Metal.Porous.PorousMetalPlasticity import PorousMetalPlasticity
+from .Plastic.Metal.TwoLayerViscoPlasticity.Viscous import Viscous
+from .Plastic.MohrCoulomb.MohrCoulombPlasticity import MohrCoulombPlasticity
+from .Plastic.Plastic import Plastic
+from .Plastic.Swelling.Swelling import Swelling
+from .Regularization import Regularization
 
 
 class Material(MaterialBase):
@@ -969,7 +970,7 @@ class Material(MaterialBase):
             A Float specifying the fraction of the initial compressive stiffness that defines the 
             stiffness in tension. The default value is 10–3. 
         type
-            A SymbolicConstant specifying a damage elasticity model or an elastic-plastic model for 
+            A SymbolicConstant specifying a damage elasticity model or an elastic-Plastic model for
             gasket thickness-direction behavior. Possible values are ELASTIC_PLASTIC and DAMAGE. The 
             default value is ELASTIC_PLASTIC. 
         unloadingDependencies
@@ -984,7 +985,7 @@ class Material(MaterialBase):
             The default value is STRESS. 
         yieldOnset
             A Float specifying the closure value at which the onset of yield occurs or the relative 
-            drop in slope on the loading curve that defines the onset of plastic deformation 
+            drop in slope on the loading curve that defines the onset of Plastic deformation
             (depending on the value of *yieldOnsetMethod*). The default value is 0.1. 
         yieldOnsetMethod
             A SymbolicConstant specifying the method used to determine yield onset. Possible values 

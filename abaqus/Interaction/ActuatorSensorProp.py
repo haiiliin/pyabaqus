@@ -1,8 +1,8 @@
-from .InteractionProperty import InteractionProperty
+from .ContactProperty import ContactProperty
 
-class ActuatorSensorProp(InteractionProperty):
 
-    """The ActuatorSensorProp object is an interaction property that defines the properties 
+class ActuatorSensorProp(ContactProperty):
+    """The ActuatorSensorProp object is an interaction property that defines the properties
     referred to by an ActuatorSensor object. 
     The ActuatorSensorProp object is derived from the InteractionProperty object. 
 
@@ -46,7 +46,7 @@ class ActuatorSensorProp(InteractionProperty):
         ----------
             None. 
         """
-        super().__init__()
+        super().__init__(name)
         pass
 
     def setValues(self, realProperties: tuple = (), integerProperties: tuple = ()):
@@ -70,4 +70,3 @@ class ActuatorSensorProp(InteractionProperty):
             None. 
         """
         pass
-

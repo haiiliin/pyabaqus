@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ConnectorOptions:
 
-    """The ConnectorOptions object is used to define various options for connector behaviors. 
+class ConnectorOptions:
+    """The ConnectorOptions object is used to define various options for connector behaviors.
     It can be used only in conjunction with CDCTerm, ConnectorDamage, ConnectorDamping, 
     ConnectorElasticity, ConnectorFriction, and ConnectorPlasticity objects. Because the 
     ConnectorDamage object contains two separate ConnectorOptions repositories (one for 
@@ -52,37 +52,29 @@ class ConnectorOptions:
 
     """
 
-    def __init__(self, useBehRegSettings: Boolean = ON, regularize: Boolean = ON, 
-                 defaultTolerance: Boolean = ON, regularization: float = 0, 
-                 defaultRateFactor: Boolean = ON, rateFactor: float = 0, 
-                 interpolation: SymbolicConstant = LINEAR, useBehExtSettings: Boolean = ON, 
+    def __init__(self, useBehRegSettings: Boolean = ON, regularize: Boolean = ON,
+                 defaultTolerance: Boolean = ON, regularization: float = 0,
+                 defaultRateFactor: Boolean = ON, rateFactor: float = 0,
+                 interpolation: SymbolicConstant = LINEAR, useBehExtSettings: Boolean = ON,
                  extrapolation: SymbolicConstant = CONSTANT):
         """This method creates a connector options object to be used in conjunction with an
         allowable connector behavior option, derived component term, or connector section.
 
         Path
         ----
-            - mdb.models[name].sections[name].behaviorOptions[i]\
-            - .connectorPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent\
-            - .cdcTerms[i].ConnectorOptions
+            - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
+            - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].ConnectorOptions
             - mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i]\
-            - .evolutionPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
+            - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
             - mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i]\
-            - .initiationPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
+            - mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
             - mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i]\
-            - .connectorPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].derivedComponent\
-            - .cdcTerms[i].ConnectorOptions
+            - session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
+            - session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].ConnectorOptions
             - session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i]\
-            - .evolutionPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
+            - session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
             - session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i]\
-            - .initiationPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
+            - session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
             - session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions
 
         Parameters
@@ -106,18 +98,18 @@ class ConnectorOptions:
         defaultRateFactor
             A Boolean specifying whether or not the analysis default rate filter factor will be 
             used. This argument is applicable only for an Abaqus/Explicit analysis that includes 
-            isotropic hardening with tabular definition or damage initiation with plastic motion 
+            isotropic hardening with tabular definition or damage initiation with Plastic motion
             criteria. The default value is ON. 
         rateFactor
             A Float specifying the rate filter factor to be used. This argument is applicable only 
             for an Abaqus/Explicit analysis that includes isotropic hardening with tabular 
-            definition or damage initiation with plastic motion criteria. This argument is also 
+            definition or damage initiation with Plastic motion criteria. This argument is also
             applicable only if *defaultRateFactor*=OFF. The default value is 0.9. 
         interpolation
             A SymbolicConstant specifying the type of interpolation increment to be used on 
             rate-dependent tabular data. This argument is applicable only for an Abaqus/Explicit 
             analysis that includes isotropic hardening with tabular definition or damage initiation 
-            with plastic motion criteria. Possible values are LINEAR and LOGARITHMIC. The default 
+            with Plastic motion criteria. Possible values are LINEAR and LOGARITHMIC. The default
             value is LINEAR. 
         useBehExtSettings
             A Boolean specifying whether or not to use the behavior-level settings for extrapolation 
@@ -152,4 +144,3 @@ class ConnectorOptions:
             ValueError. 
         """
         pass
-

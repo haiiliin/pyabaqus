@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class SurfaceHeatFluxState(LoadState):
-
-    """The SurfaceHeatFluxState object stores the propagating data for a surface 
+    """The SurfaceHeatFluxState object stores the propagating data for a surface
     SurfaceHeatFlux object in a step. One instance of this object is created internally by 
     the SurfaceHeatFlux object for each step. The instance is also deleted internally by the 
     SurfaceHeatFlux object. 
@@ -52,4 +51,3 @@ class SurfaceHeatFluxState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

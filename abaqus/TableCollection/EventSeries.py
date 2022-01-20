@@ -2,8 +2,7 @@ from abaqusConstants import *
 
 
 class EventSeries:
-
-    """The EventSeries object is used to define an event based on an already defined 
+    """The EventSeries object is used to define an event based on an already defined
     EventSeriesType object. 
     After EventSeries is instantiated, making changes to EventSeriesType may lead to data 
     corruption. 
@@ -22,8 +21,8 @@ class EventSeries:
 
     """
 
-    def __init__(self, name: str, createStepName: str, eventSeriesType: str, transformType: str = NONE, 
-                 timeSpan: str = STEP_TIME, transformations: str = '', fileName: str = '', 
+    def __init__(self, name: str, createStepName: str, eventSeriesType: str, transformType: str = NONE,
+                 timeSpan: str = STEP_TIME, transformations: str = '', fileName: str = '',
                  data: str = ''):
         """This method creates an EventSeries object.
 
@@ -62,7 +61,7 @@ class EventSeries:
         """
         pass
 
-    def setValues(self, transformType: str = NONE, timeSpan: str = STEP_TIME, transformations: str = '', 
+    def setValues(self, transformType: str = NONE, timeSpan: str = STEP_TIME, transformations: str = '',
                   fileName: str = '', data: str = ''):
         """This method modifies the EventSeries object.
 
@@ -89,4 +88,3 @@ class EventSeries:
             RangeError. 
         """
         pass
-

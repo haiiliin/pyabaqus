@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class TurnControl(GeometricRestriction):
-
-    """The TurnControl object defines a turn control geometric restriction. 
+    """The TurnControl object defines a turn control geometric restriction.
     The TurnControl object is derived from the GeometricRestriction object. 
 
     Access
@@ -21,9 +20,9 @@ class TurnControl(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, clientDirection: tuple, region: Region, csys: int = None, 
-                 mainPoint: str = None, mainPointDetermination: SymbolicConstant = MAXIMUM, 
-                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0, 
+    def __init__(self, name: str, clientDirection: tuple, region: Region, csys: int = None,
+                 mainPoint: str = None, mainPointDetermination: SymbolicConstant = MAXIMUM,
+                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                  tolerance2: float = 0, tolerance3: float = 0):
         """This method creates a TurnControl object.
 
@@ -77,9 +76,9 @@ class TurnControl(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, mainPoint: str = None, 
-                  mainPointDetermination: SymbolicConstant = MAXIMUM, 
-                  presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0, 
+    def setValues(self, csys: int = None, mainPoint: str = None,
+                  mainPointDetermination: SymbolicConstant = MAXIMUM,
+                  presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                   tolerance2: float = 0, tolerance3: float = 0):
         """This method modifies the TurnControl object.
 
@@ -117,4 +116,3 @@ class TurnControl(GeometricRestriction):
             None. 
         """
         pass
-

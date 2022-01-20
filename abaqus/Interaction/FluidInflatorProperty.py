@@ -1,8 +1,8 @@
-from .InteractionProperty import InteractionProperty
+from .ContactProperty import ContactProperty
 
-class FluidInflatorProperty(InteractionProperty):
 
-    """The FluidInflatorProperty object is an interaction property that defines a fluid 
+class FluidInflatorProperty(ContactProperty):
+    """The FluidInflatorProperty object is an interaction property that defines a fluid
     inflator property to model the deployment of an airbag. The inflator property defines 
     the mass flow rate and temperature as a function of inflation time either directly or by 
     entering tank test data. It also defines the mixture of gases entering the fluid cavity. 
@@ -38,9 +38,9 @@ class FluidInflatorProperty(InteractionProperty):
 
     """
 
-    def __init__(self, name: str, definition: str, effectiveArea: float, tankVolume: float, 
-                 dischargeCoefficient: float = None, dataTable: tuple = (), numFluids: int = None, 
-                 mixtureType: str = '', inflationTime: tuple = (), fluidbehaviorName: tuple = (), 
+    def __init__(self, name: str, definition: str, effectiveArea: float, tankVolume: float,
+                 dischargeCoefficient: float = None, dataTable: tuple = (), numFluids: int = None,
+                 mixtureType: str = '', inflationTime: tuple = (), fluidbehaviorName: tuple = (),
                  massFraction: tuple = ()):
         """This method creates a FluidInflatorProperty object.
 
@@ -90,11 +90,11 @@ class FluidInflatorProperty(InteractionProperty):
         ----------
             None. 
         """
-        super().__init__()
+        super().__init__(name)
         pass
 
-    def setValues(self, dischargeCoefficient: float = None, dataTable: tuple = (), numFluids: int = None, 
-                  mixtureType: str = '', inflationTime: tuple = (), fluidbehaviorName: tuple = (), 
+    def setValues(self, dischargeCoefficient: float = None, dataTable: tuple = (), numFluids: int = None,
+                  mixtureType: str = '', inflationTime: tuple = (), fluidbehaviorName: tuple = (),
                   massFraction: tuple = ()):
         """This method modifies the FluidInflatorProperty object.
 
@@ -129,4 +129,3 @@ class FluidInflatorProperty(InteractionProperty):
             None. 
         """
         pass
-

@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class QuantityType:
 
-    """The QuantityType object is used to store attributes defining the physical dimension and 
+class QuantityType:
+    """The QuantityType object is used to store attributes defining the physical dimension and
     label of the quantity type to be associated with an XYData or an AxisData object. 
     QuantityType objects are automatically created when creating XYData objects from the 
     odb. 
@@ -168,4 +168,3 @@ class QuantityType:
             None. 
         """
         pass
-

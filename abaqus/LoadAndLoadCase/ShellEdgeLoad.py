@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class ShellEdgeLoad(Load):
-
-    """The ShellEdgeLoad object defines shell edge loads on a region. 
+    """The ShellEdgeLoad object defines shell edge loads on a region.
     The ShellEdgeLoad object is derived from the Load object. 
 
     Access
@@ -38,10 +37,10 @@ class ShellEdgeLoad(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, 
-                 distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET, 
-                 angle: float = 0, axis: SymbolicConstant = AXIS_1, localCsys: int = GENERAL, 
-                 userCsys: str = GENERAL, directionVector: tuple = (), follower: Boolean = ON, 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float,
+                 distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET,
+                 angle: float = 0, axis: SymbolicConstant = AXIS_1, localCsys: int = GENERAL,
+                 userCsys: str = GENERAL, directionVector: tuple = (), follower: Boolean = ON,
                  resultant: Boolean = OFF, traction: SymbolicConstant = NORMAL):
         """This method creates a ShellEdgeLoad object.
 
@@ -118,9 +117,9 @@ class ShellEdgeLoad(Load):
         super().__init__()
         pass
 
-    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET, 
-                  angle: float = 0, axis: SymbolicConstant = AXIS_1, localCsys: int = GENERAL, 
-                  userCsys: str = GENERAL, directionVector: tuple = (), follower: Boolean = ON, 
+    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET,
+                  angle: float = 0, axis: SymbolicConstant = AXIS_1, localCsys: int = GENERAL,
+                  userCsys: str = GENERAL, directionVector: tuple = (), follower: Boolean = ON,
                   resultant: Boolean = OFF, traction: SymbolicConstant = NORMAL):
         """This method modifies the data for an existing ShellEdgeLoad object in the step where it
         is created.
@@ -184,8 +183,8 @@ class ShellEdgeLoad(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        magnitude: typing.Union[SymbolicConstant,float] = None, 
+    def setValuesInStep(self, stepName: str,
+                        magnitude: typing.Union[SymbolicConstant, float] = None,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ShellEdgeLoad object in the
         specified step.
@@ -214,4 +213,3 @@ class ShellEdgeLoad(Load):
             None. 
         """
         pass
-

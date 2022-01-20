@@ -3,8 +3,7 @@ from .Leaf import Leaf
 
 
 class LeafFromConstraintNames(Leaf):
-
-    """The LeafFromConstraintNames object can be used whenever a Leaf object is expected as an 
+    """The LeafFromConstraintNames object can be used whenever a Leaf object is expected as an
     argument. 
     A Leaf object is used used to specify the items in a display group. Leaf objects are 
     constructed as temporary objects that are used as arguments to DisplayGroup 
@@ -53,4 +52,3 @@ class LeafFromConstraintNames(Leaf):
         """
         super().__init__(DEFAULT_MODEL)
         pass
-

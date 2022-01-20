@@ -3,8 +3,7 @@ from .Amplitude import Amplitude
 
 
 class PsdDefinition(Amplitude):
-
-    """The PsdDefinition object defines the cross-spectral density frequency function for 
+    """The PsdDefinition object defines the cross-spectral density frequency function for
     random response loading. 
     The PsdDefinition object is derived from the Amplitude object. 
 
@@ -24,8 +23,8 @@ class PsdDefinition(Amplitude):
 
     """
 
-    def __init__(self, name: str, data: tuple, unitType: SymbolicConstant = FORCE, 
-                 referenceGravityAcceleration: float = 1, referenecePower: float = 0, 
+    def __init__(self, name: str, data: tuple, unitType: SymbolicConstant = FORCE,
+                 referenceGravityAcceleration: float = 1, referenecePower: float = 0,
                  user: Boolean = OFF, timeSpan: SymbolicConstant = STEP, amplitude: str = ''):
         """This method creates a PsdDefinition object.
 
@@ -75,8 +74,8 @@ class PsdDefinition(Amplitude):
         super().__init__()
         pass
 
-    def setValues(self, unitType: SymbolicConstant = FORCE, referenceGravityAcceleration: float = 1, 
-                  referenecePower: float = 0, user: Boolean = OFF, timeSpan: SymbolicConstant = STEP, 
+    def setValues(self, unitType: SymbolicConstant = FORCE, referenceGravityAcceleration: float = 1,
+                  referenecePower: float = 0, user: Boolean = OFF, timeSpan: SymbolicConstant = STEP,
                   amplitude: str = ''):
         """This method modifies the PsdDefinition object.
 
@@ -113,4 +112,3 @@ class PsdDefinition(Amplitude):
             RangeError. 
         """
         pass
-

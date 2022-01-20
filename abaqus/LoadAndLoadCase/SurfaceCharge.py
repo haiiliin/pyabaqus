@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SurfaceCharge(Load):
-
-    """The SurfaceCharge object stores the data for a surface charge. 
+    """The SurfaceCharge object stores the data for a surface charge.
     The SurfaceCharge object is derived from the Load object. 
 
     Access
@@ -36,7 +35,7 @@ class SurfaceCharge(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float,
                  distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET):
         """This method creates a SurfaceCharge object.
 
@@ -132,4 +131,3 @@ class SurfaceCharge(Load):
             None. 
         """
         pass
-

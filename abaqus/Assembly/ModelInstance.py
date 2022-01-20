@@ -17,8 +17,7 @@ class Model:
 
 
 class ModelInstance:
-
-    """A ModelInstance object is an instance of a Model. 
+    """A ModelInstance object is an instance of a Model.
 
     Access
     ------
@@ -165,4 +164,3 @@ class ModelInstance:
             None. 
         """
         pass
-

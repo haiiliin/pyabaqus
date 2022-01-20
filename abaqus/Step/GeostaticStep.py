@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class GeostaticStep(AnalysisStep):
-
-    """The GeostaticStep object is used to verify that the geostatic stress field is in 
+    """The GeostaticStep object is used to verify that the geostatic stress field is in
     equilibrium with the applied loads and boundary conditions on the model and to iterate, 
     if needed, to obtain equilibrium. 
     The GeostaticStep object is derived from the AnalysisStep object. 
@@ -161,7 +160,8 @@ class GeostaticStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -187,12 +187,12 @@ class GeostaticStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', nlgeom: Boolean = OFF, 
-                 matrixSolver: SymbolicConstant = DIRECT, 
-                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False, 
-                 solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8, 
-                 convertSDI: SymbolicConstant = PROPAGATED, utol: float = None, timePeriod: float = 1, 
-                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
+    def __init__(self, name: str, previous: str, description: str = '', nlgeom: Boolean = OFF,
+                 matrixSolver: SymbolicConstant = DIRECT,
+                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False,
+                 solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
+                 convertSDI: SymbolicConstant = PROPAGATED, utol: float = None, timePeriod: float = 1,
+                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
                  initialInc: float = None, minInc: float = None, maxInc: float = None):
         """This method creates a GeostaticStep object.
 
@@ -266,11 +266,11 @@ class GeostaticStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', nlgeom: Boolean = OFF, matrixSolver: SymbolicConstant = DIRECT, 
-                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
-                  solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8, 
-                  convertSDI: SymbolicConstant = PROPAGATED, utol: float = None, timePeriod: float = 1, 
-                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
+    def setValues(self, description: str = '', nlgeom: Boolean = OFF, matrixSolver: SymbolicConstant = DIRECT,
+                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+                  solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
+                  convertSDI: SymbolicConstant = PROPAGATED, utol: float = None, timePeriod: float = 1,
+                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
                   initialInc: float = None, minInc: float = None, maxInc: float = None):
         """This method modifies the GeostaticStep object.
 
@@ -330,4 +330,3 @@ class GeostaticStep(AnalysisStep):
             RangeError. 
         """
         pass
-

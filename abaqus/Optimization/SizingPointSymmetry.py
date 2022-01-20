@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SizingPointSymmetry(GeometricRestriction):
-
-    """The SizingPointSymmetry object defines a sizing point symmetry geometric restriction. 
+    """The SizingPointSymmetry object defines a sizing point symmetry geometric restriction.
     The SizingPointSymmetry object is derived from the GeometricRestriction object. 
 
     Access
@@ -73,4 +72,3 @@ class SizingPointSymmetry(GeometricRestriction):
             None. 
         """
         pass
-

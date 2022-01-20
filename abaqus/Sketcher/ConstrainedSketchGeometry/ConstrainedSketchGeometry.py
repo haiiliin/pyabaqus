@@ -2,8 +2,7 @@ from abaqusConstants import *
 
 
 class ConstrainedSketchGeometry:
-
-    """The ConstrainedSketchGeometry object stores the geometry of a sketch, such as lines, 
+    """The ConstrainedSketchGeometry object stores the geometry of a sketch, such as lines,
     circles, arcs, and construction lines. 
 
     Access

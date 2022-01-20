@@ -1,9 +1,9 @@
-from .Cell import Cell
 from abaqusConstants import *
+from .Cell import Cell
+
 
 class CellArray:
-
-    """The CellArray is a sequence of Cell objects. 
+    """The CellArray is a sequence of Cell objects.
 
     Access
     ------
@@ -151,7 +151,7 @@ class CellArray:
         """
         pass
 
-    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '', 
+    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
                          zMax: str = ''):
         """This method returns an array of cell objects that lie within the specified bounding box.
 
@@ -250,4 +250,3 @@ class CellArray:
             !img 
         """
         pass
-

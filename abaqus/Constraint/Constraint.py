@@ -1,7 +1,7 @@
 from abaqusConstants import *
 
-class Constraint:
 
+class Constraint:
     """The ConstrainedSketchConstraint object is the abstract base type for other ConstrainedSketchConstraint objects. The
     ConstrainedSketchConstraint object has no explicit constructor. The members of the ConstrainedSketchConstraint object are
     common to all objects derived from the ConstrainedSketchConstraint.
@@ -75,4 +75,3 @@ class Constraint:
             None. 
         """
         pass
-

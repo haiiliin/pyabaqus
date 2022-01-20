@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class ConcCharge(Load):
-
-    """The ConcCharge object stores the data for a concentrated charge. 
+    """The ConcCharge object stores the data for a concentrated charge.
     The ConcCharge object is derived from the Load object. 
 
     Access
@@ -36,7 +35,7 @@ class ConcCharge(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float,
                  distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET):
         """This method creates a ConcCharge object.
 
@@ -132,4 +131,3 @@ class ConcCharge(Load):
             None. 
         """
         pass
-

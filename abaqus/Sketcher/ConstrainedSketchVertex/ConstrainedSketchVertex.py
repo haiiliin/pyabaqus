@@ -1,8 +1,5 @@
-
-
 class ConstrainedSketchVertex:
-
-    """The ConstrainedSketchVertex object stores the vertex position. 
+    """The ConstrainedSketchVertex object stores the vertex position.
 
     Access
     ------
@@ -42,4 +39,3 @@ class ConstrainedSketchVertex:
             None. 
         """
         pass
-

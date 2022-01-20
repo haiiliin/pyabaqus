@@ -1,8 +1,5 @@
-
-
 class TimePoint:
-
-    """The TimePoint object defines time points at which data are written to the output 
+    """The TimePoint object defines time points at which data are written to the output
     database or restart files. 
 
     Access
@@ -59,4 +56,3 @@ class TimePoint:
             RangeError. 
         """
         pass
-

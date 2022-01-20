@@ -1,8 +1,5 @@
-
-
 class RigidBodyConstraint:
-
-    """The RigidBodyConstraint object. 
+    """The RigidBodyConstraint object.
 
     Access
     ------
@@ -35,4 +32,3 @@ class RigidBodyConstraint:
             None. 
         """
         pass
-

@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class IncidentWave(Interaction):
-
-    """The IncidentWave object defines incident wave interactions for acoustic and coupled 
+    """The IncidentWave object defines incident wave interactions for acoustic and coupled
     acoustic-structural analyses. 
     The IncidentWave object is derived from the Interaction object. 
 
@@ -23,10 +22,10 @@ class IncidentWave(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, sourcePoint: Region, standoffPoint: Region, 
-                 surface: Region, interactionProperty: str, definition: SymbolicConstant = PRESSURE, 
-                 amplitude: str = '', imaginaryAmplitude: str = '', surfaceNormal: tuple = (), 
-                 initialDepth: float = None, referenceMagnitude: float = None, 
+    def __init__(self, name: str, createStepName: str, sourcePoint: Region, standoffPoint: Region,
+                 surface: Region, interactionProperty: str, definition: SymbolicConstant = PRESSURE,
+                 amplitude: str = '', imaginaryAmplitude: str = '', surfaceNormal: tuple = (),
+                 initialDepth: float = None, referenceMagnitude: float = None,
                  detonationTime: float = None, magnitudeFactor: float = 1):
         """This method creates an IncidentWave object.
 
@@ -95,9 +94,9 @@ class IncidentWave(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, definition: SymbolicConstant = PRESSURE, amplitude: str = '', 
-                  imaginaryAmplitude: str = '', surfaceNormal: tuple = (), initialDepth: float = None, 
-                  referenceMagnitude: float = None, detonationTime: float = None, 
+    def setValues(self, definition: SymbolicConstant = PRESSURE, amplitude: str = '',
+                  imaginaryAmplitude: str = '', surfaceNormal: tuple = (), initialDepth: float = None,
+                  referenceMagnitude: float = None, detonationTime: float = None,
                   magnitudeFactor: float = 1):
         """This method modifies the IncidentWave object.
 
@@ -145,4 +144,3 @@ class IncidentWave(Interaction):
             None. 
         """
         pass
-

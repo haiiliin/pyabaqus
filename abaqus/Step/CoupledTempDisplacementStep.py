@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class CoupledTempDisplacementStep(AnalysisStep):
-
-    """The CoupledTempDisplacementStep object is used to analyze problems where the 
+    """The CoupledTempDisplacementStep object is used to analyze problems where the
     simultaneous solution of the temperature and stress/displacement fields is necessary. 
     The CoupledTempDisplacementStep object is derived from the AnalysisStep object. 
 
@@ -191,7 +190,8 @@ class CoupledTempDisplacementStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -217,16 +217,16 @@ class CoupledTempDisplacementStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT, 
-                 timePeriod: float = 1, nlgeom: Boolean = OFF, 
-                 stabilizationMethod: SymbolicConstant = NONE, stabilizationMagnitude: float = None, 
-                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
-                 initialInc: float = None, minInc: float = None, maxInc: float = None, deltmx: float = 0, 
-                 cetol: float = 0, creepIntegration: SymbolicConstant = IMPLICIT, 
-                 solutionTechnique: SymbolicConstant = FULL_NEWTON, 
-                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = STEP, 
-                 extrapolation: SymbolicConstant = LINEAR, maintainAttributes: Boolean = False, 
-                 convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0, 
+    def __init__(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT,
+                 timePeriod: float = 1, nlgeom: Boolean = OFF,
+                 stabilizationMethod: SymbolicConstant = NONE, stabilizationMagnitude: float = None,
+                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                 initialInc: float = None, minInc: float = None, maxInc: float = None, deltmx: float = 0,
+                 cetol: float = 0, creepIntegration: SymbolicConstant = IMPLICIT,
+                 solutionTechnique: SymbolicConstant = FULL_NEWTON,
+                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = STEP,
+                 extrapolation: SymbolicConstant = LINEAR, maintainAttributes: Boolean = False,
+                 convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0,
                  continueDampingFactors: Boolean = OFF):
         """This method creates a CoupledTempDisplacementStep object.
 
@@ -323,15 +323,15 @@ class CoupledTempDisplacementStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', response: SymbolicConstant = TRANSIENT, timePeriod: float = 1, 
-                  nlgeom: Boolean = OFF, stabilizationMethod: SymbolicConstant = NONE, 
-                  stabilizationMagnitude: float = None, 
-                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
-                  initialInc: float = None, minInc: float = None, maxInc: float = None, deltmx: float = 0, 
-                  cetol: float = 0, creepIntegration: SymbolicConstant = IMPLICIT, 
-                  solutionTechnique: SymbolicConstant = FULL_NEWTON, 
-                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = STEP, 
-                  extrapolation: SymbolicConstant = LINEAR, convertSDI: SymbolicConstant = PROPAGATED, 
+    def setValues(self, description: str = '', response: SymbolicConstant = TRANSIENT, timePeriod: float = 1,
+                  nlgeom: Boolean = OFF, stabilizationMethod: SymbolicConstant = NONE,
+                  stabilizationMagnitude: float = None,
+                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                  initialInc: float = None, minInc: float = None, maxInc: float = None, deltmx: float = 0,
+                  cetol: float = 0, creepIntegration: SymbolicConstant = IMPLICIT,
+                  solutionTechnique: SymbolicConstant = FULL_NEWTON,
+                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = STEP,
+                  extrapolation: SymbolicConstant = LINEAR, convertSDI: SymbolicConstant = PROPAGATED,
                   adaptiveDampingRatio: float = 0, continueDampingFactors: Boolean = OFF):
         """This method modifies the CoupledTempDisplacementStep object.
 
@@ -414,4 +414,3 @@ class CoupledTempDisplacementStep(AnalysisStep):
             RangeError. 
         """
         pass
-

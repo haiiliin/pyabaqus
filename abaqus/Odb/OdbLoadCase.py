@@ -1,8 +1,7 @@
 
 
 class OdbLoadCase:
-
-    """The OdbLoadCase object describes a load case. 
+    """The OdbLoadCase object describes a load case.
 
     Access
     ------
@@ -19,7 +18,7 @@ class OdbLoadCase:
 
     """
 
-    def LoadCase(self, name: str):
+    def __init__(self, name: str):
         """This method creates an OdbLoadCase object.
 
         Path
@@ -40,4 +39,3 @@ class OdbLoadCase:
             None. 
         """
         pass
-

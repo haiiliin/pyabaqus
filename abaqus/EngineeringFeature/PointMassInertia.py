@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class PointMassInertia(Inertia):
-
-    """The PointMassInertia object defines point masses and point rotary inertia on a part or 
+    """The PointMassInertia object defines point masses and point rotary inertia on a part or
     an assembly region. 
     The PointMassInertia object is derived from the Inertia object. 
 
@@ -28,9 +27,9 @@ class PointMassInertia(Inertia):
     # A Boolean specifying whether the inertia is suppressed or not. The default value is OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, region: Region, mass: float = 0, mass1: float = 0, mass2: float = 0, 
-                 mass3: float = 0, i11: float = 0, i22: float = 0, i33: float = 0, i12: float = 0, 
-                 i13: float = 0, i23: float = 0, localCsys: str = None, alpha: float = 0, 
+    def __init__(self, name: str, region: Region, mass: float = 0, mass1: float = 0, mass2: float = 0,
+                 mass3: float = 0, i11: float = 0, i22: float = 0, i33: float = 0, i12: float = 0,
+                 i13: float = 0, i23: float = 0, localCsys: str = None, alpha: float = 0,
                  composite: float = 0):
         """This method creates a PointMassInertia object.
 
@@ -95,8 +94,8 @@ class PointMassInertia(Inertia):
         super().__init__()
         pass
 
-    def setValues(self, mass: float = 0, mass1: float = 0, mass2: float = 0, mass3: float = 0, i11: float = 0, 
-                  i22: float = 0, i33: float = 0, i12: float = 0, i13: float = 0, i23: float = 0, 
+    def setValues(self, mass: float = 0, mass1: float = 0, mass2: float = 0, mass3: float = 0, i11: float = 0,
+                  i22: float = 0, i33: float = 0, i12: float = 0, i13: float = 0, i23: float = 0,
                   localCsys: str = None, alpha: float = 0, composite: float = 0):
         """This method modifies the PointMassInertia object.
 
@@ -150,4 +149,3 @@ class PointMassInertia(Inertia):
             None. 
         """
         pass
-

@@ -3,8 +3,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class OdbContactDiagnostics:
-
-    """The OdbDiagnosticContact object. 
+    """The OdbDiagnosticContact object.
 
     Access
     ------
@@ -41,4 +40,3 @@ class OdbContactDiagnostics:
 
     # A string specifying the node description. This attribute is read-only. 
     nodeDescriptions: str = ''
-

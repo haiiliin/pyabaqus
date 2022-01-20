@@ -19,7 +19,6 @@ from .Gravity import Gravity
 from .InertiaRelief import InertiaRelief
 from .InwardVolAccel import InwardVolAccel
 from .LineLoad import LineLoad
-from .LoadCase import LoadCase
 from .Moment import Moment
 from .PEGLoad import PEGLoad
 from .PipePressure import PipePressure
@@ -993,39 +992,6 @@ class LoadModel(ModelBase):
         """
         self.loads[name] = load = LineLoad(name, createStepName, region, distributionType, field, comp1, comp2, comp3,
                                            amplitude, system)
-        return load
-
-    def LoadCase(self, name: str, boundaryConditions: tuple = (), loads: tuple = (),
-                 includeActiveBaseStateBC: Boolean = ON) -> LoadCase:
-        """This method creates a load case in a step.
-
-        Path
-        ----
-            - mdb.models[name].steps[name].LoadCase
-
-        Parameters
-        ----------
-        name
-            A String specifying the name of the object.
-        boundaryConditions
-            A sequence of (String, Float) sequences specifying the name of a BoundaryCondition
-            followed by a nonzero Float scaling factor. The default value is an empty sequence.
-        loads
-            A sequence of (String, Float) sequences specifying the name of a Load followed by a
-            nonzero Float specifying a scale factor. The default value is an empty sequence.
-        includeActiveBaseStateBC
-            A Boolean specifying whether to include all active boundary conditions propagated or
-            modified from the base state. The default value is ON.
-
-        Returns
-        -------
-            A LoadCase object.
-
-        Exceptions
-        ----------
-            RangeError.
-        """
-        self.loads[name] = load = LoadCase(name, boundaryConditions, loads, includeActiveBaseStateBC)
         return load
 
     def Moment(self, name: str, createStepName: str, region: Region, cm1: float = None, cm2: float = None,

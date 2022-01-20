@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class InputFile:
 
-    """The InputFile object is used to store the definitions in an Abaqus input file. InputFile 
+class InputFile:
+    """The InputFile object is used to store the definitions in an Abaqus input file. InputFile
     objects can be created using the methods described in this section. 
 
     Access
@@ -55,7 +55,7 @@ class InputFile:
         """
         pass
 
-    def parse(self, organize: Boolean = False, verbose: Boolean = False, bulk: Boolean = True, 
+    def parse(self, organize: Boolean = False, verbose: Boolean = False, bulk: Boolean = True,
               usePyArray: Boolean = False):
         """This method parses the input file associated with the InputFile object.
 
@@ -87,4 +87,3 @@ class InputFile:
             parsing. 
         """
         pass
-

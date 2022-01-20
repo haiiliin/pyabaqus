@@ -3,8 +3,7 @@ from .Amplitude import Amplitude
 
 
 class DecayAmplitude(Amplitude):
-
-    """The DecayAmplitude object defines an amplitude curve using an exponential decay. 
+    """The DecayAmplitude object defines an amplitude curve using an exponential decay.
     The DecayAmplitude object is derived from the Amplitude object. 
 
     Access
@@ -23,7 +22,7 @@ class DecayAmplitude(Amplitude):
 
     """
 
-    def __init__(self, name: str, initial: float, maximum: float, start: float, decayTime: float, 
+    def __init__(self, name: str, initial: float, maximum: float, start: float, decayTime: float,
                  timeSpan: SymbolicConstant = STEP):
         """This method creates a DecayAmplitude object.
 
@@ -77,4 +76,3 @@ class DecayAmplitude(Amplitude):
             RangeError. 
         """
         pass
-

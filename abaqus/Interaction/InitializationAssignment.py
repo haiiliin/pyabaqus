@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class InitializationAssignment:
 
-    """The InitializationAssignment object stores the contact initialization assignment 
+class InitializationAssignment:
+    """The InitializationAssignment object stores the contact initialization assignment
     definition for domain pairs in a ContactStd or ContactExp object. The 
     InitializationAssignment object has no constructor or members. 
 
@@ -95,4 +95,3 @@ class InitializationAssignment:
             None. 
         """
         pass
-

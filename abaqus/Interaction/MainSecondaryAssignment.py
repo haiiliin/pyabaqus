@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class MainSecondaryAssignment:
 
-    """The MainSecondaryAssignment object stores the main-secondary assignment definition for 
+class MainSecondaryAssignment:
+    """The MainSecondaryAssignment object stores the main-secondary assignment definition for
     surfaces in ContactExp and ContactStd objects. The MainSecondaryAssignment object has no 
     constructor or members. 
 
@@ -93,4 +93,3 @@ class MainSecondaryAssignment:
             None. 
         """
         pass
-

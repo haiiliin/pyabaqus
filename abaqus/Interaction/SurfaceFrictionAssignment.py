@@ -4,8 +4,7 @@ from abaqusConstants import *
 
 
 class SurfaceFrictionAssignment:
-
-    """The SurfaceFrictionAssignment object stores the surface friction assignment definition 
+    """The SurfaceFrictionAssignment object stores the surface friction assignment definition
     for surfaces in ContactExp objects. The SurfaceFrictionAssignment object has no 
     constructor or members. 
 
@@ -51,7 +50,7 @@ class SurfaceFrictionAssignment:
         """
         pass
 
-    def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant,float]):
+    def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant, float]):
         """This method allows addition of surface friction assignments to new surfaces in a given
         step.
 
@@ -95,4 +94,3 @@ class SurfaceFrictionAssignment:
             None. 
         """
         pass
-

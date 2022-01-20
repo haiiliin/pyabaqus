@@ -7,8 +7,7 @@ from abaqus.Mesh.MeshNode import MeshNode
 
 
 class ReferencePoint:
-
-    """The ReferencePoint object has no direct constructor; it is created when a Feature object 
+    """The ReferencePoint object has no direct constructor; it is created when a Feature object
     is created. The ReferencePoint method creates a Feature object that creates a 
     ReferencePoint object. 
 

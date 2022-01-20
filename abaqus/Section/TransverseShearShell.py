@@ -1,8 +1,6 @@
 
-
 class TransverseShearShell:
-
-    """The TransverseShearShell object defines the transverse shear stiffness properties of a 
+    """The TransverseShearShell object defines the transverse shear stiffness properties of a
     shell section. 
 
     Access
@@ -63,4 +61,3 @@ class TransverseShearShell:
             None. 
         """
         pass
-

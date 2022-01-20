@@ -8,8 +8,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class BeadTask(OptimizationTask):
-
-    """The BeadTask object defines a bead task. 
+    """The BeadTask object defines a bead task.
     The BeadTask object is derived from the OptimizationTask object. 
 
     Access
@@ -37,16 +36,16 @@ class BeadTask(OptimizationTask):
     # A repository of GeometricRestriction objects. 
     geometricRestrictions: Repository[str, GeometricRestriction] = Repository[str, GeometricRestriction]()
 
-    def __init__(self, name: str, abaqusSensitivities: Boolean = True, 
-                 algorithm: SymbolicConstant = GENERAL_OPTIMIZATION, areBCRegionsFrozen: Boolean = OFF, 
-                 beadIter: str = 1, beadMaxMembraneStress: str = 0, beadMinStress: str = 0, 
-                 beadPerturbation: str = 0, beadWidth: SymbolicConstant = DEFAULT, curveSmooth: str = 5, 
-                 filterRadius: str = 4, filterRadiusBy: SymbolicConstant = VALUE, 
-                 flipNormalDir: Boolean = OFF, frozenBoundaryConditionRegion: SymbolicConstant = MODEL, 
-                 isSensCalcOnlyOnDesignNodes: Boolean = OFF, 
-                 modeTrackingRegion: SymbolicConstant = MODEL, nodalMoveLimit: float = 0, 
-                 nodeSmooth: SymbolicConstant = DEFAULT, 
-                 nodeUpdateStrategy: SymbolicConstant = CONSERVATIVE, numTrackedModes: int = 5, 
+    def __init__(self, name: str, abaqusSensitivities: Boolean = True,
+                 algorithm: SymbolicConstant = GENERAL_OPTIMIZATION, areBCRegionsFrozen: Boolean = OFF,
+                 beadIter: str = 1, beadMaxMembraneStress: str = 0, beadMinStress: str = 0,
+                 beadPerturbation: str = 0, beadWidth: SymbolicConstant = DEFAULT, curveSmooth: str = 5,
+                 filterRadius: str = 4, filterRadiusBy: SymbolicConstant = VALUE,
+                 flipNormalDir: Boolean = OFF, frozenBoundaryConditionRegion: SymbolicConstant = MODEL,
+                 isSensCalcOnlyOnDesignNodes: Boolean = OFF,
+                 modeTrackingRegion: SymbolicConstant = MODEL, nodalMoveLimit: float = 0,
+                 nodeSmooth: SymbolicConstant = DEFAULT,
+                 nodeUpdateStrategy: SymbolicConstant = CONSERVATIVE, numTrackedModes: int = 5,
                  updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF):
         """This method creates a BeadTask object.
 
@@ -135,16 +134,16 @@ class BeadTask(OptimizationTask):
         super().__init__()
         pass
 
-    def setValues(self, abaqusSensitivities: Boolean = True, algorithm: SymbolicConstant = GENERAL_OPTIMIZATION, 
-                  areBCRegionsFrozen: Boolean = OFF, beadIter: str = 1, beadMaxMembraneStress: str = 0, 
-                  beadMinStress: str = 0, beadPerturbation: str = 0, 
-                  beadWidth: SymbolicConstant = DEFAULT, curveSmooth: str = 5, filterRadius: str = 4, 
-                  filterRadiusBy: SymbolicConstant = VALUE, flipNormalDir: Boolean = OFF, 
-                  frozenBoundaryConditionRegion: SymbolicConstant = MODEL, 
-                  isSensCalcOnlyOnDesignNodes: Boolean = OFF, 
-                  modeTrackingRegion: SymbolicConstant = MODEL, nodalMoveLimit: float = 0, 
-                  nodeSmooth: SymbolicConstant = DEFAULT, 
-                  nodeUpdateStrategy: SymbolicConstant = CONSERVATIVE, numTrackedModes: int = 5, 
+    def setValues(self, abaqusSensitivities: Boolean = True, algorithm: SymbolicConstant = GENERAL_OPTIMIZATION,
+                  areBCRegionsFrozen: Boolean = OFF, beadIter: str = 1, beadMaxMembraneStress: str = 0,
+                  beadMinStress: str = 0, beadPerturbation: str = 0,
+                  beadWidth: SymbolicConstant = DEFAULT, curveSmooth: str = 5, filterRadius: str = 4,
+                  filterRadiusBy: SymbolicConstant = VALUE, flipNormalDir: Boolean = OFF,
+                  frozenBoundaryConditionRegion: SymbolicConstant = MODEL,
+                  isSensCalcOnlyOnDesignNodes: Boolean = OFF,
+                  modeTrackingRegion: SymbolicConstant = MODEL, nodalMoveLimit: float = 0,
+                  nodeSmooth: SymbolicConstant = DEFAULT,
+                  nodeUpdateStrategy: SymbolicConstant = CONSERVATIVE, numTrackedModes: int = 5,
                   updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF):
         """This method modifies the BeadTask object.
 
@@ -225,4 +224,3 @@ class BeadTask(OptimizationTask):
             None. 
         """
         pass
-

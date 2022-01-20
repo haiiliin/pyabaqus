@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class ConcCurrentState(LoadState):
-
-    """The ConcCurrentState object stores the propagating data of a concentrated current in a 
+    """The ConcCurrentState object stores the propagating data of a concentrated current in a
     step. One instance of this object is created internally by the ConcCurrent object for 
     each step. The instance is also deleted internally by the ConcCurrent object. 
     The ConcCurrentState object has no constructor or methods. 
@@ -51,4 +50,3 @@ class ConcCurrentState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

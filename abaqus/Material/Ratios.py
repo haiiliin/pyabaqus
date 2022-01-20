@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Ratios:
 
-    """The Ratios object specifies ratios that define anisotropic swelling. 
+class Ratios:
+    """The Ratios object specifies ratios that define anisotropic swelling.
 
     Access
     ------
@@ -73,4 +73,3 @@ class Ratios:
             RangeError. 
         """
         pass
-

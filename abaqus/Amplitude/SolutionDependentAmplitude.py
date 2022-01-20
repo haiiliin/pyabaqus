@@ -3,8 +3,7 @@ from .Amplitude import Amplitude
 
 
 class SolutionDependentAmplitude(Amplitude):
-
-    """The SolutionDependentAmplitude object defines a solution-dependent amplitude for 
+    """The SolutionDependentAmplitude object defines a solution-dependent amplitude for
     superplastic forming analysis. 
     The SolutionDependentAmplitude object is derived from the Amplitude object. 
 
@@ -24,7 +23,7 @@ class SolutionDependentAmplitude(Amplitude):
 
     """
 
-    def __init__(self, name: str, initial: float = 1, minimum: float = 0, maximum: float = 1000, 
+    def __init__(self, name: str, initial: float = 1, minimum: float = 0, maximum: float = 1000,
                  timeSpan: SymbolicConstant = STEP):
         """This method creates a SolutionDependentAmplitude object.
 
@@ -61,7 +60,7 @@ class SolutionDependentAmplitude(Amplitude):
         super().__init__()
         pass
 
-    def setValues(self, initial: float = 1, minimum: float = 0, maximum: float = 1000, 
+    def setValues(self, initial: float = 1, minimum: float = 0, maximum: float = 1000,
                   timeSpan: SymbolicConstant = STEP):
         """This method modifies the SolutionDependentAmplitude object.
 
@@ -89,4 +88,3 @@ class SolutionDependentAmplitude(Amplitude):
             RangeError. 
         """
         pass
-

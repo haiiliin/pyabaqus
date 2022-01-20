@@ -1,8 +1,7 @@
 
 
 class DataTable:
-
-    """The DataTable object is used to specify the parameter table of the respective parameter 
+    """The DataTable object is used to specify the parameter table of the respective parameter
     table type. 
     The data type of the values in each column in the DataTable object corresponds to the 
     data type mentioned for the respective ParameterColumn object. The DataTable object 
@@ -49,4 +48,3 @@ class DataTable:
             AbaqusException. 
         """
         pass
-

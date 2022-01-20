@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class XYReportOptions:
 
-    """The XYReportOptions object stores settings used by the writeXYReport method when you 
+class XYReportOptions:
+    """The XYReportOptions object stores settings used by the writeXYReport method when you
     write an XYData object to an ASCII file. The XYReportOptions object has no constructor. 
     Abaqus creates the *xyReportOptions* member when you import the Visualization module. 
 
@@ -20,9 +20,9 @@ class XYReportOptions:
 
     """
 
-    def setValues(self, pageWidth: int = 80, numDigits: int = 6, interpolation: Boolean = OFF, 
-                  xyData: Boolean = ON, totals: Boolean = OFF, minMax: Boolean = OFF, 
-                  pageWidthLimited: Boolean = OFF, numberFormat: SymbolicConstant = ENGINEERING, 
+    def setValues(self, pageWidth: int = 80, numDigits: int = 6, interpolation: Boolean = OFF,
+                  xyData: Boolean = ON, totals: Boolean = OFF, minMax: Boolean = OFF,
+                  pageWidthLimited: Boolean = OFF, numberFormat: SymbolicConstant = ENGINEERING,
                   layout: SymbolicConstant = SINGLE_TABLE):
         """This method modifies the XYReportOptions object.
 
@@ -68,4 +68,3 @@ class XYReportOptions:
               At least one of the data print methods must be selected 
         """
         pass
-

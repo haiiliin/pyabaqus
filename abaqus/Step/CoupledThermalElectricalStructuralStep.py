@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class CoupledThermalElectricalStructuralStep(AnalysisStep):
-
-    """The CoupledThermalElectricalStructuralStep object is used to analyze problems where the 
+    """The CoupledThermalElectricalStructuralStep object is used to analyze problems where the
     simultaneous solution of the temperature, stress/displacement and electrical fields is 
     necessary. 
     The CoupledThermalElectricalStructuralStep object is derived from the AnalysisStep 
@@ -189,7 +188,8 @@ class CoupledThermalElectricalStructuralStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -215,15 +215,15 @@ class CoupledThermalElectricalStructuralStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT, 
-                 timePeriod: float = 1, nlgeom: Boolean = OFF, 
-                 stabilizationMethod: SymbolicConstant = NONE, stabilizationMagnitude: float = None, 
-                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
-                 initialInc: float = None, minInc: float = None, maxInc: float = None, deltmx: float = 0, 
-                 cetol: float = 0, creepIntegration: SymbolicConstant = IMPLICIT, 
-                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = STEP, 
-                 extrapolation: SymbolicConstant = LINEAR, maintainAttributes: Boolean = False, 
-                 convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0, 
+    def __init__(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT,
+                 timePeriod: float = 1, nlgeom: Boolean = OFF,
+                 stabilizationMethod: SymbolicConstant = NONE, stabilizationMagnitude: float = None,
+                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                 initialInc: float = None, minInc: float = None, maxInc: float = None, deltmx: float = 0,
+                 cetol: float = 0, creepIntegration: SymbolicConstant = IMPLICIT,
+                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = STEP,
+                 extrapolation: SymbolicConstant = LINEAR, maintainAttributes: Boolean = False,
+                 convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0,
                  continueDampingFactors: Boolean = OFF):
         """This method creates a CoupledThermalElectricalStructuralStep object.
 
@@ -317,14 +317,14 @@ class CoupledThermalElectricalStructuralStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', response: SymbolicConstant = TRANSIENT, timePeriod: float = 1, 
-                  nlgeom: Boolean = OFF, stabilizationMethod: SymbolicConstant = NONE, 
-                  stabilizationMagnitude: float = None, 
-                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
-                  initialInc: float = None, minInc: float = None, maxInc: float = None, deltmx: float = 0, 
-                  cetol: float = 0, creepIntegration: SymbolicConstant = IMPLICIT, 
-                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = STEP, 
-                  extrapolation: SymbolicConstant = LINEAR, convertSDI: SymbolicConstant = PROPAGATED, 
+    def setValues(self, description: str = '', response: SymbolicConstant = TRANSIENT, timePeriod: float = 1,
+                  nlgeom: Boolean = OFF, stabilizationMethod: SymbolicConstant = NONE,
+                  stabilizationMagnitude: float = None,
+                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                  initialInc: float = None, minInc: float = None, maxInc: float = None, deltmx: float = 0,
+                  cetol: float = 0, creepIntegration: SymbolicConstant = IMPLICIT,
+                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = STEP,
+                  extrapolation: SymbolicConstant = LINEAR, convertSDI: SymbolicConstant = PROPAGATED,
                   adaptiveDampingRatio: float = 0, continueDampingFactors: Boolean = OFF):
         """This method modifies the CoupledThermalElectricalStructuralStep object.
 
@@ -404,4 +404,3 @@ class CoupledThermalElectricalStructuralStep(AnalysisStep):
             RangeError. 
         """
         pass
-

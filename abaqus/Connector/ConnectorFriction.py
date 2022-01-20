@@ -7,8 +7,7 @@ from .TangentialBehavior import TangentialBehavior
 
 
 class ConnectorFriction(ConnectorBehaviorOption):
-
-    """The ConnectorFriction object defines Coulomb-like or hysteretic friction behavior for 
+    """The ConnectorFriction object defines Coulomb-like or hysteretic friction behavior for
     one or more components of a connector's relative motion. 
     The ConnectorFriction object is derived from the ConnectorBehaviorOption object. 
 
@@ -41,13 +40,13 @@ class ConnectorFriction(ConnectorBehaviorOption):
     # for this ConnectorBehaviorOption. 
     options: ConnectorOptions = ConnectorOptions()
 
-    def __init__(self, frictionModel: SymbolicConstant = PREDEFINED, slipStyle: SymbolicConstant = SPECIFY, 
-                 tangentDirection: int = None, stickStiffness: float = None, 
-                 componentType: SymbolicConstant = NO_INDEPENDENT_COMPONENTS, 
-                 slipDependency: Boolean = OFF, temperatureDependency: Boolean = OFF, 
-                 dependencies: int = 0, useContactForceComponent: Boolean = OFF, 
-                 contactForceStyle: SymbolicConstant = COMPONENT_NUMBER, contactForceComponent: int = 0, 
-                 forcePotentialOperator: SymbolicConstant = SUM, forcePotentialExponent: float = 2, 
+    def __init__(self, frictionModel: SymbolicConstant = PREDEFINED, slipStyle: SymbolicConstant = SPECIFY,
+                 tangentDirection: int = None, stickStiffness: float = None,
+                 componentType: SymbolicConstant = NO_INDEPENDENT_COMPONENTS,
+                 slipDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0, useContactForceComponent: Boolean = OFF,
+                 contactForceStyle: SymbolicConstant = COMPONENT_NUMBER, contactForceComponent: int = 0,
+                 forcePotentialOperator: SymbolicConstant = SUM, forcePotentialExponent: float = 2,
                  connectorPotentials: ConnectorPotentialArray = None,
                  table: tuple = (), independentComponents: tuple = ()):
         """This method creates a connector friction behavior option for a ConnectorSection object.
@@ -176,4 +175,3 @@ class ConnectorFriction(ConnectorBehaviorOption):
             ValueError. 
         """
         pass
-

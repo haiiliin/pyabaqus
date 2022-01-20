@@ -3,8 +3,7 @@ from ..PlotOptions.DGOrientationOptions import DGOrientationOptions
 
 
 class OrientationOptions(DGOrientationOptions):
-
-    """The OrientationOptions object stores values and attributes associated with a material 
+    """The OrientationOptions object stores values and attributes associated with a material
     orientation plot. The OrientationOptions object has no constructor command. Abaqus 
     creates a *defaultOdbDisplay.materialOrientationOptions* member when you import the 
     Visualization module. Abaqus creates a *materialOrientationOptions* member when it 
@@ -83,10 +82,10 @@ class OrientationOptions(DGOrientationOptions):
     # value is "Red". 
     axis3Color: str = ''
 
-    def setValues(self, options: 'OrientationOptions' = None, axis1Color: str = '', showAxis1: Boolean = ON, 
-                  axis2Color: str = '', showAxis2: Boolean = ON, axis3Color: str = '', 
-                  showAxis3: Boolean = ON, symbolSize: float = 12, 
-                  lineThickness: SymbolicConstant = VERY_THIN, orientation: SymbolicConstant = PLY, 
+    def setValues(self, options: 'OrientationOptions' = None, axis1Color: str = '', showAxis1: Boolean = ON,
+                  axis2Color: str = '', showAxis2: Boolean = ON, axis3Color: str = '',
+                  showAxis3: Boolean = ON, symbolSize: float = 12,
+                  lineThickness: SymbolicConstant = VERY_THIN, orientation: SymbolicConstant = PLY,
                   arrowheadStyle: SymbolicConstant = NONE, scaleMode: SymbolicConstant = MODEL_SIZE):
         """This method modifies the OrientationOptions object.
 
@@ -139,4 +138,3 @@ class OrientationOptions(DGOrientationOptions):
             RangeError. 
         """
         pass
-

@@ -3,8 +3,7 @@ from .StopCondition import StopCondition
 
 
 class LocalStopCondition(StopCondition):
-
-    """The LocalStopCondition object defines a local stop condition. 
+    """The LocalStopCondition object defines a local stop condition.
     The LocalStopCondition object is derived from the StopCondition object. 
 
     Access
@@ -20,10 +19,10 @@ class LocalStopCondition(StopCondition):
 
     """
 
-    def __init__(self, name: str, referenceFactor: float, comparisonOperation: SymbolicConstant = LESS_THAN, 
-                 identifier: SymbolicConstant = MOVEMENT, 
-                 identifierOperation: SymbolicConstant = MAXIMUM, 
-                 referenceDesignCycle: SymbolicConstant = PREVIOUS, 
+    def __init__(self, name: str, referenceFactor: float, comparisonOperation: SymbolicConstant = LESS_THAN,
+                 identifier: SymbolicConstant = MOVEMENT,
+                 identifierOperation: SymbolicConstant = MAXIMUM,
+                 referenceDesignCycle: SymbolicConstant = PREVIOUS,
                  referenceOperation: SymbolicConstant = ADD, region: SymbolicConstant = MODEL):
         """This method creates a LocalStopCondition object.
 
@@ -81,10 +80,10 @@ class LocalStopCondition(StopCondition):
         super().__init__()
         pass
 
-    def setValues(self, comparisonOperation: SymbolicConstant = LESS_THAN, 
-                  identifier: SymbolicConstant = MOVEMENT, 
-                  identifierOperation: SymbolicConstant = MAXIMUM, 
-                  referenceDesignCycle: SymbolicConstant = PREVIOUS, 
+    def setValues(self, comparisonOperation: SymbolicConstant = LESS_THAN,
+                  identifier: SymbolicConstant = MOVEMENT,
+                  identifierOperation: SymbolicConstant = MAXIMUM,
+                  referenceDesignCycle: SymbolicConstant = PREVIOUS,
                   referenceOperation: SymbolicConstant = ADD, region: SymbolicConstant = MODEL):
         """This method modifies the LocalStopCondition object.
 
@@ -132,4 +131,3 @@ class LocalStopCondition(StopCondition):
             None. 
         """
         pass
-

@@ -1,8 +1,8 @@
 from .StructuralDampingByFrequencyComponentArray import StructuralDampingByFrequencyComponentArray
 
-class StructuralDampingByFrequency:
 
-    """A StructuralDampingByFrequency object contains structural damping parameters. 
+class StructuralDampingByFrequency:
+    """A StructuralDampingByFrequency object contains structural damping parameters.
 
     Access
     ------
@@ -19,4 +19,3 @@ class StructuralDampingByFrequency:
 
     # A StructuralDampingByFrequencyComponentArray object. 
     components: StructuralDampingByFrequencyComponentArray = StructuralDampingByFrequencyComponentArray()
-

@@ -1,8 +1,7 @@
 
 
 class SurfaceBeamSmoothingAssignment:
-
-    """The SurfaceBeamSmoothingAssignment object stores the surface beam smoothing assignment 
+    """The SurfaceBeamSmoothingAssignment object stores the surface beam smoothing assignment
     definition for surfaces in ContactStd objects. The SurfaceBeamSmoothingAssignment object 
     has no constructor or members. 
 
@@ -90,4 +89,3 @@ class SurfaceBeamSmoothingAssignment:
             None. 
         """
         pass
-

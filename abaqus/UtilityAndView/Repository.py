@@ -1,8 +1,5 @@
-
-
 class Repository(dict):
-
-    """Repositories are containers that store a particular type of object; for example, the 
+    """Repositories are containers that store a particular type of object; for example, the
     steps repository contains all the steps defined in the model. An Abaqus Scripting 
     Interface Repository maps a key to a value. The key is usually a String, and the value 
     is any Python object, usually an Abaqus object. A repository is similar to a Python 
@@ -52,4 +49,3 @@ class Repository(dict):
             None. 
         """
         pass
-

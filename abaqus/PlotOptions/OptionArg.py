@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class OptionArg:
 
-    """The OptionArg object is used to store values and attributes as a temporary object to be 
+class OptionArg:
+    """The OptionArg object is used to store values and attributes as a temporary object to be
     associated with a viewCutOptions object. The OptionArg object has only a constructor 
     command. 
 
@@ -27,10 +27,10 @@ class OptionArg:
 
     """
 
-    def __init__(self, renderStyle: SymbolicConstant = WIREFRAME, visibleEdges: SymbolicConstant = FEATURE, 
-                 edgeColorWireHide: str = '', edgeColorFillShade: str = '', 
-                 edgeLineStyle: SymbolicConstant = SOLID, 
-                 edgeLineThickness: SymbolicConstant = VERY_THIN, colorCodeOverride: Boolean = ON, 
+    def __init__(self, renderStyle: SymbolicConstant = WIREFRAME, visibleEdges: SymbolicConstant = FEATURE,
+                 edgeColorWireHide: str = '', edgeColorFillShade: str = '',
+                 edgeLineStyle: SymbolicConstant = SOLID,
+                 edgeLineThickness: SymbolicConstant = VERY_THIN, colorCodeOverride: Boolean = ON,
                  fillColor: str = '', translucency: Boolean = OFF, translucencyFactor: float = 0):
         """This method creates an OptionArg object.
 
@@ -80,4 +80,3 @@ class OptionArg:
             RangeError. 
         """
         pass
-

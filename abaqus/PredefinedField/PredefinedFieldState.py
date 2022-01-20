@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class PredefinedFieldState:
 
-    """The PredefinedFieldState object is the base object for the objects in the 
+class PredefinedFieldState:
+    """The PredefinedFieldState object is the base object for the objects in the
     predefinedFieldState repository of the Step object. The members of the 
     PredefinedFieldState object are common to all objects derived from PredefinedFieldState. 
     The PredefinedFieldState object has no constructor or methods. 
@@ -39,4 +39,3 @@ class PredefinedFieldState:
     # use different subsets of the entire list of possible values depending on propagation 
     # rules. 
     status: SymbolicConstant = None
-

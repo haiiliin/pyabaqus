@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Fastener:
 
-    """The Fastener object is the abstract base type for PointFastener, DiscreteFastener, and 
+class Fastener:
+    """The Fastener object is the abstract base type for PointFastener, DiscreteFastener, and
     AssembledFastener. 
 
     Access
@@ -58,4 +58,3 @@ class Fastener:
             None. 
         """
         pass
-

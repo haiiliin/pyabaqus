@@ -3,8 +3,7 @@ from ..Region.Region import Region
 
 
 class SizingMemberSize(GeometricRestriction):
-
-    """The SizingMemberSize object defines a sizing member size geometric restriction. 
+    """The SizingMemberSize object defines a sizing member size geometric restriction.
     The SizingMemberSize object is derived from the GeometricRestriction object. 
 
     Access
@@ -60,4 +59,3 @@ class SizingMemberSize(GeometricRestriction):
             None. 
         """
         pass
-

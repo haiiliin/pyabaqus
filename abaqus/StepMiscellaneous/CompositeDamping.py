@@ -1,8 +1,8 @@
 from .CompositeDampingComponentArray import CompositeDampingComponentArray
 
-class CompositeDamping:
 
-    """A CompositeDamping object contains composite modal damping parameters. 
+class CompositeDamping:
+    """A CompositeDamping object contains composite modal damping parameters.
 
     Access
     ------
@@ -19,4 +19,3 @@ class CompositeDamping:
 
     # A CompositeDampingComponentArray object. 
     components: CompositeDampingComponentArray = CompositeDampingComponentArray()
-

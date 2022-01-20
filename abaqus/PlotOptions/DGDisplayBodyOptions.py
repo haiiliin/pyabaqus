@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class DGDisplayBodyOptions:
 
-    """The DGDisplayBodyOptions object stores values and attributes applied to display bodies. 
+class DGDisplayBodyOptions:
+    """The DGDisplayBodyOptions object stores values and attributes applied to display bodies.
     The DGDisplayBodyOptions object has no constructor command. Abaqus creates an 
     *odbDisplayOptions.displayBodyOptions* member when a display group instance is created, 
     using values from *odbDisplay.displayBodyOptions*. 
@@ -74,4 +74,3 @@ class DGDisplayBodyOptions:
     # A tuple of three Floats specifying the coordinate scaling in each of the three 
     # coordinate directions when *coordinateScale*=ON. The default value is (1, 1, 1). 
     coordinateScaleFactors: float = None
-

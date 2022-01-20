@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class StdXplCosimulationState(InteractionState):
-
-    """The StdXplCosimulationState object stores the propagating data for a StdXplCosimulation 
+    """The StdXplCosimulationState object stores the propagating data for a StdXplCosimulation
     object. One instance of this object is created internally by the StdXplCosimulation 
     object for each step. The instance is also deleted internally by the StdXplCosimulation 
     object. 
@@ -39,4 +38,3 @@ class StdXplCosimulationState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

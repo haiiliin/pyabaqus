@@ -3,8 +3,7 @@ from ..Region.Region import Region
 
 
 class IntegratedOutputSection:
-
-    """The IntegratedOutputSection object specifies parameters used for integrated output. 
+    """The IntegratedOutputSection object specifies parameters used for integrated output.
 
     Access
     ------
@@ -19,8 +18,8 @@ class IntegratedOutputSection:
 
     """
 
-    def __init__(self, name: str, surface: Region = Region(), refPoint: SymbolicConstant = None, 
-                 refPointAtCenter: Boolean = OFF, refPointMotion: SymbolicConstant = INDEPENDENT, 
+    def __init__(self, name: str, surface: Region = Region(), refPoint: SymbolicConstant = None,
+                 refPointAtCenter: Boolean = OFF, refPointMotion: SymbolicConstant = INDEPENDENT,
                  localCsys: str = None, projectOrientation: Boolean = OFF):
         """This method creates an IntegratedOutputSection object.
 
@@ -70,8 +69,8 @@ class IntegratedOutputSection:
         """
         pass
 
-    def setValues(self, surface: Region = Region(), refPoint: SymbolicConstant = None, 
-                  refPointAtCenter: Boolean = OFF, refPointMotion: SymbolicConstant = INDEPENDENT, 
+    def setValues(self, surface: Region = Region(), refPoint: SymbolicConstant = None,
+                  refPointAtCenter: Boolean = OFF, refPointMotion: SymbolicConstant = INDEPENDENT,
                   localCsys: str = None, projectOrientation: Boolean = OFF):
         """This method modifies the IntegratedOutputSection object.
 
@@ -114,4 +113,3 @@ class IntegratedOutputSection:
             None. 
         """
         pass
-

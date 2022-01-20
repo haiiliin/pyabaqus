@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class MassDiffusionStep(AnalysisStep):
-
-    """The MassDiffusionStep object is used to control uncoupled transient or steady-state mass 
+    """The MassDiffusionStep object is used to control uncoupled transient or steady-state mass
     diffusion analysis. 
     The MassDiffusionStep object is derived from the AnalysisStep object. 
 
@@ -153,7 +152,8 @@ class MassDiffusionStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -179,11 +179,11 @@ class MassDiffusionStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT, 
-                 timePeriod: float = 1, timeIncrementationMethod: SymbolicConstant = AUTOMATIC, 
-                 maxNumInc: int = 100, initialInc: float = None, minInc: float = None, 
-                 maxInc: float = None, end: SymbolicConstant = PERIOD, dcmax: float = 0, 
-                 amplitude: SymbolicConstant = STEP, extrapolation: SymbolicConstant = LINEAR, 
+    def __init__(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT,
+                 timePeriod: float = 1, timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+                 maxNumInc: int = 100, initialInc: float = None, minInc: float = None,
+                 maxInc: float = None, end: SymbolicConstant = PERIOD, dcmax: float = 0,
+                 amplitude: SymbolicConstant = STEP, extrapolation: SymbolicConstant = LINEAR,
                  maintainAttributes: Boolean = False, convertSDI: SymbolicConstant = PROPAGATED):
         """This method creates a MassDiffusionStep object.
 
@@ -251,10 +251,10 @@ class MassDiffusionStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', response: SymbolicConstant = TRANSIENT, timePeriod: float = 1, 
-                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
-                  initialInc: float = None, minInc: float = None, maxInc: float = None, 
-                  end: SymbolicConstant = PERIOD, dcmax: float = 0, amplitude: SymbolicConstant = STEP, 
+    def setValues(self, description: str = '', response: SymbolicConstant = TRANSIENT, timePeriod: float = 1,
+                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                  initialInc: float = None, minInc: float = None, maxInc: float = None,
+                  end: SymbolicConstant = PERIOD, dcmax: float = 0, amplitude: SymbolicConstant = STEP,
                   extrapolation: SymbolicConstant = LINEAR, convertSDI: SymbolicConstant = PROPAGATED):
         """This method modifies the MassDiffusionStep object.
 
@@ -308,4 +308,3 @@ class MassDiffusionStep(AnalysisStep):
             RangeError. 
         """
         pass
-

@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Face:
 
-    """Faces are two-dimensional regions of geometry. 
+class Face:
+    """Faces are two-dimensional regions of geometry.
 
     Access
     ------
@@ -357,4 +357,3 @@ class Face:
             !img 
         """
         pass
-

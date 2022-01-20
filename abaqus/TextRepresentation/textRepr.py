@@ -16,6 +16,7 @@ Corresponding analysis keywords
 
 """
 
+
 def getIndentedRepr(object, maxRecursionDepth: SymbolicConstant = None,
                     maxElementsInSequence: SymbolicConstant = None, significantDigits: float = 6):
     """This method returns a String with each level of parentheses indented.
@@ -50,6 +51,7 @@ def getIndentedRepr(object, maxRecursionDepth: SymbolicConstant = None,
         None. 
     """
     pass
+
 
 def getPaths(object, maxRecursionDepth: SymbolicConstant = None,
              maxElementsInSequence: SymbolicConstant = None, pathRoot: str = ''):
@@ -87,6 +89,7 @@ def getPaths(object, maxRecursionDepth: SymbolicConstant = None,
     """
     pass
 
+
 def getTypes(object, maxRecursionDepth: SymbolicConstant = None,
              maxElementsInSequence: SymbolicConstant = None, pathRoot: str = ''):
     """This method processes the argument, interprets its structure, and returns a String
@@ -120,6 +123,7 @@ def getTypes(object, maxRecursionDepth: SymbolicConstant = None,
         None. 
     """
     pass
+
 
 def prettyPrint(object, maxRecursionDepth: SymbolicConstant = None,
                 maxElementsInSequence: SymbolicConstant = None, significantDigits: float = 6):
@@ -155,6 +159,7 @@ def prettyPrint(object, maxRecursionDepth: SymbolicConstant = None,
         None. 
     """
     pass
+
 
 def printPaths(object, maxRecursionDepth: SymbolicConstant = None,
                maxElementsInSequence: SymbolicConstant = None, pathRoot: str = ''):
@@ -192,6 +197,7 @@ def printPaths(object, maxRecursionDepth: SymbolicConstant = None,
     """
     pass
 
+
 def printTypes(object, maxRecursionDepth: SymbolicConstant = None,
                maxElementsInSequence: SymbolicConstant = None, pathRoot: str = ''):
     """This method prints the object type. The printTypes function uses getTypes to print a
@@ -225,4 +231,3 @@ def printTypes(object, maxRecursionDepth: SymbolicConstant = None,
         None. 
     """
     pass
-

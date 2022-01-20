@@ -4,6 +4,7 @@ from .ConstraintDisplayOptions import ConstraintDisplayOptions
 from .EngineeringFeatureDisplayOptions import EngineeringFeatureDisplayOptions
 from .GeometricRestrictionDisplayOptions import GeometricRestrictionDisplayOptions
 from .GeometryDisplayOptions import GeometryDisplayOptions
+from .InteractionDisplayOptions import InteractionDisplayOptions
 from .LoadDisplayOptions import LoadDisplayOptions
 from .MeshDisplayOptions import MeshDisplayOptions
 from .OptimizationTaskDisplayOptions import OptimizationTaskDisplayOptions
@@ -12,12 +13,12 @@ from .StopConditionDisplayOptions import StopConditionDisplayOptions
 from .SymbolDisplayOptions import SymbolDisplayOptions
 from ..DisplayGroup.DisplayGroup import DisplayGroup
 from ..DisplayGroup.DisplayGroupInstance import DisplayGroupInstance
+from ..DisplayGroup.Leaf import Leaf
 from ..UtilityAndView.Repository import Repository
 
 
 class AssemblyDisplayOptions:
-
-    """The AssemblyDisplayOptions object stores settings that specify how assemblies are to be 
+    """The AssemblyDisplayOptions object stores settings that specify how assemblies are to be
     displayed in a particular viewport. The AssemblyDisplayOptions object has no 
     constructor. When you create a new viewport, the settings are copied from the current 
     viewport. 
@@ -106,7 +107,7 @@ class AssemblyDisplayOptions:
 
     # A DisplayGroup object specifying the current display group and referring to an object in 
     # the *displayGroups* member of Session. 
-    displayGroup: DisplayGroup = None
+    displayGroup: DisplayGroup = DisplayGroup('dg', Leaf(EMPTY_LEAF))
 
     # A repository of DisplayGroupInstance objects. 
     displayGroupInstances: Repository[str, DisplayGroupInstance] = Repository[str, DisplayGroupInstance]()
@@ -124,7 +125,7 @@ class AssemblyDisplayOptions:
     geometryOptions: GeometryDisplayOptions = GeometryDisplayOptions()
 
     # An InteractionDisplayOptions object. 
-    interactionOptions: int = None
+    interactionOptions: InteractionDisplayOptions = InteractionDisplayOptions()
 
     # A LoadDisplayOptions object. 
     loadOptions: LoadDisplayOptions = LoadDisplayOptions()
@@ -149,14 +150,14 @@ class AssemblyDisplayOptions:
     # any valid step name. The default value is "Initial". 
     step: str = ''
 
-    def setValues(self, visibleInstances: tuple = (), step: str = '', renderStyle: SymbolicConstant = WIREFRAME, 
-                  mesh: Boolean = OFF, loads: Boolean = OFF, bcs: Boolean = OFF, 
-                  interactions: Boolean = OFF, constraints: Boolean = OFF, connectors: Boolean = OFF, 
-                  cnxEndPoints: Boolean = ON, cnxLocalAxes: Boolean = ON, cnxTypeLabels: Boolean = ON, 
-                  cnxTagDisplay: Boolean = OFF, predefinedFields: Boolean = OFF, 
-                  visibleDisplayGroups: tuple[DisplayGroup] = (), engineeringFeatures: Boolean = OFF, 
-                  renderBeamProfiles: Boolean = OFF, beamScaleFactor: float = 1, 
-                  optimizationTasks: Boolean = OFF, geometricRestrictions: Boolean = OFF, 
+    def setValues(self, visibleInstances: tuple = (), step: str = '', renderStyle: SymbolicConstant = WIREFRAME,
+                  mesh: Boolean = OFF, loads: Boolean = OFF, bcs: Boolean = OFF,
+                  interactions: Boolean = OFF, constraints: Boolean = OFF, connectors: Boolean = OFF,
+                  cnxEndPoints: Boolean = ON, cnxLocalAxes: Boolean = ON, cnxTypeLabels: Boolean = ON,
+                  cnxTagDisplay: Boolean = OFF, predefinedFields: Boolean = OFF,
+                  visibleDisplayGroups: tuple[DisplayGroup] = (), engineeringFeatures: Boolean = OFF,
+                  renderBeamProfiles: Boolean = OFF, beamScaleFactor: float = 1,
+                  optimizationTasks: Boolean = OFF, geometricRestrictions: Boolean = OFF,
                   stopConditions: Boolean = OFF):
         """This method modifies the AssemblyDisplayOptions object.
 
@@ -226,4 +227,3 @@ class AssemblyDisplayOptions:
             RangeError. 
         """
         pass
-

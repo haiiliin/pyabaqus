@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class VelocityBC(BoundaryCondition):
-
-    """The VelocityBC object stores the data for a velocity boundary condition. 
+    """The VelocityBC object stores the data for a velocity boundary condition.
     The VelocityBC object is derived from the BoundaryCondition object. 
 
     Access
@@ -47,13 +46,13 @@ class VelocityBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region, fieldName: str = '', 
-                 v1: typing.Union[SymbolicConstant,float] = UNSET, 
-                 v2: typing.Union[SymbolicConstant,float] = UNSET, 
-                 v3: typing.Union[SymbolicConstant,float] = UNSET, 
-                 vr1: typing.Union[SymbolicConstant,float] = UNSET, 
-                 vr2: typing.Union[SymbolicConstant,float] = UNSET, 
-                 vr3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
+    def __init__(self, name: str, createStepName: str, region: Region, fieldName: str = '',
+                 v1: typing.Union[SymbolicConstant, float] = UNSET,
+                 v2: typing.Union[SymbolicConstant, float] = UNSET,
+                 v3: typing.Union[SymbolicConstant, float] = UNSET,
+                 vr1: typing.Union[SymbolicConstant, float] = UNSET,
+                 vr2: typing.Union[SymbolicConstant, float] = UNSET,
+                 vr3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
                  localCsys: str = None, distributionType: SymbolicConstant = UNIFORM):
         """This method creates a VelocityBC object.
 
@@ -120,12 +119,12 @@ class VelocityBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, fieldName: str = '', v1: typing.Union[SymbolicConstant,float] = UNSET, 
-                  v2: typing.Union[SymbolicConstant,float] = UNSET, 
-                  v3: typing.Union[SymbolicConstant,float] = UNSET, 
-                  vr1: typing.Union[SymbolicConstant,float] = UNSET, 
-                  vr2: typing.Union[SymbolicConstant,float] = UNSET, 
-                  vr3: typing.Union[SymbolicConstant,float] = UNSET, amplitude: str = UNSET, 
+    def setValues(self, fieldName: str = '', v1: typing.Union[SymbolicConstant, float] = UNSET,
+                  v2: typing.Union[SymbolicConstant, float] = UNSET,
+                  v3: typing.Union[SymbolicConstant, float] = UNSET,
+                  vr1: typing.Union[SymbolicConstant, float] = UNSET,
+                  vr2: typing.Union[SymbolicConstant, float] = UNSET,
+                  vr3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
                   localCsys: str = None, distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing VelocityBC object in the step where it is
         created.
@@ -182,13 +181,13 @@ class VelocityBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        v1: typing.Union[SymbolicConstant,float] = SET, 
-                        v2: typing.Union[SymbolicConstant,float] = SET, 
-                        v3: typing.Union[SymbolicConstant,float] = SET, 
-                        vr1: typing.Union[SymbolicConstant,float] = SET, 
-                        vr2: typing.Union[SymbolicConstant,float] = SET, 
-                        vr3: typing.Union[SymbolicConstant,float] = SET, 
+    def setValuesInStep(self, stepName: str,
+                        v1: typing.Union[SymbolicConstant, float] = SET,
+                        v2: typing.Union[SymbolicConstant, float] = SET,
+                        v3: typing.Union[SymbolicConstant, float] = SET,
+                        vr1: typing.Union[SymbolicConstant, float] = SET,
+                        vr2: typing.Union[SymbolicConstant, float] = SET,
+                        vr3: typing.Union[SymbolicConstant, float] = SET,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing VelocityBC object in the
         specified step.
@@ -231,4 +230,3 @@ class VelocityBC(BoundaryCondition):
             None. 
         """
         pass
-

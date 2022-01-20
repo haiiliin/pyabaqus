@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class MovieOptions:
 
-    """The MovieOptions object stores settings that control how the movie background for an 
+class MovieOptions:
+    """The MovieOptions object stores settings that control how the movie background for an
     animation is rendered in a particular viewport. MovieOptions objects are accessed from 
     the movie options associated with a particular viewport. 
     The MovieOptions object has no constructor; Abaqus creates the *movieOptions* member for 
@@ -21,10 +21,10 @@ class MovieOptions:
 
     """
 
-    def setValues(self, movieName: str = '', showMovie: Boolean = OFF, 
-                  positionMethod: SymbolicConstant = FIT_TO_VIEWPORT, 
-                  fitMethod: SymbolicConstant = BEST_FIT, alignment: SymbolicConstant = CENTER, 
-                  xScale: float = 1, yScale: float = 1, origin: tuple[float] = (), 
+    def setValues(self, movieName: str = '', showMovie: Boolean = OFF,
+                  positionMethod: SymbolicConstant = FIT_TO_VIEWPORT,
+                  fitMethod: SymbolicConstant = BEST_FIT, alignment: SymbolicConstant = CENTER,
+                  xScale: float = 1, yScale: float = 1, origin: tuple[float] = (),
                   translucency: float = 1, options: str = None):
         """This method modifies the MovieOptions object.
 
@@ -89,4 +89,3 @@ class MovieOptions:
             RangeError. 
         """
         pass
-

@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class DiscreteFastener(Fastener):
-
-    """The DiscreteFastener object defines a discrete fastener. 
+    """The DiscreteFastener object defines a discrete fastener.
     The DiscreteFastener object is derived from the Fastener object. 
 
     Access
@@ -30,9 +29,9 @@ class DiscreteFastener(Fastener):
     # OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, region: Region, influenceRadius: typing.Union[SymbolicConstant,float], 
-                 ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON, 
-                 coupling: SymbolicConstant = CONTINUUM, weightingMethod: SymbolicConstant = UNIFORM, 
+    def __init__(self, name: str, region: Region, influenceRadius: typing.Union[SymbolicConstant, float],
+                 ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON,
+                 coupling: SymbolicConstant = CONTINUUM, weightingMethod: SymbolicConstant = UNIFORM,
                  localCsys: int = None):
         """This method creates a DiscreteFastener object. Although the constructor is available
         both for parts and for the assembly, DiscreteFastener objects are currently supported
@@ -88,8 +87,8 @@ class DiscreteFastener(Fastener):
         super().__init__()
         pass
 
-    def setValues(self, ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON, 
-                  coupling: SymbolicConstant = CONTINUUM, weightingMethod: SymbolicConstant = UNIFORM, 
+    def setValues(self, ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON,
+                  coupling: SymbolicConstant = CONTINUUM, weightingMethod: SymbolicConstant = UNIFORM,
                   localCsys: int = None):
         """This method modifies the DiscreteFastener object.
 
@@ -130,4 +129,3 @@ class DiscreteFastener(Fastener):
             None. 
         """
         pass
-

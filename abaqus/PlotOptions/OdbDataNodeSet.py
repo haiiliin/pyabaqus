@@ -1,8 +1,5 @@
-
-
 class OdbDataNodeSet:
-
-    """The OdbDataNodeSet object stores node set data. 
+    """The OdbDataNodeSet object stores node set data.
 
     Access
     ------
@@ -23,4 +20,3 @@ class OdbDataNodeSet:
     # A String-to-tuple-of-Ints Dictionary specifying the nodes in the set. This attribute is 
     # read-only. 
     nodes: str = ''
-

@@ -1,6 +1,6 @@
 from abaqusConstants import *
-from .MessageArray import MessageArray
 from .Job import Job
+from .MessageArray import MessageArray
 
 
 class ModelJob(Job):

@@ -1,8 +1,5 @@
-
-
 class OdbDataInstance:
-
-    """The OdbDataInstance object instance data. 
+    """The OdbDataInstance object instance data.
 
     Access
     ------
@@ -19,4 +16,3 @@ class OdbDataInstance:
 
     # A String specifying the instance name. This attribute is read-only. 
     name: str = ''
-

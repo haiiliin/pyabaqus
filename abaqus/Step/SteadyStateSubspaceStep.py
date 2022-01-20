@@ -18,8 +18,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class SteadyStateSubspaceStep(AnalysisStep):
-
-    """The SteadyStateSubspaceStep object is used to calculate the linearized steady-state 
+    """The SteadyStateSubspaceStep object is used to calculate the linearized steady-state
     response of the system to harmonic excitation on the basis of the subspace projection 
     method. 
     The SteadyStateSubspaceStep object is derived from the AnalysisStep object. 
@@ -144,7 +143,8 @@ class SteadyStateSubspaceStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -170,11 +170,11 @@ class SteadyStateSubspaceStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, frequencyRange: SteadyStateSubspaceFrequencyArray, 
-                 description: str = '', factorization: SymbolicConstant = COMPLEX, 
-                 scale: SymbolicConstant = LOGARITHMIC, matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
-                 maintainAttributes: Boolean = False, subdivideUsingEigenfrequencies: Boolean = ON, 
-                 projection: SymbolicConstant = ALL_FREQUENCIES, maxDampingChange: float = 0, 
+    def __init__(self, name: str, previous: str, frequencyRange: SteadyStateSubspaceFrequencyArray,
+                 description: str = '', factorization: SymbolicConstant = COMPLEX,
+                 scale: SymbolicConstant = LOGARITHMIC, matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+                 maintainAttributes: Boolean = False, subdivideUsingEigenfrequencies: Boolean = ON,
+                 projection: SymbolicConstant = ALL_FREQUENCIES, maxDampingChange: float = 0,
                  maxStiffnessChange: float = 0, frictionDamping: Boolean = OFF):
         """This method creates a SteadyStateSubspaceStep object.
 
@@ -234,10 +234,10 @@ class SteadyStateSubspaceStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', factorization: SymbolicConstant = COMPLEX, 
-                  scale: SymbolicConstant = LOGARITHMIC, matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
-                  subdivideUsingEigenfrequencies: Boolean = ON, 
-                  projection: SymbolicConstant = ALL_FREQUENCIES, maxDampingChange: float = 0, 
+    def setValues(self, description: str = '', factorization: SymbolicConstant = COMPLEX,
+                  scale: SymbolicConstant = LOGARITHMIC, matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+                  subdivideUsingEigenfrequencies: Boolean = ON,
+                  projection: SymbolicConstant = ALL_FREQUENCIES, maxDampingChange: float = 0,
                   maxStiffnessChange: float = 0, frictionDamping: Boolean = OFF):
         """This method modifies the SteadyStateSubspaceStep object.
 
@@ -281,4 +281,3 @@ class SteadyStateSubspaceStep(AnalysisStep):
             RangeError. 
         """
         pass
-

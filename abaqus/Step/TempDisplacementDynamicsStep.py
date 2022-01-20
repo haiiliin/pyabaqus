@@ -18,8 +18,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class TempDisplacementDynamicsStep(AnalysisStep):
-
-    """The TempDisplacementDynamicsStep object is used to perform a dynamic coupled 
+    """The TempDisplacementDynamicsStep object is used to perform a dynamic coupled
     thermal-stress analysis using explicit integration. 
     The TempDisplacementDynamicsStep object is derived from the AnalysisStep object. 
 
@@ -151,7 +150,8 @@ class TempDisplacementDynamicsStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -177,11 +177,11 @@ class TempDisplacementDynamicsStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1, 
-                 nlgeom: Boolean = OFF, timeIncrementationMethod: SymbolicConstant = AUTOMATIC_GLOBAL, 
-                 maxIncrement: float = None, scaleFactor: float = 1, userDefinedInc: float = None, 
-                 massScaling: MassScalingArray = PREVIOUS_STEP, linearBulkViscosity: float = 0, 
-                 quadBulkViscosity: float = 1, maintainAttributes: Boolean = False, 
+    def __init__(self, name: str, previous: str, description: str = '', timePeriod: float = 1,
+                 nlgeom: Boolean = OFF, timeIncrementationMethod: SymbolicConstant = AUTOMATIC_GLOBAL,
+                 maxIncrement: float = None, scaleFactor: float = 1, userDefinedInc: float = None,
+                 massScaling: MassScalingArray = PREVIOUS_STEP, linearBulkViscosity: float = 0,
+                 quadBulkViscosity: float = 1, maintainAttributes: Boolean = False,
                  improvedDtMethod: Boolean = ON):
         """This method creates a TempDisplacementDynamicsStep object.
 
@@ -245,10 +245,10 @@ class TempDisplacementDynamicsStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', timePeriod: float = 1, nlgeom: Boolean = OFF, 
-                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC_GLOBAL, 
-                  maxIncrement: float = None, scaleFactor: float = 1, userDefinedInc: float = None, 
-                  massScaling: MassScalingArray = PREVIOUS_STEP, linearBulkViscosity: float = 0, 
+    def setValues(self, description: str = '', timePeriod: float = 1, nlgeom: Boolean = OFF,
+                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC_GLOBAL,
+                  maxIncrement: float = None, scaleFactor: float = 1, userDefinedInc: float = None,
+                  massScaling: MassScalingArray = PREVIOUS_STEP, linearBulkViscosity: float = 0,
                   quadBulkViscosity: float = 1, improvedDtMethod: Boolean = ON):
         """This method modifies the TempDisplacementDynamicsStep object.
 
@@ -298,4 +298,3 @@ class TempDisplacementDynamicsStep(AnalysisStep):
             RangeError. 
         """
         pass
-

@@ -3,8 +3,7 @@ from ..Region.Region import Region
 
 
 class ElasticFoundation(Interaction):
-
-    """The ElasticFoundation object defines a mechanical foundation. 
+    """The ElasticFoundation object defines a mechanical foundation.
     The ElasticFoundation object is derived from the Interaction object. 
 
     Access
@@ -88,4 +87,3 @@ class ElasticFoundation(Interaction):
             None. 
         """
         pass
-

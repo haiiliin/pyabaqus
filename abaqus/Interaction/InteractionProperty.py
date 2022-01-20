@@ -1,8 +1,7 @@
 
 
 class InteractionProperty:
-
-    """The InteractionProperty object is the abstract base type for other InteractionProperty 
+    """The InteractionProperty object is the abstract base type for other InteractionProperty
     objects. The InteractionProperty object has no explicit constructor, members, or 
     methods. 
 
@@ -16,6 +15,5 @@ class InteractionProperty:
 
     Corresponding analysis keywords
     -------------------------------
-
     """
     pass

@@ -1,8 +1,7 @@
 
 
 class LayerProperties:
-
-    """The LayerProperties object defines the properties of a layer of reinforcement for 
+    """The LayerProperties object defines the properties of a layer of reinforcement for
     membrane, shell, and surface sections. 
 
     Access
@@ -22,8 +21,8 @@ class LayerProperties:
 
     """
 
-    def __init__(self, barArea: float, orientationAngle: float, layerName: str, material: str, 
-                 barSpacing: float = 0, layerPosition: float = 0, spacingAngle: float = 0, 
+    def __init__(self, barArea: float, orientationAngle: float, layerName: str, material: str,
+                 barSpacing: float = 0, layerPosition: float = 0, spacingAngle: float = 0,
                  extensionRatio: float = 0, radius: float = 0):
         """This method creates a LayerProperties object.
 
@@ -73,4 +72,3 @@ class LayerProperties:
             None. 
         """
         pass
-

@@ -1,8 +1,8 @@
 from .Datum import Datum
 
-class DatumPoint(Datum):
 
-    """The DatumPoint object has no direct constructor; it is created when a Feature object is 
+class DatumPoint(Datum):
+    """The DatumPoint object has no direct constructor; it is created when a Feature object is
     created. For example, the DatumPointByCoordinate method creates a Feature object that 
     creates a DatumPoint object. 
     The DatumPoint object is derived from the Datum object. 
@@ -27,4 +27,3 @@ class DatumPoint(Datum):
     # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on 
     # the datum. 
     pointOn: float = None
-

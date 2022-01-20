@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class PEGLoad(Load):
-
-    """The PEGLoad object stores the data for a PEG load. 
+    """The PEGLoad object stores the data for a PEG load.
     The PEGLoad object is derived from the Load object. 
 
     Access
@@ -38,8 +37,8 @@ class PEGLoad(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, 
-                 distributionType: SymbolicConstant = UNIFORM, field: str = '', comp1: float = None, 
+    def __init__(self, name: str, createStepName: str, region: Region,
+                 distributionType: SymbolicConstant = UNIFORM, field: str = '', comp1: float = None,
                  comp2: float = None, comp3: float = None, amplitude: str = UNSET):
         """This method creates a PEGLoad object.
 
@@ -86,7 +85,7 @@ class PEGLoad(Load):
         super().__init__()
         pass
 
-    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', comp1: float = None, 
+    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', comp1: float = None,
                   comp2: float = None, comp3: float = None, amplitude: str = UNSET):
         """This method modifies the data for an existing PEGLoad object in the step where it is
         created.
@@ -123,10 +122,10 @@ class PEGLoad(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, 
-                        comp1: typing.Union[SymbolicConstant,float] = None, 
-                        comp2: typing.Union[SymbolicConstant,float] = None, 
-                        comp3: typing.Union[SymbolicConstant,float] = None, 
+    def setValuesInStep(self, stepName: str,
+                        comp1: typing.Union[SymbolicConstant, float] = None,
+                        comp2: typing.Union[SymbolicConstant, float] = None,
+                        comp3: typing.Union[SymbolicConstant, float] = None,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing PEGLoad object in the
         specified step.
@@ -162,4 +161,3 @@ class PEGLoad(Load):
             None. 
         """
         pass
-

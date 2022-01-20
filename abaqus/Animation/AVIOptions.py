@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class AVIOptions:
 
-    """The AVIOptions object is used to store values and attributes to be used in generating 
+class AVIOptions:
+    """The AVIOptions object is used to store values and attributes to be used in generating
     AVI animation. The AVIOptions object has no constructor. Abaqus creates the *aviOptions* 
     member when the animation module is imported. 
 
@@ -19,8 +19,8 @@ class AVIOptions:
 
     """
 
-    def setValues(self, compressionMethod: SymbolicConstant = RLE8, compressionQuality: int = None, 
-                  codecOptions: str = '', sizeDefinition: SymbolicConstant = SIZE_ON_SCREEN, 
+    def setValues(self, compressionMethod: SymbolicConstant = RLE8, compressionQuality: int = None,
+                  codecOptions: str = '', sizeDefinition: SymbolicConstant = SIZE_ON_SCREEN,
                   imageSize: int = None):
         """This method modifies the AVIOptions object.
 
@@ -66,4 +66,3 @@ class AVIOptions:
             None. 
         """
         pass
-

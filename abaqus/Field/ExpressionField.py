@@ -1,8 +1,8 @@
 from .AnalyticalField import AnalyticalField
 
-class ExpressionField(AnalyticalField):
 
-    """The ExpressionField object defines a spatially varying field whose value is calculated 
+class ExpressionField(AnalyticalField):
+    """The ExpressionField object defines a spatially varying field whose value is calculated
     from a user-supplied mathematical expression. 
     The ExpressionField object is derived from the AnalyticalField object. 
 
@@ -72,4 +72,3 @@ class ExpressionField(AnalyticalField):
             None. 
         """
         pass
-

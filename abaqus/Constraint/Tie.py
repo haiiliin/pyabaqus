@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class Tie(Constraint):
-
-    """The Tie object defines two surfaces to be tied together for the duration of a 
+    """The Tie object defines two surfaces to be tied together for the duration of a
     simulation. 
     The Tie object is derived from the ConstrainedSketchConstraint object.
 
@@ -27,10 +26,10 @@ class Tie(Constraint):
     # OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, main: Region, secondary: Region, adjust: Boolean = ON, 
-                 positionToleranceMethod: SymbolicConstant = COMPUTED, positionTolerance: float = 0, 
-                 tieRotations: Boolean = ON, constraintRatioMethod: SymbolicConstant = DEFAULT, 
-                 constraintRatio: float = 0, constraintEnforcement: SymbolicConstant = SOLVER_DEFAULT, 
+    def __init__(self, name: str, main: Region, secondary: Region, adjust: Boolean = ON,
+                 positionToleranceMethod: SymbolicConstant = COMPUTED, positionTolerance: float = 0,
+                 tieRotations: Boolean = ON, constraintRatioMethod: SymbolicConstant = DEFAULT,
+                 constraintRatio: float = 0, constraintEnforcement: SymbolicConstant = SOLVER_DEFAULT,
                  thickness: Boolean = ON):
         """This method creates a Tie object.
 
@@ -101,9 +100,9 @@ class Tie(Constraint):
         """
         pass
 
-    def setValues(self, adjust: Boolean = ON, positionToleranceMethod: SymbolicConstant = COMPUTED, 
-                  positionTolerance: float = 0, tieRotations: Boolean = ON, 
-                  constraintRatioMethod: SymbolicConstant = DEFAULT, constraintRatio: float = 0, 
+    def setValues(self, adjust: Boolean = ON, positionToleranceMethod: SymbolicConstant = COMPUTED,
+                  positionTolerance: float = 0, tieRotations: Boolean = ON,
+                  constraintRatioMethod: SymbolicConstant = DEFAULT, constraintRatio: float = 0,
                   constraintEnforcement: SymbolicConstant = SOLVER_DEFAULT, thickness: Boolean = ON):
         """This method modifies the Tie object.
 
@@ -145,4 +144,3 @@ class Tie(Constraint):
             None. 
         """
         pass
-

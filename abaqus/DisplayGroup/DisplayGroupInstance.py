@@ -3,8 +3,7 @@ from ..PlotOptions.OdbDisplayOptions import OdbDisplayOptions
 
 
 class DisplayGroupInstance:
-
-    """A DisplayGroupInstance object stores the IDs of the entities displayed in a viewport. 
+    """A DisplayGroupInstance object stores the IDs of the entities displayed in a viewport.
     The DisplayGroupInstance object has no constructor. When you set a display group to be 
     plotted in a viewport, Abaqus/CAE creates a DisplayGroupInstance object for each display 
     group and places it in the DisplayGroupInstanceRepository object. 
@@ -109,4 +108,3 @@ class DisplayGroupInstance:
             None. 
         """
         pass
-

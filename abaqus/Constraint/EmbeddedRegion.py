@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class EmbeddedRegion(Constraint):
-
-    """The EmbeddedRegion object allows you to embed a region of the model within a “host” 
+    """The EmbeddedRegion object allows you to embed a region of the model within a “host”
     region of the model or within the whole model. 
     The EmbeddedRegion object is derived from the ConstrainedSketchConstraint object.
 
@@ -27,8 +26,8 @@ class EmbeddedRegion(Constraint):
     # OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, embeddedRegion: Region, hostRegion: Region, 
-                 weightFactorTolerance: float = None, toleranceMethod: SymbolicConstant = BOTH, 
+    def __init__(self, name: str, embeddedRegion: Region, hostRegion: Region,
+                 weightFactorTolerance: float = None, toleranceMethod: SymbolicConstant = BOTH,
                  absoluteTolerance: float = 0, fractionalTolerance: float = 0):
         """This method creates a EmbeddedRegion object.
 
@@ -75,7 +74,7 @@ class EmbeddedRegion(Constraint):
         super().__init__()
         pass
 
-    def setValues(self, weightFactorTolerance: float = None, toleranceMethod: SymbolicConstant = BOTH, 
+    def setValues(self, weightFactorTolerance: float = None, toleranceMethod: SymbolicConstant = BOTH,
                   absoluteTolerance: float = 0, fractionalTolerance: float = 0):
         """This method modifies the EmbeddedRegion object.
 
@@ -109,4 +108,3 @@ class EmbeddedRegion(Constraint):
             None. 
         """
         pass
-

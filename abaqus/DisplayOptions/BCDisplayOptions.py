@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class BCDisplayOptions:
 
-    """The BCDisplayOptions object stores settings that specify how assemblies are to be 
+class BCDisplayOptions:
+    """The BCDisplayOptions object stores settings that specify how assemblies are to be
     displayed in a particular viewport when 
     session.viewports[name].assemblyDisplay.bcs=ON 
     The BCDisplayOptions object has no constructor. When you create a new viewport, the 
@@ -21,10 +21,10 @@ class BCDisplayOptions:
 
     """
 
-    def setValues(self, displacement: Boolean = ON, velocity: Boolean = ON, acceleration: Boolean = ON, 
-                  symmetry: Boolean = ON, antiSymmetry: Boolean = ON, temperature: Boolean = ON, 
-                  porePressure: Boolean = ON, fluidCavityPressure: Boolean = ON, 
-                  acousticPressure: Boolean = ON, electricPotential: Boolean = ON, 
+    def setValues(self, displacement: Boolean = ON, velocity: Boolean = ON, acceleration: Boolean = ON,
+                  symmetry: Boolean = ON, antiSymmetry: Boolean = ON, temperature: Boolean = ON,
+                  porePressure: Boolean = ON, fluidCavityPressure: Boolean = ON,
+                  acousticPressure: Boolean = ON, electricPotential: Boolean = ON,
                   concentration: Boolean = ON, encastre: Boolean = ON, pinned: Boolean = ON):
         """This method modifies the BCDisplayOptions object.
 
@@ -70,4 +70,3 @@ class BCDisplayOptions:
             None. 
         """
         pass
-

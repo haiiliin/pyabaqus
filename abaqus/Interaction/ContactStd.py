@@ -7,7 +7,7 @@ from .Interaction import Interaction
 from .MainSecondaryAssignment import MainSecondaryAssignment
 from .RegionPairs import RegionPairs
 from .SlidingFormulationAssignment import SlidingFormulationAssignment
-from .SlidingTransitionAssignments import SlidingTransitionAssignments
+from .SlidingTransitionAssignment import SlidingTransitionAssignment
 from .SmoothingAssignment import SmoothingAssignment
 from .StabilizationAssignment import StabilizationAssignment
 from .SurfaceBeamSmoothingAssignment import SurfaceBeamSmoothingAssignment
@@ -18,8 +18,7 @@ from .SurfaceVertexCriteriaAssignment import SurfaceVertexCriteriaAssignment
 
 
 class ContactStd(Interaction):
-
-    """The ContactStd object defines the contact domain and associated properties during 
+    """The ContactStd object defines the contact domain and associated properties during
     contact in an Abaqus/Standard analysis. 
     The ContactStd object is derived from the Interaction object. 
 
@@ -84,7 +83,7 @@ class ContactStd(Interaction):
 
     # A SlidingTransitionAssignments object specifying the sliding transition assignments in 
     # the contact domain. 
-    slidingTransitionAssignments: SlidingTransitionAssignments = SlidingTransitionAssignments()
+    slidingTransitionAssignments: SlidingTransitionAssignment = SlidingTransitionAssignment()
 
     # A Boolean specifying whether to assign the edge-to-edge formulation. The default value 
     # is False. 
@@ -94,20 +93,20 @@ class ContactStd(Interaction):
     edgeToEdgeFormulation: str = NO
 
     @typing.overload
-    def __init__(self, name: str, createStepName: str, useAllstar: Boolean = OFF, 
-                 globalSmoothing: Boolean = ON, includedPairs: RegionPairs = RegionPairs(), 
-                 excludedPairs: RegionPairs = RegionPairs(), 
-                 contactPropertyAssignments: ContactPropertyAssignment = ContactPropertyAssignment(), 
-                 surfaceThicknessAssignments: SurfaceThicknessAssignment = SurfaceThicknessAssignment(), 
-                 surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(), 
-                 surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(), 
-                 surfaceBeamSmoothingAssignments: SurfaceBeamSmoothingAssignment = SurfaceBeamSmoothingAssignment(), 
-                 surfaceVertexCriteriaAssignments: SurfaceVertexCriteriaAssignment = SurfaceVertexCriteriaAssignment(), 
-                 mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(), 
-                 initializationAssignments: InitializationAssignment = InitializationAssignment(), 
-                 stabilizationAssignments: StabilizationAssignment = StabilizationAssignment(), 
-                 smoothingAssignments: SmoothingAssignment = SmoothingAssignment(), 
-                 slidingTransitionAssignments: SlidingTransitionAssignments = SlidingTransitionAssignments(), 
+    def __init__(self, name: str, createStepName: str, useAllstar: Boolean = OFF,
+                 globalSmoothing: Boolean = ON, includedPairs: RegionPairs = RegionPairs(),
+                 excludedPairs: RegionPairs = RegionPairs(),
+                 contactPropertyAssignments: ContactPropertyAssignment = ContactPropertyAssignment(),
+                 surfaceThicknessAssignments: SurfaceThicknessAssignment = SurfaceThicknessAssignment(),
+                 surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
+                 surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
+                 surfaceBeamSmoothingAssignments: SurfaceBeamSmoothingAssignment = SurfaceBeamSmoothingAssignment(),
+                 surfaceVertexCriteriaAssignments: SurfaceVertexCriteriaAssignment = SurfaceVertexCriteriaAssignment(),
+                 mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
+                 initializationAssignments: InitializationAssignment = InitializationAssignment(),
+                 stabilizationAssignments: StabilizationAssignment = StabilizationAssignment(),
+                 smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
+                 slidingTransitionAssignments: SlidingTransitionAssignment = SlidingTransitionAssignment(),
                  slidingFormulationAssignments: SlidingFormulationAssignment = SlidingFormulationAssignment()):
         """This method creates a ContactStd object.
 
@@ -180,19 +179,19 @@ class ContactStd(Interaction):
         pass
 
     @typing.overload
-    def __init__(self, name: str, createStepName: str, globalSmoothing: Boolean = ON, 
-                 surfaceBeamSmoothingAssignments: tuple = (), 
-                 surfaceVertexCriteriaAssignments: typing.Union[SymbolicConstant,float] = GLOBAL,
-                 slidingFormulationAssignments: SymbolicConstant = None, useAllstar: Boolean = OFF, 
-                 includedPairs: SymbolicConstant = None, excludedPairs: SymbolicConstant = None, 
-                 contactPropertyAssignments: SymbolicConstant = None, 
-                 surfaceFeatureAssignments: typing.Union[SymbolicConstant,float] = GLOBAL,
-                 surfaceThicknessAssignments: typing.Union[SymbolicConstant,float] = GLOBAL,
-                 surfaceOffsetAssignments: typing.Union[SymbolicConstant,float] = GLOBAL,
-                 mainSecondaryAssignments: SymbolicConstant = None, 
-                 initializationAssignments: SymbolicConstant = None, 
-                 stabilizationAssignments: SymbolicConstant = None, 
-                 smoothingAssignments: SymbolicConstant = None, 
+    def __init__(self, name: str, createStepName: str, globalSmoothing: Boolean = ON,
+                 surfaceBeamSmoothingAssignments: tuple = (),
+                 surfaceVertexCriteriaAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
+                 slidingFormulationAssignments: SymbolicConstant = None, useAllstar: Boolean = OFF,
+                 includedPairs: SymbolicConstant = None, excludedPairs: SymbolicConstant = None,
+                 contactPropertyAssignments: SymbolicConstant = None,
+                 surfaceFeatureAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
+                 surfaceThicknessAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
+                 surfaceOffsetAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
+                 mainSecondaryAssignments: SymbolicConstant = None,
+                 initializationAssignments: SymbolicConstant = None,
+                 stabilizationAssignments: SymbolicConstant = None,
+                 smoothingAssignments: SymbolicConstant = None,
                  slidingTransitionAssignments: SymbolicConstant = None):
         """This method creates a ContactStd object.
 
@@ -322,4 +321,3 @@ class ContactStd(Interaction):
 
     def __init__(self, *args, **kwargs):
         pass
-

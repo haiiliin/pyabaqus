@@ -1,8 +1,5 @@
-
-
 class StructuralDampingComponent:
-
-    """A StructuralDampingComponent object is used to define structural damping over a range of 
+    """A StructuralDampingComponent object is used to define structural damping over a range of
     modes. 
 
     Access
@@ -26,4 +23,3 @@ class StructuralDampingComponent:
 
     # A Float specifying the damping factor, s. 
     factor: float = None
-

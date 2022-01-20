@@ -1,8 +1,6 @@
 
-
 class ContactControl:
-
-    """The ContactControl object is the abstract base type for other ContactControl objects. 
+    """The ContactControl object is the abstract base type for other ContactControl objects.
     The ContactControl object has no explicit constructor, members, or methods. 
 
     Access
@@ -17,5 +15,4 @@ class ContactControl:
     -------------------------------
 
     """
-
     pass

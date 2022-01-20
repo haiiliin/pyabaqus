@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class EulerianMotionBC(BoundaryCondition):
-
-    """The EulerianMotionBC object stores the data for an Eulerian mesh motion boundary 
+    """The EulerianMotionBC object stores the data for an Eulerian mesh motion boundary
     condition. 
     The EulerianMotionBC object is derived from the BoundaryCondition object. 
 
@@ -137,16 +136,16 @@ class EulerianMotionBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, instanceName: str, followRegion: Boolean = ON, 
-                 region: Region = Region(), materialName: str = '', 
-                 ctrPosition1: SymbolicConstant = FREE, posPosition1: SymbolicConstant = FREE, 
-                 negPosition1: SymbolicConstant = FREE, expansionRatio1: float = None, 
-                 contractRatio1: float = 0, ctrPosition2: SymbolicConstant = FREE, 
-                 posPosition2: SymbolicConstant = FREE, negPosition2: SymbolicConstant = FREE, 
-                 expansionRatio2: float = None, contractRatio2: float = 0, 
-                 ctrPosition3: SymbolicConstant = FREE, posPosition3: SymbolicConstant = FREE, 
-                 negPosition3: SymbolicConstant = FREE, expansionRatio3: float = None, 
-                 contractRatio3: float = 0, allowContraction: Boolean = ON, aspectLimit: float = 10, 
+    def __init__(self, name: str, createStepName: str, instanceName: str, followRegion: Boolean = ON,
+                 region: Region = Region(), materialName: str = '',
+                 ctrPosition1: SymbolicConstant = FREE, posPosition1: SymbolicConstant = FREE,
+                 negPosition1: SymbolicConstant = FREE, expansionRatio1: float = None,
+                 contractRatio1: float = 0, ctrPosition2: SymbolicConstant = FREE,
+                 posPosition2: SymbolicConstant = FREE, negPosition2: SymbolicConstant = FREE,
+                 expansionRatio2: float = None, contractRatio2: float = 0,
+                 ctrPosition3: SymbolicConstant = FREE, posPosition3: SymbolicConstant = FREE,
+                 negPosition3: SymbolicConstant = FREE, expansionRatio3: float = None,
+                 contractRatio3: float = 0, allowContraction: Boolean = ON, aspectLimit: float = 10,
                  vmaxFactor: float = 1, volThreshold: float = 0, bufferSize: float = 2):
         """This method creates an EulerianMotionBC object.
 
@@ -251,16 +250,16 @@ class EulerianMotionBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, instanceName: str = '', followRegion: Boolean = ON, region: Region = Region(), 
-                  materialName: str = '', ctrPosition1: SymbolicConstant = FREE, 
-                  posPosition1: SymbolicConstant = FREE, negPosition1: SymbolicConstant = FREE, 
-                  expansionRatio1: float = None, contractRatio1: float = 0, 
-                  ctrPosition2: SymbolicConstant = FREE, posPosition2: SymbolicConstant = FREE, 
-                  negPosition2: SymbolicConstant = FREE, expansionRatio2: float = None, 
-                  contractRatio2: float = 0, ctrPosition3: SymbolicConstant = FREE, 
-                  posPosition3: SymbolicConstant = FREE, negPosition3: SymbolicConstant = FREE, 
-                  expansionRatio3: float = None, contractRatio3: float = 0, 
-                  allowContraction: Boolean = ON, aspectLimit: float = 10, vmaxFactor: float = 1, 
+    def setValues(self, instanceName: str = '', followRegion: Boolean = ON, region: Region = Region(),
+                  materialName: str = '', ctrPosition1: SymbolicConstant = FREE,
+                  posPosition1: SymbolicConstant = FREE, negPosition1: SymbolicConstant = FREE,
+                  expansionRatio1: float = None, contractRatio1: float = 0,
+                  ctrPosition2: SymbolicConstant = FREE, posPosition2: SymbolicConstant = FREE,
+                  negPosition2: SymbolicConstant = FREE, expansionRatio2: float = None,
+                  contractRatio2: float = 0, ctrPosition3: SymbolicConstant = FREE,
+                  posPosition3: SymbolicConstant = FREE, negPosition3: SymbolicConstant = FREE,
+                  expansionRatio3: float = None, contractRatio3: float = 0,
+                  allowContraction: Boolean = ON, aspectLimit: float = 10, vmaxFactor: float = 1,
                   volThreshold: float = 0, bufferSize: float = 2):
         """This method modifies the data for an existing EulerianMotionBC object in the step where
         it is created.
@@ -357,15 +356,15 @@ class EulerianMotionBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, ctrPosition1: SymbolicConstant = FREE, 
-                        posPosition1: SymbolicConstant = FREE, negPosition1: SymbolicConstant = FREE, 
-                        expansionRatio1: float = None, contractRatio1: float = 0, 
-                        ctrPosition2: SymbolicConstant = FREE, posPosition2: SymbolicConstant = FREE, 
-                        negPosition2: SymbolicConstant = FREE, expansionRatio2: float = None, 
-                        contractRatio2: float = 0, ctrPosition3: SymbolicConstant = FREE, 
-                        posPosition3: SymbolicConstant = FREE, negPosition3: SymbolicConstant = FREE, 
-                        expansionRatio3: float = None, contractRatio3: float = 0, 
-                        allowContraction: Boolean = ON, aspectLimit: float = 10, vmaxFactor: float = 1, 
+    def setValuesInStep(self, stepName: str, ctrPosition1: SymbolicConstant = FREE,
+                        posPosition1: SymbolicConstant = FREE, negPosition1: SymbolicConstant = FREE,
+                        expansionRatio1: float = None, contractRatio1: float = 0,
+                        ctrPosition2: SymbolicConstant = FREE, posPosition2: SymbolicConstant = FREE,
+                        negPosition2: SymbolicConstant = FREE, expansionRatio2: float = None,
+                        contractRatio2: float = 0, ctrPosition3: SymbolicConstant = FREE,
+                        posPosition3: SymbolicConstant = FREE, negPosition3: SymbolicConstant = FREE,
+                        expansionRatio3: float = None, contractRatio3: float = 0,
+                        allowContraction: Boolean = ON, aspectLimit: float = 10, vmaxFactor: float = 1,
                         volThreshold: float = 0, bufferSize: float = 2):
         """This method modifies the propagating data for an existing EulerianMotionBC object in the
         specified step.
@@ -453,4 +452,3 @@ class EulerianMotionBC(BoundaryCondition):
             None. 
         """
         pass
-

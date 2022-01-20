@@ -1,8 +1,8 @@
-from .Vertex import Vertex
 from abaqusConstants import *
+from .Vertex import Vertex
+
 
 class VertexArray:
-
     """The VertexArray is a sequence of ConstrainedSketchVertex objects. If the part is modified, then
     VertexArray must be updated for that part. 
 
@@ -131,7 +131,7 @@ class VertexArray:
         """
         pass
 
-    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '', 
+    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
                          zMax: str = ''):
         """This method returns an array of vertex objects that lie within the specified bounding
         box.
@@ -265,4 +265,3 @@ class VertexArray:
             !img 
         """
         pass
-

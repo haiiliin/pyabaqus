@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Vertex:
 
-    """Vertices are point regions of geometry. 
+class Vertex:
+    """Vertices are point regions of geometry.
 
     Access
     ------
@@ -99,4 +99,3 @@ class Vertex:
             !img 
         """
         pass
-

@@ -5,8 +5,7 @@ from ..Region.Region import Region
 
 
 class VelocityBaseMotionBC(BoundaryCondition):
-
-    """The VelocityBaseMotionBC object stores the data for a velocity base motion boundary 
+    """The VelocityBaseMotionBC object stores the data for a velocity base motion boundary
     condition. 
     The VelocityBaseMotionBC object is derived from the BoundaryCondition object. 
 
@@ -56,7 +55,7 @@ class VelocityBaseMotionBC(BoundaryCondition):
     # in the global coordinate system. The default value is None. 
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, dof: SymbolicConstant, amplitudeScaleFactor: float = 1, 
+    def __init__(self, name: str, createStepName: str, dof: SymbolicConstant, amplitudeScaleFactor: float = 1,
                  centerOfRotation: tuple = (), correlation: CorrelationArray = None,
                  secondaryBase: str = '', useComplex: Boolean = OFF, amplitude: str = UNSET):
         """This method creates a VelocityBaseMotionBC object.
@@ -104,7 +103,7 @@ class VelocityBaseMotionBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, amplitudeScaleFactor: float = 1, centerOfRotation: tuple = (), 
+    def setValues(self, amplitudeScaleFactor: float = 1, centerOfRotation: tuple = (),
                   correlation: CorrelationArray = None, secondaryBase: str = '',
                   useComplex: Boolean = OFF, amplitude: str = UNSET):
         """This method modifies the data for an existing VelocityBaseMotionBC object in the step
@@ -165,4 +164,3 @@ class VelocityBaseMotionBC(BoundaryCondition):
             None. 
         """
         pass
-

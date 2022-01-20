@@ -14,7 +14,8 @@ Corresponding analysis keywords
 
 """
 
-def writeFreeBodyRepor(fileName: str, append: Boolean, step: int = None, frame: int = None, 
+
+def writeFreeBodyRepor(fileName: str, append: Boolean, step: int = None, frame: int = None,
                        stepFrame: SymbolicConstant = SPECIFY, odb: Odb = None):
     """This method writes a FreeBody object to a user-defined ASCII file.
 
@@ -49,4 +50,3 @@ def writeFreeBodyRepor(fileName: str, append: Boolean, step: int = None, frame: 
     ----------
     """
     pass
-

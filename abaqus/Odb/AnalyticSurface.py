@@ -3,8 +3,7 @@ from .OdbSequenceAnalyticSurfaceSegment import OdbSequenceAnalyticSurfaceSegment
 
 
 class AnalyticSurface:
-
-    """The AnalyticSurface object is a geometric surface that can be described with straight 
+    """The AnalyticSurface object is a geometric surface that can be described with straight
     and/or curved line segments. 
 
     Access
@@ -40,4 +39,3 @@ class AnalyticSurface:
     # A tuple of tuples of Floats specifying the global coordinates of points representing the 
     # local coordinate system, if used. 
     localCoordData: float = None
-

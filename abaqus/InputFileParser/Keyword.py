@@ -1,8 +1,5 @@
-
-
 class Keyword:
-
-    """The Keyword object is used to store a keyword definition from an Abaqus input file. 
+    """The Keyword object is used to store a keyword definition from an Abaqus input file.
     Keyword objects are returned via the InputFile.parse() method. 
 
     Access
@@ -35,4 +32,3 @@ class Keyword:
 
     # A sequence of Strings specifying the comments. 
     comments: tuple = ()
-

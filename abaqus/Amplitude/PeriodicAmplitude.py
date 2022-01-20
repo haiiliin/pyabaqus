@@ -3,8 +3,7 @@ from .Amplitude import Amplitude
 
 
 class PeriodicAmplitude(Amplitude):
-
-    """The PeriodicAmplitude object defines an amplitude curve using a Fourier series. 
+    """The PeriodicAmplitude object defines an amplitude curve using a Fourier series.
     The PeriodicAmplitude object is derived from the Amplitude object. 
 
     Access
@@ -23,7 +22,7 @@ class PeriodicAmplitude(Amplitude):
 
     """
 
-    def __init__(self, name: str, frequency: float, start: float, a_0: float, data: tuple, 
+    def __init__(self, name: str, frequency: float, start: float, a_0: float, data: tuple,
                  timeSpan: SymbolicConstant = STEP):
         """This method creates a PeriodicAmplitude object.
 
@@ -77,4 +76,3 @@ class PeriodicAmplitude(Amplitude):
             RangeError. 
         """
         pass
-

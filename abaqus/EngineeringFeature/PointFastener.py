@@ -7,8 +7,7 @@ from ..Region.RegionArray import RegionArray
 
 
 class PointFastener(Fastener):
-
-    """The PointFastener object defines a point fastener. 
+    """The PointFastener object defines a point fastener.
     The PointFastener object is derived from the Fastener object. 
 
     Access
@@ -31,18 +30,18 @@ class PointFastener(Fastener):
     # OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, region: Region, physicalRadius: float, directionVector: tuple = None, 
-                 targetSurfaces: RegionArray = MODEL, ur1: Boolean = ON, ur2: Boolean = ON, 
-                 ur3: Boolean = ON, attachmentMethod: SymbolicConstant = FACETOFACE, 
-                 influenceRadius: typing.Union[SymbolicConstant,float] = DEFAULT, 
-                 searchRadius: typing.Union[SymbolicConstant,float] = DEFAULT, 
-                 maximumLayers: SymbolicConstant = ALL, coupling: SymbolicConstant = CONTINUUM, 
-                 weightingMethod: SymbolicConstant = UNIFORM, additionalMass: float = 0, 
-                 adjustOrientation: Boolean = ON, localCsys: int = None, 
-                 connectionType: SymbolicConstant = CONNECTOR, sectionName: str = '', 
-                 connectorOrientationLocalCsys1: int = None, axis1: SymbolicConstant = AXIS_1, 
-                 angle1: float = 0, orient2SameAs1: Boolean = ON, 
-                 connectorOrientationLocalCsys2: int = None, axis2: SymbolicConstant = AXIS_1, 
+    def __init__(self, name: str, region: Region, physicalRadius: float, directionVector: tuple = None,
+                 targetSurfaces: RegionArray = MODEL, ur1: Boolean = ON, ur2: Boolean = ON,
+                 ur3: Boolean = ON, attachmentMethod: SymbolicConstant = FACETOFACE,
+                 influenceRadius: typing.Union[SymbolicConstant, float] = DEFAULT,
+                 searchRadius: typing.Union[SymbolicConstant, float] = DEFAULT,
+                 maximumLayers: SymbolicConstant = ALL, coupling: SymbolicConstant = CONTINUUM,
+                 weightingMethod: SymbolicConstant = UNIFORM, additionalMass: float = 0,
+                 adjustOrientation: Boolean = ON, localCsys: int = None,
+                 connectionType: SymbolicConstant = CONNECTOR, sectionName: str = '',
+                 connectorOrientationLocalCsys1: int = None, axis1: SymbolicConstant = AXIS_1,
+                 angle1: float = 0, orient2SameAs1: Boolean = ON,
+                 connectorOrientationLocalCsys2: int = None, axis2: SymbolicConstant = AXIS_1,
                  angle2: float = 0, unsorted: Boolean = OFF):
         """This method creates a PointFastener object. Although the constructor is available both
         for parts and for the assembly, PointFastener objects are currently supported only under
@@ -166,17 +165,17 @@ class PointFastener(Fastener):
         super().__init__()
         pass
 
-    def setValues(self, directionVector: tuple = None, targetSurfaces: RegionArray = MODEL, ur1: Boolean = ON, 
-                  ur2: Boolean = ON, ur3: Boolean = ON, attachmentMethod: SymbolicConstant = FACETOFACE, 
-                  influenceRadius: typing.Union[SymbolicConstant,float] = DEFAULT, 
-                  searchRadius: typing.Union[SymbolicConstant,float] = DEFAULT, 
-                  maximumLayers: SymbolicConstant = ALL, coupling: SymbolicConstant = CONTINUUM, 
-                  weightingMethod: SymbolicConstant = UNIFORM, additionalMass: float = 0, 
-                  adjustOrientation: Boolean = ON, localCsys: int = None, 
-                  connectionType: SymbolicConstant = CONNECTOR, sectionName: str = '', 
-                  connectorOrientationLocalCsys1: int = None, axis1: SymbolicConstant = AXIS_1, 
-                  angle1: float = 0, orient2SameAs1: Boolean = ON, 
-                  connectorOrientationLocalCsys2: int = None, axis2: SymbolicConstant = AXIS_1, 
+    def setValues(self, directionVector: tuple = None, targetSurfaces: RegionArray = MODEL, ur1: Boolean = ON,
+                  ur2: Boolean = ON, ur3: Boolean = ON, attachmentMethod: SymbolicConstant = FACETOFACE,
+                  influenceRadius: typing.Union[SymbolicConstant, float] = DEFAULT,
+                  searchRadius: typing.Union[SymbolicConstant, float] = DEFAULT,
+                  maximumLayers: SymbolicConstant = ALL, coupling: SymbolicConstant = CONTINUUM,
+                  weightingMethod: SymbolicConstant = UNIFORM, additionalMass: float = 0,
+                  adjustOrientation: Boolean = ON, localCsys: int = None,
+                  connectionType: SymbolicConstant = CONNECTOR, sectionName: str = '',
+                  connectorOrientationLocalCsys1: int = None, axis1: SymbolicConstant = AXIS_1,
+                  angle1: float = 0, orient2SameAs1: Boolean = ON,
+                  connectorOrientationLocalCsys2: int = None, axis2: SymbolicConstant = AXIS_1,
                   angle2: float = 0, unsorted: Boolean = OFF):
         """This method modifies the PointFastener object.
 
@@ -285,4 +284,3 @@ class PointFastener(Fastener):
             None. 
         """
         pass
-

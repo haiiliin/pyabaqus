@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class NetworkDatabaseConnector:
 
-    """The NetworkDatabaseConnector object allows you to access an output database on a remote 
+class NetworkDatabaseConnector:
+    """The NetworkDatabaseConnector object allows you to access an output database on a remote
     system. 
 
     Access
@@ -20,9 +20,9 @@ class NetworkDatabaseConnector:
     # A Boolean specifying if the connection between the client and the server is established. 
     connected: Boolean = OFF
 
-    def __init__(self, name: str, hostName: str, directory: str, remoteAbaqusDriverName: str = '', 
-                 remoteLoginMechanism: SymbolicConstant = SSH, sshPath: str = '', serverPort: int = 0, 
-                 connectionPort: int = 0, serverTimeout: int = 86400, 
+    def __init__(self, name: str, hostName: str, directory: str, remoteAbaqusDriverName: str = '',
+                 remoteLoginMechanism: SymbolicConstant = SSH, sshPath: str = '', serverPort: int = 0,
+                 connectionPort: int = 0, serverTimeout: int = 86400,
                  allowAutomaticStartup: Boolean = ON):
         """This method creates a NetworkDatabaseConnector object that you can use to access a
         remote output database. You can create a network database connector from any platform:
@@ -114,8 +114,8 @@ class NetworkDatabaseConnector:
         """
         pass
 
-    def setValues(self, remoteAbaqusDriverName: str = '', remoteLoginMechanism: SymbolicConstant = SSH, 
-                  sshPath: str = '', serverPort: int = 0, connectionPort: int = 0, 
+    def setValues(self, remoteAbaqusDriverName: str = '', remoteLoginMechanism: SymbolicConstant = SSH,
+                  sshPath: str = '', serverPort: int = 0, connectionPort: int = 0,
                   serverTimeout: int = 86400, allowAutomaticStartup: Boolean = ON):
         """This method modifies the NetworkDatabaseConnector object.
 
@@ -152,4 +152,3 @@ class NetworkDatabaseConnector:
             None. 
         """
         pass
-

@@ -3,8 +3,7 @@ from .Crack import Crack
 
 
 class DebondVCCT(Crack):
-
-    """The DebondVCCT object defines the parameters needed to activate crack propagation using 
+    """The DebondVCCT object defines the parameters needed to activate crack propagation using
     VCCT. 
     The DebondVCCT object is derived from the Crack object. 
 
@@ -27,7 +26,7 @@ class DebondVCCT(Crack):
     # A Boolean specifying whether the crack is suppressed or not. The default value is OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, initiationStep: str, surfToSurfInteraction: str, 
+    def __init__(self, name: str, initiationStep: str, surfToSurfInteraction: str,
                  debondingForceAmplitude: SymbolicConstant = STEP, printToDATFrequency: int = 1):
         """This method creates a DebondVCCT object. Although the constructor is available both for
         parts and for the assembly, DebondVCCT objects are currently supported only under the
@@ -88,4 +87,3 @@ class DebondVCCT(Crack):
             None. 
         """
         pass
-

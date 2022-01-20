@@ -1,8 +1,5 @@
-
-
 class RayleighDampingByFrequencyComponent:
-
-    """A RayleighDampingByFrequencyComponent object is used to define Rayleigh damping over a 
+    """A RayleighDampingByFrequencyComponent object is used to define Rayleigh damping over a
     range of frequencies. 
 
     Access
@@ -26,4 +23,3 @@ class RayleighDampingByFrequencyComponent:
 
     # A Float specifying the stiffness proportional damping, βM. 
     beta: float = None
-

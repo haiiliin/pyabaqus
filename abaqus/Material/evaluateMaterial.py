@@ -16,14 +16,15 @@ Corresponding analysis keywords
 
 """
 
-def evaluateMateria(material: Material, simulationName: str, dataSource: SymbolicConstant = None, 
-                    strainEnergyPotentials: SymbolicConstant = None, marlowData: SymbolicConstant = None, 
-                    marlowDataType: SymbolicConstant = None, testDataTypes: SymbolicConstant = None, 
-                    uniaxialStrainRange: float = None, biaxialStrainRange: float = None, 
-                    planarStrainRange: float = None, volumeRatioRange: float = None, 
-                    simpleShearStrainRange: float = None, viscoDataSource: SymbolicConstant = None, 
-                    viscoTestDataTypes: SymbolicConstant = None, relaxationTime: float = None, 
-                    creepTime: float = None):
+
+def evaluateMaterial(material: Material, simulationName: str, dataSource: SymbolicConstant = None,
+                     strainEnergyPotentials: SymbolicConstant = None, marlowData: SymbolicConstant = None,
+                     marlowDataType: SymbolicConstant = None, testDataTypes: SymbolicConstant = None,
+                     uniaxialStrainRange: float = None, biaxialStrainRange: float = None,
+                     planarStrainRange: float = None, volumeRatioRange: float = None,
+                     simpleShearStrainRange: float = None, viscoDataSource: SymbolicConstant = None,
+                     viscoTestDataTypes: SymbolicConstant = None, relaxationTime: float = None,
+                     creepTime: float = None):
     """This method evaluates the behavior of a hyperelastic material under standard test
     conditions.
 
@@ -106,4 +107,3 @@ def evaluateMateria(material: Material, simulationName: str, dataSource: Symboli
         hyperelastic materials. 
     """
     pass
-

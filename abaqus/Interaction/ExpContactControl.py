@@ -3,8 +3,7 @@ from .ContactControl import ContactControl
 
 
 class ExpContactControl(ContactControl):
-
-    """The ExpContactControl object is used in Abaqus/Explicit analyses to specify optional 
+    """The ExpContactControl object is used in Abaqus/Explicit analyses to specify optional
     solution controls for problems involving contact between bodies. 
     The ExpContactControl object is derived from the ContactControl object. 
 
@@ -22,8 +21,8 @@ class ExpContactControl(ContactControl):
 
     """
 
-    def __init__(self, name: str, globTrkChoice: SymbolicConstant = DEFAULT, globTrkInc: int = None, 
-                 fastLocalTrk: Boolean = ON, scalePenalty: float = 1, warpCheckPeriod: int = 20, 
+    def __init__(self, name: str, globTrkChoice: SymbolicConstant = DEFAULT, globTrkInc: int = None,
+                 fastLocalTrk: Boolean = ON, scalePenalty: float = 1, warpCheckPeriod: int = 20,
                  warpCutoff: float = 20):
         """This method creates an ExpContactControl object.
 
@@ -68,8 +67,8 @@ class ExpContactControl(ContactControl):
         super().__init__()
         pass
 
-    def setValues(self, globTrkChoice: SymbolicConstant = DEFAULT, globTrkInc: int = None, 
-                  fastLocalTrk: Boolean = ON, scalePenalty: float = 1, warpCheckPeriod: int = 20, 
+    def setValues(self, globTrkChoice: SymbolicConstant = DEFAULT, globTrkInc: int = None,
+                  fastLocalTrk: Boolean = ON, scalePenalty: float = 1, warpCheckPeriod: int = 20,
                   warpCutoff: float = 20):
         """This method modifies the ExpContactControl object.
 
@@ -106,4 +105,3 @@ class ExpContactControl(ContactControl):
             RangeError. 
         """
         pass
-

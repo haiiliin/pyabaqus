@@ -1,5 +1,5 @@
-from abaqusConstants import *
 from abaqus.Sketcher.ConstrainedSketchBase import ConstrainedSketchBase
+from abaqusConstants import *
 
 
 class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
@@ -375,4 +375,3 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
             !img
         """
         pass
-

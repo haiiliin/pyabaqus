@@ -1,6 +1,4 @@
-
-
-"""The following command is used to record a user-defined command in the Abaqus journal 
+"""The following command is used to record a user-defined command in the Abaqus journal
 file. 
 
 Access
@@ -14,7 +12,8 @@ Corresponding analysis keywords
 
 """
 
-def journalMethodCal(objectPath: str, methodName: str, args: tuple, kargs: str):
+
+def journalMethodCall(objectPath: str, methodName: str, args: tuple, kargs: str):
     """This function may be used by a user-defined command to record itself in the Abaqus
     journal file.
     For example
@@ -53,4 +52,3 @@ def journalMethodCal(objectPath: str, methodName: str, args: tuple, kargs: str):
         None. 
     """
     pass
-

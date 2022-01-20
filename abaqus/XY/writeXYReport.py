@@ -14,6 +14,7 @@ Corresponding analysis keywords
 
 """
 
+
 def writeXYRepor(fileName: str, xyData: tuple[XYData], appendMode: Boolean = ON):
     """This method writes an XYData object to a user-defined ASCII file.
 
@@ -40,4 +41,3 @@ def writeXYRepor(fileName: str, xyData: tuple[XYData], appendMode: Boolean = ON)
         None. 
     """
     pass
-

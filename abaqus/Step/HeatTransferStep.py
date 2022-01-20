@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class HeatTransferStep(AnalysisStep):
-
-    """The HeatTransferStep object is used to control uncoupled heat transfer for either 
+    """The HeatTransferStep object is used to control uncoupled heat transfer for either
     transient or steady-state response. 
     The HeatTransferStep object is derived from the AnalysisStep object. 
 
@@ -174,7 +173,8 @@ class HeatTransferStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -200,14 +200,14 @@ class HeatTransferStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT, 
-                 timePeriod: float = 1, timeIncrementationMethod: SymbolicConstant = AUTOMATIC, 
-                 maxNumInc: int = 100, initialInc: float = None, minInc: float = None, 
-                 maxInc: float = None, end: float = None, deltmx: float = 0, mxdem: float = 0, 
-                 amplitude: SymbolicConstant = STEP, extrapolation: SymbolicConstant = LINEAR, 
-                 matrixSolver: SymbolicConstant = DIRECT, 
-                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False, 
-                 solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8, 
+    def __init__(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT,
+                 timePeriod: float = 1, timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+                 maxNumInc: int = 100, initialInc: float = None, minInc: float = None,
+                 maxInc: float = None, end: float = None, deltmx: float = 0, mxdem: float = 0,
+                 amplitude: SymbolicConstant = STEP, extrapolation: SymbolicConstant = LINEAR,
+                 matrixSolver: SymbolicConstant = DIRECT,
+                 matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False,
+                 solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
                  convertSDI: SymbolicConstant = PROPAGATED):
         """This method creates a HeatTransferStep object.
 
@@ -292,13 +292,13 @@ class HeatTransferStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', response: SymbolicConstant = TRANSIENT, timePeriod: float = 1, 
-                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100, 
-                  initialInc: float = None, minInc: float = None, maxInc: float = None, end: float = None, 
-                  deltmx: float = 0, mxdem: float = 0, amplitude: SymbolicConstant = STEP, 
-                  extrapolation: SymbolicConstant = LINEAR, matrixSolver: SymbolicConstant = DIRECT, 
-                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
-                  solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8, 
+    def setValues(self, description: str = '', response: SymbolicConstant = TRANSIENT, timePeriod: float = 1,
+                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                  initialInc: float = None, minInc: float = None, maxInc: float = None, end: float = None,
+                  deltmx: float = 0, mxdem: float = 0, amplitude: SymbolicConstant = STEP,
+                  extrapolation: SymbolicConstant = LINEAR, matrixSolver: SymbolicConstant = DIRECT,
+                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+                  solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
                   convertSDI: SymbolicConstant = PROPAGATED):
         """This method modifies the HeatTransferStep object.
 
@@ -369,4 +369,3 @@ class HeatTransferStep(AnalysisStep):
             RangeError. 
         """
         pass
-

@@ -4,8 +4,7 @@ from ..Region.RegionArray import RegionArray
 
 
 class ContourIntegral(Crack):
-
-    """The ContourIntegral object defines contour integral objects on an region. Currently only 
+    """The ContourIntegral object defines contour integral objects on an region. Currently only
     assembly regions are supported. 
     The ContourIntegral object is derived from the Crack object. 
 
@@ -28,10 +27,10 @@ class ContourIntegral(Crack):
     # A Boolean specifying whether the crack is suppressed or not. The default value is OFF. 
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, crackFront: RegionArray, crackTip: RegionArray, 
-                 extensionDirectionMethod: SymbolicConstant, symmetric: Boolean = OFF, 
-                 listOfRegions: Boolean = OFF, crackFrontName: str = '', crackTipName: str = '', 
-                 crackNormal: tuple = (), qVectors: tuple = (), midNodePosition: float = 0, 
+    def __init__(self, name: str, crackFront: RegionArray, crackTip: RegionArray,
+                 extensionDirectionMethod: SymbolicConstant, symmetric: Boolean = OFF,
+                 listOfRegions: Boolean = OFF, crackFrontName: str = '', crackTipName: str = '',
+                 crackNormal: tuple = (), qVectors: tuple = (), midNodePosition: float = 0,
                  collapsedElementAtTip: SymbolicConstant = NONE):
         """This method creates a ContourIntegral object. Although the constructor is available both
         for parts and for the assembly, ContourIntegral objects are currently supported only
@@ -101,8 +100,8 @@ class ContourIntegral(Crack):
         super().__init__()
         pass
 
-    def setValues(self, symmetric: Boolean = OFF, listOfRegions: Boolean = OFF, crackFrontName: str = '', 
-                  crackTipName: str = '', crackNormal: tuple = (), qVectors: tuple = (), 
+    def setValues(self, symmetric: Boolean = OFF, listOfRegions: Boolean = OFF, crackFrontName: str = '',
+                  crackTipName: str = '', crackNormal: tuple = (), qVectors: tuple = (),
                   midNodePosition: float = 0, collapsedElementAtTip: SymbolicConstant = NONE):
         """This method modifies the ContourIntegral object.
 
@@ -150,4 +149,3 @@ class ContourIntegral(Crack):
             None. 
         """
         pass
-

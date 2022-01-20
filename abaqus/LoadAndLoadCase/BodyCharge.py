@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class BodyCharge(Load):
-
-    """The BodyCharge object stores the data for a body charge. 
+    """The BodyCharge object stores the data for a body charge.
     The BodyCharge object is derived from the Load object. 
 
     Access
@@ -36,7 +35,7 @@ class BodyCharge(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float,
                  amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM, field: str = ''):
         """This method creates a BodyCharge object.
 
@@ -132,4 +131,3 @@ class BodyCharge(Load):
             None. 
         """
         pass
-

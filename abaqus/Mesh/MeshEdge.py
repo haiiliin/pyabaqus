@@ -1,8 +1,8 @@
 from .MeshElementArray import MeshElementArray
 
-class MeshEdge:
 
-    """The MeshEdge object refers to an element edge. It has no constructor or members. A 
+class MeshEdge:
+    """The MeshEdge object refers to an element edge. It has no constructor or members. A
     MeshEdge object can be accessed via a MeshEdgeArray or a repository on a part or part 
     instance. 
 
@@ -112,4 +112,3 @@ class MeshEdge:
             None. 
         """
         pass
-

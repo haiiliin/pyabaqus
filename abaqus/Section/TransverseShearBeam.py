@@ -4,8 +4,7 @@ from abaqusConstants import *
 
 
 class TransverseShearBeam:
-
-    """The TransverseShearBeam object defines the transverse shear stiffness properties of a 
+    """The TransverseShearBeam object defines the transverse shear stiffness properties of a
     beam section. 
 
     Access
@@ -24,8 +23,8 @@ class TransverseShearBeam:
 
     """
 
-    def __init__(self, scfDefinition: SymbolicConstant, k23: float = None, k13: float = None, 
-                 slendernessCompensation: typing.Union[SymbolicConstant,float] = 0):
+    def __init__(self, scfDefinition: SymbolicConstant, k23: float = None, k13: float = None,
+                 slendernessCompensation: typing.Union[SymbolicConstant, float] = 0):
         """This method creates a TransverseShearBeam object.
 
         Path
@@ -73,4 +72,3 @@ class TransverseShearBeam:
             None. 
         """
         pass
-

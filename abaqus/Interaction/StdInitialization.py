@@ -3,8 +3,7 @@ from .ContactInitialization import ContactInitialization
 
 
 class StdInitialization(ContactInitialization):
-
-    """The StdInitialization object is used in conjunction with ContactStd in Abaqus/Standard 
+    """The StdInitialization object is used in conjunction with ContactStd in Abaqus/Standard
     analyses to specify contact initialization data. 
     The StdInitialization object is derived from the ContactInitialization object. 
 
@@ -22,8 +21,8 @@ class StdInitialization(ContactInitialization):
 
     """
 
-    def __init__(self, name: str, overclosureType: SymbolicConstant = ADJUST, 
-                 interferenceDistance: float = None, clearanceDistance: float = None, 
+    def __init__(self, name: str, overclosureType: SymbolicConstant = ADJUST,
+                 interferenceDistance: float = None, clearanceDistance: float = None,
                  openingTolerance: float = None, overclosureTolerance: float = None):
         """This method creates a StdInitialization object.
 
@@ -65,8 +64,8 @@ class StdInitialization(ContactInitialization):
         super().__init__()
         pass
 
-    def setValues(self, overclosureType: SymbolicConstant = ADJUST, interferenceDistance: float = None, 
-                  clearanceDistance: float = None, openingTolerance: float = None, 
+    def setValues(self, overclosureType: SymbolicConstant = ADJUST, interferenceDistance: float = None,
+                  clearanceDistance: float = None, openingTolerance: float = None,
                   overclosureTolerance: float = None):
         """This method modifies the StdInitialization object.
 
@@ -100,4 +99,3 @@ class StdInitialization(ContactInitialization):
             RangeError. 
         """
         pass
-

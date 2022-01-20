@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ConstraintDisplayOptions:
 
-    """The ConstraintDisplayOptions object stores settings that specify how assemblies are to 
+class ConstraintDisplayOptions:
+    """The ConstraintDisplayOptions object stores settings that specify how assemblies are to
     be displayed in a particular viewport when 
     session.viewports[name].assemblyDisplay.constraints=ON 
     The ConstraintDisplayOptions object has no constructor. When you create a new viewport, 
@@ -21,8 +21,8 @@ class ConstraintDisplayOptions:
 
     """
 
-    def setValues(self, constraintEquation: Boolean = ON, tieConstraint: Boolean = ON, 
-                  rigidBodyConstraint: Boolean = ON, displayBodyConstraint: Boolean = ON, 
+    def setValues(self, constraintEquation: Boolean = ON, tieConstraint: Boolean = ON,
+                  rigidBodyConstraint: Boolean = ON, displayBodyConstraint: Boolean = ON,
                   couplingConstrain: Boolean = ON):
         """This method modifies the ConstraintDisplayOptions object.
 
@@ -52,4 +52,3 @@ class ConstraintDisplayOptions:
             None. 
         """
         pass
-

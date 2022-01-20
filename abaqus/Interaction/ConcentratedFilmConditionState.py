@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class ConcentratedFilmConditionState(InteractionState):
-
-    """The ConcentratedFilmConditionState object stores the propagating data for a 
+    """The ConcentratedFilmConditionState object stores the propagating data for a
     ConcentratedFilmCondition object. One instance of this object is created internally by 
     the ConcentratedFilmCondition object for each step. The instance is also deleted 
     internally by the ConcentratedFilmCondition object. 
@@ -82,4 +81,3 @@ class ConcentratedFilmConditionState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

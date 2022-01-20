@@ -1,8 +1,8 @@
 from ..Region.Region import Region
 
-class AdaptiveMeshDomain:
 
-    """The AdaptiveMeshDomain object defines the region and controls that govern an Arbitrary 
+class AdaptiveMeshDomain:
+    """The AdaptiveMeshDomain object defines the region and controls that govern an Arbitrary
     Lagrangian Eularian (ALE) style adaptive smoothing mesh domain. 
 
     Access
@@ -18,7 +18,7 @@ class AdaptiveMeshDomain:
 
     """
 
-    def __init__(self, region: Region, controls: str = '', frequency: int = 10, initialMeshSweeps: int = 5, 
+    def __init__(self, region: Region, controls: str = '', frequency: int = 10, initialMeshSweeps: int = 5,
                  meshSweeps: int = 1):
         """This method creates an AdaptiveMeshDomain object.
 
@@ -67,4 +67,3 @@ class AdaptiveMeshDomain:
             RangeError. 
         """
         pass
-

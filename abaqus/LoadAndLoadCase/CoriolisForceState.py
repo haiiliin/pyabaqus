@@ -3,8 +3,7 @@ from .LoadState import LoadState
 
 
 class CoriolisForceState(LoadState):
-
-    """The CoriolisForceState object stores the propagating data of a coriolis force in a step. 
+    """The CoriolisForceState object stores the propagating data of a coriolis force in a step.
     One instance of this object is created internally by the CoriolisForce object for each 
     step. The instance is also deleted internally by the CoriolisForce object. 
     The CoriolisForceState object has no constructor or methods. 
@@ -51,4 +50,3 @@ class CoriolisForceState(LoadState):
     # A String specifying the name of the amplitude reference. The String is empty if the load 
     # has no amplitude reference. 
     amplitude: str = ''
-

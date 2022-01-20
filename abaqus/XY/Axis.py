@@ -5,8 +5,7 @@ from .TextStyle import TextStyle
 
 
 class Axis:
-
-    """The Axis object is used to store the display attributes of axes. Axes objects are 
+    """The Axis object is used to store the display attributes of axes. Axes objects are
     automatically created when adding XYCurve objects to a Chart object. 
 
     Access
@@ -75,9 +74,9 @@ class Axis:
     tickStyle: LineStyle = LineStyle()
 
     def setValues(self, axis: 'Axis' = None, labelFrequency: int = 1,
-                  labelPlacement: SymbolicConstant = INSIDE, labelStyle: TextStyle = TextStyle(), 
-                  lineStyle: LineStyle = LineStyle(), placement: SymbolicConstant = MIN_MAX_EDGE, 
-                  tickLength: float = 2, tickPlacement: SymbolicConstant = INSIDE, 
+                  labelPlacement: SymbolicConstant = INSIDE, labelStyle: TextStyle = TextStyle(),
+                  lineStyle: LineStyle = LineStyle(), placement: SymbolicConstant = MIN_MAX_EDGE,
+                  tickLength: float = 2, tickPlacement: SymbolicConstant = INSIDE,
                   tickStyle: LineStyle = LineStyle(), titleStyle: TextStyle = TextStyle()):
         """This method modifies the Axis object.
 
@@ -130,4 +129,3 @@ class Axis:
             None. 
         """
         pass
-

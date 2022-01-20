@@ -5,8 +5,7 @@ from .TransverseShearShell import TransverseShearShell
 
 
 class GeneralStiffnessSection(ShellSection):
-
-    """The GeneralStiffnessSection object defines the properties of a shell section via the 
+    """The GeneralStiffnessSection object defines the properties of a shell section via the
     stiffness matrix. 
     The GeneralStiffnessSection object is derived from the ShellSection object. 
 
@@ -32,10 +31,10 @@ class GeneralStiffnessSection(ShellSection):
     # A TransverseShearShell object specifying the transverse shear stiffness properties. 
     transverseShear: TransverseShearShell = None
 
-    def __init__(self, name: str, stiffnessMatrix: tuple, referenceTemperature: float = None, 
-                 applyThermalStress: Boolean = OFF, temperatureDependency: Boolean = OFF, 
-                 dependencies: int = 0, poissonDefinition: SymbolicConstant = DEFAULT, 
-                 poisson: float = 0, useDensity: Boolean = OFF, density: float = 0, 
+    def __init__(self, name: str, stiffnessMatrix: tuple, referenceTemperature: float = None,
+                 applyThermalStress: Boolean = OFF, temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0, poissonDefinition: SymbolicConstant = DEFAULT,
+                 poisson: float = 0, useDensity: Boolean = OFF, density: float = 0,
                  thermalStresses: tuple = (), scalingData: tuple = ()):
         """This method creates a GeneralStiffnessSection object.
 
@@ -96,10 +95,10 @@ class GeneralStiffnessSection(ShellSection):
         super().__init__()
         pass
 
-    def setValues(self, referenceTemperature: float = None, applyThermalStress: Boolean = OFF, 
-                  temperatureDependency: Boolean = OFF, dependencies: int = 0, 
-                  poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0, 
-                  useDensity: Boolean = OFF, density: float = 0, thermalStresses: tuple = (), 
+    def setValues(self, referenceTemperature: float = None, applyThermalStress: Boolean = OFF,
+                  temperatureDependency: Boolean = OFF, dependencies: int = 0,
+                  poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
+                  useDensity: Boolean = OFF, density: float = 0, thermalStresses: tuple = (),
                   scalingData: tuple = ()):
         """This method modifies the GeneralStiffnessSection object.
 
@@ -148,4 +147,3 @@ class GeneralStiffnessSection(ShellSection):
             None. 
         """
         pass
-

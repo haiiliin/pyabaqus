@@ -3,8 +3,7 @@ from ..PlotOptions.DGContourOptions import DGContourOptions
 
 
 class ContourOptions(DGContourOptions):
-
-    """The ContourOptions object stores values and attributes associated with a contour plot. 
+    """The ContourOptions object stores values and attributes associated with a contour plot.
     The ContourOptions object has no constructor command. Abaqus creates a 
     *defaultOdbDisplay.contourOptions* member when you import the Visualization module. 
     Abaqus creates a *contourOptions* member when it creates the OdbDisplay object, using 
@@ -201,22 +200,22 @@ class ContourOptions(DGContourOptions):
     # spectrum when *legendHideOutsideLimits*=ON.The default value is OFF. 
     legendHideOutsideLimits: Boolean = OFF
 
-    def setValues(self, options: 'ContourOptions' = None, contourType: SymbolicConstant = BANDED, 
-                  contourMethod: SymbolicConstant = TEXTURE_MAPPED, tickmarkPlots: Boolean = OFF, 
-                  contourStyle: SymbolicConstant = UNIFORM, numIntervals: int = 12, 
-                  intervalType: SymbolicConstant = UNIFORM, intervalValues: tuple = (), 
-                  maxAutoCompute: Boolean = ON, maxValue: float = None, minAutoCompute: Boolean = ON, 
-                  minValue: float = None, animationAutoLimits: SymbolicConstant = ALL_FRAMES, 
-                  edgeColorLine: str = '', edgeColorBandedQuilt: str = '', spectrum: str = '', 
-                  reversedContourLegendRange: Boolean = OFF, outsideLimitsMode: SymbolicConstant = None, 
-                  outsideLimitsAboveColor: str = '', outsideLimitsBelowColor: str = '', 
-                  intervalLineAttributes: SymbolicConstant = None, contourEdges: Boolean = OFF, 
-                  contourEdgeColor: str = '', contourEdgeStyle: SymbolicConstant = SOLID, 
-                  contourEdgeThickness: SymbolicConstant = VERY_THIN, 
-                  tickmarkAxisLength: SymbolicConstant = MEDIUM, tickmarkBaseValue: float = 0, 
-                  tickmarkOrientation: SymbolicConstant = N2, tickmarkCurveColor: str = '', 
-                  averagedOrientationDisplay: Boolean = OFF, extrapolatedAveraging: Boolean = OFF, 
-                  showMaxLocation: Boolean = OFF, showMinLocation: Boolean = OFF, 
+    def setValues(self, options: 'ContourOptions' = None, contourType: SymbolicConstant = BANDED,
+                  contourMethod: SymbolicConstant = TEXTURE_MAPPED, tickmarkPlots: Boolean = OFF,
+                  contourStyle: SymbolicConstant = UNIFORM, numIntervals: int = 12,
+                  intervalType: SymbolicConstant = UNIFORM, intervalValues: tuple = (),
+                  maxAutoCompute: Boolean = ON, maxValue: float = None, minAutoCompute: Boolean = ON,
+                  minValue: float = None, animationAutoLimits: SymbolicConstant = ALL_FRAMES,
+                  edgeColorLine: str = '', edgeColorBandedQuilt: str = '', spectrum: str = '',
+                  reversedContourLegendRange: Boolean = OFF, outsideLimitsMode: SymbolicConstant = None,
+                  outsideLimitsAboveColor: str = '', outsideLimitsBelowColor: str = '',
+                  intervalLineAttributes: SymbolicConstant = None, contourEdges: Boolean = OFF,
+                  contourEdgeColor: str = '', contourEdgeStyle: SymbolicConstant = SOLID,
+                  contourEdgeThickness: SymbolicConstant = VERY_THIN,
+                  tickmarkAxisLength: SymbolicConstant = MEDIUM, tickmarkBaseValue: float = 0,
+                  tickmarkOrientation: SymbolicConstant = N2, tickmarkCurveColor: str = '',
+                  averagedOrientationDisplay: Boolean = OFF, extrapolatedAveraging: Boolean = OFF,
+                  showMaxLocation: Boolean = OFF, showMinLocation: Boolean = OFF,
                   legendHideOutsideLimits: Boolean = OFF):
         """This method modifies the ContourOptions object.
 
@@ -349,4 +348,3 @@ class ContourOptions(DGContourOptions):
             RangeError. 
         """
         pass
-

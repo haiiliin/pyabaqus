@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class BackwardCompatibility:
 
-    """The BackwardCompatibility object enables the user to control access to deprecated 
+class BackwardCompatibility:
+    """The BackwardCompatibility object enables the user to control access to deprecated
     commands in the Abaqus Scripting Interface and to collect data on which deprecated 
     commands have been used. This enables the user to check that no deprecated methods, 
     members, or arguments have been used. Data are recorded on any deprecated members, 
@@ -125,7 +125,7 @@ class BackwardCompatibility:
         """
         pass
 
-    def setValues(self, includeDeprecated: Boolean = ON, reportDeprecated: Boolean = True, 
+    def setValues(self, includeDeprecated: Boolean = ON, reportDeprecated: Boolean = True,
                   showKeysInReport: Boolean = False):
         """This method modifies the BackwardCompatibility object.
 
@@ -150,4 +150,3 @@ class BackwardCompatibility:
             None. 
         """
         pass
-

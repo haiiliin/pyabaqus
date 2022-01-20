@@ -7,8 +7,7 @@ from ..Region.Region import Region
 
 
 class SurfaceToSurfaceContactExp(Interaction):
-
-    """The SurfaceToSurfaceContactExp object defines surface-to-surface contact during an 
+    """The SurfaceToSurfaceContactExp object defines surface-to-surface contact during an
     Abaqus/Explicit analysis. 
     The SurfaceToSurfaceContactExp object is derived from the Interaction object. 
 
@@ -25,16 +24,16 @@ class SurfaceToSurfaceContactExp(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, main: Region, secondary: Region, 
-                 sliding: SymbolicConstant, interactionProperty: str, 
-                 mechanicalConstraint: SymbolicConstant = KINEMATIC, 
-                 weightingFactorType: SymbolicConstant = DEFAULT, weightingFactor: float = 0, 
-                 contactControls: str = '', 
-                 initialClearance: typing.Union[SymbolicConstant,float] = OMIT, 
-                 halfThreadAngle: str = None, pitch: str = None, 
-                 majorBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
-                 meanBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
-                 datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF, 
+    def __init__(self, name: str, createStepName: str, main: Region, secondary: Region,
+                 sliding: SymbolicConstant, interactionProperty: str,
+                 mechanicalConstraint: SymbolicConstant = KINEMATIC,
+                 weightingFactorType: SymbolicConstant = DEFAULT, weightingFactor: float = 0,
+                 contactControls: str = '',
+                 initialClearance: typing.Union[SymbolicConstant, float] = OMIT,
+                 halfThreadAngle: str = None, pitch: str = None,
+                 majorBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
+                 meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
+                 datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF,
                  clearanceRegion: Region = Region()):
         """This method creates a SurfaceToSurfaceContactExp object.
 
@@ -124,14 +123,14 @@ class SurfaceToSurfaceContactExp(Interaction):
         """
         pass
 
-    def setValues(self, mechanicalConstraint: SymbolicConstant = KINEMATIC, 
-                  weightingFactorType: SymbolicConstant = DEFAULT, weightingFactor: float = 0, 
-                  contactControls: str = '', 
-                  initialClearance: typing.Union[SymbolicConstant,float] = OMIT, 
-                  halfThreadAngle: str = None, pitch: str = None, 
-                  majorBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
-                  meanBoltDiameter: typing.Union[SymbolicConstant,float] = COMPUTED, 
-                  datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF, 
+    def setValues(self, mechanicalConstraint: SymbolicConstant = KINEMATIC,
+                  weightingFactorType: SymbolicConstant = DEFAULT, weightingFactor: float = 0,
+                  contactControls: str = '',
+                  initialClearance: typing.Union[SymbolicConstant, float] = OMIT,
+                  halfThreadAngle: str = None, pitch: str = None,
+                  majorBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
+                  meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
+                  datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF,
                   clearanceRegion: Region = Region()):
         """This method modifies the data for an existing SurfaceToSurfaceContactExp object in the
         step where it is created.
@@ -210,4 +209,3 @@ class SurfaceToSurfaceContactExp(Interaction):
             None. 
         """
         pass
-

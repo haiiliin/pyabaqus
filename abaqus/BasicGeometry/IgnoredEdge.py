@@ -1,8 +1,5 @@
-
-
 class IgnoredEdge:
-
-    """An IgnoredEdge object is a one-dimensional region of geometry that has been abstracted 
+    """An IgnoredEdge object is a one-dimensional region of geometry that has been abstracted
     away by a virtual topology feature. 
 
     Access
@@ -91,4 +88,3 @@ class IgnoredEdge:
             !img 
         """
         pass
-

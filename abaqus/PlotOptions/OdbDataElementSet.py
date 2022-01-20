@@ -1,8 +1,5 @@
-
-
 class OdbDataElementSet:
-
-    """The OdbDataElementSet object stores element set data. 
+    """The OdbDataElementSet object stores element set data.
 
     Access
     ------
@@ -23,4 +20,3 @@ class OdbDataElementSet:
     # A String-to-tuple-of-Ints Dictionary specifying the elements in the set. This attribute 
     # is read-only. 
     elements: str = ''
-

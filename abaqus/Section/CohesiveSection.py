@@ -3,8 +3,7 @@ from .Section import Section
 
 
 class CohesiveSection(Section):
-
-    """The CohesiveSection object defines the properties of a cohesive section. 
+    """The CohesiveSection object defines the properties of a cohesive section.
     The CohesiveSection object is derived from the Section object. 
 
     Access
@@ -23,8 +22,8 @@ class CohesiveSection(Section):
 
     """
 
-    def __init__(self, name: str, response: SymbolicConstant, material: str, 
-                 initialThicknessType: SymbolicConstant = SOLVER_DEFAULT, initialThickness: float = 1, 
+    def __init__(self, name: str, response: SymbolicConstant, material: str,
+                 initialThicknessType: SymbolicConstant = SOLVER_DEFAULT, initialThickness: float = 1,
                  outOfPlaneThickness: float = None):
         """This method creates a CohesiveSection object.
 
@@ -67,7 +66,7 @@ class CohesiveSection(Section):
         super().__init__()
         pass
 
-    def setValues(self, initialThicknessType: SymbolicConstant = SOLVER_DEFAULT, initialThickness: float = 1, 
+    def setValues(self, initialThicknessType: SymbolicConstant = SOLVER_DEFAULT, initialThickness: float = 1,
                   outOfPlaneThickness: float = None):
         """This method modifies the CohesiveSection object.
 
@@ -95,4 +94,3 @@ class CohesiveSection(Section):
             RangeError. 
         """
         pass
-

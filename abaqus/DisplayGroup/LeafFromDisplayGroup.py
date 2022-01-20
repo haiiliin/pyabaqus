@@ -4,8 +4,7 @@ from .Leaf import Leaf
 
 
 class LeafFromDisplayGroup(Leaf):
-
-    """The LeafFromDisplayGroup object can be used whenever a Leaf object is expected as an 
+    """The LeafFromDisplayGroup object can be used whenever a Leaf object is expected as an
     argument. Leaf objects are used to specify the items in a display group. Leaf objects 
     are constructed as temporary objects, which are then used as arguments to DisplayGroup 
     commands.The LeafFromDisplayGroup object is derived from the Leaf object. 
@@ -49,4 +48,3 @@ class LeafFromDisplayGroup(Leaf):
         """
         super().__init__(DEFAULT_MODEL)
         pass
-

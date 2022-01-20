@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class SymbolDisplayOptions:
 
-    """The SymbolDisplayOptions object stores settings that specify how the assembly is 
+class SymbolDisplayOptions:
+    """The SymbolDisplayOptions object stores settings that specify how the assembly is
     displayed in a particular viewport. The SymbolDisplayOptions object has no constructor. 
     When you create a new viewport, the settings are copied from the current viewport. 
 
@@ -19,7 +19,7 @@ class SymbolDisplayOptions:
 
     """
 
-    def setValues(self, otherSymbolSize: int = 12, arrowSymbolSize: int = 12, faceSymbolDensity: int = 5, 
+    def setValues(self, otherSymbolSize: int = 12, arrowSymbolSize: int = 12, faceSymbolDensity: int = 5,
                   edgeSymbolDensity: int = 5, meshSymbolFraction: float = 1, showFields: Boolean = ON):
         """This method modifies the SymbolDisplayOptions object.
 
@@ -53,4 +53,3 @@ class SymbolDisplayOptions:
             None. 
         """
         pass
-

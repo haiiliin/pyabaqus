@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class StabilizationAssignment:
 
-    """The StabilizationAssignment object stores the contact stabilization assignment 
+class StabilizationAssignment:
+    """The StabilizationAssignment object stores the contact stabilization assignment
     definition for domain pairs in a ContactStd object. The StabilizationAssignment object 
     has no constructor or members. 
 
@@ -91,4 +91,3 @@ class StabilizationAssignment:
             None. 
         """
         pass
-

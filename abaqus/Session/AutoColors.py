@@ -1,8 +1,5 @@
-
-
 class AutoColors:
-
-    """The AutoColors object defines a color palette. 
+    """The AutoColors object defines a color palette.
 
     Access
     ------
@@ -35,4 +32,3 @@ class AutoColors:
             None. 
         """
         pass
-

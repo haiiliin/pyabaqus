@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Cell:
 
-    """Cells are volumetric regions of geometry. 
+class Cell:
+    """Cells are volumetric regions of geometry.
 
     Access
     ------
@@ -187,4 +187,3 @@ class Cell:
             !img 
         """
         pass
-

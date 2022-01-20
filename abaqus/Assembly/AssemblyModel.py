@@ -1,14 +1,15 @@
 from abaqusConstants import *
 from .PartInstance import PartInstance
-# from ..Model.Model import Model as BaseModel
+
+# from ..Model.ModelBase import ModelBase
 
 
-# prevent circular import
-class BaseModel:
+# Prevent circular import
+class ModelBase:
     pass
 
 
-class AssemblyModel(BaseModel):
+class AssemblyModel(ModelBase):
     """The following commands operate on Model objects. For more information about the Model 
     object, see Model object. 
 
@@ -47,7 +48,7 @@ class AssemblyModel(BaseModel):
         ----------
             None. 
         """
-        pass
+        return self
 
     def convertAllSketches(self, regenerate: Boolean = True, convertReversedSketches: Boolean = True):
         """This method converts all sketches from Abaqus 6.5 or earlier to the equivalent
@@ -96,4 +97,3 @@ class AssemblyModel(BaseModel):
             None. 
         """
         pass
-

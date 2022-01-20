@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class OdbNumericalProblemSummary:
 
-    """The OdbNumericalProblemSummary object stores the numerical problem summary of a job. 
+class OdbNumericalProblemSummary:
+    """The OdbNumericalProblemSummary object stores the numerical problem summary of a job.
 
     Access
     ------
@@ -37,4 +37,3 @@ class OdbNumericalProblemSummary:
 
     # An int specifying the number of negative eigenvalues. This attribute is read-only. 
     numberOfNegativeEigenValues: str = ''
-

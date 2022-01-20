@@ -3,8 +3,7 @@ from .Amplitude import Amplitude
 
 
 class ActuatorAmplitude(Amplitude):
-
-    """The ActuatorAmplitude object defines an actuator amplitude curve. 
+    """The ActuatorAmplitude object defines an actuator amplitude curve.
     The ActuatorAmplitude object is derived from the Amplitude object. 
 
     Access
@@ -68,4 +67,3 @@ class ActuatorAmplitude(Amplitude):
             RangeError. 
         """
         pass
-

@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Monitor:
 
-    """The Monitor object defines a degree of freedom to monitor. 
+class Monitor:
+    """The Monitor object defines a degree of freedom to monitor.
 
     Access
     ------
@@ -77,4 +77,3 @@ class Monitor:
             RangeError. 
         """
         pass
-

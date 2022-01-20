@@ -5,8 +5,7 @@ from ..BasicGeometry.ModelDotArray import ModelDotArray
 
 
 class DisplayBody(Constraint):
-
-    """The DisplayBody object defines a constraint such that the specified instance is used for 
+    """The DisplayBody object defines a constraint such that the specified instance is used for
     display only and does not take part in the analysis. However it will still be visible 
     during postprocessing and its position at any frame will be defined by the translation 
     and rotation of the specified control points. 
@@ -76,4 +75,3 @@ class DisplayBody(Constraint):
             None. 
         """
         pass
-

@@ -6,9 +6,9 @@ from ..Mesh.MeshEdge import MeshEdge
 from ..Mesh.MeshElementArray import MeshElementArray
 from ..Mesh.MeshFace import MeshFace
 
-class Skin:
 
-    """The Skin object stores information on skin reinforcements created on entities. 
+class Skin:
+    """The Skin object stores information on skin reinforcements created on entities.
 
     Access
     ------
@@ -36,7 +36,7 @@ class Skin:
     # A FaceArray object. 
     faces: FaceArray = FaceArray([])
 
-    def __init__(self, name: str, faces: tuple[Face] = (), edges: tuple[Edge] = (), 
+    def __init__(self, name: str, faces: tuple[Face] = (), edges: tuple[Edge] = (),
                  elementFaces: tuple[MeshFace] = (), elementEdges: tuple[MeshEdge] = ()):
         """This method creates a skin from a sequence of objects in a model database. At least one
         of the optional arguments needs to be specified.
@@ -72,7 +72,7 @@ class Skin:
         """
         pass
 
-    def EditSkin(self, name: str, faces: tuple[Face] = (), edges: tuple[Edge] = (), 
+    def EditSkin(self, name: str = '', faces: tuple[Face] = (), edges: tuple[Edge] = (),
                  elementFaces: tuple[MeshFace] = (), elementEdges: tuple[MeshEdge] = ()):
         """This method modifies underlying entities of the selected skin. At least one of the
         optional arguments needs to be specified.
@@ -107,4 +107,3 @@ class Skin:
             InvalidNameError. 
         """
         pass
-

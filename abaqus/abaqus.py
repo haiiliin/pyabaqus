@@ -1,52 +1,44 @@
 import os
 import sys
+from threading import Thread
 
-from .Mdb.Mdb import Mdb as BaseMdb
+from PyQt5.QtWidgets import QApplication, QStyle
+
+from .Mdb.Mdb import Mdb as AbaqusMdb
 from .Session.Session import Session
+from .Tools.JobMonitor.JobMonitor import JobMonitor
 
 
-class Mdb(BaseMdb):
+class Mdb(AbaqusMdb):
 
     def __init__(self, pathName: str = ''):
         super().__init__(pathName)
-        self.abaqus_bat_path = None
-        self.abaqus_bat_setting = None
         self.debug = None
+
+    def save(self):
+        super().save()
 
     def saveAs(self, pathName: str):
         if isinstance(self.debug, bool) and self.debug:
             print(pathName)
+        abaqus = 'abaqus'
         if 'ABAQUS_BAT_SETTING' in os.environ.keys():
-            self.abaqus_bat_path = os.environ['ABAQUS_BAT_PATH']
-        if 'ABAQUS_BAT_PATH' in os.environ.keys():
-            self.abaqus_bat_setting = os.environ['ABAQUS_BAT_SETTING']
-        os.system('{} cae -{} {}'.format(self.abaqus_bat_path, self.abaqus_bat_setting, os.path.abspath(sys.argv[0])))
+            abaqus = os.environ['ABAQUS_BAT_PATH']
+        os.system('{} cae -noGUI {}'.format(abaqus, os.path.abspath(sys.argv[0])))
 
 
 session = Session()
 mdb = Mdb()
 
 
-def submitJobByInputFile(inputFile: str, userSubroutine: str = None, options: str = 'int', showStatusFile: bool = True,
-                         abaqus: str = 'abaqus'):
-    """Submit job by input file
+def runPythonScript(scriptPath: str, abaqus: str = 'abaqus'):
+    """
 
     Parameters
     ----------
-    inputFile
-        File path of the input file, suffix can be included or not.
-    userSubroutine
-        File path of the user-defined subroutine, if the file is in the directory of the input file, in this way
-        this variable should be file name of the subroutine (otr the whole file path if you want), if the file is not
-        in the directory of the input file, this variable should be the whole file path.
-        whole
-    options
-        Command options for abaqus command, see https://help.3ds.com/2022/english/dssimulia_established/SIMACAEEXCRefMap/simaexc-c-analysisproc.htm?contextscope=all&id=b034a4baa38a4e9496fce622201c4e30
-        or https://abaqus-docs.mit.edu/2017/English/SIMACAEEXCRefMap/simaexc-c-analysisproc.htm
-        for details, job or input options shouldn't be included, i.e. `int double'.
-    showStatusFile
-        Show status file (.sta) or not when the calculation starts.
-    abaqus
+    scriptPath: str
+        File path of the python script
+    abaqus: str
         File path of the abaqus command, if the folder contains abaqus commands is added to the system variables, you
         omit the file directory, i.e., just `abaqus`.
 
@@ -54,19 +46,63 @@ def submitJobByInputFile(inputFile: str, userSubroutine: str = None, options: st
     -------
     None
     """
-    absInputFilepath = os.path.abspath(inputFile)
-    workDirectory = os.path.dirname(absInputFilepath)
-    if showStatusFile is True:
-        staFile = os.path.basename(absInputFilepath.replace('.inp', '')) + '.sta'
-        if not os.path.exists(staFile):
-            with open(staFile, 'w+') as f:
-                f.write('')
-                f.close()
-        os.startfile(staFile)
+    os.chdir(os.path.dirname(os.path.abspath(scriptPath)))
+    os.system('{} cae noGUI={}'.format(abaqus, scriptPath))
+
+
+def submitJobByInputFile(inputFile: str, userSubroutine: str = None, options: str = 'int', showStatus: bool = True,
+                         abaqus: str = 'abaqus'):
+    """Submit job by input file, can not execute in Python environment of Abaqus
+
+    Parameters
+    ----------
+    inputFile: str
+        File path of the input file, suffix can be included or not.
+    userSubroutine: str
+        File path of the user-defined subroutine, if the file is in the directory of the input file, in this way
+        this variable should be file name of the subroutine (otr the whole file path if you want), if the file is not
+        in the directory of the input file, this variable should be the whole file path.
+        whole
+    options: str
+        Command options for abaqus command, see https://help.3ds.com/2022/english/dssimulia_established/SIMACAEEXCRefMap/simaexc-c-analysisproc.htm?contextscope=all&id=b034a4baa38a4e9496fce622201c4e30
+        or https://abaqus-docs.mit.edu/2017/English/SIMACAEEXCRefMap/simaexc-c-analysisproc.htm
+        for details, job or input options shouldn't be included, i.e. `int double'.
+    showStatus: bool
+        Show status or not when the calculation starts.
+    abaqus: str
+        File path of the abaqus command, if the folder contains abaqus commands is added to the system variables, you
+        omit the file directory, i.e., just `abaqus`.
+
+    Returns
+    -------
+    None
+    """
+    absInputFilePath = os.path.abspath(inputFile)
+    workDirectory = os.path.dirname(absInputFilePath)
+    jobName = os.path.basename(absInputFilePath.replace('.inp', ''))
+
+    if showStatus:
+        monitorThread = Thread(target=_jobMonitor, args=(workDirectory, jobName))
+        monitorThread.start()
+    abaqusThread = Thread(target=_runAbaqus, args=(userSubroutine, abaqus, workDirectory, jobName, options))
+    abaqusThread.start()
+
+
+def _runAbaqus(userSubroutine: str, abaqus: str, workDirectory: str, jobName: str, options: str):
     if userSubroutine is not None:
-        commandLine = "{} job={} user={} {}".format(abaqus, os.path.basename(absInputFilepath.replace('.inp', '')),
-                                                    userSubroutine, options)
+        commandLine = "{} job={} user={} {}".format(abaqus, jobName, userSubroutine, options)
     else:
-        commandLine = "{} job={} {}".format(abaqus, os.path.basename(absInputFilepath.replace('.inp', '')), options)
+        commandLine = "{} job={} {}".format(abaqus, jobName, options)
     os.system('cd {}'.format(workDirectory))
     os.system(commandLine)
+
+
+def _jobMonitor(workDirectory: str, jobName: str):
+    app = QApplication(sys.argv)
+    monitor = JobMonitor()
+    monitor.setWindowIcon(QApplication.style().standardIcon(QStyle.SP_TitleBarMenuButton))
+    monitor.setWorkDirectory(workDirectory)
+    monitor.setJobName(jobName)
+    monitor.show()
+    monitor.run()
+    sys.exit(app.exec_())

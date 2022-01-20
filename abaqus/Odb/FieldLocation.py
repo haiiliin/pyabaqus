@@ -3,8 +3,7 @@ from .SectionPointArray import SectionPointArray
 
 
 class FieldLocation:
-
-    """The FieldLocation object specifies locations for which data are available in the field. 
+    """The FieldLocation object specifies locations for which data are available in the field.
     For example, a displacement field will have a FieldLocation object with a *position* 
     member value of NODAL. The FieldLocation object has no constructor; it is created 
     automatically as an element of the *location* member of a FieldOutput object by the 
@@ -33,4 +32,3 @@ class FieldLocation:
 
     # A SectionPointArray object. 
     sectionPoints: SectionPointArray = SectionPointArray()
-

@@ -34,14 +34,14 @@ from ..Region.Surface import Surface
 from ..Sketcher.ConstrainedSketch import ConstrainedSketch
 from ..UtilityAndView.Repository import Repository
 
+
 # prevent circular imports
 class PartInstance:
     pass
 
 
 class PartBase(Feature):
-
-    """The Part object defines the physical attributes of a structure. Parts are instanced into 
+    """The Part object defines the physical attributes of a structure. Parts are instanced into
     the assembly and positioned before an analysis. 
 
     Access
@@ -98,7 +98,7 @@ class PartBase(Feature):
     featuresById: Repository[str, Feature] = Repository[str, Feature]()
 
     # A repository of Datum objects specifying all the datums in the part. 
-    datums: Repository[str, Datum] = Repository[str, Datum]()
+    datums: list[Datum] = list[Datum]()
 
     # A MeshElementArray object specifying all the elements in the part. 
     elements: MeshElementArray = MeshElementArray([])
@@ -170,7 +170,7 @@ class PartBase(Feature):
     elementEdges: MeshEdgeArray = MeshEdgeArray([])
 
     @typing.overload
-    def __init__(self, name: str, dimensionality: SymbolicConstant, type: SymbolicConstant, 
+    def __init__(self, name: str, dimensionality: SymbolicConstant, type: SymbolicConstant,
                  twist: Boolean = OFF):
         """This method creates a Part object and places it in the parts repository.
 
@@ -204,7 +204,7 @@ class PartBase(Feature):
         pass
 
     @typing.overload
-    def __init__(self, name: str, objectToCopy: str, scale: float = 1, mirrorPlane: SymbolicConstant = NONE, 
+    def __init__(self, name: str, objectToCopy: str, scale: float = 1, mirrorPlane: SymbolicConstant = NONE,
                  compressFeatureList: Boolean = OFF, separate: Boolean = OFF):
         """This method copies a Part object and places the copy in the parts repository.
 
@@ -277,8 +277,8 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromBooleanMerge(self, name: str, instances: tuple[PartInstance], keepIntersections: Boolean = False, 
-                             mergeNodes: SymbolicConstant = BOUNDARY_ONLY, nodeMergingTolerance: float = None, 
+    def PartFromBooleanMerge(self, name: str, instances: tuple[PartInstance], keepIntersections: Boolean = False,
+                             mergeNodes: SymbolicConstant = BOUNDARY_ONLY, nodeMergingTolerance: float = None,
                              removeDuplicateElements: Boolean = ON, domain: SymbolicConstant = GEOMETRY):
         """This method creates a Part in the parts repository after merging two or more part
         instances. The part instances can be either Abaqus native parts or orphan mesh parts,
@@ -358,10 +358,10 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromGeometryFile(self, name: str, geometryFile: AcisFile, dimensionality: SymbolicConstant, 
-                             type: SymbolicConstant, bodyNum: int = 1, combine: Boolean = False, 
-                             booleanSolids: Boolean = FALSE, retainBoundary: Boolean = FALSE, 
-                             usePartNameFromFile: Boolean = OFF, stitchTolerance: float = 1, twist: Boolean = OFF, 
+    def PartFromGeometryFile(self, name: str, geometryFile: AcisFile, dimensionality: SymbolicConstant,
+                             type: SymbolicConstant, bodyNum: int = 1, combine: Boolean = False,
+                             booleanSolids: Boolean = FALSE, retainBoundary: Boolean = FALSE,
+                             usePartNameFromFile: Boolean = OFF, stitchTolerance: float = 1, twist: Boolean = OFF,
                              scale: float = 1, convertToAnalytical: int = 0, convertToPrecise: int = 0):
         """This method creates a Part object and places it in the parts repository.
 
@@ -438,7 +438,7 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromInstanceMesh(self, name: str, partInstances: tuple[PartInstance] = (), copyPartSets: Boolean = False, 
+    def PartFromInstanceMesh(self, name: str, partInstances: tuple[PartInstance] = (), copyPartSets: Boolean = False,
                              copyAssemblySets: Boolean = False):
         """This method creates a Part object containing the mesh found in the supplied PartInstance
         objects and places the new Part object in the parts repository.
@@ -550,7 +550,8 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromNodesAndElements(self, name: str, dimensionality: SymbolicConstant, type: SymbolicConstant, nodes: tuple, 
+    def PartFromNodesAndElements(self, name: str, dimensionality: SymbolicConstant, type: SymbolicConstant,
+                                 nodes: tuple,
                                  elements: tuple, twist: Boolean = OFF):
         """This method creates a Part object from nodes and elements and places it in the parts
         repository.
@@ -593,8 +594,8 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromOdb(self, name: str, odb: str, fileName: str = '', instance: str = '', elementSet: str = '', 
-                    shape: SymbolicConstant = UNDEFORMED, step: int = None, frame: int = None, 
+    def PartFromOdb(self, name: str, odb: str, fileName: str = '', instance: str = '', elementSet: str = '',
+                    shape: SymbolicConstant = UNDEFORMED, step: int = None, frame: int = None,
                     twist: Boolean = OFF):
         """This method creates an orphan mesh Part object by reading an output database. The new
         part is placed in the parts repository.
@@ -827,7 +828,7 @@ class PartBase(Feature):
         """
         pass
 
-    def assignThickness(self, faces: tuple[Face], thickness: float = None, topFaces: tuple[Face] = (), 
+    def assignThickness(self, faces: tuple[Face], thickness: float = None, topFaces: tuple[Face] = (),
                         bottomFaces: tuple[Face] = ()):
         """This method assigns thickness data to shell faces. The thickness can be used while
         assigning shell and membrane sections to faces.
@@ -1211,8 +1212,8 @@ class PartBase(Feature):
         """
         pass
 
-    def getMassProperties(self, regions: str = '', relativeAccuracy: SymbolicConstant = LOW, useMesh: Boolean = False, 
-                          specifyDensity: Boolean = False, density: str = '', specifyThickness: Boolean = False, 
+    def getMassProperties(self, regions: str = '', relativeAccuracy: SymbolicConstant = LOW, useMesh: Boolean = False,
+                          specifyDensity: Boolean = False, density: str = '', specifyThickness: Boolean = False,
                           thickness: str = '', miAboutCenterOfMass: Boolean = True, miAboutPoint: tuple = ()):
         """This method returns the mass properties of a part or region. Only beams, trusses,
         shells, solids, point, nonstructural mass, and rotary inertia elements are supported.
@@ -1464,7 +1465,8 @@ class PartBase(Feature):
         """
         pass
 
-    def projectReferencesOntoSketch(self, sketch: str, filter: SymbolicConstant = ALL_EDGES, upToFeature: Feature = Feature(), 
+    def projectReferencesOntoSketch(self, sketch: str, filter: SymbolicConstant = ALL_EDGES,
+                                    upToFeature: Feature = Feature(),
                                     edges: tuple = (), vertices: tuple = ()):
         """This method projects the vertices of specified edges, and datum points from the part
         onto the specified ConstrainedSketch object. The vertices and datum points appear on the
@@ -1897,8 +1899,8 @@ class PartBase(Feature):
         """
         pass
 
-    def copyMeshPattern(self, elements: tuple[MeshElement] = (), faces: tuple[Face] = (), 
-                        elemFaces: tuple[MeshFace] = (), targetFace: MeshFace = MeshFace(), 
+    def copyMeshPattern(self, elements: tuple[MeshElement] = (), faces: tuple[Face] = (),
+                        elemFaces: tuple[MeshFace] = (), targetFace: MeshFace = MeshFace(),
                         nodes: tuple[MeshNode] = (), coordinates: tuple = ()):
         """This method copies a mesh pattern from a source region consisting of a set of shell
         elements or element faces onto a target face, mapping nodes and elements in a one-one
@@ -2006,4 +2008,3 @@ class PartBase(Feature):
             None. 
         """
         pass
-

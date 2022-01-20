@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class OdbData:
-
-    """The OdbData object stores non persistent values and attributes associated with an open 
+    """The OdbData object stores non persistent values and attributes associated with an open
     odb for the given session. The OdbData object has no constructor. Abaqus creates the 
     *odbData* repository when you import the Visualization module. Abaqus creates a OdbData 
     object when an odb is opened. 
@@ -140,4 +139,3 @@ class OdbData:
             None. 
         """
         pass
-

@@ -25,8 +25,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class SteadyStateModalStep(AnalysisStep):
-
-    """he SteadyStateModalStep object is used to calculate the linearized steady-state response 
+    """he SteadyStateModalStep object is used to calculate the linearized steady-state response
     of the system to harmonic excitation. 
     The SteadyStateModalStep object is derived from the AnalysisStep object. 
 
@@ -147,7 +146,8 @@ class SteadyStateModalStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -173,15 +173,15 @@ class SteadyStateModalStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, frequencyRange: SteadyStateModalFrequencyArray, 
-                 description: str = '', scale: SymbolicConstant = LOGARITHMIC, 
-                 directDamping: DirectDamping = DirectDamping(), 
-                 compositeDamping: CompositeDamping = CompositeDamping(), 
-                 rayleighDamping: RayleighDamping = RayleighDamping(), 
-                 structuralDamping: StructuralDamping = StructuralDamping(), 
-                 directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(), 
-                 rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(), 
-                 structuralDampingByFrequency: StructuralDampingByFrequency = StructuralDampingByFrequency(), 
+    def __init__(self, name: str, previous: str, frequencyRange: SteadyStateModalFrequencyArray,
+                 description: str = '', scale: SymbolicConstant = LOGARITHMIC,
+                 directDamping: DirectDamping = DirectDamping(),
+                 compositeDamping: CompositeDamping = CompositeDamping(),
+                 rayleighDamping: RayleighDamping = RayleighDamping(),
+                 structuralDamping: StructuralDamping = StructuralDamping(),
+                 directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
+                 rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(),
+                 structuralDampingByFrequency: StructuralDampingByFrequency = StructuralDampingByFrequency(),
                  maintainAttributes: Boolean = False, subdivideUsingEigenfrequencies: Boolean = ON):
         """This method creates a SteadyStateModalStep object.
 
@@ -235,14 +235,14 @@ class SteadyStateModalStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', scale: SymbolicConstant = LOGARITHMIC, 
-                  directDamping: DirectDamping = DirectDamping(), 
-                  compositeDamping: CompositeDamping = CompositeDamping(), 
-                  rayleighDamping: RayleighDamping = RayleighDamping(), 
-                  structuralDamping: StructuralDamping = StructuralDamping(), 
-                  directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(), 
-                  rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(), 
-                  structuralDampingByFrequency: StructuralDampingByFrequency = StructuralDampingByFrequency(), 
+    def setValues(self, description: str = '', scale: SymbolicConstant = LOGARITHMIC,
+                  directDamping: DirectDamping = DirectDamping(),
+                  compositeDamping: CompositeDamping = CompositeDamping(),
+                  rayleighDamping: RayleighDamping = RayleighDamping(),
+                  structuralDamping: StructuralDamping = StructuralDamping(),
+                  directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
+                  rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(),
+                  structuralDampingByFrequency: StructuralDampingByFrequency = StructuralDampingByFrequency(),
                   subdivideUsingEigenfrequencies: Boolean = ON):
         """This method modifies the SteadyStateModalStep object.
 
@@ -280,4 +280,3 @@ class SteadyStateModalStep(AnalysisStep):
             RangeError. 
         """
         pass
-

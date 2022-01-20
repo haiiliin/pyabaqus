@@ -3,8 +3,7 @@ from .DataSet import DataSet
 
 
 class Behavior:
-
-    """The Behavior object specifies the method used for calibrating a material. 
+    """The Behavior object specifies the method used for calibrating a material.
 
     Access
     ------
@@ -58,13 +57,13 @@ class Behavior:
         """
         pass
 
-    def setValues(self, E: str = '', nu: str = '', ds1Name: str = '', ds2Name: str = '', materialName: str = '', 
-                  yieldPoint: str = '', ultimatePoint: str = '', plasticPoints: str = '', 
-                  PoissonsRatio: str = '', elasticModulus: str = '', plasticPointsRange: str = '', 
-                  name: str = '', uniaxialName: str = '', biaxialName: str = '', interpolation: str = '', 
-                  uniWeight: str = '', biWeight: str = '', uMullinsReload: str = '', 
-                  uMullinsUnload: str = '', uPYieldPoint: tuple = (), uPermSet: str = '', 
-                  uPrimary: str = '', bMullinsReload: str = '', bMullinsUnload: str = '', 
+    def setValues(self, E: str = '', nu: str = '', ds1Name: str = '', ds2Name: str = '', materialName: str = '',
+                  yieldPoint: str = '', ultimatePoint: str = '', plasticPoints: str = '',
+                  PoissonsRatio: str = '', elasticModulus: str = '', plasticPointsRange: str = '',
+                  name: str = '', uniaxialName: str = '', biaxialName: str = '', interpolation: str = '',
+                  uniWeight: str = '', biWeight: str = '', uMullinsReload: str = '',
+                  uMullinsUnload: str = '', uPYieldPoint: tuple = (), uPermSet: str = '',
+                  uPrimary: str = '', bMullinsReload: str = '', bMullinsUnload: str = '',
                   bPYieldPoint: tuple = (), bPermSet: str = '', bPrimary: str = ''):
         """This method modifies the data for an existing behavior object.
 
@@ -89,7 +88,7 @@ class Behavior:
             Stress/strain value for the material ultimate point.Only valid if the behavior type is 
             ElasPlasIsoBehavior 
         plasticPoints
-            Stress/strain values for the plastic portion of material curve. Only valid if the 
+            Stress/strain values for the Plastic portion of material curve. Only valid if the
             behavior type is ElasPlasIsoBehavior 
         PoissonsRatio
             Poisson's Ratio. Only valid if the behavior type is ElasPlasIsoBehavior 
@@ -97,7 +96,7 @@ class Behavior:
             Young's Modulus for the elastic portion of the material curve. Only valid if the 
             behavior type is ElasPlasIsoBehavior 
         plasticPointsRange
-            Extent of the material plastic points. Only valid if the behavior type is 
+            Extent of the material Plastic points. Only valid if the behavior type is
             ElasPlasIsoBehavior 
         name
             Name of the behavior. 
@@ -159,7 +158,7 @@ class Behavior:
         """This method appends the calibration data obtained from the DataSet object to an existing
         material object. In the case of ElasIsoBehavior, it appends the young's modulus and
         poisson's ratio. For ElasPlasIsoBehavior it appends the young's modulus, poisson's ratio
-        and plastic points range and for FeFpBehavior it appends plastic points range and
+        and Plastic points range and for FeFpBehavior it appends Plastic points range and
         Mullins effect properties.
 
         Parameters
@@ -256,7 +255,7 @@ class Behavior:
         pass
 
     def compute_plasticPoints(self, dataSet: DataSet, slider_val: str, start_index: str, end_index: str, yp: str = ''):
-        """This method extracts the coordinates of the plastic Points. The method is only valid for
+        """This method extracts the coordinates of the Plastic Points. The method is only valid for
         ElasPlasIsoBehavior type of behavior.
 
         Parameters
@@ -274,7 +273,7 @@ class Behavior:
 
         Returns
         -------
-            A sequence of coordinates of the plastic points. 
+            A sequence of coordinates of the Plastic points.
 
         Exceptions
         ----------
@@ -308,4 +307,3 @@ class Behavior:
             None. 
         """
         pass
-

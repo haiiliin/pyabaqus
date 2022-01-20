@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class Growth(GeometricRestriction):
-
-    """The Growth object defines a growth geometric restriction. 
+    """The Growth object defines a growth geometric restriction.
     The Growth object is derived from the GeometricRestriction object. 
 
     Access
@@ -21,7 +20,7 @@ class Growth(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, region: Region, growth: float = 0, 
+    def __init__(self, name: str, region: Region, growth: float = 0,
                  presumeFeasibleRegionAtStart: Boolean = ON, shrink: float = 0):
         """This method creates a Growth object.
 
@@ -82,4 +81,3 @@ class Growth(GeometricRestriction):
             None. 
         """
         pass
-

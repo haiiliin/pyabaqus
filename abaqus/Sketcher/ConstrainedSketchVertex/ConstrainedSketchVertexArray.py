@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ConstrainedSketchVertexArray:
 
-    """The ConstrainedSketchVertexArray is a sequence of ConstrainedSketchVertex objects. 
+class ConstrainedSketchVertexArray:
+    """The ConstrainedSketchVertexArray is a sequence of ConstrainedSketchVertex objects.
 
     Access
     ------
@@ -37,4 +37,3 @@ class ConstrainedSketchVertexArray:
             None. 
         """
         pass
-

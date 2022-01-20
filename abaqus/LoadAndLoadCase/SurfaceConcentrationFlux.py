@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SurfaceConcentrationFlux(Load):
-
-    """The SurfaceConcentrationFlux object defines surface concentration flux from a region or 
+    """The SurfaceConcentrationFlux object defines surface concentration flux from a region or
     into a region. 
     The SurfaceConcentrationFlux object is derived from the Load object. 
 
@@ -38,7 +37,7 @@ class SurfaceConcentrationFlux(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, field: str = '', 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, field: str = '',
                  distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):
         """This method creates a SurfaceConcentrationFlux object.
 
@@ -137,4 +136,3 @@ class SurfaceConcentrationFlux(Load):
             None. 
         """
         pass
-

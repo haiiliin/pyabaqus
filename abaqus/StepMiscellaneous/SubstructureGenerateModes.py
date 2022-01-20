@@ -1,8 +1,5 @@
-
-
 class SubstructureGenerateModes:
-
-    """A SubstructureGenerateModes object is used to define the modes to be used in a modal 
+    """A SubstructureGenerateModes object is used to define the modes to be used in a modal
     dynamic analysis. 
 
     Access
@@ -27,4 +24,3 @@ class SubstructureGenerateModes:
     # An Int specifying the increment used to define the intermediate mode numbers beginning 
     # from the lowest mode to the highest mode. 
     increment: int = None
-

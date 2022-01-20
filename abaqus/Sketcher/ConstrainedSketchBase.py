@@ -1,16 +1,15 @@
-from abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint import ConstrainedSketchConstraint
-from abaqus.Sketcher.ConstrainedSketchDimension.ConstrainedSketchDimension import ConstrainedSketchDimension
-from abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchImageOptions import ConstrainedSketchImageOptions
-from abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchOptions import ConstrainedSketchOptions
-from abaqus.Sketcher.ConstrainedSketchParameter.ConstrainedSketchParameter import ConstrainedSketchParameter
-from abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertexArray import ConstrainedSketchVertexArray
+from .ConstrainedSketchConstraint import ConstrainedSketchConstraint
+from .ConstrainedSketchDimension.ConstrainedSketchDimension import ConstrainedSketchDimension
+from .ConstrainedSketchOptions.ConstrainedSketchImageOptions import ConstrainedSketchImageOptions
+from .ConstrainedSketchOptions.ConstrainedSketchOptions import ConstrainedSketchOptions
+from .ConstrainedSketchParameter.ConstrainedSketchParameter import ConstrainedSketchParameter
+from .ConstrainedSketchVertex.ConstrainedSketchVertexArray import ConstrainedSketchVertexArray
 from ..Amplitude.ConstrainedSketchGeometryArray import ConstrainedSketchGeometryArray
 from ..UtilityAndView.Repository import Repository
 
 
 class ConstrainedSketchBase:
-
-    """A ConstrainedSketch object contains the entities that are used to create a sketch. The 
+    """A ConstrainedSketch object contains the entities that are used to create a sketch. The
     objects include ConstrainedSketchGeometry objects contained in the ConstrainedSketchGeometry Repository,
     such as Line, Arc, and Spline. ConstrainedSketchVertex, ConstrainedSketchDimension, ConstrainedSketchConstraint, and ConstrainedSketchParameter objects are
     contained in their respective repositories. 

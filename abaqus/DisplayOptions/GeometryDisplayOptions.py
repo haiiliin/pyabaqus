@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class GeometryDisplayOptions:
 
-    """The GeometryDisplayOptions object stores settings that specify how assemblies are to be 
+class GeometryDisplayOptions:
+    """The GeometryDisplayOptions object stores settings that specify how assemblies are to be
     displayed in a particular viewport. The GeometryDisplayOptions object has no 
     constructor. When you create a new viewport, the settings are copied from the current 
     viewport. 
@@ -22,10 +22,10 @@ class GeometryDisplayOptions:
 
     """
 
-    def setValues(self, geometryEdgesInShaded: Boolean = ON, geometryHiddenEdges: Boolean = OFF, 
-                  geometrySilhouetteEdges: Boolean = ON, datumAxes: Boolean = ON, 
-                  datumCoordSystems: Boolean = ON, datumPlanes: Boolean = ON, 
-                  referencePointLabels: Boolean = ON, referencePointSymbols: Boolean = ON, 
+    def setValues(self, geometryEdgesInShaded: Boolean = ON, geometryHiddenEdges: Boolean = OFF,
+                  geometrySilhouetteEdges: Boolean = ON, datumAxes: Boolean = ON,
+                  datumCoordSystems: Boolean = ON, datumPlanes: Boolean = ON,
+                  referencePointLabels: Boolean = ON, referencePointSymbols: Boolean = ON,
                   referenceRepresentation: Boolean = OFF, referenceRepTranslucency: Boolean = ON):
         """This method modifies the GeometryDisplayOptions object.
 
@@ -67,4 +67,3 @@ class GeometryDisplayOptions:
             RangeError. 
         """
         pass
-

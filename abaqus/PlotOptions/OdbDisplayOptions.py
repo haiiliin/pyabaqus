@@ -5,9 +5,9 @@ from .DGOrientationOptions import DGOrientationOptions
 from .DGSuperimposeOptions import DGSuperimposeOptions
 from .DGSymbolOptions import DGSymbolOptions
 
-class OdbDisplayOptions:
 
-    """The OdbDisplayOptions object stores the display options associated with an OdbInstance 
+class OdbDisplayOptions:
+    """The OdbDisplayOptions object stores the display options associated with an OdbInstance
     object. This object does not have a constructor. Abaqus creates the OdbDisplayOptions 
     object when an OdbInstance object is created using the display options associated with 
     the current viewport at the time of creation. 
@@ -49,4 +49,3 @@ class OdbDisplayOptions:
 
     # A DGDisplayBodyOptions object. 
     displayBodyOptions: DGDisplayBodyOptions = DGDisplayBodyOptions()
-

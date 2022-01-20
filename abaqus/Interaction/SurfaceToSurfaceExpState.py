@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class SurfaceToSurfaceExpState(InteractionState):
-
-    """The SurfaceToSurfaceExpState object stores the propagating data for a 
+    """The SurfaceToSurfaceExpState object stores the propagating data for a
     SurfaceToSurfaceContactExp object. One instance of this object is created internally by 
     the SurfaceToSurfaceContactExp object for each step. The instance is also deleted 
     internally by the SurfaceToSurfaceContactExp object. 
@@ -54,4 +53,3 @@ class SurfaceToSurfaceExpState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

@@ -1,8 +1,10 @@
+from abaqus.UtilityAndView.Repository import Repository
+from abaqusConstants import *
+from .PropertyTableData import PropertyTableData
 
 
 class PropertyTable:
-
-    """A PropertyTable is an object that is used to define the container that encapsulates the 
+    """A PropertyTable is an object that is used to define the container that encapsulates the
     PropertyTableData object. 
     The data of the PropertyTableData object is dependent on the contents of the 
     PropertyTable object. 
@@ -24,7 +26,7 @@ class PropertyTable:
     """
 
     # A repository of PropertyTableData. Specifies all the propertyTableData in PropertyTable 
-    propertyTableDatas: str = ''
+    propertyTableDatas: Repository[str, PropertyTableData] = Repository[str, PropertyTableData]()
 
     def __init__(self, name: str, properties: str, variables: str = ''):
         """This method creates a PropertyTable object.
@@ -71,3 +73,42 @@ class PropertyTable:
         """
         pass
 
+    def PropertyTableData(self, label: str = '', regularize: SymbolicConstant = None,
+                          extrapolate: SymbolicConstant = None, isTemp: Boolean = OFF, fieldNums: int = None,
+                          regularizeTolerance: str = '', data: str = '') -> PropertyTableData:
+        """This method creates a PropertyTableData object.
+
+        Path
+        ----
+            - mdb.models[name].tableCollections[name].propertyTables[name].PropertTableData
+
+        Parameters
+        ----------
+        label
+            A String specifying a unique label name for the current PropertyTable object.
+        regularize
+            A SymbolicConstant specifying the type of regularize to the user-defined property data.
+        extrapolate
+            A SymbolicConstant specifying the type of extrapolation of dependent variables outside
+            the specified range of the independent variables.
+        isTemp
+            A Boolean specifying the dependency of properties on temperature.
+        fieldNums
+            An Int specifying the field variables on which properties are dependent.
+        regularizeTolerance
+            A Double specifying the tolerance to be used to regularize the property table data.
+        data
+            An Array of doubles specifying the values of the properties, the variables mentioned in
+            PropertyTable, and the field variables mentioned in PropertyTableData.
+
+        Returns
+        -------
+            A PropertyTableData object.
+
+        Exceptions
+        ----------
+            RangeError.
+        """
+        self.propertyTableDatas[label] = propertyTableData = PropertyTableData(label, regularize, extrapolate, isTemp,
+                                                                               fieldNums, regularizeTolerance, data)
+        return propertyTableData

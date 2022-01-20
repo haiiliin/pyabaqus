@@ -6,8 +6,7 @@ from ..Region.Region import Region
 
 
 class DiscreteField(Field):
-
-    """The DiscreteField object defines a varying field whose values correspond to distinct 
+    """The DiscreteField object defines a varying field whose values correspond to distinct
     points within a domain. 
     The DiscreteField object is derived from the Field object. 
 
@@ -24,8 +23,8 @@ class DiscreteField(Field):
 
     """
 
-    def __init__(self, name: str, defaultValues: tuple, fieldType: SymbolicConstant, 
-                 location: SymbolicConstant = NODES, dataWidth: int = 1, 
+    def __init__(self, name: str, defaultValues: tuple, fieldType: SymbolicConstant,
+                 location: SymbolicConstant = NODES, dataWidth: int = 1,
                  data: DataTableArray = None, description: str = '',
                  orientationType: SymbolicConstant = CARTESIAN, partLevelOrientation: Boolean = OFF):
         """This method creates a DiscreteField object.
@@ -71,8 +70,8 @@ class DiscreteField(Field):
         super().__init__()
         pass
 
-    def DiscreteFieldByVolumeFraction(self, name: str, eulerianInstance: PartInstance, referenceInstance: PartInstance, 
-                                      accuracy: str = MEDIUM, materialLocation: str = INSIDE, description: str = '', 
+    def DiscreteFieldByVolumeFraction(self, name: str, eulerianInstance: PartInstance, referenceInstance: PartInstance,
+                                      accuracy: str = MEDIUM, materialLocation: str = INSIDE, description: str = '',
                                       scaleFactor: str = ''):
         """This method creates a DiscreteField object that represents the volume fraction of each
         element of an Eulerian Instance that is occupied by a reference instance.
@@ -142,7 +141,7 @@ class DiscreteField(Field):
         """
         pass
 
-    def setValues(self, location: SymbolicConstant = NODES, dataWidth: int = 1, 
+    def setValues(self, location: SymbolicConstant = NODES, dataWidth: int = 1,
                   data: DataTableArray = None, description: str = '',
                   orientationType: SymbolicConstant = CARTESIAN, partLevelOrientation: Boolean = OFF):
         """This method modifies the DiscreteField object.
@@ -175,4 +174,3 @@ class DiscreteField(Field):
             None. 
         """
         pass
-

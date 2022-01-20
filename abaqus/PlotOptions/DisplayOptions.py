@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class DisplayOptions:
 
-    """The DisplayOptions object stores a plot state. 
+class DisplayOptions:
+    """The DisplayOptions object stores a plot state.
 
     Access
     ------
@@ -46,4 +46,3 @@ class DisplayOptions:
             None. 
         """
         pass
-

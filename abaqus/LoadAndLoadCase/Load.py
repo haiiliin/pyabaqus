@@ -1,8 +1,8 @@
 from ..Region.Region import Region
 
-class Load:
 
-    """The Load object is the abstract base type for other Load objects. The Load object has no 
+class Load:
+    """The Load object is the abstract base type for other Load objects. The Load object has no
     explicit constructor. The methods and members of the Load object are common to all 
     objects derived from Load. 
 
@@ -131,4 +131,3 @@ class Load:
             None. 
         """
         pass
-

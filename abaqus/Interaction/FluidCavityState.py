@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class FluidCavityState(InteractionState):
-
-    """The FluidCavityState object stores the propagating data for an FluidCavity object. One 
+    """The FluidCavityState object stores the propagating data for an FluidCavity object. One
     instance of this object is created internally by the FluidCavity object for each step. 
     The instance is also deleted internally by the FluidCavity object. 
     The FluidCavityState object has no constructor or methods. 
@@ -35,4 +34,3 @@ class FluidCavityState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

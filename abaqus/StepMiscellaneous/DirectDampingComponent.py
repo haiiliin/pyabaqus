@@ -1,8 +1,5 @@
-
-
 class DirectDampingComponent:
-
-    """A DirectDampingComponent object is used to define direct damping over a range of modes. 
+    """A DirectDampingComponent object is used to define direct damping over a range of modes.
 
     Access
     ------
@@ -25,4 +22,3 @@ class DirectDampingComponent:
 
     # A Float specifying the fraction of critical damping. 
     fraction: float = None
-

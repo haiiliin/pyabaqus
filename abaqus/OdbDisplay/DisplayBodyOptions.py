@@ -3,8 +3,7 @@ from ..PlotOptions.DGDisplayBodyOptions import DGDisplayBodyOptions
 
 
 class DisplayBodyOptions(DGDisplayBodyOptions):
-
-    """The DisplayBodyOptions object stores values and attributes that are common to all plot 
+    """The DisplayBodyOptions object stores values and attributes that are common to all plot
     states. The DisplayBodyOptions object has no constructor command. Abaqus creates a 
     *defaultOdbDisplay.displayBodyOptions* member when you import the Visualization module. 
     Abaqus creates a *displayBodyOptions* member when it creates the OdbDisplay object, 
@@ -90,13 +89,13 @@ class DisplayBodyOptions(DGDisplayBodyOptions):
     # coordinate directions when *coordinateScale*=ON. The default value is (1, 1, 1). 
     coordinateScaleFactors: float = None
 
-    def setValues(self, options: 'DisplayBodyOptions' = None, visibleEdges: SymbolicConstant = EXTERIOR, 
-                  edgeColorWireHide: str = '', edgeColorFillShade: str = '', 
-                  edgeLineStyle: SymbolicConstant = SOLID, 
-                  edgeLineThickness: SymbolicConstant = VERY_THIN, fillColor: str = '', 
-                  colorCodeOverride: Boolean = ON, elementShrink: Boolean = OFF, 
-                  elementShrinkFactor: int = 5, coordinateScale: Boolean = OFF, 
-                  coordinateScaleFactors: tuple = (), translucency: Boolean = OFF, 
+    def setValues(self, options: 'DisplayBodyOptions' = None, visibleEdges: SymbolicConstant = EXTERIOR,
+                  edgeColorWireHide: str = '', edgeColorFillShade: str = '',
+                  edgeLineStyle: SymbolicConstant = SOLID,
+                  edgeLineThickness: SymbolicConstant = VERY_THIN, fillColor: str = '',
+                  colorCodeOverride: Boolean = ON, elementShrink: Boolean = OFF,
+                  elementShrinkFactor: int = 5, coordinateScale: Boolean = OFF,
+                  coordinateScaleFactors: tuple = (), translucency: Boolean = OFF,
                   translucencyFactor: float = 0):
         """This method modifies the DisplayBodyOptions object.
 
@@ -154,4 +153,3 @@ class DisplayBodyOptions(DGDisplayBodyOptions):
             RangeError. 
         """
         pass
-

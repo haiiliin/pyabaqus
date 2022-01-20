@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class CyclicSymmetryState(InteractionState):
-
-    """The CyclicSymmetryState object stores the propagating data for a CyclicSymmetry object. 
+    """The CyclicSymmetryState object stores the propagating data for a CyclicSymmetry object.
     One instance of this object is created internally by the CyclicSymmetry object for each 
     step. The instance is also deleted internally by the CyclicSymmetry object. 
     The CyclicSymmetryState object has no constructor or methods. 
@@ -77,4 +76,3 @@ class CyclicSymmetryState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

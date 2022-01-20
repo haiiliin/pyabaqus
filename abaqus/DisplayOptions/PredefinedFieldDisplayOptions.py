@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class PredefinedFieldDisplayOptions:
 
-    """The PredefinedFieldDisplayOptions object stores settings that specify how assemblies are 
+class PredefinedFieldDisplayOptions:
+    """The PredefinedFieldDisplayOptions object stores settings that specify how assemblies are
     to be displayed in a particular viewport when 
     session.viewports[name].assemblyDisplay.predefinedFields=ON 
     The PredefinedFieldDisplayOptions object has no constructor. When you create a new 
@@ -21,7 +21,7 @@ class PredefinedFieldDisplayOptions:
 
     """
 
-    def setValues(self, temperatureField: Boolean = ON, velocityField: Boolean = ON, generalField: Boolean = ON, 
+    def setValues(self, temperatureField: Boolean = ON, velocityField: Boolean = ON, generalField: Boolean = ON,
                   stressField: Boolean = ON, hardeningField: Boolean = ON):
         """This method modifies the PredefinedFieldDisplayOptions object.
 
@@ -49,4 +49,3 @@ class PredefinedFieldDisplayOptions:
             RangeError. 
         """
         pass
-

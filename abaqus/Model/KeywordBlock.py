@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class KeywordBlock:
 
-    """The KeywordBlock object contains a representation of its model in the Abaqus input file 
+class KeywordBlock:
+    """The KeywordBlock object contains a representation of its model in the Abaqus input file
     format. You may edit the contents of the KeywordBlock to add solver functionality that 
     is not supported by Abaqus/CAE. As a general rule, edits to the KeywordBlock object 
     should be made as the last step prior to writing the actual Abaqus input file, thus 
@@ -136,4 +136,3 @@ class KeywordBlock:
             IndexError. 
         """
         pass
-

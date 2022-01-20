@@ -17,8 +17,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class FrequencyStep(AnalysisStep):
-
-    """The FrequencyStep object is used to perform eigenvalue extraction to calculate the 
+    """The FrequencyStep object is used to perform eigenvalue extraction to calculate the
     natural frequencies and corresponding mode shapes of a system. 
     The FrequencyStep object is derived from the AnalysisStep object. 
 
@@ -217,7 +216,8 @@ class FrequencyStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -243,18 +243,18 @@ class FrequencyStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, eigensolver: SymbolicConstant, 
-                 numEigen: SymbolicConstant = ALL, description: str = '', shift: float = 0, 
-                 minEigen: float = None, maxEigen: float = None, vectors: int = None, 
-                 maxIterations: int = 30, blockSize: SymbolicConstant = DEFAULT, 
-                 maxBlocks: SymbolicConstant = DEFAULT, normalization: SymbolicConstant = DISPLACEMENT, 
-                 propertyEvaluationFrequency: float = None, projectDamping: Boolean = ON, 
-                 acousticCoupling: SymbolicConstant = AC_ON, acousticRangeFactor: float = 1, 
-                 frictionDamping: Boolean = OFF, matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
-                 maintainAttributes: Boolean = False, simLinearDynamics: Boolean = OFF, 
-                 residualModes: Boolean = OFF, substructureCutoffMultiplier: float = 5, 
-                 firstCutoffMultiplier: float = 1, secondCutoffMultiplier: float = 1, 
-                 residualModeRegion: str = None, residualModeDof: str = None, 
+    def __init__(self, name: str, previous: str, eigensolver: SymbolicConstant,
+                 numEigen: SymbolicConstant = ALL, description: str = '', shift: float = 0,
+                 minEigen: float = None, maxEigen: float = None, vectors: int = None,
+                 maxIterations: int = 30, blockSize: SymbolicConstant = DEFAULT,
+                 maxBlocks: SymbolicConstant = DEFAULT, normalization: SymbolicConstant = DISPLACEMENT,
+                 propertyEvaluationFrequency: float = None, projectDamping: Boolean = ON,
+                 acousticCoupling: SymbolicConstant = AC_ON, acousticRangeFactor: float = 1,
+                 frictionDamping: Boolean = OFF, matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+                 maintainAttributes: Boolean = False, simLinearDynamics: Boolean = OFF,
+                 residualModes: Boolean = OFF, substructureCutoffMultiplier: float = 5,
+                 firstCutoffMultiplier: float = 1, secondCutoffMultiplier: float = 1,
+                 residualModeRegion: str = None, residualModeDof: str = None,
                  limitSavedEigenvectorRegion: SymbolicConstant = None):
         """This method creates a FrequencyStep object.
 
@@ -374,16 +374,16 @@ class FrequencyStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, numEigen: SymbolicConstant = ALL, description: str = '', shift: float = 0, 
-                  minEigen: float = None, maxEigen: float = None, vectors: int = None, 
-                  maxIterations: int = 30, blockSize: SymbolicConstant = DEFAULT, 
-                  maxBlocks: SymbolicConstant = DEFAULT, normalization: SymbolicConstant = DISPLACEMENT, 
-                  propertyEvaluationFrequency: float = None, projectDamping: Boolean = ON, 
-                  acousticCoupling: SymbolicConstant = AC_ON, acousticRangeFactor: float = 1, 
-                  frictionDamping: Boolean = OFF, matrixStorage: SymbolicConstant = SOLVER_DEFAULT, 
-                  simLinearDynamics: Boolean = OFF, residualModes: Boolean = OFF, 
-                  substructureCutoffMultiplier: float = 5, firstCutoffMultiplier: float = 1, 
-                  secondCutoffMultiplier: float = 1, residualModeRegion: str = None, 
+    def setValues(self, numEigen: SymbolicConstant = ALL, description: str = '', shift: float = 0,
+                  minEigen: float = None, maxEigen: float = None, vectors: int = None,
+                  maxIterations: int = 30, blockSize: SymbolicConstant = DEFAULT,
+                  maxBlocks: SymbolicConstant = DEFAULT, normalization: SymbolicConstant = DISPLACEMENT,
+                  propertyEvaluationFrequency: float = None, projectDamping: Boolean = ON,
+                  acousticCoupling: SymbolicConstant = AC_ON, acousticRangeFactor: float = 1,
+                  frictionDamping: Boolean = OFF, matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+                  simLinearDynamics: Boolean = OFF, residualModes: Boolean = OFF,
+                  substructureCutoffMultiplier: float = 5, firstCutoffMultiplier: float = 1,
+                  secondCutoffMultiplier: float = 1, residualModeRegion: str = None,
                   residualModeDof: str = None, limitSavedEigenvectorRegion: SymbolicConstant = None):
         """This method modifies the FrequencyStep object.
 
@@ -480,4 +480,3 @@ class FrequencyStep(AnalysisStep):
             RangeError. 
         """
         pass
-

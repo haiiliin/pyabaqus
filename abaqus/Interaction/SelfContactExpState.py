@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class SelfContactExpState(InteractionState):
-
-    """The SelfContactExpState object stores the propagating data for a SelfContactExp object. 
+    """The SelfContactExpState object stores the propagating data for a SelfContactExp object.
     One instance of this object is created internally by the SelfContactExp object for each 
     step. The instance is also deleted internally by the SelfContactExp object. 
     The SelfContactExpState object has no constructor or methods. 
@@ -54,4 +53,3 @@ class SelfContactExpState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

@@ -4,8 +4,7 @@ from .XYCurveArray import XYCurveArray
 
 
 class AxisData:
-
-    """The AxisData object is used to store the data attributes of axes. An AxisData object is 
+    """The AxisData object is used to store the data attributes of axes. An AxisData object is
     automatically created when creating an Axis object. 
 
     Access
@@ -142,10 +141,10 @@ class AxisData:
     title: str = ''
 
     def setValues(self, axisData: 'AxisData' = None, labelFormat: SymbolicConstant = AUTOMATIC,
-                  labelNumDigits: int = 2, scale: SymbolicConstant = LINEAR, dbReference: float = 1, 
-                  minAutoCompute: Boolean = ON, minValue: float = None, maxAutoCompute: Boolean = ON, 
-                  maxValue: float = None, tickMode: SymbolicConstant = AUTOCOMPUTE, 
-                  tickIncrement: float = None, tickCount: int = None, minorTickCount: int = 1, 
+                  labelNumDigits: int = 2, scale: SymbolicConstant = LINEAR, dbReference: float = 1,
+                  minAutoCompute: Boolean = ON, minValue: float = None, maxAutoCompute: Boolean = ON,
+                  maxValue: float = None, tickMode: SymbolicConstant = AUTOCOMPUTE,
+                  tickIncrement: float = None, tickCount: int = None, minorTickCount: int = 1,
                   title: str = '', useSystemTitle: Boolean = ON):
         """This method modifies the AxisData object.
 
@@ -218,4 +217,3 @@ class AxisData:
             RangeError. 
         """
         pass
-

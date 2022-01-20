@@ -3,8 +3,7 @@ from .Constraint import Constraint
 
 
 class Equation(Constraint):
-
-    """The Equation object defines a linear multi-point constraint between a set of degrees of 
+    """The Equation object defines a linear multi-point constraint between a set of degrees of
     freedom. 
     The Equation object is derived from the ConstrainedSketchConstraint object.
 
@@ -69,4 +68,3 @@ class Equation(Constraint):
               Equation must have two or more terms. 
         """
         pass
-

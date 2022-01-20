@@ -3,8 +3,7 @@ from .LayerPropertiesArray import LayerPropertiesArray
 
 
 class RebarLayers:
-
-    """The RebarLayers object defines the rebar properties of a section. 
+    """The RebarLayers object defines the rebar properties of a section.
 
     Access
     ------
@@ -65,4 +64,3 @@ class RebarLayers:
             None. 
         """
         pass
-

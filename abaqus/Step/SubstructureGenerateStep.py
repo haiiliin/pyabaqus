@@ -20,8 +20,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class SubstructureGenerateStep(AnalysisStep):
-
-    """TheSubstructureGenerateStep object is used to generate a substructure. 
+    """TheSubstructureGenerateStep object is used to generate a substructure.
     The SubstructureGenerateStep object is derived from the AnalysisStep object. 
 
     Access
@@ -159,7 +158,8 @@ class SubstructureGenerateStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+        str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
@@ -185,18 +185,18 @@ class SubstructureGenerateStep(AnalysisStep):
     # A repository of PredefinedFieldState objects. 
     predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, substructureIdentifier: int, description: str = '', 
-                 recoveryMatrix: SymbolicConstant = WHOLE_MODEL, recoveryRegion: Region = Region(), 
-                 computeGravityLoadVectors: Boolean = False, computeReducedMassMatrix: Boolean = False, 
-                 computeReducedStructuralDampingMatrix: Boolean = False, 
-                 computeReducedViscousDampingMatrix: Boolean = False, 
-                 evaluateFrequencyDependentProperties: Boolean = False, frequency: float = 0, 
-                 retainedEigenmodesMethod: SymbolicConstant = NONE, 
+    def __init__(self, name: str, previous: str, substructureIdentifier: int, description: str = '',
+                 recoveryMatrix: SymbolicConstant = WHOLE_MODEL, recoveryRegion: Region = Region(),
+                 computeGravityLoadVectors: Boolean = False, computeReducedMassMatrix: Boolean = False,
+                 computeReducedStructuralDampingMatrix: Boolean = False,
+                 computeReducedViscousDampingMatrix: Boolean = False,
+                 evaluateFrequencyDependentProperties: Boolean = False, frequency: float = 0,
+                 retainedEigenmodesMethod: SymbolicConstant = NONE,
                  modeRange: SubstructureGenerateModesArray = None,
                  frequencyRange: SubstructureGenerateFrequencyArray = None,
-                 globalDampingField: SymbolicConstant = NONE, alphaDampingRatio: float = 0, 
-                 betaDampingRatio: float = 0, structuralDampingRatio: float = 0, 
-                 viscousDampingControl: SymbolicConstant = NONE, 
+                 globalDampingField: SymbolicConstant = NONE, alphaDampingRatio: float = 0,
+                 betaDampingRatio: float = 0, structuralDampingRatio: float = 0,
+                 viscousDampingControl: SymbolicConstant = NONE,
                  structuralDampingControl: SymbolicConstant = NONE):
         """This method creates a SubstructureGenerateStep object.
 
@@ -278,18 +278,18 @@ class SubstructureGenerateStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', recoveryMatrix: SymbolicConstant = WHOLE_MODEL, 
-                  recoveryRegion: Region = Region(), computeGravityLoadVectors: Boolean = False, 
-                  computeReducedMassMatrix: Boolean = False, 
-                  computeReducedStructuralDampingMatrix: Boolean = False, 
-                  computeReducedViscousDampingMatrix: Boolean = False, 
-                  evaluateFrequencyDependentProperties: Boolean = False, frequency: float = 0, 
-                  retainedEigenmodesMethod: SymbolicConstant = NONE, 
+    def setValues(self, description: str = '', recoveryMatrix: SymbolicConstant = WHOLE_MODEL,
+                  recoveryRegion: Region = Region(), computeGravityLoadVectors: Boolean = False,
+                  computeReducedMassMatrix: Boolean = False,
+                  computeReducedStructuralDampingMatrix: Boolean = False,
+                  computeReducedViscousDampingMatrix: Boolean = False,
+                  evaluateFrequencyDependentProperties: Boolean = False, frequency: float = 0,
+                  retainedEigenmodesMethod: SymbolicConstant = NONE,
                   modeRange: SubstructureGenerateModesArray = None,
                   frequencyRange: SubstructureGenerateFrequencyArray = None,
-                  globalDampingField: SymbolicConstant = NONE, alphaDampingRatio: float = 0, 
-                  betaDampingRatio: float = 0, structuralDampingRatio: float = 0, 
-                  viscousDampingControl: SymbolicConstant = NONE, 
+                  globalDampingField: SymbolicConstant = NONE, alphaDampingRatio: float = 0,
+                  betaDampingRatio: float = 0, structuralDampingRatio: float = 0,
+                  viscousDampingControl: SymbolicConstant = NONE,
                   structuralDampingControl: SymbolicConstant = NONE):
         """This method modifies the SubstructureGenerateStep object.
 
@@ -358,4 +358,3 @@ class SubstructureGenerateStep(AnalysisStep):
             RangeError. 
         """
         pass
-

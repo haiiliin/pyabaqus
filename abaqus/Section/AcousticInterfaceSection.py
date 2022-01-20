@@ -1,8 +1,8 @@
 from .Section import Section
 
-class AcousticInterfaceSection(Section):
 
-    """The AcousticInterfaceSection object defines the properties of an acoustic section. 
+class AcousticInterfaceSection(Section):
+    """The AcousticInterfaceSection object defines the properties of an acoustic section.
     The AcousticInterfaceSection object is derived from the Section object. 
 
     Access
@@ -66,4 +66,3 @@ class AcousticInterfaceSection(Section):
             RangeError. 
         """
         pass
-

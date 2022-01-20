@@ -1,8 +1,7 @@
 
 
 class ContactInitialization:
-
-    """The ContactInitialization object is the abstract base type for other 
+    """The ContactInitialization object is the abstract base type for other
     ContactInitialization objects. The ContactInitialization object has no explicit 
     constructor, members, or methods. 
 
@@ -18,5 +17,4 @@ class ContactInitialization:
     -------------------------------
 
     """
-
     pass

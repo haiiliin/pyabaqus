@@ -3,8 +3,7 @@ from ..Region.Region import Region
 
 
 class BeadPenetrationCheck(GeometricRestriction):
-
-    """The BeadPenetrationCheck object defines a penetration check geometric restriction. 
+    """The BeadPenetrationCheck object defines a penetration check geometric restriction.
     The BeadPenetrationCheck object is derived from the GeometricRestriction object. 
 
     Access
@@ -62,4 +61,3 @@ class BeadPenetrationCheck(GeometricRestriction):
             None. 
         """
         pass
-

@@ -1,8 +1,7 @@
 
 
 class AbaqusNDarray:
-
-    """The AbaqusNDarray object is a sequence object derived from numpy.ndarray and is used to 
+    """The AbaqusNDarray object is a sequence object derived from numpy.ndarray and is used to
     store numeric keyword data from an Abaqus input file. This object is similar to the 
     numpy.ndarray object, but the numeric elements are returned as standard Python objects, 
     not numpy numeric types. 
@@ -23,5 +22,4 @@ class AbaqusNDarray:
     -------------------------------
 
     """
-
     pass

@@ -1,10 +1,9 @@
 from abaqusConstants import *
-from .InteractionProperty import InteractionProperty
+from .ContactProperty import ContactProperty
 
 
-class FluidCavityProperty(InteractionProperty):
-
-    """The FluidCavityProperty object is an interaction property that defines the fluid 
+class FluidCavityProperty(ContactProperty):
+    """The FluidCavityProperty object is an interaction property that defines the fluid
     behavior for a surface-based fluid cavity. 
     The FluidCavityProperty object is derived from the InteractionProperty object. 
 
@@ -27,14 +26,14 @@ class FluidCavityProperty(InteractionProperty):
 
     """
 
-    def __init__(self, name: str, definition: SymbolicConstant = HYDRAULIC, fluidDensity: float = None, 
-                 molecularWeight: float = None, useExpansion: Boolean = OFF, 
-                 expansionTempDep: Boolean = OFF, expansionDependencies: int = 0, 
-                 referenceTemperature: float = 0, expansionTable: tuple = (), 
-                 useBulkModulus: Boolean = OFF, bulkModulusTempDep: Boolean = OFF, 
-                 bulkModulusDependencies: int = 0, bulkModulusTable: tuple = (), 
-                 useCapacity: Boolean = OFF, capacityType: SymbolicConstant = POLYNOMIAL, 
-                 capacityTempDep: Boolean = OFF, capacityDependencies: int = 0, 
+    def __init__(self, name: str, definition: SymbolicConstant = HYDRAULIC, fluidDensity: float = None,
+                 molecularWeight: float = None, useExpansion: Boolean = OFF,
+                 expansionTempDep: Boolean = OFF, expansionDependencies: int = 0,
+                 referenceTemperature: float = 0, expansionTable: tuple = (),
+                 useBulkModulus: Boolean = OFF, bulkModulusTempDep: Boolean = OFF,
+                 bulkModulusDependencies: int = 0, bulkModulusTable: tuple = (),
+                 useCapacity: Boolean = OFF, capacityType: SymbolicConstant = POLYNOMIAL,
+                 capacityTempDep: Boolean = OFF, capacityDependencies: int = 0,
                  capacityTable: tuple = ()):
         """This method creates a FluidCavityProperty object.
 
@@ -143,17 +142,17 @@ class FluidCavityProperty(InteractionProperty):
         ----------
             None. 
         """
-        super().__init__()
+        super().__init__(name)
         pass
 
-    def setValues(self, definition: SymbolicConstant = HYDRAULIC, fluidDensity: float = None, 
-                  molecularWeight: float = None, useExpansion: Boolean = OFF, 
-                  expansionTempDep: Boolean = OFF, expansionDependencies: int = 0, 
-                  referenceTemperature: float = 0, expansionTable: tuple = (), 
-                  useBulkModulus: Boolean = OFF, bulkModulusTempDep: Boolean = OFF, 
-                  bulkModulusDependencies: int = 0, bulkModulusTable: tuple = (), 
-                  useCapacity: Boolean = OFF, capacityType: SymbolicConstant = POLYNOMIAL, 
-                  capacityTempDep: Boolean = OFF, capacityDependencies: int = 0, 
+    def setValues(self, definition: SymbolicConstant = HYDRAULIC, fluidDensity: float = None,
+                  molecularWeight: float = None, useExpansion: Boolean = OFF,
+                  expansionTempDep: Boolean = OFF, expansionDependencies: int = 0,
+                  referenceTemperature: float = 0, expansionTable: tuple = (),
+                  useBulkModulus: Boolean = OFF, bulkModulusTempDep: Boolean = OFF,
+                  bulkModulusDependencies: int = 0, bulkModulusTable: tuple = (),
+                  useCapacity: Boolean = OFF, capacityType: SymbolicConstant = POLYNOMIAL,
+                  capacityTempDep: Boolean = OFF, capacityDependencies: int = 0,
                   capacityTable: tuple = ()):
         """This method modifies the FluidCavityProperty object.
 
@@ -257,4 +256,3 @@ class FluidCavityProperty(InteractionProperty):
             None. 
         """
         pass
-

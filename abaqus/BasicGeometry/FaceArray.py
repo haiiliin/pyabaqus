@@ -1,9 +1,9 @@
-from .Face import Face
 from abaqusConstants import *
+from .Face import Face
+
 
 class FaceArray:
-
-    """The FaceArray is a sequence of Face objects. If the part is modified, then FaceArray 
+    """The FaceArray is a sequence of Face objects. If the part is modified, then FaceArray
     must be updated for that part. 
 
     Access
@@ -164,7 +164,7 @@ class FaceArray:
         """
         pass
 
-    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '', 
+    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
                          zMax: str = ''):
         """This method returns an array of face objects that lie within the specified bounding box.
 
@@ -297,4 +297,3 @@ class FaceArray:
             !img 
         """
         pass
-

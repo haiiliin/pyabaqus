@@ -4,8 +4,7 @@ from .TextStyle import TextStyle
 
 
 class Title:
-
-    """The Title object is used to store the display attributes of the XYPlot title. An Title 
+    """The Title object is used to store the display attributes of the XYPlot title. An Title
     object is automatically created when creating a XYPlot object. 
 
     Access
@@ -62,4 +61,3 @@ class Title:
             None. 
         """
         pass
-

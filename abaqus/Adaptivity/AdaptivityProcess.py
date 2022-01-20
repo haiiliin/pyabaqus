@@ -5,8 +5,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class AdaptivityProcess:
-
-    """The AdaptivityProcess object defines a series of jobs that will be submitted for 
+    """The AdaptivityProcess object defines a series of jobs that will be submitted for
     analysis. Abaqus performs adaptive remeshing between each job. 
 
     Access
@@ -28,7 +27,7 @@ class AdaptivityProcess:
 
     # A repository of AdaptivityIteration objects specifying the AdaptivityIteration objects 
     # received during running the adaptivity process. 
-    iterations: Repository[str, AdaptivityIteration] = Repository[str, AdaptivityIteration]()
+    iterations: Repository[int, AdaptivityIteration] = Repository[str, AdaptivityIteration]()
 
     def __init__(self, name: str, job: ModelJob, maxIterations: int = 3, jobPrefix: str = ''):
         """This method creates an AdaptivityProcess object.
@@ -63,7 +62,7 @@ class AdaptivityProcess:
         """
         pass
 
-    def submit(self, waitForCompletion: Boolean = OFF, datacheckJob: Boolean = False, 
+    def submit(self, waitForCompletion: Boolean = OFF, datacheckJob: Boolean = False,
                continueJob: Boolean = False):
         """This method begins the process of analysis and adaptive remeshing.
 
@@ -113,3 +112,36 @@ class AdaptivityProcess:
         """
         pass
 
+    def AdaptivityIteration(self, iteration: int, jobName: str, modelName: str, odbPath: str, remeshingErrors: int) -> AdaptivityIteration:
+        """This method creates an AdaptivityIteration object.
+
+        Path
+        ----
+            - mdb.adaptivityProcesses[name].AdaptivityIteration
+
+        Parameters
+        ----------
+        iteration
+            An Int specifying the sequence number for this iteration in the adaptivity process.
+        jobName
+            A String specifying the name of the job that was run for this iteration.
+        modelName
+            A String specifying the name of the model that was analyzed and remeshed in this
+            iteration.
+        odbPath
+            A String specifying the path to the ODB file that was created for this iteration.
+        remeshingErrors
+            An Int specifying the number of part instances which generated errors while remeshing
+            the model in this iteration of the adaptivity process.
+
+        Returns
+        -------
+            An AdaptivityIteration object.
+
+        Exceptions
+        ----------
+            None.
+        """
+        self.iterations[iteration] = iteration = AdaptivityIteration(iteration, jobName, modelName, odbPath,
+                                                                     remeshingErrors)
+        return iteration

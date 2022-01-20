@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class OdbDiagnosticAttempt:
 
-    """The OdbDiagnosticAttempt object. 
+class OdbDiagnosticAttempt:
+    """The OdbDiagnosticAttempt object.
 
     Access
     ------
@@ -44,4 +44,3 @@ class OdbDiagnosticAttempt:
     # A float specifying the size of the increment of the particular attempt. This attribute 
     # is read-only. 
     size: str = ''
-

@@ -3,8 +3,7 @@ from .ContactInitialization import ContactInitialization
 
 
 class ExpInitialization(ContactInitialization):
-
-    """The ExpInitialization object is used in conjunction with ContactExp in Abaqus/Explicit 
+    """The ExpInitialization object is used in conjunction with ContactExp in Abaqus/Explicit
     analyses to specify contact initialization data. 
     The ExpInitialization object is derived from the ContactInitialization object. 
 
@@ -22,10 +21,10 @@ class ExpInitialization(ContactInitialization):
 
     """
 
-    def __init__(self, name: str, overclosureType: SymbolicConstant = ADJUST, 
-                 interferenceDistance: float = None, clearanceDistance: float = None, 
-                 openingTolerance: float = None, overclosureTolerance: float = None, 
-                 adjustNodalCoords: Boolean = True, secondaryNodesetName: str = None, 
+    def __init__(self, name: str, overclosureType: SymbolicConstant = ADJUST,
+                 interferenceDistance: float = None, clearanceDistance: float = None,
+                 openingTolerance: float = None, overclosureTolerance: float = None,
+                 adjustNodalCoords: Boolean = True, secondaryNodesetName: str = None,
                  stepFraction: float = 1):
         """This method creates an ExpInitialization object.
 
@@ -81,9 +80,9 @@ class ExpInitialization(ContactInitialization):
         super().__init__()
         pass
 
-    def setValues(self, overclosureType: SymbolicConstant = ADJUST, interferenceDistance: float = None, 
-                  clearanceDistance: float = None, openingTolerance: float = None, 
-                  overclosureTolerance: float = None, adjustNodalCoords: Boolean = True, 
+    def setValues(self, overclosureType: SymbolicConstant = ADJUST, interferenceDistance: float = None,
+                  clearanceDistance: float = None, openingTolerance: float = None,
+                  overclosureTolerance: float = None, adjustNodalCoords: Boolean = True,
                   secondaryNodesetName: str = None, stepFraction: float = 1):
         """This method modifies the ExpInitialization object.
 
@@ -131,4 +130,3 @@ class ExpInitialization(ContactInitialization):
             RangeError. 
         """
         pass
-

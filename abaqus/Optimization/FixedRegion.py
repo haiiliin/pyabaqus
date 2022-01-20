@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class FixedRegion(GeometricRestriction):
-
-    """The FixedRegion object defines a fixed region geometric restriction. 
+    """The FixedRegion object defines a fixed region geometric restriction.
     The FixedRegion object is derived from the GeometricRestriction object. 
 
     Access
@@ -21,7 +20,7 @@ class FixedRegion(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, region: Region, csys: int = None, presumeFeasibleRegionAtStart: Boolean = ON, 
+    def __init__(self, name: str, region: Region, csys: int = None, presumeFeasibleRegionAtStart: Boolean = ON,
                  u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF):
         """This method creates a FixedRegion object.
 
@@ -65,7 +64,7 @@ class FixedRegion(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, presumeFeasibleRegionAtStart: Boolean = ON, u1: Boolean = OFF, 
+    def setValues(self, csys: int = None, presumeFeasibleRegionAtStart: Boolean = ON, u1: Boolean = OFF,
                   u2: Boolean = OFF, u3: Boolean = OFF):
         """This method modifies the FixedRegion object.
 
@@ -97,4 +96,3 @@ class FixedRegion(GeometricRestriction):
             None. 
         """
         pass
-

@@ -24,4 +24,3 @@ class ConstrainedSketchVertexModel(ConstrainedSketchBase):
             None.
         """
         pass
-

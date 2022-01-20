@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class ConcentratedHeatFlux(Load):
-
-    """The ConcentratedHeatFlux object stores the data for a concentrated heat flux load. 
+    """The ConcentratedHeatFlux object stores the data for a concentrated heat flux load.
     The ConcentratedHeatFlux object is derived from the Load object. 
 
     Access
@@ -40,8 +39,8 @@ class ConcentratedHeatFlux(Load):
     # A Region object specifying the region to which the load is applied. 
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, 
-                 distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET, 
+    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float,
+                 distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET,
                  dof: int = 11):
         """This method creates a ConcentratedHeatFlux object.
 
@@ -86,7 +85,7 @@ class ConcentratedHeatFlux(Load):
         super().__init__()
         pass
 
-    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET, 
+    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET,
                   dof: int = 11):
         """This method modifies the data for an existing ConcentratedHeatFlux object in the step
         where it is created.
@@ -144,4 +143,3 @@ class ConcentratedHeatFlux(Load):
             None. 
         """
         pass
-

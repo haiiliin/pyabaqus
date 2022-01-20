@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class Velocity(PredefinedField):
-
-    """The Velocity object stores the data for an initial velocity predefined field. 
+    """The Velocity object stores the data for an initial velocity predefined field.
     The Velocity object is derived from the PredefinedField object. 
 
     Access
@@ -22,8 +21,8 @@ class Velocity(PredefinedField):
 
     """
 
-    def __init__(self, name: str, region: Region, velocity1: float, velocity2: float, velocity3: float, 
-                 omega: float, axisBegin: tuple, axisEnd: tuple, field: str = '', 
+    def __init__(self, name: str, region: Region, velocity1: float, velocity2: float, velocity3: float,
+                 omega: float, axisBegin: tuple, axisEnd: tuple, field: str = '',
                  distributionType: SymbolicConstant = MAGNITUDE):
         """This method creates a Velocity predefined field object.
 
@@ -92,4 +91,3 @@ class Velocity(PredefinedField):
             None. 
         """
         pass
-

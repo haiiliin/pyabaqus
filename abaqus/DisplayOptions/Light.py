@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class Light:
 
-    """The Light object stores settings that control how objects are lit when the *renderStyle* 
+class Light:
+    """The Light object stores settings that control how objects are lit when the *renderStyle*
     is set to SHADED. 
     The Light object has no constructor; Abaqus creates them as part of the 
     *defaultLightOptions* and the *lightOptions* objects when a session is started. 
@@ -20,7 +20,7 @@ class Light:
 
     """
 
-    def setValues(self, enabled: Boolean = OFF, type: SymbolicConstant = DIRECTIONAL, latitude: float = 0, 
+    def setValues(self, enabled: Boolean = OFF, type: SymbolicConstant = DIRECTIONAL, latitude: float = 0,
                   longitude: float = 0, diffuseColor: str = '', specularColor: str = ''):
         """This method modifies the Light object.
 
@@ -60,4 +60,3 @@ class Light:
             RangeError. 
         """
         pass
-

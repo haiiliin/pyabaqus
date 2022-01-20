@@ -3,8 +3,7 @@ from .InteractionState import InteractionState
 
 
 class AcousticImpedanceState(InteractionState):
-
-    """The AcousticImpedanceState object stores the propagating data of an AcousticImpedance 
+    """The AcousticImpedanceState object stores the propagating data of an AcousticImpedance
     object in a step. One instance of this object is created internally by the 
     AcousticImpedance object for each step. The instance is also deleted internally by the 
     AcousticImpedance object. 
@@ -45,4 +44,3 @@ class AcousticImpedanceState(InteractionState):
     # - INSTANCE_NOT_APPLICABLE 
     # - BUILT_INTO_BASE_STATE 
     status: SymbolicConstant = None
-

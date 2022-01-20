@@ -22,6 +22,7 @@ Corresponding analysis keywords
 
 """
 
+
 def isUpgradeRequiredForOd(upgradeRequiredOdbPath: str):
     """This method determines if an output database file needs to be upgraded to the current
     release.
@@ -56,6 +57,7 @@ def isUpgradeRequiredForOd(upgradeRequiredOdbPath: str):
     """
     pass
 
+
 def maxEnvelop():
     """Retrieve the maximum value of an output variable over a number of fields.
 
@@ -77,6 +79,7 @@ def maxEnvelop():
     """
     pass
 
+
 def minEnvelop():
     """Retrieve the minimum value of an output variable over a number of fields.
 
@@ -97,6 +100,7 @@ def minEnvelop():
           This function takes no keyword arguments. 
     """
     pass
+
 
 @typing.overload
 def openOdb(path: str, readOnly: Boolean = OFF, readInternalSets: Boolean = OFF):
@@ -135,6 +139,7 @@ def openOdb(path: str, readOnly: Boolean = OFF, readInternalSets: Boolean = OFF)
         opened. 
     """
     pass
+
 
 @typing.overload
 def openOdb(name: str, path: str = '', readOnly: Boolean = OFF):
@@ -179,8 +184,10 @@ def openOdb(name: str, path: str = '', readOnly: Boolean = OFF):
     """
     pass
 
+
 def openOdb(*args, **kwargs):
     pass
+
 
 def upgradeOd(existingOdbPath: str, upgradedOdbPath: str):
     """This method upgrades an existing Odb object to the current release and writes the
@@ -218,4 +225,3 @@ def upgradeOd(existingOdbPath: str, upgradedOdbPath: str):
           OdbError: cannot convert database 
     """
     pass
-

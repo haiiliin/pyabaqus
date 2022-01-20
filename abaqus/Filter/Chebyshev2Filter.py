@@ -3,8 +3,7 @@ from .Filter import Filter
 
 
 class Chebyshev2Filter(Filter):
-
-    """The Chebyshev2Filter object defines a Chebyshev type 2 filter. 
+    """The Chebyshev2Filter object defines a Chebyshev type 2 filter.
     The Chebyshev2Filter object is derived from the Filter object. 
 
     Access
@@ -23,8 +22,8 @@ class Chebyshev2Filter(Filter):
 
     """
 
-    def __init__(self, name: str, cutoffFrequency: float, rippleFactor: float = 0, order: int = 2, 
-                 operation: SymbolicConstant = NONE, halt: Boolean = OFF, limit: float = None, 
+    def __init__(self, name: str, cutoffFrequency: float, rippleFactor: float = 0, order: int = 2,
+                 operation: SymbolicConstant = NONE, halt: Boolean = OFF, limit: float = None,
                  invariant: SymbolicConstant = NONE):
         """This method creates a Chebyshev2Filter object.
 
@@ -73,7 +72,7 @@ class Chebyshev2Filter(Filter):
         super().__init__()
         pass
 
-    def setValues(self, rippleFactor: float = 0, order: int = 2, operation: SymbolicConstant = NONE, 
+    def setValues(self, rippleFactor: float = 0, order: int = 2, operation: SymbolicConstant = NONE,
                   halt: Boolean = OFF, limit: float = None, invariant: SymbolicConstant = NONE):
         """This method modifies the Chebyshev2Filter object.
 
@@ -109,4 +108,3 @@ class Chebyshev2Filter(Filter):
             RangeError. 
         """
         pass
-

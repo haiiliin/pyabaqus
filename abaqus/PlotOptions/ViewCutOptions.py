@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class ViewCutOptions:
 
-    """The ViewCutOptions object stores values and attributes associated with a view cut plot. 
+class ViewCutOptions:
+    """The ViewCutOptions object stores values and attributes associated with a view cut plot.
     The ViewCutOptions object has no constructor command. Abaqus creates a 
     *defaultOdbDisplay.viewCutOptions* member when you import the Visualization module. 
     Abaqus creates an *viewCutOptions* member when it creates the OdbDisplay object, using 
@@ -109,16 +109,16 @@ class ViewCutOptions:
     # default value is (0, 1, 0). 
     yAxis: float = None
 
-    def setValues(self, options: 'ViewCutOptions' = None, belowOptions: str = None, 
-                  useBelowOptions: Boolean = OFF, onOptions: str = None, useOnOptions: Boolean = OFF, 
-                  aboveOptions: str = None, useAboveOptions: Boolean = OFF, 
-                  freeBodyCutThru: SymbolicConstant = CURRENT_DISPLAY_GROUP, 
-                  freeBodyStepThru: SymbolicConstant = ACTIVE_CUT_RANGE, numCutFreeBody: int = 1, 
-                  displaySlicing: Boolean = OFF, slicingAtPathNodes: Boolean = OFF, 
-                  freeBodySumOnPath: Boolean = ON, cutFreeBodyMin: float = 0, cutFreeBodyMax: float = 0, 
-                  showHeatFlowRate: SymbolicConstant = ON, summationLoc: SymbolicConstant = CENTROID, 
-                  componentResolution: SymbolicConstant = NORMAL_TANGENTIAL, 
-                  csysName: SymbolicConstant = GLOBAL, pathName: str = '', summationPoint: tuple = (), 
+    def setValues(self, options: 'ViewCutOptions' = None, belowOptions: str = None,
+                  useBelowOptions: Boolean = OFF, onOptions: str = None, useOnOptions: Boolean = OFF,
+                  aboveOptions: str = None, useAboveOptions: Boolean = OFF,
+                  freeBodyCutThru: SymbolicConstant = CURRENT_DISPLAY_GROUP,
+                  freeBodyStepThru: SymbolicConstant = ACTIVE_CUT_RANGE, numCutFreeBody: int = 1,
+                  displaySlicing: Boolean = OFF, slicingAtPathNodes: Boolean = OFF,
+                  freeBodySumOnPath: Boolean = ON, cutFreeBodyMin: float = 0, cutFreeBodyMax: float = 0,
+                  showHeatFlowRate: SymbolicConstant = ON, summationLoc: SymbolicConstant = CENTROID,
+                  componentResolution: SymbolicConstant = NORMAL_TANGENTIAL,
+                  csysName: SymbolicConstant = GLOBAL, pathName: str = '', summationPoint: tuple = (),
                   yAxis: tuple = ()):
         """This method modifies the ViewCutOptions object.
 
@@ -197,4 +197,3 @@ class ViewCutOptions:
             RangeError. 
         """
         pass
-

@@ -1,9 +1,9 @@
 from .Section import Section
 from .TransverseShearShell import TransverseShearShell
 
-class ShellSection(Section):
 
-    """The ShellSection object defines the properties of a shell section. The ShellSection 
+class ShellSection(Section):
+    """The ShellSection object defines the properties of a shell section. The ShellSection
     object is derived from the Section object. The ShellSection object has no explicit 
     constructor and no methods or members. 
     The ShellSection object is derived from the Section object. 
@@ -28,4 +28,3 @@ class ShellSection(Section):
 
     # A TransverseShearShell object specifying the transverse shear stiffness properties. 
     transverseShear: TransverseShearShell = None
-

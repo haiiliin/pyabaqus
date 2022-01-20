@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class PropertyTableData:
 
-    """A PropertyTableData is an object that is used to specify the property table of the 
+class PropertyTableData:
+    """A PropertyTableData is an object that is used to specify the property table of the
     respective property table type. 
     The values in each column in the PropertyTableData object corresponds to the properties 
     and variables mentioned in the PropertyTable object. 
@@ -21,8 +21,8 @@ class PropertyTableData:
 
     """
 
-    def __init__(self, label: str = '', regularize: SymbolicConstant = None, 
-                 extrapolate: SymbolicConstant = None, isTemp: Boolean = OFF, fieldNums: int = None, 
+    def __init__(self, label: str = '', regularize: SymbolicConstant = None,
+                 extrapolate: SymbolicConstant = None, isTemp: Boolean = OFF, fieldNums: int = None,
                  regularizeTolerance: str = '', data: str = ''):
         """This method creates a PropertyTableData object.
 
@@ -73,4 +73,3 @@ class PropertyTableData:
             RangeError. 
         """
         pass
-

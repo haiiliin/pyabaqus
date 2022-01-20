@@ -3,8 +3,7 @@ from .Edge import Edge
 
 
 class InterestingPoint:
-
-    """Interesting points can be located at the following: 
+    """Interesting points can be located at the following:
     - The middle of an edge. 
     - The middle of an arc. 
     - The center of an arc. 
@@ -51,4 +50,3 @@ class InterestingPoint:
             !img 
         """
         pass
-

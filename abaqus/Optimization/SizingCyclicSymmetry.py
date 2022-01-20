@@ -4,8 +4,7 @@ from ..Region.Region import Region
 
 
 class SizingCyclicSymmetry(GeometricRestriction):
-
-    """The SizingCyclicSymmetry object defines a sizing cyclic symmetry geometric restriction. 
+    """The SizingCyclicSymmetry object defines a sizing cyclic symmetry geometric restriction.
     The SizingCyclicSymmetry object is derived from the GeometricRestriction object. 
 
     Access
@@ -21,7 +20,7 @@ class SizingCyclicSymmetry(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, region: Region, translation: float, axis: SymbolicConstant = AXIS_1, 
+    def __init__(self, name: str, region: Region, translation: float, axis: SymbolicConstant = AXIS_1,
                  csys: int = None, ignoreFrozenArea: Boolean = OFF):
         """This method creates a SizingCyclicSymmetry object.
 
@@ -84,4 +83,3 @@ class SizingCyclicSymmetry(GeometricRestriction):
             None. 
         """
         pass
-

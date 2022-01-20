@@ -7,8 +7,7 @@ from ..UtilityAndView.Repository import Repository
 
 
 class OdbFrame:
-
-    """The domain of the OdbFrame object is taken from the parent step. 
+    """The domain of the OdbFrame object is taken from the parent step.
 
     Access
     ------
@@ -47,10 +46,10 @@ class OdbFrame:
     fieldOutputs: Repository[str, FieldOutput] = Repository[str, FieldOutput]()
 
     # An OdbLoadCase object specifying the load case for the frame. 
-    loadCase: OdbLoadCase = OdbLoadCase()
+    loadCase: OdbLoadCase = OdbLoadCase('loadCase')
 
     @typing.overload
-    def Frame(self, incrementNumber: int, frameValue: float, description: str = ''):
+    def __init__(self, incrementNumber: int, frameValue: float, description: str = ''):
         """This method creates an OdbFrame object and appends it to the frame sequence.
 
         Path
@@ -81,7 +80,7 @@ class OdbFrame:
         pass
 
     @typing.overload
-    def Frame(self, mode: int, frequency: float, description: str = ''):
+    def __init__(self, mode: int, frequency: float, description: str = ''):
         """This constructor creates an OdbFrame object in the frequency domain and appends it to
         the frame sequence. The arguments to the constructor are valid only when
         *domain*=FREQUENCY or *domain*=MODAL.
@@ -111,7 +110,7 @@ class OdbFrame:
         pass
 
     @typing.overload
-    def Frame(self, loadCase: OdbLoadCase, description: str = '', frequency: float = 0):
+    def __init__(self, loadCase: OdbLoadCase, description: str = '', frequency: float = 0):
         """This constructor creates an OdbFrame object for a specific load case and appends it to
         the frame sequence.
 
@@ -142,3 +141,90 @@ class OdbFrame:
     def Frame(self, *args, **kwargs):
         pass
 
+    @typing.overload
+    def FieldOutput(self, name: str, description: str, type: SymbolicConstant, componentLabels: tuple = (),
+                    validInvariants: SymbolicConstant = None, isEngineeringTensor: Boolean = OFF):
+        """This method creates a FieldOutput object.
+
+        Path
+        ----
+            - session.odbs[name].steps[name].frames[i].FieldOutput
+
+        Parameters
+        ----------
+        name
+            A String specifying the output variable name.
+        description
+            A String specifying the output variable. Colon (:) should not be used as a part of the
+            field output description.
+        type
+            A SymbolicConstant specifying the output type. Possible values are SCALAR, VECTOR,
+            TENSOR_3D_FULL, TENSOR_3D_PLANAR, TENSOR_3D_SURFACE, TENSOR_2D_PLANAR, and
+            TENSOR_2D_SURFACE.
+        componentLabels
+            A sequence of Strings specifying the labels for each component of the value. The length
+            of the sequence must match the type. If *type*=TENSOR, the default value is *name* with
+            the suffixes ('11', '22', '33', '12', '13', '23'). If *type*=VECTOR, the default value
+            is *name* with the suffixes ('1', '2', '3'). If *type*=SCALAR, the default value is an
+            empty sequence.
+        validInvariants
+            A sequence of SymbolicConstants specifying which invariants should be calculated for
+            this field. An empty sequence indicates that no invariants are valid for this field.
+            Possible values
+            are:MAGNITUDEMISESTRESCAPRESSINV3MAX_PRINCIPALMID_PRINCIPALMIN_PRINCIPALMAX_INPLANE_PRINCIPALMIN_INPLANE_PRINCIPALOUTOFPLANE_PRINCIPALThe
+            default value is an empty sequence.
+        isEngineeringTensor
+            A Boolean specifying whether the field is an engineering tensor or not. Setting
+            isEngineeringTensor to true makes a tensor field behave as a strain like quantity where
+            the off-diagonal components of tensor are halved for invariants computation. This
+            parameter applies only to tensor field outputs. The default value is OFF.
+
+        Returns
+        -------
+            A FieldOutput object.
+
+        Exceptions
+        ----------
+            None.
+        """
+        pass
+
+    @typing.overload
+    def FieldOutput(self, field: 'FieldOutput', name: str = '', description: str = ''):
+        """This method creates a FieldOutput object from an existing FieldOutput object of the same
+        output database.
+
+        Path
+        ----
+            - session.odbs[name].steps[name].frames[i].FieldOutput
+
+        Parameters
+        ----------
+        field
+            A FieldOutput object.
+        name
+            A String specifying the name of the FieldOutput object.
+        description
+            A String specifying the output variable. Colon (:) should not be used as a part of the
+            field output description.
+
+        Returns
+        -------
+            A FieldOutput object.
+
+        Exceptions
+        ----------
+            None.
+        """
+        pass
+
+    def FieldOutput(self, *args, **kwargs):
+        if 'name' in kwargs.keys():
+            name = kwargs['name']
+        else:
+            if isinstance(args[0], FieldOutput):
+                name = args[1]
+            else:
+                name = args[0]
+        self.fieldOutputs[name] = fieldOutput = FieldOutput(*args, **kwargs)
+        return fieldOutput

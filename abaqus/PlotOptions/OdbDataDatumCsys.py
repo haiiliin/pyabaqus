@@ -1,8 +1,8 @@
 from abaqusConstants import *
 
-class OdbDataDatumCsys:
 
-    """The OdbDataDatumCsys object stores coordinate system data. 
+class OdbDataDatumCsys:
+    """The OdbDataDatumCsys object stores coordinate system data.
 
     Access
     ------
@@ -39,4 +39,3 @@ class OdbDataDatumCsys:
     # A tuple of three Floats specifying a sequence of three floats specifying the origin. The 
     # default value is (0, 0, 0). 
     origin: tuple = ()
-

@@ -1,6 +1,5 @@
 class ConstrainedSketchDimension:
-
-    """The ConstrainedSketchDimension object stores the dimensions associated with a sketch. 
+    """The ConstrainedSketchDimension object stores the dimensions associated with a sketch.
 
     Access
     ------

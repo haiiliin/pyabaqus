@@ -1,8 +1,5 @@
-
-
 class SectorDefinition:
-
-    """The SectorDefinition object describes the number of symmetry sectors and axis of 
+    """The SectorDefinition object describes the number of symmetry sectors and axis of
     symmetry for a cyclic symmetry model. 
 
     Access
@@ -24,4 +21,3 @@ class SectorDefinition:
     # A tuple of tuples of Floats specifying the coordinates of two points on the axis of 
     # symmetry. 
     symmetryAxis: float = None
-
