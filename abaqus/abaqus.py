@@ -29,7 +29,7 @@ mdb = Mdb()
 
 
 def runPythonScript(scriptPath: str):
-    """
+    """Run python script
 
     Parameters
     ----------

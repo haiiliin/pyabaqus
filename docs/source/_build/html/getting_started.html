@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started &mdash; pyabaqus 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorials" href="tutorials.html" />
+    <link rel="prev" title="Welcome to pyabaqus’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#two-python-interpreters">Two Python interpreters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/getting_started.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
+<p><cite>pyabaqus</cite> is a Python package to run Abaqus fluently, it is a package to make Abaqus modeling, calculation, visualization easily. Using <cite>pyabaqus</cite>, you can simply build the Abaqus model, submit and monitor the job, and visualize the results in just one python script, you don’t even need to open Abaqus the whole time.</p>
+<section id="two-python-interpreters">
+<h3>Two Python interpreters<a class="headerlink" href="#two-python-interpreters" title="Permalink to this headline"></a></h3>
+<p>Before we go any furthur, it is necessary for us to understand two Python interpreters.</p>
+<p>When we use the Abaqus/CAE graphical user interface (GUI) to create a model and to visualize the results, commands are issued internally by Abaqus/CAE after every operation. These commands reflect the geometry you created along with the options and settings you selected from each dialog box. The GUI generates commands in an object-oriented programming language called Python. The commands issued by the GUI are sent to the Abaqus/CAE kernel. The kernel interprets the commands and uses the options and settings to create an internal representation of our model. The kernel is the brains behind Abaqus/CAE. The GUI is the interface between the user and the kernel.</p>
+<p>In a word, Abaqus use Python language to interact with the Abaqus kernel, everything that can be done in Abaqus/CAE, can also be done using Python script. Abaqus has already installed a Python interpreter so that Abaqus/CAE can use it to interact with the Abaqus kernel.</p>
+<p>For some reasons, we cannot directly use the Python interpreter inside Abaqus to build an Abaqus model. But forturnately, we can use the commands provided by Abaqus to access it. i.e.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>abaqus cae
+    <span class="o">[</span><span class="nv">database</span><span class="o">=</span>database-file<span class="o">]</span>
+    <span class="o">[</span><span class="nv">replay</span><span class="o">=</span>replay-file<span class="o">]</span>
+    <span class="o">[</span><span class="nv">recover</span><span class="o">=</span>journal-file<span class="o">]</span>
+    <span class="o">[</span><span class="nv">startup</span><span class="o">=</span>startup-file<span class="o">]</span>
+    <span class="o">[</span><span class="nv">script</span><span class="o">=</span>script-file<span class="o">]</span>
+    <span class="o">[</span><span class="nv">noGUI</span><span class="o">=</span>noGUI-file<span class="o">]</span>
+    <span class="o">[</span>noenvstartup<span class="o">]</span>
+    <span class="o">[</span>noSavedOptions<span class="o">]</span>
+    <span class="o">[</span>noSavedGuiPrefs<span class="o">]</span>
+    <span class="o">[</span>noStartupDialog<span class="o">]</span>
+    <span class="o">[</span><span class="nv">custom</span><span class="o">=</span>script-file<span class="o">]</span>
+    <span class="o">[</span><span class="nv">guiTester</span><span class="o">=</span>GUI-script<span class="o">]</span>
+    <span class="o">[</span>guiRecord<span class="o">]</span>
+    <span class="o">[</span>guiNoRecord<span class="o">]</span>
+</pre></div>
+</div>
+<p>Usually, we can use the noGUI-file or script-file to execuate our Python script in Abaqus.</p>
+<p>Another Python interpreter, is the Python interpreter installed by ourselves, where <cite>pyabaqus</cite> is installed. <cite>pyabaqus</cite> provides a bridge to connect our Python script to Abaqus Python interpreter, it provides type hints for Python scripting for Abaqus, enabling us to write a Abaqus Python script quickly.</p>
+</section>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<p><cite>pyabaqus</cite> is uploaded to <a class="reference external" href="https://pypi.org/project/pyabaqus">PyPi</a>, you can simply install it using pip:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install pyabaqus
+</pre></div>
+</div>
+<p>You may install the latest development version by cloning the <a class="reference external" href="https://github.com/Haiiliin/pyabaqus">GitHub repository</a> and using <cite>python</cite> to install from the local directory:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/Haiiliin/pyabaqus.git
+python setup.py install
+</pre></div>
+</div>
+</section>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Required dependencies:</dt><dd><ul class="simple">
+<li><p>PyQt5, used for GUI window of Job monitoring</p></li>
+</ul>
+</dd>
+</dl>
+<p>Once you have installed <cite>pyabaqus</cite> and <cite>PyQt5</cite>, you can start to build the Abaqus model right now.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to pyabaqus’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorials.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

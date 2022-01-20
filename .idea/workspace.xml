@@ -5,10 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58188d34-b460-421e-8d9c-6f9bc0ddb14d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/.buildinfo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/environment.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/getting_started.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/index.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/tutorials.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_sources/getting_started.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_sources/index.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_sources/tutorials.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/basic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/badge_only.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/Roboto-Slab-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/Roboto-Slab-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/Roboto-Slab-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/Roboto-Slab-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/lato-bold-italic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/lato-bold-italic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/lato-bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/lato-bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/lato-normal-italic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/lato-normal-italic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/lato-normal.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/fonts/lato-normal.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/css/theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/doctools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/documentation_options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/file.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/jquery-3.5.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/js/badge_only.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/js/html5shiv-printshiv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/js/html5shiv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/js/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/language_data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/pygments.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/searchtools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/underscore-1.13.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/underscore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/genindex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/getting_started.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/objects.inv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/searchindex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/_build/html/tutorials.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/getting_started.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/tutorials.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/dst/dst.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/dst/dst.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/dst/runme.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tests/dst/runme.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abaqus/Session/SessionBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Session/SessionBase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abaqus/abaqus.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/abaqus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,6 +248,11 @@
       <workItem from="1642674241913" duration="173000" />
       <workItem from="1642674613776" duration="372000" />
       <workItem from="1642675102239" duration="25000" />
+      <workItem from="1642675508862" duration="631000" />
+      <workItem from="1642679560650" duration="11000" />
+      <workItem from="1642680858642" duration="25000" />
+      <workItem from="1642684958429" duration="841000" />
+      <workItem from="1642692507034" duration="1279000" />
     </task>
     <servers />
   </component>
@@ -214,12 +275,12 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PyAbaqusBase$submit.coverage" NAME="submit Coverage Results" MODIFIED="1642659917536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/dst" />
-    <SUITE FILE_PATH="coverage/PyAbaqusBase$output.coverage" NAME="output Coverage Results" MODIFIED="1642659765561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/dst" />
     <SUITE FILE_PATH="coverage/PyAbaqusBase$test_dst.coverage" NAME="dst Coverage Results" MODIFIED="1642650680096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PyAbaqusBase$tool.coverage" NAME="tool Coverage Results" MODIFIED="1641006827647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
-    <SUITE FILE_PATH="coverage/pyabaqus$output.coverage" NAME="output Coverage Results" MODIFIED="1642668716534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/dst" />
+    <SUITE FILE_PATH="coverage/PyAbaqusBase$submit.coverage" NAME="submit Coverage Results" MODIFIED="1642659917536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/dst" />
     <SUITE FILE_PATH="coverage/PyAbaqusBase$test.coverage" NAME="test Coverage Results" MODIFIED="1640966025057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PyAbaqusBase$extract_output.coverage" NAME="extract_output Coverage Results" MODIFIED="1642659524381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/dst" />
+    <SUITE FILE_PATH="coverage/PyAbaqusBase$tool.coverage" NAME="tool Coverage Results" MODIFIED="1641006827647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/pyabaqus$output.coverage" NAME="output Coverage Results" MODIFIED="1642668716534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/dst" />
+    <SUITE FILE_PATH="coverage/PyAbaqusBase$output.coverage" NAME="output Coverage Results" MODIFIED="1642659765561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/dst" />
   </component>
 </project>

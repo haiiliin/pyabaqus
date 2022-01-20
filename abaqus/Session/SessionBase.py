@@ -1,5 +1,3 @@
-import os.path
-import sys
 import typing
 
 from abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketcherOptions import ConstrainedSketcherOptions
@@ -748,7 +746,7 @@ class SessionBase:
         self.odbs[name] = odb = Odb(name, *args, **kwargs)
 
         abaqus = 'abaqus'
-        if 'ABAQUS_BAT_SETTING' in os.environ.keys():
+        if 'ABAQUS_BAT_PATH' in os.environ.keys():
             abaqus = os.environ['ABAQUS_BAT_PATH']
         os.system('{} cae database={} script={}'.format(abaqus, os.path.abspath(name), os.path.abspath(sys.argv[0])))
         self.exit()
