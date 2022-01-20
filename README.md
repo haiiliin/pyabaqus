@@ -1,3 +1,3 @@
-# PyAbaqusBase
- Convert Abaqus Scripting Reference into Python objects
+# pyabaqus
+ Type hints for python scripting of Abaqus
  

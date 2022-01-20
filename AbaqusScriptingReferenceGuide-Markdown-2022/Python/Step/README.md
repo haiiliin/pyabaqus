@@ -1,3 +1,0 @@
-# Step commands (step)
-
-The Step commands described in this chapter are used to create and configure analysis steps. [Step commands (output)](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-StoPyc-sb.htm?ContextScope=all) describes the commands used to create and configure output requests and integrated output sections and the commands to configure diagnostic printing, monitoring, and restart. [Step commands (miscellaneous)](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-StmPyc-sb.htm?ContextScope=all) describes the commands used to configure controls, damping, and frequency tables.

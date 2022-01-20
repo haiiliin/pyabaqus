@@ -5,13 +5,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pyabaqus",
-    version="0.0.5",
+    version="1.0.2",
     author="WANG Hailin",
     author_email="hailin.wang@connect.polyu.hk",
-    description="Convert Abaqus Scripting Reference into Python objects",
+    description="Type hints for python scripting of Abaqus",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Hailin-Wang/pyabaqus",
+    url="https://github.com/Haiiliin/pyabaqus",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -22,7 +22,7 @@ setuptools.setup(
                 'calibration', 'connectorBehavior', 'customKernel', 'deleteObjectCallback', 'displayGroupMdbToolset',
                 'displayGroupOdbToolset', 'driverUtils', 'field','fields','inpParser', 'interaction', 'material',
                 'mesh', 'meshEdit', 'methodCallback', 'monitorManager', 'odbAccess', 'odbConnectorBehavior',
-                'odbMaterial', 'odbSection', 'part', 'redentABQ', 'section', 'symbolicConstants', 'testRepr',
+                'odbMaterial', 'odbSection', 'part', 'redentABQ', 'section', 'symbolicConstants', 'textRepr',
                 'upgradeScript', 'visualization'],
     python_requires='>=3.6',
 )

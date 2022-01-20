@@ -16,5 +16,6 @@ dependencies:
   - nbsphinx
   - recommonmark
   - sphinx-markdown-tables
-  - numpy
-  - PyQt5
+  - pip:
+    - numpy
+    - PyQt5
