@@ -13,14 +13,11 @@ class Mdb(AbaqusMdb):
 
     def __init__(self, pathName: str = ''):
         super().__init__(pathName)
-        self.debug = None
 
     def save(self):
         super().save()
 
     def saveAs(self, pathName: str):
-        if isinstance(self.debug, bool) and self.debug:
-            print(pathName)
         abaqus = 'abaqus'
         if 'ABAQUS_BAT_SETTING' in os.environ.keys():
             abaqus = os.environ['ABAQUS_BAT_PATH']
@@ -31,27 +28,46 @@ session = Session()
 mdb = Mdb()
 
 
-def runPythonScript(scriptPath: str, abaqus: str = 'abaqus'):
+def runPythonScript(scriptPath: str):
     """
 
     Parameters
     ----------
     scriptPath: str
         File path of the python script
-    abaqus: str
-        File path of the abaqus command, if the folder contains abaqus commands is added to the system variables, you
-        omit the file directory, i.e., just `abaqus`.
 
     Returns
     -------
     None
     """
+    abaqus = 'abaqus'
+    if 'ABAQUS_BAT_SETTING' in os.environ.keys():
+        abaqus = os.environ['ABAQUS_BAT_PATH']
     os.chdir(os.path.dirname(os.path.abspath(scriptPath)))
     os.system('{} cae noGUI={}'.format(abaqus, scriptPath))
 
 
-def submitJobByInputFile(inputFile: str, userSubroutine: str = None, options: str = 'int', showStatus: bool = True,
-                         abaqus: str = 'abaqus'):
+def extractOutputData(odb: str, script: str):
+    """Extract output data using python script
+
+    Parameters
+    ----------
+    odb: str
+        File path of the output database
+    script: str
+        File path of the script
+
+    Returns
+    -------
+    None
+    """
+    abaqus = 'abaqus'
+    if 'ABAQUS_BAT_SETTING' in os.environ.keys():
+        abaqus = os.environ['ABAQUS_BAT_PATH']
+    os.system('{} cae database={} script={}'.format(abaqus, os.path.abspath(odb), os.path.abspath(script)))
+
+
+def submitJobByInputFile(inputFile: str, userSubroutine: str = None, options: str = 'int', showStatus: bool = True):
     """Submit job by input file, can not execute in Python environment of Abaqus
 
     Parameters
@@ -69,14 +85,14 @@ def submitJobByInputFile(inputFile: str, userSubroutine: str = None, options: st
         for details, job or input options shouldn't be included, i.e. `int double'.
     showStatus: bool
         Show status or not when the calculation starts.
-    abaqus: str
-        File path of the abaqus command, if the folder contains abaqus commands is added to the system variables, you
-        omit the file directory, i.e., just `abaqus`.
 
     Returns
     -------
     None
     """
+    abaqus = 'abaqus'
+    if 'ABAQUS_BAT_SETTING' in os.environ.keys():
+        abaqus = os.environ['ABAQUS_BAT_PATH']
     absInputFilePath = os.path.abspath(inputFile)
     workDirectory = os.path.dirname(absInputFilePath)
     jobName = os.path.basename(absInputFilePath.replace('.inp', ''))
