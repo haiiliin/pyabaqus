@@ -6,24 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="58188d34-b460-421e-8d9c-6f9bc0ddb14d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PyAbaqusBase.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PyAbaqusBase.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/BasicGeometry/FaceArray.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/BasicGeometry/FaceArray.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Region/RegionPart.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Region/RegionPart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/abaqus.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/abaqus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/environment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/environment.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/getting_started.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/getting_started.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/tutorials.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/tutorials.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/_sources/getting_started.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/_sources/getting_started.rst.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/_sources/tutorials.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/_sources/tutorials.rst.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/getting_started.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/getting_started.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/searchindex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/tutorials.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/tutorials.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/getting_started.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/getting_started.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/tutorials.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/tutorials.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +53,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -184,6 +166,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\user\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="58188d34-b460-421e-8d9c-6f9bc0ddb14d" name="Changes" comment="" />
@@ -213,7 +198,7 @@
       <workItem from="1642684958429" duration="841000" />
       <workItem from="1642692507034" duration="1279000" />
       <workItem from="1642733195889" duration="1886000" />
-      <workItem from="1642753739846" duration="226000" />
+      <workItem from="1642753739846" duration="503000" />
     </task>
     <servers />
   </component>

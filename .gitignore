@@ -114,5 +114,5 @@ dmypy.json
 .pyre/
 
 # User Defined
-/.vscode/
-/.idea/
+.vscode/
+.idea/
