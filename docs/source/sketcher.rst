@@ -7,7 +7,8 @@ A ConstrainedSketch object contains the entities that are used to create a sketc
 
 
 Access
-------``
+------
+
 - `mdb.models[name].sketches[name]`
 
 
