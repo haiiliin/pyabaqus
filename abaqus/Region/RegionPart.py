@@ -25,7 +25,7 @@ class RegionPart(RegionPartBase):
                 face2Elements: tuple[Face] = None, face3Elements: tuple[Face] = None, face4Elements: tuple[Face] = None,
                 face5Elements: tuple[Face] = None, face6Elements: tuple[Face] = None, side1Elements: tuple[Face] = None,
                 side2Elements: tuple[Face] = None, side12Elements: tuple[Face] = None, end1Elements: tuple[Face] = None,
-                end2Elements: tuple[Face] = None, circumElements: tuple[Face] = None, name: str = ''):
+                end2Elements: tuple[Face] = None, circumElements: tuple[Face] = None, name: str = '') -> Surface:
         """This method creates a surface from a sequence of objects in a model database. The
         surface will apply to the sides specified by the arguments.For example
         surface=mdb.models['Model-1'].parts['Part-1'].Surface(side1Faces=side1Faces,
@@ -89,7 +89,7 @@ class RegionPart(RegionPartBase):
             faces: tuple[Face] = None, cells: tuple[Cell] = None, xVertices: tuple[Vertex] = None,
             xEdges: tuple[Edge] = None, xFaces: tuple[Face] = None,
             referencePoints: tuple[ReferencePoint] = (), skinFaces: tuple = (),
-            skinEdges: tuple = (), stringerEdges: tuple = ()):
+            skinEdges: tuple = (), stringerEdges: tuple = ()) -> Set:
         """This method creates a set from a sequence of objects in a model database.
 
         Path
@@ -148,7 +148,7 @@ class RegionPart(RegionPartBase):
         pass
 
     @typing.overload
-    def Set(self, name: str, objectToCopy: Set):
+    def Set(self, name: str, objectToCopy: Set) -> Set:
         """This method copies a set from an existing set.
 
         Path
@@ -173,7 +173,7 @@ class RegionPart(RegionPartBase):
         """
         pass
 
-    def Set(self, name, *args, **kwargs):
+    def Set(self, name, *args, **kwargs) -> Set:
         self.sets[name] = aSet = Set(name, *args, **kwargs)
         return aSet
 
@@ -215,7 +215,7 @@ class RegionPart(RegionPartBase):
         return skin
 
     def EditSkin(self, name: str = '', faces: tuple[Face] = (), edges: tuple[Edge] = (),
-                 elementFaces: tuple[MeshFace] = (), elementEdges: tuple[MeshEdge] = ()):
+                 elementFaces: tuple[MeshFace] = (), elementEdges: tuple[MeshEdge] = ()) -> Skin:
         """This method modifies underlying entities of the selected skin. At least one of the
         optional arguments needs to be specified.
 

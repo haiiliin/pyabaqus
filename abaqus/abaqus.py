@@ -19,7 +19,7 @@ class Mdb(AbaqusMdb):
 
     def saveAs(self, pathName: str):
         abaqus = 'abaqus'
-        if 'ABAQUS_BAT_SETTING' in os.environ.keys():
+        if 'ABAQUS_BAT_PATH' in os.environ.keys():
             abaqus = os.environ['ABAQUS_BAT_PATH']
         os.system('{} cae -noGUI {}'.format(abaqus, os.path.abspath(sys.argv[0])))
 
@@ -41,7 +41,7 @@ def runPythonScript(scriptPath: str):
     None
     """
     abaqus = 'abaqus'
-    if 'ABAQUS_BAT_SETTING' in os.environ.keys():
+    if 'ABAQUS_BAT_PATH' in os.environ.keys():
         abaqus = os.environ['ABAQUS_BAT_PATH']
     os.chdir(os.path.dirname(os.path.abspath(scriptPath)))
     os.system('{} cae noGUI={}'.format(abaqus, scriptPath))
@@ -62,7 +62,7 @@ def extractOutputData(odb: str, script: str):
     None
     """
     abaqus = 'abaqus'
-    if 'ABAQUS_BAT_SETTING' in os.environ.keys():
+    if 'ABAQUS_BAT_PATH' in os.environ.keys():
         abaqus = os.environ['ABAQUS_BAT_PATH']
     os.system('{} cae database={} script={}'.format(abaqus, os.path.abspath(odb), os.path.abspath(script)))
 
@@ -91,7 +91,7 @@ def submitJobByInputFile(inputFile: str, userSubroutine: str = None, options: st
     None
     """
     abaqus = 'abaqus'
-    if 'ABAQUS_BAT_SETTING' in os.environ.keys():
+    if 'ABAQUS_BAT_PATH' in os.environ.keys():
         abaqus = os.environ['ABAQUS_BAT_PATH']
     absInputFilePath = os.path.abspath(inputFile)
     workDirectory = os.path.dirname(absInputFilePath)

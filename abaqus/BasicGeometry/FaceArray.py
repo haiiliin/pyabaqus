@@ -86,9 +86,8 @@ class FaceArray:
             that point.If you omit the *coordinates* keyword argument, findAt accepts as arguments a 
             sequence of pairs of sequences describing each face's coordinate and normal, and findAt 
             returns a sequence of Face objects at the given locations. If you omit the *coordinates* 
-            keyword argument, you must also omit the *normal* argument.`faces = 
-            f.findAt(((-16.438578, -41.835673, -24.19804), ),                 ((25.210364, 
-            -35.689868, 1.860314), ),                 ((26.727683, -38.207055, 4.164759), ))` 
+            keyword argument, you must also omit the *normal* argument.
+            `faces = f.findAt(((-16.438578, -41.835673, -24.19804), ), ((25.210364, -35.689868, 1.860314), ), ((26.727683, -38.207055, 4.164759), ))` 
         normal
             A sequence of Floats specifying the *X*-, *Y*-, and *Z*-components of a vector 
             indicating the face normal. 

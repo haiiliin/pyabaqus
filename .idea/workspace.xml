@@ -5,102 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58188d34-b460-421e-8d9c-6f9bc0ddb14d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pyabaqus.7z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PyAbaqusBase.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PyAbaqusBase.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Adaptivity/AdaptivityIteration.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Adaptivity/AdaptivityIteration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Adaptivity/AdaptivityProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Adaptivity/AdaptivityProcess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Adaptivity/RuleResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Adaptivity/RuleResult.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Assembly/AssemblyBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Assembly/AssemblyBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Assembly/ModelInstance.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Assembly/ModelInstance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Assembly/PartInstance.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Assembly/PartInstance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/BasicGeometry/ReferencePoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/BasicGeometry/ReferencePoints.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/BeamSectionProfile/BeamSectionProfileModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/BeamSectionProfile/BeamSectionProfileModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Canvas/ViewportBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Canvas/ViewportBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/DisplayOptions/AssemblyDisplayOptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/DisplayOptions/AssemblyDisplayOptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/DisplayOptions/PartDisplayOptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/DisplayOptions/PartDisplayOptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/EngineeringFeature/EngineeringFeatureBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/EngineeringFeature/EngineeringFeatureBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Job/Coexecution.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Job/Coexecution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Mdb/MdbBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Mdb/MdbBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Model/ModelBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Model/ModelBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Odb/HistoryRegion.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Odb/HistoryRegion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Odb/OdbAssemblyBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Odb/OdbAssemblyBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Odb/OdbBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Odb/OdbBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Odb/OdbFrame.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Odb/OdbFrame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Odb/OdbInstanceBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Odb/OdbInstanceBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Odb/OdbPartBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Odb/OdbPartBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Odb/OdbStepBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Odb/OdbStepBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Odb/UserDataBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Odb/UserDataBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/OdbDisplay/OdbDisplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/OdbDisplay/OdbDisplay.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Optimization/BeadTask.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Optimization/BeadTask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Optimization/OptimizationTaskBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Optimization/OptimizationTaskBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Optimization/ShapeTask.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Optimization/ShapeTask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Optimization/SizingTask.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Optimization/SizingTask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Optimization/TopologyTask.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Optimization/TopologyTask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Part/PartBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Part/PartBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/PlotOptions/MdbData.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/PlotOptions/MdbData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/PlotOptions/OdbContactDiagnostics.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/PlotOptions/OdbContactDiagnostics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/PlotOptions/OdbData.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/PlotOptions/OdbData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/PlotOptions/OdbDiagnosticData.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/PlotOptions/OdbDiagnosticData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/PlotOptions/OdbDiagnosticIncrement.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/PlotOptions/OdbDiagnosticIncrement.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/PlotOptions/OdbDiagnosticStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/PlotOptions/OdbDiagnosticStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Session/SessionBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Session/SessionBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Sketcher/ConstrainedSketchBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Sketcher/ConstrainedSketchBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/AnalysisStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/AnalysisStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/AnnealStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/AnnealStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/BuckleStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/BuckleStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/ComplexFrequencyStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/ComplexFrequencyStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/CoupledTempDisplacementStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/CoupledTempDisplacementStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/CoupledThermalElectricStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/CoupledThermalElectricStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/CoupledThermalElectricalStructuralStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/CoupledThermalElectricalStructuralStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/DirectCyclicStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/DirectCyclicStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/EmagTimeHarmonicStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/EmagTimeHarmonicStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/ExplicitDynamicsStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/ExplicitDynamicsStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/FrequencyStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/FrequencyStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/GeostaticStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/GeostaticStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/HeatTransferStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/HeatTransferStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/ImplicitDynamicsStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/ImplicitDynamicsStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/InitialStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/InitialStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/MassDiffusionStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/MassDiffusionStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/ModalDynamicsStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/ModalDynamicsStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/RandomResponseStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/RandomResponseStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/ResponseSpectrumStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/ResponseSpectrumStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/SoilsStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/SoilsStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/StaticLinearPerturbationStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/StaticLinearPerturbationStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/StaticRiksStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/StaticRiksStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/StaticStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/StaticStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/SteadyStateDirectStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/SteadyStateDirectStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/SteadyStateModalStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/SteadyStateModalStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/SteadyStateSubspaceStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/SteadyStateSubspaceStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/StepBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/StepBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/SubspaceDynamicsStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/SubspaceDynamicsStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/SubstructureGenerateStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/SubstructureGenerateStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/TempDisplacementDynamicsStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/TempDisplacementDynamicsStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/Step/ViscoStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Step/ViscoStep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/TableCollection/PropertyTable.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/TableCollection/PropertyTable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/TableCollection/TableCollection.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/TableCollection/TableCollection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/TableCollection/TableCollectionAssembly.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/TableCollection/TableCollectionAssembly.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/UtilityAndView/Repository.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/XY/Chart.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/XY/Chart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abaqus/XY/XYPlotBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/XY/XYPlotBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/.buildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/.buildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abaqus/BasicGeometry/FaceArray.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/BasicGeometry/FaceArray.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abaqus/Region/RegionPart.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/Region/RegionPart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abaqus/abaqus.py" beforeDir="false" afterPath="$PROJECT_DIR$/abaqus/abaqus.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/environment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/environment.pickle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/getting_started.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/getting_started.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/index.doctree" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/tutorials.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/.doctrees/tutorials.doctree" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/_build/html/_sources/getting_started.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/_sources/getting_started.rst.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/_sources/index.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/_sources/index.rst.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/_build/html/_sources/tutorials.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/_sources/tutorials.rst.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/_static/documentation_options.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/_static/documentation_options.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/genindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/genindex.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/_build/html/getting_started.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/getting_started.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/_build/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_build/html/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/_build/html/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/searchindex.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/_build/html/tutorials.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_build/html/tutorials.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/getting_started.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/getting_started.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/tutorials.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/tutorials.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,7 +212,8 @@
       <workItem from="1642680858642" duration="25000" />
       <workItem from="1642684958429" duration="841000" />
       <workItem from="1642692507034" duration="1279000" />
-      <workItem from="1642733195889" duration="819000" />
+      <workItem from="1642733195889" duration="1886000" />
+      <workItem from="1642753739846" duration="226000" />
     </task>
     <servers />
   </component>
