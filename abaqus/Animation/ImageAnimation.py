@@ -37,11 +37,7 @@ class ImageAnimation:
 
         Returns
         -------
-            An ImageAnimation object. 
-
-        Exceptions
-        ----------
-            None. 
+            An ImageAnimation object. . 
         """
         pass
 
@@ -53,14 +49,6 @@ class ImageAnimation:
         canvasObjects
             A sequence specifying the canvas objects to capture. The default is to capture all 
             canvas objects. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -69,14 +57,6 @@ class ImageAnimation:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -86,13 +66,5 @@ class ImageAnimation:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

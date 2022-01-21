@@ -134,11 +134,7 @@ class DisplacementBC(BoundaryCondition):
 
         Returns
         -------
-            A DisplacementBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A DisplacementBC object. . 
         """
         super().__init__()
         pass
@@ -206,14 +202,6 @@ class DisplacementBC(BoundaryCondition):
             A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE 
             analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and 
             PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -263,13 +251,5 @@ class DisplacementBC(BoundaryCondition):
             A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE 
             analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and 
             PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

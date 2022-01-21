@@ -71,11 +71,7 @@ class UniaxialTestData:
 
         Returns
         -------
-            A UniaxialTestData object. 
-
-        Exceptions
-        ----------
-            None. 
+            A UniaxialTestData object. . 
         """
         pass
 
@@ -84,13 +80,5 @@ class UniaxialTestData:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

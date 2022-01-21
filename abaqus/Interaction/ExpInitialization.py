@@ -119,11 +119,7 @@ class ExpInitialization(ContactInitialization):
         stepFraction
             A Float specifying the fraction of the step time (between 0.0 and 1.0) in which the 
             interference fit has to be solved. The default value is 1.0. This argument is valid only 
-            when *overclosureType*=INTERFERENCE. 
-
-        Returns
-        -------
-            None. 
+            when *overclosureType*=INTERFERENCE.
 
         Exceptions
         ----------

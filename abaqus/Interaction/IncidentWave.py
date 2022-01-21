@@ -85,11 +85,7 @@ class IncidentWave(Interaction):
 
         Returns
         -------
-            An IncidentWave object. 
-
-        Exceptions
-        ----------
-            None. 
+            An IncidentWave object. . 
         """
         super().__init__()
         pass
@@ -134,13 +130,5 @@ class IncidentWave(Interaction):
         magnitudeFactor
             A Float specifying the magnitude scale factor. The default value is 1.0.This argument is 
             valid only when *definition*=CONWEP. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

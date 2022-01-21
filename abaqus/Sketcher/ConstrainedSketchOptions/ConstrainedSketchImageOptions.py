@@ -45,11 +45,7 @@ class ConstrainedSketchImageOptions:
         translucency
             A Float specifying the translucency factor to use when displaying the image. Possible 
             values are 0.0 ≤≤ *translucency* ≤≤ 1.0 with 0.0 being invisible and 1.0 being opaque. 
-            The default value is 1.0. 
-
-        Returns
-        -------
-            None. 
+            The default value is 1.0.
 
         Exceptions
         ----------

@@ -64,11 +64,7 @@ class SecondaryBaseBC(BoundaryCondition):
 
         Returns
         -------
-            A SecondaryBaseBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SecondaryBaseBC object. . 
         """
         super().__init__()
         pass
@@ -79,14 +75,6 @@ class SecondaryBaseBC(BoundaryCondition):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -98,13 +86,5 @@ class SecondaryBaseBC(BoundaryCondition):
         ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

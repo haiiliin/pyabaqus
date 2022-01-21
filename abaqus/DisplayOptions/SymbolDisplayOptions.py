@@ -43,13 +43,5 @@ class SymbolDisplayOptions:
         showFields
             A Boolean specifying whether symbols should be scaled based on analytical field value. 
             The default value is ON. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

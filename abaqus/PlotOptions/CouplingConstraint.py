@@ -30,10 +30,6 @@ class CouplingConstraint:
 
         Returns
         -------
-            Tuple-of-Ints Dictionary specifying the node numbers on the controlled surface. 
-
-        Exceptions
-        ----------
-            None. 
+            Tuple-of-Ints Dictionary specifying the node numbers on the controlled surface. . 
         """
         pass

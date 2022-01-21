@@ -77,11 +77,7 @@ class AcisFile:
 
         Returns
         -------
-            An AcisFile object. 
-
-        Exceptions
-        ----------
-            None. 
+            An AcisFile object. . 
         """
         pass
 
@@ -116,11 +112,7 @@ class AcisFile:
 
         Returns
         -------
-            An AcisFile object. 
-
-        Exceptions
-        ----------
-            None. 
+            An AcisFile object. . 
         """
         pass
 
@@ -200,11 +192,7 @@ class AcisFile:
 
         Returns
         -------
-            An AcisFile object. 
-
-        Exceptions
-        ----------
-            None. 
+            An AcisFile object. . 
         """
         pass
 
@@ -299,13 +287,5 @@ class AcisFile:
         version
             A Float specifying the ACIS version. For example, the Float 12.0 corresponds to ACIS 
             Version 12.0. The default value is the current version of ACIS. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

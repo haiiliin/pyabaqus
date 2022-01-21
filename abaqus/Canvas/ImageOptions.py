@@ -76,11 +76,7 @@ class ImageOptions:
         options
             None or an ImageOptions object specifying the object from which values are to be copied. 
             If other arguments are also supplied to setValues, they will override the values in the 
-            *options* member. The default value is None. 
-
-        Returns
-        -------
-            None. 
+            *options* member. The default value is None.
 
         Exceptions
         ----------

@@ -39,14 +39,6 @@ class SurfaceFrictionAssignment:
             index is referenced. Each tuple contains: 
             - A Float specifying the overriding friction coefficient value to be used in the contact 
             definition. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -66,14 +58,6 @@ class SurfaceFrictionAssignment:
             which the friction coefficient is assigned. 
             - A Float specifying the overriding friction coefficient to be used in the contact 
             definition. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -84,13 +68,5 @@ class SurfaceFrictionAssignment:
         ----------
         indices
             A sequence of Ints specifying the index of each surface friction assignment to delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -43,11 +43,7 @@ class AdjustPoints(Constraint):
 
         Returns
         -------
-            An AdjustPoints object. 
-
-        Exceptions
-        ----------
-            None. 
+            An AdjustPoints object. . 
         """
         super().__init__()
         pass
@@ -57,13 +53,5 @@ class AdjustPoints(Constraint):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

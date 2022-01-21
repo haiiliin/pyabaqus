@@ -64,11 +64,8 @@ class OutputStep(StepBase):
 
         Returns
         -------
-            A DiagnosticPrint object.
-
-        Exceptions
-        ----------
-            None.
+        diagnosticPrint: DiagnosticPrint
+            A DiagnosticPrint object
         """
         self.diagnosticPrint = diagnosticPrint = DiagnosticPrint(allke, criticalElement, dmass, etotal, contact,
                                                                  modelChange, plasticity, residual, frequency, solve,
@@ -111,11 +108,8 @@ class OutputStep(StepBase):
 
         Returns
         -------
-            A Monitor object.
-
-        Exceptions
-        ----------
-            RangeError.
+        monitor: Monitor
+            A Monitor object
         """
         self.monitor = monitor = Monitor(node, dof, frequency)
         return monitor
@@ -147,7 +141,8 @@ class OutputStep(StepBase):
 
         Returns
         -------
-            A Restart object.
+        restart: Restart
+            A Restart object
 
         Exceptions
         ----------

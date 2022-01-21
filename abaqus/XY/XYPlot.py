@@ -172,11 +172,7 @@ class XYPlot(XYPlotBase):
 
         Returns
         -------
-            A QuantityType object.
-
-        Exceptions
-        ----------
-            None.
+            A QuantityType object..
         """
         quantityType = QuantityType(label, type)
         return quantityType
@@ -313,11 +309,7 @@ class XYPlot(XYPlotBase):
 
         Returns
         -------
-            An XYData object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            An XYData object..
         """
         pass
 
@@ -339,11 +331,7 @@ class XYPlot(XYPlotBase):
 
         Returns
         -------
-            An XYData object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            An XYData object..
         """
         pass
 

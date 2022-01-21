@@ -49,11 +49,7 @@ class TopologyPlanarSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A TopologyPlanarSymmetry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TopologyPlanarSymmetry object. . 
         """
         super().__init__()
         pass
@@ -72,13 +68,5 @@ class TopologyPlanarSymmetry(GeometricRestriction):
             default value is None. 
         ignoreFrozenArea
             A Boolean specifying whether to ignore frozen areas. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

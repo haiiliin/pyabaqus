@@ -96,11 +96,7 @@ class Moment(Load):
 
         Returns
         -------
-            A Moment object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Moment object. . 
         """
         super().__init__()
         pass
@@ -141,14 +137,6 @@ class Moment(Load):
             A String specifying the name of the AnalyticalField object associated with this load. 
             The *field* argument applies only when *distributionType*=FIELD. The default value is an 
             empty string. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -181,13 +169,5 @@ class Moment(Load):
             amplitude is propagated from the previous static analysis step. FREED should be used if 
             the load is changed to have no amplitude reference. You should provide the *amplitude* 
             argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

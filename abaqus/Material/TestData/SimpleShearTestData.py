@@ -35,11 +35,7 @@ class SimpleShearTestData:
 
         Returns
         -------
-            A SimpleShearTestData object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SimpleShearTestData object. . 
         """
         pass
 
@@ -48,13 +44,5 @@ class SimpleShearTestData:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

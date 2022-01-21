@@ -313,14 +313,6 @@ class ViewportBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -330,14 +322,6 @@ class ViewportBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -347,14 +331,6 @@ class ViewportBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -366,14 +342,6 @@ class ViewportBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -383,14 +351,6 @@ class ViewportBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -399,14 +359,6 @@ class ViewportBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -415,14 +367,6 @@ class ViewportBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -444,11 +388,7 @@ class ViewportBase:
         Returns
         -------
             A Dictionary object of element labels, keyed by OdbInstance name. Returns None if the 
-            *displayedObject* member is not an Odb object. 
-
-        Exceptions
-        ----------
-            None. 
+            *displayedObject* member is not an Odb object. . 
         """
         pass
 
@@ -470,11 +410,7 @@ class ViewportBase:
         Returns
         -------
             A Dictionary object of node labels, keyed by OdbInstance name. Returns None if the 
-            *displayedObject* member is not an Odb object. 
-
-        Exceptions
-        ----------
-            None. 
+            *displayedObject* member is not an Odb object. . 
         """
         pass
 
@@ -489,11 +425,7 @@ class ViewportBase:
         Returns
         -------
             A dictionary with keys 'minPartInstanceName', 'minElementLabel', 'minNodeLabel', 
-            'minPosition', 'maxPartInstanceName', 'maxElementLabel', 'maxNodeLabel', 'maxPosition' 
-
-        Exceptions
-        ----------
-            None. 
+            'minPosition', 'maxPartInstanceName', 'maxElementLabel', 'maxNodeLabel', 'maxPosition' . 
         """
         pass
 
@@ -502,14 +434,6 @@ class ViewportBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -518,14 +442,6 @@ class ViewportBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -534,14 +450,6 @@ class ViewportBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -557,14 +465,6 @@ class ViewportBase:
         deltaY
             A Float specifying the offset in millimeters of the *Y*-component of the viewport 
             origin. The default value is 0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -574,14 +474,6 @@ class ViewportBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -590,14 +482,6 @@ class ViewportBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -614,14 +498,6 @@ class ViewportBase:
         translucency
             A float in the range of 0.0 to 1.0 specifying how translucent the objects drawn using 
             *initialColor* needs to be. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -634,14 +510,6 @@ class ViewportBase:
         ----------
         colorMapping
             An AttributeColorMap object. Possible values are any AttributeColorMap object. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -675,14 +543,6 @@ class ViewportBase:
         nodeSymbolSize
             A SymbolicConstant specifying the node symbol size for the nodes contained in *leaf*. 
             Possible values are SMALL, MEDIUM, and LARGE. The default value is SMALL. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -696,14 +556,6 @@ class ViewportBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -738,11 +590,7 @@ class ViewportBase:
         layerOffset
             A Float specifying a factor to be used in offsetting layers in the screen Z direction. 
             Possible values are –1 to 1. A negative value reverses the apparent order in which the 
-            layers are plotted. 
-
-        Returns
-        -------
-            None. 
+            layers are plotted.
 
         Exceptions
         ----------
@@ -756,11 +604,7 @@ class ViewportBase:
         Parameters
         ----------
         names
-            A sequence of String values identifying keys in the session.drawings repository. 
-
-        Returns
-        -------
-            None. 
+            A sequence of String values identifying keys in the session.drawings repository.
 
         Exceptions
         ----------
@@ -775,11 +619,7 @@ class ViewportBase:
         Parameters
         ----------
         names
-            A sequence of String values identifying keys in the Viewport sequence. 
-
-        Returns
-        -------
-            None. 
+            A sequence of String values identifying keys in the Viewport sequence.
 
         Exceptions
         ----------
@@ -805,13 +645,5 @@ class ViewportBase:
         degreesPerFrame
             A Float specifying the number of degrees to rotate the model view about its Z axis 
             before each refresh. The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -42,11 +42,7 @@ class LeafFromOdbElementPick(Leaf):
 
         Returns
         -------
-            A LeafFromOdbElementPick object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LeafFromOdbElementPick object. . 
         """
         super().__init__(DEFAULT_MODEL)
         pass

@@ -272,13 +272,5 @@ class OdbMeshRegionData:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

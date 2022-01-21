@@ -40,11 +40,7 @@ class LeafFromOdbElementLayups(Leaf):
 
         Returns
         -------
-            A LeafFromOdbElementLayups object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LeafFromOdbElementLayups object. . 
         """
         super().__init__(DEFAULT_MODEL)
         pass

@@ -41,11 +41,7 @@ class HomogeneousSolidSection(SolidSection):
 
         Returns
         -------
-            A HomogeneousSolidSection object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A HomogeneousSolidSection object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -57,11 +53,7 @@ class HomogeneousSolidSection(SolidSection):
         ----------
         thickness
             A Float specifying the thickness of the section. Possible values are None or greater 
-            than zero. The default value is 1.0. 
-
-        Returns
-        -------
-            None. 
+            than zero. The default value is 1.0.
 
         Exceptions
         ----------

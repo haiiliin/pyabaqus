@@ -53,11 +53,7 @@ class ModulatedAmplitude(Amplitude):
 
         Returns
         -------
-            A ModulatedAmplitude object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A ModulatedAmplitude object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -69,11 +65,7 @@ class ModulatedAmplitude(Amplitude):
         ----------
         timeSpan
             A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
-            and TOTAL. The default value is STEP. 
-
-        Returns
-        -------
-            None. 
+            and TOTAL. The default value is STEP.
 
         Exceptions
         ----------

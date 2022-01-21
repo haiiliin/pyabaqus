@@ -34,11 +34,7 @@ class MeshEdgeArray(list[MeshEdge]):
 
         Returns
         -------
-            A MeshEdgeArray object. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshEdgeArray object. . 
         """
         super().__init__()
 
@@ -70,10 +66,6 @@ class MeshEdgeArray(list[MeshEdge]):
 
         Returns
         -------
-            A String specifying the object or objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A String specifying the object or objects. . 
         """
         pass

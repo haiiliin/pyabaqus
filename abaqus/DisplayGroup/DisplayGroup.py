@@ -64,11 +64,7 @@ class DisplayGroup:
 
         Returns
         -------
-            A DisplayGroup object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A DisplayGroup object. . 
         """
         pass
 
@@ -79,14 +75,6 @@ class DisplayGroup:
         ----------
         leaf
             A Leaf object specifying the items to add to the display group. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -98,14 +86,6 @@ class DisplayGroup:
         ----------
         leaf
             A Leaf object specifying the items to be excluded from the display group. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -117,14 +97,6 @@ class DisplayGroup:
         ----------
         leaf
             A Leaf object specifying the items to be included in the display group. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -133,14 +105,6 @@ class DisplayGroup:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -151,14 +115,6 @@ class DisplayGroup:
         ----------
         leaf
             A Leaf object specifying the items to remove from the display group. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -170,14 +126,6 @@ class DisplayGroup:
         leaf
             A Leaf object specifying the items with which to replace the current display group 
             contents. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -186,13 +134,5 @@ class DisplayGroup:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

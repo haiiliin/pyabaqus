@@ -42,13 +42,5 @@ class ConstraintDisplayOptions:
         couplingConstrain
             A Boolean specifying whether coupling constraint symbols are shown. The default value is 
             ON. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

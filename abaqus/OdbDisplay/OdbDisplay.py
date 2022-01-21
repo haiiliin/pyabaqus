@@ -257,14 +257,6 @@ class OdbDisplay:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -277,11 +269,7 @@ class OdbDisplay:
         variableLabel
             A String specifying the field output variable. 
         field
-            A String specifying the FieldOutput object. 
-
-        Returns
-        -------
-            None. 
+            A String specifying the FieldOutput object.
 
         Exceptions
         ----------
@@ -302,11 +290,7 @@ class OdbDisplay:
         frame
             An Int specifying the frame in the specified step. Valid values are 0 ≤≤ *frame* ≤≤ 
             (*numFramesInStep* − 1). If *frame* ≥≥ (*numFramesInStep* − 1) the last frame will be 
-            displayed. 
-
-        Returns
-        -------
-            None. 
+            displayed.
 
         Exceptions
         ----------
@@ -328,14 +312,6 @@ class OdbDisplay:
         ----------
         frame
             An OdbFrame object. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -369,11 +345,7 @@ class OdbDisplay:
             A Dictionary with String keys and String values. Each key specifies a region in the 
             model; the corresponding value specifies a section point within that region. For 
             example:`sectionPoint={'shell < MAT > < 7 section points >':'SPOS,    (fraction = 1.0)', 
-            'shell < MAT > < 5 section points >':    'SPOS, (fraction = 1.0)', }` 
-
-        Returns
-        -------
-            None. 
+            'shell < MAT > < 5 section points >':    'SPOS, (fraction = 1.0)', }`
 
         Exceptions
         ----------
@@ -395,11 +367,7 @@ class OdbDisplay:
             example:`sectionPoint={'shell < MAT > < 7 section points >':'SPOS,    (fraction = 1.0)', 
             'shell < MAT > < 5 section points >':    'SPOS, (fraction = 1.0)', }` 
         activePly
-            A String specifying the active ply name. 
-
-        Returns
-        -------
-            None. 
+            A String specifying the active ply name.
 
         Exceptions
         ----------
@@ -454,11 +422,7 @@ class OdbDisplay:
             A Boolean to specify if the status variable is to be active. 
         applyStatusToUndeformed
             A Boolean to specify if the active status variable is to remove elements from undeformed 
-            plots. The default value is False. 
-
-        Returns
-        -------
-            None. 
+            plots. The default value is False.
 
         Exceptions
         ----------
@@ -505,11 +469,7 @@ class OdbDisplay:
             value is set in the SymbolOptions object. 
         vectorQuantity
             A SymbolicConstant specifying the vector quantity to be displayed with the symbol. This 
-            value is set in the SymbolOptions object. 
-
-        Returns
-        -------
-            None. 
+            value is set in the SymbolOptions object.
 
         Exceptions
         ----------
@@ -526,11 +486,7 @@ class OdbDisplay:
         Parameters
         ----------
         variableLabel
-            A String specifying the field output variable. 
-
-        Returns
-        -------
-            None. 
+            A String specifying the field output variable.
 
         Exceptions
         ----------
@@ -551,14 +507,6 @@ class OdbDisplay:
             A Boolean specifying whether to display the cut. The default value is OFF. 
         viewCutNames
             A List of ViewCut objects. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -621,11 +569,7 @@ class OdbDisplay:
 
         Returns
         -------
-            A ViewCut object.
-
-        Exceptions
-        ----------
-            None.
+            A ViewCut object..
         """
         self.viewCuts[name] = viewCut = ViewCut(name, shape, origin, normal, axis2, csysName, cylinderAxis,
                                                 followDeformation, overrideAveraging, referenceFrame)

@@ -266,11 +266,7 @@ class ModelBase:
 
         Returns
         -------
-            A Model object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Model object. . 
         """
         self.steps['Initial'] = InitialStep()
 
@@ -293,11 +289,7 @@ class ModelBase:
 
         Returns
         -------
-            A Model object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Model object. . 
         """
         pass
 
@@ -320,11 +312,7 @@ class ModelBase:
 
         Returns
         -------
-            A Model object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Model object. . 
         """
         pass
 
@@ -399,11 +387,7 @@ class ModelBase:
 
         Returns
         -------
-            A Model object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Model object. . 
         """
         pass
 
@@ -456,13 +440,5 @@ class ModelBase:
         copyInteractions
             A Boolean specifying whether to copy the interactions created in the model to the model 
             that instances this model. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

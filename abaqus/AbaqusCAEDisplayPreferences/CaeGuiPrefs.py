@@ -29,14 +29,6 @@ class CaeGuiPrefs:
         backupFile
             A Boolean specifying whether Abaqus should save a numbered backup copy of the 
             preferences file, *fileName*. Default is True. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -47,13 +39,5 @@ class CaeGuiPrefs:
         ----------
         fileName
             A String specifying the path to the preferences file. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

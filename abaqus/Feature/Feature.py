@@ -87,11 +87,8 @@ class Feature:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -171,11 +168,8 @@ class Feature:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -282,11 +276,8 @@ class Feature:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -946,11 +937,8 @@ class Feature:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -972,11 +960,8 @@ class Feature:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -997,11 +982,8 @@ class Feature:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1503,11 +1485,8 @@ class Feature:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1595,11 +1574,8 @@ class Feature:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1622,11 +1598,8 @@ class Feature:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1648,11 +1621,8 @@ class Feature:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1678,11 +1648,8 @@ class Feature:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1890,11 +1857,8 @@ class Feature:
 
         Returns
         -------
-            A Feature Object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         return self
 
@@ -1914,11 +1878,8 @@ class Feature:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1960,11 +1921,8 @@ class Feature:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1976,11 +1934,7 @@ class Feature:
 
         Returns
         -------
-            A Boolean value of True if the feature is suppressed and False if it is not suppressed. 
-
-        Exceptions
-        ----------
-            None. 
+            A Boolean value of True if the feature is suppressed and False if it is not suppressed. . 
         """
         pass
 
@@ -1991,14 +1945,6 @@ class Feature:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -2010,14 +1956,6 @@ class Feature:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -2046,11 +1984,7 @@ class Feature:
         distance
             A Float specifying the projection *distance*. Possible values are *distance* >> 0.0. You 
             use this argument to modify a partition object created with the 
-            PartitionFaceBySketchDistance method. 
-
-        Returns
-        -------
-            None. 
+            PartitionFaceBySketchDistance method.
 
         Exceptions
         ----------
@@ -2067,13 +2001,5 @@ class Feature:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

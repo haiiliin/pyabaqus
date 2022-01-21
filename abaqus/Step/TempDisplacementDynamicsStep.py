@@ -286,11 +286,7 @@ class TempDisplacementDynamicsStep(AnalysisStep):
             "conservative" (*improvedDtMethod*=OFF) method to estimate the element stable time 
             increment for three-dimensional continuum elements and elements with plane stress 
             formulations (shell, membrane, and two-dimensional plane stress elements). The default 
-            value is ON. 
-
-        Returns
-        -------
-            None. 
+            value is ON.
 
         Exceptions
         ----------

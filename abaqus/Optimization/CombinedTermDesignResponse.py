@@ -90,11 +90,7 @@ class CombinedTermDesignResponse(DesignResponse):
 
         Returns
         -------
-            A CombinedTermDesignResponse object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CombinedTermDesignResponse object. . 
         """
         super().__init__()
         pass
@@ -159,13 +155,5 @@ class CombinedTermDesignResponse(DesignResponse):
         weights
             A sequence of Floats specifying the weights to apply to the list of design responses 
             used when *method* is WEIGHTED_ADD. The default value is an empty sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

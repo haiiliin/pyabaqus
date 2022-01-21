@@ -42,11 +42,7 @@ class LeafFromOdbEdgePick(Leaf):
 
         Returns
         -------
-            A LeafFromOdbEdgePick object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LeafFromOdbEdgePick object. . 
         """
         super().__init__(DEFAULT_MODEL)
         pass

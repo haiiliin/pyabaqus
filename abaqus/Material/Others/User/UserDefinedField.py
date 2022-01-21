@@ -30,10 +30,6 @@ class UserDefinedField:
 
         Returns
         -------
-            A UserDefinedField object. 
-
-        Exceptions
-        ----------
-            None. 
+            A UserDefinedField object. . 
         """
         pass

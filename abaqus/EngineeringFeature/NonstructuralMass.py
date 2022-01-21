@@ -54,11 +54,7 @@ class NonstructuralMass(Inertia):
 
         Returns
         -------
-            A NonstructuralMass object. 
-
-        Exceptions
-        ----------
-            None. 
+            A NonstructuralMass object. . 
         """
         super().__init__()
         pass
@@ -72,13 +68,5 @@ class NonstructuralMass(Inertia):
             A SymbolicConstant specifying the distribution of the nonstructural mass. Possible 
             values are MASS_PROPORTIONAL and VOLUME_PROPORTIONAL. The default value is 
             MASS_PROPORTIONAL.The *distribution* argument applies only when *units*=TOTAL_MASS. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

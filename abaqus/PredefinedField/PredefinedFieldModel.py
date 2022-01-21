@@ -110,11 +110,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            A Field object.
-
-        Exceptions
-        ----------
-            None.
+            A Field object..
         """
         self.predefinedFields[name] = predefinedField = Field(name, createStepName, region, outputVariable,
                                                               fieldVariableNum, distributionType,
@@ -141,11 +137,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            A FluidCavityPressure object.
-
-        Exceptions
-        ----------
-            None.
+            A FluidCavityPressure object..
         """
         self.predefinedFields[name] = predefinedField = FluidCavityPressure(name, fluidCavity, fluidPressure)
         return predefinedField
@@ -182,11 +174,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            An InitialState object.
-
-        Exceptions
-        ----------
-            None.
+            An InitialState object..
         """
         self.predefinedFields[name] = predefinedField = InitialState(name, instances, fileName, endStep, endIncrement,
                                                                      updateReferenceConfiguration)
@@ -231,11 +219,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            A KinematicHardening object.
-
-        Exceptions
-        ----------
-            None.
+            A KinematicHardening object..
         """
         self.predefinedFields[name] = predefinedField = KinematicHardening(name, region, numBackStress,
                                                                            equivPlasticStrain, backStress, sectPtNum,
@@ -281,11 +265,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            A MaterialAssignment object.
-
-        Exceptions
-        ----------
-            None.
+            A MaterialAssignment object..
         """
         self.predefinedFields[name] = predefinedField = MaterialAssignment(name, instanceList, useFields,
                                                                            assignmentList, fieldList, colorList)
@@ -325,11 +305,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            A Stress object.
-
-        Exceptions
-        ----------
-            None.
+            A Stress object..
         """
         self.predefinedFields[name] = predefinedField = Stress(name, region, distributionType, sigma11, sigma22,
                                                                sigma33, sigma12, sigma13, sigma23)
@@ -433,11 +409,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            A Temperature object.
-
-        Exceptions
-        ----------
-            None.
+            A Temperature object..
         """
         self.predefinedFields[name] = predefinedField = Temperature(name, createStepName, region, distributionType,
                                                                     crossSectionDistribution, field, amplitude,
@@ -485,11 +457,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            A Velocity object.
-
-        Exceptions
-        ----------
-            None.
+            A Velocity object..
         """
         self.predefinedFields[name] = predefinedField = Velocity(name, region, velocity1, velocity2, velocity3, omega,
                                                                  axisBegin, axisEnd, field, distributionType)

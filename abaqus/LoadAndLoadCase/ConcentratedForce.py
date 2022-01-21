@@ -97,11 +97,7 @@ class ConcentratedForce(Load):
 
         Returns
         -------
-            A ConcentratedForce object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ConcentratedForce object. . 
         """
         super().__init__()
         pass
@@ -142,14 +138,6 @@ class ConcentratedForce(Load):
             of freedom. If *localCsys*=None, the degrees of freedom are defined in the global 
             coordinate system. When this member is queried, it returns an Int. The default value is 
             None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -183,13 +171,5 @@ class ConcentratedForce(Load):
             amplitude is propagated from the previous analysis step. FREED should be used if the 
             load is changed to have no amplitude reference. You should provide the *amplitude* 
             argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -91,11 +91,7 @@ class CyclicSymmetry(Interaction):
 
         Returns
         -------
-            A CyclicSymmetry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CyclicSymmetry object. . 
         """
         super().__init__()
         pass
@@ -106,14 +102,6 @@ class CyclicSymmetry(Interaction):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -154,14 +142,6 @@ class CyclicSymmetry(Interaction):
             A SymbolicConstant specifying the method used to determine the position tolerance. 
             Possible values are COMPUTED_TOLERANCE and SPECIFY_TOLERANCE. The default value is 
             COMPUTED_TOLERANCE. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -193,13 +173,5 @@ class CyclicSymmetry(Interaction):
             nodal diameter (specified in the *lowestNodalDiameter* parameter), and less than or 
             equal to the highest nodal diameter (specified in the *highestNodalDiameter* parameter). 
             The default value is 0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

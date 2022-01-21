@@ -29,14 +29,6 @@ class CaeKerPrefs:
         backupFile
             A Boolean specifying whether save a numbered backup copy of the preferences file, 
             *fileName*. Default is True. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -53,13 +45,5 @@ class CaeKerPrefs:
             (caePrefsAccess.CURRENT)HOME to open the preferences file in your home directory 
             (caePrefsAccess.HOME)The default value is HOME. Either *fileName* or *directory* must be 
             supplied. The *fileName* or *directory* arguments are mutually exclusive. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

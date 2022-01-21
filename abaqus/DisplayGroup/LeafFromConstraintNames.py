@@ -44,11 +44,7 @@ class LeafFromConstraintNames(Leaf):
 
         Returns
         -------
-            A LeafFromConstraintNames object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LeafFromConstraintNames object. . 
         """
         super().__init__(DEFAULT_MODEL)
         pass

@@ -70,11 +70,7 @@ class OdbFrame:
 
         Returns
         -------
-            An OdbFrame object. 
-
-        Exceptions
-        ----------
-            None. 
+            An OdbFrame object. . 
         """
         pass
 
@@ -100,11 +96,7 @@ class OdbFrame:
 
         Returns
         -------
-            An OdbFrame object. 
-
-        Exceptions
-        ----------
-            None. 
+            An OdbFrame object. . 
         """
         pass
 
@@ -129,11 +121,7 @@ class OdbFrame:
 
         Returns
         -------
-            An OdbFrame object. 
-
-        Exceptions
-        ----------
-            None. 
+            An OdbFrame object. . 
         """
         pass
 
@@ -180,11 +168,7 @@ class OdbFrame:
 
         Returns
         -------
-            A FieldOutput object.
-
-        Exceptions
-        ----------
-            None.
+            A FieldOutput object..
         """
         pass
 
@@ -209,11 +193,7 @@ class OdbFrame:
 
         Returns
         -------
-            A FieldOutput object.
-
-        Exceptions
-        ----------
-            None.
+            A FieldOutput object..
         """
         pass
 

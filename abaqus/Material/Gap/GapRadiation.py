@@ -40,11 +40,7 @@ class GapRadiation:
 
         Returns
         -------
-            A Gapradiation object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Gapradiation object. . 
         """
         pass
 
@@ -53,13 +49,5 @@ class GapRadiation:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

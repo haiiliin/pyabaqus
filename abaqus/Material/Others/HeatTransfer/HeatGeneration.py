@@ -30,10 +30,6 @@ class HeatGeneration:
 
         Returns
         -------
-            A HeatGeneration object. 
-
-        Exceptions
-        ----------
-            None. 
+            A HeatGeneration object. . 
         """
         pass

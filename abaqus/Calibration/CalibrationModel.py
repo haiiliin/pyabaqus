@@ -18,11 +18,7 @@ class CalibrationModel(ModelBase):
 
         Returns
         -------
-            A Calibration object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            A Calibration object..
         """
         self.calibrations[name] = calibration = Calibration(name)
         return calibration

@@ -88,11 +88,7 @@ class Piezoelectric:
 
         Returns
         -------
-            A Piezoelectric object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Piezoelectric object. . 
         """
         pass
 
@@ -101,13 +97,5 @@ class Piezoelectric:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

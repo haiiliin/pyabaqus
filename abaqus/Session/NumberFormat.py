@@ -52,10 +52,6 @@ class NumberFormat:
 
         Returns
         -------
-            A NumberFormat object. 
-
-        Exceptions
-        ----------
-            None. 
+            A NumberFormat object. . 
         """
         pass

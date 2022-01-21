@@ -64,11 +64,7 @@ class Skin:
 
         Returns
         -------
-            A Skin object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Skin object. . 
         """
         pass
 
@@ -100,10 +96,6 @@ class Skin:
 
         Returns
         -------
-            A Skin object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Skin object. . 
         """
         pass

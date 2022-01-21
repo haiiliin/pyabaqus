@@ -49,11 +49,7 @@ class SizingCyclicSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A SizingCyclicSymmetry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SizingCyclicSymmetry object. . 
         """
         super().__init__()
         pass
@@ -73,13 +69,5 @@ class SizingCyclicSymmetry(GeometricRestriction):
             default value is None. 
         ignoreFrozenArea
             A Boolean specifying whether to ignore frozen areas. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

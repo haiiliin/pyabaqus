@@ -58,11 +58,7 @@ class GeometricProperties:
 
         Returns
         -------
-            A GeometricProperties object. 
-
-        Exceptions
-        ----------
-            None. 
+            A GeometricProperties object. . 
         """
         pass
 
@@ -71,13 +67,5 @@ class GeometricProperties:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

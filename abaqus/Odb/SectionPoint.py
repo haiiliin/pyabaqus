@@ -52,10 +52,6 @@ class SectionPoint:
 
         Returns
         -------
-            A SectionPoint object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SectionPoint object. . 
         """
         pass

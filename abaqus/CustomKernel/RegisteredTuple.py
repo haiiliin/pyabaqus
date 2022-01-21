@@ -32,11 +32,7 @@ class RegisteredTuple(CommandRegister):
 
         Returns
         -------
-            A RegisteredTuple object. 
-
-        Exceptions
-        ----------
-            None. 
+            A RegisteredTuple object. . 
         """
         super().__init__()
         pass
@@ -46,13 +42,5 @@ class RegisteredTuple(CommandRegister):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

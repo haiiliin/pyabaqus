@@ -104,11 +104,7 @@ class XYData:
 
         Returns
         -------
-            An XYData object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            An XYData object. . 
         """
         pass
 
@@ -129,11 +125,7 @@ class XYData:
 
         Returns
         -------
-            An XYData object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            An XYData object. . 
         """
         pass
 
@@ -197,11 +189,7 @@ class XYData:
 
         Returns
         -------
-            An XYData object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            An XYData object.  and RangeError. 
         """
         pass
 
@@ -258,11 +246,7 @@ class XYData:
 
         Returns
         -------
-            An XYData object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            An XYData object.  and RangeError. 
         """
         pass
 
@@ -343,11 +327,7 @@ class XYData:
 
         Returns
         -------
-            A list of XYData objects. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A list of XYData objects.  and RangeError. 
         """
         pass
 
@@ -388,11 +368,7 @@ class XYData:
 
         Returns
         -------
-            A list of XYData objects. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A list of XYData objects.  and RangeError. 
         """
         pass
 
@@ -463,11 +439,7 @@ class XYData:
 
         Returns
         -------
-            A list of XYData objects. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A list of XYData objects.  and RangeError. 
         """
         pass
 
@@ -596,14 +568,6 @@ class XYData:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -639,13 +603,5 @@ class XYData:
         axis2QuantityType
             A QuantityType object specifying the QuantityType object associated to the Y -axis2- 
             values. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

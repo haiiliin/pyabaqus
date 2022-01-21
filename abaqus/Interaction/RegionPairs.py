@@ -46,13 +46,5 @@ class RegionPairs:
             given step. Possible values of the SymbolicConstants are GLOBAL and SELF. When used with 
             a ContactExp object, the second parameter of each pair can also be a string that 
             references an Eulerian material surface. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

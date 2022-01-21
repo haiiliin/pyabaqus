@@ -55,11 +55,7 @@ class XYReportOptions:
             ENGINEERING. 
         layout
             A SymbolicConstant specifying the format used in reporting the XYData objects. Possible 
-            values are SINGLE_TABLE and SEPARATE_TABLES. The default value is SINGLE_TABLE. 
-
-        Returns
-        -------
-            None. 
+            values are SINGLE_TABLE and SEPARATE_TABLES. The default value is SINGLE_TABLE.
 
         Exceptions
         ----------

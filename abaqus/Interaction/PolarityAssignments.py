@@ -33,14 +33,6 @@ class PolarityAssignments:
         value
             A SymbolicConstant specifying the value of the polarity to be assigned to the surface 
             whose index is referenced. Possible values are SPOS, SNEG, and TWO_SIDED. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -59,14 +51,6 @@ class PolarityAssignments:
             polarity attribute is assigned. 
             - A SymbolicConstant specifying the overriding polarity value to be used for the first 
             surface. Possible values of the SymbolicConstant are SPOS, SNEG, and TWO_SIDED. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -77,13 +61,5 @@ class PolarityAssignments:
         ----------
         indices
             A sequence of Ints specifying the index of each polarity assignment to delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -28,14 +28,6 @@ class Annotation:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass
@@ -45,14 +37,6 @@ class Annotation:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass
@@ -62,14 +46,6 @@ class Annotation:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass
@@ -79,14 +55,6 @@ class Annotation:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass
@@ -98,14 +66,6 @@ class Annotation:
         ----------
         name
             A String specifying the name of the other Annotation object. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass
@@ -117,14 +77,6 @@ class Annotation:
         ----------
         name
             A String specifying the name of the other Annotation object. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass
@@ -138,14 +90,6 @@ class Annotation:
             A Float specifying the *X* translation amount in millimeters. 
         y
             A Float specifying the *Y* translation amount in millimeters. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass

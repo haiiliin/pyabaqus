@@ -117,14 +117,6 @@ class View:
             A Boolean specifying the viewport should refresh immediately after the command is 
             processed. This is typically only used when writing a script and it is desirable to show 
             intermediate results before the script completes. The default value is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -140,14 +132,6 @@ class View:
             A Boolean specifying the viewport should refresh immediately after the command is 
             processed. This is typically only used when writing a script and it is desirable to show 
             intermediate results before the script completes. The default value is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -173,14 +157,6 @@ class View:
             processed. This argument is typically used only when writing a script and it is 
             desirable to show intermediate results before the script completes. The default value is 
             False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -197,14 +173,6 @@ class View:
             processed. This argument is typically used only when writing a script and it is 
             desirable to show intermediate results before the script completes. The default value is 
             False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -235,14 +203,6 @@ class View:
             processed. This argument is typically used only when writing a script and it is 
             desirable to show intermediate results before the script completes. The default value is 
             False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -263,14 +223,6 @@ class View:
             processed. This argument is typically used only when writing a script and it is 
             desirable to show intermediate results before the script completes. The default value is 
             False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -289,11 +241,7 @@ class View:
             A Boolean specifying the viewport should refresh immediately after the command is 
             processed. This argument is typically used only when writing a script and it is 
             desirable to show intermediate results before the script completes. The default value is 
-            False. 
-
-        Returns
-        -------
-            None. 
+            False.
 
         Exceptions
         ----------
@@ -308,11 +256,7 @@ class View:
         ----------
         rotationCenter
             A sequence of a String and an Int specifying a part instance name and a node label or a 
-            sequence of 3 Floats specifying a point. 
-
-        Returns
-        -------
-            None. 
+            sequence of 3 Floats specifying a point.
 
         Exceptions
         ----------
@@ -329,11 +273,7 @@ class View:
         ----------
         movieMode
             A Boolean specifying whether or not the camera is in movie mode. The default value is 
-            OFF. 
-
-        Returns
-        -------
-            None. 
+            OFF.
 
         Exceptions
         ----------
@@ -358,14 +298,6 @@ class View:
             processed. This argument is typically used only when writing a script and it is 
             desirable to show intermediate results before the script completes. The default value is 
             False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -390,11 +322,7 @@ class View:
             A Boolean specifying the viewport should refresh immediately after the command is 
             processed. This argument is typically used only when writing a script and it is 
             desirable to show intermediate results before the script completes. The default value is 
-            False. 
-
-        Returns
-        -------
-            None. 
+            False.
 
         Exceptions
         ----------
@@ -418,13 +346,5 @@ class View:
             processed. This argument is typically used only when writing a script and it is 
             desirable to show intermediate results before the script completes. The default value is 
             False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

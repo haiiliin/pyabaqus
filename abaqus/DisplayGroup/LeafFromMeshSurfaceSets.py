@@ -40,11 +40,7 @@ class LeafFromMeshSurfaceSets(Leaf):
 
         Returns
         -------
-            A LeafFromMeshSurfaceSets object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LeafFromMeshSurfaceSets object. . 
         """
         super().__init__(DEFAULT_MODEL)
         pass

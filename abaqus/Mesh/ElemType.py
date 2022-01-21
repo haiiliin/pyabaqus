@@ -34,7 +34,7 @@ class ElemType:
 
         Path
         ----
-            - ElemType
+            - mesh.ElemType
 
         Parameters
         ----------
@@ -150,10 +150,7 @@ class ElemType:
 
         Returns
         -------
-            An ElemType object. 
-
-        Exceptions
-        ----------
-            None. 
+        elemType: ElemType
+            An ElemType object 
         """
         pass

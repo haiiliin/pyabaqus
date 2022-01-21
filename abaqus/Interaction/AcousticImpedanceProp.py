@@ -49,11 +49,7 @@ class AcousticImpedanceProp(ContactProperty):
 
         Returns
         -------
-            An AcousticImpedanceProp object. 
-
-        Exceptions
-        ----------
-            None. 
+            An AcousticImpedanceProp object. . 
         """
         super().__init__(name)
         pass
@@ -66,13 +62,5 @@ class AcousticImpedanceProp(ContactProperty):
         frequencyDependency
             A Boolean specifying whether the *table* data depend on frequency. The default value is 
             OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

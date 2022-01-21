@@ -110,11 +110,7 @@ class AccelerationBC(BoundaryCondition):
 
         Returns
         -------
-            An AccelerationBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            An AccelerationBC object. . 
         """
         super().__init__()
         pass
@@ -170,14 +166,6 @@ class AccelerationBC(BoundaryCondition):
         distributionType
             A SymbolicConstant specifying how the boundary condition is distributed spatially. 
             Possible values are UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -220,13 +208,5 @@ class AccelerationBC(BoundaryCondition):
             amplitude is propagated from the previous analysis step. FREED should be used if the 
             boundary condition is changed to have no amplitude reference. You should provide the 
             *amplitude* argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

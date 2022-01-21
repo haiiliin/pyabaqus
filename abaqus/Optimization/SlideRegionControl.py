@@ -72,11 +72,7 @@ class SlideRegionControl(GeometricRestriction):
 
         Returns
         -------
-            A SlideRegionControl object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SlideRegionControl object. . 
         """
         super().__init__()
         pass
@@ -115,13 +111,5 @@ class SlideRegionControl(GeometricRestriction):
         tolerance3
             A Float specifying the geometric tolerance in the 3-direction. This is used when 
             *approach* is TURN. The default value is 0.01. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

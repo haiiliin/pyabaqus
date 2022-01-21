@@ -34,11 +34,7 @@ class Odb(AmplitudeOdb,
 
         Returns
         -------
-            An OdbPart object.
-
-        Exceptions
-        ----------
-            None.
+            An OdbPart object..
         """
         self.parts[name] = odbPart = OdbPart(name, embeddedSpace, type)
         return odbPart
@@ -154,11 +150,7 @@ class Odb(AmplitudeOdb,
 
         Returns
         -------
-            A SectionCategory object.
-
-        Exceptions
-        ----------
-            None.
+            A SectionCategory object..
         """
         self.sectionCategories[name] = sectionCategory = SectionCategory(name, description)
         return sectionCategory

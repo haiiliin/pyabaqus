@@ -35,14 +35,6 @@ class InitializationAssignment:
         value
             A String specifying the value of the contact initialization to be assigned to the domain 
             pair whose index is referenced. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -65,14 +57,6 @@ class InitializationAssignment:
             - A String specifying a secondary surface type. This entry is applicable only if the 
             ExpInitialization object is defined with *overclosureType*=CLEARANCE and 
             *adjustNodalCoords*=True. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -85,13 +69,5 @@ class InitializationAssignment:
         indices
             A sequence of Ints specifying the index of each contact initialization assignment to 
             delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

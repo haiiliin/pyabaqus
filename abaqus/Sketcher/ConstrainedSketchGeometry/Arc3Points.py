@@ -22,11 +22,7 @@ class Arc3Points(ConstrainedSketchGeometry):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the arc cannot be created). 
-
-        Exceptions
-        ----------
-            None. 
+            A ConstrainedSketchGeometry object (None if the arc cannot be created). . 
             !img 
         """
         pass

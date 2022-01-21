@@ -173,11 +173,7 @@ class SurfaceToSurfaceContactStd(Interaction):
 
         Returns
         -------
-            A SurfaceToSurfaceContactStd object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SurfaceToSurfaceContactStd object. . 
         """
         super().__init__()
         pass
@@ -188,14 +184,6 @@ class SurfaceToSurfaceContactStd(Interaction):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -312,14 +300,6 @@ class SurfaceToSurfaceContactStd(Interaction):
             A SymbolicConstant specifying the bolt normal adjustment formulation for all secondary 
             nodes. Possible values are UNIFORM AXIAL COMPONENT and LOCATION DEPENDENT. The default 
             value is UNIFORM AXIAL COMPONENT. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -364,13 +344,5 @@ class SurfaceToSurfaceContactStd(Interaction):
             A String specifying the name of the ContactControl object associated with this 
             interaction. The empty string indicates that the default contact controls will be used. 
             The default value is an empty string. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

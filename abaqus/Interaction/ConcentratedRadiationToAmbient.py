@@ -69,11 +69,7 @@ class ConcentratedRadiationToAmbient(Interaction):
 
         Returns
         -------
-            A ConcentratedRadiationToAmbient object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ConcentratedRadiationToAmbient object. . 
         """
         super().__init__()
         pass
@@ -100,14 +96,6 @@ class ConcentratedRadiationToAmbient(Interaction):
         distributionType
             A SymbolicConstant specifying how the radiation is defined. Possible values are UNIFORM 
             and ANALYTICAL_FIELD. The default value is UNIFORM. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -130,13 +118,5 @@ class ConcentratedRadiationToAmbient(Interaction):
         distributionType
             A SymbolicConstant specifying how the radiation is defined. Possible values are UNIFORM 
             and ANALYTICAL_FIELD. The default value is UNIFORM. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

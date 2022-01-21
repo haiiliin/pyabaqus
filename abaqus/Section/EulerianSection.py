@@ -39,11 +39,7 @@ class EulerianSection(Section):
 
         Returns
         -------
-            An EulerianSection object. 
-
-        Exceptions
-        ----------
-            None. 
+            An EulerianSection object. . 
         """
         super().__init__()
         pass
@@ -53,13 +49,5 @@ class EulerianSection(Section):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

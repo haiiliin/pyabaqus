@@ -43,11 +43,7 @@ class BeadPlanarSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A BeadPlanarSymmetry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A BeadPlanarSymmetry object. . 
         """
         super().__init__()
         pass
@@ -64,13 +60,5 @@ class BeadPlanarSymmetry(GeometricRestriction):
             None or a DatumCsys object specifying the local coordinate system. If *csys*=None, the 
             global coordinate system is used. When this member is queried, it returns an Int. The 
             default value is None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

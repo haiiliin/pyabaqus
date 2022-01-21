@@ -40,11 +40,7 @@ class LeafFromOdbElementSections(Leaf):
 
         Returns
         -------
-            A LeafFromOdbElementSections object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LeafFromOdbElementSections object. . 
         """
         super().__init__(DEFAULT_MODEL)
         pass

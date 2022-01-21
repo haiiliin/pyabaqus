@@ -42,11 +42,7 @@ class InterestingPoint:
 
         Returns
         -------
-            An InterestingPoint object. 
-
-        Exceptions
-        ----------
-            None. 
+            An InterestingPoint object. . 
             !img 
         """
         pass

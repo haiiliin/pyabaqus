@@ -149,11 +149,7 @@ class BeamSection(Section):
 
         Returns
         -------
-            A BeamSection object. 
-
-        Exceptions
-        ----------
-            None. 
+            A BeamSection object. . 
         """
         super().__init__()
         pass
@@ -251,13 +247,5 @@ class BeamSection(Section):
             same as that of the start profile. This argument is valid only when *beamShape*=TAPERED. 
             The default value is an empty string. This parameter is available for manipulating the 
             model database but not for the ODB API. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

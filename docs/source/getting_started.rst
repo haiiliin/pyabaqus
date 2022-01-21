@@ -62,7 +62,7 @@ Abaqus Python script quickly.
 Installation
 ------------
 
-`pyabaqus` is uploaded to `PyPi <https://pypi.org/project/pyabaqus>`_, you can simply install 
+`pyabaqus` is uploaded to `PyPI <https://pypi.org/project/pyabaqus>`_, you can simply install 
 it using pip:
 
 .. code-block:: sh
@@ -85,7 +85,7 @@ Dependencies
 ------------
 
 Required dependencies:
-    * PyQt5, used for GUI window of Job monitoring
+    * PyQt5, used for GUI window of Job monitor
 
 Once you have installed `pyabaqus` and `PyQt5`, you can start to build your Abaqus model right 
 now.
@@ -101,4 +101,4 @@ Abaqus where the Abaqus command located. Usually, Abaqus command locates in a di
 
     C:/SIMULIA/Commands/abaqus.bat
 
-You can add the directory `C:/SIMULIA/Commands` to the system environment variable `path`, or you can add a new system variable named `ABAQUS_BAT_PATH`, and set the value to the file path of the Abaqus command, i.e., `C:/SIMULIA/Commands/abaqus.bat`
+You can add the directory `C:/SIMULIA/Commands` to the system environment variable `path`, or you can create a new system variable named `ABAQUS_BAT_PATH`, and set the value to the file path of the Abaqus command, i.e., `C:/SIMULIA/Commands/abaqus.bat`

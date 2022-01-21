@@ -29,10 +29,6 @@ class CommandRegister:
 
         Returns
         -------
-            A CommandRegister object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CommandRegister object. . 
         """
         pass

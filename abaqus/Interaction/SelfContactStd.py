@@ -69,11 +69,7 @@ class SelfContactStd(Interaction):
 
         Returns
         -------
-            A SelfContactStd object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SelfContactStd object. . 
         """
         super().__init__()
         pass
@@ -99,14 +95,6 @@ class SelfContactStd(Interaction):
             A String specifying the name of the ContactControl object associated with this 
             interaction. An empty string indicates that the default contact controls will be used. 
             The default value is an empty string. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -125,13 +113,5 @@ class SelfContactStd(Interaction):
             A String specifying the name of the ContactControl object associated with this 
             interaction. An empty string indicates that the default contact controls will be used. 
             The default value is an empty string. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

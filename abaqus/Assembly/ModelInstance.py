@@ -79,11 +79,7 @@ class ModelInstance:
 
         Returns
         -------
-            A ModelInstance object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ModelInstance object. . 
         """
         pass
 
@@ -94,14 +90,6 @@ class ModelInstance:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -111,14 +99,6 @@ class ModelInstance:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -135,14 +115,6 @@ class ModelInstance:
             position the new instance in the same place as the original instance. The default value 
             is True. A value of False indicates that constraints applies to the instance are deleted 
             will be deleted from the feature list. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -153,13 +125,5 @@ class ModelInstance:
         ----------
         vector
             A sequence of three Floats specifying a translation vector. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

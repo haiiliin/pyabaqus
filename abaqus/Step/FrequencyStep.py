@@ -468,11 +468,7 @@ class FrequencyStep(AnalysisStep):
             requested. The default value is None. 
         limitSavedEigenvectorRegion
             None or a Region object specifying a region for which eigenvectors should be saved or 
-            the SymbolicConstant None representing the whole model. The default value is None. 
-
-        Returns
-        -------
-            None. 
+            the SymbolicConstant None representing the whole model. The default value is None.
 
         Exceptions
         ----------

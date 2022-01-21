@@ -76,11 +76,7 @@ class GapFlow:
 
         Returns
         -------
-            A GapFlow object. 
-
-        Exceptions
-        ----------
-            None. 
+            A GapFlow object. . 
         """
         pass
 
@@ -89,13 +85,5 @@ class GapFlow:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -73,11 +73,7 @@ class MdbBase:
 
         Returns
         -------
-            A Mdb object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Mdb object. . 
         """
         self.pathName = pathName
         self.models['Model-1'] = Model('Model-1')
@@ -99,11 +95,7 @@ class MdbBase:
 
         Returns
         -------
-            A Mdb object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Mdb object. . 
         """
         pass
 
@@ -145,14 +137,6 @@ class MdbBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -185,11 +169,7 @@ class MdbBase:
         ----------
         pathName
             A String specifying the path to be used when the model database is saved to a file. If 
-            you do not provide a file extension, .cae is appended automatically to the path. 
-
-        Returns
-        -------
-            None. 
+            you do not provide a file extension, .cae is appended automatically to the path.
 
         Exceptions
         ----------
@@ -208,11 +188,7 @@ class MdbBase:
         ----------
         pathName
             A String specifying the path to the auxiliary Mdb which is to be opened. If you do not 
-            provide a file extension, .cae is appended automatically to the path. 
-
-        Returns
-        -------
-            None. 
+            provide a file extension, .cae is appended automatically to the path.
 
         Exceptions
         ----------
@@ -274,11 +250,7 @@ class MdbBase:
         toName
             A String specifying the name to be given to the model after it is copied into the Mdb. 
             If this argument is not specified *toName* is assumed to be the same as *fromName*. If a 
-            model with name *toName* already exists in Mdb, it is overwritten. 
-
-        Returns
-        -------
-            None. 
+            model with name *toName* already exists in Mdb, it is overwritten.
 
         Exceptions
         ----------

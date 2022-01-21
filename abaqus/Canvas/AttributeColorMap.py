@@ -47,14 +47,6 @@ class AttributeColorMap:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -74,14 +66,6 @@ class AttributeColorMap:
             example:`defaultOverrides={                        'Copper':(1,''#00FF00', '#00CCFF',    
                                 '#00FF00')}`The color mapping can contain keys that have not been 
             created. When the key is created, it gets the appropriate values from this mapping. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -101,13 +85,5 @@ class AttributeColorMap:
             example:`defaultOverrides={                        'Copper':(1,''#00FF00', '#00CCFF',    
                                 '#00FF00')}`The color mapping can contain keys that have not been 
             created. When the key is created, it gets the appropriate values from this mapping. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -28,13 +28,5 @@ class AnnotationViewport(ViewportBase):
         index
             An Int specifying the index of the Annotation object in the sequence of annotations to 
             plot. The default value is zero. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

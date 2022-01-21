@@ -81,11 +81,7 @@ class PressurePenetration(Interaction):
 
         Returns
         -------
-            A PressurePenetration object. 
-
-        Exceptions
-        ----------
-            None. 
+            A PressurePenetration object. . 
         """
         super().__init__()
         pass
@@ -104,14 +100,6 @@ class PressurePenetration(Interaction):
             A Float specifying the fraction of the current step time over which the fluid pressure 
             on newly penetrated contact surface segments is ramped up to the current magnitude. The 
             default value is 0.001. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -140,13 +128,5 @@ class PressurePenetration(Interaction):
             A Float specifying the fraction of the current step time over which the fluid pressure 
             on newly penetrated contact surface segments is ramped up to the current magnitude. The 
             default value is 0.001. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

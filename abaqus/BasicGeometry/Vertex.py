@@ -57,11 +57,7 @@ class Vertex:
 
         Returns
         -------
-            A tuple of integers. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of integers. . 
             !img 
         """
         pass
@@ -74,11 +70,7 @@ class Vertex:
 
         Returns
         -------
-            A MeshNodeArray object which is a sequence of MeshNode objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshNodeArray object which is a sequence of MeshNode objects. . 
             !img 
         """
         pass
@@ -91,11 +83,7 @@ class Vertex:
 
         Returns
         -------
-            A MeshElementArray object which is a sequence of MeshElement objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshElementArray object which is a sequence of MeshElement objects. . 
             !img 
         """
         pass

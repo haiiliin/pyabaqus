@@ -39,11 +39,7 @@ class BeadPointSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A BeadPointSymmetry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A BeadPointSymmetry object. . 
         """
         super().__init__()
         pass
@@ -57,13 +53,5 @@ class BeadPointSymmetry(GeometricRestriction):
             None or a DatumCsys object specifying the position of the symmetry point defined as the 
             origin of a local coordinate system. If *csys*=None, the global coordinate system is 
             used. When this member is queried, it returns an Int. The default value is None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -74,11 +74,7 @@ class CohesiveBehavior:
 
         Returns
         -------
-            A CohesiveBehavior object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CohesiveBehavior object. . 
         """
         pass
 
@@ -87,13 +83,5 @@ class CohesiveBehavior:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

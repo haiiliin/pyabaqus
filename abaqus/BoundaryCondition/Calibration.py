@@ -39,10 +39,6 @@ class Calibration:
 
         Returns
         -------
-            A Calibration object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Calibration object. . 
         """
         pass

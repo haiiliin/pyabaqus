@@ -25,10 +25,6 @@ class MpcConstraint:
 
         Returns
         -------
-            A tuple containing coordinates of the nodes pertaining to the constraint. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple containing coordinates of the nodes pertaining to the constraint. . 
         """
         pass

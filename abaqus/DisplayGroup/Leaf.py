@@ -37,10 +37,6 @@ class Leaf:
 
         Returns
         -------
-            A Leaf object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Leaf object. . 
         """
         pass

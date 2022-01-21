@@ -119,11 +119,7 @@ class Region:
 
         Returns
         -------
-            A Region object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Region object. . 
         """
         pass
 
@@ -210,11 +206,7 @@ class Region:
 
         Returns
         -------
-            A Region object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Region object. . 
         """
         pass
 

@@ -56,11 +56,7 @@ class ConstrainedSketchParameter:
 
         Returns
         -------
-            A ConstrainedSketchParameter object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ConstrainedSketchParameter object. . 
             !img 
         """
         pass

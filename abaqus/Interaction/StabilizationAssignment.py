@@ -35,14 +35,6 @@ class StabilizationAssignment:
         value
             A String specifying the value of the contact stabilization to be assigned to the domain 
             pair whose index is referenced. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -61,14 +53,6 @@ class StabilizationAssignment:
             - A region object or the SymbolicConstant GLOBAL. 
             - A region object or the SymbolicConstant SELF. 
             - A String specifying a StdStabilization object associated with this pair of regions. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -81,13 +65,5 @@ class StabilizationAssignment:
         indices
             A sequence of Ints specifying the index of each contact stabilization assignment to 
             delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

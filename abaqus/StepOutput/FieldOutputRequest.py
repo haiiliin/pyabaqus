@@ -135,14 +135,6 @@ class FieldOutputRequest:
             A SymbolicConstant specifying the position on an element where output needs to be 
             written. Possible values are INTEGRATION_POINTS, AVERAGED_AT_NODES, CENTROIDAL, and 
             NODES. The default value is INTEGRATION_POINTS. 
-
-        Returns
-        -------
-            A FieldOutputRequest object. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -154,15 +146,7 @@ class FieldOutputRequest:
         ----------
         stepName
             A String specifying the name of the step in which the field output request is 
-            deactivated. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
+            deactivated.
         """
         pass
 
@@ -177,15 +161,7 @@ class FieldOutputRequest:
             moved. 
         toStepName
             A String specifying the name of the step to which the field output request state is 
-            moved. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
+            moved.
         """
         pass
 
@@ -197,15 +173,7 @@ class FieldOutputRequest:
         ----------
         stepName
             A String specifying the name of the step in which the field output request state is 
-            reset. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
+            reset.
         """
         pass
 
@@ -214,14 +182,6 @@ class FieldOutputRequest:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
         """
         pass
 
@@ -230,14 +190,6 @@ class FieldOutputRequest:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
         """
         pass
 
@@ -329,14 +281,6 @@ class FieldOutputRequest:
             A SymbolicConstant specifying the position on an element where output needs to be 
             written. Possible values are INTEGRATION_POINTS, AVERAGED_AT_NODES, CENTROIDAL, and 
             NODES. The default value is INTEGRATION_POINTS. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -374,13 +318,5 @@ class FieldOutputRequest:
         timeMarks
             A Boolean specifying when to write results to the output database. The default value is 
             OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

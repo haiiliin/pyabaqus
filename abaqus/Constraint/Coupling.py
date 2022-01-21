@@ -92,11 +92,7 @@ class Coupling(Constraint):
 
         Returns
         -------
-            A Coupling object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Coupling object. . 
         """
         super().__init__()
         pass
@@ -145,13 +141,5 @@ class Coupling(Constraint):
             distributing weight factors. Possible values are UNIFORM, LINEAR, QUADRATIC, and CUBIC. 
             The default value is UNIFORM.The *weightingMethod* argument applies only when 
             *couplingType*=DISTRIBUTING. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

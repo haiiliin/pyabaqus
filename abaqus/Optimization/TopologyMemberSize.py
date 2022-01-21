@@ -49,11 +49,7 @@ class TopologyMemberSize(GeometricRestriction):
 
         Returns
         -------
-            A TopologyMemberSize object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TopologyMemberSize object. . 
         """
         super().__init__()
         pass
@@ -74,13 +70,5 @@ class TopologyMemberSize(GeometricRestriction):
             A SymbolicConstant specifying whether to restrict the minimum or maximum thickness or an 
             envelope of both. Possible values are ENVELOPE, MAXIMUM, and MINIMUM. The default value 
             is MINIMUM. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

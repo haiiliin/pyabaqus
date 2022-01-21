@@ -319,11 +319,7 @@ class SuperimposeOptions(DGSuperimposeOptions):
             default value is 0.0. 
         nonuniformOffset
             A sequence of three Floats specifying the offset value in each of the three coordinate 
-            directions when *deformedOffsetMode*=NONUNIFORM. The default value is (0, 0, 0). 
-
-        Returns
-        -------
-            None. 
+            directions when *deformedOffsetMode*=NONUNIFORM. The default value is (0, 0, 0).
 
         Exceptions
         ----------

@@ -42,10 +42,6 @@ class SymbolicConstant:
 
         Returns
         -------
-            A SymbolicConstant object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SymbolicConstant object. . 
         """
         pass

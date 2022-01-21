@@ -278,13 +278,5 @@ class MappedField(AnalyticalField):
             value is None. 
         description
             A String specifying the description of the field. The default value is an empty string. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

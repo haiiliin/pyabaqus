@@ -35,10 +35,6 @@ class ScratchOdb:
 
         Returns
         -------
-            A ScratchOdb object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ScratchOdb object. . 
         """
         pass

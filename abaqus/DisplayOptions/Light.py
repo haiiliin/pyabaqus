@@ -49,11 +49,7 @@ class Light:
         specularColor
             A String specifying the color of the specular highlights created by this light source. 
             The initial value is 36% gray. A list of valid color strings is in the *colors* map in 
-            the *session* object. 
-
-        Returns
-        -------
-            None. 
+            the *session* object.
 
         Exceptions
         ----------

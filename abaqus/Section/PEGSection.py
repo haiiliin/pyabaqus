@@ -48,11 +48,7 @@ class PEGSection(Section):
 
         Returns
         -------
-            A PEGSection object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A PEGSection object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -70,11 +66,7 @@ class PEGSection(Section):
             planes, ΔϕxΔ⁢ϕx. The default value is 0.0. 
         wedgeAngle2
             A Float specifying the value of the y component of the angle between the bounding 
-            planes, ΔϕyΔ⁢ϕy. The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
+            planes, ΔϕyΔ⁢ϕy. The default value is 0.0.
 
         Exceptions
         ----------

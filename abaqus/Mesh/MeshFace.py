@@ -36,11 +36,8 @@ class MeshFace:
 
         Returns
         -------
-            A tuple of MeshEdge objects. 
-
-        Exceptions
-        ----------
-            None. 
+        edges: tuple[MeshEdge]
+            A tuple of MeshEdge objects
         """
         pass
 
@@ -52,11 +49,8 @@ class MeshFace:
 
         Returns
         -------
-            A tuple of MeshElement objects. 
-
-        Exceptions
-        ----------
-            None. 
+        elements: tuple[MeshElement]
+            A tuple of MeshElement objects
         """
         pass
 
@@ -68,11 +62,8 @@ class MeshFace:
 
         Returns
         -------
-            A tuple of MeshNode objects. 
-
-        Exceptions
-        ----------
-            None. 
+        nodes: tuple[MeshNode]
+            A tuple of MeshNode objects
         """
         pass
 
@@ -88,11 +79,8 @@ class MeshFace:
 
         Returns
         -------
-            A MeshNodeArray object, which is a sequence of MeshNode objects. 
-
-        Exceptions
-        ----------
-            None. 
+        nodes: MeshNodeArray
+            A MeshNodeArray object, which is a sequence of MeshNode objects
         """
         pass
 
@@ -104,12 +92,9 @@ class MeshFace:
 
         Returns
         -------
+        normal: tuple[float]
             A tuple of 3 floats representing the unit normal vector. If the element face is 
-            collapsed such that a normal cannot be computed, a zero-length vector is returned. 
-
-        Exceptions
-        ----------
-            None. 
+            collapsed such that a normal cannot be computed, a zero-length vector is returned. . 
         """
         pass
 
@@ -125,11 +110,8 @@ class MeshFace:
 
         Returns
         -------
-            A MeshFaceArray object, which is a sequence of MeshFace objects. 
-
-        Exceptions
-        ----------
-            None. 
+        faces: MeshFaceArray
+            A MeshFaceArray object, which is a sequence of MeshFace objects. . 
         """
         pass
 
@@ -145,11 +127,8 @@ class MeshFace:
 
         Returns
         -------
-            A MeshEdgeArray object, which is a sequence of MeshEdge objects. 
-
-        Exceptions
-        ----------
-            None. 
+        edges: MeshEdgeArray
+            A MeshEdgeArray object, which is a sequence of MeshEdge objects. . 
         """
         pass
 
@@ -165,11 +144,8 @@ class MeshFace:
 
         Returns
         -------
-            A MeshElementArray object, which is a sequence of MeshElement objects. 
-
-        Exceptions
-        ----------
-            None. 
+        elements: MeshElementArray
+            A MeshElementArray object, which is a sequence of MeshElement objects. . 
         """
         pass
 
@@ -185,11 +161,8 @@ class MeshFace:
 
         Returns
         -------
-            A MeshFaceArray object, which is a sequence of MeshFace objects. 
-
-        Exceptions
-        ----------
-            None. 
+        faces: MeshFaceArray
+            A MeshFaceArray object, which is a sequence of MeshFace objects. . 
         """
         pass
 
@@ -202,11 +175,8 @@ class MeshFace:
 
         Returns
         -------
-            A MeshElementArray object, which is a sequence of MeshElement objects. 
-
-        Exceptions
-        ----------
-            None. 
+        elements: MeshElementArray
+            A MeshElementArray object, which is a sequence of MeshElement objects. . 
         """
         pass
 
@@ -222,10 +192,7 @@ class MeshFace:
 
         Returns
         -------
-            A MeshFaceArray object, which is a sequence of MeshFace objects. 
-
-        Exceptions
-        ----------
-            None. 
+        faces: MeshFaceArray
+            A MeshFaceArray object, which is a sequence of MeshFace objects. . 
         """
         pass

@@ -40,14 +40,6 @@ class MeshPart(PartBase):
             A sequence of Cell objects specifying regions where to assign the stack direction. 
         referenceRegion
             A Face object specifying the top side of the stack direction. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -77,14 +69,6 @@ class MeshPart(PartBase):
             geometric edge. 
         node
             A MeshNode object specifying the mesh node to be associated with the geometric vertex. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -171,11 +155,8 @@ class MeshPart(PartBase):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -188,14 +169,6 @@ class MeshPart(PartBase):
         regions
             A sequence of Cell objects specifying the regions for which to set the boundary layer 
             mesh control parameters. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -208,14 +181,6 @@ class MeshPart(PartBase):
         regions
             A sequence of Part objects or Region objects specifying the parts or regions from which 
             the native mesh is to be deleted. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -233,14 +198,6 @@ class MeshPart(PartBase):
             *geometricEntities* contains a face, this boolean indicates whether the edges and 
             vertices that bound the face will also be disassociated from the mesh. The default value 
             is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -250,14 +207,6 @@ class MeshPart(PartBase):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -270,14 +219,6 @@ class MeshPart(PartBase):
         regions
             A sequence of Part objects or Edge objects specifying the parts or edges from which the 
             seeds are to be deleted. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -307,14 +248,6 @@ class MeshPart(PartBase):
             preview mesh. This option will only have an effect if any of the specified regions are 
             to be meshed with tetrahedral elements and a boundary preview mesh already exists. The 
             default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -361,14 +294,6 @@ class MeshPart(PartBase):
             A Boolean specifying whether existing element sets that include source elements will be 
             extended to also include extruded elements. This argument is ignored for native parts. 
             The default value is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -411,14 +336,6 @@ class MeshPart(PartBase):
             A Boolean specifying whether existing element sets that include source elements will be 
             extended to also include swept elements. This argument is ignored for native parts. The 
             default value is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -458,14 +375,6 @@ class MeshPart(PartBase):
             A Boolean specifying whether existing element sets that include source elements will be 
             extended to also include extruded elements. This argument is ignored for native parts. 
             The default value is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -542,11 +451,7 @@ class MeshPart(PartBase):
         Returns
         -------
             The return value is a Float, an Int, or a SymbolicConstant depending on the value of the 
-            *attribute* argument. 
-
-        Exceptions
-        ----------
-            None. 
+            *attribute* argument. . 
         """
         pass
 
@@ -591,11 +496,7 @@ class MeshPart(PartBase):
 
         Returns
         -------
-            A sequence of Face objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A sequence of Face objects. . 
         """
         pass
 
@@ -667,11 +568,7 @@ class MeshPart(PartBase):
 
         Returns
         -------
-            A MeshStats object. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshStats object. . 
         """
         pass
 
@@ -719,11 +616,7 @@ class MeshPart(PartBase):
 
         Returns
         -------
-            A Region object, or None. 
-
-        Exceptions
-        ----------
-            None. 
+            A Region object, or None. . 
         """
         pass
 
@@ -740,11 +633,8 @@ class MeshPart(PartBase):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -760,11 +650,8 @@ class MeshPart(PartBase):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -819,14 +706,6 @@ class MeshPart(PartBase):
             - FINER: The resulting mesh can be finer than the specified seeds. 
             - FIXED: The seeds must be exactly matched by the mesh (only with respect to the number 
             of elements, not to the nodal positioning). 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -849,14 +728,6 @@ class MeshPart(PartBase):
             - FINER: The resulting mesh can be finer than the specified seeds. 
             - FIXED: The seeds must be exactly matched by the mesh (only with respect to the number 
             of elements, not to the nodal positioning). 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -885,14 +756,6 @@ class MeshPart(PartBase):
             - FINER: The resulting mesh can be finer than the specified seeds. 
             - FIXED: The seeds must be exactly matched by the mesh (only with respect to the number 
             of elements, not to the nodal positioning). 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -915,14 +778,6 @@ class MeshPart(PartBase):
             default value is FREE. If unspecified, the existing constraint will remain unchanged. 
             Possible values are:FREE: The resulting mesh can be finer or coarser than the specified 
             seeds.FINER: The resulting mesh can be finer than the specified seeds. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -951,14 +806,6 @@ class MeshPart(PartBase):
             selected regions. 
         setName
             A String specifying a unique name for a set that will contain boundary layer elements. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -976,11 +823,7 @@ class MeshPart(PartBase):
             regions.Note:If an ElemType object has an UNKNOWN_*xxx* value for *elemCode*, its order 
             will be deduced from the order of other valid ElemType objects within the same 
             setElementType command. If no valid ElemType objects can be found, the order will remain 
-            unchanged. 
-
-        Returns
-        -------
-            None. 
+            unchanged.
 
         Exceptions
         ----------
@@ -1004,14 +847,6 @@ class MeshPart(PartBase):
         corners
             Three, four, or five ConstrainedSketchVertex objects defining the logical corners for a given mappable
             face region. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1079,14 +914,6 @@ class MeshPart(PartBase):
             - Hexahedral or hexahedral-dominated sweep meshing with *algorithm*=ADVANCING_FRONT. 
             - Free tetrahedral meshing. *allowMapped*=True implies that mapped triangular meshing 
             can be used on faces that bound three-dimensional *regions*. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1105,14 +932,6 @@ class MeshPart(PartBase):
             elements will be created; it will have no effect if gasket elements are not used. 
             Possible values are FORWARD or REVERSE.If *sense*=FORWARD, the sense of the given edge's 
             underlying curve will be used. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1184,11 +1003,7 @@ class MeshPart(PartBase):
         -------
             A Dictionary object containing values for some number of the following keys: 
             failedElements, warningElements, naElements (sequences of MeshElement objects); 
-            numElements (Int); average, worst (Float); worstElement (MeshElement object) 
-
-        Exceptions
-        ----------
-            None. 
+            numElements (Int); average, worst (Float); worstElement (MeshElement object) . 
         """
         pass
 
@@ -1211,11 +1026,7 @@ class MeshPart(PartBase):
 
         Returns
         -------
-            A MeshNode object.
-
-        Exceptions
-        ----------
-            None.
+            A MeshNode object..
         """
         node = MeshNode(coordinates, localCsys, label)
         self.nodes.append(node)

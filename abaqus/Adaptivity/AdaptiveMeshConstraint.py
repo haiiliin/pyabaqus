@@ -74,11 +74,7 @@ class AdaptiveMeshConstraint:
         ----------
         stepName
             A String specifying the name of the step in which the adaptive mesh constraint is 
-            deactivated. 
-
-        Returns
-        -------
-            None. 
+            deactivated.
 
         Exceptions
         ----------
@@ -96,11 +92,7 @@ class AdaptiveMeshConstraint:
             is moved. 
         toStepName
             A String specifying the name of the step to which the adaptive mesh constraint state is 
-            moved. 
-
-        Returns
-        -------
-            None. 
+            moved.
 
         Exceptions
         ----------
@@ -116,11 +108,7 @@ class AdaptiveMeshConstraint:
         ----------
         stepName
             A String specifying the name of the step in which the adaptive mesh constraint state is 
-            reset. 
-
-        Returns
-        -------
-            None. 
+            reset.
 
         Exceptions
         ----------
@@ -133,14 +121,6 @@ class AdaptiveMeshConstraint:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -149,14 +129,6 @@ class AdaptiveMeshConstraint:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -167,13 +139,5 @@ class AdaptiveMeshConstraint:
         ----------
         indices
             A sequence of Ints specifying the index of each adaptive mesh constraint to delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

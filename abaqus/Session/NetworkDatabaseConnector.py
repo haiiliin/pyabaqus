@@ -66,11 +66,7 @@ class NetworkDatabaseConnector:
 
         Returns
         -------
-            A NetworkDatabaseConnector object. 
-
-        Exceptions
-        ----------
-            None. 
+            A NetworkDatabaseConnector object. . 
         """
         pass
 
@@ -87,14 +83,6 @@ class NetworkDatabaseConnector:
             An Int specifying the timeout in seconds for the remote server. For example: 86400 
             corresponds to one day. The server exits if it does not receive any communication from 
             the client during the time specified. The default value is 86400. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -103,14 +91,6 @@ class NetworkDatabaseConnector:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -142,13 +122,5 @@ class NetworkDatabaseConnector:
         allowAutomaticStartup
             A Boolean specifying whether to start the remote network database connector server. The 
             default value is ON. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -77,11 +77,7 @@ class EulerianBC(BoundaryCondition):
 
         Returns
         -------
-            An EulerianBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            An EulerianBC object. . 
         """
         super().__init__()
         pass
@@ -105,14 +101,6 @@ class EulerianBC(BoundaryCondition):
             A SymbolicConstant specifying the control of material flow out of the Eulerian domain. 
             Possible values are ZERO_PRESSURE, FREE, NON_REFLECTING, and EQUILIBRIUM. The default 
             value is ZERO_PRESSURE. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -135,13 +123,5 @@ class EulerianBC(BoundaryCondition):
             A SymbolicConstant specifying the control of material flow out of the Eulerian domain. 
             Possible values are ZERO_PRESSURE, FREE, NON_REFLECTING, and EQUILIBRIUM. The default 
             value is ZERO_PRESSURE. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

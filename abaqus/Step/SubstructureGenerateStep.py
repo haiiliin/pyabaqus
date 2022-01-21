@@ -346,11 +346,7 @@ class SubstructureGenerateStep(AnalysisStep):
         structuralDampingControl
             A SymbolicConstant specifying the damping control to include the structural damping 
             matrix. Possible values are ELEMENT, FACTOR, COMBINED, and NONE. The default value is 
-            NONE. 
-
-        Returns
-        -------
-            None. 
+            NONE.
 
         Exceptions
         ----------

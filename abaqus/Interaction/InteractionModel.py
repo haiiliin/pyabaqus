@@ -176,10 +176,6 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            None
-
-        Exceptions
-        ----------
             None.
         """
         pass
@@ -199,11 +195,7 @@ class InteractionModel(InteractionContactControlModel,
             A string specifying the name of the secondary surface used in contact.
             A float specifying the separation distance between the main surface and the secondary
             surface.
-            A boolean specifying whether or not contact surfaces are overclosed.
-
-        Exceptions
-        ----------
-            None.
+            A boolean specifying whether or not contact surfaces are overclosed..
         """
         pass
 
@@ -260,11 +252,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            An AcousticImpedance object.
-
-        Exceptions
-        ----------
-            None.
+            An AcousticImpedance object..
         """
         self.interactions[name] = interaction = AcousticImpedance(name, createStepName, surface, definition,
                                                                   interactionProperty, nonreflectingType, radius,
@@ -300,11 +288,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            An AcousticImpedanceProp object.
-
-        Exceptions
-        ----------
-            None.
+            An AcousticImpedanceProp object..
         """
         self.interactions[name] = interaction = AcousticImpedanceProp(name, tableType, table, frequencyDependency)
         return interaction
@@ -346,11 +330,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            An ActuatorSensor object.
-
-        Exceptions
-        ----------
-            None.
+            An ActuatorSensor object..
         """
         self.interactions[name] = interaction = ActuatorSensor(name, createStepName, point, interactionProperty,
                                                                noCoordComponents, unsymm, noSolutionDepVar, userSubUel,
@@ -378,11 +358,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            An ActuatorSensorProp object.
-
-        Exceptions
-        ----------
-            None.
+            An ActuatorSensorProp object..
         """
         self.interactions[name] = interaction = ActuatorSensorProp(name, realProperties, integerProperties)
         return interaction
@@ -566,11 +542,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A CavityRadiation object.
-
-        Exceptions
-        ----------
-            None.
+            A CavityRadiation object..
         """
         self.interactions[name] = interaction = CavityRadiation(name, createStepName, surfaces, surfaceEmissivities,
                                                                 ambientTemp, blocking, blockingSurfaces, rangeOfView,
@@ -612,11 +584,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A CavityRadiationProp object.
-
-        Exceptions
-        ----------
-            None.
+            A CavityRadiationProp object..
         """
         self.interactions[name] = interaction = CavityRadiationProp(name, temperatureDependency, dependencies, property)
         return interaction
@@ -693,11 +661,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A ConcentratedFilmCondition object.
-
-        Exceptions
-        ----------
-            None.
+            A ConcentratedFilmCondition object..
         """
         self.interactions[name] = interaction = ConcentratedFilmCondition(name, createStepName, region, definition,
                                                                           nodalArea, explicitRegionType,
@@ -754,11 +718,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A ConcentratedRadiationToAmbient object.
-
-        Exceptions
-        ----------
-            None.
+            A ConcentratedRadiationToAmbient object..
         """
         self.interactions[name] = interaction = ConcentratedRadiationToAmbient(name, createStepName, region,
                                                                                ambientTemperature,
@@ -831,11 +791,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A ContactExp object.
-
-        Exceptions
-        ----------
-            None.
+            A ContactExp object..
         """
         self.interactions[name] = interaction = ContactExp(name, createStepName, useAllstar, globalSmoothing,
                                                            includedPairs, excludedPairs, contactPropertyAssignments,
@@ -859,11 +815,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A ContactProperty object.
-
-        Exceptions
-        ----------
-            None.
+            A ContactProperty object..
         """
         interactionProperties = ContactProperty(name)
         self.interactions[name] = interactionProperties
@@ -946,11 +898,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A ContactStd object.
-
-        Exceptions
-        ----------
-            None.
+            A ContactStd object..
         """
         self.interactions[name] = interaction = ContactStd(name, createStepName, useAllstar, globalSmoothing,
                                                            includedPairs, excludedPairs, contactPropertyAssignments,
@@ -1027,11 +975,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A CyclicSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A CyclicSymmetry object..
         """
         self.interactions[name] = interaction = CyclicSymmetry(name, createStepName, main, secondary, repetitiveSectors,
                                                                axisPoint1, axisPoint2, extractedNodalDiameter,
@@ -1061,11 +1005,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            An ElasticFoundation object.
-
-        Exceptions
-        ----------
-            None.
+            An ElasticFoundation object..
         """
         self.interactions[name] = interaction = ElasticFoundation(name, createStepName, surface, stiffness)
         return interaction
@@ -1240,11 +1180,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A FilmCondition object.
-
-        Exceptions
-        ----------
-            None.
+            A FilmCondition object..
         """
         self.interactions[name] = interaction = FilmCondition(name, createStepName, surface, definition,
                                                               interactionProperty, sinkTemperature, sinkAmplitude,
@@ -1278,11 +1214,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A FilmConditionProp object.
-
-        Exceptions
-        ----------
-            None.
+            A FilmConditionProp object..
         """
         self.interactions[name] = interaction = FilmConditionProp(name, temperatureDependency, dependencies, property)
         return interaction
@@ -1323,11 +1255,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A FluidCavity object.
-
-        Exceptions
-        ----------
-            None.
+            A FluidCavity object..
         """
         self.interactions[name] = interaction = FluidCavity(name, createStepName, cavityPoint, cavitySurface,
                                                             interactionProperty, ambientPressure, thickness,
@@ -1444,11 +1372,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A FluidCavityProperty object.
-
-        Exceptions
-        ----------
-            None.
+            A FluidCavityProperty object..
         """
         self.interactions[name] = interaction = FluidCavityProperty(name, definition, fluidDensity, molecularWeight,
                                                                     useExpansion, expansionTempDep,
@@ -1490,11 +1414,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A FluidExchange object.
-
-        Exceptions
-        ----------
-            None.
+            A FluidExchange object..
         """
         self.interactions[name] = interaction = FluidExchange(name, createStepName, firstCavity, interactionProperty,
                                                               definition, secondCavity, exchangeArea)
@@ -1573,11 +1493,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A FluidExchangeProperty object.
-
-        Exceptions
-        ----------
-            None.
+            A FluidExchangeProperty object..
         """
         self.interactions[name] = interaction = FluidExchangeProperty(name, dataTable, definition, pressureDependency,
                                                                       temperatureDependency, fieldDependencies)
@@ -1610,11 +1526,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A FluidInflator object.
-
-        Exceptions
-        ----------
-            None.
+            A FluidInflator object..
         """
         self.interactions[name] = interaction = FluidInflator(name, createStepName, cavity, interactionProperty,
                                                               inflationTimeAmplitude, massFlowAmplitude)
@@ -1666,11 +1578,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A FluidInflatorProperty object.
-
-        Exceptions
-        ----------
-            None.
+            A FluidInflatorProperty object..
         """
         self.interactions[name] = interaction = FluidInflatorProperty(name, definition, effectiveArea, tankVolume,
                                                                       dischargeCoefficient, dataTable, numFluids,
@@ -1741,11 +1649,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            An IncidentWave object.
-
-        Exceptions
-        ----------
-            None.
+            An IncidentWave object..
         """
         self.interactions[name] = interaction = IncidentWave(name, createStepName, sourcePoint, standoffPoint, surface,
                                                              interactionProperty, definition, amplitude,
@@ -1893,11 +1797,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            An IncidentWaveProperty object.
-
-        Exceptions
-        ----------
-            None.
+            An IncidentWaveProperty object..
         """
         self.interactions[name] = interaction = IncidentWaveProperty(name, definition, propagationModel, soundSpeed,
                                                                      fluidDensity, specificHeatRatio, gravity,
@@ -1947,11 +1847,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A ModelChange object.
-
-        Exceptions
-        ----------
-            None.
+            A ModelChange object..
         """
         self.interactions[name] = interaction = ModelChange(name, createStepName, isRestart, regionType, region,
                                                             activeInStep, includeStrain)
@@ -1998,11 +1894,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A PressurePenetration object.
-
-        Exceptions
-        ----------
-            None.
+            A PressurePenetration object..
         """
         self.interactions[name] = interaction = PressurePenetration(name, createStepName, contactInteraction,
                                                                     mainPoints, secondaryPoints, penetrationPressure,
@@ -2054,11 +1946,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A RadiationToAmbient object.
-
-        Exceptions
-        ----------
-            None.
+            A RadiationToAmbient object..
         """
         self.interactions[name] = interaction = RadiationToAmbient(name, createStepName, surface, emissivity, field,
                                                                    distributionType, radiationType, ambientTemperature,
@@ -2094,11 +1982,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A SelfContactExp object.
-
-        Exceptions
-        ----------
-            None.
+            A SelfContactExp object..
         """
         self.interactions[name] = interaction = SelfContactExp(name, createStepName, surface, interactionProperty,
                                                                mechanicalConstraint, contactControls)
@@ -2141,11 +2025,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A SelfContactStd object.
-
-        Exceptions
-        ----------
-            None.
+            A SelfContactStd object..
         """
         self.interactions[name] = interaction = SelfContactStd(name, createStepName, surface, interactionProperty,
                                                                enforcement, thickness, smooth, contactControls)
@@ -2391,11 +2271,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A StdXplCosimulation object.
-
-        Exceptions
-        ----------
-            None.
+            A StdXplCosimulation object..
         """
         self.interactions[name] = interaction = StdXplCosimulation(name, createStepName, region, incrementation,
                                                                    stepSize, stepSizeDefinition)
@@ -2474,11 +2350,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A SurfaceToSurfaceContactExp object.
-
-        Exceptions
-        ----------
-            None.
+            A SurfaceToSurfaceContactExp object..
         """
         self.interactions[name] = interaction = SurfaceToSurfaceContactExp(name, createStepName, main, secondary,
                                                                            sliding, interactionProperty,
@@ -2626,11 +2498,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A SurfaceToSurfaceContactStd object.
-
-        Exceptions
-        ----------
-            None.
+            A SurfaceToSurfaceContactStd object..
         """
         self.interactions[name] = interaction = SurfaceToSurfaceContactStd(name, createStepName, master, slave, sliding,
                                                                            interactionProperty, interferenceType,
@@ -2668,11 +2536,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A XFEMCrackGrowth object.
-
-        Exceptions
-        ----------
-            None.
+            A XFEMCrackGrowth object..
         """
         self.interactions[name] = interaction = XFEMCrackGrowth(name, createStepName, crackName, allowGrowth)
         return interaction

@@ -147,11 +147,7 @@ class SurfaceTraction(Load):
 
         Returns
         -------
-            A SurfaceTraction object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SurfaceTraction object. . 
         """
         super().__init__()
         pass
@@ -209,14 +205,6 @@ class SurfaceTraction(Load):
         traction
             A SymbolicConstant specifying how to apply surface traction. Possible values are SHEAR 
             and GENERAL. The default value is SHEAR. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -239,13 +227,5 @@ class SurfaceTraction(Load):
             amplitude is propagated from the previous analysis step. FREED should be used if the 
             load has no amplitude reference. You should provide the *amplitude* argument only if it 
             is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

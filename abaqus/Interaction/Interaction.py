@@ -34,14 +34,6 @@ class Interaction:
         ----------
         stepName
             A String specifying the name of the step in which the interaction is deactivated. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -54,14 +46,6 @@ class Interaction:
             A String specifying the name of the step from which to move the interaction. 
         toStepName
             A String specifying the name of the step to which to move the interaction. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -73,14 +57,6 @@ class Interaction:
         ----------
         stepName
             A String specifying the name of the step in which the interaction is reactivated. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -89,14 +65,6 @@ class Interaction:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -105,14 +73,6 @@ class Interaction:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -123,13 +83,5 @@ class Interaction:
         ----------
         indices
             A sequence of Ints specifying the index of each interaction to delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

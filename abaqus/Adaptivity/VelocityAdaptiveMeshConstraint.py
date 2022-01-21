@@ -101,11 +101,7 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
 
         Returns
         -------
-            A VelocityAdaptiveMeshConstraint object. 
-
-        Exceptions
-        ----------
-            None. 
+            A VelocityAdaptiveMeshConstraint object. . 
         """
         super().__init__()
         pass
@@ -158,14 +154,6 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
             A SymbolicConstant specifying the mesh motion in relation to the underlying material. 
             Possible values are INDEPENDENT, FOLLOW and USER_DEFINED. The default value is 
             INDEPENDENT. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -209,13 +197,5 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
             amplitude is propagated from the previous analysis step. FREED should be used if the 
             adaptive mesh constraint is changed to have no amplitude reference. You should provide 
             the *amplitude* argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

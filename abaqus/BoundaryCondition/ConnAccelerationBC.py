@@ -125,11 +125,7 @@ class ConnAccelerationBC(BoundaryCondition):
 
         Returns
         -------
-            A ConnAccelerationBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ConnAccelerationBC object. . 
         """
         super().__init__()
         pass
@@ -193,14 +189,6 @@ class ConnAccelerationBC(BoundaryCondition):
         distributionType
             A SymbolicConstant specifying how the boundary condition is distributed spatially. 
             Possible values are UNIFORM and USER_DEFINED. The default value is UNIFORM. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -249,13 +237,5 @@ class ConnAccelerationBC(BoundaryCondition):
             amplitude is propagated from the previous analysis step. FREED should be used if the 
             boundary condition is changed to have no amplitude reference. You should provide the 
             *amplitude* argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

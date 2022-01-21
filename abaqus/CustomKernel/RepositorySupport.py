@@ -34,11 +34,7 @@ class RepositorySupport(CommandRegister):
 
         Returns
         -------
-            A RepositorySupport object. 
-
-        Exceptions
-        ----------
-            None. 
+            A RepositorySupport object. . 
         """
         super().__init__()
         pass
@@ -57,13 +53,5 @@ class RepositorySupport(CommandRegister):
         constructors
             A constructor or sequence of constructors specifying which classes will store their 
             instances in the repository. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

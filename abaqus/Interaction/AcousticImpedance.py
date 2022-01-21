@@ -75,11 +75,7 @@ class AcousticImpedance(Interaction):
 
         Returns
         -------
-            An AcousticImpedance object. 
-
-        Exceptions
-        ----------
-            None. 
+            An AcousticImpedance object. . 
         """
         super().__init__()
         pass
@@ -124,14 +120,6 @@ class AcousticImpedance(Interaction):
             of the major axis of the ellipse or prolate spheroid defining the boundary surface. The 
             default value is (0, 0, 1).This argument is valid only when *definition*=NONREFLECTING, 
             and *nonreflectingType*=ELLIPTICAL or PROLATE. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -145,13 +133,5 @@ class AcousticImpedance(Interaction):
             A String specifying the name of the step in which the interaction is modified. 
         interactionProperty
             A String specifying the AcousticImpedanceProp object associated with this interaction. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

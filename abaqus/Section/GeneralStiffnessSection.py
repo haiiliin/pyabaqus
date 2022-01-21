@@ -86,11 +86,7 @@ class GeneralStiffnessSection(ShellSection):
 
         Returns
         -------
-            A GeneralStiffnessSection object. 
-
-        Exceptions
-        ----------
-            None. 
+            A GeneralStiffnessSection object. . 
         """
         super().__init__()
         pass
@@ -137,13 +133,5 @@ class GeneralStiffnessSection(ShellSection):
             A sequence of sequences of Floats specifying the scaling factors for given temperatures 
             and/or field data. Each row should contain (Y, alpha, T, F1,...,Fn). The default value 
             is an empty sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

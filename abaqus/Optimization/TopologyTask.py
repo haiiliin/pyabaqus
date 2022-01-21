@@ -184,11 +184,7 @@ class TopologyTask(OptimizationTask):
 
         Returns
         -------
-            A TopologyTask object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TopologyTask object. . 
         """
         super().__init__()
         pass
@@ -326,13 +322,5 @@ class TopologyTask(OptimizationTask):
             A Boolean specifying whether the group in the design response will be evaluated using 
             the existing algorithm or a new algorithm based on Abaqus sensitivities. The default 
             value of False means that the existing algorithm will be used. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

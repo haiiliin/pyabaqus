@@ -127,13 +127,5 @@ class FreeBodyOptions:
         constantLengthArrow
             A Boolean specifying whether to use a constant length for all arrows. The default value 
             is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

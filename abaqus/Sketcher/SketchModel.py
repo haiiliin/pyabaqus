@@ -4,8 +4,8 @@ from ..Model.ModelBase import ModelBase
 
 class SketchModel(ModelBase):
 
-    def ConstrainedSketch(self, name: str, sheetSize: float, gridSpacing: float = None, transform: tuple = ()) -> \
-            ConstrainedSketch:
+    def ConstrainedSketch(self, name: str, sheetSize: float, gridSpacing: float = None, 
+                          transform: tuple = ()) -> ConstrainedSketch:
         """This method creates a ConstrainedSketch object. If the sketch cannot be created, the
         method returns None.
 
@@ -32,11 +32,8 @@ class SketchModel(ModelBase):
 
         Returns
         -------
+        sketch: ConstrainedSketch
             A ConstrainedSketch object.
-
-        Exceptions
-        ----------
-            None.
         """
         self.sketches[name] = sketch = ConstrainedSketch(name, sheetSize, gridSpacing, transform)
         return sketch

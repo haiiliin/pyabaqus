@@ -34,11 +34,7 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            An ActuatorAmplitude object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            An ActuatorAmplitude object. and RangeError.
         """
         self.amplitudes[name] = amplitude = ActuatorAmplitude(name, timeSpan)
         return amplitude
@@ -70,11 +66,7 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A DecayAmplitude object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A DecayAmplitude object. and RangeError.
         """
         self.amplitudes[name] = amplitude = DecayAmplitude(name, initial, maximum, start, decayTime, timeSpan)
         return amplitude
@@ -112,11 +104,7 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            An EquallySpacedAmplitude object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            An EquallySpacedAmplitude object. and RangeError.
         """
         self.amplitudes[name] = amplitude = EquallySpacedAmplitude(name, fixedInterval, data, begin, smooth, timeSpan)
         return amplitude
@@ -152,11 +140,7 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A ModulatedAmplitude object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A ModulatedAmplitude object. and RangeError.
         """
         self.amplitudes[name] = amplitude = ModulatedAmplitude(name, initial, magnitude, start, frequency1, frequency2,
                                                                timeSpan)
@@ -189,11 +173,7 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A PeriodicAmplitude object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A PeriodicAmplitude object. and RangeError.
         """
         self.amplitudes[name] = amplitude = PeriodicAmplitude(name, frequency, start, a_0, data, timeSpan)
         return amplitude
@@ -240,11 +220,7 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A PsdDefinition object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A PsdDefinition object. and RangeError.
         """
         self.amplitudes[name] = amplitude = PsdDefinition(name, data, unitType, referenceGravityAcceleration,
                                                           referenecePower, user, timeSpan, amplitude)
@@ -271,11 +247,7 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A SmoothStepAmplitude object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A SmoothStepAmplitude object. and RangeError.
         """
         self.amplitudes[name] = amplitude = SmoothStepAmplitude(name, data, timeSpan)
         return amplitude
@@ -308,11 +280,7 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A SolutionDependentAmplitude object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A SolutionDependentAmplitude object. and RangeError.
         """
         self.amplitudes[name] = amplitude = SolutionDependentAmplitude(name, initial, minimum, maximum, timeSpan)
         return amplitude
@@ -373,11 +341,7 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A SpectrumAmplitude object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A SpectrumAmplitude object. and RangeError.
         """
         self.amplitudes[name] = amplitude = SpectrumAmplitude(name, method, data, specificationUnits, eventUnits,
                                                               solution, timeIncrement, gravity, criticalDamping,
@@ -411,11 +375,7 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A TabularAmplitude object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A TabularAmplitude object. and RangeError.
         """
         self.amplitudes[name] = amplitude = TabularAmplitude(name, data, smooth, timeSpan)
         return amplitude

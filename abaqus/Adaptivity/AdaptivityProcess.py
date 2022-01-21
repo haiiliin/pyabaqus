@@ -76,14 +76,6 @@ class AdaptivityProcess:
         continueJob
             A Boolean specifying whether to run the adaptivity as a continuation analysis. The 
             default value is False. The datacheckJob and continueJob arguments cannot both be True. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -100,14 +92,6 @@ class AdaptivityProcess:
             A String specifying the prefix to use for jobs created by the adaptivity process. An 
             empty string indicates that the name of the adaptivity process should be used. The 
             default value is an empty string. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -135,11 +119,7 @@ class AdaptivityProcess:
 
         Returns
         -------
-            An AdaptivityIteration object.
-
-        Exceptions
-        ----------
-            None.
+            An AdaptivityIteration object..
         """
         self.iterations[iteration] = iteration = AdaptivityIteration(iteration, jobName, modelName, odbPath,
                                                                      remeshingErrors)

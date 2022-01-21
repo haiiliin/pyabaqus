@@ -85,11 +85,7 @@ class AcousticPressureBC(BoundaryCondition):
 
         Returns
         -------
-            An AcousticPressureBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            An AcousticPressureBC object. . 
         """
         super().__init__()
         pass
@@ -119,14 +115,6 @@ class AcousticPressureBC(BoundaryCondition):
         fixed
             A Boolean specifying whether the boundary condition should remain fixed at the current 
             values at the start of the step. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -148,13 +136,5 @@ class AcousticPressureBC(BoundaryCondition):
             amplitude is propagated from the previous analysis step. FREED should be used if the 
             boundary condition is changed to have no amplitude reference. You should provide the 
             *amplitude* argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

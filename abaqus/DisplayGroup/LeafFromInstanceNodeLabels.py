@@ -41,11 +41,7 @@ class LeafFromInstanceNodeLabels(Leaf):
 
         Returns
         -------
-            A LeafFromInstanceNodeLabels object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LeafFromInstanceNodeLabels object. . 
         """
         super().__init__(DEFAULT_MODEL)
         pass

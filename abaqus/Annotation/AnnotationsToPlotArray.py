@@ -28,14 +28,6 @@ class AnnotationsToPlotArray(list[Annotation]):
         index
             An Int specifying the index of the Annotation object in the AnnotationsToPlotArray 
             sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass
@@ -49,14 +41,6 @@ class AnnotationsToPlotArray(list[Annotation]):
         index
             An Int specifying the index of the Annotation object in the AnnotationsToPlotArray 
             sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass
@@ -73,14 +57,6 @@ class AnnotationsToPlotArray(list[Annotation]):
         other
             An Integer specifying the index of the other Annotation object in the 
             AnnotationsToPlotArray sequence after which this object will be moved. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass
@@ -97,14 +73,6 @@ class AnnotationsToPlotArray(list[Annotation]):
         other
             An Int specifying the index of the other Annotation object in the AnnotationsToPlotArray 
             sequence before which this object will be moved. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass
@@ -118,14 +86,6 @@ class AnnotationsToPlotArray(list[Annotation]):
         index
             An Int specifying the index of the Annotation object in the AnnotationsToPlotArray 
             sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass
@@ -139,14 +99,6 @@ class AnnotationsToPlotArray(list[Annotation]):
         index
             An Int specifying the index of the Annotation object in the AnnotationsToPlotArray 
             sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass

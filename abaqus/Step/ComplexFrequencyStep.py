@@ -256,11 +256,7 @@ class ComplexFrequencyStep(AnalysisStep):
             If the value is None, the analysis product will evaluate the stiffness associated with 
             frequency-dependent springs and dashpots at zero frequency and will not consider the 
             stiffness contributions from frequency-domain viscoelasticity in the step. The default 
-            value is None. 
-
-        Returns
-        -------
-            None. 
+            value is None.
 
         Exceptions
         ----------

@@ -62,11 +62,7 @@ class GasketSection(Section):
 
         Returns
         -------
-            A GasketSection object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and ValueError. 
+            A GasketSection object.  and ValueError. 
         """
         super().__init__()
         pass
@@ -95,11 +91,7 @@ class GasketSection(Section):
             used in all but link elements to stabilize gasket elements that are not supported at all 
             nodes, such as those that extend outside neighboring components. If DEFAULT is 
             specified, a value is used equal to 10–9 times the initial compressive stiffness in the 
-            thickness direction. The default value is DEFAULT. 
-
-        Returns
-        -------
-            None. 
+            thickness direction. The default value is DEFAULT.
 
         Exceptions
         ----------

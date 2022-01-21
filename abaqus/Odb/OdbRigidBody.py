@@ -63,10 +63,6 @@ class OdbRigidBody:
 
         Returns
         -------
-            An OdbRigidBody object. 
-
-        Exceptions
-        ----------
-            None. 
+            An OdbRigidBody object. . 
         """
         pass

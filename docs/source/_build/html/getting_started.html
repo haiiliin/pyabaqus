@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting Started &mdash; pyabaqus 1.0.4 documentation</title>
+  <title>Getting Started &mdash; pyabaqus 1.0.5 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -37,7 +36,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
@@ -50,6 +49,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Reference manual</a></li>
 </ul>
 
         </div>
@@ -76,15 +76,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="getting-started">
+  <div class="section" id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h1>
-<section id="introduction">
+<div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
 <p><cite>pyabaqus</cite> is a Python package to run Abaqus fluently, it is a package to make Abaqus
 modeling, calculation, visualization easily. Using <cite>pyabaqus</cite>, you can simply build the Abaqus
 model, submit and monitor the job, and visualize the results in just one Python script, you
 don’t even need to open Abaqus the whole time.</p>
-<section id="two-python-interpreters">
+<div class="section" id="two-python-interpreters">
 <h3>Two Python interpreters<a class="headerlink" href="#two-python-interpreters" title="Permalink to this headline"></a></h3>
 <p>Before we go any further, it is necessary for us to understand two Python interpreters.</p>
 <p>When we use the Abaqus/CAE graphical user interface (GUI) to create a model and to visualize
@@ -122,11 +122,11 @@ Abaqus model. But fortunately, we can use the commands provided by Abaqus to acc
 is installed. <cite>pyabaqus</cite> provides a bridge to connect our Python script to Abaqus Python
 interpreter, it provides type hints for Python scripting for Abaqus, enabling us to write a
 Abaqus Python script quickly.</p>
-</section>
-</section>
-<section id="installation">
+</div>
+</div>
+<div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
-<p><cite>pyabaqus</cite> is uploaded to <a class="reference external" href="https://pypi.org/project/pyabaqus">PyPi</a>, you can simply install
+<p><cite>pyabaqus</cite> is uploaded to <a class="reference external" href="https://pypi.org/project/pyabaqus">PyPI</a>, you can simply install
 it using pip:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install pyabaqus
 </pre></div>
@@ -138,28 +138,28 @@ the local directory:</p>
 python setup.py install
 </pre></div>
 </div>
-</section>
-<section id="dependencies">
+</div>
+<div class="section" id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h2>
 <dl class="simple">
 <dt>Required dependencies:</dt><dd><ul class="simple">
-<li><p>PyQt5, used for GUI window of Job monitoring</p></li>
+<li><p>PyQt5, used for GUI window of Job monitor</p></li>
 </ul>
 </dd>
 </dl>
 <p>Once you have installed <cite>pyabaqus</cite> and <cite>PyQt5</cite>, you can start to build your Abaqus model right
 now.</p>
-</section>
-<section id="abaqus-command">
+</div>
+<div class="section" id="abaqus-command">
 <h2>Abaqus command<a class="headerlink" href="#abaqus-command" title="Permalink to this headline"></a></h2>
 <p>In order to use Abaqus command to execute the Python script and submit the job, you need to tell
 Abaqus where the Abaqus command located. Usually, Abaqus command locates in a directory like this:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>C:/SIMULIA/Commands/abaqus.bat
 </pre></div>
 </div>
-<p>You can add the directory <cite>C:/SIMULIA/Commands</cite> to the system environment variable <cite>path</cite>, or you can add a new system variable named <cite>ABAQUS_BAT_PATH</cite>, and set the value to the file path of the Abaqus command, i.e., <cite>C:/SIMULIA/Commands/abaqus.bat</cite></p>
-</section>
-</section>
+<p>You can add the directory <cite>C:/SIMULIA/Commands</cite> to the system environment variable <cite>path</cite>, or you can create a new system variable named <cite>ABAQUS_BAT_PATH</cite>, and set the value to the file path of the Abaqus command, i.e., <cite>C:/SIMULIA/Commands/abaqus.bat</cite></p>
+</div>
+</div>
 
 
            </div>

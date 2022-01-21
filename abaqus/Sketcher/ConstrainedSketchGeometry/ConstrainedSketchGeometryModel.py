@@ -23,12 +23,8 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the arc cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        geometry: ConstrainedSketchGeometry
+            A ConstrainedSketchGeometry object
         """
         pass
 
@@ -56,12 +52,12 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the arc cannot be created).
+        geometry: ConstrainedSketchGeometry
+            A ConstrainedSketchGeometry object
 
         Exceptions
         ----------
-            If incompatible data are given, the second endpoint is ignored.
-            !img
+            If incompatible data are given, the second endpoint is ignored
         """
         pass
 
@@ -84,12 +80,8 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the arc cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        geometry: ConstrainedSketchGeometry
+            A ConstrainedSketchGeometry object
         """
         pass
 
@@ -110,12 +102,8 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the circle cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        geometry: ConstrainedSketchGeometry
+            A ConstrainedSketchGeometry object
         """
         pass
 
@@ -137,12 +125,8 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the circle cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        geometry: ConstrainedSketchGeometry
+            A ConstrainedSketchGeometry object
         """
         pass
 
@@ -166,17 +150,13 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the ellipse cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        geometry: ConstrainedSketchGeometry
+            A ConstrainedSketchGeometry object
         """
         pass
 
-    def FilletByRadius(self, radius: float, curve1: 'ConstrainedSketchGeometry', nearPoint1: tuple[float],
-                       curve2: 'ConstrainedSketchGeometry', nearPoint2: tuple[float]):
+    def FilletByRadius(self, radius: float, curve1: 'ConstrainedSketchGeometryModel', nearPoint1: tuple[float],
+                       curve2: 'ConstrainedSketchGeometryModel', nearPoint2: tuple[float]):
         """This method constructs a fillet arc of a given radius between two curves. The fillet is
         added to the geometry repository of the ConstrainedSketch object.
 
@@ -203,13 +183,13 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the fillet cannot be created).
+        geometry: ConstrainedSketchGeometry
+            A ConstrainedSketchGeometry object
 
         Exceptions
         ----------
             - If the radius given cannot be used to create a fillet between the two curves given:
               Range Error: cannot construct the Fillet specified
-            !img
         """
         pass
 
@@ -229,12 +209,8 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the line cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        geometry: ConstrainedSketchGeometry
+            A ConstrainedSketchGeometry object
         """
         pass
 
@@ -254,12 +230,8 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the line cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        geometry: ConstrainedSketchGeometry
+            A ConstrainedSketchGeometry object
         """
         pass
 
@@ -281,12 +253,8 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the spline cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        geometry: ConstrainedSketchGeometry
+            A ConstrainedSketchGeometry object
         """
         pass
 
@@ -305,12 +273,8 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the spot cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        geometry: ConstrainedSketchGeometry
+            A ConstrainedSketchGeometry object
         """
         pass
 
@@ -323,12 +287,8 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A list of ConstrainedSketchVertex objects.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        vertices: list[ConstrainedSketchVertex]
+            A list of ConstrainedSketchVertex objects
         """
         pass
 
@@ -340,12 +300,8 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Returns
         -------
-            The length of the given ConstrainedSketchGeometry.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        length: int
+            The length of the given ConstrainedSketchGeometry
         """
         pass
 
@@ -367,11 +323,7 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A pair of floats representing the point along the edge.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        points: tuple[float]
+            A pair of floats representing the point along the edge
         """
         pass

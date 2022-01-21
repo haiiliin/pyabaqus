@@ -78,11 +78,7 @@ class ShapeRotationalSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A ShapeRotationalSymmetry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ShapeRotationalSymmetry object. . 
         """
         super().__init__()
         pass
@@ -126,13 +122,5 @@ class ShapeRotationalSymmetry(GeometricRestriction):
         tolerance3
             A Float specifying the geometric tolerance in the 3-direction. The default value is 
             0.01. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -338,11 +338,7 @@ class CommonOptions(DGCommonOptions):
             A Boolean specifying whether to set translucency. The default value is OFF. 
         translucencyFactor
             A Float specifying the translucency factor when *translucency*=ON. Possible values are 
-            0.0≤≤ *translucencyFactor* ≤≤ 1.0. The default value is 0.3. 
-
-        Returns
-        -------
-            None. 
+            0.0≤≤ *translucencyFactor* ≤≤ 1.0. The default value is 0.3.
 
         Exceptions
         ----------

@@ -215,11 +215,7 @@ class AssemblyDisplayOptions:
         geometricRestrictions
             A Boolean specifying whether geometric restrictions are shown. The default value is OFF. 
         stopConditions
-            A Boolean specifying whether stop conditions are shown. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
+            A Boolean specifying whether stop conditions are shown. The default value is OFF.
 
         Exceptions
         ----------

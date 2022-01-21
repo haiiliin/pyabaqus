@@ -17,10 +17,6 @@ class Spot(ConstrainedSketchVertex):
 
         Returns
         -------
-            A ConstrainedSketchVertex object (None if the spot cannot be created). 
-
-        Exceptions
-        ----------
-            None. 
+            A ConstrainedSketchVertex object (None if the spot cannot be created). . 
         """
         pass

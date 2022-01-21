@@ -17,10 +17,7 @@ class ConstrainedSketchVertexModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchVertex object (None if the spot cannot be created).
-
-        Exceptions
-        ----------
-            None.
+        vertex: ConstrainedSketchVertex
+            A ConstrainedSketchVertex object (None if the spot cannot be created)
         """
         pass

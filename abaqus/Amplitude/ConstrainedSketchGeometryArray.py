@@ -31,10 +31,6 @@ class ConstrainedSketchGeometryArray:
 
         Returns
         -------
-            A ConstrainedSketchGeometry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ConstrainedSketchGeometry object. . 
         """
         pass

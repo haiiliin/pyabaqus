@@ -124,11 +124,7 @@ class ConnectorSection(Section):
 
         Returns
         -------
-            A ConnectorSection object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A ConnectorSection object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -220,11 +216,7 @@ class ConnectorSection(Section):
             data associated with the *behaviorOptions*. Possible values are CONSTANT and LINEAR. The 
             default value is CONSTANT. 
         behaviorOptions
-            A ConnectorBehaviorOptionArray object. 
-
-        Returns
-        -------
-            None. 
+            A ConnectorBehaviorOptionArray object.
 
         Exceptions
         ----------

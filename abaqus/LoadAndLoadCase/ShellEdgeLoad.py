@@ -108,11 +108,7 @@ class ShellEdgeLoad(Load):
 
         Returns
         -------
-            A ShellEdgeLoad object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ShellEdgeLoad object. . 
         """
         super().__init__()
         pass
@@ -172,14 +168,6 @@ class ShellEdgeLoad(Load):
         traction
             A SymbolicConstant specifying how to apply surface traction. Possible values are NORMAL, 
             TRANSVERSE, SHEAR, MOMENT and GENERAL. The default value is NORMAL. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -203,13 +191,5 @@ class ShellEdgeLoad(Load):
             amplitude is propagated from the previous analysis step. FREED should be used if the 
             load has no amplitude reference. You should provide the *amplitude* argument only if it 
             is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

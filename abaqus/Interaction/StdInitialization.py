@@ -88,11 +88,7 @@ class StdInitialization(ContactInitialization):
             *interferenceDistance*. The default value is None. 
         overclosureTolerance
             None or a Float specifying the distance tolerance within which initial overclosures will 
-            undergo strain-free adjustments.. The default value is None. 
-
-        Returns
-        -------
-            None. 
+            undergo strain-free adjustments.. The default value is None.
 
         Exceptions
         ----------

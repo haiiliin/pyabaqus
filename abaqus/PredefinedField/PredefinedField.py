@@ -46,11 +46,7 @@ class PredefinedField:
             moved. 
         toStepName
             A String specifying the name of the step to which the PredefinedFieldState object is 
-            moved. 
-
-        Returns
-        -------
-            None. 
+            moved.
 
         Exceptions
         ----------
@@ -63,14 +59,6 @@ class PredefinedField:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -79,14 +67,6 @@ class PredefinedField:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -97,13 +77,5 @@ class PredefinedField:
         ----------
         indices
             A sequence of Ints specifying the index of each field to delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

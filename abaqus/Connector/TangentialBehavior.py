@@ -87,11 +87,7 @@ class TangentialBehavior:
 
         Returns
         -------
-            A TangentialBehavior object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TangentialBehavior object. . 
         """
         pass
 
@@ -100,13 +96,5 @@ class TangentialBehavior:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

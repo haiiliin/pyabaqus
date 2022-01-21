@@ -37,14 +37,6 @@ class SmoothingAssignment:
             index is referenced. Each tuple contains one entry:A SymbolicConstant specifying the 
             surface smoothing value to be used for the surface. Possible values of the 
             SymbolicConstant are NONE, REVOLUTION, SPHERICAL, and TOROIDAL. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -63,14 +55,6 @@ class SmoothingAssignment:
             - A region object specifying the surface to which the smoothing is assigned. 
             - A SymbolicConstant specifying the surface smoothing value to be used for the surface. 
             Possible values of the SymbolicConstant are NONE, REVOLUTION, SPHERICAL, and TOROIDAL. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -82,13 +66,5 @@ class SmoothingAssignment:
         ----------
         indices
             A sequence of Ints specifying the index of each surface smoothing assignment to delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

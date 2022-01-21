@@ -84,11 +84,7 @@ class FluidInflatorProperty(ContactProperty):
 
         Returns
         -------
-            A FluidInflatorProperty object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FluidInflatorProperty object. . 
         """
         super().__init__(name)
         pass
@@ -119,13 +115,5 @@ class FluidInflatorProperty(ContactProperty):
         massFraction
             A sequence of sequences of Floats specifying the mass fraction or the molar fraction 
             corresponding to entered fluid behavior. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

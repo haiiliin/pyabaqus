@@ -65,11 +65,7 @@ class PsdDefinition(Amplitude):
 
         Returns
         -------
-            A PsdDefinition object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A PsdDefinition object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -101,11 +97,7 @@ class PsdDefinition(Amplitude):
         amplitude
             A String specifying the name of the amplitude that describes the dynamic event used to 
             define the cross-spectral density frequency function. The default value is an empty 
-            string. 
-
-        Returns
-        -------
-            None. 
+            string.
 
         Exceptions
         ----------

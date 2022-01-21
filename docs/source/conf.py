@@ -22,7 +22,7 @@ copyright = '2022, WANG Hailin'
 author = 'WANG Hailin'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.4'
+release = '1.0.5'
 
 
 # -- General configuration ---------------------------------------------------
@@ -31,6 +31,7 @@ release = '1.0.4'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx_toolbox.more_autodoc.overloads',
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
@@ -38,7 +39,7 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
     # 'sphinx.ext.viewcode',
-    'sphinx.ext.napoleon'
+    'sphinx.ext.napoleon',
 ]
 
 # True to convert the type definitions in the docstrings as references. Defaults to False.
@@ -94,3 +95,5 @@ latex_logo = None
 # (Japanese documents use jreport rather). latex_appendices is available only for this theme.
 # It defaults to 'manual'.
 latex_theme = 'manual'
+
+# autoclass_content = 'both'

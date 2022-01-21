@@ -72,11 +72,7 @@ class DrillControl(GeometricRestriction):
 
         Returns
         -------
-            A DrillControl object. 
-
-        Exceptions
-        ----------
-            None. 
+            A DrillControl object. . 
         """
         super().__init__()
         pass
@@ -115,13 +111,5 @@ class DrillControl(GeometricRestriction):
             0.01. 
         undercutTolerance
             A Float specifying the undercut tolerance. The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

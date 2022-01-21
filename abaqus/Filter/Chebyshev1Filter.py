@@ -63,11 +63,7 @@ class Chebyshev1Filter(Filter):
 
         Returns
         -------
-            A Chebyshev1Filter object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A Chebyshev1Filter object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -97,11 +93,7 @@ class Chebyshev1Filter(Filter):
             used. The default value is None. 
         invariant
             A SymbolicConstant specifying the invariant to which filtering is applied. Possible 
-            values are NONE, FIRST, and SECOND. The default value is NONE. 
-
-        Returns
-        -------
-            None. 
+            values are NONE, FIRST, and SECOND. The default value is NONE.
 
         Exceptions
         ----------

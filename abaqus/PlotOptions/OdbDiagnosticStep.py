@@ -124,13 +124,5 @@ class OdbDiagnosticStep:
             discontinuity iterations), NUM_EQI (the number of equivalent iterations), NUM_ITERS (the 
             number of iterations), STEP_TIME (the cumulative step time until that increment) or 
             INC_SIZE (the step time for each increment). 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

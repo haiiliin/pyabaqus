@@ -89,11 +89,7 @@ class StdStabilization(ContactStabilization):
         reset
             A Boolean specifying whether to cancel carryover effects from contact stabilization 
             specifications involving nondefault amplitudes that appeared in previous steps. The 
-            default value is OFF. 
-
-        Returns
-        -------
-            None. 
+            default value is OFF.
 
         Exceptions
         ----------

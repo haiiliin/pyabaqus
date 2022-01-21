@@ -51,11 +51,7 @@ class DisplayBody(Constraint):
 
         Returns
         -------
-            A DisplayBody object. 
-
-        Exceptions
-        ----------
-            None. 
+            A DisplayBody object. . 
         """
         super().__init__()
         pass
@@ -65,13 +61,5 @@ class DisplayBody(Constraint):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

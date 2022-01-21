@@ -49,11 +49,7 @@ class SelfContactExp(Interaction):
 
         Returns
         -------
-            A SelfContactExp object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SelfContactExp object. . 
         """
         super().__init__()
         pass
@@ -71,14 +67,6 @@ class SelfContactExp(Interaction):
             A String specifying the name of the ContactControl object associated with this 
             interaction. An empty string indicates that the default contact controls will be used. 
             The default value is an empty string. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -97,13 +85,5 @@ class SelfContactExp(Interaction):
             A String specifying the name of the ContactControl object associated with this 
             interaction. An empty string indicates that the default contact controls will be used. 
             The default value is an empty string. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

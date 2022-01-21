@@ -102,11 +102,7 @@ class NormalBehavior:
 
         Returns
         -------
-            A NormalBehavior object. 
-
-        Exceptions
-        ----------
-            None. 
+            A NormalBehavior object. . 
         """
         pass
 
@@ -115,13 +111,5 @@ class NormalBehavior:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

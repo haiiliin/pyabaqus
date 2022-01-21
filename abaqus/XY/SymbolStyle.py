@@ -104,13 +104,5 @@ class SymbolStyle:
         size
             A Float specifying the marker size to be used when drawing markers using this 
             SymbolStyle object. The default value is 2.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

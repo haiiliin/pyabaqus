@@ -58,11 +58,7 @@ class HeatCapacitance(Inertia):
 
         Returns
         -------
-            A HeatCapacitance object. 
-
-        Exceptions
-        ----------
-            None. 
+            A HeatCapacitance object. . 
         """
         super().__init__()
         pass
@@ -76,13 +72,5 @@ class HeatCapacitance(Inertia):
             A Boolean specifying whether the data depend on temperature. The default value is OFF. 
         dependencies
             An Int specifying the number of field variable dependencies. The default value is 0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

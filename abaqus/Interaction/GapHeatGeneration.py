@@ -44,11 +44,7 @@ class GapHeatGeneration:
 
         Returns
         -------
-            A GapHeatGeneration object. 
-
-        Exceptions
-        ----------
-            None. 
+            A GapHeatGeneration object. . 
         """
         pass
 
@@ -57,13 +53,5 @@ class GapHeatGeneration:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

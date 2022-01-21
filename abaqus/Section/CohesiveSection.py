@@ -83,11 +83,7 @@ class CohesiveSection(Section):
             argument applies only when *initialThicknessType*=SPECIFY. The default value is 1.0. 
         outOfPlaneThickness
             None or a Float specifying the out-of-plane thickness for the section. The default value 
-            is None. 
-
-        Returns
-        -------
-            None. 
+            is None.
 
         Exceptions
         ----------

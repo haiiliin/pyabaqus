@@ -76,11 +76,7 @@ class ConcentratedHeatFlux(Load):
 
         Returns
         -------
-            A ConcentratedHeatFlux object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ConcentratedHeatFlux object. . 
         """
         super().__init__()
         pass
@@ -106,14 +102,6 @@ class ConcentratedHeatFlux(Load):
         dof
             An Int specifying the degree of freedom of the node, to which the concentrated heat flux 
             should be applied. The default value is 11. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -133,13 +121,5 @@ class ConcentratedHeatFlux(Load):
             amplitude is propagated from the previous static analysis step. FREED should be used if 
             the load is changed to have no amplitude reference. You should provide the *amplitude* 
             argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

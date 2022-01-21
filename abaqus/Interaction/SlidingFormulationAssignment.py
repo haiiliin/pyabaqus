@@ -36,14 +36,6 @@ class SlidingFormulationAssignment:
             A SymbolicConstant specifying the value of the smoothness of the surface-to-surface 
             formulation on sliding to be assigned to the surface whose index is referenced. Possible 
             values are NONE and SMALL_SLIDING. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -62,14 +54,6 @@ class SlidingFormulationAssignment:
             which the sliding formulation attribute is assigned.A SymbolicConstant specifying the 
             overriding the smoothness value to be used for the first surface. Possible values of the 
             SymbolicConstant are NONE and SMALL_SLIDING. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -81,13 +65,5 @@ class SlidingFormulationAssignment:
         indices
             A sequence of Ints specifying the index of each sliding formulation assignment to 
             delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

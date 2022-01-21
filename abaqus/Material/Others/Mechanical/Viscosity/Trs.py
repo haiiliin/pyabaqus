@@ -47,11 +47,7 @@ class Trs:
 
         Returns
         -------
-            A Trs object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Trs object. . 
         """
         pass
 
@@ -60,13 +56,5 @@ class Trs:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -141,14 +141,6 @@ class HistoryOutputRequest:
         useGlobal
             A Boolean specifying whether to output vector-valued nodal variables in the global 
             directions. The default value is True. 
-
-        Returns
-        -------
-            A HistoryOutputRequest object. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -160,15 +152,7 @@ class HistoryOutputRequest:
         ----------
         stepName
             A String specifying the name of the step in which the history output request is 
-            deactivated. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
+            deactivated.
         """
         pass
 
@@ -183,15 +167,7 @@ class HistoryOutputRequest:
             moved. 
         toStepName
             A String specifying the name of the step to which the history output request state is 
-            moved. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
+            moved.
         """
         pass
 
@@ -203,15 +179,7 @@ class HistoryOutputRequest:
         ----------
         stepName
             A String specifying the name of the step in which the history output request state is 
-            reset. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
+            reset.
         """
         pass
 
@@ -220,14 +188,6 @@ class HistoryOutputRequest:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
         """
         pass
 
@@ -236,14 +196,6 @@ class HistoryOutputRequest:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
         """
         pass
 
@@ -335,14 +287,6 @@ class HistoryOutputRequest:
         useGlobal
             A Boolean specifying whether to output vector-valued nodal variables in the global 
             directions. The default value is True. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -378,13 +322,5 @@ class HistoryOutputRequest:
             A String specifying the name of a time point object. The default value is equal to the 
             number of intervals during the step at which output database states are to be written. 
             The default value is None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

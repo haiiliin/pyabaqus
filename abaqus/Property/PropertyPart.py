@@ -46,6 +46,7 @@ class PropertyPart(PartBase):
 
         Returns
         -------
+        layup: CompositeLayup
             A CompositeLayup object.
 
         Exceptions
@@ -87,11 +88,8 @@ class PropertyPart(PartBase):
 
         Returns
         -------
-            A SectionAssignment object.
-
-        Exceptions
-        ----------
-            None.
+        assignment: SectionAssignment
+            A SectionAssignment object
         """
         sectionAssignment = SectionAssignment(region, sectionName, thicknessAssignment, offset, offsetType, offsetField)
         self.sectionAssignments.append(sectionAssignment)
@@ -185,11 +183,8 @@ class PropertyPart(PartBase):
 
         Returns
         -------
-            A MaterialOrientation object.
-
-        Exceptions
-        ----------
-            None.
+        orientation: MaterialOrientation
+            A MaterialOrientation object..
         """
         materialOrientation = MaterialOrientation(region, localCsys, axis, angle, stackDirection, fieldName,
                                                   orientationType, normalAxisDirection, normalAxisDefinition,

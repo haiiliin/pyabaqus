@@ -68,11 +68,7 @@ class ConnectorOrientation:
 
         Returns
         -------
-            A ConnectorOrientation object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ConnectorOrientation object. . 
         """
         pass
 
@@ -81,13 +77,5 @@ class ConnectorOrientation:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -30,13 +30,5 @@ class OdbDataStep:
             A Boolean specifying whether to activate all the frames in the step. 
         update
             A Boolean specifying whether to update the model. The default value is ON 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

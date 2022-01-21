@@ -21,11 +21,7 @@ class DisplayGroupSession(SessionBase):
 
         Returns
         -------
-            A DisplayGroup object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            A DisplayGroup object..
         """
         self.displayGroups[name] = displayGroup = DisplayGroup(name, leaf)
         return displayGroup

@@ -92,11 +92,7 @@ class ConcentratedFilmCondition(Interaction):
 
         Returns
         -------
-            A ConcentratedFilmCondition object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ConcentratedFilmCondition object. . 
         """
         super().__init__()
         pass
@@ -154,14 +150,6 @@ class ConcentratedFilmCondition(Interaction):
         sinkDistributionType
             A SymbolicConstant specifying how the sink temperature is distributed. Possible values 
             are UNIFORM, ANALYTICAL_FIELD, and DISCRETE_FIELD. The default value is UNIFORM. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -173,13 +161,5 @@ class ConcentratedFilmCondition(Interaction):
         ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

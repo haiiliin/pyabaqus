@@ -65,11 +65,7 @@ class RegionAssembly(RegionAssemblyBase):
 
         Returns
         -------
-            A Surface object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            A Surface object..
         """
         surface = Surface(side1Faces, side2Faces, side12Faces, end1Edges, end2Edges, circumEdges, side1Edges,
                           side2Edges, face1Elements, face2Elements, face3Elements, face4Elements, face5Elements,
@@ -135,11 +131,7 @@ class RegionAssembly(RegionAssemblyBase):
 
         Returns
         -------
-            A Set object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            A Set object..
         """
         pass
 
@@ -161,11 +153,7 @@ class RegionAssembly(RegionAssemblyBase):
 
         Returns
         -------
-            A Set object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            A Set object..
         """
         pass
 

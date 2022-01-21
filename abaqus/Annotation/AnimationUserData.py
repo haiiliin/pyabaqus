@@ -106,11 +106,6 @@ class AnimationUserData(UserDataBase):
         Returns
         -------
             An Arrow object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
-            !img
         """
         self.annotations[name] = arrow = Arrow(name, startPoint, endPoint, startAnchor, endAnchor, startHeadStyle,
                                                endHeadStyle, startGap, endGap, color, lineStyle, lineThickness)
@@ -193,11 +188,7 @@ class AnimationUserData(UserDataBase):
 
         Returns
         -------
-            A Text object.
-
-        Exceptions
-        ----------
-            None.
+            A Text object..
             !img
         """
         self.annotations[name] = text = Text(name, text, offset, anchor, referencePoint, rotationAngle, color, font,

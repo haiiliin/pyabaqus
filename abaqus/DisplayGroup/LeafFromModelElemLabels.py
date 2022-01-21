@@ -46,11 +46,7 @@ class LeafFromModelElemLabels(Leaf):
 
         Returns
         -------
-            A LeafFromModelElemLabels object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LeafFromModelElemLabels object. . 
         """
         super().__init__(DEFAULT_MODEL)
         pass

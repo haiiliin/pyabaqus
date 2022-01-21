@@ -174,11 +174,7 @@ class EmagTimeHarmonicStep(AnalysisStep):
         factorization
             A SymbolicConstant specifying whether damping terms are to be ignored so that a real, 
             rather than a complex, system matrix is factored. Possible values are REAL_ONLY and 
-            COMPLEX. The default value is COMPLEX. 
-
-        Returns
-        -------
-            None. 
+            COMPLEX. The default value is COMPLEX.
 
         Exceptions
         ----------

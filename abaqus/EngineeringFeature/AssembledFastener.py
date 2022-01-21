@@ -74,11 +74,7 @@ class AssembledFastener(Fastener):
 
         Returns
         -------
-            An AssembledFastener object. 
-
-        Exceptions
-        ----------
-            None. 
+            An AssembledFastener object. . 
         """
         super().__init__()
         pass
@@ -99,13 +95,5 @@ class AssembledFastener(Fastener):
         scriptName
             A String specifying the name of the property generation script. The default value is an 
             empty string. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

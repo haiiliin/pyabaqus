@@ -414,11 +414,7 @@ class DirectCyclicStep(AnalysisStep):
         convertSDI
             A SymbolicConstant specifying whether to force a new iteration if severe discontinuities 
             occur during an iteration. Possible values are PROPAGATED, CONVERT_SDI_OFF, and 
-            CONVERT_SDI_ON. The default value is PROPAGATED. 
-
-        Returns
-        -------
-            None. 
+            CONVERT_SDI_ON. The default value is PROPAGATED.
 
         Exceptions
         ----------

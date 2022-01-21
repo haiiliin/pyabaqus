@@ -92,13 +92,5 @@ class TextStyle:
         rotationAngle
             A Float specifying the angle in degrees used for displaying the text. The default value 
             is 0.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

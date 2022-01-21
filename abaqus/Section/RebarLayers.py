@@ -41,11 +41,7 @@ class RebarLayers:
 
         Returns
         -------
-            A RebarLayers object. 
-
-        Exceptions
-        ----------
-            None. 
+            A RebarLayers object. . 
         """
         pass
 
@@ -54,13 +50,5 @@ class RebarLayers:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

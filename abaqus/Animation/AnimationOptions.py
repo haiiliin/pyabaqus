@@ -208,13 +208,5 @@ class AnimationOptions:
             A String specifying the color used to plot *X–Y* time tracker symbols when 
             *xyUseHighlightMethod* = False. When setting the color to 'Default' the system will take 
             the color associated to each curve. The default value is "Default". 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

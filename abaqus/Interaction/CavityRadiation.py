@@ -324,11 +324,7 @@ class CavityRadiation(Interaction):
 
         Returns
         -------
-            A CavityRadiation object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CavityRadiation object. . 
         """
         super().__init__()
         pass
@@ -498,14 +494,6 @@ class CavityRadiation(Interaction):
             None or a Float specifying the Z value indicating the symmetry reference line in 
             axisymmetric models. This argument applies only for axisymmetric models, and when 
             *reflectionSymmetries* = 1. The default value is None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -538,13 +526,5 @@ class CavityRadiation(Interaction):
         viewfactorAccurTol
             A Float specifying the acceptable tolerance for the viewfactor calculations. The default 
             value is 0.05. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

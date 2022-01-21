@@ -60,11 +60,7 @@ class ShapePointSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A ShapePointSymmetry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ShapePointSymmetry object. . 
         """
         super().__init__()
         pass
@@ -95,13 +91,5 @@ class ShapePointSymmetry(GeometricRestriction):
         tolerance3
             A Float specifying the geometric tolerance in the 3-direction. The default value is 
             0.01. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

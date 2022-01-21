@@ -30,10 +30,6 @@ class Spectrum:
 
         Returns
         -------
-            A Spectrum object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Spectrum object. . 
         """
         pass

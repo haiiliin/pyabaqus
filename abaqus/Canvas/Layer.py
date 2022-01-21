@@ -53,11 +53,7 @@ class Layer:
 
         Returns
         -------
-            A Layer object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Layer object. . 
         """
         pass
 
@@ -68,14 +64,6 @@ class Layer:
         ----------
         name
             A String specifying the name of the other Layer object. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -86,13 +74,5 @@ class Layer:
         ----------
         name
             A String specifying the name of the other Layer object. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

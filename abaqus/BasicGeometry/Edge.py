@@ -67,11 +67,7 @@ class Edge:
 
         Returns
         -------
-            A Boolean value of True if the tangent is flipped and False if not. 
-
-        Exceptions
-        ----------
-            None. 
+            A Boolean value of True if the tangent is flipped and False if not. . 
             !img 
         """
         pass
@@ -112,11 +108,7 @@ class Edge:
 
         Returns
         -------
-            A tuple of integers. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of integers. . 
             !img 
         """
         pass
@@ -129,11 +121,7 @@ class Edge:
 
         Returns
         -------
-            An EdgeArray object, which is a sequence of Edge objects. 
-
-        Exceptions
-        ----------
-            None. 
+            An EdgeArray object, which is a sequence of Edge objects. . 
             !img 
         """
         pass
@@ -149,11 +137,7 @@ class Edge:
 
         Returns
         -------
-            An EdgeArray object, which is a sequence of Edgeobjects. 
-
-        Exceptions
-        ----------
-            None. 
+            An EdgeArray object, which is a sequence of Edgeobjects. . 
             !img 
         """
         pass
@@ -166,11 +150,7 @@ class Edge:
 
         Returns
         -------
-            A MeshNodeArray object, which is a sequence of MeshNode objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshNodeArray object, which is a sequence of MeshNode objects. . 
             !img 
         """
         pass
@@ -183,11 +163,7 @@ class Edge:
 
         Returns
         -------
-            A MeshElementArray object which is a sequence of MeshElement objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshElementArray object which is a sequence of MeshElement objects. . 
             !img 
         """
         pass
@@ -219,11 +195,7 @@ class Edge:
 
         Returns
         -------
-            A Float. 
-
-        Exceptions
-        ----------
-            None. 
+            A Float. . 
             !img 
         """
         pass
@@ -239,11 +211,7 @@ class Edge:
 
         Returns
         -------
-            A tuple of integers. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of integers. . 
             !img 
         """
         pass

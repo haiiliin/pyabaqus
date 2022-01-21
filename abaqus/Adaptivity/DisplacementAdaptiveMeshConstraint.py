@@ -96,11 +96,7 @@ class DisplacementAdaptiveMeshConstraint(AdaptiveMeshConstraint):
 
         Returns
         -------
-            A DisplacementAdaptiveMeshConstraint object. 
-
-        Exceptions
-        ----------
-            None. 
+            A DisplacementAdaptiveMeshConstraint object. . 
         """
         super().__init__(name, region=region, localCsys=localCsys)
 
@@ -152,14 +148,6 @@ class DisplacementAdaptiveMeshConstraint(AdaptiveMeshConstraint):
             None or a DatumCsys object specifying the local coordinate system of the adaptive mesh 
             constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
             in the global coordinate system. The default value is None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -203,13 +191,5 @@ class DisplacementAdaptiveMeshConstraint(AdaptiveMeshConstraint):
             amplitude is propagated from the previous analysis step. FREED should be used if the 
             adaptive mesh constraint is changed to have no amplitude reference. You should provide 
             the *amplitude* argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -22,11 +22,7 @@ class Spline(ConstrainedSketchGeometry):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the spline cannot be created). 
-
-        Exceptions
-        ----------
-            None. 
+            A ConstrainedSketchGeometry object (None if the spline cannot be created). . 
             !img 
         """
         pass

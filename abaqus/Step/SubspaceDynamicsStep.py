@@ -227,11 +227,7 @@ class SubspaceDynamicsStep(AnalysisStep):
             A Float specifying the suggested time increment. The default value is 0.0. 
         amplitude
             A SymbolicConstant specifying the amplitude variation for loading magnitudes during the 
-            step. Possible values are STEP and RAMP. The default value is STEP. 
-
-        Returns
-        -------
-            None. 
+            step. Possible values are STEP and RAMP. The default value is STEP.
 
         Exceptions
         ----------

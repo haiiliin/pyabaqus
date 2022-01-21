@@ -36,11 +36,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            An AdjustPoints object.
-
-        Exceptions
-        ----------
-            None.
+            An AdjustPoints object..
         """
         self.constraints[name] = constraint = AdjustPoints(name, surface, controlPoints)
         return constraint
@@ -109,11 +105,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            A Coupling object.
-
-        Exceptions
-        ----------
-            None.
+            A Coupling object..
         """
         self.constraints[name] = constraint = Coupling(name, surface, controlPoint, influenceRadius, couplingType,
                                                        adjust, localCsys, u1, u2, u3, ur1, ur2, ur3, weightingMethod)
@@ -141,11 +133,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            A DisplayBody object.
-
-        Exceptions
-        ----------
-            None.
+            A DisplayBody object..
         """
         self.constraints[name] = constraint = DisplayBody(name, instance, controlPoints)
         return constraint
@@ -189,11 +177,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            An EmbeddedRegion object.
-
-        Exceptions
-        ----------
-            None.
+            An EmbeddedRegion object..
         """
         self.constraints[name] = constraint = EmbeddedRegion(name, embeddedRegion, hostRegion, weightFactorTolerance,
                                                              toleranceMethod, absoluteTolerance, fractionalTolerance)
@@ -263,11 +247,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            A MultipointConstraint object.
-
-        Exceptions
-        ----------
-            None.
+            A MultipointConstraint object..
         """
         self.constraints[name] = constraint = MultipointConstraint(name, surface, controlPoint, mpcType, csys, userType,
                                                                    userMode)
@@ -309,11 +289,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            A RigidBody object.
-
-        Exceptions
-        ----------
-            None.
+            A RigidBody object..
         """
         self.constraints[name] = constraint = RigidBody(name, refPointRegion, bodyRegion, tieRegion, pinRegion,
                                                         surfaceRegion, refPointAtCOM, isothermal)
@@ -354,11 +330,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            A ShellSolidCoupling object.
-
-        Exceptions
-        ----------
-            None.
+            A ShellSolidCoupling object..
         """
         self.constraints[name] = constraint = ShellSolidCoupling(name, shellEdge, solidFace, positionToleranceMethod,
                                                                  positionTolerance, influenceDistanceMethod,
@@ -413,11 +385,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            A Tie object.
-
-        Exceptions
-        ----------
-            None.
+            A Tie object..
         """
         self.constraints[name] = constraint = Tie(name, main, secondary, adjust, positionToleranceMethod,
                                                   positionTolerance, tieRotations, constraintRatioMethod,

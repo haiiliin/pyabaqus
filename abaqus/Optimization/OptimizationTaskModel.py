@@ -99,11 +99,7 @@ class OptimizationTaskModel(ModelBase):
 
         Returns
         -------
-            A BeadTask object.
-
-        Exceptions
-        ----------
-            None.
+            A BeadTask object..
         """
         self.optimizationTasks[name] = optimizationTask = BeadTask(name, abaqusSensitivities, algorithm,
                                                                    areBCRegionsFrozen, beadIter, beadMaxMembraneStress,
@@ -305,11 +301,7 @@ class OptimizationTaskModel(ModelBase):
 
         Returns
         -------
-            A ShapeTask object.
-
-        Exceptions
-        ----------
-            None.
+            A ShapeTask object..
         """
         self.optimizationTasks[name] = optimizationTask = ShapeTask(name, abaqusSensitivities, absoluteStepSizeControl,
                                                                     activateDurability, additionalDurabilityFiles,
@@ -391,11 +383,7 @@ class OptimizationTaskModel(ModelBase):
 
         Returns
         -------
-            A SizingTask object.
-
-        Exceptions
-        ----------
-            None.
+            A SizingTask object..
         """
         self.optimizationTasks[name] = optimizationTask = SizingTask(name, abaqusSensitivities,
                                                                      elementThicknessDeltaStopCriteria,
@@ -550,11 +538,7 @@ class OptimizationTaskModel(ModelBase):
 
         Returns
         -------
-            A TopologyTask object.
-
-        Exceptions
-        ----------
-            None.
+            A TopologyTask object..
         """
         self.optimizationTasks[name] = optimizationTask = TopologyTask(name, abaqusSensitivities, algorithm,
                                                                        densityMoveLimit, densityUpdateStrategy,

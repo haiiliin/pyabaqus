@@ -27,11 +27,8 @@ class TableCollectionStep(StepBase):
 
         Returns
         -------
+        elements: ActivateElements
             An ActivateElements object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.activateElements['activation'] = activateElements = ActivateElements(tableCollection, activation,
                                                                                   eigenTimeConst, expansionTimeConstant)

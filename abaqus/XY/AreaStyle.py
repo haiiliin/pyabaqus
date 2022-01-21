@@ -79,13 +79,5 @@ class AreaStyle:
         style
             A SymbolicConstant specifying the area pattern style to be used when filling an area 
             using this AreaStyle. The default value is SOLID. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

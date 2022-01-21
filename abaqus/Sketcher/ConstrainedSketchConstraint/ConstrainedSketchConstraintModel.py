@@ -1,6 +1,6 @@
-from abaqus.BasicGeometry.Vertex import Vertex
-from abaqus.Sketcher.ConstrainedSketchBase import ConstrainedSketchBase
-from abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
+from ...BasicGeometry.Vertex import Vertex
+from ..ConstrainedSketchBase import ConstrainedSketchBase
+from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
 
 class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
@@ -23,12 +23,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object
         """
         pass
 
@@ -53,12 +49,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object
         """
         pass
 
@@ -79,12 +71,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object
         """
         pass
 
@@ -105,12 +93,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object
         """
         pass
 
@@ -131,12 +115,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object
         """
         pass
 
@@ -155,12 +135,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object
         """
         pass
 
@@ -179,12 +155,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object
         """
         pass
 
@@ -205,12 +177,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object
         """
         pass
 
@@ -232,18 +200,15 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object
         """
         pass
 
     def EqualDistanceConstraint(self, entity1: str, entity2: ConstrainedSketchGeometry, midpoint: Vertex):
         """This method creates an equal distance constraint. This constraint can be applied between
-        a midpoint ConstrainedSketchVertex object and any other two ConstrainedSketchVertex objects or between a midpoint ConstrainedSketchVertex
+        a midpoint ConstrainedSketchVertex object and any other two ConstrainedSketchVertex objects or between a
+        midpoint ConstrainedSketchVertex
         object and two ConstrainedSketchGeometry objects that are lines. The equal distance
         constraint forces the midpoint vertex to remain at an equal distance from the two other
         vertices or lines.
@@ -264,12 +229,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object
         """
         pass
 
@@ -290,11 +251,7 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object
         """
         pass

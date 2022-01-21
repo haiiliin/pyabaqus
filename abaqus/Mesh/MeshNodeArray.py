@@ -55,11 +55,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Returns
         -------
-            A MeshNodeArray object. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshNodeArray object. . 
         """
         super().__init__()
 
@@ -73,11 +69,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Returns
         -------
-            A MeshNode object. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshNode object. . 
         """
         pass
 
@@ -93,11 +85,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Returns
         -------
-            A MeshNodeArray object. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshNodeArray object. . 
         """
         pass
 
@@ -109,11 +97,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Returns
         -------
-            A String specifying the object or objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A String specifying the object or objects. . 
         """
         pass
 
@@ -138,11 +122,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Returns
         -------
-            A MeshNodeArray object, which is a sequence of MeshNode objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshNodeArray object, which is a sequence of MeshNode objects. . 
         """
         pass
 
@@ -162,11 +142,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Returns
         -------
-            A MeshNodeArray object, which is a sequence of MeshNode objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshNodeArray object, which is a sequence of MeshNode objects. . 
         """
         pass
 
@@ -183,11 +159,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Returns
         -------
-            A MeshNodeArray object, which is a sequence of MeshNode objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshNodeArray object, which is a sequence of MeshNode objects. . 
         """
         pass
 
@@ -229,11 +201,7 @@ class MeshNodeArray(list[MeshNode]):
         Returns
         -------
             A MeshNode, or a list of MeshNode objects, or a list of lists of MeshNode objects, 
-            depending on the number of points given and the number of nodes requested. 
-
-        Exceptions
-        ----------
-            None. 
+            depending on the number of points given and the number of nodes requested. . 
         """
         pass
 

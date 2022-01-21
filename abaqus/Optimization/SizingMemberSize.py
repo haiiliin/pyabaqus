@@ -49,13 +49,5 @@ class SizingMemberSize(GeometricRestriction):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

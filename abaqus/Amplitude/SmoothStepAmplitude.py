@@ -44,11 +44,7 @@ class SmoothStepAmplitude(Amplitude):
 
         Returns
         -------
-            A SmoothStepAmplitude object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A SmoothStepAmplitude object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -60,11 +56,7 @@ class SmoothStepAmplitude(Amplitude):
         ----------
         timeSpan
             A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
-            and TOTAL. The default value is STEP. 
-
-        Returns
-        -------
-            None. 
+            and TOTAL. The default value is STEP.
 
         Exceptions
         ----------

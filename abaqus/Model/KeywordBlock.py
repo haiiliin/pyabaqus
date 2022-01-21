@@ -49,14 +49,6 @@ class KeywordBlock:
             A Boolean specifying whether this objects *sieBlocks* member has been edited. Setting 
             edited=False will set the *sieBlocks* member to an empty tuple, thereby discarding all 
             previous edits. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -70,11 +62,7 @@ class KeywordBlock:
             be inserted. 
         text
             A String specifying the text to be inserted. The text represents an Abaqus input file 
-            keyword and its associated data 
-
-        Returns
-        -------
-            None. 
+            keyword and its associated data
 
         Exceptions
         ----------
@@ -91,11 +79,7 @@ class KeywordBlock:
             An Int specifying the position of the String to be replaced in the *sieBlocks* member. 
         text
             A String specifying the text to be replaced. The text represents an Abaqus input file 
-            keyword and its associated data. 
-
-        Returns
-        -------
-            None. 
+            keyword and its associated data.
 
         Exceptions
         ----------
@@ -125,11 +109,7 @@ class KeywordBlock:
             *storeNodesAndElements*=True if you wish to make changes to the *NODE or *ELEMENT data 
             lines themselves. If your task is limited to reading nodal coordinates and element 
             connectivities (i.e. not editing this information) then it is generally better to access 
-            this information from other parts of the Mdb. 
-
-        Returns
-        -------
-            None. 
+            this information from other parts of the Mdb.
 
         Exceptions
         ----------

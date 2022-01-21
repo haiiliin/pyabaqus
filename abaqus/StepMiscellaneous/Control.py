@@ -113,11 +113,7 @@ class Control:
         vcctLinearScaling
             The SymbolicConstant DEFAULT or a Float specifying linear scaling parameter for a VCCT 
             debonding analysis. If a specified value is 0, it will be set to its system-defined 
-            value. The value can also be the SymbolicConstant DEFAULT. The default value is DEFAULT. 
-
-        Returns
-        -------
-            None. 
+            value. The value can also be the SymbolicConstant DEFAULT. The default value is DEFAULT.
 
         Exceptions
         ----------

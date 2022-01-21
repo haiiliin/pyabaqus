@@ -56,11 +56,7 @@ class TabularAmplitude(Amplitude):
 
         Returns
         -------
-            A TabularAmplitude object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A TabularAmplitude object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -78,11 +74,7 @@ class TabularAmplitude(Amplitude):
             SOLVER_DEFAULT. 
         timeSpan
             A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
-            and TOTAL. The default value is STEP. 
-
-        Returns
-        -------
-            None. 
+            and TOTAL. The default value is STEP.
 
         Exceptions
         ----------

@@ -42,11 +42,7 @@ class AssemblyModel(ModelBase):
 
         Returns
         -------
-            A Model object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Model object. . 
         """
         return self
 
@@ -67,11 +63,7 @@ class AssemblyModel(ModelBase):
         Returns
         -------
             A list of strings describing any warnings or errors encountered during the conversion 
-            process. 
-
-        Exceptions
-        ----------
-            None. 
+            process. . 
         """
         pass
 
@@ -90,10 +82,6 @@ class AssemblyModel(ModelBase):
         Returns
         -------
             A list of strings describing any warnings or errors encountered during the conversion 
-            process. 
-
-        Exceptions
-        ----------
-            None. 
+            process. . 
         """
         pass

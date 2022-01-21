@@ -46,13 +46,5 @@ class StreamOptions:
             A Boolean specifying whether to show arrows. The default value is OFF. 
         numArrows
             An Int specifying the number of arrows on each stream line. The default value is 10. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

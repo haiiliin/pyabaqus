@@ -65,11 +65,7 @@ class EmbeddedRegion(Constraint):
 
         Returns
         -------
-            An EmbeddedRegion object. 
-
-        Exceptions
-        ----------
-            None. 
+            An EmbeddedRegion object. . 
         """
         super().__init__()
         pass
@@ -98,13 +94,5 @@ class EmbeddedRegion(Constraint):
             within the host region. The default value is 0.05.If both tolerance arguments are 
             specified, the smaller value will be used.This argument applies only when 
             *toleranceMethod*=FRACTIONAL or BOTH. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

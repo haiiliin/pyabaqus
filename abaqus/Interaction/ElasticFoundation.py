@@ -41,11 +41,7 @@ class ElasticFoundation(Interaction):
 
         Returns
         -------
-            An ElasticFoundation object. 
-
-        Exceptions
-        ----------
-            None. 
+            An ElasticFoundation object. . 
         """
         super().__init__()
         pass
@@ -56,14 +52,6 @@ class ElasticFoundation(Interaction):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -77,13 +65,5 @@ class ElasticFoundation(Interaction):
             A String specifying the name of the step in which the interaction is modified. 
         stiffness
             A Float specifying the foundation stiffness per area (or per length for beams). 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

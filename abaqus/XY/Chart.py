@@ -99,14 +99,6 @@ class Chart:
             A Boolean defining whether color distribution affects curve lines. 
         symbols
             A Boolean defining whether color distribution affects curve symbols. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -115,14 +107,6 @@ class Chart:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -131,14 +115,6 @@ class Chart:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -202,14 +178,6 @@ class Chart:
         ----------
         axis
             The Axis object to be moved. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -221,14 +189,6 @@ class Chart:
         ----------
         axis
             The Axis object to be moved. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -240,14 +200,6 @@ class Chart:
         curve
             The XYCurve name or the XYCurve object or a sequence of XYCurve names or XYCurve objects 
             to be removed from the Chart. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -274,11 +226,7 @@ class Chart:
             A View object. 
         useQuantityType
             A Boolean specifying whether to use the QuantityType to associate curves with axes. The 
-            default value is ON. 
-
-        Returns
-        -------
-            None. 
+            default value is ON.
 
         Exceptions
         ----------

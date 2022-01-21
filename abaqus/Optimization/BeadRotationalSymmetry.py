@@ -47,11 +47,7 @@ class BeadRotationalSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A BeadRotationalSymmetry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A BeadRotationalSymmetry object. . 
         """
         super().__init__()
         pass
@@ -68,13 +64,5 @@ class BeadRotationalSymmetry(GeometricRestriction):
             None or a DatumCsys object specifying the local coordinate system. If *csys*=None, the 
             global coordinate system is used. When this member is queried, it returns an Int. The 
             default value is None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

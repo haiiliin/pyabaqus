@@ -120,11 +120,7 @@ class Arrow(Annotation):
 
         Returns
         -------
-            An Arrow object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            An Arrow object. . 
             !img 
         """
         super().__init__()
@@ -139,14 +135,6 @@ class Arrow(Annotation):
             A Float specifying the *X* translation amount in millimeters. 
         y
             A Float specifying the*Y* translation amount in millimeters. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass
@@ -160,14 +148,6 @@ class Arrow(Annotation):
             A Float specifying the *X* translation amount in millimeters. 
         y
             A Float specifying the*Y* translation amount in millimeters. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass
@@ -228,14 +208,6 @@ class Arrow(Annotation):
         lineThickness
             A SymbolicConstant specifying the line thickness of the arrow. Possible values are 
             VERY_THIN, THIN, MEDIUM, and THICK. The default value is VERY_THIN. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass

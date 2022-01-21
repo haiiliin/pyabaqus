@@ -51,11 +51,7 @@ class EpsOptions:
         shadingQuality
             A SymbolicConstant specifying how fine the shading of curved surfaces will be for vector 
             images. Possible values are EXTRA COARSE, COARSE, MEDIUM, FINE, and EXTRA FINE. The 
-            default value is MEDIUM. 
-
-        Returns
-        -------
-            None. 
+            default value is MEDIUM.
 
         Exceptions
         ----------

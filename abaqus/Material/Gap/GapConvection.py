@@ -51,11 +51,7 @@ class GapConvection:
 
         Returns
         -------
-            A GapConvection object. 
-
-        Exceptions
-        ----------
-            None. 
+            A GapConvection object. . 
         """
         pass
 

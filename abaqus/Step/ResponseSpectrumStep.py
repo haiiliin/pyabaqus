@@ -260,11 +260,7 @@ class ResponseSpectrumStep(AnalysisStep):
         directDampingByFrequency
             A DirectDampingByFrequency object. 
         rayleighDampingByFrequency
-            A RayleighDampingByFrequency object. 
-
-        Returns
-        -------
-            None. 
+            A RayleighDampingByFrequency object.
 
         Exceptions
         ----------

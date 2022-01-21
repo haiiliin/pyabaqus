@@ -47,11 +47,7 @@ class OdbInstance(OdbInstanceBase):
 
         Returns
         -------
-            An OdbRigidBody object.
-
-        Exceptions
-        ----------
-            None.
+            An OdbRigidBody object..
         """
         odbRigidBody = OdbRigidBody(referenceNode, position, isothermal, elements, tieNodes, pinNodes, analyticSurface)
         self.rigidBodies.append(odbRigidBody)
@@ -78,11 +74,7 @@ class OdbInstance(OdbInstanceBase):
 
         Returns
         -------
-            An OdbSet object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            An OdbSet object..
         """
         self.nodeSets[name] = odbSet = OdbSet(name, nodes)
         return odbSet

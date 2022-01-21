@@ -54,13 +54,5 @@ class ProbeReport:
             A Boolean specifying whether to print the minimum and maximum values of either the field 
             output result (when *probeObject*=”ODB”) or the *x*- and *y*-coordinates (when 
             *probeObject*=XYPlot). The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

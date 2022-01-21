@@ -46,11 +46,7 @@ class FreeBody:
 
         Returns
         -------
-            A FreeBody object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FreeBody object. . 
         """
         pass
 
@@ -82,11 +78,7 @@ class FreeBody:
 
         Returns
         -------
-            A FreeBody object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FreeBody object. . 
         """
         pass
 
@@ -120,10 +112,6 @@ class FreeBody:
 
         Returns
         -------
-            A FreeBody object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FreeBody object. . 
         """
         pass

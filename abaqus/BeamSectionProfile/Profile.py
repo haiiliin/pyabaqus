@@ -39,11 +39,7 @@ class Profile:
 
         Returns
         -------
-            A list of Profile objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A list of Profile objects. . 
             !img 
         """
         pass

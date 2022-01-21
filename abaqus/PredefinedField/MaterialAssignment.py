@@ -63,11 +63,7 @@ class MaterialAssignment(PredefinedField):
 
         Returns
         -------
-            A MaterialAssignment object. 
-
-        Exceptions
-        ----------
-            None. 
+            A MaterialAssignment object. . 
         """
         super().__init__()
         pass
@@ -97,13 +93,5 @@ class MaterialAssignment(PredefinedField):
             A sequence of three Ints specifying colors used to display the material instance 
             assignments. This is a sequence of R,G,B colors, where the values are represented by 
             integers between 0 and 255. The default value is an empty sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

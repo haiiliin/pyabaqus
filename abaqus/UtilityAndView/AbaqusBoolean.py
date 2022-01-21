@@ -43,10 +43,6 @@ class AbaqusBoolean:
 
         Returns
         -------
-            An AbaqusBoolean object. 
-
-        Exceptions
-        ----------
-            None. 
+            An AbaqusBoolean object. . 
         """
         pass

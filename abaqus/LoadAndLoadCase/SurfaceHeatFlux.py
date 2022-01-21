@@ -68,11 +68,7 @@ class SurfaceHeatFlux(Load):
 
         Returns
         -------
-            A SurfaceHeatFlux object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SurfaceHeatFlux object. . 
         """
         super().__init__()
         pass
@@ -94,14 +90,6 @@ class SurfaceHeatFlux(Load):
             A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. 
             UNSET should be used if the load has no amplitude reference. The default value is UNSET. 
             You should provide the *amplitude* argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -121,13 +109,5 @@ class SurfaceHeatFlux(Load):
             amplitude is propagated from the previous analysis step. FREED should be used if the 
             load has no amplitude reference. You should provide the *amplitude* argument only if it 
             is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

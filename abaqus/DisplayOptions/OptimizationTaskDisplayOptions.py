@@ -29,11 +29,7 @@ class OptimizationTaskDisplayOptions:
         topologyTask
             A Boolean specifying whether topology task symbols are shown. The default value is ON. 
         shapeTask
-            A Boolean specifying whether shape task symbols are shown. The default value is ON. 
-
-        Returns
-        -------
-            None. 
+            A Boolean specifying whether shape task symbols are shown. The default value is ON.
 
         Exceptions
         ----------

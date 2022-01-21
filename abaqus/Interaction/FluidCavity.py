@@ -57,11 +57,7 @@ class FluidCavity(Interaction):
 
         Returns
         -------
-            A FluidCavity object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FluidCavity object. . 
         """
         super().__init__()
         pass
@@ -84,13 +80,5 @@ class FluidCavity(Interaction):
         checkNormals
             A Boolean specifying whether the analysis will check the consistency of the surface 
             normals. The default value is ON. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -55,11 +55,7 @@ class StdXplCosimulation(Interaction):
 
         Returns
         -------
-            A StdXplCosimulation object. 
-
-        Exceptions
-        ----------
-            None. 
+            A StdXplCosimulation object. . 
         """
         super().__init__()
         pass
@@ -82,13 +78,5 @@ class StdXplCosimulation(Interaction):
             A SymbolicConstant specifying whether the increment size is the analysis default or a 
             supplied variable. Possible values are DEFAULT and SPECIFIED. The default value is 
             DEFAULT. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

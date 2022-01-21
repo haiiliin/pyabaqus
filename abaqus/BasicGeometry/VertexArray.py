@@ -47,11 +47,7 @@ class VertexArray:
 
         Returns
         -------
-            A VertexArray object. 
-
-        Exceptions
-        ----------
-            None. 
+            A VertexArray object. . 
             !img 
         """
         pass
@@ -83,11 +79,7 @@ class VertexArray:
 
         Returns
         -------
-            A ConstrainedSketchVertex object or a sequence of ConstrainedSketchVertex objects.
-
-        Exceptions
-        ----------
-            None. 
+            A ConstrainedSketchVertex object or a sequence of ConstrainedSketchVertex objects.. 
             !img 
         """
         pass
@@ -105,11 +97,7 @@ class VertexArray:
 
         Returns
         -------
-            A ConstrainedSketchVertex object or a sequence of ConstrainedSketchVertex objects.
-
-        Exceptions
-        ----------
-            None. 
+            A ConstrainedSketchVertex object or a sequence of ConstrainedSketchVertex objects.. 
             !img 
         """
         pass
@@ -122,11 +110,7 @@ class VertexArray:
 
         Returns
         -------
-            A String specifying the object or objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A String specifying the object or objects. . 
             !img 
         """
         pass
@@ -153,11 +137,7 @@ class VertexArray:
 
         Returns
         -------
-            A VertexArray object, which is a sequence of ConstrainedSketchVertex objects.
-
-        Exceptions
-        ----------
-            None. 
+            A VertexArray object, which is a sequence of ConstrainedSketchVertex objects.. 
             !img 
         """
         pass
@@ -179,11 +159,7 @@ class VertexArray:
 
         Returns
         -------
-            A VertexArray object, which is a sequence of ConstrainedSketchVertex objects.
-
-        Exceptions
-        ----------
-            None. 
+            A VertexArray object, which is a sequence of ConstrainedSketchVertex objects.. 
             !img 
         """
         pass
@@ -201,11 +177,7 @@ class VertexArray:
 
         Returns
         -------
-            A VertexArray object, which is a sequence of ConstrainedSketchVertex objects.
-
-        Exceptions
-        ----------
-            None. 
+            A VertexArray object, which is a sequence of ConstrainedSketchVertex objects.. 
             !img 
         """
         pass
@@ -223,11 +195,7 @@ class VertexArray:
             *low*: a tuple of three floats representing the minimum *X*-, *Y*-, and *Z*-boundary 
             values of the bounding box. 
             *high*: a tuple of three floats representing the maximum *X*-, *Y*-, and *Z*-boundary 
-            values of the bounding box. 
-
-        Exceptions
-        ----------
-            None. 
+            values of the bounding box. . 
             !img 
         """
         pass

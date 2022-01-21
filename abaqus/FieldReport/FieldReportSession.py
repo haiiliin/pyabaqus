@@ -75,14 +75,6 @@ class FieldReportSession(SessionBase):
             A SymbolicConstant indicating whether to obtain the values from the specified frame or
             from all active frames. Possible values are SPECIFY and ALL. The default value is
             SPECIFY.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
         """
         pass
 

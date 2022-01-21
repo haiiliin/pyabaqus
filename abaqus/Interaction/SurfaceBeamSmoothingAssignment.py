@@ -35,14 +35,6 @@ class SurfaceBeamSmoothingAssignment:
             A tuple specifying the value of the surface beam smoothing assignments for the surface 
             whose index is referenced. Each tuple contains one entry:A Float specifying the surface 
             beam smoothing value to be used for the surface. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -59,14 +51,6 @@ class SurfaceBeamSmoothingAssignment:
             A sequence of tuples specifying the surface beam smoothing assignments. Each tuple 
             contains two entries:A region object specifying the surface to which the smoothing is 
             assigned.A Float specifying the surface smoothing value to be used for the surface. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -79,13 +63,5 @@ class SurfaceBeamSmoothingAssignment:
         indices
             A sequence of Ints specifying the index of each surface beam smoothing assignment to 
             delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

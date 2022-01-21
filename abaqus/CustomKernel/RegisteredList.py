@@ -30,11 +30,7 @@ class RegisteredList(CommandRegister):
 
         Returns
         -------
-            A RegisteredList object. 
-
-        Exceptions
-        ----------
-            None. 
+            A RegisteredList object. . 
         """
         super().__init__()
         pass
@@ -44,13 +40,5 @@ class RegisteredList(CommandRegister):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

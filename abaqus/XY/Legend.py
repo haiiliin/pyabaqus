@@ -79,13 +79,5 @@ class Legend:
             A TextStyle object specifying the text properties used to display the legend text. 
         titleStyle
             A TextStyle object specifying the text properties used to display the legend title. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

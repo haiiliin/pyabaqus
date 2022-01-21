@@ -1164,13 +1164,5 @@ class DamageInitiation:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

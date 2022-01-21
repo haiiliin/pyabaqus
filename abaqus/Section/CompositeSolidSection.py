@@ -46,11 +46,7 @@ class CompositeSolidSection(Section):
 
         Returns
         -------
-            A CompositeSolidSection object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CompositeSolidSection object. . 
         """
         super().__init__()
         pass
@@ -66,13 +62,5 @@ class CompositeSolidSection(Section):
         layupName
             A String specifying the layup name for this section. The default value is an empty 
             string. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

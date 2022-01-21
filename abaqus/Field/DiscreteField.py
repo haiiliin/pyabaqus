@@ -164,13 +164,5 @@ class DiscreteField(Field):
         partLevelOrientation
             A Boolean specifying whether or not the orientations are described in terms of part 
             level coordinates. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

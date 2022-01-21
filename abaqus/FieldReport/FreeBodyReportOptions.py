@@ -46,10 +46,6 @@ class FreeBodyReportOptions:
 
         Returns
         -------
-            A FreeBodyReportOptions object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FreeBodyReportOptions object. . 
         """
         pass

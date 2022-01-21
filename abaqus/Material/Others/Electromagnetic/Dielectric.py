@@ -73,11 +73,7 @@ class Dielectric:
 
         Returns
         -------
-            A Dielectric object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Dielectric object. . 
         """
         pass
 
@@ -86,13 +82,5 @@ class Dielectric:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -268,14 +268,6 @@ class ModelJob(Job):
             A Boolean specifying whether to perform consistency checking for the job. The default 
             value is ON.It is not recommended to turn the consistency checking off unless you are 
             absolutely sure the model is consistent. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -284,13 +276,5 @@ class ModelJob(Job):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

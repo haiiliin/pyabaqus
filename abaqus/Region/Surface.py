@@ -64,7 +64,7 @@ class Surface:
                  side1Elements: tuple[Face] = None,
                  side2Elements: tuple[Face] = None, side12Elements: tuple[Face] = None,
                  end1Elements: tuple[Face] = None,
-                 end2Elements: tuple[Face] = None, circumElements: tuple[Face] = None, name: str = ''):
+                 end2Elements: tuple[Face] = None, circumElements: tuple[Face] = None, name: str = '', **kwargs):
         """This method creates a surface from a sequence of objects in a model database. The
         surface will apply to the sides specified by the arguments.For example
         surface=mdb.models['Model-1'].parts['Part-1'].Surface(side1Faces=side1Faces,
@@ -77,43 +77,69 @@ class Surface:
 
         Parameters
         ----------
-                side1Faces
-                side2Faces
-                side12Faces
-            On three-dimensional wire edges, you can use the following arguments: 
-                end1Edges
-                end2Edges
-                circumEdges
-            On three-dimensional or two-dimensional or axisymmetric edges, you can use the following 
-            arguments: 
-                side1Edges
-                side2Edges
-            On two-dimensional or axisymmetric shell elements, you can use the following arguments: 
-                face1Elements
-                face2Elements
-                face3Elements
-                face4Elements
-                face5Elements
-                face6Elements
-            On three-dimensional shell elements, you can use the following arguments: 
-                side1Elements
-                side2Elements
-                side12Elements
-            On three-dimensional wire elements, you can use the following arguments: 
-                end1Elements
-                end2Elements
-                circumElements
-            On two-dimensional or axisymmetric wire elements, you can use the following arguments: 
+        kwargs
+
+            On three-dimensional solid faces, you can use the following arguments:
+
+            side1Faces
+            side2Faces
+
+            On three-dimensional shell faces, you can use the following arguments:
+
+            side1Faces
+            side2Faces
+            side12Faces
+
+            On three-dimensional wire edges, you can use the following arguments:
+
+            end1Edges
+            end2Edges
+            circumEdges
+
+            On three-dimensional or two-dimensional or axisymmetric edges, you can use the following arguments:
+
+            side1Edges
+            side2Edges
+
+            On two-dimensional or axisymmetric shell elements, you can use the following arguments:
+
+            face1Elements
+            face2Elements
+            face3Elements
+            face4Elements
+
+            On solid elements, you can use the following arguments:
+
+            face1Elements
+            face2Elements
+            face3Elements
+            face4Elements
+            face5Elements
+            face6Elements
+
+            On three-dimensional shell elements, you can use the following arguments:
+
+            side1Elements
+            side2Elements
+            side12Elements
+
+            On three-dimensional wire elements, you can use the following arguments:
+
+            end1Elements
+            end2Elements
+            circumElements
+
+            On two-dimensional or axisymmetric wire elements, you can use the following arguments:
+
+            side1Elements
+            side2Elements
+
         name
             A String specifying the repository key. The default value is an empty string. 
 
         Returns
         -------
-            A Surface object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Surface object. . 
         """
         pass
 
@@ -135,11 +161,7 @@ class Surface:
 
         Returns
         -------
-            A Surface object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Surface object. . 
         """
         pass
 
@@ -169,11 +191,7 @@ class Surface:
 
         Returns
         -------
-            A Surface object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Surface object. . 
         """
         pass
 
@@ -195,10 +213,6 @@ class Surface:
 
         Returns
         -------
-            A Surface object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Surface object. . 
         """
         pass

@@ -106,11 +106,7 @@ class FractureCriterion:
 
         Returns
         -------
-            A FractureCriterion object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FractureCriterion object. . 
         """
         pass
 
@@ -119,13 +115,5 @@ class FractureCriterion:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

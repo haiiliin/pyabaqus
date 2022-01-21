@@ -91,11 +91,7 @@ class ContourIntegral(Crack):
 
         Returns
         -------
-            A ContourIntegral object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ContourIntegral object. . 
         """
         super().__init__()
         pass
@@ -139,13 +135,5 @@ class ContourIntegral(Crack):
         collapsedElementAtTip
             A SymbolicConstant specifying the crack-tip singularity. Possible values are NONE, 
             SINGLE_NODE, and DUPLICATE_NODES. The default value is NONE. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

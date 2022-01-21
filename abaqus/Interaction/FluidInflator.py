@@ -47,11 +47,7 @@ class FluidInflator(Interaction):
 
         Returns
         -------
-            A FluidInflator object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FluidInflator object. . 
         """
         super().__init__()
         pass
@@ -67,13 +63,5 @@ class FluidInflator(Interaction):
         massFlowAmplitude
             A string specifying the name of the amplitude curve by which to modify the mass flow 
             rate. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

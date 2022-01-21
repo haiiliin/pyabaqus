@@ -105,11 +105,7 @@ class MembraneSection(Section):
             A String specifying the name of the AnalyticalField or DiscreteField object used to 
             define the thickness of the shell elements. The *thicknessField* argument applies only 
             when *thicknessType*=ANALYTICAL_FIELD or *thicknessType*=DISCRETE_FIELD. The default 
-            value is an empty string. 
-
-        Returns
-        -------
-            None. 
+            value is an empty string.
 
         Exceptions
         ----------

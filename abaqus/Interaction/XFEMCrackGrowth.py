@@ -41,11 +41,7 @@ class XFEMCrackGrowth(Interaction):
 
         Returns
         -------
-            A XFEMCrackGrowth object. 
-
-        Exceptions
-        ----------
-            None. 
+            A XFEMCrackGrowth object. . 
         """
         super().__init__()
         pass
@@ -59,14 +55,6 @@ class XFEMCrackGrowth(Interaction):
         allowGrowth
             A Boolean specifying whether the crack is allowed to grow (propagate) during this 
             analysis step. The default value is ON. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -81,13 +69,5 @@ class XFEMCrackGrowth(Interaction):
         allowGrowth
             A Boolean specifying whether the crack is allowed to grow (propagate) during this 
             analysis step. The default value is ON. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

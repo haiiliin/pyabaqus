@@ -35,14 +35,6 @@ class MeshEditAssembly(AssemblyBase):
         collapseMethod
             A SymbolicConstant specifying the method used to collapse the edge. Possible values are 
             FORWARD, REVERSE, and AVERAGE. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -53,14 +45,6 @@ class MeshEditAssembly(AssemblyBase):
         ----------
         elements
             A sequence of triangular MeshElement objects specifying the elements to combine. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -75,14 +59,6 @@ class MeshEditAssembly(AssemblyBase):
         deleteUnreferencedNodes
             A Boolean specifying whether to delete all those associated nodes that become 
             unreferenced after the given elements are deleted. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -98,14 +74,6 @@ class MeshEditAssembly(AssemblyBase):
             An object specifying the target for the node projection operation. The 
             *projectionReference* can be any one of the following objects: MeshNode, MeshEdge, 
             MeshFace, ConstrainedSketchVertex, Edge, Face, DatumPoint, DatumAxis, or DatumPlane.
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -149,11 +117,7 @@ class MeshEditAssembly(AssemblyBase):
         projectToGeometry
             A Boolean specifying whether to project nodes back to their original geometry. For 
             example, if a node is on a face, this method first positions the node at the new 
-            location and then projects it back to the original face. The default value is ON. 
-
-        Returns
-        -------
-            None. 
+            location and then projects it back to the original face. The default value is ON.
 
         Exceptions
         ----------
@@ -178,14 +142,6 @@ class MeshEditAssembly(AssemblyBase):
         removeDuplicateElements
             A Boolean specifying whether elements with the same connectivity after the merge will 
             merged into a single element. The default value is True. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -203,14 +159,6 @@ class MeshEditAssembly(AssemblyBase):
         removeDuplicateElements
             A Boolean specifying whether elements with the same connectivity after the merge will 
             merged into a single element. The default value is True. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -225,14 +173,6 @@ class MeshEditAssembly(AssemblyBase):
         elements
             A sequence of quadrilateral MeshElement objects specifying the elements to split. Each 
             quadrilateral element is split into two triangular elements by the shorter diagonal. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -246,14 +186,6 @@ class MeshEditAssembly(AssemblyBase):
         parameter
             A Float specifying the normalized distance along the *edge* at which to split. Possible 
             values are 0.0 << *parameter* << 1.0. The default value is 0.5. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -264,14 +196,6 @@ class MeshEditAssembly(AssemblyBase):
         ----------
         edge
             A single MeshEdge object specifying the element edge to swap. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -315,14 +239,6 @@ class MeshEditAssembly(AssemblyBase):
         extendElementSets
             A Boolean specifying whether existing element sets that include base elements will be 
             extended to include corresponding offset elements. The default value is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -336,14 +252,6 @@ class MeshEditAssembly(AssemblyBase):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -356,13 +264,5 @@ class MeshEditAssembly(AssemblyBase):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

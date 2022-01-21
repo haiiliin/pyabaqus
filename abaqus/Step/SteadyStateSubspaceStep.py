@@ -269,11 +269,7 @@ class SteadyStateSubspaceStep(AnalysisStep):
             new projection is to be performed. The default value is 0.1. 
         frictionDamping
             A Boolean specifying whether to add to the damping matrix contributions due to friction 
-            effects. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
+            effects. The default value is OFF.
 
         Exceptions
         ----------

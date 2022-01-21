@@ -19,11 +19,7 @@ class Line(ConstrainedSketchGeometry):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the line cannot be created). 
-
-        Exceptions
-        ----------
-            None. 
+            A ConstrainedSketchGeometry object (None if the line cannot be created). . 
             !img 
         """
         pass

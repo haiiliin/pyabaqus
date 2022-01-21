@@ -39,11 +39,7 @@ class AcousticInterfaceSection(Section):
 
         Returns
         -------
-            An AcousticInterfaceSection object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            An AcousticInterfaceSection object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -55,11 +51,7 @@ class AcousticInterfaceSection(Section):
         ----------
         thickness
             A Float specifying the thickness of the section. Possible values are *thickness* >> 0.0. 
-            The default value is 1.0. 
-
-        Returns
-        -------
-            None. 
+            The default value is 1.0.
 
         Exceptions
         ----------

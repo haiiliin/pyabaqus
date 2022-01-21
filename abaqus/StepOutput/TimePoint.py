@@ -33,11 +33,7 @@ class TimePoint:
 
         Returns
         -------
-            A TimePoint object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A TimePoint object.  and RangeError. 
         """
         pass
 

@@ -223,13 +223,5 @@ class JobFromInputFile(Job):
             DSLS SimUnit license model. Possible values are DEFAULT, TOKEN, and CREDIT. The default 
             value is DEFAULT.If the license model is not the DSLS SimUnit, the licenseType is not 
             available. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

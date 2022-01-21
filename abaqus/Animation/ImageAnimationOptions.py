@@ -38,13 +38,5 @@ class ImageAnimationOptions:
             A Boolean specifying whether to capture viewport backgrounds. The default value is OFF. 
         compass
             A Boolean specifying whether to capture the view compass. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

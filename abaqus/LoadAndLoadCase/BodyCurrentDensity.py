@@ -63,11 +63,7 @@ class BodyCurrentDensity(Load):
 
         Returns
         -------
-            A BodyCurrentDensity object. 
-
-        Exceptions
-        ----------
-            None. 
+            A BodyCurrentDensity object. . 
         """
         super().__init__()
         pass
@@ -85,14 +81,6 @@ class BodyCurrentDensity(Load):
         distributionType
             A SymbolicConstant specifying how the load is distributed spatially. Possible values are 
             UNIFORM and USER_DEFINED. The default value is UNIFORM. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -116,13 +104,5 @@ class BodyCurrentDensity(Load):
             amplitude is propagated from the previous static analysis step. FREED should be used if 
             the load is changed to have no amplitude reference. You should provide the *amplitude* 
             argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

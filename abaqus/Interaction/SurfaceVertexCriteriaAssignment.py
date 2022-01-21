@@ -39,14 +39,6 @@ class SurfaceVertexCriteriaAssignment:
             whose index is referenced. Each tuple contains: 
             - A Float or a SymbolicConstant specifying the vertex criteria value to be used for the 
             surface. Possible values of the SymbolicConstant are ALL_VERTICES or NO_VERTICES. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -66,14 +58,6 @@ class SurfaceVertexCriteriaAssignment:
             which the vertex criteria is assigned. 
             - A Float or a SymbolicConstant specifying the vertex criteria value to be used for the 
             surface. Possible values of the SymbolicConstant are ALL_VERTICES or NO_VERTICES. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -86,13 +70,5 @@ class SurfaceVertexCriteriaAssignment:
         indices
             A sequence of Ints specifying the index of each surface vertex criteria assignment to 
             delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

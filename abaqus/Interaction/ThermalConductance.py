@@ -83,11 +83,7 @@ class ThermalConductance:
 
         Returns
         -------
-            A ThermalConductance object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ThermalConductance object. . 
         """
         pass
 
@@ -96,13 +92,5 @@ class ThermalConductance:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

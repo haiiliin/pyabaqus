@@ -50,11 +50,7 @@ class BeadFixedRegion(GeometricRestriction):
 
         Returns
         -------
-            A BeadFixedRegion object. 
-
-        Exceptions
-        ----------
-            None. 
+            A BeadFixedRegion object. . 
         """
         super().__init__()
         pass
@@ -77,13 +73,5 @@ class BeadFixedRegion(GeometricRestriction):
         u3
             A Boolean specifying whether to fix the region in the 3-direction. The default value is 
             OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

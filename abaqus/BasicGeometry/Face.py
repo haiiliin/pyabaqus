@@ -67,11 +67,7 @@ class Face:
         Returns
         -------
             A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the centroid of 
-            the face. 
-
-        Exceptions
-        ----------
-            None. 
+            the face. . 
             !img 
         """
         pass
@@ -99,11 +95,7 @@ class Face:
             'curvature1', 'curvature2' and 'gaussianCurvature'. Where the evaluationPoint specifies 
             the location at which the curvature was evaluated. 'principalAxis1' and 'principalAxis2' 
             refer to the vectors specifying the two principal axes of the face. 'curvature1' and 
-            'curvature2' specify the curvatures along the two principal axes. 
-
-        Exceptions
-        ----------
-            None. 
+            'curvature2' specify the curvatures along the two principal axes. . 
             !img 
         """
         pass
@@ -116,11 +108,7 @@ class Face:
 
         Returns
         -------
-            A MeshElementArray object which is a sequence of MeshElement objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshElementArray object which is a sequence of MeshElement objects. . 
             !img 
         """
         pass
@@ -138,11 +126,7 @@ class Face:
 
         Returns
         -------
-            A MeshFaceArray object which is a sequence of MeshFace objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshFaceArray object which is a sequence of MeshFace objects. . 
             !img 
         """
         pass
@@ -162,11 +146,7 @@ class Face:
 
         Returns
         -------
-            A MeshNodeArray object which is a sequence of MeshNode objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshNodeArray object which is a sequence of MeshNode objects. . 
             !img 
         """
         pass
@@ -206,11 +186,7 @@ class Face:
 
         Returns
         -------
-            A Float. 
-
-        Exceptions
-        ----------
-            None. 
+            A Float. . 
             !img 
         """
         pass
@@ -223,11 +199,7 @@ class Face:
 
         Returns
         -------
-            A tuple of integers. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of integers. . 
             !img 
         """
         pass
@@ -240,11 +212,7 @@ class Face:
 
         Returns
         -------
-            A tuple of integers. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of integers. . 
             !img 
         """
         pass
@@ -258,11 +226,7 @@ class Face:
 
         Returns
         -------
-            A tuple of integers. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of integers. . 
             !img 
         """
         pass
@@ -275,11 +239,7 @@ class Face:
 
         Returns
         -------
-            A FaceArray object which is a sequence of Face objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A FaceArray object which is a sequence of Face objects. . 
             !img 
         """
         pass
@@ -295,11 +255,7 @@ class Face:
 
         Returns
         -------
-            A FaceArray object, which is a sequence of Face objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A FaceArray object, which is a sequence of Face objects. . 
             !img 
         """
         pass
@@ -313,11 +269,7 @@ class Face:
 
         Returns
         -------
-            A FaceArray object, which is a sequence of Face objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A FaceArray object, which is a sequence of Face objects. . 
             !img 
         """
         pass
@@ -331,11 +283,7 @@ class Face:
 
         Returns
         -------
-            A Boolean value of True if the normal is flipped and False if not. 
-
-        Exceptions
-        ----------
-            None. 
+            A Boolean value of True if the normal is flipped and False if not. . 
             !img 
         """
         pass
@@ -349,11 +297,7 @@ class Face:
 
         Returns
         -------
-            An array of String 
-
-        Exceptions
-        ----------
-            None. 
+            An array of String . 
             !img 
         """
         pass

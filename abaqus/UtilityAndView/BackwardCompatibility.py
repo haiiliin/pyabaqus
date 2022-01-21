@@ -68,11 +68,7 @@ class BackwardCompatibility:
 
         Returns
         -------
-            A list of Strings. 
-
-        Exceptions
-        ----------
-            None. 
+            A list of Strings. . 
         """
         pass
 
@@ -85,11 +81,7 @@ class BackwardCompatibility:
 
         Returns
         -------
-            A list of Strings. 
-
-        Exceptions
-        ----------
-            None. 
+            A list of Strings. . 
         """
         pass
 
@@ -98,14 +90,6 @@ class BackwardCompatibility:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -114,14 +98,6 @@ class BackwardCompatibility:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -140,13 +116,5 @@ class BackwardCompatibility:
         showKeysInReport
             A Boolean specifying whether the keys and indices are included in the report that is 
             displayed when *reportDeprecated* is True. The default value is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

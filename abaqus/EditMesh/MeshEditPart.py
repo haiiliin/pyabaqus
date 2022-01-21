@@ -43,14 +43,6 @@ class MeshEditPart(PartBase):
             A Float specifying the normalized distance along the edge of the midside nodes. Possible 
             values are 0.0 ≤≤ *parameter* ≤≤ 1.0, where 0.0 specifies the position of the corner 
             node. The default value is 0.5. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -88,14 +80,6 @@ class MeshEditPart(PartBase):
             growth of any given element edge will no longer be constrained by short edges on 
             neighboring elements, but elements could move from their original positions in cases 
             where there are multiple adjacent layers of thin elements. The default value is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -110,14 +94,6 @@ class MeshEditPart(PartBase):
         collapseMethod
             A SymbolicConstant specifying the method used to collapse the edge. Possible values are 
             FORWARD, REVERSE, and AVERAGE. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -129,14 +105,6 @@ class MeshEditPart(PartBase):
         ----------
         elements
             A sequence of triangular MeshElement objects specifying the elements to combine. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -146,14 +114,6 @@ class MeshEditPart(PartBase):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -169,14 +129,6 @@ class MeshEditPart(PartBase):
         deleteUnreferencedNodes
             A Boolean specifying whether to delete all those associated nodes that become 
             unreferenced after the given elements are deleted. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -191,14 +143,6 @@ class MeshEditPart(PartBase):
             A Boolean specifying whether to delete all those associated nodes that become 
             unreferenced after the given nodes and the connected elements are deleted. The default 
             value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -243,11 +187,7 @@ class MeshEditPart(PartBase):
         projectToGeometry
             A Boolean specifying whether to project nodes back to their original geometry. For 
             example, if a node is on a face, this method first positions the node at the new 
-            location and then projects it back to the original face. The default value is ON. 
-
-        Returns
-        -------
-            None. 
+            location and then projects it back to the original face. The default value is ON.
 
         Exceptions
         ----------
@@ -267,14 +207,6 @@ class MeshEditPart(PartBase):
             An object specifying the target for the node projection operation. The 
             *projectionReference* can be any one of the following objects: MeshNode, MeshEdge, 
             MeshFace, ConstrainedSketchVertex, Edge, Face, DatumPoint, DatumAxis, or DatumPlane.
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -288,14 +220,6 @@ class MeshEditPart(PartBase):
             are:TRIRefine a planar triangular mesh and replace it with a new one. If no element 
             sizes are attached, the new mesh will be governed by the sizes of the boundary edges in 
             the old mesh.TETCreate a tetrahedral mesh from a closed shell of triangular elements. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -339,14 +263,6 @@ class MeshEditPart(PartBase):
         extendElementSets
             A Boolean specifying whether existing element sets that include base elements will be 
             extended to include corresponding offset elements. The default value is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -364,14 +280,6 @@ class MeshEditPart(PartBase):
         elements
             A MeshElementArray, a list of MeshElement objects, a Set, or a list of Set objects 
             containing the elements to be included in the merge operation. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -396,14 +304,6 @@ class MeshEditPart(PartBase):
             A Boolean specifying which node labels will remain after nodes are merged. If True then
             the highest node labels are kept; when False the lowest node labels are kept. The
             default value is False. This argument applies only to merging of orphan mesh nodes.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
         """
         pass
 
@@ -427,14 +327,6 @@ class MeshEditPart(PartBase):
             A Boolean specifying which node label will remain after nodes are merged. If True then 
             the higher node label is kept; when False the lower node label is kept. The default 
             value is False. This argument applies only to merging of orphan mesh nodes. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -451,14 +343,6 @@ class MeshEditPart(PartBase):
         referenceRegion
             A MeshFace object specifying a reference top face that indicates the desired 
             orientation. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -467,14 +351,6 @@ class MeshEditPart(PartBase):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -496,11 +372,7 @@ class MeshEditPart(PartBase):
             An Int by which existing labels of the specified elements will be offset. 
         labels
             A list of labels for the specified elements. The length of this list must match the 
-            number of specified elements. 
-
-        Returns
-        -------
-            None. 
+            number of specified elements.
 
         Exceptions
         ----------
@@ -533,11 +405,7 @@ class MeshEditPart(PartBase):
             An Int by which existing labels of the specified nodes will be offset. 
         labels
             A list of labels for the specified nodes. The length of this list must match the number 
-            of specified nodes. 
-
-        Returns
-        -------
-            None. 
+            of specified nodes.
 
         Exceptions
         ----------
@@ -559,14 +427,6 @@ class MeshEditPart(PartBase):
         ----------
         size
             A Float specifying the desired element size. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -579,14 +439,6 @@ class MeshEditPart(PartBase):
         elements
             A sequence of quadrilateral MeshElement objects specifying the elements to split. Each 
             quadrilateral element is split into two triangular elements by the shorter diagonal. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -601,14 +453,6 @@ class MeshEditPart(PartBase):
         parameter
             A Float specifying the normalized distance along *edge* at which to split. Possible 
             values are 0.0 << *parameter* << 1.0. The default value is 0.5. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -637,14 +481,6 @@ class MeshEditPart(PartBase):
             direction for the subdivision operation. Must be an edge of one of the specified 
             elements, and all specified elements must be reachable by topological navigation from 
             this element edge. May not be combined with *face*. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -656,14 +492,6 @@ class MeshEditPart(PartBase):
         ----------
         edge
             A single MeshEdge object specifying the element edge to swap. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -676,14 +504,6 @@ class MeshEditPart(PartBase):
             A Float specifying the radius of the cylinder about which the part is to be wrapped. The 
             wrapping procedure will relocate a node at point (xx, yy) on the planar mesh to 
             (x,θ,zx,θ,z), where rr is the specified radius, θθ = xrxr, and zz=yy. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -697,14 +517,6 @@ class MeshEditPart(PartBase):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -717,13 +529,5 @@ class MeshEditPart(PartBase):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

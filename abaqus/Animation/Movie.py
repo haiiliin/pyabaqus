@@ -116,11 +116,7 @@ class Movie:
         timelineEndTime
             The SymbolicConstant END_FRAME_TIME or a Float specifying the global timeline time that 
             corresponds to the time of *endFrame*. The SymbolicConstant END_FRAME_TIME indicates the 
-            time in this movie corresponding to *endFrame*. The default value is END_FRAME_TIME. 
-
-        Returns
-        -------
-            None. 
+            time in this movie corresponding to *endFrame*. The default value is END_FRAME_TIME.
 
         Exceptions
         ----------

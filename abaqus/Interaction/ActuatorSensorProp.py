@@ -40,11 +40,7 @@ class ActuatorSensorProp(ContactProperty):
 
         Returns
         -------
-            An ActuatorSensorProp object. 
-
-        Exceptions
-        ----------
-            None. 
+            An ActuatorSensorProp object. . 
         """
         super().__init__(name)
         pass
@@ -60,13 +56,5 @@ class ActuatorSensorProp(ContactProperty):
         integerProperties
             A sequence of Ints specifying the JPROPS array used by user subroutine UEL. The default 
             value is an empty sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

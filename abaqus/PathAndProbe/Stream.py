@@ -38,10 +38,6 @@ class Stream:
 
         Returns
         -------
-            A Stream object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Stream object. . 
         """
         pass

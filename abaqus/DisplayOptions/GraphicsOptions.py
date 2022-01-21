@@ -477,11 +477,7 @@ class GraphicsOptions:
             A Float specifying a tolerance used when computing the appropriate scale for 
             transforming result (contour) values to texture values. When set too low the 'out of 
             range' colors may be incorrectly shown for values near the range limits. The default 
-            value is 0.5×10–5. 
-
-        Returns
-        -------
-            None. 
+            value is 0.5×10–5.
 
         Exceptions
         ----------

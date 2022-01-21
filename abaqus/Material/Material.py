@@ -139,11 +139,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A BrittleCracking object. 
-
-        Exceptions
-        ----------
-            None. 
+            A BrittleCracking object. . 
         """
         self.brittleCracking = BrittleCracking(table, temperatureDependency, dependencies, type)
         return self.brittleCracking
@@ -549,11 +545,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A Dielectric object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Dielectric object. . 
         """
         self.dielectric = Dielectric(table, type, frequencyDependency, temperatureDependency, dependencies)
         return self.dielectric
@@ -866,11 +858,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A FluidLeakoff object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FluidLeakoff object. . 
         """
         self.fluidLeakoff = FluidLeakoff(temperatureDependency, dependencies, type, table)
         return self.fluidLeakoff
@@ -902,11 +890,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A GapFlow object. 
-
-        Exceptions
-        ----------
-            None. 
+            A GapFlow object. . 
         """
         self.gapFlow = GapFlow(table, kmax, temperatureDependency, dependencies, type)
         return self.gapFlow
@@ -1057,11 +1041,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A Gel object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Gel object. . 
         """
         self.gel = Gel(table)
         return self.gel
@@ -1147,11 +1127,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A Hyperelastic object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A Hyperelastic object.  and RangeError. 
         """
         self.hyperelastic = Hyperelastic(table, type, moduliTimeScale, temperatureDependency, n, beta, testData,
                                          compressible, properties, deviatoricResponse, volumetricResponse, poissonRatio,
@@ -1217,11 +1193,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A Hypoelastic object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Hypoelastic object. . 
         """
         self.hypoelastic = Hypoelastic(table, user)
         return self.hypoelastic
@@ -1452,11 +1424,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A MoistureSwelling object. 
-
-        Exceptions
-        ----------
-            None. 
+            A MoistureSwelling object. . 
         """
         self.moistureSwelling = MoistureSwelling(table)
         return self.moistureSwelling
@@ -1522,11 +1490,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A Piezoelectric object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Piezoelectric object. . 
         """
         self.piezoelectric = Piezoelectric(table, type, temperatureDependency, dependencies)
         return self.piezoelectric
@@ -1625,11 +1589,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A PorousBulkModuli object. 
-
-        Exceptions
-        ----------
-            None. 
+            A PorousBulkModuli object. . 
         """
         self.porousBulkModuli = PorousBulkModuli(table, temperatureDependency)
         return self.porousBulkModuli
@@ -2056,11 +2016,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A Viscous object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Viscous object. . 
         """
         self.viscous = Viscous(table, law, temperatureDependency, dependencies, time)
         return self.viscous

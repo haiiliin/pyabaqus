@@ -31,11 +31,7 @@ class RegisteredDictionary(CommandRegister):
 
         Returns
         -------
-            A RegisteredDictionary object. 
-
-        Exceptions
-        ----------
-            None. 
+            A RegisteredDictionary object. . 
         """
         super().__init__()
         pass
@@ -46,14 +42,6 @@ class RegisteredDictionary(CommandRegister):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -66,13 +54,5 @@ class RegisteredDictionary(CommandRegister):
             A String or an integer specifying the name of the key to be changed. 
         toName
             A String or an integer specifying the new name for the key. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

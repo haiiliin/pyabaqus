@@ -76,11 +76,7 @@ class RetainedNodalDofsBC(BoundaryCondition):
 
         Returns
         -------
-            A RetainedNodalDofsBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A RetainedNodalDofsBC object. . 
         """
         super().__init__()
         pass
@@ -113,14 +109,6 @@ class RetainedNodalDofsBC(BoundaryCondition):
             A Boolean specifying whether to retain the rotational degree of freedom about the 
             3-direction. The default value is OFF indicating that the degree of freedom is not 
             retained. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -148,13 +136,5 @@ class RetainedNodalDofsBC(BoundaryCondition):
         ur3
             A Boolean specifying whether to retain the rotational degree of freedom about the 
             3-direction. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

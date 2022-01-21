@@ -145,11 +145,7 @@ class QuantityType:
 
         Returns
         -------
-            A QuantityType object. 
-
-        Exceptions
-        ----------
-            None. 
+            A QuantityType object. . 
         """
         pass
 
@@ -158,13 +154,5 @@ class QuantityType:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

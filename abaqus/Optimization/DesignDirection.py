@@ -72,11 +72,7 @@ class DesignDirection(GeometricRestriction):
 
         Returns
         -------
-            A DesignDirection object. 
-
-        Exceptions
-        ----------
-            None. 
+            A DesignDirection object. . 
         """
         super().__init__()
         pass
@@ -120,13 +116,5 @@ class DesignDirection(GeometricRestriction):
             A Boolean specifying whether movement in the region should follow the *masterPoint* in 
             the 3-direction. This is used when *movementRestriction* is VECTOR. The default value is 
             ON. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

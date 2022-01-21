@@ -50,11 +50,7 @@ class Mdb(AcisMdb, JobMdb, MdbBase):
 
         Returns
         -------
-            A Model object.
-
-        Exceptions
-        ----------
-            None.
+            A Model object..
         """
         self.models[name] = model = Model(name, description, stefanBoltzmann, absoluteZero, waveFormulation, modelType,
                                           universalGas, copyConstraints, copyConnectors, copyInteractions)

@@ -143,11 +143,7 @@ class ViewportAnnotationOptions:
         compassPrivilegedPlane
             A SymbolicConstant specifying the plane that will be used for the base of the 3D 
             Compass. Possible values are XYPLANE, XZPLANE, and YZPLANE. The default value is 
-            XZPLANE. 
-
-        Returns
-        -------
-            None. 
+            XZPLANE.
 
         Exceptions
         ----------

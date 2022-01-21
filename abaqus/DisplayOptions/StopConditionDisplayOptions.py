@@ -28,11 +28,7 @@ class StopConditionDisplayOptions:
         ----------
         localStopCondition
             A Boolean specifying whether local stop condition symbols are shown. The default value 
-            is ON. 
-
-        Returns
-        -------
-            None. 
+            is ON.
 
         Exceptions
         ----------

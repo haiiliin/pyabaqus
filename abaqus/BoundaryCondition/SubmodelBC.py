@@ -118,11 +118,7 @@ class SubmodelBC(BoundaryCondition):
 
         Returns
         -------
-            A SubmodelBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SubmodelBC object. . 
         """
         super().__init__()
         pass
@@ -162,14 +158,6 @@ class SubmodelBC(BoundaryCondition):
             A Boolean specifying whether to ignore driven nodes that lie outside the region of 
             elements of the global model after accounting for the exterior search tolerance. The 
             default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -203,13 +191,5 @@ class SubmodelBC(BoundaryCondition):
             A Float specifying the thickness of the center zone size around the shell midsurface. 
             The default value is None.The *centerZoneSize* argument is applicable only if 
             *fixed*=OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

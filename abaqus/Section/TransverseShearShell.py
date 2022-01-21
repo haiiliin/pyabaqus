@@ -38,11 +38,7 @@ class TransverseShearShell:
 
         Returns
         -------
-            A TransverseShearShell object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TransverseShearShell object. . 
         """
         pass
 
@@ -51,13 +47,5 @@ class TransverseShearShell:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

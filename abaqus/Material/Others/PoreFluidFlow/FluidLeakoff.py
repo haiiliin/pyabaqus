@@ -52,11 +52,7 @@ class FluidLeakoff:
 
         Returns
         -------
-            A FluidLeakoff object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FluidLeakoff object. . 
         """
         pass
 
@@ -65,13 +61,5 @@ class FluidLeakoff:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -221,11 +221,7 @@ class StdContactControl(ContactControl):
         enforceWithLagrangeMultipliers
             A SymbolicConstant specifying whether to enforce the contact constraints with Lagrange 
             multipliers. Possible values are DEFAULT, ENFORCEMENT_OFF, and ENFORCEMENT_ON. The 
-            default value is DEFAULT. 
-
-        Returns
-        -------
-            None. 
+            default value is DEFAULT.
 
         Exceptions
         ----------

@@ -78,11 +78,7 @@ class OdbSet:
 
         Returns
         -------
-            An OdbSet object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            An OdbSet object. . 
         """
         pass
 
@@ -106,11 +102,7 @@ class OdbSet:
 
         Returns
         -------
-            An OdbSet object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            An OdbSet object. . 
         """
         pass
 
@@ -135,11 +127,7 @@ class OdbSet:
 
         Returns
         -------
-            An OdbSet object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            An OdbSet object. . 
         """
         pass
 
@@ -163,11 +151,7 @@ class OdbSet:
 
         Returns
         -------
-            An OdbSet object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            An OdbSet object. . 
         """
         pass
 
@@ -205,11 +189,7 @@ class OdbSet:
 
         Returns
         -------
-            An OdbSet object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            An OdbSet object. . 
         """
         pass
 
@@ -234,11 +214,7 @@ class OdbSet:
 
         Returns
         -------
-            An OdbSet object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            An OdbSet object. . 
         """
         pass
 
@@ -262,10 +238,6 @@ class OdbSet:
 
         Returns
         -------
-            An OdbSet object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            An OdbSet object. . 
         """
         pass

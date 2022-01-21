@@ -151,11 +151,7 @@ class AdaptiveMeshControl:
             default value is 1.0. 
         standardVolumetricSmoothingWeight
             A Float specifying the weight used by Abaqus/Standard for the volumetric smoothing 
-            method. The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
+            method. The default value is 0.0.
 
         Exceptions
         ----------

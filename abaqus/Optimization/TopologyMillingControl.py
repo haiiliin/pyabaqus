@@ -54,11 +54,7 @@ class TopologyMillingControl(GeometricRestriction):
 
         Returns
         -------
-            A TopologyMillingControl object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TopologyMillingControl object. . 
         """
         super().__init__()
         pass
@@ -82,13 +78,5 @@ class TopologyMillingControl(GeometricRestriction):
         radius
             A Float specifying the radius for the collision check during the removal of the elements 
             for the milling criteria. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

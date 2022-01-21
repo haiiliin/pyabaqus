@@ -68,11 +68,7 @@ class VolumetricTestData:
 
         Returns
         -------
-            A VolumetricTestData object. 
-
-        Exceptions
-        ----------
-            None. 
+            A VolumetricTestData object. . 
         """
         pass
 
@@ -81,13 +77,5 @@ class VolumetricTestData:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

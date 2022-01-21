@@ -194,11 +194,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Part object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+        part: Part
+            A Part object
         """
         pass
 
@@ -237,11 +234,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Part object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+        part: Part
+            A Part object
         """
         pass
 
@@ -268,11 +262,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Part object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+        part: Part
+            A Part object
         """
         pass
 
@@ -314,11 +305,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Part object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+        part: Part
+            A Part object
         """
         pass
 
@@ -343,11 +331,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Part object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+        part: Part
+            A Part object
             - If the specified part is not an orphan mesh part: 
               Cannot extrude a geometric part. 
             - If the specified part is not two-dimensional: 
@@ -423,11 +408,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Part object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+        part: Part
+            A Part object
             - If the ACIS file is corrupt: 
               PartError: the file is corrupt 
             - If the dimensionality does not correspond to what is found in the ACIS file: 
@@ -463,11 +445,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Part object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+        part: Part
+            A Part object
             - If the analysis type (deformable or rigid) is not consistent among the supplied part 
             instances: 
               The selected part instances do not have a consistent analysis type. 
@@ -496,11 +475,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Part object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+        part: Part
+            A Part object
             - If the part does not contain a mesh: 
               The current part does not contain a mesh for a mesh part. 
         """
@@ -532,11 +508,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Part object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+        part: Part
+            A Part object
             - If the specified part is not an orphan mesh part: 
               Cannot mirror a geometric part. 
             - If the specified part is a rigid body: 
@@ -585,11 +558,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Part object. 
-
-        Exceptions
-        ----------
-            None. 
+        part: Part
+            A Part object
         """
         pass
 
@@ -638,11 +608,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Part object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+        part: Part
+            A Part object
             - If the output database contains elements of more than one dimensionality or type: 
               File contains both axisymmetric and nonaxisymmetric elements.File contains both 2D and 
             3D elements.File contains both rigid and deformable elements. 
@@ -688,11 +655,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Part object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+        part: Part
+            A Part object
             - If the specified part is not an orphan mesh part: 
               Cannot reduce dimension of a geometric part. 
             - If the specified part is not three-dimensional: 
@@ -727,11 +691,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Part object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+        part: Part
+            A Part object
             - If the specified part is not a substructure: 
               File specified does not contain a substructure. 
             - If the specified part already exists: 
@@ -774,11 +735,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Part object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+        part: Part
+            A Part object
             - If the specified part is not an orphan mesh part: 
               Specified part must be an orphan mesh. 
             - If the Part2DGeomFrom2DMesh method cannot create a valid two-dimensional shell section 
@@ -797,10 +755,6 @@ class PartBase(Feature):
         Parameters
         ----------
 
-        Returns
-        -------
-            None. 
-
         Exceptions
         ----------
             RangeError. 
@@ -816,14 +770,6 @@ class PartBase(Feature):
         ----------
         sketch
             A ConstrainedSketch object. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -853,14 +799,6 @@ class PartBase(Feature):
             thickness is twice the distance to the *bottomFaces*. This argument will be ignored if 
             *thickness* is specified. Either *thickness*, *topFaces*, or *bottomFaces* must be 
             specified. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -870,14 +808,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -898,14 +828,6 @@ class PartBase(Feature):
             with higher values reporting less and less important errors. The default value is 20, 
             which reports all critical errors. When the default value is used, the stored validity 
             status is updated to agree with the result of this check. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -915,14 +837,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -931,14 +845,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -949,14 +855,6 @@ class PartBase(Feature):
         ----------
         featureNames
             A sequence of Strings specifying the feature names that will be deleted from the part. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -987,12 +885,9 @@ class PartBase(Feature):
 
         Returns
         -------
+        angle: float
             A Float specifying the angle between the specified entities. If you provide a plane as 
-            an argument, Abaqus/CAE computes the angle using the normal to the plane. 
-
-        Exceptions
-        ----------
-            None. 
+            an argument, Abaqus/CAE computes the angle using the normal to the plane. . 
         """
         pass
 
@@ -1009,11 +904,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Float specifying the sum of the calculated areas of the given faces. 
-
-        Exceptions
-        ----------
-            None. 
+        area: float
+            A Float specifying the sum of the calculated areas of the given faces. . 
         """
         pass
 
@@ -1027,12 +919,9 @@ class PartBase(Feature):
         ----------
 
         Returns
-        -------
-            A sequence containing the path to the associated CAD part and assembly file. 
-
-        Exceptions
-        ----------
-            None. 
+        -------`
+        paths: tuple
+            A sequence containing the path to the associated CAD part and assembly file
         """
         pass
 
@@ -1047,12 +936,9 @@ class PartBase(Feature):
 
         Returns
         -------
+        paras: dict
             A dictionary object representing a map of the name of the parameter and its associated 
-            value. 
-
-        Exceptions
-        ----------
-            None. 
+            value. . 
         """
         pass
 
@@ -1075,11 +961,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the centroid. 
-
-        Exceptions
-        ----------
-            None. 
+        centroid: tuple[float]
+            A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the centroid. . 
         """
         pass
 
@@ -1093,11 +976,7 @@ class PartBase(Feature):
 
         Returns
         -------
-            A tuple of 3 Floats representing the coordinates of the specified point. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of 3 Floats representing the coordinates of the specified point. . 
         """
         pass
 
@@ -1118,11 +997,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Float specifying the maximum curvature. 
-
-        Exceptions
-        ----------
-            None. 
+        curvature: float
+            A Float specifying the maximum curvature. . 
         """
         pass
 
@@ -1143,11 +1019,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Float specifying the distance between *entity1* and *entity2*. 
-
-        Exceptions
-        ----------
-            None. 
+        distance: float
+            A Float specifying the distance between *entity1* and *entity2*. . 
         """
         pass
 
@@ -1161,11 +1034,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Float specifying the total length. 
-
-        Exceptions
-        ----------
-            None. 
+        length: float
+            A Float specifying the total length
         """
         pass
 
@@ -1182,11 +1052,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Float specifying the perimeter. 
-
-        Exceptions
-        ----------
-            None. 
+        perimeter: float
+            A Float specifying the perimeter
         """
         pass
 
@@ -1203,11 +1070,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Float specifying the sum of the areas of the given faces. 
-
-        Exceptions
-        ----------
-            None. 
+        volume: float
+            A Float specifying the sum of the areas of the given faces
         """
         pass
 
@@ -1250,6 +1114,7 @@ class PartBase(Feature):
 
         Returns
         -------
+        properties: dict
             A Dictionary object with the following items: 
             *area*: None or a Float specifying the sum of the area of the specified faces. The area 
             is computed only for one side for shells. 
@@ -1315,11 +1180,7 @@ class PartBase(Feature):
             considered for substructures. 
             UNSUPPORTED_NON_STRUCTURAL_MASS_PROPORTIONAL: Non-structural mass with Mass Proportional 
             distribution is not supported. Results are computed using Volume Proportional 
-            distribution. 
-
-        Exceptions
-        ----------
-            None. 
+            distribution. . 
         """
         pass
 
@@ -1333,6 +1194,7 @@ class PartBase(Feature):
 
         Returns
         -------
+        faces: tuple[Face]
             Sequence of Face objects. 
 
         Exceptions
@@ -1352,6 +1214,7 @@ class PartBase(Feature):
 
         Returns
         -------
+        edges: tuple[Edge]
             Sequence of Edge objects. 
 
         Exceptions
@@ -1371,6 +1234,7 @@ class PartBase(Feature):
 
         Returns
         -------
+        cells: tuple[Cell]
             Sequence of Cell objects. 
 
         Exceptions
@@ -1390,6 +1254,7 @@ class PartBase(Feature):
 
         Returns
         -------
+        vertices: tuple[ConstrainedSketchVertex]
             Sequence of ConstrainedSketchVertex objects.
 
         Exceptions
@@ -1424,14 +1289,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1453,14 +1310,6 @@ class PartBase(Feature):
         constrainToBackground
             A Boolean that determines whether the projected edges need to constrained to the 
             background geometry. The default is True. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1491,14 +1340,6 @@ class PartBase(Feature):
         vertices
             A sequence of candidate vertices to be projected onto the sketch. By default, all 
             vertices are candidates for projection. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1517,13 +1358,10 @@ class PartBase(Feature):
 
         Returns
         -------
+        attributes: dict
             A Dictionary object with string keys and integer values which returns the above 
             information with the keys being numVertices, numEdges, numFaces, numCells, 
-            numWiredEdges, numShellFaces and numSolidFaces. 
-
-        Exceptions
-        ----------
-            None. 
+            numWiredEdges, numShellFaces and numSolidFaces. . 
         """
         pass
 
@@ -1533,14 +1371,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1565,12 +1395,9 @@ class PartBase(Feature):
 
         Returns
         -------
+        geometry: dict
             A Dictionary object with string keys, which returns the above information with the keys 
-            being name, space, type, volume, centroid, category and boundingBox. 
-
-        Exceptions
-        ----------
-            None. 
+            being name, space, type, volume, centroid, category and boundingBox. . 
         """
         pass
 
@@ -1583,11 +1410,8 @@ class PartBase(Feature):
 
         Returns
         -------
-            A Region object, or None. 
-
-        Exceptions
-        ----------
-            None. 
+        region: Region
+            A Region object, or None
         """
         pass
 
@@ -1597,14 +1421,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1615,14 +1431,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1631,14 +1439,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1651,14 +1451,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1669,14 +1461,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1685,14 +1469,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1703,14 +1479,6 @@ class PartBase(Feature):
         ----------
         featureNames
             A tuple of names of features which are to be resumed. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1719,14 +1487,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1736,14 +1496,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1761,14 +1513,6 @@ class PartBase(Feature):
         rootFile
             A String specifying the name of the root associated CAD file. This can be the same as 
             the part file or can be the assembly file, depending on the one that was imported. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1779,14 +1523,6 @@ class PartBase(Feature):
         ----------
         featureNames
             A tuple of names of features which are to be suppressed in the part. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1799,11 +1535,7 @@ class PartBase(Feature):
             A String specifying the name of the file to which to write. 
         version
             A Float specifying the ACIS version. For example, the Float 12.0 corresponds to ACIS 
-            Version 12.0. The default value is the current version of ACIS. 
-
-        Returns
-        -------
-            None. 
+            Version 12.0. The default value is the current version of ACIS.
 
         Exceptions
         ----------
@@ -1827,14 +1559,6 @@ class PartBase(Feature):
             A Bool specifying whether to update the path of the CAD model file specified in the 
             *parameterFile* to the current directory, if the CAD model is present in the current 
             directory. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1847,11 +1571,7 @@ class PartBase(Feature):
             A String specifying the name of the file to which to write. 
         flavor
             A SymbolicConstant specifying a particular flavor of IGES. Possible values are STANDARD, 
-            AUTOCAD, SOLIDWORKS, JAMA, and MSBO. 
-
-        Returns
-        -------
-            None. 
+            AUTOCAD, SOLIDWORKS, JAMA, and MSBO.
 
         Exceptions
         ----------
@@ -1866,11 +1586,7 @@ class PartBase(Feature):
         Parameters
         ----------
         fileName
-            A String specifying the name of the file to which to write. 
-
-        Returns
-        -------
-            None. 
+            A String specifying the name of the file to which to write.
 
         Exceptions
         ----------
@@ -1885,11 +1601,7 @@ class PartBase(Feature):
         Parameters
         ----------
         fileName
-            A String specifying the name of the file to which to write. 
-
-        Returns
-        -------
-            None. 
+            A String specifying the name of the file to which to write.
 
         Exceptions
         ----------
@@ -1926,14 +1638,6 @@ class PartBase(Feature):
             of given nodes, and be ordered to correspond to the given nodes in *ascending order* 
             according to index. These coordinates are positions of the nodes of a mesh that will be 
             the target face corresponding to nodes provided. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1945,14 +1649,6 @@ class PartBase(Feature):
         ----------
         nodes
             A sequence of MeshNode objects or a Set object containing nodes. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1962,14 +1658,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1979,14 +1667,6 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1997,13 +1677,5 @@ class PartBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

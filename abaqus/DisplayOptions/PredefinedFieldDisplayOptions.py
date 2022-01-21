@@ -38,11 +38,7 @@ class PredefinedFieldDisplayOptions:
         stressField
             A Boolean specifying whether stress field symbols are shown. The default value is ON. 
         hardeningField
-            A Boolean specifying whether hardening field symbols are shown. The default value is ON. 
-
-        Returns
-        -------
-            None. 
+            A Boolean specifying whether hardening field symbols are shown. The default value is ON.
 
         Exceptions
         ----------

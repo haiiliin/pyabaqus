@@ -83,11 +83,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FieldOutput object. . 
         """
         pass
 
@@ -112,11 +108,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FieldOutput object. . 
         """
         pass
 
@@ -172,11 +164,7 @@ class FieldOutput:
             coordinates systems, where the sequence is the same length as *data*. If 
             *localCoordSystem* is a matrix, a different local coordinate system applies to each data 
             value.User supplied values of localCoordSystem are transposed before storing in the 
-            database. 
-
-        Returns
-        -------
-            None. 
+            database.
 
         Exceptions
         ----------
@@ -195,11 +183,7 @@ class FieldOutput:
         Parameters
         ----------
         field
-            A FieldOutput object specifying the data to add. 
-
-        Returns
-        -------
-            None. 
+            A FieldOutput object specifying the data to add.
 
         Exceptions
         ----------
@@ -250,11 +234,7 @@ class FieldOutput:
             An odb_SequenceSequenceFloat object specifying the imaginary data values for the 
             specified position, instance, and labels. You must provide this data when you add 
             complex fields to the output database. The order of the values follows the conventions 
-            defined in the Abaqus Elements Guide. 
-
-        Returns
-        -------
-            None. 
+            defined in the Abaqus Elements Guide.
 
         Exceptions
         ----------
@@ -286,11 +266,7 @@ class FieldOutput:
 
         Returns
         -------
-            AFieldOutput object. 
-
-        Exceptions
-        ----------
-            None. 
+            AFieldOutput object. . 
         """
         pass
 
@@ -309,11 +285,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FieldOutput object. . 
         """
         pass
 
@@ -348,11 +320,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FieldOutput object. . 
         """
         pass
 
@@ -368,11 +336,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FieldOutput object. . 
         """
         pass
 
@@ -388,11 +352,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FieldOutput object. . 
         """
         pass
 
@@ -407,11 +367,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FieldOutput object. . 
         """
         pass
 
@@ -426,11 +382,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FieldOutput object. . 
         """
         pass
 
@@ -445,11 +397,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FieldOutput object. . 
         """
         pass
 
@@ -464,11 +412,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FieldOutput object. . 
         """
         pass
 
@@ -483,11 +427,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FieldOutput object. . 
         """
         pass
 
@@ -503,11 +443,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FieldOutput object. . 
         """
         pass
 
@@ -674,14 +610,6 @@ class FieldOutput:
             the suffixes ('11', '22', '33', '12', '13', '23'). If *type*=VECTOR, the default value 
             is *name* with the suffixes ('1', '2', '3'). If *type*=SCALAR, the default value is an 
             empty sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -694,14 +622,6 @@ class FieldOutput:
             A SymbolicConstant specifying the output type. Possible values are SCALAR, VECTOR, 
             TENSOR_3D_FULL, TENSOR_3D_PLANAR, TENSOR_3D_SURFACE, TENSOR_2D_PLANAR, and 
             TENSOR_2D_SURFACE. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -726,13 +646,5 @@ class FieldOutput:
             - MIN_INPLANE_PRINCIPAL 
             - OUTOFPLANE_PRINCIPAL 
             The default value is an empty sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

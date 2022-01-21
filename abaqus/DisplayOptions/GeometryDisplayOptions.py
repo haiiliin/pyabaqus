@@ -56,11 +56,7 @@ class GeometryDisplayOptions:
             the Part or Instance is shown. The default value is OFF. 
         referenceRepTranslucency
             A Boolean specifying whether to apply translucency to the geometry that belongs to the 
-            reference representation of the Part or Instance. The default value is ON. 
-
-        Returns
-        -------
-            None. 
+            reference representation of the Part or Instance. The default value is ON.
 
         Exceptions
         ----------

@@ -37,11 +37,7 @@ class BeadPenetrationCheck(GeometricRestriction):
 
         Returns
         -------
-            A BeadPenetrationCheck object. 
-
-        Exceptions
-        ----------
-            None. 
+            A BeadPenetrationCheck object. . 
         """
         super().__init__()
         pass
@@ -51,13 +47,5 @@ class BeadPenetrationCheck(GeometricRestriction):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

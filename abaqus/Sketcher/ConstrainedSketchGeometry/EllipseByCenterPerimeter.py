@@ -23,11 +23,7 @@ class EllipseByCenterPerimeter(ConstrainedSketchGeometry):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the ellipse cannot be created). 
-
-        Exceptions
-        ----------
-            None. 
+            A ConstrainedSketchGeometry object (None if the ellipse cannot be created). . 
             !img 
         """
         pass

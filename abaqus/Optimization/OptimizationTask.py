@@ -85,11 +85,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SingleTermDesignResponse object.
-
-        Exceptions
-        ----------
-            None.
+            A SingleTermDesignResponse object..
         """
         self.designResponses[name] = singleTermDesignResponse = SingleTermDesignResponse(name, identifier, csys,
                                                                                          drivingRegion, operation,
@@ -117,11 +113,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            An ObjectiveFunction object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            An ObjectiveFunction object. and RangeError.
         """
         self.objectiveFunctions[name] = objectiveFunction = ObjectiveFunction(name, objectives, target)
         return objectiveFunction
@@ -150,11 +142,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            An OptimizationConstraint object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            An OptimizationConstraint object. and RangeError.
         """
         self.optimizationConstraints[name] = optimizationConstraint = OptimizationConstraint(name, designResponse,
                                                                                              restrictionValue,
@@ -191,11 +179,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A BeadFixedRegion object.
-
-        Exceptions
-        ----------
-            None.
+            A BeadFixedRegion object..
         """
         self.geometricRestrictions[name] = geometricRestriction = BeadFixedRegion(name, region, csys, u1, u2, u3)
         return geometricRestriction
@@ -222,11 +206,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A BeadGrowth object.
-
-        Exceptions
-        ----------
-            None.
+            A BeadGrowth object..
         """
         self.geometricRestrictions[name] = geometricRestriction = BeadGrowth(name, region, beadGrowth, shrink)
         return geometricRestriction
@@ -250,11 +230,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A BeadPenetrationCheck object.
-
-        Exceptions
-        ----------
-            None.
+            A BeadPenetrationCheck object..
         """
         self.geometricRestrictions[name] = geometricRestriction = BeadPenetrationCheck(name, beadPenetrationCheckRegion,
                                                                                        region)
@@ -284,11 +260,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A BeadPlanarSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A BeadPlanarSymmetry object..
         """
         self.geometricRestrictions[name] = geometricRestriction = BeadPlanarSymmetry(name, region, axis, csys)
         return geometricRestriction
@@ -313,11 +285,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A BeadPointSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A BeadPointSymmetry object..
         """
         self.geometricRestrictions[name] = geometricRestriction = BeadPointSymmetry(name, region, csys)
         return geometricRestriction
@@ -348,11 +316,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A BeadRotationalSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A BeadRotationalSymmetry object..
         """
         self.geometricRestrictions[name] = geometricRestriction = BeadRotationalSymmetry(name, angle, region, axis,
                                                                                          csys)
@@ -410,11 +374,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A DesignDirection object.
-
-        Exceptions
-        ----------
-            None.
+            A DesignDirection object..
         """
         self.geometricRestrictions[name] = geometricRestriction = DesignDirection(name, region, csys, mainPoint,
                                                                                   mainPointDetermination,
@@ -475,11 +435,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A DrillControl object.
-
-        Exceptions
-        ----------
-            None.
+            A DrillControl object..
         """
         self.geometricRestrictions[name] = geometricRestriction = DrillControl(name, clientDirection, region, csys,
                                                                                drawAngle, mainPoint,
@@ -524,11 +480,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A FixedRegion object.
-
-        Exceptions
-        ----------
-            None.
+            A FixedRegion object..
         """
         self.geometricRestrictions[name] = geometricRestriction = FixedRegion(name, region, csys,
                                                                               presumeFeasibleRegionAtStart, u1, u2, u3)
@@ -552,11 +504,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A FrozenArea object.
-
-        Exceptions
-        ----------
-            None.
+            A FrozenArea object..
         """
         self.geometricRestrictions[name] = geometricRestriction = FrozenArea(name, region)
         return geometricRestriction
@@ -589,11 +537,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A Growth object.
-
-        Exceptions
-        ----------
-            None.
+            A Growth object..
         """
         self.geometricRestrictions[name] = geometricRestriction = Growth(name, region, growth,
                                                                          presumeFeasibleRegionAtStart, shrink)
@@ -623,11 +567,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A PenetrationCheck object.
-
-        Exceptions
-        ----------
-            None.
+            A PenetrationCheck object..
         """
         self.geometricRestrictions[name] = geometricRestriction = PenetrationCheck(name, penetrationCheckRegion, region,
                                                                                    presumeFeasibleRegionAtStart)
@@ -687,11 +627,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A ShapeDemoldControl object.
-
-        Exceptions
-        ----------
-            None.
+            A ShapeDemoldControl object..
         """
         self.geometricRestrictions[name] = geometricRestriction = ShapeDemoldControl(name, pullDirection, region,
                                                                                      collisionCheckRegion, csys,
@@ -732,11 +668,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A ShapeMemberSize object.
-
-        Exceptions
-        ----------
-            None.
+            A ShapeMemberSize object..
         """
         self.geometricRestrictions[name] = geometricRestriction = ShapeMemberSize(name, region, maxThickness,
                                                                                   minThickness, sizeRestriction,
@@ -792,11 +724,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A ShapePlanarSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A ShapePlanarSymmetry object..
         """
         self.geometricRestrictions[name] = geometricRestriction = ShapePlanarSymmetry(name, clientDirection, region,
                                                                                       allowNonSymmetricMesh, csys,
@@ -846,11 +774,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A ShapePointSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A ShapePointSymmetry object..
         """
         self.geometricRestrictions[name] = geometricRestriction = ShapePointSymmetry(name, region, csys,
                                                                                      mainPointDetermination,
@@ -916,11 +840,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A ShapeRotationalSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A ShapeRotationalSymmetry object..
         """
         self.geometricRestrictions[name] = geometricRestriction = ShapeRotationalSymmetry(name, clientDirection, region,
                                                                                           allowNonSymmetricMesh, angle,
@@ -948,11 +868,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SizingClusterAreas object.
-
-        Exceptions
-        ----------
-            None.
+            A SizingClusterAreas object..
         """
         self.geometricRestrictions[name] = geometricRestriction = SizingClusterAreas(name, regions)
         return geometricRestriction
@@ -986,11 +902,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SizingCyclicSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A SizingCyclicSymmetry object..
         """
         self.geometricRestrictions[name] = geometricRestriction = SizingCyclicSymmetry(name, region, translation, axis,
                                                                                        csys, ignoreFrozenArea)
@@ -1012,11 +924,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SizingFrozenArea object.
-
-        Exceptions
-        ----------
-            None.
+            A SizingFrozenArea object..
         """
         self.geometricRestrictions[name] = geometricRestriction = SizingFrozenArea(name, region)
         return geometricRestriction
@@ -1072,11 +980,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SizingPlanarSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A SizingPlanarSymmetry object..
         """
         self.geometricRestrictions[name] = geometricRestriction = SizingPlanarSymmetry(name, region, axis, csys,
                                                                                        ignoreFrozenArea)
@@ -1105,11 +1009,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SizingPointSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A SizingPointSymmetry object..
         """
         self.geometricRestrictions[name] = geometricRestriction = SizingPointSymmetry(name, region, csys,
                                                                                       ignoreFrozenArea)
@@ -1143,11 +1043,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SizingRotationalSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A SizingRotationalSymmetry object..
         """
         self.geometricRestrictions[name] = geometricRestriction = SizingRotationalSymmetry(name, angle, region, axis,
                                                                                            csys, ignoreFrozenArea)
@@ -1205,11 +1101,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SlideRegionControl object.
-
-        Exceptions
-        ----------
-            None.
+            A SlideRegionControl object..
         """
         self.geometricRestrictions[name] = geometricRestriction = SlideRegionControl(name, clientDirection, region,
                                                                                      approach, csys, freeFormRegion,
@@ -1269,11 +1161,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A StampControl object.
-
-        Exceptions
-        ----------
-            None.
+            A StampControl object..
         """
         self.geometricRestrictions[name] = geometricRestriction = StampControl(name, clientDirection, region, csys,
                                                                                drawAngle, mainPoint,
@@ -1314,11 +1202,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyCyclicSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A TopologyCyclicSymmetry object..
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyCyclicSymmetry(name, region, translation,
                                                                                          axis, csys, ignoreFrozenArea)
@@ -1364,11 +1248,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyDemoldControl object.
-
-        Exceptions
-        ----------
-            None.
+            A TopologyDemoldControl object..
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyDemoldControl(name, region, csys, draftAngle,
                                                                                         collisionCheckRegion,
@@ -1405,11 +1285,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyMemberSize object.
-
-        Exceptions
-        ----------
-            None.
+            A TopologyMemberSize object..
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyMemberSize(name, region, maxThickness,
                                                                                      minThickness, separation,
@@ -1450,11 +1326,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyMillingControl object.
-
-        Exceptions
-        ----------
-            None.
+            A TopologyMillingControl object..
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyMillingControl(name, millingDirections,
                                                                                          region, csys,
@@ -1504,11 +1376,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyOverhangControl object.
-
-        Exceptions
-        ----------
-            None.
+            A TopologyOverhangControl object..
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyOverhangControl(name, pullDirection, region,
                                                                                           csys, draftAngle,
@@ -1545,11 +1413,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyPlanarSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A TopologyPlanarSymmetry object..
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyPlanarSymmetry(name, region, axis, csys,
                                                                                          ignoreFrozenArea)
@@ -1580,11 +1444,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyPointSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A TopologyPointSymmetry object..
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyPointSymmetry(name, region, csys,
                                                                                         ignoreFrozenArea)
@@ -1620,11 +1480,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyRotationalSymmetry object.
-
-        Exceptions
-        ----------
-            None.
+            A TopologyRotationalSymmetry object..
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyRotationalSymmetry(name, angle, region, axis,
                                                                                              csys, ignoreFrozenArea)
@@ -1677,11 +1533,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TurnControl object.
-
-        Exceptions
-        ----------
-            None.
+            A TurnControl object..
         """
         self.geometricRestrictions[name] = geometricRestriction = TurnControl(name, clientDirection, region, csys,
                                                                               mainPoint, mainPointDetermination,

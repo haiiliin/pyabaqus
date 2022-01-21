@@ -94,11 +94,7 @@ class ExpContactControl(ContactControl):
             main surfaces. The default value is 20. 
         warpCutoff
             A Float specifying the out-of-plane warping angle (in degrees), at which a facet will be 
-            considered to be highly warped. The default value is 20.0. 
-
-        Returns
-        -------
-            None. 
+            considered to be highly warped. The default value is 20.0.
 
         Exceptions
         ----------

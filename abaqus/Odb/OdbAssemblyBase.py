@@ -95,11 +95,7 @@ class OdbAssemblyBase:
             Possible values are AXIS_1, AXIS_2, and AXIS_3. The default value is AXIS_1. 
         angle2
             A Float specifying the angle of the additional rotation about the second connector node 
-            axis. The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
+            axis. The default value is 0.0.
 
         Exceptions
         ----------
@@ -117,11 +113,7 @@ class OdbAssemblyBase:
         region
             An OdbSet specifying a region. 
         section
-            A Section object. 
-
-        Returns
-        -------
-            None. 
+            A Section object.
 
         Exceptions
         ----------
@@ -154,11 +146,7 @@ class OdbAssemblyBase:
         elementSetName
             A String specifying a name for this element set. The default value is the empty string. 
         sectionCategory
-            A SectionCategory object for this element set. 
-
-        Returns
-        -------
-            None. 
+            A SectionCategory object for this element set.
 
         Exceptions
         ----------
@@ -182,11 +170,7 @@ class OdbAssemblyBase:
         coordinates
             A sequence of sequences of Floats specifying the nodal coordinates. 
         nodeSetName
-            A String specifying a name for this node set. The default value is None. 
-
-        Returns
-        -------
-            None. 
+            A String specifying a name for this node set. The default value is None.
 
         Exceptions
         ----------
@@ -218,11 +202,7 @@ class OdbAssemblyBase:
         tieNodes
             An OdbSet specifying tie-type nodes assigned to the rigid body. 
         analyticSurface
-            An AnalyticSurface specifying the Analytic Rigid Surface assigned to the rigid body. 
-
-        Returns
-        -------
-            None. 
+            An AnalyticSurface specifying the Analytic Rigid Surface assigned to the rigid body.
 
         Exceptions
         ----------

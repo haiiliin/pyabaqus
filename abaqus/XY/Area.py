@@ -153,11 +153,7 @@ class Area:
         pt
             A Float specifying the top padding of the area in mm. The default value is 1.0. 
         pb
-            A Float specifying the bottom padding of the area in mm. The default value is 1.0. 
-
-        Returns
-        -------
-            None. 
+            A Float specifying the bottom padding of the area in mm. The default value is 1.0.
 
         Exceptions
         ----------

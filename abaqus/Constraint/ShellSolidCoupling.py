@@ -60,11 +60,7 @@ class ShellSolidCoupling(Constraint):
 
         Returns
         -------
-            A ShellSolidCoupling object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ShellSolidCoupling object. . 
         """
         super().__init__()
         pass
@@ -89,13 +85,5 @@ class ShellSolidCoupling(Constraint):
         influenceDistance
             A Float specifying the influence distance. The *influenceDistance* argument applies only 
             when *influenceDistanceMethod*=SPECIFIED. The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

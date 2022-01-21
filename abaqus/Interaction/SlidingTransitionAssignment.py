@@ -36,14 +36,6 @@ class SlidingTransitionAssignment:
             A SymbolicConstant specifying the value of the smoothness of the surface-to-surface 
             formulation on sliding to be assigned to the surface whose index is referenced. Possible 
             values are ELEMENT_ORDER_SMOOTHING, LINEAR_SMOOTHING, and QUADRATIC_SMOOTHING. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -62,14 +54,6 @@ class SlidingTransitionAssignment:
             which the sliding transition attribute is assigned.A SymbolicConstant specifying the 
             overriding the smoothness value to be used for the first surface. Possible values of the 
             SymbolicConstant are ELEMENT_ORDER_SMOOTHING, LINEAR_SMOOTHING, and QUADRATIC_SMOOTHING. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -80,13 +64,5 @@ class SlidingTransitionAssignment:
         ----------
         indices
             A sequence of Ints specifying the index of each sliding transition assignment to delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

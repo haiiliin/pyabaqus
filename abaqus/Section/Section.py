@@ -34,11 +34,7 @@ class Section(SectionBase):
 
         Returns
         -------
-            A TransverseShearBeam object.
-
-        Exceptions
-        ----------
-            None.
+            A TransverseShearBeam object..
         """
         self.beamTransverseShear = transverseShearBeam = TransverseShearBeam(scfDefinition, k23, k13,
                                                                              slendernessCompensation)
@@ -63,11 +59,7 @@ class Section(SectionBase):
 
         Returns
         -------
-            A TransverseShearShell object.
-
-        Exceptions
-        ----------
-            None.
+            A TransverseShearShell object..
         """
         self.transverseShear = transverseShearShell = TransverseShearShell(k11, k22, k12)
         return transverseShearShell

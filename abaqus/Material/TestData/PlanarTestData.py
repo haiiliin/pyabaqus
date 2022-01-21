@@ -62,11 +62,7 @@ class PlanarTestData:
 
         Returns
         -------
-            A PlanarTestData object. 
-
-        Exceptions
-        ----------
-            None. 
+            A PlanarTestData object. . 
         """
         pass
 
@@ -75,13 +71,5 @@ class PlanarTestData:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

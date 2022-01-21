@@ -319,11 +319,7 @@ class MaterialBase:
 
         Returns
         -------
-            A Material object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Material object. . 
         """
         self.name, self.description, self.materialIdentifier = name, description, materialIdentifier
 
@@ -344,10 +340,6 @@ class MaterialBase:
 
         Returns
         -------
-            A list of Material objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A list of Material objects. . 
         """
         pass

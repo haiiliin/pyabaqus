@@ -26,13 +26,5 @@ class OdbDataFrame:
             A Boolean specifying whether to activate the frame. 
         update
             A Boolean specifying whether to update the model. The default value is ON 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

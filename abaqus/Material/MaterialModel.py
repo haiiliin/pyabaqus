@@ -10,7 +10,6 @@ class MaterialModel(ModelBase):
         Path
         ----
             - mdb.models[name].Material
-            - session.odbs[name].Material
 
         Parameters
         ----------
@@ -25,11 +24,7 @@ class MaterialModel(ModelBase):
 
         Returns
         -------
-            A Material object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            A Material object..
         """
         self.materials[name] = material = Material(name, description, materialIdentifier)
         return material

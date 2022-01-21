@@ -45,11 +45,7 @@ class AcousticInfiniteSection(Section):
 
         Returns
         -------
-            An AcousticInfiniteSection object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            An AcousticInfiniteSection object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -65,11 +61,7 @@ class AcousticInfiniteSection(Section):
         order
             An Int specifying the number of ninth-order polynomials that will be used to resolve the 
             variation of the acoustic field in the infinite direction. Possible values are 0 << 
-            *order* ≤≤ 10. The default value is 10. 
-
-        Returns
-        -------
-            None. 
+            *order* ≤≤ 10. The default value is 10.
 
         Exceptions
         ----------

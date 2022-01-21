@@ -61,11 +61,7 @@ class IntegratedOutputSection:
 
         Returns
         -------
-            An IntegratedOutputSection object. 
-
-        Exceptions
-        ----------
-            None. 
+            An IntegratedOutputSection object. . 
         """
         pass
 
@@ -103,13 +99,5 @@ class IntegratedOutputSection:
             that the 1–axis is normal to the *surface*. Projection onto a planar *surface* is such 
             that the 1-axis is normal to the surface, and a projection onto a nonplanar *surface* is 
             such that a least-squares fit surface will be used. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

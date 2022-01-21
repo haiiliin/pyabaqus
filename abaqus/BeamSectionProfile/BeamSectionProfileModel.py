@@ -33,11 +33,7 @@ class BeamSectionProfileModel(ModelBase):
 
         Returns
         -------
-            A list of Profile objects.
-
-        Exceptions
-        ----------
-            None.
+            A list of Profile objects..
             !img
         """
         profiles: dict[Profile] = dict[Profile]()

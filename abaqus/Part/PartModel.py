@@ -30,11 +30,7 @@ class PartModel(ModelBase):
 
         Returns
         -------
-            A Part object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            A Part object..
         """
         self.parts[name] = part = Part(name, dimensionality, type, twist)
         return part

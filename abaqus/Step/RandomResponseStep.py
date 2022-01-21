@@ -256,11 +256,7 @@ class RandomResponseStep(AnalysisStep):
         rayleighDampingByFrequency
             A RayleighDampingByFrequency object. 
         structuralDampingByFrequency
-            A StructuralDampingByFrequency object. 
-
-        Returns
-        -------
-            None. 
+            A StructuralDampingByFrequency object.
 
         Exceptions
         ----------

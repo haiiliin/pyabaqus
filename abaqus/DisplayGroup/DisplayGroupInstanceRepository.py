@@ -32,13 +32,5 @@ class DisplayGroupInstanceRepository:
             A Boolean specifying whether to synchronize the display options on all the 
             DisplayGroupInstance objects stored in the DisplayGroupInstanceRepository for which 
             *lockOptions* is OFF. The default value of *updateInstances* is ON. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

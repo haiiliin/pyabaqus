@@ -86,11 +86,7 @@ class OdbPartBase:
 
         Returns
         -------
-            An OdbPart object. 
-
-        Exceptions
-        ----------
-            None. 
+            An OdbPart object. . 
         """
         pass
 
@@ -114,14 +110,6 @@ class OdbPartBase:
             A String specifying a name for this element set. The default value is the empty string. 
         sectionCategory
             A SectionCategory object for this element set. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -144,14 +132,6 @@ class OdbPartBase:
             A String specifying a name for this element set. The default value is None. 
         sectionCategory
             A SectionCategory object for this element set. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -172,14 +152,6 @@ class OdbPartBase:
             A sequence of sequences of Floats specifying the nodal coordinates. 
         nodeSetName
             A String specifying a name for this node set. The default value is None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -197,14 +169,6 @@ class OdbPartBase:
             *x*, *y*, *z*), (*label*, *x*, *y*, *z*), ...). 
         nodeSetName
             A String specifying a name for this node set. The default value is None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -224,14 +188,6 @@ class OdbPartBase:
         vector
             A sequence of three Floats specifying the approximate local  n1n1 -direction of the beam 
             cross-section. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -258,14 +214,6 @@ class OdbPartBase:
             A SymbolicConstant specifying the stack or thickness direction of the material. Possible 
             values are STACK_1, STACK_2, STACK_3, and STACK_ORIENTATION. The default value is 
             STACK_3. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -287,14 +235,6 @@ class OdbPartBase:
             AXIS_1. 
         angle
             A Float specifying the angle of the additional rotation. The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -349,11 +289,7 @@ class OdbPartBase:
             object. 
         filletRadius
             A Double specifying the radius of curvature to smooth discontinuities between adjoining 
-            segments. The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
+            segments. The default value is 0.0.
 
         Exceptions
         ----------
@@ -376,11 +312,7 @@ class OdbPartBase:
             object. 
         filletRadius
             A Double specifying the radius of curvature to smooth discontinuities between adjoining 
-            segments. The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
+            segments. The default value is 0.0.
 
         Exceptions
         ----------
@@ -403,11 +335,7 @@ class OdbPartBase:
             object. 
         filletRadius
             A Double specifying the radius of curvature to smooth discontinuities between adjoining 
-            segments. The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
+            segments. The default value is 0.0.
 
         Exceptions
         ----------

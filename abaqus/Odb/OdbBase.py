@@ -95,11 +95,7 @@ class OdbBase:
 
         Returns
         -------
-            An Odb object. 
-
-        Exceptions
-        ----------
-            None. 
+            An Odb object. . 
         """
         pass
 
@@ -108,14 +104,6 @@ class OdbBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -178,10 +166,6 @@ class OdbBase:
 
         Returns
         -------
-            A Boolean specifying whether additional steps or frames were added to the Odb object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Boolean specifying whether additional steps or frames were added to the Odb object. . 
         """
         pass

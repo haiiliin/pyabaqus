@@ -57,13 +57,5 @@ class MesherOptions:
             also consulted when populating the element type dialog; preferred types are selected by 
             default for a region not previously assigned any element types. The default value is an 
             empty list. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

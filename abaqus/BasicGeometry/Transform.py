@@ -26,11 +26,7 @@ class Transform:
 
         Returns
         -------
-            A tuple of 12 Floats. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of 12 Floats. . 
             !img 
         """
         pass

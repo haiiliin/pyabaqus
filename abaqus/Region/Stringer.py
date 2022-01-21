@@ -51,11 +51,7 @@ class Stringer:
 
         Returns
         -------
-            A Stringer object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Stringer object. . 
         """
         pass
 
@@ -80,10 +76,6 @@ class Stringer:
 
         Returns
         -------
-            A Stringer object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Stringer object. . 
         """
         pass

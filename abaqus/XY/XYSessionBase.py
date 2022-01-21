@@ -137,11 +137,7 @@ class XYSessionBase(SessionBase):
 
         Returns
         -------
-            None 
-
-        Exceptions
-        ----------
-            None. 
+            None . 
         """
         pass
 
@@ -154,11 +150,7 @@ class XYSessionBase(SessionBase):
 
         Returns
         -------
-            A Double specifying the tolerance. 
-
-        Exceptions
-        ----------
-            None. 
+            A Double specifying the tolerance. . 
         """
         pass
 
@@ -174,11 +166,7 @@ class XYSessionBase(SessionBase):
 
         Returns
         -------
-            None 
-
-        Exceptions
-        ----------
-            None. 
+            None . 
         """
         pass
 
@@ -191,10 +179,6 @@ class XYSessionBase(SessionBase):
 
         Returns
         -------
-            Int specifying the limit for number of XY data objects. 
-
-        Exceptions
-        ----------
-            None. 
+            Int specifying the limit for number of XY data objects. . 
         """
         pass

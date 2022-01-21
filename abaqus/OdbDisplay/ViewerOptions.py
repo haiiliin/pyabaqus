@@ -42,13 +42,5 @@ class ViewerOptions:
         odbUpdateCheckInterval
             An Int specifying the minimum time between status checks (in seconds). The default value 
             is 0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

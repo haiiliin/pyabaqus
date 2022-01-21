@@ -110,11 +110,7 @@ class OutputModel(ModelBase):
 
         Returns
         -------
-            A FieldOutputRequest object.
-
-        Exceptions
-        ----------
-            None.
+            A FieldOutputRequest object..
         """
         self.fieldOutputRequests[name] = FieldOutputRequest(name, createStepName, region, variables, frequency, modes,
                                                             timeInterval, numIntervals, timeMarks, boltLoad,
@@ -223,11 +219,7 @@ class OutputModel(ModelBase):
 
         Returns
         -------
-            A HistoryOutputRequest object.
-
-        Exceptions
-        ----------
-            None.
+            A HistoryOutputRequest object..
         """
         self.historyOutputRequests[name] = HistoryOutputRequest(name, createStepName, region, variables, frequency,
                                                                 modes, timeInterval, numIntervals, boltLoad,
@@ -281,11 +273,7 @@ class OutputModel(ModelBase):
 
         Returns
         -------
-            An IntegratedOutputSection object.
-
-        Exceptions
-        ----------
-            None.
+            An IntegratedOutputSection object..
         """
         self.integratedOutputSections[name] = integratedOutputSection = IntegratedOutputSection(
             name, surface, refPoint, refPointAtCenter, refPointMotion, localCsys, projectOrientation)
@@ -308,11 +296,7 @@ class OutputModel(ModelBase):
 
         Returns
         -------
-            A TimePoint object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A TimePoint object. and RangeError.
         """
         self.timePoints[name] = timePoint = TimePoint(name, points)
         return timePoint

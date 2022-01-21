@@ -54,11 +54,7 @@ class MeshDisplayOptions:
             The default value is OFF. 
         seeds
             A Boolean specifying whether seeds are shown. This argument is ignored in partDisplay. 
-            The default value is OFF. 
-
-        Returns
-        -------
-            None. 
+            The default value is OFF.
 
         Exceptions
         ----------

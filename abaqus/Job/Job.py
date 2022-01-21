@@ -140,14 +140,6 @@ class Job:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -167,14 +159,6 @@ class Job:
         continueJob
             A Boolean specifying whether to run the job as a continuation analysis. The default 
             value is False. The datacheckJob and continueJob arguments cannot both be True. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -186,14 +170,6 @@ class Job:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -202,13 +178,5 @@ class Job:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -60,11 +60,7 @@ class SingleTermDesignResponse(DesignResponse):
 
         Returns
         -------
-            A SingleTermDesignResponse object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SingleTermDesignResponse object. . 
         """
         super().__init__()
         pass
@@ -97,13 +93,5 @@ class SingleTermDesignResponse(DesignResponse):
             Possible values are MAXIMUM, MINIMUM, and SUM. The default value is SUM. 
         stepOptions
             A StepOptionArray object. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

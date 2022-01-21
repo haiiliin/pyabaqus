@@ -51,11 +51,7 @@ class SolutionDependentAmplitude(Amplitude):
 
         Returns
         -------
-            A SolutionDependentAmplitude object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A SolutionDependentAmplitude object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -77,11 +73,7 @@ class SolutionDependentAmplitude(Amplitude):
             *minimum* and *initial*. The default value is 1000.0. 
         timeSpan
             A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
-            and TOTAL. The default value is STEP. 
-
-        Returns
-        -------
-            None. 
+            and TOTAL. The default value is STEP.
 
         Exceptions
         ----------

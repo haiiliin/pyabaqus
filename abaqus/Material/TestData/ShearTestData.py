@@ -46,11 +46,7 @@ class ShearTestData:
 
         Returns
         -------
-            A ShearTestData object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ShearTestData object. . 
         """
         pass
 
@@ -59,13 +55,5 @@ class ShearTestData:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -51,11 +51,7 @@ class ShapeMemberSize(GeometricRestriction):
 
         Returns
         -------
-            A ShapeMemberSize object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ShapeMemberSize object. . 
         """
         super().__init__()
         pass
@@ -78,13 +74,5 @@ class ShapeMemberSize(GeometricRestriction):
             A bool specifying whether to use the node group region. The default value is OFF. 
         nodeGroupRegion
             A Node Region object specifying the check node group. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

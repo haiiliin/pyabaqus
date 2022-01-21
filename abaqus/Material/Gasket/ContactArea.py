@@ -50,11 +50,7 @@ class ContactArea:
 
         Returns
         -------
-            A ContactArea object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ContactArea object. . 
         """
         pass
 
@@ -63,13 +59,5 @@ class ContactArea:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

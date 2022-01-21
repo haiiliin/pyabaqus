@@ -72,11 +72,7 @@ class CapCreepConsolidation:
 
         Returns
         -------
-            A CapCreepConsolidation object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CapCreepConsolidation object. . 
         """
         pass
 
@@ -85,13 +81,5 @@ class CapCreepConsolidation:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

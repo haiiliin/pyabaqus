@@ -97,11 +97,7 @@ class SurfaceToSurfaceContactExp(Interaction):
 
         Returns
         -------
-            A SurfaceToSurfaceContactExp object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SurfaceToSurfaceContactExp object. . 
         """
         super().__init__()
         pass
@@ -112,14 +108,6 @@ class SurfaceToSurfaceContactExp(Interaction):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -173,14 +161,6 @@ class SurfaceToSurfaceContactExp(Interaction):
             axis. The default value is OFF. 
         clearanceRegion
             A Region object specifying the contact region for which clearance is specified. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -199,13 +179,5 @@ class SurfaceToSurfaceContactExp(Interaction):
             A String specifying the name of the ContactControl object associated with this 
             interaction. An empty string indicates that the default contact controls will be used. 
             The default value is an empty string. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

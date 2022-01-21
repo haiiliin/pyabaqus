@@ -44,11 +44,7 @@ class ParameterTable:
 
         Returns
         -------
-            A ParameterTable object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ParameterTable object. . 
         """
         pass
 

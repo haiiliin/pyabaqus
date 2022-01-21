@@ -138,13 +138,5 @@ class PlyStackPlotOptions:
             A Float specifying the size of the ply in the Y-direction. The default value is 1.0. 
         sizeZ
             A Float specifying the size of the ply in the Z-direction. The default value is 0.8. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

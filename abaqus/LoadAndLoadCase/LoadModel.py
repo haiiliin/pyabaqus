@@ -74,11 +74,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A BodyCharge object.
-
-        Exceptions
-        ----------
-            None.
+            A BodyCharge object..
         """
         self.loads[name] = load = BodyCharge(name, createStepName, region, magnitude, amplitude, distributionType,
                                              field)
@@ -118,11 +114,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A BodyConcentrationFlux object.
-
-        Exceptions
-        ----------
-            None.
+            A BodyConcentrationFlux object..
         """
         self.loads[name] = load = BodyConcentrationFlux(name, createStepName, region, magnitude, field,
                                                         distributionType, amplitude)
@@ -162,11 +154,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A BodyCurrent object.
-
-        Exceptions
-        ----------
-            None.
+            A BodyCurrent object..
         """
         self.loads[name] = load = BodyCurrent(name, createStepName, region, magnitude, amplitude, distributionType,
                                               field)
@@ -205,11 +193,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A BodyCurrentDensity object.
-
-        Exceptions
-        ----------
-            None.
+            A BodyCurrentDensity object..
         """
         self.loads[name] = load = BodyCurrentDensity(name, createStepName, region, comp1, comp2, comp3, amplitude,
                                                      distributionType)
@@ -254,11 +238,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A BodyForce object.
-
-        Exceptions
-        ----------
-            None.
+            A BodyForce object..
         """
         self.loads[name] = load = BodyForce(name, createStepName, region, field, distributionType, comp1, comp2, comp3,
                                             amplitude)
@@ -297,11 +277,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A BodyHeatFlux object.
-
-        Exceptions
-        ----------
-            None.
+            A BodyHeatFlux object..
         """
         self.loads[name] = load = BodyHeatFlux(name, createStepName, region, magnitude, field, distributionType,
                                                amplitude)
@@ -389,11 +365,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A ConcCharge object.
-
-        Exceptions
-        ----------
-            None.
+            A ConcCharge object..
         """
         self.loads[name] = load = ConcCharge(name, createStepName, region, magnitude, distributionType, field,
                                              amplitude)
@@ -433,11 +405,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A ConcConcFlux object.
-
-        Exceptions
-        ----------
-            None.
+            A ConcConcFlux object..
         """
         self.loads[name] = load = ConcConcFlux(name, createStepName, region, magnitude, distributionType, field,
                                                amplitude)
@@ -477,11 +445,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A ConcCurrent object.
-
-        Exceptions
-        ----------
-            None.
+            A ConcCurrent object..
         """
         self.loads[name] = load = ConcCurrent(name, createStepName, region, magnitude, distributionType, field,
                                               amplitude)
@@ -536,11 +500,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A ConcentratedForce object.
-
-        Exceptions
-        ----------
-            None.
+            A ConcentratedForce object..
         """
         self.loads[name] = load = ConcentratedForce(name, createStepName, region, distributionType, field, cf1, cf2,
                                                     cf3, amplitude, follower, localCsys)
@@ -583,11 +543,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A ConcentratedHeatFlux object.
-
-        Exceptions
-        ----------
-            None.
+            A ConcentratedHeatFlux object..
         """
         self.loads[name] = load = ConcentratedHeatFlux(name, createStepName, region, magnitude, distributionType, field,
                                                        amplitude, dof)
@@ -627,11 +583,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A ConcPoreFluid object.
-
-        Exceptions
-        ----------
-            None.
+            A ConcPoreFluid object..
         """
         self.loads[name] = load = ConcPoreFluid(name, createStepName, region, magnitude, distributionType, field,
                                                 amplitude)
@@ -682,11 +634,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A ConnectorForce object.
-
-        Exceptions
-        ----------
-            None.
+            A ConnectorForce object..
         """
         self.loads[name] = load = ConnectorForce(name, createStepName, region, fastenerName, fastenerSetName, f1, f2,
                                                  f3, amplitude)
@@ -736,11 +684,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A ConnectorMoment object.
-
-        Exceptions
-        ----------
-            None.
+            A ConnectorMoment object..
         """
         self.loads[name] = load = ConnectorMoment(name, createStepName, region, fastenerName, fastenerSetName, m1, m2,
                                                   m3, amplitude)
@@ -784,11 +728,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A CoriolisForce object.
-
-        Exceptions
-        ----------
-            None.
+            A CoriolisForce object..
         """
         self.loads[name] = load = CoriolisForce(name, createStepName, region, magnitude, point1, point2, amplitude,
                                                 distributionType, field)
@@ -833,11 +773,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A Gravity object.
-
-        Exceptions
-        ----------
-            None.
+            A Gravity object..
         """
         self.loads[name] = load = Gravity(name, createStepName, distributionType, field, region, comp1, comp2, comp3,
                                           amplitude)
@@ -886,11 +822,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            An InertiaRelief object.
-
-        Exceptions
-        ----------
-            None.
+            An InertiaRelief object..
         """
         self.loads[name] = load = InertiaRelief(name, createStepName, u1, u2, u3, ur1, ur2, ur3, referencePoint,
                                                 localCoordinates)
@@ -930,11 +862,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            An InwardVolAccel object.
-
-        Exceptions
-        ----------
-            None.
+            An InwardVolAccel object..
         """
         self.loads[name] = load = InwardVolAccel(name, createStepName, region, magnitude, distributionType, field,
                                                  amplitude)
@@ -984,11 +912,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A LineLoad object.
-
-        Exceptions
-        ----------
-            None.
+            A LineLoad object..
         """
         self.loads[name] = load = LineLoad(name, createStepName, region, distributionType, field, comp1, comp2, comp3,
                                            amplitude, system)
@@ -1042,11 +966,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A Moment object.
-
-        Exceptions
-        ----------
-            None.
+            A Moment object..
         """
         self.loads[name] = load = Moment(name, createStepName, region, cm1, cm2, cm3, amplitude, follower, localCsys,
                                          distributionType, field)
@@ -1091,11 +1011,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A PEGLoad object.
-
-        Exceptions
-        ----------
-            None.
+            A PEGLoad object..
         """
         self.loads[name] = load = PEGLoad(name, createStepName, region, distributionType, field, comp1, comp2, comp3,
                                           amplitude)
@@ -1146,11 +1062,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A PipePressure object.
-
-        Exceptions
-        ----------
-            None.
+            A PipePressure object..
         """
         self.loads[name] = load = PipePressure(name, createStepName, region, magnitude, diameter, hZero, hReference,
                                                field, amplitude, distributionType, side)
@@ -1200,11 +1112,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A Pressure object.
-
-        Exceptions
-        ----------
-            None.
+            A Pressure object..
         """
         self.loads[name] = load = Pressure(name, createStepName, region, magnitude, hZero, hReference, field, refPoint,
                                            distributionType, amplitude)
@@ -1257,11 +1165,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A RotationalBodyForce object.
-
-        Exceptions
-        ----------
-            None.
+            A RotationalBodyForce object..
         """
         self.loads[name] = load = RotationalBodyForce(name, createStepName, region, magnitude, point1, point2,
                                                       distributionType, field, centrifugal, rotaryAcceleration,
@@ -1339,11 +1243,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A ShellEdgeLoad object.
-
-        Exceptions
-        ----------
-            None.
+            A ShellEdgeLoad object..
         """
         self.loads[name] = load = ShellEdgeLoad(name, createStepName, region, magnitude, distributionType, field,
                                                 amplitude, angle, axis, localCsys, userCsys, directionVector, follower,
@@ -1391,11 +1291,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A SubmodelSB object.
-
-        Exceptions
-        ----------
-            None.
+            A SubmodelSB object..
         """
         self.loads[name] = load = SubmodelSB(name, createStepName, region, globalStep, globalDrivingRegion,
                                              absoluteExteriorTolerance, exteriorTolerance, globalIncrement)
@@ -1428,11 +1324,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A SubstructureLoad object.
-
-        Exceptions
-        ----------
-            None.
+            A SubstructureLoad object..
         """
         self.loads[name] = load = SubstructureLoad(name, createStepName, region, loadCaseNames, magnitude, amplitude)
         return load
@@ -1471,11 +1363,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A SurfaceCharge object.
-
-        Exceptions
-        ----------
-            None.
+            A SurfaceCharge object..
         """
         self.loads[name] = load = SurfaceCharge(name, createStepName, region, magnitude, distributionType, field,
                                                 amplitude)
@@ -1517,11 +1405,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A SurfaceConcentrationFlux object.
-
-        Exceptions
-        ----------
-            None.
+            A SurfaceConcentrationFlux object..
         """
         self.loads[name] = load = SurfaceConcentrationFlux(name, createStepName, region, magnitude, field,
                                                            distributionType, amplitude)
@@ -1561,11 +1445,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A SurfaceCurrent object.
-
-        Exceptions
-        ----------
-            None.
+            A SurfaceCurrent object..
         """
         self.loads[name] = load = SurfaceCurrent(name, createStepName, region, magnitude, distributionType, field,
                                                  amplitude)
@@ -1605,11 +1485,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A SurfaceCurrentDensity object.
-
-        Exceptions
-        ----------
-            None.
+            A SurfaceCurrentDensity object..
         """
         self.loads[name] = load = SurfaceCurrentDensity(name, createStepName, region, comp1, comp2, comp3,
                                                         distributionType, amplitude)
@@ -1648,11 +1524,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A SurfaceHeatFlux object.
-
-        Exceptions
-        ----------
-            None.
+            A SurfaceHeatFlux object..
         """
         self.loads[name] = load = SurfaceHeatFlux(name, createStepName, region, magnitude, field, distributionType,
                                                   amplitude)
@@ -1691,11 +1563,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A SurfacePoreFluid object.
-
-        Exceptions
-        ----------
-            None.
+            A SurfacePoreFluid object..
         """
         self.loads[name] = load = SurfacePoreFluid(name, createStepName, region, magnitude, field, distributionType,
                                                    amplitude)
@@ -1770,11 +1638,7 @@ class LoadModel(ModelBase):
 
         Returns
         -------
-            A SurfaceTraction object.
-
-        Exceptions
-        ----------
-            None.
+            A SurfaceTraction object..
         """
         self.loads[name] = load = SurfaceTraction(name, createStepName, region, magnitude, distributionType, field,
                                                   amplitude, angle, axis, localCsys, userCsys, directionVector,

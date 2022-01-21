@@ -25,11 +25,7 @@ class ConcentricConstraint(ConstrainedSketchConstraint):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ConstrainedSketchConstraint object. . 
             !img 
         """
         pass

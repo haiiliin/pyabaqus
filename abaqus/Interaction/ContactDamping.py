@@ -74,11 +74,7 @@ class ContactDamping:
 
         Returns
         -------
-            A ContactDamping object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ContactDamping object. . 
         """
         pass
 
@@ -87,13 +83,5 @@ class ContactDamping:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

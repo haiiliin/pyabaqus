@@ -49,14 +49,6 @@ class TextReprOptions:
             sequence to return. Possible values are UNLIMITED or Ints >> 0. The initial value is 
             100. After the maximum number of elements, the remainder are indicated by the string 
             '...'. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 

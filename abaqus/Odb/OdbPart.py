@@ -61,11 +61,7 @@ class OdbPart(OdbPartBase):
 
         Returns
         -------
-            An OdbSet object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            An OdbSet object..
         """
         self.nodeSets[name] = odbSet = OdbSet(name, nodes)
         return odbSet

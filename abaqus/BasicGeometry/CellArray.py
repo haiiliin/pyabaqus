@@ -44,11 +44,7 @@ class CellArray:
 
         Returns
         -------
-            A CellArray object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CellArray object. . 
             !img 
         """
         pass
@@ -84,11 +80,7 @@ class CellArray:
 
         Returns
         -------
-            A Cell object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Cell object. . 
             !img 
         """
         pass
@@ -102,11 +94,7 @@ class CellArray:
 
         Returns
         -------
-            A FaceArray object representing the faces on the exterior of the cells. 
-
-        Exceptions
-        ----------
-            None. 
+            A FaceArray object representing the faces on the exterior of the cells. . 
             !img 
         """
         pass
@@ -142,11 +130,7 @@ class CellArray:
 
         Returns
         -------
-            A String specifying the object or objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A String specifying the object or objects. . 
             !img 
         """
         pass
@@ -172,11 +156,7 @@ class CellArray:
 
         Returns
         -------
-            A CellArray object, which is a sequence of Cell objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A CellArray object, which is a sequence of Cell objects. . 
             !img 
         """
         pass
@@ -198,11 +178,7 @@ class CellArray:
 
         Returns
         -------
-            A CellArray object, which is a sequence of Cell objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A CellArray object, which is a sequence of Cell objects. . 
             !img 
         """
         pass
@@ -220,11 +196,7 @@ class CellArray:
 
         Returns
         -------
-            A CellArray object, which is a sequence of Cell objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A CellArray object, which is a sequence of Cell objects. . 
             !img 
         """
         pass
@@ -242,11 +214,7 @@ class CellArray:
             *low*: a tuple of three floats representing the minimum *X*-, *Y*-, and *Z*-boundary 
             values of the bounding box. 
             *high*: a tuple of three floats representing the maximum *X*-, *Y*-, and *Z*-boundary 
-            values of the bounding box. 
-
-        Exceptions
-        ----------
-            None. 
+            values of the bounding box. . 
             !img 
         """
         pass

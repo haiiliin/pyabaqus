@@ -82,14 +82,6 @@ class OptimizationProcess:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -101,14 +93,6 @@ class OptimizationProcess:
         validate
             A Boolean specifying whether Abaqus should perform the validation of the optimization 
             process only. The default value is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -120,14 +104,6 @@ class OptimizationProcess:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -174,14 +150,6 @@ class OptimizationProcess:
             Defines a list of names of part instances to be used for surface extraction. One file 
             (according to extractFormat) is created for each part instance. If the argument is not 
             specified, no part instance is selected and surface is generated for the whole model. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -218,13 +186,5 @@ class OptimizationProcess:
             OPT_DATASAVE_SPECIFY_CYCLE. Abaqus saves file iterations for every nth iteration after 
             iteration 1; if you set *saveEvery*=3, Abaqus saves file iterations for cycles 1, 4, 7, 
             and so on. The default value is None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

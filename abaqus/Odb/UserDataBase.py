@@ -107,10 +107,6 @@ class UserDataBase:
 
         Returns
         -------
-            An XYData object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            An XYData object. . 
         """
         pass

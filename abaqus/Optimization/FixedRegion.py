@@ -55,11 +55,7 @@ class FixedRegion(GeometricRestriction):
 
         Returns
         -------
-            A FixedRegion object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FixedRegion object. . 
         """
         super().__init__()
         pass
@@ -86,13 +82,5 @@ class FixedRegion(GeometricRestriction):
         u3
             A Boolean specifying whether to fix the region in the 3-direction. The default value is 
             OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

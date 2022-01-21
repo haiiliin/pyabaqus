@@ -64,11 +64,7 @@ class ConstrainedSketcherOptions:
         editMethod
             A SymbolicConstant specifying the constraint solving mode used by the sketcher during 
             regular sketch editing and adding new constraints and dimensions. Possible values are 
-            MINIMUM_MOVE, STANDARD, WEIGHTED, and RELAXATION. The default value is STANDARD. 
-
-        Returns
-        -------
-            None. 
+            MINIMUM_MOVE, STANDARD, WEIGHTED, and RELAXATION. The default value is STANDARD.
 
         Exceptions
         ----------

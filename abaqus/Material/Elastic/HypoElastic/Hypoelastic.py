@@ -43,11 +43,7 @@ class Hypoelastic:
 
         Returns
         -------
-            A Hypoelastic object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Hypoelastic object. . 
         """
         pass
 
@@ -56,13 +52,5 @@ class Hypoelastic:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

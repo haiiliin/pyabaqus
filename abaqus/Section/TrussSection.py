@@ -57,11 +57,7 @@ class TrussSection(Section):
         ----------
         area
             A Float specifying the cross-sectional area for the section. Possible values are *area* 
-            >> 0. The default value is 1.0. 
-
-        Returns
-        -------
-            None. 
+            >> 0. The default value is 1.0.
 
         Exceptions
         ----------

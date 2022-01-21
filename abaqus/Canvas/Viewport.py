@@ -20,11 +20,7 @@ class Viewport(AnnotationViewport):
 
         Returns
         -------
-            A Layer object.
-
-        Exceptions
-        ----------
-            None.
+            A Layer object..
         """
         self.layers[name] = layer = Layer(name, copyViewName)
         return layer

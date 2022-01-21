@@ -79,11 +79,7 @@ class XYCurve:
 
         Returns
         -------
-            An XYCurve object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            An XYCurve object. . 
         """
         pass
 
@@ -106,13 +102,5 @@ class XYCurve:
         useDefault
             A Boolean specifying whether to use the system supplied legend label. The default value 
             is ON. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

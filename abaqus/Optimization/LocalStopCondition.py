@@ -71,11 +71,7 @@ class LocalStopCondition(StopCondition):
 
         Returns
         -------
-            A LocalStopCondition object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LocalStopCondition object. . 
         """
         super().__init__()
         pass
@@ -121,13 +117,5 @@ class LocalStopCondition(StopCondition):
         region
             The SymbolicConstant MODEL or a Region object specifying the region to which the stop 
             condition is applied. The default value is MODEL. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -37,11 +37,7 @@ class FrozenArea(GeometricRestriction):
 
         Returns
         -------
-            A FrozenArea object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FrozenArea object. . 
         """
         super().__init__()
         pass
@@ -55,13 +51,5 @@ class FrozenArea(GeometricRestriction):
             A Region object specifying the region to which the geometric restriction is applied. 
             When used with a TopologyTask, there is no default value. When used with a ShapeTask, 
             the default value is MODEL. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

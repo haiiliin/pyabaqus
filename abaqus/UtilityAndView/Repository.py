@@ -39,13 +39,5 @@ class Repository(dict):
             A String specifying the old name of the repository key. 
         toName
             A String specifying the new name of the repository key. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

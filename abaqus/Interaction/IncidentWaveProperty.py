@@ -163,11 +163,7 @@ class IncidentWaveProperty(ContactProperty):
 
         Returns
         -------
-            An IncidentWaveProperty object. 
-
-        Exceptions
-        ----------
-            None. 
+            An IncidentWaveProperty object. . 
         """
         super().__init__(name)
         pass
@@ -302,13 +298,5 @@ class IncidentWaveProperty(ContactProperty):
             A Float specifying the multiplication factor to convert from the analysis pressure unit 
             to pascals. The default value is 1.0.This argument is valid only when 
             *definition*=AIR_BLAST or *definition*=SURFACE_BLAST. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

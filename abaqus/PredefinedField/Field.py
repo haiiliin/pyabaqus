@@ -137,11 +137,7 @@ class Field(PredefinedField):
 
         Returns
         -------
-            A Field object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Field object. . 
         """
         super().__init__()
         pass
@@ -154,11 +150,7 @@ class Field(PredefinedField):
         fromStepName
             A String specifying the name of the step from which the PredefinedFieldState is moved. 
         toStepName
-            A String specifying the name of the step to which the PredefinedFieldState is moved. 
-
-        Returns
-        -------
-            None. 
+            A String specifying the name of the step to which the PredefinedFieldState is moved.
 
         Exceptions
         ----------
@@ -247,14 +239,6 @@ class Field(PredefinedField):
             the N2 direction. 
             - If *crossSectionDistribution*=POINTS_THROUGH_SECTION, *magnitudes* is a sequence of 
             Doubles specifying the Field at each point. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -327,13 +311,5 @@ class Field(PredefinedField):
             the N2 direction. 
             - If *crossSectionDistribution*=POINTS_THROUGH_SECTION, *magnitudes* is a sequence of 
             Doubles specifying the Field at each point. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -56,11 +56,7 @@ class DebondVCCT(Crack):
 
         Returns
         -------
-            A DebondVCCT object. 
-
-        Exceptions
-        ----------
-            None. 
+            A DebondVCCT object. . 
         """
         super().__init__()
         pass
@@ -77,13 +73,5 @@ class DebondVCCT(Crack):
         printToDATFrequency
             An Int specifying the frequency at which output will be printed to DAT file. The default 
             value is 1. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

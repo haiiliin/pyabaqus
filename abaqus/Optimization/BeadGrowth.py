@@ -41,11 +41,7 @@ class BeadGrowth(GeometricRestriction):
 
         Returns
         -------
-            A BeadGrowth object. 
-
-        Exceptions
-        ----------
-            None. 
+            A BeadGrowth object. . 
         """
         super().__init__()
         pass
@@ -61,13 +57,5 @@ class BeadGrowth(GeometricRestriction):
         shrink
             A Float specifying the maximum optimization displacement in the shrink direction. Either 
             *beadGrowth* or *shrink* or both must be specified The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -111,11 +111,7 @@ class Viscous:
 
         Returns
         -------
-            A Viscous object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Viscous object. . 
         """
         pass
 
@@ -124,13 +120,5 @@ class Viscous:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

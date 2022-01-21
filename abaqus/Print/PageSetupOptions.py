@@ -60,11 +60,7 @@ class PageSetupOptions:
             A Boolean specifying whether the output includes the Abaqus logo. The default value is 
             ON. 
         date
-            A Boolean specifying whether the output includes the date. The default value is ON. 
-
-        Returns
-        -------
-            None. 
+            A Boolean specifying whether the output includes the date. The default value is ON.
 
         Exceptions
         ----------

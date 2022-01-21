@@ -52,11 +52,7 @@ class XYPlotBase:
 
         Returns
         -------
-            An XYPlot object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            An XYPlot object. . 
         """
         pass
 
@@ -70,14 +66,6 @@ class XYPlotBase:
             A Boolean defining whether color distribution affects curve lines. 
         symbols
             A Boolean defining whether color distribution affects curve symbols. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -86,14 +74,6 @@ class XYPlotBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -103,14 +83,6 @@ class XYPlotBase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -125,14 +97,6 @@ class XYPlotBase:
             A Boolean specifying the viewport should refresh immediately after the command is 
             processed. This is typically only used when writing a script and it is desirable to show 
             intermediate results before the script completes. The default value is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -147,14 +111,6 @@ class XYPlotBase:
             A Boolean specifying the viewport should refresh immediately after the command is 
             processed. This is typically only used when writing a script and it is desirable to show 
             intermediate results before the script completes. The default value is False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -168,13 +124,5 @@ class XYPlotBase:
         transform
             A sequence of Floats specifying a transformation matrix used to scale or pan along the 
             axes of the active Chart object of this XYPlot. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -34,11 +34,7 @@ class AnimationController:
         ----------
         duration
             The SymbolicConstant UNLIMITED or an Int specifying how many seconds to play the 
-            animation. The default value is UNLIMITED. 
-
-        Returns
-        -------
-            None. 
+            animation. The default value is UNLIMITED.
 
         Exceptions
         ----------
@@ -52,14 +48,6 @@ class AnimationController:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -68,14 +56,6 @@ class AnimationController:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -84,14 +64,6 @@ class AnimationController:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -107,14 +79,6 @@ class AnimationController:
             nearest to this value, for *animationType*=HARMONIC the frame with the angle nearest to 
             this value, for *animationType*=SCALE_FACTOR the frame with the scale value nearest to 
             this value. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -123,14 +87,6 @@ class AnimationController:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -139,14 +95,6 @@ class AnimationController:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -157,11 +105,7 @@ class AnimationController:
         ----------
         animationType
             A SymbolicConstant specifying the type of movie to play. Possible values are 
-            SCALE_FACTOR, HARMONIC, TIME_HISTORY, and NONE. The default value is NONE. 
-
-        Returns
-        -------
-            None. 
+            SCALE_FACTOR, HARMONIC, TIME_HISTORY, and NONE. The default value is NONE.
 
         Exceptions
         ----------

@@ -35,11 +35,7 @@ class IgnoredEdge:
 
         Returns
         -------
-            A Float. 
-
-        Exceptions
-        ----------
-            None. 
+            A Float. . 
             !img 
         """
         pass

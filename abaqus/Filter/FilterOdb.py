@@ -46,11 +46,7 @@ class FilterOdb(OdbBase):
 
         Returns
         -------
-            A ButterworthFilter object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A ButterworthFilter object. and RangeError.
         """
         self.filters[name] = butterworthFilter = ButterworthFilter(name, cutoffFrequency, order, operation, halt, limit,
                                                                    invariant)
@@ -97,11 +93,7 @@ class FilterOdb(OdbBase):
 
         Returns
         -------
-            A Chebyshev1Filter object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A Chebyshev1Filter object. and RangeError.
         """
         self.filters[name] = chebyshev1Filter = Chebyshev1Filter(name, cutoffFrequency, rippleFactor, order, operation,
                                                                  halt, limit, invariant)
@@ -148,11 +140,7 @@ class FilterOdb(OdbBase):
 
         Returns
         -------
-            A Chebyshev2Filter object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A Chebyshev2Filter object. and RangeError.
         """
         self.filters[name] = chebyshev2Filter = Chebyshev2Filter(name, cutoffFrequency, rippleFactor, order, operation,
                                                                  halt, limit, invariant)
@@ -195,11 +183,7 @@ class FilterOdb(OdbBase):
 
         Returns
         -------
-            An OperatorFilter object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            An OperatorFilter object. and RangeError.
         """
         self.filters[name] = operatorFilter = OperatorFilter(name, cutoffFrequency, order, operation, halt, limit,
                                                              invariant)

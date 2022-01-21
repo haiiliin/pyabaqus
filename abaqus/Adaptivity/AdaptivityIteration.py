@@ -48,11 +48,7 @@ class AdaptivityIteration:
 
         Returns
         -------
-            An AdaptivityIteration object. 
-
-        Exceptions
-        ----------
-            None. 
+            An AdaptivityIteration object. . 
         """
         pass
 

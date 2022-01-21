@@ -35,14 +35,6 @@ class ContactPropertyAssignment:
         value
             A String specifying the value of the contact property to be assigned to the domain pair 
             whose index is referenced. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -62,14 +54,6 @@ class ContactPropertyAssignment:
             object, this parameter can also be a string that references an Eulerian material 
             surface.A String specifying a ContactProperty object associated with this pair of 
             regions. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -87,13 +71,5 @@ class ContactPropertyAssignment:
             SymbolicConstant GLOBAL.A region or a material object or the SymbolicConstant SELF. When 
             used with a ContactExp object, this parameter can also be a string that references an 
             Eulerian material surface.*surfPair* and *indices* arguments are mutually exclusive. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

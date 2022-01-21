@@ -116,11 +116,7 @@ class LoadDisplayOptions:
             default value is ON. 
         concentratedConcentrationFlux
             ​	A Boolean specifying whether concentrated concentration flux symbols are shown. The 
-            default value is ON. 
-
-        Returns
-        -------
-            None. 
+            default value is ON.
 
         Exceptions
         ----------

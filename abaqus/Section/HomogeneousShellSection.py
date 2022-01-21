@@ -117,11 +117,7 @@ class HomogeneousShellSection(GeometryShellSection):
 
         Returns
         -------
-            A HomogeneousShellSection object. 
-
-        Exceptions
-        ----------
-            None. 
+            A HomogeneousShellSection object. . 
         """
         super().__init__()
         pass
@@ -197,13 +193,5 @@ class HomogeneousShellSection(GeometryShellSection):
             define the thickness of the shell elements at each node. The *nodalThicknessField* 
             argument applies only when *thicknessType*=NODAL_ANALYTICAL_FIELD or 
             *thicknessType*=NODAL_DISCRETE_FIELD. The default value is an empty string. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

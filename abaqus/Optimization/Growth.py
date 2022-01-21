@@ -48,11 +48,7 @@ class Growth(GeometricRestriction):
 
         Returns
         -------
-            A Growth object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Growth object. . 
         """
         super().__init__()
         pass
@@ -71,13 +67,5 @@ class Growth(GeometricRestriction):
         shrink
             A Float specifying the maximum optimization displacement in the shrink direction. Either 
             *growth* or *shrink* or both must be specified The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

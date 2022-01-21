@@ -218,11 +218,7 @@ class Drawing:
         edgeColor
             A sequence of 0 or 3 Float values in the range of 0.0 to 1.0 that will be used to 
             compose the edge color.If the initial Float value is -1, the viewport background color 
-            will be used for the edge color. 
-
-        Returns
-        -------
-            None. 
+            will be used for the edge color.
 
         Exceptions
         ----------
@@ -243,11 +239,7 @@ class Drawing:
         pointColor
             A sequence of 0 or 3 Float values in the range of 0.0 to 1.0 that will be used to 
             compose the point color.If the initial Float value is -1, the viewport background color 
-            will be used for the edge color. 
-
-        Returns
-        -------
-            None. 
+            will be used for the edge color.
 
         Exceptions
         ----------
@@ -387,11 +379,7 @@ class Drawing:
         depthTest
             A Boolean specifying whether an object's depth will be considered during rendering. The 
             default value is ON.When OFF, the object will not be hidden by other objects in front of 
-            it. 
-
-        Returns
-        -------
-            None. 
+            it.
 
         Exceptions
         ----------

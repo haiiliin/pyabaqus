@@ -53,11 +53,7 @@ class InitialState(PredefinedField):
 
         Returns
         -------
-            An InitialState object. 
-
-        Exceptions
-        ----------
-            None. 
+            An InitialState object. . 
         """
         super().__init__()
         pass
@@ -79,13 +75,5 @@ class InitialState(PredefinedField):
         updateReferenceConfiguration
             A Boolean specifying whether to update the reference configuration based on the import 
             data. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

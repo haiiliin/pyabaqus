@@ -40,13 +40,5 @@ class MeshEditOptions:
             operations on other parts or assemblies in any model will be unaffected. The default 
             value is OFF.If you change the value of *enableUndo* to True, Abaqus sets *_suspendUndo* 
             to False. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

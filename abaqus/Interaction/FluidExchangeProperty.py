@@ -95,11 +95,7 @@ class FluidExchangeProperty(ContactProperty):
 
         Returns
         -------
-            A FluidExchangeProperty object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FluidExchangeProperty object. . 
         """
         super().__init__(name)
         pass
@@ -126,13 +122,5 @@ class FluidExchangeProperty(ContactProperty):
             An Int specifying the number of field variable dependencies in the data. This argument 
             is applicable only when *definition*=BULK_VISCOSITY, or when 
             *definition*=MASS_RATE_LEAK, or when *definition*=VOL_RATE_LEAK. The default value is 0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

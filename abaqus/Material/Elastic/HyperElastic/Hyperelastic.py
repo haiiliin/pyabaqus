@@ -166,11 +166,7 @@ class Hyperelastic:
 
         Returns
         -------
-            A Hyperelastic object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A Hyperelastic object.  and RangeError. 
         """
         pass
 

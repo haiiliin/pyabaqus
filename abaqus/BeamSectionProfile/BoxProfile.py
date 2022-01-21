@@ -82,11 +82,7 @@ class BoxProfile(Profile):
             *uniformThickness*=OFF. The default value is 0.0. 
         t4
             A Float specifying the wall thickness of the fourth segment. *t4* is required only when 
-            *uniformThickness*=OFF. The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
+            *uniformThickness*=OFF. The default value is 0.0.
 
         Exceptions
         ----------

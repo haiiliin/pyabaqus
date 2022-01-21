@@ -46,11 +46,7 @@ class SizingPlanarSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A SizingPlanarSymmetry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SizingPlanarSymmetry object. . 
         """
         super().__init__()
         pass
@@ -60,13 +56,5 @@ class SizingPlanarSymmetry(GeometricRestriction):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

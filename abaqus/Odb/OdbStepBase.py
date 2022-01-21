@@ -269,14 +269,6 @@ class OdbStepBase:
         ----------
         field
             A FieldOutput object specifying the default deformed field variable for visualization. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -287,13 +279,5 @@ class OdbStepBase:
         ----------
         field
             A FieldOutput object specifying the default field variable for visualization. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

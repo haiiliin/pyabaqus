@@ -88,11 +88,7 @@ class PipePressure(Load):
 
         Returns
         -------
-            A PipePressure object. 
-
-        Exceptions
-        ----------
-            None. 
+            A PipePressure object. . 
         """
         super().__init__()
         pass
@@ -118,14 +114,6 @@ class PipePressure(Load):
         side
             A SymbolicConstant specifying whether the pressure is applied internally or externally. 
             Possible values are INTERNAL and EXTERNAL. The default value is INTERNAL. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -152,13 +140,5 @@ class PipePressure(Load):
             amplitude is propagated from the previous static analysis step. FREED should be used if 
             the load has no amplitude reference. You should provide the *amplitude* argument only if 
             it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

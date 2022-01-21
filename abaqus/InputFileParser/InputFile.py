@@ -47,11 +47,7 @@ class InputFile:
 
         Returns
         -------
-            An InputFile object. 
-
-        Exceptions
-        ----------
-            None. 
+            An InputFile object. . 
         """
         pass
 

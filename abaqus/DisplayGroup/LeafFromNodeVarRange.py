@@ -46,11 +46,7 @@ class LeafFromNodeVarRange(Leaf):
 
         Returns
         -------
-            A LeafFromNodeVarRange object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LeafFromNodeVarRange object. . 
         """
         super().__init__(DEFAULT_MODEL)
         pass

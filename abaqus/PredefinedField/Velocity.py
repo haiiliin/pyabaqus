@@ -60,11 +60,7 @@ class Velocity(PredefinedField):
 
         Returns
         -------
-            A Velocity object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Velocity object. . 
         """
         super().__init__()
         pass
@@ -81,13 +77,5 @@ class Velocity(PredefinedField):
         distributionType
             A SymbolicConstant specifying whether the load is uniform. Possible values are MAGNITUDE 
             and FIELD_ANALYTICAL. The default value is MAGNITUDE. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

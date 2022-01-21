@@ -73,10 +73,6 @@ class SectionLayer:
 
         Returns
         -------
-            A SectionLayer object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SectionLayer object. . 
         """
         pass

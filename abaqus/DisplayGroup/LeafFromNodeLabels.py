@@ -45,11 +45,7 @@ class LeafFromNodeLabels(Leaf):
 
         Returns
         -------
-            A LeafFromNodeLabels object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LeafFromNodeLabels object. . 
         """
         super().__init__(DEFAULT_MODEL)
         pass

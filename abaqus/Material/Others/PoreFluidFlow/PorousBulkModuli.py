@@ -40,11 +40,7 @@ class PorousBulkModuli:
 
         Returns
         -------
-            A PorousBulkModuli object. 
-
-        Exceptions
-        ----------
-            None. 
+            A PorousBulkModuli object. . 
         """
         pass
 
@@ -53,13 +49,5 @@ class PorousBulkModuli:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -73,11 +73,7 @@ class BrittleCracking:
 
         Returns
         -------
-            A BrittleCracking object. 
-
-        Exceptions
-        ----------
-            None. 
+            A BrittleCracking object. . 
         """
         pass
 
@@ -86,13 +82,5 @@ class BrittleCracking:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

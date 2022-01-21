@@ -38,11 +38,7 @@ class DetonationPoint:
 
         Returns
         -------
-            A DetonationPoint object. 
-
-        Exceptions
-        ----------
-            None. 
+            A DetonationPoint object. . 
         """
         pass
 
@@ -51,13 +47,5 @@ class DetonationPoint:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

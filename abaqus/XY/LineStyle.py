@@ -121,13 +121,5 @@ class LineStyle:
         thickness
             A Float specifying the line thickness in mm to be used when drawing lines using this 
             LineStyle. The default value is 0.2. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

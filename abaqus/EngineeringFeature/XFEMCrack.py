@@ -85,11 +85,7 @@ class XFEMCrack(Crack):
 
         Returns
         -------
-            A XFEMCrack object. 
-
-        Exceptions
-        ----------
-            None. 
+            A XFEMCrack object. . 
         """
         super().__init__()
         pass
@@ -135,13 +131,5 @@ class XFEMCrack(Crack):
         autoDetectValue
             An integer specifying the number of element layers around the crack location, to which 
             the crack domain is shrunk. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

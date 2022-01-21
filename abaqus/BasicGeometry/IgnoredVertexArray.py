@@ -49,11 +49,7 @@ class IgnoredVertexArray:
 
         Returns
         -------
-            An IgnoredVertex object or a sequence of IgnoredVertex objects. 
-
-        Exceptions
-        ----------
-            None. 
+            An IgnoredVertex object or a sequence of IgnoredVertex objects. . 
             !img 
         """
         pass
@@ -71,11 +67,7 @@ class IgnoredVertexArray:
 
         Returns
         -------
-            An IgnoredVertex object or a sequence of IgnoredVertex objects. 
-
-        Exceptions
-        ----------
-            None. 
+            An IgnoredVertex object or a sequence of IgnoredVertex objects. . 
             !img 
         """
         pass
@@ -88,11 +80,7 @@ class IgnoredVertexArray:
 
         Returns
         -------
-            A String specifying the object or objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A String specifying the object or objects. . 
             !img 
         """
         pass

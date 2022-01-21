@@ -39,11 +39,7 @@ class Calibration:
 
         Returns
         -------
-            A Calibration object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Calibration object. . 
         """
         pass
 
@@ -64,11 +60,7 @@ class Calibration:
 
         Returns
         -------
-            A Behavior object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            A Behavior object..
         """
         self.behaviors = behavior = Behavior(name, typeName)
         return behavior
@@ -97,11 +89,7 @@ class Calibration:
 
         Returns
         -------
-            A DataSet object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            A DataSet object..
         """
         self.dataSets = dataSet = DataSet(name, data, type, form)
         return dataSet

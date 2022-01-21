@@ -45,11 +45,7 @@ class PngOptions:
             around 50 pixels and may be different for width and height. 
             The maximum value of width and height (*maxWidth* and *maxHeight* ) is the largest 
             number of pixels supported by the system graphics and will be at least as large as the 
-            screen dimensions. 
-
-        Returns
-        -------
-            None. 
+            screen dimensions.
 
         Exceptions
         ----------

@@ -56,11 +56,7 @@ class CombinedTestData:
 
         Returns
         -------
-            A CombinedTestData object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CombinedTestData object. . 
         """
         pass
 
@@ -69,13 +65,5 @@ class CombinedTestData:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

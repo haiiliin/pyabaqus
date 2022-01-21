@@ -76,11 +76,7 @@ class DiagnosticPrint:
 
         Returns
         -------
-            A DiagnosticPrint object. 
-
-        Exceptions
-        ----------
-            None. 
+            A DiagnosticPrint object. . 
         """
         pass
 
@@ -89,13 +85,5 @@ class DiagnosticPrint:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

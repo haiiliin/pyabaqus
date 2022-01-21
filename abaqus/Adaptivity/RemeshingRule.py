@@ -119,14 +119,6 @@ class RemeshingRule:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -136,14 +128,6 @@ class RemeshingRule:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -216,13 +200,5 @@ class RemeshingRule:
             None or an Int specifying an approximate limit on the number of elements that will be 
             created during remeshing. Use None to indicate there is not upper limit. The default 
             value is None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

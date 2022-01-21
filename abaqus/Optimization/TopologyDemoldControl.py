@@ -61,11 +61,7 @@ class TopologyDemoldControl(GeometricRestriction):
 
         Returns
         -------
-            A TopologyDemoldControl object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TopologyDemoldControl object. . 
         """
         super().__init__()
         pass
@@ -97,13 +93,5 @@ class TopologyDemoldControl(GeometricRestriction):
         technique
             A SymbolicConstant specifying the demold technique. Possible values are AUTO, 
             AUTO_TIGHT, POINT, SURFACE, and STAMP. The default value is AUTO. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

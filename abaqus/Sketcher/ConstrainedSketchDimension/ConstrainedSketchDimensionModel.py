@@ -45,12 +45,8 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchDimension object (None if the dimension cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        dimension
+            A ConstrainedSketchDimension object
         """
         pass
 
@@ -80,12 +76,8 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchDimension object (None if the dimension cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        dimension
+            A ConstrainedSketchDimension object
         """
         pass
 
@@ -114,12 +106,8 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchDimension object (None if the dimension cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        dimension
+            A ConstrainedSketchDimension object
         """
         pass
 
@@ -153,12 +141,8 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchDimension object (None if the dimension cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        dimension
+            A ConstrainedSketchDimension object
         """
         pass
 
@@ -187,12 +171,8 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchDimension object (None if the dimension cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        dimension
+            A ConstrainedSketchDimension object
         """
         pass
 
@@ -222,11 +202,7 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
 
         Returns
         -------
-            A ConstrainedSketchDimension object (None if the dimension cannot be created).
-
-        Exceptions
-        ----------
-            None.
-            !img
+        dimension
+            A ConstrainedSketchDimension object
         """
         pass

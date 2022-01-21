@@ -28,11 +28,8 @@ class Parameter(ConstrainedSketchParameter):
 
         Returns
         -------
-            A ConstrainedSketch object.
-
-        Exceptions
-        ----------
-            None. 
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object. 
             !img 
         """
         pass

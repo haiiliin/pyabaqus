@@ -30,10 +30,6 @@ class ConstrainedSketchVertexArray:
 
         Returns
         -------
-            A ConstrainedSketchVertex object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ConstrainedSketchVertex object. . 
         """
         pass

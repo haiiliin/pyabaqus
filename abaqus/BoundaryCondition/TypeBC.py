@@ -68,11 +68,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TypeBC object. . 
         """
         pass
 
@@ -103,11 +99,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TypeBC object. . 
         """
         pass
 
@@ -138,11 +130,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TypeBC object. . 
         """
         pass
 
@@ -173,11 +161,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TypeBC object. . 
         """
         pass
 
@@ -208,11 +192,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TypeBC object. . 
         """
         pass
 
@@ -243,11 +223,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TypeBC object. . 
         """
         pass
 
@@ -278,11 +254,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TypeBC object. . 
         """
         pass
 
@@ -313,11 +285,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TypeBC object. . 
         """
         pass
 
@@ -341,14 +309,6 @@ class TypeBC(BoundaryCondition):
             None or a DatumCsys object specifying the local coordinate system of the boundary 
             condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
             in the global coordinate system. The default value is None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -362,11 +322,7 @@ class TypeBC(BoundaryCondition):
             A String specifying the name of the step in which the boundary condition is modified. 
         typeName
             A SymbolicConstant specifying the predefined boundary condition type. Possible values 
-            are XSYMM, YSYMM, ZSYMM, XASYMM, YASYMM, ZASYMM, PINNED, and ENCASTRE. 
-
-        Returns
-        -------
-            None. 
+            are XSYMM, YSYMM, ZSYMM, XASYMM, YASYMM, ZASYMM, PINNED, and ENCASTRE.
 
         Exceptions
         ----------

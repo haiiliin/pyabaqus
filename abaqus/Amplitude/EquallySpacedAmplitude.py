@@ -62,11 +62,7 @@ class EquallySpacedAmplitude(Amplitude):
 
         Returns
         -------
-            An EquallySpacedAmplitude object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            An EquallySpacedAmplitude object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -87,11 +83,7 @@ class EquallySpacedAmplitude(Amplitude):
             SOLVER_DEFAULT. 
         timeSpan
             A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
-            and TOTAL. The default value is STEP. 
-
-        Returns
-        -------
-            None. 
+            and TOTAL. The default value is STEP.
 
         Exceptions
         ----------

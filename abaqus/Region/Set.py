@@ -143,11 +143,7 @@ class Set:
 
         Returns
         -------
-            A Set object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Set object. . 
         """
         pass
 
@@ -169,11 +165,7 @@ class Set:
 
         Returns
         -------
-            A Set object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Set object. . 
         """
         pass
 
@@ -202,11 +194,7 @@ class Set:
 
         Returns
         -------
-            A Set object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Set object. . 
         """
         pass
 
@@ -232,11 +220,7 @@ class Set:
 
         Returns
         -------
-            A Set object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Set object. . 
         """
         pass
 
@@ -259,11 +243,7 @@ class Set:
 
         Returns
         -------
-            A Set object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Set object. . 
         """
         pass
 
@@ -288,11 +268,7 @@ class Set:
 
         Returns
         -------
-            A Set object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Set object. . 
         """
         pass
 
@@ -317,10 +293,6 @@ class Set:
 
         Returns
         -------
-            A Set object or a tuple of Set objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A Set object or a tuple of Set objects. . 
         """
         pass

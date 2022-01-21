@@ -106,14 +106,6 @@ class BoltLoad(Load):
             The default value is False. You should provide the *preTenSecPartLevel* argument only if 
             the selected region belongs to a dependent part instance. A pre-tension section cannot 
             be defined at the part level for independent and model instances. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -137,13 +129,5 @@ class BoltLoad(Load):
             amplitude is propagated from the previous analysis step. FREED should be used if the 
             load is changed to have no amplitude reference. You should provide the *amplitude* 
             argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

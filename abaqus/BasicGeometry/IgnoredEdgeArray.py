@@ -52,11 +52,7 @@ class IgnoredEdgeArray:
 
         Returns
         -------
-            An IgnoredEdge object or a sequence of IgnoredEdge objects. 
-
-        Exceptions
-        ----------
-            None. 
+            An IgnoredEdge object or a sequence of IgnoredEdge objects. . 
             !img 
         """
         pass
@@ -74,11 +70,7 @@ class IgnoredEdgeArray:
 
         Returns
         -------
-            An IgnoredEdge object or a sequence of IgnoredEdge objects. 
-
-        Exceptions
-        ----------
-            None. 
+            An IgnoredEdge object or a sequence of IgnoredEdge objects. . 
             !img 
         """
         pass
@@ -91,11 +83,7 @@ class IgnoredEdgeArray:
 
         Returns
         -------
-            A String specifying the object or objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A String specifying the object or objects. . 
             !img 
         """
         pass

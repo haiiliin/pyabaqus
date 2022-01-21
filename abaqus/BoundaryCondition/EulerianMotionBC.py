@@ -241,11 +241,7 @@ class EulerianMotionBC(BoundaryCondition):
 
         Returns
         -------
-            An EulerianMotionBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            An EulerianMotionBC object. . 
         """
         super().__init__()
         pass
@@ -345,14 +341,6 @@ class EulerianMotionBC(BoundaryCondition):
         bufferSize
             None or a Float specifying the buffer between the surface box and the Eulerian section 
             mesh bounding box. The default value is 2.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -442,13 +430,5 @@ class EulerianMotionBC(BoundaryCondition):
         bufferSize
             None or a Float specifying the buffer between the surface box and the Eulerian section 
             mesh bounding box. The default value is 2.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

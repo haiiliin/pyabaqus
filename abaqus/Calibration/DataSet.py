@@ -38,11 +38,7 @@ class DataSet:
 
         Returns
         -------
-            A DataSet object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A DataSet object. . 
         """
         pass
 
@@ -53,13 +49,5 @@ class DataSet:
         ----------
         data
             A sequence of pairs of Floats specifying data set type pairs. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -62,11 +62,7 @@ class MultipointConstraint(Constraint):
 
         Returns
         -------
-            A MultipointConstraint object. 
-
-        Exceptions
-        ----------
-            None. 
+            A MultipointConstraint object. . 
         """
         super().__init__()
         pass
@@ -89,13 +85,5 @@ class MultipointConstraint(Constraint):
             A SymbolicConstant specifying the mode of the constraint when it is user-defined. 
             Possible values are DOF_MODE_MPC and NODE_MODE_MPC. The default value is 
             DOF_MODE_MPC.The *userMode* argument applies only when *mpcType*=USER_MPC. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

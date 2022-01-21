@@ -233,11 +233,7 @@ class SteadyStateDirectStep(AnalysisStep):
             eigenfrequencies of the system. The default value is OFF. 
         frictionDamping
             A Boolean specifying whether to add to the damping matrix contributions due to friction 
-            effects. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
+            effects. The default value is OFF.
 
         Exceptions
         ----------

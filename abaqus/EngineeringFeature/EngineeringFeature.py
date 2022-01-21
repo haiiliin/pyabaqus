@@ -68,11 +68,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            An AssembledFastener object.
-
-        Exceptions
-        ----------
-            None.
+            An AssembledFastener object..
         """
         self.fasteners[name] = assembledFastener = AssembledFastener(name, region, templateModel, controlSet,
                                                                      templateSurfaces, assignedSurfaces, propertyPrefix,
@@ -143,11 +139,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A ContourIntegral object.
-
-        Exceptions
-        ----------
-            None.
+            A ContourIntegral object..
         """
         self.cracks[name] = contourIntegral = ContourIntegral(name, crackFront, crackTip, extensionDirectionMethod,
                                                               symmetric, listOfRegions, crackFrontName, crackTipName,
@@ -185,11 +177,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A DebondVCCT object.
-
-        Exceptions
-        ----------
-            None.
+            A DebondVCCT object..
         """
         self.cracks[name] = debondVCCT = DebondVCCT(name, initiationStep, surfToSurfInteraction,
                                                     debondingForceAmplitude, printToDATFrequency)
@@ -244,11 +232,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A DiscreteFastener object.
-
-        Exceptions
-        ----------
-            None.
+            A DiscreteFastener object..
         """
         self.fasteners[name] = discreteFastener = DiscreteFastener(name, region, influenceRadius, ur1, ur2, ur3,
                                                                    coupling, weightingMethod, localCsys)
@@ -279,11 +263,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A HeatCapacitance object.
-
-        Exceptions
-        ----------
-            None.
+            A HeatCapacitance object..
         """
         self.inertias[name] = heatCapacitance = HeatCapacitance(name, region, table, temperatureDependency,
                                                                 dependencies)
@@ -316,11 +296,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A NonstructuralMass object.
-
-        Exceptions
-        ----------
-            None.
+            A NonstructuralMass object..
         """
         self.inertias[name] = nonstructuralMass = NonstructuralMass(name, region, units, magnitude, distribution)
         return nonstructuralMass
@@ -451,11 +427,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A PointFastener object.
-
-        Exceptions
-        ----------
-            None.
+            A PointFastener object..
         """
         self.fasteners[name] = pointFastener = PointFastener(name, region, physicalRadius, directionVector,
                                                              targetSurfaces, ur1, ur2, ur3, attachmentMethod,
@@ -525,11 +497,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A PointMassInertia object.
-
-        Exceptions
-        ----------
-            None.
+            A PointMassInertia object..
         """
         self.inertias[name] = pointMassInertia = PointMassInertia(name, region, mass, mass1, mass2, mass3, i11, i22,
                                                                   i33, i12, i13, i23, localCsys, alpha, composite)
@@ -576,11 +544,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A SpringDashpotToGround object.
-
-        Exceptions
-        ----------
-            None.
+            A SpringDashpotToGround object..
         """
         self.springDashpots[name] = springDashpotToGround = SpringDashpotToGround(name, region, dof, orientation,
                                                                                   springBehavior, dashpotBehavior,
@@ -639,11 +603,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A TwoPointSpringDashpot object.
-
-        Exceptions
-        ----------
-            None.
+            A TwoPointSpringDashpot object..
         """
         self.springDashpots[name] = twoPointSpringDashpot = TwoPointSpringDashpot(name, regionPairs, axis, dof1, dof2,
                                                                                   orientation, springBehavior,
@@ -708,11 +668,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A XFEMCrack object.
-
-        Exceptions
-        ----------
-            None.
+            A XFEMCrack object..
         """
         self.cracks[name] = xFEMCrack = XFEMCrack(name, crackDomain, allowCrackGrowth, crackLocation,
                                                   singularityCalcRadius, interactionProperty, elemId, nodeId,

@@ -60,13 +60,5 @@ class BCDisplayOptions:
             A Boolean specifying whether encastre symbols are shown. The default value is ON. 
         pinned
             A Boolean specifying whether pinned symbols are shown. The default value is ON. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

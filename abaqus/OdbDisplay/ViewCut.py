@@ -127,11 +127,7 @@ class ViewCut:
 
         Returns
         -------
-            A ViewCut object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ViewCut object. . 
         """
         pass
 
@@ -211,14 +207,6 @@ class ViewCut:
             A SymbolicConstant specifying which reference frame will be used when the cut follows 
             the deformation. Possible values are FIRST_FRAME, LAST_FRAME, and CURRENT_FRAME. The 
             default value is FIRST_FRAME. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -228,13 +216,5 @@ class ViewCut:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

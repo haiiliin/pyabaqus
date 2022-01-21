@@ -40,11 +40,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -68,11 +65,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -91,11 +85,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -116,11 +107,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -139,11 +127,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -165,11 +150,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -282,11 +264,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -305,11 +284,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -394,11 +370,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -422,11 +395,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -445,11 +415,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -482,11 +449,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -507,11 +471,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -534,11 +495,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -555,11 +513,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -579,11 +534,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -646,11 +598,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -711,11 +660,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -777,11 +723,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -837,11 +780,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -917,11 +857,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -961,11 +898,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -999,11 +933,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1041,11 +972,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1074,11 +1002,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1114,11 +1039,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1141,11 +1063,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1187,11 +1106,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1235,11 +1151,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1258,11 +1171,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1313,11 +1223,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1337,11 +1244,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1370,11 +1274,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1397,11 +1298,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1424,11 +1322,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1450,11 +1345,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1481,11 +1373,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1517,11 +1406,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1584,11 +1470,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1663,11 +1546,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1729,11 +1609,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1812,11 +1689,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1879,11 +1753,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -1957,11 +1828,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -2022,11 +1890,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -2105,11 +1970,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -2134,11 +1996,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -2170,11 +2029,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -2209,11 +2065,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -2246,11 +2099,8 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -2269,10 +2119,7 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass

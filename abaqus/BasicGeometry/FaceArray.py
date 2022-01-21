@@ -54,11 +54,7 @@ class FaceArray:
 
         Returns
         -------
-            A FaceArray object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FaceArray object. . 
             !img 
         """
         pass
@@ -97,11 +93,7 @@ class FaceArray:
 
         Returns
         -------
-            A Face object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Face object. . 
             !img 
         """
         pass
@@ -115,11 +107,7 @@ class FaceArray:
 
         Returns
         -------
-            An EdgeArray object specifying the exterior edges. 
-
-        Exceptions
-        ----------
-            None. 
+            An EdgeArray object specifying the exterior edges. . 
             !img 
         """
         pass
@@ -137,11 +125,7 @@ class FaceArray:
 
         Returns
         -------
-            A Face object or a sequence of Face objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A Face object or a sequence of Face objects. . 
             !img 
         """
         pass
@@ -154,11 +138,7 @@ class FaceArray:
 
         Returns
         -------
-            A String specifying the object or objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A String specifying the object or objects. . 
             !img 
         """
         pass
@@ -184,11 +164,7 @@ class FaceArray:
 
         Returns
         -------
-            A FaceArray object, which is a sequence of Face objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A FaceArray object, which is a sequence of Face objects. . 
             !img 
         """
         pass
@@ -210,11 +186,7 @@ class FaceArray:
 
         Returns
         -------
-            A FaceArray object, which is a sequence of Face objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A FaceArray object, which is a sequence of Face objects. . 
             !img 
         """
         pass
@@ -232,11 +204,7 @@ class FaceArray:
 
         Returns
         -------
-            A FaceArray object, which is a sequence of Face objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A FaceArray object, which is a sequence of Face objects. . 
             !img 
         """
         pass
@@ -254,11 +222,7 @@ class FaceArray:
             *low*: a tuple of three floats representing the minimum *X*-, *Y*-, and *Z*-boundary 
             values of the bounding box. 
             *high*: a tuple of three floats representing the maximum *X*-, *Y*-, and *Z*-boundary 
-            values of the bounding box. 
-
-        Exceptions
-        ----------
-            None. 
+            values of the bounding box. . 
             !img 
         """
         pass

@@ -47,11 +47,8 @@ class LoadCase:
 
         Returns
         -------
-            A LoadCase object. 
-
-        Exceptions
-        ----------
-            RangeError. 
+        case: LoadCase
+            A LoadCase object
         """
         pass
 
@@ -60,14 +57,6 @@ class LoadCase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -76,14 +65,6 @@ class LoadCase:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -102,13 +83,5 @@ class LoadCase:
         includeActiveBaseStateBC
             A Boolean specifying whether to include all active boundary conditions propagated or 
             modified from the base state. The default value is ON. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            RangeError. 
         """
         pass

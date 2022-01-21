@@ -92,11 +92,7 @@ class Feature(FeatureBase):
 
         Returns
         -------
-            A Feature object.
-
-        Exceptions
-        ----------
-            None.
+            A Feature object..
         """
         return Feature()
 
@@ -148,11 +144,8 @@ class Feature(FeatureBase):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         return Feature()
 

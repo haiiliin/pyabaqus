@@ -68,11 +68,7 @@ class OdbDatumCsys:
 
         Returns
         -------
-            An OdbDatumCsys object. 
-
-        Exceptions
-        ----------
-            None. 
+            An OdbDatumCsys object. . 
         """
         pass
 
@@ -105,11 +101,7 @@ class OdbDatumCsys:
 
         Returns
         -------
-            An OdbDatumCsys object. 
-
-        Exceptions
-        ----------
-            None. 
+            An OdbDatumCsys object. . 
         """
         pass
 
@@ -143,11 +135,7 @@ class OdbDatumCsys:
 
         Returns
         -------
-            An OdbDatumCsys object. 
-
-        Exceptions
-        ----------
-            None. 
+            An OdbDatumCsys object. . 
         """
         pass
 
@@ -175,11 +163,7 @@ class OdbDatumCsys:
 
         Returns
         -------
-            An OdbDatumCsys object. 
-
-        Exceptions
-        ----------
-            None. 
+            An OdbDatumCsys object. . 
         """
         pass
 
@@ -199,10 +183,6 @@ class OdbDatumCsys:
 
         Returns
         -------
-            An OdbDatumCsys object. 
-
-        Exceptions
-        ----------
-            None. 
+            An OdbDatumCsys object. . 
         """
         pass

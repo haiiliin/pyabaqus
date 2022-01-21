@@ -94,11 +94,7 @@ class VelocityBaseMotionBC(BoundaryCondition):
 
         Returns
         -------
-            A VelocityBaseMotionBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A VelocityBaseMotionBC object. . 
         """
         super().__init__()
         pass
@@ -129,14 +125,6 @@ class VelocityBaseMotionBC(BoundaryCondition):
             UNSET should be used if the boundary condition has no amplitude reference. The default 
             value is UNSET. You should provide the *amplitude* argument only if it is valid for the 
             specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -154,13 +142,5 @@ class VelocityBaseMotionBC(BoundaryCondition):
             amplitude is propagated from the previous analysis step. FREED should be used if the 
             boundary condition is changed to have no amplitude reference. You should provide the 
             *amplitude* argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

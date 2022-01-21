@@ -85,11 +85,7 @@ class LineLoad(Load):
 
         Returns
         -------
-            A LineLoad object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LineLoad object. . 
         """
         super().__init__()
         pass
@@ -125,14 +121,6 @@ class LineLoad(Load):
         system
             A SymbolicConstant specifying whether the load is applied in a global or the beam local 
             frame of reference. Possible values are GLOBAL and LOCAL. The default value is GLOBAL. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -165,13 +153,5 @@ class LineLoad(Load):
             amplitude is propagated from the previous static analysis step. FREED should be used if 
             the load is changed to have no amplitude reference. You should provide the *amplitude* 
             argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

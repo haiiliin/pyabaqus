@@ -36,14 +36,6 @@ class MainSecondaryAssignment:
             A SymbolicConstant specifying the value of the main-secondary role to be assigned to the 
             surface whose index is referenced. Possible values are MAIN, SECONDARY, and BALANCED. 
             The SymbolicConstant BALANCED can be specified only in an Abaqus/Standard analysis. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -65,14 +57,6 @@ class MainSecondaryAssignment:
             first surface. Possible values of the SymbolicConstant are MAIN, SECONDARY, and 
             BALANCED. The SymbolicConstant BALANCED can be specified only in an Abaqus/Standard 
             analysis. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -83,13 +67,5 @@ class MainSecondaryAssignment:
         ----------
         indices
             A sequence of Ints specifying the index of each main-secondary assignment to delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

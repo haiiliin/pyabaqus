@@ -244,10 +244,6 @@ class AdaptivityStep(StepBase):
         Returns
         -------
             An AdaptiveMeshDomain object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.adaptiveMeshDomains[controls] = adaptiveMeshDomain = AdaptiveMeshDomain(region, controls, frequency,
                                                                                      initialMeshSweeps, meshSweeps)

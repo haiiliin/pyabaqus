@@ -165,11 +165,7 @@ class AssemblyBase(Feature):
 
         Returns
         -------
-            A PartInstance object.
-
-        Exceptions
-        ----------
-            None.
+            A PartInstance object..
         """
         pass
 
@@ -194,11 +190,7 @@ class AssemblyBase(Feature):
 
         Returns
         -------
-            A ModelInstance object.
-
-        Exceptions
-        ----------
-            None.
+            A ModelInstance object..
         """
         pass
 
@@ -218,14 +210,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -235,14 +219,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -251,14 +227,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -270,14 +238,6 @@ class AssemblyBase(Feature):
         featureNames
             A sequence of Strings specifying the feature names that will be deleted from the 
             assembly. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -291,14 +251,6 @@ class AssemblyBase(Feature):
         exclude
             A Bool specifying whether to exclude the selected instances from the analysis or include 
             them. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -307,14 +259,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -421,11 +365,7 @@ class AssemblyBase(Feature):
             profile is not supported. 
             TAPERED_BEAM_MI: Moment of inertia calculations for tapered beams are not accurate. 
             SUBSTRUCTURE_INCORRECT_PROPERTIES: The user assigned density and thickness is not 
-            considered for substructures. 
-
-        Exceptions
-        ----------
-            None. 
+            considered for substructures. . 
         """
         pass
 
@@ -457,11 +397,7 @@ class AssemblyBase(Feature):
         Returns
         -------
             A Float specifying the angle between the specified entities. If you provide a plane as 
-            an argument, Abaqus/CAE computes the angle using the normal to the plane. 
-
-        Exceptions
-        ----------
-            None. 
+            an argument, Abaqus/CAE computes the angle using the normal to the plane. . 
         """
         pass
 
@@ -475,11 +411,7 @@ class AssemblyBase(Feature):
 
         Returns
         -------
-            A tuple of three Floats representing the coordinates of the specified point. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of three Floats representing the coordinates of the specified point. . 
         """
         pass
 
@@ -502,11 +434,7 @@ class AssemblyBase(Feature):
 
         Returns
         -------
-            A Float specifying the calculated distance. 
-
-        Exceptions
-        ----------
-            None. 
+            A Float specifying the calculated distance. . 
         """
         pass
 
@@ -532,11 +460,7 @@ class AssemblyBase(Feature):
             *startVertex*: A ConstrainedSketchVertex object specifying the vertex associated with one end of the
             attachment line. This end is also associated with the startFace. 
             *endVertex*: A ConstrainedSketchVertex object specifying the vertex associated with the other end of the
-            attachment line. This end is also associated with the endFace. 
-
-        Exceptions
-        ----------
-            None. 
+            attachment line. This end is also associated with the endFace. . 
         """
         pass
 
@@ -552,11 +476,7 @@ class AssemblyBase(Feature):
         Returns
         -------
             A tuple of strings representing the section names. If no section names are found, the 
-            tuple will contain one empty string. 
-
-        Exceptions
-        ----------
-            None. 
+            tuple will contain one empty string. . 
         """
         pass
 
@@ -572,14 +492,6 @@ class AssemblyBase(Feature):
             the assembly tree or component identifier associated with the part in the EAF file. If 
             *ids* is an empty sequence, all occurrences or parts will be imported. The default value 
             is an empty sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -595,14 +507,6 @@ class AssemblyBase(Feature):
             the assembly tree or component identifier associated with the part in the EAF file. If 
             *ids* is an empty sequence, all occurrences or parts will be imported. The default value 
             is an empty sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -620,14 +524,6 @@ class AssemblyBase(Feature):
             the assembly tree or component identifier associated with the part in the EAF file. If 
             *ids* is an empty sequence, all occurrences or parts will be imported. The default value 
             is an empty sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -645,14 +541,6 @@ class AssemblyBase(Feature):
             the assembly tree or component identifier associated with the part in the EAF file. If 
             *ids* is an empty sequence, all occurrences or parts will be imported. The default value 
             is an empty sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -670,14 +558,6 @@ class AssemblyBase(Feature):
             the assembly tree or component identifier associated with the part in the EAF file. If 
             *ids* is an empty sequence, all occurrences or parts will be imported. The default value 
             is an empty sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -695,14 +575,6 @@ class AssemblyBase(Feature):
             the assembly tree or component identifier associated with the part in the EAF file. If 
             *ids* is an empty sequence, all occurrences or parts will be imported. The default value 
             is an empty sequence. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -714,14 +586,6 @@ class AssemblyBase(Feature):
         ----------
         instances
             A sequence of PartInstance objects to convert to dependent part instances. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -733,14 +597,6 @@ class AssemblyBase(Feature):
         ----------
         instances
             A sequence of PartInstance objects to convert to independent part instances. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -749,14 +605,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -765,14 +613,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -803,14 +643,6 @@ class AssemblyBase(Feature):
         vertices
             A sequence of candidate vertices to be projected onto the sketch. By default, all 
             vertices are candidates for projection. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -820,14 +652,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -841,14 +665,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -857,14 +673,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -875,14 +683,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -891,14 +691,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -909,14 +701,6 @@ class AssemblyBase(Feature):
         ----------
         featureNames
             A sequence of Strings specifying the names of features to resume. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -925,14 +709,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -950,14 +726,6 @@ class AssemblyBase(Feature):
         angle
             A Float specifying the rotation angle in degrees. Use the right-hand rule to determine 
             the direction. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -970,14 +738,6 @@ class AssemblyBase(Feature):
             A sequence of Strings specifying the names of instances to translate. 
         vector
             A sequence of three Floats specifying a translation vector. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -986,14 +746,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1006,11 +758,7 @@ class AssemblyBase(Feature):
             A Boolean specifying whether the positioning constraints in the assembly should be 
             regenerated together before regenerating other assembly features. The default value is 
             ON.If the assembly has position constraint features and you modify the value of 
-            *regenerateConstraintsTogether*, Abaqus/CAE will regenerate the assembly features. 
-
-        Returns
-        -------
-            None. 
+            *regenerateConstraintsTogether*, Abaqus/CAE will regenerate the assembly features.
 
         Exceptions
         ----------
@@ -1026,14 +774,6 @@ class AssemblyBase(Feature):
         ----------
         featureNames
             A sequence of Strings specifying the names of features to suppress in the assembly. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1046,14 +786,6 @@ class AssemblyBase(Feature):
         ----------
         instances
             A sequence of PartInstance objects to be converted to regular part instances. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1070,14 +802,6 @@ class AssemblyBase(Feature):
         version
             A Float specifying the ACIS version. For example, the Float 12.0 corresponds to ACIS 
             Version 12.0. The default value is the current version of ACIS. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1096,14 +820,6 @@ class AssemblyBase(Feature):
             A Bool specifying whether to update the path of the CAD model file specified in the 
             *parameterFile* to the current directory, if the CAD model is present in the current 
             directory. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1113,14 +829,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1130,14 +838,6 @@ class AssemblyBase(Feature):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1156,14 +856,6 @@ class AssemblyBase(Feature):
             A positive Integer specifying the new start node label. 
         startElemLabel
             A positive Integer specifying the new start element label. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1196,14 +888,6 @@ class AssemblyBase(Feature):
             of given nodes, and be ordered to correspond to the given nodes in *ascending order* 
             according to index. These coordinates are positions of the nodes of a mesh that will be 
             the target face corresponding to nodes provided. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -1215,13 +899,5 @@ class AssemblyBase(Feature):
         ----------
         nodes
             A sequence of MeshNode objects or a Set object containing nodes. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

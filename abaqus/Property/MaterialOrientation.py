@@ -124,11 +124,7 @@ class MaterialOrientation:
 
         Returns
         -------
-            A MaterialOrientation object. 
-
-        Exceptions
-        ----------
-            None. 
+            A MaterialOrientation object. . 
         """
         pass
 
@@ -225,11 +221,7 @@ class MaterialOrientation:
 
         Returns
         -------
-            A MaterialOrientation object. 
-
-        Exceptions
-        ----------
-            None. 
+            A MaterialOrientation object. . 
         """
         pass
 
@@ -238,13 +230,5 @@ class MaterialOrientation:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

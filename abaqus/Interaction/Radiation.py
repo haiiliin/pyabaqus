@@ -36,11 +36,7 @@ class Radiation:
 
         Returns
         -------
-            A Radiation object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Radiation object. . 
         """
         pass
 
@@ -49,13 +45,5 @@ class Radiation:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

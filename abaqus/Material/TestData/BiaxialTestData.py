@@ -56,11 +56,7 @@ class BiaxialTestData:
 
         Returns
         -------
-            A BiaxialTestData object. 
-
-        Exceptions
-        ----------
-            None. 
+            A BiaxialTestData object. . 
         """
         pass
 
@@ -69,13 +65,5 @@ class BiaxialTestData:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

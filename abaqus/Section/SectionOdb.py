@@ -50,11 +50,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            An AcousticInfiniteSection object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            An AcousticInfiniteSection object. and RangeError.
         """
         self.sections[name] = section = AcousticInfiniteSection(name, material, thickness, order)
         return section
@@ -77,11 +73,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            An AcousticInterfaceSection object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            An AcousticInterfaceSection object. and RangeError.
         """
         self.sections[name] = section = AcousticInterfaceSection(name, thickness)
         return section
@@ -195,11 +187,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A BeamSection object.
-
-        Exceptions
-        ----------
-            None.
+            A BeamSection object..
         """
         self.sections[name] = section = BeamSection(name, integration, profile, poissonRatio, thermalExpansion,
                                                     temperatureDependency, dependencies, density, referenceTemperature,
@@ -337,11 +325,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A CompositeShellSection object.
-
-        Exceptions
-        ----------
-            None.
+            A CompositeShellSection object..
         """
         self.sections[name] = section = CompositeShellSection(name, layup, symmetric, thicknessType, preIntegrate,
                                                               poissonDefinition, poisson, integrationRule, temperature,
@@ -373,11 +357,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A CompositeSolidSection object.
-
-        Exceptions
-        ----------
-            None.
+            A CompositeSolidSection object..
         """
         self.sections[name] = section = CompositeSolidSection(name, layup, symmetric, layupName)
         return section
@@ -481,11 +461,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A ConnectorSection object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A ConnectorSection object. and RangeError.
         """
         self.sections[name] = section = ConnectorSection(name, assembledType, rotationalType, translationalType,
                                                          integration, u1ReferenceLength, u2ReferenceLength,
@@ -513,11 +489,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            An EulerianSection object.
-
-        Exceptions
-        ----------
-            None.
+            An EulerianSection object..
         """
         self.sections[name] = section = EulerianSection(name, data)
         return section
@@ -560,11 +532,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A GasketSection object.
-
-        Exceptions
-        ----------
-            InvalidNameError and ValueError.
+            A GasketSection object. and ValueError.
         """
         self.sections[name] = section = GasketSection(name, material, crossSection, initialGap, initialThickness,
                                                       initialVoid, stabilizationStiffness)
@@ -625,11 +593,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A GeneralStiffnessSection object.
-
-        Exceptions
-        ----------
-            None.
+            A GeneralStiffnessSection object..
         """
         self.sections[name] = section = GeneralStiffnessSection(name, stiffnessMatrix, referenceTemperature,
                                                                 applyThermalStress, temperatureDependency, dependencies,
@@ -722,11 +686,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A HomogeneousShellSection object.
-
-        Exceptions
-        ----------
-            None.
+            A HomogeneousShellSection object..
         """
         self.sections[name] = section = HomogeneousShellSection(name, material, thickness, numIntPts, thicknessType,
                                                                 preIntegrate, poissonDefinition, poisson,
@@ -755,11 +715,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A HomogeneousSolidSection object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A HomogeneousSolidSection object. and RangeError.
         """
         self.sections[name] = section = HomogeneousSolidSection(name, material, thickness)
         return section
@@ -879,11 +835,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A PEGSection object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A PEGSection object. and RangeError.
         """
         self.sections[name] = section = PEGSection(name, material, thickness, wedgeAngle1, wedgeAngle2)
         return section

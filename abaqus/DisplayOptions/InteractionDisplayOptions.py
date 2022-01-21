@@ -49,11 +49,7 @@ class InteractionDisplayOptions:
             default value is ON. 
         concentratedFilmCondition
             A Boolean specifying whether concentrated film condition symbols are shown. The default 
-            value is ON. 
-
-        Returns
-        -------
-            None. 
+            value is ON.
 
         Exceptions
         ----------

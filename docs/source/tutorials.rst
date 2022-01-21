@@ -28,7 +28,7 @@ easier, and that is what `pyabaqus` does.
 The example model described in the following is simple, there is a squre structure, the vertical displacement of the bottom face is fixed, and there is a vertical pressure in the top surface, the Abaqus model is showed as follows:
 
 
-.. image:: model.png
+.. image:: images/model.png
     :width: 50%
     :align: center
 
@@ -81,7 +81,7 @@ Is this code, we draw a sketch with a squre. Now we can create a part using this
     part = model.Part(name='part', dimensionality=THREE_D, type=DEFORMABLE_BODY)
     part.BaseSolidExtrude(sketch=sketch, depth=1)
 
-The first create a 3D and deformable part. Then we use the extrusion method to create a part using the sketch. 
+The first line creates a 3D and deformable part. Then we use the extrusion method to create a part using the sketch. 
 
 
 Create some sets for boundary conditions and loads
@@ -365,6 +365,7 @@ We can use the `xyDataListFromField` to extract the output data:
 .. code-block:: Python
 
     import numpy as np
+    
     data = np.array(dataList[0])
     np.savetxt('data.csv', data, header='time,U3', delimiter=',', comments='')
 
@@ -374,14 +375,14 @@ Results of above example
 
 The distribution of `U3` of above model is showed as follows:
 
-.. image:: output.png
+.. image:: images/output.png
     :width: 70%
     :align: center
 
 
 The distribution of the vertical displacement of a point in the top surface is showed as follows:
 
-.. image:: compression.png
+.. image:: images/compression.png
     :width: 70%
     :align: center
 
@@ -401,7 +402,7 @@ The whole output script of this example is showed as follows:
 
     executeOnCaeStartup()
 
-    # Opem output database
+    # Open output database
     odb = session.openOdb('Job-1.odb')
 
     # Extract output data
@@ -445,7 +446,7 @@ Submit a job by an input file
 
 If argument `showStatus` of `abaqus.submitJobByInputFile` is set to True (by default, it is set to True), a job monitor will be create to monitor the job, showed in the following figure:
 
-.. image:: job_monitor.png
+.. image:: images/job_monitor.png
     :width: 100%
     :align: center
 

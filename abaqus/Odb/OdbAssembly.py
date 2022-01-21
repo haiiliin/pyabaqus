@@ -37,11 +37,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbDatumCsys object.
-
-        Exceptions
-        ----------
-            None.
+            An OdbDatumCsys object..
         """
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
@@ -75,11 +71,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbDatumCsys object.
-
-        Exceptions
-        ----------
-            None.
+            An OdbDatumCsys object..
         """
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
@@ -114,11 +106,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbDatumCsys object.
-
-        Exceptions
-        ----------
-            None.
+            An OdbDatumCsys object..
         """
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
@@ -147,11 +135,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbDatumCsys object.
-
-        Exceptions
-        ----------
-            None.
+            An OdbDatumCsys object..
         """
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
@@ -172,11 +156,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbDatumCsys object.
-
-        Exceptions
-        ----------
-            None.
+            An OdbDatumCsys object..
         """
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
@@ -212,11 +192,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbInstance object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            An OdbInstance object..
         """
         self.instances[name] = odbInstance = OdbInstance(name, object, localCoordSystem)
         return odbInstance
@@ -260,11 +236,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbRigidBody object.
-
-        Exceptions
-        ----------
-            None.
+            An OdbRigidBody object..
         """
         odbRigidBody = OdbRigidBody(referenceNode, position, isothermal, elements, tieNodes, pinNodes, analyticSurface)
         self.rigidBodies.append(odbRigidBody)
@@ -291,11 +263,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbSet object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            An OdbSet object..
         """
         self.nodeSets[name] = odbSet = OdbSet(name, nodes)
         return odbSet

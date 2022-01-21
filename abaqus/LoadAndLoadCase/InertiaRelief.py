@@ -75,11 +75,7 @@ class InertiaRelief(Load):
 
         Returns
         -------
-            An InertiaRelief object. 
-
-        Exceptions
-        ----------
-            None. 
+            An InertiaRelief object. . 
         """
         super().__init__()
         pass
@@ -117,14 +113,6 @@ class InertiaRelief(Load):
             degrees of freedom for the inertia relief load. If *localCoordinates*=None, the free 
             directions are defined in the global coordinate system. When this member is queried, it 
             returns an Int. The default value is None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -160,13 +148,5 @@ class InertiaRelief(Load):
         fixed
             A Boolean specifying whether the inertia relief loading should remain fixed at the 
             current loading at the start of the step. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -51,13 +51,5 @@ class Title:
             A Boolean specifying whether to show the default title. The default value is OFF. 
         titleStyle
             A TextStyle object specifying the text properties used to display the legend title. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

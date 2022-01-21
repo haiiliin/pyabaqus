@@ -98,11 +98,7 @@ class HistoryPoint:
 
         Returns
         -------
-            A HistoryPoint object. 
-
-        Exceptions
-        ----------
-            None. 
+            A HistoryPoint object. . 
         """
         pass
 
@@ -147,11 +143,7 @@ class HistoryPoint:
 
         Returns
         -------
-            A HistoryPoint object. 
-
-        Exceptions
-        ----------
-            None. 
+            A HistoryPoint object. . 
         """
         pass
 
@@ -170,11 +162,7 @@ class HistoryPoint:
 
         Returns
         -------
-            A HistoryPoint object. 
-
-        Exceptions
-        ----------
-            None. 
+            A HistoryPoint object. . 
         """
         pass
 
@@ -193,11 +181,7 @@ class HistoryPoint:
 
         Returns
         -------
-            A HistoryPoint object. 
-
-        Exceptions
-        ----------
-            None. 
+            A HistoryPoint object. . 
         """
         pass
 
@@ -216,11 +200,7 @@ class HistoryPoint:
 
         Returns
         -------
-            A HistoryPoint object. 
-
-        Exceptions
-        ----------
-            None. 
+            A HistoryPoint object. . 
         """
         pass
 

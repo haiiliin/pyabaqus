@@ -49,11 +49,7 @@ class SizingRotationalSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A SizingRotationalSymmetry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SizingRotationalSymmetry object. . 
         """
         super().__init__()
         pass
@@ -72,13 +68,5 @@ class SizingRotationalSymmetry(GeometricRestriction):
             default value is None. 
         ignoreFrozenArea
             A Boolean specifying whether to ignore frozen areas. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

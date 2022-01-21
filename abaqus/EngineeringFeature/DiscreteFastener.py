@@ -78,11 +78,7 @@ class DiscreteFastener(Fastener):
 
         Returns
         -------
-            A DiscreteFastener object. 
-
-        Exceptions
-        ----------
-            None. 
+            A DiscreteFastener object. . 
         """
         super().__init__()
         pass
@@ -119,13 +115,5 @@ class DiscreteFastener(Fastener):
             None or a DatumCsys object specifying the local coordinate system of fastener couplings. 
             If *localCsys*=None, couplings are defined in the global coordinate system. When this 
             member is queried, it returns an Int. The default value is None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -53,11 +53,7 @@ class HistoryOutput:
 
         Returns
         -------
-            A HistoryOutput object. 
-
-        Exceptions
-        ----------
-            None. 
+            A HistoryOutput object. . 
         """
         pass
 
@@ -72,14 +68,6 @@ class HistoryOutput:
             or mode number. 
         value
             A Double specifying the value of the variable at the frame value specified in *frame*. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -94,11 +82,7 @@ class HistoryOutput:
             frequency, or mode number. 
         value
             A sequence of Floats specifying the value of the variable at the frame values specified 
-            in *frame*. 
-
-        Returns
-        -------
-            None. 
+            in *frame*.
 
         Exceptions
         ----------
@@ -117,14 +101,6 @@ class HistoryOutput:
             A sequence of pairs of Floats specifying the pairs (*frameValue*, *value*) where 
             *frameValue* is either time, frequency, or mode and *value* is the value of the 
             specified variable at *frameValue*. (This value depends on the type of the variable.) 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 

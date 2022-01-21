@@ -5,7 +5,7 @@ import numpy as np
 
 executeOnCaeStartup()
 
-# Opem output database
+# Open output database
 odb = session.openOdb('Job-1.odb')
 
 # Extract output data

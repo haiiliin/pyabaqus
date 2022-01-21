@@ -48,13 +48,5 @@ class PrintOptions:
             A Boolean specifying whether the raster image printed is reduced from true color to 256 
             colors to reduce file size. The quality of the image will be compromised. The default 
             value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

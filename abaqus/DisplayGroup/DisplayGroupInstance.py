@@ -56,11 +56,7 @@ class DisplayGroupInstance:
 
         Returns
         -------
-            A Dictionary object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Dictionary object. . 
         """
         pass
 
@@ -77,11 +73,7 @@ class DisplayGroupInstance:
 
         Returns
         -------
-            A Dictionary object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Dictionary object. . 
         """
         pass
 
@@ -98,13 +90,5 @@ class DisplayGroupInstance:
             is available only for DisplayGroupInstance objects that are members of the 
             DisplayGroupInstance repository member of the OdbDisplay object. The default value is 
             OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

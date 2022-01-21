@@ -43,15 +43,7 @@ class BoundaryCondition:
         Parameters
         ----------
         stepName
-            A String specifying the name of the step in which the boundary condition is deactivated. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
+            A String specifying the name of the step in which the boundary condition is deactivated.
         """
         pass
 
@@ -64,15 +56,7 @@ class BoundaryCondition:
             A String specifying the name of the step from which the boundary condition state is 
             moved. 
         toStepName
-            A String specifying the name of the step to which the boundary condition state is moved. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
+            A String specifying the name of the step to which the boundary condition state is moved.
         """
         pass
 
@@ -83,15 +67,7 @@ class BoundaryCondition:
         Parameters
         ----------
         stepName
-            A String specifying the name of the step in which the boundary condition state is reset. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
+            A String specifying the name of the step in which the boundary condition state is reset.
         """
         pass
 
@@ -100,14 +76,6 @@ class BoundaryCondition:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -116,14 +84,6 @@ class BoundaryCondition:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -134,14 +94,6 @@ class BoundaryCondition:
         ----------
         indices
             A sequence of Ints specifying the index of each boundary condition to delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 

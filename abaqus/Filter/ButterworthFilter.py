@@ -59,11 +59,7 @@ class ButterworthFilter(Filter):
 
         Returns
         -------
-            A ButterworthFilter object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A ButterworthFilter object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -90,11 +86,7 @@ class ButterworthFilter(Filter):
             used. The default value is None. 
         invariant
             A SymbolicConstant specifying the invariant to which filtering is applied. Possible 
-            values are NONE, FIRST, and SECOND. The default value is NONE. 
-
-        Returns
-        -------
-            None. 
+            values are NONE, FIRST, and SECOND. The default value is NONE.
 
         Exceptions
         ----------

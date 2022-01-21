@@ -49,11 +49,7 @@ class Assembly(MeshEditAssembly, MeshAssembly, PropertyAssembly, RegionAssembly,
 
         Returns
         -------
-            A ConnectorOrientation object.
-
-        Exceptions
-        ----------
-            None.
+            A ConnectorOrientation object..
         """
         connectorOrientation = ConnectorOrientation(region, localCsys1, axis1, angle1, orient2sameAs1, localCsys2,
                                                     axis2, angle2)

@@ -71,11 +71,7 @@ class StampControl(GeometricRestriction):
 
         Returns
         -------
-            A StampControl object. 
-
-        Exceptions
-        ----------
-            None. 
+            A StampControl object. . 
         """
         super().__init__()
         pass
@@ -114,13 +110,5 @@ class StampControl(GeometricRestriction):
             0.01. 
         undercutTolerance
             A Float specifying the undercut tolerance. The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

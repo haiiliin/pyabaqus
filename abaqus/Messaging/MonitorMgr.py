@@ -41,14 +41,6 @@ class MonitorMgr:
             passed as the *userData* argument to the addMessageCallback method. 
         userData
             Any Python object or None. This object is passed to the callback function. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -95,14 +87,6 @@ class MonitorMgr:
         userData
             Any Python object or None; it must be the same as the *userData* argument specified in 
             the original call to addMessageCallback. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 

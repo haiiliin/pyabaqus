@@ -39,11 +39,7 @@ class LeafFromReferencePoint(Leaf):
 
         Returns
         -------
-            A LeafFromReferencePoint object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LeafFromReferencePoint object. . 
         """
         super().__init__(DEFAULT_MODEL)
         pass

@@ -72,11 +72,7 @@ class CapCreepCohesion:
 
         Returns
         -------
-            A CapCreepCohesion object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CapCreepCohesion object. . 
         """
         pass
 
@@ -85,13 +81,5 @@ class CapCreepCohesion:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

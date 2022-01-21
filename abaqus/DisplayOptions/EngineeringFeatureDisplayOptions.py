@@ -48,11 +48,7 @@ class EngineeringFeatureDisplayOptions:
             ON. 
         twoPointSpring
             A Boolean specifying whether two-point spring symbols are shown. The default value is 
-            ON. 
-
-        Returns
-        -------
-            None. 
+            ON.
 
         Exceptions
         ----------

@@ -85,11 +85,7 @@ class MagneticVectorPotentialBC(BoundaryCondition):
 
         Returns
         -------
-            A MagneticVectorPotentialBC object. 
-
-        Exceptions
-        ----------
-            None. 
+            A MagneticVectorPotentialBC object. . 
         """
         super().__init__()
         pass
@@ -126,14 +122,6 @@ class MagneticVectorPotentialBC(BoundaryCondition):
             None or a DatumCsys object specifying the local coordinate system of the boundary 
             condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
             in the global coordinate system. The default value is None. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -161,13 +149,5 @@ class MagneticVectorPotentialBC(BoundaryCondition):
             amplitude is propagated from the previous analysis step. FREED should be used if the 
             boundary condition is changed to have no amplitude reference. You should provide the 
             *amplitude* argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

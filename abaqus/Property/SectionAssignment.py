@@ -61,11 +61,7 @@ class SectionAssignment:
 
         Returns
         -------
-            A SectionAssignment object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SectionAssignment object. . 
         """
         pass
 
@@ -74,14 +70,6 @@ class SectionAssignment:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -90,14 +78,6 @@ class SectionAssignment:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -125,13 +105,5 @@ class SectionAssignment:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

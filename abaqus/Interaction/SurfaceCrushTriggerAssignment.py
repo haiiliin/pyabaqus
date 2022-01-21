@@ -42,14 +42,6 @@ class SurfaceCrushTriggerAssignment:
             - A Float specifying the crush stress value to be used for the surface. 
             - A Float specifying the crush initiation angle value to be used for the surface. 
             - A Float specifying the crush continuation angle value to be used for the surface. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -72,14 +64,6 @@ class SurfaceCrushTriggerAssignment:
             - A Float specifying the crush stress value to be used for the surface. 
             - A Float specifying the crush initiation angle value to be used for the surface. 
             - A Float specifying the crush continuation angle value to be used for the surface. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -92,13 +76,5 @@ class SurfaceCrushTriggerAssignment:
         indices
             A sequence of Ints specifying the index of each surface crush trigger assignment to 
             delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

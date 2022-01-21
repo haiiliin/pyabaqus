@@ -85,14 +85,6 @@ class CompositeLayup:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -101,14 +93,6 @@ class CompositeLayup:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -117,14 +101,6 @@ class CompositeLayup:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -154,14 +130,6 @@ class CompositeLayup:
         symmetric
             A Boolean specifying whether or not the layup should be made symmetric by the analysis. 
             The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -331,11 +299,7 @@ class CompositeLayup:
 
         Returns
         -------
-            A CompositeShellSection object.
-
-        Exceptions
-        ----------
-            None.
+            A CompositeShellSection object..
         """
         self.section = compositeShellSection = CompositeShellSection(name, layup, symmetric, thicknessType,
                                                                      preIntegrate, poissonDefinition, poisson,
@@ -408,11 +372,7 @@ class CompositeLayup:
 
         Returns
         -------
-            A GeometryShellSection object.
-
-        Exceptions
-        ----------
-            None.
+            A GeometryShellSection object..
         """
         self.section = geometryShellSection = GeometryShellSection(nodalThicknessField, thicknessField, thicknessType,
                                                                    preIntegrate, poissonDefinition, poisson,
@@ -505,11 +465,7 @@ class CompositeLayup:
 
         Returns
         -------
-            A HomogeneousShellSection object.
-
-        Exceptions
-        ----------
-            None.
+            A HomogeneousShellSection object..
         """
         self.section[name] = homogeneousShellSection = HomogeneousShellSection(name, material, thickness, numIntPts, thicknessType, preIntegrate, poissonDefinition, poisson, integrationRule, temperature, idealization, nTemp, thicknessModulus, useDensity, density, thicknessField, nodalThicknessField)
         return homogeneousShellSection

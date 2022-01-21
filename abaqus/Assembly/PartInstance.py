@@ -161,11 +161,7 @@ class PartInstance:
 
         Returns
         -------
-            A PartInstance object. 
-
-        Exceptions
-        ----------
-            None. 
+            A PartInstance object. . 
         """
         self.vertices = part.vertices
         self.ignoredEdges = part.ignoredEdges
@@ -209,11 +205,7 @@ class PartInstance:
 
         Returns
         -------
-            A PartInstance object. 
-
-        Exceptions
-        ----------
-            None. 
+            A PartInstance object. . 
         """
         pass
 
@@ -261,11 +253,7 @@ class PartInstance:
 
         Returns
         -------
-            A PartInstance object. 
-
-        Exceptions
-        ----------
-            None. 
+            A PartInstance object. . 
         """
         pass
 
@@ -303,11 +291,7 @@ class PartInstance:
 
         Returns
         -------
-            A sequence of PartInstance objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A sequence of PartInstance objects. . 
         """
         pass
 
@@ -342,11 +326,7 @@ class PartInstance:
 
         Returns
         -------
-            A sequence of PartInstance objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A sequence of PartInstance objects. . 
         """
         pass
 
@@ -363,11 +343,7 @@ class PartInstance:
             An Int specifying which level of checking is performed. Values can range from 20 to 70, 
             with higher values reporting less and less important errors. The default value is 20, 
             which reports all critical errors. When the default value is used, the stored validity 
-            status is updated to agree with the result of this check. 
-
-        Returns
-        -------
-            None. 
+            status is updated to agree with the result of this check.
 
         Exceptions
         ----------
@@ -402,11 +378,8 @@ class PartInstance:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass
 
@@ -417,14 +390,6 @@ class PartInstance:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -434,14 +399,6 @@ class PartInstance:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -455,11 +412,7 @@ class PartInstance:
         Returns
         -------
             A tuple including the point of rotation, axis of rotation, and rotation angle (in 
-            degrees). 
-
-        Exceptions
-        ----------
-            None. 
+            degrees). . 
         """
         pass
 
@@ -472,11 +425,7 @@ class PartInstance:
 
         Returns
         -------
-            A tuple of three Floats representing the translation. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of three Floats representing the translation. . 
         """
         pass
 
@@ -492,14 +441,6 @@ class PartInstance:
             position the new instance in the same place as the original instance. The default value 
             is True. A value of False indicates that constraints applies to the instance are deleted 
             will be deleted from the feature list. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -516,14 +457,6 @@ class PartInstance:
         angle
             A Float specifying the rotation angle in degrees. Use the right-hand rule to determine 
             the direction. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -534,14 +467,6 @@ class PartInstance:
         ----------
         vector
             A sequence of three Floats specifying a translation vector. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -567,10 +492,7 @@ class PartInstance:
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            None. 
+        feature: Feature
+            A Feature object
         """
         pass

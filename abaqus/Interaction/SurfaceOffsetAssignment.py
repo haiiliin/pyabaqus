@@ -39,14 +39,6 @@ class SurfaceOffsetAssignment:
             index is referenced. Each tuple contains one entry: 
             - A Float or a SymbolicConstant specifying the surface offset fraction value to be used 
             for the surface. Possible values of the SymbolicConstant are ORIGINAL, SPOS, and SNEG. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -66,14 +58,6 @@ class SurfaceOffsetAssignment:
             which the offset fraction is assigned. 
             - A Float or a SymbolicConstant specifying the surface offset fraction value to be used 
             for the surface. Possible values of the SymbolicConstant are ORIGINAL, SPOS, and SNEG. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -85,13 +69,5 @@ class SurfaceOffsetAssignment:
         indices
             A sequence of Ints specifying the index of each surface offset fraction assignment to 
             delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

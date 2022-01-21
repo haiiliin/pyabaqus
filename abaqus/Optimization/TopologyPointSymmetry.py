@@ -45,11 +45,7 @@ class TopologyPointSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A TopologyPointSymmetry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TopologyPointSymmetry object. . 
         """
         super().__init__()
         pass
@@ -65,13 +61,5 @@ class TopologyPointSymmetry(GeometricRestriction):
             used. When this member is queried, it returns an Int. The default value is None. 
         ignoreFrozenArea
             A Boolean specifying whether to ignore frozen areas. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

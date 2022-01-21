@@ -74,11 +74,7 @@ class Tie(Constraint):
 
         Returns
         -------
-            A Tie object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Tie object. . 
         """
         super().__init__()
         pass
@@ -89,14 +85,6 @@ class Tie(Constraint):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -134,13 +122,5 @@ class Tie(Constraint):
         thickness
             A Boolean specifying whether shell element thickness is considered. The default value is 
             ON. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

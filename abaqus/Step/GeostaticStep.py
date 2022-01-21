@@ -318,11 +318,7 @@ class GeostaticStep(AnalysisStep):
         maxInc
             A Float specifying the maximum time increment allowed. The default value is the total 
             time period for the step.Note:This parameter is ignored unless 
-            *timeIncrementationMethod*=AUTOMATIC. 
-
-        Returns
-        -------
-            None. 
+            *timeIncrementationMethod*=AUTOMATIC.
 
         Exceptions
         ----------

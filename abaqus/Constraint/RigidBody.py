@@ -62,11 +62,7 @@ class RigidBody(Constraint):
 
         Returns
         -------
-            A RigidBody object. 
-
-        Exceptions
-        ----------
-            None. 
+            A RigidBody object. . 
         """
         super().__init__()
         pass
@@ -95,13 +91,5 @@ class RigidBody(Constraint):
         isothermal
             A Boolean specifying whether the temperature degree of freedom should be constrained. 
             The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

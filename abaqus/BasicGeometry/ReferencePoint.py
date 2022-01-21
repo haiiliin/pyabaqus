@@ -58,9 +58,5 @@ class ReferencePoint:
 
         Returns
         -------
-            A Feature Object.
-
-        Exceptions
-        ----------
-            None.
+            A Feature Object..
         """

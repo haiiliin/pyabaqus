@@ -51,11 +51,7 @@ class CyclicHardening:
 
         Returns
         -------
-            A CyclicHardening object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CyclicHardening object. . 
         """
         pass
 
@@ -64,13 +60,5 @@ class CyclicHardening:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

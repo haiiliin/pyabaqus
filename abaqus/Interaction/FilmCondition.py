@@ -82,11 +82,7 @@ class FilmCondition(Interaction):
 
         Returns
         -------
-            A FilmCondition object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FilmCondition object. . 
         """
         super().__init__()
         pass
@@ -135,14 +131,6 @@ class FilmCondition(Interaction):
         sinkDistributionType
             A SymbolicConstant specifying how the sink temperature is distributed. Possible values 
             are UNIFORM, ANALYTICAL_FIELD, and DISCRETE_FIELD. The default value is UNIFORM. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -154,13 +142,5 @@ class FilmCondition(Interaction):
         ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

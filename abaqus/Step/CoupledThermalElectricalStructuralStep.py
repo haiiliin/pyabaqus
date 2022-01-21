@@ -392,11 +392,7 @@ class CoupledThermalElectricalStructuralStep(AnalysisStep):
         continueDampingFactors
             A Boolean specifying whether this step will carry over the damping factors from the 
             results of the preceding general step. This parameter must be used in conjunction with 
-            the *adaptiveDampingRatio* parameter. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
+            the *adaptiveDampingRatio* parameter. The default value is OFF.
 
         Exceptions
         ----------

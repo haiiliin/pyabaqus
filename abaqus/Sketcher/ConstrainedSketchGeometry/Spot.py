@@ -18,11 +18,7 @@ class Spot(ConstrainedSketchGeometry):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the spot cannot be created). 
-
-        Exceptions
-        ----------
-            None. 
+            A ConstrainedSketchGeometry object (None if the spot cannot be created). . 
             !img 
         """
         pass

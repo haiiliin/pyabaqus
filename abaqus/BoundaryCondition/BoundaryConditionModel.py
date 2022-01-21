@@ -94,11 +94,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            An AccelerationBaseMotionBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: AccelerationBC
+            An AccelerationBaseMotionBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = AccelerationBaseMotionBC(name, createStepName, dof,
                                                                                      amplitudeScaleFactor,
@@ -172,11 +169,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            An AccelerationBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: AccelerationBC
+            An AccelerationBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = AccelerationBC(name, createStepName, region, fieldName, a1,
                                                                            a2, a3, ar1, ar2, ar3, amplitude, localCsys,
@@ -222,11 +216,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            An AcousticPressureBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: AcousticPressureBC
+            An AcousticPressureBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = AcousticPressureBC(name, createStepName, region, fieldName,
                                                                                magnitude, distributionType, amplitude,
@@ -239,7 +230,7 @@ class BoundaryConditionModel(ModelBase):
 
         Path
         ----
-            -           mdb.models[name].Calibration
+            - mdb.models[name].Calibration
 
         Parameters
         ----------
@@ -248,11 +239,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A Calibration object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+        calibration: Calibration
+            A Calibration object..
         """
         self.boundaryConditions[name] = boundaryCondition = Calibration(name)
         return boundaryCondition
@@ -295,11 +283,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A ConcentrationBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: ConcentrationBC
+            A ConcentrationBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = ConcentrationBC(name, createStepName, region, fieldName,
                                                                             magnitude, distributionType, amplitude,
@@ -378,11 +363,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A ConnAccelerationBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: ConnAccelerationBC
+            A ConnAccelerationBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = ConnAccelerationBC(name, createStepName, region,
                                                                                fastenerName, fastenerSetName, a1, a2,
@@ -470,11 +452,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A ConnDisplacementBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: ConnDisplacementBC
+            A ConnDisplacementBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = ConnDisplacementBC(name, createStepName, region,
                                                                                fastenerName, fastenerSetName, u1, u2,
@@ -554,11 +533,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A ConnVelocityBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: ConnVelocityBC
+            A ConnVelocityBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = ConnVelocityBC(name, createStepName, region, fastenerName,
                                                                            fastenerSetName, v1, v2, v3, vr1, vr2, vr3,
@@ -607,11 +583,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A DisplacementBaseMotionBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: DisplacementBaseMotionBC
+            A DisplacementBaseMotionBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = DisplacementBaseMotionBC(name, createStepName, dof,
                                                                                      amplitudeScaleFactor,
@@ -697,11 +670,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A DisplacementBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: DisplacementBC
+            A DisplacementBC object
         """
         self.boundaryConditions[name] = boundaryCondition = DisplacementBC(name, createStepName, region, fieldName, u1,
                                                                            u2, u3, ur1, ur2, ur3, fixed, amplitude,
@@ -747,11 +717,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            An ElectricPotentialBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: ElectricPotentialBC
+            An ElectricPotentialBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = ElectricPotentialBC(name, createStepName, region, fieldName,
                                                                                 magnitude, distributionType, amplitude,
@@ -788,11 +755,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            An EulerianBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: EulerianBC
+            An EulerianBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = EulerianBC(name, createStepName, region, definition,
                                                                        inflowType, outflowType)
@@ -904,11 +868,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            An EulerianMotionBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: EulerianMotionBC
+            An EulerianMotionBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = EulerianMotionBC(name, createStepName, instanceName,
                                                                              followRegion, region, materialName,
@@ -952,11 +913,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A FluidCavityPressureBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: FluidCavityPressureBC
+            A FluidCavityPressureBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = FluidCavityPressureBC(name, createStepName, fluidCavity,
                                                                                   magnitude, amplitude, fixed)
@@ -1009,11 +967,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A MagneticVectorPotentialBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: MagneticVectorPotentialBC
+            A MagneticVectorPotentialBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = MagneticVectorPotentialBC(name, createStepName, region,
                                                                                       component1, component2,
@@ -1060,11 +1015,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A MaterialFlowBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: MaterialFlowBC
+            A MaterialFlowBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = MaterialFlowBC(name, createStepName, region, fieldName,
                                                                            magnitude, distributionType, amplitude,
@@ -1110,11 +1062,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A PorePressureBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: PorePressureBC
+            A PorePressureBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = PorePressureBC(name, createStepName, region, fieldName,
                                                                            magnitude, distributionType, amplitude,
@@ -1163,11 +1112,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A RetainedNodalDofsBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: RetainedNodalDofsBC
+            A RetainedNodalDofsBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = RetainedNodalDofsBC(name, createStepName, region, u1, u2,
                                                                                 u3, ur1, ur2, ur3)
@@ -1195,11 +1141,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A SecondaryBaseBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: SecondaryBaseBC
+            A SecondaryBaseBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = SecondaryBaseBC(name, createStepName, regions, dofs)
         self.steps[createStepName].boundaryConditionStates[name] = SecondaryBaseBCState()
@@ -1269,11 +1212,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A SubmodelBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: SubmodelBC
+            A SubmodelBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = SubmodelBC(name, createStepName, region, dof, globalStep,
                                                                        timeScale, shellThickness, globalDrivingRegion,
@@ -1323,11 +1263,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A TemperatureBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: TemperatureBC
+            A TemperatureBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = TemperatureBC(name, createStepName, region, fieldName,
                                                                           magnitude, dof, amplitude, distributionType,
@@ -1376,11 +1313,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A VelocityBaseMotionBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: VelocityBaseMotionBC
+            A VelocityBaseMotionBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = VelocityBaseMotionBC(name, createStepName, dof,
                                                                                  amplitudeScaleFactor, centerOfRotation,
@@ -1453,11 +1387,8 @@ class BoundaryConditionModel(ModelBase):
 
         Returns
         -------
-            A VelocityBC object.
-
-        Exceptions
-        ----------
-            None.
+        bc: VelocityBC
+            A VelocityBC object..
         """
         self.boundaryConditions[name] = boundaryCondition = VelocityBC(name, createStepName, region, fieldName, v1, v2,
                                                                        v3, vr1, vr2, vr3, amplitude, localCsys,

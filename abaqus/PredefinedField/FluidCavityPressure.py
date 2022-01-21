@@ -42,11 +42,7 @@ class FluidCavityPressure(PredefinedField):
 
         Returns
         -------
-            A FluidCavityPressure object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FluidCavityPressure object. . 
         """
         super().__init__()
         pass
@@ -56,13 +52,5 @@ class FluidCavityPressure(PredefinedField):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

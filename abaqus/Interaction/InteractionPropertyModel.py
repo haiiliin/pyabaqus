@@ -41,11 +41,7 @@ class InteractionPropertyModel(ModelBase):
 
         Returns
         -------
-            An AcousticImpedanceProp object. 
-
-        Exceptions
-        ----------
-            None. 
+            An AcousticImpedanceProp object. . 
         """
         self.interactionProperties[name] = interactionProperty = AcousticImpedanceProp(name, tableType, table,
                                                                                        frequencyDependency)
@@ -72,11 +68,7 @@ class InteractionPropertyModel(ModelBase):
 
         Returns
         -------
-            An ActuatorSensorProp object. 
-
-        Exceptions
-        ----------
-            None. 
+            An ActuatorSensorProp object. . 
         """
         self.interactionProperties[name] = interactionProperty = ActuatorSensorProp(name, realProperties,
                                                                                     integerProperties)
@@ -105,11 +97,7 @@ class InteractionPropertyModel(ModelBase):
 
         Returns
         -------
-            A CavityRadiationProp object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CavityRadiationProp object. . 
         """
         self.interactionProperties[name] = interactionProperty = CavityRadiationProp(name, temperatureDependency,
                                                                                      dependencies, property)
@@ -129,11 +117,7 @@ class InteractionPropertyModel(ModelBase):
 
         Returns
         -------
-            A ContactProperty object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ContactProperty object. . 
         """
         self.interactionProperties[name] = interactionProperty = ContactProperty(name)
         return interactionProperty
@@ -164,11 +148,7 @@ class InteractionPropertyModel(ModelBase):
 
         Returns
         -------
-            A FilmConditionProp object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FilmConditionProp object. . 
         """
         self.interactionProperties[name] = interactionProperty = FilmConditionProp(name, temperatureDependency,
                                                                                    dependencies, property)
@@ -284,11 +264,7 @@ class InteractionPropertyModel(ModelBase):
 
         Returns
         -------
-            A FluidCavityProperty object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FluidCavityProperty object. . 
         """
         self.interactionProperties[name] = interactionProperty = FluidCavityProperty(name, definition, fluidDensity,
                                                                                      molecularWeight, useExpansion,
@@ -377,11 +353,7 @@ class InteractionPropertyModel(ModelBase):
 
         Returns
         -------
-            A FluidExchangeProperty object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FluidExchangeProperty object. . 
         """
         self.interactionProperties[name] = interactionProperty = FluidExchangeProperty(name, dataTable, definition,
                                                                                        pressureDependency,
@@ -435,11 +407,7 @@ class InteractionPropertyModel(ModelBase):
 
         Returns
         -------
-            A FluidInflatorProperty object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FluidInflatorProperty object. . 
         """
         self.interactionProperties[name] = interactionProperty = FluidInflatorProperty(name, definition, effectiveArea,
                                                                                        tankVolume, dischargeCoefficient,
@@ -588,11 +556,7 @@ class InteractionPropertyModel(ModelBase):
 
         Returns
         -------
-            An IncidentWaveProperty object. 
-
-        Exceptions
-        ----------
-            None. 
+            An IncidentWaveProperty object. . 
         """
         self.interactionProperties[name] = interactionProperty = IncidentWaveProperty(name, definition,
                                                                                       propagationModel, soundSpeed,

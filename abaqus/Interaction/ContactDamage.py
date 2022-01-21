@@ -261,11 +261,7 @@ class ContactDamage:
 
         Returns
         -------
-            A ContactDamage object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ContactDamage object. . 
         """
         pass
 
@@ -274,13 +270,5 @@ class ContactDamage:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

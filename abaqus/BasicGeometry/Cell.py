@@ -58,11 +58,7 @@ class Cell:
 
         Returns
         -------
-            A Float. 
-
-        Exceptions
-        ----------
-            None. 
+            A Float. . 
             !img 
         """
         pass
@@ -76,11 +72,7 @@ class Cell:
 
         Returns
         -------
-            A tuple of integers. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of integers. . 
             !img 
         """
         pass
@@ -93,11 +85,7 @@ class Cell:
 
         Returns
         -------
-            A tuple of integers. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of integers. . 
             !img 
         """
         pass
@@ -110,11 +98,7 @@ class Cell:
 
         Returns
         -------
-            A tuple of integers. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of integers. . 
             !img 
         """
         pass
@@ -127,11 +111,7 @@ class Cell:
 
         Returns
         -------
-            A CellArray object which is a sequence of Cell objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A CellArray object which is a sequence of Cell objects. . 
             !img 
         """
         pass
@@ -144,11 +124,7 @@ class Cell:
 
         Returns
         -------
-            A MeshNodeArray object which is a sequence of MeshNode objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshNodeArray object which is a sequence of MeshNode objects. . 
             !img 
         """
         pass
@@ -161,11 +137,7 @@ class Cell:
 
         Returns
         -------
-            A MeshElementArray object which is a sequence of MeshElement objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshElementArray object which is a sequence of MeshElement objects. . 
             !img 
         """
         pass
@@ -179,11 +151,7 @@ class Cell:
 
         Returns
         -------
-            An array of String. 
-
-        Exceptions
-        ----------
-            None. 
+            An array of String. . 
             !img 
         """
         pass

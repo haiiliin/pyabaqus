@@ -64,11 +64,7 @@ class TopologyOverhangControl(GeometricRestriction):
 
         Returns
         -------
-            A TopologyOverhangControl object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TopologyOverhangControl object. . 
         """
         super().__init__()
         pass
@@ -101,13 +97,5 @@ class TopologyOverhangControl(GeometricRestriction):
         technique
             A SymbolicConstant specifying the overhang control technique used to define the base 
             plane. Possible values are AUTO, POINT, and NONE. The default value is AUTO. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

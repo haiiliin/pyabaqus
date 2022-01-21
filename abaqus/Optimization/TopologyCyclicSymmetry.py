@@ -52,11 +52,7 @@ class TopologyCyclicSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A TopologyCyclicSymmetry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TopologyCyclicSymmetry object. . 
         """
         super().__init__()
         pass
@@ -76,13 +72,5 @@ class TopologyCyclicSymmetry(GeometricRestriction):
             default value is None. 
         ignoreFrozenArea
             A Boolean specifying whether to ignore frozen areas. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

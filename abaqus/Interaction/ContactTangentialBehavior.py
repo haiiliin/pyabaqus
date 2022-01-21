@@ -154,11 +154,7 @@ class ContactTangentialBehavior:
 
         Returns
         -------
-            A ContactTangentialBehavior object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ContactTangentialBehavior object. . 
         """
         pass
 
@@ -167,13 +163,5 @@ class ContactTangentialBehavior:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

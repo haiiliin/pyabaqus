@@ -77,11 +77,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: AnnealStep
             An AnnealStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = AnnealStep(name, previous, description, refTemp, maintainAttributes)
         return step
@@ -138,11 +135,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: BuckleStep
             A BuckleStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = BuckleStep(name, previous, numEigen, description, eigensolver, minEigen, maxEigen,
                                              vectors, maxIterations, blockSize, maxBlocks, matrixStorage,
@@ -200,11 +194,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: ComplexFrequencyStep
             A ComplexFrequencyStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = ComplexFrequencyStep(name, previous, numEigen, description, shift, frictionDamping,
                                                        matrixStorage, maintainAttributes, minEigen, maxEigen,
@@ -311,11 +302,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: CoupledTempDisplacementStep
             A CoupledTempDisplacementStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = CoupledTempDisplacementStep(name, previous, description, response, timePeriod, nlgeom,
                                                               stabilizationMethod, stabilizationMagnitude,
@@ -426,11 +414,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: CoupledThermalElectricalStructuralStep
             A CoupledThermalElectricalStructuralStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = CoupledThermalElectricalStructuralStep(name, previous, description, response,
                                                                          timePeriod, nlgeom, stabilizationMethod,
@@ -517,11 +502,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: CoupledThermalElectricStep
             A CoupledThermalElectricStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = CoupledThermalElectricStep(name, previous, description, response, timePeriod,
                                                              timeIncrementationMethod, maxNumInc, initialInc, minInc,
@@ -630,11 +612,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: DirectCyclicStep
             A DirectCyclicStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = DirectCyclicStep(name, previous, description, timePeriod, timeIncrementationMethod,
                                                    maxNumInc, initialInc, minInc, maxInc, maxNumIterations,
@@ -670,11 +649,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: EmagTimeHarmonicStep
             An EmagTimeHarmonicStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = EmagTimeHarmonicStep(name, previous, frequencyRange, description, factorization)
         return step
@@ -745,11 +721,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: ExplicitDynamicsStep
             An ExplicitDynamicsStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = ExplicitDynamicsStep(name, previous, description, timePeriod, nlgeom, adiabatic,
                                                        timeIncrementationMethod, maxIncrement, scaleFactor, massScaling,
@@ -879,11 +852,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: FrequencyStep
             A FrequencyStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = FrequencyStep(name, previous, eigensolver, numEigen, description, shift, minEigen,
                                                 maxEigen, vectors, maxIterations, blockSize, maxBlocks, normalization,
@@ -964,11 +934,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: GeostaticStep
             A GeostaticStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = GeostaticStep(name, previous, description, nlgeom, matrixSolver, matrixStorage,
                                                 maintainAttributes, solutionTechnique, reformKernel, convertSDI, utol,
@@ -1059,11 +1026,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: HeatTransferStep
             A HeatTransferStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = HeatTransferStep(name, previous, description, response, timePeriod,
                                                    timeIncrementationMethod, maxNumInc, initialInc, minInc, maxInc, end,
@@ -1178,11 +1142,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: ImplicitDynamicsStep
             An ImplicitDynamicsStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = ImplicitDynamicsStep(name, previous, description, timePeriod, nlgeom, matrixStorage,
                                                        application, adiabatic, timeIncrementationMethod, maxNumInc,
@@ -1256,11 +1217,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: MassDiffusionStep
             A MassDiffusionStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = MassDiffusionStep(name, previous, description, response, timePeriod,
                                                     timeIncrementationMethod, maxNumInc, initialInc, minInc, maxInc,
@@ -1317,11 +1275,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: ModalDynamicsStep
             A ModalDynamicsStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = ModalDynamicsStep(name, previous, description, continueAnalysis, timePeriod, incSize,
                                                     directDamping, compositeDamping, rayleighDamping, amplitude,
@@ -1378,11 +1333,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: RandomResponseStep
             A RandomResponseStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = RandomResponseStep(name, previous, freq, description, scale, directDamping,
                                                      compositeDamping, rayleighDamping, structuralDamping,
@@ -1439,11 +1391,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: ResponseSpectrumStep
             A ResponseSpectrumStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = ResponseSpectrumStep(name, previous, components, description, comp, sum,
                                                        directDamping, compositeDamping, rayleighDamping,
@@ -1557,11 +1506,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: SoilsStep
             A SoilsStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = SoilsStep(name, previous, description, response, timePeriod, nlgeom,
                                             stabilizationMethod, stabilizationMagnitude, creep,
@@ -1602,11 +1548,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: StaticLinearPerturbationStep
             A StaticLinearPerturbationStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = StaticLinearPerturbationStep(name, previous, description, matrixSolver, matrixStorage,
                                                                maintainAttributes)
@@ -1705,11 +1648,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: StaticRiksStep
             A StaticRiksStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = StaticRiksStep(name, previous, description, nlgeom, adiabatic, maxLPF, nodeOn,
                                                  maximumDisplacement, dof, region, timeIncrementationMethod, maxNumInc,
@@ -1823,11 +1763,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
-            A StaticStep object.
-
-        Exceptions
-        ----------
-            RangeError.
+        step: StaticRiksStep
+            A StaticRiksStep object.
         """
         self.steps[name] = step = StaticStep(name, previous, description, timePeriod, nlgeom, stabilizationMethod,
                                              stabilizationMagnitude, adiabatic, timeIncrementationMethod, maxNumInc,
@@ -1881,11 +1818,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: SteadyStateDirectStep
             A SteadyStateDirectStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = SteadyStateDirectStep(name, previous, frequencyRange, description, factorization,
                                                         scale, matrixStorage, maintainAttributes,
@@ -1946,11 +1880,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: SteadyStateModalStep
             A SteadyStateModalStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = SteadyStateModalStep(name, previous, frequencyRange, description, scale,
                                                        directDamping, compositeDamping, rayleighDamping,
@@ -2015,11 +1946,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: SteadyStateSubspaceStep
             A SteadyStateSubspaceStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = SteadyStateSubspaceStep(name, previous, frequencyRange, description, factorization,
                                                           scale, matrixStorage, maintainAttributes,
@@ -2068,11 +1996,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: SubspaceDynamicsStep
             A SubspaceDynamicsStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = SubspaceDynamicsStep(name, previous, description, timePeriod, vectors, nlgeom,
                                                        maxNumInc, incSize, amplitude, maintainAttributes)
@@ -2162,11 +2087,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: SubstructureGenerateStep
             A SubstructureGenerateStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = SubstructureGenerateStep(name, previous, substructureIdentifier, description,
                                                            recoveryMatrix, recoveryRegion, computeGravityLoadVectors,
@@ -2240,11 +2162,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: TempDisplacementDynamicsStep
             A TempDisplacementDynamicsStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = TempDisplacementDynamicsStep(name, previous, description, timePeriod, nlgeom,
                                                                timeIncrementationMethod, maxIncrement, scaleFactor,
@@ -2350,11 +2269,8 @@ class StepModel(ModelBase):
 
         Returns
         -------
+        step: ViscoStep
             A ViscoStep object.
-
-        Exceptions
-        ----------
-            RangeError.
         """
         self.steps[name] = step = ViscoStep(name, previous, description, timePeriod, nlgeom, stabilizationMethod,
                                             stabilizationMagnitude, timeIncrementationMethod, matrixSolver,

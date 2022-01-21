@@ -41,11 +41,7 @@ class CycledPlastic:
 
         Returns
         -------
-            A CycledPlastic object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CycledPlastic object. . 
         """
         pass
 
@@ -54,13 +50,5 @@ class CycledPlastic:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

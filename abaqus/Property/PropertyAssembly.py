@@ -37,11 +37,7 @@ class PropertyAssembly(AssemblyBase):
 
         Returns
         -------
-            A SectionAssignment object.
-
-        Exceptions
-        ----------
-            None.
+            A SectionAssignment object..
         """
         sectionAssignment = SectionAssignment(region, sectionName, thicknessAssignment, offset, offsetType, offsetField)
         self.sectionAssignments.append(sectionAssignment)

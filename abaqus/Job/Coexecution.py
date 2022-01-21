@@ -88,14 +88,6 @@ class Coexecution:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -117,14 +109,6 @@ class Coexecution:
             A Boolean specifying whether to run the co-execution as a continuation analysis. The 
             default value is False. The *datacheckJob* and *continueJob* arguments cannot both be 
             True. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -137,14 +121,6 @@ class Coexecution:
             A Boolean specifying whether to perform consistency checking for the individual jobs. 
             The default value is ON. It is not recommended to turn the consistency checking off 
             unless you are absolutely sure the models are all consistent. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -156,13 +132,5 @@ class Coexecution:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

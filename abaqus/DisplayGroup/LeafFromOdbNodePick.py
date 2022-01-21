@@ -42,11 +42,7 @@ class LeafFromOdbNodePick(Leaf):
 
         Returns
         -------
-            A LeafFromOdbNodePick object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LeafFromOdbNodePick object. . 
         """
         super().__init__(DEFAULT_MODEL)
         pass

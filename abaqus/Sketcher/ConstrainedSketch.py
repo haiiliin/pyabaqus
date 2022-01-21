@@ -43,11 +43,8 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
         Returns
         -------
-            A ConstrainedSketch object.
-
-        Exceptions
-        ----------
-            None.
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object
         """
         pass
 
@@ -72,12 +69,8 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
         Returns
         -------
-            A ConstrainedSketch object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
-            !img
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object
         """
         pass
 
@@ -101,12 +94,8 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
         Returns
         -------
-            A ConstrainedSketch object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
-            !img
+        sketch: ConstrainedSketch
+            A ConstrainedSketch object
         """
         pass
 
@@ -119,15 +108,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -140,15 +120,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         line
             A ConstrainedSketchGeometry object specifying a construction line that indicates the
             centerline of revolved features.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -161,15 +132,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         point
             A ConstrainedSketchVertex object specifying an isolated point that indicates the center
             of twist for extruded features that use a twist angle.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -181,15 +143,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         ----------
         objectList
             A sequence specifying the ConstrainedSketchGeometry objects to dimension.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -208,15 +161,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         parameter1
             A Float specifying the parameter location on the ConstrainedSketchGeometry where the
             trimming should be applied. *point1* and *parameter1* are mutually exclusive.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -240,15 +184,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         point2
             A pair of Floats specifying the location on *curve2* near where *curve1* should be
             broken.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -265,15 +200,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         objectList
             A sequence of ConstrainedSketchGeometry objects specifying the sketch to be copied and
             mirrored.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -288,15 +214,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
             A sequence of two Floats specifying the translation vector.
         objectList
             A sequence of ConstrainedSketchGeometry objects to be copied and moved.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -312,15 +229,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
             A Float specifying the angle of rotation in degrees.
         objectList
             A sequence of ConstrainedSketchGeometry objects to be copied and moved.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -338,15 +246,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
             A pair of Floats specifying the center of scaling.
         objectList
             A sequence of ConstrainedSketchGeometry objects to be copied and scaled.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -359,15 +258,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         objectList
             A sequence of ConstrainedSketchGeometry, ConstrainedSketchDimension, or
             ConstrainedSketchConstraint objects to be deleted.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -378,15 +268,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         ----------
         name
             A String specifying the name of the parameter to delete.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -403,15 +284,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
             A sequence of sequences of three Floats specifying a sequence of points along which to
             drag the entity. The order of points in the sequence defines a path that determines the
             solution.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -477,15 +349,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
             A Float specifying the search radius.
         vertexList
             A sequence of ConstrainedSketchVertex objects to be merged.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -498,15 +361,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
             A sequence of two Floats specifying the translation vector.
         objectList
             A sequence of ConstrainedSketchGeometry objects specifying the objects to be translated.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -528,15 +382,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
             LEFT and RIGHT.
         filletCorners
             A Boolean specifying whether the corners need to be rounded instead of being extended.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -563,15 +408,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
             A sequence of ConstrainedSketchVertex objects to copy.
         geomList
             A sequence of ConstrainedSketchGeometry objects to copy.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -580,15 +416,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -606,12 +433,8 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
         Returns
         -------
-            An Int specifying the success or failure of the method. A value of 0 indicates failure.
-
-        Exceptions
-        ----------
-            None.
-            !img
+        success: int
+            An Int specifying the success or failure of the method. A value of 0 indicates failure
         """
         pass
 
@@ -629,15 +452,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         geomList
             A sequence of ConstrainedSketchGeometry objects where the gaps and overlaps are to be
             removed.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -656,19 +470,10 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
             whose lengths are smaller than the given value. The default value is –1.0. This value
             implies that all edges specified in *geomList* will be removed and the sketch healed to
             remove gaps left by their removal.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
-    def retrieveSketch(self, sketch: 'ConstrainedSketchBase'):
+    def retrieveSketch(self, sketch: 'ConstrainedSketch'):
         """This method copies all ConstrainedSketchGeometry, ConstrainedSketchDimension,
         ConstrainedSketchConstraint, and ConstrainedSketchParameter objects from the specified
         ConstrainedSketch object. The new objects are added to the existing objects (if any).
@@ -679,15 +484,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         ----------
         sketch
             A ConstrainedSketch object specifying the object from which to copy.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -703,15 +499,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
             A Float specifying the angle of rotation in degrees.
         objectList
             A sequence of ConstrainedSketchGeometry specifying the objects to be rotated.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -728,15 +515,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
             A pair of Floats specifying the center of scale.
         objectList
             A sequence of ConstrainedSketchGeometry objects specifying the objects to be scaled.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -754,15 +532,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
             Indicates that the sketch is superimposed on the current viewport. The view direction is
             changed to be perpendicular to the sketch plane. The change is effected smoothly as an
             animated sequence of many small viewing steps.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -785,15 +554,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         point2
             A pair of Floats specifying the location on *curve2* near where *curve1* should be
             trimmed or extended.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -802,15 +562,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -823,15 +574,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            None.
-            !img
         """
         pass
 
@@ -845,15 +587,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         version
             A Float specifying the ACIS version. For example, the Float 12.0 corresponds to ACIS
             Version 12.0. The default value is the current version of ACIS.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            InvalidNameError.
-            !img
         """
         pass
 
@@ -867,14 +600,5 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         flavor
             A SymbolicConstant specifying a particular flavor of IGES to export. Possible values
             areSTANDARD, AUTOCAD, SOLIDWORKS, JAMA, and MSBO.
-
-        Returns
-        -------
-            None.
-
-        Exceptions
-        ----------
-            InvalidNameError.
-            !img
         """
         pass

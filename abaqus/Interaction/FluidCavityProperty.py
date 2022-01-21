@@ -136,11 +136,7 @@ class FluidCavityProperty(ContactProperty):
 
         Returns
         -------
-            A FluidCavityProperty object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FluidCavityProperty object. . 
         """
         super().__init__(name)
         pass
@@ -246,13 +242,5 @@ class FluidCavityProperty(ContactProperty):
             - Value of the first field variable, if the data depend on field variables. 
             - Value of the second field variable. 
             - Etc. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

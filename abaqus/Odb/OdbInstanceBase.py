@@ -113,11 +113,7 @@ class OdbInstanceBase:
 
         Returns
         -------
-            An OdbInstance object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            An OdbInstance object. . 
         """
         pass
 
@@ -134,14 +130,6 @@ class OdbInstanceBase:
         vector
             A sequence of three Floats specifying the approximate local n1n1-direction of the beam 
             cross-section. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -168,14 +156,6 @@ class OdbInstanceBase:
             A SymbolicConstant specifying the stack or thickness direction of the material. Possible 
             values are STACK_1, STACK_2, STACK_3, and STACK_ORIENTATION. The default value is 
             STACK_3. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -197,14 +177,6 @@ class OdbInstanceBase:
             AXIS_1. 
         angle
             A Float specifying the angle of the additional rotation. The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -255,11 +227,7 @@ class OdbInstanceBase:
         region
             An OdbSet specifying a region on an instance. 
         section
-            A Section object. 
-
-        Returns
-        -------
-            None. 
+            A Section object.
 
         Exceptions
         ----------
@@ -282,11 +250,7 @@ class OdbInstanceBase:
             object. 
         filletRadius
             A Double specifying the radius of curvature to smooth discontinuities between adjoining 
-            segments. The default value is 0.0. 
-
-        Returns
-        -------
-            None. 
+            segments. The default value is 0.0.
 
         Exceptions
         ----------
@@ -313,11 +277,7 @@ class OdbInstanceBase:
             segments. The default value is 0.0. 
         localCoordData
             A sequence of sequences of Floats specifying the global coordinates of points used to 
-            define the local coordinate system. 
-
-        Returns
-        -------
-            None. 
+            define the local coordinate system.
 
         Exceptions
         ----------
@@ -344,11 +304,7 @@ class OdbInstanceBase:
             segments. The default value is 0.0. 
         localCoordData
             A sequence of sequences of Floats specifying the global coordinates of points used to 
-            define the local coordinate system. 
-
-        Returns
-        -------
-            None. 
+            define the local coordinate system.
 
         Exceptions
         ----------
@@ -379,11 +335,7 @@ class OdbInstanceBase:
         tieNodes
             An OdbSet specifying tie-type nodes assigned to the rigid body. 
         analyticSurface
-            An AnalyticSurface specifying the Analytic Rigid Surface assigned to the rigid body. 
-
-        Returns
-        -------
-            None. 
+            An AnalyticSurface specifying the Analytic Rigid Surface assigned to the rigid body.
 
         Exceptions
         ----------

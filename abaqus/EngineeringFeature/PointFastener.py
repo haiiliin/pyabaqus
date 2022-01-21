@@ -156,11 +156,7 @@ class PointFastener(Fastener):
 
         Returns
         -------
-            A PointFastener object. 
-
-        Exceptions
-        ----------
-            None. 
+            A PointFastener object. . 
         """
         super().__init__()
         pass
@@ -274,13 +270,5 @@ class PointFastener(Fastener):
             A Boolean specifying whether the analysis product should leave targetSurfaces in the 
             given unsorted order, or sort them by proximity to determine the connectivity of 
             fastening points. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

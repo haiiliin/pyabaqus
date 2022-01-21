@@ -258,11 +258,7 @@ class BuckleStep(AnalysisStep):
             *blockSize*, and *maxBlocks* are ignored unless *eigensolver*=LANCZOS. 
         matrixStorage
             A SymbolicConstant specifying the type of matrix storage. Possible values are SYMMETRIC, 
-            UNSYMMETRIC, and SOLVER_DEFAULT. The default value is SOLVER_DEFAULT. 
-
-        Returns
-        -------
-            None. 
+            UNSYMMETRIC, and SOLVER_DEFAULT. The default value is SOLVER_DEFAULT.
 
         Exceptions
         ----------

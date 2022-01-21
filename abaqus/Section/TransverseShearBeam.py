@@ -4,8 +4,7 @@ from abaqusConstants import *
 
 
 class TransverseShearBeam:
-    """The TransverseShearBeam object defines the transverse shear stiffness properties of a
-    beam section. 
+    """The TransverseShearBeam object defines the transverse shear stiffness properties of a beam section. 
 
     Access
     ------
@@ -49,11 +48,7 @@ class TransverseShearBeam:
 
         Returns
         -------
-            A TransverseShearBeam object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TransverseShearBeam object. . 
         """
         pass
 
@@ -62,13 +57,5 @@ class TransverseShearBeam:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

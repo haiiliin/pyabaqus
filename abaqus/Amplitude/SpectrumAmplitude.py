@@ -79,11 +79,7 @@ class SpectrumAmplitude(Amplitude):
 
         Returns
         -------
-            A SpectrumAmplitude object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A SpectrumAmplitude object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -126,11 +122,7 @@ class SpectrumAmplitude(Amplitude):
             and TOTAL. The default value is STEP. 
         amplitude
             A String specifying the name of the amplitude that describes the dynamic event used to 
-            calculate the spectrum. The default value is an empty string. 
-
-        Returns
-        -------
-            None. 
+            calculate the spectrum. The default value is an empty string.
 
         Exceptions
         ----------

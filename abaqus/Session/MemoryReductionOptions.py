@@ -29,13 +29,5 @@ class MemoryReductionOptions:
         percentThreshold
             A Float specifying the percent of *kernelMemoryLimit* at which the reduced memory mode 
             starts. The default value is 75.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

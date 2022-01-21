@@ -19,11 +19,7 @@ class OdbSession(SessionBase):
 
         Returns
         -------
-            A ScratchOdb object.
-
-        Exceptions
-        ----------
-            None.
+            A ScratchOdb object..
         """
         self.scratchOdbs['odb'] = scratchOdb = ScratchOdb(odb)
         return scratchOdb

@@ -71,11 +71,8 @@ class MeshNode:
 
         Returns
         -------
-            A MeshNode object. 
-
-        Exceptions
-        ----------
-            None. 
+        node: MeshNode
+            A MeshNode object
         """
         pass
 
@@ -87,11 +84,8 @@ class MeshNode:
 
         Returns
         -------
-            A tuple of MeshEdge objects. 
-
-        Exceptions
-        ----------
-            None. 
+        edges: tuple[MeshEdge]
+            A tuple of MeshEdge objects
         """
         pass
 
@@ -103,11 +97,8 @@ class MeshNode:
 
         Returns
         -------
-            A tuple of MeshFace objects. 
-
-        Exceptions
-        ----------
-            None. 
+        faces: tuple[MeshFace]
+            A tuple of MeshFace objects
         """
         pass
 
@@ -119,11 +110,8 @@ class MeshNode:
 
         Returns
         -------
-            A tuple of MeshElement objects. 
-
-        Exceptions
-        ----------
-            None. 
+        elements: tuple[MeshElement]
+            A tuple of MeshElement objects
         """
         pass
 
@@ -139,11 +127,8 @@ class MeshNode:
 
         Returns
         -------
-            A MeshNodeArray object, which is a sequence of MeshNode objects. 
-
-        Exceptions
-        ----------
-            None. 
+        nodes: MeshNodeArray
+            A MeshNodeArray object, which is a sequence of MeshNode objects
         """
         pass
 
@@ -156,13 +141,5 @@ class MeshNode:
             An Int specifying the node label. This member may only be edited if the node belongs to 
             an orphan mesh part. The specified label must be non-negative and must not be in use by 
             any other node of the same part. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

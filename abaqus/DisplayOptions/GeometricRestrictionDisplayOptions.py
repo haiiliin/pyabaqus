@@ -93,11 +93,7 @@ class GeometricRestrictionDisplayOptions:
             symbols are shown. The default value is ON. 
         turnControl
             A Boolean specifying whether turn control geometric restriction symbols are shown. The 
-            default value is ON. 
-
-        Returns
-        -------
-            None. 
+            default value is ON.
 
         Exceptions
         ----------

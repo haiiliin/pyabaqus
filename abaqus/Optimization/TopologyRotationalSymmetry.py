@@ -51,11 +51,7 @@ class TopologyRotationalSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A TopologyRotationalSymmetry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TopologyRotationalSymmetry object. . 
         """
         super().__init__()
         pass
@@ -74,13 +70,5 @@ class TopologyRotationalSymmetry(GeometricRestriction):
             default value is None. 
         ignoreFrozenArea
             A Boolean specifying whether to ignore frozen areas. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

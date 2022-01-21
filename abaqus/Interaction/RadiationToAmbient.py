@@ -66,11 +66,7 @@ class RadiationToAmbient(Interaction):
 
         Returns
         -------
-            A RadiationToAmbient object. 
-
-        Exceptions
-        ----------
-            None. 
+            A RadiationToAmbient object. . 
         """
         super().__init__()
         pass
@@ -105,14 +101,6 @@ class RadiationToAmbient(Interaction):
             step or linearly over the step. Use None in an Abaqus/Explicit analysis to specify that 
             the reference ambient temperature is applied throughout the step. This argument applies 
             only when *radiationType*=AMBIENT. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -124,13 +112,5 @@ class RadiationToAmbient(Interaction):
         ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

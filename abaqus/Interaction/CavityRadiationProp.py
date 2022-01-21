@@ -44,11 +44,7 @@ class CavityRadiationProp(ContactProperty):
 
         Returns
         -------
-            A CavityRadiationProp object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CavityRadiationProp object. . 
         """
         super().__init__(name)
         pass
@@ -66,13 +62,5 @@ class CavityRadiationProp(ContactProperty):
             A sequence of sequences of Floats specifying the following:The emissivity, 
             ϵϵ.Temperature, if the data depend on temperature.Value of the first field variable, if 
             the data depend on field variables.Value of the second field variable.Etc. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

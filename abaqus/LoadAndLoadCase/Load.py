@@ -31,15 +31,7 @@ class Load:
         Parameters
         ----------
         stepName
-            A String specifying the name of the step in which the load is deactivated. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
+            A String specifying the name of the step in which the load is deactivated.
         """
         pass
 
@@ -51,15 +43,7 @@ class Load:
         fromStepName
             A String specifying the name of the step from which the load state is moved. 
         toStepName
-            A String specifying the name of the step to which the load state is moved. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
+            A String specifying the name of the step to which the load state is moved.
         """
         pass
 
@@ -70,15 +54,7 @@ class Load:
         Parameters
         ----------
         stepName
-            A String specifying the name of the step in which the load state is reset. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            TextError. 
+            A String specifying the name of the step in which the load state is reset.
         """
         pass
 
@@ -87,14 +63,6 @@ class Load:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -103,14 +71,6 @@ class Load:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -121,13 +81,5 @@ class Load:
         ----------
         indices
             A sequence of Ints specifying the index of each load to delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

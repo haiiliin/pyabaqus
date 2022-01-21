@@ -74,11 +74,7 @@ class GapElectricalConductance:
 
         Returns
         -------
-            A GapElectricalConductance object. 
-
-        Exceptions
-        ----------
-            None. 
+            A GapElectricalConductance object. . 
         """
         pass
 
@@ -87,13 +83,5 @@ class GapElectricalConductance:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

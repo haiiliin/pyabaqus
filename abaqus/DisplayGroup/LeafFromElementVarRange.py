@@ -46,11 +46,7 @@ class LeafFromElementVarRange(Leaf):
 
         Returns
         -------
-            A LeafFromElementVarRange object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LeafFromElementVarRange object. . 
         """
         super().__init__(DEFAULT_MODEL)
         pass

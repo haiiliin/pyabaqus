@@ -52,11 +52,7 @@ class FluidExchange(Interaction):
 
         Returns
         -------
-            A FluidExchange object. 
-
-        Exceptions
-        ----------
-            None. 
+            A FluidExchange object. . 
         """
         super().__init__()
         pass
@@ -75,13 +71,5 @@ class FluidExchange(Interaction):
             argument is applicable only when *definition*=BETWEEN_CAVITIES. 
         exchangeArea
             A Float specifying the effective exchange area. The default value is 1.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

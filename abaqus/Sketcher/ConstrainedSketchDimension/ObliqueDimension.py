@@ -30,11 +30,7 @@ class ObliqueDimension(ConstrainedSketchDimension):
 
         Returns
         -------
-            A ConstrainedSketchDimension object (None if the dimension cannot be created). 
-
-        Exceptions
-        ----------
-            None. 
+            A ConstrainedSketchDimension object (None if the dimension cannot be created). . 
             !img 
         """
         pass

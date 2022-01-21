@@ -45,11 +45,7 @@ class PenetrationCheck(GeometricRestriction):
 
         Returns
         -------
-            A PenetrationCheck object. 
-
-        Exceptions
-        ----------
-            None. 
+            A PenetrationCheck object. . 
         """
         super().__init__()
         pass
@@ -62,13 +58,5 @@ class PenetrationCheck(GeometricRestriction):
         presumeFeasibleRegionAtStart
             A Boolean specifying whether to ignore the geometric restriction in the first design 
             cycle. The default value is ON. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

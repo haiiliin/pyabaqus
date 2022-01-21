@@ -44,14 +44,6 @@ class EngineeringFeatureBase:
         regions
             A sequence of Region objects specifying the domain of the seam crack. The Region objects 
             must be faces or edges. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -63,13 +55,5 @@ class EngineeringFeatureBase:
         regions
             A sequence of Region objects specifying the domain of the seam crack. The Region objects 
             must be faces or edges. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

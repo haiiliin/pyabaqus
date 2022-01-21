@@ -36,11 +36,7 @@ class Gel:
 
         Returns
         -------
-            A Gel object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Gel object. . 
         """
         pass
 
@@ -49,13 +45,5 @@ class Gel:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

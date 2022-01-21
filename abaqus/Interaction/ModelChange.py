@@ -58,11 +58,7 @@ class ModelChange(Interaction):
 
         Returns
         -------
-            A ModelChange object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ModelChange object. . 
         """
         super().__init__()
         pass
@@ -92,14 +88,6 @@ class ModelChange(Interaction):
             A Boolean specifying whether stress/displacement elements are reactivated with strain. 
             This argument is valid only when *isRestart*=False and when *activeInStep*=True. The 
             default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -118,13 +106,5 @@ class ModelChange(Interaction):
             A Boolean specifying whether stress/displacement elements are reactivated with strain. 
             This argument is valid only when *isRestart*=False and when *activeInStep*=True. The 
             default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

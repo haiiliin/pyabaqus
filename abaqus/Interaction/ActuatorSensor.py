@@ -62,11 +62,7 @@ class ActuatorSensor(Interaction):
 
         Returns
         -------
-            An ActuatorSensor object. 
-
-        Exceptions
-        ----------
-            None. 
+            An ActuatorSensor object. . 
         """
         super().__init__()
         pass
@@ -76,13 +72,5 @@ class ActuatorSensor(Interaction):
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

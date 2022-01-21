@@ -55,11 +55,7 @@ class Stress(PredefinedField):
 
         Returns
         -------
-            A Stress object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Stress object. . 
         """
         super().__init__()
         pass
@@ -86,13 +82,5 @@ class Stress(PredefinedField):
             A Float specifying the second shear component of the stress. 
         sigma23
             A Float specifying the third shear component of the stress. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

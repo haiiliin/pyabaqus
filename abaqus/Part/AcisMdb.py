@@ -65,11 +65,7 @@ class AcisMdb(MdbBase):
 
         Returns
         -------
-            An AcisFile object.
-
-        Exceptions
-        ----------
-            None.
+            An AcisFile object..
         """
         return AcisFile()
 
@@ -105,11 +101,7 @@ class AcisMdb(MdbBase):
 
         Returns
         -------
-            An AcisFile object.
-
-        Exceptions
-        ----------
-            None.
+            An AcisFile object..
         """
         return AcisFile()
 
@@ -191,11 +183,7 @@ class AcisMdb(MdbBase):
 
         Returns
         -------
-            An AcisFile object.
-
-        Exceptions
-        ----------
-            None.
+            An AcisFile object..
         """
         return AcisFile()
 

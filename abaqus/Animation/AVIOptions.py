@@ -56,13 +56,5 @@ class AVIOptions:
             maximum width (*maxWidth*) and height (*maxHeight*) depend on the graphics capabilities 
             of the system. The maximum width and height will be at least as large as the screen 
             dimensions. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

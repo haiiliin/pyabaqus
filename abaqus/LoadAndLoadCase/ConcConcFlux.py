@@ -68,11 +68,7 @@ class ConcConcFlux(Load):
 
         Returns
         -------
-            A ConcConcFlux object. 
-
-        Exceptions
-        ----------
-            None. 
+            A ConcConcFlux object. . 
         """
         super().__init__()
         pass
@@ -94,14 +90,6 @@ class ConcConcFlux(Load):
             A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. 
             UNSET should be used if the load has no amplitude reference. The default value is UNSET. 
             You should provide the *amplitude* argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -121,13 +109,5 @@ class ConcConcFlux(Load):
             amplitude is propagated from the previous static analysis step. FREED should be used if 
             the load is changed to have no amplitude reference. You should provide the *amplitude* 
             argument only if it is valid for the specified step. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

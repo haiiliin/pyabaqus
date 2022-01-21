@@ -71,11 +71,7 @@ class SpringDashpotToGround(SpringDashpot):
 
         Returns
         -------
-            A SpringDashpotToGround object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SpringDashpotToGround object. . 
         """
         super().__init__()
         pass
@@ -104,13 +100,5 @@ class SpringDashpotToGround(SpringDashpot):
         dashpotCoefficient
             A Float specifying the force per relative velocity for the dashpot. The default value is 
             0.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

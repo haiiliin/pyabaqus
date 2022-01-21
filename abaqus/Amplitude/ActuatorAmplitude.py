@@ -40,11 +40,7 @@ class ActuatorAmplitude(Amplitude):
 
         Returns
         -------
-            An ActuatorAmplitude object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            An ActuatorAmplitude object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -56,11 +52,7 @@ class ActuatorAmplitude(Amplitude):
         ----------
         timeSpan
             A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
-            and TOTAL. The default value is STEP. 
-
-        Returns
-        -------
-            None. 
+            and TOTAL. The default value is STEP.
 
         Exceptions
         ----------

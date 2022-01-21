@@ -49,14 +49,6 @@ class JournalOptions:
             A NumberFormat object specifying the default format for numbers in geometry commands 
             output. The default values are the same as the default values for the NumberFormat 
             object. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -89,11 +81,7 @@ class JournalOptions:
 
         Returns
         -------
-            A NumberFormat object.
-
-        Exceptions
-        ----------
-            None.
+            A NumberFormat object..
         """
         self.numberFormat = numberFormat = NumberFormat(blankPad, format, numDigits, precision)
         return numberFormat

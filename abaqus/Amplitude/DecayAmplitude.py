@@ -49,11 +49,7 @@ class DecayAmplitude(Amplitude):
 
         Returns
         -------
-            A DecayAmplitude object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            A DecayAmplitude object.  and RangeError. 
         """
         super().__init__()
         pass
@@ -65,11 +61,7 @@ class DecayAmplitude(Amplitude):
         ----------
         timeSpan
             A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
-            and TOTAL. The default value is STEP. 
-
-        Returns
-        -------
-            None. 
+            and TOTAL. The default value is STEP.
 
         Exceptions
         ----------

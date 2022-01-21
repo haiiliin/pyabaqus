@@ -44,11 +44,7 @@ class TableCollection:
 
         Returns
         -------
-            A TableCollection object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TableCollection object. . 
         """
         pass
 
@@ -91,11 +87,7 @@ class TableCollection:
 
         Returns
         -------
-            A ParameterTable object.
-
-        Exceptions
-        ----------
-            None.
+            A ParameterTable object..
         """
         self.parameterTables[name] = parameterTable = ParameterTable(name)
         return parameterTable

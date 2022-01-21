@@ -31,14 +31,6 @@ class Constraint:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -47,14 +39,6 @@ class Constraint:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -65,13 +49,5 @@ class Constraint:
         ----------
         indices
             A sequence of Ints specifying the index of each constraint to delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

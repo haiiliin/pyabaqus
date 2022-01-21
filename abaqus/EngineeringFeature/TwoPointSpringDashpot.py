@@ -81,11 +81,7 @@ class TwoPointSpringDashpot(SpringDashpot):
 
         Returns
         -------
-            A TwoPointSpringDashpot object. 
-
-        Exceptions
-        ----------
-            None. 
+            A TwoPointSpringDashpot object. . 
         """
         super().__init__()
         pass
@@ -124,13 +120,5 @@ class TwoPointSpringDashpot(SpringDashpot):
         dashpotCoefficient
             A Float specifying the force per relative velocity for the dashpots. The default value 
             is 0.0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

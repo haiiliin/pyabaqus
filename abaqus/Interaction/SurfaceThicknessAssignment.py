@@ -43,14 +43,6 @@ class SurfaceThicknessAssignment:
             analysis. 
             - A Float specifying a scale factor that multiplies the thickness value specified in the 
             second entry. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -74,14 +66,6 @@ class SurfaceThicknessAssignment:
             analysis. 
             - A Float specifying a scale factor that multiplies the thickness value specified in the 
             second entry. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -92,13 +76,5 @@ class SurfaceThicknessAssignment:
         ----------
         indices
             A sequence of Ints specifying the index of each surface thickness assignment to delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

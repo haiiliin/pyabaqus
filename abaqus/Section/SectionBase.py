@@ -54,10 +54,6 @@ class SectionBase:
 
         Returns
         -------
-            A list of Section objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A list of Section objects. . 
         """
         pass

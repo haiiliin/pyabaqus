@@ -178,11 +178,7 @@ class AnnealStep(AnalysisStep):
             A String specifying a description of the new step. The default value is an empty string. 
         refTemp
             A Float specifying the post-anneal reference temperature. The default value is the 
-            current temperature at all nodes in the model after the annealing has completed. 
-
-        Returns
-        -------
-            None. 
+            current temperature at all nodes in the model after the annealing has completed.
 
         Exceptions
         ----------

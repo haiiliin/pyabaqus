@@ -701,11 +701,7 @@ class BasicOptions:
             value is an empty sequence. 
         includeFeatureBoundaries
             A Boolean specifying whether to include additional averaging boundaries for shells and 
-            membranes based on feature edges. The default value is ON. 
-
-        Returns
-        -------
-            None. 
+            membranes based on feature edges. The default value is ON.
 
         Exceptions
         ----------

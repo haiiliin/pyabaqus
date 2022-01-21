@@ -140,11 +140,7 @@ class Temperature(PredefinedField):
 
         Returns
         -------
-            A Temperature object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Temperature object. . 
         """
         super().__init__()
         pass
@@ -157,11 +153,7 @@ class Temperature(PredefinedField):
         fromStepName
             A String specifying the name of the step from which the PredefinedFieldState is moved. 
         toStepName
-            A String specifying the name of the step to which the PredefinedFieldState is moved. 
-
-        Returns
-        -------
-            None. 
+            A String specifying the name of the step to which the PredefinedFieldState is moved.
 
         Exceptions
         ----------
@@ -252,14 +244,6 @@ class Temperature(PredefinedField):
             A Float specifying the fraction of the average element size in the global model by which 
             a driven node of the field can lie outside the region of the elements of the global 
             model. The default value is 0.0. This argument cannot be used with *midside*. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -334,13 +318,5 @@ class Temperature(PredefinedField):
             A Float specifying the fraction of the average element size in the global model by which 
             a driven node of the field can lie outside the region of the elements of the global 
             model. The default value is 0.0. This argument cannot be used with *midside*. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

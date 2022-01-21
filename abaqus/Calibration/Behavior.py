@@ -49,11 +49,7 @@ class Behavior:
 
         Returns
         -------
-            A Behavior object. 
-
-        Exceptions
-        ----------
-            InvalidNameError. 
+            A Behavior object. . 
         """
         pass
 
@@ -143,14 +139,6 @@ class Behavior:
         bPrimary
             A string specifying name of Primary DataSet object. Only valid if the behavior is of 
             type FeFpBehavior 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -165,14 +153,6 @@ class Behavior:
         ----------
         materialName
             A String specifying the name of the existing material 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -188,11 +168,7 @@ class Behavior:
         Returns
         -------
             A tuple consisting of a and b values of the regression line(y = ax + b), coefficient of 
-            determination(r-squared) value and the start and end-points of the line. 
-
-        Exceptions
-        ----------
-            None. 
+            determination(r-squared) value and the start and end-points of the line. . 
         """
         pass
 
@@ -208,11 +184,7 @@ class Behavior:
         Returns
         -------
             A tuple consisting of a and b values of the regression line(y = ax + b), coefficient of 
-            determination(r-squared) value and the start and end-points of the line. 
-
-        Exceptions
-        ----------
-            None. 
+            determination(r-squared) value and the start and end-points of the line. . 
         """
         pass
 
@@ -227,11 +199,7 @@ class Behavior:
 
         Returns
         -------
-            Coordinates of the ultimate point. 
-
-        Exceptions
-        ----------
-            None. 
+            Coordinates of the ultimate point. . 
         """
         pass
 
@@ -246,11 +214,7 @@ class Behavior:
 
         Returns
         -------
-            A float specifying the value of elastic modulus. 
-
-        Exceptions
-        ----------
-            None. 
+            A float specifying the value of elastic modulus. . 
         """
         pass
 
@@ -273,11 +237,7 @@ class Behavior:
 
         Returns
         -------
-            A sequence of coordinates of the Plastic points.
-
-        Exceptions
-        ----------
-            None. 
+            A sequence of coordinates of the Plastic points.. 
         """
         pass
 
@@ -300,10 +260,6 @@ class Behavior:
         Returns
         -------
             A sequence of strings specifying names of the DataSet objects containing loading, 
-            unloading, reloading and primary datasets. 
-
-        Exceptions
-        ----------
-            None. 
+            unloading, reloading and primary datasets. . 
         """
         pass

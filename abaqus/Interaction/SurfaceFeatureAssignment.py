@@ -48,14 +48,6 @@ class SurfaceFeatureAssignment:
             GLOBAL region constant and can be used only in the Abaqus/Explicit version of general 
             contact. 
             - A SymbolicConstant ORIGINAL or CURRENT specifying the configuration. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -83,14 +75,6 @@ class SurfaceFeatureAssignment:
             GLOBAL region constant and can be used only in the Abaqus/Explicit version of general 
             contact. 
             - A SymbolicConstant ORIGINAL or CURRENT specifying the configuration. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -103,13 +87,5 @@ class SurfaceFeatureAssignment:
         indices
             A sequence of Ints specifying the index of each surface feature angle assignment to 
             delete. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

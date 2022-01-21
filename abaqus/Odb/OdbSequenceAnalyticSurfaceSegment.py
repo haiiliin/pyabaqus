@@ -30,11 +30,7 @@ class OdbSequenceAnalyticSurfaceSegment:
 
         Returns
         -------
-            An OdbSequenceAnalyticSurfaceSegment object. 
-
-        Exceptions
-        ----------
-            None. 
+            An OdbSequenceAnalyticSurfaceSegment object. . 
         """
         pass
 
@@ -46,14 +42,6 @@ class OdbSequenceAnalyticSurfaceSegment:
         ----------
         origin
             A sequence of Floats specifying the coordinates of start point. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -65,14 +53,6 @@ class OdbSequenceAnalyticSurfaceSegment:
         ----------
         endPoint
             A sequence of Floats specifying the coordinates of end point. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -86,14 +66,6 @@ class OdbSequenceAnalyticSurfaceSegment:
             A sequence of Floats specifying the coordinates of center of the circular segment. 
         endPoint
             A sequence of Floats specifying the coordinates of end point of the circular segment. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -108,13 +80,5 @@ class OdbSequenceAnalyticSurfaceSegment:
             segment. 
         endPoint
             A sequence of Floats specifying the coordinates of end point of the parabolic segment. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

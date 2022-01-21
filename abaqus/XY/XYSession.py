@@ -178,11 +178,7 @@ class XYSession(XYSessionBase):
 
         Returns
         -------
-            A QuantityType object.
-
-        Exceptions
-        ----------
-            None.
+            A QuantityType object..
         """
         quantityType = QuantityType(label, type)
         return quantityType
@@ -319,11 +315,7 @@ class XYSession(XYSessionBase):
 
         Returns
         -------
-            An XYData object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            An XYData object..
         """
         pass
 
@@ -345,11 +337,7 @@ class XYSession(XYSessionBase):
 
         Returns
         -------
-            An XYData object.
-
-        Exceptions
-        ----------
-            InvalidNameError.
+            An XYData object..
         """
         pass
 
@@ -413,11 +401,7 @@ class XYSession(XYSessionBase):
 
         Returns
         -------
-            An XYData object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            An XYData object. and RangeError.
         """
         self.xyDataObjects[name] = xyData = XYData(())
         return xyData
@@ -475,11 +459,7 @@ class XYSession(XYSessionBase):
 
         Returns
         -------
-            An XYData object.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            An XYData object. and RangeError.
         """
         self.xyDataObjects[name] = xyData = XYData(())
         return xyData
@@ -562,11 +542,7 @@ class XYSession(XYSessionBase):
 
         Returns
         -------
-            A list of XYData objects.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A list of XYData objects. and RangeError.
         """
         # xyDataObjects: list[XYData] = []
         # for var in variable:
@@ -616,11 +592,7 @@ class XYSession(XYSessionBase):
 
         Returns
         -------
-            A list of XYData objects.
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError.
+            A list of XYData objects. and RangeError.
         """
         self.xyDataObjects['name'] = xyData = XYData(())
         return [xyData]

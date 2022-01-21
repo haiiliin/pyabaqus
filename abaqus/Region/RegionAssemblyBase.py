@@ -35,14 +35,6 @@ class RegionAssemblyBase(AssemblyBase):
             A Set or Surface object specifying set 1. 
         arg2
             A Set or Surface object specifying set 2. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -53,14 +45,6 @@ class RegionAssemblyBase(AssemblyBase):
         ----------
         setNames
             A sequence of Strings specifying the set names that will be deleted from the assembly. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -73,14 +57,6 @@ class RegionAssemblyBase(AssemblyBase):
             A string specifying the Set name. 
         internalSet
             A Boolean specifying whether the Set should be marked as internal. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -93,14 +69,6 @@ class RegionAssemblyBase(AssemblyBase):
             A string specifying the Surface name. 
         internalSurface
             A Boolean specifying whether the Surface should be marked as internal. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -111,14 +79,6 @@ class RegionAssemblyBase(AssemblyBase):
         ----------
         setName
             A string specifying the Set name. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -129,14 +89,6 @@ class RegionAssemblyBase(AssemblyBase):
         ----------
         surfaceName
             A string specifying the Surface name. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -148,13 +100,5 @@ class RegionAssemblyBase(AssemblyBase):
         surfaceNames
             A sequence of Strings specifying the surface names that will be deleted from the 
             assembly. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

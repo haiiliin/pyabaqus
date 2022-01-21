@@ -85,11 +85,7 @@ class PointMassInertia(Inertia):
 
         Returns
         -------
-            A PointMassInertia object. 
-
-        Exceptions
-        ----------
-            None. 
+            A PointMassInertia object. . 
         """
         super().__init__()
         pass
@@ -139,13 +135,5 @@ class PointMassInertia(Inertia):
         composite
             A Float specifying the composite damping magnitude. The default value is 0.0.This 
             argument applies only to Abaqus/Standard analyses. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

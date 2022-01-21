@@ -40,11 +40,7 @@ class MoistureSwelling:
 
         Returns
         -------
-            A MoistureSwelling object. 
-
-        Exceptions
-        ----------
-            None. 
+            A MoistureSwelling object. . 
         """
         pass
 
@@ -53,13 +49,5 @@ class MoistureSwelling:
 
         Parameters
         ----------
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

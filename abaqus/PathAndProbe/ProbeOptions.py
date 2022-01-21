@@ -182,13 +182,5 @@ class ProbeOptions:
             *probeObject*=XYPlot. When *interpolateXy*=OFF, probing returns the nearest *X–Y* data 
             point on the curve. When *interpolateXy*=ON, probing interpolates data to return a value 
             at the nearest point on the curve. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

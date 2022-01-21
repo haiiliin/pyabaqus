@@ -309,14 +309,6 @@ class SessionBase:
             allocation failure.`For optimal performance, the memory limit should be set to a value 
             less than the physical amount of memory on the machine.The minimum setting allowed is 
             256 MB. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -336,11 +328,7 @@ class SessionBase:
 
         Returns
         -------
-            The connection port number used for the CAD connection. 
-
-        Exceptions
-        ----------
-            None. 
+            The connection port number used for the CAD connection. . 
         """
         pass
 
@@ -353,11 +341,7 @@ class SessionBase:
         Returns
         -------
             A Boolean value of True if the CAD connection enabled and False if the CAD connection 
-            disabled. 
-
-        Exceptions
-        ----------
-            None. 
+            disabled. . 
         """
         pass
 
@@ -369,14 +353,6 @@ class SessionBase:
         CADName
             A String specifying the CAD system for which associative import will be disabled. 
             Available options are Pro/ENGINEER, CATIA V5, and CATIA V6, NX and SolidWorks. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -398,14 +374,6 @@ class SessionBase:
             CAD system. If unspecified, attempts will be made to identify an open port. This port 
             number is not the same as the *portNum* used by the associative import interface. The 
             default CAD listening ports are as follow:ProE : 3344NX : 3344 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -422,14 +390,6 @@ class SessionBase:
         Port
             An integer specifying the port number to be used by Abaqus/CAE to send the modified 
             parameters to the CAD system. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -460,14 +420,6 @@ class SessionBase:
             in the originating CAD system.If you specify neither *CADPartFile* nor *CADPartName* 
             during an update in which you specified *CADName*='Pro/ENGINEER', Abaqus updates all of 
             the parts in the specified file. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -479,14 +431,6 @@ class SessionBase:
         CADName
             A String specifying the CAD system for which the parameter update will be disabled. 
             Available option is Pro/ENGINEER. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -510,14 +454,6 @@ class SessionBase:
         compression
             A Boolean specifying the format for an SVG file. It is only valid to use this argument 
             when *format* is SVG. Possible values are False (Uncompressed) and True (Compressed). 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -552,11 +488,7 @@ class SessionBase:
             100. The default value is 1. 
         canvasObjects
             A sequence of canvas objects (viewports, text strings, or arrows) to print. The default 
-            is to print all canvas objects. 
-
-        Returns
-        -------
-            None. 
+            is to print all canvas objects.
 
         Exceptions
         ----------
@@ -580,14 +512,6 @@ class SessionBase:
             A SymbolicConstant specifying the directory in which Abaqus saves the file that will be 
             used to restore your customized settings (abaqus_2021.gpr). Possible values are HOME and 
             CURRENT. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -604,14 +528,6 @@ class SessionBase:
             (Compressed). 
         canvasObjects
             A sequence of canvas objects (viewports, text strings, or arrows) to export. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -628,14 +544,6 @@ class SessionBase:
             (Compressed). 
         canvasObjects
             A sequence of canvas objects to export. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -649,14 +557,6 @@ class SessionBase:
             extension is supplied, (.obj) will be added. 
         canvasObjects
             A sequence of canvas objects to export. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 

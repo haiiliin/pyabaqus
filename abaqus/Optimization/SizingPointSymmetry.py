@@ -42,11 +42,7 @@ class SizingPointSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A SizingPointSymmetry object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SizingPointSymmetry object. . 
         """
         super().__init__()
         pass
@@ -62,13 +58,5 @@ class SizingPointSymmetry(GeometricRestriction):
             used. When this member is queried, it returns an Int. The default value is None. 
         ignoreFrozenArea
             A Boolean specifying whether to ignore frozen areas. The default value is OFF. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

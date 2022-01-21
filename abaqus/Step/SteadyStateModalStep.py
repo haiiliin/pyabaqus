@@ -268,11 +268,7 @@ class SteadyStateModalStep(AnalysisStep):
             A StructuralDampingByFrequency object. 
         subdivideUsingEigenfrequencies
             A Boolean specifying whether to subdivide each frequency range using the 
-            eigenfrequencies of the system. The default value is ON. 
-
-        Returns
-        -------
-            None. 
+            eigenfrequencies of the system. The default value is ON.
 
         Exceptions
         ----------

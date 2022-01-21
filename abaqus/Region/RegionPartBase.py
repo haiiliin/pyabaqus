@@ -35,14 +35,6 @@ class RegionPartBase(PartBase):
             A Set or Surface object specifying set 1. 
         arg2
             A Set or Surface object specifying set 2. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -55,14 +47,6 @@ class RegionPartBase(PartBase):
             A string specifying the Set name. 
         internalSet
             A Boolean specifying whether the Set should be marked as internal. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -75,14 +59,6 @@ class RegionPartBase(PartBase):
             A string specifying the Surface name. 
         internalSurface
             A Boolean specifying whether the Surface should be marked as internal. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -93,14 +69,6 @@ class RegionPartBase(PartBase):
         ----------
         setName
             A string specifying the Set name. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -111,14 +79,6 @@ class RegionPartBase(PartBase):
         ----------
         surfaceName
             A string specifying the Surface name. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -129,14 +89,6 @@ class RegionPartBase(PartBase):
         ----------
         setNames
             A sequence of Strings specifying the set names that will be deleted from the part. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -147,13 +99,5 @@ class RegionPartBase(PartBase):
         ----------
         surfaceNames
             A sequence of Strings specifying the surface names that will be deleted from the part. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

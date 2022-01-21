@@ -25,10 +25,6 @@ class RigidBodyConstraint:
 
         Returns
         -------
-            A String Value: NONE in the absence of constraint data. 
-
-        Exceptions
-        ----------
-            None. 
+            A String Value: NONE in the absence of constraint data. . 
         """
         pass

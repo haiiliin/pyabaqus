@@ -65,10 +65,6 @@ class LayerProperties:
 
         Returns
         -------
-            A LayerProperties object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LayerProperties object. . 
         """
         pass

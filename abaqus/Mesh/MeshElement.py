@@ -77,11 +77,8 @@ class MeshElement:
 
         Returns
         -------
-            A MeshElement object. 
-
-        Exceptions
-        ----------
-            None. 
+        element: MeshElement
+            A MeshElement object. . 
         """
         pass
 
@@ -93,11 +90,7 @@ class MeshElement:
 
         Returns
         -------
-            A tuple of MeshNode objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of MeshNode objects. . 
         """
         pass
 
@@ -109,11 +102,7 @@ class MeshElement:
 
         Returns
         -------
-            A tuple of MeshEdge objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of MeshEdge objects. . 
         """
         pass
 
@@ -125,11 +114,7 @@ class MeshElement:
 
         Returns
         -------
-            A tuple of MeshFace objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A tuple of MeshFace objects. . 
         """
         pass
 
@@ -141,11 +126,7 @@ class MeshElement:
 
         Returns
         -------
-            A MeshElementArray object which is a sequence of MeshElement objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshElementArray object which is a sequence of MeshElement objects. . 
         """
         pass
 
@@ -161,11 +142,7 @@ class MeshElement:
 
         Returns
         -------
-            A MeshElementArray object, which is a sequence of MeshElement objects. 
-
-        Exceptions
-        ----------
-            None. 
+            A MeshElementArray object, which is a sequence of MeshElement objects. . 
         """
         pass
 
@@ -178,13 +155,5 @@ class MeshElement:
             An Int specifying the element label. This member may only be edited if the element 
             belongs to an orphan mesh part. The specified label must be non-negative and must not be 
             in use by any other element of the same part. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

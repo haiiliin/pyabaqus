@@ -42,11 +42,7 @@ class OptimizationConstraint:
 
         Returns
         -------
-            An OptimizationConstraint object. 
-
-        Exceptions
-        ----------
-            InvalidNameError and RangeError. 
+            An OptimizationConstraint object.  and RangeError. 
         """
         pass
 
@@ -59,11 +55,7 @@ class OptimizationConstraint:
             A SymbolicConstant specifying the method used to constrain the design response. Possible 
             values are ABSOLUTE_EQUAL, ABSOLUTE_GREATER_THAN_EQUAL, ABSOLUTE_LESS_THAN_EQUAL, 
             RELATIVE_EQUAL, RELATIVE_GREATER_THAN_EQUAL, and RELATIVE_LESS_THAN_EQUAL. The default 
-            value is ABSOLUTE_EQUAL. 
-
-        Returns
-        -------
-            None. 
+            value is ABSOLUTE_EQUAL.
 
         Exceptions
         ----------

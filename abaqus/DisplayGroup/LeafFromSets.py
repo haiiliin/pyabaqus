@@ -40,11 +40,7 @@ class LeafFromSets(Leaf):
 
         Returns
         -------
-            A LeafFromSets object. 
-
-        Exceptions
-        ----------
-            None. 
+            A LeafFromSets object. . 
         """
         super().__init__(DEFAULT_MODEL)
         pass

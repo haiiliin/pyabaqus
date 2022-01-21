@@ -106,11 +106,7 @@ class Text(Annotation):
 
         Returns
         -------
-            A Text object. 
-
-        Exceptions
-        ----------
-            None. 
+            A Text object. . 
             !img 
         """
         super().__init__()
@@ -167,14 +163,6 @@ class Text(Annotation):
             A SymbolicConstant specifying the Text object justification for multiline text. Possible 
             values are JUSTIFY_LEFT, JUSTIFY_CENTER, and JUSTIFY_RIGHT. The default value is 
             JUSTIFY_LEFT. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
             !img 
         """
         pass

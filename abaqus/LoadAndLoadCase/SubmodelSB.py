@@ -81,11 +81,7 @@ class SubmodelSB(Load):
 
         Returns
         -------
-            A SubmodelSB object. 
-
-        Exceptions
-        ----------
-            None. 
+            A SubmodelSB object. . 
         """
         super().__init__()
         pass
@@ -113,14 +109,6 @@ class SubmodelSB(Load):
             will be used to specify the values of the driven variables. If *globalIncrement*=0, the 
             solution from the last increment will be used. The *globalIncrement* argument is 
             applicable only for linear perturbation steps. The default value is 0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
 
@@ -146,13 +134,5 @@ class SubmodelSB(Load):
             solution from the last increment will be used. The *globalIncrement* argument is 
             applicable only for linear perturbation steps and if *fixed*=OFF. The default value is 
             0. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

@@ -115,11 +115,7 @@ class CompositeShellSection(GeometryShellSection):
 
         Returns
         -------
-            A CompositeShellSection object. 
-
-        Exceptions
-        ----------
-            None. 
+            A CompositeShellSection object. . 
         """
         super().__init__()
         pass
@@ -193,13 +189,5 @@ class CompositeShellSection(GeometryShellSection):
             define the thickness of the shell elements at each node. The *nodalThicknessField* 
             argument applies only when *thicknessType*=NODAL_ANALYTICAL_FIELD or 
             *thicknessType*=NODAL_DISCRETE_FIELD. The default value is an empty string. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass

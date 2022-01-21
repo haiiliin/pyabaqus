@@ -66,11 +66,7 @@ class KinematicHardening(PredefinedField):
 
         Returns
         -------
-            A KinematicHardening object. 
-
-        Exceptions
-        ----------
-            None. 
+            A KinematicHardening object. . 
         """
         super().__init__()
         pass
@@ -102,13 +98,5 @@ class KinematicHardening(PredefinedField):
         distributionType
             A SymbolicConstant specifying whether the load is uniform. Possible values are MAGNITUDE 
             and ANALYTICAL_FIELD. The default value is MAGNITUDE. 
-
-        Returns
-        -------
-            None. 
-
-        Exceptions
-        ----------
-            None. 
         """
         pass
