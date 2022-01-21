@@ -18,7 +18,6 @@ from ..Region.Set import Set
 from ..Region.Skin import Skin
 from ..Region.Stringer import Stringer
 from ..Region.Surface import Surface
-from ..UtilityAndView.Repository import Repository
 
 
 class PartInstance:
@@ -70,22 +69,22 @@ class PartInstance:
     # A repository of Set objects specifying the sets created on the part. For more 
     # information, see [Region 
     # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
-    sets: Repository[str, Set] = Repository[str, Set]()
+    sets: dict[str, Set] = dict[str, Set]()
 
     # A repository of Surface objects specifying the surfaces created on the part. For more 
     # information, see [Region 
     # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
-    surfaces: Repository[str, Surface] = Repository[str, Surface]()
+    surfaces: dict[str, Surface] = dict[str, Surface]()
 
     # A repository of Skin objects specifying the skins created on the part. For more 
     # information, see [Region 
     # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
-    skins: Repository[str, Skin] = Repository[str, Skin]()
+    skins: dict[str, Skin] = dict[str, Skin]()
 
     # A repository of Stringer objects specifying the stringers created on the part. For more 
     # information, see [Region 
     # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
-    stringers: Repository[str, Stringer] = Repository[str, Stringer]()
+    stringers: dict[str, Stringer] = dict[str, Stringer]()
 
     # A VertexArray object. 
     vertices: VertexArray = VertexArray([])
@@ -118,7 +117,7 @@ class PartInstance:
     # For a given element and a given face index within that element, the corresponding 
     # MeshFace object can be retrieved from the repository by using the key calculated as (i*8 
     # + j), where i and j are zero-based element and face indices, respectively. 
-    elemFaces: Repository[str, MeshFace] = Repository[str, MeshFace]()
+    elemFaces: dict[str, MeshFace] = dict[str, MeshFace]()
 
     # A MeshFaceArray object. 
     elementFaces: MeshFaceArray = MeshFaceArray([])
@@ -128,13 +127,13 @@ class PartInstance:
     # corresponding MeshEdge object can be retrieved from the repository by using the key 
     # calculated as (i*32 + j*4 + k), where i, j, and k are zero-based element, face, and edge 
     # indices, respectively. 
-    elemEdges: Repository[str, MeshEdge] = Repository[str, MeshEdge]()
+    elemEdges: dict[str, MeshEdge] = dict[str, MeshEdge]()
 
     # A MeshEdgeArray object. 
     elementEdges: MeshEdgeArray = MeshEdgeArray([])
 
     # A repository of ReferencePoint objects. 
-    referencePoints: Repository[str, ReferencePoint] = Repository[str, ReferencePoint]()
+    referencePoints: dict[str, ReferencePoint] = dict[str, ReferencePoint]()
 
     # A String specifying the name of the part from which the instance was created. 
     partName: str = ''

@@ -13,7 +13,6 @@ from .OdbDataSurfaceSet import OdbDataSurfaceSet
 from .OdbDiagnosticData import OdbDiagnosticData
 from .RigidBodyConstraint import RigidBodyConstraint
 from .TieConstraint import TieConstraint
-from ..UtilityAndView.Repository import Repository
 
 
 class OdbData:
@@ -51,63 +50,63 @@ class OdbData:
 
     # A repository of HistoryVariable objects specifying the history request label. The 
     # repository is read-only. 
-    historyVariables: Repository[str, HistoryVariable] = Repository[str, HistoryVariable]()
+    historyVariables: dict[str, HistoryVariable] = dict[str, HistoryVariable]()
 
     # A repository of OdbDataStep objects specifying the list of steps. The repository is 
     # read-only. 
-    steps: Repository[str, OdbDataStep] = Repository[str, OdbDataStep]()
+    steps: dict[str, OdbDataStep] = dict[str, OdbDataStep]()
 
     # A repository of OdbDataInstance objects specifying the list of instances. The repository 
     # is read-only. 
-    instances: Repository[str, OdbDataInstance] = Repository[str, OdbDataInstance]()
+    instances: dict[str, OdbDataInstance] = dict[str, OdbDataInstance]()
 
     # A repository of OdbDataMaterial objects specifying the list of materials. The repository 
     # is read-only. 
-    materials: Repository[str, OdbDataMaterial] = Repository[str, OdbDataMaterial]()
+    materials: dict[str, OdbDataMaterial] = dict[str, OdbDataMaterial]()
 
     # A repository of OdbDataSection objects specifying the list of sections. The repository 
     # is read-only. 
-    sections: Repository[str, OdbDataSection] = Repository[str, OdbDataSection]()
+    sections: dict[str, OdbDataSection] = dict[str, OdbDataSection]()
 
     # A repository of OdbDataElementSet objects specifying the list of element sets. The 
     # repository is read-only. 
-    elementSets: Repository[str, OdbDataElementSet] = Repository[str, OdbDataElementSet]()
+    elementSets: dict[str, OdbDataElementSet] = dict[str, OdbDataElementSet]()
 
     # A repository of OdbDataNodeSet objects specifying the list of node sets. The repository 
     # is read-only. 
-    nodeSets: Repository[str, OdbDataNodeSet] = Repository[str, OdbDataNodeSet]()
+    nodeSets: dict[str, OdbDataNodeSet] = dict[str, OdbDataNodeSet]()
 
     # A repository of OdbDataSurfaceSet objects specifying the list of surface sets. The 
     # repository is read-only. 
-    surfaceSets: Repository[str, OdbDataSurfaceSet] = Repository[str, OdbDataSurfaceSet]()
+    surfaceSets: dict[str, OdbDataSurfaceSet] = dict[str, OdbDataSurfaceSet]()
 
     # A repository of OdbDataDatumCsys objects specifying the list of coordinate systems 
     # defined in the model. The repository is read-only. 
-    datumCsyses: Repository[str, OdbDataDatumCsys] = Repository[str, OdbDataDatumCsys]()
+    datumCsyses: dict[str, OdbDataDatumCsys] = dict[str, OdbDataDatumCsys]()
 
     # A repository of CouplingConstraint objects specifying the list of kinematic couplings. 
     # The repository is read-only. 
-    kinematicCouplings: Repository[str, CouplingConstraint] = Repository[str, CouplingConstraint]()
+    kinematicCouplings: dict[str, CouplingConstraint] = dict[str, CouplingConstraint]()
 
     # A repository of CouplingConstraint objects specifying the list of distributing 
     # couplings. The repository is read-only. 
-    distributingCouplings: Repository[str, CouplingConstraint] = Repository[str, CouplingConstraint]()
+    distributingCouplings: dict[str, CouplingConstraint] = dict[str, CouplingConstraint]()
 
     # A repository of CouplingConstraint objects specifying the list of shellsolid couplings. 
     # The repository is read-only. 
-    shellSolidCouplings: Repository[str, CouplingConstraint] = Repository[str, CouplingConstraint]()
+    shellSolidCouplings: dict[str, CouplingConstraint] = dict[str, CouplingConstraint]()
 
     # A repository of RigidBodyConstraint objects specifying the list of rigid body 
     # constraints. The repository is read-only. 
-    rigidbodies: Repository[str, RigidBodyConstraint] = Repository[str, RigidBodyConstraint]()
+    rigidbodies: dict[str, RigidBodyConstraint] = dict[str, RigidBodyConstraint]()
 
     # A repository of MpcConstraint objects specifying the list of multipoint constraints. The 
     # repository is read-only. 
-    multiPointConstraints: Repository[str, MpcConstraint] = Repository[str, MpcConstraint]()
+    multiPointConstraints: dict[str, MpcConstraint] = dict[str, MpcConstraint]()
 
     # A repository of TieConstraint objects specifying the list of Tie constraints. The 
     # repository is read-only. 
-    ties: Repository[str, TieConstraint] = Repository[str, TieConstraint]()
+    ties: dict[str, TieConstraint] = dict[str, TieConstraint]()
 
     # An OdbDiagnosticData object. 
     diagnosticData: OdbDiagnosticData = OdbDiagnosticData()

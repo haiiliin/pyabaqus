@@ -1,6 +1,5 @@
 from abaqusConstants import *
 from .OdbDiagnosticAttempt import OdbDiagnosticAttempt
-from ..UtilityAndView.Repository import Repository
 
 
 class OdbDiagnosticIncrement:
@@ -20,7 +19,7 @@ class OdbDiagnosticIncrement:
     """
 
     # A repository of OdbDiagnosticAttempt objects. 
-    attempts: Repository[str, OdbDiagnosticAttempt] = Repository[str, OdbDiagnosticAttempt]()
+    attempts: dict[str, OdbDiagnosticAttempt] = dict[str, OdbDiagnosticAttempt]()
 
     # A float specifying the size of the initial increment. This attribute is read-only. 
     initialSize: str = ''

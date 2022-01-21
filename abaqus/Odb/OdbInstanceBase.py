@@ -12,7 +12,6 @@ from .RebarOrientationArray import RebarOrientationArray
 from ..Property.MaterialOrientationArray import MaterialOrientationArray
 from ..Property.SectionAssignmentArray import SectionAssignmentArray
 from ..Section.Section import Section
-from ..UtilityAndView.Repository import Repository
 
 
 class OdbInstanceBase:
@@ -57,13 +56,13 @@ class OdbInstanceBase:
     elements: OdbMeshElementArray = OdbMeshElementArray()
 
     # A repository of OdbSet objects specifying node sets. 
-    nodeSets: Repository[str, OdbSet] = Repository[str, OdbSet]()
+    nodeSets: dict[str, OdbSet] = dict[str, OdbSet]()
 
     # A repository of OdbSet objects specifying element sets. 
-    elementSets: Repository[str, OdbSet] = Repository[str, OdbSet]()
+    elementSets: dict[str, OdbSet] = dict[str, OdbSet]()
 
     # A repository of OdbSet objects specifying surfaces. 
-    surfaces: Repository[str, OdbSet] = Repository[str, OdbSet]()
+    surfaces: dict[str, OdbSet] = dict[str, OdbSet]()
 
     # A SectionAssignmentArray object. 
     sectionAssignments: SectionAssignmentArray = SectionAssignmentArray()

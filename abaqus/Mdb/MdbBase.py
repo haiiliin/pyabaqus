@@ -7,7 +7,6 @@ from ..Job.Coexecution import Coexecution
 from ..Job.Job import Job
 from ..Job.OptimizationProcess import OptimizationProcess
 from ..Model.Model import Model
-from ..UtilityAndView.Repository import Repository
 
 
 class MdbBase:
@@ -34,29 +33,29 @@ class MdbBase:
     lastChangedCount: float = None
 
     # A repository of Job objects. 
-    jobs: Repository[str, Job] = Repository[str, Job]()
+    jobs: dict[str, Job] = dict[str, Job]()
 
     # A repository of AdaptivityProcess objects. 
-    adaptivityProcesses: Repository[str, AdaptivityProcess] = Repository[str, AdaptivityProcess]()
+    adaptivityProcesses: dict[str, AdaptivityProcess] = dict[str, AdaptivityProcess]()
 
     # A repository of Coexecution objects. 
-    coexecutions: Repository[str, Coexecution] = Repository[str, Coexecution]()
+    coexecutions: dict[str, Coexecution] = dict[str, Coexecution]()
 
     # A repository of OptimizationProcess objects. 
-    optimizationProcesses: Repository[str, OptimizationProcess] = Repository[str, OptimizationProcess]()
+    optimizationProcesses: dict[str, OptimizationProcess] = dict[str, OptimizationProcess]()
 
     # A MeshEditOptions object specifying the undo/redo behavior when editing meshes on parts 
     # or part instances. 
     meshEditOptions: MeshEditOptions = MeshEditOptions()
 
     # A repository of Model objects. 
-    models: Repository[str, Model] = Repository[str, Model]()
+    models: dict[str, Model] = dict[str, Model]()
 
     # A RepositorySupport object. 
     customData: RepositorySupport = RepositorySupport()
 
     # A repository of Annotation objects. 
-    annotations: Repository[str, Annotation] = Repository[str, Annotation]()
+    annotations: dict[str, Annotation] = dict[str, Annotation]()
 
     def __init__(self, pathName: str = ''):
         """This constructor creates an empty Mdb object.

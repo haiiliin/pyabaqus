@@ -12,7 +12,6 @@ from ..CustomKernel.RepositorySupport import RepositorySupport
 from ..Filter.Filter import Filter
 from ..Material.Material import Material
 from ..Section.Section import Section
-from ..UtilityAndView.Repository import Repository
 
 
 class OdbBase:
@@ -35,10 +34,10 @@ class OdbBase:
     isReadOnly: Boolean = OFF
 
     # A repository of Amplitude objects. 
-    amplitudes: Repository[str, Amplitude] = Repository[str, Amplitude]()
+    amplitudes: dict[str, Amplitude] = dict[str, Amplitude]()
 
     # A repository of Filter objects. 
-    filters: Repository[str, Filter] = Repository[str, Filter]()
+    filters: dict[str, Filter] = dict[str, Filter]()
 
     # An OdbAssembly object. 
     rootAssembly: OdbAssembly = OdbAssembly()
@@ -47,19 +46,19 @@ class OdbBase:
     jobData: JobData = JobData()
 
     # A repository of OdbPart objects. 
-    parts: Repository[str, OdbPart] = Repository[str, OdbPart]()
+    parts: dict[str, OdbPart] = dict[str, OdbPart]()
 
     # A repository of Material objects. 
-    materials: Repository[str, Material] = Repository[str, Material]()
+    materials: dict[str, Material] = dict[str, Material]()
 
     # A repository of OdbStep objects. 
-    steps: Repository[str, OdbStep] = Repository[str, OdbStep]()
+    steps: dict[str, OdbStep] = dict[str, OdbStep]()
 
     # A repository of Section objects. 
-    sections: Repository[str, Section] = Repository[str, Section]()
+    sections: dict[str, Section] = dict[str, Section]()
 
     # A repository of SectionCategory objects. 
-    sectionCategories: Repository[str, SectionCategory] = Repository[str, SectionCategory]()
+    sectionCategories: dict[str, SectionCategory] = dict[str, SectionCategory]()
 
     # A SectorDefinition object. 
     sectorDefinition: SectorDefinition = SectorDefinition()
@@ -71,7 +70,7 @@ class OdbBase:
     customData: RepositorySupport = RepositorySupport()
 
     # A repository of Profile objects. 
-    profiles: Repository[str, Profile] = Repository[str, Profile]()
+    profiles: dict[str, Profile] = dict[str, Profile]()
 
     def __init__(self, name: str, analysisTitle: str = '', description: str = '', path: str = ''):
         """This method creates a new Odb object.

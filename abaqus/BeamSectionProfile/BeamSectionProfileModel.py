@@ -12,7 +12,6 @@ from .RectangularProfile import RectangularProfile
 from .TProfile import TProfile
 from .TrapezoidalProfile import TrapezoidalProfile
 from ..Model.ModelBase import ModelBase
-from ..UtilityAndView.Repository import Repository
 
 
 class BeamSectionProfileModel(ModelBase):
@@ -41,7 +40,7 @@ class BeamSectionProfileModel(ModelBase):
             None.
             !img
         """
-        profiles: Repository[Profile] = Repository[Profile]()
+        profiles: dict[Profile] = dict[Profile]()
         self.profiles.update(profiles)
         return profiles
 

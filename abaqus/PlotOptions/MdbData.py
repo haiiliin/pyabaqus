@@ -1,6 +1,5 @@
 from .MdbDataInstance import MdbDataInstance
 from .MdbDataStep import MdbDataStep
-from ..UtilityAndView.Repository import Repository
 
 
 class MdbData:
@@ -26,8 +25,8 @@ class MdbData:
 
     # A repository of MdbDataStep objects specifying the list of steps. The repository is 
     # read-only. 
-    steps: Repository[str, MdbDataStep] = Repository[str, MdbDataStep]()
+    steps: dict[str, MdbDataStep] = dict[str, MdbDataStep]()
 
     # A repository of MdbDataInstance objects specifying the list of instances. The repository 
     # is read-only. 
-    instances: Repository[str, MdbDataInstance] = Repository[str, MdbDataInstance]()
+    instances: dict[str, MdbDataInstance] = dict[str, MdbDataInstance]()

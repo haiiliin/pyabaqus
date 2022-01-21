@@ -4,7 +4,6 @@ from .OdbAnalysisWarning import OdbAnalysisWarning
 from .OdbDiagnosticStep import OdbDiagnosticStep
 from .OdbJobTime import OdbJobTime
 from .OdbNumericalProblemSummary import OdbNumericalProblemSummary
-from ..UtilityAndView.Repository import Repository
 
 
 class OdbDiagnosticData:
@@ -24,13 +23,13 @@ class OdbDiagnosticData:
     """
 
     # A repository of OdbAnalysisError objects. 
-    analysisErrors: Repository[str, OdbAnalysisError] = Repository[str, OdbAnalysisError]()
+    analysisErrors: dict[str, OdbAnalysisError] = dict[str, OdbAnalysisError]()
 
     # A repository of OdbAnalysisWarning objects. 
-    analysisWarnings: Repository[str, OdbAnalysisWarning] = Repository[str, OdbAnalysisWarning]()
+    analysisWarnings: dict[str, OdbAnalysisWarning] = dict[str, OdbAnalysisWarning]()
 
     # A repository of OdbDiagnosticStep objects. 
-    steps: Repository[str, OdbDiagnosticStep] = Repository[str, OdbDiagnosticStep]()
+    steps: dict[str, OdbDiagnosticStep] = dict[str, OdbDiagnosticStep]()
 
     # An OdbJobTime object. 
     jobTime: OdbJobTime = OdbJobTime()

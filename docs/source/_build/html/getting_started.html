@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting Started &mdash; pyabaqus 1.0.0 documentation</title>
+  <title>Getting Started &mdash; pyabaqus 1.0.3 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -79,13 +79,26 @@
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
-<p><cite>pyabaqus</cite> is a Python package to run Abaqus fluently, it is a package to make Abaqus modeling, calculation, visualization easily. Using <cite>pyabaqus</cite>, you can simply build the Abaqus model, submit and monitor the job, and visualize the results in just one python script, you don’t even need to open Abaqus the whole time.</p>
+<p><cite>pyabaqus</cite> is a Python package to run Abaqus fluently, it is a package to make Abaqus
+modeling, calculation, visualization easily. Using <cite>pyabaqus</cite>, you can simply build the Abaqus
+model, submit and monitor the job, and visualize the results in just one Python script, you
+don’t even need to open Abaqus the whole time.</p>
 <section id="two-python-interpreters">
 <h3>Two Python interpreters<a class="headerlink" href="#two-python-interpreters" title="Permalink to this headline"></a></h3>
-<p>Before we go any furthur, it is necessary for us to understand two Python interpreters.</p>
-<p>When we use the Abaqus/CAE graphical user interface (GUI) to create a model and to visualize the results, commands are issued internally by Abaqus/CAE after every operation. These commands reflect the geometry you created along with the options and settings you selected from each dialog box. The GUI generates commands in an object-oriented programming language called Python. The commands issued by the GUI are sent to the Abaqus/CAE kernel. The kernel interprets the commands and uses the options and settings to create an internal representation of our model. The kernel is the brains behind Abaqus/CAE. The GUI is the interface between the user and the kernel.</p>
-<p>In a word, Abaqus use Python language to interact with the Abaqus kernel, everything that can be done in Abaqus/CAE, can also be done using Python script. Abaqus has already installed a Python interpreter so that Abaqus/CAE can use it to interact with the Abaqus kernel.</p>
-<p>For some reasons, we cannot directly use the Python interpreter inside Abaqus to build an Abaqus model. But forturnately, we can use the commands provided by Abaqus to access it. i.e.</p>
+<p>Before we go any further, it is necessary for us to understand two Python interpreters.</p>
+<p>When we use the Abaqus/CAE graphical user interface (GUI) to create a model and to visualize
+the results, commands are issued internally by Abaqus/CAE after every operation. These
+commands reflect the geometry you created along with the options and settings you selected
+from each dialog box. The GUI generates commands in an object-oriented programming language
+called Python. The commands issued by the GUI are sent to the Abaqus/CAE kernel. The kernel
+interprets the commands and uses the options and settings to create an internal representation
+of our model. The kernel is the brains behind Abaqus/CAE. The GUI is the interface between the
+user and the kernel.</p>
+<p>In a word, Abaqus use Python language to interact with the Abaqus kernel, everything that can
+be done in Abaqus/CAE, can also be done using Python script. Abaqus has already installed a
+Python interpreter so that Abaqus/CAE can use it to interact with the Abaqus kernel.</p>
+<p>For some reasons, we cannot directly use the Python interpreter inside Abaqus to build an
+Abaqus model. But fortunately, we can use the commands provided by Abaqus to access it. i.e.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>abaqus cae
     <span class="o">[</span><span class="nv">database</span><span class="o">=</span>database-file<span class="o">]</span>
     <span class="o">[</span><span class="nv">replay</span><span class="o">=</span>replay-file<span class="o">]</span>
@@ -103,17 +116,23 @@
     <span class="o">[</span>guiNoRecord<span class="o">]</span>
 </pre></div>
 </div>
-<p>Usually, we can use the noGUI-file or script-file to execuate our Python script in Abaqus.</p>
-<p>Another Python interpreter, is the Python interpreter installed by ourselves, where <cite>pyabaqus</cite> is installed. <cite>pyabaqus</cite> provides a bridge to connect our Python script to Abaqus Python interpreter, it provides type hints for Python scripting for Abaqus, enabling us to write a Abaqus Python script quickly.</p>
+<p>Usually, we can use the noGUI-file or script-file to execute our Python script in Abaqus.</p>
+<p>Another Python interpreter, is the Python interpreter installed by ourselves, where <cite>pyabaqus</cite>
+is installed. <cite>pyabaqus</cite> provides a bridge to connect our Python script to Abaqus Python
+interpreter, it provides type hints for Python scripting for Abaqus, enabling us to write a
+Abaqus Python script quickly.</p>
 </section>
 </section>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
-<p><cite>pyabaqus</cite> is uploaded to <a class="reference external" href="https://pypi.org/project/pyabaqus">PyPi</a>, you can simply install it using pip:</p>
+<p><cite>pyabaqus</cite> is uploaded to <a class="reference external" href="https://pypi.org/project/pyabaqus">PyPi</a>, you can simply install
+it using pip:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install pyabaqus
 </pre></div>
 </div>
-<p>You may install the latest development version by cloning the <a class="reference external" href="https://github.com/Haiiliin/pyabaqus">GitHub repository</a> and using <cite>python</cite> to install from the local directory:</p>
+<p>You may install the latest development version by cloning the
+<a class="reference external" href="https://github.com/Haiiliin/pyabaqus">GitHub repository</a> and using <cite>python</cite> to install from
+the local directory:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/Haiiliin/pyabaqus.git
 python setup.py install
 </pre></div>
@@ -127,7 +146,8 @@ python setup.py install
 </ul>
 </dd>
 </dl>
-<p>Once you have installed <cite>pyabaqus</cite> and <cite>PyQt5</cite>, you can start to build the Abaqus model right now.</p>
+<p>Once you have installed <cite>pyabaqus</cite> and <cite>PyQt5</cite>, you can start to build your Abaqus model right
+now.</p>
 </section>
 </section>
 

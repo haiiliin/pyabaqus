@@ -3,7 +3,6 @@ from .Area import Area
 from .Chart import Chart
 from .Title import Title
 from .XYCurve import XYCurve
-from ..UtilityAndView.Repository import Repository
 
 
 class XYPlotBase:
@@ -30,10 +29,10 @@ class XYPlotBase:
     title: Title = Title()
 
     # A repository of Chart objects. 
-    charts: Repository[str, Chart] = Repository[str, Chart]()
+    charts: dict[str, Chart] = dict[str, Chart]()
 
     # A repository of XYCurve objects. 
-    curves: Repository[str, XYCurve] = Repository[str, XYCurve]()
+    curves: dict[str, XYCurve] = dict[str, XYCurve]()
 
     # A tuple of Floats specifying a transformation matrix used to scale or pan along the axes 
     # of the active Chart object of this XYPlot. 

@@ -1,5 +1,4 @@
 # from .ErrorIndicatorResult import ErrorIndicatorResult
-from ..UtilityAndView.Repository import Repository
 
 
 # Prevent circular import
@@ -24,7 +23,7 @@ class RuleResult:
 
     """
 
-    def __init__(self, name: str, indicatorResults: Repository[str, ErrorIndicatorResult], numElems: int,
+    def __init__(self, name: str, indicatorResults: dict[str, ErrorIndicatorResult], numElems: int,
                  minSizeElemCount: int, satisfiedVars: tuple = ()):
         """This method creates a RuleResult with data for a RemeshingRule for a given adaptivity
         iteration.

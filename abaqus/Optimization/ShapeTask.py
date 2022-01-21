@@ -5,7 +5,6 @@ from .ObjectiveFunction import ObjectiveFunction
 from .OptimizationConstraint import OptimizationConstraint
 from .OptimizationTask import OptimizationTask
 from .StopCondition import StopCondition
-from ..UtilityAndView.Repository import Repository
 
 
 class ShapeTask(OptimizationTask):
@@ -26,19 +25,19 @@ class ShapeTask(OptimizationTask):
     """
 
     # A repository of DesignResponse objects. 
-    designResponses: Repository[str, DesignResponse] = Repository[str, DesignResponse]()
+    designResponses: dict[str, DesignResponse] = dict[str, DesignResponse]()
 
     # A repository of ObjectiveFunction objects. 
-    objectiveFunctions: Repository[str, ObjectiveFunction] = Repository[str, ObjectiveFunction]()
+    objectiveFunctions: dict[str, ObjectiveFunction] = dict[str, ObjectiveFunction]()
 
     # A repository of OptimizationConstraint objects. 
-    optimizationConstraints: Repository[str, OptimizationConstraint] = Repository[str, OptimizationConstraint]()
+    optimizationConstraints: dict[str, OptimizationConstraint] = dict[str, OptimizationConstraint]()
 
     # A repository of GeometricRestriction objects. 
-    geometricRestrictions: Repository[str, GeometricRestriction] = Repository[str, GeometricRestriction]()
+    geometricRestrictions: dict[str, GeometricRestriction] = dict[str, GeometricRestriction]()
 
     # A repository of StopCondition objects. 
-    stopConditions: Repository[str, StopCondition] = Repository[str, StopCondition]()
+    stopConditions: dict[str, StopCondition] = dict[str, StopCondition]()
 
     def __init__(self, name: str, abaqusSensitivities: Boolean = True,
                  absoluteStepSizeControl: SymbolicConstant = MINIMUM, activateDurability: Boolean = ON,

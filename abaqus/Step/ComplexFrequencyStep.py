@@ -13,7 +13,6 @@ from ..StepOutput.FieldOutputRequestState import FieldOutputRequestState
 from ..StepOutput.HistoryOutputRequestState import HistoryOutputRequestState
 from ..StepOutput.Monitor import Monitor
 from ..StepOutput.Restart import Restart
-from ..UtilityAndView.Repository import Repository
 
 
 class ComplexFrequencyStep(AnalysisStep):
@@ -121,10 +120,10 @@ class ComplexFrequencyStep(AnalysisStep):
     suppressed: Boolean = OFF
 
     # A repository of FieldOutputRequestState objects. 
-    fieldOutputRequestState: Repository[str, FieldOutputRequestState] = Repository[str, FieldOutputRequestState]()
+    fieldOutputRequestState: dict[str, FieldOutputRequestState] = dict[str, FieldOutputRequestState]()
 
     # A repository of HistoryOutputRequestState objects. 
-    historyOutputRequestState: Repository[str, HistoryOutputRequestState] = Repository[str, HistoryOutputRequestState]()
+    historyOutputRequestState: dict[str, HistoryOutputRequestState] = dict[str, HistoryOutputRequestState]()
 
     # A DiagnosticPrint object. 
     diagnosticPrint: DiagnosticPrint = DiagnosticPrint()
@@ -136,11 +135,11 @@ class ComplexFrequencyStep(AnalysisStep):
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: Repository[str, AdaptiveMeshConstraintState] = Repository[
+    adaptiveMeshConstraintStates: dict[str, AdaptiveMeshConstraintState] = dict[
         str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
-    adaptiveMeshDomains: Repository[str, AdaptiveMeshDomain] = Repository[str, AdaptiveMeshDomain]()
+    adaptiveMeshDomains: dict[str, AdaptiveMeshDomain] = dict[str, AdaptiveMeshDomain]()
 
     # A Control object. 
     control: Control = Control()
@@ -149,19 +148,19 @@ class ComplexFrequencyStep(AnalysisStep):
     solverControl: SolverControl = SolverControl()
 
     # A repository of BoundaryConditionState objects. 
-    boundaryConditionStates: Repository[str, BoundaryConditionState] = Repository[str, BoundaryConditionState]()
+    boundaryConditionStates: dict[str, BoundaryConditionState] = dict[str, BoundaryConditionState]()
 
     # A repository of InteractionState objects. 
     interactionStates: int = None
 
     # A repository of LoadState objects. 
-    loadStates: Repository[str, LoadState] = Repository[str, LoadState]()
+    loadStates: dict[str, LoadState] = dict[str, LoadState]()
 
     # A repository of LoadCase objects. 
-    loadCases: Repository[str, LoadCase] = Repository[str, LoadCase]()
+    loadCases: dict[str, LoadCase] = dict[str, LoadCase]()
 
     # A repository of PredefinedFieldState objects. 
-    predefinedFieldStates: Repository[str, PredefinedFieldState] = Repository[str, PredefinedFieldState]()
+    predefinedFieldStates: dict[str, PredefinedFieldState] = dict[str, PredefinedFieldState]()
 
     def __init__(self, name: str, previous: str, numEigen: SymbolicConstant = ALL, description: str = '',
                  shift: float = None, frictionDamping: Boolean = OFF,

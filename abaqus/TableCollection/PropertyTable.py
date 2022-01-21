@@ -1,4 +1,3 @@
-from abaqus.UtilityAndView.Repository import Repository
 from abaqusConstants import *
 from .PropertyTableData import PropertyTableData
 
@@ -26,7 +25,7 @@ class PropertyTable:
     """
 
     # A repository of PropertyTableData. Specifies all the propertyTableData in PropertyTable 
-    propertyTableDatas: Repository[str, PropertyTableData] = Repository[str, PropertyTableData]()
+    propertyTableDatas: dict[str, PropertyTableData] = dict[str, PropertyTableData]()
 
     def __init__(self, name: str, properties: str, variables: str = ''):
         """This method creates a PropertyTable object.

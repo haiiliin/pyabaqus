@@ -6,7 +6,10 @@
 Welcome to pyabaqus's documentation!
 ====================================
 
-`pyabaqus` is a Python package to run Abaqus fluently, it is a package to make Abaqus modeling, calculation, visualization easily. Using `pyabaqus`, you can simply build the Abaqus model, submit and monitor the job, and visualize the results in just one python script, you don't even need to open Abaqus the whole time. 
+`pyabaqus` is a Python package to run Abaqus fluently, it is a package to make Abaqus 
+modeling, calculation, visualization easily. Using `pyabaqus`, you can simply build the Abaqus 
+model, submit and monitor the job, and visualize the results in just one python script, you 
+don't even need to open Abaqus the whole time.
 
 .. toctree::
    :maxdepth: 2

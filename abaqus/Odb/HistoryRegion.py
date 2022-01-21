@@ -3,7 +3,6 @@ import typing
 from abaqusConstants import *
 from .HistoryOutput import HistoryOutput
 from .HistoryPoint import HistoryPoint
-from ..UtilityAndView.Repository import Repository
 
 
 class HistoryRegion:
@@ -27,7 +26,7 @@ class HistoryRegion:
     position: SymbolicConstant = None
 
     # A repository of HistoryOutput objects. 
-    historyOutputs: Repository[str, HistoryOutput] = Repository[str, HistoryOutput]()
+    historyOutputs: dict[str, HistoryOutput] = dict[str, HistoryOutput]()
 
     def __init__(self, name: str, description: str, point: HistoryPoint, loadCase: str = None):
         """This method creates a HistoryRegion object.

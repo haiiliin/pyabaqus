@@ -1,7 +1,6 @@
 from abaqusConstants import *
 from .AdaptivityIteration import AdaptivityIteration
 from ..Job.ModelJob import ModelJob
-from ..UtilityAndView.Repository import Repository
 
 
 class AdaptivityProcess:
@@ -27,7 +26,7 @@ class AdaptivityProcess:
 
     # A repository of AdaptivityIteration objects specifying the AdaptivityIteration objects 
     # received during running the adaptivity process. 
-    iterations: Repository[int, AdaptivityIteration] = Repository[str, AdaptivityIteration]()
+    iterations: dict[int, AdaptivityIteration] = dict[str, AdaptivityIteration]()
 
     def __init__(self, name: str, job: ModelJob, maxIterations: int = 3, jobPrefix: str = ''):
         """This method creates an AdaptivityProcess object.

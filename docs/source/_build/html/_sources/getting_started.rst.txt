@@ -5,19 +5,32 @@ Getting Started
 Introduction
 ------------
 
-`pyabaqus` is a Python package to run Abaqus fluently, it is a package to make Abaqus modeling, calculation, visualization easily. Using `pyabaqus`, you can simply build the Abaqus model, submit and monitor the job, and visualize the results in just one python script, you don't even need to open Abaqus the whole time. 
+`pyabaqus` is a Python package to run Abaqus fluently, it is a package to make Abaqus 
+modeling, calculation, visualization easily. Using `pyabaqus`, you can simply build the Abaqus 
+model, submit and monitor the job, and visualize the results in just one Python script, you 
+don't even need to open Abaqus the whole time. 
 
 
 Two Python interpreters
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Before we go any furthur, it is necessary for us to understand two Python interpreters. 
+Before we go any further, it is necessary for us to understand two Python interpreters.
 
-When we use the Abaqus/CAE graphical user interface (GUI) to create a model and to visualize the results, commands are issued internally by Abaqus/CAE after every operation. These commands reflect the geometry you created along with the options and settings you selected from each dialog box. The GUI generates commands in an object-oriented programming language called Python. The commands issued by the GUI are sent to the Abaqus/CAE kernel. The kernel interprets the commands and uses the options and settings to create an internal representation of our model. The kernel is the brains behind Abaqus/CAE. The GUI is the interface between the user and the kernel. 
+When we use the Abaqus/CAE graphical user interface (GUI) to create a model and to visualize 
+the results, commands are issued internally by Abaqus/CAE after every operation. These 
+commands reflect the geometry you created along with the options and settings you selected 
+from each dialog box. The GUI generates commands in an object-oriented programming language 
+called Python. The commands issued by the GUI are sent to the Abaqus/CAE kernel. The kernel 
+interprets the commands and uses the options and settings to create an internal representation 
+of our model. The kernel is the brains behind Abaqus/CAE. The GUI is the interface between the 
+user and the kernel. 
 
-In a word, Abaqus use Python language to interact with the Abaqus kernel, everything that can be done in Abaqus/CAE, can also be done using Python script. Abaqus has already installed a Python interpreter so that Abaqus/CAE can use it to interact with the Abaqus kernel. 
+In a word, Abaqus use Python language to interact with the Abaqus kernel, everything that can 
+be done in Abaqus/CAE, can also be done using Python script. Abaqus has already installed a 
+Python interpreter so that Abaqus/CAE can use it to interact with the Abaqus kernel. 
 
-For some reasons, we cannot directly use the Python interpreter inside Abaqus to build an Abaqus model. But forturnately, we can use the commands provided by Abaqus to access it. i.e.
+For some reasons, we cannot directly use the Python interpreter inside Abaqus to build an 
+Abaqus model. But fortunately, we can use the commands provided by Abaqus to access it. i.e.
 
 .. code-block:: sh
     
@@ -38,22 +51,28 @@ For some reasons, we cannot directly use the Python interpreter inside Abaqus to
         [guiNoRecord]
 
 
-Usually, we can use the noGUI-file or script-file to execuate our Python script in Abaqus.
+Usually, we can use the noGUI-file or script-file to execute our Python script in Abaqus.
 
-Another Python interpreter, is the Python interpreter installed by ourselves, where `pyabaqus` is installed. `pyabaqus` provides a bridge to connect our Python script to Abaqus Python interpreter, it provides type hints for Python scripting for Abaqus, enabling us to write a Abaqus Python script quickly.
+Another Python interpreter, is the Python interpreter installed by ourselves, where `pyabaqus` 
+is installed. `pyabaqus` provides a bridge to connect our Python script to Abaqus Python 
+interpreter, it provides type hints for Python scripting for Abaqus, enabling us to write a 
+Abaqus Python script quickly.
 
 
 Installation
 ------------
 
-`pyabaqus` is uploaded to `PyPi <https://pypi.org/project/pyabaqus>`_, you can simply install it using pip:
+`pyabaqus` is uploaded to `PyPi <https://pypi.org/project/pyabaqus>`_, you can simply install 
+it using pip:
 
 .. code-block:: sh
 
    pip install pyabaqus
 
 
-You may install the latest development version by cloning the `GitHub repository <https://github.com/Haiiliin/pyabaqus>`_ and using `python` to install from the local directory:
+You may install the latest development version by cloning the 
+`GitHub repository <https://github.com/Haiiliin/pyabaqus>`_ and using `python` to install from 
+the local directory:
 
 .. code-block:: sh
 
@@ -67,4 +86,5 @@ Dependencies
 Required dependencies:
     * PyQt5, used for GUI window of Job monitoring
 
-Once you have installed `pyabaqus` and `PyQt5`, you can start to build the Abaqus model right now.
+Once you have installed `pyabaqus` and `PyQt5`, you can start to build your Abaqus model right 
+now.

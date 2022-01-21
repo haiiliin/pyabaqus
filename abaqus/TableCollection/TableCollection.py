@@ -1,7 +1,6 @@
-from abaqus.TableCollection.DataTable import DataTable
-from abaqus.TableCollection.ParameterTable import ParameterTable
-from abaqus.TableCollection.PropertyTable import PropertyTable
-from abaqus.UtilityAndView.Repository import Repository
+from ..TableCollection.DataTable import DataTable
+from ..TableCollection.ParameterTable import ParameterTable
+from ..TableCollection.PropertyTable import PropertyTable
 
 
 class TableCollection:
@@ -22,10 +21,10 @@ class TableCollection:
     """
 
     # A repository of the PropertyTable object. 
-    propertyTables: Repository[str, PropertyTable] = Repository[str, PropertyTable]()
+    propertyTables: dict[str, PropertyTable] = dict[str, PropertyTable]()
 
     # A repository of the ParameterTable object 
-    parameterTables: Repository[str, ParameterTable] = Repository[str, ParameterTable]()
+    parameterTables: dict[str, ParameterTable] = dict[str, ParameterTable]()
 
     # sequence of the DataTable object
     dataTables: list[DataTable] = []

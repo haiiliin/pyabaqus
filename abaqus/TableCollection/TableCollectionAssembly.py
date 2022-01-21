@@ -2,12 +2,11 @@ from abaqusConstants import *
 from .ElementProgressiveActivation import ElementProgressiveActivation
 from ..Assembly.AssemblyBase import AssemblyBase
 from ..Region.Region import Region
-from ..UtilityAndView.Repository import Repository
 
 
 class TableCollectionAssembly(AssemblyBase):
 
-    elementProgressiveActivations: Repository[str, ElementProgressiveActivation] = Repository[str, ElementProgressiveActivation]()
+    elementProgressiveActivations: dict[str, ElementProgressiveActivation] = dict[str, ElementProgressiveActivation]()
 
     def ElementProgressiveActivation(self, name: str, elset: Region = Region(), deformation: Boolean = OFF,
                                      freeSurfaceType: SymbolicConstant = NONE) -> ElementProgressiveActivation:

@@ -1,6 +1,5 @@
 from abaqusConstants import *
 from .Job import Job
-from ..UtilityAndView.Repository import Repository
 
 
 class Coexecution:
@@ -66,7 +65,7 @@ class Coexecution:
     atTime: str = ''
 
     # A repository of Job objects specifying the jobs that comprise this co-execution. 
-    jobs: Repository[str, Job] = Repository[str, Job]()
+    jobs: dict[str, Job] = dict[str, Job]()
 
     # A tuple of Strings specifying the names of the secondary models for the co-execution. 
     secondaryModels: tuple = ()

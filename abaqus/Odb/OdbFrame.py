@@ -3,7 +3,6 @@ import typing
 from abaqusConstants import *
 from .FieldOutput import FieldOutput
 from .OdbLoadCase import OdbLoadCase
-from ..UtilityAndView.Repository import Repository
 
 
 class OdbFrame:
@@ -43,7 +42,7 @@ class OdbFrame:
 
     # A repository of FieldOutput objects specifying the key to the *fieldOutputs*repository 
     # is a String representing an output variable. 
-    fieldOutputs: Repository[str, FieldOutput] = Repository[str, FieldOutput]()
+    fieldOutputs: dict[str, FieldOutput] = dict[str, FieldOutput]()
 
     # An OdbLoadCase object specifying the load case for the frame. 
     loadCase: OdbLoadCase = OdbLoadCase('loadCase')

@@ -32,7 +32,6 @@ from ..Region.Skin import Skin
 from ..Region.Stringer import Stringer
 from ..Region.Surface import Surface
 from ..Sketcher.ConstrainedSketch import ConstrainedSketch
-from ..UtilityAndView.Repository import Repository
 
 
 # prevent circular imports
@@ -88,14 +87,14 @@ class PartBase(Feature):
     cells: CellArray = CellArray([])
 
     # A repository of Feature objects specifying all the features in the part. 
-    features: Repository[str, Feature] = Repository[str, Feature]()
+    features: dict[str, Feature] = dict[str, Feature]()
 
     # A repository of Feature objects specifying all Feature objects in the part. The Feature 
     # objects in the featuresById repository are the same as the Feature objects in the 
     # features repository. However, the key to the objects in the featuresById repository is 
     # an integer specifying the *ID*, whereas the key to the objects in the features 
     # repository is a string specifying the *name*. 
-    featuresById: Repository[str, Feature] = Repository[str, Feature]()
+    featuresById: dict[str, Feature] = dict[str, Feature]()
 
     # A repository of Datum objects specifying all the datums in the part. 
     datums: list[Datum] = list[Datum]()
@@ -107,7 +106,7 @@ class PartBase(Feature):
     # given element and a given face index within that element, the corresponding MeshFace 
     # object can be retrieved from the repository by using the key calculated as (i*8 + j), 
     # where i and j are zero-based element and face indices, respectively. 
-    elemFaces: Repository[str, MeshFace] = Repository[str, MeshFace]()
+    elemFaces: dict[str, MeshFace] = dict[str, MeshFace]()
 
     # A MeshFaceArray object specifying all the unique element faces in the part. 
     elementFaces: MeshFaceArray = MeshFaceArray([])
@@ -119,30 +118,30 @@ class PartBase(Feature):
     retainedNodes: MeshNodeArray = MeshNodeArray([])
 
     # A repository of Set objects specifying for more information, see Set. 
-    sets: Repository[str, Set] = Repository[str, Set]()
+    sets: dict[str, Set] = dict[str, Set]()
 
     # A repository of Set objects specifying the contents of the *allSets* repository is the 
     # same as the contents of the *sets* repository. 
-    allSets: Repository[str, Set] = Repository[str, Set]()
+    allSets: dict[str, Set] = dict[str, Set]()
 
     # A repository of Set objects specifying picked regions. 
-    allInternalSets: Repository[str, Set] = Repository[str, Set]()
+    allInternalSets: dict[str, Set] = dict[str, Set]()
 
     # A repository of Surface objects specifying for more information, see Surface. 
-    surfaces: Repository[str, Surface] = Repository[str, Surface]()
+    surfaces: dict[str, Surface] = dict[str, Surface]()
 
     # A repository of Surface objects specifying the contents of the *allSurfaces* repository 
     # is the same as the contents of the *surfaces* repository. 
-    allSurfaces: Repository[str, Surface] = Repository[str, Surface]()
+    allSurfaces: dict[str, Surface] = dict[str, Surface]()
 
     # A repository of Surface objects specifying picked regions. 
-    allInternalSurfaces: Repository[str, Surface] = Repository[str, Surface]()
+    allInternalSurfaces: dict[str, Surface] = dict[str, Surface]()
 
     # A repository of Skin objects specifying the skins created on the part. 
-    skins: Repository[str, Skin] = Repository[str, Skin]()
+    skins: dict[str, Skin] = dict[str, Skin]()
 
     # A repository of Stringer objects specifying the stringers created on the part. 
-    stringers: Repository[str, Stringer] = Repository[str, Stringer]()
+    stringers: dict[str, Stringer] = dict[str, Stringer]()
 
     # A repository of ReferencePoint objects. 
     referencePoints: ReferencePoints = ReferencePoints()
@@ -157,14 +156,14 @@ class PartBase(Feature):
     materialOrientations: MaterialOrientationArray = MaterialOrientationArray()
 
     # A repository of CompositeLayup objects. 
-    compositeLayups: Repository[str, CompositeLayup] = Repository[str, CompositeLayup]()
+    compositeLayups: dict[str, CompositeLayup] = dict[str, CompositeLayup]()
 
     # A repository of MeshEdge objects specifying all the element edges in the part. For a 
     # given element and a given edge index on a given face within that element, the 
     # corresponding MeshEdge object can be retrieved from the repository by using the key 
     # calculated as (i*32 + j*4 + k), where i, j, and k are zero-based element, face, and edge 
     # indices, respectively. 
-    elemEdges: Repository[str, MeshEdge] = Repository[str, MeshEdge]()
+    elemEdges: dict[str, MeshEdge] = dict[str, MeshEdge]()
 
     # A MeshEdgeArray object specifying all the unique element edges in the part. 
     elementEdges: MeshEdgeArray = MeshEdgeArray([])

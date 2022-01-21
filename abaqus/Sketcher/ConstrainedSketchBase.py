@@ -5,7 +5,6 @@ from .ConstrainedSketchOptions.ConstrainedSketchOptions import ConstrainedSketch
 from .ConstrainedSketchParameter.ConstrainedSketchParameter import ConstrainedSketchParameter
 from .ConstrainedSketchVertex.ConstrainedSketchVertexArray import ConstrainedSketchVertexArray
 from ..Amplitude.ConstrainedSketchGeometryArray import ConstrainedSketchGeometryArray
-from ..UtilityAndView.Repository import Repository
 
 
 class ConstrainedSketchBase:
@@ -28,10 +27,10 @@ class ConstrainedSketchBase:
     """
 
     # A repository of ConstrainedSketchConstraint objects. 
-    constraints: Repository[str, ConstrainedSketchConstraint] = Repository[str, ConstrainedSketchConstraint]()
+    constraints: dict[str, ConstrainedSketchConstraint] = dict[str, ConstrainedSketchConstraint]()
 
     # A repository of ConstrainedSketchDimension objects. 
-    dimensions: Repository[str, ConstrainedSketchDimension] = Repository[str, ConstrainedSketchDimension]()
+    dimensions: dict[str, ConstrainedSketchDimension] = dict[str, ConstrainedSketchDimension]()
 
     # A ConstrainedSketchGeometryArray object specifying the sketch geometry, such as lines, 
     # arcs, circles, and splines. 
@@ -39,7 +38,7 @@ class ConstrainedSketchBase:
 
     # A repository of ConstrainedSketchParameter objects specifying sketch parameters, which 
     # may be associated with dimensions. 
-    parameters: Repository[str, ConstrainedSketchParameter] = Repository[str, ConstrainedSketchParameter]()
+    parameters: dict[str, ConstrainedSketchParameter] = dict[str, ConstrainedSketchParameter]()
 
     # A ConstrainedSketchOptions object specifying the sketch option settings. 
     sketchOptions: ConstrainedSketchOptions = ConstrainedSketchOptions()

@@ -6,7 +6,6 @@ from .HistoryPoint import HistoryPoint
 from .HistoryRegion import HistoryRegion
 from .OdbFrameArray import OdbFrameArray
 from .OdbLoadCase import OdbLoadCase
-from ..UtilityAndView.Repository import Repository
 
 
 class OdbStepBase:
@@ -42,10 +41,10 @@ class OdbStepBase:
     frames: OdbFrameArray = OdbFrameArray()
 
     # A repository of HistoryRegion objects. 
-    historyRegions: Repository[str, HistoryRegion] = Repository[str, HistoryRegion]()
+    historyRegions: dict[str, HistoryRegion] = dict[str, HistoryRegion]()
 
     # A repository of OdbLoadCase objects. 
-    loadCases: Repository[str, OdbLoadCase] = Repository[str, OdbLoadCase]()
+    loadCases: dict[str, OdbLoadCase] = dict[str, OdbLoadCase]()
 
     # A tuple of Floats specifying the coordinates of the center of mass. 
     massCenter: float = None

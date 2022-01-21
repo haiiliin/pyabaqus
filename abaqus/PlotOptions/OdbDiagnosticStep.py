@@ -1,7 +1,6 @@
 from abaqusConstants import *
 from .OdbContactDiagnostics import OdbContactDiagnostics
 from .OdbDiagnosticIncrement import OdbDiagnosticIncrement
-from ..UtilityAndView.Repository import Repository
 
 
 class OdbDiagnosticStep:
@@ -28,7 +27,7 @@ class OdbDiagnosticStep:
     characteristicElementLength: str = ''
 
     # A repository of OdbContactDiagnostics objects. 
-    contactDiagnostics: Repository[str, OdbContactDiagnostics] = Repository[str, OdbContactDiagnostics]()
+    contactDiagnostics: dict[str, OdbContactDiagnostics] = dict[str, OdbContactDiagnostics]()
 
     # A sequence of string specifying the explicit increment status. This attribute is 
     # read-only. 
@@ -46,7 +45,7 @@ class OdbDiagnosticStep:
     incrementsCompleted: str = ''
 
     # A repository of OdbDiagnosticIncrement objects. 
-    increments: Repository[str, OdbDiagnosticIncrement] = Repository[str, OdbDiagnosticIncrement]()
+    increments: dict[str, OdbDiagnosticIncrement] = dict[str, OdbDiagnosticIncrement]()
 
     # A float specifying the initial increment size for the step. This attribute is read-only. 
     initialTimeIncrement: str = ''

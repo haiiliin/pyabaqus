@@ -1,5 +1,4 @@
 from ..Annotation.Annotation import Annotation
-from ..UtilityAndView.Repository import Repository
 from ..XY.QuantityType import QuantityType
 from ..XY.XYData import XYData
 
@@ -57,10 +56,10 @@ class UserDataBase:
     legendLabel: str = ''
 
     # A repository of XYData objects. 
-    xyDataObjects: Repository[str, XYData] = Repository[str, XYData]()
+    xyDataObjects: dict[str, XYData] = dict[str, XYData]()
 
     # A repository of Annotation objects. 
-    annotations: Repository[str, Annotation] = Repository[str, Annotation]()
+    annotations: dict[str, Annotation] = dict[str, Annotation]()
 
     # A tuple of pairs of Floats specifying the *X–Y* data pairs. 
     data: float = None

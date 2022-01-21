@@ -1,8 +1,7 @@
 from .ReferencePoint import ReferencePoint
-from ..UtilityAndView.Repository import Repository
 
 
-class ReferencePoints(Repository[int, ReferencePoint]):
+class ReferencePoints(dict[int, ReferencePoint]):
 
     def __getitem__(self, key: int) -> ReferencePoint:
         if key in self.keys():

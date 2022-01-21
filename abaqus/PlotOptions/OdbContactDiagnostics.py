@@ -1,5 +1,4 @@
 from .OdbAuxiliaryData import OdbAuxiliaryData
-from ..UtilityAndView.Repository import Repository
 
 
 class OdbContactDiagnostics:
@@ -19,7 +18,7 @@ class OdbContactDiagnostics:
     """
 
     # A repository of OdbAuxiliaryData objects. This attribute is read-only. 
-    data: Repository[str, OdbAuxiliaryData] = Repository[str, OdbAuxiliaryData]()
+    data: dict[str, OdbAuxiliaryData] = dict[str, OdbAuxiliaryData]()
 
     # A string specifying the opening/overclosure status of the contact. This attribute is 
     # read-only. 

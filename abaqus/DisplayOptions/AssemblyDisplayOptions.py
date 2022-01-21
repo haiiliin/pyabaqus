@@ -14,7 +14,6 @@ from .SymbolDisplayOptions import SymbolDisplayOptions
 from ..DisplayGroup.DisplayGroup import DisplayGroup
 from ..DisplayGroup.DisplayGroupInstance import DisplayGroupInstance
 from ..DisplayGroup.Leaf import Leaf
-from ..UtilityAndView.Repository import Repository
 
 
 class AssemblyDisplayOptions:
@@ -110,7 +109,7 @@ class AssemblyDisplayOptions:
     displayGroup: DisplayGroup = DisplayGroup('dg', Leaf(EMPTY_LEAF))
 
     # A repository of DisplayGroupInstance objects. 
-    displayGroupInstances: Repository[str, DisplayGroupInstance] = Repository[str, DisplayGroupInstance]()
+    displayGroupInstances: dict[str, DisplayGroupInstance] = dict[str, DisplayGroupInstance]()
 
     # An EngineeringFeatureDisplayOptions object. 
     engineeringFeatureOptions: EngineeringFeatureDisplayOptions = EngineeringFeatureDisplayOptions()

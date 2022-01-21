@@ -8,7 +8,6 @@ from ..Mesh.MeshNodeArray import MeshNodeArray
 # from ..Model.Model import Model
 from ..Region.Set import Set
 from ..Region.Surface import Surface
-from ..UtilityAndView.Repository import Repository
 
 
 # prevent circular imports
@@ -35,12 +34,12 @@ class ModelInstance:
     # A repository of Set objects specifying the sets created on the assembly. For more 
     # information, see [Region 
     # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
-    sets: Repository[str, Set] = Repository[str, Set]()
+    sets: dict[str, Set] = dict[str, Set]()
 
     # A repository of Surface objects specifying the surfaces created on the assembly. For 
     # more information, see [Region 
     # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
-    surfaces: Repository[str, Surface] = Repository[str, Surface]()
+    surfaces: dict[str, Surface] = dict[str, Surface]()
 
     # A VertexArray object. 
     vertices: VertexArray = VertexArray([])
@@ -55,10 +54,10 @@ class ModelInstance:
     nodes: MeshNodeArray = MeshNodeArray([])
 
     # A repository of Datum objects. 
-    datums: Repository[str, Datum] = Repository[str, Datum]()
+    datums: dict[str, Datum] = dict[str, Datum]()
 
     # A repository of ReferencePoint objects. 
-    referencePoints: Repository[str, ReferencePoint] = Repository[str, ReferencePoint]()
+    referencePoints: dict[str, ReferencePoint] = dict[str, ReferencePoint]()
 
     def __init__(self, name: str, model: Model, autoOffset: Boolean = OFF):
         """This method creates a ModelInstance object and puts it into the instances repository.

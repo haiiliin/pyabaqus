@@ -23,7 +23,6 @@ from ..Region.Set import Set
 from ..Region.Skin import Skin
 from ..Region.Stringer import Stringer
 from ..Region.Surface import Surface
-from ..UtilityAndView.Repository import Repository
 
 
 class AssemblyBase(Feature):
@@ -77,57 +76,57 @@ class AssemblyBase(Feature):
     nodes: MeshNodeArray = MeshNodeArray([])
 
     # A repository of PartInstance objects. 
-    instances: Repository[str, PartInstance] = Repository[str, PartInstance]()
+    instances: dict[str, PartInstance] = dict[str, PartInstance]()
 
     # A repository of Datum objects specifying all Datum objects in the assembly. 
     datums: list[Datum] = list[Datum]()
 
     # A repository of Feature objects specifying all Feature objects in the assembly. 
-    features: Repository[str, Feature] = Repository[str, Feature]()
+    features: dict[str, Feature] = dict[str, Feature]()
 
     # A repository of Feature objects specifying all Feature objects in the assembly.The 
     # Feature objects in the featuresById repository are the same as the Feature objects in 
     # the features repository. However, the key to the objects in the featuresById repository 
     # is an integer specifying the *ID*, whereas the key to the objects in the features 
     # repository is a string specifying the *name*. 
-    featuresById: Repository[str, Feature] = Repository[str, Feature]()
+    featuresById: dict[str, Feature] = dict[str, Feature]()
 
     # A repository of Surface objects specifying for more information, see [Region 
     # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
-    surfaces: Repository[str, Surface] = Repository[str, Surface]()
+    surfaces: dict[str, Surface] = dict[str, Surface]()
 
     # A repository of Surface objects specifying for more information, see [Region 
     # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
-    allSurfaces: Repository[str, Surface] = Repository[str, Surface]()
+    allSurfaces: dict[str, Surface] = dict[str, Surface]()
 
     # A repository of Surface objects specifying picked regions. 
-    allInternalSurfaces: Repository[str, Surface] = Repository[str, Surface]()
+    allInternalSurfaces: dict[str, Surface] = dict[str, Surface]()
 
     # A repository of Set objects. 
-    sets: Repository[str, Set] = Repository[str, Set]()
+    sets: dict[str, Set] = dict[str, Set]()
 
     # A repository of Set objects specifying for more information, see [Region 
     # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
-    allSets: Repository[str, Set] = Repository[str, Set]()
+    allSets: dict[str, Set] = dict[str, Set]()
 
     # A repository of Set objects specifying picked regions. 
-    allInternalSets: Repository[str, Set] = Repository[str, Set]()
+    allInternalSets: dict[str, Set] = dict[str, Set]()
 
     # A repository of Skin objects specifying the skins created on the assembly. 
-    skins: Repository[str, Skin] = Repository[str, Skin]()
+    skins: dict[str, Skin] = dict[str, Skin]()
 
     # A repository of Stringer objects specifying the stringers created on the assembly. 
-    stringers: Repository[str, Stringer] = Repository[str, Stringer]()
+    stringers: dict[str, Stringer] = dict[str, Stringer]()
 
     # A repository of ReferencePoint objects. 
-    referencePoints: Repository[str, ReferencePoint] = Repository[str, ReferencePoint]()
+    referencePoints: dict[str, ReferencePoint] = dict[str, ReferencePoint]()
 
     # A repository of ModelInstance objects. 
-    modelInstances: Repository[str, ModelInstance] = Repository[str, ModelInstance]()
+    modelInstances: dict[str, ModelInstance] = dict[str, ModelInstance]()
 
     # A PartInstance object specifying the PartInstances and A ModelInstance object specifying 
     # the ModelInstances. 
-    allInstances: Repository[str, typing.Union[PartInstance, ModelInstance]] = Repository[
+    allInstances: dict[str, typing.Union[PartInstance, ModelInstance]] = dict[
         str, typing.Union[PartInstance, ModelInstance]]()
 
     # An EngineeringFeature object. 

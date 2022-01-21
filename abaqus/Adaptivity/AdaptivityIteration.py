@@ -1,6 +1,5 @@
 from .ErrorIndicatorResult import ErrorIndicatorResult
 from .RuleResult import RuleResult
-from ..UtilityAndView.Repository import Repository
 
 
 class AdaptivityIteration:
@@ -23,7 +22,7 @@ class AdaptivityIteration:
     # A repository of RuleResult objects specifying the calculated results from sizing 
     # functions corresponding to the RemeshingRule objects for this iteration of an adaptivity 
     # process. 
-    ruleResults: Repository[str, RuleResult] = Repository[str, RuleResult]()
+    ruleResults: dict[str, RuleResult] = dict[str, RuleResult]()
 
     def __init__(self, iteration: int, jobName: str, modelName: str, odbPath: str, remeshingErrors: int):
         """This method creates an AdaptivityIteration object.
@@ -85,7 +84,7 @@ class AdaptivityIteration:
         self.ruleResults[name] = ruleResult = ErrorIndicatorResult(name, results)
         return ruleResult
 
-    def RuleResult(self, name: str, indicatorResults: Repository[str, ErrorIndicatorResult], numElems: int,
+    def RuleResult(self, name: str, indicatorResults: dict[str, ErrorIndicatorResult], numElems: int,
                    minSizeElemCount: int, satisfiedVars: tuple = ()) -> RuleResult:
         """This method creates a RuleResult with data for a RemeshingRule for a given adaptivity
         iteration.

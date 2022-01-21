@@ -20,7 +20,6 @@ from ..PlotOptions.DisplayOptions import DisplayOptions
 from ..PlotOptions.FreeBodyOptions import FreeBodyOptions
 from ..PlotOptions.StreamOptions import StreamOptions
 from ..PlotOptions.ViewCutOptions import ViewCutOptions
-from ..UtilityAndView.Repository import Repository
 
 
 class OdbDisplay:
@@ -86,13 +85,13 @@ class OdbDisplay:
     modelVariableList: OdbModelFieldVarList = OdbModelFieldVarList()
 
     # A repository of OdbSet objects specifying the set label. The repository is read-only. 
-    nodeSet: Repository[str, OdbSet] = Repository[str, OdbSet]()
+    nodeSet: dict[str, OdbSet] = dict[str, OdbSet]()
 
     # A repository of OdbSet objects specifying the set label. The repository is read-only. 
-    elementSet: Repository[str, OdbSet] = Repository[str, OdbSet]()
+    elementSet: dict[str, OdbSet] = dict[str, OdbSet]()
 
     # A repository of OdbSet objects specifying the set label. The repository is read-only. 
-    surfaceSet: Repository[str, OdbSet] = Repository[str, OdbSet]()
+    surfaceSet: dict[str, OdbSet] = dict[str, OdbSet]()
 
     # A DisplayOptions object. 
     display: DisplayOptions = DisplayOptions()
@@ -122,7 +121,7 @@ class OdbDisplay:
     viewCutOptions: ViewCutOptions = ViewCutOptions()
 
     # A repository of ViewCut objects. 
-    viewCuts: Repository[str, ViewCut] = Repository[str, ViewCut]()
+    viewCuts: dict[str, ViewCut] = dict[str, ViewCut]()
 
     # A DisplayGroup object specifying the current display group and referring to an object in 
     # the *displayGroups* member of Session. 

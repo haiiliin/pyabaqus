@@ -10,7 +10,6 @@ from .SectionCategory import SectionCategory
 from ..Assembly.ConnectorOrientationArray import ConnectorOrientationArray
 from ..Property.SectionAssignmentArray import SectionAssignmentArray
 from ..Section.Section import Section
-from ..UtilityAndView.Repository import Repository
 
 
 class OdbAssemblyBase:
@@ -32,16 +31,16 @@ class OdbAssemblyBase:
     """
 
     # A repository of OdbInstance objects. 
-    instances: Repository[str, OdbInstance] = Repository[str, OdbInstance]()
+    instances: dict[str, OdbInstance] = dict[str, OdbInstance]()
 
     # A repository of OdbSet objects specifying node sets. 
-    nodeSets: Repository[str, OdbSet] = Repository[str, OdbSet]()
+    nodeSets: dict[str, OdbSet] = dict[str, OdbSet]()
 
     # A repository of OdbSet objects specifying element sets. 
-    elementSets: Repository[str, OdbSet] = Repository[str, OdbSet]()
+    elementSets: dict[str, OdbSet] = dict[str, OdbSet]()
 
     # A repository of OdbSet objects specifying surfaces. 
-    surfaces: Repository[str, OdbSet] = Repository[str, OdbSet]()
+    surfaces: dict[str, OdbSet] = dict[str, OdbSet]()
 
     # An OdbMeshNodeArray object. 
     nodes: OdbMeshNodeArray = OdbMeshNodeArray()
@@ -50,7 +49,7 @@ class OdbAssemblyBase:
     elements: OdbMeshElementArray = OdbMeshElementArray()
 
     # A repository of OdbDatumCsys objects. 
-    datumCsyses: Repository[str, OdbDatumCsys] = Repository[str, OdbDatumCsys]()
+    datumCsyses: dict[str, OdbDatumCsys] = dict[str, OdbDatumCsys]()
 
     # A SectionAssignmentArray object. 
     sectionAssignments: SectionAssignmentArray = SectionAssignmentArray()

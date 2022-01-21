@@ -4,7 +4,6 @@ from .GeometricRestriction import GeometricRestriction
 from .ObjectiveFunction import ObjectiveFunction
 from .OptimizationConstraint import OptimizationConstraint
 from .OptimizationTask import OptimizationTask
-from ..UtilityAndView.Repository import Repository
 
 
 class BeadTask(OptimizationTask):
@@ -25,16 +24,16 @@ class BeadTask(OptimizationTask):
     """
 
     # A repository of DesignResponse objects. 
-    designResponses: Repository[str, DesignResponse] = Repository[str, DesignResponse]()
+    designResponses: dict[str, DesignResponse] = dict[str, DesignResponse]()
 
     # A repository of ObjectiveFunction objects. 
-    objectiveFunctions: Repository[str, ObjectiveFunction] = Repository[str, ObjectiveFunction]()
+    objectiveFunctions: dict[str, ObjectiveFunction] = dict[str, ObjectiveFunction]()
 
     # A repository of OptimizationConstraint objects. 
-    optimizationConstraints: Repository[str, OptimizationConstraint] = Repository[str, OptimizationConstraint]()
+    optimizationConstraints: dict[str, OptimizationConstraint] = dict[str, OptimizationConstraint]()
 
     # A repository of GeometricRestriction objects. 
-    geometricRestrictions: Repository[str, GeometricRestriction] = Repository[str, GeometricRestriction]()
+    geometricRestrictions: dict[str, GeometricRestriction] = dict[str, GeometricRestriction]()
 
     def __init__(self, name: str, abaqusSensitivities: Boolean = True,
                  algorithm: SymbolicConstant = GENERAL_OPTIMIZATION, areBCRegionsFrozen: Boolean = OFF,

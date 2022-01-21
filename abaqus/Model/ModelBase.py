@@ -35,7 +35,6 @@ from ..StepOutput.TimePoint import TimePoint
 from ..TableCollection.EventSeriesData import EventSeriesData
 from ..TableCollection.EventSeriesType import EventSeriesType
 from ..TableCollection.TableCollection import TableCollection
-from ..UtilityAndView.Repository import Repository
 
 
 class ModelBase:
@@ -121,40 +120,40 @@ class ModelBase:
     rootAssembly: Assembly = Assembly()
 
     # A repository of Amplitude objects. 
-    amplitudes: Repository[str, Amplitude] = Repository[str, Amplitude]()
+    amplitudes: dict[str, Amplitude] = dict[str, Amplitude]()
 
     # A repository of Profile objects. 
-    profiles: Repository[str, Profile] = Repository[str, Profile]()
+    profiles: dict[str, Profile] = dict[str, Profile]()
 
     # A repository of BoundaryCondition objects. 
-    boundaryConditions: Repository[str, BoundaryCondition] = Repository[str, BoundaryCondition]()
+    boundaryConditions: dict[str, BoundaryCondition] = dict[str, BoundaryCondition]()
 
     # A repository of ConstrainedSketchConstraint objects.
-    constraints: Repository[str, Constraint] = Repository[str, Constraint]()
+    constraints: dict[str, Constraint] = dict[str, Constraint]()
 
     # A repository of AnalyticalField objects. 
-    analyticalFields: Repository[str, AnalyticalField] = Repository[str, AnalyticalField]()
+    analyticalFields: dict[str, AnalyticalField] = dict[str, AnalyticalField]()
 
     # A repository of DiscreteField objects. 
-    discreteFields: Repository[str, DiscreteField] = Repository[str, DiscreteField]()
+    discreteFields: dict[str, DiscreteField] = dict[str, DiscreteField]()
 
     # A repository of PredefinedField objects. 
-    predefinedFields: Repository[str, PredefinedField] = Repository[str, PredefinedField]()
+    predefinedFields: dict[str, PredefinedField] = dict[str, PredefinedField]()
 
     # A repository of Interaction objects. 
-    interactions: Repository[str, Interaction] = Repository[str, Interaction]()
+    interactions: dict[str, Interaction] = dict[str, Interaction]()
 
     # A repository of InteractionProperty objects. 
-    interactionProperties: Repository[str, ContactProperty] = Repository[str, ContactProperty]()
+    interactionProperties: dict[str, ContactProperty] = dict[str, ContactProperty]()
 
     # A repository of ContactControl objects. 
-    contactControls: Repository[str, ContactControl] = Repository[str, ContactControl]()
+    contactControls: dict[str, ContactControl] = dict[str, ContactControl]()
 
     # A repository of ContactInitialization objects. 
-    contactInitializations: Repository[str, ContactInitialization] = Repository[str, ContactInitialization]()
+    contactInitializations: dict[str, ContactInitialization] = dict[str, ContactInitialization]()
 
     # A repository of ContactStabilization objects. 
-    contactStabilizations: Repository[str, ContactStabilization] = Repository[str, ContactStabilization]()
+    contactStabilizations: dict[str, ContactStabilization] = dict[str, ContactStabilization]()
 
     # A tuple of tuples of Strings specifying the linked child PartInstance name in the 
     # current model to the corresponding parent PartInstance name in a different model. 
@@ -165,64 +164,64 @@ class ModelBase:
     linkedParts: tuple = ()
 
     # A repository of Load objects. 
-    loads: Repository[str, Load] = Repository[str, Load]()
+    loads: dict[str, Load] = dict[str, Load]()
 
     # A repository of Material objects. 
-    materials: Repository[str, Material] = Repository[str, Material]()
+    materials: dict[str, Material] = dict[str, Material]()
 
     # A repository of Calibration objects. 
-    calibrations: Repository[str, Calibration] = Repository[str, Calibration]()
+    calibrations: dict[str, Calibration] = dict[str, Calibration]()
 
     # A repository of Section objects. 
-    sections: Repository[str, Section] = Repository[str, Section]()
+    sections: dict[str, Section] = dict[str, Section]()
 
     # A repository of RemeshingRule objects. 
-    remeshingRules: Repository[str, RemeshingRule] = Repository[str, RemeshingRule]()
+    remeshingRules: dict[str, RemeshingRule] = dict[str, RemeshingRule]()
 
     # A repository of ConstrainedSketch objects. 
-    sketches: Repository[str, ConstrainedSketch] = Repository[str, ConstrainedSketch]()
+    sketches: dict[str, ConstrainedSketch] = dict[str, ConstrainedSketch]()
 
     # A repository of Part objects. 
-    parts: Repository[str, Part] = Repository[str, Part]()
+    parts: dict[str, Part] = dict[str, Part]()
 
     # A repository of Step objects. 
-    steps: Repository[str, Step] = Repository[str, Step]()
+    steps: dict[str, Step] = dict[str, Step]()
 
     # A FeatureOptions object. 
     featureOptions: FeatureOptions = FeatureOptions()
 
     # A repository of AdaptiveMeshConstraint objects. 
-    adaptiveMeshConstraints: Repository[str, AdaptiveMeshConstraint] = Repository[str, AdaptiveMeshConstraint]()
+    adaptiveMeshConstraints: dict[str, AdaptiveMeshConstraint] = dict[str, AdaptiveMeshConstraint]()
 
     # A repository of AdaptiveMeshControl objects. 
-    adaptiveMeshControls: Repository[str, AdaptiveMeshControl] = Repository[str, AdaptiveMeshControl]()
+    adaptiveMeshControls: dict[str, AdaptiveMeshControl] = dict[str, AdaptiveMeshControl]()
 
     # A repository of TimePoint objects. 
-    timePoints: Repository[str, TimePoint] = Repository[str, TimePoint]()
+    timePoints: dict[str, TimePoint] = dict[str, TimePoint]()
 
     # A repository of Filter objects. 
-    filters: Repository[str, Filter] = Repository[str, Filter]()
+    filters: dict[str, Filter] = dict[str, Filter]()
 
     # A repository of IntegratedOutputSection objects. 
-    integratedOutputSections: Repository[str, IntegratedOutputSection] = Repository[str, IntegratedOutputSection]()
+    integratedOutputSections: dict[str, IntegratedOutputSection] = dict[str, IntegratedOutputSection]()
 
     # A repository of FieldOutputRequest objects. 
-    fieldOutputRequests: Repository[str, FieldOutputRequest] = Repository[str, FieldOutputRequest]()
+    fieldOutputRequests: dict[str, FieldOutputRequest] = dict[str, FieldOutputRequest]()
 
     # A repository of HistoryOutputRequest objects. 
-    historyOutputRequests: Repository[str, HistoryOutputRequest] = Repository[str, HistoryOutputRequest]()
+    historyOutputRequests: dict[str, HistoryOutputRequest] = dict[str, HistoryOutputRequest]()
 
     # A repository of OptimizationTask objects. 
-    optimizationTasks: Repository[str, OptimizationTask] = Repository[str, OptimizationTask]()
+    optimizationTasks: dict[str, OptimizationTask] = dict[str, OptimizationTask]()
 
     # A repository of TableCollection objects. 
-    tableCollections: Repository[str, TableCollection] = Repository[str, TableCollection]()
+    tableCollections: dict[str, TableCollection] = dict[str, TableCollection]()
 
     # A repository of EventSeriesType objects. 
-    eventSeriesTypes: Repository[str, EventSeriesType] = Repository[str, EventSeriesType]()
+    eventSeriesTypes: dict[str, EventSeriesType] = dict[str, EventSeriesType]()
 
     # A repository of EventSeriesData objects. 
-    eventSeriesDatas: Repository[str, EventSeriesData] = Repository[str, EventSeriesData]()
+    eventSeriesDatas: dict[str, EventSeriesData] = dict[str, EventSeriesData]()
 
     def __init__(self, name: str, description: str = '', stefanBoltzmann: float = None,
                  absoluteZero: float = None, waveFormulation: SymbolicConstant = NOT_SET,

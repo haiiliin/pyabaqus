@@ -6,7 +6,6 @@ from .Legend import Legend
 from .LineStyle import LineStyle
 from .TextStyle import TextStyle
 from .XYCurve import XYCurve
-from ..UtilityAndView.Repository import Repository
 from ..UtilityAndView.View import View
 
 
@@ -41,7 +40,7 @@ class Chart:
 
     # A repository of XYCurve objects specifying a repository of XYCurve objects to display in 
     # the Chart. 
-    curves: Repository[str, XYCurve] = Repository[str, XYCurve]()
+    curves: dict[str, XYCurve] = dict[str, XYCurve]()
 
     # An AxisArray object specifying a read-only sequence of axis objects displayed as axes1 - 
     # the abscissa for a Cartesian chart. 

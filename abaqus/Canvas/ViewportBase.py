@@ -15,7 +15,6 @@ from ..DisplayOptions.PartDisplayOptions import PartDisplayOptions
 from ..DisplayOptions.ViewportAnnotationOptions import ViewportAnnotationOptions
 from ..OdbDisplay.OdbDisplay import OdbDisplay
 from ..PlotOptions.DetailPlotOptions import DetailPlotOptions
-from ..UtilityAndView.Repository import Repository
 from ..UtilityAndView.View import View
 
 
@@ -177,7 +176,7 @@ class ViewportBase:
     #     "initialColor"
     #     "Layup"
     #     "Ply"
-    colorMappings: Repository[str, AttributeColorMap] = Repository[str, AttributeColorMap]()
+    colorMappings: dict[str, AttributeColorMap] = dict[str, AttributeColorMap]()
 
     # A String specifying the color that will be applied to all objects in the viewport at the 
     # start of color coding. The possible values are 'As is', 'Default' or a string with a 
@@ -197,7 +196,7 @@ class ViewportBase:
 
     # A repository of Layer objects specifying the key to the repository is a String with the 
     # name of the layer. 
-    layers: Repository[str, Layer] = Repository[str, Layer]()
+    layers: dict[str, Layer] = dict[str, Layer]()
 
     # A View object specifying the object that controls viewing of the viewport content. 
     view: View = None

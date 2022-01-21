@@ -50,7 +50,6 @@ from ..Print.PngOptions import PngOptions
 from ..Print.PrintOptions import PrintOptions
 from ..Print.PsOptions import PsOptions
 from ..Print.SvgOptions import SvgOptions
-from ..UtilityAndView.Repository import Repository
 from ..UtilityAndView.View import View
 from ..XY.Chart import Chart
 from ..XY.DefaultChartOptions import DefaultChartOptions
@@ -96,7 +95,7 @@ class SessionBase:
     kernelMemoryLimit: float = None
 
     # A repository of Color objects. 
-    colors: Repository[str, Color] = Repository[str, Color]()
+    colors: dict[str, Color] = dict[str, Color]()
 
     # A JournalOptions object specifying how to record selection of geometry in the journal 
     # and replay files. 
@@ -130,7 +129,7 @@ class SessionBase:
     quickTimeOptions: QuickTimeOptions = QuickTimeOptions()
 
     # A repository of Viewport objects. 
-    viewports: Repository[str, Viewport] = Repository[str, Viewport]()
+    viewports: dict[str, Viewport] = dict[str, Viewport]()
 
     # A RepositorySupport object. 
     customData: RepositorySupport = RepositorySupport()
@@ -148,10 +147,10 @@ class SessionBase:
     freeBodyReportOptions: FreeBodyReportOptions = FreeBodyReportOptions()
 
     # A repository of Odb objects. 
-    odbs: Repository[str, Odb] = Repository[str, Odb]()
+    odbs: dict[str, Odb] = dict[str, Odb]()
 
     # A repository of ScratchOdb objects. 
-    scratchOdbs: Repository[str, ScratchOdb] = Repository[str, ScratchOdb]()
+    scratchOdbs: dict[str, ScratchOdb] = dict[str, ScratchOdb]()
 
     # A DefaultOdbDisplay object. 
     defaultOdbDisplay: DefaultOdbDisplay = DefaultOdbDisplay()
@@ -163,22 +162,22 @@ class SessionBase:
     defaultChartOptions: DefaultChartOptions = DefaultChartOptions()
 
     # A repository of OdbData objects. 
-    odbData: Repository[str, OdbData] = Repository[str, OdbData]()
+    odbData: dict[str, OdbData] = dict[str, OdbData]()
 
     # A repository of MdbData objects. 
-    mdbData: Repository[str, MdbData] = Repository[str, MdbData]()
+    mdbData: dict[str, MdbData] = dict[str, MdbData]()
 
     # A repository of Path objects. 
-    paths: Repository[str, Path] = Repository[str, Path]()
+    paths: dict[str, Path] = dict[str, Path]()
 
     # A repository of FreeBody objects. 
-    freeBodies: Repository[str, FreeBody] = Repository[str, FreeBody]()
+    freeBodies: dict[str, FreeBody] = dict[str, FreeBody]()
 
     # A repository of Stream objects. 
-    streams: Repository[str, Stream] = Repository[str, Stream]()
+    streams: dict[str, Stream] = dict[str, Stream]()
 
     # A repository of Spectrum objects. 
-    spectrums: Repository[str, Spectrum] = Repository[str, Spectrum]()
+    spectrums: dict[str, Spectrum] = dict[str, Spectrum]()
 
     # A CurrentProbeValues object. 
     currentProbeValues: CurrentProbeValues = CurrentProbeValues()
@@ -226,16 +225,16 @@ class SessionBase:
     xyColors: AutoColors = AutoColors()
 
     # A repository of XYData objects. 
-    xyDataObjects: Repository[str, XYData] = Repository[str, XYData]()
+    xyDataObjects: dict[str, XYData] = dict[str, XYData]()
 
     # A repository of XYCurve objects. 
-    curves: Repository[str, XYCurve] = Repository[str, XYCurve]()
+    curves: dict[str, XYCurve] = dict[str, XYCurve]()
 
     # A repository of XYPlot objects. 
-    xyPlots: Repository[str, XYPlot] = Repository[str, XYPlot]()
+    xyPlots: dict[str, XYPlot] = dict[str, XYPlot]()
 
     # A repository of Chart objects. 
-    charts: Repository[str, Chart] = Repository[str, Chart]()
+    charts: dict[str, Chart] = dict[str, Chart]()
 
     # An XYReportOptions object. 
     defaultXYReportOptions: XYReportOptions = XYReportOptions()
@@ -244,13 +243,13 @@ class SessionBase:
     xyReportOptions: XYReportOptions = XYReportOptions()
 
     # A repository of View objects. 
-    views: Repository[str, View] = Repository[str, View]()
+    views: dict[str, View] = dict[str, View]()
 
     # A repository of NetworkDatabaseConnector objects. 
-    networkDatabaseConnectors: Repository[str, NetworkDatabaseConnector] = Repository[str, NetworkDatabaseConnector]()
+    networkDatabaseConnectors: dict[str, NetworkDatabaseConnector] = dict[str, NetworkDatabaseConnector]()
 
     # A repository of DisplayGroup objects. 
-    displayGroups: Repository[str, DisplayGroup] = Repository[str, DisplayGroup]()
+    displayGroups: dict[str, DisplayGroup] = dict[str, DisplayGroup]()
 
     # A GraphicsInfo object. 
     graphicsInfo: GraphicsInfo = GraphicsInfo()
@@ -265,7 +264,7 @@ class SessionBase:
     defaultViewportAnnotationOptions: ViewportAnnotationOptions = ViewportAnnotationOptions()
 
     # A repository of Queue objects. 
-    queues: Repository[str, Queue] = Repository[str, Queue]()
+    queues: dict[str, Queue] = dict[str, Queue]()
 
     # A String specifying the name of the current viewport. 
     currentViewportName: str = ''
@@ -276,10 +275,10 @@ class SessionBase:
     sessionState: dict = None
 
     # A repository of Image objects. 
-    images: Repository[str, Image] = Repository[str, Image]()
+    images: dict[str, Image] = dict[str, Image]()
 
     # A repository of Movie objects. 
-    movies: Repository[str, Movie] = Repository[str, Movie]()
+    movies: dict[str, Movie] = dict[str, Movie]()
 
     # A LightOptions object. 
     defaultLightOptions: LightOptions = LightOptions()
@@ -291,7 +290,7 @@ class SessionBase:
     defaultMesherOptions: MesherOptions = MesherOptions()
 
     # A repository of Drawing objects. 
-    drawings: Repository[str, Drawing] = Repository[str, Drawing]()
+    drawings: dict[str, Drawing] = dict[str, Drawing]()
 
     def setValues(self, kernelMemoryLimit: float = None):
         """This method modifies the Session object.
