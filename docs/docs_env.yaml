@@ -19,3 +19,4 @@ dependencies:
   - pip:
     - numpy
     - PyQt5
+    - sphinx-toolbox
