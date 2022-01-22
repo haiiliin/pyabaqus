@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reference manual &mdash; pyabaqus 1.0.5 documentation</title>
+  <title>Reference manual &mdash; pyabaqus 1.0.6 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -128,11 +128,15 @@
 <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mdb.html">Mdb object</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mdb.html#attributes">Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdb.html#create-models">Create models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdb.html#open-three-party-files">Open three-party files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdb.html#create-jobs">Create jobs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdb.html#object-features">Object features</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="model.html">Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="model.html#attributes">Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model.html#create-models">Create models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model.html#object-features">Object features</a></li>
 </ul>
@@ -145,6 +149,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="amplitude.html">Amplitude</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="amplitude.html#attributes">Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="amplitude.html#create-amplitudes">Create amplitudes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="amplitude.html#object-features">Object features</a></li>
 </ul>
@@ -159,6 +164,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="assembly.html">Assembly</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="assembly.html#assembly-attributes">Assembly Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly.html#partinstance-attributes">PartInstance Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly.html#modelinstance-attributes">ModelInstance Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assembly.html#create-instances">Create instances</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assembly.html#object-features">Object features</a></li>
 </ul>
@@ -254,6 +262,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="job.html">Job</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="job.html#attributes">Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="job.html#create-jobs">Create jobs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="job.html#create-queues-in-session">Create queues in Session</a></li>
 <li class="toctree-l2"><a class="reference internal" href="job.html#features-of-the-job">Features of the job</a></li>
@@ -265,13 +274,17 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="material.html">Material</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="material.html#attributes">Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="material.html#create-materials">Create materials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="material.html#assign-properties-to-the-material">Assign properties to the material</a></li>
 <li class="toctree-l2"><a class="reference internal" href="material.html#object-features">Object features</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mdb.html">Mdb object</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mdb.html#attributes">Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdb.html#create-models">Create models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdb.html#open-three-party-files">Open three-party files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdb.html#create-jobs">Create jobs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdb.html#object-features">Object features</a></li>
 </ul>
 </li>
@@ -284,11 +297,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="model.html">Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="model.html#attributes">Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model.html#create-models">Create models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model.html#object-features">Object features</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="odb.html">Odb</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="odb.html#attributes">Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="odb.html#object-features">Object features</a></li>
 </ul>
 </li>
@@ -303,6 +318,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="part.html">Part</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="part.html#attributes">Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="part.html#create-parts">Create parts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="part.html#object-features">Object features</a></li>
 </ul>
@@ -343,6 +359,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="session.html">Session</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="session.html#attributes">Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="session.html#object-features">Object features</a></li>
 </ul>
 </li>
@@ -352,6 +369,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="step.html">Step</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="step.html#attributes">Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="step.html#create-steps">Create steps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="step.html#object-features">Object features</a></li>
 </ul>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mesh &mdash; pyabaqus 1.0.5 documentation</title>
+  <title>Mesh &mdash; pyabaqus 1.0.6 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -150,7 +150,7 @@
 <h3>Mesh features for Assembly<a class="headerlink" href="#mesh-features-for-assembly" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshAssembly.MeshAssembly">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshAssembly.</span></span><span class="sig-name descname"><span class="pre">MeshAssembly</span></span><a class="headerlink" href="#abaqus.Mesh.MeshAssembly.MeshAssembly" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshAssembly</span></span><a class="headerlink" href="#abaqus.Mesh.MeshAssembly.MeshAssembly" title="Permalink to this definition"></a></dt>
 <dd><p>The following commands operate on Assembly objects. For more information about the
 Assembly object, see Assembly object.</p>
 <blockquote>
@@ -1108,7 +1108,7 @@ argument, all meshes in the assembly are considered.</p></li>
 <h3>ElemType<a class="headerlink" href="#elemtype" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.ElemType.ElemType">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.ElemType.</span></span><span class="sig-name descname"><span class="pre">ElemType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elemCode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elemLibrary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hourglassStiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bendingHourglass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drillingHourglass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kinematicSplit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'AVERAGE_STRAIN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distortionControl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lengthRatio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">secondOrderAccuracy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hourglassControl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ENHANCED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weightFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displacementHourglass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotationalHourglass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outOfPlaneDisplacementHourglass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elemDeletion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">particleConversion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">particleConversionThreshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">particleConversionPPD</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">particleConversionKernel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CUBIC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxDegradation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">viscosity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linearBulkViscosity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quadraticBulkViscosity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numFourierModes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeOffset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linearKinematicCtrl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initialGapOpening</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.ElemType.ElemType" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ElemType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elemCode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elemLibrary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hourglassStiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bendingHourglass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drillingHourglass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kinematicSplit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'AVERAGE_STRAIN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distortionControl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lengthRatio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">secondOrderAccuracy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hourglassControl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ENHANCED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weightFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displacementHourglass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotationalHourglass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outOfPlaneDisplacementHourglass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elemDeletion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">particleConversion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">particleConversionThreshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">particleConversionPPD</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">particleConversionKernel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CUBIC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxDegradation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">viscosity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linearBulkViscosity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quadraticBulkViscosity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numFourierModes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeOffset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linearKinematicCtrl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initialGapOpening</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.ElemType.ElemType" title="Permalink to this definition"></a></dt>
 <dd><p>The ElemType object is an argument object used as an argument in the setElementType
 command.</p>
 <blockquote>
@@ -1123,7 +1123,7 @@ command.</p>
 <h3>MeshEdge<a class="headerlink" href="#meshedge" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshEdge.MeshEdge">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshEdge.</span></span><span class="sig-name descname"><span class="pre">MeshEdge</span></span><a class="headerlink" href="#abaqus.Mesh.MeshEdge.MeshEdge" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshEdge</span></span><a class="headerlink" href="#abaqus.Mesh.MeshEdge.MeshEdge" title="Permalink to this definition"></a></dt>
 <dd><p>The MeshEdge object refers to an element edge. It has no constructor or members. A
 MeshEdge object can be accessed via a MeshEdgeArray or a repository on a part or part
 instance.</p>
@@ -1226,7 +1226,7 @@ all elements in the mesh are included.</p>
 <h3>MeshEdgeArray<a class="headerlink" href="#meshedgearray" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshEdgeArray.MeshEdgeArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshEdgeArray.</span></span><span class="sig-name descname"><span class="pre">MeshEdgeArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elemEdges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Mesh.MeshEdge.MeshEdge" title="abaqus.Mesh.MeshEdge.MeshEdge"><span class="pre">abaqus.Mesh.MeshEdge.MeshEdge</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.MeshEdgeArray.MeshEdgeArray" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshEdgeArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elemEdges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Mesh.MeshEdge.MeshEdge" title="abaqus.Mesh.MeshEdge.MeshEdge"><span class="pre">abaqus.Mesh.MeshEdge.MeshEdge</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.MeshEdgeArray.MeshEdgeArray" title="Permalink to this definition"></a></dt>
 <dd><p>The MeshEdgeArray is a sequence of MeshEdge objects.</p>
 <blockquote>
 <div><ul class="simple">
@@ -1282,7 +1282,7 @@ Error: The mask results in an empty sequence</p></li>
 <h3>MeshElement<a class="headerlink" href="#meshelement" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshElement.MeshElement">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshElement.</span></span><span class="sig-name descname"><span class="pre">MeshElement</span></span><a class="headerlink" href="#abaqus.Mesh.MeshElement.MeshElement" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshElement</span></span><a class="headerlink" href="#abaqus.Mesh.MeshElement.MeshElement" title="Permalink to this definition"></a></dt>
 <dd><p>The MeshElement object refers to an element of a native mesh or an orphan mesh. A
 MeshElement object can be accessed via a part or part instance using an index that
 refers to the internal numbering of the element repository. The index does not refer to
@@ -1335,10 +1335,10 @@ LINE3, TRI3, TRI6, QUAD4, QUAD8, TET4, TET10, WEDGE6, WEDGE15, HEX8, and HEX20.<
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>element</strong> – A MeshElement object. .</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">MeshElement</span> <span class="pre">object.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><a class="reference internal" href="#abaqus.Mesh.MeshElement.MeshElement" title="abaqus.Mesh.MeshElement.MeshElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">MeshElement</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1438,7 +1438,7 @@ in use by any other element of the same part.</p>
 <h3>MeshElementArray<a class="headerlink" href="#meshelementarray" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshElementArray.MeshElementArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshElementArray.</span></span><span class="sig-name descname"><span class="pre">MeshElementArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Mesh.MeshElement.MeshElement" title="abaqus.Mesh.MeshElement.MeshElement"><span class="pre">abaqus.Mesh.MeshElement.MeshElement</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.MeshElementArray.MeshElementArray" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshElementArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Mesh.MeshElement.MeshElement" title="abaqus.Mesh.MeshElement.MeshElement"><span class="pre">abaqus.Mesh.MeshElement.MeshElement</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.MeshElementArray.MeshElementArray" title="Permalink to this definition"></a></dt>
 <dd><p>The MeshElementArray is a sequence of MeshElement objects.</p>
 <blockquote>
 <div><ul class="simple">
@@ -1670,7 +1670,7 @@ Error: The mask results in an empty sequence</p></li>
 <h3>MesherOptions<a class="headerlink" href="#mesheroptions" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.MesherOptions.MesherOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MesherOptions.</span></span><span class="sig-name descname"><span class="pre">MesherOptions</span></span><a class="headerlink" href="#abaqus.Mesh.MesherOptions.MesherOptions" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MesherOptions</span></span><a class="headerlink" href="#abaqus.Mesh.MesherOptions.MesherOptions" title="Permalink to this definition"></a></dt>
 <dd><p>The MesherOptions object controls the default settings that Abaqus uses for all meshing
 methods. The MesherOptions object has no constructor. Abaqus creates the <em>MesherOptions</em>
 member when a session is started.
@@ -1724,7 +1724,7 @@ empty list.</p></li>
 <h3>MeshFace<a class="headerlink" href="#meshface" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshFace.MeshFace">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshFace.</span></span><span class="sig-name descname"><span class="pre">MeshFace</span></span><a class="headerlink" href="#abaqus.Mesh.MeshFace.MeshFace" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshFace</span></span><a class="headerlink" href="#abaqus.Mesh.MeshFace.MeshFace" title="Permalink to this definition"></a></dt>
 <dd><p>The MeshFace object refers to an element face. It has no constructor or members. A
 MeshFace object can be accessed via a MeshFaceArray or a repository on a part or part
 instance.</p>
@@ -1746,10 +1746,10 @@ instance.</p>
 <dd><p>This method returns a tuple of unique element edges on the element face.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
+<dd class="field-odd"><p><strong>edges</strong> – A tuple of MeshEdge objects</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshEdge</span> <span class="pre">objects.</span> <span class="pre">.</span></code></p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple[MeshEdge]</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1765,10 +1765,10 @@ specified face angle.</p>
 <dd class="field-odd"><p><strong>angle</strong> – A float specifying the value of the face angle in degrees.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>edges</strong> – A MeshEdgeArray object, which is a sequence of MeshEdge objects. .</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">MeshEdgeArray</span> <span class="pre">object</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">which</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">sequence</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshEdge</span> <span class="pre">objects.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MeshEdgeArray</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1784,10 +1784,10 @@ specified angle.</p>
 <dd class="field-odd"><p><strong>angle</strong> – A float specifying the value of the face angle.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>faces</strong> – A MeshFaceArray object, which is a sequence of MeshFace objects. .</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">MeshFaceArray</span> <span class="pre">object</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">which</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">sequence</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshFace</span> <span class="pre">objects.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MeshFaceArray</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1803,10 +1803,10 @@ by layer.</p>
 <dd class="field-odd"><p><strong>numLayers</strong> – A int specifying the value of the number of layers.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>faces</strong> – A MeshFaceArray object, which is a sequence of MeshFace objects. .</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">MeshFaceArray</span> <span class="pre">object</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">which</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">sequence</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshFace</span> <span class="pre">objects.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MeshFaceArray</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1822,10 +1822,10 @@ specified face angle with the seed face.</p>
 <dd class="field-odd"><p><strong>angle</strong> – A float specifying the value of the face angle in degrees.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>faces</strong> – A MeshFaceArray object, which is a sequence of MeshFace objects. .</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">MeshFaceArray</span> <span class="pre">object</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">which</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">sequence</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshFace</span> <span class="pre">objects.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MeshFaceArray</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1836,10 +1836,10 @@ specified face angle with the seed face.</p>
 <dd><p>This method returns a tuple of elements that share the element face.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
+<dd class="field-odd"><p><strong>elements</strong> – A tuple of MeshElement objects</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshElement</span> <span class="pre">objects.</span> <span class="pre">.</span></code></p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple[MeshElement]</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1855,10 +1855,10 @@ specified angle.</p>
 <dd class="field-odd"><p><strong>angle</strong> – A float specifying the value of the face angle.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>elements</strong> – A MeshElementArray object, which is a sequence of MeshElement objects. .</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">MeshElementArray</span> <span class="pre">object</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">which</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">sequence</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshElement</span> <span class="pre">objects.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MeshElementArray</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1870,10 +1870,10 @@ specified angle.</p>
 finding adjacent elements via topology.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
+<dd class="field-odd"><p><strong>elements</strong> – A MeshElementArray object, which is a sequence of MeshElement objects. .</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">MeshElementArray</span> <span class="pre">object</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">which</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">sequence</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshElement</span> <span class="pre">objects.</span> <span class="pre">.</span></code></p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MeshElementArray</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1884,10 +1884,10 @@ finding adjacent elements via topology.</p>
 <dd><p>This method returns a tuple of nodes on the element face.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
+<dd class="field-odd"><p><strong>nodes</strong> – A tuple of MeshNode objects</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshNode</span> <span class="pre">objects.</span> <span class="pre">.</span></code></p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple[MeshNode]</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1903,10 +1903,10 @@ specified angle.</p>
 <dd class="field-odd"><p><strong>angle</strong> – A float specifying the value of the face angle.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>nodes</strong> – A MeshNodeArray object, which is a sequence of MeshNode objects</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">MeshNodeArray</span> <span class="pre">object</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">which</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">sequence</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshNode</span> <span class="pre">objects.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MeshNodeArray</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1917,11 +1917,11 @@ specified angle.</p>
 <dd><p>This method returns the normal direction for the element face.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">3</span> <span class="pre">floats</span> <span class="pre">representing</span> <span class="pre">the</span> <span class="pre">unit</span> <span class="pre">normal</span> <span class="pre">vector.</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">element</span> <span class="pre">face</span> <span class="pre">is</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">collapsed</span> <span class="pre">such</span> <span class="pre">that</span> <span class="pre">a</span> <span class="pre">normal</span> <span class="pre">cannot</span> <span class="pre">be</span> <span class="pre">computed</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">zero-length</span> <span class="pre">vector</span> <span class="pre">is</span> <span class="pre">returned.</span> <span class="pre">.</span></code></p></li>
-</ul>
-</p>
+<dd class="field-odd"><p><strong>normal</strong> – A tuple of 3 floats representing the unit normal vector. If the element face is
+collapsed such that a normal cannot be computed, a zero-length vector is returned. .</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple[float]</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1933,7 +1933,7 @@ specified angle.</p>
 <h3>MeshFaceArray<a class="headerlink" href="#meshfacearray" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshFaceArray.MeshFaceArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshFaceArray.</span></span><span class="sig-name descname"><span class="pre">MeshFaceArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elemFaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Mesh.MeshFace.MeshFace" title="abaqus.Mesh.MeshFace.MeshFace"><span class="pre">abaqus.Mesh.MeshFace.MeshFace</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.MeshFaceArray.MeshFaceArray" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshFaceArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elemFaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Mesh.MeshFace.MeshFace" title="abaqus.Mesh.MeshFace.MeshFace"><span class="pre">abaqus.Mesh.MeshFace.MeshFace</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.MeshFaceArray.MeshFaceArray" title="Permalink to this definition"></a></dt>
 <dd><p>The MeshFaceArray is a sequence of MeshFace objects.</p>
 <blockquote>
 <div><ul class="simple">
@@ -1989,7 +1989,7 @@ Error: The mask results in an empty sequence</p></li>
 <h3>MeshNode<a class="headerlink" href="#meshnode" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshNode.MeshNode">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshNode.</span></span><span class="sig-name descname"><span class="pre">MeshNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates:</span> <span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.MeshNode.MeshNode" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates:</span> <span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.MeshNode.MeshNode" title="Permalink to this definition"></a></dt>
 <dd><p>The MeshNode object refers to a node of a native mesh or an orphan mesh. A MeshNode
 object can be accessed via a part or part instance using an index that refers to the
 internal numbering of the node repository. The index does not refer to the node label.</p>
@@ -2029,10 +2029,10 @@ internal numbering of the node repository. The index does not refer to the node 
 <dd><p>This method returns a tuple of element edge objects that share the node.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
+<dd class="field-odd"><p><strong>edges</strong> – A tuple of MeshEdge objects</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshEdge</span> <span class="pre">objects.</span> <span class="pre">.</span></code></p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple[MeshEdge]</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -2043,10 +2043,10 @@ internal numbering of the node repository. The index does not refer to the node 
 <dd><p>This method returns a tuple of element face objects that share the node.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
+<dd class="field-odd"><p><strong>faces</strong> – A tuple of MeshFace objects</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshFace</span> <span class="pre">objects.</span> <span class="pre">.</span></code></p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple[MeshFace]</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -2057,10 +2057,10 @@ internal numbering of the node repository. The index does not refer to the node 
 <dd><p>This method returns a tuple of element objects that share the node.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
+<dd class="field-odd"><p><strong>elements</strong> – A tuple of MeshElement objects</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshElement</span> <span class="pre">objects.</span> <span class="pre">.</span></code></p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple[MeshElement]</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -2076,10 +2076,10 @@ to the specified face angle.</p>
 <dd class="field-odd"><p><strong>angle</strong> – A float specifying the value of the face angle in degrees.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>nodes</strong> – A MeshNodeArray object, which is a sequence of MeshNode objects</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">MeshNodeArray</span> <span class="pre">object</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">which</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">sequence</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshNode</span> <span class="pre">objects.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MeshNodeArray</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -2104,7 +2104,7 @@ any other node of the same part.</p>
 <h3>MeshNodeArray<a class="headerlink" href="#meshnodearray" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshNodeArray.MeshNodeArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshNodeArray.</span></span><span class="sig-name descname"><span class="pre">MeshNodeArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Mesh.MeshNode.MeshNode" title="abaqus.Mesh.MeshNode.MeshNode"><span class="pre">abaqus.Mesh.MeshNode.MeshNode</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.MeshNodeArray.MeshNodeArray" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshNodeArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Mesh.MeshNode.MeshNode" title="abaqus.Mesh.MeshNode.MeshNode"><span class="pre">abaqus.Mesh.MeshNode.MeshNode</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.MeshNodeArray.MeshNodeArray" title="Permalink to this definition"></a></dt>
 <dd><p>The MeshNodeArray is a sequence of MeshNode objects.</p>
 <blockquote>
 <div><ul class="simple">
@@ -2329,9 +2329,9 @@ Error: The mask results in an empty sequence</p></li>
 <h3>MeshPart<a class="headerlink" href="#meshpart" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshPart.MeshPart">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshPart.</span></span><span class="sig-name descname"><span class="pre">MeshPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.MeshPart.MeshPart" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.MeshPart.MeshPart" title="Permalink to this definition"></a></dt>
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshPart.</span></span><span class="sig-name descname"><span class="pre">MeshPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>The following commands operate on Part objects. For more information about the Part
 object, see Part object.</p>
 <blockquote>
@@ -3319,7 +3319,7 @@ argument, the entire part mesh is considered.</p></li>
 <h3>MeshStats<a class="headerlink" href="#meshstats" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshStats.MeshStats">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshStats.</span></span><span class="sig-name descname"><span class="pre">MeshStats</span></span><a class="headerlink" href="#abaqus.Mesh.MeshStats.MeshStats" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshStats</span></span><a class="headerlink" href="#abaqus.Mesh.MeshStats.MeshStats" title="Permalink to this definition"></a></dt>
 <dd><p>The MeshStats object is a query object for holding mesh statistics and is returned by
 the getMeshStats command. The object does not have any methods.</p>
 <blockquote>

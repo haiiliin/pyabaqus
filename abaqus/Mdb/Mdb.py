@@ -1,3 +1,4 @@
+from abaqus.Job.ModelJob import ModelJob
 from abaqusConstants import *
 from .MdbBase import MdbBase
 from ..Job.JobMdb import JobMdb
@@ -5,7 +6,7 @@ from ..Model.Model import Model
 from ..Part.AcisMdb import AcisMdb
 
 
-class Mdb(AcisMdb, JobMdb, MdbBase):
+class Mdb(AcisMdb, JobMdb):
 
     def Model(self, name: str, description: str = '', stefanBoltzmann: float = None,
               absoluteZero: float = None, waveFormulation: SymbolicConstant = NOT_SET,
@@ -50,8 +51,10 @@ class Mdb(AcisMdb, JobMdb, MdbBase):
 
         Returns
         -------
-            A Model object..
+        model: Model
+            A Model object
         """
         self.models[name] = model = Model(name, description, stefanBoltzmann, absoluteZero, waveFormulation, modelType,
                                           universalGas, copyConstraints, copyConnectors, copyInteractions)
         return model
+    

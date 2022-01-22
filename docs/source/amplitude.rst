@@ -4,6 +4,13 @@ Amplitude
 
 Amplitude commands are used to create arbitrary time or frequency variations of load, displacement, and some interaction attributes throughout a step using step time or throughout an analysis using total time.
 
+Attributes
+----------
+
+- **mdb.models[name].amplitudes[name].name**: A String specifying the repository key.
+- **mdb.models[name].amplitudes[name].timeSpan**: A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP and TOTAL. The default value is STEP.
+
+
 Create amplitudes
 -----------------
 

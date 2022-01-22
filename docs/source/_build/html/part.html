@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Part &mdash; pyabaqus 1.0.5 documentation</title>
+  <title>Part &mdash; pyabaqus 1.0.6 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -78,6 +78,7 @@
 <li class="toctree-l2"><a class="reference internal" href="odb_display.html">Odb Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="optimization.html">Optimization</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Part</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#attributes">Attributes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-parts">Create parts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#object-features">Object features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#basic-features-of-part">Basic features of Part</a></li>
@@ -140,11 +141,48 @@
   <div class="section" id="part">
 <h1>Part<a class="headerlink" href="#part" title="Permalink to this headline"></a></h1>
 <p>Features in Abaqus/CAE include Parts, Datums, Partitions, and Assembly operations. Part commands create Feature objects on only the Part object. The commands that create Feature objects on only the rootAssembly object are described in Assembly commands. The commands that create Feature objects on both the Part and the rootAssembly objects are described in Feature commands.</p>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><strong>mdb.models[name].parts[name].geometryValidity</strong>: A Boolean specifying the validity of the geometry of the part. The value is computed, but it can be set to ON to perform feature and mesh operations on an invalid part. There is no guarantee that such operations will work if the part was originally invalid.</p></li>
+<li><p><strong>mdb.models[name].parts[name].isOutOfDate</strong>: An Int specifying that feature parameters have been modified but that the part has not been regenerated. Possible values are 0 and 1.</p></li>
+<li><p><strong>mdb.models[name].parts[name].timeStamp</strong>: A Float specifying when the part was last modified.</p></li>
+<li><p><strong>mdb.models[name].parts[name].vertices</strong>: A <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.VertexArray.VertexArray" title="abaqus.BasicGeometry.VertexArray.VertexArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.VertexArray.VertexArray</span></code></a> object specifying all the vertices in the part.</p></li>
+<li><p><strong>mdb.models[name].parts[name].ignoredVertices</strong>: An <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray" title="abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray</span></code></a> object specifying all the ignored vertices in the part.</p></li>
+<li><p><strong>mdb.models[name].parts[name].edges</strong>: An <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.EdgeArray.EdgeArray" title="abaqus.BasicGeometry.EdgeArray.EdgeArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.EdgeArray.EdgeArray</span></code></a> object specifying all the edges in the part.</p></li>
+<li><p><strong>mdb.models[name].parts[name].ignoredEdges</strong>: An <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.IgnoredEdgeArray.IgnoredEdgeArray" title="abaqus.BasicGeometry.IgnoredEdgeArray.IgnoredEdgeArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.IgnoredEdgeArray.IgnoredEdgeArray</span></code></a> object specifying all the ignored edges in the part.</p></li>
+<li><p><strong>mdb.models[name].parts[name].faces</strong>: A <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.FaceArray.FaceArray" title="abaqus.BasicGeometry.FaceArray.FaceArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.FaceArray.FaceArray</span></code></a> object specifying all the faces in the part.</p></li>
+<li><p><strong>mdb.models[name].parts[name].cells</strong>: A <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.CellArray.CellArray" title="abaqus.BasicGeometry.CellArray.CellArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.CellArray.CellArray</span></code></a> object specifying all the cells in the part.</p></li>
+<li><p><strong>mdb.models[name].parts[name].features</strong>: A repository of <a class="reference internal" href="assembly.html#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.Feature.Feature</span></code></a> objects specifying all the features in the part.</p></li>
+<li><p><strong>mdb.models[name].parts[name].featuresById</strong>: A repository of <a class="reference internal" href="assembly.html#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.Feature.Feature</span></code></a> objects specifying all <a class="reference internal" href="assembly.html#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.Feature.Feature</span></code></a> objects in the part. The <a class="reference internal" href="assembly.html#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.Feature.Feature</span></code></a> objects in the featuresById repository are the same as the <a class="reference internal" href="assembly.html#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.Feature.Feature</span></code></a> objects in the features repository. However, the key to the objects in the featuresById repository is an integer specifying the <em>ID</em>, whereas the key to the objects in the features repository is a string specifying the <em>name</em>.</p></li>
+<li><p><strong>mdb.models[name].parts[name].datums</strong>: A repository of <a class="reference internal" href="datum.html#abaqus.Datum.Datum.Datum" title="abaqus.Datum.Datum.Datum"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Datum.Datum.Datum</span></code></a> objects specifying all the datums in the part.</p></li>
+<li><p><strong>mdb.models[name].parts[name].elements</strong>: A <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray" title="abaqus.Mesh.MeshElementArray.MeshElementArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshElementArray.MeshElementArray</span></code></a> object specifying all the elements in the part.</p></li>
+<li><p><strong>mdb.models[name].parts[name].elemFaces</strong>: A repository of <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshFace.MeshFace" title="abaqus.Mesh.MeshFace.MeshFace"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshFace.MeshFace</span></code></a> objects specifying all the element faces in the part. For a given element and a given face index within that element, the corresponding <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshFace.MeshFace" title="abaqus.Mesh.MeshFace.MeshFace"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshFace.MeshFace</span></code></a> object can be retrieved from the repository by using the key calculated as (i*8 + j), where i and j are zero-based element and face indices, respectively.</p></li>
+<li><p><strong>mdb.models[name].parts[name].elementFaces</strong>: A <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshFaceArray.MeshFaceArray" title="abaqus.Mesh.MeshFaceArray.MeshFaceArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshFaceArray.MeshFaceArray</span></code></a> object specifying all the unique element faces in the part.</p></li>
+<li><p><strong>mdb.models[name].parts[name].nodes</strong>: A <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshNodeArray.MeshNodeArray" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshNodeArray.MeshNodeArray</span></code></a> object specifying all the nodes in the part.</p></li>
+<li><p><strong>mdb.models[name].parts[name].retainedNodes</strong>: A <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshNodeArray.MeshNodeArray" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshNodeArray.MeshNodeArray</span></code></a> object specifying all the retained nodes in the substructure part.</p></li>
+<li><p><strong>mdb.models[name].parts[name].sets</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Set.Set" title="abaqus.Region.Set.Set"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Set.Set</span></code></a> objects specifying for more information, see <a class="reference internal" href="region.html#abaqus.Region.Set.Set" title="abaqus.Region.Set.Set"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Set.Set</span></code></a>.</p></li>
+<li><p><strong>mdb.models[name].parts[name].allSets</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Set.Set" title="abaqus.Region.Set.Set"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Set.Set</span></code></a> objects specifying the contents of the <em>all:py:class:`abaqus.Region.Set.Set`s</em> repository is the same as the contents of the <em>sets</em> repository.</p></li>
+<li><p><strong>mdb.models[name].parts[name].allInternalSets</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Set.Set" title="abaqus.Region.Set.Set"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Set.Set</span></code></a> objects specifying picked regions.</p></li>
+<li><p><strong>mdb.models[name].parts[name].surfaces</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Surface.Surface" title="abaqus.Region.Surface.Surface"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Surface.Surface</span></code></a> objects specifying for more information, see <a class="reference internal" href="region.html#abaqus.Region.Surface.Surface" title="abaqus.Region.Surface.Surface"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Surface.Surface</span></code></a>.</p></li>
+<li><p><strong>mdb.models[name].parts[name].allSurfaces</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Surface.Surface" title="abaqus.Region.Surface.Surface"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Surface.Surface</span></code></a> objects specifying the contents of the <em>all:py:class:`abaqus.Region.Surface.Surface`s</em> repository is the same as the contents of the <em>surfaces</em> repository.</p></li>
+<li><p><strong>mdb.models[name].parts[name].allInternalSurfaces</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Surface.Surface" title="abaqus.Region.Surface.Surface"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Surface.Surface</span></code></a> objects specifying picked regions.</p></li>
+<li><p><strong>mdb.models[name].parts[name].skins</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Skin.Skin" title="abaqus.Region.Skin.Skin"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Skin.Skin</span></code></a> objects specifying the skins created on the part.</p></li>
+<li><p><strong>mdb.models[name].parts[name].stringers</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Stringer.Stringer" title="abaqus.Region.Stringer.Stringer"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Stringer.Stringer</span></code></a> objects specifying the stringers created on the part.</p></li>
+<li><p><strong>mdb.models[name].parts[name].referencePoints</strong>: A repository of <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.ReferencePoint.ReferencePoint" title="abaqus.BasicGeometry.ReferencePoint.ReferencePoint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.ReferencePoint.ReferencePoint</span></code></a> objects.</p></li>
+<li><p><strong>mdb.models[name].parts[name].engineeringFeatures</strong>: An <a class="reference internal" href="engineering.html#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature" title="abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].parts[name].sectionAssignments</strong>: A <a class="reference internal" href="property.html#abaqus.Property.SectionAssignmentArray.SectionAssignmentArray" title="abaqus.Property.SectionAssignmentArray.SectionAssignmentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Property.SectionAssignmentArray.SectionAssignmentArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].parts[name].materialOrientations</strong>: A <a class="reference internal" href="property.html#abaqus.Property.MaterialOrientationArray.MaterialOrientationArray" title="abaqus.Property.MaterialOrientationArray.MaterialOrientationArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Property.MaterialOrientationArray.MaterialOrientationArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].parts[name].compositeLayups</strong>: A repository of <a class="reference internal" href="property.html#abaqus.Property.CompositeLayup.CompositeLayup" title="abaqus.Property.CompositeLayup.CompositeLayup"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Property.CompositeLayup.CompositeLayup</span></code></a> objects.</p></li>
+<li><p><strong>mdb.models[name].parts[name].elemEdges</strong>: A repository of <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshEdge.MeshEdge" title="abaqus.Mesh.MeshEdge.MeshEdge"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshEdge.MeshEdge</span></code></a> objects specifying all the element edges in the part. For a given element and a given edge index on a given face within that element, the corresponding <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshEdge.MeshEdge" title="abaqus.Mesh.MeshEdge.MeshEdge"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshEdge.MeshEdge</span></code></a> object can be retrieved from the repository by using the key calculated as (i*32 + j*4 + k), where i, j, and k are zero-based element, face, and edge indices, respectively.</p></li>
+<li><p><strong>mdb.models[name].parts[name].elementEdges</strong>: A <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshEdgeArray.MeshEdgeArray" title="abaqus.Mesh.MeshEdgeArray.MeshEdgeArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshEdgeArray.MeshEdgeArray</span></code></a> object specifying all the unique element edges in the part.</p></li>
+</ul>
+</div>
 <div class="section" id="create-parts">
 <h2>Create parts<a class="headerlink" href="#create-parts" title="Permalink to this headline"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Part.PartModel.PartModel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Part.PartModel.</span></span><span class="sig-name descname"><span class="pre">PartModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Part.PartModel.PartModel" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Part.PartModel.PartModel" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Part.PartModel.PartModel.Part">
 <span class="sig-name descname"><span class="pre">Part</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Part.PartModel.PartModel.Part" title="Permalink to this definition"></a></dt>
@@ -180,9 +218,9 @@ value is OFF.</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Part.PartBase.PartBase">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Part.PartBase.</span></span><span class="sig-name descname"><span class="pre">PartBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Part.PartBase.PartBase" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Part.PartBase.PartBase" title="Permalink to this definition"></a></dt>
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Part.PartBase.</span></span><span class="sig-name descname"><span class="pre">PartBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>The Part object defines the physical attributes of a structure. Parts are instanced into
 the assembly and positioned before an analysis.</p>
 <blockquote>
@@ -211,10 +249,10 @@ instance.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>part</strong> – A Part object</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -251,10 +289,10 @@ value is GEOMETRY.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>part</strong> – A Part object</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -279,13 +317,21 @@ Part object in the positive <em>Z</em>-direction and places it in the parts repo
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">an</span> <span class="pre">orphan</span> <span class="pre">mesh</span> <span class="pre">part</span></code> – Cannot extrude a geometric part.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">two-dimensional</span></code> – Cannot extrude a 3D part.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">rigid</span> <span class="pre">body</span></code> – Cannot change dimension of a rigid body.</p></li>
+<dd class="field-even"><p><p><strong>part</strong> – A Part object
+- If the specified part is not an orphan mesh part:</p>
+<blockquote>
+<div><p>Cannot extrude a geometric part.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>If the specified part is not two-dimensional:
+Cannot extrude a 3D part.</p></li>
+<li><p>If the specified part is a rigid body:
+Cannot change dimension of a rigid body.</p></li>
 </ul>
 </p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -341,13 +387,21 @@ the tolerant entities to be more precise.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">ACIS</span> <span class="pre">file</span> <span class="pre">is</span> <span class="pre">corrupt</span></code> – PartError: the file is corrupt</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">dimensionality</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">correspond</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">what</span> <span class="pre">is</span> <span class="pre">found</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">ACIS</span> <span class="pre">file</span></code> – PartError: dimensionality does not match the contents of the file</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">type</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">correspond</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">what</span> <span class="pre">is</span> <span class="pre">found</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">ACIS</span> <span class="pre">file</span></code> – PartError: type does not match the contents of the file</p></li>
+<dd class="field-even"><p><p><strong>part</strong> – A Part object
+- If the ACIS file is corrupt:</p>
+<blockquote>
+<div><p>PartError: the file is corrupt</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>If the dimensionality does not correspond to what is found in the ACIS file:
+PartError: dimensionality does not match the contents of the file</p></li>
+<li><p>If the type does not correspond to what is found in the ACIS file:
+PartError: type does not match the contents of the file</p></li>
 </ul>
 </p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -376,14 +430,22 @@ specified part instances to the new part. The default is False.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">analysis</span> <span class="pre">type</span> <span class="pre">(deformable</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">rigid)</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">consistent</span> <span class="pre">among</span> <span class="pre">the</span> <span class="pre">supplied</span> <span class="pre">part</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">instances</span></code> – The selected part instances do not have a consistent analysis type.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">assembly</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">contain</span> <span class="pre">a</span> <span class="pre">mesh</span></code> – The current assembly does not contain a mesh for a mesh part.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">instances</span> <span class="pre">do</span> <span class="pre">not</span> <span class="pre">contain</span> <span class="pre">a</span> <span class="pre">mesh</span></code> – The selected part instances do not have a mesh for a mesh part.</p></li>
+<dd class="field-even"><p><p><strong>part</strong> – A Part object
+- If the analysis type (deformable or rigid) is not consistent among the supplied part
+instances:</p>
+<blockquote>
+<div><p>The selected part instances do not have a consistent analysis type.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>If the assembly does not contain a mesh:
+The current assembly does not contain a mesh for a mesh part.</p></li>
+<li><p>If the specified part instances do not contain a mesh:
+The selected part instances do not have a mesh for a mesh part.</p></li>
 </ul>
 </p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -439,13 +501,21 @@ the tolerant entities to be more precise.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">ACIS</span> <span class="pre">file</span> <span class="pre">is</span> <span class="pre">corrupt</span></code> – PartError: the file is corrupt</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">dimensionality</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">correspond</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">what</span> <span class="pre">is</span> <span class="pre">found</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">ACIS</span> <span class="pre">file</span></code> – PartError: dimensionality does not match the contents of the file</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">type</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">correspond</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">what</span> <span class="pre">is</span> <span class="pre">found</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">ACIS</span> <span class="pre">file</span></code> – PartError: type does not match the contents of the file</p></li>
+<dd class="field-even"><p><p><strong>part</strong> – A Part object
+- If the ACIS file is corrupt:</p>
+<blockquote>
+<div><p>PartError: the file is corrupt</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>If the dimensionality does not correspond to what is found in the ACIS file:
+PartError: dimensionality does not match the contents of the file</p></li>
+<li><p>If the type does not correspond to what is found in the ACIS file:
+PartError: type does not match the contents of the file</p></li>
 </ul>
 </p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -469,11 +539,15 @@ default is False.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">part</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">contain</span> <span class="pre">a</span> <span class="pre">mesh</span></code> – The current part does not contain a mesh for a mesh part.</p></li>
-</ul>
+<dd class="field-even"><p><p><strong>part</strong> – A Part object
+- If the part does not contain a mesh:</p>
+<blockquote>
+<div><p>The current part does not contain a mesh for a mesh part.</p>
+</div></blockquote>
 </p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -503,15 +577,26 @@ mirror plane. This point must not be coincident with <em>point1</em>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">an</span> <span class="pre">orphan</span> <span class="pre">mesh</span> <span class="pre">part</span></code> – Cannot mirror a geometric part.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">rigid</span> <span class="pre">body</span></code> – Cannot mirror a rigid body.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">*point1*</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">*point2*</span> <span class="pre">are</span> <span class="pre">coincident</span></code> – Mirror plane director has zero length.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">two-dimensional</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">plane</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">parallel</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">*Z*-axis</span></code> – Mirror plane must be parallel to Z axis for 2D parts</p></li>
+<dd class="field-even"><p><p><strong>part</strong> – A Part object
+- If the specified part is not an orphan mesh part:</p>
+<blockquote>
+<div><p>Cannot mirror a geometric part.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>If the specified part is a rigid body:
+Cannot mirror a rigid body.</p></li>
+<li><p>If <em>point1</em> and <em>point2</em> are coincident:
+Mirror plane director has zero length.</p></li>
+<li><p>If the specified part is two-dimensional and the plane is not parallel to the</p></li>
 </ul>
+<dl class="simple">
+<dt><em>Z</em>-axis:</dt><dd><p>Mirror plane must be parallel to Z axis for 2D parts</p>
+</dd>
+</dl>
 </p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -547,10 +632,10 @@ value is OFF.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>part</strong> – A Part object</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -592,18 +677,32 @@ value is OFF.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">output</span> <span class="pre">database</span> <span class="pre">contains</span> <span class="pre">elements</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">more</span> <span class="pre">than</span> <span class="pre">one</span> <span class="pre">dimensionality</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code> – File contains both axisymmetric and nonaxisymmetric elements.File contains both 2D and</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">3D</span> <span class="pre">elements.File</span> <span class="pre">contains</span> <span class="pre">both</span> <span class="pre">rigid</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">deformable</span> <span class="pre">elements.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">more</span> <span class="pre">than</span> <span class="pre">one</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">found</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">output</span> <span class="pre">database</span></code> – PartError: importing of more than one part is not currently supported</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">output</span> <span class="pre">database</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">contain</span> <span class="pre">any</span> <span class="pre">valid</span> <span class="pre">results</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">step</span></code> – Error. File does not contain any valid frames.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">step</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">frame</span> <span class="pre">do</span> <span class="pre">not</span> <span class="pre">contain</span> <span class="pre">any</span> <span class="pre">displacements</span></code> – Error. Specified frame does not contain nodal displacements.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">element</span> <span class="pre">set</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">found</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">output</span> <span class="pre">database</span></code> – Error. Specified element set is not defined in the ODB.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">step</span> <span class="pre">number</span> <span class="pre">is</span> <span class="pre">invalid</span></code> – OdiError: Invalid step index: i. Available step indices: 0 - j.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">frame</span> <span class="pre">number</span> <span class="pre">is</span> <span class="pre">invalid</span></code> – OdiError: Invalid frame index: i. Available frame indices: 0 - j.</p></li>
+<dd class="field-even"><p><p><strong>part</strong> – A Part object
+- If the output database contains elements of more than one dimensionality or type:</p>
+<blockquote>
+<div><p>File contains both axisymmetric and nonaxisymmetric elements.File contains both 2D and</p>
+</div></blockquote>
+<p>3D elements.File contains both rigid and deformable elements.
+- If more than one part is found on the output database:</p>
+<blockquote>
+<div><p>PartError: importing of more than one part is not currently supported</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>If the output database does not contain any valid results for the specified step:
+Error. File does not contain any valid frames.</p></li>
+<li><p>If the specified step and frame do not contain any displacements:
+Error. Specified frame does not contain nodal displacements.</p></li>
+<li><p>If the specified element set is not found on the output database:
+Error. Specified element set is not defined in the ODB.</p></li>
+<li><p>If the step number is invalid:
+OdiError: Invalid step index: i. Available step indices: 0 - j.</p></li>
+<li><p>If the frame number is invalid:
+OdiError: Invalid frame index: i. Available frame indices: 0 - j.</p></li>
 </ul>
 </p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -633,16 +732,27 @@ system of the plane. This point must not project onto <em>point1</em>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">an</span> <span class="pre">orphan</span> <span class="pre">mesh</span> <span class="pre">part</span></code> – Cannot reduce dimension of a geometric part.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">three-dimensional</span></code> – Cannot reduce dimension of a 2D part.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">rigid</span> <span class="pre">body</span></code> – Cannot change dimension of a rigid body.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">*point1*</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">*point2*</span> <span class="pre">are</span> <span class="pre">coincident</span></code> – Cutting plane director has zero length.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">*point3*</span> <span class="pre">projects</span> <span class="pre">onto</span> <span class="pre">*point1*</span></code> – Local axis point projects to origin.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">no</span> <span class="pre">elements</span> <span class="pre">are</span> <span class="pre">cut</span> <span class="pre">by</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">plane</span></code> – Cannot reduce part dimension.</p></li>
+<dd class="field-even"><p><p><strong>part</strong> – A Part object
+- If the specified part is not an orphan mesh part:</p>
+<blockquote>
+<div><p>Cannot reduce dimension of a geometric part.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>If the specified part is not three-dimensional:
+Cannot reduce dimension of a 2D part.</p></li>
+<li><p>If the specified part is a rigid body:
+Cannot change dimension of a rigid body.</p></li>
+<li><p>If <em>point1</em> and <em>point2</em> are coincident:
+Cutting plane director has zero length.</p></li>
+<li><p>If <em>point3</em> projects onto <em>point1</em>:
+Local axis point projects to origin.</p></li>
+<li><p>If no elements are cut by the specified plane:
+Cannot reduce part dimension.</p></li>
 </ul>
 </p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -666,15 +776,23 @@ places it in the parts repository.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">a</span> <span class="pre">substructure</span></code> – File specified does not contain a substructure.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">already</span> <span class="pre">exists</span></code> – A part with the same name already exists.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">substructure</span> <span class="pre">cannot</span> <span class="pre">be</span> <span class="pre">imported</span></code> – The output database is missing nodes and elements.Nested substructures are not</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">supported.The</span> <span class="pre">substructure</span> <span class="pre">sim</span> <span class="pre">file</span> <span class="pre">was</span> <span class="pre">generated</span> <span class="pre">using</span> <span class="pre">a</span> <span class="pre">version</span> <span class="pre">that</span> <span class="pre">is</span> <span class="pre">different</span> <span class="pre">from</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">current</span> <span class="pre">version.</span></code></p></li>
+<dd class="field-even"><p><p><strong>part</strong> – A Part object
+- If the specified part is not a substructure:</p>
+<blockquote>
+<div><p>File specified does not contain a substructure.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>If the specified part already exists:
+A part with the same name already exists.</p></li>
+<li><p>If the substructure cannot be imported:
+The output database is missing nodes and elements.Nested substructures are not</p></li>
 </ul>
+<p>supported.The substructure sim file was generated using a version that is different from
+the current version.</p>
 </p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -707,15 +825,28 @@ value is OFF.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">an</span> <span class="pre">orphan</span> <span class="pre">mesh</span> <span class="pre">part</span></code> – Specified part must be an orphan mesh.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">Part2DGeomFrom2DMesh</span> <span class="pre">method</span> <span class="pre">cannot</span> <span class="pre">create</span> <span class="pre">a</span> <span class="pre">valid</span> <span class="pre">two-dimensional</span> <span class="pre">shell</span> <span class="pre">section</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">from</span> <span class="pre">the</span> <span class="pre">two-dimensional</span> <span class="pre">mesh</span></code> – Planar shell feature failed</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">two-dimensional</span></code> – Cannot create a geometry from a 3D part.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">rigid</span> <span class="pre">body</span></code> – Cannot create a geometry from a rigid body.</p></li>
+<dd class="field-even"><p><p><strong>part</strong> – A Part object
+- If the specified part is not an orphan mesh part:</p>
+<blockquote>
+<div><p>Specified part must be an orphan mesh.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>If the Part2DGeomFrom2DMesh method cannot create a valid two-dimensional shell section</p></li>
+</ul>
+<dl class="simple">
+<dt>from the two-dimensional mesh:</dt><dd><p>Planar shell feature failed</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>If the specified part is not two-dimensional:
+Cannot create a geometry from a 3D part.</p></li>
+<li><p>If the specified part is a rigid body:
+Cannot create a geometry from a rigid body.</p></li>
 </ul>
 </p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -739,15 +870,23 @@ places it in the parts repository.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">a</span> <span class="pre">substructure</span></code> – File specified does not contain a substructure.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">already</span> <span class="pre">exists</span></code> – A part with the same name already exists.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">substructure</span> <span class="pre">cannot</span> <span class="pre">be</span> <span class="pre">imported</span></code> – The output database is missing nodes and elements.Nested substructures are not</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">supported.The</span> <span class="pre">substructure</span> <span class="pre">sim</span> <span class="pre">file</span> <span class="pre">was</span> <span class="pre">generated</span> <span class="pre">using</span> <span class="pre">a</span> <span class="pre">version</span> <span class="pre">that</span> <span class="pre">is</span> <span class="pre">different</span> <span class="pre">from</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">current</span> <span class="pre">version.</span></code></p></li>
+<dd class="field-even"><p><p><strong>part</strong> – A Part object
+- If the specified part is not a substructure:</p>
+<blockquote>
+<div><p>File specified does not contain a substructure.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>If the specified part already exists:
+A part with the same name already exists.</p></li>
+<li><p>If the substructure cannot be imported:
+The output database is missing nodes and elements.Nested substructures are not</p></li>
 </ul>
+<p>supported.The substructure sim file was generated using a version that is different from
+the current version.</p>
 </p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -771,15 +910,23 @@ places it in the parts repository.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Part</span> <span class="pre">object.</span> <span class="pre">.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">a</span> <span class="pre">substructure</span></code> – File specified does not contain a substructure.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">part</span> <span class="pre">already</span> <span class="pre">exists</span></code> – A part with the same name already exists.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">-</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">substructure</span> <span class="pre">cannot</span> <span class="pre">be</span> <span class="pre">imported</span></code> – The output database is missing nodes and elements.Nested substructures are not</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">supported.The</span> <span class="pre">substructure</span> <span class="pre">sim</span> <span class="pre">file</span> <span class="pre">was</span> <span class="pre">generated</span> <span class="pre">using</span> <span class="pre">a</span> <span class="pre">version</span> <span class="pre">that</span> <span class="pre">is</span> <span class="pre">different</span> <span class="pre">from</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">current</span> <span class="pre">version.</span></code></p></li>
+<dd class="field-even"><p><p><strong>part</strong> – A Part object
+- If the specified part is not a substructure:</p>
+<blockquote>
+<div><p>File specified does not contain a substructure.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>If the specified part already exists:
+A part with the same name already exists.</p></li>
+<li><p>If the substructure cannot be imported:
+The output database is missing nodes and elements.Nested substructures are not</p></li>
 </ul>
+<p>supported.The substructure sim file was generated using a version that is different from
+the current version.</p>
 </p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Part</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -792,10 +939,17 @@ places it in the parts repository.</p>
 <div class="section" id="basic-features-of-part">
 <h3>Basic features of Part<a class="headerlink" href="#basic-features-of-part" title="Permalink to this headline"></a></h3>
 <dl class="py class">
-<dt class="sig sig-object py" id="id37">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Part.PartBase.</span></span><span class="sig-name descname"><span class="pre">PartBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id37" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="abaqus.Part.Part.Part">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Part</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Part.Part.Part" title="Permalink to this definition"></a></dt>
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Part.PartBase.</span></span><span class="sig-name descname"><span class="pre">PartBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Part</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="id37">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id37" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>The Part object defines the physical attributes of a structure. Parts are instanced into
 the assembly and positioned before an analysis.</p>
 <blockquote>
@@ -809,16 +963,13 @@ the assembly and positioned before an analysis.</p>
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Part.PartBase.PartBase.setValues" title="Permalink to this definition"></a></dt>
 <dd><p>This method modifies the Part object.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – RangeError.</p></li>
+</ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>RangeError.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -938,11 +1089,11 @@ specifies the vertex at which to evaluate the angle.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Float</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">angle</span> <span class="pre">between</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">entities.</span> <span class="pre">If</span> <span class="pre">you</span> <span class="pre">provide</span> <span class="pre">a</span> <span class="pre">plane</span> <span class="pre">as</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">an</span> <span class="pre">argument</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Abaqus/CAE</span> <span class="pre">computes</span> <span class="pre">the</span> <span class="pre">angle</span> <span class="pre">using</span> <span class="pre">the</span> <span class="pre">normal</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">plane.</span> <span class="pre">.</span></code></p></li>
-</ul>
-</p>
+<dd class="field-even"><p><strong>angle</strong> – A Float specifying the angle between the specified entities. If you provide a plane as
+an argument, Abaqus/CAE computes the angle using the normal to the plane. .</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -956,10 +1107,10 @@ Associative Import capability. The root file can be the assembly file or the par
 depending on what which one was imported.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
+<dd class="field-odd"><p><strong>paths</strong> – A sequence containing the path to the associated CAD part and assembly file</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">sequence</span> <span class="pre">containing</span> <span class="pre">the</span> <span class="pre">path</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">associated</span> <span class="pre">CAD</span> <span class="pre">part</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">assembly</span> <span class="pre">file.</span> <span class="pre">.</span></code></p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -973,11 +1124,11 @@ softwares using the Associative Import capability, and if the parameter names de
 that CAD software are prefixed with the string ABQ.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">dictionary</span> <span class="pre">object</span> <span class="pre">representing</span> <span class="pre">a</span> <span class="pre">map</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">name</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">parameter</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">its</span> <span class="pre">associated</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">value.</span> <span class="pre">.</span></code></p></li>
-</ul>
-</p>
+<dd class="field-odd"><p><strong>paras</strong> – A dictionary object representing a map of the name of the parameter and its associated
+value. .</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1000,10 +1151,10 @@ accuracy has been achieved. The default value is 0.000001 (0.0001%).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>centroid</strong> – A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the centroid. .</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">sequence</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">Floats</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">*X*-</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">*Y*-</span></code>, and <code class="xref py py-class docutils literal notranslate"><span class="pre">*Z*-coordinates</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">centroid.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple[float]</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1042,10 +1193,10 @@ computation. The default value is 100.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>curvature</strong> – A Float specifying the maximum curvature. .</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Float</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">maximum</span> <span class="pre">curvature.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1067,10 +1218,10 @@ measure.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>distance</strong> – A Float specifying the distance between <em>entity1</em> and <em>entity2</em>. .</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Float</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">distance</span> <span class="pre">between</span> <span class="pre">*entity1*</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">*entity2*.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1084,10 +1235,10 @@ measure.</p></li>
 <dd class="field-odd"><p><strong>edges</strong> – A sequence of Edge objects whose total length the method will calculate.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>length</strong> – A Float specifying the total length</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Float</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">total</span> <span class="pre">length.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1104,10 +1255,10 @@ specified faces.</p>
 <dd class="field-odd"><p><strong>faces</strong> – A sequence of Face objects whose perimeter the method will calculate.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>perimeter</strong> – A Float specifying the perimeter</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Float</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">perimeter.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1125,10 +1276,10 @@ specified faces.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>volume</strong> – A Float specifying the sum of the areas of the given faces</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Float</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">sum</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">areas</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">given</span> <span class="pre">faces.</span> <span class="pre">.</span></code></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1163,75 +1314,75 @@ about the center of mass, they will be evaluated about the origin.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Dictionary</span> <span class="pre">object</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">following</span> <span class="pre">items</span></code></p></li>
-<li><p><strong>*area*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">Float</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">sum</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">area</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">specified</span> <span class="pre">faces.</span> <span class="pre">The</span> <span class="pre">area</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">is</span> <span class="pre">computed</span> <span class="pre">only</span> <span class="pre">for</span> <span class="pre">one</span> <span class="pre">side</span> <span class="pre">for</span> <span class="pre">shells.</span></code></p></li>
-<li><p><strong>*areaCentroid*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">three</span> <span class="pre">Floats</span> <span class="pre">representing</span> <span class="pre">the</span> <span class="pre">coordinates</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">area</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">centroid.</span></code></p></li>
-<li><p><strong>*volume*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">Float</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">volume</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">specified</span> <span class="pre">regions.</span></code>)</p></li>
-<li><p><strong>*volumeCentroid*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">three</span> <span class="pre">Floats</span> <span class="pre">representing</span> <span class="pre">the</span> <span class="pre">coordinates</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">volume</span> <span class="pre">centroid.</span></code></p></li>
-<li><p><strong>*massFromMassPerUnitSurfaceArea*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">Float</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">mass</span> <span class="pre">due</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">mass</span> <span class="pre">per</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">unit</span> <span class="pre">surface</span> <span class="pre">area.</span></code></p></li>
-<li><p><strong>*mass*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">Float</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">mass</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">specified</span> <span class="pre">regions.</span> <span class="pre">It</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">total</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">mass</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">includes</span> <span class="pre">mass</span> <span class="pre">from</span> <span class="pre">quantities</span> <span class="pre">such</span> <span class="pre">as</span> <span class="pre">mass</span> <span class="pre">per</span> <span class="pre">unit</span> <span class="pre">surface</span> <span class="pre">area.</span></code></p></li>
-<li><p><strong>*centerOfMass*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">three</span> <span class="pre">Floats</span> <span class="pre">representing</span> <span class="pre">the</span> <span class="pre">coordinates</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">center</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">mass.</span></code></p></li>
-<li><p><strong>*momentOfInertia*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">six</span> <span class="pre">Floats</span> <span class="pre">representing</span> <span class="pre">the</span> <span class="pre">moments</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">inertia</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">about</span> <span class="pre">the</span> <span class="pre">center</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">mass</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">about</span> <span class="pre">the</span> <span class="pre">point</span> <span class="pre">specified.</span></code></p></li>
-<li><p><strong>*warnings*</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">SymbolicConstants</span> <span class="pre">representing</span> <span class="pre">the</span> <span class="pre">problems</span> <span class="pre">encountered</span> <span class="pre">while</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">computing</span> <span class="pre">the</span> <span class="pre">mass</span> <span class="pre">properties.</span> <span class="pre">Possible</span> <span class="pre">SymbolicConstants</span> <span class="pre">are</span></code></p></li>
-<li><p><strong>UNSUPPORTED_ENTITIES</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Some</span> <span class="pre">unsupported</span> <span class="pre">entities</span> <span class="pre">exist</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">region.</span> <span class="pre">The</span> <span class="pre">mass</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">properties</span> <span class="pre">are</span> <span class="pre">computed</span> <span class="pre">only</span> <span class="pre">for</span> <span class="pre">beams</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">trusses</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">shells</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">solids</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">point</span> <span class="pre">and</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">non-structural</span> <span class="pre">mass</span> <span class="pre">elements</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">rotary</span> <span class="pre">inertia</span> <span class="pre">elements.</span> <span class="pre">The</span> <span class="pre">mass</span> <span class="pre">properties</span> <span class="pre">are</span> <span class="pre">not</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">computed</span> <span class="pre">for</span> <span class="pre">axisymmetric</span> <span class="pre">elements</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">springs</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">connectors</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">gaskets</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">any</span> <span class="pre">other</span> <span class="pre">elements.</span></code></p></li>
-<li><p><strong>MISSING_THICKNESS</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">section</span> <span class="pre">definitions</span> <span class="pre">are</span> <span class="pre">missing</span> <span class="pre">thickness</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">values.</span></code></p></li>
-<li><p><strong>ZERO_THICKNESS</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">section</span> <span class="pre">definitions</span> <span class="pre">have</span> <span class="pre">a</span> <span class="pre">zero</span> <span class="pre">thickness</span> <span class="pre">value.</span></code>)</p></li>
-<li><p><strong>VARIABLE_THICKNESS</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">The</span> <span class="pre">nodal</span> <span class="pre">thickness</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">field</span> <span class="pre">thickness</span> <span class="pre">specified</span> <span class="pre">for</span> <span class="pre">some</span> <span class="pre">regions</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">has</span> <span class="pre">been</span> <span class="pre">ignored.</span></code></p></li>
-<li><p><strong>NON_APPLICABLE_THICKNESS</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">thickness</span> <span class="pre">value</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">applicable</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">corresponding</span> <span class="pre">sections</span> <span class="pre">specified</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">regions.</span></code></p></li>
-<li><p><strong>MISSING_DENSITY</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">section</span> <span class="pre">definitions</span> <span class="pre">are</span> <span class="pre">missing</span> <span class="pre">material</span> <span class="pre">density</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">values.</span></code></p></li>
-<li><p><strong>MISSING_MATERIAL_DEFINITION</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">material</span> <span class="pre">definition</span> <span class="pre">is</span> <span class="pre">missing.</span></code>)</p></li>
-<li><p><strong>ZERO_DENSITY</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">section</span> <span class="pre">definitions</span> <span class="pre">have</span> <span class="pre">a</span> <span class="pre">zero</span> <span class="pre">material</span> <span class="pre">density</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">value.</span></code></p></li>
-<li><p><strong>UNSUPPORTED_DENSITY</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">either</span> <span class="pre">a</span> <span class="pre">negative</span> <span class="pre">material</span> <span class="pre">density</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">temperature</span> <span class="pre">dependent</span> <span class="pre">density</span> <span class="pre">has</span> <span class="pre">been</span> <span class="pre">specified</span></code>, or <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">material</span> <span class="pre">value</span> <span class="pre">is</span> <span class="pre">missing</span> <span class="pre">for</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">one</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">more</span> <span class="pre">plies</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">composite</span> <span class="pre">section.</span></code></p></li>
-<li><p><strong>SHELL_OFFSETS</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">shells</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">this</span> <span class="pre">method</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">account</span> <span class="pre">for</span> <span class="pre">any</span> <span class="pre">offsets</span> <span class="pre">specified.</span></code>)</p></li>
-<li><p><strong>MISSING_SECTION_DEFINITION</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">section</span> <span class="pre">definition</span> <span class="pre">is</span> <span class="pre">missing.</span></code>)</p></li>
-<li><p><strong>UNSUPPORTED_SECTION_DEFINITION</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">The</span> <span class="pre">section</span> <span class="pre">definition</span> <span class="pre">provided</span> <span class="pre">for</span> <span class="pre">some</span> <span class="pre">regions</span> <span class="pre">is</span> <span class="pre">not</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">supported.</span></code></p></li>
-<li><p><strong>REINFORCEMENTS</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">This</span> <span class="pre">method</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">account</span> <span class="pre">for</span> <span class="pre">any</span> <span class="pre">reinforcements</span> <span class="pre">specified</span> <span class="pre">on</span> <span class="pre">the</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">model.</span></code></p></li>
-<li><p><strong>SMEARED_PROPERTIES</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">regions</span> <span class="pre">with</span> <span class="pre">composite</span> <span class="pre">section</span> <span class="pre">assignments</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">density</span> <span class="pre">is</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">smeared</span> <span class="pre">across</span> <span class="pre">the</span> <span class="pre">thickness.</span> <span class="pre">The</span> <span class="pre">volume</span> <span class="pre">centroid</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">center</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">mass</span> <span class="pre">computations</span> <span class="pre">for</span> <span class="pre">a</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">composite</span> <span class="pre">shell</span> <span class="pre">use</span> <span class="pre">a</span> <span class="pre">lumped</span> <span class="pre">mass</span> <span class="pre">approach</span> <span class="pre">where</span> <span class="pre">the</span> <span class="pre">volume</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">mass</span> <span class="pre">is</span> <span class="pre">assumed</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">be</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">lumped</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">plane</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">shell.</span> <span class="pre">As</span> <span class="pre">a</span> <span class="pre">result</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">these</span> <span class="pre">approximations</span> <span class="pre">the</span> <span class="pre">volume</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">centroid</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">center</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">mass</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">moments</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">inertia</span> <span class="pre">may</span> <span class="pre">be</span> <span class="pre">slightly</span> <span class="pre">inaccurate</span> <span class="pre">for</span> <span class="pre">regions</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">with</span> <span class="pre">composite</span> <span class="pre">section</span> <span class="pre">assignments.</span></code></p></li>
-<li><p><strong>UNSUPPORTED_NON_STRUCTURAL_MASS_ENTITIES</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">This</span> <span class="pre">method</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">account</span> <span class="pre">for</span> <span class="pre">any</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">non-structural</span> <span class="pre">mass</span> <span class="pre">on</span> <span class="pre">wires.</span></code></p></li>
-<li><p><strong>INCORRECT_MOMENT_OF_INERTIA</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">geometry</span> <span class="pre">regions</span> <span class="pre">with</span> <span class="pre">non-structural</span> <span class="pre">mass</span> <span class="pre">per</span> <span class="pre">volume,</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">non-structural</span> <span class="pre">mass</span> <span class="pre">is</span> <span class="pre">assumed</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">be</span> <span class="pre">a</span> <span class="pre">point</span> <span class="pre">mass</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">centroid</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">regions.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Thus</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">moments</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">inertia</span> <span class="pre">may</span> <span class="pre">be</span> <span class="pre">inaccurate</span> <span class="pre">as</span> <span class="pre">the</span> <span class="pre">distribution</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">non-structural</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">mass</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">accounted</span> <span class="pre">for.</span> <span class="pre">Use</span> <span class="pre">the</span> <span class="pre">mesh</span> <span class="pre">for</span> <span class="pre">accurately</span> <span class="pre">computing</span> <span class="pre">the</span> <span class="pre">moments</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">inertia.</span></code></p></li>
-<li><p><strong>MISSING_BEAM_ORIENTATIONS</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span> <span class="pre">with</span> <span class="pre">beam</span> <span class="pre">section</span> <span class="pre">assignments</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">beam</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">section</span> <span class="pre">orientations</span> <span class="pre">are</span> <span class="pre">missing.</span></code></p></li>
-<li><p><strong>UNSUPPORTED_BEAM_PROFILES</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">This</span> <span class="pre">method</span> <span class="pre">supports</span> <span class="pre">the</span> <span class="pre">Box</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Pipe</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Circular</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Rectangular,</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Hexagonal</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Trapezoidal</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">I</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">L</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">T</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Arbitrary</span></code>, and <code class="xref py py-class docutils literal notranslate"><span class="pre">Tapered</span> <span class="pre">beam</span> <span class="pre">profiles.</span> <span class="pre">Any</span> <span class="pre">other</span> <span class="pre">beam</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">profile</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">supported.</span></code></p></li>
-<li><p><strong>TAPERED_BEAM_MI</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Moment</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">inertia</span> <span class="pre">calculations</span> <span class="pre">for</span> <span class="pre">tapered</span> <span class="pre">beams</span> <span class="pre">are</span> <span class="pre">not</span> <span class="pre">accurate.</span></code>)</p></li>
-<li><p><strong>SUBSTRUCTURE_INCORRECT_PROPERTIES</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">The</span> <span class="pre">user</span> <span class="pre">assigned</span> <span class="pre">density</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">thickness</span> <span class="pre">is</span> <span class="pre">not</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">considered</span> <span class="pre">for</span> <span class="pre">substructures.</span></code></p></li>
-<li><p><strong>UNSUPPORTED_NON_STRUCTURAL_MASS_PROPORTIONAL</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Non-structural</span> <span class="pre">mass</span> <span class="pre">with</span> <span class="pre">Mass</span> <span class="pre">Proportional</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">distribution</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">supported.</span> <span class="pre">Results</span> <span class="pre">are</span> <span class="pre">computed</span> <span class="pre">using</span> <span class="pre">Volume</span> <span class="pre">Proportional</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">distribution.</span> <span class="pre">.</span></code></p></li>
-</ul>
-</p>
+<dd class="field-even"><p><strong>properties</strong> – A Dictionary object with the following items:
+<em>area</em>: None or a Float specifying the sum of the area of the specified faces. The area
+is computed only for one side for shells.
+<em>areaCentroid</em>: None or a tuple of three Floats representing the coordinates of the area
+centroid.
+<em>volume</em>: None or a Float specifying the volume of the specified regions.
+<em>volumeCentroid</em>: None or a tuple of three Floats representing the coordinates of the
+volume centroid.
+<em>massFromMassPerUnitSurfaceArea</em>: None or a Float specifying the mass due to mass per
+unit surface area.
+<em>mass</em>: None or a Float specifying the mass of the specified regions. It is the total
+mass and includes mass from quantities such as mass per unit surface area.
+<em>centerOfMass</em>: None or a tuple of three Floats representing the coordinates of the
+center of mass.
+<em>momentOfInertia</em>: None or a tuple of six Floats representing the moments of inertia
+about the center of mass or about the point specified.
+<em>warnings</em>: A tuple of SymbolicConstants representing the problems encountered while
+computing the mass properties. Possible SymbolicConstants are:
+UNSUPPORTED_ENTITIES: Some unsupported entities exist in the specified region. The mass
+properties are computed only for beams, trusses, shells, solids, point and
+non-structural mass elements and rotary inertia elements. The mass properties are not
+computed for axisymmetric elements, springs, connectors, gaskets or any other elements.
+MISSING_THICKNESS: For some regions, the section definitions are missing thickness
+values.
+ZERO_THICKNESS: For some regions, the section definitions have a zero thickness value.
+VARIABLE_THICKNESS: The nodal thickness or field thickness specified for some regions
+has been ignored.
+NON_APPLICABLE_THICKNESS: For some regions, the thickness value is not applicable to the
+corresponding sections specified on the regions.
+MISSING_DENSITY: For some regions, the section definitions are missing material density
+values.
+MISSING_MATERIAL_DEFINITION: For some regions, the material definition is missing.
+ZERO_DENSITY: For some regions, the section definitions have a zero material density
+value.
+UNSUPPORTED_DENSITY: For some regions, either a negative material density or a
+temperature dependent density has been specified, or the material value is missing for
+one or more plies in the composite section.
+SHELL_OFFSETS: For shells, this method does not account for any offsets specified.
+MISSING_SECTION_DEFINITION: For some regions, the section definition is missing.
+UNSUPPORTED_SECTION_DEFINITION: The section definition provided for some regions is not
+supported.
+REINFORCEMENTS: This method does not account for any reinforcements specified on the
+model.
+SMEARED_PROPERTIES: For regions with composite section assignments, the density is
+smeared across the thickness. The volume centroid and center of mass computations for a
+composite shell use a lumped mass approach where the volume and mass is assumed to be
+lumped in the plane of the shell. As a result of these approximations the volume
+centroid, center of mass and moments of inertia may be slightly inaccurate for regions
+with composite section assignments.
+UNSUPPORTED_NON_STRUCTURAL_MASS_ENTITIES: This method does not account for any
+non-structural mass on wires.
+INCORRECT_MOMENT_OF_INERTIA: For geometry regions with non-structural mass per volume,
+the non-structural mass is assumed to be a point mass at the centroid of the regions.
+Thus, the moments of inertia may be inaccurate as the distribution of the non-structural
+mass is not accounted for. Use the mesh for accurately computing the moments of inertia.
+MISSING_BEAM_ORIENTATIONS: For some regions with beam section assignments, the beam
+section orientations are missing.
+UNSUPPORTED_BEAM_PROFILES: This method supports the Box, Pipe, Circular, Rectangular,
+Hexagonal, Trapezoidal, I, L, T, Arbitrary, and Tapered beam profiles. Any other beam
+profile is not supported.
+TAPERED_BEAM_MI: Moment of inertia calculations for tapered beams are not accurate.
+SUBSTRUCTURE_INCORRECT_PROPERTIES: The user assigned density and thickness is not
+considered for substructures.
+UNSUPPORTED_NON_STRUCTURAL_MASS_PROPORTIONAL: Non-structural mass with Mass Proportional
+distribution is not supported. Results are computed using Volume Proportional
+distribution. .</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1245,18 +1396,19 @@ about the center of mass, they will be evaluated about the origin.</p></li>
 <dd class="field-odd"><p><strong>name</strong> – A string specifying the feature name.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">Face</span> <span class="pre">objects.</span></code></p>
-</dd>
-</dl>
-<blockquote>
-<div><ul class="simple">
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>faces</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple[Face]</span></code>) – Sequence of Face objects.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Exceptions</span></code></p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">----------</span></code> –</p>
+<ul>
 <li><p>An exception occurs if a feature with the given name does not exist.
 Error : Incorrect feature name.</p></li>
 </ul>
-</div></blockquote>
+</li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -1268,18 +1420,19 @@ Error : Incorrect feature name.</p></li>
 <dd class="field-odd"><p><strong>name</strong> – A string specifying the feature name.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">Edge</span> <span class="pre">objects.</span></code></p>
-</dd>
-</dl>
-<blockquote>
-<div><ul class="simple">
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>edges</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple[Edge]</span></code>) – Sequence of Edge objects.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Exceptions</span></code></p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">----------</span></code> –</p>
+<ul>
 <li><p>An exception occurs if a feature with the given name does not exist.
 Error : Incorrect feature name.</p></li>
 </ul>
-</div></blockquote>
+</li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -1291,18 +1444,19 @@ Error : Incorrect feature name.</p></li>
 <dd class="field-odd"><p><strong>name</strong> – A string specifying the feature name.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">Cell</span> <span class="pre">objects.</span></code></p>
-</dd>
-</dl>
-<blockquote>
-<div><ul class="simple">
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>cells</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple[Cell]</span></code>) – Sequence of Cell objects.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Exceptions</span></code></p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">----------</span></code> –</p>
+<ul>
 <li><p>An exception occurs if a feature with the given name does not exist.
 Error : Incorrect feature name.</p></li>
 </ul>
-</div></blockquote>
+</li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -1314,18 +1468,19 @@ Error : Incorrect feature name.</p></li>
 <dd class="field-odd"><p><strong>name</strong> – A string specifying the feature name.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedSketchVertex</span> <span class="pre">objects.</span></code></p>
-</dd>
-</dl>
-<blockquote>
-<div><ul class="simple">
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>vertices</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple[ConstrainedSketchVertex]</span></code>) – Sequence of ConstrainedSketchVertex objects.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Exceptions</span></code></p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">----------</span></code> –</p>
+<ul>
 <li><p>An exception occurs if a feature with the given name does not exist.
 Error : Incorrect feature name.</p></li>
 </ul>
-</div></blockquote>
+</li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -1420,12 +1575,12 @@ the analysis type is deformable); and
 value is True</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Dictionary</span> <span class="pre">object</span> <span class="pre">with</span> <span class="pre">string</span> <span class="pre">keys</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">integer</span> <span class="pre">values</span> <span class="pre">which</span> <span class="pre">returns</span> <span class="pre">the</span> <span class="pre">above</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">information</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">keys</span> <span class="pre">being</span> <span class="pre">numVertices</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">numEdges</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">numFaces</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">numCells,</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">numWiredEdges</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">numShellFaces</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">numSolidFaces.</span> <span class="pre">.</span></code></p></li>
-</ul>
-</p>
+<dd class="field-even"><p><strong>attributes</strong> – A Dictionary object with string keys and integer values which returns the above
+information with the keys being numVertices, numEdges, numFaces, numCells,
+numWiredEdges, numShellFaces and numSolidFaces. .</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1458,11 +1613,11 @@ value is True.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Dictionary</span> <span class="pre">object</span> <span class="pre">with</span> <span class="pre">string</span> <span class="pre">keys</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">which</span> <span class="pre">returns</span> <span class="pre">the</span> <span class="pre">above</span> <span class="pre">information</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">keys</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">being</span> <span class="pre">name</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">space</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">volume</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">centroid</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">category</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">boundingBox.</span> <span class="pre">.</span></code></p></li>
-</ul>
-</p>
+<dd class="field-even"><p><strong>geometry</strong> – A Dictionary object with string keys, which returns the above information with the keys
+being name, space, type, volume, centroid, category and boundingBox. .</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1474,10 +1629,10 @@ value is True.</p></li>
 require one for analysis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
+<dd class="field-odd"><p><strong>region</strong> – A Region object, or None</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Region</span> <span class="pre">object</span></code>, or <code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span> <span class="pre">.</span></code></p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Region</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1748,9 +1903,9 @@ parts are upgraded and regenrated.</p>
 <h3>Edit Mesh features of Part<a class="headerlink" href="#edit-mesh-features-of-part" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.EditMesh.MeshEditPart.MeshEditPart">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.EditMesh.MeshEditPart.</span></span><span class="sig-name descname"><span class="pre">MeshEditPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.EditMesh.MeshEditPart.MeshEditPart" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshEditPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.EditMesh.MeshEditPart.MeshEditPart" title="Permalink to this definition"></a></dt>
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.EditMesh.MeshEditPart.</span></span><span class="sig-name descname"><span class="pre">MeshEditPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshEditPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>The following commands operate on Part objects. For more information about the Part
 object, see Part object.</p>
 <blockquote>
@@ -2204,9 +2359,9 @@ wrapping procedure will relocate a node at point (xx, yy) on the planar mesh to
 <h3>Mesh features of Part<a class="headerlink" href="#mesh-features-of-part" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshPart.MeshPart">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshPart.</span></span><span class="sig-name descname"><span class="pre">MeshPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.MeshPart.MeshPart" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Mesh.MeshPart.MeshPart" title="Permalink to this definition"></a></dt>
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshPart.</span></span><span class="sig-name descname"><span class="pre">MeshPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>The following commands operate on Part objects. For more information about the Part
 object, see Part object.</p>
 <blockquote>
@@ -3194,9 +3349,9 @@ argument, the entire part mesh is considered.</p></li>
 <h3>Property features of Part<a class="headerlink" href="#property-features-of-part" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Property.PropertyPart.PropertyPart">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Property.PropertyPart.</span></span><span class="sig-name descname"><span class="pre">PropertyPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.PropertyPart.PropertyPart" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PropertyPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.PropertyPart.PropertyPart" title="Permalink to this definition"></a></dt>
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Property.PropertyPart.</span></span><span class="sig-name descname"><span class="pre">PropertyPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PropertyPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Property.PropertyPart.PropertyPart.CompositeLayup">
 <span class="sig-name descname"><span class="pre">CompositeLayup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GLOBAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetValues</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SHELL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="property.html#abaqus.Property.CompositeLayup.CompositeLayup" title="abaqus.Property.CompositeLayup.CompositeLayup"><span class="pre">abaqus.Property.CompositeLayup.CompositeLayup</span></a></span></span><a class="headerlink" href="#abaqus.Property.PropertyPart.PropertyPart.CompositeLayup" title="Permalink to this definition"></a></dt>
@@ -3347,9 +3502,9 @@ OFFSET_FIELD. The default value is SINGLE_VALUE.</p></li>
 <h3>Region features of Part<a class="headerlink" href="#region-features-of-part" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Region.RegionPart.RegionPart">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Region.RegionPart.</span></span><span class="sig-name descname"><span class="pre">RegionPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Region.RegionPart.RegionPart" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RegionPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Region.RegionPart.RegionPart" title="Permalink to this definition"></a></dt>
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Region.RegionPart.</span></span><span class="sig-name descname"><span class="pre">RegionPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RegionPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Region.RegionPart.RegionPart.EditSkin">
 <span class="sig-name descname"><span class="pre">EditSkin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">faces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="geometry.html#abaqus.BasicGeometry.Face.Face" title="abaqus.BasicGeometry.Face.Face"><span class="pre">abaqus.BasicGeometry.Face.Face</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="geometry.html#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">abaqus.BasicGeometry.Edge.Edge</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementFaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mesh.html#abaqus.Mesh.MeshFace.MeshFace" title="abaqus.Mesh.MeshFace.MeshFace"><span class="pre">abaqus.Mesh.MeshFace.MeshFace</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementEdges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mesh.html#abaqus.Mesh.MeshEdge.MeshEdge" title="abaqus.Mesh.MeshEdge.MeshEdge"><span class="pre">abaqus.Mesh.MeshEdge.MeshEdge</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="region.html#abaqus.Region.RegionPart.RegionPart.Skin" title="abaqus.Region.RegionPart.RegionPart.Skin"><span class="pre">abaqus.Region.RegionPart.RegionPart.Skin</span></a></span></span><a class="headerlink" href="#abaqus.Region.RegionPart.RegionPart.EditSkin" title="Permalink to this definition"></a></dt>
@@ -3566,7 +3721,7 @@ side2Elements</p>
 <h3>AcisFile<a class="headerlink" href="#acisfile" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Part.AcisFile.AcisFile">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Part.AcisFile.</span></span><span class="sig-name descname"><span class="pre">AcisFile</span></span><a class="headerlink" href="#abaqus.Part.AcisFile.AcisFile" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AcisFile</span></span><a class="headerlink" href="#abaqus.Part.AcisFile.AcisFile" title="Permalink to this definition"></a></dt>
 <dd><p>The AcisFile object is a file object used to open ACIS-, STEP-, and IGES-format files.</p>
 <blockquote>
 <div><ul class="simple">
@@ -3883,7 +4038,7 @@ Version 12.0. The default value is the current version of ACIS.</p></li>
 <h3>AcisMdb<a class="headerlink" href="#acismdb" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Part.AcisMdb.</span></span><span class="sig-name descname"><span class="pre">AcisMdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AcisMdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openAcis">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openAcis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleFromFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openAcis" title="Permalink to this definition"></a></dt>
@@ -4179,7 +4334,7 @@ Texterror: Failed to read VDA file.</p></li>
 <h3>Feature<a class="headerlink" href="#feature" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Part.Feature.Feature">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Part.Feature.</span></span><span class="sig-name descname"><span class="pre">Feature</span></span><a class="headerlink" href="#abaqus.Part.Feature.Feature" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Feature</span></span><a class="headerlink" href="#abaqus.Part.Feature.Feature" title="Permalink to this definition"></a></dt>
 <dd><p>The following commands operate on Feature objects. For more information about the
 Feature object, see Feature object.</p>
 <blockquote>

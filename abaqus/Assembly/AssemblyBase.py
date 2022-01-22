@@ -126,8 +126,7 @@ class AssemblyBase(Feature):
 
     # A PartInstance object specifying the PartInstances and A ModelInstance object specifying 
     # the ModelInstances. 
-    allInstances: dict[str, typing.Union[PartInstance, ModelInstance]] = dict[
-        str, typing.Union[PartInstance, ModelInstance]]()
+    allInstances: dict[str, typing.Union[PartInstance, ModelInstance]] = dict[str, typing.Union[PartInstance, ModelInstance]]()
 
     # An EngineeringFeature object. 
     engineeringFeatures: EngineeringFeature = EngineeringFeature()

@@ -252,10 +252,6 @@ class ModelJob(Job):
         Returns
         -------
             A ModelJob object.
-
-        Exceptions
-        ----------
-            AbaqusException.
         """
         pass
 

@@ -95,8 +95,7 @@ class StepBase:
     restart: Restart = Restart()
 
     # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: dict[str, AdaptiveMeshConstraintState] = dict[
-        str, AdaptiveMeshConstraintState]()
+    adaptiveMeshConstraintStates: dict[str, AdaptiveMeshConstraintState] = dict[str, AdaptiveMeshConstraintState]()
 
     # A repository of AdaptiveMeshDomain objects. 
     adaptiveMeshDomains: dict[str, AdaptiveMeshDomain] = dict[str, AdaptiveMeshDomain]()

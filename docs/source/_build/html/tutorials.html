@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tutorials &mdash; pyabaqus 1.0.5 documentation</title>
+  <title>Tutorials &mdash; pyabaqus 1.0.6 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -222,7 +222,7 @@ easier, and that is what <cite>pyabaqus</cite> does.</p>
 </div>
 <div class="section" id="create-loads">
 <h3>Create loads<a class="headerlink" href="#create-loads" title="Permalink to this headline"></a></h3>
-<p>we can use <cite>Pressure</cite> ro create a pressure:</p>
+<p>We can use <cite>Pressure</cite> ro create a pressure:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">top_instance</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="s1">&#39;instance&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">surfaces</span><span class="p">[</span><span class="s1">&#39;surface-top&#39;</span><span class="p">]</span>
 <span class="n">pressure</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Pressure</span><span class="p">(</span><span class="s1">&#39;pressure&#39;</span><span class="p">,</span> <span class="n">createStepName</span><span class="o">=</span><span class="s1">&#39;Step-1&#39;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="n">top_instance</span><span class="p">,</span> <span class="n">magnitude</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
@@ -244,7 +244,7 @@ easier, and that is what <cite>pyabaqus</cite> does.</p>
 </div>
 <div class="section" id="create-jobs">
 <h3>Create jobs<a class="headerlink" href="#create-jobs" title="Permalink to this headline"></a></h3>
-<p>we can use <cite>Job</cite> to create a job:</p>
+<p>We can use <cite>Job</cite> to create a job:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">job</span> <span class="o">=</span> <span class="n">mdb</span><span class="o">.</span><span class="n">Job</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Job-1&#39;</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s1">&#39;Model-1&#39;</span><span class="p">)</span>
 </pre></div>
 </div>

@@ -116,3 +116,6 @@ dmypy.json
 # User Defined
 .vscode/
 .idea/
+/docs/rsts/
+/build_dist_wheel.bat
+/upload.bat

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mdb.models &mdash; pyabaqus 1.0.6 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Reference manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>mdb.models</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/mdb.models.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="mdb-models">
+<h1>mdb.models<a class="headerlink" href="#mdb-models" title="Permalink to this headline"></a></h1>
+<p># An Assembly object.
+mdb.models[name].rootAssembly</p>
+<p>A repository of Amplitude objects.
+mdb.models[name].amplitudes</p>
+<p>A repository of Profile objects.
+mdb.models[name].profiles</p>
+<p>A repository of BoundaryCondition objects.
+mdb.models[name].boundaryConditions</p>
+<p>A repository of ConstrainedSketchConstraint objects.
+mdb.models[name].constraints</p>
+<p>A repository of AnalyticalField objects.
+mdb.models[name].analyticalFields</p>
+<p>A repository of DiscreteField objects.
+mdb.models[name].discreteFields</p>
+<p>A repository of PredefinedField objects.
+mdb.models[name].predefinedFields</p>
+<p>A repository of Interaction objects.
+mdb.models[name].interactions</p>
+<p>A repository of InteractionProperty objects.
+mdb.models[name].interactionProperties</p>
+<p>A repository of ContactControl objects.
+mdb.models[name].contactControls</p>
+<p>A repository of ContactInitialization objects.
+mdb.models[name].contactInitializations</p>
+<p>A repository of ContactStabilization objects.
+mdb.models[name].contactStabilizations</p>
+<p>A tuple of tuples of Strings specifying the linked child PartInstance name in the
+current model to the corresponding parent PartInstance name in a different model.
+mdb.models[name].linkedInstances</p>
+<p>A tuple of tuples of Strings specifying the linked child Part name in the current model
+to the corresponding parent Part name in a different model.
+mdb.models[name].linkedParts</p>
+<p>A repository of Load objects.
+mdb.models[name].loads</p>
+<p>A repository of Material objects.
+mdb.models[name].materials</p>
+<p>A repository of Calibration objects.
+mdb.models[name].calibrations</p>
+<p>A repository of Section objects.
+mdb.models[name].sections</p>
+<p>A repository of RemeshingRule objects.
+mdb.models[name].remeshingRules</p>
+<p>A repository of ConstrainedSketch objects.
+mdb.models[name].sketches</p>
+<p>A repository of Part objects.
+mdb.models[name].parts</p>
+<p>A repository of Step objects.
+mdb.models[name].steps</p>
+<p>A FeatureOptions object.
+mdb.models[name].featureOptions</p>
+<p>A repository of AdaptiveMeshConstraint objects.
+mdb.models[name].adaptiveMeshConstraints</p>
+<p>A repository of AdaptiveMeshControl objects.
+mdb.models[name].adaptiveMeshControls</p>
+<p>A repository of TimePoint objects.
+mdb.models[name].timePoints</p>
+<p>A repository of Filter objects.
+mdb.models[name].filters</p>
+<p>A repository of IntegratedOutputSection objects.
+mdb.models[name].integratedOutputSections</p>
+<p>A repository of FieldOutputRequest objects.
+mdb.models[name].fieldOutputRequests</p>
+<p>A repository of HistoryOutputRequest objects.
+mdb.models[name].historyOutputRequests</p>
+<p>A repository of OptimizationTask objects.
+mdb.models[name].optimizationTasks</p>
+<p>A repository of TableCollection objects.
+mdb.models[name].tableCollections</p>
+<p>A repository of EventSeriesType objects.
+mdb.models[name].eventSeriesTypes</p>
+<p>A repository of EventSeriesData objects.
+mdb.models[name].eventSeriesDatas</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

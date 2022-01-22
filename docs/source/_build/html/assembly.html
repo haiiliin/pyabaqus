@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Assembly &mdash; pyabaqus 1.0.5 documentation</title>
+  <title>Assembly &mdash; pyabaqus 1.0.6 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -48,6 +48,9 @@
 <li class="toctree-l2"><a class="reference internal" href="animation.html">Animation Options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="annotation.html">Annotation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Assembly</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#assembly-attributes">Assembly Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#partinstance-attributes">PartInstance Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modelinstance-attributes">ModelInstance Attributes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-instances">Create instances</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#object-features">Object features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#basic-features-of-the-assembly">Basic features of the Assembly</a></li>
@@ -143,11 +146,87 @@
   <div class="section" id="assembly">
 <h1>Assembly<a class="headerlink" href="#assembly" title="Permalink to this headline"></a></h1>
 <p>Features in Abaqus/CAE include Parts, Datums, Partitions, and Assembly operations. Assembly commands create Feature objects on only the rootAssembly object. The commands that create Feature objects on only the Part object are described in Part commands. The commands that create Feature objects on both the Part and the rootAssembly objects are described in Feature commands.</p>
+<div class="section" id="assembly-attributes">
+<h2>Assembly Attributes<a class="headerlink" href="#assembly-attributes" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><strong>mdb.models[name].rootAssembly.isOutOfDate</strong>: An Int specifying that feature parameters have been modified but that the assembly has not been regenerated. Possible values are 0 and 1.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.timeStamp</strong>: A Float specifying which gives an indication when the assembly was last modified.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.isLocked</strong>: An Int specifying whether the assembly is locked or not. Possible values are 0 and 1.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.regenerateConstraintsTogether</strong>: A Boolean specifying whether the positioning constraints in the assembly should be regenerated together before regenerating other assembly features. The default value is ON.If the assembly has position constraint features and you modify the value of <strong>regenerateConstraintsTogether</strong>, Abaqus/CAE will regenerate the assembly features.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.vertices</strong>: A <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.VertexArray.VertexArray" title="abaqus.BasicGeometry.VertexArray.VertexArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.VertexArray.VertexArray</span></code></a> object specifying all the vertices existing at the assembly level. This member does not provide access to the vertices at the instance level.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.edges</strong>: An <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.EdgeArray.EdgeArray" title="abaqus.BasicGeometry.EdgeArray.EdgeArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.EdgeArray.EdgeArray</span></code></a> object specifying all the edges existing at the assembly level. This member does not provide access to the edges at the instance level.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.elements</strong>: A <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray" title="abaqus.Mesh.MeshElementArray.MeshElementArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshElementArray.MeshElementArray</span></code></a> object specifying all the elements existing at the assembly level. This member does not provide access to the elements at the instance level.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.nodes</strong>: A <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshNodeArray.MeshNodeArray" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshNodeArray.MeshNodeArray</span></code></a> object specifying all the nodes existing at the assembly level. This member does not provide access to the nodes at the instance level.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances</strong>: A repository of <a class="reference internal" href="#abaqus.Assembly.PartInstance.PartInstance" title="abaqus.Assembly.PartInstance.PartInstance"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.PartInstance.PartInstance</span></code></a> objects.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.datums</strong>: A repository of <a class="reference internal" href="datum.html#abaqus.Datum.Datum.Datum" title="abaqus.Datum.Datum.Datum"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Datum.Datum.Datum</span></code></a> objects specifying all <a class="reference internal" href="datum.html#abaqus.Datum.Datum.Datum" title="abaqus.Datum.Datum.Datum"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Datum.Datum.Datum</span></code></a> objects in the assembly.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.features</strong>: A repository of <a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.Feature.Feature</span></code></a> objects specifying all <a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.Feature.Feature</span></code></a> objects in the assembly.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.featuresById</strong>: A repository of <a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.Feature.Feature</span></code></a> objects specifying all <a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.Feature.Feature</span></code></a> objects in the assembly.The <a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.Feature.Feature</span></code></a> objects in the featuresById repository are the same as the <a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.Feature.Feature</span></code></a> objects in the features repository. However, the key to the objects in the featuresById repository is an integer specifying the <strong>ID</strong>, whereas the key to the objects in the features repository is a string specifying the <strong>name</strong>.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.surfaces</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Surface.Surface" title="abaqus.Region.Surface.Surface"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Surface.Surface</span></code></a> objects specifying for more information, see <a class="reference internal" href="region.html"><span class="doc">Region</span></a>.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.allSurfaces</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Surface.Surface" title="abaqus.Region.Surface.Surface"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Surface.Surface</span></code></a> objects specifying for more information, see <a class="reference internal" href="region.html"><span class="doc">Region</span></a>.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.allInternalSurfaces</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Surface.Surface" title="abaqus.Region.Surface.Surface"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Surface.Surface</span></code></a> objects specifying picked regions.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.sets</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Set.Set" title="abaqus.Region.Set.Set"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Set.Set</span></code></a> objects.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.allSets</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Set.Set" title="abaqus.Region.Set.Set"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Set.Set</span></code></a> objects specifying for more information, see <a class="reference internal" href="region.html"><span class="doc">Region</span></a>.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.allInternalSets</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Set.Set" title="abaqus.Region.Set.Set"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Set.Set</span></code></a> objects specifying picked regions.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.skins</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Skin.Skin" title="abaqus.Region.Skin.Skin"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Skin.Skin</span></code></a> objects specifying the skins created on the assembly.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.stringers</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Stringer.Stringer" title="abaqus.Region.Stringer.Stringer"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Stringer.Stringer</span></code></a> objects specifying the stringers created on the assembly.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.referencePoints</strong>: A repository of <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.ReferencePoint.ReferencePoint" title="abaqus.BasicGeometry.ReferencePoint.ReferencePoint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.ReferencePoint.ReferencePoint</span></code></a> objects.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.modelInstances</strong>: A repository of <a class="reference internal" href="#abaqus.Assembly.ModelInstance.ModelInstance" title="abaqus.Assembly.ModelInstance.ModelInstance"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.ModelInstance.ModelInstance</span></code></a> objects.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.allInstances</strong>: A <a class="reference internal" href="#abaqus.Assembly.PartInstance.PartInstance" title="abaqus.Assembly.PartInstance.PartInstance"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.PartInstance.PartInstance</span></code></a> object specifying the PartInstances and A <a class="reference internal" href="#abaqus.Assembly.ModelInstance.ModelInstance" title="abaqus.Assembly.ModelInstance.ModelInstance"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.ModelInstance.ModelInstance</span></code></a> object specifying the ModelInstances.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.engineeringFeatures</strong>: An <a class="reference internal" href="engineering.html#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature" title="abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.modelName</strong>: A String specifying the name of the model to which the assembly belongs.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.connectorOrientations</strong>: A <a class="reference internal" href="#abaqus.Assembly.ConnectorOrientationArray.ConnectorOrientationArray" title="abaqus.Assembly.ConnectorOrientationArray.ConnectorOrientationArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Assembly.ConnectorOrientationArray.ConnectorOrientationArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.sectionAssignments</strong>: A <a class="reference internal" href="property.html#abaqus.Property.SectionAssignmentArray.SectionAssignmentArray" title="abaqus.Property.SectionAssignmentArray.SectionAssignmentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Property.SectionAssignmentArray.SectionAssignmentArray</span></code></a> object.</p></li>
+</ul>
+</div>
+<div class="section" id="partinstance-attributes">
+<h2>PartInstance Attributes<a class="headerlink" href="#partinstance-attributes" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].name</strong>: A String specifying the repository key. The name must be a valid Abaqus object name.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].dependent</strong>: A Boolean specifying whether the part instance is dependent or independent. If <a href="#id1"><span class="problematic" id="id2">**</span></a>dependent**=OFF, the part instance is independent. The default value is OFF.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].excludedFromSimulation</strong>: A Boolean specifying whether the part instance is excluded from the simulation. If <a href="#id3"><span class="problematic" id="id4">**</span></a>excludedFromSimulation**=ON, the part instance is excluded from the simulation. The default value is OFF.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].geometryValidity</strong>: A Boolean specifying the validity of the geometry of the instance. The value is computed, but it can be set to ON to perform feature and mesh operations on an invalid instance. There is no guarantee that such operations will work if the instance was originally invalid.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].analysisType</strong>: A SymbolicConstant specifying the part type. Possible values are DEFORMABLE_BODY, EULERIAN, DISCRETE_RIGID_SURFACE, and ANALYTIC_RIGID_SURFACE.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].referenceNode</strong>: An Int specifying the reference node number. This member is valid only if <a href="#id5"><span class="problematic" id="id6">**</span></a>analysisType**=DISCRETE_RIGID_SURFACE or ANALYTIC_RIGID_SURFACE.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].part</strong>: A <a class="reference internal" href="part.html#abaqus.Part.Part.Part" title="abaqus.Part.Part.Part"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Part.Part.Part</span></code></a> object specifying the instanced part.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].sets</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Set.Set" title="abaqus.Region.Set.Set"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Set.Set</span></code></a> objects specifying the sets created on the part. For more information, see <a class="reference internal" href="region.html"><span class="doc">Region</span></a>.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].surfaces</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Surface.Surface" title="abaqus.Region.Surface.Surface"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Surface.Surface</span></code></a> objects specifying the surfaces created on the part. For more information, see <a class="reference internal" href="region.html"><span class="doc">Region</span></a>.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].skins</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Skin.Skin" title="abaqus.Region.Skin.Skin"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Skin.Skin</span></code></a> objects specifying the skins created on the part. For more information, see <a class="reference internal" href="region.html"><span class="doc">Region</span></a>.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].stringers</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Stringer.Stringer" title="abaqus.Region.Stringer.Stringer"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Stringer.Stringer</span></code></a> objects specifying the stringers created on the part. For more information, see <a class="reference internal" href="region.html"><span class="doc">Region</span></a>.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].vertices</strong>: A <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.VertexArray.VertexArray" title="abaqus.BasicGeometry.VertexArray.VertexArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.VertexArray.VertexArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].ignoredVertices</strong>: An <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray" title="abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].edges</strong>: An <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.EdgeArray.EdgeArray" title="abaqus.BasicGeometry.EdgeArray.EdgeArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.EdgeArray.EdgeArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].ignoredEdges</strong>: An <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.IgnoredEdgeArray.IgnoredEdgeArray" title="abaqus.BasicGeometry.IgnoredEdgeArray.IgnoredEdgeArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.IgnoredEdgeArray.IgnoredEdgeArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].faces</strong>: A <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.FaceArray.FaceArray" title="abaqus.BasicGeometry.FaceArray.FaceArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.FaceArray.FaceArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].cells</strong>: A <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.CellArray.CellArray" title="abaqus.BasicGeometry.CellArray.CellArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.CellArray.CellArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].datums</strong>: A repository of <a class="reference internal" href="datum.html#abaqus.Datum.Datum.Datum" title="abaqus.Datum.Datum.Datum"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Datum.Datum.Datum</span></code></a> objects.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].elements</strong>: A <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray" title="abaqus.Mesh.MeshElementArray.MeshElementArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshElementArray.MeshElementArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].nodes</strong>: A <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshNodeArray.MeshNodeArray" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshNodeArray.MeshNodeArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].elemFaces</strong>: A repository of <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshFace.MeshFace" title="abaqus.Mesh.MeshFace.MeshFace"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshFace.MeshFace</span></code></a> objects specifying all the element faces in the part instance. For a given element and a given face index within that element, the corresponding <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshFace.MeshFace" title="abaqus.Mesh.MeshFace.MeshFace"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshFace.MeshFace</span></code></a> object can be retrieved from the repository by using the key calculated as (i*8 + j), where i and j are zero-based element and face indices, respectively.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].elementFaces</strong>: A <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshFaceArray.MeshFaceArray" title="abaqus.Mesh.MeshFaceArray.MeshFaceArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshFaceArray.MeshFaceArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].elemEdges</strong>: A repository of <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshEdge.MeshEdge" title="abaqus.Mesh.MeshEdge.MeshEdge"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshEdge.MeshEdge</span></code></a> objects specifying all the element edges in the part instance. For a given element and a given edge index on a given face within that element, the corresponding <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshEdge.MeshEdge" title="abaqus.Mesh.MeshEdge.MeshEdge"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshEdge.MeshEdge</span></code></a> object can be retrieved from the repository by using the key calculated as (i*32 + j*4 + k), where i, j, and k are zero-based element, face, and edge indices, respectively.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].elementEdges</strong>: A <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshEdgeArray.MeshEdgeArray" title="abaqus.Mesh.MeshEdgeArray.MeshEdgeArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshEdgeArray.MeshEdgeArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].referencePoints</strong>: A repository of <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.ReferencePoint.ReferencePoint" title="abaqus.BasicGeometry.ReferencePoint.ReferencePoint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.ReferencePoint.ReferencePoint</span></code></a> objects.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].partName</strong>: A String specifying the name of the part from which the instance was created.</p></li>
+</ul>
+</div>
+<div class="section" id="modelinstance-attributes">
+<h2>ModelInstance Attributes<a class="headerlink" href="#modelinstance-attributes" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].sets</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Set.Set" title="abaqus.Region.Set.Set"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Set.Set</span></code></a> objects specifying the sets created on the assembly. For more information, see <a class="reference internal" href="region.html"><span class="doc">Region</span></a>.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].surfaces</strong>: A repository of <a class="reference internal" href="region.html#abaqus.Region.Surface.Surface" title="abaqus.Region.Surface.Surface"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Region.Surface.Surface</span></code></a> objects specifying the surfaces created on the assembly. For more information, see <a class="reference internal" href="region.html"><span class="doc">Region</span></a>.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].vertices</strong>: A <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.VertexArray.VertexArray" title="abaqus.BasicGeometry.VertexArray.VertexArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.VertexArray.VertexArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].edges</strong>: An <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.EdgeArray.EdgeArray" title="abaqus.BasicGeometry.EdgeArray.EdgeArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.EdgeArray.EdgeArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].elements</strong>: A <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray" title="abaqus.Mesh.MeshElementArray.MeshElementArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshElementArray.MeshElementArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].nodes</strong>: A <a class="reference internal" href="mesh.html#abaqus.Mesh.MeshNodeArray.MeshNodeArray" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Mesh.MeshNodeArray.MeshNodeArray</span></code></a> object.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].datums</strong>: A repository of <a class="reference internal" href="datum.html#abaqus.Datum.Datum.Datum" title="abaqus.Datum.Datum.Datum"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Datum.Datum.Datum</span></code></a> objects.</p></li>
+<li><p><strong>mdb.models[name].rootAssembly.instances[name].referencePoints</strong>: A repository of <a class="reference internal" href="geometry.html#abaqus.BasicGeometry.ReferencePoint.ReferencePoint" title="abaqus.BasicGeometry.ReferencePoint.ReferencePoint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.BasicGeometry.ReferencePoint.ReferencePoint</span></code></a> objects.</p></li>
+</ul>
+</div>
 <div class="section" id="create-instances">
 <h2>Create instances<a class="headerlink" href="#create-instances" title="Permalink to this headline"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Assembly.AssemblyModel.AssemblyModel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Assembly.AssemblyModel.</span></span><span class="sig-name descname"><span class="pre">AssemblyModel</span></span><a class="headerlink" href="#abaqus.Assembly.AssemblyModel.AssemblyModel" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AssemblyModel</span></span><a class="headerlink" href="#abaqus.Assembly.AssemblyModel.AssemblyModel" title="Permalink to this definition"></a></dt>
 <dd><p>The following commands operate on Model objects. For more information about the Model
 object, see Model object.</p>
 <blockquote>
@@ -189,8 +268,52 @@ PartInstance object.</p>
 <div class="section" id="basic-features-of-the-assembly">
 <h3>Basic features of the Assembly<a class="headerlink" href="#basic-features-of-the-assembly" title="Permalink to this headline"></a></h3>
 <dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Assembly.Assembly.Assembly">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Assembly</span></span><a class="headerlink" href="#abaqus.Assembly.Assembly.Assembly" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Assembly.Assembly.Assembly.ConnectorOrientation">
+<span class="sig-name descname"><span class="pre">ConnectorOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region:</span> <span class="pre">abaqus.Region.Set.Set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys1:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis1:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle1:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient2sameAs1:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys2:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis2:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle2:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.ConnectorOrientation.ConnectorOrientation" title="abaqus.Assembly.ConnectorOrientation.ConnectorOrientation"><span class="pre">abaqus.Assembly.ConnectorOrientation.ConnectorOrientation</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Assembly.Assembly.ConnectorOrientation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a ConnectorOrientation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].rootAssembly.ConnectorOrientation</p></li>
+<li><p>session.odbs[name].rootAssembly.ConnectorOrientation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region</strong> – A Set object specifying the region to which the orientation is assigned.</p></li>
+<li><p><strong>localCsys1</strong> – A DatumCsys object specifying the local coordinate system of the first connector point.
+This value may be None, indicating the global coordinate system.</p></li>
+<li><p><strong>axis1</strong> – A SymbolicConstant specifying the axis of a datum coordinate system about which an
+additional rotation is applied. Possible values are AXIS_1, AXIS_2, and AXIS_3. The
+default value is AXIS_1.</p></li>
+<li><p><strong>angle1</strong> – A Float specifying the angle of the additional rotation. The default value is 0.0.</p></li>
+<li><p><strong>orient2sameAs1</strong> – A Boolean specifying whether or not the second connector point is to use the same local
+coordinate system, axis, and angle as the first point. The default value is ON.</p></li>
+<li><p><strong>localCsys2</strong> – A DatumCsys object specifying the local coordinate system of the second connector point.
+This value may be None, indicating the global coordinate system.</p></li>
+<li><p><strong>axis2</strong> – A SymbolicConstant specifying the axis of a datum coordinate system about which an
+additional rotation is applied. Possible values are AXIS_1, AXIS_2, and AXIS_3. The
+default value is AXIS_1.</p></li>
+<li><p><strong>angle2</strong> – A Float specifying the angle of the additional rotation. The default value is 0.0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">ConnectorOrientation</span> <span class="pre">object..</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Assembly.AssemblyBase.AssemblyBase">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Assembly.AssemblyBase.</span></span><span class="sig-name descname"><span class="pre">AssemblyBase</span></span><a class="headerlink" href="#abaqus.Assembly.AssemblyBase.AssemblyBase" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AssemblyBase</span></span><a class="headerlink" href="#abaqus.Assembly.AssemblyBase.AssemblyBase" title="Permalink to this definition"></a></dt>
 <dd><p>An Assembly object is a container for instances of parts. The Assembly object has no
 constructor command. Abaqus creates the <em>rootAssembly</em> member when a Model object is
 created.</p>
@@ -418,72 +541,72 @@ about the center of mass, they will be evaluated about the origin.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Dictionary</span> <span class="pre">object</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">following</span> <span class="pre">items</span></code></p></li>
-<li><p><strong>*area*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">Float</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">sum</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">area</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">specified</span> <span class="pre">faces.</span> <span class="pre">The</span> <span class="pre">area</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">is</span> <span class="pre">computed</span> <span class="pre">only</span> <span class="pre">for</span> <span class="pre">one</span> <span class="pre">side</span> <span class="pre">for</span> <span class="pre">shells.</span></code></p></li>
-<li><p><strong>*areaCentroid*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">three</span> <span class="pre">Floats</span> <span class="pre">representing</span> <span class="pre">the</span> <span class="pre">coordinates</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">area</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">centroid.</span></code></p></li>
-<li><p><strong>*volume*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">Float</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">volume</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">specified</span> <span class="pre">regions.</span></code>)</p></li>
-<li><p><strong>*volumeCentroid*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">three</span> <span class="pre">Floats</span> <span class="pre">representing</span> <span class="pre">the</span> <span class="pre">coordinates</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">volume</span> <span class="pre">centroid.</span></code></p></li>
-<li><p><strong>*massFromMassPerUnitSurfaceArea*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">Float</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">mass</span> <span class="pre">due</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">mass</span> <span class="pre">per</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">unit</span> <span class="pre">surface</span> <span class="pre">area.</span></code></p></li>
-<li><p><strong>*mass*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">Float</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">mass</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">specified</span> <span class="pre">regions.</span> <span class="pre">It</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">total</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">mass</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">includes</span> <span class="pre">mass</span> <span class="pre">from</span> <span class="pre">quantities</span> <span class="pre">such</span> <span class="pre">as</span> <span class="pre">mass</span> <span class="pre">per</span> <span class="pre">unit</span> <span class="pre">surface</span> <span class="pre">area.</span></code></p></li>
-<li><p><strong>*centerOfMass*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">three</span> <span class="pre">Floats</span> <span class="pre">representing</span> <span class="pre">the</span> <span class="pre">coordinates</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">center</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">mass.</span></code></p></li>
-<li><p><strong>*momentOfInertia*</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">six</span> <span class="pre">Floats</span> <span class="pre">representing</span> <span class="pre">the</span> <span class="pre">moments</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">inertia</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">about</span> <span class="pre">the</span> <span class="pre">center</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">mass</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">about</span> <span class="pre">the</span> <span class="pre">point</span> <span class="pre">specified.</span></code></p></li>
-<li><p><strong>*warnings*</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">tuple</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">SymbolicConstants</span> <span class="pre">representing</span> <span class="pre">the</span> <span class="pre">problems</span> <span class="pre">encountered</span> <span class="pre">while</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">computing</span> <span class="pre">the</span> <span class="pre">mass</span> <span class="pre">properties.</span> <span class="pre">Possible</span> <span class="pre">SymbolicConstants</span> <span class="pre">are</span></code></p></li>
-<li><p><strong>UNSUPPORTED_ENTITIES</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Some</span> <span class="pre">unsupported</span> <span class="pre">entities</span> <span class="pre">exist</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">regions.</span> <span class="pre">The</span> <span class="pre">mass</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">properties</span> <span class="pre">are</span> <span class="pre">computed</span> <span class="pre">only</span> <span class="pre">for</span> <span class="pre">beams</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">trusses</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">shells</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">solids</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">point</span> <span class="pre">and</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">non-structural</span> <span class="pre">mass</span> <span class="pre">elements</span></code>, and <code class="xref py py-class docutils literal notranslate"><span class="pre">rotary</span> <span class="pre">inertia</span> <span class="pre">elements.</span> <span class="pre">The</span> <span class="pre">mass</span> <span class="pre">properties</span> <span class="pre">are</span> <span class="pre">not</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">computed</span> <span class="pre">for</span> <span class="pre">axisymmetric</span> <span class="pre">elements</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">springs</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">connectors</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">gaskets</span></code>, or <code class="xref py py-class docutils literal notranslate"><span class="pre">any</span> <span class="pre">other</span> <span class="pre">elements.</span></code></p></li>
-<li><p><strong>MISSING_THICKNESS</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">section</span> <span class="pre">definitions</span> <span class="pre">are</span> <span class="pre">missing</span> <span class="pre">thickness</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">values.</span></code></p></li>
-<li><p><strong>ZERO_THICKNESS</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">section</span> <span class="pre">definitions</span> <span class="pre">have</span> <span class="pre">a</span> <span class="pre">zero</span> <span class="pre">thickness</span> <span class="pre">value.</span></code>)</p></li>
-<li><p><strong>VARIABLE_THICKNESS</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">The</span> <span class="pre">nodal</span> <span class="pre">thickness</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">field</span> <span class="pre">thickness</span> <span class="pre">specified</span> <span class="pre">for</span> <span class="pre">some</span> <span class="pre">regions</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">has</span> <span class="pre">been</span> <span class="pre">ignored.</span></code></p></li>
-<li><p><strong>NON_APPLICABLE_THICKNESS</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">thickness</span> <span class="pre">value</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">applicable</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">corresponding</span> <span class="pre">sections</span> <span class="pre">specified</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">regions.</span></code></p></li>
-<li><p><strong>MISSING_DENSITY</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">section</span> <span class="pre">definitions</span> <span class="pre">are</span> <span class="pre">missing</span> <span class="pre">material</span> <span class="pre">density</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">values.</span></code></p></li>
-<li><p><strong>MISSING_MATERIAL_DEFINITION</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">material</span> <span class="pre">definition</span> <span class="pre">is</span> <span class="pre">missing.</span></code>)</p></li>
-<li><p><strong>ZERO_DENSITY</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">section</span> <span class="pre">definitions</span> <span class="pre">have</span> <span class="pre">a</span> <span class="pre">zero</span> <span class="pre">material</span> <span class="pre">density</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">value.</span></code></p></li>
-<li><p><strong>UNSUPPORTED_DENSITY</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">either</span> <span class="pre">a</span> <span class="pre">negative</span> <span class="pre">material</span> <span class="pre">density</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">a</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">temperature</span> <span class="pre">dependent</span> <span class="pre">density</span> <span class="pre">has</span> <span class="pre">been</span> <span class="pre">specified</span></code>, or <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">material</span> <span class="pre">value</span> <span class="pre">is</span> <span class="pre">missing</span> <span class="pre">for</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">one</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">more</span> <span class="pre">plies</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">composite</span> <span class="pre">section.</span></code></p></li>
-<li><p><strong>SHELL_OFFSETS</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">shells</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">this</span> <span class="pre">method</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">account</span> <span class="pre">for</span> <span class="pre">any</span> <span class="pre">offsets</span> <span class="pre">specified.</span></code>)</p></li>
-<li><p><strong>MISSING_SECTION_DEFINITION</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">section</span> <span class="pre">definition</span> <span class="pre">is</span> <span class="pre">missing.</span></code>)</p></li>
-<li><p><strong>UNSUPPORTED_SECTION_DEFINITION</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">The</span> <span class="pre">section</span> <span class="pre">definition</span> <span class="pre">provided</span> <span class="pre">for</span> <span class="pre">some</span> <span class="pre">regions</span> <span class="pre">is</span> <span class="pre">not</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">supported.</span></code></p></li>
-<li><p><strong>REINFORCEMENTS</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">This</span> <span class="pre">method</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">account</span> <span class="pre">for</span> <span class="pre">any</span> <span class="pre">reinforcements</span> <span class="pre">specified</span> <span class="pre">on</span> <span class="pre">the</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">model.</span></code></p></li>
-<li><p><strong>SMEARED_PROPERTIES</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">regions</span> <span class="pre">with</span> <span class="pre">composite</span> <span class="pre">section</span> <span class="pre">assignments</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">density</span> <span class="pre">is</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">smeared</span> <span class="pre">across</span> <span class="pre">the</span> <span class="pre">thickness.</span> <span class="pre">The</span> <span class="pre">volume</span> <span class="pre">centroid</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">center</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">mass</span> <span class="pre">computations</span> <span class="pre">for</span> <span class="pre">a</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">composite</span> <span class="pre">shell</span> <span class="pre">use</span> <span class="pre">a</span> <span class="pre">lumped</span> <span class="pre">mass</span> <span class="pre">approach</span> <span class="pre">where</span> <span class="pre">the</span> <span class="pre">volume</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">mass</span> <span class="pre">is</span> <span class="pre">assumed</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">be</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">lumped</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">plane</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">shell.</span> <span class="pre">As</span> <span class="pre">a</span> <span class="pre">result</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">these</span> <span class="pre">approximations</span> <span class="pre">the</span> <span class="pre">volume</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">centroid</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">center</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">mass</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">moments</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">inertia</span> <span class="pre">may</span> <span class="pre">be</span> <span class="pre">slightly</span> <span class="pre">inaccurate</span> <span class="pre">for</span> <span class="pre">regions</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">with</span> <span class="pre">composite</span> <span class="pre">section</span> <span class="pre">assignments.</span></code></p></li>
-<li><p><strong>UNSUPPORTED_NON_STRUCTURAL_MASS_ENTITIES</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">This</span> <span class="pre">method</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">account</span> <span class="pre">for</span> <span class="pre">any</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">non-structural</span> <span class="pre">mass</span> <span class="pre">on</span> <span class="pre">wires.</span></code></p></li>
-<li><p><strong>INCORRECT_MOMENT_OF_INERTIA</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">geometry</span> <span class="pre">regions</span> <span class="pre">with</span> <span class="pre">non-structural</span> <span class="pre">mass</span> <span class="pre">per</span> <span class="pre">volume,</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">non-structural</span> <span class="pre">mass</span> <span class="pre">is</span> <span class="pre">assumed</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">be</span> <span class="pre">a</span> <span class="pre">point</span> <span class="pre">mass</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">centroid</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">regions.</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Thus</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">moments</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">inertia</span> <span class="pre">may</span> <span class="pre">be</span> <span class="pre">inaccurate</span> <span class="pre">as</span> <span class="pre">the</span> <span class="pre">distribution</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">non-structural</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">mass</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">accounted</span> <span class="pre">for.</span> <span class="pre">Use</span> <span class="pre">the</span> <span class="pre">mesh</span> <span class="pre">for</span> <span class="pre">accurately</span> <span class="pre">computing</span> <span class="pre">the</span> <span class="pre">moments</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">inertia.</span></code></p></li>
-<li><p><strong>MISSING_BEAM_ORIENTATIONS</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">For</span> <span class="pre">some</span> <span class="pre">regions</span> <span class="pre">with</span> <span class="pre">beam</span> <span class="pre">section</span> <span class="pre">assignments</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">beam</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">section</span> <span class="pre">orientations</span> <span class="pre">are</span> <span class="pre">missing.</span></code></p></li>
-<li><p><strong>UNSUPPORTED_BEAM_PROFILES</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">This</span> <span class="pre">method</span> <span class="pre">supports</span> <span class="pre">the</span> <span class="pre">Box</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Pipe</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Circular</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Rectangular,</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Hexagonal</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Trapezoidal</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">I</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">L</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">T</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Arbitrary</span></code>, and <code class="xref py py-class docutils literal notranslate"><span class="pre">Tapered</span> <span class="pre">beam</span> <span class="pre">profiles.</span> <span class="pre">Any</span> <span class="pre">other</span> <span class="pre">beam</span></code></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">profile</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">supported.</span></code></p></li>
-<li><p><strong>TAPERED_BEAM_MI</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Moment</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">inertia</span> <span class="pre">calculations</span> <span class="pre">for</span> <span class="pre">tapered</span> <span class="pre">beams</span> <span class="pre">are</span> <span class="pre">not</span> <span class="pre">accurate.</span></code>)</p></li>
-<li><p><strong>SUBSTRUCTURE_INCORRECT_PROPERTIES</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">The</span> <span class="pre">user</span> <span class="pre">assigned</span> <span class="pre">density</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">thickness</span> <span class="pre">is</span> <span class="pre">not</span></code>)</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">considered</span> <span class="pre">for</span> <span class="pre">substructures.</span> <span class="pre">.</span></code></p></li>
-</ul>
-</p>
+<dd class="field-even"><p><strong>properties</strong> – A Dictionary object with the following items:
+<em>area</em>: None or a Float specifying the sum of the area of the specified faces. The area
+is computed only for one side for shells.
+<em>areaCentroid</em>: None or a tuple of three Floats representing the coordinates of the area
+centroid.
+<em>volume</em>: None or a Float specifying the volume of the specified regions.
+<em>volumeCentroid</em>: None or a tuple of three Floats representing the coordinates of the
+volume centroid.
+<em>massFromMassPerUnitSurfaceArea</em>: None or a Float specifying the mass due to mass per
+unit surface area.
+<em>mass</em>: None or a Float specifying the mass of the specified regions. It is the total
+mass and includes mass from quantities such as mass per unit surface area.
+<em>centerOfMass</em>: None or a tuple of three Floats representing the coordinates of the
+center of mass.
+<em>momentOfInertia</em>: None or a tuple of six Floats representing the moments of inertia
+about the center of mass or about the point specified.
+<em>warnings</em>: A tuple of SymbolicConstants representing the problems encountered while
+computing the mass properties. Possible SymbolicConstants are:
+UNSUPPORTED_ENTITIES: Some unsupported entities exist in the specified regions. The mass
+properties are computed only for beams, trusses, shells, solids, point and
+non-structural mass elements, and rotary inertia elements. The mass properties are not
+computed for axisymmetric elements, springs, connectors, gaskets, or any other elements.
+MISSING_THICKNESS: For some regions, the section definitions are missing thickness
+values.
+ZERO_THICKNESS: For some regions, the section definitions have a zero thickness value.
+VARIABLE_THICKNESS: The nodal thickness or field thickness specified for some regions
+has been ignored.
+NON_APPLICABLE_THICKNESS: For some regions, the thickness value is not applicable to the
+corresponding sections specified on the regions.
+MISSING_DENSITY: For some regions, the section definitions are missing material density
+values.
+MISSING_MATERIAL_DEFINITION: For some regions, the material definition is missing.
+ZERO_DENSITY: For some regions, the section definitions have a zero material density
+value.
+UNSUPPORTED_DENSITY: For some regions, either a negative material density or a
+temperature dependent density has been specified, or the material value is missing for
+one or more plies in the composite section.
+SHELL_OFFSETS: For shells, this method does not account for any offsets specified.
+MISSING_SECTION_DEFINITION: For some regions, the section definition is missing.
+UNSUPPORTED_SECTION_DEFINITION: The section definition provided for some regions is not
+supported.
+REINFORCEMENTS: This method does not account for any reinforcements specified on the
+model.
+SMEARED_PROPERTIES: For regions with composite section assignments, the density is
+smeared across the thickness. The volume centroid and center of mass computations for a
+composite shell use a lumped mass approach where the volume and mass is assumed to be
+lumped in the plane of the shell. As a result of these approximations the volume
+centroid, center of mass and moments of inertia may be slightly inaccurate for regions
+with composite section assignments.
+UNSUPPORTED_NON_STRUCTURAL_MASS_ENTITIES: This method does not account for any
+non-structural mass on wires.
+INCORRECT_MOMENT_OF_INERTIA: For geometry regions with non-structural mass per volume,
+the non-structural mass is assumed to be a point mass at the centroid of the regions.
+Thus, the moments of inertia may be inaccurate as the distribution of the non-structural
+mass is not accounted for. Use the mesh for accurately computing the moments of inertia.
+MISSING_BEAM_ORIENTATIONS: For some regions with beam section assignments, the beam
+section orientations are missing.
+UNSUPPORTED_BEAM_PROFILES: This method supports the Box, Pipe, Circular, Rectangular,
+Hexagonal, Trapezoidal, I, L, T, Arbitrary, and Tapered beam profiles. Any other beam
+profile is not supported.
+TAPERED_BEAM_MI: Moment of inertia calculations for tapered beams are not accurate.
+SUBSTRUCTURE_INCORRECT_PROPERTIES: The user assigned density and thickness is not
+considered for substructures. .</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -672,7 +795,7 @@ appear on the sketch as reference geometry.</p>
 <li><p><strong>sketch</strong> – The ConstrainedSketch object on which the edges, vertices, and datum points are
 projected.</p></li>
 <li><p><strong>filter</strong> – A SymbolicConstant specifying how to limit the amount of projection. Possible values are
-ALL_EDGES and COPLANAR_EDGES. If <a href="#id1"><span class="problematic" id="id2">*</span></a>filter*=COPLANAR_EDGES, edges that are coplanar to the
+ALL_EDGES and COPLANAR_EDGES. If <a href="#id7"><span class="problematic" id="id8">*</span></a>filter*=COPLANAR_EDGES, edges that are coplanar to the
 sketching plane are the only candidates for projection. The default value is ALL_EDGES.</p></li>
 <li><p><strong>upToFeature</strong> – A Feature object specifying a marker in the feature-based history of the part.
 Abaqus/CAE projects onto the sketch only the part entities that were created before the
@@ -903,7 +1026,7 @@ directory.</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="id0">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Assembly.AssemblyModel.</span></span><span class="sig-name descname"><span class="pre">AssemblyModel</span></span><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AssemblyModel</span></span><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
 <dd><p>The following commands operate on Model objects. For more information about the Model
 object, see Model object.</p>
 <blockquote>
@@ -965,7 +1088,7 @@ PartInstance object to which it will be linked.</p>
 <h3>Edit Mesh features of the Assembly<a class="headerlink" href="#edit-mesh-features-of-the-assembly" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.EditMesh.MeshEditAssembly.</span></span><span class="sig-name descname"><span class="pre">MeshEditAssembly</span></span><a class="headerlink" href="#abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshEditAssembly</span></span><a class="headerlink" href="#abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly" title="Permalink to this definition"></a></dt>
 <dd><p>The following commands operate on Assembly objects. For more information about the
 Assembly object, see Assembly object.</p>
 <blockquote>
@@ -1065,9 +1188,9 @@ layers of elements that propagate out normal to the surface boundary.</p>
 <li><p><strong>meshType</strong> – A Symbolic Constant specifying the type of mesh to be generated. Possible values are
 SOLID or SHELL.</p></li>
 <li><p><strong>totalThickness</strong> – A Float specifying the total thickness of the solid layers. This argument applies only
-when <a href="#id3"><span class="problematic" id="id4">*</span></a>meshType*=SOLID.</p></li>
+when <a href="#id9"><span class="problematic" id="id10">*</span></a>meshType*=SOLID.</p></li>
 <li><p><strong>distanceBetweenLayers</strong> – A Float specifying the distance between shell layers. This argument applies only when
-<a href="#id5"><span class="problematic" id="id6">*</span></a>meshType*=SHELL.</p></li>
+<a href="#id11"><span class="problematic" id="id12">*</span></a>meshType*=SHELL.</p></li>
 <li><p><strong>numLayers</strong> – An Int specifying the number of element layers to be generated.</p></li>
 <li><p><strong>offsetDirection</strong> – A Symbolic Constant specifying the direction of the offset. This argument is required
 only when the given region relates to a shell mesh. Possible values are OUTWARD, INWARD,
@@ -1076,7 +1199,7 @@ and BOTH. The default value is OUTWARD.</p></li>
 <li><p><strong>shareNodes</strong> – Boolean specifying whether the first layer of nodes should be shared with nodes on the
 base surface. The default value is False.</p></li>
 <li><p><strong>deleteBaseElements</strong> – A Boolean specifying whether to delete the shell elements after the offset layers are
-generated. The default value is False. This argument applies only when <a href="#id7"><span class="problematic" id="id8">*</span></a>meshType*=SHELL.</p></li>
+generated. The default value is False. This argument applies only when <a href="#id13"><span class="problematic" id="id14">*</span></a>meshType*=SHELL.</p></li>
 <li><p><strong>constantThicknessCorners</strong> – A Boolean specifying whether to use element-based thickness or nodal-based thickness.
 The default value is False.</p></li>
 <li><p><strong>extendElementSets</strong> – A Boolean specifying whether existing element sets that include base elements will be
@@ -1169,7 +1292,7 @@ sufficient cache allowance to store the edit mesh operation.</p>
 <h3>Mesh features of the Assembly<a class="headerlink" href="#mesh-features-of-the-assembly" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshAssembly.MeshAssembly">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Mesh.MeshAssembly.</span></span><span class="sig-name descname"><span class="pre">MeshAssembly</span></span><a class="headerlink" href="#abaqus.Mesh.MeshAssembly.MeshAssembly" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MeshAssembly</span></span><a class="headerlink" href="#abaqus.Mesh.MeshAssembly.MeshAssembly" title="Permalink to this definition"></a></dt>
 <dd><p>The following commands operate on Assembly objects. For more information about the
 Assembly object, see Assembly object.</p>
 <blockquote>
@@ -1500,46 +1623,46 @@ are:
 - SMALLEST_ELEM_LOCATION
 - CONSTRAINT
 The return value is dependent on the <em>attribute</em> argument.
-- If <a href="#id9"><span class="problematic" id="id10">*</span></a>attribute*=EDGE_SEEDING_METHOD, the return value is a SymbolicConstant specifying
+- If <a href="#id15"><span class="problematic" id="id16">*</span></a>attribute*=EDGE_SEEDING_METHOD, the return value is a SymbolicConstant specifying
 the edge seeding method used to create the seeds along the edge. Possible values are:
 - UNIFORM_BY_NUMBER
 - UNIFORM_BY_SIZE
 - CURVATURE_BASED_BY_SIZE
 - BIASED
 - NONE
-- If <a href="#id11"><span class="problematic" id="id12">*</span></a>attribute*=BIAS_METHOD, the return value is a SymbolicConstant specifying the bias
+- If <a href="#id17"><span class="problematic" id="id18">*</span></a>attribute*=BIAS_METHOD, the return value is a SymbolicConstant specifying the bias
 type used to create the seeds along the edge. Possible values are:
 - SINGLE
 - DOUBLE
 - NONE
-- If <a href="#id13"><span class="problematic" id="id14">*</span></a>attribute*=NUMBER, the return value is an Int specifying the number of element
+- If <a href="#id19"><span class="problematic" id="id20">*</span></a>attribute*=NUMBER, the return value is an Int specifying the number of element
 seeds along the edge.
-- If <a href="#id15"><span class="problematic" id="id16">*</span></a>attribute*=AVERAGE_SIZE, the return value is a Float specifying the average
+- If <a href="#id21"><span class="problematic" id="id22">*</span></a>attribute*=AVERAGE_SIZE, the return value is a Float specifying the average
 element size along the edge.
-- If <a href="#id17"><span class="problematic" id="id18">*</span></a>attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation
+- If <a href="#id23"><span class="problematic" id="id24">*</span></a>attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation
 factor h/Lh/L, where hh is the chordal deviation and LL is the element length. If edge
 seeds are not defined, the return value is zero.
-- If <a href="#id19"><span class="problematic" id="id20">*</span></a>attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the
+- If <a href="#id25"><span class="problematic" id="id26">*</span></a>attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the
 smallest allowable element as a fraction of the specified global element size. If edge
 seeds are not defined, the return value is zero.
-- If <a href="#id21"><span class="problematic" id="id22">*</span></a>attribute*=BIAS_RATIO, the return value is a Float specifying the length ratio of
+- If <a href="#id27"><span class="problematic" id="id28">*</span></a>attribute*=BIAS_RATIO, the return value is a Float specifying the length ratio of
 the largest element to the smallest element.
-- If <a href="#id23"><span class="problematic" id="id24">*</span></a>attribute*=BIAS_MIN_SIZE, the return value is a Float specifying the length of the
+- If <a href="#id29"><span class="problematic" id="id30">*</span></a>attribute*=BIAS_MIN_SIZE, the return value is a Float specifying the length of the
 largest element; only applicable if the EDGE_SEEDING_METHOD is BIASED and seeds were
 specified by minimum and maximum sizes.
-- If <a href="#id25"><span class="problematic" id="id26">*</span></a>attribute*=BIAS_MAX_SIZE, the return value is a Float specifying the length of the
+- If <a href="#id31"><span class="problematic" id="id32">*</span></a>attribute*=BIAS_MAX_SIZE, the return value is a Float specifying the length of the
 largest element; only applicable if the EDGE_SEEDING_METHOD is BIASED and seeds were
 specified by minimum and maximum sizes.
-- If <a href="#id27"><span class="problematic" id="id28">*</span></a>attribute*=VERTEX_ADJ_TO_SMALLEST_ELEM, the return value is an Int specifying the
+- If <a href="#id33"><span class="problematic" id="id34">*</span></a>attribute*=VERTEX_ADJ_TO_SMALLEST_ELEM, the return value is an Int specifying the
 ID of the vertex next to the smallest element; only applicable if the
 EDGE_SEEDING_METHOD is BIASED.
-- If <a href="#id29"><span class="problematic" id="id30">*</span></a>attribute*=SMALLEST_ELEM_LOCATION, the return value is a SymbolicConstant
+- If <a href="#id35"><span class="problematic" id="id36">*</span></a>attribute*=SMALLEST_ELEM_LOCATION, the return value is a SymbolicConstant
 specifying the location of smallest elements for double bias seeds; only applicable if
 the EDGE_SEEDING_METHOD is BIASED and BIAS_METHOD is DOUBLE. Possible values are:
 - SMALLEST_ELEM_AT_CENTER
 - SMALLEST_ELEM_AT_ENDS
 - NONE
-- If <a href="#id31"><span class="problematic" id="id32">*</span></a>attribute*=CONSTRAINT, the return value is a SymbolicConstant specifying how close
+- If <a href="#id37"><span class="problematic" id="id38">*</span></a>attribute*=CONSTRAINT, the return value is a SymbolicConstant specifying how close
 the seeds must be matched by the mesh. Possible values are:
 - FREE
 - FINER
@@ -1619,7 +1742,7 @@ elements.</p>
 - ALGORITHM
 - MIN_TRANSITION
 The return value is dependent on the <em>attribute</em> argument.
-- If <a href="#id33"><span class="problematic" id="id34">*</span></a>attribute*=ELEM_SHAPE, the return value is a SymbolicConstant specifying the
+- If <a href="#id39"><span class="problematic" id="id40">*</span></a>attribute*=ELEM_SHAPE, the return value is a SymbolicConstant specifying the
 element shape used during meshing. Possible values are:
 - LINE
 - QUAD
@@ -1629,7 +1752,7 @@ element shape used during meshing. Possible values are:
 - TET
 - WEDGE
 - HEX_DOMINATED
-- If <a href="#id35"><span class="problematic" id="id36">*</span></a>attribute*=TECHNIQUE, the return value is a SymbolicConstant specifying the
+- If <a href="#id41"><span class="problematic" id="id42">*</span></a>attribute*=TECHNIQUE, the return value is a SymbolicConstant specifying the
 meshing technique to be used during meshing. Possible values are:
 - FREE
 - STRUCTURED
@@ -1637,7 +1760,7 @@ meshing technique to be used during meshing. Possible values are:
 - UNMESHABLE
 Where UNMESHABLE indicates that no meshing technique is applicable with the currently
 assigned element shape.
-- If <a href="#id37"><span class="problematic" id="id38">*</span></a>attribute*=ALGORITHM, the return value is a SymbolicConstant specifying the
+- If <a href="#id43"><span class="problematic" id="id44">*</span></a>attribute*=ALGORITHM, the return value is a SymbolicConstant specifying the
 meshing algorithm to be used during meshing. Possible values are:
 - MEDIAL_AXIS
 - ADVANCING_FRONT
@@ -1645,10 +1768,10 @@ meshing algorithm to be used during meshing. Possible values are:
 - NON_DEFAULT
 - NONE
 Where NONE indicates that no algorithm is applicable.
-- If <a href="#id39"><span class="problematic" id="id40">*</span></a>attribute*=MIN_TRANSITION, the return value is a Boolean indicating whether
+- If <a href="#id45"><span class="problematic" id="id46">*</span></a>attribute*=MIN_TRANSITION, the return value is a Boolean indicating whether
 minimum transition will be used during meshing. This option is applicable only to the
 following:
-- Free quadrilateral meshing or sweep hexahedral meshing with <a href="#id41"><span class="problematic" id="id42">*</span></a>algorithm*=MEDIAL_AXIS.
+- Free quadrilateral meshing or sweep hexahedral meshing with <a href="#id47"><span class="problematic" id="id48">*</span></a>algorithm*=MEDIAL_AXIS.
 - Structured quadrilateral meshing.</p></li>
 </ul>
 </dd>
@@ -1701,14 +1824,14 @@ are:
 - DEVIATION_FACTOR
 - MIN_SIZE_FACTOR
 The return value is dependent on the value of the <em>attribute</em> argument.
-- If <a href="#id43"><span class="problematic" id="id44">*</span></a>attribute*=SIZE, the return value is a Float specifying the assigned global
+- If <a href="#id49"><span class="problematic" id="id50">*</span></a>attribute*=SIZE, the return value is a Float specifying the assigned global
 element size. If part seeds are not defined, the return value is zero.
-- If <a href="#id45"><span class="problematic" id="id46">*</span></a>attribute*=DEFAULT_SIZE, the return value is a Float specifying a suggested
+- If <a href="#id51"><span class="problematic" id="id52">*</span></a>attribute*=DEFAULT_SIZE, the return value is a Float specifying a suggested
 default global element size based upon the part geometry.
-- If <a href="#id47"><span class="problematic" id="id48">*</span></a>attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation
+- If <a href="#id53"><span class="problematic" id="id54">*</span></a>attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation
 factor h/Lh/L, where hh is the chordal deviation and LL is the element length. If part
 seeds are not defined, the return value is zero.
-- If <a href="#id49"><span class="problematic" id="id50">*</span></a>attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the
+- If <a href="#id55"><span class="problematic" id="id56">*</span></a>attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the
 smallest allowable element as a fraction of the specified global element size. If part
 seeds are not defined, the return value is zero.</p></li>
 </ul>
@@ -1797,16 +1920,16 @@ values are:
 - DOUBLE: Double-biased seed distribution will be applied.</p></li>
 <li><p><strong>end1Edges</strong> – A sequence of Edge objects specifying the edges to seed. The smallest elements will be
 positioned near the end where the normalized curve parameter=0.0. You must provide
-either the <em>end1Edges</em> or the <em>end2Edges</em> argument or both when <a href="#id51"><span class="problematic" id="id52">*</span></a>biasMethod*=SINGLE and
-omit both of them when <a href="#id53"><span class="problematic" id="id54">*</span></a>biasMethod*=DOUBLE.Note:You can determine which end is which by
+either the <em>end1Edges</em> or the <em>end2Edges</em> argument or both when <a href="#id57"><span class="problematic" id="id58">*</span></a>biasMethod*=SINGLE and
+omit both of them when <a href="#id59"><span class="problematic" id="id60">*</span></a>biasMethod*=DOUBLE.Note:You can determine which end is which by
 the order of the vertex indices returned by
 [getVertices()](<a class="reference external" href="https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-edgepyc.htm?ContextScope=all#simaker-edgegetverticespyc">https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-edgepyc.htm?ContextScope=all#simaker-edgegetverticespyc</a>).</p></li>
 <li><p><strong>end2Edges</strong> – A sequence of Edge objects specifying the edges to seed. The smallest elements will be
 positioned near the end where the normalized curve parameter=1.0.</p></li>
 <li><p><strong>centerEdges</strong> – A sequence of Edge objects specifying the edges to seed. The smallest elements will be
 positioned near edge center. You must provide either the <em>centerEdges</em> or the <em>endEdges</em>
-argument or both when <a href="#id55"><span class="problematic" id="id56">*</span></a>biasMethod*=DOUBLE and omit both of them when
-<a href="#id57"><span class="problematic" id="id58">*</span></a>biasMethod*=SINGLE.</p></li>
+argument or both when <a href="#id61"><span class="problematic" id="id62">*</span></a>biasMethod*=DOUBLE and omit both of them when
+<a href="#id63"><span class="problematic" id="id64">*</span></a>biasMethod*=SINGLE.</p></li>
 <li><p><strong>endEdges</strong> – A sequence of Edge objects specifying the edges to seed. The smallest elements will be
 positioned near edge ends.</p></li>
 <li><p><strong>ratio</strong> – A Float specifying the ratio of the largest element to the smallest element. Possible
@@ -2009,7 +2132,7 @@ will be used.</p></li>
 <li><p><strong>minTransition</strong> – A Boolean specifying whether minimum transition is to be applied. The default value is
 ON. If unspecified, the existing value will remain unchanged. This option is applicable
 only in the following cases:
-- Free quadrilateral meshing or hexahedral sweep meshing with <a href="#id59"><span class="problematic" id="id60">*</span></a>algorithm*=MEDIAL_AXIS.
+- Free quadrilateral meshing or hexahedral sweep meshing with <a href="#id65"><span class="problematic" id="id66">*</span></a>algorithm*=MEDIAL_AXIS.
 - Structured quadrilateral meshing.</p></li>
 <li><p><strong>sizeGrowth</strong> – A SymbolicConstant specifying element size growth to be applied when generating the
 interior of a tetrahedral mesh. Possible values are MODERATE and MAXIMUM. If
@@ -2040,7 +2163,7 @@ revolvable region.</p>
 <li><p><strong>edge</strong> – An Edge object specifying the sweep or revolve path.</p></li>
 <li><p><strong>sense</strong> – A SymbolicConstant specifying the sweep sense. The sense will affect only how gasket
 elements will be created; it will have no effect if gasket elements are not used.
-Possible values are FORWARD or REVERSE.If <a href="#id61"><span class="problematic" id="id62">*</span></a>sense*=FORWARD, the sense of the given edge’s
+Possible values are FORWARD or REVERSE.If <a href="#id67"><span class="problematic" id="id68">*</span></a>sense*=FORWARD, the sense of the given edge’s
 underlying curve will be used.</p></li>
 </ul>
 </dd>
@@ -2127,7 +2250,7 @@ argument, all meshes in the assembly are considered.</p></li>
 <h3>Property features of the Assembly<a class="headerlink" href="#property-features-of-the-assembly" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Property.PropertyAssembly.PropertyAssembly">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Property.PropertyAssembly.</span></span><span class="sig-name descname"><span class="pre">PropertyAssembly</span></span><a class="headerlink" href="#abaqus.Property.PropertyAssembly.PropertyAssembly" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PropertyAssembly</span></span><a class="headerlink" href="#abaqus.Property.PropertyAssembly.PropertyAssembly" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Property.PropertyAssembly.PropertyAssembly.SectionAssignment">
 <span class="sig-name descname"><span class="pre">SectionAssignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Set.Set" title="abaqus.Region.Set.Set"><span class="pre">abaqus.Region.Set.Set</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectionName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessAssignment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FROM_SECTION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SINGLE_VALUE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.PropertyAssembly.PropertyAssembly.SectionAssignment" title="Permalink to this definition"></a></dt>
@@ -2170,7 +2293,7 @@ OFFSET_FIELD. The default value is SINGLE_VALUE.</p></li>
 <h3>Table Collection features of the Assembly<a class="headerlink" href="#table-collection-features-of-the-assembly" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.TableCollectionAssembly.TableCollectionAssembly">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.TableCollection.TableCollectionAssembly.</span></span><span class="sig-name descname"><span class="pre">TableCollectionAssembly</span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionAssembly.TableCollectionAssembly" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TableCollectionAssembly</span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionAssembly.TableCollectionAssembly" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.TableCollectionAssembly.TableCollectionAssembly.ElementProgressiveActivation">
 <span class="sig-name descname"><span class="pre">ElementProgressiveActivation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elset:</span> <span class="pre">abaqus.Region.Region.Region</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Region.Region.Region</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deformation:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freeSurfaceType:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'NONE'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="table_collection.html#abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation" title="abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation"><span class="pre">abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionAssembly.TableCollectionAssembly.ElementProgressiveActivation" title="Permalink to this definition"></a></dt>
@@ -2188,12 +2311,12 @@ elementProgressiveActivation repository.</p>
 <li><p><strong>elset</strong> – A Region object specifying the region containing the elements that will be activated
 during the analysis.</p></li>
 <li><p><strong>deformation</strong> – A Boolean value specifying whether the elements that have not yet been activated will
-follow the deformations of the active elements. Set <a href="#id63"><span class="problematic" id="id64">*</span></a>deformation*=ON when the
+follow the deformations of the active elements. Set <a href="#id69"><span class="problematic" id="id70">*</span></a>deformation*=ON when the
 deformation of the active elements is excessive. The default value is OFF.</p></li>
 <li><p><strong>freeSurfaceType</strong> – A SymbolicConstant specifying the exposed areas of the element facets that are active
 for convection or radiation boundary conditions to be applied. Possible values are NONE
-and FACET. If <a href="#id65"><span class="problematic" id="id66">*</span></a>freeSurfaceType*=FACET, user subroutine UEPACTIVATIONFACET will be called
-at the start of the increment for each element. If <a href="#id67"><span class="problematic" id="id68">*</span></a>freeSurfaceType*=NONE, all the
+and FACET. If <a href="#id71"><span class="problematic" id="id72">*</span></a>freeSurfaceType*=FACET, user subroutine UEPACTIVATIONFACET will be called
+at the start of the increment for each element. If <a href="#id73"><span class="problematic" id="id74">*</span></a>freeSurfaceType*=NONE, all the
 exposed areas of the element facets are considered. The default value is NONE.</p></li>
 </ul>
 </dd>
@@ -2216,7 +2339,7 @@ exposed areas of the element facets are considered. The default value is NONE.</
 <h3>ConnectorOrientation<a class="headerlink" href="#connectororientation" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Assembly.ConnectorOrientation.ConnectorOrientation">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Assembly.ConnectorOrientation.</span></span><span class="sig-name descname"><span class="pre">ConnectorOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region:</span> <span class="pre">abaqus.Region.Set.Set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys1:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis1:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle1:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient2sameAs1:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys2:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis2:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle2:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.ConnectorOrientation.ConnectorOrientation" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConnectorOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region:</span> <span class="pre">abaqus.Region.Set.Set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys1:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis1:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle1:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient2sameAs1:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys2:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis2:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle2:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.ConnectorOrientation.ConnectorOrientation" title="Permalink to this definition"></a></dt>
 <dd><p>The ConnectorOrientation object is used to assign a connector orientation to a
 connector.</p>
 <blockquote>
@@ -2240,7 +2363,7 @@ connector.</p>
 <h3>ConnectorOrientationArray<a class="headerlink" href="#connectororientationarray" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Assembly.ConnectorOrientationArray.ConnectorOrientationArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Assembly.ConnectorOrientationArray.</span></span><span class="sig-name descname"><span class="pre">ConnectorOrientationArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.ConnectorOrientationArray.ConnectorOrientationArray" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConnectorOrientationArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.ConnectorOrientationArray.ConnectorOrientationArray" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </div>
@@ -2248,7 +2371,7 @@ connector.</p>
 <h3>Feature<a class="headerlink" href="#feature" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Assembly.Feature.Feature">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Assembly.Feature.</span></span><span class="sig-name descname"><span class="pre">Feature</span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Feature</span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature" title="Permalink to this definition"></a></dt>
 <dd><p>The following commands operate on Feature objects. For more information about the
 Feature object, see Feature object.</p>
 <blockquote>
@@ -2546,7 +2669,7 @@ reverse aligned (ON).</p></li>
 <h3>ModelInstance<a class="headerlink" href="#modelinstance" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Assembly.ModelInstance.ModelInstance">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Assembly.ModelInstance.</span></span><span class="sig-name descname"><span class="pre">ModelInstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqus.Assembly.ModelInstance.Model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoOffset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.ModelInstance.ModelInstance" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ModelInstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqus.Assembly.ModelInstance.Model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoOffset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.ModelInstance.ModelInstance" title="Permalink to this definition"></a></dt>
 <dd><p>A ModelInstance object is an instance of a Model.</p>
 <blockquote>
 <div><ul class="simple">
@@ -2605,7 +2728,7 @@ will be deleted from the feature list.</p></li>
 <h3>PartInstance<a class="headerlink" href="#partinstance" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Assembly.PartInstance.</span></span><span class="sig-name descname"><span class="pre">PartInstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">part</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqus.Part.Part.Part</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoOffset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartInstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">part</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="part.html#abaqus.Part.Part.Part" title="abaqus.Part.Part.Part"><span class="pre">abaqus.Part.Part.Part</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoOffset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance" title="Permalink to this definition"></a></dt>
 <dd><p>A PartInstance object is an instance of a Part object.</p>
 <blockquote>
 <div><ul class="simple">
@@ -2867,7 +2990,7 @@ and <em>Z</em>-directions.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.replace">
-<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instanceOf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqus.Part.Part.Part</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">applyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.replace" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instanceOf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="part.html#abaqus.Part.Part.Part" title="abaqus.Part.Part.Part"><span class="pre">abaqus.Part.Part.Part</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">applyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.replace" title="Permalink to this definition"></a></dt>
 <dd><p>This method replaces one instance with an instance of another part.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2943,7 +3066,7 @@ solving for the actual contact.</p></li>
 <h3>PartInstanceArray<a class="headerlink" href="#partinstancearray" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstanceArray.PartInstanceArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Assembly.PartInstanceArray.</span></span><span class="sig-name descname"><span class="pre">PartInstanceArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstanceArray.PartInstanceArray" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartInstanceArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstanceArray.PartInstanceArray" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </div>
