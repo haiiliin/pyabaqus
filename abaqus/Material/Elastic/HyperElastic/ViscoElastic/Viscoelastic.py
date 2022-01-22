@@ -87,10 +87,8 @@ class Viscoelastic:
         ----------
         domain
             A SymbolicConstant specifying the domain definition. Possible values are:
-            - FREQUENCY,
-                specifying a frequency domain. This domain is only available for an Abaqus/Standard analysis.
-            - TIME,
-                specifying a time domain.
+            - FREQUENCY, specifying a frequency domain. This domain is only available for an Abaqus/Standard analysis.
+            - TIME, specifying a time domain.
         table
             A sequence of sequences of Floats specifying the items described below. 
         frequency

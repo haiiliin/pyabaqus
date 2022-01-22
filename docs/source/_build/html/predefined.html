@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Predefined Field &mdash; pyabaqus 1.0.5 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Print" href="print.html" />
+    <link rel="prev" title="PlotOptions" href="plot_options.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="references.html">Reference manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mdb.html">Mdb object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model.html">Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ale.html">Adaptivity (Arbitrary Lagrangian-Eulerian, ALE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amplitude.html">Amplitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation.html">Animation Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="annotation.html">Annotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly.html">Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html">Basic Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile.html">Beam Section Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bc.html">Boundary condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html">Material Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canvas.html">Canvas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connector.html">Connector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint.html">Constraint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernel.html">Custom Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datum.html">Datum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display.html">Display Group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display_options.html">Display Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit_mesh.html">Edit Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="engineering.html">Engineering Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feature.html">Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="field.html">Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="field_report.html">FieldReport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">InputFileParser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interaction.html">Interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="job.html">Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load.html">Load and Load Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="material.html">Material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdb.html">Mdb object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mesh.html">Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="messaging.html">Messaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model.html">Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odb.html">Odb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odb_display.html">Odb Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="part.html">Part</a></li>
+<li class="toctree-l2"><a class="reference internal" href="path.html">Path and Probe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_options.html">PlotOptions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Predefined Field</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-predefined-fields">Create predefined fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#object-features">Object features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#field">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fieldstate">FieldState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#predefinedfield">PredefinedField</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#predefinedfieldstate">PredefinedFieldState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fluidcavitypressure">FluidCavityPressure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#imafield">IMAField</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#imaregion">IMARegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#initialstate">InitialState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kinematichardening">KinematicHardening</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#materialassignment">MaterialAssignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stress">Stress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#temperature">Temperature</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#temperaturestate">TemperatureState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tiffoptions">TiffOptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#velocity">Velocity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="print.html">Print</a></li>
+<li class="toctree-l2"><a class="reference internal" href="property.html">Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="region.html">Region</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section.html">Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session.html">Session</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sketcher.html">Sketcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="step.html">Step</a></li>
+<li class="toctree-l2"><a class="reference internal" href="step_miscellaneous.html">Step Miscellaneous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output.html">Step Output Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table_collection.html">Table Collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text_representation.html">TextRepresentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.html">UtilityAndView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xy.html">XY</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="references.html">Reference manual</a> &raquo;</li>
+      <li>Predefined Field</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/predefined.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="predefined-field">
+<h1>Predefined Field<a class="headerlink" href="#predefined-field" title="Permalink to this headline"></a></h1>
+<p>A PredefinedField object stores the non-propagating data of a predefined field as well as a number of instances of the corresponding PredefinedFieldState object. The PredefinedFieldState object stores the propagating data of the predefined field in a single step. A specific type of PredefinedField object and a specific type of PredefinedFieldState object are designed for each type of predefined field. Instances of the PredefinedFieldState object are created and deleted internally by its corresponding PredefinedField object.</p>
+<div class="section" id="create-predefined-fields">
+<h2>Create predefined fields<a class="headerlink" href="#create-predefined-fields" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.PredefinedFieldModel.</span></span><span class="sig-name descname"><span class="pre">PredefinedFieldModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Field">
+<span class="sig-name descname"><span class="pre">Field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">createStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputVariable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldVariableNum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crossSectionDistribution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONSTANT_THROUGH_THICKNESS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNSET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitudes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.PredefinedField.Field.Field" title="abaqus.PredefinedField.Field.Field"><span class="pre">abaqus.PredefinedField.Field.Field</span></a></span></span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Field" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a Field object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].Field</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>createStepName</strong> – A String specifying the name of the step in which the predefined field is created.</p></li>
+<li><p><strong>region</strong> – A Region object specifying the region to which the predefined field is applied. <em>Region</em>
+is ignored if the predefined field has a <em>distributionType</em> member available, and
+<a href="#id1"><span class="problematic" id="id2">*</span></a>distributionType*=FROM_FILE.</p></li>
+<li><p><strong>outputVariable</strong> – A String specifying the scalar nodal output variable that will be read from an output
+database and used to initialize a specified predefined field. This argument is a
+required argument if <a href="#id3"><span class="problematic" id="id4">*</span></a>distributionType*=FROM_FILE or
+<a href="#id5"><span class="problematic" id="id6">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p></li>
+<li><p><strong>fieldVariableNum</strong> – An Int specifying the field variable number.</p></li>
+<li><p><strong>distributionType</strong> – A SymbolicConstant specifying how the predefined field varies spatially. Possible values
+are UNIFORM, USER_DEFINED, FROM_FILE, FIELD, FROM_FILE_AND_USER_DEFINED, and
+DISCRETE_FIELD. The default value is UNIFORM.</p></li>
+<li><p><strong>crossSectionDistribution</strong> – A SymbolicConstant specifying how the predefined field is distributed over the
+cross-section of the region. Possible values are
+- CONSTANT_THROUGH_THICKNESS
+- GRADIENTS_THROUGH_SHELL_CS
+- GRADIENTS_THROUGH_BEAM_CS
+- POINTS_THROUGH_SECTION
+The default value is CONSTANT_THROUGH_THICKNESS.</p></li>
+<li><p><strong>field</strong> – A String specifying the name of the AnalyticalField or DiscreteField object associated
+with this predefined field. The <em>field</em> argument applies only when
+<a href="#id7"><span class="problematic" id="id8">*</span></a>distributionType*=FIELD or <a href="#id9"><span class="problematic" id="id10">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an
+empty string.</p></li>
+<li><p><strong>amplitude</strong> – A String or the SymbolicConstant UNSET specifying the name of the amplitude reference.
+UNSET should be used if the predefined field has no amplitude reference. The default
+value is UNSET.Note:<em>amplitude</em> should be given only if it is valid for the specified
+step.</p></li>
+<li><p><strong>fileName</strong> – A String specifying the name of the file from which the Field values are to be read when
+<a href="#id11"><span class="problematic" id="id12">*</span></a>distributionType*=FROM_FILE or <a href="#id13"><span class="problematic" id="id14">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p></li>
+<li><p><strong>beginStep</strong> – An Int specifying the first step from which Field values are to be read or the
+SymbolicConstant FIRST_STEP or LAST_STEP. This argument is valid only when
+<a href="#id15"><span class="problematic" id="id16">*</span></a>distributionType*=FROM_FILE or <a href="#id17"><span class="problematic" id="id18">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>beginIncrement</strong> – An Int specifying the first increment of the step set in <em>beginStep</em> or the
+SymbolicConstants STEP_START or STEP_END. This argument is valid only when
+<a href="#id19"><span class="problematic" id="id20">*</span></a>distributionType*=FROM_FILE or <a href="#id21"><span class="problematic" id="id22">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>endStep</strong> – An Int specifying the last step from which Field values are to be read or the
+SymbolicConstants FIRST_STEP and LAST_STEP. This argument is valid only when
+<a href="#id23"><span class="problematic" id="id24">*</span></a>distributionType*=FROM_FILE or <a href="#id25"><span class="problematic" id="id26">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>endIncrement</strong> – An Int specifying the last increment of the step set in <em>endStep</em> or the
+SymbolicConstants STEP_START and STEP_END. This argument is valid only when
+<a href="#id27"><span class="problematic" id="id28">*</span></a>distributionType*=FROM_FILE or <a href="#id29"><span class="problematic" id="id30">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>interpolate</strong> – A SymbolicConstant specifying whether to interpolate a field read from an output
+database or results file. Possible values are OFF, ON, or MIDSIDE_ONLY. The default
+value is OFF.</p></li>
+<li><p><strong>magnitudes</strong> – A Sequence of Doubles specifying the Field values when <em>distributionType*=UNIFORM or
+FIELD. The value of the *magnitudes</em> argument is a function of the
+<em>crossSectionDistribution</em> argument, as shown in the following list:
+- If <em>crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS, *magnitudes</em> is a Double
+specifying the Field.
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS, *magnitudes</em> is a sequence
+of Doubles specifying the mean value and the gradient in the thickness direction.
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS, *magnitudes</em> is a sequence of
+Doubles specifying the mean value, the gradient in the N1 direction, and the gradient in
+the N2 direction.
+- If <em>crossSectionDistribution*=POINTS_THROUGH_SECTION, *magnitudes</em> is a sequence of
+Doubles specifying the Field at each point.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Field</span> <span class="pre">object..</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.FluidCavityPressure">
+<span class="sig-name descname"><span class="pre">FluidCavityPressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluidCavity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluidPressure</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.PredefinedField.FluidCavityPressure.FluidCavityPressure" title="abaqus.PredefinedField.FluidCavityPressure.FluidCavityPressure"><span class="pre">abaqus.PredefinedField.FluidCavityPressure.FluidCavityPressure</span></a></span></span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.FluidCavityPressure" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a FluidCavityPressure object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].FluidCavityPressure</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>fluidCavity</strong> – A String specifying the name of a Fluid Cavity Interaction.</p></li>
+<li><p><strong>fluidPressure</strong> – A Float specifying the initial fluid pressure.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">FluidCavityPressure</span> <span class="pre">object..</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.InitialState">
+<span class="sig-name descname"><span class="pre">InitialState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="assembly.html#abaqus.Assembly.PartInstanceArray.PartInstanceArray" title="abaqus.Assembly.PartInstanceArray.PartInstanceArray"><span class="pre">abaqus.Assembly.PartInstanceArray.PartInstanceArray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LAST_STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP_END'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updateReferenceConfiguration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.PredefinedField.InitialState.InitialState" title="abaqus.PredefinedField.InitialState.InitialState"><span class="pre">abaqus.PredefinedField.InitialState.InitialState</span></a></span></span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.InitialState" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates an InitialState predefined field object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].InitialState</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>instances</strong> – A PartInstanceArray object specifying the instances to which the predefined field is
+applied.</p></li>
+<li><p><strong>fileName</strong> – A String specifying the name of the job that generated the initial state data.</p></li>
+<li><p><strong>endStep</strong> – The SymbolicConstant LAST_STEP or an Int specifying the step from which the initial
+state values are to be read or the SymbolicConstant LAST_STEP. The default value is
+LAST_STEP.</p></li>
+<li><p><strong>endIncrement</strong> – The SymbolicConstant STEP_END or an Int specifying the increment, interval or iteration
+of the step set in <em>endStep</em> or the SymbolicConstant STEP_END. The default value is
+STEP_END.</p></li>
+<li><p><strong>updateReferenceConfiguration</strong> – A Boolean specifying whether to update the reference configuration based on the import
+data. The default value is OFF.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">An</span> <span class="pre">InitialState</span> <span class="pre">object..</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.KinematicHardening">
+<span class="sig-name descname"><span class="pre">KinematicHardening</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">numBackStress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equivPlasticStrain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backStress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectPtNum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'KINEMATIC_HARDENING'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rebarLayerNames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MAGNITUDE'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.PredefinedField.KinematicHardening.KinematicHardening" title="abaqus.PredefinedField.KinematicHardening.KinematicHardening"><span class="pre">abaqus.PredefinedField.KinematicHardening.KinematicHardening</span></a></span></span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.KinematicHardening" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a KinematicHardening object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].KinematicHardening</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>region</strong> – A Region object specifying the region to which the predefined field is applied.</p></li>
+<li><p><strong>numBackStress</strong> – An Int specifying the number of backstresses. The default value is 1.</p></li>
+<li><p><strong>equivPlasticStrain</strong> – A sequence of Floats specifying the initial equivalent Plastic strain.</p></li>
+<li><p><strong>backStress</strong> – A sequence of sequences of Floats specifying the initial backstress tensor for kinematic
+hardening models. The default value is an empty sequence.</p></li>
+<li><p><strong>sectPtNum</strong> – A sequence of Ints specifying section point numbers. This argument is valid only when
+<a href="#id31"><span class="problematic" id="id32">*</span></a>definition*=SECTION_PTS.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying different types of kinematic hardening. Possible values
+are KINEMATIC_HARDENING, CRUSHABLE_FOAM, REBAR, SECTION_PTS, and USER_DEFINED. The
+default value is KINEMATIC_HARDENING.</p></li>
+<li><p><strong>rebarLayerNames</strong> – A sequence of Strings specifying rebar layer names. This argument is valid only when
+<a href="#id33"><span class="problematic" id="id34">*</span></a>definition*=REBAR.</p></li>
+<li><p><strong>distributionType</strong> – A SymbolicConstant specifying whether the load is uniform. Possible values are MAGNITUDE
+and ANALYTICAL_FIELD. The default value is MAGNITUDE.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">KinematicHardening</span> <span class="pre">object..</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.MaterialAssignment">
+<span class="sig-name descname"><span class="pre">MaterialAssignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instanceList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="assembly.html#abaqus.Assembly.PartInstanceArray.PartInstanceArray" title="abaqus.Assembly.PartInstanceArray.PartInstanceArray"><span class="pre">abaqus.Assembly.PartInstanceArray.PartInstanceArray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">useFields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assignmentList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colorList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.PredefinedField.MaterialAssignment.MaterialAssignment" title="abaqus.PredefinedField.MaterialAssignment.MaterialAssignment"><span class="pre">abaqus.PredefinedField.MaterialAssignment.MaterialAssignment</span></a></span></span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.MaterialAssignment" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a MaterialAssignment predefined field object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].MaterialAssignment</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>instanceList</strong> – A PartInstanceArray object specifying the part instances to which the predefined field
+is applied. All instances must be assigned the same Eulerian section.</p></li>
+<li><p><strong>useFields</strong> – A Boolean specifying whether the volume fraction data will be uniform or defined by
+discrete fields. The default value is OFF.</p></li>
+<li><p><strong>assignmentList</strong> – A sequence of tuples specifying the uniform volume fractions to be assigned. This
+argument is valid only when <em>useFields*=FALSE. Each tuple contains two entries:A Region
+object.A tuple of Floats specifying the uniform volume fraction values. The length of
+the tuple must match the number of material instance names specified in the Eulerain
+section assigned to part instances specified by *instanceList</em>.</p></li>
+<li><p><strong>fieldList</strong> – A sequence of tuples specifying the discrete volume fractions to be assigned. This
+argument is valid only when <em>useFields*=TRUE. Each tuple contains two entries:A Region
+object.A tuple of Strings specifying Discrete Field names. The length of the tuple must
+match the number of material instance names specified in the Eulerain section assigned
+to part instances specified by *instanceList</em>.</p></li>
+<li><p><strong>colorList</strong> – A sequence of three Ints specifying colors used to display the material instance
+assignments. This is a sequence of R,G,B colors, where the values are represented by
+integers between 0 and 255. The default value is an empty sequence.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">MaterialAssignment</span> <span class="pre">object..</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Stress">
+<span class="sig-name descname"><span class="pre">Stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma11</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma22</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma33</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma12</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma13</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma23</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.PredefinedField.Stress.Stress" title="abaqus.PredefinedField.Stress.Stress"><span class="pre">abaqus.PredefinedField.Stress.Stress</span></a></span></span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Stress" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a Stress predefined field object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].Stress</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>region</strong> – A Region object specifying the region to which the predefined field is applied. Region
+is ignored if the predefined field has <a href="#id35"><span class="problematic" id="id36">*</span></a>distributionType*=FROM_FILE.</p></li>
+<li><p><strong>distributionType</strong> – A SymbolicConstant specifying whether the load is uniform. Possible values are UNIFORM
+and FROM_FILE. The default value is UNIFORM.</p></li>
+<li><p><strong>sigma11</strong> – A Float specifying the first principal component of the stress.</p></li>
+<li><p><strong>sigma22</strong> – A Float specifying the second principal component of the stress.</p></li>
+<li><p><strong>sigma33</strong> – A Float specifying the third principal component of the stress.</p></li>
+<li><p><strong>sigma12</strong> – A Float specifying the first shear component of the stress.</p></li>
+<li><p><strong>sigma13</strong> – A Float specifying the second shear component of the stress.</p></li>
+<li><p><strong>sigma23</strong> – A Float specifying the third shear component of the stress.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Stress</span> <span class="pre">object..</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Temperature">
+<span class="sig-name descname"><span class="pre">Temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">createStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crossSectionDistribution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONSTANT_THROUGH_THICKNESS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNSET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitudes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteExteriorTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exteriorTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.PredefinedField.Temperature.Temperature" title="abaqus.PredefinedField.Temperature.Temperature"><span class="pre">abaqus.PredefinedField.Temperature.Temperature</span></a></span></span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Temperature" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a Temperature object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].Temperature</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>createStepName</strong> – A String specifying the name of the step in which the predefined field is created.</p></li>
+<li><p><strong>region</strong> – A Region object specifying the region to which the predefined field is applied. <em>Region</em>
+is ignored if the predefined field has a <em>distributionType</em> member available, and
+<a href="#id37"><span class="problematic" id="id38">*</span></a>distributionType*=FROM_FILE .</p></li>
+<li><p><strong>distributionType</strong> – A SymbolicConstant specifying how the predefined field varies spatially. Possible values
+are UNIFORM, USER_DEFINED, FROM_FILE, FIELD, FROM_FILE_AND_USER_DEFINED, and
+DISCRETE_FIELD. The default value is UNIFORM.</p></li>
+<li><p><strong>crossSectionDistribution</strong> – A SymbolicConstant specifying how the predefined field is distributed over the cross
+section of the region. Possible values are
+- CONSTANT_THROUGH_THICKNESS
+- GRADIENTS_THROUGH_SHELL_CS
+- GRADIENTS_THROUGH_BEAM_CS
+- POINTS_THROUGH_SECTION
+The default value is CONSTANT_THROUGH_THICKNESS.</p></li>
+<li><p><strong>field</strong> – A String specifying the name of the AnalyticalField or DiscreteField object associated
+with this predefined field. The <em>field</em> argument applies only when
+<a href="#id39"><span class="problematic" id="id40">*</span></a>distributionType*=FIELD or <a href="#id41"><span class="problematic" id="id42">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an
+empty string.</p></li>
+<li><p><strong>amplitude</strong> – A String or the SymbolicConstant UNSET specifying the name of the amplitude reference.
+UNSET should be used if the predefined field has no amplitude reference. The default
+value is UNSET.Note:<em>amplitude</em> should be given only if it is valid for the specified
+step.</p></li>
+<li><p><strong>fileName</strong> – A String specifying the name of the file from which the temperature values are to be
+read when <a href="#id43"><span class="problematic" id="id44">*</span></a>distributionType*=FROM_FILE or <a href="#id45"><span class="problematic" id="id46">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p></li>
+<li><p><strong>beginStep</strong> – An Int specifying the first step from which temperature values are to be read or the
+SymbolicConstant FIRST_STEP or LAST_STEP. This argument is valid only when
+<a href="#id47"><span class="problematic" id="id48">*</span></a>distributionType*=FROM_FILE or <a href="#id49"><span class="problematic" id="id50">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>beginIncrement</strong> – An Int specifying the first increment of the step set in <em>beginStep</em> or the
+SymbolicConstants STEP_START or STEP_END. This argument is valid only when
+<a href="#id51"><span class="problematic" id="id52">*</span></a>distributionType*=FROM_FILE or <a href="#id53"><span class="problematic" id="id54">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>endStep</strong> – An Int specifying the last step from which temperature values are to be read or the
+SymbolicConstants FIRST_STEP and LAST_STEP. This argument is valid only when
+<a href="#id55"><span class="problematic" id="id56">*</span></a>distributionType*=FROM_FILE or <a href="#id57"><span class="problematic" id="id58">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>endIncrement</strong> – An Int specifying the last increment of the step set in <em>endStep</em> or the
+SymbolicConstants STEP_START and STEP_END. This argument is valid only when
+<a href="#id59"><span class="problematic" id="id60">*</span></a>distributionType*=FROM_FILE or <a href="#id61"><span class="problematic" id="id62">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>interpolate</strong> – A SymbolicConstant specifying whether to interpolate a field read from an output
+database or results file. Possible values are OFF, ON or MIDSIDE_ONLY. The default value
+is OFF.</p></li>
+<li><p><strong>magnitudes</strong> – A Sequence of Doubles specifying the temperature values when <em>distributionType*=UNIFORM
+or FIELD. The value of the *magnitudes</em> argument is a function of the
+<em>crossSectionDistribution</em> argument, as shown in the following list:
+- If <em>crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS then *magnitudes</em> is a Double
+specifying the temperature.
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS then *magnitudes</em> is a
+sequence of Doubles specifying the mean value and the gradient in the thickness
+direction.
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS then *magnitudes</em> is a
+sequence of Doubles specifying the mean value, the gradient in the N1 direction, and the
+gradient in the N2 direction.
+- If <em>crossSectionDistribution*=POINTS_THROUGH_SECTION then *magnitudes</em> is a sequence
+of Doubles specifying the temperature at each point.</p></li>
+<li><p><strong>absoluteExteriorTolerance</strong> – A Float specifying the absolute value by which a driven node of the field can lie
+outside the region of the elements of the global model. The default value is 0.0. This
+argument cannot be used with <em>midside</em>.</p></li>
+<li><p><strong>exteriorTolerance</strong> – A Float specifying the fraction of the average element size in the global model by which
+a driven node of the field can lie outside the region of the elements of the global
+model. The default value is 0.0. This argument cannot be used with <em>midside</em>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Temperature</span> <span class="pre">object..</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Velocity">
+<span class="sig-name descname"><span class="pre">Velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisBegin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisEnd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MAGNITUDE'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.PredefinedField.Velocity.Velocity" title="abaqus.PredefinedField.Velocity.Velocity"><span class="pre">abaqus.PredefinedField.Velocity.Velocity</span></a></span></span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Velocity" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a Velocity predefined field object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].Velocity</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>region</strong> – A Region object specifying the region to which the predefined field is applied.</p></li>
+<li><p><strong>velocity1</strong> – A Float specifying the first component of the velocity.</p></li>
+<li><p><strong>velocity2</strong> – A Float specifying the second component of the velocity.</p></li>
+<li><p><strong>velocity3</strong> – A Float specifying the third component of the velocity.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the angular velocity.</p></li>
+<li><p><strong>axisBegin</strong> – A sequence of Floats specifying the <em>X-</em>, <em>Y-</em>, and <em>Z</em>- coordinates of the starting
+point of the axis about which <em>omega</em> is defined.</p></li>
+<li><p><strong>axisEnd</strong> – A sequence of Floats specifying the <em>X-</em>, <em>Y-</em>, and <em>Z</em>- coordinates of the end point of
+the axis about which <em>omega</em> is defined.</p></li>
+<li><p><strong>field</strong> – A String specifying the name of the AnalyticalField object associated with this
+predefined field. The <em>field</em> argument applies only when
+<a href="#id63"><span class="problematic" id="id64">*</span></a>distributionType*=FIELD_ANALYTICAL. The default value is an empty string.</p></li>
+<li><p><strong>distributionType</strong> – A SymbolicConstant specifying whether the load is uniform. Possible values are MAGNITUDE
+and FIELD_ANALYTICAL. The default value is MAGNITUDE.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Velocity</span> <span class="pre">object..</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="object-features">
+<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline"></a></h2>
+<div class="section" id="field">
+<h3>Field<a class="headerlink" href="#field" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.Field.Field">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.Field.</span></span><span class="sig-name descname"><span class="pre">Field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">createStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputVariable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldVariableNum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crossSectionDistribution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONSTANT_THROUGH_THICKNESS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNSET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitudes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.Field.Field" title="Permalink to this definition"></a></dt>
+<dd><p>The Field object stores the data for field predefined fields.
+The Field object is derived from the PredefinedField object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].predefinedFields[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>INITIAL CONDITIONS</p></li>
+<li><p>FIELD</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.Field.Field.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fromStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.Field.Field.move" title="Permalink to this definition"></a></dt>
+<dd><p>This method moves the FieldState object from one step to a different step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fromStepName</strong> – A String specifying the name of the step from which the PredefinedFieldState is moved.</p></li>
+<li><p><strong>toStepName</strong> – A String specifying the name of the step to which the PredefinedFieldState is moved.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – TextError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.Field.Field.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputVariable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldVariableNum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crossSectionDistribution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONSTANT_THROUGH_THICKNESS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNSET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitudes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.Field.Field.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the data for an existing Field object in the step where it is
+created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>outputVariable</strong> – A String specifying the scalar nodal output variable that will be read from an output
+database and used to initialize a specified predefined field. This argument is a
+required argument if <a href="#id65"><span class="problematic" id="id66">*</span></a>distributionType*=FROM_FILE or
+<a href="#id67"><span class="problematic" id="id68">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p></li>
+<li><p><strong>fieldVariableNum</strong> – An Int specifying the field variable number.</p></li>
+<li><p><strong>distributionType</strong> – A SymbolicConstant specifying how the predefined field varies spatially. Possible values
+are UNIFORM, USER_DEFINED, FROM_FILE, FIELD, FROM_FILE_AND_USER_DEFINED, and
+DISCRETE_FIELD. The default value is UNIFORM.</p></li>
+<li><p><strong>crossSectionDistribution</strong> – A SymbolicConstant specifying how the predefined field is distributed over the
+cross-section of the region. Possible values are
+- CONSTANT_THROUGH_THICKNESS
+- GRADIENTS_THROUGH_SHELL_CS
+- GRADIENTS_THROUGH_BEAM_CS
+- POINTS_THROUGH_SECTION
+The default value is CONSTANT_THROUGH_THICKNESS.</p></li>
+<li><p><strong>field</strong> – A String specifying the name of the AnalyticalField or DiscreteField object associated
+with this predefined field. The <em>field</em> argument applies only when
+<a href="#id69"><span class="problematic" id="id70">*</span></a>distributionType*=FIELD or <a href="#id71"><span class="problematic" id="id72">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an
+empty string.</p></li>
+<li><p><strong>amplitude</strong> – A String or the SymbolicConstant UNSET specifying the name of the amplitude reference.
+UNSET should be used if the predefined field has no amplitude reference. The default
+value is UNSET.Note:<em>amplitude</em> should be given only if it is valid for the specified
+step.</p></li>
+<li><p><strong>fileName</strong> – A String specifying the name of the file from which the Field values are to be read when
+<a href="#id73"><span class="problematic" id="id74">*</span></a>distributionType*=FROM_FILE or <a href="#id75"><span class="problematic" id="id76">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p></li>
+<li><p><strong>beginStep</strong> – An Int specifying the first step from which Field values are to be read or the
+SymbolicConstant FIRST_STEP or LAST_STEP. This argument is valid only when
+<a href="#id77"><span class="problematic" id="id78">*</span></a>distributionType*=FROM_FILE or <a href="#id79"><span class="problematic" id="id80">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>beginIncrement</strong> – An Int specifying the first increment of the step set in <em>beginStep</em> or the
+SymbolicConstants STEP_START or STEP_END. This argument is valid only when
+<a href="#id81"><span class="problematic" id="id82">*</span></a>distributionType*=FROM_FILE or <a href="#id83"><span class="problematic" id="id84">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>endStep</strong> – An Int specifying the last step from which Field values are to be read or the
+SymbolicConstants FIRST_STEP and LAST_STEP. This argument is valid only when
+<a href="#id85"><span class="problematic" id="id86">*</span></a>distributionType*=FROM_FILE or <a href="#id87"><span class="problematic" id="id88">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>endIncrement</strong> – An Int specifying the last increment of the step set in <em>endStep</em> or the
+SymbolicConstants STEP_START and STEP_END. This argument is valid only when
+<a href="#id89"><span class="problematic" id="id90">*</span></a>distributionType*=FROM_FILE or <a href="#id91"><span class="problematic" id="id92">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>interpolate</strong> – A SymbolicConstant specifying whether to interpolate a field read from an output
+database or results file. Possible values are OFF, ON, or MIDSIDE_ONLY. The default
+value is OFF.</p></li>
+<li><p><strong>magnitudes</strong> – A Sequence of Doubles specifying the Field values when <em>distributionType*=UNIFORM or
+FIELD. The value of the *magnitudes</em> argument is a function of the
+<em>crossSectionDistribution</em> argument, as shown in the following list:
+- If <em>crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS, *magnitudes</em> is a Double
+specifying the Field.
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS, *magnitudes</em> is a sequence
+of Doubles specifying the mean value and the gradient in the thickness direction.
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS, *magnitudes</em> is a sequence of
+Doubles specifying the mean value, the gradient in the N1 direction, and the gradient in
+the N2 direction.
+- If <em>crossSectionDistribution*=POINTS_THROUGH_SECTION, *magnitudes</em> is a sequence of
+Doubles specifying the Field at each point.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.Field.Field.setValuesInStep">
+<span class="sig-name descname"><span class="pre">setValuesInStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputVariable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldVariableNum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNSET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitudes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.Field.Field.setValuesInStep" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the propagating data for an existing Field object in the specified
+step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stepName</strong> – A String specifying the name of the step in which the predefined field is modified.</p></li>
+<li><p><strong>outputVariable</strong> – A String specifying the scalar nodal output variable that will be read from an output
+database and used to initialize a specified predefined field. This argument is a
+required argument if <a href="#id93"><span class="problematic" id="id94">*</span></a>distributionType*=FROM_FILE or
+<a href="#id95"><span class="problematic" id="id96">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p></li>
+<li><p><strong>fieldVariableNum</strong> – An Int specifying the field variable number.</p></li>
+<li><p><strong>field</strong> – A String specifying the name of the AnalyticalField or DiscreteField object associated
+with this predefined field. The <em>field</em> argument applies only when
+<a href="#id97"><span class="problematic" id="id98">*</span></a>distributionType*=FIELD or <a href="#id99"><span class="problematic" id="id100">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an
+empty string.</p></li>
+<li><p><strong>amplitude</strong> – A String or the SymbolicConstant UNSET specifying the name of the amplitude reference.
+UNSET should be used if the predefined field has no amplitude reference. The default
+value is UNSET.Note:<em>amplitude</em> should be given only if it is valid for the specified
+step.</p></li>
+<li><p><strong>fileName</strong> – A String specifying the name of the file from which the Field values are to be read when
+<a href="#id101"><span class="problematic" id="id102">*</span></a>distributionType*=FROM_FILE or <a href="#id103"><span class="problematic" id="id104">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p></li>
+<li><p><strong>beginStep</strong> – An Int specifying the first step from which Field values are to be read or the
+SymbolicConstant FIRST_STEP or LAST_STEP. This argument is valid only when
+<a href="#id105"><span class="problematic" id="id106">*</span></a>distributionType*=FROM_FILE or <a href="#id107"><span class="problematic" id="id108">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>beginIncrement</strong> – An Int specifying the first increment of the step set in <em>beginStep</em> or the
+SymbolicConstants STEP_START or STEP_END. This argument is valid only when
+<a href="#id109"><span class="problematic" id="id110">*</span></a>distributionType*=FROM_FILE or <a href="#id111"><span class="problematic" id="id112">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>endStep</strong> – An Int specifying the last step from which Field values are to be read or the
+SymbolicConstants FIRST_STEP and LAST_STEP. This argument is valid only when
+<a href="#id113"><span class="problematic" id="id114">*</span></a>distributionType*=FROM_FILE or <a href="#id115"><span class="problematic" id="id116">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>endIncrement</strong> – An Int specifying the last increment of the step set in <em>endStep</em> or the
+SymbolicConstants STEP_START and STEP_END. This argument is valid only when
+<a href="#id117"><span class="problematic" id="id118">*</span></a>distributionType*=FROM_FILE or <a href="#id119"><span class="problematic" id="id120">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>interpolate</strong> – A SymbolicConstant specifying whether to interpolate a field read from an output
+database or results file. Possible values are OFF, ON, or MIDSIDE_ONLY. The default
+value is OFF.</p></li>
+<li><p><strong>magnitudes</strong> – A Sequence of Doubles specifying the Field values when <em>distributionType*=UNIFORM or
+FIELD. The value of the *magnitudes</em> argument is a function of the
+<em>crossSectionDistribution</em> argument, as shown in the following list:
+- If <em>crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS, *magnitudes</em> is a Double
+specifying the Field.
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS, *magnitudes</em> is a sequence
+of Doubles specifying the mean value and the gradient in the thickness direction.
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS, *magnitudes</em> is a sequence of
+Doubles specifying the mean value, the gradient in the N1 direction, and the gradient in
+the N2 direction.
+- If <em>crossSectionDistribution*=POINTS_THROUGH_SECTION, *magnitudes</em> is a sequence of
+Doubles specifying the Field at each point.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="fieldstate">
+<h3>FieldState<a class="headerlink" href="#fieldstate" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.FieldState.FieldState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.FieldState.</span></span><span class="sig-name descname"><span class="pre">FieldState</span></span><a class="headerlink" href="#abaqus.PredefinedField.FieldState.FieldState" title="Permalink to this definition"></a></dt>
+<dd><p>The FieldState object stores the propagating data of a field in a step. One instance of
+this object is created internally by the Field object for each step.
+The FieldState object has no constructor or methods.
+The FieldState object is derived from the PredefinedFieldState object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].steps[name].predefinedFieldStates[name]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="predefinedfield">
+<h3>PredefinedField<a class="headerlink" href="#predefinedfield" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedField.PredefinedField">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.PredefinedField.</span></span><span class="sig-name descname"><span class="pre">PredefinedField</span></span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedField.PredefinedField" title="Permalink to this definition"></a></dt>
+<dd><p>The PredefinedField object is the base object for the objects in the predefined field
+repository. The methods and members of the PredefinedField object are common to all
+objects derived from PredefinedField.
+An instance of any PredefinedField object can be obtained through the predefined field
+repository of the Model object. An instance of any PredefinedFieldState object can be
+obtained through the predefined field repository of the Step object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].predefinedFields[name]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedField.PredefinedField.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedField.PredefinedField.delete" title="Permalink to this definition"></a></dt>
+<dd><p>This method allows you to delete existing fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>indices</strong> – A sequence of Ints specifying the index of each field to delete.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedField.PredefinedField.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fromStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedField.PredefinedField.move" title="Permalink to this definition"></a></dt>
+<dd><p>This method moves a specific PredefinedFieldState object from one step to a different
+step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fromStepName</strong> – A String specifying the name of the step from which the PredefinedFieldState object is
+moved.</p></li>
+<li><p><strong>toStepName</strong> – A String specifying the name of the step to which the PredefinedFieldState object is
+moved.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – TextError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedField.PredefinedField.resume">
+<span class="sig-name descname"><span class="pre">resume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedField.PredefinedField.resume" title="Permalink to this definition"></a></dt>
+<dd><p>This method resumes the predefined field that was previously suppressed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedField.PredefinedField.suppress">
+<span class="sig-name descname"><span class="pre">suppress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedField.PredefinedField.suppress" title="Permalink to this definition"></a></dt>
+<dd><p>This method suppresses the predefined field.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="predefinedfieldstate">
+<h3>PredefinedFieldState<a class="headerlink" href="#predefinedfieldstate" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.PredefinedFieldState.PredefinedFieldState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.PredefinedFieldState.</span></span><span class="sig-name descname"><span class="pre">PredefinedFieldState</span></span><a class="headerlink" href="#abaqus.PredefinedField.PredefinedFieldState.PredefinedFieldState" title="Permalink to this definition"></a></dt>
+<dd><p>The PredefinedFieldState object is the base object for the objects in the
+predefinedFieldState repository of the Step object. The members of the
+PredefinedFieldState object are common to all objects derived from PredefinedFieldState.
+The PredefinedFieldState object has no constructor or methods.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].steps[name].predefinedFieldStates[name]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="fluidcavitypressure">
+<h3>FluidCavityPressure<a class="headerlink" href="#fluidcavitypressure" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.FluidCavityPressure.FluidCavityPressure">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.FluidCavityPressure.</span></span><span class="sig-name descname"><span class="pre">FluidCavityPressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluidCavity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluidPressure</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.FluidCavityPressure.FluidCavityPressure" title="Permalink to this definition"></a></dt>
+<dd><p>The FluidCavityPressure object stores the data for initial fluid cavity pressures. The
+base class*region* argument can not be specifed with this object.
+The FluidCavityPressure object is derived from the PredefinedField object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].predefinedFields[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>INITIAL CONDITIONS</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.FluidCavityPressure.FluidCavityPressure.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.FluidCavityPressure.FluidCavityPressure.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the FluidCavityPressure object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="imafield">
+<h3>IMAField<a class="headerlink" href="#imafield" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.IMAField.IMAField">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.IMAField.</span></span><span class="sig-name descname"><span class="pre">IMAField</span></span><a class="headerlink" href="#abaqus.PredefinedField.IMAField.IMAField" title="Permalink to this definition"></a></dt>
+<dd><p>A IMAField is an object used to define material instance name volume fractions for the
+MaterialAssignment predefined field.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].predefinedFields[name].fieldList</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="imaregion">
+<h3>IMARegion<a class="headerlink" href="#imaregion" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.IMARegion.IMARegion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.IMARegion.</span></span><span class="sig-name descname"><span class="pre">IMARegion</span></span><a class="headerlink" href="#abaqus.PredefinedField.IMARegion.IMARegion" title="Permalink to this definition"></a></dt>
+<dd><p>A IMARegion is an object used to define material instance name volume fractions for the
+MaterialAssignment predefined field.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].predefinedFields[name].assignmentList</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="initialstate">
+<h3>InitialState<a class="headerlink" href="#initialstate" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.InitialState.InitialState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.InitialState.</span></span><span class="sig-name descname"><span class="pre">InitialState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="assembly.html#abaqus.Assembly.PartInstanceArray.PartInstanceArray" title="abaqus.Assembly.PartInstanceArray.PartInstanceArray"><span class="pre">abaqus.Assembly.PartInstanceArray.PartInstanceArray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LAST_STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP_END'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updateReferenceConfiguration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.InitialState.InitialState" title="Permalink to this definition"></a></dt>
+<dd><p>The InitialState object stores the data for an initial state predefined field.
+The InitialState object is derived from the PredefinedField object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].predefinedFields[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>INSTANCE</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.InitialState.InitialState.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LAST_STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP_END'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updateReferenceConfiguration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.InitialState.InitialState.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the InitialState object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endStep</strong> – The SymbolicConstant LAST_STEP or an Int specifying the step from which the initial
+state values are to be read or the SymbolicConstant LAST_STEP. The default value is
+LAST_STEP.</p></li>
+<li><p><strong>endIncrement</strong> – The SymbolicConstant STEP_END or an Int specifying the increment, interval or iteration
+of the step set in <em>endStep</em> or the SymbolicConstant STEP_END. The default value is
+STEP_END.</p></li>
+<li><p><strong>updateReferenceConfiguration</strong> – A Boolean specifying whether to update the reference configuration based on the import
+data. The default value is OFF.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="kinematichardening">
+<h3>KinematicHardening<a class="headerlink" href="#kinematichardening" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.KinematicHardening.KinematicHardening">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.KinematicHardening.</span></span><span class="sig-name descname"><span class="pre">KinematicHardening</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">numBackStress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equivPlasticStrain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backStress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectPtNum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'KINEMATIC_HARDENING'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rebarLayerNames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MAGNITUDE'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.KinematicHardening.KinematicHardening" title="Permalink to this definition"></a></dt>
+<dd><p>The KinematicHardening object stores the data for initial equivalent Plastic strains
+and, if relevant, the initial backstress tensor.
+The KinematicHardening object is derived from the PredefinedField object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].predefinedFields[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>INITIAL CONDITIONS</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.KinematicHardening.KinematicHardening.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numBackStress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equivPlasticStrain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backStress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectPtNum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'KINEMATIC_HARDENING'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rebarLayerNames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MAGNITUDE'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.KinematicHardening.KinematicHardening.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the KinematicHardening object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>numBackStress</strong> – An Int specifying the number of backstresses. The default value is 1.</p></li>
+<li><p><strong>equivPlasticStrain</strong> – A sequence of Floats specifying the initial equivalent Plastic strain.</p></li>
+<li><p><strong>backStress</strong> – A sequence of sequences of Floats specifying the initial backstress tensor for kinematic
+hardening models. The default value is an empty sequence.</p></li>
+<li><p><strong>sectPtNum</strong> – A sequence of Ints specifying section point numbers. This argument is valid only when
+<a href="#id121"><span class="problematic" id="id122">*</span></a>definition*=SECTION_PTS.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying different types of kinematic hardening. Possible values
+are KINEMATIC_HARDENING, CRUSHABLE_FOAM, REBAR, SECTION_PTS, and USER_DEFINED. The
+default value is KINEMATIC_HARDENING.</p></li>
+<li><p><strong>rebarLayerNames</strong> – A sequence of Strings specifying rebar layer names. This argument is valid only when
+<a href="#id123"><span class="problematic" id="id124">*</span></a>definition*=REBAR.</p></li>
+<li><p><strong>distributionType</strong> – A SymbolicConstant specifying whether the load is uniform. Possible values are MAGNITUDE
+and ANALYTICAL_FIELD. The default value is MAGNITUDE.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="materialassignment">
+<h3>MaterialAssignment<a class="headerlink" href="#materialassignment" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.MaterialAssignment.MaterialAssignment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.MaterialAssignment.</span></span><span class="sig-name descname"><span class="pre">MaterialAssignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instanceList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="assembly.html#abaqus.Assembly.PartInstanceArray.PartInstanceArray" title="abaqus.Assembly.PartInstanceArray.PartInstanceArray"><span class="pre">abaqus.Assembly.PartInstanceArray.PartInstanceArray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">useFields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assignmentList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colorList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.MaterialAssignment.MaterialAssignment" title="Permalink to this definition"></a></dt>
+<dd><p>The MaterialAssignment object stores the data for an initial material assignment
+predefined field, for use with an Eulerian analysis.
+The MaterialAssignment object is derived from the PredefinedField object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].predefinedFields[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>INITIAL CONDITIONS</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.MaterialAssignment.MaterialAssignment.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useFields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assignmentList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colorList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.MaterialAssignment.MaterialAssignment.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the MaterialAssignment object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>useFields</strong> – A Boolean specifying whether the volume fraction data will be uniform or defined by
+discrete fields. The default value is OFF.</p></li>
+<li><p><strong>assignmentList</strong> – A sequence of tuples specifying the uniform volume fractions to be assigned. This
+argument is valid only when <em>useFields*=FALSE. Each tuple contains two entries:A Region
+object.A tuple of Floats specifying the uniform volume fraction values. The length of
+the tuple must match the number of material instance names specified in the Eulerain
+section assigned to part instances specified by *instanceList</em>.</p></li>
+<li><p><strong>fieldList</strong> – A sequence of tuples specifying the discrete volume fractions to be assigned. This
+argument is valid only when <em>useFields*=TRUE. Each tuple contains two entries:A Region
+object.A tuple of Strings specifying Discrete Field names. The length of the tuple must
+match the number of material instance names specified in the Eulerain section assigned
+to part instances specified by *instanceList</em>.</p></li>
+<li><p><strong>colorList</strong> – A sequence of three Ints specifying colors used to display the material instance
+assignments. This is a sequence of R,G,B colors, where the values are represented by
+integers between 0 and 255. The default value is an empty sequence.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="stress">
+<h3>Stress<a class="headerlink" href="#stress" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.Stress.Stress">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.Stress.</span></span><span class="sig-name descname"><span class="pre">Stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma11</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma22</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma33</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma12</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma13</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma23</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.Stress.Stress" title="Permalink to this definition"></a></dt>
+<dd><p>The Stress object stores the data for an initial stress predefined field.
+The Stress object is derived from the PredefinedField object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].predefinedFields[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>INITIAL CONDITIONS</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.Stress.Stress.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma11</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma22</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma33</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma12</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma13</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma23</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.Stress.Stress.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the Stress object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>distributionType</strong> – A SymbolicConstant specifying whether the load is uniform. Possible values are UNIFORM
+and FROM_FILE. The default value is UNIFORM.</p></li>
+<li><p><strong>sigma11</strong> – A Float specifying the first principal component of the stress.</p></li>
+<li><p><strong>sigma22</strong> – A Float specifying the second principal component of the stress.</p></li>
+<li><p><strong>sigma33</strong> – A Float specifying the third principal component of the stress.</p></li>
+<li><p><strong>sigma12</strong> – A Float specifying the first shear component of the stress.</p></li>
+<li><p><strong>sigma13</strong> – A Float specifying the second shear component of the stress.</p></li>
+<li><p><strong>sigma23</strong> – A Float specifying the third shear component of the stress.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="temperature">
+<h3>Temperature<a class="headerlink" href="#temperature" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.Temperature.Temperature">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.Temperature.</span></span><span class="sig-name descname"><span class="pre">Temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">createStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crossSectionDistribution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONSTANT_THROUGH_THICKNESS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNSET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitudes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteExteriorTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exteriorTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.Temperature.Temperature" title="Permalink to this definition"></a></dt>
+<dd><p>The Temperature object stores the data for temperature predefined fields.
+The Temperature object is derived from the PredefinedField object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].predefinedFields[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>INITIAL CONDITIONS</p></li>
+<li><p>TEMPERATURE</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.Temperature.Temperature.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fromStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.Temperature.Temperature.move" title="Permalink to this definition"></a></dt>
+<dd><p>This method moves the TemperatureState object from one step to a different step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fromStepName</strong> – A String specifying the name of the step from which the PredefinedFieldState is moved.</p></li>
+<li><p><strong>toStepName</strong> – A String specifying the name of the step to which the PredefinedFieldState is moved.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – TextError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.Temperature.Temperature.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crossSectionDistribution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONSTANT_THROUGH_THICKNESS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNSET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitudes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteExteriorTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exteriorTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.Temperature.Temperature.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the data for an existing Temperature object in the step where it is
+created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>distributionType</strong> – A SymbolicConstant specifying how the predefined field varies spatially. Possible values
+are UNIFORM, USER_DEFINED, FROM_FILE, FIELD, FROM_FILE_AND_USER_DEFINED, and
+DISCRETE_FIELD. The default value is UNIFORM.</p></li>
+<li><p><strong>crossSectionDistribution</strong> – A SymbolicConstant specifying how the predefined field is distributed over the cross
+section of the region. Possible values are
+- CONSTANT_THROUGH_THICKNESS
+- GRADIENTS_THROUGH_SHELL_CS
+- GRADIENTS_THROUGH_BEAM_CS
+- POINTS_THROUGH_SECTION
+The default value is CONSTANT_THROUGH_THICKNESS.</p></li>
+<li><p><strong>field</strong> – A String specifying the name of the AnalyticalField or DiscreteField object associated
+with this predefined field. The <em>field</em> argument applies only when
+<a href="#id125"><span class="problematic" id="id126">*</span></a>distributionType*=FIELD or <a href="#id127"><span class="problematic" id="id128">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an
+empty string.</p></li>
+<li><p><strong>amplitude</strong> – A String or the SymbolicConstant UNSET specifying the name of the amplitude reference.
+UNSET should be used if the predefined field has no amplitude reference. The default
+value is UNSET.Note:<em>amplitude</em> should be given only if it is valid for the specified
+step.</p></li>
+<li><p><strong>fileName</strong> – A String specifying the name of the file from which the temperature values are to be
+read when <a href="#id129"><span class="problematic" id="id130">*</span></a>distributionType*=FROM_FILE or <a href="#id131"><span class="problematic" id="id132">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p></li>
+<li><p><strong>beginStep</strong> – An Int specifying the first step from which temperature values are to be read or the
+SymbolicConstant FIRST_STEP or LAST_STEP. This argument is valid only when
+<a href="#id133"><span class="problematic" id="id134">*</span></a>distributionType*=FROM_FILE or <a href="#id135"><span class="problematic" id="id136">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>beginIncrement</strong> – An Int specifying the first increment of the step set in <em>beginStep</em> or the
+SymbolicConstants STEP_START or STEP_END. This argument is valid only when
+<a href="#id137"><span class="problematic" id="id138">*</span></a>distributionType*=FROM_FILE or <a href="#id139"><span class="problematic" id="id140">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>endStep</strong> – An Int specifying the last step from which temperature values are to be read or the
+SymbolicConstants FIRST_STEP and LAST_STEP. This argument is valid only when
+<a href="#id141"><span class="problematic" id="id142">*</span></a>distributionType*=FROM_FILE or <a href="#id143"><span class="problematic" id="id144">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>endIncrement</strong> – An Int specifying the last increment of the step set in <em>endStep</em> or the
+SymbolicConstants STEP_START and STEP_END. This argument is valid only when
+<a href="#id145"><span class="problematic" id="id146">*</span></a>distributionType*=FROM_FILE or <a href="#id147"><span class="problematic" id="id148">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>interpolate</strong> – A SymbolicConstant specifying whether to interpolate a field read from an output
+database or results file. Possible values are OFF, ON or MIDSIDE_ONLY. The default value
+is OFF.</p></li>
+<li><p><strong>magnitudes</strong> – A Sequence of Doubles specifying the temperature values when <em>distributionType*=UNIFORM
+or FIELD. The value of the *magnitudes</em> argument is a function of the
+<em>crossSectionDistribution</em> argument, as shown in the following list:
+- If <em>crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS then *magnitudes</em> is a Double
+specifying the temperature.
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS then *magnitudes</em> is a
+sequence of Doubles specifying the mean value and the gradient in the thickness
+direction.
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS then *magnitudes</em> is a
+sequence of Doubles specifying the mean value, the gradient in the N1 direction, and the
+gradient in the N2 direction.
+- If <em>crossSectionDistribution*=POINTS_THROUGH_SECTION then *magnitudes</em> is a sequence
+of Doubles specifying the temperature at each point.</p></li>
+<li><p><strong>absoluteExteriorTolerance</strong> – A Float specifying the absolute value by which a driven node of the field can lie
+outside the region of the elements of the global model. The default value is 0.0. This
+argument cannot be used with <em>midside</em>.</p></li>
+<li><p><strong>exteriorTolerance</strong> – A Float specifying the fraction of the average element size in the global model by which
+a driven node of the field can lie outside the region of the elements of the global
+model. The default value is 0.0. This argument cannot be used with <em>midside</em>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.Temperature.Temperature.setValuesInStep">
+<span class="sig-name descname"><span class="pre">setValuesInStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNSET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitudes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteExteriorTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exteriorTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.Temperature.Temperature.setValuesInStep" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the propagating data for an existing Temperature object in the
+specified step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stepName</strong> – A String specifying the name of the step in which the predefined field is modified.</p></li>
+<li><p><strong>field</strong> – A String specifying the name of the AnalyticalField or DiscreteField object associated
+with this predefined field. The <em>field</em> argument applies only when
+<a href="#id149"><span class="problematic" id="id150">*</span></a>distributionType*=FIELD or <a href="#id151"><span class="problematic" id="id152">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an
+empty string.</p></li>
+<li><p><strong>amplitude</strong> – A String or the SymbolicConstant UNSET specifying the name of the amplitude reference.
+UNSET should be used if the predefined field has no amplitude reference. The default
+value is UNSET.Note:<em>amplitude</em> should be given only if it is valid for the specified
+step.</p></li>
+<li><p><strong>fileName</strong> – A String specifying the name of the file from which the temperature values are to be
+read when <a href="#id153"><span class="problematic" id="id154">*</span></a>distributionType*=FROM_FILE or <a href="#id155"><span class="problematic" id="id156">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p></li>
+<li><p><strong>beginStep</strong> – An Int specifying the first step from which temperature values are to be read or the
+SymbolicConstant FIRST_STEP or LAST_STEP. This argument is valid only when
+<a href="#id157"><span class="problematic" id="id158">*</span></a>distributionType*=FROM_FILE or <a href="#id159"><span class="problematic" id="id160">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>beginIncrement</strong> – An Int specifying the first increment of the step set in <em>beginStep</em> or the
+SymbolicConstants STEP_START or STEP_END. This argument is valid only when
+<a href="#id161"><span class="problematic" id="id162">*</span></a>distributionType*=FROM_FILE or <a href="#id163"><span class="problematic" id="id164">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>endStep</strong> – An Int specifying the last step from which temperature values are to be read or the
+SymbolicConstants FIRST_STEP and LAST_STEP. This argument is valid only when
+<a href="#id165"><span class="problematic" id="id166">*</span></a>distributionType*=FROM_FILE or <a href="#id167"><span class="problematic" id="id168">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>endIncrement</strong> – An Int specifying the last increment of the step set in <em>endStep</em> or the
+SymbolicConstants STEP_START and STEP_END. This argument is valid only when
+<a href="#id169"><span class="problematic" id="id170">*</span></a>distributionType*=FROM_FILE or <a href="#id171"><span class="problematic" id="id172">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The
+default value is None.</p></li>
+<li><p><strong>interpolate</strong> – A SymbolicConstant specifying whether to interpolate a field read from an output
+database or results file. Possible values are OFF, ON or MIDSIDE_ONLY. The default value
+is OFF.</p></li>
+<li><p><strong>magnitudes</strong> – A Sequence of Doubles specifying the temperature values when <em>distributionType*=UNIFORM
+or FIELD. The value of the *magnitudes</em> argument is a function of the
+<em>crossSectionDistribution</em> argument, as shown in the following list:
+- If <em>crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS then *magnitudes</em> is a Double
+specifying the temperature.
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS then *magnitudes</em> is a
+sequence of Doubles specifying the mean value and the gradient in the thickness
+direction.
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS then *magnitudes</em> is a
+sequence of Doubles specifying the mean value, the gradient in the N1 direction, and the
+gradient in the N2 direction.
+- If <em>crossSectionDistribution*=POINTS_THROUGH_SECTION then *magnitudes</em> is a sequence
+of Doubles specifying the temperature at each point.</p></li>
+<li><p><strong>absoluteExteriorTolerance</strong> – A Float specifying the absolute value by which a driven node of the field can lie
+outside the region of the elements of the global model. The default value is 0.0. This
+argument cannot be used with <em>midside</em>.</p></li>
+<li><p><strong>exteriorTolerance</strong> – A Float specifying the fraction of the average element size in the global model by which
+a driven node of the field can lie outside the region of the elements of the global
+model. The default value is 0.0. This argument cannot be used with <em>midside</em>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="temperaturestate">
+<h3>TemperatureState<a class="headerlink" href="#temperaturestate" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.TemperatureState.TemperatureState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.TemperatureState.</span></span><span class="sig-name descname"><span class="pre">TemperatureState</span></span><a class="headerlink" href="#abaqus.PredefinedField.TemperatureState.TemperatureState" title="Permalink to this definition"></a></dt>
+<dd><p>The TemperatureState object stores the propagating data of a temperature in a step. One
+instance of this object is created internally by the Temperature object for each step.
+The TemperatureState object has no constructor or methods.
+The TemperatureState object is derived from the PredefinedFieldState object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].steps[name].predefinedFieldStates[name]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="tiffoptions">
+<h3>TiffOptions<a class="headerlink" href="#tiffoptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.TiffOptions.TiffOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.TiffOptions.</span></span><span class="sig-name descname"><span class="pre">TiffOptions</span></span><a class="headerlink" href="#abaqus.PredefinedField.TiffOptions.TiffOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The TiffOptions object stores the settings that Abaqus uses when printing in TIFF
+format. The TiffOptions object has no constructor. Abaqus creates the <em>tiffOptions</em>
+member when a session is started.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.tiffOptions</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.TiffOptions.TiffOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imageSize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SIZE_ON_SCREEN'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.TiffOptions.TiffOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the TiffOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imageSize</strong> – The SymbolicConstant SIZE_ON_SCREEN or a pair of Ints specifying the width and height of
+the image in pixels. Possible values are (<em>minWidth</em>, <em>minHeight</em>) ≤≤ <em>imageSize</em> ≤≤
+(<em>maxWidth</em> and <em>maxHeight</em>). The default value is SIZE_ON_SCREEN.
+Note:The minimum value of width and height (<em>minWidth</em> and <em>minHeight</em> ) is the number
+of pixels that occupy 10 mm at the current screen resolution. The value is typically
+around 50 pixels and may be different for width and height.
+The maximum value of width and height (<em>maxWidth</em> and <em>maxHeight</em> ) is the largest
+number of pixels supported by the system graphics and will be at least as large as the
+screen dimensions.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – <p>RangeError.
+- If either the width or height arguments of <em>imageSize</em> are out of range (where
+<em>minWidth</em> and <em>minHeight</em> are the number of pixels corresponding to approximately 10 mm
+for a given display and <em>maxWidth</em> and <em>maxHeight</em> are the largest allowable number of
+pixels supported by the system graphics):</p>
+<blockquote>
+<div><p>RangeError: imageSize must be SIZE_ON_SCREEN or a sequence of 2 Ints in the range</p>
+</div></blockquote>
+<p>(minWidth, minHeight) &lt;= (width, height) &lt;= (maxWidth, maxHeight).</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="velocity">
+<h3>Velocity<a class="headerlink" href="#velocity" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.Velocity.Velocity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PredefinedField.Velocity.</span></span><span class="sig-name descname"><span class="pre">Velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisBegin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisEnd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MAGNITUDE'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.Velocity.Velocity" title="Permalink to this definition"></a></dt>
+<dd><p>The Velocity object stores the data for an initial velocity predefined field.
+The Velocity object is derived from the PredefinedField object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].predefinedFields[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>INITIAL CONDITIONS</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PredefinedField.Velocity.Velocity.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MAGNITUDE'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PredefinedField.Velocity.Velocity.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the Velocity object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>field</strong> – A String specifying the name of the AnalyticalField object associated with this
+predefined field. The <em>field</em> argument applies only when
+<a href="#id173"><span class="problematic" id="id174">*</span></a>distributionType*=FIELD_ANALYTICAL. The default value is an empty string.</p></li>
+<li><p><strong>distributionType</strong> – A SymbolicConstant specifying whether the load is uniform. Possible values are MAGNITUDE
+and FIELD_ANALYTICAL. The default value is MAGNITUDE.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plot_options.html" class="btn btn-neutral float-left" title="PlotOptions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="print.html" class="btn btn-neutral float-right" title="Print" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

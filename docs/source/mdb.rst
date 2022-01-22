@@ -2,18 +2,18 @@
 Mdb object
 ==========
 
-The Mdb object is the high-level Abaqus model database. A model database stores models and analysis controls.
+Mdb commands are used to create and upgrade an Abaqus model database that stores models and analysis controls.
 
 
-Access
-------
-
-- `mdb`
-
-
-Features of the mdb object
---------------------------
+Create models
+-------------
 
 .. autoclass:: abaqus.Mdb.Mdb.Mdb
     :members:
-    :inherited-members:
+
+
+Object features
+---------------
+
+.. autoclass:: abaqus.Mdb.MdbBase.MdbBase
+    :members:

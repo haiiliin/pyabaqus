@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>abaqus.Tools.JobMonitor package &mdash; pyabaqus 1.0.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Reference manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>abaqus.Tools.JobMonitor package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/abaqus.Tools.JobMonitor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="abaqus-tools-jobmonitor-package">
+<h1>abaqus.Tools.JobMonitor package<a class="headerlink" href="#abaqus-tools-jobmonitor-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-abaqus.Tools.JobMonitor.FileMonitorThread">
+<span id="abaqus-tools-jobmonitor-filemonitorthread-module"></span><h2>abaqus.Tools.JobMonitor.FileMonitorThread module<a class="headerlink" href="#module-abaqus.Tools.JobMonitor.FileMonitorThread" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Tools.JobMonitor.FileMonitorThread.</span></span><span class="sig-name descname"><span class="pre">FileMonitorThread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workDirectory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jobName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtCore.QThread</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread.generateFilePaths">
+<span class="sig-name descname"><span class="pre">generateFilePaths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread.generateFilePaths" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread.readyReadCmdText">
+<span class="sig-name descname"><span class="pre">readyReadCmdText</span></span><a class="headerlink" href="#abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread.readyReadCmdText" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread.readyReadMessageFile">
+<span class="sig-name descname"><span class="pre">readyReadMessageFile</span></span><a class="headerlink" href="#abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread.readyReadMessageFile" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread.readyReadStatusFile">
+<span class="sig-name descname"><span class="pre">readyReadStatusFile</span></span><a class="headerlink" href="#abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread.readyReadStatusFile" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread.run" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread.setJobName">
+<span class="sig-name descname"><span class="pre">setJobName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread.setJobName" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread.setWorkDirectory">
+<span class="sig-name descname"><span class="pre">setWorkDirectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workDirectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.FileMonitorThread.FileMonitorThread.setWorkDirectory" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Tools.JobMonitor.JobMonitor">
+<span id="abaqus-tools-jobmonitor-jobmonitor-module"></span><h2>abaqus.Tools.JobMonitor.JobMonitor module<a class="headerlink" href="#module-abaqus.Tools.JobMonitor.JobMonitor" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.JobMonitor.JobMonitor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Tools.JobMonitor.JobMonitor.</span></span><span class="sig-name descname"><span class="pre">JobMonitor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workDirectory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jobName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.JobMonitor.JobMonitor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtWidgets.QMainWindow</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.findText">
+<span class="sig-name descname"><span class="pre">findText</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.findText" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.keyPressEvent">
+<span class="sig-name descname"><span class="pre">keyPressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">QKeyEvent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.keyPressEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.run" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.setJobName">
+<span class="sig-name descname"><span class="pre">setJobName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.setJobName" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.setMessageFileText">
+<span class="sig-name descname"><span class="pre">setMessageFileText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.setMessageFileText" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.setStatusFileText">
+<span class="sig-name descname"><span class="pre">setStatusFileText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.setStatusFileText" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.setText">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToSetText</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PyQt5.QtWidgets.QPlainTextEdit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.setText" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.setWorkDirectory">
+<span class="sig-name descname"><span class="pre">setWorkDirectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workDirectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.setWorkDirectory" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.showFoundText">
+<span class="sig-name descname"><span class="pre">showFoundText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">findNext</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.JobMonitor.JobMonitor.showFoundText" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Tools.JobMonitor.TextFinder">
+<span id="abaqus-tools-jobmonitor-textfinder-module"></span><h2>abaqus.Tools.JobMonitor.TextFinder module<a class="headerlink" href="#module-abaqus.Tools.JobMonitor.TextFinder" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.TextFinder.TextFinder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Tools.JobMonitor.TextFinder.</span></span><span class="sig-name descname"><span class="pre">TextFinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.TextFinder.TextFinder" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.TextFinder.TextFinder.findNext">
+<span class="sig-name descname"><span class="pre">findNext</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.TextFinder.TextFinder.findNext" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.TextFinder.TextFinder.findPrevious">
+<span class="sig-name descname"><span class="pre">findPrevious</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.TextFinder.TextFinder.findPrevious" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.TextFinder.TextFinder.readyToFind">
+<span class="sig-name descname"><span class="pre">readyToFind</span></span><a class="headerlink" href="#abaqus.Tools.JobMonitor.TextFinder.TextFinder.readyToFind" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.TextFinder.TextFinder.textToFind">
+<span class="sig-name descname"><span class="pre">textToFind</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.TextFinder.TextFinder.textToFind" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Tools.JobMonitor.Ui_JobMonitor">
+<span id="abaqus-tools-jobmonitor-ui-jobmonitor-module"></span><h2>abaqus.Tools.JobMonitor.Ui_JobMonitor module<a class="headerlink" href="#module-abaqus.Tools.JobMonitor.Ui_JobMonitor" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.Ui_JobMonitor.Ui_JobMonitor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Tools.JobMonitor.Ui_JobMonitor.</span></span><span class="sig-name descname"><span class="pre">Ui_JobMonitor</span></span><a class="headerlink" href="#abaqus.Tools.JobMonitor.Ui_JobMonitor.Ui_JobMonitor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.Ui_JobMonitor.Ui_JobMonitor.retranslateUi">
+<span class="sig-name descname"><span class="pre">retranslateUi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">JobMonitor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.Ui_JobMonitor.Ui_JobMonitor.retranslateUi" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.Ui_JobMonitor.Ui_JobMonitor.setupUi">
+<span class="sig-name descname"><span class="pre">setupUi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">JobMonitor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.Ui_JobMonitor.Ui_JobMonitor.setupUi" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Tools.JobMonitor.Ui_TextFinder">
+<span id="abaqus-tools-jobmonitor-ui-textfinder-module"></span><h2>abaqus.Tools.JobMonitor.Ui_TextFinder module<a class="headerlink" href="#module-abaqus.Tools.JobMonitor.Ui_TextFinder" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.Ui_TextFinder.Ui_TextFinder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Tools.JobMonitor.Ui_TextFinder.</span></span><span class="sig-name descname"><span class="pre">Ui_TextFinder</span></span><a class="headerlink" href="#abaqus.Tools.JobMonitor.Ui_TextFinder.Ui_TextFinder" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.Ui_TextFinder.Ui_TextFinder.retranslateUi">
+<span class="sig-name descname"><span class="pre">retranslateUi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">TextFinder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.Ui_TextFinder.Ui_TextFinder.retranslateUi" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Tools.JobMonitor.Ui_TextFinder.Ui_TextFinder.setupUi">
+<span class="sig-name descname"><span class="pre">setupUi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">TextFinder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Tools.JobMonitor.Ui_TextFinder.Ui_TextFinder.setupUi" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Tools.JobMonitor">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-abaqus.Tools.JobMonitor" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

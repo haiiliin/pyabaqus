@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>abaqus.PathAndProbe package &mdash; pyabaqus 1.0.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Reference manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>abaqus.PathAndProbe package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/abaqus.PathAndProbe.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="abaqus-pathandprobe-package">
+<h1>abaqus.PathAndProbe package<a class="headerlink" href="#abaqus-pathandprobe-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-abaqus.PathAndProbe.CurrentProbeValues">
+<span id="abaqus-pathandprobe-currentprobevalues-module"></span><h2>abaqus.PathAndProbe.CurrentProbeValues module<a class="headerlink" href="#module-abaqus.PathAndProbe.CurrentProbeValues" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.CurrentProbeValues.CurrentProbeValues">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PathAndProbe.CurrentProbeValues.</span></span><span class="sig-name descname"><span class="pre">CurrentProbeValues</span></span><a class="headerlink" href="#abaqus.PathAndProbe.CurrentProbeValues.CurrentProbeValues" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The CurrentProbeValues object has no constructor. The CurrentProbeValues object is
+created when you import the Visualization module.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.currentProbeValues</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.CurrentProbeValues.CurrentProbeValues.values">
+<span class="sig-name descname"><span class="pre">values</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.PathAndProbe.CurrentProbeValues.CurrentProbeValues.values" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.PathAndProbe.FreeBody">
+<span id="abaqus-pathandprobe-freebody-module"></span><h2>abaqus.PathAndProbe.FreeBody module<a class="headerlink" href="#module-abaqus.PathAndProbe.FreeBody" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.FreeBody.FreeBody">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PathAndProbe.FreeBody.</span></span><span class="sig-name descname"><span class="pre">FreeBody</span></span><a class="headerlink" href="#abaqus.PathAndProbe.FreeBody.FreeBody" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The FreeBody object defines a section across which resultant forces and moments are
+computed.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.freeBodies[name]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.FreeBody.FreeBody.FreeBodyFromEdges">
+<span class="sig-name descname"><span class="pre">FreeBodyFromEdges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summationLoc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CENTROID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summationPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">componentResolution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NORMAL_TANGENTIAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csysName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PathAndProbe.FreeBody.FreeBody.FreeBodyFromEdges" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a FreeBody object and places it in the freeBodies repository.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.FreeBodyFromEdges</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A string name for the free body.</p></li>
+<li><p><strong>edges</strong> – A DisplayGroup leaf object that specifies the physical constituents of the free body.</p></li>
+<li><p><strong>summationLoc</strong> – A SymbolicConstant specifying the location of the summation point. Possible values are
+CENTROID, NODAL_AVERAGE and SPECIFY. The default value is CENTROID.</p></li>
+<li><p><strong>summationPoint</strong> – A tuple of 3 floats specifying the summation point.</p></li>
+<li><p><strong>componentResolution</strong> – A SymbolicConstant specifying the component resolution. Possible values are
+NORMAL_TANGENTIAL and CSYS. The default value is NORMAL_TANGENTIAL.</p></li>
+<li><p><strong>csysName</strong> – A string specifying the name of the coordinate system.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">FreeBody</span> <span class="pre">object.</span> <span class="pre">.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.FreeBody.FreeBody.FreeBodyFromFaces">
+<span class="sig-name descname"><span class="pre">FreeBodyFromFaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">faces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summationLoc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CENTROID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summationPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">componentResolution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NORMAL_TANGENTIAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csysName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PathAndProbe.FreeBody.FreeBody.FreeBodyFromFaces" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a FreeBody object and places it in the freeBodies repository.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.FreeBodyFromFaces</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A string name for the free body.</p></li>
+<li><p><strong>faces</strong> – A DisplayGroup leaf object that specifies the physical constituents of the free body.</p></li>
+<li><p><strong>summationLoc</strong> – A SymbolicConstant specifying the location of the summation point. Possible values are
+CENTROID, NODAL_AVERAGE and SPECIFY. The default value is CENTROID.</p></li>
+<li><p><strong>summationPoint</strong> – A tuple of 3 floats specifying the summation point.</p></li>
+<li><p><strong>componentResolution</strong> – A SymbolicConstant specifying the component resolution. Possible values are
+NORMAL_TANGENTIAL and CSYS. The default value is NORMAL_TANGENTIAL.</p></li>
+<li><p><strong>csysName</strong> – A string specifying the name of the coordinate system.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">FreeBody</span> <span class="pre">object.</span> <span class="pre">.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.FreeBody.FreeBody.FreeBodyFromNodesElements">
+<span class="sig-name descname"><span class="pre">FreeBodyFromNodesElements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summationLoc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CENTROID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summationPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">componentResolution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NORMAL_TANGENTIAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csysName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PathAndProbe.FreeBody.FreeBody.FreeBodyFromNodesElements" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a FreeBody object and places it in the freeBodies repository.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.FreeBodyFromNodesElements</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A string name for the free body.</p></li>
+<li><p><strong>elements</strong> – A DisplayGroup leaf object that specifies the physical constituents of the free body.</p></li>
+<li><p><strong>nodes</strong> – A DisplayGroup leaf object that specifies the physical constituents of the free body.</p></li>
+<li><p><strong>summationLoc</strong> – A SymbolicConstant specifying the location of the summation point. Possible values are
+CENTROID, NODAL_AVERAGE and SPECIFY. The default value is CENTROID.</p></li>
+<li><p><strong>summationPoint</strong> – A tuple of 3 floats specifying the summation point.</p></li>
+<li><p><strong>componentResolution</strong> – A SymbolicConstant specifying the component resolution. Possible values are
+NORMAL_TANGENTIAL and CSYS. The default value is NORMAL_TANGENTIAL.</p></li>
+<li><p><strong>csysName</strong> – A string specifying the name of the coordinate system.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">FreeBody</span> <span class="pre">object.</span> <span class="pre">.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.PathAndProbe.NodeQuery">
+<span id="abaqus-pathandprobe-nodequery-module"></span><h2>abaqus.PathAndProbe.NodeQuery module<a class="headerlink" href="#module-abaqus.PathAndProbe.NodeQuery" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.NodeQuery.NodeQuery">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PathAndProbe.NodeQuery.</span></span><span class="sig-name descname"><span class="pre">NodeQuery</span></span><a class="headerlink" href="#abaqus.PathAndProbe.NodeQuery.NodeQuery" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The NodeQuery object specifies nodes and their coordinates in a path. The NodeQuery
+object has no constructor or methods. Abaqus creates the <em>nodeQuery</em> member when you
+import the visualization module.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.nodeQuery</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.NodeQuery.NodeQuery.nodeId">
+<span class="sig-name descname"><span class="pre">nodeId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.PathAndProbe.NodeQuery.NodeQuery.nodeId" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.NodeQuery.NodeQuery.nodePos">
+<span class="sig-name descname"><span class="pre">nodePos</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.PathAndProbe.NodeQuery.NodeQuery.nodePos" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.PathAndProbe.Path">
+<span id="abaqus-pathandprobe-path-module"></span><h2>abaqus.PathAndProbe.Path module<a class="headerlink" href="#module-abaqus.PathAndProbe.Path" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.Path.Path">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PathAndProbe.Path.</span></span><span class="sig-name descname"><span class="pre">Path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expression</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circleDefinition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numSegments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radialAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PathAndProbe.Path.Path" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Path object defines a line through your model by specifying a series of nodes or
+points.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.paths[name]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.Path.Path.coordinates">
+<span class="sig-name descname"><span class="pre">coordinates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#abaqus.PathAndProbe.Path.Path.coordinates" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.PathAndProbe.PathSession">
+<span id="abaqus-pathandprobe-pathsession-module"></span><h2>abaqus.PathAndProbe.PathSession module<a class="headerlink" href="#module-abaqus.PathAndProbe.PathSession" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.PathSession.PathSession">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PathAndProbe.PathSession.</span></span><span class="sig-name descname"><span class="pre">PathSession</span></span><a class="headerlink" href="#abaqus.PathAndProbe.PathSession.PathSession" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="abaqus.Session.html#abaqus.Session.SessionBase.SessionBase" title="abaqus.Session.SessionBase.SessionBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Session.SessionBase.SessionBase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.PathSession.PathSession.Path">
+<span class="sig-name descname"><span class="pre">Path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expression</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circleDefinition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numSegments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radialAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.PathAndProbe.Path.Path" title="abaqus.PathAndProbe.Path.Path"><span class="pre">abaqus.PathAndProbe.Path.Path</span></a></span></span><a class="headerlink" href="#abaqus.PathAndProbe.PathSession.PathSession.Path" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a Path object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.Path</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>type</strong> – A SymbolicConstant specifying the type of path being created. Possible values are
+NODE_LIST, POINT_LIST, EDGE_LIST, CIRCUMFERENTIAL, and RADIAL.</p></li>
+<li><p><strong>expression</strong> – A sequence specifying the nodes or points that make up the path. The definition of the
+path expression depends on the <em>type</em> argument.
+- If <em>type*=NODE_LIST, *expression</em> must be a sequence of sequences. Each inner sequence
+contains two items, the first item is a String specifying the name of a part instance,
+and the second item can be either a sequence of Ints or a sequence of Strings, each
+specifying a range of Ints.
+- If <em>type*=POINT_LIST, *expression</em> must be a sequence of tuples of three Floats,
+specifying the coordinates of each point.
+- If <em>type*=EDGE_LIST, *expression</em> must be a sequence of sequences. Each inner sequence
+contains two items, the first item is a String specifying the name of the part instance,
+and the second item is a sequence of tuples of four Ints that uniquely identify an
+element edge. The four Ints are:
+1. The element label.
+2. The element face index (one-based).
+3. The face edge index (one-based).
+4. The edge direction. A positive number specifies that the edge direction runs from the
+edge start node to the edge end node. A negative number specifies the opposite.
+- When <em>type*=CIRCUMFERENTIAL or RADIAL, *expression</em> must be a sequence of three tuples
+of three Floats, specifying the coordinates of the points used to define a coordinate
+system.</p></li>
+<li><p><strong>circleDefinition</strong> – A SymbolicConstant specifying the method in which the circle is being defined. This
+argument is valid only when <em>type*=CIRCUMFERENTIAL or RADIAL. Possible values are
+ORIGIN_AXIS and POINT_ARC.When the value is ORIGIN_AXIS, the first two points in
+*expression</em> are points on the rotational axis and the third point lies on the x-axis.
+When the value is POINT_ARC, the three points in <em>expression</em> are points lying on the
+arc of the circle.</p></li>
+<li><p><strong>numSegments</strong> – An Int specifying the number of equal segments in the path. This argument is valid only
+when <a href="#id1"><span class="problematic" id="id2">*</span></a>type*=CIRCUMFERENTIAL or RADIAL.</p></li>
+<li><p><strong>startAngle</strong> – A Float specifying the start angle of the circumferential path. This argument is valid
+only when <a href="#id3"><span class="problematic" id="id4">*</span></a>type*=CIRCUMFERENTIAL.</p></li>
+<li><p><strong>endAngle</strong> – A Float specifying the end angle of the circumferential path. This argument is valid
+only when <a href="#id5"><span class="problematic" id="id6">*</span></a>type*=CIRCUMFERENTIAL.</p></li>
+<li><p><strong>radius</strong> – The SymbolicConstant CIRCLE_RADIUS or a Float specifying the radius of the
+circumferential path. This argument is valid only when <a href="#id7"><span class="problematic" id="id8">*</span></a>type*=CIRCUMFERENTIAL.</p></li>
+<li><p><strong>radialAngle</strong> – A Float specifying the angle between the radial path and the <em>X</em>-axis of the specified
+coordinate system. This argument is valid only when <a href="#id9"><span class="problematic" id="id10">*</span></a>type*=RADIAL.</p></li>
+<li><p><strong>startRadius</strong> – The SymbolicConstant CIRCLE_RADIUS or a Float specifying the start radius of the radial
+path. This argument is valid only when <a href="#id11"><span class="problematic" id="id12">*</span></a>type*=RADIAL.</p></li>
+<li><p><strong>endRadius</strong> – The SymbolicConstant CIRCLE_RADIUS or a Float specifying the end radius of the radial
+path. This argument is valid only when <a href="#id13"><span class="problematic" id="id14">*</span></a>type*=RADIAL.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Path</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ModelError, ErrorUnsupportedNodeData, ErrorUnsupportedPointData, ErrorIncorrectPathData,
+KeyError, ErrorEmptyPathName, ErrorPathNotFound, and ErrorNoOdbPathDisplay.
+ValueError: When <em>type*=CIRCUMFERENTIAL or RADIAL, the three points specified in
+*expression</em> are collinear.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.PathSession.PathSession.Spectrum">
+<span class="sig-name descname"><span class="pre">Spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.PathAndProbe.Spectrum.Spectrum" title="abaqus.PathAndProbe.Spectrum.Spectrum"><span class="pre">abaqus.PathAndProbe.Spectrum.Spectrum</span></a></span></span><a class="headerlink" href="#abaqus.PathAndProbe.PathSession.PathSession.Spectrum" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a Spectrum object and places it in the spectrums repository.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.Spectrum</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A string name for the spectrum.</p></li>
+<li><p><strong>colors</strong> – A sequence of strings indicating the colors of the spectrum.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Spectrum</span> <span class="pre">object..</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.PathSession.PathSession.Stream">
+<span class="sig-name descname"><span class="pre">Stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numPointsOnRake</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointA</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.PathAndProbe.Stream.Stream" title="abaqus.PathAndProbe.Stream.Stream"><span class="pre">abaqus.PathAndProbe.Stream.Stream</span></a></span></span><a class="headerlink" href="#abaqus.PathAndProbe.PathSession.PathSession.Stream" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates aStream object and places it in the streams repository.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.Stream</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A string name for the stream.</p></li>
+<li><p><strong>numPointsOnRake</strong> – An integer specifying the number of points along the rake.</p></li>
+<li><p><strong>pointA</strong> – A tuple of 3 floats specifying the starting point of the rake. Alternatively, a string
+representation of the node selected in the viewport.</p></li>
+<li><p><strong>pointB</strong> – A tuple of 3 floats specifying the end point of the rake. Alternatively, a string
+representation of the node selected in the viewport.</p></li>
+<li><p><strong>path</strong> – APath object that specifies the rake.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Stream</span> <span class="pre">object..</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.PathAndProbe.ProbeOptions">
+<span id="abaqus-pathandprobe-probeoptions-module"></span><h2>abaqus.PathAndProbe.ProbeOptions module<a class="headerlink" href="#module-abaqus.PathAndProbe.ProbeOptions" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PathAndProbe.ProbeOptions.</span></span><span class="sig-name descname"><span class="pre">ProbeOptions</span></span><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The ProbeOptions object is used to store settings associated with probing a model or an
+<em>X–Y</em> plot. The ProbeOptions object has no constructor. Abaqus creates the
+<em>defaultProbeOptions</em> and the <em>probeOptions</em> members when you import the Visualization
+module. When probing is initiated for the first time, the values in the <em>probeOptions</em>
+member are initialized using the values from the <em>defaultProbeOptions</em> member.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.defaultProbeOptions</p></li>
+<li><p>session.probeOptions</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.attachedElements">
+<span class="sig-name descname"><span class="pre">attachedElements</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.attachedElements" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.baseCoordinates">
+<span class="sig-name descname"><span class="pre">baseCoordinates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.baseCoordinates" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.deformedCoordinates">
+<span class="sig-name descname"><span class="pre">deformedCoordinates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.deformedCoordinates" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.elementConnectivity">
+<span class="sig-name descname"><span class="pre">elementConnectivity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.elementConnectivity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.elementFieldResults">
+<span class="sig-name descname"><span class="pre">elementFieldResults</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.elementFieldResults" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.elementID">
+<span class="sig-name descname"><span class="pre">elementID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.elementID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.elementType">
+<span class="sig-name descname"><span class="pre">elementType</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.elementType" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.interpolateXy">
+<span class="sig-name descname"><span class="pre">interpolateXy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.interpolateXy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.isFieldOutputAvailable">
+<span class="sig-name descname"><span class="pre">isFieldOutputAvailable</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.isFieldOutputAvailable" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.legend">
+<span class="sig-name descname"><span class="pre">legend</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.legend" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.nodeFieldResults">
+<span class="sig-name descname"><span class="pre">nodeFieldResults</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.nodeFieldResults" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.nodeId">
+<span class="sig-name descname"><span class="pre">nodeId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.nodeId" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.partInstance">
+<span class="sig-name descname"><span class="pre">partInstance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.partInstance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.probeEntity">
+<span class="sig-name descname"><span class="pre">probeEntity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ELEMENT'</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.probeEntity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.probeObject">
+<span class="sig-name descname"><span class="pre">probeObject</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.probeObject" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.probeOutputPosition">
+<span class="sig-name descname"><span class="pre">probeOutputPosition</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.probeOutputPosition" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.sequenceID">
+<span class="sig-name descname"><span class="pre">sequenceID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.sequenceID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions" title="abaqus.PathAndProbe.ProbeOptions.ProbeOptions"><span class="pre">abaqus.PathAndProbe.ProbeOptions.ProbeOptions</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probeEntity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ELEMENT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probeOutputPosition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partInstance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementConnectivity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementFieldResults</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseCoordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deformedCoordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attachedElements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeFieldResults</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xValue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yValue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequenceID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolateXy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the settings on the ProbeOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>options</strong> – A ProbeOptions object from which values are to be copied. If other arguments are also
+supplied to setValues, they will override the values in <em>options</em>. The default value is
+None.</p></li>
+<li><p><strong>probeEntity</strong> – A SymbolicConstant specifying the entity being probed when <a href="#id15"><span class="problematic" id="id16">*</span></a>probeObject*=”ODB”. Possible
+values are NODE and ELEMENT. The default value is ELEMENT.</p></li>
+<li><p><strong>probeOutputPosition</strong> – A SymbolicConstant specifying the output position to probe for field output results when
+<a href="#id17"><span class="problematic" id="id18">*</span></a>probeObject*=”ODB”. Possible values are NODAL, INTEGRATION_POINT, ELEMENT_FACE,
+ELEMENT_NODAL, and ELEMENT_CENTROID.When <a href="#id19"><span class="problematic" id="id20">*</span></a>probeEntity*=NODE, the only possible value is
+NODAL. When <a href="#id21"><span class="problematic" id="id22">*</span></a>probeEntity*=ELEMENT, the only possible values are INTEGRATION_POINT,
+ELEMENT_FACE, ELEMENT_NODAL, and ELEMENT_CENTROID, and the default is INTEGRATION_POINT.</p></li>
+<li><p><strong>partInstance</strong> – A Boolean specifying whether to display the part instance information. This member is
+valid when <a href="#id23"><span class="problematic" id="id24">*</span></a>probeObject*=ODB. The default value is ON.</p></li>
+<li><p><strong>elementID</strong> – A Boolean specifying whether to display the element ID information. This member is valid
+when <a href="#id25"><span class="problematic" id="id26">*</span></a>probeObject*=ODB and <a href="#id27"><span class="problematic" id="id28">*</span></a>probeEntity*=ELEMENT. The default value is ON.</p></li>
+<li><p><strong>elementType</strong> – A Boolean specifying whether to display the element type information. This member is
+valid when <a href="#id29"><span class="problematic" id="id30">*</span></a>probeObject*=ODB and <a href="#id31"><span class="problematic" id="id32">*</span></a>probeEntity*=ELEMENT. The default value is ON.</p></li>
+<li><p><strong>elementConnectivity</strong> – A Boolean specifying whether to display the element connectivity. This member is valid
+when <a href="#id33"><span class="problematic" id="id34">*</span></a>probeObject*=ODB and <a href="#id35"><span class="problematic" id="id36">*</span></a>probeEntity*=ELEMENT. The default value is ON.</p></li>
+<li><p><strong>elementFieldResults</strong> – A Boolean specifying whether to display the element field output results. This member is
+valid when <a href="#id37"><span class="problematic" id="id38">*</span></a>probeObject*=ODB, <a href="#id39"><span class="problematic" id="id40">*</span></a>probeEntity*=ELEMENT, and <a href="#id41"><span class="problematic" id="id42">*</span></a>isFieldOutputAvailable*=ON.
+The default value is ON.</p></li>
+<li><p><strong>nodeId</strong> – A Boolean specifying whether to display the node ID when <a href="#id43"><span class="problematic" id="id44">*</span></a>probeObject*=ODB and
+<a href="#id45"><span class="problematic" id="id46">*</span></a>probeEntity*=NODE. The default value is ON.</p></li>
+<li><p><strong>baseCoordinates</strong> – A Boolean specifying whether to display the base coordinates of a node when
+<a href="#id47"><span class="problematic" id="id48">*</span></a>probeObject*=ODB and <a href="#id49"><span class="problematic" id="id50">*</span></a>probeEntity*=NODE. The default value is ON.</p></li>
+<li><p><strong>deformedCoordinates</strong> – A Boolean specifying whether to display the deformed coordinates of a node when
+<a href="#id51"><span class="problematic" id="id52">*</span></a>probeObject*=ODB and <a href="#id53"><span class="problematic" id="id54">*</span></a>probeEntity*=NODE. The default value is ON.</p></li>
+<li><p><strong>attachedElements</strong> – A Boolean specifying whether to display the elements attached to a node when
+<a href="#id55"><span class="problematic" id="id56">*</span></a>probeObject*=ODB and <a href="#id57"><span class="problematic" id="id58">*</span></a>probeEntity*=NODE. The default value is ON.</p></li>
+<li><p><strong>nodeFieldResults</strong> – A Boolean specifying whether to display the node field output results. This member is
+valid when <a href="#id59"><span class="problematic" id="id60">*</span></a>probeObject*=ODB, <a href="#id61"><span class="problematic" id="id62">*</span></a>probeEntity*=NODE, and <a href="#id63"><span class="problematic" id="id64">*</span></a>isFieldOutputAvailable*=ON. The
+default value is ON.</p></li>
+<li><p><strong>legend</strong> – A Boolean specifying whether to display the legend for a curve being probed. This member
+is valid when <a href="#id65"><span class="problematic" id="id66">*</span></a>probeObject*=XYPlot. The default value is ON.</p></li>
+<li><p><strong>xValue</strong> – A Boolean specifying whether to display the <em>x</em>-coordinate value of the point on the
+curve being probed. This member is valid when <a href="#id67"><span class="problematic" id="id68">*</span></a>probeObject*=XYPlot. The default value is
+ON.</p></li>
+<li><p><strong>yValue</strong> – A Boolean specifying whether to display the <em>y</em>-coordinate value of the point on the
+curve being probed. This member is valid when <a href="#id69"><span class="problematic" id="id70">*</span></a>probeObject*=XYPlot. The default value is
+ON.</p></li>
+<li><p><strong>sequenceID</strong> – A Boolean specifying whether to display the sequence ID of the point on the curve being
+probed. This member is valid when <a href="#id71"><span class="problematic" id="id72">*</span></a>probeObject*=XYPlot. The default value is ON.</p></li>
+<li><p><strong>interpolateXy</strong> – A Boolean specifying whether to interpolate values within a line segment when
+<em>probeObject*=XYPlot. When *interpolateXy*=OFF, probing returns the nearest *X–Y</em> data
+point on the curve. When <a href="#id73"><span class="problematic" id="id74">*</span></a>interpolateXy*=ON, probing interpolates data to return a value
+at the nearest point on the curve. The default value is OFF.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.xValue">
+<span class="sig-name descname"><span class="pre">xValue</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.xValue" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeOptions.ProbeOptions.yValue">
+<span class="sig-name descname"><span class="pre">yValue</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.yValue" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.PathAndProbe.ProbeReport">
+<span id="abaqus-pathandprobe-probereport-module"></span><h2>abaqus.PathAndProbe.ProbeReport module<a class="headerlink" href="#module-abaqus.PathAndProbe.ProbeReport" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeReport.ProbeReport">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PathAndProbe.ProbeReport.</span></span><span class="sig-name descname"><span class="pre">ProbeReport</span></span><a class="headerlink" href="#abaqus.PathAndProbe.ProbeReport.ProbeReport" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The ProbeReport object is used to store settings associated with tabular reports of
+probe data. The ProbeReport object has no constructor. Abaqus creates the
+<em>defaultProbeReport</em> and the <em>probeReport</em> members when you import the Visualization
+module. When probing is initiated for the first time, the values in the <em>probeReport</em>
+member are initialized using the values from the <em>defaultProbeReport</em> member.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.defaultProbeReport</p></li>
+<li><p>session.probeReport</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.ProbeReport.ProbeReport.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numColumns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDigits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numFormat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ENGINEERING'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pageWidth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NO_LIMIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printTotal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printMinMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PathAndProbe.ProbeReport.ProbeReport.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ProbeReport object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>options</strong> – None or a ProbeReport object specifying values to be copied. If other arguments are also
+supplied to setValues, they will override the values in <em>options</em>. The default value is
+None.</p></li>
+<li><p><strong>numColumns</strong> – An Int specifying the number of columns in the report file. This argument is valid only
+when <a href="#id75"><span class="problematic" id="id76">*</span></a>pageWidth*=SPECIFY. The default value is 80.</p></li>
+<li><p><strong>numDigits</strong> – An Int specifying the number of significant digits to be written for decimal values. The
+default value is 6.</p></li>
+<li><p><strong>numFormat</strong> – A SymbolicConstant specifying the number format to be used when formatting decimal
+values. Possible values are AUTOMATIC, ENGINEERING, and SCIENTIFIC. The default value is
+ENGINEERING.</p></li>
+<li><p><strong>pageWidth</strong> – A SymbolicConstant specifying the page width format. Possible values are NO_LIMIT and
+SPECIFY. The default value is NO_LIMIT.</p></li>
+<li><p><strong>printTotal</strong> – A Boolean specifying whether to print the total value of either the field output result
+(when <em>probeObject*=”ODB”) or the *x</em>- and <em>y</em>-coordinates (when <a href="#id77"><span class="problematic" id="id78">*</span></a>probeObject*=XYPlot).
+The default value is OFF.</p></li>
+<li><p><strong>printMinMax</strong> – A Boolean specifying whether to print the minimum and maximum values of either the field
+output result (when <em>probeObject*=”ODB”) or the *x</em>- and <em>y</em>-coordinates (when
+<a href="#id79"><span class="problematic" id="id80">*</span></a>probeObject*=XYPlot). The default value is OFF.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.PathAndProbe.SelectedProbeValues">
+<span id="abaqus-pathandprobe-selectedprobevalues-module"></span><h2>abaqus.PathAndProbe.SelectedProbeValues module<a class="headerlink" href="#module-abaqus.PathAndProbe.SelectedProbeValues" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.SelectedProbeValues.SelectedProbeValues">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PathAndProbe.SelectedProbeValues.</span></span><span class="sig-name descname"><span class="pre">SelectedProbeValues</span></span><a class="headerlink" href="#abaqus.PathAndProbe.SelectedProbeValues.SelectedProbeValues" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The SelectedProbeValues object has no constructor. The SelectedProbeValues object is
+created when you import the Visualization module.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.selectedProbeValues</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.SelectedProbeValues.SelectedProbeValues.fieldOutputAvailable">
+<span class="sig-name descname"><span class="pre">fieldOutputAvailable</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.PathAndProbe.SelectedProbeValues.SelectedProbeValues.fieldOutputAvailable" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.SelectedProbeValues.SelectedProbeValues.lastValues">
+<span class="sig-name descname"><span class="pre">lastValues</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#abaqus.PathAndProbe.SelectedProbeValues.SelectedProbeValues.lastValues" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.SelectedProbeValues.SelectedProbeValues.length">
+<span class="sig-name descname"><span class="pre">length</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.PathAndProbe.SelectedProbeValues.SelectedProbeValues.length" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.SelectedProbeValues.SelectedProbeValues.values">
+<span class="sig-name descname"><span class="pre">values</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.PathAndProbe.SelectedProbeValues.SelectedProbeValues.values" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.PathAndProbe.Spectrum">
+<span id="abaqus-pathandprobe-spectrum-module"></span><h2>abaqus.PathAndProbe.Spectrum module<a class="headerlink" href="#module-abaqus.PathAndProbe.Spectrum" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.Spectrum.Spectrum">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PathAndProbe.Spectrum.</span></span><span class="sig-name descname"><span class="pre">Spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PathAndProbe.Spectrum.Spectrum" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Spectrum object defines a color spectrum for the contour display.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.spectrums[name]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.PathAndProbe.Stream">
+<span id="abaqus-pathandprobe-stream-module"></span><h2>abaqus.PathAndProbe.Stream module<a class="headerlink" href="#module-abaqus.PathAndProbe.Stream" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PathAndProbe.Stream.Stream">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.PathAndProbe.Stream.</span></span><span class="sig-name descname"><span class="pre">Stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numPointsOnRake</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointA</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PathAndProbe.Stream.Stream" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>TheStream object defines a set of streamlines in fluid mechanics.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.streams[name]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.PathAndProbe">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-abaqus.PathAndProbe" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

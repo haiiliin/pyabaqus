@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>abaqus.Connector package &mdash; pyabaqus 1.0.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Reference manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>abaqus.Connector package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/abaqus.Connector.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="abaqus-connector-package">
+<h1>abaqus.Connector package<a class="headerlink" href="#abaqus-connector-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-abaqus.Connector.CDCTerm">
+<span id="abaqus-connector-cdcterm-module"></span><h2>abaqus.Connector.CDCTerm module<a class="headerlink" href="#module-abaqus.Connector.CDCTerm" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.CDCTerm.CDCTerm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.CDCTerm.</span></span><span class="sig-name descname"><span class="pre">CDCTerm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intrinsicComponents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">termOperator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'RSS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">termSign</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'POSITIVE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indepCompType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'POSITION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indepComponents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tempDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldDependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.CDCTerm.CDCTerm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The CDCTerm object is used to create contributing terms for a DerivedComponent object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import section</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i]</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i]</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i]</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i]</p></li>
+<li><p>import odbSection</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i]</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i]</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i]</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.CDCTerm.CDCTerm.ConnectorOptions">
+<span class="sig-name descname"><span class="pre">ConnectorOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useBehRegSettings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultRateFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rateFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LINEAR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useBehExtSettings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrapolation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONSTANT'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="abaqus.Connector.ConnectorOptions.ConnectorOptions"><span class="pre">abaqus.Connector.ConnectorOptions.ConnectorOptions</span></a></span></span><a class="headerlink" href="#abaqus.Connector.CDCTerm.CDCTerm.ConnectorOptions" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a connector options object to be used in conjunction with an
+allowable connector behavior option, derived component term, or connector section.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>useBehRegSettings</strong> – A Boolean specifying whether or not to use the behavior-level settings for
+regularization options. This argument is applicable only for an Abaqus/Explicit
+analysis. The default value is ON.</p></li>
+<li><p><strong>regularize</strong> – A Boolean specifying whether or not the tabular data will be regularized. This argument
+is applicable only for an Abaqus/Explicit analysis and only if <a href="#id1"><span class="problematic" id="id2">*</span></a>useBehRegSettings*=OFF.
+The default value is ON.</p></li>
+<li><p><strong>defaultTolerance</strong> – A Boolean specifying whether or not the analysis default regularization tolerance will
+be used. This argument is applicable only for an Abaqus/Explicit analysis and only if
+<a href="#id3"><span class="problematic" id="id4">*</span></a>useBehRegSettings*=OFF and <a href="#id5"><span class="problematic" id="id6">*</span></a>regularize*=ON. The default value is ON.</p></li>
+<li><p><strong>regularization</strong> – A Float specifying the regularization increment to be used. This argument is applicable
+only for an Abaqus/Explicit analysis and only if <a href="#id7"><span class="problematic" id="id8">*</span></a>useBehRegSettings*=OFF,
+<a href="#id9"><span class="problematic" id="id10">*</span></a>regularize*=ON, and <a href="#id11"><span class="problematic" id="id12">*</span></a>defaultTolerance*=OFF. The default value is 0.03.</p></li>
+<li><p><strong>defaultRateFactor</strong> – A Boolean specifying whether or not the analysis default rate filter factor will be
+used. This argument is applicable only for an Abaqus/Explicit analysis that includes
+isotropic hardening with tabular definition or damage initiation with Plastic motion
+criteria. The default value is ON.</p></li>
+<li><p><strong>rateFactor</strong> – A Float specifying the rate filter factor to be used. This argument is applicable only
+for an Abaqus/Explicit analysis that includes isotropic hardening with tabular
+definition or damage initiation with Plastic motion criteria. This argument is also
+applicable only if <a href="#id13"><span class="problematic" id="id14">*</span></a>defaultRateFactor*=OFF. The default value is 0.9.</p></li>
+<li><p><strong>interpolation</strong> – A SymbolicConstant specifying the type of interpolation increment to be used on
+rate-dependent tabular data. This argument is applicable only for an Abaqus/Explicit
+analysis that includes isotropic hardening with tabular definition or damage initiation
+with Plastic motion criteria. Possible values are LINEAR and LOGARITHMIC. The default
+value is LINEAR.</p></li>
+<li><p><strong>useBehExtSettings</strong> – A Boolean specifying whether or not to use the behavior-level settings for extrapolation
+options. The default value is ON.</p></li>
+<li><p><strong>extrapolation</strong> – A SymbolicConstant specifying the extrapolation technique to be used. This argument is
+applicable only if <a href="#id15"><span class="problematic" id="id16">*</span></a>useBehExtSettings*=OFF. Possible values are CONSTANT and LINEAR. The
+default value is CONSTANT.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">ConnectorOptions</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError and TextError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.CDCTerm.CDCTerm.options">
+<span class="sig-name descname"><span class="pre">options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="abaqus.Connector.ConnectorOptions.ConnectorOptions"><span class="pre">abaqus.Connector.ConnectorOptions.ConnectorOptions</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.ConnectorOptions.ConnectorOptions</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.CDCTerm.CDCTerm.options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.CDCTerm.CDCTerm.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.CDCTerm.CDCTerm.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the CDCTerm object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.CDCTermArray">
+<span id="abaqus-connector-cdctermarray-module"></span><h2>abaqus.Connector.CDCTermArray module<a class="headerlink" href="#module-abaqus.Connector.CDCTermArray" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.CDCTermArray.CDCTermArray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.CDCTermArray.</span></span><span class="sig-name descname"><span class="pre">CDCTermArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.CDCTermArray.CDCTermArray" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<a class="reference internal" href="#abaqus.Connector.CDCTerm.CDCTerm" title="abaqus.Connector.CDCTerm.CDCTerm"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Connector.CDCTerm.CDCTerm</span></code></a>]</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.CDCTermArray.CDCTermArray.findAt">
+<span class="sig-name descname"><span class="pre">findAt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.CDCTermArray.CDCTermArray.findAt" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.ConnectorBehaviorOption">
+<span id="abaqus-connector-connectorbehavioroption-module"></span><h2>abaqus.Connector.ConnectorBehaviorOption module<a class="headerlink" href="#module-abaqus.Connector.ConnectorBehaviorOption" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.ConnectorBehaviorOption.</span></span><span class="sig-name descname"><span class="pre">ConnectorBehaviorOption</span></span><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The ConnectorBehaviorOption object is the abstract base type for other
+ConnectorBehaviorOption objects. The ConnectorBehaviorOption object has no explicit
+constructor. The members of the ConnectorBehaviorOption object are common to all objects
+derived from the ConnectorBehaviorOption.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import section</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i]</p></li>
+<li><p>import odbSection</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.ConnectorOptions">
+<span class="sig-name descname"><span class="pre">ConnectorOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useBehRegSettings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultRateFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rateFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LINEAR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useBehExtSettings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrapolation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONSTANT'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="abaqus.Connector.ConnectorOptions.ConnectorOptions"><span class="pre">abaqus.Connector.ConnectorOptions.ConnectorOptions</span></a></span></span><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.ConnectorOptions" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a connector options object to be used in conjunction with an
+allowable connector behavior option, derived component term, or connector section.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>useBehRegSettings</strong> – A Boolean specifying whether or not to use the behavior-level settings for
+regularization options. This argument is applicable only for an Abaqus/Explicit
+analysis. The default value is ON.</p></li>
+<li><p><strong>regularize</strong> – A Boolean specifying whether or not the tabular data will be regularized. This argument
+is applicable only for an Abaqus/Explicit analysis and only if <a href="#id17"><span class="problematic" id="id18">*</span></a>useBehRegSettings*=OFF.
+The default value is ON.</p></li>
+<li><p><strong>defaultTolerance</strong> – A Boolean specifying whether or not the analysis default regularization tolerance will
+be used. This argument is applicable only for an Abaqus/Explicit analysis and only if
+<a href="#id19"><span class="problematic" id="id20">*</span></a>useBehRegSettings*=OFF and <a href="#id21"><span class="problematic" id="id22">*</span></a>regularize*=ON. The default value is ON.</p></li>
+<li><p><strong>regularization</strong> – A Float specifying the regularization increment to be used. This argument is applicable
+only for an Abaqus/Explicit analysis and only if <a href="#id23"><span class="problematic" id="id24">*</span></a>useBehRegSettings*=OFF,
+<a href="#id25"><span class="problematic" id="id26">*</span></a>regularize*=ON, and <a href="#id27"><span class="problematic" id="id28">*</span></a>defaultTolerance*=OFF. The default value is 0.03.</p></li>
+<li><p><strong>defaultRateFactor</strong> – A Boolean specifying whether or not the analysis default rate filter factor will be
+used. This argument is applicable only for an Abaqus/Explicit analysis that includes
+isotropic hardening with tabular definition or damage initiation with Plastic motion
+criteria. The default value is ON.</p></li>
+<li><p><strong>rateFactor</strong> – A Float specifying the rate filter factor to be used. This argument is applicable only
+for an Abaqus/Explicit analysis that includes isotropic hardening with tabular
+definition or damage initiation with Plastic motion criteria. This argument is also
+applicable only if <a href="#id29"><span class="problematic" id="id30">*</span></a>defaultRateFactor*=OFF. The default value is 0.9.</p></li>
+<li><p><strong>interpolation</strong> – A SymbolicConstant specifying the type of interpolation increment to be used on
+rate-dependent tabular data. This argument is applicable only for an Abaqus/Explicit
+analysis that includes isotropic hardening with tabular definition or damage initiation
+with Plastic motion criteria. Possible values are LINEAR and LOGARITHMIC. The default
+value is LINEAR.</p></li>
+<li><p><strong>useBehExtSettings</strong> – A Boolean specifying whether or not to use the behavior-level settings for extrapolation
+options. The default value is ON.</p></li>
+<li><p><strong>extrapolation</strong> – A SymbolicConstant specifying the extrapolation technique to be used. This argument is
+applicable only if <a href="#id31"><span class="problematic" id="id32">*</span></a>useBehExtSettings*=OFF. Possible values are CONSTANT and LINEAR. The
+default value is CONSTANT.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">ConnectorOptions</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError and TextError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.DerivedComponent">
+<span class="sig-name descname"><span class="pre">DerivedComponent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Connector.DerivedComponent.DerivedComponent" title="abaqus.Connector.DerivedComponent.DerivedComponent"><span class="pre">abaqus.Connector.DerivedComponent.DerivedComponent</span></a></span></span><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.DerivedComponent" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DerivedComponent object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].DerivedComponent</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].DerivedComponent</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DerivedComponent</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError and TextError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.TangentialBehavior">
+<span class="sig-name descname"><span class="pre">TangentialBehavior</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PENALTY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slipRateDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pressureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponentialDecayDefinition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'COEFFICIENTS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shearStressLimit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximumElasticSlip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FRACTION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteDistance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Connector.TangentialBehavior.TangentialBehavior" title="abaqus.Connector.TangentialBehavior.TangentialBehavior"><span class="pre">abaqus.Connector.TangentialBehavior.TangentialBehavior</span></a></span></span><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.TangentialBehavior" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a TangentialBehavior object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>formulation</strong> – A SymbolicConstant specifying the friction coefficient formulation. Possible values are
+PENALTY and EXPONENTIAL_DECAY. The default value is PENALTY.</p></li>
+<li><p><strong>slipRateDependency</strong> – A Boolean specifying whether the data depend on slip rate. The default value is OFF.</p></li>
+<li><p><strong>pressureDependency</strong> – A Boolean specifying whether the data depend on contact pressure. The default value is
+OFF.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variables for the data. The default value is 0.</p></li>
+<li><p><strong>exponentialDecayDefinition</strong> – A SymbolicConstant specifying the exponential decay definition for the data. Possible
+values are COEFFICIENTS and TEST_DATA. The default value is COEFFICIENTS.</p></li>
+<li><p><strong>shearStressLimit</strong> – None or a Float specifying no upper limit or the friction coefficient shear stress
+limit. The default value is None.</p></li>
+<li><p><strong>maximumElasticSlip</strong> – A SymbolicConstant specifying the method for modifying the allowable elastic slip.
+Possible values are FRACTION and ABSOLUTE_DISTANCE. The default value is FRACTION.This
+argument applies only to Abaqus/Standard analyses.</p></li>
+<li><p><strong>fraction</strong> – A Float specifying the ratio of the allowable maximum elastic slip to a characteristic
+model dimension. The default value is 10–4.This argument applies only to Abaqus/Standard
+analyses.</p></li>
+<li><p><strong>absoluteDistance</strong> – None or a Float specifying the absolute magnitude of the allowable elastic slip. The
+default value is None.This argument applies only to Abaqus/Standard analyses.</p></li>
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the tangential properties. Items in the
+table data are described below. The default value is an empty sequence.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">TangentialBehavior</span> <span class="pre">object..</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.connectorPotentials">
+<span class="sig-name descname"><span class="pre">connectorPotentials</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray" title="abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray"><span class="pre">abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.connectorPotentials" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.derivedComponent">
+<span class="sig-name descname"><span class="pre">derivedComponent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.DerivedComponent.DerivedComponent" title="abaqus.Connector.DerivedComponent.DerivedComponent"><span class="pre">abaqus.Connector.DerivedComponent.DerivedComponent</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.DerivedComponent.DerivedComponent</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.derivedComponent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.evolutionPotentials">
+<span class="sig-name descname"><span class="pre">evolutionPotentials</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray" title="abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray"><span class="pre">abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.evolutionPotentials" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.initiationOptions">
+<span class="sig-name descname"><span class="pre">initiationOptions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="abaqus.Connector.ConnectorOptions.ConnectorOptions"><span class="pre">abaqus.Connector.ConnectorOptions.ConnectorOptions</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.ConnectorOptions.ConnectorOptions</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.initiationOptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.initiationPotentials">
+<span class="sig-name descname"><span class="pre">initiationPotentials</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray" title="abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray"><span class="pre">abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.initiationPotentials" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.isotropicOptions">
+<span class="sig-name descname"><span class="pre">isotropicOptions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="abaqus.Connector.ConnectorOptions.ConnectorOptions"><span class="pre">abaqus.Connector.ConnectorOptions.ConnectorOptions</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.ConnectorOptions.ConnectorOptions</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.isotropicOptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.kinematicOptions">
+<span class="sig-name descname"><span class="pre">kinematicOptions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="abaqus.Connector.ConnectorOptions.ConnectorOptions"><span class="pre">abaqus.Connector.ConnectorOptions.ConnectorOptions</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.ConnectorOptions.ConnectorOptions</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.kinematicOptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.options">
+<span class="sig-name descname"><span class="pre">options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="abaqus.Connector.ConnectorOptions.ConnectorOptions"><span class="pre">abaqus.Connector.ConnectorOptions.ConnectorOptions</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.ConnectorOptions.ConnectorOptions</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.tangentialBehavior">
+<span class="sig-name descname"><span class="pre">tangentialBehavior</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.TangentialBehavior.TangentialBehavior" title="abaqus.Connector.TangentialBehavior.TangentialBehavior"><span class="pre">abaqus.Connector.TangentialBehavior.TangentialBehavior</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.TangentialBehavior.TangentialBehavior</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption.tangentialBehavior" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.ConnectorBehaviorOptionArray">
+<span id="abaqus-connector-connectorbehavioroptionarray-module"></span><h2>abaqus.Connector.ConnectorBehaviorOptionArray module<a class="headerlink" href="#module-abaqus.Connector.ConnectorBehaviorOptionArray" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOptionArray.ConnectorBehaviorOptionArray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.ConnectorBehaviorOptionArray.</span></span><span class="sig-name descname"><span class="pre">ConnectorBehaviorOptionArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOptionArray.ConnectorBehaviorOptionArray" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<a class="reference internal" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption" title="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption</span></code></a>]</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorBehaviorOptionArray.ConnectorBehaviorOptionArray.findAt">
+<span class="sig-name descname"><span class="pre">findAt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorBehaviorOptionArray.ConnectorBehaviorOptionArray.findAt" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.ConnectorDamage">
+<span id="abaqus-connector-connectordamage-module"></span><h2>abaqus.Connector.ConnectorDamage module<a class="headerlink" href="#module-abaqus.Connector.ConnectorDamage" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorDamage.ConnectorDamage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.ConnectorDamage.</span></span><span class="sig-name descname"><span class="pre">ConnectorDamage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coupling</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNCOUPLED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">criterion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FORCE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initiationTemperature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initiationPotentialOperator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SUM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initiationPotentialExponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initiationDependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evolution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evolutionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MOTION_TYPE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">softening</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LINEAR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useAffected</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degradation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MAXIMUM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evolutionTemperature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evolutionDependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evolutionPotentialOperator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SUM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evolutionPotentialExponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initiationPotentials</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray" title="abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray"><span class="pre">abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evolutionPotentials</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray" title="abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray"><span class="pre">abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initiationTable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evolutionTable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">affectedComponents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorDamage.ConnectorDamage" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption" title="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption</span></code></a></p>
+<p>The ConnectorDamage object defines damage behavior for one or more components of a
+connector’s relative motion.
+The ConnectorDamage object is derived from the ConnectorBehaviorOption object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import section</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i]</p></li>
+<li><p>import odbSection</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p>Table data for <em>initiationTable</em>:
+If <a href="#id33"><span class="problematic" id="id34">*</span></a>criterion*=FORCE, then each sequence of the table data specifies the following:
+- Lower (compression) limiting force or moment. Use -1.0E+36 to indicate an unspecified lower limit.
+- Upper (tension) limiting force or moment. Use 1.0E+36 to indicate an unspecified upper limit. At least one</p>
+<blockquote>
+<div><p>limit, lower or upper, must be specified.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Temperature, if the data depend on temperature.</p></li>
+<li><p>Value of the first field variable, if the data depend on field variables.</p></li>
+<li><p>Value of the second field variable.</p></li>
+<li><p>Etc.</p></li>
+</ul>
+<p>If <a href="#id35"><span class="problematic" id="id36">*</span></a>criterion*=MOTION, then each sequence of the table data specifies the following:
+- Lower (compression) limiting connector constitutive relative displacement or rotation. Use -1.0E+36 to</p>
+<blockquote>
+<div><p>indicate an unspecified lower limit.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Upper (tension) limiting connector constitutive relative displacement or rotation. Use 1.0E+36 to indicate an
+unspecified upper limit. At least one limit, lower or upper, must be specified.</p></li>
+<li><p>Temperature, if the data depend on temperature.</p></li>
+<li><p>Value of the first field variable, if the data depend on field variables.</p></li>
+<li><p>Value of the second field variable.</p></li>
+<li><p>Etc.</p></li>
+</ul>
+<p>If <em>criterion*=PLASTIC_MOTION, then each sequence of the table data specifies the following:
+- Relative equivalent Plastic displacement/rotation at which damage will be initiated.
+- Mode-mix ratio (only if *coupling*=COUPLED).
+- Relative equivalent Plastic displacement/rotation rate.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+Table data for *evolutionTable</em>:
+If <a href="#id37"><span class="problematic" id="id38">*</span></a>evolutionType*=MOTION and <a href="#id39"><span class="problematic" id="id40">*</span></a>softening*=LINEAR, then each sequence of the table data specifies the following:
+- Post-initiation equivalent relative Plastic motion at ultimate failure if <a href="#id41"><span class="problematic" id="id42">*</span></a>criterion*=PLASTIC_MOTION.</p>
+<blockquote>
+<div><p>Otherwise, post-initiation constitutive relative motion (displacement/rotation) at ultimate failure.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Mode-mix ratio (only if <a href="#id43"><span class="problematic" id="id44">*</span></a>coupling*=COUPLED and <a href="#id45"><span class="problematic" id="id46">*</span></a>criterion*=PLASTIC_MOTION).</p></li>
+<li><p>Temperature, if the data depend on temperature.</p></li>
+<li><p>Value of the first field variable, if the data depend on field variables.</p></li>
+<li><p>Value of the second field variable.</p></li>
+<li><p>Etc.</p></li>
+</ul>
+<p>If <a href="#id47"><span class="problematic" id="id48">*</span></a>evolutionType*=MOTION and <a href="#id49"><span class="problematic" id="id50">*</span></a>softening*=EXPONENTIAL, then each sequence of the table data specifies the following:
+- Post-initiation equivalent relative Plastic motion at ultimate failure if <a href="#id51"><span class="problematic" id="id52">*</span></a>criterion*=PLASTIC_MOTION.</p>
+<blockquote>
+<div><p>Otherwise, post-initiation constitutive relative motion (displacement/rotation) at ultimate failure.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Exponential law parameter.</p></li>
+<li><p>Mode-mix ratio (only if <a href="#id53"><span class="problematic" id="id54">*</span></a>coupling*=COUPLED and <a href="#id55"><span class="problematic" id="id56">*</span></a>criterion*=PLASTIC_MOTION).</p></li>
+<li><p>Temperature, if the data depend on temperature.</p></li>
+<li><p>Value of the first field variable, if the data depend on field variables.</p></li>
+<li><p>Value of the second field variable.</p></li>
+<li><p>Etc.</p></li>
+</ul>
+<p>If <a href="#id57"><span class="problematic" id="id58">*</span></a>evolutionType*=MOTION and <a href="#id59"><span class="problematic" id="id60">*</span></a>softening*=TABULAR, then each sequence of the table data specifies the following:
+- Damage variable (cannot be less than 0 or greater than 1).
+- Post-initiation equivalent relative Plastic motion if <a href="#id61"><span class="problematic" id="id62">*</span></a>criterion*=PLASTIC_MOTION. Otherwise, post-initiation</p>
+<blockquote>
+<div><p>constitutive relative motion (displacement/rotation).</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Mode-mix ratio (only if <a href="#id63"><span class="problematic" id="id64">*</span></a>coupling*=COUPLED and <a href="#id65"><span class="problematic" id="id66">*</span></a>criterion*=PLASTIC_MOTION).</p></li>
+<li><p>Temperature, if the data depend on temperature.</p></li>
+<li><p>Value of the first field variable, if the data depend on field variables.</p></li>
+<li><p>Value of the second field variable.</p></li>
+<li><p>Etc.</p></li>
+</ul>
+<p>If <a href="#id67"><span class="problematic" id="id68">*</span></a>evolutionType*=ENERGY, then each sequence of the table data specifies the following:
+- Total energy dissipated by damage at ultimate failure.
+- Mode-mix ratio (only if <a href="#id69"><span class="problematic" id="id70">*</span></a>coupling*=COUPLED and <a href="#id71"><span class="problematic" id="id72">*</span></a>criterion*=PLASTIC_MOTION).
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.</p>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>CONNECTOR DAMAGE INITIATION</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorDamage.ConnectorDamage.evolutionOptions">
+<span class="sig-name descname"><span class="pre">evolutionOptions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="abaqus.Connector.ConnectorOptions.ConnectorOptions"><span class="pre">abaqus.Connector.ConnectorOptions.ConnectorOptions</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.ConnectorOptions.ConnectorOptions</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorDamage.ConnectorDamage.evolutionOptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorDamage.ConnectorDamage.initiationOptions">
+<span class="sig-name descname"><span class="pre">initiationOptions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="abaqus.Connector.ConnectorOptions.ConnectorOptions"><span class="pre">abaqus.Connector.ConnectorOptions.ConnectorOptions</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.ConnectorOptions.ConnectorOptions</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorDamage.ConnectorDamage.initiationOptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorDamage.ConnectorDamage.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorDamage.ConnectorDamage.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ConnectorDamage object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.ConnectorDamping">
+<span id="abaqus-connector-connectordamping-module"></span><h2>abaqus.Connector.ConnectorDamping module<a class="headerlink" href="#module-abaqus.Connector.ConnectorDamping" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorDamping.ConnectorDamping">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.ConnectorDamping.</span></span><span class="sig-name descname"><span class="pre">ConnectorDamping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">behavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LINEAR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupling</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNCOUPLED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequencyDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">independentComponents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorDamping.ConnectorDamping" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption" title="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption</span></code></a></p>
+<p>The ConnectorDamping object defines damping behavior for one or more components of a
+connector’s relative motion.
+The ConnectorDamping object is derived from the ConnectorBehaviorOption object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import section</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i]</p></li>
+<li><p>import odbSection</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p>If <em>behavior*=LINEAR and *coupling*=UNCOUPLED, then each sequence of the table data specifies the following:
+- Damping coefficient (force or moment per relative velocity).
+- Frequency (cycles/time), if the data depend on frequency.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If *behavior*=NONLINEAR and *coupling*=UNCOUPLED, then each sequence of the table data specifies the following:
+- Force or moment.
+- Relative displacement or rotation.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If *behavior*=LINEAR and *coupling*=COUPLED, the table data specify the symmetric portion of the damping matrix
+for the specified components followed by any temperature data and then any field data. For example, if
+components 2, 3, and 5 are specified, the table portion of the command is as follows:
+table=( (C22C22, C23C23, C25C25, C33C33, C35C35, C55C55,), )
+The following items should then be specified as comma-separated data:
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If *behavior*=NONLINEAR and *coupling*=COUPLED_POSITION or COUPLED_MOTION, each sequence of the table data
+specifies the following:
+- Force or moment for the directions in the *components</em> list.
+- Relative velocity for the directions in the <em>components</em> list.
+- Relative position or angle for the first <em>independentComponents</em> direction if <a href="#id73"><span class="problematic" id="id74">*</span></a>coupling*=COUPLED_POSITION.</p>
+<blockquote>
+<div><p>Relative displacement or rotation for the first <em>independentComponents</em> direction if <a href="#id75"><span class="problematic" id="id76">*</span></a>coupling*=COUPLED_MOTION.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Relative position or angle for the second <em>independentComponents</em> direction if <em>coupling*=COUPLED_POSITION.
+Relative displacement or rotation for the second *independentComponents</em> direction if <a href="#id77"><span class="problematic" id="id78">*</span></a>coupling*=COUPLED_MOTION.</p></li>
+<li><p>Etc. up to the Nth <em>independentComponents</em> direction.</p></li>
+<li><p>Temperature, if the data depend on temperature.</p></li>
+<li><p>Value of the first field variable, if the data depend on field variables.</p></li>
+<li><p>Value of the second field variable.</p></li>
+<li><p>Etc.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>CONNECTOR DAMPING</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorDamping.ConnectorDamping.options">
+<span class="sig-name descname"><span class="pre">options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="abaqus.Connector.ConnectorOptions.ConnectorOptions"><span class="pre">abaqus.Connector.ConnectorOptions.ConnectorOptions</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.ConnectorOptions.ConnectorOptions</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorDamping.ConnectorDamping.options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorDamping.ConnectorDamping.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorDamping.ConnectorDamping.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ConnectorDamping object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.ConnectorElasticity">
+<span id="abaqus-connector-connectorelasticity-module"></span><h2>abaqus.Connector.ConnectorElasticity module<a class="headerlink" href="#module-abaqus.Connector.ConnectorElasticity" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorElasticity.ConnectorElasticity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.ConnectorElasticity.</span></span><span class="sig-name descname"><span class="pre">ConnectorElasticity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">behavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LINEAR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupling</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNCOUPLED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequencyDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">independentComponents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorElasticity.ConnectorElasticity" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption" title="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption</span></code></a></p>
+<p>The ConnectorElasticity object defines elastic behavior for one or more components of a
+connector’s relative motion.
+The ConnectorElasticity object is derived from the ConnectorBehaviorOption object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import section</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i]</p></li>
+<li><p>import odbSection</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p>If <em>behavior*=LINEAR and *coupling*=UNCOUPLED, then each sequence of the table data specifies the following:
+- Elastic stiffness (per each specified force/moment component).
+- Frequency (cycles/time), if the data depend on frequency.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If *behavior*=NONLINEAR and *coupling*=UNCOUPLED, then each sequence of the table data specifies the following:
+- Force or moment.
+- Relative displacement or rotation.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If *behavior*=LINEAR and *coupling*=COUPLED, the table data specify the symmetric portion of the elastic stiffness matrix for the specified components followed by any temperature data and then any field data. For example, if components 2, 3, and 5 are specified, the table portion of the command is as follows:
+table=( (D22D22, D23D23, D25D25, D33D33, D35D35, D55D55,),
+)
+The following items should then be specified as comma-separated data:
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If *behavior*=NONLINEAR and *coupling*=COUPLED_POSITION or COUPLED_MOTION, each sequence of the table data specifies the following:
+- Force or moment for the directions in the *components</em> list.
+- Relative position or angle for the first <em>independentComponents</em> direction if <em>coupling*=COUPLED_POSITION. Relative displacement or rotation for the first *independentComponents</em> direction if <em>coupling*=COUPLED_MOTION.
+- Relative position or angle for the second *independentComponents</em> direction if <em>coupling*=COUPLED_POSITION. Relative displacement or rotation for the second *independentComponents</em> direction if <em>coupling*=COUPLED_MOTION.
+- Etc. up to the Nth *independentComponents</em> direction.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.</p>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>CONNECTOR ELASTICITY</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorElasticity.ConnectorElasticity.options">
+<span class="sig-name descname"><span class="pre">options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="abaqus.Connector.ConnectorOptions.ConnectorOptions"><span class="pre">abaqus.Connector.ConnectorOptions.ConnectorOptions</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.ConnectorOptions.ConnectorOptions</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorElasticity.ConnectorElasticity.options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorElasticity.ConnectorElasticity.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorElasticity.ConnectorElasticity.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ConnectorElasticity object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.ConnectorFailure">
+<span id="abaqus-connector-connectorfailure-module"></span><h2>abaqus.Connector.ConnectorFailure module<a class="headerlink" href="#module-abaqus.Connector.ConnectorFailure" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorFailure.ConnectorFailure">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.ConnectorFailure.</span></span><span class="sig-name descname"><span class="pre">ConnectorFailure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">releaseComponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ALL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minMotion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxMotion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minForce</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxForce</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorFailure.ConnectorFailure" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption" title="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption</span></code></a></p>
+<p>The ConnectorFailure object defines failure criteria for one or more components of a
+connector’s relative motion.
+The ConnectorFailure object is derived from the ConnectorBehaviorOption object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import section</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i]</p></li>
+<li><p>import odbSection</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>CONNECTOR FAILURE</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorFailure.ConnectorFailure.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorFailure.ConnectorFailure.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ConnectorFailure object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.ConnectorFriction">
+<span id="abaqus-connector-connectorfriction-module"></span><h2>abaqus.Connector.ConnectorFriction module<a class="headerlink" href="#module-abaqus.Connector.ConnectorFriction" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorFriction.ConnectorFriction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.ConnectorFriction.</span></span><span class="sig-name descname"><span class="pre">ConnectorFriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frictionModel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PREDEFINED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slipStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SPECIFY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tangentDirection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stickStiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">componentType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NO_INDEPENDENT_COMPONENTS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slipDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useContactForceComponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contactForceStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'COMPONENT_NUMBER'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contactForceComponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forcePotentialOperator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SUM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forcePotentialExponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectorPotentials</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray" title="abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray"><span class="pre">abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">independentComponents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorFriction.ConnectorFriction" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption" title="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption</span></code></a></p>
+<p>The ConnectorFriction object defines Coulomb-like or hysteretic friction behavior for
+one or more components of a connector’s relative motion.
+The ConnectorFriction object is derived from the ConnectorBehaviorOption object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import section</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i]</p></li>
+<li><p>import odbSection</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>CONNECTOR FRICTION</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorFriction.ConnectorFriction.derivedComponent">
+<span class="sig-name descname"><span class="pre">derivedComponent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.DerivedComponent.DerivedComponent" title="abaqus.Connector.DerivedComponent.DerivedComponent"><span class="pre">abaqus.Connector.DerivedComponent.DerivedComponent</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.DerivedComponent.DerivedComponent</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorFriction.ConnectorFriction.derivedComponent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorFriction.ConnectorFriction.options">
+<span class="sig-name descname"><span class="pre">options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="abaqus.Connector.ConnectorOptions.ConnectorOptions"><span class="pre">abaqus.Connector.ConnectorOptions.ConnectorOptions</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.ConnectorOptions.ConnectorOptions</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorFriction.ConnectorFriction.options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorFriction.ConnectorFriction.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorFriction.ConnectorFriction.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ConnectorFriction object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorFriction.ConnectorFriction.tangentialBehavior">
+<span class="sig-name descname"><span class="pre">tangentialBehavior</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.TangentialBehavior.TangentialBehavior" title="abaqus.Connector.TangentialBehavior.TangentialBehavior"><span class="pre">abaqus.Connector.TangentialBehavior.TangentialBehavior</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.TangentialBehavior.TangentialBehavior</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorFriction.ConnectorFriction.tangentialBehavior" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.ConnectorLock">
+<span id="abaqus-connector-connectorlock-module"></span><h2>abaqus.Connector.ConnectorLock module<a class="headerlink" href="#module-abaqus.Connector.ConnectorLock" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorLock.ConnectorLock">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.ConnectorLock.</span></span><span class="sig-name descname"><span class="pre">ConnectorLock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lockingComponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ALL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minMotion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxMotion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minForce</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxForce</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorLock.ConnectorLock" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption" title="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption</span></code></a></p>
+<p>The ConnectorLock object defines locking criteria for one or more available components
+of a connector’s relative motion.
+The ConnectorLock object is derived from the ConnectorBehaviorOption object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import section</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i]</p></li>
+<li><p>import odbSection</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>CONNECTOR LOCK</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorLock.ConnectorLock.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorLock.ConnectorLock.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ConnectorLock object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.ConnectorOptions">
+<span id="abaqus-connector-connectoroptions-module"></span><h2>abaqus.Connector.ConnectorOptions module<a class="headerlink" href="#module-abaqus.Connector.ConnectorOptions" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorOptions.ConnectorOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.ConnectorOptions.</span></span><span class="sig-name descname"><span class="pre">ConnectorOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useBehRegSettings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultRateFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rateFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LINEAR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useBehExtSettings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrapolation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONSTANT'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The ConnectorOptions object is used to define various options for connector behaviors.
+It can be used only in conjunction with CDCTerm, ConnectorDamage, ConnectorDamping,
+ConnectorElasticity, ConnectorFriction, and ConnectorPlasticity objects. Because the
+ConnectorDamage object contains two separate ConnectorOptions repositories (one for
+damage initiation and one for damage evolution), there are two ConnectorOptions
+constructors associated with that behavior—initiationOptions and evolutionOptions. The
+ConnectorPlasticity object also contains two separate ConnectorOptions repositories (one
+for isotropic hardening and one for kinematic hardening), so there are two
+ConnectorOptions constructors associated with that behavior—isotropicOptions and
+kinematicOptions.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import section</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].options</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].options</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].evolutionOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i].options</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].initiationOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i].options</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].isotropicOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].kinematicOptions</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].options</p></li>
+<li><p>import odbSection</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].options</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].options</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].evolutionOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i].options</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].initiationOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i].options</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].isotropicOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].kinematicOptions</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].options</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>CONNECTOR BEHAVIOR</p></li>
+<li><p>CONNECTOR DAMAGE INITIATION</p></li>
+<li><p>CONNECTOR DAMAGE EVOLUTION</p></li>
+<li><p>CONNECTOR DAMPING</p></li>
+<li><p>CONNECTOR DERIVED COMPONENT</p></li>
+<li><p>CONNECTOR ELASTICITY</p></li>
+<li><p>CONNECTOR FRICTION</p></li>
+<li><p>CONNECTOR PLASTICITY</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorOptions.ConnectorOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ConnectorOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.ConnectorPlasticity">
+<span id="abaqus-connector-connectorplasticity-module"></span><h2>abaqus.Connector.ConnectorPlasticity module<a class="headerlink" href="#module-abaqus.Connector.ConnectorPlasticity" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorPlasticity.ConnectorPlasticity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.ConnectorPlasticity.</span></span><span class="sig-name descname"><span class="pre">ConnectorPlasticity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coupling</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNCOUPLED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isotropic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isotropicType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'TABULAR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isotropicTemperature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isotropicDependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kinematic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kinematicType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'HALF_CYCLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kinematicTemperature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kinematicDependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forcePotentialOperator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SUM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forcePotentialExponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectorPotentials</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray" title="abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray"><span class="pre">abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isotropicTable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kinematicTable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorPlasticity.ConnectorPlasticity" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption" title="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption</span></code></a></p>
+<p>The ConnectorPlasticity object defines Plastic behavior for one or more components of a
+connector’s relative motion.
+The ConnectorPlasticity object is derived from the ConnectorBehaviorOption object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import section</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i]</p></li>
+<li><p>import odbSection</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p>Table data for <em>isotropicTable</em>:
+If <em>isotropicType*=TABULAR, then each sequence of the table data specifies the following:
+- Equivalent yield force or moment defining the size of the elastic range.
+- Equivalent relative Plastic motion.
+- Equivalent relative Plastic motion rate.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If *isotropicType*=EXPONENTIAL_LAW, then each sequence of the table data specifies the following:
+- Equivalent force or moment defining the size of the elastic range at zero Plastic motion.
+- Isotropic hardening parameter QinfQinf.
+- Isotropic hardening parameter bb.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+Table data for *kinematicTable</em>:
+If <a href="#id79"><span class="problematic" id="id80">*</span></a>kinematicType*=HALF_CYCLE, then each sequence of the table data specifies the following:
+- Yield force or moment.
+- Connector relative Plastic motion.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id81"><span class="problematic" id="id82">*</span></a>kinematicType*=STABILIZED, then each sequence of the table data specifies the following:
+- Yield force or moment.
+- Connector relative Plastic motion.
+- Connector relative constitutive motion range.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id83"><span class="problematic" id="id84">*</span></a>kinematicType*=PARAMETERS, then each sequence of the table data specifies the following:
+- Yield force or moment at zero relative Plastic motion.
+- Kinematic hardening parameter CC.
+- Kinematic hardening parameter γγ. Set γγ=0 to specify linear Ziegler kinematic hardening.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.</p>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>CONNECTOR PLASTICITY</p></li>
+<li><p>CONNECTOR HARDENING</p></li>
+<li><p>CONNECTOR POTENTIAL</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorPlasticity.ConnectorPlasticity.isotropicOptions">
+<span class="sig-name descname"><span class="pre">isotropicOptions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="abaqus.Connector.ConnectorOptions.ConnectorOptions"><span class="pre">abaqus.Connector.ConnectorOptions.ConnectorOptions</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.ConnectorOptions.ConnectorOptions</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorPlasticity.ConnectorPlasticity.isotropicOptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorPlasticity.ConnectorPlasticity.kinematicOptions">
+<span class="sig-name descname"><span class="pre">kinematicOptions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.ConnectorOptions.ConnectorOptions" title="abaqus.Connector.ConnectorOptions.ConnectorOptions"><span class="pre">abaqus.Connector.ConnectorOptions.ConnectorOptions</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.ConnectorOptions.ConnectorOptions</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorPlasticity.ConnectorPlasticity.kinematicOptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorPlasticity.ConnectorPlasticity.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorPlasticity.ConnectorPlasticity.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ConnectorPlasticity object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.ConnectorPotential">
+<span id="abaqus-connector-connectorpotential-module"></span><h2>abaqus.Connector.ConnectorPotential module<a class="headerlink" href="#module-abaqus.Connector.ConnectorPotential" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorPotential.ConnectorPotential">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.ConnectorPotential.</span></span><span class="sig-name descname"><span class="pre">ConnectorPotential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">componentStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'COMPONENT_NUMBER'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">componentNumber</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sign</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'POSITIVE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positiveExponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shiftFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hFunction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ABS'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorPotential.ConnectorPotential" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The ConnectorPotential object is used to define a restricted set of mathematical
+functions to represent yield or limiting surfaces in the space spanned by connector
+available components. It can be used only in conjunction with ConnectorDamage,
+ConnectorFriction, and ConnectorPlasticity objects. Because the ConnectorDamage object
+contains two separate ConnectorPotential repositories (one for damage initiation and one
+for damage evolution), there are two ConnectorPotential constructors associated with
+that behavior—IniPotential and EvoPotential.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import section</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i]</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i]</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i]</p></li>
+<li><p>import odbSection</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i]</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i]</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>CONNECTOR POTENTIAL</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorPotential.ConnectorPotential.DerivedComponent">
+<span class="sig-name descname"><span class="pre">DerivedComponent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Connector.DerivedComponent.DerivedComponent" title="abaqus.Connector.DerivedComponent.DerivedComponent"><span class="pre">abaqus.Connector.DerivedComponent.DerivedComponent</span></a></span></span><a class="headerlink" href="#abaqus.Connector.ConnectorPotential.ConnectorPotential.DerivedComponent" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DerivedComponent object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].DerivedComponent</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].DerivedComponent</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DerivedComponent</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError and TextError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorPotential.ConnectorPotential.derivedComponent">
+<span class="sig-name descname"><span class="pre">derivedComponent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.DerivedComponent.DerivedComponent" title="abaqus.Connector.DerivedComponent.DerivedComponent"><span class="pre">abaqus.Connector.DerivedComponent.DerivedComponent</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Connector.DerivedComponent.DerivedComponent</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Connector.ConnectorPotential.ConnectorPotential.derivedComponent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorPotential.ConnectorPotential.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorPotential.ConnectorPotential.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ConnectorPotential object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.ConnectorPotentialArray">
+<span id="abaqus-connector-connectorpotentialarray-module"></span><h2>abaqus.Connector.ConnectorPotentialArray module<a class="headerlink" href="#module-abaqus.Connector.ConnectorPotentialArray" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.ConnectorPotentialArray.</span></span><span class="sig-name descname"><span class="pre">ConnectorPotentialArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<a class="reference internal" href="#abaqus.Connector.ConnectorPotential.ConnectorPotential" title="abaqus.Connector.ConnectorPotential.ConnectorPotential"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Connector.ConnectorPotential.ConnectorPotential</span></code></a>]</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray.findAt">
+<span class="sig-name descname"><span class="pre">findAt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorPotentialArray.ConnectorPotentialArray.findAt" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.ConnectorStop">
+<span id="abaqus-connector-connectorstop-module"></span><h2>abaqus.Connector.ConnectorStop module<a class="headerlink" href="#module-abaqus.Connector.ConnectorStop" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorStop.ConnectorStop">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.ConnectorStop.</span></span><span class="sig-name descname"><span class="pre">ConnectorStop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minMotion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxMotion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorStop.ConnectorStop" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption" title="abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Connector.ConnectorBehaviorOption.ConnectorBehaviorOption</span></code></a></p>
+<p>The ConnectorStop object defines connector stops for one or more components of a
+connector’s relative motion.
+The ConnectorStop object is derived from the ConnectorBehaviorOption object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import section</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i]</p></li>
+<li><p>import odbSection</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>CONNECTOR STOP</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.ConnectorStop.ConnectorStop.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.ConnectorStop.ConnectorStop.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ConnectorStop object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.DerivedComponent">
+<span id="abaqus-connector-derivedcomponent-module"></span><h2>abaqus.Connector.DerivedComponent module<a class="headerlink" href="#module-abaqus.Connector.DerivedComponent" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.DerivedComponent.DerivedComponent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.DerivedComponent.</span></span><span class="sig-name descname"><span class="pre">DerivedComponent</span></span><a class="headerlink" href="#abaqus.Connector.DerivedComponent.DerivedComponent" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A DerivedComponent object describes user-customized components for use in defining
+ConnectorFriction and Potential objects.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import section</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].derivedComponent</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent</p></li>
+<li><p>import odbSection</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].derivedComponent</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>CONNECTOR DERIVED COMPONENT</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.DerivedComponent.DerivedComponent.CDCTerm">
+<span class="sig-name descname"><span class="pre">CDCTerm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intrinsicComponents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">termOperator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'RSS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">termSign</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'POSITIVE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indepCompType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'POSITION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indepComponents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tempDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldDependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Connector.CDCTerm.CDCTerm" title="abaqus.Connector.CDCTerm.CDCTerm"><span class="pre">abaqus.Connector.CDCTerm.CDCTerm</span></a></span></span><a class="headerlink" href="#abaqus.Connector.DerivedComponent.DerivedComponent.CDCTerm" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a CDCTerm object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.CDCTerm</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.CDCTerm</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.CDCTerm</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.CDCTerm</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.CDCTerm</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.CDCTerm</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.CDCTerm</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.CDCTerm</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>intrinsicComponents</strong> – A sequence of Ints specifying the components of relative motion for which the
+contributing term is defined. Possible values are 1 ≤≤ <em>intrinsicComponents</em> ≤≤ 6. Only
+available components can be specified if the DerivedComponent object is being referenced
+by a Potential object. This is not the case if the DerivedComponent object is referenced
+by a ConnectorFriction object directly. The default value is an empty sequence.</p></li>
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying components numbers and temperature and
+field values. Each sequence of the table data specifies:The first intrinsic component
+number.If applicable, the second intrinsic component number.Etc.If applicable, the first
+independent component number.If applicable, the second independent component
+number.Etc.If applicable, the temperature value.If applicable, the value of the first
+field variable.If applicable, the value of the second field variable.Etc.The default
+value is an empty sequence.</p></li>
+<li><p><strong>termOperator</strong> – A SymbolicConstant specifying the method for combining contributing terms: square root
+of a sum of the squares, direct sum, or Macauley sum. Possible values are RSS, SUM, and
+MACAULEY. The default value is RSS.</p></li>
+<li><p><strong>termSign</strong> – A SymbolicConstant specifying the overall sign for the contributing term. Possible
+values are POSITIVE and NEGATIVE. The default value is POSITIVE.</p></li>
+<li><p><strong>localDependency</strong> – A Boolean specifying whether the table data depend on either components of relative
+position or components of constitutive relative motion. The default value is OFF.</p></li>
+<li><p><strong>indepCompType</strong> – A SymbolicConstant specifying whether localDependency refers to components of relative
+position or components of constitutive relative motion. Possible values are POSITION and
+MOTION. The default value is POSITION.The <em>indepCompType</em> argument applies only if
+<a href="#id85"><span class="problematic" id="id86">*</span></a>localDependency*=ON.</p></li>
+<li><p><strong>indepComponents</strong> – A sequence of Ints specifying the independent components included in the derived
+component definition. Possible values are 1 ≤≤ <em>indepComponents</em> ≤≤ 6. Only available
+components can be specified. The <em>indepComponents</em> argument applies only if
+<a href="#id87"><span class="problematic" id="id88">*</span></a>localDependency*=ON. The default value is an empty sequence.</p></li>
+<li><p><strong>tempDependency</strong> – A Boolean specifying whether the table data depend on temperature. The default value is
+OFF.</p></li>
+<li><p><strong>fieldDependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">CDCTerm</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError and TextError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Connector.DerivedComponent.DerivedComponent.cdcTerms">
+<span class="sig-name descname"><span class="pre">cdcTerms</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Connector.CDCTermArray.CDCTermArray" title="abaqus.Connector.CDCTermArray.CDCTermArray"><span class="pre">abaqus.Connector.CDCTermArray.CDCTermArray</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#abaqus.Connector.DerivedComponent.DerivedComponent.cdcTerms" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.DerivedComponent.DerivedComponent.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.DerivedComponent.DerivedComponent.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the DerivedComponent object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>ValueError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector.TangentialBehavior">
+<span id="abaqus-connector-tangentialbehavior-module"></span><h2>abaqus.Connector.TangentialBehavior module<a class="headerlink" href="#module-abaqus.Connector.TangentialBehavior" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Connector.TangentialBehavior.TangentialBehavior">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Connector.TangentialBehavior.</span></span><span class="sig-name descname"><span class="pre">TangentialBehavior</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PENALTY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slipRateDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pressureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponentialDecayDefinition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'COEFFICIENTS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shearStressLimit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximumElasticSlip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FRACTION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteDistance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.TangentialBehavior.TangentialBehavior" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The TangentialBehavior object specifies tangential behavior for a connector friction
+behavior option.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import section</p></li>
+<li><p>mdb.models[name].sections[name].behaviorOptions[i].tangentialBehavior</p></li>
+<li><p>import odbSection</p></li>
+<li><p>session.odbs[name].sections[name].behaviorOptions[i].tangentialBehavior</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p>If <a href="#id89"><span class="problematic" id="id90">*</span></a>formulation*=PENALTY, the table data specify the following:
+- Friction coefficient in the slip direction, μμ.
+- Slip rate, if the data depend on slip rate.
+- Contact pressure, if the data depend on contact pressure.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id91"><span class="problematic" id="id92">*</span></a>formulation*=EXPONENTIAL_DECAY and <a href="#id93"><span class="problematic" id="id94">*</span></a>exponentialDecayDefinition*=COEFFICIENTS, the table data specify the following:
+- Static friction coefficient, μsμs.
+- Kinetic friction coefficient, μkμk.
+- Decay coefficient, dcdc.
+If <a href="#id95"><span class="problematic" id="id96">*</span></a>formulation*=EXPONENTIAL_DECAY and <a href="#id97"><span class="problematic" id="id98">*</span></a>exponentialDecayDefinition*=TEST_DATA, the table data specify the following:
+- Static coefficient of friction.
+- Dynamic friction coefficient measured at the reference slip rate, ˙γ2γ˙2.
+- Reference slip rate, ˙γ2γ˙2, used to measure the dynamic friction coefficient.
+- Kinetic friction coefficient, μ∞μ∞. This value corresponds to the asymptotic value of the friction coefficient at infinite slip rate, ˙γ∞γ˙∞.</p>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>FRICTION</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Connector.TangentialBehavior.TangentialBehavior.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Connector.TangentialBehavior.TangentialBehavior.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the TangentialBehavior object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Connector">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-abaqus.Connector" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

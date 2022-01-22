@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>abaqus.Field package &mdash; pyabaqus 1.0.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Reference manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>abaqus.Field package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/abaqus.Field.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="abaqus-field-package">
+<h1>abaqus.Field package<a class="headerlink" href="#abaqus-field-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-abaqus.Field.AnalyticalField">
+<span id="abaqus-field-analyticalfield-module"></span><h2>abaqus.Field.AnalyticalField module<a class="headerlink" href="#module-abaqus.Field.AnalyticalField" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Field.AnalyticalField.AnalyticalField">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Field.AnalyticalField.</span></span><span class="sig-name descname"><span class="pre">AnalyticalField</span></span><a class="headerlink" href="#abaqus.Field.AnalyticalField.AnalyticalField" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Field.Field.Field" title="abaqus.Field.Field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Field.Field.Field</span></code></a></p>
+<p>The AnalyticalField object is the abstract base type for other AnalyticalField objects.
+The AnalyticalField object has no explicit constructor. The methods and members of the
+AnalyticalField object are common to all objects derived from the AnalyticalField.
+The AnalyticalField object is derived from the Field object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import fields</p></li>
+<li><p>mdb.models[name].analyticalFields[name]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Field.AnalyticalField.AnalyticalField.OdbMeshRegionData">
+<span class="sig-name descname"><span class="pre">OdbMeshRegionData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">odbFileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variableLabel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stepIndex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frameIndex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputPosition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNDEFINED_POSITION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SCALAR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storageType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FLOAT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantityToPlot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FIELD_OUTPUT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">averageElementOutput</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useRegionBoundaries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regionBoundaries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">includeFeatureBoundaries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">featureAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">averageOnlyDisplayed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">averagingThreshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">computeOrder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'EXTRAPOLATE_COMPUTE_AVERAGE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numericForm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'REAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complexAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectionPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refinementType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refinementLabel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displayOutputPosition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData" title="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData"><span class="pre">abaqus.Field.OdbMeshRegionData.OdbMeshRegionData</span></a></span></span><a class="headerlink" href="#abaqus.Field.AnalyticalField.AnalyticalField.OdbMeshRegionData" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates an OdbMeshRegionData object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].analyticalFields[name].OdbMeshRegionData</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>odbFileName</strong> – A String specifying the name of the output database file (including the .odb extension)
+to be read into as the source data. This String can also be the full path to the output
+database file if it is located in another directory.</p></li>
+<li><p><strong>variableLabel</strong> – A String specifying the field output variable.</p></li>
+<li><p><strong>stepIndex</strong> – An Int specifying the step index. Possible values are 0 ≤≤ <em>stepIndex</em> ≤≤ (<em>numSteps</em> −
+1). The default value is 0.</p></li>
+<li><p><strong>frameIndex</strong> – An Int specifying the frame in the specified step. Valid values are 0 ≤≤ <em>frameIndex</em> ≤≤
+(<em>numFramesInStep</em> − 1). The default value is 0.</p></li>
+<li><p><strong>outputPosition</strong> – A SymbolicConstant specifying the position where the data is written in the output
+database. Data can be obtained only from the position at which it was written to the
+output database during the analysis. This position should be aligned with the field
+output variable. Possible values are:
+- UNDEFINED_POSITION
+- NODAL
+- INTEGRATION_POINT
+- ELEMENT_FACE
+- ELEMENT_NODAL
+- ELEMENT_CENTROID
+- WHOLE_ELEMENT
+- WHOLE_REGION
+- WHOLE_PART_INSTANCE
+- WHOLE_MODEL
+- GENERAL_PARTICLE
+​   The default value is UNDEFINED_POSITION.</p></li>
+<li><p><strong>dataType</strong> – A SymbolicConstant specifying the data type of the field output variable which should be
+aligned with the variable. Currently only SCALAR is supported. Possible values are:
+- ENUMERATION
+- BOOLEAN
+- INTEGER
+- SCALAR
+- VECTOR
+- QUATERNION_2D
+- QUATERNION_3D
+- TENSOR
+- TENSOR_3D_FULL
+- TENSOR_3D_PLANAR
+- TENSOR_3D_SURFACE
+- TENSOR_2D_PLANAR
+- TENSOR_2D_SURFACE
+The default value is SCALAR.</p></li>
+<li><p><strong>storageType</strong> – ​   A SymbolicConstant specifying the storage type of the field output variable which
+should be aligned with the variable. Possible values are FLOAT, DOUBLE, INTEGER, and
+BOOLEAN. The default value is FLOAT.</p></li>
+<li><p><strong>quantityToPlot</strong> – ​   A SymbolicConstant specifying the quantity to plot. Currently only FIELD_OUTPUT is
+supported. Possible values are FIELD_OUTPUT and DISCONTINUITIES. The default value is
+FIELD_OUTPUT.</p></li>
+<li><p><strong>averageElementOutput</strong> – ​   A Boolean specifying whether to average the element output. The default value is OFF.</p></li>
+<li><p><strong>useRegionBoundaries</strong> – ​   A Boolean specifying whether to use region boundaries when averaging. The default
+value is OFF.</p></li>
+<li><p><strong>regionBoundaries</strong> – ​   A SymbolicConstant specifying the type of averaging region boundaries. Currently only
+NONE and ODB_REGIONS are supported. Possible values are NONE, ODB_REGIONS, ELEMENT_SET,
+and DISPLAY_GROUPS. The default value is NONE.</p></li>
+<li><p><strong>includeFeatureBoundaries</strong> – ​   A Boolean specifying whether to include additional averaging boundaries for shells and
+membranes based on feature edges. The default value is ON.</p></li>
+<li><p><strong>featureAngle</strong> – ​   A Float specifying the feature angle to be used when <a href="#id1"><span class="problematic" id="id2">*</span></a>includeFeatureBoundaries*=ON.
+The default value is 20.0.</p></li>
+<li><p><strong>averageOnlyDisplayed</strong> – ​   A Boolean specifying whether to average only values on displayed elements. The default
+value is OFF.</p></li>
+<li><p><strong>averagingThreshold</strong> – ​   A Float specifying the nodal averaging threshold percentage. 0 ≤≤ <em>averagingThreshold</em>
+≤≤100. The default value is 75.0.</p></li>
+<li><p><strong>computeOrder</strong> – ​   A SymbolicConstant specifying the order or the computations to be performed on the
+interested field output variable. Possible values are EXTRAPOLATE_AVERAGE_COMPUTE,
+EXTRAPOLATE_COMPUTE_AVERAGE, EXTRAPOLATE_COMPUTE, EXTRAPOLATE_COMPUTE_DISCONTINUITIES,
+and RAW_DATA. The default value is EXTRAPOLATE_COMPUTE_AVERAGE.</p></li>
+<li><p><strong>numericForm</strong> – ​   A SymbolicConstant specifying the numeric form in which to display results that
+contain complex numbers. Possible values are COMPLEX_MAGNITUDE, COMPLEX_PHASE, REAL,
+IMAGINARY, and COMPLEX_MAG_AT_ANGLE. The default value is REAL.</p></li>
+<li><p><strong>complexAngle</strong> – ​   A Float specifying the angle (in degrees) at which to display results that contain
+complex numbers when <a href="#id3"><span class="problematic" id="id4">*</span></a>numericForm=COMPLEX_MAG_AT_ANGLE*=COMPLEX_MAG_AT_ANGLE. The
+default value is 0.0.</p></li>
+<li><p><strong>sectionPoint</strong> – ​   A Dictionary with String keys and String values. Each key specifies a region in the
+model; the corresponding value specifies a section point within that region. For
+example:
+sectionPoint={‘shell &lt; MAT &gt; &lt; 7 section points &gt;’:’SPOS
+(fraction = 1.0)’, ‘shell &lt; MAT &gt; &lt; 5 section points &gt;’:
+‘SPOS, (fraction = 1.0)’, }</p></li>
+<li><p><strong>refinementType</strong> – ​   A SymbolicConstant specifying the type of the FieldOutput object. Possible values for
+the SymbolicConstant are NO_REFINEMENT, INVARIANT and COMPONENT. Default argument is
+NO_REFINEMENT. <em>refinementType</em> is mandetory if <em>variableLabel</em> has an INVARIANT or a
+COMPONENT.</p></li>
+<li><p><strong>refinementLabel</strong> – ​   A String specifying the Label of FieldOutput object. This is required only if the
+<em>refinementType</em> is INVARIANT or COMPONENT.</p></li>
+<li><p><strong>displayOutputPosition</strong> – ​   A SymbolicConstant specifying the position from which to obtain the data. Possible
+values are NODAL, INTEGRATION_POINT, ELEMENT_FACE, ELEMENT_NODAL, ELEMENT_CENTROID,
+WHOLE_ELEMENT, WHOLE_REGION, WHOLE_PART_INSTANCE, WHOLE_MODEL, and GENERAL_PARTICLE.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">An</span> <span class="pre">OdbMeshRegionData</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>TextException.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.AnalyticalField.AnalyticalField.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#abaqus.Field.AnalyticalField.AnalyticalField.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.AnalyticalField.AnalyticalField.localCsys">
+<span class="sig-name descname"><span class="pre">localCsys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="abaqus.Datum.html#abaqus.Datum.DatumCsys.DatumCsys" title="abaqus.Datum.DatumCsys.DatumCsys"><span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Field.AnalyticalField.AnalyticalField.localCsys" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.AnalyticalField.AnalyticalField.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#abaqus.Field.AnalyticalField.AnalyticalField.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.AnalyticalField.AnalyticalField.odbMeshRegionData">
+<span class="sig-name descname"><span class="pre">odbMeshRegionData</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData" title="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData"><span class="pre">abaqus.Field.OdbMeshRegionData.OdbMeshRegionData</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Field.OdbMeshRegionData.OdbMeshRegionData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Field.AnalyticalField.AnalyticalField.odbMeshRegionData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Field.DataTable">
+<span id="abaqus-field-datatable-module"></span><h2>abaqus.Field.DataTable module<a class="headerlink" href="#module-abaqus.Field.DataTable" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Field.DataTable.DataTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Field.DataTable.</span></span><span class="sig-name descname"><span class="pre">DataTable</span></span><a class="headerlink" href="#abaqus.Field.DataTable.DataTable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A DataTable is an object used to define the domain and data for a DiscreteField.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import field</p></li>
+<li><p>mdb.models[name].discreteFields[name].data[i]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.DataTable.DataTable.dataWidth">
+<span class="sig-name descname"><span class="pre">dataWidth</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.Field.DataTable.DataTable.dataWidth" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.DataTable.DataTable.domain">
+<span class="sig-name descname"><span class="pre">domain</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.Field.DataTable.DataTable.domain" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.DataTable.DataTable.instanceName">
+<span class="sig-name descname"><span class="pre">instanceName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#abaqus.Field.DataTable.DataTable.instanceName" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.DataTable.DataTable.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#abaqus.Field.DataTable.DataTable.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.DataTable.DataTable.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.Field.DataTable.DataTable.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Field.DataTableArray">
+<span id="abaqus-field-datatablearray-module"></span><h2>abaqus.Field.DataTableArray module<a class="headerlink" href="#module-abaqus.Field.DataTableArray" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Field.DataTableArray.DataTableArray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Field.DataTableArray.</span></span><span class="sig-name descname"><span class="pre">DataTableArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Field.DataTableArray.DataTableArray" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<a class="reference internal" href="#abaqus.Field.DataTable.DataTable" title="abaqus.Field.DataTable.DataTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Field.DataTable.DataTable</span></code></a>]</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Field.DataTableArray.DataTableArray.findAt">
+<span class="sig-name descname"><span class="pre">findAt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Field.DataTableArray.DataTableArray.findAt" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Field.DiscreteField">
+<span id="abaqus-field-discretefield-module"></span><h2>abaqus.Field.DiscreteField module<a class="headerlink" href="#module-abaqus.Field.DiscreteField" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Field.DiscreteField.DiscreteField">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Field.DiscreteField.</span></span><span class="sig-name descname"><span class="pre">DiscreteField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultValues</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NODES'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataWidth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Field.DataTableArray.DataTableArray" title="abaqus.Field.DataTableArray.DataTableArray"><span class="pre">abaqus.Field.DataTableArray.DataTableArray</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientationType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CARTESIAN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partLevelOrientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Field.DiscreteField.DiscreteField" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Field.Field.Field" title="abaqus.Field.Field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Field.Field.Field</span></code></a></p>
+<p>The DiscreteField object defines a varying field whose values correspond to distinct
+points within a domain.
+The DiscreteField object is derived from the Field object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import fields</p></li>
+<li><p>mdb.models[name].discreteFields[name]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Field.DiscreteField.DiscreteField.DiscreteFieldByVolumeFraction">
+<span class="sig-name descname"><span class="pre">DiscreteFieldByVolumeFraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eulerianInstance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Assembly.html#abaqus.Assembly.PartInstance.PartInstance" title="abaqus.Assembly.PartInstance.PartInstance"><span class="pre">abaqus.Assembly.PartInstance.PartInstance</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">referenceInstance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Assembly.html#abaqus.Assembly.PartInstance.PartInstance" title="abaqus.Assembly.PartInstance.PartInstance"><span class="pre">abaqus.Assembly.PartInstance.PartInstance</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">accuracy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MEDIUM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">materialLocation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'INSIDE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Field.DiscreteField.DiscreteField.DiscreteFieldByVolumeFraction" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DiscreteField object that represents the volume fraction of each
+element of an Eulerian Instance that is occupied by a reference instance.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[<em>name</em>].rootAssembly.DiscreteFieldByVolumeFraction</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>eulerianInstance</strong> – A PartInstance object specifying the elements for which volume fraction values will be
+computed.</p></li>
+<li><p><strong>referenceInstance</strong> – A PartInstance object specifying the region that either contains material or is empty of
+material.</p></li>
+<li><p><strong>accuracy</strong> – A Symbolic Constant specifying the level of accuracy that will be used in computing
+volume fractions. Possible values are LOW, MEDIUM, or HIGH. The default value is MEDIUM.</p></li>
+<li><p><strong>materialLocation</strong> – A Symbolic Constant indicating whether the material is inside or outside the
+<em>referenceInstance</em>. Possible values are INSIDE or OUTSIDE. The default value is INSIDE.</p></li>
+<li><p><strong>description</strong> – A String specifying the description of the field. The default value is an empty string.</p></li>
+<li><p><strong>scaleFactor</strong> – A float specifying the fraction of the volume that is occupied by the
+<em>referenceInstance.</em> Valid values are between 0 and 1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DiscreteField</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>AbaqusException.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Field.DiscreteField.DiscreteField.DiscreteFieldFromAnalytic">
+<span class="sig-name descname"><span class="pre">DiscreteFieldFromAnalytic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analyticFieldName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Field.DiscreteField.DiscreteField.DiscreteFieldFromAnalytic" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DiscreteField object from a AnalyticalField object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].DiscreteFieldFromAnalytic</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>location</strong> – A SymbolicConstant or an Int specifying the location of the domain data. Possible values
+are NODES and ELEMENTS. The default value is NODES.</p></li>
+<li><p><strong>analyticFieldName</strong> – A String specifying the name of the AnalyticalField containing the source data.</p></li>
+<li><p><strong>region</strong> – A Region object for the field.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DiscreteField</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>AbaqusException.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Field.DiscreteField.DiscreteField.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NODES'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataWidth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Field.DataTableArray.DataTableArray" title="abaqus.Field.DataTableArray.DataTableArray"><span class="pre">abaqus.Field.DataTableArray.DataTableArray</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientationType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CARTESIAN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partLevelOrientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Field.DiscreteField.DiscreteField.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the DiscreteField object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> – A SymbolicConstant or an Int specifying the location of the domain data. Possible values
+are NODES and ELEMENTS. The default value is NODES.</p></li>
+<li><p><strong>dataWidth</strong> – An Int specifying the width of the supplied data. The default value is 1.</p></li>
+<li><p><strong>data</strong> – A DataTableArray object.</p></li>
+<li><p><strong>description</strong> – A String specifying the description of the field. The default value is an empty string.</p></li>
+<li><p><strong>orientationType</strong> – A SymbolicConstant specifying the type of the system being described by a discrete field
+used for an orientation. Possible values are CARTESIAN, CYLINDRICAL, and SPHERICAL. The
+default value is CARTESIAN.</p></li>
+<li><p><strong>partLevelOrientation</strong> – A Boolean specifying whether or not the orientations are described in terms of part
+level coordinates. The default value is OFF.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Field.ExpressionField">
+<span id="abaqus-field-expressionfield-module"></span><h2>abaqus.Field.ExpressionField module<a class="headerlink" href="#module-abaqus.Field.ExpressionField" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Field.ExpressionField.ExpressionField">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Field.ExpressionField.</span></span><span class="sig-name descname"><span class="pre">ExpressionField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expression</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Field.ExpressionField.ExpressionField" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Field.AnalyticalField.AnalyticalField" title="abaqus.Field.AnalyticalField.AnalyticalField"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Field.AnalyticalField.AnalyticalField</span></code></a></p>
+<p>The ExpressionField object defines a spatially varying field whose value is calculated
+from a user-supplied mathematical expression.
+The ExpressionField object is derived from the AnalyticalField object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import fields</p></li>
+<li><p>mdb.models[name].analyticalFields[name]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Field.ExpressionField.ExpressionField.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Field.ExpressionField.ExpressionField.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ExpressionField object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>localCsys</strong> – None or a DatumCsys object specifying the local coordinate system of the field. If
+<a href="#id5"><span class="problematic" id="id6">*</span></a>localCsys*=None, the field is defined in the global coordinate system. The default
+value is None.</p></li>
+<li><p><strong>description</strong> – A String specifying the description of the field. The default value is an empty string.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Field.Field">
+<span id="abaqus-field-field-module"></span><h2>abaqus.Field.Field module<a class="headerlink" href="#module-abaqus.Field.Field" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Field.Field.Field">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Field.Field.</span></span><span class="sig-name descname"><span class="pre">Field</span></span><a class="headerlink" href="#abaqus.Field.Field.Field" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Field object is the abstract base type for other Field objects. The Field object has
+no explicit constructor. The methods and members of the Field object are common to all
+objects derived from the Field.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import fields</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.Field.Field.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#abaqus.Field.Field.Field.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.Field.Field.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#abaqus.Field.Field.Field.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Field.FieldModel">
+<span id="abaqus-field-fieldmodel-module"></span><h2>abaqus.Field.FieldModel module<a class="headerlink" href="#module-abaqus.Field.FieldModel" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Field.FieldModel.FieldModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Field.FieldModel.</span></span><span class="sig-name descname"><span class="pre">FieldModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Field.FieldModel.FieldModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="abaqus.Model.html#abaqus.Model.ModelBase.ModelBase" title="abaqus.Model.ModelBase.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Model.ModelBase.ModelBase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Field.FieldModel.FieldModel.DiscreteField">
+<span class="sig-name descname"><span class="pre">DiscreteField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultValues</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NODES'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataWidth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.Field.DataTableArray.DataTableArray" title="abaqus.Field.DataTableArray.DataTableArray"><span class="pre">abaqus.Field.DataTableArray.DataTableArray</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientationType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CARTESIAN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partLevelOrientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Field.DiscreteField.DiscreteField" title="abaqus.Field.DiscreteField.DiscreteField"><span class="pre">abaqus.Field.DiscreteField.DiscreteField</span></a></span></span><a class="headerlink" href="#abaqus.Field.FieldModel.FieldModel.DiscreteField" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DiscreteField object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].DiscreteField</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>defaultValues</strong> – A sequence of Floats specifying a sequence of floats specifying the default values.</p></li>
+<li><p><strong>fieldType</strong> – A SymbolicConstant or an Int specifying the type of data represented by this discrete
+field. Possible values are SCALAR, ORIENTATION, and PRESCRIBEDCONDITION_DOF.</p></li>
+<li><p><strong>location</strong> – A SymbolicConstant or an Int specifying the location of the domain data. Possible values
+are NODES and ELEMENTS. The default value is NODES.</p></li>
+<li><p><strong>dataWidth</strong> – An Int specifying the width of the supplied data. The default value is 1.</p></li>
+<li><p><strong>data</strong> – A DataTableArray object.</p></li>
+<li><p><strong>description</strong> – A String specifying the description of the field. The default value is an empty string.</p></li>
+<li><p><strong>orientationType</strong> – A SymbolicConstant specifying the type of the system being described by a discrete field
+used for an orientation. Possible values are CARTESIAN, CYLINDRICAL, and SPHERICAL. The
+default value is CARTESIAN.</p></li>
+<li><p><strong>partLevelOrientation</strong> – A Boolean specifying whether or not the orientations are described in terms of part
+level coordinates. The default value is OFF.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DiscreteField</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>AbaqusException.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Field.FieldModel.FieldModel.ExpressionField">
+<span class="sig-name descname"><span class="pre">ExpressionField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expression</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Field.ExpressionField.ExpressionField" title="abaqus.Field.ExpressionField.ExpressionField"><span class="pre">abaqus.Field.ExpressionField.ExpressionField</span></a></span></span><a class="headerlink" href="#abaqus.Field.FieldModel.FieldModel.ExpressionField" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates an ExpressionField object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].ExpressionField</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>expression</strong> – A String specifying the Python expression to evaluate in space. Variables are X, Y, and
+Z; R, Th, and Z; or R, Th, and P based on the selected coordinate system.</p></li>
+<li><p><strong>localCsys</strong> – None or a DatumCsys object specifying the local coordinate system of the field. If
+<a href="#id7"><span class="problematic" id="id8">*</span></a>localCsys*=None, the field is defined in the global coordinate system. The default
+value is None.</p></li>
+<li><p><strong>description</strong> – A String specifying the description of the field. The default value is an empty string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">An</span> <span class="pre">ExpressionField</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>TextException.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Field.FieldModel.FieldModel.MappedField">
+<span class="sig-name descname"><span class="pre">MappedField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'POINT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partLevelData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointDataFormat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'XYZ'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gridPointPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'XYPLANE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultUnMappedValue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mappingAlgorithm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SURFACE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchTolType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'RELATIVE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundarySearchTol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighborhoodSearchTol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">negativeNormalSearchTol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positiveNormalSearchTol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleCoordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gridPointData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xyzPointData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinateScalingFactors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Field.MappedField.MappedField" title="abaqus.Field.MappedField.MappedField"><span class="pre">abaqus.Field.MappedField.MappedField</span></a></span></span><a class="headerlink" href="#abaqus.Field.FieldModel.FieldModel.MappedField" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates an MappedField object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].MappedField</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>regionType</strong> – A SymbolicConstant specifying the data source region type. It can be either an ODB mesh
+or a cloud of points. Possible values are MESH and POINT. The default value is POINT.</p></li>
+<li><p><strong>partLevelData</strong> – A Boolean specifying whether or not the point cloud source data are described in terms
+of part level coordinates. If part level coordinates is employed, the local coordinate
+system defined in <em>localCsys</em> will be ignored. The default value is OFF.</p></li>
+<li><p><strong>pointDataFormat</strong> – A SymbolicConstant specifying point cloud source data format. Possible values are GRID
+and XYZ. The default value is XYZ.</p></li>
+<li><p><strong>gridPointPlane</strong> – A SymbolicConstant specifying the plane on which the point cloud source data of grid
+format are described. Possible values are XYPLANE, YZPLANE, and XZPLANE. The default
+value is XYPLANE.</p></li>
+<li><p><strong>defaultUnMappedValue</strong> – A Float specifying the parameter (field) value reported when a value cannot be
+calculated from the data source. The default value is 0.0.</p></li>
+<li><p><strong>mappingAlgorithm</strong> – A SymbolicConstant specifying the mapping algorithm for target surface, or on mesh
+target model when the parameter value are located at nodes, for example nodal
+temperatures. Possible values are SURFACE and VOLUMETRIC. The default value is SURFACE.</p></li>
+<li><p><strong>searchTolType</strong> – A SymbolicConstant specifying searching tolerance type in terms of absolute value or a
+fraction of the average of all element characteristic length in target model region.
+Possible values are ABSOLUTE and RELATIVE. The default value is RELATIVE.</p></li>
+<li><p><strong>boundarySearchTol</strong> – A Float specifying the search distance tolerance value on the exterior boundary of
+target model region. Source points within this distance will be included in computing
+the parameter value of target region. This tolerance applies to both surface and
+volumetric mapping. The default value is 0.01.</p></li>
+<li><p><strong>neighborhoodSearchTol</strong> – A Float specifying the search distance tolerance value used for distance weighting
+algorithm. Source points within this distance will be included in computing the
+parameter value of target region. This tolerance only applies to surface mapping. The
+default value is 1000000.0.</p></li>
+<li><p><strong>negativeNormalSearchTol</strong> – A Float specifying the search distance tolerance value in the negative normal of target
+surface region. Source points within this distance will be included in computing the
+parameter value of target region. This tolerance only applies to surface mapping. The
+default value is 0.15.</p></li>
+<li><p><strong>positiveNormalSearchTol</strong> – A Float specifying the search distance tolerance value in the positive normal of target
+surface region. Source points within this distance will be included in computing the
+parameter value of target region. This tolerance only applies to surface mapping. The
+default value is 0.05.</p></li>
+<li><p><strong>scaleCoordinates</strong> – A Boolean specifying whether or not to scale the user-supplied coordinate values from
+the point cloud or indicated ODB. The default value is OFF.</p></li>
+<li><p><strong>gridPointData</strong> – A sequence of sequences of Floats specifying the point cloud source data of grid format.
+The default value is an empty sequence.</p></li>
+<li><p><strong>xyzPointData</strong> – A sequence of sequences of Floats specifying the point cloud source data of XYZ format.
+Each data item is defining the XYZ coordinates of a point and its field value. The
+default value is an empty sequence.</p></li>
+<li><p><strong>coordinateScalingFactors</strong> – A sequence of Floats specifying the scaling factors for the global 1, 2 and 3
+directions. The default value is (1.0, 1.0, 1.0).</p></li>
+<li><p><strong>localCsys</strong> – None or a DatumCsys object specifying the local coordinate system of the field. If
+<a href="#id9"><span class="problematic" id="id10">*</span></a>localCsys*=None, the field is defined in the global coordinate system. The default
+value is None.</p></li>
+<li><p><strong>description</strong> – A String specifying the description of the field. The default value is an empty string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">MappedField</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>AbaqusException.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Field.FieldOdb">
+<span id="abaqus-field-fieldodb-module"></span><h2>abaqus.Field.FieldOdb module<a class="headerlink" href="#module-abaqus.Field.FieldOdb" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Field.FieldOdb.FieldOdb">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Field.FieldOdb.</span></span><span class="sig-name descname"><span class="pre">FieldOdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analysisTitle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Field.FieldOdb.FieldOdb" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="abaqus.Odb.html#abaqus.Odb.OdbBase.OdbBase" title="abaqus.Odb.OdbBase.OdbBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Odb.OdbBase.OdbBase</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Field.MappedField">
+<span id="abaqus-field-mappedfield-module"></span><h2>abaqus.Field.MappedField module<a class="headerlink" href="#module-abaqus.Field.MappedField" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Field.MappedField.</span></span><span class="sig-name descname"><span class="pre">MappedField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'POINT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partLevelData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointDataFormat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'XYZ'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gridPointPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'XYPLANE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultUnMappedValue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mappingAlgorithm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SURFACE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchTolType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'RELATIVE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundarySearchTol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighborhoodSearchTol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">negativeNormalSearchTol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positiveNormalSearchTol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleCoordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gridPointData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xyzPointData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinateScalingFactors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Field.MappedField.MappedField" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Field.AnalyticalField.AnalyticalField" title="abaqus.Field.AnalyticalField.AnalyticalField"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Field.AnalyticalField.AnalyticalField</span></code></a></p>
+<p>The MappedField object defines a spatially varying field whose value is calculated from
+an external source data.
+The MappedField object is derived from the AnalyticalField object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import fields</p></li>
+<li><p>mdb.models[name].analyticalFields[name]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.boundarySearchTol">
+<span class="sig-name descname"><span class="pre">boundarySearchTol</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.boundarySearchTol" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.coordinateScalingFactors">
+<span class="sig-name descname"><span class="pre">coordinateScalingFactors</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.coordinateScalingFactors" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.defaultUnMappedValue">
+<span class="sig-name descname"><span class="pre">defaultUnMappedValue</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.defaultUnMappedValue" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.gridPointData">
+<span class="sig-name descname"><span class="pre">gridPointData</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.gridPointData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.gridPointPlane">
+<span class="sig-name descname"><span class="pre">gridPointPlane</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'XYPLANE'</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.gridPointPlane" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.localCsys">
+<span class="sig-name descname"><span class="pre">localCsys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.localCsys" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.mappingAlgorithm">
+<span class="sig-name descname"><span class="pre">mappingAlgorithm</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SURFACE'</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.mappingAlgorithm" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.negativeNormalSearchTol">
+<span class="sig-name descname"><span class="pre">negativeNormalSearchTol</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.negativeNormalSearchTol" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.neighborhoodSearchTol">
+<span class="sig-name descname"><span class="pre">neighborhoodSearchTol</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1000000</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.neighborhoodSearchTol" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.odbMeshRegionData">
+<span class="sig-name descname"><span class="pre">odbMeshRegionData</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData" title="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData"><span class="pre">abaqus.Field.OdbMeshRegionData.OdbMeshRegionData</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.odbMeshRegionData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.partLevelData">
+<span class="sig-name descname"><span class="pre">partLevelData</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.partLevelData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.pointDataFormat">
+<span class="sig-name descname"><span class="pre">pointDataFormat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'XYZ'</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.pointDataFormat" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.positiveNormalSearchTol">
+<span class="sig-name descname"><span class="pre">positiveNormalSearchTol</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.positiveNormalSearchTol" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.regionType">
+<span class="sig-name descname"><span class="pre">regionType</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'POINT'</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.regionType" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.scaleCoordinates">
+<span class="sig-name descname"><span class="pre">scaleCoordinates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.scaleCoordinates" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.searchTolType">
+<span class="sig-name descname"><span class="pre">searchTolType</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RELATIVE'</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.searchTolType" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'POINT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partLevelData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointDataFormat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'XYZ'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gridPointPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'XYPLANE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultUnMappedValue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mappingAlgorithm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SURFACE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchTolType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'RELATIVE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundarySearchTol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighborhoodSearchTol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">negativeNormalSearchTol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positiveNormalSearchTol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleCoordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gridPointData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xyzPointData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinateScalingFactors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the MappedField object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>regionType</strong> – A SymbolicConstant specifying the data source region type. It can be either an ODB mesh
+or a cloud of points. Possible values are MESH and POINT. The default value is POINT.</p></li>
+<li><p><strong>partLevelData</strong> – A Boolean specifying whether or not the point cloud source data are described in terms
+of part level coordinates. If part level coordinates is employed, the local coordinate
+system defined in <em>localCsys</em> will be ignored. The default value is OFF.</p></li>
+<li><p><strong>pointDataFormat</strong> – A SymbolicConstant specifying point cloud source data format. Possible values are GRID
+and XYZ. The default value is XYZ.</p></li>
+<li><p><strong>gridPointPlane</strong> – A SymbolicConstant specifying the plane on which the point cloud source data of grid
+format are described. Possible values are XYPLANE, YZPLANE, and XZPLANE. The default
+value is XYPLANE.</p></li>
+<li><p><strong>defaultUnMappedValue</strong> – A Float specifying the parameter (field) value reported when a value cannot be
+calculated from the data source. The default value is 0.0.</p></li>
+<li><p><strong>mappingAlgorithm</strong> – A SymbolicConstant specifying the mapping algorithm for target surface, or on mesh
+target model when the parameter value are located at nodes, for example nodal
+temperatures. Possible values are SURFACE and VOLUMETRIC. The default value is SURFACE.</p></li>
+<li><p><strong>searchTolType</strong> – A SymbolicConstant specifying searching tolerance type in terms of absolute value or a
+fraction of the average of all element characteristic length in target model region.
+Possible values are ABSOLUTE and RELATIVE. The default value is RELATIVE.</p></li>
+<li><p><strong>boundarySearchTol</strong> – A Float specifying the search distance tolerance value on the exterior boundary of
+target model region. Source points within this distance will be included in computing
+the parameter value of target region. This tolerance applies to both surface and
+volumetric mapping. The default value is 0.01.</p></li>
+<li><p><strong>neighborhoodSearchTol</strong> – A Float specifying the search distance tolerance value used for distance weighting
+algorithm. Source points within this distance will be included in computing the
+parameter value of target region. This tolerance only applies to surface mapping. The
+default value is 1000000.0.</p></li>
+<li><p><strong>negativeNormalSearchTol</strong> – A Float specifying the search distance tolerance value in the negative normal of target
+surface region. Source points within this distance will be included in computing the
+parameter value of target region. This tolerance only applies to surface mapping. The
+default value is 0.15.</p></li>
+<li><p><strong>positiveNormalSearchTol</strong> – A Float specifying the search distance tolerance value in the positive normal of target
+surface region. Source points within this distance will be included in computing the
+parameter value of target region. This tolerance only applies to surface mapping. The
+default value is 0.05.</p></li>
+<li><p><strong>scaleCoordinates</strong> – A Boolean specifying whether or not to scale the user-supplied coordinate values from
+the point cloud or indicated ODB. The default value is OFF.</p></li>
+<li><p><strong>gridPointData</strong> – A sequence of sequences of Floats specifying the point cloud source data of grid format.
+The default value is an empty sequence.</p></li>
+<li><p><strong>xyzPointData</strong> – A sequence of sequences of Floats specifying the point cloud source data of XYZ format.
+Each data item is defining the XYZ coordinates of a point and its field value. The
+default value is an empty sequence.</p></li>
+<li><p><strong>coordinateScalingFactors</strong> – A sequence of Floats specifying the scaling factors for the global 1, 2 and 3
+directions. The default value is (1.0, 1.0, 1.0).</p></li>
+<li><p><strong>localCsys</strong> – None or a DatumCsys object specifying the local coordinate system of the field. If
+<a href="#id11"><span class="problematic" id="id12">*</span></a>localCsys*=None, the field is defined in the global coordinate system. The default
+value is None.</p></li>
+<li><p><strong>description</strong> – A String specifying the description of the field. The default value is an empty string.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.MappedField.MappedField.xyzPointData">
+<span class="sig-name descname"><span class="pre">xyzPointData</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#abaqus.Field.MappedField.MappedField.xyzPointData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Field.OdbMeshRegionData">
+<span id="abaqus-field-odbmeshregiondata-module"></span><h2>abaqus.Field.OdbMeshRegionData module<a class="headerlink" href="#module-abaqus.Field.OdbMeshRegionData" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Field.OdbMeshRegionData.</span></span><span class="sig-name descname"><span class="pre">OdbMeshRegionData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">odbFileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variableLabel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stepIndex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frameIndex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputPosition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNDEFINED_POSITION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SCALAR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storageType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FLOAT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantityToPlot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FIELD_OUTPUT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">averageElementOutput</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useRegionBoundaries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regionBoundaries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">includeFeatureBoundaries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">featureAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">averageOnlyDisplayed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">averagingThreshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">computeOrder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'EXTRAPOLATE_COMPUTE_AVERAGE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numericForm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'REAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complexAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectionPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refinementType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refinementLabel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displayOutputPosition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The OdbMeshRegionData object defines the external source data of MappedField from an ODB
+file.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import field</p></li>
+<li><p>mdb.models[name].analyticalFields[name].odbMeshRegionData</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.averageElementOutput">
+<span class="sig-name descname"><span class="pre">averageElementOutput</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.averageElementOutput" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.averageOnlyDisplayed">
+<span class="sig-name descname"><span class="pre">averageOnlyDisplayed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.averageOnlyDisplayed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.averagingThreshold">
+<span class="sig-name descname"><span class="pre">averagingThreshold</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">75</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.averagingThreshold" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.complexAngle">
+<span class="sig-name descname"><span class="pre">complexAngle</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.complexAngle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.computeOrder">
+<span class="sig-name descname"><span class="pre">computeOrder</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'EXTRAPOLATE_COMPUTE_AVERAGE'</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.computeOrder" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.dataType">
+<span class="sig-name descname"><span class="pre">dataType</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SCALAR'</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.dataType" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.displayOutputPosition">
+<span class="sig-name descname"><span class="pre">displayOutputPosition</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UNDEFINED_POSITION'</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.displayOutputPosition" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.featureAngle">
+<span class="sig-name descname"><span class="pre">featureAngle</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.featureAngle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.frameIndex">
+<span class="sig-name descname"><span class="pre">frameIndex</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.frameIndex" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.includeFeatureBoundaries">
+<span class="sig-name descname"><span class="pre">includeFeatureBoundaries</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.includeFeatureBoundaries" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.numericForm">
+<span class="sig-name descname"><span class="pre">numericForm</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'REAL'</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.numericForm" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.odbFileName">
+<span class="sig-name descname"><span class="pre">odbFileName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.odbFileName" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.outputPosition">
+<span class="sig-name descname"><span class="pre">outputPosition</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UNDEFINED_POSITION'</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.outputPosition" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.quantityToPlot">
+<span class="sig-name descname"><span class="pre">quantityToPlot</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FIELD_OUTPUT'</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.quantityToPlot" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.regionBoundaries">
+<span class="sig-name descname"><span class="pre">regionBoundaries</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NONE'</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.regionBoundaries" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the OdbMeshRegionData object.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.stepIndex">
+<span class="sig-name descname"><span class="pre">stepIndex</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.stepIndex" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.storageType">
+<span class="sig-name descname"><span class="pre">storageType</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FLOAT'</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.storageType" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.useRegionBoundaries">
+<span class="sig-name descname"><span class="pre">useRegionBoundaries</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.useRegionBoundaries" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.variableLabel">
+<span class="sig-name descname"><span class="pre">variableLabel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.variableLabel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Field">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-abaqus.Field" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

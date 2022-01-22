@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Print &mdash; pyabaqus 1.0.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Reference manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Print</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/rsts/print.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="print">
+<h1>Print<a class="headerlink" href="#print" title="Permalink to this headline"></a></h1>
+<div class="section" id="epsoptions">
+<h2>EpsOptions<a class="headerlink" href="#epsoptions" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Print.EpsOptions.EpsOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Print.EpsOptions.</span></span><span class="sig-name descname"><span class="pre">EpsOptions</span></span><a class="headerlink" href="#abaqus.Print.EpsOptions.EpsOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The EpsOptions object stores the settings that Abaqus uses when printing using
+Encapsulated PostScript format. The EpsOptions object has no constructor. Abaqus creates
+the <em>epsOptions</em> member when a session is started.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.epsOptions</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Print.EpsOptions.EpsOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imageSize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SIZE_ON_SCREEN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'INCHES'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DPI_150'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PS_IF_AVAILABLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imageFormat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'VECTOR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shadingQuality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MEDIUM'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Print.EpsOptions.EpsOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the EpsOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imageSize</strong> – The SymbolicConstant SIZE_ON_SCREEN or a pair of Floats specifying the width and height
+of the image in the units specified by <em>units</em>. Possible numeric values are <em>imageSize</em>
+≥≥ (<em>minWidth</em>, <em>minHeight</em>). The default value is SIZE_ON_SCREEN.Note:The minimum value
+of width and height (<em>minWidth</em> and <em>minHeight</em>) is 10 mm (approximately 0.4 inches).</p></li>
+<li><p><strong>units</strong> – A SymbolicConstant specifying the units of the <em>imageSize</em> argument. This argument is
+ignored if <em>imageSize</em> is SIZE_ON_SCREEN. Possible values are INCHES and MM. The default
+value is INCHES.</p></li>
+<li><p><strong>resolution</strong> – A SymbolicConstant specifying the resolution of the image in dots per inch (dpi). The
+<em>resolution</em> can be DPI_1200 only if <a href="#id1"><span class="problematic" id="id2">*</span></a>imageFormat*=VECTOR. Possible values are DPI_75,
+DPI_150, DPI_300, DPI_450, DPI_600, and DPI_1200. The default value is DPI_150.</p></li>
+<li><p><strong>fontType</strong> – A SymbolicConstant specifying the PostScript font substitution rules to be applied.
+Possible values are PS_ALWAYS, PS_IF_AVAILABLE, and AS_DISPLAYED. The default value is
+PS_IF_AVAILABLE.</p></li>
+<li><p><strong>imageFormat</strong> – A SymbolicConstant specifying how the viewport display will be represented. Possible
+values are VECTOR and RASTER. The default value is VECTOR.</p></li>
+<li><p><strong>shadingQuality</strong> – A SymbolicConstant specifying how fine the shading of curved surfaces will be for vector
+images. Possible values are EXTRA COARSE, COARSE, MEDIUM, FINE, and EXTRA FINE. The
+default value is MEDIUM.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – <p>RangeError.
+- If either element of <em>imageSize</em> is out of range:</p>
+<blockquote>
+<div><p>RangeError: imageSize must be SIZE_ON_SCREEN or a sequence of 2 Floats &gt;= (<em>minWidth</em>,</p>
+</div></blockquote>
+<p><em>minHeight</em>)</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="pagesetupoptions">
+<h2>PageSetupOptions<a class="headerlink" href="#pagesetupoptions" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Print.PageSetupOptions.PageSetupOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Print.PageSetupOptions.</span></span><span class="sig-name descname"><span class="pre">PageSetupOptions</span></span><a class="headerlink" href="#abaqus.Print.PageSetupOptions.PageSetupOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The PageSetupOptions object stores the settings that Abaqus uses when printing using a
+Windows printer. The PageSetupOptions object has no constructor. Abaqus creates the
+<em>pageSetupOptions</em> member when a session is started.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.pageSetupOptions</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Print.PageSetupOptions.PageSetupOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imageSize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FIT_TO_PAGE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'INCHES'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MEDIUM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topMargin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bottomMargin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leftMargin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rightMargin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PORTRAIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Print.PageSetupOptions.PageSetupOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the PageSetupOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imageSize</strong> – A SymbolicConstant or a pair of Floats specifying the size of the printed image in the
+currently selected units (inches or millimeters). Possible values are FIT_TO_PAGE and
+SIZE_ON_SCREEN. The default value is FIT_TO_PAGE.Note:The minimum value of width and
+height (<em>minWidth</em> and <em>minHeight</em>) is 10 mm (approximately 0.4 inches).</p></li>
+<li><p><strong>units</strong> – A SymbolicConstant specifying the units to use for the margins and image size. Possible
+values are INCHES and MM. The default value is INCHES.</p></li>
+<li><p><strong>quality</strong> – A SymbolicConstant specifying the quality of the image. Possible values are COARSE,
+MEDIUM, and FINE. The default value is MEDIUM.</p></li>
+<li><p><strong>topMargin</strong> – A Float specifying the top margin of the paper in the currently selected units (inches
+or millimeters). Possible values are <em>topMargin</em> ≥≥ 0. The default value is 0.5.</p></li>
+<li><p><strong>bottomMargin</strong> – A Float specifying the bottom margin of the paper in the currently selected units
+(inches or millimeters). Possible values are <em>bottomMargin</em> ≥≥ 0. The default value is
+0.5.</p></li>
+<li><p><strong>leftMargin</strong> – A Float specifying the left margin of the paper in the currently selected units (inches
+or millimeters). Possible values are <em>leftMargin</em> ≥≥ 0. The default value is 0.5.</p></li>
+<li><p><strong>rightMargin</strong> – A Float specifying the right margin of the paper in the currently selected units (inches
+or millimeters). Possible values are <em>rightMargin</em> ≥≥ 0. The default value is 0.5.</p></li>
+<li><p><strong>orientation</strong> – A SymbolicConstant specifying the orientation of the image. Possible values are PORTRAIT
+and LANDSCAPE. The default value is PORTRAIT.</p></li>
+<li><p><strong>logo</strong> – A Boolean specifying whether the output includes the Abaqus logo. The default value is
+ON.</p></li>
+<li><p><strong>date</strong> – A Boolean specifying whether the output includes the date. The default value is ON.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – <p>RangeError.
+Note:The minimum value of width and height (<em>minWidth</em> and <em>minHeight</em>) is 10 mm
+(approximately 0.4 inches).
+- If <em>leftMargin</em> + <em>rightMargin</em> is out of range:</p>
+<blockquote>
+<div><p>RangeError: leftMargin and rightMargin must produce image width &gt;= minWidth</p>
+</div></blockquote>
+<ul>
+<li><p>If <em>topMargin</em> + <em>bottomMargin</em> is out of range:
+RangeError: topMargin and bottomMargin must produce image height &gt;= minHeight</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="pngoptions">
+<h2>PngOptions<a class="headerlink" href="#pngoptions" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Print.PngOptions.PngOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Print.PngOptions.</span></span><span class="sig-name descname"><span class="pre">PngOptions</span></span><a class="headerlink" href="#abaqus.Print.PngOptions.PngOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The PngOptions object stores the settings that Abaqus uses when printing in PNG format.
+The PngOptions object has no constructor. Abaqus creates the <em>pngOptions</em> member when a
+session is started.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Print.PngOptions.PngOptions.cces">
+<span class="sig-name descname"><span class="pre">cces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Print.PngOptions.PngOptions.cces" title="Permalink to this definition"></a></dt>
+<dd><p>session.pngOptions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Exceptions</span></code></p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">----------</span></code></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Print.PngOptions.PngOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imageSize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SIZE_ON_SCREEN'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Print.PngOptions.PngOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the PngOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imageSize</strong> – The SymbolicConstant SIZE_ON_SCREEN or a pair of Ints specifying the width and height of
+the image in pixels. Possible values are (<em>minWidth</em>, <em>minHeight</em>) ≤ <em>imageSize</em> ≤
+(<em>maxWidth</em> and <em>maxHeight</em>). The default value is SIZE_ON_SCREEN.
+Note: The minimum value of width and height (<em>minWidth</em> and <em>minHeight</em> ) is the number
+of pixels that occupy 10 mm at the current screen resolution. The value is typically
+around 50 pixels and may be different for width and height.
+The maximum value of width and height (<em>maxWidth</em> and <em>maxHeight</em> ) is the largest
+number of pixels supported by the system graphics and will be at least as large as the
+screen dimensions.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – <p>RangeError.
+- If either the width or height arguments of <em>imageSize</em> are out of range (where
+<em>minWidth</em> and <em>minHeight</em> are the number of pixels corresponding to approximately 10 mm
+for a given display and <em>maxWidth</em> and <em>maxHeight</em> are the largest allowable number of
+pixels supported by the system graphics):</p>
+<blockquote>
+<div><p>RangeError: imageSize must be SIZE_ON_SCREEN or a sequence of 2 Ints in the range</p>
+</div></blockquote>
+<p>(minWidth, minHeight) &lt;= (width, height) &lt;= (maxWidth, maxHeight).</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="printoptions">
+<h2>PrintOptions<a class="headerlink" href="#printoptions" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Print.PrintOptions.PrintOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Print.PrintOptions.</span></span><span class="sig-name descname"><span class="pre">PrintOptions</span></span><a class="headerlink" href="#abaqus.Print.PrintOptions.PrintOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The PrintOptions object stores the common settings that Abaqus uses for all print
+methods. The PrintOptions object has no constructor. Abaqus creates the <em>printOptions</em>
+member when a session is started.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.printOptions</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Print.PrintOptions.PrintOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rendition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'COLOR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vpDecorations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vpBackground</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printCommand</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deleteTemporaryFiles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reduceColors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Print.PrintOptions.PrintOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the PrintOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rendition</strong> – A SymbolicConstant specifying how the image is rendered. Possible values are
+BLACK_AND_WHITE, GREYSCALE, and COLOR. The default value is COLOR.</p></li>
+<li><p><strong>vpDecorations</strong> – A Boolean specifying whether the output includes the viewport border and title. The
+default value is ON.</p></li>
+<li><p><strong>vpBackground</strong> – A Boolean specifying whether the output includes viewport backgrounds. The default value
+is OFF.</p></li>
+<li><p><strong>compass</strong> – A Boolean specifying whether the output includes the view compass The default value is
+OFF.</p></li>
+<li><p><strong>printCommand</strong> – A String specifying the default print command that will be used by the printToPrinter
+method if no <em>printCommand</em> argument is provided. The default value is “lpr”.</p></li>
+<li><p><strong>deleteTemporaryFiles</strong> – A Boolean specifying whether to delete the temporary files created when an image is
+printed. The default value is ON.You should set the <em>deleteTemporaryFiles</em> argument to
+False if your printer does not support print spooling.</p></li>
+<li><p><strong>reduceColors</strong> – A Boolean specifying whether the raster image printed is reduced from true color to 256
+colors to reduce file size. The quality of the image will be compromised. The default
+value is OFF.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="psoptions">
+<h2>PsOptions<a class="headerlink" href="#psoptions" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Print.PsOptions.PsOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Print.PsOptions.</span></span><span class="sig-name descname"><span class="pre">PsOptions</span></span><a class="headerlink" href="#abaqus.Print.PsOptions.PsOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The PsOptions object stores the settings that Abaqus uses when printing using PostScript
+format. The PsOptions object has no constructor. Abaqus creates the <em>psOptions</em> member
+when a session is started.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.psOptions</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Print.PsOptions.PsOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paperSize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LETTER'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topMargin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bottomMargin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leftMargin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rightMargin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PORTRAIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DPI_150'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PS_IF_AVAILABLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imageFormat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'VECTOR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shadingQuality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MEDIUM'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Print.PsOptions.PsOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the PsOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>paperSize</strong> – A SymbolicConstant specifying the paper size. Possible values are:
+- LETTER
+- LEGAL
+- LEDGER
+- A0
+- A1
+- A2
+- A3
+- A4
+- A5
+The default value is LETTER.</p></li>
+<li><p><strong>topMargin</strong> – A Float specifying the top margin of the paper in inches. Possible values are
+<em>topMargin</em> ≥≥ 0. The default value is 0.5.</p></li>
+<li><p><strong>bottomMargin</strong> – A Float specifying the bottom margin of the paper in inches. Possible values are
+<em>bottomMargin</em> ≥≥ 0. The default value is 0.5.</p></li>
+<li><p><strong>leftMargin</strong> – A Float specifying the left margin of the paper in inches. Possible values are
+<em>leftMargin</em> ≥≥ 0. The default value is 0.5.</p></li>
+<li><p><strong>rightMargin</strong> – A Float specifying the right margin of the paper in inches. Possible values are
+<em>rightMargin</em> ≥≥ 0. The default value is 0.5.</p></li>
+<li><p><strong>orientation</strong> – A SymbolicConstant specifying the orientation of the image. Possible values are PORTRAIT
+and LANDSCAPE. The default value is PORTRAIT.</p></li>
+<li><p><strong>logo</strong> – A Boolean specifying whether the output includes the Abaqus logo. The default value is
+ON.</p></li>
+<li><p><strong>date</strong> – A Boolean specifying whether the output includes the date. The default value is ON.</p></li>
+<li><p><strong>resolution</strong> – A SymbolicConstant specifying the resolution of the image in dots per inch (dpi). The
+<em>resolution</em> can be DPI_1200 only if <em>imageFormat</em> = VECTOR. Possible values are DPI_75,
+DPI_150, DPI_300, DPI_450, DPI_600, and DPI_1200. The default value is DPI_150.</p></li>
+<li><p><strong>fontType</strong> – A SymbolicConstant specifying the PostScript font substitution rules to be applied.
+Possible values are PS_ALWAYS, PS_IF_AVAILABLE, and AS_DISPLAYED. The default value is
+PS_IF_AVAILABLE.</p></li>
+<li><p><strong>imageFormat</strong> – A SymbolicConstant specifying how the viewport display will be represented. Possible
+values are VECTOR and RASTER. The default value is VECTOR.</p></li>
+<li><p><strong>shadingQuality</strong> – A SymbolicConstant specifying how fine the shading of curved surfaces will be for vector
+images. Possible values are EXTRA COARSE, COARSE, MEDIUM, FINE, and EXTRA FINE. The
+default value is MEDIUM.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – <p>RangeError.
+Note:The minimum value of width and height (<em>minWidth</em> and <em>minHeight</em>) is 10 mm
+(approximately 0.4 inches).
+- If <em>leftMargin</em> + <em>rightMargin</em> is out of range:</p>
+<blockquote>
+<div><p>RangeError: leftMargin and rightMargin must produce image width &gt;= minWidth</p>
+</div></blockquote>
+<ul>
+<li><p>If <em>topMargin</em> + <em>bottomMargin</em> is out of range:
+RangeError: topMargin and bottomMargin must produce image height &gt;= minHeight</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="svgoptions">
+<h2>SvgOptions<a class="headerlink" href="#svgoptions" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Print.SvgOptions.SvgOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Print.SvgOptions.</span></span><span class="sig-name descname"><span class="pre">SvgOptions</span></span><a class="headerlink" href="#abaqus.Print.SvgOptions.SvgOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The SvgOptions object stores the settings that Abaqus uses when printing in SVG format.
+The SvgOptions object has no constructor. Abaqus creates the <em>svgOptions</em> member when a
+session is started.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.svgOptions</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Print.SvgOptions.SvgOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imageSize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SIZE_ON_SCREEN'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Print.SvgOptions.SvgOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the SvgOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imageSize</strong> – The SymbolicConstant SIZE_ON_SCREEN or a pair of Ints specifying the width and height of
+the image in pixels. Possible values are (<em>minWidth</em>, <em>minHeight</em> ) ≤≤ <em>imageSize</em> ≤≤
+(<em>maxWidth</em> and <em>maxHeight</em>). The default value is SIZE_ON_SCREEN.Note:The minimum value
+of width and height (<em>minWidth</em> and <em>minHeight</em>) is the number of pixels that occupy 10
+mm at the current screen resolution. The value is typically around 50 pixels and may be
+different for width and height.The maximum value of width and height (<em>maxWidth</em> and
+<em>maxHeight</em>) is the largest number of pixels supported by the system graphics and will
+be at least as large as the screen dimensions.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – <p>RangeError.
+- If either the width or height arguments of <em>imageSize</em> are out of range (where
+<em>minWidth</em> and <em>minHeight</em> are the number of pixels corresponding to approximately 10 mm
+for a given display and <em>maxWidth</em> and <em>maxHeight</em> are the largest allowable number of
+pixels supported by the system graphics):</p>
+<blockquote>
+<div><p>RangeError: imageSize must be SIZE_ON_SCREEN or a sequence of 2 Ints in the range</p>
+</div></blockquote>
+<p>(minWidth, minHeight) &lt;= (width, height) &lt;= (maxWidth, maxHeight).</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

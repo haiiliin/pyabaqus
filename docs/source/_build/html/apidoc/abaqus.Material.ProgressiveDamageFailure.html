@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>abaqus.Material.ProgressiveDamageFailure package &mdash; pyabaqus 1.0.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Reference manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>abaqus.Material.ProgressiveDamageFailure package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/abaqus.Material.ProgressiveDamageFailure.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="abaqus-material-progressivedamagefailure-package">
+<h1>abaqus.Material.ProgressiveDamageFailure package<a class="headerlink" href="#abaqus-material-progressivedamagefailure-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-abaqus.Material.ProgressiveDamageFailure.DamageEvolution">
+<span id="abaqus-material-progressivedamagefailure-damageevolution-module"></span><h2>abaqus.Material.ProgressiveDamageFailure.DamageEvolution module<a class="headerlink" href="#module-abaqus.Material.ProgressiveDamageFailure.DamageEvolution" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageEvolution.DamageEvolution">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.ProgressiveDamageFailure.DamageEvolution.</span></span><span class="sig-name descname"><span class="pre">DamageEvolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degradation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MAXIMUM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mixedModeBehavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MODE_INDEPENDENT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modeMixRatio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ENERGY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">softening</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LINEAR'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageEvolution.DamageEvolution" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The DamageEvolution object specifies material properties to define the evolution of
+damage.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].ductileDamageInitiation.damageEvolution</p></li>
+<li><p>mdb.models[name].materials[name].fldDamageInitiation.damageEvolution</p></li>
+<li><p>mdb.models[name].materials[name].flsdDamageInitiation.damageEvolution</p></li>
+<li><p>mdb.models[name].materials[name].hashinDamageInitiation.damageEvolution</p></li>
+<li><p>mdb.models[name].materials[name].johnsonCookDamageInitiation.damageEvolution</p></li>
+<li><p>mdb.models[name].materials[name].maxeDamageInitiation.damageEvolution</p></li>
+<li><p>mdb.models[name].materials[name].maxpeDamageInitiation.damageEvolution</p></li>
+<li><p>mdb.models[name].materials[name].maxpsDamageInitiation.damageEvolution</p></li>
+<li><p>mdb.models[name].materials[name].maxsDamageInitiation.damageEvolution</p></li>
+<li><p>mdb.models[name].materials[name].mkDamageInitiation.damageEvolution</p></li>
+<li><p>mdb.models[name].materials[name].msfldDamageInitiation.damageEvolution</p></li>
+<li><p>mdb.models[name].materials[name].quadeDamageInitiation.damageEvolution</p></li>
+<li><p>mdb.models[name].materials[name].quadsDamageInitiation.damageEvolution</p></li>
+<li><p>mdb.models[name].materials[name].shearDamageInitiation.damageEvolution</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].ductileDamageInitiation.damageEvolution</p></li>
+<li><p>session.odbs[name].materials[name].fldDamageInitiation.damageEvolution</p></li>
+<li><p>session.odbs[name].materials[name].flsdDamageInitiation.damageEvolution</p></li>
+<li><p>session.odbs[name].materials[name].hashinDamageInitiation.damageEvolution</p></li>
+<li><p>session.odbs[name].materials[name].johnsonCookDamageInitiation.damageEvolution</p></li>
+<li><p>session.odbs[name].materials[name].maxeDamageInitiation.damageEvolution</p></li>
+<li><p>session.odbs[name].materials[name].maxpeDamageInitiation.damageEvolution</p></li>
+<li><p>session.odbs[name].materials[name].maxpsDamageInitiation.damageEvolution</p></li>
+<li><p>session.odbs[name].materials[name].maxsDamageInitiation.damageEvolution</p></li>
+<li><p>session.odbs[name].materials[name].mkDamageInitiation.damageEvolution</p></li>
+<li><p>session.odbs[name].materials[name].msfldDamageInitiation.damageEvolution</p></li>
+<li><p>session.odbs[name].materials[name].quadeDamageInitiation.damageEvolution</p></li>
+<li><p>session.odbs[name].materials[name].quadsDamageInitiation.damageEvolution</p></li>
+<li><p>session.odbs[name].materials[name].shearDamageInitiation.damageEvolution</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p>If <a href="#id1"><span class="problematic" id="id2">*</span></a>type*=DISPLACEMENT, and <a href="#id3"><span class="problematic" id="id4">*</span></a>softening*=LINEAR, and <a href="#id5"><span class="problematic" id="id6">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:
+- Equivalent total or Plastic displacement at failure, measured from the time of damage initiation.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id7"><span class="problematic" id="id8">*</span></a>type*=ENERGY, and <a href="#id9"><span class="problematic" id="id10">*</span></a>softening*=LINEAR, and <a href="#id11"><span class="problematic" id="id12">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:
+- Fracture energy.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id13"><span class="problematic" id="id14">*</span></a>type*=DISPLACEMENT, and <a href="#id15"><span class="problematic" id="id16">*</span></a>softening*=LINEAR, and <a href="#id17"><span class="problematic" id="id18">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:
+- Total displacement at failure, measured from the time of damage initiation.
+- Appropriate mode mix ratio.
+- Appropriate mode mix ratio (if relevant, for three-dimensional problems with anisotropic shear behavior).
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id19"><span class="problematic" id="id20">*</span></a>type*=ENERGY, and <a href="#id21"><span class="problematic" id="id22">*</span></a>softening*=LINEAR, and <a href="#id23"><span class="problematic" id="id24">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:
+- Fracture energy.
+- Appropriate mode mix ratio.
+- Appropriate mode mix ratio (if relevant, for three-dimensional problems with anisotropic shear behavior).
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id25"><span class="problematic" id="id26">*</span></a>type*=DISPLACEMENT, and <a href="#id27"><span class="problematic" id="id28">*</span></a>softening*=EXPONENTIAL, and <a href="#id29"><span class="problematic" id="id30">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:
+- Equivalent total or Plastic displacement at failure, measured from the time of damage initiation.
+- Exponential law parameter.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id31"><span class="problematic" id="id32">*</span></a>type*=ENERGY, and <a href="#id33"><span class="problematic" id="id34">*</span></a>softening*=EXPONENTIAL, and <a href="#id35"><span class="problematic" id="id36">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:
+- Fracture energy.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id37"><span class="problematic" id="id38">*</span></a>type*=DISPLACEMENT, and <a href="#id39"><span class="problematic" id="id40">*</span></a>softening*=EXPONENTIAL, and <a href="#id41"><span class="problematic" id="id42">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:
+- Total displacement at failure, measured from the time of damage initiation.
+- Exponential law parameter.
+- Appropriate mode mix ratio.
+- Appropriate mode mix ratio (if relevant, for three-dimensional problems with anisotropic shear behavior).
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id43"><span class="problematic" id="id44">*</span></a>type*=ENERGY, and <a href="#id45"><span class="problematic" id="id46">*</span></a>softening*=EXPONENTIAL, and <a href="#id47"><span class="problematic" id="id48">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:
+- Fracture energy.
+- Appropriate mode mix ratio.
+- Appropriate mode mix ratio (if relevant, for three-dimensional problems with anisotropic shear behavior).
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id49"><span class="problematic" id="id50">*</span></a>type*=DISPLACEMENT, and <a href="#id51"><span class="problematic" id="id52">*</span></a>softening*=TABULAR, and <a href="#id53"><span class="problematic" id="id54">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:
+- Damage variable.
+- Equivalent total or Plastic displacement, measured from the time of damage initiation.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id55"><span class="problematic" id="id56">*</span></a>type*=DISPLACEMENT, and <a href="#id57"><span class="problematic" id="id58">*</span></a>softening*=TABULAR, and <a href="#id59"><span class="problematic" id="id60">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:
+- Damage variable.
+- Equivalent total or Plastic displacement, measured from the time of damage initiation.
+- Appropriate mode mix ratio.
+- Appropriate mode mix ratio (if relevant, for three-dimensional problems with anisotropic shear behavior).
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id61"><span class="problematic" id="id62">*</span></a>type*=ENERGY, and <a href="#id63"><span class="problematic" id="id64">*</span></a>softening*=LINEAR or EXPONENTIAL, and <a href="#id65"><span class="problematic" id="id66">*</span></a>mixedModeBehavior*=POWER_LAW or BK, the table data specify the following:
+- Normal mode fracture energy.
+- Shear mode fracture energy for failure in the first shear direction.
+- Shear mode fracture energy for failure in the second shear direction.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id67"><span class="problematic" id="id68">*</span></a>type*=ENERGY, <a href="#id69"><span class="problematic" id="id70">*</span></a>softening*=LINEAR and constructor for [DamageInitiation](<a class="reference external" href="https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-damageinitiationpyc.htm?ContextScope=all)=HashinDamageInitiation">https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-damageinitiationpyc.htm?ContextScope=all)=HashinDamageInitiation</a> the table data specify the following:
+- Fiber tensile fracture energy.
+- Fiber compressive fracture energy.
+- Matrix tensile fracture energy.
+- Matrix compressive fracture energy.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.</p>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>DAMAGE EVOLUTION</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageEvolution.DamageEvolution.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageEvolution.DamageEvolution.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the DamageEvolution object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.ProgressiveDamageFailure.DamageInitiation">
+<span id="abaqus-material-progressivedamagefailure-damageinitiation-module"></span><h2>abaqus.Material.ProgressiveDamageFailure.DamageInitiation module<a class="headerlink" href="#module-abaqus.Material.ProgressiveDamageFailure.DamageInitiation" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.ProgressiveDamageFailure.DamageInitiation.</span></span><span class="sig-name descname"><span class="pre">DamageInitiation</span></span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The DamageInitiation object specifies material properties to define the initiation of
+damage.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].ductileDamageInitiation</p></li>
+<li><p>mdb.models[name].materials[name].fldDamageInitiation</p></li>
+<li><p>mdb.models[name].materials[name].flsdDamageInitiation</p></li>
+<li><p>mdb.models[name].materials[name].hashinDamageInitiation</p></li>
+<li><p>mdb.models[name].materials[name].johnsonCookDamageInitiation</p></li>
+<li><p>mdb.models[name].materials[name].maxeDamageInitiation</p></li>
+<li><p>mdb.models[name].materials[name].maxpeDamageInitiation</p></li>
+<li><p>mdb.models[name].materials[name].maxpsDamageInitiation</p></li>
+<li><p>mdb.models[name].materials[name].maxsDamageInitiation</p></li>
+<li><p>mdb.models[name].materials[name].mkDamageInitiation</p></li>
+<li><p>mdb.models[name].materials[name].msfldDamageInitiation</p></li>
+<li><p>mdb.models[name].materials[name].quadeDamageInitiation</p></li>
+<li><p>mdb.models[name].materials[name].quadsDamageInitiation</p></li>
+<li><p>mdb.models[name].materials[name].shearDamageInitiation</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].ductileDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].fldDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].flsdDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].hashinDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].johnsonCookDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].maxeDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].maxpeDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].maxpsDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].maxsDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].mkDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].msfldDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].quadeDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].quadsDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].shearDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p>If constructor is DuctileDamageInitiation, the table data specify the following:
+- Equivalent fracture strain at damage initiation.
+- Stress triaxiality.
+- Strain rate.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If constructor is FldDamageInitiation, the table data specify the following:
+- Major principal strain at damage initiation.
+- Minor principal strain.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If constructor FlsdDamageInitiation, the table data specify the following:
+- Major principal stress at damage initiation.
+- Minor principal stress.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If constructor is JohnsonCookDamageInitiation, the table data specify the following:
+- Johnson-Cook failure parameter D1.
+- Johnson-Cook failure parameter D2.
+- Johnson-Cook failure parameter D3.
+- Johnson-Cook failure parameter D4.
+- Johnson-Cook failure parameter D5.
+- Melting temperature.
+- Transition temperature.
+- Reference strain rate.
+If constructor MkDamageInitiation, the table data specify the following:
+- Flaw size relative to nominal thickness of the section.
+- Angle (in degrees) with respect to the 1-direction of the local material orientation.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If constructor is MsfldDamageInitiation and <a href="#id71"><span class="problematic" id="id72">*</span></a>definition*=MSFLD, the table data specify the following:
+- Nominal strain at damage initiation in a normal-only mode.
+- Equivalent Plastic strain at initiation of localized necking.
+- Ratio of minor to major principal strains.
+- Equivalent Plastic strain rate.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If constructor is MsfldDamageInitiation and <a href="#id73"><span class="problematic" id="id74">*</span></a>definition*=FLD, the table data specify the following:
+- Major principal strain at initiation of localized necking.
+- Equivalent Plastic strain at initiation of localized necking.
+- Ratio of minor to major principal strains.
+- Equivalent Plastic strain rate.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If constructor is QuadeDamageInitiation or MaxeDamageInitiation, the table data specify the following:
+- Nominal strain at damage initiation in a normal-only mode.
+- Nominal strain at damage initiation in a shear-only mode that involves separation only along the first shear direction.
+- Nominal strain at damage initiation in a shear-only mode that involves separation only along the second shear direction.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If constructor is QuadsDamageInitiation or MaxsDamageInitiation, the table data specify the following:
+- Nominal strain at damage initiation in a normal-only mode.
+- Nominal strain at damage initiation in a shear-only mode that involves separation only along the first shear direction.
+- Nominal strain at damage initiation in a shear-only mode that involves separation only along the second shear direction.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If constructor is MaxpeDamageInitiation, the table data specify the following:
+- Maximum principal strain at damage initiation.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If constructor is MaxpsDamageInitiation, the table data specify the following:
+- Maximum principal stress at damage initiation.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If constructor is ShearDamageInitiation, the table data specify the following:
+- Equivalent fracture strain at damage initiation.
+- Shear stress ratio.
+- Strain rate.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If constructor is HashinDamageInitiation, the table data specify the following:
+- Fiber tensile strength.
+- Fiber compressive strength.
+- Matrix tensile strength.
+- Matrix compressive strength.
+- Longitudinal shear strength.
+- Transverse shear strength.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.</p>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>DAMAGE INITIATION</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.DuctileDamageInitiation">
+<span class="sig-name descname"><span class="pre">DuctileDamageInitiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSFLD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberImperfections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NMORI'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.DuctileDamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DamageInitiation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].materials[name].DuctileDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].DuctileDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described in the “Table data”
+section.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+and MSFLD. The default value is MSFLD.</p></li>
+<li><p><strong>feq</strong> – A Float specifying the critical value of the deformation severity index for equivalent
+Plastic strains. The default value is 10.0.</p></li>
+<li><p><strong>fnn</strong> – A Float specifying the critical value of the deformation severity index for strains
+normal to the groove direction. The default value is 10.0.</p></li>
+<li><p><strong>fnt</strong> – A Float specifying the critical value of the deformation severity index for shear
+strains. The default value is 10.0.</p></li>
+<li><p><strong>frequency</strong> – An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+analysis is going to be performed. The default value is 1.</p></li>
+<li><p><strong>ks</strong> – A Float specifying the value of Ks. The default value is 0.0.</p></li>
+<li><p><strong>numberImperfections</strong> – An Int specifying the number of imperfections to be considered for the evaluation of the
+Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+the angular direction. The default value is 4.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+<li><p><strong>alpha</strong> – A Float specifying the value of the coefficient that will multiply the shear
+contribution to the Hashin’s fiber initiation criterion. The default value is 0.0.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the factor used for filtering the ratio of principal strain rates
+used for the evaluation of the MSFLD damage initiation criterion. The default value is
+1.0.</p></li>
+<li><p><strong>tolerance</strong> – A Float specifying the tolerance within which the damage initiation criterion must be
+satisfied. The default value is 0.05.</p></li>
+<li><p><strong>direction</strong> – A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+and TMORI. The default value is NMORI.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DamageInitiation</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.FldDamageInitiation">
+<span class="sig-name descname"><span class="pre">FldDamageInitiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSFLD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberImperfections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NMORI'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.FldDamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DamageInitiation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].materials[name].FldDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].FldDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described in the “Table data”
+section.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+and MSFLD. The default value is MSFLD.</p></li>
+<li><p><strong>feq</strong> – A Float specifying the critical value of the deformation severity index for equivalent
+Plastic strains. The default value is 10.0.</p></li>
+<li><p><strong>fnn</strong> – A Float specifying the critical value of the deformation severity index for strains
+normal to the groove direction. The default value is 10.0.</p></li>
+<li><p><strong>fnt</strong> – A Float specifying the critical value of the deformation severity index for shear
+strains. The default value is 10.0.</p></li>
+<li><p><strong>frequency</strong> – An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+analysis is going to be performed. The default value is 1.</p></li>
+<li><p><strong>ks</strong> – A Float specifying the value of Ks. The default value is 0.0.</p></li>
+<li><p><strong>numberImperfections</strong> – An Int specifying the number of imperfections to be considered for the evaluation of the
+Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+the angular direction. The default value is 4.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+<li><p><strong>alpha</strong> – A Float specifying the value of the coefficient that will multiply the shear
+contribution to the Hashin’s fiber initiation criterion. The default value is 0.0.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the factor used for filtering the ratio of principal strain rates
+used for the evaluation of the MSFLD damage initiation criterion. The default value is
+1.0.</p></li>
+<li><p><strong>tolerance</strong> – A Float specifying the tolerance within which the damage initiation criterion must be
+satisfied. The default value is 0.05.</p></li>
+<li><p><strong>direction</strong> – A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+and TMORI. The default value is NMORI.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DamageInitiation</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.FlsdDamageInitiation">
+<span class="sig-name descname"><span class="pre">FlsdDamageInitiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSFLD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberImperfections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NMORI'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.FlsdDamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DamageInitiation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].materials[name].FlsdDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].FlsdDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described in the “Table data”
+section.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+and MSFLD. The default value is MSFLD.</p></li>
+<li><p><strong>feq</strong> – A Float specifying the critical value of the deformation severity index for equivalent
+Plastic strains. The default value is 10.0.</p></li>
+<li><p><strong>fnn</strong> – A Float specifying the critical value of the deformation severity index for strains
+normal to the groove direction. The default value is 10.0.</p></li>
+<li><p><strong>fnt</strong> – A Float specifying the critical value of the deformation severity index for shear
+strains. The default value is 10.0.</p></li>
+<li><p><strong>frequency</strong> – An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+analysis is going to be performed. The default value is 1.</p></li>
+<li><p><strong>ks</strong> – A Float specifying the value of Ks. The default value is 0.0.</p></li>
+<li><p><strong>numberImperfections</strong> – An Int specifying the number of imperfections to be considered for the evaluation of the
+Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+the angular direction. The default value is 4.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+<li><p><strong>alpha</strong> – A Float specifying the value of the coefficient that will multiply the shear
+contribution to the Hashin’s fiber initiation criterion. The default value is 0.0.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the factor used for filtering the ratio of principal strain rates
+used for the evaluation of the MSFLD damage initiation criterion. The default value is
+1.0.</p></li>
+<li><p><strong>tolerance</strong> – A Float specifying the tolerance within which the damage initiation criterion must be
+satisfied. The default value is 0.05.</p></li>
+<li><p><strong>direction</strong> – A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+and TMORI. The default value is NMORI.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DamageInitiation</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.HashinDamageInitiation">
+<span class="sig-name descname"><span class="pre">HashinDamageInitiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSFLD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberImperfections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NMORI'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.HashinDamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DamageInitiation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].materials[name].HashinDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].HashinDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described in the “Table data”
+section.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+and MSFLD. The default value is MSFLD.</p></li>
+<li><p><strong>feq</strong> – A Float specifying the critical value of the deformation severity index for equivalent
+Plastic strains. The default value is 10.0.</p></li>
+<li><p><strong>fnn</strong> – A Float specifying the critical value of the deformation severity index for strains
+normal to the groove direction. The default value is 10.0.</p></li>
+<li><p><strong>fnt</strong> – A Float specifying the critical value of the deformation severity index for shear
+strains. The default value is 10.0.</p></li>
+<li><p><strong>frequency</strong> – An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+analysis is going to be performed. The default value is 1.</p></li>
+<li><p><strong>ks</strong> – A Float specifying the value of Ks. The default value is 0.0.</p></li>
+<li><p><strong>numberImperfections</strong> – An Int specifying the number of imperfections to be considered for the evaluation of the
+Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+the angular direction. The default value is 4.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+<li><p><strong>alpha</strong> – A Float specifying the value of the coefficient that will multiply the shear
+contribution to the Hashin’s fiber initiation criterion. The default value is 0.0.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the factor used for filtering the ratio of principal strain rates
+used for the evaluation of the MSFLD damage initiation criterion. The default value is
+1.0.</p></li>
+<li><p><strong>tolerance</strong> – A Float specifying the tolerance within which the damage initiation criterion must be
+satisfied. The default value is 0.05.</p></li>
+<li><p><strong>direction</strong> – A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+and TMORI. The default value is NMORI.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DamageInitiation</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.JohnsonCookDamageInitiation">
+<span class="sig-name descname"><span class="pre">JohnsonCookDamageInitiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSFLD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberImperfections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NMORI'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.JohnsonCookDamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DamageInitiation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].materials[name].JohnsonCookDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].JohnsonCookDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described in the “Table data”
+section.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+and MSFLD. The default value is MSFLD.</p></li>
+<li><p><strong>feq</strong> – A Float specifying the critical value of the deformation severity index for equivalent
+Plastic strains. The default value is 10.0.</p></li>
+<li><p><strong>fnn</strong> – A Float specifying the critical value of the deformation severity index for strains
+normal to the groove direction. The default value is 10.0.</p></li>
+<li><p><strong>fnt</strong> – A Float specifying the critical value of the deformation severity index for shear
+strains. The default value is 10.0.</p></li>
+<li><p><strong>frequency</strong> – An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+analysis is going to be performed. The default value is 1.</p></li>
+<li><p><strong>ks</strong> – A Float specifying the value of Ks. The default value is 0.0.</p></li>
+<li><p><strong>numberImperfections</strong> – An Int specifying the number of imperfections to be considered for the evaluation of the
+Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+the angular direction. The default value is 4.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+<li><p><strong>alpha</strong> – A Float specifying the value of the coefficient that will multiply the shear
+contribution to the Hashin’s fiber initiation criterion. The default value is 0.0.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the factor used for filtering the ratio of principal strain rates
+used for the evaluation of the MSFLD damage initiation criterion. The default value is
+1.0.</p></li>
+<li><p><strong>tolerance</strong> – A Float specifying the tolerance within which the damage initiation criterion must be
+satisfied. The default value is 0.05.</p></li>
+<li><p><strong>direction</strong> – A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+and TMORI. The default value is NMORI.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DamageInitiation</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.MaxeDamageInitiation">
+<span class="sig-name descname"><span class="pre">MaxeDamageInitiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSFLD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberImperfections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NMORI'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CENTROID'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.MaxeDamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DamageInitiation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].materials[name].MaxeDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].MaxeDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described in the “Table data”
+section.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+and MSFLD. The default value is MSFLD.</p></li>
+<li><p><strong>feq</strong> – A Float specifying the critical value of the deformation severity index for equivalent
+Plastic strains. The default value is 10.0.</p></li>
+<li><p><strong>fnn</strong> – A Float specifying the critical value of the deformation severity index for strains
+normal to the groove direction. The default value is 10.0.</p></li>
+<li><p><strong>fnt</strong> – A Float specifying the critical value of the deformation severity index for shear
+strains. The default value is 10.0.</p></li>
+<li><p><strong>frequency</strong> – An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+analysis is going to be performed. The default value is 1.</p></li>
+<li><p><strong>ks</strong> – A Float specifying the value of Ks. The default value is 0.0.</p></li>
+<li><p><strong>numberImperfections</strong> – An Int specifying the number of imperfections to be considered for the evaluation of the
+Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+the angular direction. The default value is 4.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+<li><p><strong>alpha</strong> – A Float specifying the value of the coefficient that will multiply the shear
+contribution to the Hashin’s fiber initiation criterion. The default value is 0.0.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the factor used for filtering the ratio of principal strain rates
+used for the evaluation of the MSFLD damage initiation criterion. The default value is
+1.0.</p></li>
+<li><p><strong>tolerance</strong> – A Float specifying the tolerance within which the damage initiation criterion must be
+satisfied. The default value is 0.05.</p></li>
+<li><p><strong>direction</strong> – A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+and TMORI. The default value is NMORI.</p></li>
+<li><p><strong>position</strong> – An SymbolicConstant specifying the damage initiation position. Possible values are
+CENTROID, CRACKTIP and COMBINED. The default value is CENTROID.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DamageInitiation</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.MaxpeDamageInitiation">
+<span class="sig-name descname"><span class="pre">MaxpeDamageInitiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSFLD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberImperfections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NMORI'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CENTROID'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.MaxpeDamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DamageInitiation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].materials[name].MaxpeDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].MaxpeDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described in the “Table data”
+section.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+and MSFLD. The default value is MSFLD.</p></li>
+<li><p><strong>feq</strong> – A Float specifying the critical value of the deformation severity index for equivalent
+Plastic strains. The default value is 10.0.</p></li>
+<li><p><strong>fnn</strong> – A Float specifying the critical value of the deformation severity index for strains
+normal to the groove direction. The default value is 10.0.</p></li>
+<li><p><strong>fnt</strong> – A Float specifying the critical value of the deformation severity index for shear
+strains. The default value is 10.0.</p></li>
+<li><p><strong>frequency</strong> – An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+analysis is going to be performed. The default value is 1.</p></li>
+<li><p><strong>ks</strong> – A Float specifying the value of Ks. The default value is 0.0.</p></li>
+<li><p><strong>numberImperfections</strong> – An Int specifying the number of imperfections to be considered for the evaluation of the
+Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+the angular direction. The default value is 4.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+<li><p><strong>alpha</strong> – A Float specifying the value of the coefficient that will multiply the shear
+contribution to the Hashin’s fiber initiation criterion. The default value is 0.0.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the factor used for filtering the ratio of principal strain rates
+used for the evaluation of the MSFLD damage initiation criterion. The default value is
+1.0.</p></li>
+<li><p><strong>tolerance</strong> – A Float specifying the tolerance within which the damage initiation criterion must be
+satisfied. The default value is 0.05.</p></li>
+<li><p><strong>direction</strong> – A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+and TMORI. The default value is NMORI.</p></li>
+<li><p><strong>position</strong> – An SymbolicConstant specifying the damage initiation position. Possible values are
+CENTROID, CRACKTIP and COMBINED. The default value is CENTROID.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DamageInitiation</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.MaxpsDamageInitiation">
+<span class="sig-name descname"><span class="pre">MaxpsDamageInitiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSFLD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberImperfections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NMORI'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CENTROID'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.MaxpsDamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DamageInitiation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].materials[name].MaxpsDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].MaxpsDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described in the “Table data”
+section.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+and MSFLD. The default value is MSFLD.</p></li>
+<li><p><strong>feq</strong> – A Float specifying the critical value of the deformation severity index for equivalent
+Plastic strains. The default value is 10.0.</p></li>
+<li><p><strong>fnn</strong> – A Float specifying the critical value of the deformation severity index for strains
+normal to the groove direction. The default value is 10.0.</p></li>
+<li><p><strong>fnt</strong> – A Float specifying the critical value of the deformation severity index for shear
+strains. The default value is 10.0.</p></li>
+<li><p><strong>frequency</strong> – An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+analysis is going to be performed. The default value is 1.</p></li>
+<li><p><strong>ks</strong> – A Float specifying the value of Ks. The default value is 0.0.</p></li>
+<li><p><strong>numberImperfections</strong> – An Int specifying the number of imperfections to be considered for the evaluation of the
+Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+the angular direction. The default value is 4.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+<li><p><strong>alpha</strong> – A Float specifying the value of the coefficient that will multiply the shear
+contribution to the Hashin’s fiber initiation criterion. The default value is 0.0.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the factor used for filtering the ratio of principal strain rates
+used for the evaluation of the MSFLD damage initiation criterion. The default value is
+1.0.</p></li>
+<li><p><strong>tolerance</strong> – A Float specifying the tolerance within which the damage initiation criterion must be
+satisfied. The default value is 0.05.</p></li>
+<li><p><strong>direction</strong> – A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+and TMORI. The default value is NMORI.</p></li>
+<li><p><strong>position</strong> – An SymbolicConstant specifying the damage initiation position. Possible values are
+CENTROID, CRACKTIP and COMBINED. The default value is CENTROID.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DamageInitiation</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.MaxsDamageInitiation">
+<span class="sig-name descname"><span class="pre">MaxsDamageInitiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSFLD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberImperfections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NMORI'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CENTROID'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.MaxsDamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DamageInitiation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].materials[name].MaxsDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].MaxsDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described in the “Table data”
+section.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+and MSFLD. The default value is MSFLD.</p></li>
+<li><p><strong>feq</strong> – A Float specifying the critical value of the deformation severity index for equivalent
+Plastic strains. The default value is 10.0.</p></li>
+<li><p><strong>fnn</strong> – A Float specifying the critical value of the deformation severity index for strains
+normal to the groove direction. The default value is 10.0.</p></li>
+<li><p><strong>fnt</strong> – A Float specifying the critical value of the deformation severity index for shear
+strains. The default value is 10.0.</p></li>
+<li><p><strong>frequency</strong> – An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+analysis is going to be performed. The default value is 1.</p></li>
+<li><p><strong>ks</strong> – A Float specifying the value of Ks. The default value is 0.0.</p></li>
+<li><p><strong>numberImperfections</strong> – An Int specifying the number of imperfections to be considered for the evaluation of the
+Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+the angular direction. The default value is 4.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+<li><p><strong>alpha</strong> – A Float specifying the value of the coefficient that will multiply the shear
+contribution to the Hashin’s fiber initiation criterion. The default value is 0.0.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the factor used for filtering the ratio of principal strain rates
+used for the evaluation of the MSFLD damage initiation criterion. The default value is
+1.0.</p></li>
+<li><p><strong>tolerance</strong> – A Float specifying the tolerance within which the damage initiation criterion must be
+satisfied. The default value is 0.05.</p></li>
+<li><p><strong>direction</strong> – A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+and TMORI. The default value is NMORI.</p></li>
+<li><p><strong>position</strong> – An SymbolicConstant specifying the damage initiation position. Possible values are
+CENTROID, CRACKTIP and COMBINED. The default value is CENTROID.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DamageInitiation</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.MkDamageInitiation">
+<span class="sig-name descname"><span class="pre">MkDamageInitiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSFLD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberImperfections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NMORI'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.MkDamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DamageInitiation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].materials[name].MkDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].MkDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described in the “Table data”
+section.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+and MSFLD. The default value is MSFLD.</p></li>
+<li><p><strong>feq</strong> – A Float specifying the critical value of the deformation severity index for equivalent
+Plastic strains. The default value is 10.0.</p></li>
+<li><p><strong>fnn</strong> – A Float specifying the critical value of the deformation severity index for strains
+normal to the groove direction. The default value is 10.0.</p></li>
+<li><p><strong>fnt</strong> – A Float specifying the critical value of the deformation severity index for shear
+strains. The default value is 10.0.</p></li>
+<li><p><strong>frequency</strong> – An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+analysis is going to be performed. The default value is 1.</p></li>
+<li><p><strong>ks</strong> – A Float specifying the value of Ks. The default value is 0.0.</p></li>
+<li><p><strong>numberImperfections</strong> – An Int specifying the number of imperfections to be considered for the evaluation of the
+Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+the angular direction. The default value is 4.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+<li><p><strong>alpha</strong> – A Float specifying the value of the coefficient that will multiply the shear
+contribution to the Hashin’s fiber initiation criterion. The default value is 0.0.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the factor used for filtering the ratio of principal strain rates
+used for the evaluation of the MSFLD damage initiation criterion. The default value is
+1.0.</p></li>
+<li><p><strong>tolerance</strong> – A Float specifying the tolerance within which the damage initiation criterion must be
+satisfied. The default value is 0.05.</p></li>
+<li><p><strong>direction</strong> – A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+and TMORI. The default value is NMORI.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DamageInitiation</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.MsfldDamageInitiation">
+<span class="sig-name descname"><span class="pre">MsfldDamageInitiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSFLD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberImperfections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NMORI'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.MsfldDamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DamageInitiation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].materials[name].MsfldDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].MsfldDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described in the “Table data”
+section.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+and MSFLD. The default value is MSFLD.</p></li>
+<li><p><strong>feq</strong> – A Float specifying the critical value of the deformation severity index for equivalent
+Plastic strains. The default value is 10.0.</p></li>
+<li><p><strong>fnn</strong> – A Float specifying the critical value of the deformation severity index for strains
+normal to the groove direction. The default value is 10.0.</p></li>
+<li><p><strong>fnt</strong> – A Float specifying the critical value of the deformation severity index for shear
+strains. The default value is 10.0.</p></li>
+<li><p><strong>frequency</strong> – An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+analysis is going to be performed. The default value is 1.</p></li>
+<li><p><strong>ks</strong> – A Float specifying the value of Ks. The default value is 0.0.</p></li>
+<li><p><strong>numberImperfections</strong> – An Int specifying the number of imperfections to be considered for the evaluation of the
+Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+the angular direction. The default value is 4.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+<li><p><strong>alpha</strong> – A Float specifying the value of the coefficient that will multiply the shear
+contribution to the Hashin’s fiber initiation criterion. The default value is 0.0.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the factor used for filtering the ratio of principal strain rates
+used for the evaluation of the MSFLD damage initiation criterion. The default value is
+1.0.</p></li>
+<li><p><strong>tolerance</strong> – A Float specifying the tolerance within which the damage initiation criterion must be
+satisfied. The default value is 0.05.</p></li>
+<li><p><strong>direction</strong> – A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+and TMORI. The default value is NMORI.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DamageInitiation</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.QuadeDamageInitiation">
+<span class="sig-name descname"><span class="pre">QuadeDamageInitiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSFLD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberImperfections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NMORI'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CENTROID'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.QuadeDamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DamageInitiation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].materials[name].QuadeDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].QuadeDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described in the “Table data”
+section.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+and MSFLD. The default value is MSFLD.</p></li>
+<li><p><strong>feq</strong> – A Float specifying the critical value of the deformation severity index for equivalent
+Plastic strains. The default value is 10.0.</p></li>
+<li><p><strong>fnn</strong> – A Float specifying the critical value of the deformation severity index for strains
+normal to the groove direction. The default value is 10.0.</p></li>
+<li><p><strong>fnt</strong> – A Float specifying the critical value of the deformation severity index for shear
+strains. The default value is 10.0.</p></li>
+<li><p><strong>frequency</strong> – An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+analysis is going to be performed. The default value is 1.</p></li>
+<li><p><strong>ks</strong> – A Float specifying the value of Ks. The default value is 0.0.</p></li>
+<li><p><strong>numberImperfections</strong> – An Int specifying the number of imperfections to be considered for the evaluation of the
+Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+the angular direction. The default value is 4.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+<li><p><strong>alpha</strong> – A Float specifying the value of the coefficient that will multiply the shear
+contribution to the Hashin’s fiber initiation criterion. The default value is 0.0.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the factor used for filtering the ratio of principal strain rates
+used for the evaluation of the MSFLD damage initiation criterion. The default value is
+1.0.</p></li>
+<li><p><strong>tolerance</strong> – A Float specifying the tolerance within which the damage initiation criterion must be
+satisfied. The default value is 0.05.</p></li>
+<li><p><strong>direction</strong> – A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+and TMORI. The default value is NMORI.</p></li>
+<li><p><strong>position</strong> – An SymbolicConstant specifying the damage initiation position. Possible values are
+CENTROID, CRACKTIP and COMBINED. The default value is CENTROID.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DamageInitiation</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.QuadsDamageInitiation">
+<span class="sig-name descname"><span class="pre">QuadsDamageInitiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSFLD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberImperfections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NMORI'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CENTROID'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.QuadsDamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DamageInitiation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].materials[name].QuadsDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].QuadsDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described in the “Table data”
+section.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+and MSFLD. The default value is MSFLD.</p></li>
+<li><p><strong>feq</strong> – A Float specifying the critical value of the deformation severity index for equivalent
+Plastic strains. The default value is 10.0.</p></li>
+<li><p><strong>fnn</strong> – A Float specifying the critical value of the deformation severity index for strains
+normal to the groove direction. The default value is 10.0.</p></li>
+<li><p><strong>fnt</strong> – A Float specifying the critical value of the deformation severity index for shear
+strains. The default value is 10.0.</p></li>
+<li><p><strong>frequency</strong> – An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+analysis is going to be performed. The default value is 1.</p></li>
+<li><p><strong>ks</strong> – A Float specifying the value of Ks. The default value is 0.0.</p></li>
+<li><p><strong>numberImperfections</strong> – An Int specifying the number of imperfections to be considered for the evaluation of the
+Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+the angular direction. The default value is 4.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+<li><p><strong>alpha</strong> – A Float specifying the value of the coefficient that will multiply the shear
+contribution to the Hashin’s fiber initiation criterion. The default value is 0.0.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the factor used for filtering the ratio of principal strain rates
+used for the evaluation of the MSFLD damage initiation criterion. The default value is
+1.0.</p></li>
+<li><p><strong>tolerance</strong> – A Float specifying the tolerance within which the damage initiation criterion must be
+satisfied. The default value is 0.05.</p></li>
+<li><p><strong>direction</strong> – A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+and TMORI. The default value is NMORI.</p></li>
+<li><p><strong>position</strong> – An SymbolicConstant specifying the damage initiation position. Possible values are
+CENTROID, CRACKTIP and COMBINED. The default value is CENTROID.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DamageInitiation</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.ShearDamageInitiation">
+<span class="sig-name descname"><span class="pre">ShearDamageInitiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSFLD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberImperfections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NMORI'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.ShearDamageInitiation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DamageInitiation object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].materials[name].ShearDamageInitiation</p></li>
+<li><p>session.odbs[name].materials[name].ShearDamageInitiation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described in the “Table data”
+section.</p></li>
+<li><p><strong>definition</strong> – A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+and MSFLD. The default value is MSFLD.</p></li>
+<li><p><strong>feq</strong> – A Float specifying the critical value of the deformation severity index for equivalent
+Plastic strains. The default value is 10.0.</p></li>
+<li><p><strong>fnn</strong> – A Float specifying the critical value of the deformation severity index for strains
+normal to the groove direction. The default value is 10.0.</p></li>
+<li><p><strong>fnt</strong> – A Float specifying the critical value of the deformation severity index for shear
+strains. The default value is 10.0.</p></li>
+<li><p><strong>frequency</strong> – An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+analysis is going to be performed. The default value is 1.</p></li>
+<li><p><strong>ks</strong> – A Float specifying the value of Ks. The default value is 0.0.</p></li>
+<li><p><strong>numberImperfections</strong> – An Int specifying the number of imperfections to be considered for the evaluation of the
+Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+the angular direction. The default value is 4.</p></li>
+<li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>
+<li><p><strong>dependencies</strong> – An Int specifying the number of field variable dependencies. The default value is 0.</p></li>
+<li><p><strong>alpha</strong> – A Float specifying the value of the coefficient that will multiply the shear
+contribution to the Hashin’s fiber initiation criterion. The default value is 0.0.</p></li>
+<li><p><strong>omega</strong> – A Float specifying the factor used for filtering the ratio of principal strain rates
+used for the evaluation of the MSFLD damage initiation criterion. The default value is
+1.0.</p></li>
+<li><p><strong>tolerance</strong> – A Float specifying the tolerance within which the damage initiation criterion must be
+satisfied. The default value is 0.05.</p></li>
+<li><p><strong>direction</strong> – A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+and TMORI. The default value is NMORI.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DamageInitiation</span> <span class="pre">object.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.alpha">
+<span class="sig-name descname"><span class="pre">alpha</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.alpha" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.damageEvolution">
+<span class="sig-name descname"><span class="pre">damageEvolution</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Material.ProgressiveDamageFailure.DamageEvolution.DamageEvolution" title="abaqus.Material.ProgressiveDamageFailure.DamageEvolution.DamageEvolution"><span class="pre">abaqus.Material.ProgressiveDamageFailure.DamageEvolution.DamageEvolution</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.damageEvolution" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.damageStabilization">
+<span class="sig-name descname"><span class="pre">damageStabilization</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Material.ProgressiveDamageFailure.DamageStabilization.DamageStabilization" title="abaqus.Material.ProgressiveDamageFailure.DamageStabilization.DamageStabilization"><span class="pre">abaqus.Material.ProgressiveDamageFailure.DamageStabilization.DamageStabilization</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.damageStabilization" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.damageStabilizationCohesive">
+<span class="sig-name descname"><span class="pre">damageStabilizationCohesive</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Material.ProgressiveDamageFailure.DamageStabilizationCohesive.DamageStabilizationCohesive" title="abaqus.Material.ProgressiveDamageFailure.DamageStabilizationCohesive.DamageStabilizationCohesive"><span class="pre">abaqus.Material.ProgressiveDamageFailure.DamageStabilizationCohesive.DamageStabilizationCohesive</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Material.ProgressiveDamageFailure.DamageStabilizationCohesive.DamageStabilizationCohesive</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.damageStabilizationCohesive" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.definition">
+<span class="sig-name descname"><span class="pre">definition</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MSFLD'</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.definition" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.dependencies" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.direction">
+<span class="sig-name descname"><span class="pre">direction</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NMORI'</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.direction" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.feq">
+<span class="sig-name descname"><span class="pre">feq</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.feq" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.fnn">
+<span class="sig-name descname"><span class="pre">fnn</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.fnn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.fnt">
+<span class="sig-name descname"><span class="pre">fnt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.fnt" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.frequency">
+<span class="sig-name descname"><span class="pre">frequency</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.frequency" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.ks">
+<span class="sig-name descname"><span class="pre">ks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.ks" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.numberImperfections">
+<span class="sig-name descname"><span class="pre">numberImperfections</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.numberImperfections" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.omega">
+<span class="sig-name descname"><span class="pre">omega</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.omega" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the DamageInitiation object.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.temperatureDependency">
+<span class="sig-name descname"><span class="pre">temperatureDependency</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.BooleanType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.temperatureDependency" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.tolerance">
+<span class="sig-name descname"><span class="pre">tolerance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation.tolerance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.ProgressiveDamageFailure.DamageStabilization">
+<span id="abaqus-material-progressivedamagefailure-damagestabilization-module"></span><h2>abaqus.Material.ProgressiveDamageFailure.DamageStabilization module<a class="headerlink" href="#module-abaqus.Material.ProgressiveDamageFailure.DamageStabilization" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageStabilization.DamageStabilization">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.ProgressiveDamageFailure.DamageStabilization.</span></span><span class="sig-name descname"><span class="pre">DamageStabilization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fiberTensileCoeff</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fiberCompressiveCoeff</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrixTensileCoeff</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrixCompressiveCoeff</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageStabilization.DamageStabilization" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The DamageStabilization object specifies the viscosity coefficients for the damage model
+for fiber-reinforced materials.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].ductileDamageInitiation.damageStabilization</p></li>
+<li><p>mdb.models[name].materials[name].fldDamageInitiation.damageStabilization</p></li>
+<li><p>mdb.models[name].materials[name].flsdDamageInitiation.damageStabilization</p></li>
+<li><p>mdb.models[name].materials[name].hashinDamageInitiation.damageStabilization</p></li>
+<li><p>mdb.models[name].materials[name].johnsonCookDamageInitiation.damageStabilization</p></li>
+<li><p>mdb.models[name].materials[name].maxeDamageInitiation.damageStabilization</p></li>
+<li><p>mdb.models[name].materials[name].maxpeDamageInitiation.damageStabilization</p></li>
+<li><p>mdb.models[name].materials[name].maxpsDamageInitiation.damageStabilization</p></li>
+<li><p>mdb.models[name].materials[name].maxsDamageInitiation.damageStabilization</p></li>
+<li><p>mdb.models[name].materials[name].mkDamageInitiation.damageStabilization</p></li>
+<li><p>mdb.models[name].materials[name].msfldDamageInitiation.damageStabilization</p></li>
+<li><p>mdb.models[name].materials[name].quadeDamageInitiation.damageStabilization</p></li>
+<li><p>mdb.models[name].materials[name].quadsDamageInitiation.damageStabilization</p></li>
+<li><p>mdb.models[name].materials[name].shearDamageInitiation.damageStabilization</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].ductileDamageInitiation.damageStabilization</p></li>
+<li><p>session.odbs[name].materials[name].fldDamageInitiation.damageStabilization</p></li>
+<li><p>session.odbs[name].materials[name].flsdDamageInitiation.damageStabilization</p></li>
+<li><p>session.odbs[name].materials[name].hashinDamageInitiation.damageStabilization</p></li>
+<li><p>session.odbs[name].materials[name].johnsonCookDamageInitiation.damageStabilization</p></li>
+<li><p>session.odbs[name].materials[name].maxeDamageInitiation.damageStabilization</p></li>
+<li><p>session.odbs[name].materials[name].maxpeDamageInitiation.damageStabilization</p></li>
+<li><p>session.odbs[name].materials[name].maxpsDamageInitiation.damageStabilization</p></li>
+<li><p>session.odbs[name].materials[name].maxsDamageInitiation.damageStabilization</p></li>
+<li><p>session.odbs[name].materials[name].mkDamageInitiation.damageStabilization</p></li>
+<li><p>session.odbs[name].materials[name].msfldDamageInitiation.damageStabilization</p></li>
+<li><p>session.odbs[name].materials[name].quadeDamageInitiation.damageStabilization</p></li>
+<li><p>session.odbs[name].materials[name].quadsDamageInitiation.damageStabilization</p></li>
+<li><p>session.odbs[name].materials[name].shearDamageInitiation.damageStabilization</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>DAMAGE STABILIZATION</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageStabilization.DamageStabilization.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageStabilization.DamageStabilization.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the DamageStabilization object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.ProgressiveDamageFailure.DamageStabilizationCohesive">
+<span id="abaqus-material-progressivedamagefailure-damagestabilizationcohesive-module"></span><h2>abaqus.Material.ProgressiveDamageFailure.DamageStabilizationCohesive module<a class="headerlink" href="#module-abaqus.Material.ProgressiveDamageFailure.DamageStabilizationCohesive" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageStabilizationCohesive.DamageStabilizationCohesive">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.ProgressiveDamageFailure.DamageStabilizationCohesive.</span></span><span class="sig-name descname"><span class="pre">DamageStabilizationCohesive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cohesiveCoeff</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageStabilizationCohesive.DamageStabilizationCohesive" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The DamageStabilizationCohesive object specifies the viscosity coefficients for the
+damage model for surface-based cohesive behavior or enriched cohesive behavior.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].ductileDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>mdb.models[name].materials[name].fldDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>mdb.models[name].materials[name].flsdDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>mdb.models[name].materials[name].hashinDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>mdb.models[name].materials[name].johnsonCookDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>mdb.models[name].materials[name].maxeDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>mdb.models[name].materials[name].maxpeDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>mdb.models[name].materials[name].maxpsDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>mdb.models[name].materials[name].maxsDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>mdb.models[name].materials[name].mkDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>mdb.models[name].materials[name].msfldDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>mdb.models[name].materials[name].quadeDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>mdb.models[name].materials[name].quadsDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>mdb.models[name].materials[name].shearDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].ductileDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>session.odbs[name].materials[name].fldDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>session.odbs[name].materials[name].flsdDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>session.odbs[name].materials[name].hashinDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>session.odbs[name].materials[name].johnsonCookDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>session.odbs[name].materials[name].maxeDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>session.odbs[name].materials[name].maxpeDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>session.odbs[name].materials[name].maxpsDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>session.odbs[name].materials[name].maxsDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>session.odbs[name].materials[name].mkDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>session.odbs[name].materials[name].msfldDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>session.odbs[name].materials[name].quadeDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>session.odbs[name].materials[name].quadsDamageInitiation.damageStabilizationCohesive</p></li>
+<li><p>session.odbs[name].materials[name].shearDamageInitiation.damageStabilizationCohesive</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>DAMAGE STABILIZATION</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.ProgressiveDamageFailure.DamageStabilizationCohesive.DamageStabilizationCohesive.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.ProgressiveDamageFailure.DamageStabilizationCohesive.DamageStabilizationCohesive.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the DamageStabilizationCohesive object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.ProgressiveDamageFailure">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-abaqus.Material.ProgressiveDamageFailure" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -303,6 +303,7 @@ class AssemblyBase(Feature):
 
         Returns
         -------
+        properties: dict
             A Dictionary object with the following items: 
             *area*: None or a Float specifying the sum of the area of the specified faces. The area 
             is computed only for one side for shells. 

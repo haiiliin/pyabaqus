@@ -2,25 +2,24 @@
 Model
 =====
 
-Abaqus creates a Model object named Model-1 when a session is started.
+Model commands are used to create Abaqus/CAE models. A finished model contains all the data that Abaqus/CAE needs to create and submit an analysis to Abaqus/Standard or Abaqus/Explicit. Models are stored in a model database.
 
 
-Access
-------
-
-- `mdb.models[name]`
-
-
-Create a model
+Create models
 --------------
 
 .. autoclass:: abaqus.Mdb.Mdb.Mdb
     :members:
 
 
-Features of th model
---------------------
+Object features
+---------------
 
+Basic Features of the model
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Model.ModelBase.ModelBase
+    :members:
 
 ALE Features of the model
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -154,3 +153,8 @@ Table Collection Features of the model
 .. autoclass:: abaqus.TableCollection.TableCollectionModel.TableCollectionModel
     :members:
 
+KeywordBlock
+~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Model.KeywordBlock.KeywordBlock
+    :members:

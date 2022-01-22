@@ -1,0 +1,65 @@
+======
+Region
+======
+
+
+Region
+~~~~~~
+
+.. autoclass:: abaqus.Region.Region.Region
+    :members:
+
+RegionArray
+~~~~~~~~~~~
+
+.. autoclass:: abaqus.Region.RegionArray.RegionArray
+    :members:
+
+RegionAssembly
+~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Region.RegionAssembly.RegionAssembly
+    :members:
+
+RegionAssemblyBase
+~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Region.RegionAssemblyBase.RegionAssemblyBase
+    :members:
+
+RegionPart
+~~~~~~~~~~
+
+.. autoclass:: abaqus.Region.RegionPart.RegionPart
+    :members:
+
+RegionPartBase
+~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Region.RegionPartBase.RegionPartBase
+    :members:
+
+Set
+~~~
+
+.. autoclass:: abaqus.Region.Set.Set
+    :members:
+
+Skin
+~~~~
+
+.. autoclass:: abaqus.Region.Skin.Skin
+    :members:
+
+Stringer
+~~~~~~~~
+
+.. autoclass:: abaqus.Region.Stringer.Stringer
+    :members:
+
+Surface
+~~~~~~~
+
+.. autoclass:: abaqus.Region.Surface.Surface
+    :members:
+

@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>abaqus.Sketcher package &mdash; pyabaqus 1.0.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Reference manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>abaqus.Sketcher package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/abaqus.Sketcher.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="abaqus-sketcher-package">
+<h1>abaqus.Sketcher package<a class="headerlink" href="#abaqus-sketcher-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html">abaqus.Sketcher.ConstrainedSketchConstraint package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#module-abaqus.Sketcher.ConstrainedSketchConstraint.CoincidentConstraint">abaqus.Sketcher.ConstrainedSketchConstraint.CoincidentConstraint module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#module-abaqus.Sketcher.ConstrainedSketchConstraint.ConcentricConstraint">abaqus.Sketcher.ConstrainedSketchConstraint.ConcentricConstraint module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#module-abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#module-abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#module-abaqus.Sketcher.ConstrainedSketchConstraint.EqualDistanceConstraint">abaqus.Sketcher.ConstrainedSketchConstraint.EqualDistanceConstraint module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#module-abaqus.Sketcher.ConstrainedSketchConstraint.EqualLengthConstraint">abaqus.Sketcher.ConstrainedSketchConstraint.EqualLengthConstraint module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#module-abaqus.Sketcher.ConstrainedSketchConstraint.EqualRadiusConstraint">abaqus.Sketcher.ConstrainedSketchConstraint.EqualRadiusConstraint module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#module-abaqus.Sketcher.ConstrainedSketchConstraint.FixedConstraint">abaqus.Sketcher.ConstrainedSketchConstraint.FixedConstraint module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#module-abaqus.Sketcher.ConstrainedSketchConstraint.HorizontalConstraint">abaqus.Sketcher.ConstrainedSketchConstraint.HorizontalConstraint module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#module-abaqus.Sketcher.ConstrainedSketchConstraint.ParallelConstraint">abaqus.Sketcher.ConstrainedSketchConstraint.ParallelConstraint module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#module-abaqus.Sketcher.ConstrainedSketchConstraint.PerpendicularConstraint">abaqus.Sketcher.ConstrainedSketchConstraint.PerpendicularConstraint module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#module-abaqus.Sketcher.ConstrainedSketchConstraint.TangentConstraint">abaqus.Sketcher.ConstrainedSketchConstraint.TangentConstraint module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#module-abaqus.Sketcher.ConstrainedSketchConstraint.VerticalConstraint">abaqus.Sketcher.ConstrainedSketchConstraint.VerticalConstraint module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchConstraint.html#module-abaqus.Sketcher.ConstrainedSketchConstraint">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchDimension.html">abaqus.Sketcher.ConstrainedSketchDimension package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchDimension.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchDimension.html#module-abaqus.Sketcher.ConstrainedSketchDimension.AngularDimension">abaqus.Sketcher.ConstrainedSketchDimension.AngularDimension module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchDimension.html#module-abaqus.Sketcher.ConstrainedSketchDimension.ConstrainedSketchDimension">abaqus.Sketcher.ConstrainedSketchDimension.ConstrainedSketchDimension module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchDimension.html#module-abaqus.Sketcher.ConstrainedSketchDimension.ConstrainedSketchDimensionModel">abaqus.Sketcher.ConstrainedSketchDimension.ConstrainedSketchDimensionModel module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchDimension.html#module-abaqus.Sketcher.ConstrainedSketchDimension.DistanceDimension">abaqus.Sketcher.ConstrainedSketchDimension.DistanceDimension module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchDimension.html#module-abaqus.Sketcher.ConstrainedSketchDimension.HorizontalDimension">abaqus.Sketcher.ConstrainedSketchDimension.HorizontalDimension module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchDimension.html#module-abaqus.Sketcher.ConstrainedSketchDimension.ObliqueDimension">abaqus.Sketcher.ConstrainedSketchDimension.ObliqueDimension module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchDimension.html#module-abaqus.Sketcher.ConstrainedSketchDimension.RadialDimension">abaqus.Sketcher.ConstrainedSketchDimension.RadialDimension module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchDimension.html#module-abaqus.Sketcher.ConstrainedSketchDimension.VerticalDimension">abaqus.Sketcher.ConstrainedSketchDimension.VerticalDimension module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchDimension.html#module-abaqus.Sketcher.ConstrainedSketchDimension">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html">abaqus.Sketcher.ConstrainedSketchGeometry package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry.Arc3Points">abaqus.Sketcher.ConstrainedSketchGeometry.Arc3Points module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry.ArcByCenterEnds">abaqus.Sketcher.ConstrainedSketchGeometry.ArcByCenterEnds module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry.ArcByStartEndTangent">abaqus.Sketcher.ConstrainedSketchGeometry.ArcByStartEndTangent module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry.CircleByCenterPerimeter">abaqus.Sketcher.ConstrainedSketchGeometry.CircleByCenterPerimeter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometryModel">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometryModel module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry.ConstructionCircleByCenterPerimeter">abaqus.Sketcher.ConstrainedSketchGeometry.ConstructionCircleByCenterPerimeter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry.ConstructionLine">abaqus.Sketcher.ConstrainedSketchGeometry.ConstructionLine module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry.EllipseByCenterPerimeter">abaqus.Sketcher.ConstrainedSketchGeometry.EllipseByCenterPerimeter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry.FilletByRadius">abaqus.Sketcher.ConstrainedSketchGeometry.FilletByRadius module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry.Line">abaqus.Sketcher.ConstrainedSketchGeometry.Line module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry.Spline">abaqus.Sketcher.ConstrainedSketchGeometry.Spline module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry.Spot">abaqus.Sketcher.ConstrainedSketchGeometry.Spot module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry.getPointAtDistance">abaqus.Sketcher.ConstrainedSketchGeometry.getPointAtDistance module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#module-abaqus.Sketcher.ConstrainedSketchGeometry">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchOptions.html">abaqus.Sketcher.ConstrainedSketchOptions package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchOptions.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchOptions.html#module-abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchImageOptions">abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchImageOptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchOptions.html#module-abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchOptions">abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchOptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchOptions.html#module-abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketcherOptions">abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketcherOptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchOptions.html#module-abaqus.Sketcher.ConstrainedSketchOptions">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchParameter.html">abaqus.Sketcher.ConstrainedSketchParameter package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchParameter.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchParameter.html#module-abaqus.Sketcher.ConstrainedSketchParameter.ConstrainedSketchParameter">abaqus.Sketcher.ConstrainedSketchParameter.ConstrainedSketchParameter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchParameter.html#module-abaqus.Sketcher.ConstrainedSketchParameter.ConstrainedSketchParameterModel">abaqus.Sketcher.ConstrainedSketchParameter.ConstrainedSketchParameterModel module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchParameter.html#module-abaqus.Sketcher.ConstrainedSketchParameter.Parameter">abaqus.Sketcher.ConstrainedSketchParameter.Parameter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchParameter.html#module-abaqus.Sketcher.ConstrainedSketchParameter">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchVertex.html">abaqus.Sketcher.ConstrainedSketchVertex package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchVertex.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchVertex.html#module-abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex">abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchVertex.html#module-abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertexArray">abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertexArray module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchVertex.html#module-abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertexModel">abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertexModel module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchVertex.html#module-abaqus.Sketcher.ConstrainedSketchVertex.Spot">abaqus.Sketcher.ConstrainedSketchVertex.Spot module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchVertex.html#module-abaqus.Sketcher.ConstrainedSketchVertex">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketch">
+<span id="abaqus-sketcher-constrainedsketch-module"></span><h2>abaqus.Sketcher.ConstrainedSketch module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketch" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketch.</span></span><span class="sig-name descname"><span class="pre">ConstrainedSketch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheetSize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gridSpacing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketch.</span></span><span class="sig-name descname"><span class="pre">ConstrainedSketch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch" title="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch"><span class="pre">abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch</span></a></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="../sketcher.html#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel" title="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel</span></code></a>, <a class="reference internal" href="../sketcher.html#abaqus.Sketcher.ConstrainedSketchDimension.ConstrainedSketchDimensionModel.ConstrainedSketchDimensionModel" title="abaqus.Sketcher.ConstrainedSketchDimension.ConstrainedSketchDimensionModel.ConstrainedSketchDimensionModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchDimension.ConstrainedSketchDimensionModel.ConstrainedSketchDimensionModel</span></code></a>, <a class="reference internal" href="../sketcher.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometryModel.ConstrainedSketchGeometryModel" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometryModel.ConstrainedSketchGeometryModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometryModel.ConstrainedSketchGeometryModel</span></code></a>, <a class="reference internal" href="../sketcher.html#abaqus.Sketcher.ConstrainedSketchParameter.ConstrainedSketchParameterModel.ConstrainedSketchParameterModel" title="abaqus.Sketcher.ConstrainedSketchParameter.ConstrainedSketchParameterModel.ConstrainedSketchParameterModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchParameter.ConstrainedSketchParameterModel.ConstrainedSketchParameterModel</span></code></a>, <a class="reference internal" href="../sketcher.html#abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertexModel.ConstrainedSketchVertexModel" title="abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertexModel.ConstrainedSketchVertexModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertexModel.ConstrainedSketchVertexModel</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.ConstrainedSketchFromGeometryFile">
+<span class="sig-name descname"><span class="pre">ConstrainedSketchFromGeometryFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometryFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Part.html#abaqus.Part.AcisFile.AcisFile" title="abaqus.Part.AcisFile.AcisFile"><span class="pre">abaqus.Part.AcisFile.AcisFile</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.ConstrainedSketchFromGeometryFile" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a ConstrainedSketch object and places it in the sketches repository.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].ConstrainedSketchFromGeometryFile</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>geometryFile</strong> – An AcisFile object specifying a file containing geometry. The geometry in the file is
+converted to two-dimensional sketch geometry in the <em>X–Y</em> plane.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sketch</strong> – A ConstrainedSketch object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch" title="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedSketch</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.assignCenterOfTwist">
+<span class="sig-name descname"><span class="pre">assignCenterOfTwist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchVertex.html#abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex.ConstrainedSketchVertex" title="abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex.ConstrainedSketchVertex"><span class="pre">abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex.ConstrainedSketchVertex</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.assignCenterOfTwist" title="Permalink to this definition"></a></dt>
+<dd><p>This method indicates the isolated point that will be used as the center of twist when
+an extruded feature is created with twist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>point</strong> – A ConstrainedSketchVertex object specifying an isolated point that indicates the center
+of twist for extruded features that use a twist angle.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.assignCenterline">
+<span class="sig-name descname"><span class="pre">assignCenterline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.assignCenterline" title="Permalink to this definition"></a></dt>
+<dd><p>This method indicates the construction line that will be used as a centerline for
+revolved features.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>line</strong> – A ConstrainedSketchGeometry object specifying a construction line that indicates the
+centerline of revolved features.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.autoDimension">
+<span class="sig-name descname"><span class="pre">autoDimension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objectList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.autoDimension" title="Permalink to this definition"></a></dt>
+<dd><p>This method applies dimensions to the selected ConstrainedSketchGeometry objects in an
+effort to make the ConstrainedSketch well defined.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>objectList</strong> – A sequence specifying the ConstrainedSketchGeometry objects to dimension.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.autoTrimCurve">
+<span class="sig-name descname"><span class="pre">autoTrimCurve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curve1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.autoTrimCurve" title="Permalink to this definition"></a></dt>
+<dd><p>This method automatically trims a selected ConstrainedSketchGeometry object at the
+specified location. If the object does not intersect other ConstrainedSketchGeometry
+objects, the entire selected object will be deleted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>curve1</strong> – The ConstrainedSketchGeometry object to be trimmed.</p></li>
+<li><p><strong>point1</strong> – A pair of Floats specifying the location on ConstrainedSketchGeometry where the trimming
+should be applied. <em>point1</em> and <em>parameter1</em> are mutually exclusive.</p></li>
+<li><p><strong>parameter1</strong> – A Float specifying the parameter location on the ConstrainedSketchGeometry where the
+trimming should be applied. <em>point1</em> and <em>parameter1</em> are mutually exclusive.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.breakCurve">
+<span class="sig-name descname"><span class="pre">breakCurve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curve1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">point1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curve2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.breakCurve" title="Permalink to this definition"></a></dt>
+<dd><p>This method breaks a specified ConstrainedSketchGeometry object (<em>curve1</em>) using another
+specified ConstrainedSketchGeometry object (<em>curve2</em>). If the selected
+ConstrainedSketchGeometry objects intersect, then only <em>curve1</em> will be broken; <em>curve2</em>
+is not affected by the operation. The location for the break is determined by the
+specified point values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>curve1</strong> – A ConstrainedSketchGeometry object specifying the object to be broken.</p></li>
+<li><p><strong>point1</strong> – A pair of Floats specifying the location on <em>curve1</em> near where the break should be
+applied.</p></li>
+<li><p><strong>curve2</strong> – A ConstrainedSketchGeometry object specifying where <em>curve1</em> should be broken.</p></li>
+<li><p><strong>point2</strong> – A pair of Floats specifying the location on <em>curve2</em> near where <em>curve1</em> should be
+broken.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.copyMirror">
+<span class="sig-name descname"><span class="pre">copyMirror</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mirrorLine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.copyMirror" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates copies of the given ConstrainedSketchGeometry objects, mirrors them
+about a selected line, and inserts them into the appropriate repositories of the
+ConstrainedSketch object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mirrorLine</strong> – A ConstrainedSketchGeometry object specifying the line about which Abaqus will mirror
+the sketch.</p></li>
+<li><p><strong>objectList</strong> – A sequence of ConstrainedSketchGeometry objects specifying the sketch to be copied and
+mirrored.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.copyMove">
+<span class="sig-name descname"><span class="pre">copyMove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.copyMove" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates copies of the given ConstrainedSketchGeometry objects, moves them
+from their original position, and inserts them into the appropriate repositories of the
+ConstrainedSketch object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector</strong> – A sequence of two Floats specifying the translation vector.</p></li>
+<li><p><strong>objectList</strong> – A sequence of ConstrainedSketchGeometry objects to be copied and moved.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.copyRotate">
+<span class="sig-name descname"><span class="pre">copyRotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">centerPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.copyRotate" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates copies of the given ConstrainedSketchGeometry objects, rotates them,
+and inserts them into the appropriate repositories of the ConstrainedSketch object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>centerPoint</strong> – A pair of Floats specifying the center of rotation.</p></li>
+<li><p><strong>angle</strong> – A Float specifying the angle of rotation in degrees.</p></li>
+<li><p><strong>objectList</strong> – A sequence of ConstrainedSketchGeometry objects to be copied and moved.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.copyScale">
+<span class="sig-name descname"><span class="pre">copyScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scaleValue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleCenter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.copyScale" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates copies of the given ConstrainedSketchGeometry objects, scales them
+by the specified value about a selected point, and inserts them into the appropriate
+repositories of the ConstrainedSketch object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scaleValue</strong> – A Float specifying the value for scaling.</p></li>
+<li><p><strong>scaleCenter</strong> – A pair of Floats specifying the center of scaling.</p></li>
+<li><p><strong>objectList</strong> – A sequence of ConstrainedSketchGeometry objects to be copied and scaled.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objectList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.delete" title="Permalink to this definition"></a></dt>
+<dd><p>This method deletes the given ConstrainedSketchGeometry, ConstrainedSketchDimension, or
+ConstrainedSketchConstraint objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>objectList</strong> – A sequence of ConstrainedSketchGeometry, ConstrainedSketchDimension, or
+ConstrainedSketchConstraint objects to be deleted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.deleteParameter">
+<span class="sig-name descname"><span class="pre">deleteParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.deleteParameter" title="Permalink to this definition"></a></dt>
+<dd><p>The command deletes a specified parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> – A String specifying the name of the parameter to delete.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.dragEntity">
+<span class="sig-name descname"><span class="pre">dragEntity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.dragEntity" title="Permalink to this definition"></a></dt>
+<dd><p>This method drags a specified ConstrainedSketchGeometry or ConstrainedSketchVertex
+object to a specific location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity</strong> – A ConstrainedSketchGeometry or ConstrainedSketchVertex object specifying the object to
+drag.</p></li>
+<li><p><strong>points</strong> – A sequence of sequences of three Floats specifying a sequence of points along which to
+drag the entity. The order of points in the sequence defines a path that determines the
+solution.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.linearPattern">
+<span class="sig-name descname"><span class="pre">linearPattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacing1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertexList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchVertex.html#abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex.ConstrainedSketchVertex" title="abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex.ConstrainedSketchVertex"><span class="pre">abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex.ConstrainedSketchVertex</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geomList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacing2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.linearPattern" title="Permalink to this definition"></a></dt>
+<dd><p>This method copies ConstrainedSketchGeometry objects in a linear pattern along one or
+two directions. This method also copies any associated dimension or constraint objects
+that exist between the given objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number1</strong> – An Integer specifying the total number of copies, including the original objects, that
+appear along the first direction in the pattern. Possible values are 1 ≤≤ <em>number1</em> ≤≤
+1000.</p></li>
+<li><p><strong>spacing1</strong> – A Float specifying the spacing between copies along the first direction in the pattern.
+Possible values are 0.0 ≤≤ <em>spacing1</em> .</p></li>
+<li><p><strong>angle1</strong> – A Float specifying the angle in degrees of the first direction in the pattern. Possible
+values are –360.0 ≤≤ <em>angle1</em> ≤≤ 360.0.</p></li>
+<li><p><strong>vertexList</strong> – A sequence of ConstrainedSketchVertex objects to copy.</p></li>
+<li><p><strong>geomList</strong> – A sequence of ConstrainedSketchGeometry objects to copy.</p></li>
+<li><p><strong>number2</strong> – An integer specifying the total number of copies, including the original objects, that
+appear along the second direction in the pattern. Possible values are 1 ≤≤ <em>number2</em> ≤≤
+1000. The default value is 1. The value of either <em>number1</em> or <em>number2</em> must be greater
+than one.</p></li>
+<li><p><strong>spacing2</strong> – A Float specifying the spacing between copies along the first direction in the pattern.
+Possible values are 0.0 ≤≤ <em>spacing2</em>. The default value is <em>spacing1</em>.</p></li>
+<li><p><strong>angle2</strong> – A Float specifying the angle in degrees of the first direction in the pattern. Possible
+values are –360.0 ≤≤ <em>angle2</em> ≤≤ 360.0. The default value is 90° beyond the value of
+<em>angle1</em>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><ul class="simple">
+<li><p>AbaqusException
+Number must be greater than 1 for at least one direction</p></li>
+</ul>
+<p>!img</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.mergeVertices">
+<span class="sig-name descname"><span class="pre">mergeVertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertexList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchVertex.html#abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex.ConstrainedSketchVertex" title="abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex.ConstrainedSketchVertex"><span class="pre">abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex.ConstrainedSketchVertex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.mergeVertices" title="Permalink to this definition"></a></dt>
+<dd><p>This method merges the ConstrainedSketchVertex objects that lie within the specified
+distance of each other. If only one ConstrainedSketchVertex object is selected, it will
+merge all ConstrainedSketchVertex objects that lie within the specified distance of that
+vertex. If more than one vertex is selected, the search will be restricted to only the
+selected ConstrainedSketchVertex objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – A Float specifying the search radius.</p></li>
+<li><p><strong>vertexList</strong> – A sequence of ConstrainedSketchVertex objects to be merged.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.move" title="Permalink to this definition"></a></dt>
+<dd><p>This method translates the given ConstrainedSketchGeometry objects by the given vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector</strong> – A sequence of two Floats specifying the translation vector.</p></li>
+<li><p><strong>objectList</strong> – A sequence of ConstrainedSketchGeometry objects specifying the objects to be translated.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.offset">
+<span class="sig-name descname"><span class="pre">offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filletCorners</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.offset" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates copies of the selected ConstrainedSketchGeometry objects, offsets
+them by the specified distance in the specified direction, and inserts them into the
+ConstrainedSketch object’s appropriate repositories. If connected objects are selected,
+trim or extend is carried out to complete the offset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>distance</strong> – A Float specifying the distance to be offset.</p></li>
+<li><p><strong>objectList</strong> – A sequence of ConstrainedSketchGeometry objects to be copied and offset.</p></li>
+<li><p><strong>side</strong> – A SymbolicConstant specifying which side the offset should occur. Possible values are
+LEFT and RIGHT.</p></li>
+<li><p><strong>filletCorners</strong> – A Boolean specifying whether the corners need to be rounded instead of being extended.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.print">
+<span class="sig-name descname"><span class="pre">print</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.print" title="Permalink to this definition"></a></dt>
+<dd><p>This method prints the following statistics about a sketch:
+- The sketch Id (a positive integer).
+- The number of geometry curves (the number of ConstrainedSketchGeometry objects).
+- The number of dimensions (the number of ConstrainedSketchDimension objects).
+- The number of vertices (the number of ConstrainedSketchVertex objects).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.radialPattern">
+<span class="sig-name descname"><span class="pre">radialPattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">totalAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">centerPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertexList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchVertex.html#abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex.ConstrainedSketchVertex" title="abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex.ConstrainedSketchVertex"><span class="pre">abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertex.ConstrainedSketchVertex</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geomList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.radialPattern" title="Permalink to this definition"></a></dt>
+<dd><p>This method copies ConstrainedSketchGeometry objects in a radial pattern about a
+specified center point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number</strong> – An Int specifying the total number of copies, including the original objects, that
+appear in the radial pattern. Possible values are 2 ≤≤ <em>number2</em> ≤≤ 1000.</p></li>
+<li><p><strong>totalAngle</strong> – A Float specifying the total angle in degrees between the first and last instance in the
+pattern. A positive angle corresponds to a counter-clockwise direction. The values 360°
+and -360° represent a special case where the pattern makes a full circle. In this case,
+because the copy would overlay the original, the copy is not placed at the last
+position. Possible values are –360.0 ≤≤ <em>totalAngle</em> ≤≤ 360.0.</p></li>
+<li><p><strong>centerPoint</strong> – A pair of Floats specifying the center of the radial pattern.</p></li>
+<li><p><strong>vertexList</strong> – A sequence of ConstrainedSketchVertex objects to copy.</p></li>
+<li><p><strong>geomList</strong> – A sequence of ConstrainedSketchGeometry objects to copy.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.rectangle">
+<span class="sig-name descname"><span class="pre">rectangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.rectangle" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates four lines that form a rectangle with diagonal corners defined by
+the given points and inserts them into the geometry repository of the ConstrainedSketch
+object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>point1</strong> – A pair of Floats specifying the first corner of the rectangle.</p></li>
+<li><p><strong>point2</strong> – A pair of Floats specifying the second corner of the rectangle.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>success</strong> – An Int specifying the success or failure of the method. A value of 0 indicates failure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.removeGapsAndOverlaps">
+<span class="sig-name descname"><span class="pre">removeGapsAndOverlaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geomList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.removeGapsAndOverlaps" title="Permalink to this definition"></a></dt>
+<dd><p>This method removes gaps and overlaps between sketch geometries specified by the user.
+This method is particularly useful when cleaning up imported sketches</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tolerance</strong> – A float value which specifies the largest size of the gap or overlap between entities
+that is to be removed. Typically this value is small and is used to close gaps and
+overlaps which may not exist in the originating program but exist in the sketch because
+of mismatched tolerances between the two programs.</p></li>
+<li><p><strong>geomList</strong> – A sequence of ConstrainedSketchGeometry objects where the gaps and overlaps are to be
+removed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.repairShortEdges">
+<span class="sig-name descname"><span class="pre">repairShortEdges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geomList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.repairShortEdges" title="Permalink to this definition"></a></dt>
+<dd><p>This method deletes the short edges specified, optionally selecting only those short
+edges whose lengths are smaller than the specified tolerance and healing the resultant
+gap in the sketch. This method is particularly useful in conjunction with
+removeGapsAndOverlap when cleaning up imported sketches.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>geomList</strong> – A sequence of ConstrainedSketchGeometry objects where the short edges are to be removed.</p></li>
+<li><p><strong>tolerance</strong> – A float value that is used to select and delete only those edges specified in <em>geomList</em>
+whose lengths are smaller than the given value. The default value is –1.0. This value
+implies that all edges specified in <em>geomList</em> will be removed and the sketch healed to
+remove gaps left by their removal.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.resetView">
+<span class="sig-name descname"><span class="pre">resetView</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.resetView" title="Permalink to this definition"></a></dt>
+<dd><p>This method resets the view to be perpendicular to the sketching plane.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.retrieveSketch">
+<span class="sig-name descname"><span class="pre">retrieveSketch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sketch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch" title="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch"><span class="pre">abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.retrieveSketch" title="Permalink to this definition"></a></dt>
+<dd><p>This method copies all ConstrainedSketchGeometry, ConstrainedSketchDimension,
+ConstrainedSketchConstraint, and ConstrainedSketchParameter objects from the specified
+ConstrainedSketch object. The new objects are added to the existing objects (if any).
+The objects in the specified ConstrainedSketch object are not modified by the retrieve
+operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sketch</strong> – A ConstrainedSketch object specifying the object from which to copy.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.rotate">
+<span class="sig-name descname"><span class="pre">rotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">centerPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.rotate" title="Permalink to this definition"></a></dt>
+<dd><p>This method rotates the given ConstrainedSketchGeometry objects by the given angle and
+about the given point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>centerPoint</strong> – A pair of Floats specifying the center of rotation.</p></li>
+<li><p><strong>angle</strong> – A Float specifying the angle of rotation in degrees.</p></li>
+<li><p><strong>objectList</strong> – A sequence of ConstrainedSketchGeometry specifying the objects to be rotated.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.scale">
+<span class="sig-name descname"><span class="pre">scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scaleValue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleCenter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.scale" title="Permalink to this definition"></a></dt>
+<dd><p>This method scales the given ConstrainedSketchGeometry objects by the given scale factor
+and about the given point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scaleValue</strong> – A Float specifying the value of scale.</p></li>
+<li><p><strong>scaleCenter</strong> – A pair of Floats specifying the center of scale.</p></li>
+<li><p><strong>objectList</strong> – A sequence of ConstrainedSketchGeometry objects specifying the objects to be scaled.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.setPrimaryObject">
+<span class="sig-name descname"><span class="pre">setPrimaryObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.setPrimaryObject" title="Permalink to this definition"></a></dt>
+<dd><p>This method makes the ConstrainedSketch object the primary object in the current
+viewport. The sketch remains the primary object in the current viewport until an
+unsetPrimaryobject command is issued.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>option</strong> – A SymbolicConstant specifying how the sketch is displayed. Possible values
+are:STANDALONE: Indicates a new stand-alone sketch. The current viewport is cleared and
+is replaced by the stand-alone sketch. The view direction is set to −ZZ.SUPERIMPOSE:
+Indicates that the sketch is superimposed on the current viewport. The view direction is
+changed to be perpendicular to the sketch plane. The change is effected smoothly as an
+animated sequence of many small viewing steps.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.trimExtendCurve">
+<span class="sig-name descname"><span class="pre">trimExtendCurve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curve1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curve2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.trimExtendCurve" title="Permalink to this definition"></a></dt>
+<dd><p>This method trims or extends a specified ConstrainedSketchGeometry object (<em>curve1</em>)
+using another specified ConstrainedSketchGeometry object (<em>curve2</em>). <em>curve2</em> is not
+affected by the operation. The location for the trim or extend is determined by the
+specified point values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>curve1</strong> – The ConstrainedSketchGeometry object specifying the object to be trimmed or extended.</p></li>
+<li><p><strong>point1</strong> – A pair of Floats specifying the location on <em>curve1</em> where trim or extend should be
+applied.</p></li>
+<li><p><strong>curve2</strong> – The ConstrainedSketchGeometry object specifying the object to which <em>curve1</em> is trimmed
+or extended. <em>curve2</em> is not trimmed or extended.</p></li>
+<li><p><strong>point2</strong> – A pair of Floats specifying the location on <em>curve2</em> near where <em>curve1</em> should be
+trimmed or extended.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.undo">
+<span class="sig-name descname"><span class="pre">undo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.undo" title="Permalink to this definition"></a></dt>
+<dd><p>This method undoes the effects of the last ConstrainedSketch object method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.unsetPrimaryObject">
+<span class="sig-name descname"><span class="pre">unsetPrimaryObject</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.unsetPrimaryObject" title="Permalink to this definition"></a></dt>
+<dd><p>This method removes the ConstrainedSketch object from the current viewport, reversing
+the effects of the setPrimaryobject command. If the <em>option</em> argument was set to
+SUPERIMPOSE, the viewport will be returned to the view orientation that was in place
+when the setPrimaryobject command was issued. If the <em>option</em> argument was set to
+STANDALONE, the viewport will be left empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.writeAcisFile">
+<span class="sig-name descname"><span class="pre">writeAcisFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.writeAcisFile" title="Permalink to this definition"></a></dt>
+<dd><p>This method exports the geometry of the sketch to a named file in ACIS format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fileName</strong> – A String specifying the file name.</p></li>
+<li><p><strong>version</strong> – A Float specifying the ACIS version. For example, the Float 12.0 corresponds to ACIS
+Version 12.0. The default value is the current version of ACIS.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.writeIgesFile">
+<span class="sig-name descname"><span class="pre">writeIgesFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flavor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.writeIgesFile" title="Permalink to this definition"></a></dt>
+<dd><p>This method exports the geometry of the sketch to a named file in IGES format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – A String specifying the file name.</p></li>
+<li><p><strong>flavor</strong> – A SymbolicConstant specifying a particular flavor of IGES to export. Possible values
+areSTANDARD, AUTOCAD, SOLIDWORKS, JAMA, and MSBO.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchBase">
+<span id="abaqus-sketcher-constrainedsketchbase-module"></span><h2>abaqus.Sketcher.ConstrainedSketchBase module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchBase" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketchBase.</span></span><span class="sig-name descname"><span class="pre">ConstrainedSketchBase</span></span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A ConstrainedSketch object contains the entities that are used to create a sketch. The
+objects include ConstrainedSketchGeometry objects contained in the ConstrainedSketchGeometry Repository,
+such as Line, Arc, and Spline. ConstrainedSketchVertex, ConstrainedSketchDimension, ConstrainedSketchConstraint, and ConstrainedSketchParameter objects are
+contained in their respective repositories.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import sketch</p></li>
+<li><p>mdb.models[name].sketches[name]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase.constraints">
+<span class="sig-name descname"><span class="pre">constraints</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict[str,</span> <span class="pre">&lt;module</span> <span class="pre">'abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint'</span> <span class="pre">from</span> <span class="pre">'C:\\Program</span> <span class="pre">Files\\Python39\\lib\\site-packages\\abaqus\\Sketcher\\ConstrainedSketchConstraint\\ConstrainedSketchConstraint.py'&gt;]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase.constraints" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase.dimensions">
+<span class="sig-name descname"><span class="pre">dimensions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchDimension.html#abaqus.Sketcher.ConstrainedSketchDimension.ConstrainedSketchDimension.ConstrainedSketchDimension" title="abaqus.Sketcher.ConstrainedSketchDimension.ConstrainedSketchDimension.ConstrainedSketchDimension"><span class="pre">abaqus.Sketcher.ConstrainedSketchDimension.ConstrainedSketchDimension.ConstrainedSketchDimension</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase.dimensions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase.geometry">
+<span class="sig-name descname"><span class="pre">geometry</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="abaqus.Amplitude.html#abaqus.Amplitude.ConstrainedSketchGeometryArray.ConstrainedSketchGeometryArray" title="abaqus.Amplitude.ConstrainedSketchGeometryArray.ConstrainedSketchGeometryArray"><span class="pre">abaqus.Amplitude.ConstrainedSketchGeometryArray.ConstrainedSketchGeometryArray</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Amplitude.ConstrainedSketchGeometryArray.ConstrainedSketchGeometryArray</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase.geometry" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase.imageOptions">
+<span class="sig-name descname"><span class="pre">imageOptions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchOptions.html#abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchImageOptions.ConstrainedSketchImageOptions" title="abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchImageOptions.ConstrainedSketchImageOptions"><span class="pre">abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchImageOptions.ConstrainedSketchImageOptions</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchImageOptions.ConstrainedSketchImageOptions</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase.imageOptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase.parameters">
+<span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchParameter.html#abaqus.Sketcher.ConstrainedSketchParameter.ConstrainedSketchParameter.ConstrainedSketchParameter" title="abaqus.Sketcher.ConstrainedSketchParameter.ConstrainedSketchParameter.ConstrainedSketchParameter"><span class="pre">abaqus.Sketcher.ConstrainedSketchParameter.ConstrainedSketchParameter.ConstrainedSketchParameter</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase.parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase.sketchOptions">
+<span class="sig-name descname"><span class="pre">sketchOptions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchOptions.html#abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchOptions.ConstrainedSketchOptions" title="abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchOptions.ConstrainedSketchOptions"><span class="pre">abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchOptions.ConstrainedSketchOptions</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchOptions.ConstrainedSketchOptions</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase.sketchOptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase.vertices">
+<span class="sig-name descname"><span class="pre">vertices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchVertex.html#abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertexArray.ConstrainedSketchVertexArray" title="abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertexArray.ConstrainedSketchVertexArray"><span class="pre">abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertexArray.ConstrainedSketchVertexArray</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertexArray.ConstrainedSketchVertexArray</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase.vertices" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.SketchModel">
+<span id="abaqus-sketcher-sketchmodel-module"></span><h2>abaqus.Sketcher.SketchModel module<a class="headerlink" href="#module-abaqus.Sketcher.SketchModel" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.SketchModel.SketchModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.SketchModel.</span></span><span class="sig-name descname"><span class="pre">SketchModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.SketchModel.SketchModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="abaqus.Model.html#abaqus.Model.ModelBase.ModelBase" title="abaqus.Model.ModelBase.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Model.ModelBase.ModelBase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.SketchModel.SketchModel.ConstrainedSketch">
+<span class="sig-name descname"><span class="pre">ConstrainedSketch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheetSize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gridSpacing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch" title="abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch"><span class="pre">abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch</span></a></span></span><a class="headerlink" href="#abaqus.Sketcher.SketchModel.SketchModel.ConstrainedSketch" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a ConstrainedSketch object. If the sketch cannot be created, the
+method returns None.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].ConstrainedSketch</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>sheetSize</strong> – A Float specifying the sheet size.</p></li>
+<li><p><strong>gridSpacing</strong> – A Float specifying the spacing between gridlines. Possible values are Floats &gt;&gt; 0. The
+default value is approximately 2 percent of <em>sheetSize</em>.</p></li>
+<li><p><strong>transform</strong> – A sequence of sequences of Floats specifying the three-dimensional orientation of the
+sketch. The sequence is a 3 × 4 transformation matrix specifying the axis of rotation
+and the translation vector. Possible values are any Floats.The default value for the
+axis of rotation is the identity matrix`(1.0, 0.0, 0.0),  (0.0, 1.0, 0.0),  (0.0, 0.0,
+1.0)`The default value for the translation vector is`(0.0, 0.0, 0.0)`The default values
+position the sketch on the <em>X–Y</em> plane centered at the origin.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sketch</strong> – A ConstrainedSketch object.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../sketcher.html#abaqus.Sketcher.SketchModel.SketchModel.ConstrainedSketch" title="abaqus.Sketcher.SketchModel.SketchModel.ConstrainedSketch"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedSketch</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-abaqus.Sketcher" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

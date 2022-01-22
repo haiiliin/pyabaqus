@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>abaqus.Amplitude package &mdash; pyabaqus 1.0.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Reference manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>abaqus.Amplitude package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/abaqus.Amplitude.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="abaqus-amplitude-package">
+<h1>abaqus.Amplitude package<a class="headerlink" href="#abaqus-amplitude-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-abaqus.Amplitude.ActuatorAmplitude">
+<span id="abaqus-amplitude-actuatoramplitude-module"></span><h2>abaqus.Amplitude.ActuatorAmplitude module<a class="headerlink" href="#module-abaqus.Amplitude.ActuatorAmplitude" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.ActuatorAmplitude.</span></span><span class="sig-name descname"><span class="pre">ActuatorAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Amplitude.Amplitude.Amplitude" title="abaqus.Amplitude.Amplitude.Amplitude"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Amplitude.Amplitude.Amplitude</span></code></a></p>
+<p>The ActuatorAmplitude object defines an actuator amplitude curve.
+The ActuatorAmplitude object is derived from the Amplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import amplitude</p></li>
+<li><p>mdb.models[name].amplitudes[name]</p></li>
+<li><p>import odbAmplitude</p></li>
+<li><p>session.odbs[name].amplitudes[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>AMPLITUDE</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ActuatorAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – RangeError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.Amplitude">
+<span id="abaqus-amplitude-amplitude-module"></span><h2>abaqus.Amplitude.Amplitude module<a class="headerlink" href="#module-abaqus.Amplitude.Amplitude" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Amplitude.Amplitude">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.Amplitude.</span></span><span class="sig-name descname"><span class="pre">Amplitude</span></span><a class="headerlink" href="#abaqus.Amplitude.Amplitude.Amplitude" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Amplitude object is the abstract base type for other Amplitude objects. The
+Amplitude object has no explicit constructor. The methods and members of the Amplitude
+object are common to all objects derived from the Amplitude.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import amplitude</p></li>
+<li><p>mdb.models[name].amplitudes[name]</p></li>
+<li><p>import odbAmplitude</p></li>
+<li><p>session.odbs[name].amplitudes[name]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Amplitude.Amplitude.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#abaqus.Amplitude.Amplitude.Amplitude.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Amplitude.Amplitude.timeSpan">
+<span class="sig-name descname"><span class="pre">timeSpan</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'STEP'</span></em><a class="headerlink" href="#abaqus.Amplitude.Amplitude.Amplitude.timeSpan" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.AmplitudeModel">
+<span id="abaqus-amplitude-amplitudemodel-module"></span><h2>abaqus.Amplitude.AmplitudeModel module<a class="headerlink" href="#module-abaqus.Amplitude.AmplitudeModel" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeModel.AmplitudeModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.AmplitudeModel.</span></span><span class="sig-name descname"><span class="pre">AmplitudeModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeModel.AmplitudeModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="abaqus.Model.html#abaqus.Model.ModelBase.ModelBase" title="abaqus.Model.ModelBase.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Model.ModelBase.ModelBase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeModel.AmplitudeModel.ActuatorAmplitude">
+<span class="sig-name descname"><span class="pre">ActuatorAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude" title="abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude"><span class="pre">abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeModel.AmplitudeModel.ActuatorAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a ActuatorAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].ActuatorAmplitude</p></li>
+<li><p>session.odbs[name].ActuatorAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">An</span> <span class="pre">ActuatorAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeModel.AmplitudeModel.DecayAmplitude">
+<span class="sig-name descname"><span class="pre">DecayAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decayTime</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.DecayAmplitude.DecayAmplitude" title="abaqus.Amplitude.DecayAmplitude.DecayAmplitude"><span class="pre">abaqus.Amplitude.DecayAmplitude.DecayAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeModel.AmplitudeModel.DecayAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DecayAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].DecayAmplitude</p></li>
+<li><p>session.odbs[name].DecayAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>initial</strong> – A Float specifying the constant A0A0.</p></li>
+<li><p><strong>maximum</strong> – A Float specifying the coefficient AA.</p></li>
+<li><p><strong>start</strong> – A Float specifying the starting time t0t0. Possible values are non-negative numbers.</p></li>
+<li><p><strong>decayTime</strong> – A Float specifying the decay time tdtd. Possible values are non-negative numbers.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DecayAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeModel.AmplitudeModel.EquallySpacedAmplitude">
+<span class="sig-name descname"><span class="pre">EquallySpacedAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedInterval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">begin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLVER_DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude" title="abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude"><span class="pre">abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeModel.AmplitudeModel.EquallySpacedAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates an EquallySpacedAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].EquallySpacedAmplitude</p></li>
+<li><p>session.odbs[name].EquallySpacedAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>fixedInterval</strong> – A Float specifying the fixed time interval at which the amplitude data are given.
+Possible values are positive numbers.</p></li>
+<li><p><strong>data</strong> – A sequence of Floats specifying the amplitude values.</p></li>
+<li><p><strong>begin</strong> – A Float specifying the time at which the first amplitude data are given. Possible values
+are non-negative numbers. The default value is 0.0.</p></li>
+<li><p><strong>smooth</strong> – The SymbolicConstant SOLVER_DEFAULT or a Float specifying the degree of smoothing.
+Possible float values are 0 ≤≤ <em>smoothing</em> ≤≤ 0.5. If <a href="#id1"><span class="problematic" id="id2">*</span></a>smooth*=SOLVER_DEFAULT, the
+default degree of smoothing will be determined by the solver. The default value is
+SOLVER_DEFAULT.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">An</span> <span class="pre">EquallySpacedAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeModel.AmplitudeModel.ModulatedAmplitude">
+<span class="sig-name descname"><span class="pre">ModulatedAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.ModulatedAmplitude.ModulatedAmplitude" title="abaqus.Amplitude.ModulatedAmplitude.ModulatedAmplitude"><span class="pre">abaqus.Amplitude.ModulatedAmplitude.ModulatedAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeModel.AmplitudeModel.ModulatedAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a ModulatedAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].ModulatedAmplitude</p></li>
+<li><p>session.odbs[name].ModulatedAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>initial</strong> – A Float specifying the constant A0A0.</p></li>
+<li><p><strong>magnitude</strong> – A Float specifying the coefficient AA.</p></li>
+<li><p><strong>start</strong> – A Float specifying the starting time t0t0. Possible values are non-negative numbers.</p></li>
+<li><p><strong>frequency1</strong> – A Float specifying the circular frequency 1 (ω1ω1). Possible values are positive
+numbers.</p></li>
+<li><p><strong>frequency2</strong> – A Float specifying the circular frequency 2 (ω2ω2). Possible values are positive
+numbers.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">ModulatedAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeModel.AmplitudeModel.PeriodicAmplitude">
+<span class="sig-name descname"><span class="pre">PeriodicAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a_0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude" title="abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude"><span class="pre">abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeModel.AmplitudeModel.PeriodicAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a PeriodicAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].PeriodicAmplitude</p></li>
+<li><p>session.odbs[name].PeriodicAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>frequency</strong> – A Float specifying the circular frequency ωω. Possible values are positive numbers.</p></li>
+<li><p><strong>start</strong> – A Float specifying the starting time t0t0. Possible values are positive numbers.</p></li>
+<li><p><strong>a_0</strong> – A Float specifying the constant A0A0.</p></li>
+<li><p><strong>data</strong> – A sequence of pairs of Floats specifying AiAi and BiBi pairs.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">PeriodicAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeModel.AmplitudeModel.PsdDefinition">
+<span class="sig-name descname"><span class="pre">PsdDefinition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unitType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FORCE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referenceGravityAcceleration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referenecePower</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.PsdDefinition.PsdDefinition" title="abaqus.Amplitude.PsdDefinition.PsdDefinition"><span class="pre">abaqus.Amplitude.PsdDefinition.PsdDefinition</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeModel.AmplitudeModel.PsdDefinition" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a PsdDefinition object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].PsdDefinition</p></li>
+<li><p>session.odbs[name].PsdDefinition</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>data</strong> – A sequence of sequences of Floats specifying the real part of the frequency function,
+the imaginary part of the frequency function, and the frequency or frequency band number
+values, depending on the value of <em>unitType</em>.</p></li>
+<li><p><strong>unitType</strong> – A SymbolicConstant specifying the type of units for specifying the frequency function.
+FORCE implies power units. BASE implies gravity used to define base motion. DB implies
+decibel units. Possible values are FORCE, BASE, and DB. The default value is FORCE.</p></li>
+<li><p><strong>referenceGravityAcceleration</strong> – A Float specifying the reference gravity acceleration. This argument applies when
+<em>unitType</em> = BASE. The default value is 1.0.</p></li>
+<li><p><strong>referenecePower</strong> – A Float specifying the reference power value, in load units squared. This argument
+applies when <em>unitType</em> = DB. The default value is 0.0.</p></li>
+<li><p><strong>user</strong> – A Boolean specifying whether the frequency function is defined in user subroutine UPSD.
+If specified, then <em>data</em> is not applicable, and the <em>unitType</em> value must not be DB.
+The default value is OFF.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+<li><p><strong>amplitude</strong> – A String specifying the name of the amplitude that describes the dynamic event used to
+define the cross-spectral density frequency function. The default value is an empty
+string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">PsdDefinition</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeModel.AmplitudeModel.SmoothStepAmplitude">
+<span class="sig-name descname"><span class="pre">SmoothStepAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude" title="abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude"><span class="pre">abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeModel.AmplitudeModel.SmoothStepAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a SmoothStepAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].SmoothStepAmplitude</p></li>
+<li><p>session.odbs[name].SmoothStepAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>data</strong> – A sequence of pairs of Floats specifying time/frequency and amplitude pairs. Possible
+values for time/frequency are positive numbers.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">SmoothStepAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeModel.AmplitudeModel.SolutionDependentAmplitude">
+<span class="sig-name descname"><span class="pre">SolutionDependentAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.SolutionDependentAmplitude.SolutionDependentAmplitude" title="abaqus.Amplitude.SolutionDependentAmplitude.SolutionDependentAmplitude"><span class="pre">abaqus.Amplitude.SolutionDependentAmplitude.SolutionDependentAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeModel.AmplitudeModel.SolutionDependentAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a SolutionDependentAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].SolutionDependentAmplitude</p></li>
+<li><p>session.odbs[name].SolutionDependentAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>initial</strong> – A Float specifying the initial amplitude value. Possible values are those between
+<em>minimum</em> and <em>maximum</em>. The default value is 1.0.</p></li>
+<li><p><strong>minimum</strong> – A Float specifying the minimum amplitude value. Possible values are those smaller than
+<em>maximum</em> and <em>initial</em>. The default value is 0.1.</p></li>
+<li><p><strong>maximum</strong> – A Float specifying the maximum amplitude value. Possible values are those larger than
+<em>minimum</em> and <em>initial</em>. The default value is 1000.0.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">SolutionDependentAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeModel.AmplitudeModel.SpectrumAmplitude">
+<span class="sig-name descname"><span class="pre">SpectrumAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specificationUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ACCELERATION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eventUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'EVENT_ACCELERATION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ABSOLUTE_VALUE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gravity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">criticalDamping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.SpectrumAmplitude.SpectrumAmplitude" title="abaqus.Amplitude.SpectrumAmplitude.SpectrumAmplitude"><span class="pre">abaqus.Amplitude.SpectrumAmplitude.SpectrumAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeModel.AmplitudeModel.SpectrumAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a SpectrumAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].SpectrumAmplitude</p></li>
+<li><p>session.odbs[name].SpectrumAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>method</strong> – A SymbolicConstant specifying the method for specifying the spectrum. Possible values
+are DEFINE and CALCULATE.</p></li>
+<li><p><strong>data</strong> – A sequence of sequences of Floats specifying the magnitude, frequency, and damping
+values.</p></li>
+<li><p><strong>specificationUnits</strong> – A SymbolicConstant specifying the units used for specifying the spectrum. Possible
+values are DISPLACEMENT, VELOCITY, ACCELERATION, and GRAVITY. The default value is
+ACCELERATION.</p></li>
+<li><p><strong>eventUnits</strong> – A SymbolicConstant specifying the units used to describe the dynamic event in the
+amplitude used for the calculation. Possible values are EVENT_DISPLACEMENT,
+EVENT_VELOCITY, EVENT_ACCELERATION, and EVENT_GRAVITY. The default value is
+EVENT_ACCELERATION.</p></li>
+<li><p><strong>solution</strong> – A SymbolicConstant specifying the solution method for the dynamic equations. Possible
+values are ABSOLUTE_VALUE and RELATIVE_VALUE. The default value is ABSOLUTE_VALUE.</p></li>
+<li><p><strong>timeIncrement</strong> – A Float specifying the implicit time increment used to calculate the spectrum. This
+argument is required when the <em>method</em> = CALCULATE. The default value is 0.0.</p></li>
+<li><p><strong>gravity</strong> – A Float specifying the acceleration due to gravity. This argument applies only when
+<em>specificationUnits</em> = GRAVITY or*eventUnits* = GRAVITY. The default value is 1.0.</p></li>
+<li><p><strong>criticalDamping</strong> – A Boolean specifying whether to calculate the spectrum for only the specified range of
+critical damping values or a list of values. If <em>criticalDamping</em> = ON, the spectrum is
+calculated only for the specified range of critical damping values. If <em>criticalDamping</em>
+= OFF, the spectrum is calculated for a list of damping values. The default value is
+OFF.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+<li><p><strong>amplitude</strong> – A String specifying the name of the amplitude that describes the dynamic event used to
+calculate the spectrum. The default value is an empty string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">SpectrumAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeModel.AmplitudeModel.TabularAmplitude">
+<span class="sig-name descname"><span class="pre">TabularAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLVER_DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.TabularAmplitude.TabularAmplitude" title="abaqus.Amplitude.TabularAmplitude.TabularAmplitude"><span class="pre">abaqus.Amplitude.TabularAmplitude.TabularAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeModel.AmplitudeModel.TabularAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a TabularAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].TabularAmplitude</p></li>
+<li><p>session.odbs[name].TabularAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>data</strong> – A sequence of pairs of Floats specifying time/frequency and amplitude pairs. Possible
+values for time/frequency are positive numbers.</p></li>
+<li><p><strong>smooth</strong> – The SymbolicConstant SOLVER_DEFAULT or a Float specifying the degree of smoothing.
+Possible float values are between 0 and 0.5. If <a href="#id3"><span class="problematic" id="id4">*</span></a>smooth*=SOLVER_DEFAULT, the default
+degree of smoothing will be determined by the solver. The default value is
+SOLVER_DEFAULT.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">TabularAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.AmplitudeOdb">
+<span id="abaqus-amplitude-amplitudeodb-module"></span><h2>abaqus.Amplitude.AmplitudeOdb module<a class="headerlink" href="#module-abaqus.Amplitude.AmplitudeOdb" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.AmplitudeOdb.</span></span><span class="sig-name descname"><span class="pre">AmplitudeOdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analysisTitle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="abaqus.Odb.html#abaqus.Odb.OdbBase.OdbBase" title="abaqus.Odb.OdbBase.OdbBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Odb.OdbBase.OdbBase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.ActuatorAmplitude">
+<span class="sig-name descname"><span class="pre">ActuatorAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude" title="abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude"><span class="pre">abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.ActuatorAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a ActuatorAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].ActuatorAmplitude</p></li>
+<li><p>session.odbs[name].ActuatorAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">An</span> <span class="pre">ActuatorAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.DecayAmplitude">
+<span class="sig-name descname"><span class="pre">DecayAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decayTime</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.DecayAmplitude.DecayAmplitude" title="abaqus.Amplitude.DecayAmplitude.DecayAmplitude"><span class="pre">abaqus.Amplitude.DecayAmplitude.DecayAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.DecayAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DecayAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].DecayAmplitude</p></li>
+<li><p>session.odbs[name].DecayAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>initial</strong> – A Float specifying the constant A0A0.</p></li>
+<li><p><strong>maximum</strong> – A Float specifying the coefficient AA.</p></li>
+<li><p><strong>start</strong> – A Float specifying the starting time t0t0. Possible values are non-negative numbers.</p></li>
+<li><p><strong>decayTime</strong> – A Float specifying the decay time tdtd. Possible values are non-negative numbers.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">DecayAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.EquallySpacedAmplitude">
+<span class="sig-name descname"><span class="pre">EquallySpacedAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedInterval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">begin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLVER_DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude" title="abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude"><span class="pre">abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.EquallySpacedAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates an EquallySpacedAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].EquallySpacedAmplitude</p></li>
+<li><p>session.odbs[name].EquallySpacedAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>fixedInterval</strong> – A Float specifying the fixed time interval at which the amplitude data are given.
+Possible values are positive numbers.</p></li>
+<li><p><strong>data</strong> – A sequence of Floats specifying the amplitude values.</p></li>
+<li><p><strong>begin</strong> – A Float specifying the time at which the first amplitude data are given. Possible values
+are non-negative numbers. The default value is 0.0.</p></li>
+<li><p><strong>smooth</strong> – The SymbolicConstant SOLVER_DEFAULT or a Float specifying the degree of smoothing.
+Possible float values are 0 ≤≤ <em>smoothing</em> ≤≤ 0.5. If <a href="#id5"><span class="problematic" id="id6">*</span></a>smooth*=SOLVER_DEFAULT, the
+default degree of smoothing will be determined by the solver. The default value is
+SOLVER_DEFAULT.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">An</span> <span class="pre">EquallySpacedAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.ModulatedAmplitude">
+<span class="sig-name descname"><span class="pre">ModulatedAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.ModulatedAmplitude.ModulatedAmplitude" title="abaqus.Amplitude.ModulatedAmplitude.ModulatedAmplitude"><span class="pre">abaqus.Amplitude.ModulatedAmplitude.ModulatedAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.ModulatedAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a ModulatedAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].ModulatedAmplitude</p></li>
+<li><p>session.odbs[name].ModulatedAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>initial</strong> – A Float specifying the constant A0A0.</p></li>
+<li><p><strong>magnitude</strong> – A Float specifying the coefficient AA.</p></li>
+<li><p><strong>start</strong> – A Float specifying the starting time t0t0. Possible values are non-negative numbers.</p></li>
+<li><p><strong>frequency1</strong> – A Float specifying the circular frequency 1 (ω1ω1). Possible values are positive
+numbers.</p></li>
+<li><p><strong>frequency2</strong> – A Float specifying the circular frequency 2 (ω2ω2). Possible values are positive
+numbers.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">ModulatedAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.PeriodicAmplitude">
+<span class="sig-name descname"><span class="pre">PeriodicAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a_0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude" title="abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude"><span class="pre">abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.PeriodicAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a PeriodicAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].PeriodicAmplitude</p></li>
+<li><p>session.odbs[name].PeriodicAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>frequency</strong> – A Float specifying the circular frequency ωω. Possible values are positive numbers.</p></li>
+<li><p><strong>start</strong> – A Float specifying the starting time t0t0. Possible values are positive numbers.</p></li>
+<li><p><strong>a_0</strong> – A Float specifying the constant A0A0.</p></li>
+<li><p><strong>data</strong> – A sequence of pairs of Floats specifying AiAi and BiBi pairs.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">PeriodicAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.PsdDefinition">
+<span class="sig-name descname"><span class="pre">PsdDefinition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unitType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FORCE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referenceGravityAcceleration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referenecePower</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.PsdDefinition.PsdDefinition" title="abaqus.Amplitude.PsdDefinition.PsdDefinition"><span class="pre">abaqus.Amplitude.PsdDefinition.PsdDefinition</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.PsdDefinition" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a PsdDefinition object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].PsdDefinition</p></li>
+<li><p>session.odbs[name].PsdDefinition</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>data</strong> – A sequence of sequences of Floats specifying the real part of the frequency function,
+the imaginary part of the frequency function, and the frequency or frequency band number
+values, depending on the value of <em>unitType</em>.</p></li>
+<li><p><strong>unitType</strong> – A SymbolicConstant specifying the type of units for specifying the frequency function.
+FORCE implies power units. BASE implies gravity used to define base motion. DB implies
+decibel units. Possible values are FORCE, BASE, and DB. The default value is FORCE.</p></li>
+<li><p><strong>referenceGravityAcceleration</strong> – A Float specifying the reference gravity acceleration. This argument applies when
+<em>unitType</em> = BASE. The default value is 1.0.</p></li>
+<li><p><strong>referenecePower</strong> – A Float specifying the reference power value, in load units squared. This argument
+applies when <em>unitType</em> = DB. The default value is 0.0.</p></li>
+<li><p><strong>user</strong> – A Boolean specifying whether the frequency function is defined in user subroutine UPSD.
+If specified, then <em>data</em> is not applicable, and the <em>unitType</em> value must not be DB.
+The default value is OFF.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+<li><p><strong>amplitude</strong> – A String specifying the name of the amplitude that describes the dynamic event used to
+define the cross-spectral density frequency function. The default value is an empty
+string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">PsdDefinition</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.SmoothStepAmplitude">
+<span class="sig-name descname"><span class="pre">SmoothStepAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude" title="abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude"><span class="pre">abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.SmoothStepAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a SmoothStepAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].SmoothStepAmplitude</p></li>
+<li><p>session.odbs[name].SmoothStepAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>data</strong> – A sequence of pairs of Floats specifying time/frequency and amplitude pairs. Possible
+values for time/frequency are positive numbers.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">SmoothStepAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.SolutionDependentAmplitude">
+<span class="sig-name descname"><span class="pre">SolutionDependentAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.SolutionDependentAmplitude.SolutionDependentAmplitude" title="abaqus.Amplitude.SolutionDependentAmplitude.SolutionDependentAmplitude"><span class="pre">abaqus.Amplitude.SolutionDependentAmplitude.SolutionDependentAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.SolutionDependentAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a SolutionDependentAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].SolutionDependentAmplitude</p></li>
+<li><p>session.odbs[name].SolutionDependentAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>initial</strong> – A Float specifying the initial amplitude value. Possible values are those between
+<em>minimum</em> and <em>maximum</em>. The default value is 1.0.</p></li>
+<li><p><strong>minimum</strong> – A Float specifying the minimum amplitude value. Possible values are those smaller than
+<em>maximum</em> and <em>initial</em>. The default value is 0.1.</p></li>
+<li><p><strong>maximum</strong> – A Float specifying the maximum amplitude value. Possible values are those larger than
+<em>minimum</em> and <em>initial</em>. The default value is 1000.0.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">SolutionDependentAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.SpectrumAmplitude">
+<span class="sig-name descname"><span class="pre">SpectrumAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specificationUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ACCELERATION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eventUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'EVENT_ACCELERATION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ABSOLUTE_VALUE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gravity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">criticalDamping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.SpectrumAmplitude.SpectrumAmplitude" title="abaqus.Amplitude.SpectrumAmplitude.SpectrumAmplitude"><span class="pre">abaqus.Amplitude.SpectrumAmplitude.SpectrumAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.SpectrumAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a SpectrumAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].SpectrumAmplitude</p></li>
+<li><p>session.odbs[name].SpectrumAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>method</strong> – A SymbolicConstant specifying the method for specifying the spectrum. Possible values
+are DEFINE and CALCULATE.</p></li>
+<li><p><strong>data</strong> – A sequence of sequences of Floats specifying the magnitude, frequency, and damping
+values.</p></li>
+<li><p><strong>specificationUnits</strong> – A SymbolicConstant specifying the units used for specifying the spectrum. Possible
+values are DISPLACEMENT, VELOCITY, ACCELERATION, and GRAVITY. The default value is
+ACCELERATION.</p></li>
+<li><p><strong>eventUnits</strong> – A SymbolicConstant specifying the units used to describe the dynamic event in the
+amplitude used for the calculation. Possible values are EVENT_DISPLACEMENT,
+EVENT_VELOCITY, EVENT_ACCELERATION, and EVENT_GRAVITY. The default value is
+EVENT_ACCELERATION.</p></li>
+<li><p><strong>solution</strong> – A SymbolicConstant specifying the solution method for the dynamic equations. Possible
+values are ABSOLUTE_VALUE and RELATIVE_VALUE. The default value is ABSOLUTE_VALUE.</p></li>
+<li><p><strong>timeIncrement</strong> – A Float specifying the implicit time increment used to calculate the spectrum. This
+argument is required when the <em>method</em> = CALCULATE. The default value is 0.0.</p></li>
+<li><p><strong>gravity</strong> – A Float specifying the acceleration due to gravity. This argument applies only when
+<em>specificationUnits</em> = GRAVITY or*eventUnits* = GRAVITY. The default value is 1.0.</p></li>
+<li><p><strong>criticalDamping</strong> – A Boolean specifying whether to calculate the spectrum for only the specified range of
+critical damping values or a list of values. If <em>criticalDamping</em> = ON, the spectrum is
+calculated only for the specified range of critical damping values. If <em>criticalDamping</em>
+= OFF, the spectrum is calculated for a list of damping values. The default value is
+OFF.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+<li><p><strong>amplitude</strong> – A String specifying the name of the amplitude that describes the dynamic event used to
+calculate the spectrum. The default value is an empty string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">SpectrumAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.TabularAmplitude">
+<span class="sig-name descname"><span class="pre">TabularAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLVER_DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Amplitude.TabularAmplitude.TabularAmplitude" title="abaqus.Amplitude.TabularAmplitude.TabularAmplitude"><span class="pre">abaqus.Amplitude.TabularAmplitude.TabularAmplitude</span></a></span></span><a class="headerlink" href="#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.TabularAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a TabularAmplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].TabularAmplitude</p></li>
+<li><p>session.odbs[name].TabularAmplitude</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key.</p></li>
+<li><p><strong>data</strong> – A sequence of pairs of Floats specifying time/frequency and amplitude pairs. Possible
+values for time/frequency are positive numbers.</p></li>
+<li><p><strong>smooth</strong> – The SymbolicConstant SOLVER_DEFAULT or a Float specifying the degree of smoothing.
+Possible float values are between 0 and 0.5. If <a href="#id7"><span class="problematic" id="id8">*</span></a>smooth*=SOLVER_DEFAULT, the default
+degree of smoothing will be determined by the solver. The default value is
+SOLVER_DEFAULT.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">TabularAmplitude</span> <span class="pre">object.</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeError.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.BaselineCorrection">
+<span id="abaqus-amplitude-baselinecorrection-module"></span><h2>abaqus.Amplitude.BaselineCorrection module<a class="headerlink" href="#module-abaqus.Amplitude.BaselineCorrection" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.BaselineCorrection.BaselineCorrection">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.BaselineCorrection.</span></span><span class="sig-name descname"><span class="pre">BaselineCorrection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intervals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.BaselineCorrection.BaselineCorrection" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The BaselineCorrection object modifies an acceleration history to minimize the overall
+drift of the displacement obtained from the time integration of the given acceleration.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import amplitude</p></li>
+<li><p>mdb.models[name].amplitudes[name].baselineCorrection</p></li>
+<li><p>import odbAmplitude</p></li>
+<li><p>session.odbs[name].amplitudes[name].baselineCorrection</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>BASELINE CORRECTION</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.BaselineCorrection.BaselineCorrection.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.BaselineCorrection.BaselineCorrection.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the BaselineCorrection object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.ConstrainedSketchGeometryArray">
+<span id="abaqus-amplitude-constrainedsketchgeometryarray-module"></span><h2>abaqus.Amplitude.ConstrainedSketchGeometryArray module<a class="headerlink" href="#module-abaqus.Amplitude.ConstrainedSketchGeometryArray" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.ConstrainedSketchGeometryArray.ConstrainedSketchGeometryArray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.ConstrainedSketchGeometryArray.</span></span><span class="sig-name descname"><span class="pre">ConstrainedSketchGeometryArray</span></span><a class="headerlink" href="#abaqus.Amplitude.ConstrainedSketchGeometryArray.ConstrainedSketchGeometryArray" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The ConstrainedSketchGeometryArray is a sequence of ConstrainedSketchGeometry objects.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import sketch</p></li>
+<li><p>mdb.models[name].sketches[name].geometry[i]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.ConstrainedSketchGeometryArray.ConstrainedSketchGeometryArray.findAt">
+<span class="sig-name descname"><span class="pre">findAt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printWarning</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.ConstrainedSketchGeometryArray.ConstrainedSketchGeometryArray.findAt" title="Permalink to this definition"></a></dt>
+<dd><p>This method returns the ConstrainedSketchGeometry object located at the given
+coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>coordinates</strong> – A sequence of Floats specifying the <em>X</em>- and <em>Y</em>-coordinates of the object to find.</p></li>
+<li><p><strong>printWarning</strong> – A Boolean specifying whether a message is to be printed to the CLI if no entity is found
+at the specified location. The default value is True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">ConstrainedSketchGeometry</span> <span class="pre">object.</span> <span class="pre">.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.Correlation">
+<span id="abaqus-amplitude-correlation-module"></span><h2>abaqus.Amplitude.Correlation module<a class="headerlink" href="#module-abaqus.Amplitude.Correlation" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Correlation.Correlation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.Correlation.</span></span><span class="sig-name descname"><span class="pre">Correlation</span></span><a class="headerlink" href="#abaqus.Amplitude.Correlation.Correlation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Amplitude.Amplitude.Amplitude" title="abaqus.Amplitude.Amplitude.Amplitude"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Amplitude.Amplitude.Amplitude</span></code></a></p>
+<p>A Correlation is an object used to define the cross-correlation as part of the
+definition of random loading.
+The Correlation object is derived from the Amplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import load</p></li>
+<li><p>mdb.models[name].boundaryConditions[name].correlation[i]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Correlation.Correlation.approach">
+<span class="sig-name descname"><span class="pre">approach</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CORRELATED'</span></em><a class="headerlink" href="#abaqus.Amplitude.Correlation.Correlation.approach" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Correlation.Correlation.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#abaqus.Amplitude.Correlation.Correlation.data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Correlation.Correlation.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#abaqus.Amplitude.Correlation.Correlation.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Correlation.Correlation.timeSpan">
+<span class="sig-name descname"><span class="pre">timeSpan</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">abaqusConstants.SymbolicConstantType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'STEP'</span></em><a class="headerlink" href="#abaqus.Amplitude.Correlation.Correlation.timeSpan" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.CorrelationArray">
+<span id="abaqus-amplitude-correlationarray-module"></span><h2>abaqus.Amplitude.CorrelationArray module<a class="headerlink" href="#module-abaqus.Amplitude.CorrelationArray" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.CorrelationArray.CorrelationArray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.CorrelationArray.</span></span><span class="sig-name descname"><span class="pre">CorrelationArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.CorrelationArray.CorrelationArray" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<a class="reference internal" href="#abaqus.Amplitude.Correlation.Correlation" title="abaqus.Amplitude.Correlation.Correlation"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Amplitude.Correlation.Correlation</span></code></a>]</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.CorrelationArray.CorrelationArray.findAt">
+<span class="sig-name descname"><span class="pre">findAt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.CorrelationArray.CorrelationArray.findAt" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.DecayAmplitude">
+<span id="abaqus-amplitude-decayamplitude-module"></span><h2>abaqus.Amplitude.DecayAmplitude module<a class="headerlink" href="#module-abaqus.Amplitude.DecayAmplitude" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.DecayAmplitude.DecayAmplitude">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.DecayAmplitude.</span></span><span class="sig-name descname"><span class="pre">DecayAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decayTime</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.DecayAmplitude.DecayAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Amplitude.Amplitude.Amplitude" title="abaqus.Amplitude.Amplitude.Amplitude"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Amplitude.Amplitude.Amplitude</span></code></a></p>
+<p>The DecayAmplitude object defines an amplitude curve using an exponential decay.
+The DecayAmplitude object is derived from the Amplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import amplitude</p></li>
+<li><p>mdb.models[name].amplitudes[name]</p></li>
+<li><p>import odbAmplitude</p></li>
+<li><p>session.odbs[name].amplitudes[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>AMPLITUDE</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.DecayAmplitude.DecayAmplitude.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.DecayAmplitude.DecayAmplitude.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the DecayAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – RangeError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.EquallySpacedAmplitude">
+<span id="abaqus-amplitude-equallyspacedamplitude-module"></span><h2>abaqus.Amplitude.EquallySpacedAmplitude module<a class="headerlink" href="#module-abaqus.Amplitude.EquallySpacedAmplitude" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.EquallySpacedAmplitude.</span></span><span class="sig-name descname"><span class="pre">EquallySpacedAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedInterval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">begin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLVER_DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Amplitude.Amplitude.Amplitude" title="abaqus.Amplitude.Amplitude.Amplitude"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Amplitude.Amplitude.Amplitude</span></code></a></p>
+<p>The EquallySpacedAmplitude object defines a list of amplitude values at fixed time
+intervals beginning at a specified value of time.
+The EquallySpacedAmplitude object is derived from the Amplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import amplitude</p></li>
+<li><p>mdb.models[name].amplitudes[name]</p></li>
+<li><p>import odbAmplitude</p></li>
+<li><p>session.odbs[name].amplitudes[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>AMPLITUDE</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude.baselineCorrection">
+<span class="sig-name descname"><span class="pre">baselineCorrection</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Amplitude.BaselineCorrection.BaselineCorrection" title="abaqus.Amplitude.BaselineCorrection.BaselineCorrection"><span class="pre">abaqus.Amplitude.BaselineCorrection.BaselineCorrection</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Amplitude.BaselineCorrection.BaselineCorrection</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude.baselineCorrection" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">begin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLVER_DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the EquallySpacedAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>begin</strong> – A Float specifying the time at which the first amplitude data are given. Possible values
+are non-negative numbers. The default value is 0.0.</p></li>
+<li><p><strong>smooth</strong> – The SymbolicConstant SOLVER_DEFAULT or a Float specifying the degree of smoothing.
+Possible float values are 0 ≤≤ <em>smoothing</em> ≤≤ 0.5. If <a href="#id9"><span class="problematic" id="id10">*</span></a>smooth*=SOLVER_DEFAULT, the
+default degree of smoothing will be determined by the solver. The default value is
+SOLVER_DEFAULT.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – RangeError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.ModulatedAmplitude">
+<span id="abaqus-amplitude-modulatedamplitude-module"></span><h2>abaqus.Amplitude.ModulatedAmplitude module<a class="headerlink" href="#module-abaqus.Amplitude.ModulatedAmplitude" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.ModulatedAmplitude.ModulatedAmplitude">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.ModulatedAmplitude.</span></span><span class="sig-name descname"><span class="pre">ModulatedAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.ModulatedAmplitude.ModulatedAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Amplitude.Amplitude.Amplitude" title="abaqus.Amplitude.Amplitude.Amplitude"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Amplitude.Amplitude.Amplitude</span></code></a></p>
+<p>The ModulatedAmplitude object defines a modulated amplitude curve.
+The ModulatedAmplitude object is derived from the Amplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import amplitude</p></li>
+<li><p>mdb.models[name].amplitudes[name]</p></li>
+<li><p>import odbAmplitude</p></li>
+<li><p>session.odbs[name].amplitudes[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>AMPLITUDE</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.ModulatedAmplitude.ModulatedAmplitude.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.ModulatedAmplitude.ModulatedAmplitude.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ModulatedAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – RangeError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.PeriodicAmplitude">
+<span id="abaqus-amplitude-periodicamplitude-module"></span><h2>abaqus.Amplitude.PeriodicAmplitude module<a class="headerlink" href="#module-abaqus.Amplitude.PeriodicAmplitude" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.PeriodicAmplitude.</span></span><span class="sig-name descname"><span class="pre">PeriodicAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a_0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Amplitude.Amplitude.Amplitude" title="abaqus.Amplitude.Amplitude.Amplitude"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Amplitude.Amplitude.Amplitude</span></code></a></p>
+<p>The PeriodicAmplitude object defines an amplitude curve using a Fourier series.
+The PeriodicAmplitude object is derived from the Amplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import amplitude</p></li>
+<li><p>mdb.models[name].amplitudes[name]</p></li>
+<li><p>import odbAmplitude</p></li>
+<li><p>session.odbs[name].amplitudes[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>AMPLITUDE</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the PeriodicAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – RangeError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.Property">
+<span id="abaqus-amplitude-property-module"></span><h2>abaqus.Amplitude.Property module<a class="headerlink" href="#module-abaqus.Amplitude.Property" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Property.assignBeamSectionOrientatio">
+<span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.Property.</span></span><span class="sig-name descname"><span class="pre">assignBeamSectionOrientatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.Property.assignBeamSectionOrientatio" title="Permalink to this definition"></a></dt>
+<dd><p>This method assigns a beam section orientation to a region of a part.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[<em>name</em>].parts[<em>name</em>].assignBeamSectionOrientation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region</strong> – A sequence of geomSequences of Edge objects or a sequence of sequences of
+one-dimensional elements.</p></li>
+<li><p><strong>method</strong> – A SymbolicConstant specifying the assignment method. Only a value of N1_COSINES is
+currently supported.</p></li>
+<li><p><strong>n1</strong> – A sequence of three Floats specifying the approximate local n1n1-direction of the beam
+cross-section.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>None.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Property.assignMaterialOrientatio">
+<span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.Property.</span></span><span class="sig-name descname"><span class="pre">assignMaterialOrientatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Datum.html#abaqus.Datum.Datum.Datum" title="abaqus.Datum.Datum.Datum"><span class="pre">abaqus.Datum.Datum.Datum</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.Property.assignMaterialOrientatio" title="Permalink to this definition"></a></dt>
+<dd><p>This method assigns a material orientation to a region.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[<em>name</em>].parts[<em>name</em>].assignMaterialOrientation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region</strong> – A sequence of geomSequences of ConstrainedSketchVertex, Edge, Face, and Cell objects or a sequence of
+sequences of elements.</p></li>
+<li><p><strong>localCsys</strong> – A Datum object specifying the local coordinate system or None, indicating the global
+coordinate system.</p></li>
+<li><p><strong>axis</strong> – A SymbolicConstant specifying the axis of a cylindrical or spherical datum coordinate
+system about which an additional rotation is applied. For shells this axis is also the
+shell normal. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default value is
+AXIS_1.</p></li>
+<li><p><strong>angle</strong> – A Float specifying the angle of the additional rotation. The default value is 0.0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>None.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Property.assignRebarOrientatio">
+<span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.Property.</span></span><span class="sig-name descname"><span class="pre">assignRebarOrientatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Datum.html#abaqus.Datum.Datum.Datum" title="abaqus.Datum.Datum.Datum"><span class="pre">abaqus.Datum.Datum.Datum</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.Property.assignRebarOrientatio" title="Permalink to this definition"></a></dt>
+<dd><p>This method assigns a rebar reference orientation to a region.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[<em>name</em>].parts[<em>name</em>].assignRebarOrientation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region</strong> – A sequence of geomSequences of ConstrainedSketchVertex, Edge, Face, and Cell objects or a sequence of
+sequences of elements.</p></li>
+<li><p><strong>localCsys</strong> – A Datum object specifying the local coordinate system or None, indicating the global
+coordinate system.</p></li>
+<li><p><strong>axis</strong> – A SymbolicConstant specifying the axis of a cylindrical or spherical datum coordinate
+system about which an additional rotation is applied. For shells this axis is also the
+shell normal. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default value is
+AXIS_1.</p></li>
+<li><p><strong>angle</strong> – A Float specifying the angle of the additional rotation. The default value is 0.0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>None.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Property.flipNorma">
+<span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.Property.</span></span><span class="sig-name descname"><span class="pre">flipNorma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">referenceRegion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.Property.flipNorma" title="Permalink to this definition"></a></dt>
+<dd><p>This method flips the normals of shell or membrane elements of an orphan mesh or of
+two-dimensional geometric regions.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[<em>name</em>].parts[<em>name</em>].flipNormal</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>regions</strong> – A Region object specifying the region on which normals are flipped. For 3D parts, the
+region contains Face objects or two-dimensional triangle or quadrilateral Element
+objects. For axisymmetric parts, the region contains Edge objects or line Elements
+objects.</p></li>
+<li><p><strong>referenceRegion</strong> – A two-dimensional element object whose normal is to be matched. If unspecified, all the
+normals associated with the given regions will be flipped. The <em>referenceRegion</em>
+argument is applicable only if the argument regions contain a sequence of quadrilateral
+or triangular elements.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>None.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Property.flipTangen">
+<span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.Property.</span></span><span class="sig-name descname"><span class="pre">flipTangen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.Property.flipTangen" title="Permalink to this definition"></a></dt>
+<dd><p>This method flips the tangents of beam or truss elements of an orphan mesh or of
+one-dimensional geometric regions.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[<em>name</em>].parts[<em>name</em>].flipTangent</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>regions</strong> – A Region object specifying the region on which normals are flipped. The region contains
+Edge objects or one-dimensional Element objects.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>None.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Property.unassignBeamSectionOrientatio">
+<span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.Property.</span></span><span class="sig-name descname"><span class="pre">unassignBeamSectionOrientatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.Property.unassignBeamSectionOrientatio" title="Permalink to this definition"></a></dt>
+<dd><p>This method deletes a beam section orientation assignment.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[<em>name</em>].parts[<em>name</em>].unassignBeamSectionOrientation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – An Int specifying the number of the beam section orientation assignment to be deleted.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>None.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Property.unassignMaterialOrientatio">
+<span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.Property.</span></span><span class="sig-name descname"><span class="pre">unassignMaterialOrientatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.Property.unassignMaterialOrientatio" title="Permalink to this definition"></a></dt>
+<dd><p>This method deletes a material orientation assignment.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[<em>name</em>].parts[<em>name</em>].unassignMaterialOrientation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – An Int specifying the number of the material assignment to be deleted.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>None.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="abaqus.Amplitude.Property.unassignRebarOrientatio">
+<span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.Property.</span></span><span class="sig-name descname"><span class="pre">unassignRebarOrientatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.Property.unassignRebarOrientatio" title="Permalink to this definition"></a></dt>
+<dd><p>This method deletes a rebar orientation assignment.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[<em>name</em>].parts[<em>name</em>].unassignRebarOrientation</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – An Int specifying the number of the rebar reference orientation assignment to be
+deleted.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>None.</p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.PsdDefinition">
+<span id="abaqus-amplitude-psddefinition-module"></span><h2>abaqus.Amplitude.PsdDefinition module<a class="headerlink" href="#module-abaqus.Amplitude.PsdDefinition" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.PsdDefinition.PsdDefinition">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.PsdDefinition.</span></span><span class="sig-name descname"><span class="pre">PsdDefinition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unitType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FORCE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referenceGravityAcceleration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referenecePower</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.PsdDefinition.PsdDefinition" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Amplitude.Amplitude.Amplitude" title="abaqus.Amplitude.Amplitude.Amplitude"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Amplitude.Amplitude.Amplitude</span></code></a></p>
+<p>The PsdDefinition object defines the cross-spectral density frequency function for
+random response loading.
+The PsdDefinition object is derived from the Amplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import amplitude</p></li>
+<li><p>mdb.models[name].amplitudes[name]</p></li>
+<li><p>import odbAmplitude</p></li>
+<li><p>session.odbs[name].amplitudes[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>PSD-DEFINITION</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.PsdDefinition.PsdDefinition.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unitType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FORCE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referenceGravityAcceleration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referenecePower</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.PsdDefinition.PsdDefinition.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the PsdDefinition object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>unitType</strong> – A SymbolicConstant specifying the type of units for specifying the frequency function.
+FORCE implies power units. BASE implies gravity used to define base motion. DB implies
+decibel units. Possible values are FORCE, BASE, and DB. The default value is FORCE.</p></li>
+<li><p><strong>referenceGravityAcceleration</strong> – A Float specifying the reference gravity acceleration. This argument applies when
+<em>unitType</em> = BASE. The default value is 1.0.</p></li>
+<li><p><strong>referenecePower</strong> – A Float specifying the reference power value, in load units squared. This argument
+applies when <em>unitType</em> = DB. The default value is 0.0.</p></li>
+<li><p><strong>user</strong> – A Boolean specifying whether the frequency function is defined in user subroutine UPSD.
+If specified, then <em>data</em> is not applicable, and the <em>unitType</em> value must not be DB.
+The default value is OFF.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+<li><p><strong>amplitude</strong> – A String specifying the name of the amplitude that describes the dynamic event used to
+define the cross-spectral density frequency function. The default value is an empty
+string.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – RangeError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.SmoothStepAmplitude">
+<span id="abaqus-amplitude-smoothstepamplitude-module"></span><h2>abaqus.Amplitude.SmoothStepAmplitude module<a class="headerlink" href="#module-abaqus.Amplitude.SmoothStepAmplitude" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.SmoothStepAmplitude.</span></span><span class="sig-name descname"><span class="pre">SmoothStepAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Amplitude.Amplitude.Amplitude" title="abaqus.Amplitude.Amplitude.Amplitude"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Amplitude.Amplitude.Amplitude</span></code></a></p>
+<p>The SmoothStepAmplitude object defines an amplitude that ramps up or down smoothly from
+one data point to another.
+The SmoothStepAmplitude object is derived from the Amplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import amplitude</p></li>
+<li><p>mdb.models[name].amplitudes[name]</p></li>
+<li><p>import odbAmplitude</p></li>
+<li><p>session.odbs[name].amplitudes[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>AMPLITUDE</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the SmoothStepAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – RangeError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.SolutionDependentAmplitude">
+<span id="abaqus-amplitude-solutiondependentamplitude-module"></span><h2>abaqus.Amplitude.SolutionDependentAmplitude module<a class="headerlink" href="#module-abaqus.Amplitude.SolutionDependentAmplitude" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.SolutionDependentAmplitude.SolutionDependentAmplitude">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.SolutionDependentAmplitude.</span></span><span class="sig-name descname"><span class="pre">SolutionDependentAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.SolutionDependentAmplitude.SolutionDependentAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Amplitude.Amplitude.Amplitude" title="abaqus.Amplitude.Amplitude.Amplitude"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Amplitude.Amplitude.Amplitude</span></code></a></p>
+<p>The SolutionDependentAmplitude object defines a solution-dependent amplitude for
+superplastic forming analysis.
+The SolutionDependentAmplitude object is derived from the Amplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import amplitude</p></li>
+<li><p>mdb.models[name].amplitudes[name]</p></li>
+<li><p>import odbAmplitude</p></li>
+<li><p>session.odbs[name].amplitudes[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>AMPLITUDE</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.SolutionDependentAmplitude.SolutionDependentAmplitude.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.SolutionDependentAmplitude.SolutionDependentAmplitude.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the SolutionDependentAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>initial</strong> – A Float specifying the initial amplitude value. Possible values are those between
+<em>minimum</em> and <em>maximum</em>. The default value is 1.0.</p></li>
+<li><p><strong>minimum</strong> – A Float specifying the minimum amplitude value. Possible values are those smaller than
+<em>maximum</em> and <em>initial</em>. The default value is 0.1.</p></li>
+<li><p><strong>maximum</strong> – A Float specifying the maximum amplitude value. Possible values are those larger than
+<em>minimum</em> and <em>initial</em>. The default value is 1000.0.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – RangeError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.SpectrumAmplitude">
+<span id="abaqus-amplitude-spectrumamplitude-module"></span><h2>abaqus.Amplitude.SpectrumAmplitude module<a class="headerlink" href="#module-abaqus.Amplitude.SpectrumAmplitude" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.SpectrumAmplitude.SpectrumAmplitude">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.SpectrumAmplitude.</span></span><span class="sig-name descname"><span class="pre">SpectrumAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specificationUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ACCELERATION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eventUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'EVENT_ACCELERATION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ABSOLUTE_VALUE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gravity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">criticalDamping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.SpectrumAmplitude.SpectrumAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Amplitude.Amplitude.Amplitude" title="abaqus.Amplitude.Amplitude.Amplitude"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Amplitude.Amplitude.Amplitude</span></code></a></p>
+<p>The SpectrumAmplitude object defines the spectrum of responses for displacement,
+velocity, or acceleration to be used in a response spectrum analysis.
+The SpectrumAmplitude object is derived from the Amplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import amplitude</p></li>
+<li><p>mdb.models[name].amplitudes[name]</p></li>
+<li><p>import odbAmplitude</p></li>
+<li><p>session.odbs[name].amplitudes[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>SPECTRUM</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.SpectrumAmplitude.SpectrumAmplitude.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specificationUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ACCELERATION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eventUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'EVENT_ACCELERATION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ABSOLUTE_VALUE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gravity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">criticalDamping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.SpectrumAmplitude.SpectrumAmplitude.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the SpectrumAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>specificationUnits</strong> – A SymbolicConstant specifying the units used for specifying the spectrum. Possible
+values are DISPLACEMENT, VELOCITY, ACCELERATION, and GRAVITY. The default value is
+ACCELERATION.</p></li>
+<li><p><strong>eventUnits</strong> – A SymbolicConstant specifying the units used to describe the dynamic event in the
+amplitude used for the calculation. Possible values are EVENT_DISPLACEMENT,
+EVENT_VELOCITY, EVENT_ACCELERATION, and EVENT_GRAVITY. The default value is
+EVENT_ACCELERATION.</p></li>
+<li><p><strong>solution</strong> – A SymbolicConstant specifying the solution method for the dynamic equations. Possible
+values are ABSOLUTE_VALUE and RELATIVE_VALUE. The default value is ABSOLUTE_VALUE.</p></li>
+<li><p><strong>timeIncrement</strong> – A Float specifying the implicit time increment used to calculate the spectrum. This
+argument is required when the <em>method</em> = CALCULATE. The default value is 0.0.</p></li>
+<li><p><strong>gravity</strong> – A Float specifying the acceleration due to gravity. This argument applies only when
+<em>specificationUnits</em> = GRAVITY or*eventUnits* = GRAVITY. The default value is 1.0.</p></li>
+<li><p><strong>criticalDamping</strong> – A Boolean specifying whether to calculate the spectrum for only the specified range of
+critical damping values or a list of values. If <em>criticalDamping</em> = ON, the spectrum is
+calculated only for the specified range of critical damping values. If <em>criticalDamping</em>
+= OFF, the spectrum is calculated for a list of damping values. The default value is
+OFF.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+<li><p><strong>amplitude</strong> – A String specifying the name of the amplitude that describes the dynamic event used to
+calculate the spectrum. The default value is an empty string.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – RangeError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude.TabularAmplitude">
+<span id="abaqus-amplitude-tabularamplitude-module"></span><h2>abaqus.Amplitude.TabularAmplitude module<a class="headerlink" href="#module-abaqus.Amplitude.TabularAmplitude" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Amplitude.TabularAmplitude.TabularAmplitude">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Amplitude.TabularAmplitude.</span></span><span class="sig-name descname"><span class="pre">TabularAmplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLVER_DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.TabularAmplitude.TabularAmplitude" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Amplitude.Amplitude.Amplitude" title="abaqus.Amplitude.Amplitude.Amplitude"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Amplitude.Amplitude.Amplitude</span></code></a></p>
+<p>The TabularAmplitude object defines an amplitude curve as a table of values at
+convenient points on the time scale.
+The TabularAmplitude object is derived from the Amplitude object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import amplitude</p></li>
+<li><p>mdb.models[name].amplitudes[name]</p></li>
+<li><p>import odbAmplitude</p></li>
+<li><p>session.odbs[name].amplitudes[name]</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>AMPLITUDE</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Amplitude.TabularAmplitude.TabularAmplitude.baselineCorrection">
+<span class="sig-name descname"><span class="pre">baselineCorrection</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Amplitude.BaselineCorrection.BaselineCorrection" title="abaqus.Amplitude.BaselineCorrection.BaselineCorrection"><span class="pre">abaqus.Amplitude.BaselineCorrection.BaselineCorrection</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Amplitude.BaselineCorrection.BaselineCorrection</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Amplitude.TabularAmplitude.TabularAmplitude.baselineCorrection" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Amplitude.TabularAmplitude.TabularAmplitude.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">smooth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLVER_DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Amplitude.TabularAmplitude.TabularAmplitude.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the TabularAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>smooth</strong> – The SymbolicConstant SOLVER_DEFAULT or a Float specifying the degree of smoothing.
+Possible float values are between 0 and 0.5. If <a href="#id11"><span class="problematic" id="id12">*</span></a>smooth*=SOLVER_DEFAULT, the default
+degree of smoothing will be determined by the solver. The default value is
+SOLVER_DEFAULT.</p></li>
+<li><p><strong>timeSpan</strong> – A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+and TOTAL. The default value is STEP.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – RangeError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Amplitude">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-abaqus.Amplitude" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

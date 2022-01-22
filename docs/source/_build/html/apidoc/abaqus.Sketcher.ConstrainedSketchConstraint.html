@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>abaqus.Sketcher.ConstrainedSketchConstraint package &mdash; pyabaqus 1.0.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Reference manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>abaqus.Sketcher.ConstrainedSketchConstraint package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/abaqus.Sketcher.ConstrainedSketchConstraint.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="abaqus-sketcher-constrainedsketchconstraint-package">
+<h1>abaqus.Sketcher.ConstrainedSketchConstraint package<a class="headerlink" href="#abaqus-sketcher-constrainedsketchconstraint-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchConstraint.CoincidentConstraint">
+<span id="abaqus-sketcher-constrainedsketchconstraint-coincidentconstraint-module"></span><h2>abaqus.Sketcher.ConstrainedSketchConstraint.CoincidentConstraint module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchConstraint.CoincidentConstraint" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.CoincidentConstraint.CoincidentConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.CoincidentConstraint.</span></span><span class="sig-name descname"><span class="pre">CoincidentConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.CoincidentConstraint.CoincidentConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint" title="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchConstraint.ConcentricConstraint">
+<span id="abaqus-sketcher-constrainedsketchconstraint-concentricconstraint-module"></span><h2>abaqus.Sketcher.ConstrainedSketchConstraint.ConcentricConstraint module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchConstraint.ConcentricConstraint" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ConcentricConstraint.ConcentricConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConcentricConstraint.</span></span><span class="sig-name descname"><span class="pre">ConcentricConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConcentricConstraint.ConcentricConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint" title="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint">
+<span id="abaqus-sketcher-constrainedsketchconstraint-constrainedsketchconstraint-module"></span><h2>abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.</span></span><span class="sig-name descname"><span class="pre">ConstrainedSketchConstraint</span></span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The ConstrainedSketchConstraint object stores the constraints associated with a sketch.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import sketch</p></li>
+<li><p>mdb.models[name].sketches[name].constraints[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel">
+<span id="abaqus-sketcher-constrainedsketchconstraint-constrainedsketchconstraintmodel-module"></span><h2>abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.</span></span><span class="sig-name descname"><span class="pre">ConstrainedSketchConstraintModel</span></span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../sketcher.html#abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase" title="abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchBase.ConstrainedSketchBase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.CoincidentConstraint">
+<span class="sig-name descname"><span class="pre">CoincidentConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.CoincidentConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a coincident constraint. This constraint applies to two vertices, to
+a vertex and a ConstrainedSketchGeometry object, or to two ConstrainedSketchGeometry
+objects of the same type and constrains them to be coincident.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sketches[name].CoincidentConstraint</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity1</strong> – A ConstrainedSketchGeometry object or a ConstrainedSketchVertex object specifying the first object.</p></li>
+<li><p><strong>entity2</strong> – A ConstrainedSketchGeometry object or a ConstrainedSketchVertex object specifying the second object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sketch</strong> – A ConstrainedSketch object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedSketch</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.ConcentricConstraint">
+<span class="sig-name descname"><span class="pre">ConcentricConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.ConcentricConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a concentric constraint. This constraint applies to any combination
+of circles, arcs, ellipses, and points and constrains them to be concentric. A
+concentric constraint implies that the center of ConstrainedSketchGeometry objects
+coincide.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sketches[name].ConcentricConstraint</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity1</strong> – A ConstrainedSketchGeometry object specifying the first arc, circle, ellipse, or sketch
+vertex.</p></li>
+<li><p><strong>entity2</strong> – A ConstrainedSketchGeometry object specifying the second arc, circle, ellipse, or sketch
+vertex.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sketch</strong> – A ConstrainedSketch object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedSketch</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.EqualDistanceConstraint">
+<span class="sig-name descname"><span class="pre">EqualDistanceConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">midpoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.BasicGeometry.html#abaqus.BasicGeometry.Vertex.Vertex" title="abaqus.BasicGeometry.Vertex.Vertex"><span class="pre">abaqus.BasicGeometry.Vertex.Vertex</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.EqualDistanceConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates an equal distance constraint. This constraint can be applied between
+a midpoint ConstrainedSketchVertex object and any other two ConstrainedSketchVertex objects or between a
+midpoint ConstrainedSketchVertex
+object and two ConstrainedSketchGeometry objects that are lines. The equal distance
+constraint forces the midpoint vertex to remain at an equal distance from the two other
+vertices or lines.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sketches[name].EqualDistanceConstraint</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity1</strong> – AConstrainedSketchGeometry object specifying the first line or ConstrainedSketchVertex object.</p></li>
+<li><p><strong>entity2</strong> – A ConstrainedSketchGeometry object specifying the second line or ConstrainedSketchVertex object.</p></li>
+<li><p><strong>midpoint</strong> – A ConstrainedSketchVertex object specifying the vertex that will be positioned an equal distance from
+<em>entity1</em> and <em>entity2</em>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sketch</strong> – A ConstrainedSketch object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedSketch</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.EqualLengthConstraint">
+<span class="sig-name descname"><span class="pre">EqualLengthConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.EqualLengthConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates an equal length constraint. This constraint applies to lines and
+constrains them such that their lengths are equal.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sketches[name].EqualLengthConstraint</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity1</strong> – A ConstrainedSketchGeometry object specifying the first line.</p></li>
+<li><p><strong>entity2</strong> – A ConstrainedSketchGeometry object specifying the second line.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sketch</strong> – A ConstrainedSketch object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedSketch</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.EqualRadiusConstraint">
+<span class="sig-name descname"><span class="pre">EqualRadiusConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.EqualRadiusConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates an equal radius constraint. This constraint applies to circles and
+arcs and constrains them such that their radii are equal.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sketches[name].EqualRadiusConstraint</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity1</strong> – A ConstrainedSketchGeometry object specifying the first arc or circle.</p></li>
+<li><p><strong>entity2</strong> – A ConstrainedSketchGeometry specifying the second arc or circle.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sketch</strong> – A ConstrainedSketch object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedSketch</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.FixedConstraint">
+<span class="sig-name descname"><span class="pre">FixedConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.FixedConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a fixed constraint. This constraint applies to a
+ConstrainedSketchGeometry object or a ConstrainedSketchVertex object and constrains them to be fixed in
+space. Both the location and the shape of the sketch geometry is fixed.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sketches[name].FixedConstraint</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entity</strong> – A ConstrainedSketchGeometry object or a ConstrainedSketchVertex object specifying the item to fix in
+space.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sketch</strong> – A ConstrainedSketch object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedSketch</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.HorizontalConstraint">
+<span class="sig-name descname"><span class="pre">HorizontalConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.HorizontalConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a horizontal constraint. This constraint applies to a line and
+constrains it to be horizontal.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sketches[name].HorizontalConstraint</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entity</strong> – A ConstrainedSketchGeometry object specifying the line to constrain.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sketch</strong> – A ConstrainedSketch object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedSketch</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.ParallelConstraint">
+<span class="sig-name descname"><span class="pre">ParallelConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.ParallelConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a parallel constraint. This constraint applies to lines and
+constrains them to be parallel.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sketches[name].ParallelConstraint</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity1</strong> – A ConstrainedSketchGeometry object specifying the first line.</p></li>
+<li><p><strong>entity2</strong> – A ConstrainedSketchGeometry object specifying the second line.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sketch</strong> – A ConstrainedSketch object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedSketch</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.PerpendicularConstraint">
+<span class="sig-name descname"><span class="pre">PerpendicularConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.PerpendicularConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a perpendicular constraint. This constraint applies to different
+types of ConstrainedSketchGeometry objects and constrains them to be perpendicular to
+each other.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sketches[name].PerpendicularConstraint</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity1</strong> – A ConstrainedSketchGeometry object specifying the first object.</p></li>
+<li><p><strong>entity2</strong> – A ConstrainedSketchGeometry object specifying the second object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sketch</strong> – A ConstrainedSketch object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedSketch</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.TangentConstraint">
+<span class="sig-name descname"><span class="pre">TangentConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.TangentConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a tangent constraint. This constraint applies to different types of
+ConstrainedSketchGeometry objects and constrains them to remain tangential.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sketches[name].TangentConstraint</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity1</strong> – A ConstrainedSketchGeometry object specifying the first object.</p></li>
+<li><p><strong>entity2</strong> – A ConstrainedSketchGeometry object specifying the second object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sketch</strong> – A ConstrainedSketch object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedSketch</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.VerticalConstraint">
+<span class="sig-name descname"><span class="pre">VerticalConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraintModel.ConstrainedSketchConstraintModel.VerticalConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a vertical constraint. This constraint applies to a line and
+constrains it to be vertical.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].sketches[name].VerticalConstraint</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entity</strong> – A ConstrainedSketchGeometry object specifying the line to constrain.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sketch</strong> – A ConstrainedSketch object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedSketch</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchConstraint.EqualDistanceConstraint">
+<span id="abaqus-sketcher-constrainedsketchconstraint-equaldistanceconstraint-module"></span><h2>abaqus.Sketcher.ConstrainedSketchConstraint.EqualDistanceConstraint module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchConstraint.EqualDistanceConstraint" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.EqualDistanceConstraint.EqualDistanceConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.EqualDistanceConstraint.</span></span><span class="sig-name descname"><span class="pre">EqualDistanceConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">midpoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.BasicGeometry.html#abaqus.BasicGeometry.Vertex.Vertex" title="abaqus.BasicGeometry.Vertex.Vertex"><span class="pre">abaqus.BasicGeometry.Vertex.Vertex</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.EqualDistanceConstraint.EqualDistanceConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint" title="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchConstraint.EqualLengthConstraint">
+<span id="abaqus-sketcher-constrainedsketchconstraint-equallengthconstraint-module"></span><h2>abaqus.Sketcher.ConstrainedSketchConstraint.EqualLengthConstraint module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchConstraint.EqualLengthConstraint" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.EqualLengthConstraint.EqualLengthConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.EqualLengthConstraint.</span></span><span class="sig-name descname"><span class="pre">EqualLengthConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.EqualLengthConstraint.EqualLengthConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint" title="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchConstraint.EqualRadiusConstraint">
+<span id="abaqus-sketcher-constrainedsketchconstraint-equalradiusconstraint-module"></span><h2>abaqus.Sketcher.ConstrainedSketchConstraint.EqualRadiusConstraint module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchConstraint.EqualRadiusConstraint" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.EqualRadiusConstraint.EqualRadiusConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.EqualRadiusConstraint.</span></span><span class="sig-name descname"><span class="pre">EqualRadiusConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.EqualRadiusConstraint.EqualRadiusConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint" title="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchConstraint.FixedConstraint">
+<span id="abaqus-sketcher-constrainedsketchconstraint-fixedconstraint-module"></span><h2>abaqus.Sketcher.ConstrainedSketchConstraint.FixedConstraint module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchConstraint.FixedConstraint" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.FixedConstraint.FixedConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.FixedConstraint.</span></span><span class="sig-name descname"><span class="pre">FixedConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.FixedConstraint.FixedConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint" title="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchConstraint.HorizontalConstraint">
+<span id="abaqus-sketcher-constrainedsketchconstraint-horizontalconstraint-module"></span><h2>abaqus.Sketcher.ConstrainedSketchConstraint.HorizontalConstraint module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchConstraint.HorizontalConstraint" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.HorizontalConstraint.HorizontalConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.HorizontalConstraint.</span></span><span class="sig-name descname"><span class="pre">HorizontalConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.HorizontalConstraint.HorizontalConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint" title="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchConstraint.ParallelConstraint">
+<span id="abaqus-sketcher-constrainedsketchconstraint-parallelconstraint-module"></span><h2>abaqus.Sketcher.ConstrainedSketchConstraint.ParallelConstraint module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchConstraint.ParallelConstraint" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.ParallelConstraint.ParallelConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ParallelConstraint.</span></span><span class="sig-name descname"><span class="pre">ParallelConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ParallelConstraint.ParallelConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint" title="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchConstraint.PerpendicularConstraint">
+<span id="abaqus-sketcher-constrainedsketchconstraint-perpendicularconstraint-module"></span><h2>abaqus.Sketcher.ConstrainedSketchConstraint.PerpendicularConstraint module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchConstraint.PerpendicularConstraint" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.PerpendicularConstraint.PerpendicularConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.PerpendicularConstraint.</span></span><span class="sig-name descname"><span class="pre">PerpendicularConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.PerpendicularConstraint.PerpendicularConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint" title="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchConstraint.TangentConstraint">
+<span id="abaqus-sketcher-constrainedsketchconstraint-tangentconstraint-module"></span><h2>abaqus.Sketcher.ConstrainedSketchConstraint.TangentConstraint module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchConstraint.TangentConstraint" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.TangentConstraint.TangentConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.TangentConstraint.</span></span><span class="sig-name descname"><span class="pre">TangentConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.TangentConstraint.TangentConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint" title="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchConstraint.VerticalConstraint">
+<span id="abaqus-sketcher-constrainedsketchconstraint-verticalconstraint-module"></span><h2>abaqus.Sketcher.ConstrainedSketchConstraint.VerticalConstraint module<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchConstraint.VerticalConstraint" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Sketcher.ConstrainedSketchConstraint.VerticalConstraint.VerticalConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.VerticalConstraint.</span></span><span class="sig-name descname"><span class="pre">VerticalConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="abaqus.Sketcher.ConstrainedSketchGeometry.html#abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry" title="abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry"><span class="pre">abaqus.Sketcher.ConstrainedSketchGeometry.ConstrainedSketchGeometry.ConstrainedSketchGeometry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Sketcher.ConstrainedSketchConstraint.VerticalConstraint.VerticalConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint" title="abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Sketcher.ConstrainedSketchConstraint">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-abaqus.Sketcher.ConstrainedSketchConstraint" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

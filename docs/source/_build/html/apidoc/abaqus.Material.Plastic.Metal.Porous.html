@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>abaqus.Material.Plastic.Metal.Porous package &mdash; pyabaqus 1.0.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Reference manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>abaqus.Material.Plastic.Metal.Porous package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/abaqus.Material.Plastic.Metal.Porous.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="abaqus-material-plastic-metal-porous-package">
+<h1>abaqus.Material.Plastic.Metal.Porous package<a class="headerlink" href="#abaqus-material-plastic-metal-porous-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-abaqus.Material.Plastic.Metal.Porous.PorousFailureCriteria">
+<span id="abaqus-material-plastic-metal-porous-porousfailurecriteria-module"></span><h2>abaqus.Material.Plastic.Metal.Porous.PorousFailureCriteria module<a class="headerlink" href="#module-abaqus.Material.Plastic.Metal.Porous.PorousFailureCriteria" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Plastic.Metal.Porous.PorousFailureCriteria.PorousFailureCriteria">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.Plastic.Metal.Porous.PorousFailureCriteria.</span></span><span class="sig-name descname"><span class="pre">PorousFailureCriteria</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">criticalFraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Plastic.Metal.Porous.PorousFailureCriteria.PorousFailureCriteria" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The PorousFailureCriteria object specifies the material failure criteria for a porous
+metal.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].porousMetalPlasticity.porousFailureCriteria</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].porousMetalPlasticity.porousFailureCriteria</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>POROUS FAILURE CRITERIA</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.Plastic.Metal.Porous.PorousFailureCriteria.PorousFailureCriteria.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Plastic.Metal.Porous.PorousFailureCriteria.PorousFailureCriteria.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the PorousFailureCriteria object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.Plastic.Metal.Porous.PorousMetalPlasticity">
+<span id="abaqus-material-plastic-metal-porous-porousmetalplasticity-module"></span><h2>abaqus.Material.Plastic.Metal.Porous.PorousMetalPlasticity module<a class="headerlink" href="#module-abaqus.Material.Plastic.Metal.Porous.PorousMetalPlasticity" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Plastic.Metal.Porous.PorousMetalPlasticity.PorousMetalPlasticity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.Plastic.Metal.Porous.PorousMetalPlasticity.</span></span><span class="sig-name descname"><span class="pre">PorousMetalPlasticity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relativeDensity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Plastic.Metal.Porous.PorousMetalPlasticity.PorousMetalPlasticity" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The PorousMetalPlasticity object specifies a porous metal plasticity model.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].porousMetalPlasticity</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].porousMetalPlasticity</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>q1.</p></li>
+<li><p>q2.</p></li>
+<li><p>q3.</p></li>
+<li><p>Temperature, if the data depend on temperature.</p></li>
+<li><p>Value of the first field variable, if the data depend on field variables.</p></li>
+<li><p>Value of the second field variable.</p></li>
+<li><p>Etc.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>POROUS METAL PLASTICITY</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.Plastic.Metal.Porous.PorousMetalPlasticity.PorousMetalPlasticity.porousFailureCriteria">
+<span class="sig-name descname"><span class="pre">porousFailureCriteria</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Material.Plastic.Metal.Porous.PorousFailureCriteria.PorousFailureCriteria" title="abaqus.Material.Plastic.Metal.Porous.PorousFailureCriteria.PorousFailureCriteria"><span class="pre">abaqus.Material.Plastic.Metal.Porous.PorousFailureCriteria.PorousFailureCriteria</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Material.Plastic.Metal.Porous.PorousFailureCriteria.PorousFailureCriteria</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Material.Plastic.Metal.Porous.PorousMetalPlasticity.PorousMetalPlasticity.porousFailureCriteria" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.Plastic.Metal.Porous.PorousMetalPlasticity.PorousMetalPlasticity.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Plastic.Metal.Porous.PorousMetalPlasticity.PorousMetalPlasticity.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the PorousMetalPlasticity object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.Plastic.Metal.Porous.PorousMetalPlasticity.PorousMetalPlasticity.voidNucleation">
+<span class="sig-name descname"><span class="pre">voidNucleation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Material.Plastic.Metal.Porous.VoidNucleation.VoidNucleation" title="abaqus.Material.Plastic.Metal.Porous.VoidNucleation.VoidNucleation"><span class="pre">abaqus.Material.Plastic.Metal.Porous.VoidNucleation.VoidNucleation</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Material.Plastic.Metal.Porous.VoidNucleation.VoidNucleation</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Material.Plastic.Metal.Porous.PorousMetalPlasticity.PorousMetalPlasticity.voidNucleation" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.Plastic.Metal.Porous.VoidNucleation">
+<span id="abaqus-material-plastic-metal-porous-voidnucleation-module"></span><h2>abaqus.Material.Plastic.Metal.Porous.VoidNucleation module<a class="headerlink" href="#module-abaqus.Material.Plastic.Metal.Porous.VoidNucleation" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Plastic.Metal.Porous.VoidNucleation.VoidNucleation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.Plastic.Metal.Porous.VoidNucleation.</span></span><span class="sig-name descname"><span class="pre">VoidNucleation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Plastic.Metal.Porous.VoidNucleation.VoidNucleation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The VoidNucleation object defines the nucleation of voids in a porous material.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].porousMetalPlasticity.voidNucleation</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].porousMetalPlasticity.voidNucleation</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>εN, the mean value of the nucleation-strain normal distribution.</p></li>
+<li><p>sN, the standard deviation of the nucleation-strain normal distribution.</p></li>
+<li><p>fN, the volume fraction of nucleating voids.</p></li>
+<li><p>Temperature, if the data depend on temperature.</p></li>
+<li><p>Value of the first field variable, if the data depend on field variables.</p></li>
+<li><p>Value of the second field variable.</p></li>
+<li><p>Etc.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>VOID NUCLEATION</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.Plastic.Metal.Porous.VoidNucleation.VoidNucleation.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Plastic.Metal.Porous.VoidNucleation.VoidNucleation.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the VoidNucleation object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.Plastic.Metal.Porous">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-abaqus.Material.Plastic.Metal.Porous" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

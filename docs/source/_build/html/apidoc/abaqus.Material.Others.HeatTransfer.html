@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>abaqus.Material.Others.HeatTransfer package &mdash; pyabaqus 1.0.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Reference manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>abaqus.Material.Others.HeatTransfer package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/abaqus.Material.Others.HeatTransfer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="abaqus-material-others-heattransfer-package">
+<h1>abaqus.Material.Others.HeatTransfer package<a class="headerlink" href="#abaqus-material-others-heattransfer-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-abaqus.Material.Others.HeatTransfer.Conductivity">
+<span id="abaqus-material-others-heattransfer-conductivity-module"></span><h2>abaqus.Material.Others.HeatTransfer.Conductivity module<a class="headerlink" href="#module-abaqus.Material.Others.HeatTransfer.Conductivity" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Others.HeatTransfer.Conductivity.Conductivity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.Others.HeatTransfer.Conductivity.</span></span><span class="sig-name descname"><span class="pre">Conductivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ISOTROPIC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Others.HeatTransfer.Conductivity.Conductivity" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Conductivity object specifies thermal conductivity.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].conductivity</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].conductivity</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p>If <a href="#id1"><span class="problematic" id="id2">*</span></a>type*=ISOTROPIC, the table data specify the following:
+- Conductivity, k.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id3"><span class="problematic" id="id4">*</span></a>type*=ORTHOTROPIC, the table data specify the following:
+- k11.
+- k22.
+- k33.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <a href="#id5"><span class="problematic" id="id6">*</span></a>type*=ANISOTROPIC, the table data specify the following:
+- k11.
+- k12.
+- k22.
+- k13.
+- k23.
+- k33.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.</p>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>CONDUCTIVITY</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.Others.HeatTransfer.Conductivity.Conductivity.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Others.HeatTransfer.Conductivity.Conductivity.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the Conductivity object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.Others.HeatTransfer.HeatGeneration">
+<span id="abaqus-material-others-heattransfer-heatgeneration-module"></span><h2>abaqus.Material.Others.HeatTransfer.HeatGeneration module<a class="headerlink" href="#module-abaqus.Material.Others.HeatTransfer.HeatGeneration" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Others.HeatTransfer.HeatGeneration.HeatGeneration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.Others.HeatTransfer.HeatGeneration.</span></span><span class="sig-name descname"><span class="pre">HeatGeneration</span></span><a class="headerlink" href="#abaqus.Material.Others.HeatTransfer.HeatGeneration.HeatGeneration" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The HeatGeneration object includes volumetric heat generation in heat transfer analyses.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].heatGeneration</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].heatGeneration</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>HEAT GENERATION</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.Others.HeatTransfer.InelasticHeatFraction">
+<span id="abaqus-material-others-heattransfer-inelasticheatfraction-module"></span><h2>abaqus.Material.Others.HeatTransfer.InelasticHeatFraction module<a class="headerlink" href="#module-abaqus.Material.Others.HeatTransfer.InelasticHeatFraction" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Others.HeatTransfer.InelasticHeatFraction.InelasticHeatFraction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.Others.HeatTransfer.InelasticHeatFraction.</span></span><span class="sig-name descname"><span class="pre">InelasticHeatFraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Others.HeatTransfer.InelasticHeatFraction.InelasticHeatFraction" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The InelasticHeatFraction object defines the fraction of the rate of inelastic
+dissipation that appears as a heat source.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].inelasticHeatFraction</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].inelasticHeatFraction</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>INELASTIC HEAT FRACTION</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.Others.HeatTransfer.InelasticHeatFraction.InelasticHeatFraction.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Others.HeatTransfer.InelasticHeatFraction.InelasticHeatFraction.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the InelasticHeatFraction object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.Others.HeatTransfer.JouleHeatFraction">
+<span id="abaqus-material-others-heattransfer-jouleheatfraction-module"></span><h2>abaqus.Material.Others.HeatTransfer.JouleHeatFraction module<a class="headerlink" href="#module-abaqus.Material.Others.HeatTransfer.JouleHeatFraction" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Others.HeatTransfer.JouleHeatFraction.JouleHeatFraction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.Others.HeatTransfer.JouleHeatFraction.</span></span><span class="sig-name descname"><span class="pre">JouleHeatFraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Others.HeatTransfer.JouleHeatFraction.JouleHeatFraction" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The JouleHeatFraction object defines the fraction of electric energy released as heat.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].jouleHeatFraction</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].jouleHeatFraction</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>JOULE HEAT FRACTION</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.Others.HeatTransfer.JouleHeatFraction.JouleHeatFraction.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Others.HeatTransfer.JouleHeatFraction.JouleHeatFraction.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the JouleHeatFraction object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.Others.HeatTransfer.LatentHeat">
+<span id="abaqus-material-others-heattransfer-latentheat-module"></span><h2>abaqus.Material.Others.HeatTransfer.LatentHeat module<a class="headerlink" href="#module-abaqus.Material.Others.HeatTransfer.LatentHeat" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Others.HeatTransfer.LatentHeat.LatentHeat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.Others.HeatTransfer.LatentHeat.</span></span><span class="sig-name descname"><span class="pre">LatentHeat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Others.HeatTransfer.LatentHeat.LatentHeat" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The LatentHeat object specifies a material’s latent heat.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].latentHeat</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].latentHeat</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>Latent heat per unit mass.</p></li>
+<li><p>Solidus temperature.</p></li>
+<li><p>Liquidus temperature.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>LATENT HEAT</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.Others.HeatTransfer.LatentHeat.LatentHeat.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Others.HeatTransfer.LatentHeat.LatentHeat.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the LatentHeat object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.Others.HeatTransfer.SpecificHeat">
+<span id="abaqus-material-others-heattransfer-specificheat-module"></span><h2>abaqus.Material.Others.HeatTransfer.SpecificHeat module<a class="headerlink" href="#module-abaqus.Material.Others.HeatTransfer.SpecificHeat" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Others.HeatTransfer.SpecificHeat.SpecificHeat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.Others.HeatTransfer.SpecificHeat.</span></span><span class="sig-name descname"><span class="pre">SpecificHeat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">law</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONSTANTVOLUME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Others.HeatTransfer.SpecificHeat.SpecificHeat" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The SpecificHeat object specifies a material’s specific heat.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].specificHeat</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].specificHeat</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>Specific heat per unit mass.</p></li>
+<li><p>Temperature, if the data depend on temperature.</p></li>
+<li><p>Value of the first field variable, if the data depend on field variables.</p></li>
+<li><p>Value of the second field variable.</p></li>
+<li><p>Etc.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>SPECIFIC HEAT</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.Others.HeatTransfer.SpecificHeat.SpecificHeat.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Others.HeatTransfer.SpecificHeat.SpecificHeat.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the SpecificHeat object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.Others.HeatTransfer">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-abaqus.Material.Others.HeatTransfer" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

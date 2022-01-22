@@ -1,0 +1,23 @@
+========
+EditMesh
+========
+
+
+MeshEditAssembly
+~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly
+    :members:
+
+MeshEditOptions
+~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.EditMesh.MeshEditOptions.MeshEditOptions
+    :members:
+
+MeshEditPart
+~~~~~~~~~~~~
+
+.. autoclass:: abaqus.EditMesh.MeshEditPart.MeshEditPart
+    :members:
+

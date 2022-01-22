@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>abaqus.Material.Gasket package &mdash; pyabaqus 1.0.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Reference manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>abaqus.Material.Gasket package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/abaqus.Material.Gasket.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="abaqus-material-gasket-package">
+<h1>abaqus.Material.Gasket package<a class="headerlink" href="#abaqus-material-gasket-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-abaqus.Material.Gasket.ContactArea">
+<span id="abaqus-material-gasket-contactarea-module"></span><h2>abaqus.Material.Gasket.ContactArea module<a class="headerlink" href="#module-abaqus.Material.Gasket.ContactArea" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Gasket.ContactArea.ContactArea">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.Gasket.ContactArea.</span></span><span class="sig-name descname"><span class="pre">ContactArea</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Gasket.ContactArea.ContactArea" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A ContactArea object specifies a suboption of gasket thickness behavior when
+<a href="#id1"><span class="problematic" id="id2">*</span></a>variableUnits*=FORCE on the GasketThicknessBehavior object. The ContactArea object
+defines the contact area or contact width versus closure curves to output an average
+pressure through variable CS11.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].gasketThicknessBehavior.contactArea</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].gasketThicknessBehavior.contactArea</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>Contact area or width; this value must be positive.</p></li>
+<li><p>Closure; this value must be positive.</p></li>
+<li><p>Temperature, if the data depend on temperature.</p></li>
+<li><p>Value of the first field variable, if the data depend on field variables.</p></li>
+<li><p>Value of the second field variable.</p></li>
+<li><p>Etc.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>GASKET CONTACT AREA</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.Gasket.ContactArea.ContactArea.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Gasket.ContactArea.ContactArea.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ContactArea object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.Gasket.GasketMembraneElastic">
+<span id="abaqus-material-gasket-gasketmembraneelastic-module"></span><h2>abaqus.Material.Gasket.GasketMembraneElastic module<a class="headerlink" href="#module-abaqus.Material.Gasket.GasketMembraneElastic" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Gasket.GasketMembraneElastic.GasketMembraneElastic">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.Gasket.GasketMembraneElastic.</span></span><span class="sig-name descname"><span class="pre">GasketMembraneElastic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Gasket.GasketMembraneElastic.GasketMembraneElastic" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The GasketMembraneElastic object defines the elastic parameters for the membrane shear
+behavior of a gasket.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].gasketMembraneElastic</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].gasketMembraneElastic</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>Young’s modulus, E.</p></li>
+<li><p>Poisson’s ratio, ν.</p></li>
+<li><p>Temperature, if the data depend on temperature.</p></li>
+<li><p>Value of the first field variable, if the data depend on field variables.</p></li>
+<li><p>Value of the second field variable.</p></li>
+<li><p>Etc.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>GASKET ELASTICITY</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.Gasket.GasketMembraneElastic.GasketMembraneElastic.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Gasket.GasketMembraneElastic.GasketMembraneElastic.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the GasketMembraneElastic object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.Gasket.GasketThicknessBehavior">
+<span id="abaqus-material-gasket-gasketthicknessbehavior-module"></span><h2>abaqus.Material.Gasket.GasketThicknessBehavior module<a class="headerlink" href="#module-abaqus.Material.Gasket.GasketThicknessBehavior" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Gasket.GasketThicknessBehavior.GasketThicknessBehavior">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.Gasket.GasketThicknessBehavior.</span></span><span class="sig-name descname"><span class="pre">GasketThicknessBehavior</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tensileStiffnessFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ELASTIC_PLASTIC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unloadingDependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unloadingTemperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variableUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STRESS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yieldOnset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yieldOnsetMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'RELATIVE_SLOPE_DROP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unloadingTable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Gasket.GasketThicknessBehavior.GasketThicknessBehavior" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The GasketThicknessBehavior object defines the behavior in the thickness direction for a
+gasket.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].gasketThicknessBehavior</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].gasketThicknessBehavior</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p>If <em>variableUnits*=STRESS, the loading table data specify the following:
+- Pressure; this value must be positive.
+- Closure; this value must be positive.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If *variableUnits*=FORCE, the loading table data specify the following:
+- Force or force per unit length; this value must be positive.
+- Closure; this value must be positive.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If *variableUnits*=STRESS and *type*=ELASTIC_PLASTIC, the *unloadingTable</em> data specify the following:
+- Pressure; this value must be positive.
+- Closure; this value must be positive.
+- Plastic closure; this value must be positive.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <em>variableUnits*=FORCE and *type*=ELASTIC_PLASTIC, the *unloadingTable</em> data specify the following:
+- Pressure; this value must be positive.
+- Closure; this value must be positive.
+- Plastic closure; this value must be positive.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <em>variableUnits*=STRESS and *type*=DAMAGE, the *unloadingTable</em> data specify the following:
+- Pressure; this value must be positive.
+- Closure; this value must be positive.
+- Maximum closure reached while loading the gasket; this value must be positive.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.
+If <em>variableUnits*=FORCE and *type*=DAMAGE, the *unloadingTable</em> data specify the following:
+- Force or force per unit length; this value must be positive.
+- Closure; this value must be positive.
+- Maximum closure reached while loading the gasket; this value must be positive.
+- Temperature, if the data depend on temperature.
+- Value of the first field variable, if the data depend on field variables.
+- Value of the second field variable.
+- Etc.</p>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>GASKET THICKNESS BEHAVIOR</p></li>
+</ul>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="abaqus.Material.Gasket.GasketThicknessBehavior.GasketThicknessBehavior.contactArea">
+<span class="sig-name descname"><span class="pre">contactArea</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.Material.Gasket.ContactArea.ContactArea" title="abaqus.Material.Gasket.ContactArea.ContactArea"><span class="pre">abaqus.Material.Gasket.ContactArea.ContactArea</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;abaqus.Material.Gasket.ContactArea.ContactArea</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#abaqus.Material.Gasket.GasketThicknessBehavior.GasketThicknessBehavior.contactArea" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.Gasket.GasketThicknessBehavior.GasketThicknessBehavior.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Gasket.GasketThicknessBehavior.GasketThicknessBehavior.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the GasketThicknessBehavior object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.Gasket.GasketTransverseShearElastic">
+<span id="abaqus-material-gasket-gaskettransverseshearelastic-module"></span><h2>abaqus.Material.Gasket.GasketTransverseShearElastic module<a class="headerlink" href="#module-abaqus.Material.Gasket.GasketTransverseShearElastic" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Gasket.GasketTransverseShearElastic.GasketTransverseShearElastic">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">abaqus.Material.Gasket.GasketTransverseShearElastic.</span></span><span class="sig-name descname"><span class="pre">GasketTransverseShearElastic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variableUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STRESS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Gasket.GasketTransverseShearElastic.GasketTransverseShearElastic" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The GasketTransverseShearElastic object defines the elastic parameters for the
+transverse shear behavior of a gasket.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import material</p></li>
+<li><p>mdb.models[name].materials[name].gasketTransverseShearElastic</p></li>
+<li><p>import odbMaterial</p></li>
+<li><p>session.odbs[name].materials[name].gasketTransverseShearElastic</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>Shear stiffness. (This value cannot be negative.)</p></li>
+<li><p>Temperature, if the data depend on temperature.</p></li>
+<li><p>Value of the first field variable, if the data depend on field variables.</p></li>
+<li><p>Value of the second field variable.</p></li>
+<li><p>Etc.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>GASKET ELASTICITY</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Material.Gasket.GasketTransverseShearElastic.GasketTransverseShearElastic.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Material.Gasket.GasketTransverseShearElastic.GasketTransverseShearElastic.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the GasketTransverseShearElastic object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">None.</span></code></p>
+</dd>
+</dl>
+<blockquote>
+<div><p>RangeError.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-abaqus.Material.Gasket">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-abaqus.Material.Gasket" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

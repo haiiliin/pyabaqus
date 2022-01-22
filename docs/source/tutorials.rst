@@ -167,7 +167,7 @@ It should be noted that region of the boundary condition should be a region of t
 Create loads
 ~~~~~~~~~~~~
 
-we can use `Pressure` ro create a pressure:
+We can use `Pressure` ro create a pressure:
 
 .. code-block:: Python
 
@@ -195,7 +195,7 @@ When meshing, we have set the element type, which is defined in the `mesh` modul
 Create jobs
 ~~~~~~~~~~~
 
-we can use `Job` to create a job:
+We can use `Job` to create a job:
 
 .. code-block:: Python
 

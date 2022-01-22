@@ -22,7 +22,7 @@ copyright = '2022, WANG Hailin'
 author = 'WANG Hailin'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.5'
+release = '1.0.6'
 
 
 # -- General configuration ---------------------------------------------------
@@ -97,3 +97,12 @@ latex_logo = None
 latex_theme = 'manual'
 
 # autoclass_content = 'both'
+
+latex_engine = 'xelatex'
+latex_use_xindy = False
+latex_elements = {
+    'preamble': '\\usepackage[UTF8]{ctex}\n',
+    'printindex': '\\def\\twocolumn[#1]{#1}\\printindex',
+}
+
+add_module_names = False

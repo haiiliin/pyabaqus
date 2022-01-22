@@ -1,0 +1,35 @@
+=====
+Datum
+=====
+
+
+Datum
+~~~~~
+
+.. autoclass:: abaqus.Datum.Datum.Datum
+    :members:
+
+DatumAxis
+~~~~~~~~~
+
+.. autoclass:: abaqus.Datum.DatumAxis.DatumAxis
+    :members:
+
+DatumCsys
+~~~~~~~~~
+
+.. autoclass:: abaqus.Datum.DatumCsys.DatumCsys
+    :members:
+
+DatumPlane
+~~~~~~~~~~
+
+.. autoclass:: abaqus.Datum.DatumPlane.DatumPlane
+    :members:
+
+DatumPoint
+~~~~~~~~~~
+
+.. autoclass:: abaqus.Datum.DatumPoint.DatumPoint
+    :members:
+

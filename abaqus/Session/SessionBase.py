@@ -470,16 +470,9 @@ class SessionBase:
             to the printer. The default value is “lpr” or the value specified by the printOptions 
             method. If you create a script to print directly to a Windows printer, the 
             *printCommand* must take the following 
-            form:`session.printToPrinter.setValues(printCommand='PRINTER[
-                                                                    number of characters in name
-                                                                 ]:
-                                                                 printername
-                                                                 PROPERTIES[
-                                                                    number of characters in properties
-                                                                 ]:
-                                                                 document properties'
-                                                   )
-                               `The `PROPERTIES` is a list of characters that represents the 
+            form:
+            `session.printToPrinter.setValues(printCommand='PRINTER[number of characters in name]:printername PROPERTIES[number of characters in properties]:document properties')`
+            The `PROPERTIES` is a list of characters that represents the 
             printing preferences for the selected Windows printer. The properties are not required 
             in a script; the printed output will use the current settings for the selected printer. 
             You can use `'PRINTER[7]: DEFAULT'` to specify the default Windows printer. 

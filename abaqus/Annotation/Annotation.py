@@ -28,7 +28,6 @@ class Annotation:
 
         Parameters
         ----------
-            !img 
         """
         pass
 
@@ -37,7 +36,6 @@ class Annotation:
 
         Parameters
         ----------
-            !img 
         """
         pass
 
@@ -46,7 +44,6 @@ class Annotation:
 
         Parameters
         ----------
-            !img 
         """
         pass
 
@@ -55,7 +52,6 @@ class Annotation:
 
         Parameters
         ----------
-            !img 
         """
         pass
 
@@ -65,8 +61,7 @@ class Annotation:
         Parameters
         ----------
         name
-            A String specifying the name of the other Annotation object. 
-            !img 
+            A String specifying the name of the other Annotation object.
         """
         pass
 
@@ -77,7 +72,6 @@ class Annotation:
         ----------
         name
             A String specifying the name of the other Annotation object. 
-            !img 
         """
         pass
 
@@ -90,6 +84,5 @@ class Annotation:
             A Float specifying the *X* translation amount in millimeters. 
         y
             A Float specifying the *Y* translation amount in millimeters. 
-            !img 
         """
         pass

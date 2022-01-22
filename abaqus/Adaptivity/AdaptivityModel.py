@@ -140,11 +140,7 @@ class AdaptivityModel(ModelBase):
 
         Returns
         -------
-            An AdaptiveMeshControl object.
-
-        Exceptions
-        ----------
-            RangeError.
+            An AdaptiveMeshControl object
         """
         self.adaptiveMeshControls[name] = adaptiveMeshControl = AdaptiveMeshControl(
             name, remapping, smoothingAlgorithm, smoothingPriority, initialFeatureAngle, transitionFeatureAngle,
@@ -216,7 +212,7 @@ class AdaptivityModel(ModelBase):
 
         Returns
         -------
-            A DisplacementAdaptiveMeshConstraint object..
+            A DisplacementAdaptiveMeshConstraint object
         """
         self.adaptiveMeshConstraints[name] = adaptiveMeshConstraint = DisplacementAdaptiveMeshConstraint(
             name, createStepName, region, u1, u2, u3, ur1, ur2, ur3, amplitude, motionType, localCsys)
@@ -307,11 +303,7 @@ class AdaptivityModel(ModelBase):
 
         Returns
         -------
-            A RemeshingRule object.
-
-        Exceptions
-        ----------
-            AbaqusException.
+            A RemeshingRule object
         """
         self.remeshingRules[name] = remeshingRule = RemeshingRule(name, stepName, variables, description, region,
                                                                   sizingMethod, errorTarget, maxSolutionErrorTarget,
@@ -384,7 +376,7 @@ class AdaptivityModel(ModelBase):
 
         Returns
         -------
-            A VelocityAdaptiveMeshConstraint object..
+            A VelocityAdaptiveMeshConstraint object
         """
         self.adaptiveMeshConstraints[name] = adaptiveMeshConstraint = VelocityAdaptiveMeshConstraint(
             name, createStepName, region, v1, v2, v3, vr1, vr2, vr3, amplitude, localCsys, motionType)

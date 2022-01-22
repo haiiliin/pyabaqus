@@ -2,18 +2,11 @@
 Section
 =======
 
-The Section object defines the properties of a section. The Section object is the abstract base type for other Section objects. The Section object has no explicit  constructor. The methods and members of the Section object are common to all objects derived from the Section. 
+The Section commands are used to create sections and profiles with their associated properties and behavior. The various section objects are all derived from the Section object. The various profile objects are all derived from the Profile object. See Property commands for the property assignment commands.
 
 
-Access
-------
-
-- `mdb.models[name].sections[name]`
-- `session.odbs[name].sections[name]`
-
-
-Create a section
-----------------
+Create sections
+---------------
 
 In Mdb
 ~~~~~~
@@ -29,16 +22,178 @@ In Odb
     :members:
 
 
-Basic features of Section
--------------------------
+Object features
+---------------
 
-.. autoclass:: abaqus.Section.SectionBase.SectionBase
-    :members:
-
-
-Features of the Beam Section
-----------------------------
+Section
+~~~~~~~
 
 .. autoclass:: abaqus.Section.Section.Section
+    :members:
+    :inherited-members:
+
+AcousticInfiniteSection
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.AcousticInfiniteSection.AcousticInfiniteSection
+    :members:
+
+AcousticInterfaceSection
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.AcousticInterfaceSection.AcousticInterfaceSection
+    :members:
+
+BeamSection
+~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.BeamSection.BeamSection
+    :members:
+
+CohesiveSection
+~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.CohesiveSection.CohesiveSection
+    :members:
+
+CompositeShellSection
+~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.CompositeShellSection.CompositeShellSection
+    :members:
+
+CompositeSolidSection
+~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.CompositeSolidSection.CompositeSolidSection
+    :members:
+
+ConnectorSection
+~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.ConnectorSection.ConnectorSection
+    :members:
+
+EulerianSection
+~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.EulerianSection.EulerianSection
+    :members:
+
+GasketSection
+~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.GasketSection.GasketSection
+    :members:
+
+GeneralStiffnessSection
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.GeneralStiffnessSection.GeneralStiffnessSection
+    :members:
+
+GeometryShellSection
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.GeometryShellSection.GeometryShellSection
+    :members:
+
+HomogeneousShellSection
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.HomogeneousShellSection.HomogeneousShellSection
+    :members:
+
+HomogeneousSolidSection
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.HomogeneousSolidSection.HomogeneousSolidSection
+    :members:
+
+LayerProperties
+~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.LayerProperties.LayerProperties
+    :members:
+
+LayerPropertiesArray
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.LayerPropertiesArray.LayerPropertiesArray
+    :members:
+
+MembraneSection
+~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.MembraneSection.MembraneSection
+    :members:
+
+MPCSection
+~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.MPCSection.MPCSection
+    :members:
+
+PEGSection
+~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.PEGSection.PEGSection
+    :members:
+
+RebarLayers
+~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.RebarLayers.RebarLayers
+    :members:
+
+SectionLayer
+~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.SectionLayer.SectionLayer
+    :members:
+
+SectionLayerArray
+~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.SectionLayerArray.SectionLayerArray
+    :members:
+
+.. autoclass:: abaqus.Section.SectionOdb.SectionOdb
+    :members:
+
+ShellSection
+~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.ShellSection.ShellSection
+    :members:
+
+SolidSection
+~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.SolidSection.SolidSection
+    :members:
+
+SurfaceSection
+~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.SurfaceSection.SurfaceSection
+    :members:
+
+TransverseShearBeam
+~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.TransverseShearBeam.TransverseShearBeam
+    :members:
+
+TransverseShearShell
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.TransverseShearShell.TransverseShearShell
+    :members:
+
+TrussSection
+~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Section.TrussSection.TrussSection
     :members:
 
