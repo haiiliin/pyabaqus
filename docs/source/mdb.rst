@@ -27,7 +27,7 @@ Create models
     :members:
 
 
-Open three-party files
+Open third-party files
 ----------------------
 
 .. autoclass:: abaqus.Part.AcisMdb.AcisMdb
