@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Model &mdash; pyabaqus 1.0.6 documentation</title>
+  <title>Model &mdash; pyabaqus 1.0.7 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -17,8 +17,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Adaptivity (Arbitrary Lagrangian-Eulerian, ALE)" href="ale.html" />
-    <link rel="prev" title="Mdb object" href="mdb.html" /> 
+    <link rel="next" title="Odb" href="odb.html" />
+    <link rel="prev" title="Messaging" href="messaging.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,36 +41,6 @@
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="references.html">Reference manual</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="mdb.html">Mdb object</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#attributes">Attributes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-models">Create models</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#object-features">Object features</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#basic-features-of-the-model">Basic Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ale-features-of-the-model">ALE Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#assembly-features-of-the-model">Assembly Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#amplitude-features-of-the-model">Amplitude Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#boundary-condition-features-of-the-model">Boundary Condition Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#calibration-features-of-the-model">Calibration Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#constraint-features-of-the-model">Constraint Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#filter-features-of-the-model">Filter Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#interaction-features-of-the-model">Interaction Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#load-features-of-the-model">Load Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#material-features-of-the-model">Material Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#optimization-features-of-the-model">Optimization Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#part-features-of-the-model">Part Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#predefined-field-features-of-the-model">Predefined Field Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#beam-section-profile-features-of-the-model">Beam Section Profile Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#output-features-of-the-model">Output Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#section-features-of-the-model">Section Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sketch-features-of-the-model">Sketch Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-features-of-the-model">Step Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#table-collection-features-of-the-model">Table Collection Features of the model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#keywordblock">KeywordBlock</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="ale.html">Adaptivity (Arbitrary Lagrangian-Eulerian, ALE)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="amplitude.html">Amplitude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="animation.html">Animation Options</a></li>
@@ -277,10 +247,10 @@ that instances this model. The default value is ON.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>model</strong> – A Model object</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">Model</span> <span class="pre">object..</span></code></p>
+<dd class="field-odd"><p><a class="reference internal" href="#abaqus.Mdb.Mdb.Mdb.Model" title="abaqus.Mdb.Mdb.Mdb.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -8803,8 +8773,8 @@ this information from other parts of the Mdb.</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="mdb.html" class="btn btn-neutral float-left" title="Mdb object" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ale.html" class="btn btn-neutral float-right" title="Adaptivity (Arbitrary Lagrangian-Eulerian, ALE)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="messaging.html" class="btn btn-neutral float-left" title="Messaging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="odb.html" class="btn btn-neutral float-right" title="Odb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

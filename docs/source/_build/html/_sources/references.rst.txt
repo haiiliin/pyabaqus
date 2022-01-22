@@ -6,8 +6,6 @@ Reference manual
    :maxdepth: 2
    :caption: Modules
 
-   mdb
-   model
    ale
    amplitude
    animation

@@ -1,12 +1,24 @@
-from abaqus.Job.ModelJob import ModelJob
 from abaqusConstants import *
-from .MdbBase import MdbBase
 from ..Job.JobMdb import JobMdb
 from ..Model.Model import Model
 from ..Part.AcisMdb import AcisMdb
 
 
 class Mdb(AcisMdb, JobMdb):
+    """The Mdb object is the high-level Abaqus model database. A model database stores models
+    and analysis controls.
+
+    Access
+    ------
+        - mdb
+
+    Table Data
+    ----------
+
+    Corresponding analysis keywords
+    -------------------------------
+
+    """
 
     def Model(self, name: str, description: str = '', stefanBoltzmann: float = None,
               absoluteZero: float = None, waveFormulation: SymbolicConstant = NOT_SET,
