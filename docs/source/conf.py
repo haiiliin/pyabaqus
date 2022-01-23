@@ -22,7 +22,7 @@ copyright = '2022, WANG Hailin'
 author = 'WANG Hailin'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.7'
+release = '1.0.8'
 
 
 # -- General configuration ---------------------------------------------------
@@ -59,6 +59,11 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'sphinx_rtd_theme'
+
+
+html_theme_options = {
+    'navigation_depth': 9,
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -98,10 +103,11 @@ latex_theme = 'manual'
 
 # autoclass_content = 'both'
 
+latex_toplevel_sectioning = 'part'
 latex_engine = 'xelatex'
 latex_use_xindy = False
 latex_elements = {
-    'preamble': '\\usepackage[UTF8]{ctex}\n',
+    'preamble': '\\usepackage[UTF8]{ctex}\n\\setcounter{tocdepth}{3}\n\\setcounter{secnumdepth}{5}',
     'printindex': '\\def\\twocolumn[#1]{#1}\\printindex',
 }
 

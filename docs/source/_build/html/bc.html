@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Boundary condition &mdash; pyabaqus 1.0.7 documentation</title>
+  <title>Boundary Condition &mdash; pyabaqus 1.0.7 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -17,7 +17,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Material Calibration" href="calibration.html" />
+    <link rel="next" title="Calibration of Material" href="calibration.html" />
     <link rel="prev" title="Beam Section Profile" href="profile.html" /> 
 </head>
 
@@ -41,14 +41,14 @@
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="references.html">Reference manual</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ale.html">Adaptivity (Arbitrary Lagrangian-Eulerian, ALE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adaptivity.html">Adaptivity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="amplitude.html">Amplitude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="animation.html">Animation Options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="annotation.html">Annotation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assembly.html">Assembly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="geometry.html">Basic Geometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profile.html">Beam Section Profile</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Boundary condition</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Boundary Condition</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#create-boundary-conditions">Create boundary conditions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-calibrations">Create calibrations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#object-features">Object features</a><ul>
@@ -102,7 +102,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="calibration.html">Material Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html">Calibration of Material</a></li>
 <li class="toctree-l2"><a class="reference internal" href="canvas.html">Canvas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="connector.html">Connector</a></li>
 <li class="toctree-l2"><a class="reference internal" href="constraint.html">Constraint</a></li>
@@ -125,12 +125,9 @@
 <li class="toctree-l2"><a class="reference internal" href="mesh.html">Mesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="messaging.html">Messaging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model.html">Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="odb.html">Odb</a></li>
-<li class="toctree-l2"><a class="reference internal" href="odb_display.html">Odb Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="optimization.html">Optimization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="part.html">Part</a></li>
 <li class="toctree-l2"><a class="reference internal" href="path.html">Path and Probe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_options.html">PlotOptions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="predefined.html">Predefined Field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="print.html">Print</a></li>
 <li class="toctree-l2"><a class="reference internal" href="property.html">Property</a></li>
@@ -142,9 +139,10 @@
 <li class="toctree-l2"><a class="reference internal" href="step_miscellaneous.html">Step Miscellaneous</a></li>
 <li class="toctree-l2"><a class="reference internal" href="output.html">Step Output Request</a></li>
 <li class="toctree-l2"><a class="reference internal" href="table_collection.html">Table Collection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="text_representation.html">TextRepresentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utility.html">UtilityAndView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text_representation.html">Text Representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.html">Utility and View</a></li>
 <li class="toctree-l2"><a class="reference internal" href="xy.html">XY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odb.html">Output Database</a></li>
 </ul>
 </li>
 </ul>
@@ -164,7 +162,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="references.html">Reference manual</a> &raquo;</li>
-      <li>Boundary condition</li>
+      <li>Boundary Condition</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/bc.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -175,7 +173,7 @@
            <div itemprop="articleBody">
              
   <div class="section" id="boundary-condition">
-<h1>Boundary condition<a class="headerlink" href="#boundary-condition" title="Permalink to this headline"></a></h1>
+<h1>Boundary Condition<a class="headerlink" href="#boundary-condition" title="Permalink to this headline"></a></h1>
 <p>A specific type of boundary condition object and a specific type of boundary condition state object are designed for each type of boundary condition. A BoundaryCondition object stores the non-propagating data of a boundary condition as well as a number of instances of the corresponding BoundaryConditionState object, each of which stores the propagating data of the boundary condition in a single step. Instances of the BoundaryConditionState object are created and deleted internally by its corresponding BoundaryCondition object.</p>
 <div class="section" id="create-boundary-conditions">
 <h2>Create boundary conditions<a class="headerlink" href="#create-boundary-conditions" title="Permalink to this headline"></a></h2>
@@ -3877,7 +3875,7 @@ The VelocityBCState object is derived from the BoundaryConditionState object.</p
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="profile.html" class="btn btn-neutral float-left" title="Beam Section Profile" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="calibration.html" class="btn btn-neutral float-right" title="Material Calibration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="calibration.html" class="btn btn-neutral float-right" title="Calibration of Material" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

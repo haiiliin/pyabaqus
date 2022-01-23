@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Material Calibration &mdash; pyabaqus 1.0.7 documentation</title>
+  <title>Calibration of Material &mdash; pyabaqus 1.0.7 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -16,9 +16,7 @@
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Canvas" href="canvas.html" />
-    <link rel="prev" title="Boundary condition" href="bc.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -37,72 +35,10 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="references.html">Reference manual</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ale.html">Adaptivity (Arbitrary Lagrangian-Eulerian, ALE)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="amplitude.html">Amplitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="animation.html">Animation Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="annotation.html">Annotation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assembly.html">Assembly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="geometry.html">Basic Geometry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="profile.html">Beam Section Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bc.html">Boundary condition</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Material Calibration</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#create-material-calibrations">Create material calibrations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#object-features">Object features</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#calibration">Calibration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#behavior">Behavior</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#dataset">DataSet</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="canvas.html">Canvas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="connector.html">Connector</a></li>
-<li class="toctree-l2"><a class="reference internal" href="constraint.html">Constraint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kernel.html">Custom Kernel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datum.html">Datum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="display.html">Display Group</a></li>
-<li class="toctree-l2"><a class="reference internal" href="display_options.html">Display Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="edit_mesh.html">Edit Mesh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="engineering.html">Engineering Feature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="feature.html">Feature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="field.html">Field</a></li>
-<li class="toctree-l2"><a class="reference internal" href="field_report.html">FieldReport</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filter.html">Filter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="input.html">InputFileParser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interaction.html">Interaction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="job.html">Job</a></li>
-<li class="toctree-l2"><a class="reference internal" href="load.html">Load and Load Case</a></li>
-<li class="toctree-l2"><a class="reference internal" href="material.html">Material</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mdb.html">Mdb object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mesh.html">Mesh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="messaging.html">Messaging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model.html">Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="odb.html">Odb</a></li>
-<li class="toctree-l2"><a class="reference internal" href="odb_display.html">Odb Display</a></li>
-<li class="toctree-l2"><a class="reference internal" href="optimization.html">Optimization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="part.html">Part</a></li>
-<li class="toctree-l2"><a class="reference internal" href="path.html">Path and Probe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_options.html">PlotOptions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="predefined.html">Predefined Field</a></li>
-<li class="toctree-l2"><a class="reference internal" href="print.html">Print</a></li>
-<li class="toctree-l2"><a class="reference internal" href="property.html">Property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="region.html">Region</a></li>
-<li class="toctree-l2"><a class="reference internal" href="section.html">Section</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session.html">Session</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sketcher.html">Sketcher</a></li>
-<li class="toctree-l2"><a class="reference internal" href="step.html">Step</a></li>
-<li class="toctree-l2"><a class="reference internal" href="step_miscellaneous.html">Step Miscellaneous</a></li>
-<li class="toctree-l2"><a class="reference internal" href="output.html">Step Output Request</a></li>
-<li class="toctree-l2"><a class="reference internal" href="table_collection.html">Table Collection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="text_representation.html">TextRepresentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utility.html">UtilityAndView</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xy.html">XY</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Reference manual</a></li>
 </ul>
 
         </div>
@@ -119,8 +55,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="references.html">Reference manual</a> &raquo;</li>
-      <li>Material Calibration</li>
+      <li>Calibration of Material</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/calibration.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -130,8 +65,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="material-calibration">
-<h1>Material Calibration<a class="headerlink" href="#material-calibration" title="Permalink to this headline"></a></h1>
+  <div class="section" id="calibration-of-material">
+<h1>Calibration of Material<a class="headerlink" href="#calibration-of-material" title="Permalink to this headline"></a></h1>
 <p>The calibration commands are used for material calibration.</p>
 <div class="section" id="create-material-calibrations">
 <h2>Create material calibrations<a class="headerlink" href="#create-material-calibrations" title="Permalink to this headline"></a></h2>
@@ -482,10 +417,7 @@ True.</p></li>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="bc.html" class="btn btn-neutral float-left" title="Boundary condition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="canvas.html" class="btn btn-neutral float-right" title="Canvas" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

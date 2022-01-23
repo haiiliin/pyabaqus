@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PlotOptions &mdash; pyabaqus 1.0.7 documentation</title>
+  <title>Plot Options &mdash; pyabaqus 1.0.7 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -41,15 +41,15 @@
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="references.html">Reference manual</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ale.html">Adaptivity (Arbitrary Lagrangian-Eulerian, ALE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adaptivity.html">Adaptivity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="amplitude.html">Amplitude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="animation.html">Animation Options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="annotation.html">Annotation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assembly.html">Assembly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="geometry.html">Basic Geometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profile.html">Beam Section Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bc.html">Boundary condition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="calibration.html">Material Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bc.html">Boundary Condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html">Calibration of Material</a></li>
 <li class="toctree-l2"><a class="reference internal" href="canvas.html">Canvas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="connector.html">Connector</a></li>
 <li class="toctree-l2"><a class="reference internal" href="constraint.html">Constraint</a></li>
@@ -77,7 +77,7 @@
 <li class="toctree-l2"><a class="reference internal" href="optimization.html">Optimization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="part.html">Part</a></li>
 <li class="toctree-l2"><a class="reference internal" href="path.html">Path and Probe</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">PlotOptions</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Plot Options</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#object-features">Object features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#basicoptions">BasicOptions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#couplingconstraint">CouplingConstraint</a></li>
@@ -140,8 +140,8 @@
 <li class="toctree-l2"><a class="reference internal" href="step_miscellaneous.html">Step Miscellaneous</a></li>
 <li class="toctree-l2"><a class="reference internal" href="output.html">Step Output Request</a></li>
 <li class="toctree-l2"><a class="reference internal" href="table_collection.html">Table Collection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="text_representation.html">TextRepresentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utility.html">UtilityAndView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text_representation.html">Text Representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.html">Utility and View</a></li>
 <li class="toctree-l2"><a class="reference internal" href="xy.html">XY</a></li>
 </ul>
 </li>
@@ -162,7 +162,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="references.html">Reference manual</a> &raquo;</li>
-      <li>PlotOptions</li>
+      <li>Plot Options</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/plot_options.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -172,8 +172,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="plotoptions">
-<h1>PlotOptions<a class="headerlink" href="#plotoptions" title="Permalink to this headline"></a></h1>
+  <div class="section" id="plot-options">
+<h1>Plot Options<a class="headerlink" href="#plot-options" title="Permalink to this headline"></a></h1>
 <p>Plot options commands are used to control the appearance of plots in the Visualization module. Plots can be undeformed, deformed, contour, symbol, or material orientation.</p>
 <div class="section" id="object-features">
 <h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline"></a></h2>

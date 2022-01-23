@@ -79,6 +79,9 @@ Basic Features of the model
 .. autoclass:: abaqus.Model.ModelBase.ModelBase
     :members:
 
+.. autoclass:: abaqus.Model.Model.Model
+    :members:
+
 ALE Features of the model
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 

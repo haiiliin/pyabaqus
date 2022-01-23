@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plot Options &mdash; pyabaqus 1.0.7 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Session" href="../session.html" />
+    <link rel="prev" title="Odb Display" href="odb_display.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../references.html">Reference manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mdb.html">Mdb</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../odb.html">Odb</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="odb_display.html">Odb Display</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Plot Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#object-features">Object features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../odb.html#attributes">Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../odb.html#object-features">Object features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../session.html">Session</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kernel.html">Kernel Commands</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../references.html">Reference manual</a> &raquo;</li>
+          <li><a href="../odb.html">Odb</a> &raquo;</li>
+      <li>Plot Options</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/odb/plot_options.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="plot-options">
+<h1>Plot Options<a class="headerlink" href="#plot-options" title="Permalink to this headline"></a></h1>
+<p>Plot options commands are used to control the appearance of plots in the Visualization module. Plots can be undeformed, deformed, contour, symbol, or material orientation.</p>
+<div class="section" id="object-features">
+<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline"></a></h2>
+<div class="section" id="basicoptions">
+<h3>BasicOptions<a class="headerlink" href="#basicoptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.BasicOptions.BasicOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BasicOptions</span></span><a class="headerlink" href="#abaqus.PlotOptions.BasicOptions.BasicOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The BasicOptions object stores values and attributes associated with an OdbDisplay
+object.
+The BasicOptions object has no constructor command. Abaqus creates the
+<em>defaultOdbDisplay.basicOptions</em> member when you import the Visualization module. Abaqus
+creates a <em>basicOptions</em> member when it creates the OdbDisplay object, using the values
+from <em>defaultOdbDisplay.basicOptions</em>. Abaqus creates the <em>odbDisplay</em> member when a
+viewport is created, using the attributes from the previous active viewport. The
+previous active viewport contains the attributes from the <em>defaultOdbDisplay</em> object for
+the session. The attributes from the <em>defaultOdbDisplay</em> object are copied from the
+previous active viewport to create the new viewport.
+BasicOptions objects are accessed in one of two ways:
+- The default basic options: these settings are used as defaults when other
+<em>basicOptions</em> members are created. These settings can be set to customize user
+preferences.
+- The basic options associated with a particular viewport.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.defaultOdbDisplay.basicOptions</p></li>
+<li><p>session.viewports[name].layers[name].odbDisplay.basicOptions</p></li>
+<li><p>session.viewports[name].odbDisplay.basicOptions</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.BasicOptions.BasicOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">options:</span> <span class="pre">Optional[abaqus.PlotOptions.BasicOptions.BasicOptions]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cameraCsysName:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cameraMovesWithCsys:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cameraFollowsRotation:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">averagingThreshold:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantityToPlot:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'FIELD_OUTPUT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curveRefinementLevel:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'COARSE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noResultsColor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">featureAngle:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">otherSymbolSize:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderBeamProfiles:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beamScaleFactor:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderShellThickness:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shellScaleFactor:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accountForDeactivatedElems:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bcDisplay:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectorDisplay:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">highlightConnectorPts:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showConnectorAxes:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showConnectorType:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointElements:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referencePoints:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">massElements:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">springElements:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spotWelds:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracerParticles:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pc3dElements:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd3dElements:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweepArs:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweepElem:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweepStartAngleArs:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweepStartAngleElem:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweepEndAngleArs:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">360</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweepEndAngleElem:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">180</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numSweepSegmentsArs:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numSweepSegmentsElem:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numericForm:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'REAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complexAngle:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectionResults:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'USE_BOTTOM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">envelopeCriteria:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'MAX_ABS_VALUE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">envelopeDataPosition:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'INTEGRATION_POINT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plyResultLocation:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'MIDDLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectionPointScheme:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'CATEGORY_BASED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweepSectors:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectorSelectionType:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'SELECT_BY_NUMBER'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selectedSectorNumbers:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweepSectorStartAngle:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweepSectorEndAngle:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">360</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrudeArs:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrudeArsDepthAutoCompute:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrudeElem:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrudeArsDepth:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrudeElemDepth:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPatternOrder:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'MIRROR_RECT_CIRC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorCsysName:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'GLOBAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorAboutXyPlane:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorAboutXzPlane:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorAboutYzPlane:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorDisplayBodies:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patternCsysName:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'GLOBAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patternNumX:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patternNumY:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patternNumZ:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patternOffsetX:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patternOffsetY:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patternOffsetZ:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patternRotationAxis:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'ZAXIS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patternTotalAngle:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">360</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patternNumCircular:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">couplingDisplay:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordSystemDisplay:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scratchCoordSystemDisplay:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformationType:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datumCsys:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rigidTransformPrimary:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rigidTransformDeformed:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformOnDeformed:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">averageElementOutput:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">averageOnlyDisplayed:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">computeOutput:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'EXTRAPOLATE_AVERAGE_COMPUTE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regionBoundaries:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'ODB_REGIONS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useRegionBoundaries:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userRegions:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">includeFeatureBoundaries:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.BasicOptions.BasicOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the BasicOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>options</strong> – A BasicOptions object from which values are to be copied. If other arguments are also
+supplied to setValues, they will override the values in <em>options</em>. The default value is
+None.</p></li>
+<li><p><strong>cameraCsysName</strong> – A String specifying the name of the coordinate system driving the moving camera.</p></li>
+<li><p><strong>cameraMovesWithCsys</strong> – A Boolean specifying whether the camera moves with the coordinate system. The default
+value is OFF.</p></li>
+<li><p><strong>cameraFollowsRotation</strong> – A Boolean specifying whether the camera, when it moves, follows the rotation of the
+coordinate system. The default value is OFF.</p></li>
+<li><p><strong>averagingThreshold</strong> – A Float specifying the nodal averaging threshold percentage. Possible values are 0 &lt;&lt;
+<em>averagingThreshold</em> &lt;&lt; 100. The default value is 75.0.</p></li>
+<li><p><strong>quantityToPlot</strong> – A SymbolicConstant specifying the quantity to plot. Possible values are FIELD_OUTPUT and
+DISCONTINUITIES. The default value is FIELD_OUTPUT.</p></li>
+<li><p><strong>curveRefinementLevel</strong> – A SymbolicConstant specifying the refinement level for drawing curves. Possible values
+are EXTRA_COARSE, COARSE, MEDIUM, FINE, and EXTRA_FINE. The default value is COARSE.</p></li>
+<li><p><strong>noResultsColor</strong> – A String specifying the color of elements that do not have any results. The default
+value is “White”.</p></li>
+<li><p><strong>featureAngle</strong> – A Float specifying the feature angle to be used when <a href="#id1"><span class="problematic" id="id2">*</span></a>visibleEdges*=FEATURE. The default
+value is 30.0.</p></li>
+<li><p><strong>otherSymbolSize</strong> – An Int specifying the size of various glyph symbols (boundary conditions, coupling
+constraints, etc.). The default value is 6.</p></li>
+<li><p><strong>renderBeamProfiles</strong> – A Boolean specifying whether to render the beam profiles. The default value is OFF.</p></li>
+<li><p><strong>beamScaleFactor</strong> – A Float specifying the beam profile scale factor. The beamScaleFactor must be greater
+than zero. The default value is 1.0.</p></li>
+<li><p><strong>renderShellThickness</strong> – A Boolean specifying whether to render the shell thickness. The default value is OFF.</p></li>
+<li><p><strong>shellScaleFactor</strong> – A Float specifying the shell thickness scale factor. The shellScaleFactor must be
+greater than zero. The default value is 1.0.</p></li>
+<li><p><strong>accountForDeactivatedElems</strong> – A Boolean specifying whether to account for deactivated elements. The default value is
+ON.</p></li>
+<li><p><strong>bcDisplay</strong> – A Boolean specifying whether to display boundary conditions. The default value is OFF.</p></li>
+<li><p><strong>connectorDisplay</strong> – A Boolean specifying whether to display connectors. The default value is OFF.</p></li>
+<li><p><strong>highlightConnectorPts</strong> – A Boolean specifying whether to highlight connector points. The default value is ON.</p></li>
+<li><p><strong>showConnectorAxes</strong> – A Boolean specifying whether to display connector orientations or coordinate systems.
+The default value is ON.</p></li>
+<li><p><strong>showConnectorType</strong> – A Boolean specifying whether to display the text that describes the connector type. The
+default value is ON.</p></li>
+<li><p><strong>pointElements</strong> – A Boolean specifying whether to display point type elements. The default value is ON.</p></li>
+<li><p><strong>referencePoints</strong> – A Boolean specifying whether to display reference points. <em>referencePoints</em> is valid
+only when <a href="#id3"><span class="problematic" id="id4">*</span></a>pointElements*=ON. The default value is ON.</p></li>
+<li><p><strong>massElements</strong> – A Boolean specifying whether to display mass, heat capacity and inertia elements.
+<em>massElements</em> is valid only when <a href="#id5"><span class="problematic" id="id6">*</span></a>pointElements*=ON. The default value is OFF.</p></li>
+<li><p><strong>springElements</strong> – A Boolean specifying whether to display spring and dashpot elements. <em>springElements</em> is
+valid only when <a href="#id7"><span class="problematic" id="id8">*</span></a>pointElements*=ON. The default value is OFF.</p></li>
+<li><p><strong>spotWelds</strong> – A Boolean specifying whether to display spot weld and distributed coupling elements.
+<em>spotWelds</em> is valid only when <a href="#id9"><span class="problematic" id="id10">*</span></a>pointElements*=ON. The default value is OFF.</p></li>
+<li><p><strong>tracerParticles</strong> – A Boolean specifying whether to display tracer particles. <em>tracerParticles</em> is valid
+only when <a href="#id11"><span class="problematic" id="id12">*</span></a>pointElements*=ON. The default value is OFF.</p></li>
+<li><p><strong>pc3dElements</strong> – A Boolean specifying whether to display PC3D elements. <em>pc3dElements</em> is valid only when
+<a href="#id13"><span class="problematic" id="id14">*</span></a>pointElements*=ON. The default value is ON.</p></li>
+<li><p><strong>pd3dElements</strong> – A Boolean specifying whether to display PD3D elements. <em>pd3dElements</em> is valid only when
+<a href="#id15"><span class="problematic" id="id16">*</span></a>pointElements*=ON. The default value is ON.</p></li>
+<li><p><strong>sweepArs</strong> – A Boolean specifying whether to sweep the analytical surfaces. The default value is ON
+or OFF, depending on the characteristics of your model.</p></li>
+<li><p><strong>sweepElem</strong> – A Boolean specifying whether to sweep the deformable elements. The default value is ON
+or OFF, depending on the characteristics of your model.</p></li>
+<li><p><strong>sweepStartAngleArs</strong> – A Float specifying the starting angle (in degrees) from which to sweep the analytical
+surfaces when <a href="#id17"><span class="problematic" id="id18">*</span></a>sweepArs*=ON. The default value is 0.0.</p></li>
+<li><p><strong>sweepStartAngleElem</strong> – A Float specifying the starting angle (in degrees) from which to sweep the model when
+<a href="#id19"><span class="problematic" id="id20">*</span></a>sweepElem*=ON. The default value is 0.0.</p></li>
+<li><p><strong>sweepEndAngleArs</strong> – A Float specifying the angle (in degrees) through which to sweep the analytical surfaces
+when <a href="#id21"><span class="problematic" id="id22">*</span></a>sweepArs*=ON. The default value is 360.0.</p></li>
+<li><p><strong>sweepEndAngleElem</strong> – A Float specifying the angle (in degrees) through which to sweep the model when
+<a href="#id23"><span class="problematic" id="id24">*</span></a>sweepElem*=ON. The default value is 180.0.</p></li>
+<li><p><strong>numSweepSegmentsArs</strong> – An Int specifying the number of segments to display when <a href="#id25"><span class="problematic" id="id26">*</span></a>sweepArs*=ON. The default
+value is 10 or 20, depending on characteristics of your model.</p></li>
+<li><p><strong>numSweepSegmentsElem</strong> – An Int specifying the number of segments to display when <a href="#id27"><span class="problematic" id="id28">*</span></a>sweepElem*=ON. The default
+value is 10 or 20, depending on characteristics of your model.</p></li>
+<li><p><strong>numericForm</strong> – A SymbolicConstant specifying the numeric form in which to display results that contain
+complex numbers. Possible values are COMPLEX_MAGNITUDE, COMPLEX_PHASE, REAL, IMAGINARY,
+COMPLEX_MAG_AT_ANGLE, COMPLEX_ENVELOPE_MAX_ABS, COMPLEX_ENVELOPE_MAX, and
+COMPLEX_ENVELOPE_MIN. The default value is REAL.</p></li>
+<li><p><strong>complexAngle</strong> – A Float specifying the angle (in degrees) at which to display results that contain
+complex numbers when <a href="#id29"><span class="problematic" id="id30">*</span></a>numericForm*=COMPLEX_MAG_AT_ANGLE. The default value is 0.0.</p></li>
+<li><p><strong>sectionResults</strong> – A SymbolicConstant specifying which of the section points to use. Possible values are
+USE_BOTTOM, USE_TOP, USE_BOTTOM_AND_TOP, and USE_ENVELOPE. The default value is
+USE_BOTTOM.</p></li>
+<li><p><strong>envelopeCriteria</strong> – A SymbolicConstant specifying the envelope criterion. Possible values are MAX_VALUE,
+MIN_VALUE, and MAX_ABS_VALUE. The default value is MAX_ABS_VALUE.</p></li>
+<li><p><strong>envelopeDataPosition</strong> – A SymbolicConstant specifying the output position for envelope calculations. Possible
+values are CENTROID, ELEMENT_NODAL, and INTEGRATION_POINT. The default value is
+INTEGRATION_POINT.</p></li>
+<li><p><strong>plyResultLocation</strong> – A SymbolicConstant specifying the ply result location. Possible values are BOTTOM,
+MIDDLE, TOP, and TOP_AND_BOTTOM. The default value is MIDDLE.</p></li>
+<li><p><strong>sectionPointScheme</strong> – A SymbolicConstant specifying the section point scheme. Possible values are
+CATEGORY_BASED and PLY_BASED. The default value is CATEGORY_BASED.</p></li>
+<li><p><strong>sweepSectors</strong> – A Boolean specifying whether to sweep the cyclic symmetry sectors. The default value is
+OFF.</p></li>
+<li><p><strong>sectorSelectionType</strong> – A SymbolicConstant specifying how sectors will be selected for sweeping. Possible values
+are SELECT_BY_NUMBER, SELECT_BY_ANGLE, and SELECT_ALL. The default value is
+SELECT_BY_NUMBER.</p></li>
+<li><p><strong>selectedSectorNumbers</strong> – A sequence of Ints specifying which sectors to display when
+<em>sectorSelectionType*=SELECT_BY_NUMBER. Possible values are 1 ≤≤ *selectedSectorNumbers</em>
+≤≤ the number of sectors. The default value is (1).</p></li>
+<li><p><strong>sweepSectorStartAngle</strong> – A Float specifying the angle (in degrees) from which to sweep cyclic symmetry sectors
+when <em>sweepSectors*=ON. Possible values are multiples of the sector angle such that 0 ≤≤
+*sweepSectorStartAngle</em> ≤≤ 360. The default value is 0.0.</p></li>
+<li><p><strong>sweepSectorEndAngle</strong> – A Float specifying the angle (in degrees) through which to sweep cyclic symmetry sectors
+when <em>sweepSectors*=ON. Possible values are multiples of the sector angle such that 0 &lt;&lt;
+*sweepSectorEndAngle</em> ≤≤ 360. The default value is 360.0.</p></li>
+<li><p><strong>extrudeArs</strong> – A Boolean specifying whether to extrude analytical surfaces. The default value is ON or
+OFF depending on characteristics of your model.</p></li>
+<li><p><strong>extrudeArsDepthAutoCompute</strong> – A Boolean specifying whether to use automatic depth determination when extruding
+analytical surfaces. The default value is ON. The default value is ON.</p></li>
+<li><p><strong>extrudeElem</strong> – A Boolean specifying whether to extrude deformable elements. The default value is ON or
+OFF depending on characteristics of your model.</p></li>
+<li><p><strong>extrudeArsDepth</strong> – A Float specifying the depth (in model units) by which the analytical surfaces are to be
+extruded when <a href="#id31"><span class="problematic" id="id32">*</span></a>extrudeArs*=ON. The default value is 1.0.</p></li>
+<li><p><strong>extrudeElemDepth</strong> – A Float specifying the depth (in model units) by which the deformable elements are to be
+extruded when <a href="#id33"><span class="problematic" id="id34">*</span></a>extrudeElem*=ON. The default value is 1.0.</p></li>
+<li><p><strong>mirrorPatternOrder</strong> – A SymbolicConstant specifying the order of operations to create the mirror pattern.
+Possible values are MIRROR_RECT_CIRC, RECT_MIRROR_CIRC, MIRROR_CIRC_RECT,
+RECT_CIRC_MIRROR, CIRC_MIRROR_RECT, and CIRC_RECT_MIRROR. The default value is
+MIRROR_RECT_CIRC.</p></li>
+<li><p><strong>mirrorCsysName</strong> – The SymbolicConstant GLOBAL or a String specifying the name of the mirror’s coordinate
+system. The default value is GLOBAL.</p></li>
+<li><p><strong>mirrorAboutXyPlane</strong> – A Boolean specifying whether to mirror about the XY plane. The default value is OFF.</p></li>
+<li><p><strong>mirrorAboutXzPlane</strong> – A Boolean specifying whether to mirror about the XZ plane. The default value is OFF.</p></li>
+<li><p><strong>mirrorAboutYzPlane</strong> – A Boolean specifying whether to mirror about the YZ plane. The default value is OFF.</p></li>
+<li><p><strong>mirrorDisplayBodies</strong> – A Boolean specifying whether to mirror display bodies. The default value is OFF.</p></li>
+<li><p><strong>patternCsysName</strong> – The SymbolicConstant GLOBAL or a String specifying the name of the pattern’s coordinate
+system. The default value is GLOBAL.</p></li>
+<li><p><strong>patternNumX</strong> – An Int specifying the number of patterns to create in the X-direction for a rectangular
+pattern. The default value is 1.</p></li>
+<li><p><strong>patternNumY</strong> – An Int specifying the number of patterns to create in the Y-direction for a rectangular
+pattern. The default value is 1.</p></li>
+<li><p><strong>patternNumZ</strong> – An Int specifying the number of patterns to create in the Z-direction for a rectangular
+pattern. The default value is 1.</p></li>
+<li><p><strong>patternOffsetX</strong> – A Float specifying the offset of the pattern along the X-axis for a rectangular pattern.
+The default value is 0.0.</p></li>
+<li><p><strong>patternOffsetY</strong> – A Float specifying the offset of the pattern along the Y-axis for a rectangular pattern.
+The default value is 0.0.</p></li>
+<li><p><strong>patternOffsetZ</strong> – A Float specifying the offset of the pattern along the Z-axis for a rectangular pattern.
+The default value is 0.0.</p></li>
+<li><p><strong>patternRotationAxis</strong> – A SymbolicConstant specifying the axis of rotation for a circular. Possible values are
+XAXIS, YAXIS, and ZAXIS. The default value is ZAXIS.</p></li>
+<li><p><strong>patternTotalAngle</strong> – A Float specifying the total angle of a circular pattern. The default value is 360.0.</p></li>
+<li><p><strong>patternNumCircular</strong> – An Int specifying the number of patterns to create in a circular pattern. The default
+value is 1.</p></li>
+<li><p><strong>couplingDisplay</strong> – A Boolean specifying whether to display coupling constraints. The default value is ON.</p></li>
+<li><p><strong>coordSystemDisplay</strong> – A Boolean specifying whether to display coordinate systems. The default value is OFF.</p></li>
+<li><p><strong>scratchCoordSystemDisplay</strong> – A Boolean specifying whether to display coordinate systems that represent user-defined
+orientations. The default value is OFF.</p></li>
+<li><p><strong>transformationType</strong> – A SymbolicConstant specifying the transformation to apply to the PrimaryVariable.
+Possible values are DEFAULT, NODAL, USER_SPECIFIED, ANGULAR, and LAYUP_ORIENTATION. The
+default value is DEFAULT.If <em>transformationType*=NODAL, Abaqus will transform nodal
+vector fields into any orientation defined in the analysis with the TRANSFORM option.
+Setting *transformationType*=NODAL has no effect on element-based results.If
+*transformationType*=USER_SPECIFIED, Abaqus will transform tensor and vector fields into
+the coordinate system specified by *datumCsys</em>.If
+<a href="#id35"><span class="problematic" id="id36">*</span></a>transformationType*=LAYUP_ORIENTATION, Abaqus will transform tensor and vector fields
+into the layup orientation defined in the composite section. The odb should contain the
+field SORIENT in order to use this option.</p></li>
+<li><p><strong>datumCsys</strong> – A DatumCsys object specifying the coordinate system to use for results transformation
+when <a href="#id37"><span class="problematic" id="id38">*</span></a>transformationType*=USER_SPECIFIED.</p></li>
+<li><p><strong>rigidTransformPrimary</strong> – A Boolean specifying whether to perform a rigid transformation of nodal vector datasets
+based on the active user specific system The default value is OFF.</p></li>
+<li><p><strong>rigidTransformDeformed</strong> – A Boolean specifying whether to perform a rigid transformation of current
+deformedVariable based on the active user specific system The default value is OFF.</p></li>
+<li><p><strong>transformOnDeformed</strong> – A Boolean specifying whether to include the effects of deformation on the transformation
+calculations The default value is ON.</p></li>
+<li><p><strong>averageElementOutput</strong> – A Boolean specifying whether to average the element output. The default value is ON.</p></li>
+<li><p><strong>averageOnlyDisplayed</strong> – A Boolean specifying whether to average only values on displayed elements. The default
+value is ON.</p></li>
+<li><p><strong>computeOutput</strong> – A SymbolicConstant specifying the order or the computations to be performed. Possible
+values are EXTRAPOLATE_AVERAGE_COMPUTE, EXTRAPOLATE_COMPUTE_AVERAGE,
+EXTRAPOLATE_COMPUTE, EXTRAPOLATE_COMPUTE_DISCONTINUITIES, and RAW_DATA. The default
+value is EXTRAPOLATE_AVERAGE_COMPUTE.</p></li>
+<li><p><strong>regionBoundaries</strong> – A SymbolicConstant specifying the type of averaging region boundaries. Possible values
+are NONE, ODB_REGIONS, ELEMENT_SET, and DISPLAY_GROUPS. The default value is
+ODB_REGIONS.</p></li>
+<li><p><strong>useRegionBoundaries</strong> – A Boolean specifying whether to use region boundaries when averaging. The default value
+is ON.</p></li>
+<li><p><strong>userRegions</strong> – A sequence of Strings specifying either element set or display group names (depending on
+the value of regionBoundaries) defining the averaging region boundaries. The default
+value is an empty sequence.</p></li>
+<li><p><strong>includeFeatureBoundaries</strong> – A Boolean specifying whether to include additional averaging boundaries for shells and
+membranes based on feature edges. The default value is ON.</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – <ul>
+<li><p>If <em>featureAngle</em> is not in the valid range:
+RangeError: featureAngle must be a float in the range 0-90, inclusive</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="couplingconstraint">
+<h3>CouplingConstraint<a class="headerlink" href="#couplingconstraint" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.CouplingConstraint.CouplingConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CouplingConstraint</span></span><a class="headerlink" href="#abaqus.PlotOptions.CouplingConstraint.CouplingConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>The CouplingConstraint object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].kinematicCouplings[i]</p></li>
+<li><p>session.odbData[name].distributingCouplings[i]</p></li>
+<li><p>session.odbData[name].shellSolidCouplings[i]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.CouplingConstraint.CouplingConstraint.constraintData">
+<span class="sig-name descname"><span class="pre">constraintData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.CouplingConstraint.CouplingConstraint.constraintData" title="Permalink to this definition"></a></dt>
+<dd><p>This method returns node numbers of the surface being controlled by the control point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Tuple-of-Ints</span> <span class="pre">Dictionary</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">node</span> <span class="pre">numbers</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">controlled</span> <span class="pre">surface.</span> <span class="pre">.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="detailplotoptions">
+<h3>DetailPlotOptions<a class="headerlink" href="#detailplotoptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.DetailPlotOptions.DetailPlotOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DetailPlotOptions</span></span><a class="headerlink" href="#abaqus.PlotOptions.DetailPlotOptions.DetailPlotOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The DetailPlotOptions object stores values and attributes associated with a Viewport
+object. The DetailPlotOptions object has no constructor command. Abaqus creates the
+<em>detailPlotOptions</em> member whenever a Viewport is created.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.viewports[name].detailPlotOptions</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="dgcommonoptions">
+<h3>DGCommonOptions<a class="headerlink" href="#dgcommonoptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.DGCommonOptions.DGCommonOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DGCommonOptions</span></span><a class="headerlink" href="#abaqus.PlotOptions.DGCommonOptions.DGCommonOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The DGCommonOptions object stores values and attributes that are common to all plot
+states. The DGCommonOptions object has no constructor command. Abaqus creates an
+<em>odbDisplayOptions.commonOptions</em> member when a display group instance is created, using
+values from <em>odbDisplay.commonOptions</em>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions</p></li>
+<li><p>session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions</p></li>
+<li><p>session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions</p></li>
+<li><p>session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions</p></li>
+<li><p>session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions</p></li>
+<li><p>session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="dgcontouroptions">
+<h3>DGContourOptions<a class="headerlink" href="#dgcontouroptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.DGContourOptions.DGContourOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DGContourOptions</span></span><a class="headerlink" href="#abaqus.PlotOptions.DGContourOptions.DGContourOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The DGContourOptions object stores values and attributes associated with a contour plot.
+The DGContourOptions object has no constructor command. Abaqus creates an
+<em>odbDisplayOptions.contourOptions</em> member when a display group instance is created,
+using values from <em>odbDisplay.contourOptions</em>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions</p></li>
+<li><p>session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions</p></li>
+<li><p>session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions</p></li>
+<li><p>session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions</p></li>
+<li><p>session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions</p></li>
+<li><p>session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="dgdisplaybodyoptions">
+<h3>DGDisplayBodyOptions<a class="headerlink" href="#dgdisplaybodyoptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.DGDisplayBodyOptions.DGDisplayBodyOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DGDisplayBodyOptions</span></span><a class="headerlink" href="#abaqus.PlotOptions.DGDisplayBodyOptions.DGDisplayBodyOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The DGDisplayBodyOptions object stores values and attributes applied to display bodies.
+The DGDisplayBodyOptions object has no constructor command. Abaqus creates an
+<em>odbDisplayOptions.displayBodyOptions</em> member when a display group instance is created,
+using values from <em>odbDisplay.displayBodyOptions</em>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions</p></li>
+<li><p>session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions</p></li>
+<li><p>session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions</p></li>
+<li><p>session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions</p></li>
+<li><p>session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions</p></li>
+<li><p>session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="dgorientationoptions">
+<h3>DGOrientationOptions<a class="headerlink" href="#dgorientationoptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.DGOrientationOptions.DGOrientationOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DGOrientationOptions</span></span><a class="headerlink" href="#abaqus.PlotOptions.DGOrientationOptions.DGOrientationOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The DGOrientationOptions object stores values and attributes associated with a material
+orientation plot. The DGOrientationOptions object has no constructor command. Abaqus
+creates an <em>odbDisplayOptions.materialOrientationOptions</em> member when a display group
+instance is created, using values from <em>odbDisplay.materialOrientationOptions</em>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions</p></li>
+<li><p>session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions</p></li>
+<li><p>session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions</p></li>
+<li><p>session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions</p></li>
+<li><p>session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions</p></li>
+<li><p>session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="dgsuperimposeoptions">
+<h3>DGSuperimposeOptions<a class="headerlink" href="#dgsuperimposeoptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.DGSuperimposeOptions.DGSuperimposeOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DGSuperimposeOptions</span></span><a class="headerlink" href="#abaqus.PlotOptions.DGSuperimposeOptions.DGSuperimposeOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The DGSuperimposeOptions object stores values and attributes associated with the
+undeformed shape when the display contains both the deformed shape and the undeformed
+shape. The DGSuperimposeOptions object has no constructor command. Abaqus creates an
+<em>odbDisplayOptions.superimposeOptions</em> member when a display group instance is created,
+using values from <em>odbDisplay.superimposeOptions</em>.Access
+session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
+session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
+session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
+session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
+session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
+session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions</p>
+</dd></dl>
+
+</div>
+<div class="section" id="dgsymboloptions">
+<h3>DGSymbolOptions<a class="headerlink" href="#dgsymboloptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.DGSymbolOptions.DGSymbolOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DGSymbolOptions</span></span><a class="headerlink" href="#abaqus.PlotOptions.DGSymbolOptions.DGSymbolOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The DGSymbolOptions object stores values and attributes associated with a symbol plot.
+The DGSymbolOptions object has no constructor command. Abaqus creates an
+<em>odbDisplayOptions.symbolOptions</em> member when a display group instance is created, using
+values from <em>odbDisplay.symbolOptions</em>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions</p></li>
+<li><p>session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions</p></li>
+<li><p>session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions</p></li>
+<li><p>session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions</p></li>
+<li><p>session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions</p></li>
+<li><p>session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="displayoptions">
+<h3>DisplayOptions<a class="headerlink" href="#displayoptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.DisplayOptions.DisplayOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DisplayOptions</span></span><a class="headerlink" href="#abaqus.PlotOptions.DisplayOptions.DisplayOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The DisplayOptions object stores a plot state.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.viewports[name].layers[name].odbDisplay.display</p></li>
+<li><p>session.viewports[name].odbDisplay.display</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.DisplayOptions.DisplayOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.PlotOptions.DisplayOptions.DisplayOptions" title="abaqus.PlotOptions.DisplayOptions.DisplayOptions"><span class="pre">abaqus.PlotOptions.DisplayOptions.DisplayOptions</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotState</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.DisplayOptions.DisplayOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the DisplayOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>options</strong> – A DisplayOptions object from which values are to be copied. If other arguments are also
+supplied to setValues, they will override the values in <em>options</em>. The default value is
+None.</p></li>
+<li><p><strong>plotState</strong> – A sequence of SymbolicConstants specifying the plot state of the display. Possible
+values are UNDEFORMED, DEFORMED, CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, SYMBOLS_ON_UNDEF,
+SYMBOLS_ON_DEF, ORIENT_ON_UNDEF, and ORIENT_ON_DEF. The default value is (UNDEFORMED).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="freebodyoptions">
+<h3>FreeBodyOptions<a class="headerlink" href="#freebodyoptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.FreeBodyOptions.FreeBodyOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FreeBodyOptions</span></span><a class="headerlink" href="#abaqus.PlotOptions.FreeBodyOptions.FreeBodyOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The FreeBodyOptions object stores values and attributes associated with a free body
+plot. The FreeBodyOptions object has no constructor command. Abaqus creates a
+<em>defaultOdbDisplay.freeBodyOptions</em> member when you import the Visualization module.
+Abaqus creates a <em>FreeBodyOptions</em> member when it creates the OdbDisplay object, using
+the values from <em>defaultOdbDisplay.freeBodyOptions</em>. Abaqus creates the <em>odbDisplay</em>
+member when a viewport is created, using the values from <em>defaultOdbDisplay</em>.
+FreeBodyOptions objects are accessed in one of two ways:
+- The default free body options. These settings are used as defaults when other
+<em>freeBodyOptions</em> members are created. These settings can be set to customize user
+preferences.
+- The free body options associated with a particular viewport.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.defaultOdbDisplay.freeBodyOptions</p></li>
+<li><p>session.viewports[name].layers[name].odbDisplay.freeBodyOptions</p></li>
+<li><p>session.viewports[name].odbDisplay.freeBodyOptions</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.FreeBodyOptions.FreeBodyOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comp1ColorF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comp1ColorM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comp2ColorF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comp2ColorM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comp3ColorF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comp3ColorM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultantColorF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultantColorM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textColorF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textColorM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textFontF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textFontM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberFormatF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SCIENTIFIC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberFormatM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SCIENTIFIC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleModeF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MODEL_SIZE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleModeM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MODEL_SIZE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vectorDisplay</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'RESULTANT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDigitsF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDigitsM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sizePercentageF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sizePercentageM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresholdF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresholdM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drawLabelF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drawLabelM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showComp1F</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showComp1M</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showComp2F</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showComp2M</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showComp3F</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showComp3M</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showForce</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showMoment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constantLengthArrow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.FreeBodyOptions.FreeBodyOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the FreeBodyOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>comp1ColorF</strong> – A String specifying color of the first force component. The default value is “#FF1932”.</p></li>
+<li><p><strong>comp1ColorM</strong> – A String specifying color of the first moment component. The default value is “#0000FF”.</p></li>
+<li><p><strong>comp2ColorF</strong> – A String specifying color of the second force component. The default value is “#FF1932”.</p></li>
+<li><p><strong>comp2ColorM</strong> – A String specifying color of the second moment component. The default value is
+“#0000FF”.</p></li>
+<li><p><strong>comp3ColorF</strong> – A String specifying color of the third force component. The default value is “#FF1932”.</p></li>
+<li><p><strong>comp3ColorM</strong> – A String specifying color of the third moment component. The default value is “#0000FF”.</p></li>
+<li><p><strong>resultantColorF</strong> – A String specifying color of the resultant force. The default value is “#FF1932”.</p></li>
+<li><p><strong>resultantColorM</strong> – A String specifying color of the resultant moment. The default value is “#0000FF”.</p></li>
+<li><p><strong>textColorF</strong> – A String specifying text color for force. The default value is “Yellow”.</p></li>
+<li><p><strong>textColorM</strong> – A String specifying text color for moment. The default value is “Yellow”.</p></li>
+<li><p><strong>textFontF</strong> – A String specifying text font for force. The default value is “verdana”.</p></li>
+<li><p><strong>textFontM</strong> – A String specifying text font for moment. The default value is “verdana”.</p></li>
+<li><p><strong>numberFormatF</strong> – A SymbolicConstant specifying the number format for force. Possible values are
+SCIENTIFIC, FIXED, and ENGINEERING. The default value is SCIENTIFIC.</p></li>
+<li><p><strong>numberFormatM</strong> – A SymbolicConstant specifying the number format for moment. Possible values are
+SCIENTIFIC, FIXED, and ENGINEERING. The default value is SCIENTIFIC.</p></li>
+<li><p><strong>scaleModeF</strong> – A SymbolicConstant specifying the size scaling mode for force. Possible values are
+MODEL_SIZE and SCREEN_SIZE. The default value is MODEL_SIZE.</p></li>
+<li><p><strong>scaleModeM</strong> – A SymbolicConstant specifying the size scaling mode for moment. Possible values are
+MODEL_SIZE and SCREEN_SIZE. The default value is MODEL_SIZE.</p></li>
+<li><p><strong>vectorDisplay</strong> – A SymbolicConstant specifying the vector display mode. Possible values are RESULTANT and
+COMPONENT. The default value is RESULTANT.</p></li>
+<li><p><strong>numDigitsF</strong> – An Int specifying the number of digits in the force label. The default value is 3.</p></li>
+<li><p><strong>numDigitsM</strong> – An Int specifying the number of digits in the moment label. The default value is 3.</p></li>
+<li><p><strong>sizePercentageF</strong> – A Float specifying the size of the force symbol as a percentage of the screen or model.
+The default value is 10.0.</p></li>
+<li><p><strong>sizePercentageM</strong> – A Float specifying the size of the moment symbol as a percentage of the screen or model.
+The default value is 10.0.</p></li>
+<li><p><strong>thresholdF</strong> – A Float specifying the force threshold value. The default value is 10–6.</p></li>
+<li><p><strong>thresholdM</strong> – A Float specifying the moment threshold value. The default value is 10–6.</p></li>
+<li><p><strong>drawLabelF</strong> – A Boolean specifying whether to draw force labels. The default value is ON.</p></li>
+<li><p><strong>drawLabelM</strong> – A Boolean specifying whether to draw moment labels. The default value is ON.</p></li>
+<li><p><strong>showComp1F</strong> – A Boolean specifying whether to show the first force component. The default value is ON.</p></li>
+<li><p><strong>showComp1M</strong> – A Boolean specifying whether to show the first moment component. The default value is
+ON.</p></li>
+<li><p><strong>showComp2F</strong> – A Boolean specifying whether to show the second force component. The default value is
+ON.</p></li>
+<li><p><strong>showComp2M</strong> – A Boolean specifying whether to show the second moment component. The default value is
+ON.</p></li>
+<li><p><strong>showComp3F</strong> – A Boolean specifying whether to show the third force component. The default value is ON.</p></li>
+<li><p><strong>showComp3M</strong> – A Boolean specifying whether to show the third moment component. The default value is
+ON.</p></li>
+<li><p><strong>showForce</strong> – A Boolean specifying whether to show forces. The default value is ON.</p></li>
+<li><p><strong>showMoment</strong> – A Boolean specifying whether to show moments. The default value is ON.</p></li>
+<li><p><strong>constantLengthArrow</strong> – A Boolean specifying whether to use a constant length for all arrows. The default value
+is OFF.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="historyvariable">
+<h3>HistoryVariable<a class="headerlink" href="#historyvariable" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.HistoryVariable.HistoryVariable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HistoryVariable</span></span><a class="headerlink" href="#abaqus.PlotOptions.HistoryVariable.HistoryVariable" title="Permalink to this definition"></a></dt>
+<dd><p>The HistoryVariable object stores history data.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].historyVariables[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="mdbdata">
+<h3>MdbData<a class="headerlink" href="#mdbdata" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.MdbData.MdbData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MdbData</span></span><a class="headerlink" href="#abaqus.PlotOptions.MdbData.MdbData" title="Permalink to this definition"></a></dt>
+<dd><p>The MdbData object has no constructor. Abaqus creates an MdbData object when a cae file
+is opened or a new model is created. There is one MdbData for each model in session.
+MdbData is updated when it is displayed in a viewport.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.mdbData[name]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="mdbdataframe">
+<h3>MdbDataFrame<a class="headerlink" href="#mdbdataframe" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.MdbDataFrame.MdbDataFrame">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MdbDataFrame</span></span><a class="headerlink" href="#abaqus.PlotOptions.MdbDataFrame.MdbDataFrame" title="Permalink to this definition"></a></dt>
+<dd><p>The MdbDataFrame object. There is one and only MdbDataFrame in a MdbDataStep.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.mdbData[name].steps[i].frames[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="mdbdataframearray">
+<h3>MdbDataFrameArray<a class="headerlink" href="#mdbdataframearray" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.MdbDataFrameArray.MdbDataFrameArray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MdbDataFrameArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.MdbDataFrameArray.MdbDataFrameArray" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="mdbdatainstance">
+<h3>MdbDataInstance<a class="headerlink" href="#mdbdatainstance" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.MdbDataInstance.MdbDataInstance">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MdbDataInstance</span></span><a class="headerlink" href="#abaqus.PlotOptions.MdbDataInstance.MdbDataInstance" title="Permalink to this definition"></a></dt>
+<dd><p>The MdbDataInstance object instance data. It corresponds to same named part instance
+with a mesh in the cae model.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.mdbData[name].instances[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="mdbdatastep">
+<h3>MdbDataStep<a class="headerlink" href="#mdbdatastep" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.MdbDataStep.MdbDataStep">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MdbDataStep</span></span><a class="headerlink" href="#abaqus.PlotOptions.MdbDataStep.MdbDataStep" title="Permalink to this definition"></a></dt>
+<dd><p>The MdbDataStep object.It corresponds to same named step in the cae model.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.mdbData[name].steps[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="mpcconstraint">
+<h3>MpcConstraint<a class="headerlink" href="#mpcconstraint" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.MpcConstraint.MpcConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MpcConstraint</span></span><a class="headerlink" href="#abaqus.PlotOptions.MpcConstraint.MpcConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>The MpcConstraint object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].multiPointConstraints[i]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.MpcConstraint.MpcConstraint.constraintData">
+<span class="sig-name descname"><span class="pre">constraintData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.MpcConstraint.MpcConstraint.constraintData" title="Permalink to this definition"></a></dt>
+<dd><p>This method returns constraint data if any are associated with the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">tuple</span> <span class="pre">containing</span> <span class="pre">coordinates</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">nodes</span> <span class="pre">pertaining</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">constraint.</span> <span class="pre">.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="odbanalysiserror">
+<h3>OdbAnalysisError<a class="headerlink" href="#odbanalysiserror" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbAnalysisError.OdbAnalysisError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbAnalysisError</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbAnalysisError.OdbAnalysisError" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbAnalysisError object stores the description of different errors encountered
+during the analysis.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].diagnosticData.analysisErrors[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbanalysiswarning">
+<h3>OdbAnalysisWarning<a class="headerlink" href="#odbanalysiswarning" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbAnalysisWarning.OdbAnalysisWarning">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbAnalysisWarning</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbAnalysisWarning.OdbAnalysisWarning" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbAnalysisWarning object stores the description of different warnings encountered
+during the analysis.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].diagnosticData.analysisWarnings[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbauxiliarydata">
+<h3>OdbAuxiliaryData<a class="headerlink" href="#odbauxiliarydata" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbAuxiliaryData.OdbAuxiliaryData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbAuxiliaryData</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbAuxiliaryData.OdbAuxiliaryData" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbAuxiliaryData object stores auxiliary data related to the steps in the analysis.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].diagnosticData.analysisErrors[i].data[i]</p></li>
+<li><p>session.odbData[name].diagnosticData.analysisWarnings[i].data[i]</p></li>
+<li><p>session.odbData[name].diagnosticData.steps[i].contactDiagnostics[i].data[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbcontactdiagnostics">
+<h3>OdbContactDiagnostics<a class="headerlink" href="#odbcontactdiagnostics" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbContactDiagnostics.OdbContactDiagnostics">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbContactDiagnostics</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbContactDiagnostics.OdbContactDiagnostics" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDiagnosticContact object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].diagnosticData.steps[i].contactDiagnostics[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbdata">
+<h3>OdbData<a class="headerlink" href="#odbdata" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbData.OdbData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbData</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbData.OdbData" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbData object stores non persistent values and attributes associated with an open
+odb for the given session. The OdbData object has no constructor. Abaqus creates the
+<em>odbData</em> repository when you import the Visualization module. Abaqus creates a OdbData
+object when an odb is opened.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbData.OdbData.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">activeFrames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stepPeriods</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.OdbData.OdbData.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the OdbData object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>activeFrames</strong> – A sequence specifying the active frames, or the SymbolicConstant ALL. Each item in the
+sequence is a tuple defining the stepName followed by a sequence of expressions
+specifying frame numbers. The expression can be any of the following:An Int specifying a
+single frame number; for example, <cite>1</cite>.A String specifying a single frame number ; for
+example, <cite>‘7’</cite>.A String specifying a sequence of frame numbers; for example, <cite>‘3:5’</cite> and
+<cite>‘3:15:3’</cite>.For these expressions a negative number will indicate reverse numbering: -1
+is the last frame of the step, -2 is the one before the last frame. Frame numbering
+starts at 0.</p></li>
+<li><p><strong>stepPeriods</strong> – A sequence of (String, Float) sequences specifying the stepName and the stepPeriod.
+Alternatively, this member may take the value ODB_VALUES.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="odbdatadatumcsys">
+<h3>OdbDataDatumCsys<a class="headerlink" href="#odbdatadatumcsys" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDataDatumCsys.OdbDataDatumCsys">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDataDatumCsys</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbDataDatumCsys.OdbDataDatumCsys" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDataDatumCsys object stores coordinate system data.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].datumCsyses[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbdataelementset">
+<h3>OdbDataElementSet<a class="headerlink" href="#odbdataelementset" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDataElementSet.OdbDataElementSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDataElementSet</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbDataElementSet.OdbDataElementSet" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDataElementSet object stores element set data.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].elementSets[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbdataframe">
+<h3>OdbDataFrame<a class="headerlink" href="#odbdataframe" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDataFrame.OdbDataFrame">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDataFrame</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbDataFrame.OdbDataFrame" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDataFrame object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].steps[i].frames[i]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDataFrame.OdbDataFrame.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">activateFrame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.OdbDataFrame.OdbDataFrame.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the OdbDataFrame object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>activateFrame</strong> – A Boolean specifying whether to activate the frame.</p></li>
+<li><p><strong>update</strong> – A Boolean specifying whether to update the model. The default value is ON</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="odbdataframearray">
+<h3>OdbDataFrameArray<a class="headerlink" href="#odbdataframearray" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDataFrameArray.OdbDataFrameArray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDataFrameArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.OdbDataFrameArray.OdbDataFrameArray" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="odbdatainstance">
+<h3>OdbDataInstance<a class="headerlink" href="#odbdatainstance" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDataInstance.OdbDataInstance">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDataInstance</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbDataInstance.OdbDataInstance" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDataInstance object instance data.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].instances[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbdatamaterial">
+<h3>OdbDataMaterial<a class="headerlink" href="#odbdatamaterial" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDataMaterial.OdbDataMaterial">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDataMaterial</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbDataMaterial.OdbDataMaterial" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDataMaterial object stores material data.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].materials[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbdatanodeset">
+<h3>OdbDataNodeSet<a class="headerlink" href="#odbdatanodeset" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDataNodeSet.OdbDataNodeSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDataNodeSet</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbDataNodeSet.OdbDataNodeSet" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDataNodeSet object stores node set data.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].nodeSets[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbdatasection">
+<h3>OdbDataSection<a class="headerlink" href="#odbdatasection" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDataSection.OdbDataSection">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDataSection</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbDataSection.OdbDataSection" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDataSection object stores section data.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].sections[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbdatastep">
+<h3>OdbDataStep<a class="headerlink" href="#odbdatastep" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDataStep.OdbDataStep">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDataStep</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbDataStep.OdbDataStep" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDataStep object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].steps[i]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDataStep.OdbDataStep.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">activateFrames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.OdbDataStep.OdbDataStep.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the OdbDataStep object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>activateFrames</strong> – A Boolean specifying whether to activate all the frames in the step.</p></li>
+<li><p><strong>update</strong> – A Boolean specifying whether to update the model. The default value is ON</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="odbdatasurfaceset">
+<h3>OdbDataSurfaceSet<a class="headerlink" href="#odbdatasurfaceset" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDataSurfaceSet.OdbDataSurfaceSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDataSurfaceSet</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbDataSurfaceSet.OdbDataSurfaceSet" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDataSurfaceSet object stores surface set data.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].surfaceSets[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbdiagnosticattempt">
+<h3>OdbDiagnosticAttempt<a class="headerlink" href="#odbdiagnosticattempt" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDiagnosticAttempt.OdbDiagnosticAttempt">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDiagnosticAttempt</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbDiagnosticAttempt.OdbDiagnosticAttempt" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDiagnosticAttempt object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].diagnosticData.steps[i].increments[i].attempts[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbdiagnosticdata">
+<h3>OdbDiagnosticData<a class="headerlink" href="#odbdiagnosticdata" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDiagnosticData.OdbDiagnosticData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDiagnosticData</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbDiagnosticData.OdbDiagnosticData" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDiagnosticData object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].diagnosticData</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbdiagnosticincrement">
+<h3>OdbDiagnosticIncrement<a class="headerlink" href="#odbdiagnosticincrement" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDiagnosticIncrement.OdbDiagnosticIncrement">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDiagnosticIncrement</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbDiagnosticIncrement.OdbDiagnosticIncrement" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDiagnosticIncrement object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].diagnosticData.steps[i].increments[i]</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbdiagnosticstep">
+<h3>OdbDiagnosticStep<a class="headerlink" href="#odbdiagnosticstep" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDiagnosticStep.OdbDiagnosticStep">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDiagnosticStep</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbDiagnosticStep.OdbDiagnosticStep" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDiagnosticStep object stores step data.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].diagnosticData.steps[i]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDiagnosticStep.OdbDiagnosticStep.extractData">
+<span class="sig-name descname"><span class="pre">extractData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">incrementStatistics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.OdbDiagnosticStep.OdbDiagnosticStep.extractData" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a temporary XYData object, with increments on the x-axis and
+requested output on the y-axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>incrementStatistics</strong> – An enum specifying the requested output variable for the data table. Possible enum
+values are NUM_ATTEMPTS (the number of attempts), NUM_SDI (the number of severe
+discontinuity iterations), NUM_EQI (the number of equivalent iterations), NUM_ITERS (the
+number of iterations), STEP_TIME (the cumulative step time until that increment) or
+INC_SIZE (the step time for each increment).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="odbdisplayoptions">
+<h3>OdbDisplayOptions<a class="headerlink" href="#odbdisplayoptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbDisplayOptions.OdbDisplayOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbDisplayOptions</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbDisplayOptions.OdbDisplayOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbDisplayOptions object stores the display options associated with an OdbInstance
+object. This object does not have a constructor. Abaqus creates the OdbDisplayOptions
+object when an OdbInstance object is created using the display options associated with
+the current viewport at the time of creation.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import assembly</p></li>
+<li><p>session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions</p></li>
+<li><p>session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions</p></li>
+<li><p>import visualization</p></li>
+<li><p>session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions</p></li>
+<li><p>import part</p></li>
+<li><p>session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions</p></li>
+<li><p>session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions</p></li>
+<li><p>session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbjobtime">
+<h3>OdbJobTime<a class="headerlink" href="#odbjobtime" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbJobTime.OdbJobTime">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbJobTime</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbJobTime.OdbJobTime" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbJobTime object stores the analysis time of a job.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].diagnosticData.jobTime</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="odbnumericalproblemsummary">
+<h3>OdbNumericalProblemSummary<a class="headerlink" href="#odbnumericalproblemsummary" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OdbNumericalProblemSummary.OdbNumericalProblemSummary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbNumericalProblemSummary</span></span><a class="headerlink" href="#abaqus.PlotOptions.OdbNumericalProblemSummary.OdbNumericalProblemSummary" title="Permalink to this definition"></a></dt>
+<dd><p>The OdbNumericalProblemSummary object stores the numerical problem summary of a job.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].diagnosticData.numericalProblemSummary</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="optionarg">
+<h3>OptionArg<a class="headerlink" href="#optionarg" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.OptionArg.OptionArg">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OptionArg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">renderStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'WIREFRAME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visibleEdges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FEATURE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgeColorWireHide</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgeColorFillShade</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgeLineStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgeLineThickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'VERY_THIN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colorCodeOverride</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fillColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translucency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translucencyFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.OptionArg.OptionArg" title="Permalink to this definition"></a></dt>
+<dd><p>The OptionArg object is used to store values and attributes as a temporary object to be
+associated with a viewCutOptions object. The OptionArg object has only a constructor
+command.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.defaultOdbDisplay.viewCutOptions.aboveOptions</p></li>
+<li><p>session.defaultOdbDisplay.viewCutOptions.belowOptions</p></li>
+<li><p>session.defaultOdbDisplay.viewCutOptions.onOptions</p></li>
+<li><p>session.viewports[name].layers[name].odbDisplay.viewCutOptions.aboveOptions</p></li>
+<li><p>session.viewports[name].layers[name].odbDisplay.viewCutOptions.belowOptions</p></li>
+<li><p>session.viewports[name].layers[name].odbDisplay.viewCutOptions.onOptions</p></li>
+<li><p>session.viewports[name].odbDisplay.viewCutOptions.aboveOptions</p></li>
+<li><p>session.viewports[name].odbDisplay.viewCutOptions.belowOptions</p></li>
+<li><p>session.viewports[name].odbDisplay.viewCutOptions.onOptions</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="plystackplotoptions">
+<h3>PlyStackPlotOptions<a class="headerlink" href="#plystackplotoptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.PlyStackPlotOptions.PlyStackPlotOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PlyStackPlotOptions</span></span><a class="headerlink" href="#abaqus.PlotOptions.PlyStackPlotOptions.PlyStackPlotOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The PlyStackPlotOptions object stores values and attributes associated with aViewport
+object. The PlyStackPlotOptions object has no constructor command. Abaqus creates the
+<em>detailPlotOptions.plyStackPlotPlotOptions</em> member whenever a Viewport is created.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>session.viewports[name].detailPlotOptions.plyStackPlotOptions</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.PlyStackPlotOptions.PlyStackPlotOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">renderStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SHADED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showEdges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgeStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgeThickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'VERY_THIN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plyDisplay</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNSYMMETRIC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startLayer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numLayers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evenNumPlyColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oddNumPlyColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showFibers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fiberColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fiberStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fiberThickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'VERY_THIN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fiberSpacing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showReferencePlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referenceSurfaceColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translucency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translucencyFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translucencySort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showReferenceOutline</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referenceOutlineColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referenceOutlineStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referenceOutlineThickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'VERY_THIN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allLabelsFont</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showMaterialNames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">materialNamesColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showOrientationNames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientationNamesColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showStateBlock</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stateBlockColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showPlyNames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plyNamesColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showThicknessLabels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessLabelsColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showIntPoints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intPointsColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sizeX</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sizeY</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sizeZ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.PlyStackPlotOptions.PlyStackPlotOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the PlyStackPlotOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>renderStyle</strong> – A SymbolicConstant specifying how the plies in the viewport are rendered. Possible
+values are WIRE_FRAME, FILLED, and SHADED. The default value is SHADED.</p></li>
+<li><p><strong>showEdges</strong> – A Boolean specifying whether to draw the edges for the plies. The default value is OFF.</p></li>
+<li><p><strong>edgeStyle</strong> – A SymbolicConstant specifying the edge line style. Possible values are SOLID, DASHED,
+DOTTED, and DOT_DASH. The default value is SOLID.</p></li>
+<li><p><strong>edgeThickness</strong> – A SymbolicConstant specifying the edge line thickness. Possible values are VERY_THIN,
+THIN, MEDIUM, and THICK. The default value is VERY_THIN.</p></li>
+<li><p><strong>plyDisplay</strong> – A SymbolicConstant specifying whether to display the plies in an unsymmetric staircase
+fashion or symmetric staircase fashion. Possible values are UNSYMMETRIC and SYMMETRIC.
+The default value is UNSYMMETRIC.</p></li>
+<li><p><strong>startLayer</strong> – An Int specifying the start ply. The default value is 1.</p></li>
+<li><p><strong>numLayers</strong> – An Int specifying the number of plies to show. The default value is 30.</p></li>
+<li><p><strong>evenNumPlyColor</strong> – A String specifying the ply color for the even numbered plies. The numbering is based on
+the displayed plies and not on the actual ply number in the layup. The default value is
+“#A2B3FF”.</p></li>
+<li><p><strong>oddNumPlyColor</strong> – A String specifying the ply color for the odd numbered plies. The numbering is based on
+the displayed plies and not on the actual ply number in the layup. The default value is
+“#ECC9AD”.</p></li>
+<li><p><strong>showFibers</strong> – A Boolean specifying whether to show the fibers. The default value is ON.</p></li>
+<li><p><strong>fiberColor</strong> – A String specifying the fiber color. The default value is “Red”.</p></li>
+<li><p><strong>fiberStyle</strong> – A SymbolicConstant specifying the fiber style. Possible values are SOLID, DASHED,
+DOTTED, and DOT_DASH. The default value is SOLID.</p></li>
+<li><p><strong>fiberThickness</strong> – A SymbolicConstant specifying the fiber thickness. Possible values are VERY_THIN, THIN,
+MEDIUM, and THICK. The default value is VERY_THIN.</p></li>
+<li><p><strong>fiberSpacing</strong> – A Float specifying the spacing between the fibers. The default value is 0.1.</p></li>
+<li><p><strong>showReferencePlane</strong> – A Boolean specifying whether to show the reference surface. The default value is OFF.</p></li>
+<li><p><strong>referenceSurfaceColor</strong> – A String specifying the reference surface color. The default value is “White”.</p></li>
+<li><p><strong>translucency</strong> – A Boolean specifying whether to set translucency. The default value is OFF.</p></li>
+<li><p><strong>translucencyFactor</strong> – A Float specifying the translucency factor when <em>translucency*=ON. Possible values are
+0.0≤≤ *translucencyFactor</em> ≤≤ 1.0. The default value is 0.3.</p></li>
+<li><p><strong>translucencySort</strong> – A Boolean specifying whether to use depth sorting. The default value is OFF.</p></li>
+<li><p><strong>showReferenceOutline</strong> – A Boolean specifying whether to show the reference outline. The default value is OFF.</p></li>
+<li><p><strong>referenceOutlineColor</strong> – A String specifying the reference outline color. The default value is “Red”.</p></li>
+<li><p><strong>referenceOutlineStyle</strong> – A SymbolicConstant specifying the reference outline style. Possible values are SOLID,
+DASHED, DOTTED, and DOT_DASH. The default value is SOLID.</p></li>
+<li><p><strong>referenceOutlineThickness</strong> – A SymbolicConstant specifying the reference outline thickness. Possible values are
+VERY_THIN, THIN, MEDIUM, and THICK. The default value is VERY_THIN.</p></li>
+<li><p><strong>allLabelsFont</strong> – A String specifying the font for all the labels. The default value is
+“-<em>-verdana-medium-r-normal-</em>-<em>-80-</em>-<em>-p-</em>-<em>-</em>” on Windows and
+“-<em>-verdana-medium-r-normal-</em>-<em>-90-</em>-<em>-p-</em>-<em>-</em>” on Linux platforms. The default value is
+an empty string.</p></li>
+<li><p><strong>showMaterialNames</strong> – A Boolean specifying whether to show the material names. The default value is OFF.</p></li>
+<li><p><strong>materialNamesColor</strong> – A String specifying the material names text color. The default value is “Green”.</p></li>
+<li><p><strong>showOrientationNames</strong> – A Boolean specifying whether to show the orientation names or the fiber angles. The
+default value is OFF.</p></li>
+<li><p><strong>orientationNamesColor</strong> – A String specifying the orientation names fiber angles text color. The default value is
+“Orange”.</p></li>
+<li><p><strong>showStateBlock</strong> – A Boolean specifying whether to show the state block. The default value is ON.</p></li>
+<li><p><strong>stateBlockColor</strong> – A String specifying the state block text color. The default value is “White”.</p></li>
+<li><p><strong>showPlyNames</strong> – A Boolean specifying whether to show the ply names. The default value is ON.</p></li>
+<li><p><strong>plyNamesColor</strong> – A String specifying the ply names text color. The default value is “Yellow”.</p></li>
+<li><p><strong>showThicknessLabels</strong> – A Boolean specifying whether to show the thickness labels. The default value is ON.</p></li>
+<li><p><strong>thicknessLabelsColor</strong> – A String specifying the thickness labels text color. The default value is “Red”.</p></li>
+<li><p><strong>showIntPoints</strong> – A Boolean specifying whether to show the through thickness integration points. The
+default value is OFF.</p></li>
+<li><p><strong>intPointsColor</strong> – A String specifying the through thickness integration points color. The default value is
+“Blue”.</p></li>
+<li><p><strong>sizeX</strong> – A Float specifying the size of the ply in the X-direction. The default value is 1.5.</p></li>
+<li><p><strong>sizeY</strong> – A Float specifying the size of the ply in the Y-direction. The default value is 1.0.</p></li>
+<li><p><strong>sizeZ</strong> – A Float specifying the size of the ply in the Z-direction. The default value is 0.8.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="rigidbodyconstraint">
+<h3>RigidBodyConstraint<a class="headerlink" href="#rigidbodyconstraint" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.RigidBodyConstraint.RigidBodyConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RigidBodyConstraint</span></span><a class="headerlink" href="#abaqus.PlotOptions.RigidBodyConstraint.RigidBodyConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>The RigidBodyConstraint object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].rigidbodies[i]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.RigidBodyConstraint.RigidBodyConstraint.constraintData">
+<span class="sig-name descname"><span class="pre">constraintData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.RigidBodyConstraint.RigidBodyConstraint.constraintData" title="Permalink to this definition"></a></dt>
+<dd><p>This method returns constraint data if any are associated with the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>A String Value</strong></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">NONE</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">absence</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">constraint</span> <span class="pre">data.</span> <span class="pre">.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="streamoptions">
+<h3>StreamOptions<a class="headerlink" href="#streamoptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.StreamOptions.StreamOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StreamOptions</span></span><a class="headerlink" href="#abaqus.PlotOptions.StreamOptions.StreamOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The StreamOptions object stores values and attributes associated with a stream plot. The
+StreamOptions object has no constructor command. Abaqus creates a
+<em>defaultOdbDisplay.streamOptions</em> member when you import the Visualization module.
+Abaqus creates a <em>StreamOptions</em> member when it creates the OdbDisplay object, using the
+values from <em>defaultOdbDisplay.streamOptions</em>. Abaqus creates the <em>odbDisplay</em> member
+when a viewport is created, using the values from <em>defaultOdbDisplay</em>.
+StreamOptions objects are accessed in one of two ways:
+- The default stream options. These settings are used as defaults when other
+<em>streamOptions</em> members are created. These settings can be set to customize user
+preferences.
+- The stream options associated with a particular viewport.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.defaultOdbDisplay.streamOptions</p></li>
+<li><p>session.viewports[name].layers[name].odbDisplay.streamOptions</p></li>
+<li><p>session.viewports[name].odbDisplay.streamOptions</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.StreamOptions.StreamOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colorMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uniformColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineThickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showArrow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numArrows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.StreamOptions.StreamOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the StreamOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>colorMethod</strong> – A SymbolicConstant specifying the method for coloring stream lines. Possible values are
+UNIFORM, SPECTRUM, and CONTINUOUS. The default value is UNIFORM.</p></li>
+<li><p><strong>uniformColor</strong> – A String specifying uniform color of the stream lines. The default value is “#FFFF00”.</p></li>
+<li><p><strong>lineThickness</strong> – A Float specifying the stream line thickness. The default value is 6.0.</p></li>
+<li><p><strong>showArrow</strong> – A Boolean specifying whether to show arrows. The default value is OFF.</p></li>
+<li><p><strong>numArrows</strong> – An Int specifying the number of arrows on each stream line. The default value is 10.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="tieconstraint">
+<h3>TieConstraint<a class="headerlink" href="#tieconstraint" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.TieConstraint.TieConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TieConstraint</span></span><a class="headerlink" href="#abaqus.PlotOptions.TieConstraint.TieConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>The TieConstraint object.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.odbData[name].ties[i]</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.TieConstraint.TieConstraint.constraintData">
+<span class="sig-name descname"><span class="pre">constraintData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.TieConstraint.TieConstraint.constraintData" title="Permalink to this definition"></a></dt>
+<dd><p>This method returns constraint data if any are associated with the object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">tuple</span> <span class="pre">containing</span> <span class="pre">coordinates</span></code> of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">nodes</span> <span class="pre">pertaining</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">constraint.</span> <span class="pre">.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="viewcutoptions">
+<h3>ViewCutOptions<a class="headerlink" href="#viewcutoptions" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.ViewCutOptions.ViewCutOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ViewCutOptions</span></span><a class="headerlink" href="#abaqus.PlotOptions.ViewCutOptions.ViewCutOptions" title="Permalink to this definition"></a></dt>
+<dd><p>The ViewCutOptions object stores values and attributes associated with a view cut plot.
+The ViewCutOptions object has no constructor command. Abaqus creates a
+<em>defaultOdbDisplay.viewCutOptions</em> member when you import the Visualization module.
+Abaqus creates an <em>viewCutOptions</em> member when it creates the OdbDisplay object, using
+the values from <em>defaultOdbDisplay.viewCutOptions</em>. Abaqus creates the <em>odbDisplay</em>
+member when a viewport is created, using the values from <em>defaultOdbDisplay</em>.
+ViewCutOptions objects are accessed in one of two ways:
+- The default view cut options. These settings are used as defaults when other
+<em>viewCutOptions</em> members are created. These settings can be set to customize user
+preferences.
+- The view cut options associated with a particular viewport.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>import visualization</p></li>
+<li><p>session.defaultOdbDisplay.viewCutOptions</p></li>
+<li><p>session.viewports[name].layers[name].odbDisplay.viewCutOptions</p></li>
+<li><p>session.viewports[name].odbDisplay.viewCutOptions</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.PlotOptions.ViewCutOptions.ViewCutOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.PlotOptions.ViewCutOptions.ViewCutOptions" title="abaqus.PlotOptions.ViewCutOptions.ViewCutOptions"><span class="pre">abaqus.PlotOptions.ViewCutOptions.ViewCutOptions</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">belowOptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useBelowOptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onOptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useOnOptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aboveOptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useAboveOptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freeBodyCutThru</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CURRENT_DISPLAY_GROUP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freeBodyStepThru</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ACTIVE_CUT_RANGE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numCutFreeBody</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displaySlicing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slicingAtPathNodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freeBodySumOnPath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutFreeBodyMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutFreeBodyMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showHeatFlowRate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summationLoc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CENTROID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">componentResolution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NORMAL_TANGENTIAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csysName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GLOBAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pathName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summationPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.PlotOptions.ViewCutOptions.ViewCutOptions.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the ViewCutOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>options</strong> – A ViewCutOptions object from which values are to be copied. If other arguments are also
+supplied to setValues, they will override the values in <em>options</em>. The default value is
+None.</p></li>
+<li><p><strong>belowOptions</strong> – None or an OptionArg object specifying values to be used for defining the options
+applicable on the model below the cut. The default value is None.</p></li>
+<li><p><strong>useBelowOptions</strong> – A Boolean specifying whether to use the options defined for displaying the model below
+the cut. The default value is OFF.</p></li>
+<li><p><strong>onOptions</strong> – None or an OptionArg object specifying values to be used for defining the options
+applicable on the model on the cut. The default value is None.</p></li>
+<li><p><strong>useOnOptions</strong> – A Boolean specifying whether to use the options defined for displaying the model on the
+cut. The default value is OFF.</p></li>
+<li><p><strong>aboveOptions</strong> – None or an OptionArg object specifying values to be used for defining the options
+applicable on the model above the cut. The default value is None.</p></li>
+<li><p><strong>useAboveOptions</strong> – A Boolean specifying whether to use the options defined for displaying the model above
+the cut. The default value is OFF.</p></li>
+<li><p><strong>freeBodyCutThru</strong> – A SymbolicConstant specifying the domain through which the free body cuts. Possible
+values are CURRENT_DISPLAY_GROUP and WHOLE_MODEL. The default value is
+CURRENT_DISPLAY_GROUP.</p></li>
+<li><p><strong>freeBodyStepThru</strong> – A SymbolicConstant specifying the domain through which the free body steps. Possible
+values are ACTIVE_CUT_RANGE and PREDEFINED_PATH. The default value is ACTIVE_CUT_RANGE.</p></li>
+<li><p><strong>numCutFreeBody</strong> – An Int specifying number of free bodies per view cut. The default value is 1.</p></li>
+<li><p><strong>displaySlicing</strong> – A Boolean specifying whether to display slicing. The default value is OFF.</p></li>
+<li><p><strong>slicingAtPathNodes</strong> – A Boolean specifying whether to slice at path nodes. The default value is OFF.</p></li>
+<li><p><strong>freeBodySumOnPath</strong> – A Boolean specifying whether to put the summation point at the path. The default value
+is ON.</p></li>
+<li><p><strong>cutFreeBodyMin</strong> – A Float specifying free body minimum value. The default value is 0.0.</p></li>
+<li><p><strong>cutFreeBodyMax</strong> – A Float specifying free body maximum value. The default value is 0.0.</p></li>
+<li><p><strong>showHeatFlowRate</strong> – A SymbolicConstant specifying whether to show the heat flow rate when available.
+Possible values are ON and OFF. The default value is ON.</p></li>
+<li><p><strong>summationLoc</strong> – A SymbolicConstant specifying the summation location for the free body cut. Possible
+values are CENTROID and SPECIFY. The default value is CENTROID.</p></li>
+<li><p><strong>componentResolution</strong> – A SymbolicConstant specifying the component resolution choice for the free body cut.
+Possible values are NORMAL_TANGENTIAL and CSYS. The default value is NORMAL_TANGENTIAL.</p></li>
+<li><p><strong>csysName</strong> – The SymbolicConstant GLOBAL or a String specifying the coordinate system name for the
+free body cut’s component resolution. The default value is GLOBAL.</p></li>
+<li><p><strong>pathName</strong> – A String specifying the name of the path along which slicing occurs. The default value
+is an empty string.</p></li>
+<li><p><strong>summationPoint</strong> – A sequence of three Floats specifying the summation point for the free body cut. The
+default value is (0, 0, 0).</p></li>
+<li><p><strong>yAxis</strong> – A sequence of three Floats specifying the Y axis for free body component resolution. The
+default value is (0, 1, 0).</p></li>
+<li><p><strong>Exceptions</strong> – </p></li>
+<li><p><strong>----------</strong> – RangeError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="odb_display.html" class="btn btn-neutral float-left" title="Odb Display" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../session.html" class="btn btn-neutral float-right" title="Session" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

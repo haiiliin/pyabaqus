@@ -109,8 +109,21 @@ class Hyperelastic:
             valid only if *testData*=OFF. 
         type
             A SymbolicConstant specifying the type of strain energy potential. Possible values 
-            are:ARRUDA_BOYCEMARLOWMOONEY_RIVLINNEO_HOOKEOGDENPOLYNOMIALREDUCED_POLYNOMIALUSERVAN_DER_WAALSYEOHUNKNOWNThe 
-            default value is UNKNOWN. 
+            are:
+            
+            - ARRUDA_BOYCE
+            - MARLOW
+            - MOONEY_RIVLIN
+            - NEO_HOOKE
+            - OGDEN
+            - POLYNOMIAL
+            - REDUCED_POLYNOMIAL
+            - USER
+            - VAN_DER_WAALS
+            - YEOH
+            - UNKNOWN
+            
+            The default value is UNKNOWN. 
         moduliTimeScale
             A SymbolicConstant specifying the nature of the time response. Possible values are 
             INSTANTANEOUS and LONG_TERM. The default value is LONG_TERM. 

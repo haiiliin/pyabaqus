@@ -13,7 +13,7 @@ def addClass(name, path, headerLabel='~'):
     return string
 
 
-def addPackage(packagePath, h, hs):
+def addPackage(packagePath, hs):
     string = '\n'
     files = os.listdir(packagePath)
     hs1 = copy.deepcopy(hs)
@@ -23,9 +23,11 @@ def addPackage(packagePath, h, hs):
             continue
         if os.path.isdir('{}\\{}'.format(packagePath, file)):
             h = hs1.popleft()
-            string += addPackage('{}\\{}'.format(packagePath, file), h, hs1)
+            string += '{}\n{}\n\n'.format(file, h * len(file))
+            string += addPackage('{}\\{}'.format(packagePath, file), hs1)
         elif os.path.isfile('{}\\{}'.format(packagePath, file)):
             path = '{}\\{}\\{}'.format(packagePath, file[:-3], file[:-3]).replace('\\', '.')
+            h = hs1.popleft()
             string += addClass(file[:-3], path, h)
     hs = hs1
     return string
@@ -42,9 +44,8 @@ for package in packages:
     text += 'Object features\n---------------\n'
     modules = os.listdir('abaqus\\{}'.format(package))
 
-    headers = deque(['~', '*', '\'', '`', '.', '*', '+'])
-    header = headers.popleft()
-    text += addPackage('abaqus\\{}'.format(package), header, headers)
+    headers = deque(['~', '*', '\'', '`', ':', '#', '+'])
+    text += addPackage('abaqus\\{}'.format(package), headers)
 
     rstPath = 'docs\\rsts\\{}.rst'.format(package.lower())
     with open(rstPath, 'w+') as f:

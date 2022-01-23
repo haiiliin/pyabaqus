@@ -2,111 +2,12 @@
 Material
 ========
 
-The Material commands are used to define the materials in a model.
-
-
-Attributes
-----------
-
-- **mdb.models[name].materials[name].acousticMedium**: An :py:class:`abaqus.Material.Others.Acoustic.AcousticMedium.AcousticMedium` object.
-- **mdb.models[name].materials[name].brittleCracking**: A :py:class:`abaqus.Material.Plastic.Concrete.BrittleCracking.BrittleCracking` object.
-- **mdb.models[name].materials[name].capPlasticity**: A :py:class:`abaqus.Material.Plastic.DruckerPrager.ModifiedCap.CapPlasticity.CapPlasticity` object.
-- **mdb.models[name].materials[name].castIronPlasticity**: A :py:class:`abaqus.Material.Plastic.Metal.CastIron.CastIronPlasticity.CastIronPlasticity` object.
-- **mdb.models[name].materials[name].clayPlasticity**: A :py:class:`abaqus.Material.Plastic.CriticalStateClay.ClayPlasticity.ClayPlasticity` object.
-- **mdb.models[name].materials[name].concrete**: A :py:class:`abaqus.Material.Plastic.Concrete.Concrete.Concrete` object.
-- **mdb.models[name].materials[name].concreteDamagedPlasticity**: A :py:class:`abaqus.Material.Plastic.Concrete.ConcreteDamagedPlasticity.ConcreteDamagedPlasticity` object.
-- **mdb.models[name].materials[name].conductivity**: A :py:class:`abaqus.Material.Others.HeatTransfer.Conductivity.Conductivity` object.
-- **mdb.models[name].materials[name].creep**: A :py:class:`abaqus.Material.Plastic.Creep.Creep.Creep` object.
-- **mdb.models[name].materials[name].crushableFoam**: A :py:class:`abaqus.Material.Plastic.CrushableFoam.CrushableFoam.CrushableFoam` object.
-- **mdb.models[name].materials[name].ductileDamageInitiation**: A :py:class:`abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
-- **mdb.models[name].materials[name].fldDamageInitiation**: A :py:class:`abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
-- **mdb.models[name].materials[name].flsdDamageInitiation**: A :py:class:`abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
-- **mdb.models[name].materials[name].johnsonCookDamageInitiation**: A :py:class:`abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
-- **mdb.models[name].materials[name].maxeDamageInitiation**: A :py:class:`abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
-- **mdb.models[name].materials[name].maxsDamageInitiation**: A :py:class:`abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
-- **mdb.models[name].materials[name].maxpeDamageInitiation**: A :py:class:`abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
-- **mdb.models[name].materials[name].maxpsDamageInitiation**: A :py:class:`abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
-- **mdb.models[name].materials[name].mkDamageInitiation**: A :py:class:`abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
-- **mdb.models[name].materials[name].msfldDamageInitiation**: A :py:class:`abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
-- **mdb.models[name].materials[name].quadeDamageInitiation**: A :py:class:`abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
-- **mdb.models[name].materials[name].quadsDamageInitiation**: A :py:class:`abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
-- **mdb.models[name].materials[name].shearDamageInitiation**: A :py:class:`abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
-- **mdb.models[name].materials[name].hashinDamageInitiation**: A :py:class:`abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
-- **mdb.models[name].materials[name].damping**: A :py:class:`abaqus.Material.Others.Mechanical.Damping.Damping` object.
-- **mdb.models[name].materials[name].deformationPlasticity**: A :py:class:`abaqus.Material.Plastic.Metal.Deformation.DeformationPlasticity.DeformationPlasticity` object.
-- **mdb.models[name].materials[name].density**: A :py:class:`abaqus.Material.Density.Density.Density` object.
-- **mdb.models[name].materials[name].depvar**: A :py:class:`abaqus.Material.Others.User.Depvar.Depvar` object.
-- **mdb.models[name].materials[name].dielectric**: A :py:class:`abaqus.Material.Others.Electromagnetic.Dielectric.Dielectric` object.
-- **mdb.models[name].materials[name].diffusivity**: A :py:class:`abaqus.Material.Others.MassDiffusion.Diffusivity.Diffusivity` object.
-- **mdb.models[name].materials[name].druckerPrager**: A :py:class:`abaqus.Material.Plastic.DruckerPrager.Extended.DruckerPrager.DruckerPrager` object.
-- **mdb.models[name].materials[name].elastic**: An :py:class:`abaqus.Material.Elastic.Linear.Elastic.Elastic` object.
-- **mdb.models[name].materials[name].electricalConductivity**: An :py:class:`abaqus.Material.Others.Electromagnetic.ElectricalConductivity.ElectricalConductivity` object.
-- **mdb.models[name].materials[name].eos**: An :py:class:`abaqus.Material.Eos.Eos.Eos` object.
-- **mdb.models[name].materials[name].expansion**: An :py:class:`abaqus.Material.Others.Mechanical.Expansion.Expansion` object.
-- **mdb.models[name].materials[name].fluidLeakoff**: A :py:class:`abaqus.Material.Others.PoreFluidFlow.FluidLeakoff.FluidLeakoff` object.
-- **mdb.models[name].materials[name].gapFlow**: A :py:class:`abaqus.Material.Gap.GapFlow.GapFlow` object.
-- **mdb.models[name].materials[name].gasketThicknessBehavior**: A :py:class:`abaqus.Material.Gasket.GasketThicknessBehavior.GasketThicknessBehavior` object.
-- **mdb.models[name].materials[name].gasketTransverseShearElastic**: A :py:class:`abaqus.Material.Gasket.GasketTransverseShearElastic.GasketTransverseShearElastic` object.
-- **mdb.models[name].materials[name].gasketMembraneElastic**: A :py:class:`abaqus.Material.Gasket.GasketMembraneElastic.GasketMembraneElastic` object.
-- **mdb.models[name].materials[name].gel**: A :py:class:`abaqus.Material.Others.PoreFluidFlow.Gel.Gel` object.
-- **mdb.models[name].materials[name].heatGeneration**: A :py:class:`abaqus.Material.Others.HeatTransfer.HeatGeneration.HeatGeneration` object.
-- **mdb.models[name].materials[name].hyperelastic**: A :py:class:`abaqus.Material.Elastic.HyperElastic.Hyperelastic.Hyperelastic` object.
-- **mdb.models[name].materials[name].hyperfoam**: A :py:class:`abaqus.Material.Elastic.HyperElastic.HyperFoam.Hyperfoam.Hyperfoam` object.
-- **mdb.models[name].materials[name].hypoelastic**: A :py:class:`abaqus.Material.Elastic.HypoElastic.Hypoelastic.Hypoelastic` object.
-- **mdb.models[name].materials[name].inelasticHeatFraction**: An :py:class:`abaqus.Material.Others.HeatTransfer.InelasticHeatFraction.InelasticHeatFraction` object.
-- **mdb.models[name].materials[name].jouleHeatFraction**: A :py:class:`abaqus.Material.Others.HeatTransfer.JouleHeatFraction.JouleHeatFraction` object.
-- **mdb.models[name].materials[name].latentHeat**: A :py:class:`abaqus.Material.Others.HeatTransfer.LatentHeat.LatentHeat` object.
-- **mdb.models[name].materials[name].lowDensityFoam**: A :py:class:`abaqus.Material.Elastic.LowDensityFoam.LowDensityFoam.LowDensityFoam` object.
-- **mdb.models[name].materials[name].magneticPermeability**: A :py:class:`abaqus.Material.Others.Electromagnetic.MagneticPermeability.MagneticPermeability` object.
-- **mdb.models[name].materials[name].mohrCoulombPlasticity**: A :py:class:`abaqus.Material.Plastic.MohrCoulomb.MohrCoulombPlasticity.MohrCoulombPlasticity` object.
-- **mdb.models[name].materials[name].moistureSwelling**: A :py:class:`abaqus.Material.Others.PoreFluidFlow.MoistureSwelling.MoistureSwelling.MoistureSwelling` object.
-- **mdb.models[name].materials[name].mullinsEffect**: A :py:class:`abaqus.Material.TestData.MullinsEffect.MullinsEffect` object.
-- **mdb.models[name].materials[name].permeability**: A :py:class:`abaqus.Material.Others.PoreFluidFlow.Permeability.Permeability.Permeability` object.
-- **mdb.models[name].materials[name].piezoelectric**: A :py:class:`abaqus.Material.Others.Electromagnetic.Piezoelectric.Piezoelectric` object.
-- **mdb.models[name].materials[name].plastic**: A :py:class:`abaqus.Material.Plastic.Plastic.Plastic` object.
-- **mdb.models[name].materials[name].poreFluidExpansion**: A :py:class:`abaqus.Material.Others.Mechanical.PoreFluidExpansion.PoreFluidExpansion` object.
-- **mdb.models[name].materials[name].porousBulkModuli**: A :py:class:`abaqus.Material.Others.PoreFluidFlow.PorousBulkModuli.PorousBulkModuli` object.
-- **mdb.models[name].materials[name].porousElastic**: A :py:class:`abaqus.Material.Elastic.Porous.PorousElastic.PorousElastic` object.
-- **mdb.models[name].materials[name].porousMetalPlasticity**: A :py:class:`abaqus.Material.Plastic.Metal.Porous.PorousMetalPlasticity.PorousMetalPlasticity` object.
-- **mdb.models[name].materials[name].regularization**: A :py:class:`abaqus.Material.Regularization.Regularization` object.
-- **mdb.models[name].materials[name].solubility**: A :py:class:`abaqus.Material.Others.MassDiffusion.Solubility.Solubility` object.
-- **mdb.models[name].materials[name].sorption**: A :py:class:`abaqus.Material.Others.PoreFluidFlow.Sorption.Sorption` object.
-- **mdb.models[name].materials[name].specificHeat**: A :py:class:`abaqus.Material.Others.HeatTransfer.SpecificHeat.SpecificHeat` object.
-- **mdb.models[name].materials[name].swelling**: A :py:class:`abaqus.Material.Plastic.Swelling.Swelling.Swelling` object.
-- **mdb.models[name].materials[name].userDefinedField**: A :py:class:`abaqus.Material.Others.User.UserDefinedField.UserDefinedField` object.
-- **mdb.models[name].materials[name].userMaterial**: A :py:class:`abaqus.Material.Others.User.UserMaterial.UserMaterial` object.
-- **mdb.models[name].materials[name].userOutputVariables**: A :py:class:`abaqus.Material.Others.User.UserOutputVariables.UserOutputVariables` object.
-- **mdb.models[name].materials[name].viscoelastic**: A :py:class:`abaqus.Material.Elastic.HyperElastic.ViscoElastic.Viscoelastic.Viscoelastic` object.
-- **mdb.models[name].materials[name].viscosity**: A :py:class:`abaqus.Material.Others.Mechanical.Viscosity.Viscosity.Viscosity` object.
-- **mdb.models[name].materials[name].viscous**: A :py:class:`abaqus.Material.Plastic.Metal.TwoLayerViscoPlasticity.Viscous.Viscous` object.
-
-
-
-Create materials
------------------
-
-In Mdb
-~~~~~~
-
-.. autoclass:: abaqus.Material.MaterialModel.MaterialModel
-    :members:
-
-In Odb
-~~~~~~
-
-.. autoclass:: abaqus.Material.MaterialOdb.MaterialOdb
-    :members:
-
-
-Assign properties to the material
----------------------------------
-
-.. autoclass:: abaqus.Material.Material.Material
-    :members:
-
-
 Object features
 ---------------
+
+Density
+~~~~~~~
+
 
 Density
 *******
@@ -114,6 +15,12 @@ Density
 .. autoclass:: abaqus.Material.Density.Density.Density
     :members:
 
+Elastic
+~~~~~~~
+
+
+HyperElastic
+************
 
 
 Hyperelastic
@@ -122,12 +29,18 @@ Hyperelastic
 .. autoclass:: abaqus.Material.Elastic.HyperElastic.Hyperelastic.Hyperelastic
     :members:
 
+HyperFoam
+'''''''''
+
 
 Hyperfoam
 `````````
 
 .. autoclass:: abaqus.Material.Elastic.HyperElastic.HyperFoam.Hyperfoam.Hyperfoam
     :members:
+
+ViscoElastic
+''''''''''''
 
 
 CombinedTestData
@@ -148,12 +61,18 @@ Viscoelastic
 .. autoclass:: abaqus.Material.Elastic.HyperElastic.ViscoElastic.Viscoelastic.Viscoelastic
     :members:
 
+HypoElastic
+***********
+
 
 Hypoelastic
 '''''''''''
 
 .. autoclass:: abaqus.Material.Elastic.HypoElastic.Hypoelastic.Hypoelastic
     :members:
+
+Linear
+******
 
 
 Elastic
@@ -174,12 +93,18 @@ FailStress
 .. autoclass:: abaqus.Material.Elastic.Linear.FailStress.FailStress
     :members:
 
+LowDensityFoam
+**************
+
 
 LowDensityFoam
 ''''''''''''''
 
 .. autoclass:: abaqus.Material.Elastic.LowDensityFoam.LowDensityFoam.LowDensityFoam
     :members:
+
+Porous
+******
 
 
 PorousElastic
@@ -188,12 +113,18 @@ PorousElastic
 .. autoclass:: abaqus.Material.Elastic.Porous.PorousElastic.PorousElastic
     :members:
 
+SuperElastic
+************
+
 
 SuperElasticity
 '''''''''''''''
 
 .. autoclass:: abaqus.Material.Elastic.SuperElastic.SuperElasticity.SuperElasticity
     :members:
+
+Eos
+~~~
 
 
 DetonationPoint
@@ -215,10 +146,13 @@ EosCompaction
     :members:
 
 evaluateMaterial
-****************
+~~~~~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Material.evaluateMaterial.evaluateMaterial
     :members:
+
+Gap
+~~~
 
 
 GapConductance
@@ -244,6 +178,9 @@ GapRadiation
 
 .. autoclass:: abaqus.Material.Gap.GapRadiation.GapRadiation
     :members:
+
+Gasket
+~~~~~~
 
 
 ContactArea
@@ -271,28 +208,31 @@ GasketTransverseShearElastic
     :members:
 
 Material
-********
+~~~~~~~~
 
 .. autoclass:: abaqus.Material.Material.Material
     :members:
 
 MaterialBase
-************
+~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Material.MaterialBase.MaterialBase
     :members:
 
 MaterialModel
-*************
+~~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Material.MaterialModel.MaterialModel
     :members:
 
 MaterialOdb
-***********
+~~~~~~~~~~~
 
 .. autoclass:: abaqus.Material.MaterialOdb.MaterialOdb
     :members:
+
+Multiscale
+~~~~~~~~~~
 
 
 MeanFieldHomogenization
@@ -319,6 +259,12 @@ MeanFieldVoid
 .. autoclass:: abaqus.Material.Multiscale.MeanFieldVoid.MeanFieldVoid
     :members:
 
+Others
+~~~~~~
+
+
+Acoustic
+********
 
 
 AcousticMedium
@@ -326,6 +272,9 @@ AcousticMedium
 
 .. autoclass:: abaqus.Material.Others.Acoustic.AcousticMedium.AcousticMedium
     :members:
+
+Electromagnetic
+***************
 
 
 Dielectric
@@ -351,6 +300,9 @@ Piezoelectric
 
 .. autoclass:: abaqus.Material.Others.Electromagnetic.Piezoelectric.Piezoelectric
     :members:
+
+HeatTransfer
+************
 
 
 Conductivity
@@ -389,6 +341,12 @@ SpecificHeat
 .. autoclass:: abaqus.Material.Others.HeatTransfer.SpecificHeat.SpecificHeat
     :members:
 
+Hydrodynamic
+************
+
+
+MassDiffusion
+*************
 
 
 Diffusivity
@@ -415,6 +373,9 @@ SoretEffect
 .. autoclass:: abaqus.Material.Others.MassDiffusion.SoretEffect.SoretEffect
     :members:
 
+Mechanical
+**********
+
 
 Damping
 '''''''
@@ -434,6 +395,9 @@ PoreFluidExpansion
 .. autoclass:: abaqus.Material.Others.Mechanical.PoreFluidExpansion.PoreFluidExpansion
     :members:
 
+Viscosity
+'''''''''
+
 
 Trs
 ```
@@ -446,6 +410,9 @@ Viscosity
 
 .. autoclass:: abaqus.Material.Others.Mechanical.Viscosity.Viscosity.Viscosity
     :members:
+
+PoreFluidFlow
+*************
 
 
 FluidLeakoff
@@ -460,12 +427,18 @@ Gel
 .. autoclass:: abaqus.Material.Others.PoreFluidFlow.Gel.Gel
     :members:
 
+MoistureSwelling
+''''''''''''''''
+
 
 MoistureSwelling
 ````````````````
 
 .. autoclass:: abaqus.Material.Others.PoreFluidFlow.MoistureSwelling.MoistureSwelling.MoistureSwelling
     :members:
+
+Permeability
+''''''''''''
 
 
 Permeability
@@ -487,16 +460,19 @@ VelocityDependence
     :members:
 
 PorousBulkModuli
-````````````````
+''''''''''''''''
 
 .. autoclass:: abaqus.Material.Others.PoreFluidFlow.PorousBulkModuli.PorousBulkModuli
     :members:
 
 Sorption
-````````
+''''''''
 
 .. autoclass:: abaqus.Material.Others.PoreFluidFlow.Sorption.Sorption
     :members:
+
+User
+****
 
 
 Depvar
@@ -523,6 +499,12 @@ UserOutputVariables
 .. autoclass:: abaqus.Material.Others.User.UserOutputVariables.UserOutputVariables
     :members:
 
+Plastic
+~~~~~~~
+
+
+Concrete
+********
 
 
 BrittleCracking
@@ -597,12 +579,18 @@ TensionStiffening
 .. autoclass:: abaqus.Material.Plastic.Concrete.TensionStiffening.TensionStiffening
     :members:
 
+Creep
+*****
+
 
 Creep
 '''''
 
 .. autoclass:: abaqus.Material.Plastic.Creep.Creep.Creep
     :members:
+
+CriticalStateClay
+*****************
 
 
 ClayHardening
@@ -617,6 +605,9 @@ ClayPlasticity
 .. autoclass:: abaqus.Material.Plastic.CriticalStateClay.ClayPlasticity.ClayPlasticity
     :members:
 
+CrushableFoam
+*************
+
 
 CrushableFoam
 '''''''''''''
@@ -630,6 +621,12 @@ CrushableFoamHardening
 .. autoclass:: abaqus.Material.Plastic.CrushableFoam.CrushableFoamHardening.CrushableFoamHardening
     :members:
 
+DruckerPrager
+*************
+
+
+Extended
+''''''''
 
 
 DruckerPrager
@@ -656,6 +653,9 @@ TriaxialTestData
 .. autoclass:: abaqus.Material.Plastic.DruckerPrager.Extended.TriaxialTestData.TriaxialTestData
     :members:
 
+ModifiedCap
+'''''''''''
+
 
 CapCreepCohesion
 ````````````````
@@ -681,6 +681,12 @@ CapPlasticity
 .. autoclass:: abaqus.Material.Plastic.DruckerPrager.ModifiedCap.CapPlasticity.CapPlasticity
     :members:
 
+Metal
+*****
+
+
+Annealing
+'''''''''
 
 
 AnnealTemperature
@@ -688,6 +694,9 @@ AnnealTemperature
 
 .. autoclass:: abaqus.Material.Plastic.Metal.Annealing.AnnealTemperature.AnnealTemperature
     :members:
+
+CastIron
+''''''''
 
 
 CastIronCompressionHardening
@@ -708,6 +717,9 @@ CastIronTensionHardening
 .. autoclass:: abaqus.Material.Plastic.Metal.CastIron.CastIronTensionHardening.CastIronTensionHardening
     :members:
 
+Cyclic
+''''''
+
 
 CycledPlastic
 `````````````
@@ -721,6 +733,9 @@ CyclicHardening
 .. autoclass:: abaqus.Material.Plastic.Metal.Cyclic.CyclicHardening.CyclicHardening
     :members:
 
+Deformation
+'''''''''''
+
 
 DeformationPlasticity
 `````````````````````
@@ -728,12 +743,18 @@ DeformationPlasticity
 .. autoclass:: abaqus.Material.Plastic.Metal.Deformation.DeformationPlasticity.DeformationPlasticity
     :members:
 
+ORNL
+''''
+
 
 Ornl
 ````
 
 .. autoclass:: abaqus.Material.Plastic.Metal.ORNL.Ornl.Ornl
     :members:
+
+Porous
+''''''
 
 
 PorousFailureCriteria
@@ -754,6 +775,9 @@ VoidNucleation
 .. autoclass:: abaqus.Material.Plastic.Metal.Porous.VoidNucleation.VoidNucleation
     :members:
 
+RateDependent
+'''''''''''''
+
 
 RateDependent
 `````````````
@@ -761,12 +785,18 @@ RateDependent
 .. autoclass:: abaqus.Material.Plastic.Metal.RateDependent.RateDependent.RateDependent
     :members:
 
+TwoLayerViscoPlasticity
+'''''''''''''''''''''''
+
 
 Viscous
 ```````
 
 .. autoclass:: abaqus.Material.Plastic.Metal.TwoLayerViscoPlasticity.Viscous.Viscous
     :members:
+
+MohrCoulomb
+***********
 
 
 MohrCoulombHardening
@@ -788,16 +818,19 @@ TensionCutOff
     :members:
 
 Plastic
-'''''''
+*******
 
 .. autoclass:: abaqus.Material.Plastic.Plastic.Plastic
     :members:
 
 Potential
-'''''''''
+*********
 
 .. autoclass:: abaqus.Material.Plastic.Potential.Potential
     :members:
+
+SuperElastic
+************
 
 
 SuperElasticHardening
@@ -812,6 +845,9 @@ SuperElasticHardeningModifications
 .. autoclass:: abaqus.Material.Plastic.SuperElastic.SuperElasticHardeningModifications.SuperElasticHardeningModifications
     :members:
 
+Swelling
+********
+
 
 Swelling
 ''''''''
@@ -820,10 +856,13 @@ Swelling
     :members:
 
 TensileFailure
-''''''''''''''
+**************
 
 .. autoclass:: abaqus.Material.Plastic.TensileFailure.TensileFailure
     :members:
+
+ProgressiveDamageFailure
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 DamageEvolution
@@ -851,16 +890,19 @@ DamageStabilizationCohesive
     :members:
 
 Ratios
-******
+~~~~~~
 
 .. autoclass:: abaqus.Material.Ratios.Ratios
     :members:
 
 Regularization
-**************
+~~~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Material.Regularization.Regularization
     :members:
+
+TestData
+~~~~~~~~
 
 
 BiaxialTestData
@@ -922,3 +964,4 @@ VolumetricTestData
 
 .. autoclass:: abaqus.Material.TestData.VolumetricTestData.VolumetricTestData
     :members:
+
