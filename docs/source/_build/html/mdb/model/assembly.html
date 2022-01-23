@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Assembly &mdash; pyabaqus 1.0.8 documentation</title>
+  <title>Assembly &mdash; pyabaqus 1.0.9 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -322,6 +322,38 @@ created.</p>
 <li><p>mdb.models[name].rootAssembly</p></li>
 </ul>
 </div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Assembly.AssemblyBase.AssemblyBase.Instance">
+<span class="sig-name descname"><span class="pre">Instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">part</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="part.html#abaqus.Part.Part.Part" title="abaqus.Part.Part.Part"><span class="pre">abaqus.Part.Part.Part</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoOffset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.PartInstance.PartInstance" title="abaqus.Assembly.PartInstance.PartInstance"><span class="pre">abaqus.Assembly.PartInstance.PartInstance</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.AssemblyBase.AssemblyBase.Instance" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#id0" title="abaqus.Assembly.AssemblyModel.AssemblyModel"><span class="pre">abaqus.Assembly.AssemblyModel.AssemblyModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoOffset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.ModelInstance.ModelInstance" title="abaqus.Assembly.ModelInstance.ModelInstance"><span class="pre">abaqus.Assembly.ModelInstance.ModelInstance</span></a></span></span></dt>
+<dd><p>This method creates a PartInstance object and puts it into the instances repository.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mdb.models[name].rootAssembly.Instance</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – A String specifying the repository key. The name must be a valid Abaqus object name.</p></li>
+<li><p><strong>part</strong> – A Part object to be instanced. If the part does not exist, no PartInstance object is
+created.</p></li>
+<li><p><strong>autoOffset</strong> – A Boolean specifying whether to apply an auto offset to the new part instance that will
+offset it from existing part instances. The default value is OFF.</p></li>
+<li><p><strong>dependent</strong> – A Boolean specifying whether the part instance is dependent or independent. If
+<a href="#id7"><span class="problematic" id="id8">*</span></a>dependent*=OFF, the part instance is independent. The default value is OFF.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">A</span> <span class="pre">PartInstance</span> <span class="pre">object..</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.AssemblyBase.AssemblyBase.backup">
 <span class="sig-name descname"><span class="pre">backup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.AssemblyBase.AssemblyBase.backup" title="Permalink to this definition"></a></dt>
@@ -794,7 +826,7 @@ appear on the sketch as reference geometry.</p>
 <li><p><strong>sketch</strong> – The ConstrainedSketch object on which the edges, vertices, and datum points are
 projected.</p></li>
 <li><p><strong>filter</strong> – A SymbolicConstant specifying how to limit the amount of projection. Possible values are
-ALL_EDGES and COPLANAR_EDGES. If <a href="#id7"><span class="problematic" id="id8">*</span></a>filter*=COPLANAR_EDGES, edges that are coplanar to the
+ALL_EDGES and COPLANAR_EDGES. If <a href="#id9"><span class="problematic" id="id10">*</span></a>filter*=COPLANAR_EDGES, edges that are coplanar to the
 sketching plane are the only candidates for projection. The default value is ALL_EDGES.</p></li>
 <li><p><strong>upToFeature</strong> – A Feature object specifying a marker in the feature-based history of the part.
 Abaqus/CAE projects onto the sketch only the part entities that were created before the
@@ -1187,9 +1219,9 @@ layers of elements that propagate out normal to the surface boundary.</p>
 <li><p><strong>meshType</strong> – A Symbolic Constant specifying the type of mesh to be generated. Possible values are
 SOLID or SHELL.</p></li>
 <li><p><strong>totalThickness</strong> – A Float specifying the total thickness of the solid layers. This argument applies only
-when <a href="#id9"><span class="problematic" id="id10">*</span></a>meshType*=SOLID.</p></li>
+when <a href="#id11"><span class="problematic" id="id12">*</span></a>meshType*=SOLID.</p></li>
 <li><p><strong>distanceBetweenLayers</strong> – A Float specifying the distance between shell layers. This argument applies only when
-<a href="#id11"><span class="problematic" id="id12">*</span></a>meshType*=SHELL.</p></li>
+<a href="#id13"><span class="problematic" id="id14">*</span></a>meshType*=SHELL.</p></li>
 <li><p><strong>numLayers</strong> – An Int specifying the number of element layers to be generated.</p></li>
 <li><p><strong>offsetDirection</strong> – A Symbolic Constant specifying the direction of the offset. This argument is required
 only when the given region relates to a shell mesh. Possible values are OUTWARD, INWARD,
@@ -1198,7 +1230,7 @@ and BOTH. The default value is OUTWARD.</p></li>
 <li><p><strong>shareNodes</strong> – Boolean specifying whether the first layer of nodes should be shared with nodes on the
 base surface. The default value is False.</p></li>
 <li><p><strong>deleteBaseElements</strong> – A Boolean specifying whether to delete the shell elements after the offset layers are
-generated. The default value is False. This argument applies only when <a href="#id13"><span class="problematic" id="id14">*</span></a>meshType*=SHELL.</p></li>
+generated. The default value is False. This argument applies only when <a href="#id15"><span class="problematic" id="id16">*</span></a>meshType*=SHELL.</p></li>
 <li><p><strong>constantThicknessCorners</strong> – A Boolean specifying whether to use element-based thickness or nodal-based thickness.
 The default value is False.</p></li>
 <li><p><strong>extendElementSets</strong> – A Boolean specifying whether existing element sets that include base elements will be
@@ -1622,46 +1654,46 @@ are:
 - SMALLEST_ELEM_LOCATION
 - CONSTRAINT
 The return value is dependent on the <em>attribute</em> argument.
-- If <a href="#id15"><span class="problematic" id="id16">*</span></a>attribute*=EDGE_SEEDING_METHOD, the return value is a SymbolicConstant specifying
+- If <a href="#id17"><span class="problematic" id="id18">*</span></a>attribute*=EDGE_SEEDING_METHOD, the return value is a SymbolicConstant specifying
 the edge seeding method used to create the seeds along the edge. Possible values are:
 - UNIFORM_BY_NUMBER
 - UNIFORM_BY_SIZE
 - CURVATURE_BASED_BY_SIZE
 - BIASED
 - NONE
-- If <a href="#id17"><span class="problematic" id="id18">*</span></a>attribute*=BIAS_METHOD, the return value is a SymbolicConstant specifying the bias
+- If <a href="#id19"><span class="problematic" id="id20">*</span></a>attribute*=BIAS_METHOD, the return value is a SymbolicConstant specifying the bias
 type used to create the seeds along the edge. Possible values are:
 - SINGLE
 - DOUBLE
 - NONE
-- If <a href="#id19"><span class="problematic" id="id20">*</span></a>attribute*=NUMBER, the return value is an Int specifying the number of element
+- If <a href="#id21"><span class="problematic" id="id22">*</span></a>attribute*=NUMBER, the return value is an Int specifying the number of element
 seeds along the edge.
-- If <a href="#id21"><span class="problematic" id="id22">*</span></a>attribute*=AVERAGE_SIZE, the return value is a Float specifying the average
+- If <a href="#id23"><span class="problematic" id="id24">*</span></a>attribute*=AVERAGE_SIZE, the return value is a Float specifying the average
 element size along the edge.
-- If <a href="#id23"><span class="problematic" id="id24">*</span></a>attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation
+- If <a href="#id25"><span class="problematic" id="id26">*</span></a>attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation
 factor h/Lh/L, where hh is the chordal deviation and LL is the element length. If edge
 seeds are not defined, the return value is zero.
-- If <a href="#id25"><span class="problematic" id="id26">*</span></a>attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the
+- If <a href="#id27"><span class="problematic" id="id28">*</span></a>attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the
 smallest allowable element as a fraction of the specified global element size. If edge
 seeds are not defined, the return value is zero.
-- If <a href="#id27"><span class="problematic" id="id28">*</span></a>attribute*=BIAS_RATIO, the return value is a Float specifying the length ratio of
+- If <a href="#id29"><span class="problematic" id="id30">*</span></a>attribute*=BIAS_RATIO, the return value is a Float specifying the length ratio of
 the largest element to the smallest element.
-- If <a href="#id29"><span class="problematic" id="id30">*</span></a>attribute*=BIAS_MIN_SIZE, the return value is a Float specifying the length of the
+- If <a href="#id31"><span class="problematic" id="id32">*</span></a>attribute*=BIAS_MIN_SIZE, the return value is a Float specifying the length of the
 largest element; only applicable if the EDGE_SEEDING_METHOD is BIASED and seeds were
 specified by minimum and maximum sizes.
-- If <a href="#id31"><span class="problematic" id="id32">*</span></a>attribute*=BIAS_MAX_SIZE, the return value is a Float specifying the length of the
+- If <a href="#id33"><span class="problematic" id="id34">*</span></a>attribute*=BIAS_MAX_SIZE, the return value is a Float specifying the length of the
 largest element; only applicable if the EDGE_SEEDING_METHOD is BIASED and seeds were
 specified by minimum and maximum sizes.
-- If <a href="#id33"><span class="problematic" id="id34">*</span></a>attribute*=VERTEX_ADJ_TO_SMALLEST_ELEM, the return value is an Int specifying the
+- If <a href="#id35"><span class="problematic" id="id36">*</span></a>attribute*=VERTEX_ADJ_TO_SMALLEST_ELEM, the return value is an Int specifying the
 ID of the vertex next to the smallest element; only applicable if the
 EDGE_SEEDING_METHOD is BIASED.
-- If <a href="#id35"><span class="problematic" id="id36">*</span></a>attribute*=SMALLEST_ELEM_LOCATION, the return value is a SymbolicConstant
+- If <a href="#id37"><span class="problematic" id="id38">*</span></a>attribute*=SMALLEST_ELEM_LOCATION, the return value is a SymbolicConstant
 specifying the location of smallest elements for double bias seeds; only applicable if
 the EDGE_SEEDING_METHOD is BIASED and BIAS_METHOD is DOUBLE. Possible values are:
 - SMALLEST_ELEM_AT_CENTER
 - SMALLEST_ELEM_AT_ENDS
 - NONE
-- If <a href="#id37"><span class="problematic" id="id38">*</span></a>attribute*=CONSTRAINT, the return value is a SymbolicConstant specifying how close
+- If <a href="#id39"><span class="problematic" id="id40">*</span></a>attribute*=CONSTRAINT, the return value is a SymbolicConstant specifying how close
 the seeds must be matched by the mesh. Possible values are:
 - FREE
 - FINER
@@ -1741,7 +1773,7 @@ elements.</p>
 - ALGORITHM
 - MIN_TRANSITION
 The return value is dependent on the <em>attribute</em> argument.
-- If <a href="#id39"><span class="problematic" id="id40">*</span></a>attribute*=ELEM_SHAPE, the return value is a SymbolicConstant specifying the
+- If <a href="#id41"><span class="problematic" id="id42">*</span></a>attribute*=ELEM_SHAPE, the return value is a SymbolicConstant specifying the
 element shape used during meshing. Possible values are:
 - LINE
 - QUAD
@@ -1751,7 +1783,7 @@ element shape used during meshing. Possible values are:
 - TET
 - WEDGE
 - HEX_DOMINATED
-- If <a href="#id41"><span class="problematic" id="id42">*</span></a>attribute*=TECHNIQUE, the return value is a SymbolicConstant specifying the
+- If <a href="#id43"><span class="problematic" id="id44">*</span></a>attribute*=TECHNIQUE, the return value is a SymbolicConstant specifying the
 meshing technique to be used during meshing. Possible values are:
 - FREE
 - STRUCTURED
@@ -1759,7 +1791,7 @@ meshing technique to be used during meshing. Possible values are:
 - UNMESHABLE
 Where UNMESHABLE indicates that no meshing technique is applicable with the currently
 assigned element shape.
-- If <a href="#id43"><span class="problematic" id="id44">*</span></a>attribute*=ALGORITHM, the return value is a SymbolicConstant specifying the
+- If <a href="#id45"><span class="problematic" id="id46">*</span></a>attribute*=ALGORITHM, the return value is a SymbolicConstant specifying the
 meshing algorithm to be used during meshing. Possible values are:
 - MEDIAL_AXIS
 - ADVANCING_FRONT
@@ -1767,10 +1799,10 @@ meshing algorithm to be used during meshing. Possible values are:
 - NON_DEFAULT
 - NONE
 Where NONE indicates that no algorithm is applicable.
-- If <a href="#id45"><span class="problematic" id="id46">*</span></a>attribute*=MIN_TRANSITION, the return value is a Boolean indicating whether
+- If <a href="#id47"><span class="problematic" id="id48">*</span></a>attribute*=MIN_TRANSITION, the return value is a Boolean indicating whether
 minimum transition will be used during meshing. This option is applicable only to the
 following:
-- Free quadrilateral meshing or sweep hexahedral meshing with <a href="#id47"><span class="problematic" id="id48">*</span></a>algorithm*=MEDIAL_AXIS.
+- Free quadrilateral meshing or sweep hexahedral meshing with <a href="#id49"><span class="problematic" id="id50">*</span></a>algorithm*=MEDIAL_AXIS.
 - Structured quadrilateral meshing.</p></li>
 </ul>
 </dd>
@@ -1823,14 +1855,14 @@ are:
 - DEVIATION_FACTOR
 - MIN_SIZE_FACTOR
 The return value is dependent on the value of the <em>attribute</em> argument.
-- If <a href="#id49"><span class="problematic" id="id50">*</span></a>attribute*=SIZE, the return value is a Float specifying the assigned global
+- If <a href="#id51"><span class="problematic" id="id52">*</span></a>attribute*=SIZE, the return value is a Float specifying the assigned global
 element size. If part seeds are not defined, the return value is zero.
-- If <a href="#id51"><span class="problematic" id="id52">*</span></a>attribute*=DEFAULT_SIZE, the return value is a Float specifying a suggested
+- If <a href="#id53"><span class="problematic" id="id54">*</span></a>attribute*=DEFAULT_SIZE, the return value is a Float specifying a suggested
 default global element size based upon the part geometry.
-- If <a href="#id53"><span class="problematic" id="id54">*</span></a>attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation
+- If <a href="#id55"><span class="problematic" id="id56">*</span></a>attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation
 factor h/Lh/L, where hh is the chordal deviation and LL is the element length. If part
 seeds are not defined, the return value is zero.
-- If <a href="#id55"><span class="problematic" id="id56">*</span></a>attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the
+- If <a href="#id57"><span class="problematic" id="id58">*</span></a>attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the
 smallest allowable element as a fraction of the specified global element size. If part
 seeds are not defined, the return value is zero.</p></li>
 </ul>
@@ -1919,16 +1951,16 @@ values are:
 - DOUBLE: Double-biased seed distribution will be applied.</p></li>
 <li><p><strong>end1Edges</strong> – A sequence of Edge objects specifying the edges to seed. The smallest elements will be
 positioned near the end where the normalized curve parameter=0.0. You must provide
-either the <em>end1Edges</em> or the <em>end2Edges</em> argument or both when <a href="#id57"><span class="problematic" id="id58">*</span></a>biasMethod*=SINGLE and
-omit both of them when <a href="#id59"><span class="problematic" id="id60">*</span></a>biasMethod*=DOUBLE.Note:You can determine which end is which by
+either the <em>end1Edges</em> or the <em>end2Edges</em> argument or both when <a href="#id59"><span class="problematic" id="id60">*</span></a>biasMethod*=SINGLE and
+omit both of them when <a href="#id61"><span class="problematic" id="id62">*</span></a>biasMethod*=DOUBLE.Note:You can determine which end is which by
 the order of the vertex indices returned by
 [getVertices()](<a class="reference external" href="https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-edgepyc.htm?ContextScope=all#simaker-edgegetverticespyc">https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-edgepyc.htm?ContextScope=all#simaker-edgegetverticespyc</a>).</p></li>
 <li><p><strong>end2Edges</strong> – A sequence of Edge objects specifying the edges to seed. The smallest elements will be
 positioned near the end where the normalized curve parameter=1.0.</p></li>
 <li><p><strong>centerEdges</strong> – A sequence of Edge objects specifying the edges to seed. The smallest elements will be
 positioned near edge center. You must provide either the <em>centerEdges</em> or the <em>endEdges</em>
-argument or both when <a href="#id61"><span class="problematic" id="id62">*</span></a>biasMethod*=DOUBLE and omit both of them when
-<a href="#id63"><span class="problematic" id="id64">*</span></a>biasMethod*=SINGLE.</p></li>
+argument or both when <a href="#id63"><span class="problematic" id="id64">*</span></a>biasMethod*=DOUBLE and omit both of them when
+<a href="#id65"><span class="problematic" id="id66">*</span></a>biasMethod*=SINGLE.</p></li>
 <li><p><strong>endEdges</strong> – A sequence of Edge objects specifying the edges to seed. The smallest elements will be
 positioned near edge ends.</p></li>
 <li><p><strong>ratio</strong> – A Float specifying the ratio of the largest element to the smallest element. Possible
@@ -2131,7 +2163,7 @@ will be used.</p></li>
 <li><p><strong>minTransition</strong> – A Boolean specifying whether minimum transition is to be applied. The default value is
 ON. If unspecified, the existing value will remain unchanged. This option is applicable
 only in the following cases:
-- Free quadrilateral meshing or hexahedral sweep meshing with <a href="#id65"><span class="problematic" id="id66">*</span></a>algorithm*=MEDIAL_AXIS.
+- Free quadrilateral meshing or hexahedral sweep meshing with <a href="#id67"><span class="problematic" id="id68">*</span></a>algorithm*=MEDIAL_AXIS.
 - Structured quadrilateral meshing.</p></li>
 <li><p><strong>sizeGrowth</strong> – A SymbolicConstant specifying element size growth to be applied when generating the
 interior of a tetrahedral mesh. Possible values are MODERATE and MAXIMUM. If
@@ -2162,7 +2194,7 @@ revolvable region.</p>
 <li><p><strong>edge</strong> – An Edge object specifying the sweep or revolve path.</p></li>
 <li><p><strong>sense</strong> – A SymbolicConstant specifying the sweep sense. The sense will affect only how gasket
 elements will be created; it will have no effect if gasket elements are not used.
-Possible values are FORWARD or REVERSE.If <a href="#id67"><span class="problematic" id="id68">*</span></a>sense*=FORWARD, the sense of the given edge’s
+Possible values are FORWARD or REVERSE.If <a href="#id69"><span class="problematic" id="id70">*</span></a>sense*=FORWARD, the sense of the given edge’s
 underlying curve will be used.</p></li>
 </ul>
 </dd>
@@ -2310,12 +2342,12 @@ elementProgressiveActivation repository.</p>
 <li><p><strong>elset</strong> – A Region object specifying the region containing the elements that will be activated
 during the analysis.</p></li>
 <li><p><strong>deformation</strong> – A Boolean value specifying whether the elements that have not yet been activated will
-follow the deformations of the active elements. Set <a href="#id69"><span class="problematic" id="id70">*</span></a>deformation*=ON when the
+follow the deformations of the active elements. Set <a href="#id71"><span class="problematic" id="id72">*</span></a>deformation*=ON when the
 deformation of the active elements is excessive. The default value is OFF.</p></li>
 <li><p><strong>freeSurfaceType</strong> – A SymbolicConstant specifying the exposed areas of the element facets that are active
 for convection or radiation boundary conditions to be applied. Possible values are NONE
-and FACET. If <a href="#id71"><span class="problematic" id="id72">*</span></a>freeSurfaceType*=FACET, user subroutine UEPACTIVATIONFACET will be called
-at the start of the increment for each element. If <a href="#id73"><span class="problematic" id="id74">*</span></a>freeSurfaceType*=NONE, all the
+and FACET. If <a href="#id73"><span class="problematic" id="id74">*</span></a>freeSurfaceType*=FACET, user subroutine UEPACTIVATIONFACET will be called
+at the start of the increment for each element. If <a href="#id75"><span class="problematic" id="id76">*</span></a>freeSurfaceType*=NONE, all the
 exposed areas of the element facets are considered. The default value is NONE.</p></li>
 </ul>
 </dd>
