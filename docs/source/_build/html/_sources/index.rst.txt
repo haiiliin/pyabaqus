@@ -23,6 +23,7 @@ Other links
 -----------
 * GitHub repository: `Haiiliin/pyabaqus: Type hints for python scripting of Abaqus <https://github.com/Haiiliin/pyabaqus>`_
 * PyPI: `pyabaqus · PyPI <https://pypi.org/project/pyabaqus/>`_
+* PDF version of this documentation: `pyabaqus.pdf <https://github.com/Haiiliin/pyabaqus/releases/latest/download/pyabaqus.pdf>`_
 
 Indices and tables
 ==================

@@ -194,6 +194,30 @@ class AssemblyBase(Feature):
         pass
 
     def Instance(self, name: str, *args, **kwargs) -> typing.Union[PartInstance, ModelInstance]:
+        """This method creates a PartInstance object and puts it into the instances repository.
+
+        Path
+        ----
+            - mdb.models[name].rootAssembly.Instance
+
+        Parameters
+        ----------
+        name
+            A String specifying the repository key. The name must be a valid Abaqus object name.
+        part
+            A Part object to be instanced. If the part does not exist, no PartInstance object is
+            created.
+        autoOffset
+            A Boolean specifying whether to apply an auto offset to the new part instance that will
+            offset it from existing part instances. The default value is OFF.
+        dependent
+            A Boolean specifying whether the part instance is dependent or independent. If
+            *dependent*=OFF, the part instance is independent. The default value is OFF.
+
+        Returns
+        -------
+            A PartInstance object..
+        """
         if 'part' in kwargs.keys() or (len(args) > 0 and isinstance(args[0], Part)):
             instance = PartInstance(name, *args, **kwargs)
         else:

@@ -35,10 +35,6 @@ def runPythonScript(scriptPath: str):
     ----------
     scriptPath: str
         File path of the python script
-
-    Returns
-    -------
-    None
     """
     abaqus = 'abaqus'
     if 'ABAQUS_BAT_PATH' in os.environ.keys():
@@ -56,10 +52,6 @@ def extractOutputData(odb: str, script: str):
         File path of the output database
     script: str
         File path of the script
-
-    Returns
-    -------
-    None
     """
     abaqus = 'abaqus'
     if 'ABAQUS_BAT_PATH' in os.environ.keys():
@@ -80,15 +72,10 @@ def submitJobByInputFile(inputFile: str, userSubroutine: str = None, options: st
         in the directory of the input file, this variable should be the whole file path.
         whole
     options: str
-        Command options for abaqus command, see https://help.3ds.com/2022/english/dssimulia_established/SIMACAEEXCRefMap/simaexc-c-analysisproc.htm?contextscope=all&id=b034a4baa38a4e9496fce622201c4e30
-        or https://abaqus-docs.mit.edu/2017/English/SIMACAEEXCRefMap/simaexc-c-analysisproc.htm
-        for details, job or input options shouldn't be included, i.e. `int double'.
+        Command options for abaqus command, see `here <https://help.3ds.com/2022/english/dssimulia_established/SIMACAEEXCRefMap/simaexc-c-analysisproc.htm?contextscope=all&id=b034a4baa38a4e9496fce622201c4e30
+        or https://abaqus-docs.mit.edu/2017/English/SIMACAEEXCRefMap/simaexc-c-analysisproc.htm>`_ for details, job or input options shouldn't be included, i.e. `int double'.
     showStatus: bool
         Show status or not when the calculation starts.
-
-    Returns
-    -------
-    None
     """
     abaqus = 'abaqus'
     if 'ABAQUS_BAT_PATH' in os.environ.keys():

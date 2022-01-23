@@ -64,9 +64,9 @@ Module `driverUtils` contains an important function `executeOnCaeStartup`, this 
 
 
 Create parts
-~~~~~~~~~~~~~
+~~~~~~~~~~~~
 
-First we need to create a sketch that will be used to create the part:
+First we need to create a sketch that will be used to create the part, we need to use :py:meth:`~abaqus.Sketcher.SketchModel.SketchModel.ConstrainedSketch` to create a sketch:
 
 .. code-block:: Python
 
@@ -74,14 +74,14 @@ First we need to create a sketch that will be used to create the part:
     sketch = model.ConstrainedSketch(name='sketch', sheetSize=1.0)
     sketch.rectangle((0, 0), (1, 1))
 
-Is this code, we draw a sketch with a squre. Now we can create a part using this sketch:
+In this code, we draw a sketch with a squre. Now we can create a part using this sketch:
 
 .. code-block:: Python
 
     part = model.Part(name='part', dimensionality=THREE_D, type=DEFORMABLE_BODY)
     part.BaseSolidExtrude(sketch=sketch, depth=1)
 
-The first line creates a 3D and deformable part. Then we use the extrusion method to create a part using the sketch. 
+The first line creates a 3D and deformable part. Then we use the :py:meth:`~abaqus.Part.Feature.Feature.BaseSolidExtrude` method to create a part using the sketch. 
 
 
 Create some sets for boundary conditions and loads
@@ -89,17 +89,20 @@ Create some sets for boundary conditions and loads
 
 Unlike building a model in Abaqus/CAE, we can just click the nodes/faces to create sets, when we use a Python script to build the model, we can use coordinates to find nodes/faces we need. 
 
+We can use :py:meth:`~abaqus.Region.RegionPart.RegionPart.Set` and :py:meth:`~abaqus.Region.RegionPart.RegionPart.Surface` to create sets and surfaces:
+
 .. code-block:: Python
 
     part.Set(name='set-all', cells=part.cells.findAt(coordinates=((0.5, 0.5, 0.5), )))
     part.Set(name='set-bottom', faces=part.faces.findAt(coordinates=((0.5, 0.5, 0.0), )))
     part.Set(name='set-top', faces=part.faces.findAt(coordinates=((0.5, 0.5, 1.0), )))
-    part.Surface(name='surface-top', side1Faces=part.faces.findAt(coordinates=((0.5, 0.5, 1.0), )))
+    part.Surface(name='surface-top', 
+                 side1Faces=part.faces.findAt(coordinates=((0.5, 0.5, 1.0), )))
 
 Merge parts to assembly
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-We can use the following codes to merge parts to assembly:
+We can use :py:meth:`~abaqus.Assembly.AssemblyBase.AssemblyBase.Instance` to create instances：
 
 .. code-block:: Python
 
@@ -109,20 +112,20 @@ We can use the following codes to merge parts to assembly:
 Create materials and sections, and assign materials to sections
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First we create a Material object:
+First we create a Material object using :py:meth:`~abaqus.Material.MaterialModel.MaterialModel.Material`:
 
 .. code-block:: Python
 
     material = model.Material(name='material')
 
-Then we assign some properties to the Material object:
+Then we assign some properties to the Material object, i.e., :py:meth:`~abaqus.Material.Material.Material.Elastic` and :py:meth:`~abaqus.Material.Material.Material.Density`:
 
 .. code-block:: Python
 
     material.Elastic(table=((1000, 0.2), ))
     material.Density(table=((2500, ), ))
 
-Then we create a homogeneous solid section and assign the material to the section:
+Then we create a :py:meth:`~abaqus.Section.SectionModel.SectionModel.HomogeneousSolidSection` and assign the material to the section (:py:meth:`~abaqus.Property.PropertyPart.PropertyPart.SectionAssignment`):
 
 .. code-block:: Python
 
@@ -133,52 +136,55 @@ Then we create a homogeneous solid section and assign the material to the sectio
 Create steps
 ~~~~~~~~~~~~
 
-It is easy to create a step:
+It is easy to create a :py:meth:`~abaqus.Step.StepModel.StepModel.StaticStep`:
 
 .. code-block:: Python
 
-    step = model.StaticStep(name='Step-1', previous='Initial', description='', timePeriod=1.0, 
-                            timeIncrementationMethod=AUTOMATIC, maxNumInc=100, initialInc=0.01, 
-                            minInc=0.001, maxInc=0.1)
+    step = model.StaticStep(name='Step-1', previous='Initial', description='', 
+                            timePeriod=1.0, timeIncrementationMethod=AUTOMATIC, 
+                            maxNumInc=100, initialInc=0.01, minInc=0.001, maxInc=0.1)
 
 
 Specify output requests
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-We can use the `FieldOutputRequest` and `HistoryOutputRequest` to specify field output and history output information.
+We can use the :py:meth:`~abaqus.StepOutput.OutputModel.OutputModel.FieldOutputRequest` and :py:meth:`~abaqus.StepOutput.OutputModel.OutputModel.HistoryOutputRequest` to specify field output and history output information.
 
 .. code-block:: Python
 
-    field = model.FieldOutputRequest('F-Output-1', createStepName='Step-1', variables=('S', 'E', 'U'))
+    field = model.FieldOutputRequest('F-Output-1', createStepName='Step-1', 
+                                     variables=('S', 'E', 'U'))
 
 
 Create boundary conditions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We can use `DisplacementBC` to create a displacement boundary condition:
+We can use :py:meth:`~abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.DisplacementBC` to create a displacement boundary condition:
 
 .. code-block:: Python
 
     bottom_instance = model.rootAssembly.instances['instance'].sets['set-bottom']
-    bc = model.DisplacementBC(name='BC-1', createStepName='Initial', region=bottom_instance, u3=SET)
+    bc = model.DisplacementBC(name='BC-1', createStepName='Initial', 
+                              region=bottom_instance, u3=SET)
 
 It should be noted that region of the boundary condition should be a region of the instances instead of parts, since sets created in parts are copied to the instance, we can use the sets in the parts that we defined before. 
 
 Create loads
 ~~~~~~~~~~~~
 
-We can use `Pressure` ro create a pressure:
+We can use :py:meth:`~abaqus.LoadAndLoadCase.LoadModel.LoadModel.Pressure` ro create a pressure:
 
 .. code-block:: Python
 
     top_instance = model.rootAssembly.instances['instance'].surfaces['surface-top']
-    pressure = model.Pressure('pressure', createStepName='Step-1', region=top_instance, magnitude=100)
+    pressure = model.Pressure('pressure', createStepName='Step-1', region=top_instance, 
+                              magnitude=100)
 
 
 Mesh
 ~~~~
 
-When meshing, we have set the element type, which is defined in the `mesh` module, so we need to import `mesh` module:
+When meshing, we have set the :py:class:`~abaqus.mesh.ElemType.ElemType`, which is defined in the `mesh` module, so we need to import `mesh` module:
 
 .. code-block:: Python
 
@@ -195,7 +201,7 @@ When meshing, we have set the element type, which is defined in the `mesh` modul
 Create jobs
 ~~~~~~~~~~~
 
-We can use `Job` to create a job:
+We can use :py:meth:`~abaqus.Job.JobMdb.JobMdb.Job` to create a job:
 
 .. code-block:: Python
 
@@ -218,7 +224,7 @@ Then we can submit the job:
 Save the Abaqus model to a `.cae` file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We can use `saveAs` to save the Abaqus model to a `.cae` file:
+We can use :py:class:`~abaqus.Mdb.MdbBase.MdbBase.saveAs` to save the Abaqus model to a `.cae` file:
 
 .. code-block:: Python
 
@@ -230,7 +236,7 @@ It should be noted that we have to use this function to save the model when we u
 
     abaqus cae -noGUI script.py
 
-In order to make it simple, this has been done in the `saveAs` function:
+In order to make it simple, this has been done in the :py:meth:`~abaqus.Mdb.MdbBase.MdbBase.saveAs` function:
 
 .. code-block:: Python
 
@@ -269,7 +275,8 @@ The whole script of this example is showed as follows:
     part.Set(name='set-all', cells=part.cells.findAt(coordinates=((0.5, 0.5, 0.5), )))
     part.Set(name='set-bottom', faces=part.faces.findAt(coordinates=((0.5, 0.5, 0.0), )))
     part.Set(name='set-top', faces=part.faces.findAt(coordinates=((0.5, 0.5, 1.0), )))
-    part.Surface(name='surface-top', side1Faces=part.faces.findAt(coordinates=((0.5, 0.5, 1.0), )))
+    part.Surface(name='surface-top', 
+                 side1Faces=part.faces.findAt(coordinates=((0.5, 0.5, 1.0), )))
 
     # Assembly
     model.rootAssembly.DatumCsysByDefault(CARTESIAN)
@@ -285,20 +292,23 @@ The whole script of this example is showed as follows:
     part.SectionAssignment(region=part.sets['set-all'], sectionName='section')
 
     # Step
-    step = model.StaticStep(name='Step-1', previous='Initial', description='', timePeriod=1.0, 
-                            timeIncrementationMethod=AUTOMATIC, maxNumInc=100, initialInc=0.01, 
-                            minInc=0.001, maxInc=0.1)
+    step = model.StaticStep(name='Step-1', previous='Initial', description='', 
+                            timePeriod=1.0, timeIncrementationMethod=AUTOMATIC, 
+                            maxNumInc=100, initialInc=0.01, minInc=0.001, maxInc=0.1)
 
     # Output request
-    field = model.FieldOutputRequest('F-Output-1', createStepName='Step-1', variables=('S', 'E', 'U'))
+    field = model.FieldOutputRequest('F-Output-1', createStepName='Step-1', 
+                                     variables=('S', 'E', 'U'))
 
     # Boundary condition
     bottom_instance = model.rootAssembly.instances['instance'].sets['set-bottom']
-    bc = model.DisplacementBC(name='BC-1', createStepName='Initial', region=bottom_instance, u3=SET)
+    bc = model.DisplacementBC(name='BC-1', createStepName='Initial', 
+                              region=bottom_instance, u3=SET)
 
     # Load
     top_instance = model.rootAssembly.instances['instance'].surfaces['surface-top']
-    pressure = model.Pressure('pressure', createStepName='Step-1', region=top_instance, magnitude=100)
+    pressure = model.Pressure('pressure', createStepName='Step-1', region=top_instance, 
+                              magnitude=100)
 
     # Mesh
     elem1 = mesh.ElemType(elemCode=C3D8R)
@@ -342,7 +352,7 @@ Similarly, we have to import some modules:
 Open the output database
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-We can use `openOdb` to open the output database:
+We can use :py:meth:`~abaqus.Session.SessionBase.SessionBase.openOdb` to open the output database:
 
 .. code-block:: Python
 
@@ -352,13 +362,13 @@ We can use `openOdb` to open the output database:
 Extract the data
 ~~~~~~~~~~~~~~~~
 
-We can use the `xyDataListFromField` to extract the output data:
+We can use the :py:meth:`~abaqus.XY.XYSession.XYSession.xyDataListFromField` to extract the output data:
 
 .. code-block:: Python
 
     dataList = session.xyDataListFromField(odb=odb, outputPosition=NODAL, 
-                                       variable=(('U', NODAL, ((COMPONENT, 'U3'),)),),
-                                       nodeSets=('INSTANCE.SET-TOP', ))
+                                           variable=(('U', NODAL, ((COMPONENT, 'U3'),)),),
+                                           nodeSets=('INSTANCE.SET-TOP', ))
 
 `dataList` is a list of `XYData` objects. `XYData` is a data type defined in Abaqus, the data is stored in tuples of tuples, so we can simply save it to a file, i.e., using the `numpy` (`numpy` is installed in Python interpreter of Abaqus already):
 
@@ -407,8 +417,8 @@ The whole output script of this example is showed as follows:
 
     # Extract output data
     dataList = session.xyDataListFromField(odb=odb, outputPosition=NODAL, 
-                                        variable=(('U', NODAL, ((COMPONENT, 'U3'),)),),
-                                        nodeSets=('INSTANCE.SET-TOP', ))
+                                           variable=(('U', NODAL, ((COMPONENT, 'U3'),)),),
+                                           nodeSets=('INSTANCE.SET-TOP', ))
     data = np.array(dataList[0])
     np.savetxt('data.csv', data, header='time,U3', delimiter=',', comments='')
 
@@ -423,7 +433,11 @@ There are several simply used provided in `pyabaqus`, we cannot call it in Pytho
 Execute Python script in Abaqus
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`abaqus.runPythonScript` is provided to execute our Python script in Abaqus:
+`abaqus.runPythonScript` is provided to execute our Python script in Abaqus, the signature of `abaqus.runPythonScript` is:
+
+.. autofunction:: abaqus.runPythonScript
+
+We can use it to execute our Python script in Abaqus:
 
 .. code-block:: Python
 
@@ -435,7 +449,11 @@ Execute Python script in Abaqus
 Submit a job by an input file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`abaqus.submitJobByInputFile` is provided to submit the job by an input file (`.inp`):
+`abaqus.submitJobByInputFile` is provided to submit the job by an input file (`.inp`), the signature of `abaqus.submitJobByInputFile` is:
+
+.. autofunction:: abaqus.submitJobByInputFile
+
+We can use it to submit the job by an input file:
 
 .. code-block:: Python
 
@@ -454,7 +472,11 @@ If argument `showStatus` of `abaqus.submitJobByInputFile` is set to True (by def
 Execute output script
 ~~~~~~~~~~~~~~~~~~~~~
 
-`abaqus.extractOutputData` is provided is execute the output script:
+`abaqus.extractOutputData` is provided is execute the output script, the signature of `abaqus.extractOutputData` is:
+
+.. autofunction:: abaqus.extractOutputData
+
+We can use it to execute the output script:
 
 .. code-block:: Python
 

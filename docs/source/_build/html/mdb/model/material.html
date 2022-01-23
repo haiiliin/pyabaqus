@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Material &mdash; pyabaqus 1.0.7 documentation</title>
+  <title>Material &mdash; pyabaqus 1.0.8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -352,7 +352,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../edit_mesh.html">Edit Mesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../mdb.html#attributes">Attributes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../mdb.html#create-models">Create models</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../mdb.html#open-three-party-files">Open three-party files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mdb.html#open-third-party-files">Open third-party files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../mdb.html#create-jobs">Create jobs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../mdb.html#object-features">Object features</a></li>
 </ul>
@@ -2651,9 +2651,23 @@ The None object is the default value if <a href="#id99"><span class="problematic
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>table</strong> – A sequence of sequences of Floats specifying the items described below. This argument is
 valid only if <a href="#id101"><span class="problematic" id="id102">*</span></a>testData*=OFF.</p></li>
-<li><p><strong>type</strong> – A SymbolicConstant specifying the type of strain energy potential. Possible values
-are:ARRUDA_BOYCEMARLOWMOONEY_RIVLINNEO_HOOKEOGDENPOLYNOMIALREDUCED_POLYNOMIALUSERVAN_DER_WAALSYEOHUNKNOWNThe
-default value is UNKNOWN.</p></li>
+<li><p><strong>type</strong> – <p>A SymbolicConstant specifying the type of strain energy potential. Possible values
+are:</p>
+<ul>
+<li><p>ARRUDA_BOYCE</p></li>
+<li><p>MARLOW</p></li>
+<li><p>MOONEY_RIVLIN</p></li>
+<li><p>NEO_HOOKE</p></li>
+<li><p>OGDEN</p></li>
+<li><p>POLYNOMIAL</p></li>
+<li><p>REDUCED_POLYNOMIAL</p></li>
+<li><p>USER</p></li>
+<li><p>VAN_DER_WAALS</p></li>
+<li><p>YEOH</p></li>
+<li><p>UNKNOWN</p></li>
+</ul>
+<p>The default value is UNKNOWN.</p>
+</p></li>
 <li><p><strong>moduliTimeScale</strong> – A SymbolicConstant specifying the nature of the time response. Possible values are
 INSTANTANEOUS and LONG_TERM. The default value is LONG_TERM.</p></li>
 <li><p><strong>temperatureDependency</strong> – A Boolean specifying whether the data depend on temperature. The default value is OFF.</p></li>

@@ -186,11 +186,7 @@ class Feature(BaseFeature):
 
         Returns
         -------
-            A Feature object. 
-
-        Exceptions
-        ----------
-            RangeError. 
+            A Feature object.
         """
         pass
 
