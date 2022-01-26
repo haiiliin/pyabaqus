@@ -2,6 +2,8 @@
 Tutorials
 =========
 
+For more tests, check `pyabaqus/tests at main · Haiiliin/pyabaqus <https://github.com/Haiiliin/pyabaqus/tree/main/tests>`_.
+
 
 Usually in Abaqus, we have several things to do:
     * Build the model

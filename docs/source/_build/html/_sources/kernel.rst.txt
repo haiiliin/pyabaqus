@@ -1,10 +1,10 @@
-===============
-Kernel Commands
-===============
+======
+Kernel
+======
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Kernel objects
 
    kernel/cae_display_preferences
