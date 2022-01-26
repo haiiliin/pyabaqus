@@ -52,8 +52,8 @@ class ConcreteCompressionHardening:
         -------
             A ConcreteCompressionHardening object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -68,8 +68,8 @@ class ConcreteCompressionHardening:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -46,8 +46,8 @@ class Solubility:
         -------
             A Solubility object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -62,8 +62,8 @@ class Solubility:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

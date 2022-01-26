@@ -61,8 +61,8 @@ class BoxProfile(Profile):
         -------
             A BoxProfile object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """
@@ -84,8 +84,8 @@ class BoxProfile(Profile):
             A Float specifying the wall thickness of the fourth segment. *t4* is required only when 
             *uniformThickness*=OFF. The default value is 0.0.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """

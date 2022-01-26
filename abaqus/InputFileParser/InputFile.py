@@ -77,8 +77,8 @@ class InputFile:
         -------
             A KeywordSequence object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             If you parse an input file more than once, a ValueError is raised for each subsequent 
             parsing. 
         """

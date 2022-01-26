@@ -784,8 +784,8 @@ class AssemblyBase(Feature):
             ON.If the assembly has position constraint features and you modify the value of 
             *regenerateConstraintsTogether*, Abaqus/CAE will regenerate the assembly features.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If one or more features in the assembly fails to regenerate: 
               FeatureError: Regeneration failed 
         """

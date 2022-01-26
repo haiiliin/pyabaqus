@@ -40,8 +40,8 @@ class EosCompaction:
         -------
             An EosCompaction object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -56,8 +56,8 @@ class EosCompaction:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

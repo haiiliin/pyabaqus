@@ -71,8 +71,8 @@ class RateDependent:
         -------
             A RateDependent object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -87,8 +87,8 @@ class RateDependent:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

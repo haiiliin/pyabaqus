@@ -78,8 +78,8 @@ class ImageOptions:
             If other arguments are also supplied to setValues, they will override the values in the 
             *options* member. The default value is None.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

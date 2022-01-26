@@ -195,8 +195,8 @@ class MappedField(AnalyticalField):
         -------
             A MappedField object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         super().__init__()

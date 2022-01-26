@@ -124,8 +124,8 @@ class StdContactControl(ContactControl):
         -------
             A StdContactControl object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -223,8 +223,8 @@ class StdContactControl(ContactControl):
             multipliers. Possible values are DEFAULT, ENFORCEMENT_OFF, and ENFORCEMENT_ON. The 
             default value is DEFAULT.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -70,8 +70,8 @@ class MembraneSection(Section):
         -------
             A MembraneSection object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError and InvalidNameError. 
         """
         super().__init__()
@@ -107,8 +107,8 @@ class MembraneSection(Section):
             when *thicknessType*=ANALYTICAL_FIELD or *thicknessType*=DISCRETE_FIELD. The default 
             value is an empty string.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

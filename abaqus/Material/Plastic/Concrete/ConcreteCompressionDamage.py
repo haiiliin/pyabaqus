@@ -53,8 +53,8 @@ class ConcreteCompressionDamage:
         -------
             A ConcreteCompressionDamage object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -69,8 +69,8 @@ class ConcreteCompressionDamage:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

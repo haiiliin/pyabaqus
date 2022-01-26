@@ -133,8 +133,8 @@ class Chart:
         -------
             An Axis object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             If the given XYCurve is not used in the Chart. 
             XypError: Curve not found: 
             - If both arguments are specified. 
@@ -159,8 +159,8 @@ class Chart:
         -------
             An Axis object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             If the given XYCurve is not used in the Chart. 
             XypError: Curve not found: 
             - If both arguments are specified. 
@@ -228,8 +228,8 @@ class Chart:
             A Boolean specifying whether to use the QuantityType to associate curves with axes. The 
             default value is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

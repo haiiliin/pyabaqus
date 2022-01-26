@@ -50,8 +50,8 @@ class CastIronCompressionHardening:
         -------
             A CastIronCompressionHardening object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -66,8 +66,8 @@ class CastIronCompressionHardening:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

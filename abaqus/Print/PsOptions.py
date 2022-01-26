@@ -75,8 +75,8 @@ class PsOptions:
             images. Possible values are EXTRA COARSE, COARSE, MEDIUM, FINE, and EXTRA FINE. The 
             default value is MEDIUM.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             Note:The minimum value of width and height (*minWidth* and *minHeight*) is 10 mm 
             (approximately 0.4 inches). 

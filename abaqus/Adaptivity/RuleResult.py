@@ -53,8 +53,8 @@ class RuleResult:
         -------
             A RuleResult object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass

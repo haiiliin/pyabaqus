@@ -237,8 +237,8 @@ class TempDisplacementDynamicsStep(AnalysisStep):
         -------
             A TempDisplacementDynamicsStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -288,8 +288,8 @@ class TempDisplacementDynamicsStep(AnalysisStep):
             formulations (shell, membrane, and two-dimensional plane stress elements). The default 
             value is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

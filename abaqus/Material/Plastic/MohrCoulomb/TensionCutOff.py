@@ -48,8 +48,8 @@ class TensionCutOff:
         -------
             A TensionCutOff object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -64,8 +64,8 @@ class TensionCutOff:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -336,8 +336,8 @@ class ImplicitDynamicsStep(AnalysisStep):
         -------
             An ImplicitDynamicsStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -436,8 +436,8 @@ class ImplicitDynamicsStep(AnalysisStep):
             occur during an iteration. Possible values are PROPAGATED, CONVERT_SDI_OFF, and 
             CONVERT_SDI_ON. The default value is PROPAGATED.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

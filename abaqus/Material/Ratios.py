@@ -52,8 +52,8 @@ class Ratios:
         -------
             A Ratios object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -68,8 +68,8 @@ class Ratios:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

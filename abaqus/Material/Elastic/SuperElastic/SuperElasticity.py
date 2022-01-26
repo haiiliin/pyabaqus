@@ -61,8 +61,8 @@ class SuperElasticity:
         -------
             A SuperElasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -77,8 +77,8 @@ class SuperElasticity:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

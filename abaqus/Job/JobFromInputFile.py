@@ -136,8 +136,8 @@ class JobFromInputFile(Job):
         -------
             A JobFromInputFile object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException 
             ValueError 
             - If the user attempts to provide RESTART as a value to argument type: 

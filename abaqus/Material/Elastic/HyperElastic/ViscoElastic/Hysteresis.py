@@ -40,8 +40,8 @@ class Hysteresis:
         -------
             A Hysteresis object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -56,8 +56,8 @@ class Hysteresis:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -189,8 +189,8 @@ class MeshEditPart(PartBase):
             example, if a node is on a face, this method first positions the node at the new 
             location and then projects it back to the original face. The default value is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             A coordinate and an offset may not both be specified for the same coordinate component. 
         """
         pass
@@ -374,8 +374,8 @@ class MeshEditPart(PartBase):
             A list of labels for the specified elements. The length of this list must match the 
             number of specified elements.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - Renumbering is attempted on a native part: 
               Error: Renumbering can be applied to orphan mesh parts only 
             - Renumbering data is specified incorrectly: 
@@ -407,8 +407,8 @@ class MeshEditPart(PartBase):
             A list of labels for the specified nodes. The length of this list must match the number 
             of specified nodes.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - Renumbering is attempted on a native part: 
               Error: Renumbering can be applied to orphan mesh parts only 
             - Renumbering data is specified incorrectly: 

@@ -56,8 +56,8 @@ class Monitor:
         -------
             A Monitor object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -72,8 +72,8 @@ class Monitor:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

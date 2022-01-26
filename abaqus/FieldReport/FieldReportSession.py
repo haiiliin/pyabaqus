@@ -109,7 +109,7 @@ class FieldReportSession(SessionBase):
         Returns
         -------
 
-        Exceptions
-        ----------
+        Raises
+        ------
         """
         pass

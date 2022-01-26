@@ -218,8 +218,8 @@ class BuckleStep(AnalysisStep):
         -------
             A BuckleStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -260,8 +260,8 @@ class BuckleStep(AnalysisStep):
             A SymbolicConstant specifying the type of matrix storage. Possible values are SYMMETRIC, 
             UNSYMMETRIC, and SOLVER_DEFAULT. The default value is SOLVER_DEFAULT.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

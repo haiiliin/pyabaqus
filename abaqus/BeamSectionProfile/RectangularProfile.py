@@ -44,8 +44,8 @@ class RectangularProfile(Profile):
         -------
             A RectangularProfile object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """
@@ -62,8 +62,8 @@ class RectangularProfile(Profile):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """

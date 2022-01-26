@@ -115,8 +115,8 @@ class ConnectorDamping(ConnectorBehaviorOption):
         -------
             A ConnectorDamping object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError. 
         """
         super().__init__()
@@ -132,8 +132,8 @@ class ConnectorDamping(ConnectorBehaviorOption):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass

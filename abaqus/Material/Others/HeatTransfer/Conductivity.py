@@ -70,8 +70,8 @@ class Conductivity:
         -------
             A Conductivity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -86,8 +86,8 @@ class Conductivity:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

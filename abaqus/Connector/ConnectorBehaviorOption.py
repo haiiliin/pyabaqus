@@ -133,8 +133,8 @@ class ConnectorBehaviorOption:
         -------
             A DerivedComponent object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError.
         """
         self.derivedComponent = derivedComponent = DerivedComponent()
@@ -211,8 +211,8 @@ class ConnectorBehaviorOption:
         -------
             A ConnectorOptions object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError.
         """
         self.options = connectorOptions = ConnectorOptions(useBehRegSettings, regularize, defaultTolerance,

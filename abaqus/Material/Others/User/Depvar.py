@@ -38,8 +38,8 @@ class Depvar:
         -------
             A Depvar object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -54,8 +54,8 @@ class Depvar:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -49,8 +49,8 @@ class GapConductance:
         -------
             A GapConductance object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
         """
         pass
 
@@ -63,7 +63,7 @@ class GapConductance:
         Returns
         -------
 
-        Exceptions
-        ----------
+        Raises
+        ------
         """
         pass

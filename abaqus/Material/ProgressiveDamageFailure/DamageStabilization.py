@@ -122,8 +122,8 @@ class DamageStabilization:
         -------
             A DamageStabilization object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -138,8 +138,8 @@ class DamageStabilization:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

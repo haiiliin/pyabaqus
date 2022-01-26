@@ -37,8 +37,8 @@ class XYPlot(XYPlotBase):
         -------
             An AreaStyle object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ColorError
         """
         areaStyle = AreaStyle(color, fill, style)
@@ -74,8 +74,8 @@ class XYPlot(XYPlotBase):
         -------
             A LineStyle object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ColorError
         """
         lineStyle = LineStyle(color, show, style, thickness)
@@ -218,8 +218,8 @@ class XYPlot(XYPlotBase):
         -------
             A SymbolStyle object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ColorError
         """
         symbolStyle = SymbolStyle(color, show, marker, size)
@@ -253,8 +253,8 @@ class XYPlot(XYPlotBase):
         -------
             A TextStyle object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ColorError
         """
         textStyle = TextStyle(color, show, font, rotationAngle)

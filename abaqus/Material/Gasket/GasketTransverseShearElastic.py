@@ -51,8 +51,8 @@ class GasketTransverseShearElastic:
         -------
             A GasketTransverseShearElastic object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -67,8 +67,8 @@ class GasketTransverseShearElastic:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

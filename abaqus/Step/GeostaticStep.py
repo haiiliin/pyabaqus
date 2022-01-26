@@ -258,8 +258,8 @@ class GeostaticStep(AnalysisStep):
         -------
             A GeostaticStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -320,8 +320,8 @@ class GeostaticStep(AnalysisStep):
             time period for the step.Note:This parameter is ignored unless 
             *timeIncrementationMethod*=AUTOMATIC.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

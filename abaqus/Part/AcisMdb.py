@@ -26,8 +26,8 @@ class AcisMdb(MdbBase):
         -------
             An AcisFile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - File is from a newer version of ACIS than the CAE kernel.
               Texterror: ACIS File version exceeds Kernel.
             - The data in the ACIS file are corrupted.
@@ -154,8 +154,8 @@ class AcisMdb(MdbBase):
         -------
             An AcisFile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - The data in the IGES file are corrupted.
               Texterror: Failed to read IGES file.
         """
@@ -208,8 +208,8 @@ class AcisMdb(MdbBase):
         -------
             An AcisFile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - The data in the STEP file are corrupted.
               Texterror: Failed to read STEP file.
         """
@@ -233,8 +233,8 @@ class AcisMdb(MdbBase):
         -------
             An AcisFile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - The data in the VDA-FS file are corrupted.
               Texterror: Failed to read VDA file.
         """
@@ -264,8 +264,8 @@ class AcisMdb(MdbBase):
         -------
             An AcisFile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - The data in the Solidworks file are corrupted.
               Texterror: Failed to read Solidworks file.
         """

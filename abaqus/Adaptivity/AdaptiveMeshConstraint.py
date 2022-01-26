@@ -76,8 +76,8 @@ class AdaptiveMeshConstraint:
             A String specifying the name of the step in which the adaptive mesh constraint is 
             deactivated.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             TextError. 
         """
         pass
@@ -94,8 +94,8 @@ class AdaptiveMeshConstraint:
             A String specifying the name of the step to which the adaptive mesh constraint state is 
             moved.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             TextError. 
         """
         pass
@@ -110,8 +110,8 @@ class AdaptiveMeshConstraint:
             A String specifying the name of the step in which the adaptive mesh constraint state is 
             reset.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             TextError. 
         """
         pass

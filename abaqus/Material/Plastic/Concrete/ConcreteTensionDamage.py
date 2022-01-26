@@ -68,8 +68,8 @@ class ConcreteTensionDamage:
         -------
             A ConcreteTensionDamage object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -84,8 +84,8 @@ class ConcreteTensionDamage:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

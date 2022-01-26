@@ -151,8 +151,8 @@ class OdbStepBase:
         -------
             An OdbStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *previousStepName* is invalid: 
               ValueError: previousStepName is invalid 
         """
@@ -179,8 +179,8 @@ class OdbStepBase:
         -------
             An OdbFrame object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the OdbFrame object is not found: 
               OdbError: Frame not found. 
         """
@@ -199,8 +199,8 @@ class OdbStepBase:
         -------
             An OdbFrame object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the OdbFrame object is not found: 
               OdbError: Frame not found. 
         """
@@ -230,8 +230,8 @@ class OdbStepBase:
         -------
             An OdbFrame object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the OdbFrame object is not found: 
               OdbError: Frame not found. 
         """
@@ -255,8 +255,8 @@ class OdbStepBase:
         -------
             A HistoryRegion object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If a HistoryRegion object is not found: 
               OdbError: HistoryRegion not found. 
         """

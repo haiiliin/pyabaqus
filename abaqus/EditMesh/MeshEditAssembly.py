@@ -119,8 +119,8 @@ class MeshEditAssembly(AssemblyBase):
             example, if a node is on a face, this method first positions the node at the new 
             location and then projects it back to the original face. The default value is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             A coordinate and an offset may not both be specified for the same coordinate component. 
         """
         pass

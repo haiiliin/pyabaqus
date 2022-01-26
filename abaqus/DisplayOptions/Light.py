@@ -51,8 +51,8 @@ class Light:
             The initial value is 36% gray. A list of valid color strings is in the *colors* map in 
             the *session* object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

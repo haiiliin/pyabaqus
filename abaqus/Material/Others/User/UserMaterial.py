@@ -62,8 +62,8 @@ class UserMaterial:
         -------
             A UserMaterial object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -78,8 +78,8 @@ class UserMaterial:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

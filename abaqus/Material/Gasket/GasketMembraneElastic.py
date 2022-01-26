@@ -48,8 +48,8 @@ class GasketMembraneElastic:
         -------
             A GasketMembraneElastic object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -64,8 +64,8 @@ class GasketMembraneElastic:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

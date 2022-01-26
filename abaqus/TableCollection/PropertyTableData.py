@@ -53,8 +53,8 @@ class PropertyTableData:
         -------
             A PropertyTableData object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -68,8 +68,8 @@ class PropertyTableData:
         Returns
         -------
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -64,8 +64,8 @@ class TableCollection:
         -------
             A DataTable object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException.
         """
         dataTable = DataTable(label)
@@ -113,8 +113,8 @@ class TableCollection:
         -------
             A PropertyTable object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.propertyTables[name] = propertyTable = PropertyTable(name, properties, variables)

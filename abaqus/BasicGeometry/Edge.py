@@ -92,8 +92,8 @@ class Edge:
             'curvature' specifies the curvature vector at that location; 'radius' is the radius of 
             curvature; and 'tangent' specifies the tangent to the edge at that location. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             The given edge is straight. 
             !img 
         """
@@ -178,8 +178,8 @@ class Edge:
         -------
             A Float specifying the radius. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             The given edges is not circular. 
             !img 
         """

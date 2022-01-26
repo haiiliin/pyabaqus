@@ -43,8 +43,8 @@ class Regularization:
         -------
             A Regularization object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -59,8 +59,8 @@ class Regularization:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

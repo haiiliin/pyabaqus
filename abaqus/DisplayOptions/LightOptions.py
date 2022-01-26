@@ -103,8 +103,8 @@ class LightOptions:
             *materialShininess* argument, the more focused the specular highlight. Possible values 
             are 0.0 ≤≤ *polygonOffsetConstant* ≤≤ 128.0. The default value is 105.0.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

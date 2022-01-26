@@ -43,8 +43,8 @@ class TrussSection(Section):
         -------
             A TrussSection object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError and InvalidNameError. 
         """
         super().__init__()
@@ -59,8 +59,8 @@ class TrussSection(Section):
             A Float specifying the cross-sectional area for the section. Possible values are *area* 
             >> 0. The default value is 1.0.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

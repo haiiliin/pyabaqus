@@ -85,8 +85,8 @@ class EquallySpacedAmplitude(Amplitude):
             A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
             and TOTAL. The default value is STEP.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

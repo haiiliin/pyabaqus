@@ -68,8 +68,8 @@ class MohrCoulombPlasticity:
         -------
             A MohrCoulombPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -84,8 +84,8 @@ class MohrCoulombPlasticity:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

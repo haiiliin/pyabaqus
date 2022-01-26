@@ -261,8 +261,8 @@ class OdbMeshRegionData:
         -------
             An OdbMeshRegionData object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             TextException. 
         """
         pass

@@ -53,8 +53,8 @@ class TProfile(Profile):
         -------
             A TProfile object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """
@@ -71,8 +71,8 @@ class TProfile(Profile):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """

@@ -59,8 +59,8 @@ class Concrete:
         -------
             A Concrete object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -75,8 +75,8 @@ class Concrete:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

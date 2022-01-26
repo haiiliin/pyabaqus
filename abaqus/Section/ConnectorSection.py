@@ -218,8 +218,8 @@ class ConnectorSection(Section):
         behaviorOptions
             A ConnectorBehaviorOptionArray object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

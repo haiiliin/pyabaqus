@@ -154,8 +154,8 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
         -------
             A ConnectorPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError. 
         """
         super().__init__()
@@ -171,8 +171,8 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass

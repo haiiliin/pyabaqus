@@ -55,8 +55,8 @@ class AdaptivityProcess:
         -------
             An AdaptivityProcess object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass

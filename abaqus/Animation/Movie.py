@@ -77,8 +77,8 @@ class Movie:
         -------
             A Movie object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
             - If *fileName* does not exist or can not be read: 
               ValueError: Unable to open movie file 
@@ -118,8 +118,8 @@ class Movie:
             corresponds to the time of *endFrame*. The SymbolicConstant END_FRAME_TIME indicates the 
             time in this movie corresponding to *endFrame*. The default value is END_FRAME_TIME.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             - If 
             *startFrame*,*endFrame*,*timelineStartFrame*,*timelineEndFrame*,*timelineStartTime*, 

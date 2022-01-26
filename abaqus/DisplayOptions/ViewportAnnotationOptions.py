@@ -145,8 +145,8 @@ class ViewportAnnotationOptions:
             Compass. Possible values are XYPLANE, XZPLANE, and YZPLANE. The default value is 
             XZPLANE.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

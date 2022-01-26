@@ -76,8 +76,8 @@ class BoltLoad(Load):
         -------
             A BoltLoad object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             TextError. 
         """
         super().__init__()

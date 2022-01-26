@@ -65,8 +65,8 @@ class ConnectorLock(ConnectorBehaviorOption):
         -------
             A ConnectorLock object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError. 
         """
         super().__init__()
@@ -82,8 +82,8 @@ class ConnectorLock(ConnectorBehaviorOption):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass

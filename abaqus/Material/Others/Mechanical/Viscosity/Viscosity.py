@@ -54,8 +54,8 @@ class Viscosity:
         -------
             A Viscosity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -70,8 +70,8 @@ class Viscosity:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

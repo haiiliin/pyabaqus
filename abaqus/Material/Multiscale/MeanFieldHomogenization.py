@@ -48,8 +48,8 @@ class MeanFieldHomogenization:
         -------
             A MeanFieldHomogenization object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -64,8 +64,8 @@ class MeanFieldHomogenization:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

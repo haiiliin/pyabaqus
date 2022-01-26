@@ -58,8 +58,8 @@ class GeometryDisplayOptions:
             A Boolean specifying whether to apply translucency to the geometry that belongs to the 
             reference representation of the Part or Instance. The default value is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

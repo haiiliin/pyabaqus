@@ -755,8 +755,8 @@ class PartBase(Feature):
         Parameters
         ----------
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -1197,8 +1197,8 @@ class PartBase(Feature):
         faces: tuple[Face]
             Sequence of Face objects. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - An exception occurs if a feature with the given name does not exist. 
               Error : Incorrect feature name. 
         """
@@ -1217,8 +1217,8 @@ class PartBase(Feature):
         edges: tuple[Edge]
             Sequence of Edge objects. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - An exception occurs if a feature with the given name does not exist. 
               Error : Incorrect feature name. 
         """
@@ -1237,8 +1237,8 @@ class PartBase(Feature):
         cells: tuple[Cell]
             Sequence of Cell objects. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - An exception occurs if a feature with the given name does not exist. 
               Error : Incorrect feature name. 
         """
@@ -1257,8 +1257,8 @@ class PartBase(Feature):
         vertices: tuple[ConstrainedSketchVertex]
             Sequence of ConstrainedSketchVertex objects.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - An exception occurs if a feature with the given name does not exist. 
               Error : Incorrect feature name. 
         """
@@ -1276,8 +1276,8 @@ class PartBase(Feature):
             A Boolean value of True if the part is aligned with the sketch and False if it is not 
             aligned. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the part is not an analytical rigid part: 
               AbaqusException: Can only be used with analytical rigid parts. 
         """
@@ -1537,8 +1537,8 @@ class PartBase(Feature):
             A Float specifying the ACIS version. For example, the Float 12.0 corresponds to ACIS 
             Version 12.0. The default value is the current version of ACIS.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the part is an orphan mesh part: 
               Cannot export orphan mesh parts to ACIS. 
         """
@@ -1573,8 +1573,8 @@ class PartBase(Feature):
             A SymbolicConstant specifying a particular flavor of IGES. Possible values are STANDARD, 
             AUTOCAD, SOLIDWORKS, JAMA, and MSBO.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the part is an orphan mesh part: 
               Cannot export orphan mesh parts to IGES. 
         """
@@ -1588,8 +1588,8 @@ class PartBase(Feature):
         fileName
             A String specifying the name of the file to which to write.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the part contains no geometry: 
               Parterror: Cannot export orphan mesh parts to STEP. 
         """
@@ -1603,8 +1603,8 @@ class PartBase(Feature):
         fileName
             A String specifying the name of the file to which to write.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the part is an orphan mesh part: 
               Cannot export orphan mesh parts to VDA-FS. 
         """

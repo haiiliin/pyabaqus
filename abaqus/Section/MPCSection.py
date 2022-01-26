@@ -51,8 +51,8 @@ class MPCSection(Section):
         -------
             A MPCSection object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError and InvalidNameError. 
         """
         super().__init__()

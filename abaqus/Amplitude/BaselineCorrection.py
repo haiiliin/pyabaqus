@@ -37,8 +37,8 @@ class BaselineCorrection:
         -------
             A BaselineCorrection object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -53,8 +53,8 @@ class BaselineCorrection:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

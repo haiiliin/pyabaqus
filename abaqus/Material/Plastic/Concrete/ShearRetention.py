@@ -50,8 +50,8 @@ class ShearRetention:
         -------
             A ShearRetention object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -66,8 +66,8 @@ class ShearRetention:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

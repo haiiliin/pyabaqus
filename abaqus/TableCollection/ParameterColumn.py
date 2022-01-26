@@ -49,8 +49,8 @@ class ParameterColumn:
         -------
             A ParameterTable object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             Incompatible data are given. 
         """
         pass

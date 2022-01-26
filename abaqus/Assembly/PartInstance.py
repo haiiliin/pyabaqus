@@ -345,8 +345,8 @@ class PartInstance:
             which reports all critical errors. When the default value is used, the stored validity 
             status is updated to agree with the result of this check.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - An exception is thrown if this is a dependent part instance and *level* was either not 
             specified or was set to 20, because the validity status cannot be updated for a 
             dependent part instance. In this case, this command should be called on the Part 

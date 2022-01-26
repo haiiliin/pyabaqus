@@ -49,8 +49,8 @@ class FieldModel(ModelBase):
         -------
             A DiscreteField object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException.
         """
         self.discreteFields[name] = discreteField = DiscreteField(name, defaultValues, fieldType, location, dataWidth,
@@ -84,8 +84,8 @@ class FieldModel(ModelBase):
         -------
             An ExpressionField object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             TextException.
         """
         self.analyticalFields[name] = expressionField = ExpressionField(name, expression, localCsys, description)
@@ -178,8 +178,8 @@ class FieldModel(ModelBase):
         -------
             A MappedField object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException.
         """
         self.analyticalFields[name] = mappedField = MappedField(name, regionType, partLevelData, pointDataFormat,

@@ -166,8 +166,8 @@ class FieldOutput:
             value.User supplied values of localCoordSystem are transposed before storing in the 
             database.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - The addData method throws many exceptions of type odbException. For example, if the 
             local coordinate system is specified for scalar data: 
               odbException: Transformation not allowed for scalar data. 
@@ -185,8 +185,8 @@ class FieldOutput:
         field
             A FieldOutput object specifying the data to add.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - The addData method throws many exceptions of type odbException. For example, if the 
             local coordinate system is specified for scalar data: 
               odbException: Transformation not allowed for scalar data. 
@@ -236,8 +236,8 @@ class FieldOutput:
             complex fields to the output database. The order of the values follows the conventions 
             defined in the Abaqus Elements Guide.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If you specify an odbSet containing entities from multiple instances: 
               odbException: Entities from multiple instances present in set. 
             - The addData method throws many exceptions of type odbException. For example, if the 
@@ -478,8 +478,8 @@ class FieldOutput:
         -------
             A FieldOutput object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - The getTransformedField method throws an exception if the field contains any assembly 
             level nodes. 
               odbException: Cannot apply transformation to field containing assembly level nodes. 
@@ -518,8 +518,8 @@ class FieldOutput:
         -------
             A FieldOutput object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - The getTransformedField method throws an exception if the field contains any assembly 
             level nodes. 
               odbException: Cannot apply transformation to field containing assembly level nodes. 
@@ -563,8 +563,8 @@ class FieldOutput:
         -------
             A FieldOutput object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - The getTransformedField method throws an exception if the field contains any assembly 
             level nodes. 
               odbException: Cannot apply transformation to field containing assembly level nodes. 
@@ -591,8 +591,8 @@ class FieldOutput:
         -------
             A FieldOutput object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - The getConnectorFieldXformedToNodeA method throws an exception if the field requires a 
             deformationField and the argument is not supplied. 
               odbException: Deformation field is required for transforming this connector field. 

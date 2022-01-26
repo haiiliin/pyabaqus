@@ -38,8 +38,8 @@ class SizingMemberSize(GeometricRestriction):
         Returns
         -------
 
-        Exceptions
-        ----------
+        Raises
+        ------
         """
         super().__init__()
         pass

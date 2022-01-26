@@ -250,8 +250,8 @@ class OdbPartBase:
         -------
             An OdbMeshElement object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If no element with the specified label exists: 
               OdbError: Invalid element label 
         """
@@ -269,8 +269,8 @@ class OdbPartBase:
         -------
             An OdbMeshNode object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If no node with the specified label exists: 
               OdbError: Invalid node label 
         """
@@ -291,8 +291,8 @@ class OdbPartBase:
             A Double specifying the radius of curvature to smooth discontinuities between adjoining 
             segments. The default value is 0.0.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If OdbPart is of type THREE_D: 
               OdbError: 2D-Planar Analytic Rigid Surface can be defined only if the part is of type 
             TWO_D_PLANAR or AXISYMMETRIC. 
@@ -314,8 +314,8 @@ class OdbPartBase:
             A Double specifying the radius of curvature to smooth discontinuities between adjoining 
             segments. The default value is 0.0.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If OdbPart is not of type THREE_D: 
               OdbError: Analytic Rigid Surface of type CYLINDER can be defined only if the part is 
             of type THREE_D. 
@@ -337,8 +337,8 @@ class OdbPartBase:
             A Double specifying the radius of curvature to smooth discontinuities between adjoining 
             segments. The default value is 0.0.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If OdbPart is not of type THREE_D: 
               OdbError: Analytic Rigid Surface of type REVOLUTION can be defined only if the part is 
             of type THREE_D. 

@@ -202,8 +202,8 @@ class SteadyStateDirectStep(AnalysisStep):
         -------
             A SteadyStateDirectStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -235,8 +235,8 @@ class SteadyStateDirectStep(AnalysisStep):
             A Boolean specifying whether to add to the damping matrix contributions due to friction 
             effects. The default value is OFF.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

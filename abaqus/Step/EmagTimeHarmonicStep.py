@@ -157,8 +157,8 @@ class EmagTimeHarmonicStep(AnalysisStep):
         -------
             An EmagTimeHarmonicStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -176,8 +176,8 @@ class EmagTimeHarmonicStep(AnalysisStep):
             rather than a complex, system matrix is factored. Possible values are REAL_ONLY and 
             COMPLEX. The default value is COMPLEX.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

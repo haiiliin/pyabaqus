@@ -46,8 +46,8 @@ class AdaptiveMeshDomain:
         -------
             An AdaptiveMeshDomain object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -62,8 +62,8 @@ class AdaptiveMeshDomain:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

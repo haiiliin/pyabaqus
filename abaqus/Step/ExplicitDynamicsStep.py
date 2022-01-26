@@ -249,8 +249,8 @@ class ExplicitDynamicsStep(AnalysisStep):
         -------
             An ExplicitDynamicsStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -306,8 +306,8 @@ class ExplicitDynamicsStep(AnalysisStep):
             formulations (shell, membrane, and two-dimensional plane stress elements). The default 
             value is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

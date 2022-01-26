@@ -69,8 +69,8 @@ class TextStyle:
         -------
             A TextStyle object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ColorError 
         """
         pass

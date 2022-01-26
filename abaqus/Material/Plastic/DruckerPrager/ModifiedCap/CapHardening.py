@@ -47,8 +47,8 @@ class CapHardening:
         -------
             A CapHardening object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -63,8 +63,8 @@ class CapHardening:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

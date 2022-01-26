@@ -68,8 +68,8 @@ class PEGSection(Section):
             A Float specifying the value of the y component of the angle between the bounding 
             planes, ΔϕyΔ⁢ϕy. The default value is 0.0.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

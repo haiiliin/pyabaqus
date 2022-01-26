@@ -91,8 +91,8 @@ class CompositePly:
         -------
             A CompositePly object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass

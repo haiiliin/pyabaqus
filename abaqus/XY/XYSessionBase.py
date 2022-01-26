@@ -107,8 +107,8 @@ class XYSessionBase(SessionBase):
         -------
             A list of xyData objects. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - Text Error 
               The stress line passes through incompatible part instances. Results cannot be 
             extracted. 

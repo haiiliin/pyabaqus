@@ -39,8 +39,8 @@ class ErrorIndicatorResult(RuleResult):
         -------
             An ErrorIndicatorResult object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass

@@ -59,8 +59,8 @@ class BeamSectionProfileModel(ModelBase):
         -------
             An ArbitraryProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -105,8 +105,8 @@ class BeamSectionProfileModel(ModelBase):
         -------
             A BoxProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -134,8 +134,8 @@ class BeamSectionProfileModel(ModelBase):
         -------
             A CircularProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -174,8 +174,8 @@ class BeamSectionProfileModel(ModelBase):
         -------
             A GeneralizedProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -206,8 +206,8 @@ class BeamSectionProfileModel(ModelBase):
         -------
             A HexagonalProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -248,8 +248,8 @@ class BeamSectionProfileModel(ModelBase):
         -------
             An IProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -285,8 +285,8 @@ class BeamSectionProfileModel(ModelBase):
         -------
             A LProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -316,8 +316,8 @@ class BeamSectionProfileModel(ModelBase):
         -------
             A PipeProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -347,8 +347,8 @@ class BeamSectionProfileModel(ModelBase):
         -------
             A RectangularProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -387,8 +387,8 @@ class BeamSectionProfileModel(ModelBase):
         -------
             A TProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -422,8 +422,8 @@ class BeamSectionProfileModel(ModelBase):
         -------
             A TrapezoidalProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """

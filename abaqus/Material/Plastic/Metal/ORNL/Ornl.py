@@ -53,8 +53,8 @@ class Ornl:
         -------
             An Ornl object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -69,8 +69,8 @@ class Ornl:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -153,8 +153,8 @@ class ConnectorFriction(ConnectorBehaviorOption):
         -------
             A ConnectorFriction object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError. 
         """
         super().__init__()
@@ -170,8 +170,8 @@ class ConnectorFriction(ConnectorBehaviorOption):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass

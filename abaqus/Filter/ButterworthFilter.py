@@ -88,8 +88,8 @@ class ButterworthFilter(Filter):
             A SymbolicConstant specifying the invariant to which filtering is applied. Possible 
             values are NONE, FIRST, and SECOND. The default value is NONE.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

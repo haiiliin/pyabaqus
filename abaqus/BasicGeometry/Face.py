@@ -168,8 +168,8 @@ class Face:
             A sequence of Floats specifying the *X*-, *Y*-, and *Z*-components of the normal to the 
             face. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             An exception is raised if the optional argument *point* is provided but the point cannot 
             be projected onto the face. 
             !img 

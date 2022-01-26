@@ -50,8 +50,8 @@ class FailureRatios:
         -------
             A FailureRatios object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -66,8 +66,8 @@ class FailureRatios:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

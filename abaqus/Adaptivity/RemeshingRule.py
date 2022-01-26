@@ -108,8 +108,8 @@ class RemeshingRule:
         -------
             A RemeshingRule object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass

@@ -168,8 +168,8 @@ class AnalyticalField(Field):
         -------
             An OdbMeshRegionData object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             TextException.
         """
         self.odbMeshRegionData = OdbMeshRegionData(odbFileName, variableLabel, stepIndex, frameIndex, outputPosition,

@@ -53,8 +53,8 @@ class AcousticInterfaceSection(Section):
             A Float specifying the thickness of the section. Possible values are *thickness* >> 0.0. 
             The default value is 1.0.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

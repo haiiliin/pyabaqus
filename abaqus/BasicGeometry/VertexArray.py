@@ -226,8 +226,8 @@ class VertexArray:
             that specifies the *X*-, *Y*-, and *Z*-location of the ConstrainedSketchVertex. See program listing
             above. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - An exception occurs if the resulting sequence is empty. 
               Error: The mask results in an empty sequence 
             !img 

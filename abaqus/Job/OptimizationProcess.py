@@ -71,8 +71,8 @@ class OptimizationProcess:
         -------
             An OptimizationProcess object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass

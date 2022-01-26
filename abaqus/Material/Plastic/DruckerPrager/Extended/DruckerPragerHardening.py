@@ -56,8 +56,8 @@ class DruckerPragerHardening:
         -------
             A DruckerPragerHardening object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -72,8 +72,8 @@ class DruckerPragerHardening:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -304,8 +304,8 @@ class SymbolOptions(DGSymbolOptions):
             A Float specifying the user-specified minimum tensor value. The default value is 
             *autoTensorMinValue*.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

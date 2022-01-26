@@ -219,8 +219,8 @@ class RandomResponseStep(AnalysisStep):
         -------
             A RandomResponseStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -258,8 +258,8 @@ class RandomResponseStep(AnalysisStep):
         structuralDampingByFrequency
             A StructuralDampingByFrequency object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

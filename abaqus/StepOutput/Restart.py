@@ -47,8 +47,8 @@ class Restart:
         -------
             A Restart object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -63,8 +63,8 @@ class Restart:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

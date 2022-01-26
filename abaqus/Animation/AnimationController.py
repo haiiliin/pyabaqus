@@ -36,8 +36,8 @@ class AnimationController:
             The SymbolicConstant UNLIMITED or an Int specifying how many seconds to play the 
             animation. The default value is UNLIMITED.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *animationType*=NONE: 
               AnimationError: animationType not set 
         """
@@ -107,8 +107,8 @@ class AnimationController:
             A SymbolicConstant specifying the type of movie to play. Possible values are 
             SCALE_FACTOR, HARMONIC, TIME_HISTORY, and NONE. The default value is NONE.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

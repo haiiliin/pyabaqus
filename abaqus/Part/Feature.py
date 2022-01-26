@@ -234,8 +234,8 @@ class Feature(BaseFeature):
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -318,8 +318,8 @@ class Feature(BaseFeature):
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -556,8 +556,8 @@ class Feature(BaseFeature):
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the given boundary is not a closed loop: 
               Parterror: Cannot find a closed loop 
             - If the given boundary contains a zero length component: 
@@ -1123,8 +1123,8 @@ class Feature(BaseFeature):
         -------
             A Boolean value. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the intended volume to be turned into a shell entity is not three-dimensional. 
               Parterror: ConstrainedSketchGeometry that is not 3-dimensional does not contain cells.
         """
@@ -1195,8 +1195,8 @@ class Feature(BaseFeature):
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the selected entity is not a redundant entity. 
               Parterror: None of the selected entities are redundant. 
         """

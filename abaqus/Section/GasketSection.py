@@ -93,8 +93,8 @@ class GasketSection(Section):
             specified, a value is used equal to 10–9 times the initial compressive stiffness in the 
             thickness direction. The default value is DEFAULT.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass

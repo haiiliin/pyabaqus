@@ -79,8 +79,8 @@ class Permeability:
         -------
             A Permeability object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -95,8 +95,8 @@ class Permeability:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

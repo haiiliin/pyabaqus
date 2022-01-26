@@ -193,8 +193,8 @@ class OdbInstanceBase:
         -------
             An OdbMeshElement object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If no element with the specified label exists: 
               OdbError: Invalid element label 
         """
@@ -212,8 +212,8 @@ class OdbInstanceBase:
         -------
             AnOdbMeshNode object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If no node with the specified label exists:
               OdbError: Invalid node label
         """
@@ -229,8 +229,8 @@ class OdbInstanceBase:
         section
             A Section object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *region* is not an element set: 
               OdbError: Section assignment requires element set. 
             - If the element set is not from the current instance: 
@@ -252,8 +252,8 @@ class OdbInstanceBase:
             A Double specifying the radius of curvature to smooth discontinuities between adjoining 
             segments. The default value is 0.0.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If OdbPart associated with the part instance is of type THREE_D: 
               OdbError: 2D-Planar Analytic Rigid Surface can be defined only if the instance is of 
             type TWO_D_PLANAR or AXISYMMETRIC. 
@@ -279,8 +279,8 @@ class OdbInstanceBase:
             A sequence of sequences of Floats specifying the global coordinates of points used to 
             define the local coordinate system.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If OdbPart associated with the part instance is not of type THREE_D: 
               OdbError: Analytic Rigid Surface of type CYLINDER can be defined only if the instance 
             is of type THREE_D. 
@@ -306,8 +306,8 @@ class OdbInstanceBase:
             A sequence of sequences of Floats specifying the global coordinates of points used to 
             define the local coordinate system.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If OdbPart associated with the part instance is not of type THREE_D: 
               OdbError: Analytic Rigid Surface of type REVOLUTION can be defined only if the 
             instance is of type THREE_D. 
@@ -337,8 +337,8 @@ class OdbInstanceBase:
         analyticSurface
             An AnalyticSurface specifying the Analytic Rigid Surface assigned to the rigid body.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *referenceNode* is not a node set: 
               OdbError: Rigid body definition requires a node set. 
         """

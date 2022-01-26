@@ -217,8 +217,8 @@ class AssemblyDisplayOptions:
         stopConditions
             A Boolean specifying whether stop conditions are shown. The default value is OFF.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

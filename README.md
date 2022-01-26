@@ -1,5 +1,5 @@
 # pyabaqus
- Type hints for python scripting of Abaqus
+ Type hints for Python scripting of Abaqus
 
 ## Other links
 

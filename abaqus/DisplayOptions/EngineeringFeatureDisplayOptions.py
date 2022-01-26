@@ -50,8 +50,8 @@ class EngineeringFeatureDisplayOptions:
             A Boolean specifying whether two-point spring symbols are shown. The default value is 
             ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

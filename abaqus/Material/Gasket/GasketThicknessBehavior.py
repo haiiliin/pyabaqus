@@ -128,8 +128,8 @@ class GasketThicknessBehavior:
         -------
             A GasketThicknessBehavior object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -144,8 +144,8 @@ class GasketThicknessBehavior:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

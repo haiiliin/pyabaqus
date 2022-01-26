@@ -948,8 +948,8 @@ class OptimizationTask(OptimizationTaskBase):
         Returns
         -------
 
-        Exceptions
-        ----------
+        Raises
+        ------
         """
         self.geometricRestrictions[name] = geometricRestriction = SizingMemberSize(name, region, minWidth)
         return geometricRestriction

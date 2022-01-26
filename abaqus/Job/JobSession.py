@@ -49,8 +49,8 @@ class JobSession(SessionBase):
         -------
             A Queue object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *fileCopy*=ON and *hostName* is empty:
               Remote queue host name is not set.
             - If *fileCopy*=ON and *directory* is empty:

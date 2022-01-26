@@ -47,8 +47,8 @@ class ClayHardening:
         -------
             A ClayHardening object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -63,8 +63,8 @@ class ClayHardening:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

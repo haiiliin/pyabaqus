@@ -95,8 +95,8 @@ class DruckerPrager:
         -------
             A DruckerPrager object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -111,8 +111,8 @@ class DruckerPrager:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

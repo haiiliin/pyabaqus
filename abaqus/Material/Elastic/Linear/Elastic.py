@@ -170,8 +170,8 @@ class Elastic:
         -------
             An Elastic object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -186,8 +186,8 @@ class Elastic:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

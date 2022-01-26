@@ -703,8 +703,8 @@ class BasicOptions:
             A Boolean specifying whether to include additional averaging boundaries for shells and 
             membranes based on feature edges. The default value is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *featureAngle* is not in the valid range: 
               RangeError: featureAngle must be a float in the range 0-90, inclusive 
         """

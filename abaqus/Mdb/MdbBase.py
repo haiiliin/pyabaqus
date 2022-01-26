@@ -115,8 +115,8 @@ class MdbBase:
         -------
             An Mdb object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the file is an invalid model database: 
               MdbError: invalid model database. 
             - If the file contains a model database from an Abaqus release other than the Abaqus 
@@ -150,8 +150,8 @@ class MdbBase:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *pathName* is empty: 
               MdbError: cannot save file: pathname member is empty 
             - If *pathName* is abaqus.cae: 
@@ -170,8 +170,8 @@ class MdbBase:
             A String specifying the path to be used when the model database is saved to a file. If 
             you do not provide a file extension, .cae is appended automatically to the path.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *pathName* is abaqus.cae: 
               MdbError: “abaqus.cae” is an invalid CAE filename. 
             - If the command fails to save the Mdb object to disk for reasons not mentioned above: 
@@ -189,8 +189,8 @@ class MdbBase:
             A String specifying the path to the auxiliary Mdb which is to be opened. If you do not 
             provide a file extension, .cae is appended automatically to the path.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the file is an invalid model database: 
               MdbError: invalid model database. 
             - If the file contains a model database from an Abaqus release other than the Abaqus 
@@ -213,8 +213,8 @@ class MdbBase:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the auxiliary Mdb was not opened earlier. 
               MdbError: The auxiliary Mdb was not opened.. 
         """
@@ -231,8 +231,8 @@ class MdbBase:
         -------
             A list of model names present in the auxiliaryMdb 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the auxiliary Mdb was not opened earlier. 
               MdbError: The auxiliary Mdb was not opened.. 
         """
@@ -251,8 +251,8 @@ class MdbBase:
             If this argument is not specified *toName* is assumed to be the same as *fromName*. If a 
             model with name *toName* already exists in Mdb, it is overwritten.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the auxiliary Mdb was not opened earlier. 
               MdbError: The auxiliary Mdb was not opened. 
             - If the model fromName does not exist in the auxiliary Mdb. 

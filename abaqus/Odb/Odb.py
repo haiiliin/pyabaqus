@@ -125,8 +125,8 @@ class Odb(AmplitudeOdb,
         -------
             An OdbStep object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *previousStepName* is invalid:
               ValueError: previousStepName is invalid
         """

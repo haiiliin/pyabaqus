@@ -118,8 +118,8 @@ class Feature(FeatureBase):
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         return Feature()
@@ -177,8 +177,8 @@ class Feature(FeatureBase):
         -------
             A Feature Object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         return Feature()
@@ -210,8 +210,8 @@ class Feature(FeatureBase):
         -------
             A Feature Object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         return Feature()
@@ -236,8 +236,8 @@ class Feature(FeatureBase):
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         return Feature()
@@ -267,8 +267,8 @@ class Feature(FeatureBase):
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         return Feature()
@@ -298,8 +298,8 @@ class Feature(FeatureBase):
         -------
             A Feature object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException.
         """
         return Feature()

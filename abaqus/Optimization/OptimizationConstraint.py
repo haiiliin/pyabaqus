@@ -57,8 +57,8 @@ class OptimizationConstraint:
             RELATIVE_EQUAL, RELATIVE_GREATER_THAN_EQUAL, and RELATIVE_LESS_THAN_EQUAL. The default 
             value is ABSOLUTE_EQUAL.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

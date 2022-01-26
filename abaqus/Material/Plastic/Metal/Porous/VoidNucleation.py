@@ -49,8 +49,8 @@ class VoidNucleation:
         -------
             A VoidNucleation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -65,8 +65,8 @@ class VoidNucleation:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

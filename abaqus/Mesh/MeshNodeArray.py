@@ -178,8 +178,8 @@ class MeshNodeArray(list[MeshNode]):
             *high*: a tuple of three floats representing the maximum x, y and z boundary values of 
             the bounding box. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
         """
         pass
 
@@ -218,8 +218,8 @@ class MeshNodeArray(list[MeshNode]):
         -------
             A MeshNodeArray object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - An exception occurs if the resulting sequence is empty. 
               Error: The mask results in an empty sequence 
         """

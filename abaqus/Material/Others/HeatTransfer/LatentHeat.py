@@ -37,8 +37,8 @@ class LatentHeat:
         -------
             A LatentHeat object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -53,8 +53,8 @@ class LatentHeat:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

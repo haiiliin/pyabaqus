@@ -223,8 +223,8 @@ class DamageEvolution:
         -------
             A DamageEvolution object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -239,8 +239,8 @@ class DamageEvolution:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

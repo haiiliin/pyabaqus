@@ -111,7 +111,7 @@ class Eos:
         Returns
         -------
 
-        Exceptions
-        ----------
+        Raises
+        ------
         """
         pass

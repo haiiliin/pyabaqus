@@ -115,8 +115,8 @@ class JobMdb(MdbBase):
         -------
             A ModelJob object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException.
         """
         self.jobs[name] = job = ModelJob(name, model, description, type, queue, waitHours, waitMinutes, atTime,
@@ -276,8 +276,8 @@ class JobMdb(MdbBase):
         -------
             An OptimizationProcess object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException.
         """
         self.optimizationProcesses[name] = optimizationProcess = OptimizationProcess(name, model, task, prototypeJob,

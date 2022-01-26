@@ -53,8 +53,8 @@ class EpsOptions:
             images. Possible values are EXTRA COARSE, COARSE, MEDIUM, FINE, and EXTRA FINE. The 
             default value is MEDIUM.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             - If either element of *imageSize* is out of range: 
               RangeError: imageSize must be SIZE_ON_SCREEN or a sequence of 2 Floats >= (*minWidth*, 

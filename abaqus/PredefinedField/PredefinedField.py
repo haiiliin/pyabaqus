@@ -48,8 +48,8 @@ class PredefinedField:
             A String specifying the name of the step to which the PredefinedFieldState object is 
             moved.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             TextError. 
         """
         pass

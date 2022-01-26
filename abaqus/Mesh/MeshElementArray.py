@@ -221,8 +221,8 @@ class MeshElementArray(list[MeshElement]):
         -------
             A MeshElementArray object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - An exception occurs if the resulting sequence is empty. 
               Error: The mask results in an empty sequence 
         """

@@ -30,8 +30,8 @@ class ArcByCenterEnds(ConstrainedSketchGeometry):
         -------
             A ConstrainedSketchGeometry object (None if the arc cannot be created). 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             If incompatible data are given, the second endpoint is ignored. 
             !img 
         """

@@ -52,8 +52,8 @@ class FailStress:
         -------
             A FailStress object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -68,8 +68,8 @@ class FailStress:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

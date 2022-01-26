@@ -57,8 +57,8 @@ class BrittleFailure:
         -------
             A BrittleFailure object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -73,8 +73,8 @@ class BrittleFailure:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

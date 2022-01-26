@@ -43,8 +43,8 @@ class DataTable:
         -------
             A DataTable object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass

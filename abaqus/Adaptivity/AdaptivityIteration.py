@@ -73,8 +73,8 @@ class AdaptivityIteration:
         -------
             An ErrorIndicatorResult object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException.
         """
         self.ruleResults[name] = ruleResult = ErrorIndicatorResult(name, results)
@@ -110,8 +110,8 @@ class AdaptivityIteration:
         -------
             A RuleResult object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException.
         """
         self.ruleResults[name] = ruleResult = RuleResult(name, indicatorResults, numElems, minSizeElemCount,

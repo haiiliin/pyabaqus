@@ -42,8 +42,8 @@ class AnnealTemperature:
         -------
             An AnnealTemperature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -58,8 +58,8 @@ class AnnealTemperature:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

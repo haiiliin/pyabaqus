@@ -93,8 +93,8 @@ class CDCTerm:
         -------
             A CDCTerm object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError. 
         """
         pass
@@ -109,8 +109,8 @@ class CDCTerm:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass
@@ -186,8 +186,8 @@ class CDCTerm:
         -------
             A ConnectorOptions object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError.
         """
         self.options = connectorOptions = ConnectorOptions(useBehRegSettings, regularize, defaultTolerance,

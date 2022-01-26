@@ -155,8 +155,8 @@ class Area:
         pb
             A Float specifying the bottom padding of the area in mm. The default value is 1.0.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -64,8 +64,8 @@ class KeywordBlock:
             A String specifying the text to be inserted. The text represents an Abaqus input file 
             keyword and its associated data
 
-        Exceptions
-        ----------
+        Raises
+        ------
             IndexError. 
         """
         pass
@@ -81,8 +81,8 @@ class KeywordBlock:
             A String specifying the text to be replaced. The text represents an Abaqus input file 
             keyword and its associated data.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             IndexError. 
         """
         pass
@@ -111,8 +111,8 @@ class KeywordBlock:
             connectivities (i.e. not editing this information) then it is generally better to access 
             this information from other parts of the Mdb.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             IndexError. 
         """
         pass

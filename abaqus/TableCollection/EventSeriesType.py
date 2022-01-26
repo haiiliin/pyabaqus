@@ -37,8 +37,8 @@ class EventSeriesType:
         -------
             A EventSeriesType object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -54,8 +54,8 @@ class EventSeriesType:
         Returns
         -------
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

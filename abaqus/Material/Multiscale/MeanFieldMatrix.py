@@ -39,8 +39,8 @@ class MeanFieldMatrix:
         -------
             A MeanFieldMatrix object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -55,8 +55,8 @@ class MeanFieldMatrix:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

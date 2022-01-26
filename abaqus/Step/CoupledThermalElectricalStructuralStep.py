@@ -309,8 +309,8 @@ class CoupledThermalElectricalStructuralStep(AnalysisStep):
         -------
             A CoupledThermalElectricalStructuralStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -394,8 +394,8 @@ class CoupledThermalElectricalStructuralStep(AnalysisStep):
             results of the preceding general step. This parameter must be used in conjunction with 
             the *adaptiveDampingRatio* parameter. The default value is OFF.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

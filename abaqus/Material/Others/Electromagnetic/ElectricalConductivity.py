@@ -75,8 +75,8 @@ class ElectricalConductivity:
         -------
             An ElectricalConductivity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -91,8 +91,8 @@ class ElectricalConductivity:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

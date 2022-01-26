@@ -50,8 +50,8 @@ class PoreFluidExpansion:
         -------
             A PoreFluidExpansion object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -66,8 +66,8 @@ class PoreFluidExpansion:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

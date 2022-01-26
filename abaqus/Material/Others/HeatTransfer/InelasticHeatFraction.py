@@ -37,8 +37,8 @@ class InelasticHeatFraction:
         -------
             An InelasticHeatFraction object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -53,8 +53,8 @@ class InelasticHeatFraction:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

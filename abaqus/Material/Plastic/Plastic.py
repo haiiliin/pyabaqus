@@ -126,8 +126,8 @@ class Plastic:
         -------
             A Plastic object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -142,8 +142,8 @@ class Plastic:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

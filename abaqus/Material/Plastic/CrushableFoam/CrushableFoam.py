@@ -67,8 +67,8 @@ class CrushableFoam:
         -------
             A CrushableFoam object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -83,8 +83,8 @@ class CrushableFoam:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

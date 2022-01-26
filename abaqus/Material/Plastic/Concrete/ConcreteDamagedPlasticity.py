@@ -67,8 +67,8 @@ class ConcreteDamagedPlasticity:
         -------
             A ConcreteDamagedPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -83,8 +83,8 @@ class ConcreteDamagedPlasticity:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

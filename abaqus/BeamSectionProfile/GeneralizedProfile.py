@@ -54,8 +54,8 @@ class GeneralizedProfile(Profile):
         -------
             A GeneralizedProfile object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """
@@ -72,8 +72,8 @@ class GeneralizedProfile(Profile):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """

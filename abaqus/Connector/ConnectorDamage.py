@@ -205,8 +205,8 @@ class ConnectorDamage(ConnectorBehaviorOption):
         -------
             A ConnectorDamage object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError. 
         """
         super().__init__()
@@ -222,8 +222,8 @@ class ConnectorDamage(ConnectorBehaviorOption):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass

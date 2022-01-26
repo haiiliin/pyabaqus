@@ -68,8 +68,8 @@ class AcousticMedium:
         -------
             An AcousticMedium object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -84,8 +84,8 @@ class AcousticMedium:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

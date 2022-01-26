@@ -479,8 +479,8 @@ class GraphicsOptions:
             range' colors may be incorrectly shown for values near the range limits. The default 
             value is 0.5×10–5.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

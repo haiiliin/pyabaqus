@@ -64,8 +64,8 @@ class LowDensityFoam:
         -------
             A LowDensityFoam object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -80,8 +80,8 @@ class LowDensityFoam:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

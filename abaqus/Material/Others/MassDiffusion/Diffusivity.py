@@ -84,8 +84,8 @@ class Diffusivity:
         -------
             A Diffusivity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -100,8 +100,8 @@ class Diffusivity:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

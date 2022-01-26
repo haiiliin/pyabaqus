@@ -51,8 +51,8 @@ class InteractionDisplayOptions:
             A Boolean specifying whether concentrated film condition symbols are shown. The default 
             value is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

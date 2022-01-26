@@ -130,8 +130,8 @@ class OdbBase:
         -------
             An OdbFrame object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the exact frame is not found: 
               OdbError: Frame not found. 
         """
@@ -147,8 +147,8 @@ class OdbBase:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - OdbError 
               Database save failed. The database was opened as read-only. Modification of data is 
             not permitted. 

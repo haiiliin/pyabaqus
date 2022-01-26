@@ -196,8 +196,8 @@ class SubspaceDynamicsStep(AnalysisStep):
         -------
             A SubspaceDynamicsStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -229,8 +229,8 @@ class SubspaceDynamicsStep(AnalysisStep):
             A SymbolicConstant specifying the amplitude variation for loading magnitudes during the 
             step. Possible values are STEP and RAMP. The default value is STEP.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

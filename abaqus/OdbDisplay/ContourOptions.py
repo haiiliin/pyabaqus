@@ -339,8 +339,8 @@ class ContourOptions(DGContourOptions):
             A Boolean specifying whether to hide the values outside the specified minimum/maximum 
             for the contour interval when *legendHideOutsideLimits*=ON. The default value is OFF.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -193,8 +193,8 @@ class Hyperelastic:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

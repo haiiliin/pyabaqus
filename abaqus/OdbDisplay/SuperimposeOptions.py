@@ -321,8 +321,8 @@ class SuperimposeOptions(DGSuperimposeOptions):
             A sequence of three Floats specifying the offset value in each of the three coordinate 
             directions when *deformedOffsetMode*=NONUNIFORM. The default value is (0, 0, 0).
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

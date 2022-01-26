@@ -299,8 +299,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -325,8 +325,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -351,8 +351,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -376,8 +376,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -407,8 +407,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -438,8 +438,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -472,8 +472,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -495,8 +495,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -521,8 +521,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -547,8 +547,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -574,8 +574,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -613,8 +613,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -659,8 +659,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -693,8 +693,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -720,8 +720,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -750,8 +750,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -777,8 +777,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -808,8 +808,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -836,8 +836,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -862,8 +862,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -888,8 +888,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -914,8 +914,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1013,8 +1013,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1040,8 +1040,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException and RangeError. 
         """
         pass
@@ -1066,8 +1066,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1093,8 +1093,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1131,8 +1131,8 @@ class Feature:
             A Transform object. A Transform is an object with one method that returns the transform 
             matrix. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the sketchUpEdge is parallel to the sketchPlane: 
               Up direction is parallel to plane normal 
         """
@@ -1157,8 +1157,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1183,8 +1183,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1217,8 +1217,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1244,8 +1244,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1270,8 +1270,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1298,8 +1298,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1326,8 +1326,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1356,8 +1356,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1387,8 +1387,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1412,8 +1412,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1438,8 +1438,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1463,8 +1463,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1519,8 +1519,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1551,8 +1551,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1677,8 +1677,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1710,8 +1710,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1751,8 +1751,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1791,8 +1791,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1830,8 +1830,8 @@ class Feature:
         -------
             A Feature object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -1986,8 +1986,8 @@ class Feature:
             use this argument to modify a partition object created with the 
             PartitionFaceBySketchDistance method.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass

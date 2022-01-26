@@ -38,8 +38,8 @@ class SaturationDependence:
         -------
             A SaturationDependence object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -54,8 +54,8 @@ class SaturationDependence:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -50,8 +50,8 @@ class FailStrain:
         -------
             A FailStrain object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -66,8 +66,8 @@ class FailStrain:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -42,8 +42,8 @@ class CircularProfile(Profile):
         -------
             A CircularProfile object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """
@@ -60,8 +60,8 @@ class CircularProfile(Profile):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """

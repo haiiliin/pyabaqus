@@ -101,8 +101,8 @@ class View:
         -------
             A View object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -243,8 +243,8 @@ class View:
             desirable to show intermediate results before the script completes. The default value is 
             False.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -258,8 +258,8 @@ class View:
             A sequence of a String and an Int specifying a part instance name and a node label or a 
             sequence of 3 Floats specifying a point.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             TypeError: rotationCenter cannot be set using a part instance and node label unless the 
             displayed object is an ODB 
         """
@@ -275,8 +275,8 @@ class View:
             A Boolean specifying whether or not the camera is in movie mode. The default value is 
             OFF.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -324,8 +324,8 @@ class View:
             desirable to show intermediate results before the script completes. The default value is 
             False.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

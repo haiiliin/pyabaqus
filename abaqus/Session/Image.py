@@ -34,8 +34,8 @@ class Image:
         -------
             An Image object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
             - If *fileName* does not exist or can not be read: 
               ValueError: Unable to open image file 
@@ -65,8 +65,8 @@ class Image:
         -------
             An Image object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
             TypeError. 
             - If *movieName* does not exist: 

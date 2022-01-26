@@ -115,8 +115,8 @@ class DamageStabilizationCohesive:
         -------
             A DamageStabilizationCohesive object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -131,8 +131,8 @@ class DamageStabilizationCohesive:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

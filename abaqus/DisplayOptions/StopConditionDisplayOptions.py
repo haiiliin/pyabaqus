@@ -30,8 +30,8 @@ class StopConditionDisplayOptions:
             A Boolean specifying whether local stop condition symbols are shown. The default value 
             is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

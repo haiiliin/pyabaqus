@@ -42,8 +42,8 @@ class SuperElasticHardeningModifications:
         -------
             A SuperElasticHardeningModifications object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -58,8 +58,8 @@ class SuperElasticHardeningModifications:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

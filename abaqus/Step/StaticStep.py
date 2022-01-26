@@ -331,8 +331,8 @@ class StaticStep(AnalysisStep):
         -------
             A StaticStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -427,8 +427,8 @@ class StaticStep(AnalysisStep):
             results of the preceding general step. This parameter must be used in conjunction with 
             the *adaptiveDampingRatio* parameter. The default value is OFF.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -47,8 +47,8 @@ class PressureEffect:
         -------
             A PressureEffect object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -63,8 +63,8 @@ class PressureEffect:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

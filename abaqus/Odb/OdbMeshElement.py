@@ -83,8 +83,8 @@ class OdbMeshElement:
             A tuple of 3 floats representing the unit normal vector. If the element face is 
             collapsed such that a normal cannot be computed, a zero-length vector is returned. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the exact frame is not found: 
               OdbError: Frame not found. 
             - If the step name is not found: 

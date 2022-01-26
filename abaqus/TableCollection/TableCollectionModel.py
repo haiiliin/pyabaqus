@@ -40,8 +40,8 @@ class TableCollectionModel(ModelBase):
         -------
             An EventSeries object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.eventSeriesDatas[name] = eventSeries = EventSeries(name, createStepName, eventSeriesType, transformType,
@@ -68,8 +68,8 @@ class TableCollectionModel(ModelBase):
         -------
             A EventSeriesType object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.eventSeriesTypes[name] = eventSeriesType = EventSeriesType(name, createStepName, fields)

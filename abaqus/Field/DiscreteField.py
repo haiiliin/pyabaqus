@@ -63,8 +63,8 @@ class DiscreteField(Field):
         -------
             A DiscreteField object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         super().__init__()
@@ -106,8 +106,8 @@ class DiscreteField(Field):
         -------
             A DiscreteField object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -135,8 +135,8 @@ class DiscreteField(Field):
         -------
             A DiscreteField object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass

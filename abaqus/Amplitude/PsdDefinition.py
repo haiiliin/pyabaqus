@@ -99,8 +99,8 @@ class PsdDefinition(Amplitude):
             define the cross-spectral density frequency function. The default value is an empty 
             string.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

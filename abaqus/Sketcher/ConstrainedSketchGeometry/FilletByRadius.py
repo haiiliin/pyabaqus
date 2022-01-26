@@ -33,8 +33,8 @@ class FilletByRadius(ConstrainedSketchGeometry):
         -------
             A ConstrainedSketchGeometry object (None if the fillet cannot be created). 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the radius given cannot be used to create a fillet between the two curves given: 
               Range Error: cannot construct the Fillet specified 
             !img 

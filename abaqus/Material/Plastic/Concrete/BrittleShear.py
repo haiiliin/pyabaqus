@@ -60,8 +60,8 @@ class BrittleShear:
         -------
             A BrittleShear object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -76,8 +76,8 @@ class BrittleShear:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

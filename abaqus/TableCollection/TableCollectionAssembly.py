@@ -39,8 +39,8 @@ class TableCollectionAssembly(AssemblyBase):
         -------
             An ElementProgressiveActivation object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException: If the region does not contain only elements.
         """
         self.elementProgressiveActivations[name] = elementProgressiveActivation = ElementProgressiveActivation(

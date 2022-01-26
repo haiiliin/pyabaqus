@@ -43,8 +43,8 @@ class XYSession(XYSessionBase):
         -------
             An AreaStyle object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ColorError
         """
         areaStyle = AreaStyle(color, fill, style)
@@ -80,8 +80,8 @@ class XYSession(XYSessionBase):
         -------
             A LineStyle object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ColorError
         """
         lineStyle = LineStyle(color, show, style, thickness)
@@ -224,8 +224,8 @@ class XYSession(XYSessionBase):
         -------
             A SymbolStyle object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ColorError
         """
         symbolStyle = SymbolStyle(color, show, marker, size)
@@ -259,8 +259,8 @@ class XYSession(XYSessionBase):
         -------
             A TextStyle object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ColorError
         """
         textStyle = TextStyle(color, show, font, rotationAngle)
@@ -468,7 +468,7 @@ class XYSession(XYSessionBase):
                             variable: tuple[tuple[str, SymbolicConstant, tuple[SymbolicConstant, str]]],
                             elementSets: tuple = (), elementLabels: tuple = (), nodeSets: tuple = (),
                             nodeLabels: tuple = (), numericForm: SymbolicConstant = REAL, complexAngle: float = 0,
-                            operator: SymbolicConstant = None) -> list[XYData]:
+                            operator: SymbolicConstant = None) -> list['XYData']:
         """This method creates a list of XYData objects by reading field data from an Odb object.
 
         Path
@@ -690,8 +690,8 @@ class XYSession(XYSessionBase):
             If *variable* specified has one fieldoutput: Returns an XYData object.
             If *variable* specified has more than one fieldoutputs: Returns list of XYData objects.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *path* is invalid:
               ErrorPathNotFound: Path not found.
             - If *viewport* is invalid:

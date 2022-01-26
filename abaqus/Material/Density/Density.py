@@ -55,8 +55,8 @@ class Density:
         -------
             A Density object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -71,8 +71,8 @@ class Density:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

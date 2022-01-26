@@ -42,8 +42,8 @@ class ActivateElements:
         -------
             An ActivateElements object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -57,8 +57,8 @@ class ActivateElements:
         Returns
         -------
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

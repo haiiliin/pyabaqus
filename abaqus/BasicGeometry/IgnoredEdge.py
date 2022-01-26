@@ -50,8 +50,8 @@ class IgnoredEdge:
         -------
             A Float specifying the radius. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             The given IgnoredEdge object is not circular. 
             !img 
         """
@@ -78,8 +78,8 @@ class IgnoredEdge:
             'curvature' specifies the curvature vector at that location. 'radius' is the Radius of 
             curvature and 'tangent' specifies the tangent to the IgnoredEdge at that location. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             The given IgnoredEdge is straight. 
             !img 
         """

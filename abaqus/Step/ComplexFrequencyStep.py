@@ -215,8 +215,8 @@ class ComplexFrequencyStep(AnalysisStep):
         -------
             A ComplexFrequencyStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -258,8 +258,8 @@ class ComplexFrequencyStep(AnalysisStep):
             stiffness contributions from frequency-domain viscoelasticity in the step. The default 
             value is None.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

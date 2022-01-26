@@ -63,8 +63,8 @@ class AcousticInfiniteSection(Section):
             variation of the acoustic field in the infinite direction. Possible values are 0 << 
             *order* ≤≤ 10. The default value is 10.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

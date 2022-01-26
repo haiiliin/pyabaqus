@@ -124,8 +124,8 @@ class SpectrumAmplitude(Amplitude):
             A String specifying the name of the amplitude that describes the dynamic event used to 
             calculate the spectrum. The default value is an empty string.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

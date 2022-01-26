@@ -80,8 +80,8 @@ class ConnectorPotential:
         -------
             A ConnectorPotential object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError. 
         """
         pass
@@ -96,8 +96,8 @@ class ConnectorPotential:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass
@@ -123,8 +123,8 @@ class ConnectorPotential:
         -------
             A DerivedComponent object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError.
         """
         self.derivedComponent = derivedComponent = DerivedComponent()

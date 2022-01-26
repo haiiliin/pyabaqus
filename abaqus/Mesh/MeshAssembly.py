@@ -470,8 +470,8 @@ class MeshAssembly(AssemblyBase):
         -------
             ElemType object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - TypeError 
               If the region cannot be associated with element types or if the *elemShape* is not 
             consistent with the dimension of the *region*. 
@@ -544,8 +544,8 @@ class MeshAssembly(AssemblyBase):
             The return value is a SymbolicConstant or a Boolean depending on the value of the 
             *attribute* argument. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - TypeError 
               The region cannot carry mesh controls. 
         """
@@ -596,8 +596,8 @@ class MeshAssembly(AssemblyBase):
         -------
             The return value is a Float, and its value is dependent on the *attribute* argument. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - An exception occurs if the part instance does not contain native geometry. 
               Error: Part instance does not contain native geometry 
         """
@@ -821,8 +821,8 @@ class MeshAssembly(AssemblyBase):
             setElementType command. If no valid ElemType objects can be found, the order will remain 
             unchanged.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             As a result of the element assignment, a region must have the same library, family, and 
             order for all its assigned element types. Otherwise, an exception will be thrown. 
             For example, suppose the Hex, Wedge, and Tet elements previously assigned to a cell are 

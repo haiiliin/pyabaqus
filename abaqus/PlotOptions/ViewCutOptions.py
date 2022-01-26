@@ -188,8 +188,8 @@ class ViewCutOptions:
             A sequence of three Floats specifying the Y axis for free body component resolution. The 
             default value is (0, 1, 0).
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

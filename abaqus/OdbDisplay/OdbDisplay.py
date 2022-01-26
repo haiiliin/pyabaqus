@@ -271,8 +271,8 @@ class OdbDisplay:
         field
             A String specifying the FieldOutput object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
@@ -292,8 +292,8 @@ class OdbDisplay:
             (*numFramesInStep* − 1). If *frame* ≥≥ (*numFramesInStep* − 1) the last frame will be 
             displayed.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
@@ -347,8 +347,8 @@ class OdbDisplay:
             example:`sectionPoint={'shell < MAT > < 7 section points >':'SPOS,    (fraction = 1.0)', 
             'shell < MAT > < 5 section points >':    'SPOS, (fraction = 1.0)', }`
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
@@ -369,8 +369,8 @@ class OdbDisplay:
         activePly
             A String specifying the active ply name.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
@@ -424,8 +424,8 @@ class OdbDisplay:
             A Boolean to specify if the active status variable is to remove elements from undeformed 
             plots. The default value is False.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
@@ -471,8 +471,8 @@ class OdbDisplay:
             A SymbolicConstant specifying the vector quantity to be displayed with the symbol. This 
             value is set in the SymbolOptions object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
@@ -488,8 +488,8 @@ class OdbDisplay:
         variableLabel
             A String specifying the field output variable.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 

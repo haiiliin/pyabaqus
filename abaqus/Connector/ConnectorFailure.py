@@ -64,8 +64,8 @@ class ConnectorFailure(ConnectorBehaviorOption):
         -------
             A ConnectorFailure object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError. 
         """
         super().__init__()
@@ -81,8 +81,8 @@ class ConnectorFailure(ConnectorBehaviorOption):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass

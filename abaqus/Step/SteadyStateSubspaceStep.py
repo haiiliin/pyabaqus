@@ -226,8 +226,8 @@ class SteadyStateSubspaceStep(AnalysisStep):
         -------
             A SteadyStateSubspaceStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -271,8 +271,8 @@ class SteadyStateSubspaceStep(AnalysisStep):
             A Boolean specifying whether to add to the damping matrix contributions due to friction 
             effects. The default value is OFF.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -50,8 +50,8 @@ class ElementProgressiveActivation:
         -------
             An ElementProgressiveActivation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException: If the region does not contain only elements. 
         """
         pass
@@ -65,7 +65,7 @@ class ElementProgressiveActivation:
         Returns
         -------
 
-        Exceptions
-        ----------
+        Raises
+        ------
         """
         pass

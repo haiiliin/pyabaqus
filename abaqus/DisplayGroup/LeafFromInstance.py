@@ -42,8 +42,8 @@ class LeafFromInstance(Leaf):
         -------
             A LeafFromInstance object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If an invalid argument is passed to this method: 
               Cannot define empty leaf. 
         """

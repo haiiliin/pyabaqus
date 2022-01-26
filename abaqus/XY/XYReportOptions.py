@@ -57,8 +57,8 @@ class XYReportOptions:
             A SymbolicConstant specifying the format used in reporting the XYData objects. Possible 
             values are SINGLE_TABLE and SEPARATE_TABLES. The default value is SINGLE_TABLE.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             - If *xyData*, *total*, and *minMax* are all OFF: 
               At least one of the data print methods must be selected 

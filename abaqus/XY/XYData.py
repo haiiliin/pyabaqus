@@ -536,8 +536,8 @@ class XYData:
             If *variable* specified has one fieldoutput: Returns an XYData object. 
             If *variable* specified has more than one fieldoutputs: Returns list of XYData objects. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *path* is invalid: 
               ErrorPathNotFound: Path not found. 
             - If *viewport* is invalid: 

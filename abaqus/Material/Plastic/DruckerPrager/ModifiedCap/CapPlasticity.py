@@ -63,8 +63,8 @@ class CapPlasticity:
         -------
             A CapPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -79,8 +79,8 @@ class CapPlasticity:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

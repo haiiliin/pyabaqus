@@ -81,8 +81,8 @@ class MeanFieldVoid:
         -------
             A MeanFieldVoid object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -97,8 +97,8 @@ class MeanFieldVoid:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

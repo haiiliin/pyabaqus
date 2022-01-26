@@ -43,8 +43,8 @@ class SolverControl:
             The SymbolicConstant DEFAULT or an Int specifying the incomplete LU factorization 
             fill-in level (for geostatic and soil analysis only). The default value is DEFAULT.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

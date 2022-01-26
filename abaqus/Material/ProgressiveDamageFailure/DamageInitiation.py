@@ -276,8 +276,8 @@ class DamageInitiation:
         -------
             A DamageInitiation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -341,8 +341,8 @@ class DamageInitiation:
         -------
             A DamageInitiation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -406,8 +406,8 @@ class DamageInitiation:
         -------
             A DamageInitiation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -472,8 +472,8 @@ class DamageInitiation:
         -------
             A DamageInitiation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -541,8 +541,8 @@ class DamageInitiation:
         -------
             A DamageInitiation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -610,8 +610,8 @@ class DamageInitiation:
         -------
             A DamageInitiation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -675,8 +675,8 @@ class DamageInitiation:
         -------
             A DamageInitiation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -741,8 +741,8 @@ class DamageInitiation:
         -------
             A DamageInitiation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -811,8 +811,8 @@ class DamageInitiation:
         -------
             A DamageInitiation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -881,8 +881,8 @@ class DamageInitiation:
         -------
             A DamageInitiation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -951,8 +951,8 @@ class DamageInitiation:
         -------
             A DamageInitiation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -1021,8 +1021,8 @@ class DamageInitiation:
         -------
             A DamageInitiation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -1087,8 +1087,8 @@ class DamageInitiation:
         -------
             A DamageInitiation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -1153,8 +1153,8 @@ class DamageInitiation:
         -------
             A DamageInitiation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

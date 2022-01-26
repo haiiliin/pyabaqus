@@ -270,8 +270,8 @@ class SubstructureGenerateStep(AnalysisStep):
         -------
             A SubstructureGenerateStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -348,8 +348,8 @@ class SubstructureGenerateStep(AnalysisStep):
             matrix. Possible values are ELEMENT, FACTOR, COMBINED, and NONE. The default value is 
             NONE.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

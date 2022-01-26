@@ -72,8 +72,8 @@ class ClayPlasticity:
         -------
             A ClayPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -88,8 +88,8 @@ class ClayPlasticity:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

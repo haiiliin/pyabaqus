@@ -366,8 +366,8 @@ class FrequencyStep(AnalysisStep):
         -------
             A FrequencyStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -470,8 +470,8 @@ class FrequencyStep(AnalysisStep):
             None or a Region object specifying a region for which eigenvectors should be saved or 
             the SymbolicConstant None representing the whole model. The default value is None.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

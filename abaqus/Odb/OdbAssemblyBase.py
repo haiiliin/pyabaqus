@@ -97,8 +97,8 @@ class OdbAssemblyBase:
             A Float specifying the angle of the additional rotation about the second connector node 
             axis. The default value is 0.0.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *region* is not an element set: 
               OdbError: Connector orientation assignment requires element set. 
         """
@@ -115,8 +115,8 @@ class OdbAssemblyBase:
         section
             A Section object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *region* is not an element set: 
               OdbError: Section assignment requires element set. 
         """
@@ -148,8 +148,8 @@ class OdbAssemblyBase:
         sectionCategory
             A SectionCategory object for this element set.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - Only certain element types are permitted at the assembly level. e.g., connector 
             elements. 
               OdbError: Addition of this element type is not permitted at the assembly level 
@@ -172,8 +172,8 @@ class OdbAssemblyBase:
         nodeSetName
             A String specifying a name for this node set. The default value is None.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If length of labels does not match length of coordinates: 
               OdbError: Number of node labels and coordinates does not match 
             - If width of coordinate array does not match assembly dimension: 
@@ -204,8 +204,8 @@ class OdbAssemblyBase:
         analyticSurface
             An AnalyticSurface specifying the Analytic Rigid Surface assigned to the rigid body.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *referenceNode* is not a node set: 
               OdbError: Rigid body definition requires a node set. 
         """

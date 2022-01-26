@@ -45,8 +45,8 @@ class DeformationPlasticity:
         -------
             A DeformationPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -61,8 +61,8 @@ class DeformationPlasticity:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

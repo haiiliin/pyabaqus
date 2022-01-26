@@ -68,8 +68,8 @@ class SymbolStyle:
         -------
             A SymbolStyle object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ColorError 
         """
         pass

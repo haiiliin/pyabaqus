@@ -65,7 +65,7 @@ class GapConvection:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
         """
         pass

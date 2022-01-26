@@ -44,8 +44,8 @@ class ExpressionField(AnalyticalField):
         -------
             An ExpressionField object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             TextException. 
         """
         super().__init__()

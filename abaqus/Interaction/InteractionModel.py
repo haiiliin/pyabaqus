@@ -1049,8 +1049,8 @@ class InteractionModel(InteractionContactControlModel,
         -------
             An ExpContactControl object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.interactions[name] = interaction = ExpContactControl(name, globTrkChoice, globTrkInc, fastLocalTrk,
@@ -1109,8 +1109,8 @@ class InteractionModel(InteractionContactControlModel,
         -------
             An ExpInitialization object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.interactions[name] = interaction = ExpInitialization(name, overclosureType, interferenceDistance,
@@ -2134,8 +2134,8 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A StdContactControl object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.interactions[name] = interaction = StdContactControl(name, stiffnessScaleFactor, penetrationTolChoice,
@@ -2183,8 +2183,8 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A StdInitialization object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.interactions[name] = interaction = StdInitialization(name, overclosureType, interferenceDistance,
@@ -2229,8 +2229,8 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A StdStabilization object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.interactions[name] = interaction = StdStabilization(name, zeroDistance, reductionFactor, scaleFactor,

@@ -208,8 +208,8 @@ class AxisData:
             A Boolean specifying whether the title to use for the axis title is system defined or 
             user defined. The default value is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

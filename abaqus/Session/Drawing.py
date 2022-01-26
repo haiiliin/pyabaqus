@@ -106,8 +106,8 @@ class Drawing:
         -------
             A Drawing object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
             - If the user attempts to create a new drawing with the name of an existing drawing: 
               ValueError: There is already a drawing with this name 
@@ -132,8 +132,8 @@ class Drawing:
         -------
             The number of vertices described. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             ValueError. 
             - If an invalid *vertexDimension* is specified: 
@@ -160,8 +160,8 @@ class Drawing:
         -------
             The number of normals described. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             ValueError. 
             - If *normalData* is sequence with less than 3 values: 
@@ -194,8 +194,8 @@ class Drawing:
         -------
             The number of colors described. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             ValueError. 
             - If an invalid *colorDimension* is specified: 
@@ -220,8 +220,8 @@ class Drawing:
             compose the edge color.If the initial Float value is -1, the viewport background color 
             will be used for the edge color.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
             - If *edgeColor* is not a sequence of 0 or 3 Floats: 
               ValueError: *edgeColor* must be a tuple with 3 values 
@@ -241,8 +241,8 @@ class Drawing:
             compose the point color.If the initial Float value is -1, the viewport background color 
             will be used for the edge color.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
             - If *pointColor* is a not sequence of 0 or 3 Floats: 
               ValueError: *pointColor* must be a tuple with 3 values 
@@ -275,8 +275,8 @@ class Drawing:
         -------
             The total number of rendering commands that have been specified. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
             - If (*startIndex* + *numVertices* - 1) is larger than the length of the vertex array: 
               ValueError: Drawing request extends past array size of vertices. 
@@ -312,8 +312,8 @@ class Drawing:
         -------
             The total number of rendering commands that have been specified. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
             - If any value in the *indices* sequence negative: 
               ValueError: Index values must be positive. 
@@ -381,8 +381,8 @@ class Drawing:
             default value is ON.When OFF, the object will not be hidden by other objects in front of 
             it.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             - If an invalid *translucency* value is specified: 
               RangeError: *translucency* must be in the range 0.0 <= value <= 1.0 

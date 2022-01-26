@@ -37,8 +37,8 @@ class SuperElasticHardening:
         -------
             A SuperElasticHardening object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -53,8 +53,8 @@ class SuperElasticHardening:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

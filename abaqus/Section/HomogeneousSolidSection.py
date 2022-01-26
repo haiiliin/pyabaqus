@@ -55,8 +55,8 @@ class HomogeneousSolidSection(SolidSection):
             A Float specifying the thickness of the section. Possible values are None or greater 
             than zero. The default value is 1.0.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

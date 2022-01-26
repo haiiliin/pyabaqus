@@ -64,8 +64,8 @@ class DruckerPragerCreep:
         -------
             A DruckerPragerCreep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -80,8 +80,8 @@ class DruckerPragerCreep:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -33,8 +33,8 @@ class SvgOptions:
             *maxHeight*) is the largest number of pixels supported by the system graphics and will 
             be at least as large as the screen dimensions.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             - If either the width or height arguments of *imageSize* are out of range (where 
             *minWidth* and *minHeight* are the number of pixels corresponding to approximately 10 mm 

@@ -324,8 +324,8 @@ class TypeBC(BoundaryCondition):
             A SymbolicConstant specifying the predefined boundary condition type. Possible values 
             are XSYMM, YSYMM, ZSYMM, XASYMM, YASYMM, ZASYMM, PINNED, and ENCASTRE.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - Value Error: 
               A Symmetry/Antisymmetry/Encastre BC cannot be edited in a propagated step. 
         """

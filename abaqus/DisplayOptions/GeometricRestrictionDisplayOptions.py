@@ -95,8 +95,8 @@ class GeometricRestrictionDisplayOptions:
             A Boolean specifying whether turn control geometric restriction symbols are shown. The 
             default value is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

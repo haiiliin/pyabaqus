@@ -126,8 +126,8 @@ class Viscoelastic:
         -------
             A Viscoelastic object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -142,8 +142,8 @@ class Viscoelastic:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

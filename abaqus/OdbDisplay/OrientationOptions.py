@@ -129,8 +129,8 @@ class OrientationOptions(DGOrientationOptions):
             A SymbolicConstant specifying the scaling basis for the material orientation triad. 
             Possible values are MODEL_SIZE and SCREEN_SIZE. The default value is MODEL_SIZE.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -35,8 +35,8 @@ class UserOutputVariables:
         -------
             A UserOutputVariables object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -51,8 +51,8 @@ class UserOutputVariables:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

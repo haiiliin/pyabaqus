@@ -74,8 +74,8 @@ class CompositeLayup:
         -------
             A CompositeLayup object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException. 
         """
         pass
@@ -206,8 +206,8 @@ class CompositeLayup:
         -------
             A CompositePly object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException.
         """
         compositePly = CompositePly(thickness, region, material, plyName, orientationType, thicknessType,

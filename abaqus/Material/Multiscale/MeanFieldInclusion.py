@@ -81,8 +81,8 @@ class MeanFieldInclusion:
         -------
             A MeanFieldInclusion object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -97,8 +97,8 @@ class MeanFieldInclusion:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

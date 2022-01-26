@@ -58,8 +58,8 @@ class StdStabilization(ContactStabilization):
         -------
             A StdStabilization object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -91,8 +91,8 @@ class StdStabilization(ContactStabilization):
             specifications involving nondefault amplitudes that appeared in previous steps. The 
             default value is OFF.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

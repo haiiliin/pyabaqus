@@ -84,8 +84,8 @@ class HistoryOutput:
             A sequence of Floats specifying the value of the variable at the frame values specified 
             in *frame*.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             If the length of *frame* is not the same as the length of *value* a ValueError is 
             raised. 
         """

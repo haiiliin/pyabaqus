@@ -48,8 +48,8 @@ class PropertyTable:
         -------
             A PropertyTable object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -66,8 +66,8 @@ class PropertyTable:
         Returns
         -------
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -104,8 +104,8 @@ class PropertyTable:
         -------
             A PropertyTableData object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.propertyTableDatas[label] = propertyTableData = PropertyTableData(label, regularize, extrapolate, isTemp,

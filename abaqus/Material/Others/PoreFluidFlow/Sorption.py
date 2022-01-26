@@ -63,8 +63,8 @@ class Sorption:
         -------
             A Sorption object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -79,8 +79,8 @@ class Sorption:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

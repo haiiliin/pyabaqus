@@ -45,8 +45,8 @@ class TriaxialTestData:
         -------
             A TriaxialTestData object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -61,8 +61,8 @@ class TriaxialTestData:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -47,8 +47,8 @@ class ArbitraryProfile(Profile):
         -------
             An ArbitraryProfile object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """
@@ -65,8 +65,8 @@ class ArbitraryProfile(Profile):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """

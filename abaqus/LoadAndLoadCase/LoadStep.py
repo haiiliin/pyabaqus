@@ -31,8 +31,8 @@ class LoadStep(StepBase):
         -------
             A LoadCase object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.loadCases[name] = loadCase = LoadCase(name, boundaryConditions, loads, includeActiveBaseStateBC)

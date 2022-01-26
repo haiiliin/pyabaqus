@@ -57,8 +57,8 @@ class StdInitialization(ContactInitialization):
         -------
             A StdInitialization object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -90,8 +90,8 @@ class StdInitialization(ContactInitialization):
             None or a Float specifying the distance tolerance within which initial overclosures will 
             undergo strain-free adjustments.. The default value is None.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

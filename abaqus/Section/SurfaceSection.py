@@ -49,8 +49,8 @@ class SurfaceSection(Section):
         -------
             A SurfaceSection object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError and InvalidNameError. 
         """
         super().__init__()

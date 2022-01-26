@@ -40,8 +40,8 @@ class PredefinedFieldDisplayOptions:
         hardeningField
             A Boolean specifying whether hardening field symbols are shown. The default value is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

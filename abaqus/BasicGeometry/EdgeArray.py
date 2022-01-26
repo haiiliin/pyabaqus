@@ -140,8 +140,8 @@ class EdgeArray:
         -------
             An Edge object or a sequence of Edge objects. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - An exception occurs if the resulting sequence is empty. 
               Error: The mask results in an empty sequence 
             !img 

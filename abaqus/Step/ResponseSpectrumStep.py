@@ -224,8 +224,8 @@ class ResponseSpectrumStep(AnalysisStep):
         -------
             A ResponseSpectrumStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -262,8 +262,8 @@ class ResponseSpectrumStep(AnalysisStep):
         rayleighDampingByFrequency
             A RayleighDampingByFrequency object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

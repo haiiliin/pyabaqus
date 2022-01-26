@@ -60,8 +60,8 @@ class PorousMetalPlasticity:
         -------
             A PorousMetalPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -76,8 +76,8 @@ class PorousMetalPlasticity:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

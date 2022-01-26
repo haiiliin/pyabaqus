@@ -77,8 +77,8 @@ class ParameterTable:
         -------
             A ParameterTable object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             Incompatible data are given.
         """
         parameterColumn = ParameterColumn(type, unit, description, default, allowedValues)

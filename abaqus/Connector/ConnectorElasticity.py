@@ -114,8 +114,8 @@ class ConnectorElasticity(ConnectorBehaviorOption):
         -------
             A ConnectorElasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError. 
         """
         super().__init__()
@@ -131,8 +131,8 @@ class ConnectorElasticity(ConnectorBehaviorOption):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass

@@ -98,8 +98,8 @@ class ConstrainedSketchOptions:
             regular sketch editing and adding new constraints and dimensions. Possible values are 
             MINIMUM_MOVE, STANDARD, WEIGHTED, and RELAXATION. The default value is STANDARD.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """

@@ -45,8 +45,8 @@ class InteractionContactControlModel(ModelBase):
         -------
             An ExpContactControl object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.contactControls[name] = contactControl = ExpContactControl(name, globTrkChoice, globTrkInc, fastLocalTrk,
@@ -156,8 +156,8 @@ class InteractionContactControlModel(ModelBase):
         -------
             A StdContactControl object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.contactControls[name] = contactControl = StdContactControl(name, stiffnessScaleFactor,

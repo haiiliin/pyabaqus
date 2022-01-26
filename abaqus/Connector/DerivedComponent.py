@@ -53,8 +53,8 @@ class DerivedComponent:
         -------
             A DerivedComponent object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError. 
         """
         pass
@@ -69,8 +69,8 @@ class DerivedComponent:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass
@@ -138,8 +138,8 @@ class DerivedComponent:
         -------
             A CDCTerm object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError.
         """
         cDCTerm = CDCTerm(intrinsicComponents, table, termOperator, termSign, localDependency,

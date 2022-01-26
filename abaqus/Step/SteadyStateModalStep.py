@@ -227,8 +227,8 @@ class SteadyStateModalStep(AnalysisStep):
         -------
             A SteadyStateModalStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -270,8 +270,8 @@ class SteadyStateModalStep(AnalysisStep):
             A Boolean specifying whether to subdivide each frequency range using the 
             eigenfrequencies of the system. The default value is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

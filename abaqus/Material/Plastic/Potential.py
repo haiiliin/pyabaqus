@@ -59,8 +59,8 @@ class Potential:
         -------
             A Potential object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -75,8 +75,8 @@ class Potential:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -77,8 +77,8 @@ class Hyperfoam:
         -------
             A Hyperfoam object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -93,8 +93,8 @@ class Hyperfoam:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

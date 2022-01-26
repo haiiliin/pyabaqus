@@ -55,8 +55,8 @@ class EventSeries:
         -------
             An EventSeries object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -83,8 +83,8 @@ class EventSeries:
         Returns
         -------
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

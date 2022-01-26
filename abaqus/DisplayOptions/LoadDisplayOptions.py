@@ -118,8 +118,8 @@ class LoadDisplayOptions:
             ​	A Boolean specifying whether concentrated concentration flux symbols are shown. The 
             default value is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -34,8 +34,8 @@ class BeamSectionProfileOdb(OdbBase):
         -------
             An ArbitraryProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -80,8 +80,8 @@ class BeamSectionProfileOdb(OdbBase):
         -------
             A BoxProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -109,8 +109,8 @@ class BeamSectionProfileOdb(OdbBase):
         -------
             A CircularProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -149,8 +149,8 @@ class BeamSectionProfileOdb(OdbBase):
         -------
             A GeneralizedProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -181,8 +181,8 @@ class BeamSectionProfileOdb(OdbBase):
         -------
             A HexagonalProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -223,8 +223,8 @@ class BeamSectionProfileOdb(OdbBase):
         -------
             An IProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -260,8 +260,8 @@ class BeamSectionProfileOdb(OdbBase):
         -------
             A LProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -291,8 +291,8 @@ class BeamSectionProfileOdb(OdbBase):
         -------
             A PipeProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -322,8 +322,8 @@ class BeamSectionProfileOdb(OdbBase):
         -------
             A RectangularProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -362,8 +362,8 @@ class BeamSectionProfileOdb(OdbBase):
         -------
             A TProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """
@@ -397,8 +397,8 @@ class BeamSectionProfileOdb(OdbBase):
         -------
             A TrapezoidalProfile object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
             !img
         """

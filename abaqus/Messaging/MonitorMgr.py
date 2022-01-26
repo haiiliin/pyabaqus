@@ -100,8 +100,8 @@ class MonitorMgr:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - MonitorError: 
               Status is not ENABLED 
         """

@@ -44,8 +44,8 @@ class PipeProfile(Profile):
         -------
             A PipeProfile object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """
@@ -62,8 +62,8 @@ class PipeProfile(Profile):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """

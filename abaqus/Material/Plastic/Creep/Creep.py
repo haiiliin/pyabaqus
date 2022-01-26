@@ -114,8 +114,8 @@ class Creep:
         -------
             A Creep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -130,8 +130,8 @@ class Creep:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

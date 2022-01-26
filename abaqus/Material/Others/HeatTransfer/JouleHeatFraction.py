@@ -35,8 +35,8 @@ class JouleHeatFraction:
         -------
             A JouleHeatFraction object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -51,8 +51,8 @@ class JouleHeatFraction:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -234,8 +234,8 @@ class SectionOdb(OdbBase):
         -------
             A CohesiveSection object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError and InvalidNameError.
         """
         self.sections[name] = section = CohesiveSection(name, response, material, initialThicknessType,
@@ -764,8 +764,8 @@ class SectionOdb(OdbBase):
         -------
             A MembraneSection object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError and InvalidNameError.
         """
         self.sections[name] = section = MembraneSection(name, material, thickness, thicknessType, poissonDefinition,
@@ -801,8 +801,8 @@ class SectionOdb(OdbBase):
         -------
             A MPCSection object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError and InvalidNameError.
         """
         self.sections[name] = section = MPCSection(name, mpcType, userMode, userType)
@@ -863,8 +863,8 @@ class SectionOdb(OdbBase):
         -------
             A SurfaceSection object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError and InvalidNameError.
         """
         self.sections[name] = section = SurfaceSection(name, useDensity, density)
@@ -892,8 +892,8 @@ class SectionOdb(OdbBase):
         -------
             A TrussSection object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError and InvalidNameError.
         """
         self.sections[name] = section = TrussSection(name, material, area)

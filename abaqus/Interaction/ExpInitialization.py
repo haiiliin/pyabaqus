@@ -73,8 +73,8 @@ class ExpInitialization(ContactInitialization):
         -------
             An ExpInitialization object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -121,8 +121,8 @@ class ExpInitialization(ContactInitialization):
             interference fit has to be solved. The default value is 1.0. This argument is valid only 
             when *overclosureType*=INTERFERENCE.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

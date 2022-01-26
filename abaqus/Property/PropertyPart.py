@@ -49,8 +49,8 @@ class PropertyPart(PartBase):
         layup: CompositeLayup
             A CompositeLayup object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             AbaqusException.
         """
         self.compositeLayups[name] = compositeLayup = CompositeLayup(name, description, offsetType, offsetField,

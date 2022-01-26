@@ -31,8 +31,8 @@ class OptimizationTaskDisplayOptions:
         shapeTask
             A Boolean specifying whether shape task symbols are shown. The default value is ON.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

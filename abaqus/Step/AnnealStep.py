@@ -162,8 +162,8 @@ class AnnealStep(AnalysisStep):
         -------
             An AnnealStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -180,8 +180,8 @@ class AnnealStep(AnalysisStep):
             A Float specifying the post-anneal reference temperature. The default value is the 
             current temperature at all nodes in the model after the annealing has completed.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

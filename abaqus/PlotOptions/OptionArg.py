@@ -75,8 +75,8 @@ class OptionArg:
         -------
             An OptionArg object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

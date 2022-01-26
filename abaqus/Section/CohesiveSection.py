@@ -59,8 +59,8 @@ class CohesiveSection(Section):
         -------
             A CohesiveSection object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError and InvalidNameError. 
         """
         super().__init__()
@@ -85,8 +85,8 @@ class CohesiveSection(Section):
             None or a Float specifying the out-of-plane thickness for the section. The default value 
             is None.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

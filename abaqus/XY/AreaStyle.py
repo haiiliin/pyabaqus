@@ -59,8 +59,8 @@ class AreaStyle:
         -------
             An AreaStyle object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ColorError 
         """
         pass

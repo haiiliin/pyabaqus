@@ -55,8 +55,8 @@ class Swelling:
         -------
             A Swelling object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -71,8 +71,8 @@ class Swelling:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

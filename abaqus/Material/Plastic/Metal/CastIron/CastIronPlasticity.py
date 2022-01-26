@@ -55,8 +55,8 @@ class CastIronPlasticity:
         -------
             A CastIronPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -71,8 +71,8 @@ class CastIronPlasticity:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

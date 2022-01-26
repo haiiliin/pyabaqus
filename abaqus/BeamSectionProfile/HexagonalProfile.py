@@ -45,8 +45,8 @@ class HexagonalProfile(Profile):
         -------
             A HexagonalProfile object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """
@@ -63,8 +63,8 @@ class HexagonalProfile(Profile):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """

@@ -97,8 +97,8 @@ class Path:
         -------
             A Path object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ModelError, ErrorUnsupportedNodeData, ErrorUnsupportedPointData, ErrorIncorrectPathData, 
             KeyError, ErrorEmptyPathName, ErrorPathNotFound, and ErrorNoOdbPathDisplay. 
             ValueError: When *type*=CIRCUMFERENTIAL or RADIAL, the three points specified in 

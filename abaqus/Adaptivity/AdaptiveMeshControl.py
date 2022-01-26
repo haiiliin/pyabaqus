@@ -88,8 +88,8 @@ class AdaptiveMeshControl:
         -------
             An AdaptiveMeshControl object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         pass
@@ -153,8 +153,8 @@ class AdaptiveMeshControl:
             A Float specifying the weight used by Abaqus/Standard for the volumetric smoothing 
             method. The default value is 0.0.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -60,8 +60,8 @@ class TensileFailure:
         -------
             An TensileFailure object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -76,8 +76,8 @@ class TensileFailure:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

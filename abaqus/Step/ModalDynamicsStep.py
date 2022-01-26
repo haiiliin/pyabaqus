@@ -217,8 +217,8 @@ class ModalDynamicsStep(AnalysisStep):
         -------
             A ModalDynamicsStep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         super().__init__()
@@ -258,8 +258,8 @@ class ModalDynamicsStep(AnalysisStep):
         rayleighDampingByFrequency
             A RayleighDampingByFrequency object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -103,8 +103,8 @@ class MagneticPermeability:
         -------
             A MagneticPermeability object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -119,8 +119,8 @@ class MagneticPermeability:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

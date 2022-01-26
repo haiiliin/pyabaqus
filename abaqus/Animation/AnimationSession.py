@@ -81,8 +81,8 @@ class AnimationSession(SessionBase):
         -------
             A Movie object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError.
             - If *fileName* does not exist or can not be read:
               ValueError: Unable to open movie file

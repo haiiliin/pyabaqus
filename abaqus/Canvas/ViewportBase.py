@@ -296,8 +296,8 @@ class ViewportBase:
         -------
             A Viewport object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             - If the user attempts to delete the only viewport: 
               SystemError: the current viewport may not be deleted. 
@@ -592,8 +592,8 @@ class ViewportBase:
             Possible values are –1 to 1. A negative value reverses the apparent order in which the 
             layers are plotted.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -606,8 +606,8 @@ class ViewportBase:
         names
             A sequence of String values identifying keys in the session.drawings repository.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass
@@ -621,8 +621,8 @@ class ViewportBase:
         names
             A sequence of String values identifying keys in the Viewport sequence.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass

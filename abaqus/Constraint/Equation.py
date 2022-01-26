@@ -44,8 +44,8 @@ class Equation(Constraint):
         -------
             An Equation object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *terms* does not contain more than one entry: 
               Equation must have two or more terms. 
         """
@@ -62,8 +62,8 @@ class Equation(Constraint):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - If *terms* does not contain more than one entry: 
               Equation must have two or more terms. 
         """

@@ -37,8 +37,8 @@ class VelocityDependence:
         -------
             A VelocityDependence object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -53,8 +53,8 @@ class VelocityDependence:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

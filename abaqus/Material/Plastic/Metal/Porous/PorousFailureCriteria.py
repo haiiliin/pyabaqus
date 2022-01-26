@@ -40,8 +40,8 @@ class PorousFailureCriteria:
         -------
             A PorousFailureCriteria object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -56,8 +56,8 @@ class PorousFailureCriteria:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

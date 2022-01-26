@@ -48,8 +48,8 @@ class TrapezoidalProfile(Profile):
         -------
             A TrapezoidalProfile object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """
@@ -66,8 +66,8 @@ class TrapezoidalProfile(Profile):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
             !img 
         """

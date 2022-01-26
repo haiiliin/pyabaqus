@@ -115,8 +115,8 @@ class Control:
             debonding analysis. If a specified value is 0, it will be set to its system-defined 
             value. The value can also be the SymbolicConstant DEFAULT. The default value is DEFAULT.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -1,5 +1,5 @@
 =================
-Reference manual
+Reference Manual
 =================
 
 .. toctree::

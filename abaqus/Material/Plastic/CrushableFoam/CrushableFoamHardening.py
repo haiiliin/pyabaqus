@@ -49,8 +49,8 @@ class CrushableFoamHardening:
         -------
             A CrushableFoamHardening object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -65,8 +65,8 @@ class CrushableFoamHardening:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

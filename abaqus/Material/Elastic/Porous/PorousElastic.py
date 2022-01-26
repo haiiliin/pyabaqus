@@ -61,8 +61,8 @@ class PorousElastic:
         -------
             A PorousElastic object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -77,8 +77,8 @@ class PorousElastic:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -81,8 +81,8 @@ class PartDisplayOptions:
             A Float specifying the beam profile scale factor. The beamScaleFactor must be greater 
             than zero. The default value is 1.0.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -78,8 +78,8 @@ class ConcreteTensionStiffening:
         -------
             A ConcreteTensionStiffening object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -94,8 +94,8 @@ class ConcreteTensionStiffening:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

@@ -78,8 +78,8 @@ class Expansion:
         -------
             An Expansion object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -94,8 +94,8 @@ class Expansion:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

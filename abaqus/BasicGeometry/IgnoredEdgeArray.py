@@ -114,8 +114,8 @@ class IgnoredEdgeArray:
             floats which specify the *X*-, *Y*-, and *Z*-location of the closest point on the 
             IgnoredEdge to the given point. See program listing above. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             - An exception occurs if the resulting sequence is empty. 
               Error: The mask results in an empty sequence 
             !img 

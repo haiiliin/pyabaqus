@@ -324,8 +324,8 @@ class LoadModel(ModelBase):
         -------
             A BoltLoad object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             TextError.
         """
         self.loads[name] = load = BoltLoad(name, createStepName, region, magnitude, boltMethod, datumAxis, amplitude,

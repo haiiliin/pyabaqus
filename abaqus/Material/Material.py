@@ -108,8 +108,8 @@ class Material(MaterialBase):
         -------
             An AcousticMedium object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.acousticMedium = AcousticMedium(acousticVolumetricDrag, temperatureDependencyB, temperatureDependencyV,
@@ -165,8 +165,8 @@ class Material(MaterialBase):
         -------
             A CapPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.capPlasticity = CapPlasticity(table, temperatureDependency, dependencies)
@@ -194,8 +194,8 @@ class Material(MaterialBase):
         -------
             A CastIronPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.castIronPlasticity = CastIronPlasticity(table, temperatureDependency, dependencies)
@@ -230,8 +230,8 @@ class Material(MaterialBase):
         -------
             A ClayPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.clayPlasticity = ClayPlasticity(table, intercept, hardening, temperatureDependency, dependencies)
@@ -258,8 +258,8 @@ class Material(MaterialBase):
         -------
             A Concrete object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.concrete = Concrete(table, temperatureDependency, dependencies)
@@ -287,8 +287,8 @@ class Material(MaterialBase):
         -------
             A ConcreteDamagedPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.concreteDamagedPlasticity = ConcreteDamagedPlasticity(table, temperatureDependency, dependencies)
@@ -319,8 +319,8 @@ class Material(MaterialBase):
         -------
             A Conductivity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.conductivity = Conductivity(table, type, temperatureDependency, dependencies)
@@ -355,8 +355,8 @@ class Material(MaterialBase):
         -------
             A Creep object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.creep = Creep(table, law, temperatureDependency, dependencies, time)
@@ -387,8 +387,8 @@ class Material(MaterialBase):
         -------
             A CrushableFoam object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.crushableFoam = CrushableFoam(table, hardening, temperatureDependency, dependencies)
@@ -422,8 +422,8 @@ class Material(MaterialBase):
         -------
             A Damping object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.damping = Damping(alpha, beta, composite, structural)
@@ -448,8 +448,8 @@ class Material(MaterialBase):
         -------
             A DeformationPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.deformationPlasticity = DeformationPlasticity(table, temperatureDependency)
@@ -485,8 +485,8 @@ class Material(MaterialBase):
         -------
             A Density object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.density = Density(table, temperatureDependency, dependencies, distributionType, fieldName)
@@ -513,8 +513,8 @@ class Material(MaterialBase):
         -------
             A Depvar object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.depvar = Depvar(deleteVar, n)
@@ -578,8 +578,8 @@ class Material(MaterialBase):
         -------
             A Diffusivity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.diffusivity = Diffusivity(table, type, law, temperatureDependency, dependencies)
@@ -622,8 +622,8 @@ class Material(MaterialBase):
         -------
             A DruckerPrager object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.druckerPrager = DruckerPrager(table, shearCriterion, eccentricity, testData, temperatureDependency,
@@ -673,8 +673,8 @@ class Material(MaterialBase):
         -------
             An Elastic object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.elastic = Elastic(table, type, noCompression, noTension, temperatureDependency, dependencies, moduli)
@@ -708,8 +708,8 @@ class Material(MaterialBase):
         -------
             An ElectricalConductivity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.electricalConductivity = ElectricalConductivity(table, type, frequencyDependency, temperatureDependency,
@@ -788,8 +788,8 @@ class Material(MaterialBase):
         Returns
         -------
 
-        Exceptions
-        ----------
+        Raises
+        ------
         """
         self.eos = Eos(type, temperatureDependency, dependencies, detonationEnergy, solidTable, gasTable, reactionTable,
                        gasSpecificTable, table)
@@ -827,8 +827,8 @@ class Material(MaterialBase):
         -------
             An Expansion object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.expansion = Expansion(type, userSubroutine, zero, temperatureDependency, dependencies, table)
@@ -917,8 +917,8 @@ class Material(MaterialBase):
         -------
             A GasketMembraneElastic object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.gasketMembraneElastic = GasketMembraneElastic(table, temperatureDependency, dependencies)
@@ -982,8 +982,8 @@ class Material(MaterialBase):
         -------
             A GasketThicknessBehavior object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.gasketThicknessBehavior = GasketThicknessBehavior(table, temperatureDependency, dependencies,
@@ -1018,8 +1018,8 @@ class Material(MaterialBase):
         -------
             A GasketTransverseShearElastic object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.gasketTransverseShearElastic = GasketTransverseShearElastic(table, variableUnits, temperatureDependency,
@@ -1168,8 +1168,8 @@ class Material(MaterialBase):
         -------
             A Hyperfoam object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.hyperfoam = Hyperfoam(testData, poisson, n, temperatureDependency, moduli, table)
@@ -1217,8 +1217,8 @@ class Material(MaterialBase):
         -------
             An InelasticHeatFraction object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.inelasticHeatFraction = InelasticHeatFraction(fraction)
@@ -1242,8 +1242,8 @@ class Material(MaterialBase):
         -------
             A JouleHeatFraction object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.jouleHeatFraction = JouleHeatFraction(fraction)
@@ -1266,8 +1266,8 @@ class Material(MaterialBase):
         -------
             A LatentHeat object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.latentHeat = LatentHeat(table)
@@ -1310,8 +1310,8 @@ class Material(MaterialBase):
         -------
             A LowDensityFoam object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.lowDensityFoam = LowDensityFoam(elementRemoval, maxAllowablePrincipalStress, extrapolateStressStrainCurve,
@@ -1359,8 +1359,8 @@ class Material(MaterialBase):
         -------
             A MagneticPermeability object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.magneticPermeability = MagneticPermeability(table, table2, table3, type, frequencyDependency,
@@ -1401,8 +1401,8 @@ class Material(MaterialBase):
         -------
             A MohrCoulombPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.mohrCoulombPlasticity = MohrCoulombPlasticity(table, deviatoricEccentricity, meridionalEccentricity,
@@ -1459,8 +1459,8 @@ class Material(MaterialBase):
         -------
             A Permeability object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.permeability = Permeability(specificWeight, inertialDragCoefficient, table, type, temperatureDependency,
@@ -1533,8 +1533,8 @@ class Material(MaterialBase):
         -------
             A Plastic object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.plastic = Plastic(table, hardening, rate, dataType, strainRangeDependency, numBackstresses,
@@ -1565,8 +1565,8 @@ class Material(MaterialBase):
         -------
             A PoreFluidExpansion object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.poreFluidExpansion = PoreFluidExpansion(table, zero, temperatureDependency, dependencies)
@@ -1619,8 +1619,8 @@ class Material(MaterialBase):
         -------
             A PorousElastic object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.porousElastic = PorousElastic(table, shear, temperatureDependency, dependencies)
@@ -1651,8 +1651,8 @@ class Material(MaterialBase):
         -------
             A PorousMetalPlasticity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.porousMetalPlasticity = PorousMetalPlasticity(table, relativeDensity, temperatureDependency, dependencies)
@@ -1681,8 +1681,8 @@ class Material(MaterialBase):
         -------
             A Regularization object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.regularization = Regularization(rtol, strainRateRegularization)
@@ -1709,8 +1709,8 @@ class Material(MaterialBase):
         -------
             A Solubility object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.solubility = Solubility(table, temperatureDependency, dependencies)
@@ -1750,8 +1750,8 @@ class Material(MaterialBase):
         -------
             A Sorption object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.sorption = Sorption(absorptionTable, lawAbsorption, exsorption, lawExsorption, scanning, exsorptionTable)
@@ -1782,8 +1782,8 @@ class Material(MaterialBase):
         -------
             A SpecificHeat object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.specificHeat = SpecificHeat(table, law, temperatureDependency, dependencies)
@@ -1815,8 +1815,8 @@ class Material(MaterialBase):
         -------
             A Swelling object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.swelling = Swelling(table, law, temperatureDependency, dependencies)
@@ -1863,8 +1863,8 @@ class Material(MaterialBase):
         -------
             A UserMaterial object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.userMaterial = UserMaterial(type, unsymm, mechanicalConstants, thermalConstants, effmod, hybridFormulation)
@@ -1888,8 +1888,8 @@ class Material(MaterialBase):
         -------
             A UserOutputVariables object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.userOutputVariables = UserOutputVariables(n)
@@ -1949,8 +1949,8 @@ class Material(MaterialBase):
         -------
             A Viscoelastic object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.viscoelastic = Viscoelastic(domain, table, frequency, type, preload, time, errtol, nmax, volumetricTable)
@@ -1980,8 +1980,8 @@ class Material(MaterialBase):
         -------
             A Viscosity object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         self.viscosity = Viscosity(table, type, temperatureDependency, dependencies)

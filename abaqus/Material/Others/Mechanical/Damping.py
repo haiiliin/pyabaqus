@@ -45,8 +45,8 @@ class Damping:
         -------
             A Damping object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -61,8 +61,8 @@ class Damping:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

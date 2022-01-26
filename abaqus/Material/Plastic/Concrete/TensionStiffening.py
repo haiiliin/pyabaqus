@@ -59,8 +59,8 @@ class TensionStiffening:
         -------
             A TensionStiffening object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -75,8 +75,8 @@ class TensionStiffening:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

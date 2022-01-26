@@ -144,8 +144,8 @@ class OutputStep(StepBase):
         restart: Restart
             A Restart object
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.restart = restart = Restart(numberIntervals, timeMarks, overlay, frequency)

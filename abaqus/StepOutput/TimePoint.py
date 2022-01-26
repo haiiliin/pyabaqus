@@ -47,8 +47,8 @@ class TimePoint:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass

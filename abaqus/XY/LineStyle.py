@@ -96,8 +96,8 @@ class LineStyle:
         -------
             A LineStyle object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ColorError 
         """
         pass

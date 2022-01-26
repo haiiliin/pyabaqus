@@ -123,8 +123,8 @@ class ConnectorOptions:
         -------
             A ConnectorOptions object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError. 
         """
         pass
@@ -139,8 +139,8 @@ class ConnectorOptions:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass

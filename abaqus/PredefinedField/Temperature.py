@@ -155,8 +155,8 @@ class Temperature(PredefinedField):
         toStepName
             A String specifying the name of the step to which the PredefinedFieldState is moved.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             TextError. 
         """
         pass

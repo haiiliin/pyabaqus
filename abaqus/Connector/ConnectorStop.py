@@ -49,8 +49,8 @@ class ConnectorStop(ConnectorBehaviorOption):
         -------
             A ConnectorStop object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError and TextError. 
         """
         super().__init__()
@@ -66,8 +66,8 @@ class ConnectorStop(ConnectorBehaviorOption):
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             ValueError. 
         """
         pass

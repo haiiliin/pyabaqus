@@ -58,8 +58,8 @@ class InteractionContactInitializationModel(ModelBase):
         -------
             An ExpInitialization object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.contactInitializations[name] = contactInitialization = ExpInitialization(name, overclosureType,
@@ -108,8 +108,8 @@ class InteractionContactInitializationModel(ModelBase):
         -------
             A StdInitialization object.
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError.
         """
         self.contactInitializations[name] = contactInitialization = StdInitialization(name, overclosureType,

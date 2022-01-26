@@ -47,8 +47,8 @@ class SoretEffect:
         -------
             A SoretEffect object. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
@@ -63,8 +63,8 @@ class SoretEffect:
         -------
             None. 
 
-        Exceptions
-        ----------
+        Raises
+        ------
             RangeError. 
         """
         pass
