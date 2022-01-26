@@ -6,10 +6,11 @@ Getting Started
 Introduction
 ------------
 
-`pyabaqus` is a Python package to run Abaqus fluently, it is a package to make Abaqus 
-modeling, calculation, visualization easily. Using `pyabaqus`, you can simply build the Abaqus 
-model, submit and monitor the job, and visualize the results in just one Python script, you 
-don't even need to open Abaqus the whole time. 
+`pyabaqus` is a Python package providing type hints for Python scripting of Abaqus, you can 
+use it to write you Python script of Abaqus fluently, even without doing anything in Abaqus. 
+It also provides some simple APIs to execute the Abaqus commands so that you can run your 
+Python script to build the model, submit the job and extract the output data in just one 
+Python script, even without opening the Abaqus/CAE. 
 
 
 Two Python interpreters
