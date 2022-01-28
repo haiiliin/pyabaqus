@@ -22,9 +22,10 @@ Python script, even without opening the Abaqus/CAE.
 Other links
 -----------
 
-* GitHub repository: `Haiiliin/pyabaqus: Type hints for python scripting of Abaqus <https://github.com/Haiiliin/pyabaqus>`_
+* GitHub repository: `Haiiliin/pyabaqus: Type hints for Python scripting of Abaqus <https://github.com/Haiiliin/pyabaqus>`_
 * PyPI: `pyabaqus · PyPI <https://pypi.org/project/pyabaqus/>`_
 * PDF version of this documentation: `pyabaqus.pdf <https://github.com/Haiiliin/pyabaqus/releases/latest/download/pyabaqus.pdf>`_
+* Abaqus Executor: `executor_setup.exe <https://github.com/Haiiliin/pyabaqus/releases/latest/download/executor_setup.exe>`_
 
 .. toctree::
    :maxdepth: 2
