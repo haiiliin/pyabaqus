@@ -65,7 +65,7 @@ class AbaqusExecutorView(QMainWindow):
             widget.loadModel2View()
             subWindow.setWindowTitle(filePath)
         else:
-            filePath = QFileDialog.getSaveFileName(self, caption='Select Abaqus input file',
+            filePath = QFileDialog.getSaveFileName(self, caption='Select Abaqus Executor file',
                                                    directory=widget.model.workDirectory,
                                                    filter='Abaqus executor file (*.abqjson)')
             if not os.path.exists(os.path.dirname(filePath[0])):
@@ -79,7 +79,7 @@ class AbaqusExecutorView(QMainWindow):
         widget.show()
 
     def open(self):
-        filePath = QFileDialog.getOpenFileName(self, caption='Select Abaqus input file', directory='',
+        filePath = QFileDialog.getOpenFileName(self, caption='Select Abaqus Executor file', directory='',
                                                filter='Abaqus executor file (*.abqjson)')
         if not os.path.exists(filePath[0]):
             return
@@ -287,7 +287,9 @@ class AbaqusExecutorView(QMainWindow):
         self.currentSubWidget().ui.data.setText(os.path.relpath(filePath[0], activeWindow.model.workDirectory))
         activeWindow.model['data'] = os.path.relpath(filePath[0], activeWindow.model.workDirectory)
         df = pd.read_csv(filePath[0])
+        activeWindow.ui.x.clear()
         activeWindow.ui.x.addItems(df.columns)
+        activeWindow.ui.y.clear()
         activeWindow.ui.y.addItems(df.columns)
 
     def connectSignals(self):
