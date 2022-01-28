@@ -1,6 +1,6 @@
 import os
 
-import pandas as pd
+import matplotlib.pyplot as plt
 from PyQt5.QtWidgets import QMessageBox
 
 from .AbaqusExecutorView import AbaqusExecutorView
@@ -71,22 +71,23 @@ class AbaqusExecutor(AbaqusExecutorView):
         ylabel = activeWindow.ui.ylabel.text()
         title = activeWindow.ui.title.text()
 
-        fig = activeWindow.ui.fig.getFigure()
-        fig.clf()
-        ax = fig.add_subplot(111)
-        df = pd.read_csv(os.path.join(activeWindow.model.absWorkDirectory(), activeWindow.model.data))
-        lines = 0
-        for y in ys:
-            if y not in df.columns:
-                continue
-            lines += 1
-            ax.plot(df[x], df[y], label=y)
-        if lines > 0:
-            ax.legend()
-        ax.set_xlabel(xlabel)
-        ax.set_ylabel(ylabel)
-        ax.set_title(title)
-        fig.tight_layout()
-        activeWindow.ui.fig.draw()
-
+        code = activeWindow.ui.fig.defaultHeader() + """
+ax = fig.add_subplot(111)
+df = pd.read_csv(r'{}')
+lines = 0
+x, ys = '{}', {}
+for y in ys:
+    if y not in df.columns:
+        continue
+    lines += 1
+    ax.plot(df[x], df[y], label=y)
+if lines > 0:
+    ax.legend()
+ax.set_xlabel('{}')
+ax.set_ylabel('{}')
+ax.set_title('{}')
+ax.grid()
+fig.tight_layout()
+""".format(os.path.join(activeWindow.model.absWorkDirectory(), activeWindow.model.data), x, ys, xlabel, ylabel, title)
+        activeWindow.ui.fig.setCode(code)
         activeWindow.ui.tabWidget.setCurrentIndex(3)

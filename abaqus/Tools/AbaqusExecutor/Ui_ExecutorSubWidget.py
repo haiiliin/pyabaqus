@@ -618,7 +618,7 @@ class Ui_ExecutorSubWidget(object):
         self.figure.setObjectName("figure")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.figure)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.fig = MatplotlibWidget()
+        self.fig = MatplotlibWidget(self.figure)
         self.fig.setObjectName("fig")
         self.verticalLayout_2.addWidget(self.fig)
         self.tabWidget.addTab(self.figure, "")
@@ -664,5 +664,4 @@ class Ui_ExecutorSubWidget(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.status), _translate("ExecutorSubWidget", "Status File"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.message), _translate("ExecutorSubWidget", "Message File"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.figure), _translate("ExecutorSubWidget", "Figure"))
-from ..Widgets import PlainTextEditor
-from pyqtgraph.widgets.MatplotlibWidget import MatplotlibWidget
+from ..Widgets import MatplotlibWidget, PlainTextEditor

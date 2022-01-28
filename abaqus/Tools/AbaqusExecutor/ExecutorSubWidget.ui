@@ -1471,7 +1471,7 @@
   <customwidget>
    <class>MatplotlibWidget</class>
    <extends>QWidget</extends>
-   <header>pyqtgraph.widgets.MatplotlibWidget.h</header>
+   <header>..Widgets.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>

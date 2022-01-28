@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/exit.png</file>
+        <file>icons/new.png</file>
+        <file>icons/open.png</file>
+        <file>icons/save.png</file>
+        <file>icons/save_as.png</file>
+        <file>icons/update.png</file>
+        <file>icons/window_cascade.png</file>
+        <file>icons/window_tile.png</file>
+        <file>icons/restore.png</file>
+        <file>icons/py.png</file>
+        <file>icons/add-figure.png</file>
+        <file>icons/erase.png</file>
+        <file>icons/template.png</file>
+        <file>icons/app_icon.ico</file>
+        <file>icons/saveas.png</file>
+        <file>icons/file-explorer.png</file>
+        <file>icons/project-files.png</file>
+    </qresource>
+</RCC>
