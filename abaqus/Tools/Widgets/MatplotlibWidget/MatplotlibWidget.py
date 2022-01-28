@@ -6,7 +6,7 @@ from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import (QAction, QFileDialog, QMessageBox, QTabWidget, QToolBar, QVBoxLayout, QWidget, QTextEdit)
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from pyqtconsole import highlighter
+from .pyqtconsole import highlighter
 
 from .MatplotlibPythonConsole import MatplotlibPythonConsole
 from .PythonHighlighter import PythonHighlighter
