@@ -63,11 +63,12 @@ class AbaqusExecutorView(QMainWindow):
         if filePath is not None:
             widget.model.load(filePath)
             widget.loadModel2View()
+            subWindow.setWindowTitle(filePath)
         else:
             filePath = QFileDialog.getSaveFileName(self, caption='Select Abaqus input file',
                                                    directory=widget.model.workDirectory,
                                                    filter='Abaqus executor file (*.abqjson)')
-            if not os.path.exists(filePath[0]):
+            if not os.path.exists(os.path.dirname(filePath[0])):
                 return
             widget.model.workDirectory = os.path.dirname(filePath[0])
             widget.model.fileName = os.path.basename(filePath[0])
