@@ -73,6 +73,7 @@ class MatplotlibWidget(QWidget):
         self.pythonConsole.interpreter.canvas = self.canvas
         # self.pythonConsole.eval_in_thread()
         self.pythonConsole.eval_queued()
+        self.pythonConsole.runsource("print('Initilized!')")
 
         # Save to Python Action
         self.actionSave = QAction(QIcon(':/icons/save.png'), 'Save')
@@ -122,7 +123,7 @@ class MatplotlibWidget(QWidget):
         for key, value in zip(keys, values):
             pattern = '\n{}\s?=\s?.+\n'.format(key)
             code = re.sub(pattern, '\n{} = {}\n'.format(key, value), code)
-        self.pythonConsole.runsource(code)
+        self.pythonConsole.runsource(code + "\nprint('Updated figure!')")
         self.draw()
         self.tabWidget.setCurrentIndex(0)
         
