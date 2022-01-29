@@ -208,7 +208,7 @@ class AbaqusExecutorView(QMainWindow):
 
     def readStandardOutput(self):
         output = self.process.readAllStandardOutput()
-        self.currentSubWidget().ui.cmd.appendPlainText(str(output, encoding='utf-8'))
+        self.currentSubWidget().ui.cmd.appendPlainText(str(output, encoding='gb18030', errors='ignore'))
 
     def showTemporaryFiles(self, files: dict[str, str]):
         if 'sta' in files.keys():

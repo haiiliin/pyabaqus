@@ -32,7 +32,7 @@ class FileMonitorThread(QThread):
             if not os.path.exists(self.statusFilePath):
                 self.readyReadStatusFile.emit('')
             else:
-                with open(self.statusFilePath, 'r') as file:
+                with open(self.statusFilePath, 'r', encoding='gb18030', errors='ignore') as file:
                     text = file.read()
                     self.readyReadStatusFile.emit(text)
                     file.close()
@@ -40,7 +40,7 @@ class FileMonitorThread(QThread):
             if not os.path.exists(self.messageFilePath):
                 self.readyReadMessageFile.emit('')
             else:
-                with open(self.messageFilePath, 'r') as file:
+                with open(self.messageFilePath, 'r', encoding='gb18030', errors='ignore') as file:
                     text = file.read()
                     self.readyReadMessageFile.emit(text)
                     file.close()
