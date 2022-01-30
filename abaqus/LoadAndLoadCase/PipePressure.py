@@ -43,8 +43,9 @@ class PipePressure(Load):
                  distributionType: SymbolicConstant = UNIFORM, side: SymbolicConstant = INTERNAL):
         """This method creates a Pressure object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PipePressure
 
         Parameters

@@ -31,8 +31,9 @@ class RegionPart(RegionPartBase):
         surface=mdb.models['Model-1'].parts['Part-1'].Surface(side1Faces=side1Faces,
         name='Surf-1')
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Surface
             - mdb.models[*name*].rootAssembly.Surface
 
@@ -119,8 +120,9 @@ class RegionPart(RegionPartBase):
             skinEdges: tuple = (), stringerEdges: tuple = ()) -> Set:
         """This method creates a set from a sequence of objects in a model database.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Set
             - mdb.models[*name*].rootAssembly.Set
 
@@ -175,8 +177,9 @@ class RegionPart(RegionPartBase):
     def Set(self, name: str, objectToCopy: Set) -> Set:
         """This method copies a set from an existing set.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Set
             - mdb.models[*name*].rootAssembly.Set
 
@@ -197,8 +200,9 @@ class RegionPart(RegionPartBase):
     def Set(self, name, *args, **kwargs) -> Set:
         """This method creates a set from a sequence of objects in a model database.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Set
             - mdb.models[*name*].rootAssembly.Set
 
@@ -255,8 +259,9 @@ class RegionPart(RegionPartBase):
         """This method creates a skin from a sequence of objects in a model database. At least one
         of the optional arguments needs to be specified.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Skin
 
         Parameters
@@ -289,8 +294,9 @@ class RegionPart(RegionPartBase):
         """This method modifies underlying entities of the selected skin. At least one of the
         optional arguments needs to be specified.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].EditSkin
 
         Parameters
@@ -322,8 +328,9 @@ class RegionPart(RegionPartBase):
         """This method creates a stringer from a sequence of objects in a model database. At least
         one of the optional arguments needs to be specified.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Stringer
 
         Parameters

@@ -70,8 +70,9 @@ class OdbBase:
     def __init__(self, name: str, analysisTitle: str = '', description: str = '', path: str = ''):
         """This method creates a new Odb object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.Odb
 
         Parameters

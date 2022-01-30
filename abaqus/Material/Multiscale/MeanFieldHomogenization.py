@@ -22,8 +22,9 @@ class MeanFieldHomogenization:
                  isotropization: SymbolicConstant = ALLISO, uniformMatrixStrain: SymbolicConstant = NO):
         """This method creates a MeanFieldHomogenization object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].MeanFieldHomogenization
             - session.odbs[name].materials[name].MeanFieldHomogenization
 

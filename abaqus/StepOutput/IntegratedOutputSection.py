@@ -18,8 +18,9 @@ class IntegratedOutputSection:
                  localCsys: str = None, projectOrientation: Boolean = OFF):
         """This method creates an IntegratedOutputSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].IntegratedOutputSection
 
         Parameters

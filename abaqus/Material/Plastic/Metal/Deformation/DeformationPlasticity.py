@@ -30,8 +30,9 @@ class DeformationPlasticity:
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF):
         """This method creates a DeformationPlasticity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].DeformationPlasticity
             - session.odbs[name].materials[name].DeformationPlasticity
 

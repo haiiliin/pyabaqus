@@ -17,8 +17,9 @@ class BeadGrowth(GeometricRestriction):
     def __init__(self, name: str, region: Region, beadGrowth: float = 0, shrink: float = 0):
         """This method creates a BeadGrowth object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].BeadGrowth
 
         Parameters

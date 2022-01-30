@@ -21,8 +21,9 @@ class ConstraintModel(ModelBase):
     def AdjustPoints(self, name: str, surface: Region, controlPoints: Region) -> AdjustPoints:
         """This method creates an AdjustPoints object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AdjustPoints
 
         Parameters
@@ -48,8 +49,9 @@ class ConstraintModel(ModelBase):
                  weightingMethod: SymbolicConstant = UNIFORM) -> Coupling:
         """This method creates a Coupling object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Coupling
 
         Parameters
@@ -114,8 +116,9 @@ class ConstraintModel(ModelBase):
     def DisplayBody(self, name: str, instance: PartInstance, controlPoints: ModelDotArray) -> DisplayBody:
         """This method creates a DisplayBody object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DisplayBody
 
         Parameters
@@ -143,8 +146,9 @@ class ConstraintModel(ModelBase):
                        absoluteTolerance: float = 0, fractionalTolerance: float = 0) -> EmbeddedRegion:
         """This method creates a EmbeddedRegion object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EmbeddedRegion
 
         Parameters
@@ -186,8 +190,9 @@ class ConstraintModel(ModelBase):
     def Equation(self, name: str, terms: tuple) -> Equation:
         """This method creates an Equation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Equation
 
         Parameters
@@ -215,8 +220,9 @@ class ConstraintModel(ModelBase):
                              userMode: SymbolicConstant = DOF_MODE_MPC) -> MultipointConstraint:
         """This method creates a MultipointConstraint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MultipointConstraint
 
         Parameters
@@ -258,8 +264,9 @@ class ConstraintModel(ModelBase):
                   isothermal: Boolean = OFF) -> RigidBody:
         """This method creates a RigidBody object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].RigidBody
 
         Parameters
@@ -301,8 +308,9 @@ class ConstraintModel(ModelBase):
                            influenceDistance: float = 0) -> ShellSolidCoupling:
         """This method creates a ShellSolidCoupling object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ShellSolidCoupling
 
         Parameters
@@ -344,8 +352,9 @@ class ConstraintModel(ModelBase):
             thickness: Boolean = ON) -> Tie:
         """This method creates a Tie object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Tie
 
         Parameters

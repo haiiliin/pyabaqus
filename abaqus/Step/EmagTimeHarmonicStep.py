@@ -131,8 +131,9 @@ class EmagTimeHarmonicStep(AnalysisStep):
                  description: str = '', factorization: SymbolicConstant = COMPLEX):
         """This method creates a EmagTimeHarmonicStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EmagTimeHarmonicStep
 
         Parameters

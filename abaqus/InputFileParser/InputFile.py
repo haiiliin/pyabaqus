@@ -29,8 +29,9 @@ class InputFile:
     def __init__(self, file: str, directory: str = ''):
         """This method creates an InputFile object by reading an Abaqus input file.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - inpParser.InputFile
 
         Parameters

@@ -228,8 +228,9 @@ class ModelBase:
                  copyInteractions: Boolean = ON):
         """This method creates a Model object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.Model
 
         Parameters
@@ -272,8 +273,9 @@ class ModelBase:
         """This method creates a Model object by reading the keywords in an input file and creating
         the corresponding Abaqus/CAE objects.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.ModelFromInputFile
 
         Parameters
@@ -295,8 +297,9 @@ class ModelBase:
         """This method creates a Model object by reading an output database and creating any
         corresponding Abaqus/CAE objects.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.ModelFromOdbFile
 
         Parameters
@@ -326,8 +329,9 @@ class ModelBase:
         environment file as the one used for the translator from Nastran to Abaqus. For more
         information, see Translating Nastran data to Abaqus files.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.ModelFromNastranFile
 
         Parameters

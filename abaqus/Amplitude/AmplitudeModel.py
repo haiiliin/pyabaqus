@@ -19,8 +19,9 @@ class AmplitudeModel(ModelBase):
     def ActuatorAmplitude(self, name: str, timeSpan: SymbolicConstant = STEP) -> ActuatorAmplitude:
         """This method creates a ActuatorAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ActuatorAmplitude
             - session.odbs[name].ActuatorAmplitude
 
@@ -43,8 +44,9 @@ class AmplitudeModel(ModelBase):
                        timeSpan: SymbolicConstant = STEP) -> DecayAmplitude:
         """This method creates a DecayAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DecayAmplitude
             - session.odbs[name].DecayAmplitude
 
@@ -76,8 +78,9 @@ class AmplitudeModel(ModelBase):
                                timeSpan: SymbolicConstant = STEP) -> EquallySpacedAmplitude:
         """This method creates an EquallySpacedAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EquallySpacedAmplitude
             - session.odbs[name].EquallySpacedAmplitude
 
@@ -113,8 +116,9 @@ class AmplitudeModel(ModelBase):
                            frequency2: float, timeSpan: SymbolicConstant = STEP) -> ModulatedAmplitude:
         """This method creates a ModulatedAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ModulatedAmplitude
             - session.odbs[name].ModulatedAmplitude
 
@@ -150,8 +154,9 @@ class AmplitudeModel(ModelBase):
                           timeSpan: SymbolicConstant = STEP) -> PeriodicAmplitude:
         """This method creates a PeriodicAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PeriodicAmplitude
             - session.odbs[name].PeriodicAmplitude
 
@@ -183,8 +188,9 @@ class AmplitudeModel(ModelBase):
                       user: Boolean = OFF, timeSpan: SymbolicConstant = STEP, amplitude: str = '') -> PsdDefinition:
         """This method creates a PsdDefinition object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PsdDefinition
             - session.odbs[name].PsdDefinition
 
@@ -229,8 +235,9 @@ class AmplitudeModel(ModelBase):
     def SmoothStepAmplitude(self, name: str, data: tuple, timeSpan: SymbolicConstant = STEP) -> SmoothStepAmplitude:
         """This method creates a SmoothStepAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SmoothStepAmplitude
             - session.odbs[name].SmoothStepAmplitude
 
@@ -256,8 +263,9 @@ class AmplitudeModel(ModelBase):
                                    timeSpan: SymbolicConstant = STEP) -> SolutionDependentAmplitude:
         """This method creates a SolutionDependentAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SolutionDependentAmplitude
             - session.odbs[name].SolutionDependentAmplitude
 
@@ -293,8 +301,9 @@ class AmplitudeModel(ModelBase):
                           amplitude: str = '') -> SpectrumAmplitude:
         """This method creates a SpectrumAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SpectrumAmplitude
             - session.odbs[name].SpectrumAmplitude
 
@@ -352,8 +361,9 @@ class AmplitudeModel(ModelBase):
                          timeSpan: SymbolicConstant = STEP) -> TabularAmplitude:
         """This method creates a TabularAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].TabularAmplitude
             - session.odbs[name].TabularAmplitude
 

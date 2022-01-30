@@ -40,8 +40,9 @@ class CompositeLayup:
                  symmetric: Boolean = OFF):
         """This method creates a CompositeLayup object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].CompositeLayup
 
         Parameters
@@ -139,8 +140,9 @@ class CompositeLayup:
                      orientation: SymbolicConstant = None, additionalRotationField: str = '') -> CompositePly:
         """This method creates a CompositePly object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].compositeLayups[*name*].CompositePly
 
         Parameters
@@ -224,8 +226,9 @@ class CompositeLayup:
                               nodalThicknessField: str = '') -> CompositeShellSection:
         """This method creates a CompositeShellSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].compositeLayups[i].CompositeShellSection
             - mdb.models[name].CompositeShellSection
             - session.odbs[name].CompositeShellSection
@@ -314,8 +317,9 @@ class CompositeLayup:
                              density: float = 0) -> GeometryShellSection:
         """This method creates a GeometryShellSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].compositeLayups[*name*].Section
 
         Parameters
@@ -387,8 +391,9 @@ class CompositeLayup:
                  thicknessField: str = '', nodalThicknessField: str = '') -> HomogeneousShellSection:
         """This method creates a HomogeneousShellSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].compositeLayups[i]\
             - .HomogeneousShellSection
             - mdb.models[name].HomogeneousShellSection

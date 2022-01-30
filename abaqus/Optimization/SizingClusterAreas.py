@@ -16,8 +16,9 @@ class SizingClusterAreas(GeometricRestriction):
     def __init__(self, name: str, regions: tuple):
         """This method creates a SizingClusterAreas object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SizingClusterAreas
 
         Parameters

@@ -22,8 +22,9 @@ class Mdb(AcisMdb, JobMdb):
               copyInteractions: Boolean = ON) -> Model:
         """This method creates a Model object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.Model
 
         Parameters

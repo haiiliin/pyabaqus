@@ -17,8 +17,9 @@ class AnalyticSurfaceSegment:
     def __init__(self, type: SymbolicConstant, data: tuple):
         """This method creates an AnalyticSurfaceSegment object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - odbAccess.AnalyticSurfaceSegment
 
         Parameters

@@ -24,8 +24,9 @@ class ExpContactControl(ContactControl):
                  warpCutoff: float = 20):
         """This method creates an ExpContactControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ExpContactControl
 
         Parameters

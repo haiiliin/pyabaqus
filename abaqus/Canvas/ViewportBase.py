@@ -250,8 +250,9 @@ class ViewportBase:
                  customTitleString: str = ''):
         """This method creates a Viewport object with the specified origin and dimensions.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.Viewport
 
         Parameters

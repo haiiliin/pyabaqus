@@ -199,8 +199,9 @@ class CoupledThermalElectricStep(AnalysisStep):
                  convertSDI: SymbolicConstant = PROPAGATED):
         """This method creates a CoupledThermalElectricStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CoupledThermalElectricStep
 
         Parameters

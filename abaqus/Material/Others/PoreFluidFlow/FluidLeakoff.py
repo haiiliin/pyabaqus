@@ -33,8 +33,9 @@ class FluidLeakoff:
                  type: SymbolicConstant = COEFFICIENTS, table: tuple = ()):
         """This method creates a FluidLeakoff object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].FluidLeakoff
             - session.odbs[name].materials[name].FluidLeakoff
 

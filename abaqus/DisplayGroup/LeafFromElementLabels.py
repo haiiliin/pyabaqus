@@ -25,8 +25,9 @@ class LeafFromElementLabels(Leaf):
         """This method creates a Leaf object from a sequence of element labels that belong to a
         single part instance.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromElementLabels
 
         Parameters

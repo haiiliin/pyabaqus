@@ -23,8 +23,9 @@ class DiagnosticPrint:
                  solve: Boolean = ON, mass: Boolean = OFF):
         """This method creates a DiagnosticPrint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].DiagnosticPrint
 
         Parameters

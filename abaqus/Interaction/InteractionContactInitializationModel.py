@@ -13,8 +13,9 @@ class InteractionContactInitializationModel(ModelBase):
                           stepFraction: float = 1) -> ExpInitialization:
         """This method creates an ExpInitialization object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ExpInitialization
 
         Parameters
@@ -77,8 +78,9 @@ class InteractionContactInitializationModel(ModelBase):
                           openingTolerance: float = None, overclosureTolerance: float = None) -> StdInitialization:
         """This method creates a StdInitialization object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].StdInitialization
 
         Parameters

@@ -17,8 +17,9 @@ class RegisteredDictionary(CommandRegister):
     def __init__(self):
         """This method creates a RegisteredDictionary object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - customKernel.RegisteredDictionary
 
         Parameters

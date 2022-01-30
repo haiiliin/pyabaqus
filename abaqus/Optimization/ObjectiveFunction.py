@@ -18,8 +18,9 @@ class ObjectiveFunction:
     def __init__(self, name: str, objectives: OptimizationObjectiveArray, target: SymbolicConstant = MINIMIZE):
         """This method creates an ObjectiveFunction object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].ObjectiveFunction
 
         Parameters

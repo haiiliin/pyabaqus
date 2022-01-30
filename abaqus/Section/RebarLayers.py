@@ -23,8 +23,9 @@ class RebarLayers:
     def __init__(self, rebarSpacing: SymbolicConstant, layerTable: LayerPropertiesArray):
         """This method creates a RebarLayers object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].compositeLayups[i].section.RebarLayers
             - mdb.models[name].sections[name].RebarLayers
             - session.odbs[name].sections[name].RebarLayers

@@ -139,8 +139,9 @@ class AssemblyBase(Feature):
     def Instance(self, name: str, part: Part, autoOffset: Boolean = OFF, dependent: Boolean = OFF) -> PartInstance:
         """This method creates a PartInstance object and puts it into the instances repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.Instance
 
         Parameters
@@ -167,8 +168,9 @@ class AssemblyBase(Feature):
     def Instance(self, name: str, model: AssemblyModel, autoOffset: Boolean = OFF) -> ModelInstance:
         """This method creates a ModelInstance object and puts it into the instances repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.Instance
 
         Parameters
@@ -191,8 +193,9 @@ class AssemblyBase(Feature):
     def Instance(self, name: str, *args, **kwargs) -> typing.Union[PartInstance, ModelInstance]:
         """This method creates a PartInstance object and puts it into the instances repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.Instance
 
         Parameters

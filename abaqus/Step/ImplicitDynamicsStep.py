@@ -241,8 +241,9 @@ class ImplicitDynamicsStep(AnalysisStep):
                  reformKernel: int = 8, convertSDI: SymbolicConstant = PROPAGATED):
         """This method creates an ImplicitDynamicsStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ImplicitDynamicsStep
 
         Parameters

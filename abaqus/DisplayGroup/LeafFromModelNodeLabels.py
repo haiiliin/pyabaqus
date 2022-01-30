@@ -24,8 +24,9 @@ class LeafFromModelNodeLabels(Leaf):
         """This method creates a Leaf object from a sequence of node labels spanning several part
         instances.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromModelNodeLabels
 
         Parameters

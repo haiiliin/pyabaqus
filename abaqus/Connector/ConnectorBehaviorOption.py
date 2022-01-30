@@ -58,8 +58,9 @@ class ConnectorBehaviorOption:
                            table: tuple = ()) -> TangentialBehavior:
         """This method creates a TangentialBehavior object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior
             - session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior
 
@@ -110,8 +111,9 @@ class ConnectorBehaviorOption:
     def DerivedComponent(self) -> DerivedComponent:
         """This method creates a DerivedComponent object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent
             - mdb.models[name].sections[name].behaviorOptions[i].DerivedComponent
             - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
@@ -143,8 +145,9 @@ class ConnectorBehaviorOption:
         """This method creates a connector options object to be used in conjunction with an
         allowable connector behavior option, derived component term, or connector section.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
             - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].ConnectorOptions
             - mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions

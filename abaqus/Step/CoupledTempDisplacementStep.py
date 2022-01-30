@@ -227,8 +227,9 @@ class CoupledTempDisplacementStep(AnalysisStep):
                  continueDampingFactors: Boolean = OFF):
         """This method creates a CoupledTempDisplacementStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CoupledTempDisplacementStep
 
         Parameters

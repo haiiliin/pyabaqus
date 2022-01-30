@@ -109,8 +109,9 @@ class ConnectorDamage(ConnectorBehaviorOption):
                  components: tuple = ()):
         """This method creates a connector damage behavior option for a ConnectorSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           import connectorBehavior
             -           connectorBehavior.ConnectorDamage
             -           import odbConnectorBehavior

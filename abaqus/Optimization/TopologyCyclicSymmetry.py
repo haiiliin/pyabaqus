@@ -20,8 +20,9 @@ class TopologyCyclicSymmetry(GeometricRestriction):
                  csys: int = None, ignoreFrozenArea: Boolean = OFF):
         """This method creates a TopologyCyclicSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyCyclicSymmetry
 
         Parameters

@@ -71,8 +71,9 @@ class ConnectorDamping(ConnectorBehaviorOption):
                  independentComponents: tuple = (), components: tuple = ()):
         """This method creates a connector damping behavior option for a ConnectorSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           import connectorBehavior
             -           connectorBehavior.ConnectorDamping
             -           import odbConnectorBehavior

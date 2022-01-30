@@ -32,8 +32,9 @@ class ArbitraryProfile(Profile):
     def __init__(self, name: str, table: tuple):
         """This method creates a ArbitraryProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ArbitraryProfile
             - session.odbs[name].ArbitraryProfile
 

@@ -153,8 +153,9 @@ class ModelJob(Job):
         """This method creates an analysis job using a model on a model database (MDB) for the
         model definition.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.Job
 
         Parameters

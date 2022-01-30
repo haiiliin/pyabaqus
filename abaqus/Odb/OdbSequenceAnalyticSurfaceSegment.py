@@ -16,8 +16,9 @@ class OdbSequenceAnalyticSurfaceSegment:
     def __init__(self):
         """This method creates a OdbSequenceAnalyticSurfaceSegment object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - odbAccess.AnalyticSurfaceProfile
 
         Parameters

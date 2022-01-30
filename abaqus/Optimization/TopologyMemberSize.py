@@ -19,8 +19,9 @@ class TopologyMemberSize(GeometricRestriction):
                  separation: float = 0, sizeRestriction: SymbolicConstant = MINIMUM):
         """This method creates a TopologyMemberSize object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyMemberSize
 
         Parameters

@@ -25,8 +25,9 @@ class SolutionDependentAmplitude(Amplitude):
                  timeSpan: SymbolicConstant = STEP):
         """This method creates a SolutionDependentAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SolutionDependentAmplitude
             - session.odbs[name].SolutionDependentAmplitude
 

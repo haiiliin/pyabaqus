@@ -26,8 +26,9 @@ class SectionLayer:
                  orientation: SymbolicConstant = None, additionalRotationField: str = ''):
         """This method creates a SectionLayer object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - section.SectionLayer 
             - odbSection.SectionLayer
 

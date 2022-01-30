@@ -25,8 +25,9 @@ class LeafFromOdbElementPick(Leaf):
         strings defining the elements picked for each part instance. Leaf objects specify the
         items in a display group.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromOdbElementPick
 
         Parameters

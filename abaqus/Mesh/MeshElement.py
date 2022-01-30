@@ -56,8 +56,9 @@ class MeshElement:
     def Element(self, nodes: tuple[MeshNode], elemShape: SymbolicConstant, label: int = None):
         """This method creates an element on an orphan mesh part from a sequence of nodes.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Element
 
         Parameters

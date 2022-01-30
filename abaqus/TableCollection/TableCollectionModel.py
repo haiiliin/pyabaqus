@@ -11,8 +11,9 @@ class TableCollectionModel(ModelBase):
                     data: str = '') -> EventSeries:
         """This method creates an EventSeries object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EventSeriesData
 
         Parameters
@@ -51,8 +52,9 @@ class TableCollectionModel(ModelBase):
     def EventSeriesType(self, name: str, createStepName: str, fields: str = '') -> EventSeriesType:
         """This method creates an EventSeriesType object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EventSeriesType
 
         Parameters

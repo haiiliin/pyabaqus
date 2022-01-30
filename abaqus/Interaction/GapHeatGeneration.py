@@ -27,8 +27,9 @@ class GapHeatGeneration:
     def __init__(self, conversionFraction: float = 1, secondaryFraction: float = 0):
         """This method creates a GapHeatGeneration object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].HeatGeneration
 
         Parameters

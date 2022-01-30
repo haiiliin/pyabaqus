@@ -20,8 +20,9 @@ class TransverseShearShell:
     def __init__(self, k11: float, k22: float, k12: float):
         """This method creates a TransverseShearShell object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sections[name].TransverseShearShell
             - session.odbs[name].sections[name].TransverseShearShell
 

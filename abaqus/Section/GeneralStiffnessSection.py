@@ -36,8 +36,9 @@ class GeneralStiffnessSection(ShellSection):
                  thermalStresses: tuple = (), scalingData: tuple = ()):
         """This method creates a GeneralStiffnessSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].GeneralStiffnessSection
             - session.odbs[name].GeneralStiffnessSection
 

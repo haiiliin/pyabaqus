@@ -23,8 +23,9 @@ class TriaxialTestData:
     def __init__(self, table: tuple, a: float = None, b: float = None, pt: float = None):
         """This method creates a TriaxialTestData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].druckerPrager.TriaxialTestData
             - session.odbs[name].materials[name].druckerPrager.TriaxialTestData
 

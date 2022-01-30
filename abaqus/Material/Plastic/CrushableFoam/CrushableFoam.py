@@ -47,8 +47,9 @@ class CrushableFoam:
                  temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a CrushableFoam object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].CrushableFoam
             - session.odbs[name].materials[name].CrushableFoam
 

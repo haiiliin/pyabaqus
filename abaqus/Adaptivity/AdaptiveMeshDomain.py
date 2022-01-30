@@ -17,8 +17,9 @@ class AdaptiveMeshDomain:
                  meshSweeps: int = 1):
         """This method creates an AdaptiveMeshDomain object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].AdaptiveMeshDomain
 
         Parameters

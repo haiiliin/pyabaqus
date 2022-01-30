@@ -233,8 +233,9 @@ class DirectCyclicStep(AnalysisStep):
                  convertSDI: SymbolicConstant = PROPAGATED):
         """This method creates a DirectCyclicStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DirectCyclicStep
 
         Parameters

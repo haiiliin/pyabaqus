@@ -27,8 +27,9 @@ class ElemType:
                  linearKinematicCtrl: float = None, initialGapOpening: float = None):
         """This method creates an ElemType object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mesh.ElemType
 
         Parameters

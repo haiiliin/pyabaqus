@@ -26,8 +26,9 @@ class ExpInitialization(ContactInitialization):
                  stepFraction: float = 1):
         """This method creates an ExpInitialization object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ExpInitialization
 
         Parameters

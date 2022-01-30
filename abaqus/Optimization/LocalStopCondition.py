@@ -21,8 +21,9 @@ class LocalStopCondition(StopCondition):
                  referenceOperation: SymbolicConstant = ADD, region: SymbolicConstant = MODEL):
         """This method creates a LocalStopCondition object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].LocalStopCondition
 
         Parameters

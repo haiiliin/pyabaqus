@@ -22,8 +22,9 @@ class FilmCondition(Interaction):
                  sinkFieldName: str = '', sinkDistributionType: SymbolicConstant = UNIFORM):
         """This method creates a FilmCondition object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FilmCondition
 
         Parameters

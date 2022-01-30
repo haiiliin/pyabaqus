@@ -50,8 +50,9 @@ class Temperature(PredefinedField):
                  absoluteExteriorTolerance: float = 0, exteriorTolerance: float = 0):
         """This method creates a Temperature object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Temperature
 
         Parameters

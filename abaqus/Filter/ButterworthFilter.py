@@ -24,8 +24,9 @@ class ButterworthFilter(Filter):
                  halt: Boolean = OFF, limit: float = None, invariant: SymbolicConstant = NONE):
         """This method creates a ButterworthFilter object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ButterworthFilter
             - session.odbs[name].ButterworthFilter
 

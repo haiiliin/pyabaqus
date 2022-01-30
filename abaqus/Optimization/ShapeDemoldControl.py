@@ -22,8 +22,9 @@ class ShapeDemoldControl(GeometricRestriction):
                  tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0):
         """This method creates a ShapeDemoldControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].ShapeDemoldControl
 
         Parameters

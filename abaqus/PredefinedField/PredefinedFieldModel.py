@@ -24,8 +24,9 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
               interpolate: SymbolicConstant = OFF, magnitudes: str = '') -> Field:
         """This method creates a Field object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Field
 
         Parameters
@@ -122,8 +123,9 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
     def FluidCavityPressure(self, name: str, fluidCavity: str, fluidPressure: float) -> FluidCavityPressure:
         """This method creates a FluidCavityPressure object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidCavityPressure
 
         Parameters
@@ -147,8 +149,9 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
                      updateReferenceConfiguration: Boolean = OFF) -> InitialState:
         """This method creates an InitialState predefined field object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].InitialState
 
         Parameters
@@ -186,8 +189,9 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
                            distributionType: SymbolicConstant = MAGNITUDE) -> KinematicHardening:
         """This method creates a KinematicHardening object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].KinematicHardening
 
         Parameters
@@ -232,8 +236,9 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
                            colorList: tuple = ()) -> MaterialAssignment:
         """This method creates a MaterialAssignment predefined field object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MaterialAssignment
 
         Parameters
@@ -276,8 +281,9 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
                sigma12: float = None, sigma13: float = None, sigma23: float = None) -> Stress:
         """This method creates a Stress predefined field object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Stress
 
         Parameters
@@ -321,8 +327,9 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
                     absoluteExteriorTolerance: float = 0, exteriorTolerance: float = 0) -> Temperature:
         """This method creates a Temperature object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Temperature
 
         Parameters
@@ -423,8 +430,9 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
                  distributionType: SymbolicConstant = MAGNITUDE) -> Velocity:
         """This method creates a Velocity predefined field object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Velocity
 
         Parameters

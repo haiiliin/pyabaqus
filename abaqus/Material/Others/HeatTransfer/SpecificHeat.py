@@ -30,8 +30,9 @@ class SpecificHeat:
                  temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a SpecificHeat object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].SpecificHeat
             - session.odbs[name].materials[name].SpecificHeat
 

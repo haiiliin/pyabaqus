@@ -182,8 +182,9 @@ class SteadyStateModalStep(AnalysisStep):
                  maintainAttributes: Boolean = False, subdivideUsingEigenfrequencies: Boolean = ON):
         """This method creates a SteadyStateModalStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SteadyStateModalStep
 
         Parameters

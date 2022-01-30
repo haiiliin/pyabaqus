@@ -35,8 +35,9 @@ class FluidCavityProperty(ContactProperty):
                  capacityTable: tuple = ()):
         """This method creates a FluidCavityProperty object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidCavityProperty
 
         Parameters

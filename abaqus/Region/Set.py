@@ -91,8 +91,9 @@ class Set:
                  skinEdges: tuple = (), stringerEdges: tuple = ()):
         """This method creates a set from a sequence of objects in a model database.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Set
             - mdb.models[*name*].rootAssembly.Set
 
@@ -146,8 +147,9 @@ class Set:
     def __init__(self, name: str, objectToCopy: 'Set'):
         """This method copies a set from an existing set.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Set
             - mdb.models[*name*].rootAssembly.Set
 
@@ -170,8 +172,9 @@ class Set:
     def SetByBoolean(self, name: str, sets: tuple['Set'], operation: SymbolicConstant = UNION):
         """This method creates a set by performing a boolean operation on two or more input sets.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].SetByBoolean
             - mdb.models[*name*].rootAssembly.SetByBoolean
 
@@ -200,8 +203,9 @@ class Set:
         create sets only on parts; however, you can access the sets from instances of the parts
         in the assembly.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].SetFromColor
 
         Parameters
@@ -222,8 +226,9 @@ class Set:
     def SetFromElementLabels(self, name: str, elementLabels: tuple):
         """This method creates a set from a sequence of element labels in a model database.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].SetFromElementLabels
             - mdb.models[*name*].rootAssembly.SetFromElementLabels
 
@@ -245,8 +250,9 @@ class Set:
     def SetFromNodeLabels(self, name: str, nodeLabels: tuple, unsorted: Boolean = False):
         """This method creates a set from a sequence of node labels in a model database.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].SetFromNodeLabels
             - mdb.models[*name*].rootAssembly.SetFromNodeLabels
 
@@ -271,8 +277,9 @@ class Set:
         """This method creates sets based on mapping sets from element centroid locations in an
         Odb.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].MapSetsFromOdb
 
         Parameters

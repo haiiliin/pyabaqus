@@ -38,8 +38,9 @@ class Potential:
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a Potential object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].creep.Potential
             - mdb.models[name].materials[name].Plastic.Potential
             - mdb.models[name].materials[name].viscous.Potential

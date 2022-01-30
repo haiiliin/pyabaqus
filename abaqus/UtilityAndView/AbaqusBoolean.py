@@ -26,8 +26,9 @@ class AbaqusBoolean:
     def __init__(self, value: int):
         """The AbaqusBoolean method creates an AbaqusBoolean object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - AbaqusBoolean
 
         Parameters

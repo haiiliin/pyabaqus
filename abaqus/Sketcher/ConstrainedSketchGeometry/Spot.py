@@ -7,8 +7,9 @@ class Spot(ConstrainedSketchGeometry):
         """This method creates a spot construction point located at the specified coordinates. The
         spot is added to the vertex repository of the ConstrainedSketch object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].Spot
 
         Parameters

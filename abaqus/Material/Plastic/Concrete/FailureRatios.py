@@ -33,8 +33,9 @@ class FailureRatios:
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a FailureRatios object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].concrete.FailureRatios
             - session.odbs[name].materials[name].concrete.FailureRatios
 

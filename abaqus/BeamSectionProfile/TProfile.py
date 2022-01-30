@@ -22,8 +22,9 @@ class TProfile(Profile):
     def __init__(self, name: str, b: float, h: float, l: float, tf: float, tw: float):
         """This method creates a TProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].TProfile
             - session.odbs[name].TProfile
 

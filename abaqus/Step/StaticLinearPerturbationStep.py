@@ -141,8 +141,9 @@ class StaticLinearPerturbationStep(AnalysisStep):
                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False):
         """This method creates a StaticLinearPerturbationStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].StaticLinearPerturbationStep
 
         Parameters

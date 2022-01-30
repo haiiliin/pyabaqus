@@ -26,8 +26,9 @@ class AdaptivityProcess:
     def __init__(self, name: str, job: ModelJob, maxIterations: int = 3, jobPrefix: str = ''):
         """This method creates an AdaptivityProcess object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.AdaptivityProcess
 
         Parameters
@@ -93,8 +94,9 @@ class AdaptivityProcess:
     def AdaptivityIteration(self, iteration: int, jobName: str, modelName: str, odbPath: str, remeshingErrors: int) -> AdaptivityIteration:
         """This method creates an AdaptivityIteration object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.adaptivityProcesses[name].AdaptivityIteration
 
         Parameters

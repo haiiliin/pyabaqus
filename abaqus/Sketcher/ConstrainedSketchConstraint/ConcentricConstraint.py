@@ -10,8 +10,9 @@ class ConcentricConstraint(ConstrainedSketchConstraint):
         concentric constraint implies that the center of ConstrainedSketchGeometry objects
         coincide.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].ConcentricConstraint
 
         Parameters

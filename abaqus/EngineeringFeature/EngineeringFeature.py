@@ -27,8 +27,9 @@ class EngineeringFeature(EngineeringFeatureBase):
         both for parts and for the assembly, AssembledFastener objects are currently supported
         only under the assembly.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.AssembledFastener
             - mdb.models[name].rootAssembly.engineeringFeatures.AssembledFastener
 
@@ -84,8 +85,9 @@ class EngineeringFeature(EngineeringFeatureBase):
         for parts and for the assembly, ContourIntegral objects are currently supported only
         under the assembly.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.ContourIntegral
             - mdb.models[name].rootAssembly.engineeringFeatures.ContourIntegral
 
@@ -153,8 +155,9 @@ class EngineeringFeature(EngineeringFeatureBase):
         parts and for the assembly, DebondVCCT objects are currently supported only under the
         assembly.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.DebondVCCT
             - mdb.models[name].rootAssembly.engineeringFeatures.DebondVCCT
 
@@ -191,8 +194,9 @@ class EngineeringFeature(EngineeringFeatureBase):
         both for parts and for the assembly, DiscreteFastener objects are currently supported
         only under the assembly.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.DiscreteFastener
             - mdb.models[name].rootAssembly.engineeringFeatures.DiscreteFastener
 
@@ -242,8 +246,9 @@ class EngineeringFeature(EngineeringFeatureBase):
                         dependencies: int = 0) -> HeatCapacitance:
         """This method creates a HeatCapacitance object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.HeatCapacitance
             - mdb.models[name].rootAssembly.engineeringFeatures.HeatCapacitance
 
@@ -273,8 +278,9 @@ class EngineeringFeature(EngineeringFeatureBase):
                           distribution: SymbolicConstant = MASS_PROPORTIONAL) -> NonstructuralMass:
         """This method creates a NonstructuralMass object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.NonstructuralMass
             - mdb.models[name].rootAssembly.engineeringFeatures.NonstructuralMass
 
@@ -318,8 +324,9 @@ class EngineeringFeature(EngineeringFeatureBase):
         for parts and for the assembly, PointFastener objects are currently supported only under
         the assembly.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.PointFastener
             - mdb.models[name].rootAssembly.engineeringFeatures.PointFastener
 
@@ -445,8 +452,9 @@ class EngineeringFeature(EngineeringFeatureBase):
                          composite: float = 0) -> PointMassInertia:
         """This method creates a PointMassInertia object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.PointMassInertia
             - mdb.models[name].rootAssembly.engineeringFeatures.PointMassInertia
 
@@ -508,8 +516,9 @@ class EngineeringFeature(EngineeringFeatureBase):
                               springStiffness: float = 0, dashpotCoefficient: float = 0) -> SpringDashpotToGround:
         """This method creates a SpringDashpotToGround object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.SpringDashpotToGround
             - mdb.models[name].rootAssembly.engineeringFeatures\
             - .SpringDashpotToGround
@@ -556,8 +565,9 @@ class EngineeringFeature(EngineeringFeatureBase):
                               springStiffness: float = 0, dashpotCoefficient: float = 0) -> TwoPointSpringDashpot:
         """This method creates a TwoPointSpringDashpot object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.TwoPointSpringDashpot
             - mdb.models[name].rootAssembly.engineeringFeatures\
             - .TwoPointSpringDashpot
@@ -620,8 +630,9 @@ class EngineeringFeature(EngineeringFeatureBase):
         parts and for the assembly, XFEMCrack objects are currently supported only under the
         assembly.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.XFEMCrack
             - mdb.models[name].rootAssembly.engineeringFeatures.XFEMCrack
 

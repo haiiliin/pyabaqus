@@ -46,8 +46,9 @@ class TangentialBehavior:
                  fraction: float = None, absoluteDistance: float = None, table: tuple = ()):
         """This method creates a TangentialBehavior object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior
             - session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior
 

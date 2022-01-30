@@ -16,8 +16,9 @@ class PropertyPart(PartBase):
                        symmetric: Boolean = OFF) -> CompositeLayup:
         """This method creates a CompositeLayup object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].CompositeLayup
 
         Parameters
@@ -61,8 +62,9 @@ class PropertyPart(PartBase):
                           offset: float = 0, offsetType: SymbolicConstant = SINGLE_VALUE, offsetField: str = ''):
         """This method creates a SectionAssignment object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].SectionAssignment
             - mdb.models[*name*].rootAssembly.SectionAssignment
 
@@ -109,8 +111,9 @@ class PropertyPart(PartBase):
                             flipPrimaryDirection: Boolean = OFF, primaryAxisVector: tuple = ()) -> MaterialOrientation:
         """This method creates a MaterialOrientation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].MaterialOrientation
 
         Parameters

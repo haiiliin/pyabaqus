@@ -29,8 +29,9 @@ class SectionModel(ModelBase):
                                 order: int = 10) -> AcousticInfiniteSection:
         """This method creates an AcousticInfiniteSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AcousticInfiniteSection
             - session.odbs[name].AcousticInfiniteSection
 
@@ -58,8 +59,9 @@ class SectionModel(ModelBase):
     def AcousticInterfaceSection(self, name: str, thickness: float = 1) -> AcousticInterfaceSection:
         """This method creates an AcousticInterfaceSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AcousticInterfaceSection
             - session.odbs[name].AcousticInterfaceSection
 
@@ -90,8 +92,9 @@ class SectionModel(ModelBase):
                     centroid: tuple[float] = (), shearCenter: tuple[float] = (), profileEnd: str = '') -> BeamSection:
         """This method creates a BeamSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BeamSection
             - session.odbs[name].BeamSection
 
@@ -202,8 +205,9 @@ class SectionModel(ModelBase):
                         outOfPlaneThickness: float = None) -> CohesiveSection:
         """This method creates a CohesiveSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CohesiveSection
             - session.odbs[name].CohesiveSection
 
@@ -252,8 +256,9 @@ class SectionModel(ModelBase):
                               nodalThicknessField: str = '') -> CompositeShellSection:
         """This method creates a CompositeShellSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].compositeLayups[i].CompositeShellSection
             - mdb.models[name].CompositeShellSection
             - session.odbs[name].CompositeShellSection
@@ -337,8 +342,9 @@ class SectionModel(ModelBase):
                               layupName: str = '') -> CompositeSolidSection:
         """This method creates a CompositeSolidSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CompositeSolidSection
             - session.odbs[name].CompositeSolidSection
 
@@ -374,8 +380,9 @@ class SectionModel(ModelBase):
                          behaviorOptions: ConnectorBehaviorOptionArray = None) -> ConnectorSection:
         """This method creates a ConnectorSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConnectorSection
             - session.odbs[name].ConnectorSection
 
@@ -474,8 +481,9 @@ class SectionModel(ModelBase):
     def EulerianSection(self, name: str, data: str) -> EulerianSection:
         """This method creates a EulerianSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EulerianSection
             - session.odbs[name].EulerianSection
 
@@ -500,8 +508,9 @@ class SectionModel(ModelBase):
                       stabilizationStiffness: typing.Union[SymbolicConstant, float] = DEFAULT) -> GasketSection:
         """This method creates a GasketSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].GasketSection
             - session.odbs[name].GasketSection
 
@@ -545,8 +554,9 @@ class SectionModel(ModelBase):
                                 thermalStresses: tuple = (), scalingData: tuple = ()) -> GeneralStiffnessSection:
         """This method creates a GeneralStiffnessSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].GeneralStiffnessSection
             - session.odbs[name].GeneralStiffnessSection
 
@@ -610,8 +620,9 @@ class SectionModel(ModelBase):
                                 thicknessField: str = '', nodalThicknessField: str = '') -> HomogeneousShellSection:
         """This method creates a HomogeneousShellSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].compositeLayups[i]\
             - .HomogeneousShellSection
             - mdb.models[name].HomogeneousShellSection
@@ -698,8 +709,9 @@ class SectionModel(ModelBase):
     def HomogeneousSolidSection(self, name: str, material: str, thickness: float = 1) -> HomogeneousSolidSection:
         """This method creates a HomogeneousSolidSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].HomogeneousSolidSection
             - session.odbs[name].HomogeneousSolidSection
 
@@ -726,8 +738,9 @@ class SectionModel(ModelBase):
                         thicknessField: str = '') -> MembraneSection:
         """This method creates a MembraneSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MembraneSection
             - session.odbs[name].MembraneSection
 
@@ -776,8 +789,9 @@ class SectionModel(ModelBase):
                    userType: int = 0) -> MPCSection:
         """This method creates a MPCSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MPCSection
             - session.odbs[name].MPCSection
 
@@ -812,8 +826,9 @@ class SectionModel(ModelBase):
                    wedgeAngle2: float = 0) -> PEGSection:
         """This method creates a PEGSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PEGSection
             - session.odbs[name].PEGSection
 
@@ -843,8 +858,9 @@ class SectionModel(ModelBase):
     def SurfaceSection(self, name: str, useDensity: Boolean = OFF, density: float = 0) -> SurfaceSection:
         """This method creates a SurfaceSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfaceSection
             - session.odbs[name].SurfaceSection
 
@@ -873,8 +889,9 @@ class SectionModel(ModelBase):
     def TrussSection(self, name: str, material: str, area: float = 1) -> TrussSection:
         """This method creates a TrussSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].TrussSection
             - session.odbs[name].TrussSection
 

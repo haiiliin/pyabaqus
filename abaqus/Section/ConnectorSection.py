@@ -35,8 +35,9 @@ class ConnectorSection(Section):
                  behaviorOptions: ConnectorBehaviorOptionArray = None):
         """This method creates a ConnectorSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConnectorSection
             - session.odbs[name].ConnectorSection
 

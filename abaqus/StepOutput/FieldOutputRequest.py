@@ -51,8 +51,9 @@ class FieldOutputRequest:
                  position: SymbolicConstant = INTEGRATION_POINTS):
         """This method creates a FieldOutputRequest object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FieldOutputRequest
 
         Parameters

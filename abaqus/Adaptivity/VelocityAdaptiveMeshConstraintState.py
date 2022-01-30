@@ -95,8 +95,9 @@ class VelocityAdaptiveMeshConstraintState(AdaptiveMeshConstraintState):
         The VelocityAdaptiveMeshConstraintState object is derived from the
         AdaptiveMeshConstraintState object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].VelocityAdaptiveMeshConstraintState
 
         Parameters

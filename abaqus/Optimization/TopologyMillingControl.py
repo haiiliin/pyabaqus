@@ -20,8 +20,9 @@ class TopologyMillingControl(GeometricRestriction):
                  millingCheckRegion: SymbolicConstant = MILLING_REGION, radius: float = None):
         """This method creates a TopologyMillingControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyMillingControl
 
         Parameters

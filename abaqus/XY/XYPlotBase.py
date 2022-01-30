@@ -36,8 +36,9 @@ class XYPlotBase:
     def __init__(self, name: str):
         """This method creates an empty XYPlot object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.XYPlot
 
         Parameters

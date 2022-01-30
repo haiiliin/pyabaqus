@@ -37,8 +37,9 @@ class BrittleFailure:
                  failureCriteria: SymbolicConstant = UNIDIRECTIONAL):
         """This method creates a BrittleFailure object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].brittleCracking.BrittleFailure
             - session.odbs[name].materials[name].brittleCracking.BrittleFailure
 

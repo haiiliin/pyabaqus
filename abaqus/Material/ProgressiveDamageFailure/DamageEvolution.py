@@ -146,8 +146,9 @@ class DamageEvolution:
                  softening: SymbolicConstant = LINEAR):
         """This method creates a DamageEvolution object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].ductileDamageInitiation\
             - .DamageEvolution
             - mdb.models[name].materials[name].fldDamageInitiation.DamageEvolution

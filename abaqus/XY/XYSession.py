@@ -22,8 +22,9 @@ class XYSession(XYSessionBase):
     def AreaStyle(color: str = '', fill: Boolean = ON, style: SymbolicConstant = SOLID) -> AreaStyle:
         """This method creates an AreaStyle.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.AreaStyle
             - xyPlot.AreaStyle
 
@@ -55,8 +56,9 @@ class XYSession(XYSessionBase):
                   thickness: float = 0) -> LineStyle:
         """This method creates a LineStyle.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.LineStyle
             - xyPlot.LineStyle
 
@@ -91,8 +93,9 @@ class XYSession(XYSessionBase):
     def QuantityType(label: str = '', type: SymbolicConstant = None) -> QuantityType:
         """This method creates a QuantityType object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.QuantityType
             - xyPlot.QuantityType
 
@@ -188,8 +191,9 @@ class XYSession(XYSessionBase):
                     size: float = 2) -> SymbolStyle:
         """This method creates a SymbolStyle object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.SymbolStyle
             - xyPlot.SymbolStyle
 
@@ -235,8 +239,9 @@ class XYSession(XYSessionBase):
     def TextStyle(color: str = '', show: Boolean = ON, font: str = '', rotationAngle: float = 0) -> TextStyle:
         """This method creates a TextStyle.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.TextStyle
             - xyPlot.TextStyle
 
@@ -274,8 +279,9 @@ class XYSession(XYSessionBase):
                axis2QuantityType: QuantityType = None) -> XYData:
         """This method creates an XYData object from a sequence of *X–Y* data pairs.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.XYData
             - xyPlot.XYData
 
@@ -324,8 +330,9 @@ class XYSession(XYSessionBase):
     def XYData(objectToCopy: XYData) -> XYData:
         """This method creates an XYData object by copying an existing XYData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].userData.XYData
             - session.XYData
             - xyPlot.XYData
@@ -352,8 +359,9 @@ class XYSession(XYSessionBase):
                        skipFrequency: int = None):
         """This method creates an XYData object from data in an ASCII file.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.XYDataFromFile
             - xyPlot.XYDataFromFile
 
@@ -412,8 +420,9 @@ class XYSession(XYSessionBase):
                           numericForm: SymbolicConstant = REAL, complexAngle: float = 0, stepTuple: int = None):
         """This method creates an XYData object by reading history data from an Odb object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.XYDataFromHistory
             - xyPlot.XYDataFromHistory
 
@@ -471,8 +480,9 @@ class XYSession(XYSessionBase):
                             operator: SymbolicConstant = None) -> list['XYData']:
         """This method creates a list of XYData objects by reading field data from an Odb object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.xyDataListFromField
             - xyPlot.xyDataListFromField
 
@@ -561,8 +571,9 @@ class XYSession(XYSessionBase):
         """This method creates a list of XYData objects by computing free body data from an Odb
         object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.XYDataFromFreeBody
             - xyPlot.XYDataFromFreeBody
 
@@ -606,8 +617,9 @@ class XYSession(XYSessionBase):
                        projectOntoMesh: Boolean = False, projectionTolerance: float = 0):
         """This method creates an XYData object from path information.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.XYDataFromPath
             - xyPlot.XYDataFromPath
 

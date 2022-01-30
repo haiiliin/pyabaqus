@@ -26,8 +26,9 @@ class AcousticImpedance(Interaction):
                  centerCoordinates: tuple = (), directionCosine: tuple = ()):
         """This method creates an AcousticImpedance object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AcousticImpedance
 
         Parameters

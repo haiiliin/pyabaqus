@@ -136,8 +136,9 @@ class AnnealStep(AnalysisStep):
                  maintainAttributes: Boolean = False):
         """This method creates an AnnealStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AnnealStep
 
         Parameters

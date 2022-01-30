@@ -222,8 +222,9 @@ class StaticRiksStep(AnalysisStep):
                  convertSDI: SymbolicConstant = PROPAGATED):
         """This method creates a StaticRiksStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].StaticRiksStep
 
         Parameters

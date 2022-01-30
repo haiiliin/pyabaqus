@@ -55,8 +55,9 @@ class DisplacementBaseMotionBC(BoundaryCondition):
                  secondaryBase: str = '', useComplex: Boolean = OFF, amplitude: str = UNSET):
         """This method creates a DisplacementBaseMotionBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DisplacementBaseMotionBC
 
         Parameters

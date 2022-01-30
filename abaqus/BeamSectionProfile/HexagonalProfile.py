@@ -22,8 +22,9 @@ class HexagonalProfile(Profile):
     def __init__(self, name: str, r: float, t: float):
         """This method creates a HexagonalProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].HexagonalProfile
             - session.odbs[name].HexagonalProfile
 

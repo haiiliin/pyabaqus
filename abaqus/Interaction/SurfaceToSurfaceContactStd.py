@@ -50,8 +50,9 @@ class SurfaceToSurfaceContactStd(Interaction):
                  normalAdjustment: SymbolicConstant = None):
         """This method creates a SurfaceToSurfaceContactStd object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfaceToSurfaceContactStd
 
         Parameters

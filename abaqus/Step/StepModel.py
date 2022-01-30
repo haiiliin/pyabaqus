@@ -55,8 +55,9 @@ class StepModel(ModelBase):
                    maintainAttributes: Boolean = False) -> AnnealStep:
         """This method creates an AnnealStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AnnealStep
 
         Parameters
@@ -90,8 +91,9 @@ class StepModel(ModelBase):
                    matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False) -> BuckleStep:
         """This method creates a BuckleStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BuckleStep
 
         Parameters
@@ -150,8 +152,9 @@ class StepModel(ModelBase):
                              propertyEvaluationFrequency: float = None) -> ComplexFrequencyStep:
         """This method creates a ComplexFrequencyStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ComplexFrequencyStep
 
         Parameters
@@ -218,8 +221,9 @@ class StepModel(ModelBase):
                                     continueDampingFactors: Boolean = OFF) -> CoupledTempDisplacementStep:
         """This method creates a CoupledTempDisplacementStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CoupledTempDisplacementStep
 
         Parameters
@@ -333,8 +337,9 @@ class StepModel(ModelBase):
                                                continueDampingFactors: Boolean = OFF) -> CoupledThermalElectricalStructuralStep:
         """This method creates a CoupledThermalElectricalStructuralStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CoupledThermalElectricalStructuralStep
 
         Parameters
@@ -438,8 +443,9 @@ class StepModel(ModelBase):
                                    convertSDI: SymbolicConstant = PROPAGATED) -> CoupledThermalElectricStep:
         """This method creates a CoupledThermalElectricStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CoupledThermalElectricStep
 
         Parameters
@@ -525,8 +531,9 @@ class StepModel(ModelBase):
                          convertSDI: SymbolicConstant = PROPAGATED) -> DirectCyclicStep:
         """This method creates a DirectCyclicStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DirectCyclicStep
 
         Parameters
@@ -627,8 +634,9 @@ class StepModel(ModelBase):
                              description: str = '', factorization: SymbolicConstant = COMPLEX) -> EmagTimeHarmonicStep:
         """This method creates a EmagTimeHarmonicStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EmagTimeHarmonicStep
 
         Parameters
@@ -665,8 +673,9 @@ class StepModel(ModelBase):
                              improvedDtMethod: Boolean = ON) -> ExplicitDynamicsStep:
         """This method creates an ExplicitDynamicsStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ExplicitDynamicsStep
 
         Parameters
@@ -745,8 +754,9 @@ class StepModel(ModelBase):
                       limitSavedEigenvectorRegion: SymbolicConstant = None) -> FrequencyStep:
         """This method creates a FrequencyStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FrequencyStep
 
         Parameters
@@ -873,8 +883,9 @@ class StepModel(ModelBase):
                       initialInc: float = None, minInc: float = None, maxInc: float = None) -> GeostaticStep:
         """This method creates a GeostaticStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].GeostaticStep
 
         Parameters
@@ -954,8 +965,9 @@ class StepModel(ModelBase):
                          convertSDI: SymbolicConstant = PROPAGATED) -> HeatTransferStep:
         """This method creates a HeatTransferStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].HeatTransferStep
 
         Parameters
@@ -1051,8 +1063,9 @@ class StepModel(ModelBase):
                              reformKernel: int = 8, convertSDI: SymbolicConstant = PROPAGATED) -> ImplicitDynamicsStep:
         """This method creates an ImplicitDynamicsStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ImplicitDynamicsStep
 
         Parameters
@@ -1162,8 +1175,9 @@ class StepModel(ModelBase):
                           convertSDI: SymbolicConstant = PROPAGATED) -> MassDiffusionStep:
         """This method creates a MassDiffusionStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MassDiffusionStep
 
         Parameters
@@ -1236,8 +1250,9 @@ class StepModel(ModelBase):
                           rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency()) -> ModalDynamicsStep:
         """This method creates a ModalDynamicsStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ModalDynamicsStep
 
         Parameters
@@ -1295,8 +1310,9 @@ class StepModel(ModelBase):
                            maintainAttributes: Boolean = False) -> RandomResponseStep:
         """This method creates a RandomResponseStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].RandomResponseStep
 
         Parameters
@@ -1352,8 +1368,9 @@ class StepModel(ModelBase):
                              maintainAttributes: Boolean = False) -> ResponseSpectrumStep:
         """This method creates a ResponseSpectrumStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ResponseSpectrumStep
 
         Parameters
@@ -1414,8 +1431,9 @@ class StepModel(ModelBase):
                   continueDampingFactors: Boolean = OFF) -> SoilsStep:
         """This method creates a SoilsStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SoilsStep
 
         Parameters
@@ -1523,8 +1541,9 @@ class StepModel(ModelBase):
                                      maintainAttributes: Boolean = False) -> StaticLinearPerturbationStep:
         """This method creates a StaticLinearPerturbationStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].StaticLinearPerturbationStep
 
         Parameters
@@ -1566,8 +1585,9 @@ class StepModel(ModelBase):
                        convertSDI: SymbolicConstant = PROPAGATED) -> StaticRiksStep:
         """This method creates a StaticRiksStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].StaticRiksStep
 
         Parameters
@@ -1672,8 +1692,9 @@ class StepModel(ModelBase):
                    continueDampingFactors: Boolean = OFF) -> StaticStep:
         """This method creates a StaticStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].StaticStep
 
         Parameters
@@ -1781,8 +1802,9 @@ class StepModel(ModelBase):
                               frictionDamping: Boolean = OFF) -> SteadyStateDirectStep:
         """This method creates a SteadyStateDirectStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SteadyStateDirectStep
 
         Parameters
@@ -1839,8 +1861,9 @@ class StepModel(ModelBase):
                              subdivideUsingEigenfrequencies: Boolean = ON) -> SteadyStateModalStep:
         """This method creates a SteadyStateModalStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SteadyStateModalStep
 
         Parameters
@@ -1899,8 +1922,9 @@ class StepModel(ModelBase):
                                 frictionDamping: Boolean = OFF) -> SteadyStateSubspaceStep:
         """This method creates a SteadyStateSubspaceStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SteadyStateSubspaceStep
 
         Parameters
@@ -1961,8 +1985,9 @@ class StepModel(ModelBase):
                              maintainAttributes: Boolean = False) -> SubspaceDynamicsStep:
         """This method creates a SubspaceDynamicsStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SubspaceDynamicsStep
 
         Parameters
@@ -2018,8 +2043,9 @@ class StepModel(ModelBase):
                                  structuralDampingControl: SymbolicConstant = NONE) -> SubstructureGenerateStep:
         """This method creates a SubstructureGenerateStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SubstructureGenerateStep
 
         Parameters
@@ -2111,8 +2137,9 @@ class StepModel(ModelBase):
                                      improvedDtMethod: Boolean = ON) -> TempDisplacementDynamicsStep:
         """This method creates a TempDisplacementDynamicsStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].TempDisplacementDynamicsStep
 
         Parameters
@@ -2185,8 +2212,9 @@ class StepModel(ModelBase):
                   adaptiveDampingRatio: float = 0, continueDampingFactors: Boolean = OFF) -> ViscoStep:
         """This method creates a ViscoStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ViscoStep
 
         Parameters

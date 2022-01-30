@@ -19,8 +19,9 @@ class PorousFailureCriteria:
     def __init__(self, fraction: float = 1, criticalFraction: float = 1):
         """This method creates a PorousFailureCriteria object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].porousMetalPlasticity\
             - .PorousFailureCriteria
             - session.odbs[name].materials[name].porousMetalPlasticity\

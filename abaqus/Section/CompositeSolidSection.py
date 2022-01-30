@@ -24,8 +24,9 @@ class CompositeSolidSection(Section):
     def __init__(self, name: str, layup: SectionLayerArray, symmetric: Boolean = OFF, layupName: str = ''):
         """This method creates a CompositeSolidSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CompositeSolidSection
             - session.odbs[name].CompositeSolidSection
 

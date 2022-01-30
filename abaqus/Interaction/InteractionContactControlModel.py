@@ -11,8 +11,9 @@ class InteractionContactControlModel(ModelBase):
                           warpCutoff: float = 20) -> ExpContactControl:
         """This method creates an ExpContactControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ExpContactControl
 
         Parameters
@@ -64,8 +65,9 @@ class InteractionContactControlModel(ModelBase):
                           enforceWithLagrangeMultipliers: SymbolicConstant = DEFAULT) -> StdContactControl:
         """This method creates an StdContactControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].StdContactControl
 
         Parameters

@@ -27,8 +27,9 @@ class SurfaceSection(Section):
     def __init__(self, name: str, useDensity: Boolean = OFF, density: float = 0):
         """This method creates a SurfaceSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfaceSection
             - session.odbs[name].SurfaceSection
 

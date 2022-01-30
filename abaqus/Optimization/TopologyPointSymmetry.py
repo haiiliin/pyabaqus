@@ -19,8 +19,9 @@ class TopologyPointSymmetry(GeometricRestriction):
     def __init__(self, name: str, region: Region, csys: int = None, ignoreFrozenArea: Boolean = OFF):
         """This method creates a TopologyPointSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyPointSymmetry
 
         Parameters

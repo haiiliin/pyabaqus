@@ -12,8 +12,9 @@ class FieldReportSession(SessionBase):
                         complexAngle: float = None, stepFrame: SymbolicConstant = SPECIFY):
         """This method writes a FieldOutput object to a user-defined ASCII file.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.writeFieldReport
 
         Parameters
@@ -82,8 +83,9 @@ class FieldReportSession(SessionBase):
                            stepFrame: SymbolicConstant = SPECIFY, odb: Odb = None):
         """This method writes a FreeBody object to a user-defined ASCII file.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.writeFreeBodyReport
 
         Parameters

@@ -32,8 +32,9 @@ class Text(Annotation):
                  box: Boolean = OFF, justification: SymbolicConstant = JUSTIFY_LEFT):
         """This method creates a Text object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.Text
             - session.odbs[*name*].userData.Text
 

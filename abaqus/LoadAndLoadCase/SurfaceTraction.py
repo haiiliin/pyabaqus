@@ -80,8 +80,9 @@ class SurfaceTraction(Load):
                  resultant: Boolean = OFF, traction: SymbolicConstant = SHEAR):
         """This method creates a SurfaceTraction object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfaceTraction
 
         Parameters

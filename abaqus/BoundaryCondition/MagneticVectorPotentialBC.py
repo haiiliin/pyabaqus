@@ -41,8 +41,9 @@ class MagneticVectorPotentialBC(BoundaryCondition):
                  localCsys: str = None):
         """This method creates a MagneticVectorPotentialBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MagneticVectorPotentialBC
 
         Parameters

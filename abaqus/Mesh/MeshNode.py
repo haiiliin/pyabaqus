@@ -50,8 +50,9 @@ class MeshNode:
     def __init__(self, coordinates: tuple, localCsys: DatumCsys = DatumCsys(), label: int = None):
         """This method creates a node on an orphan mesh part.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Node
 
         Parameters

@@ -28,8 +28,9 @@ class MultipointConstraint(Constraint):
                  csys: str = None, userType: int = 0, userMode: SymbolicConstant = DOF_MODE_MPC):
         """This method creates a MultipointConstraint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MultipointConstraint
 
         Parameters

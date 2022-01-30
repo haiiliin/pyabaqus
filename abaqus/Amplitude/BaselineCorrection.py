@@ -19,8 +19,9 @@ class BaselineCorrection:
     def __init__(self, intervals: tuple = ()):
         """This method creates a BaselineCorrection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].amplitudes[name].BaselineCorrection
             - session.odbs[name].amplitudes[name].BaselineCorrection
 

@@ -23,8 +23,9 @@ class AcousticMedium:
                  bulkTable: tuple = (), volumetricTable: tuple = ()):
         """This method creates an AcousticMedium object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].AcousticMedium
             - session.odbs[name].materials[name].AcousticMedium
 

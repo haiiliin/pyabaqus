@@ -60,8 +60,9 @@ class BoundaryConditionModel(ModelBase):
                                  amplitude: str = UNSET) -> AccelerationBaseMotionBC:
         """This method creates a AccelerationBaseMotionBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AccelerationBaseMotionBC
 
         Parameters
@@ -115,8 +116,9 @@ class BoundaryConditionModel(ModelBase):
                        localCsys: str = None, distributionType: SymbolicConstant = UNIFORM) -> AccelerationBC:
         """This method creates an AccelerationBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AccelerationBC
 
         Parameters
@@ -183,8 +185,9 @@ class BoundaryConditionModel(ModelBase):
                            amplitude: str = UNSET, fixed: Boolean = OFF) -> AcousticPressureBC:
         """This method creates a AcousticPressureBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AcousticPressureBC
 
         Parameters
@@ -228,8 +231,9 @@ class BoundaryConditionModel(ModelBase):
     def Calibration(self, name: str) -> Calibration:
         """This method creates a Calibration object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Calibration
 
         Parameters
@@ -250,8 +254,9 @@ class BoundaryConditionModel(ModelBase):
                         amplitude: str = UNSET, fixed: Boolean = OFF) -> ConcentrationBC:
         """This method creates a ConcentrationBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcentrationBC
 
         Parameters
@@ -304,8 +309,9 @@ class BoundaryConditionModel(ModelBase):
         boundary condition may also be applied to a wire set referenced from an assembled
         fastener template model.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConnAccelerationBC
 
         Parameters
@@ -386,8 +392,9 @@ class BoundaryConditionModel(ModelBase):
         boundary condition may also be applied to a wire set referenced from an assembled
         fastener template model.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConnDisplacementBC
 
         Parameters
@@ -474,8 +481,9 @@ class BoundaryConditionModel(ModelBase):
         boundary condition may also be applied to a wire set referenced from an assembled
         fastener template model.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConnVelocityBC
 
         Parameters
@@ -549,8 +557,9 @@ class BoundaryConditionModel(ModelBase):
                                  amplitude: str = UNSET) -> DisplacementBaseMotionBC:
         """This method creates a DisplacementBaseMotionBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DisplacementBaseMotionBC
 
         Parameters
@@ -605,8 +614,9 @@ class BoundaryConditionModel(ModelBase):
                        localCsys: str = None, buckleCase: SymbolicConstant = NOT_APPLICABLE) -> DisplacementBC:
         """This method creates a DisplacementBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DisplacementBC
 
         Parameters
@@ -684,8 +694,9 @@ class BoundaryConditionModel(ModelBase):
                             amplitude: str = UNSET, fixed: Boolean = OFF) -> ElectricPotentialBC:
         """This method creates an ElectricPotentialBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ElectricPotentialBC
 
         Parameters
@@ -730,8 +741,9 @@ class BoundaryConditionModel(ModelBase):
                    inflowType: SymbolicConstant = FREE, outflowType: SymbolicConstant = ZERO_PRESSURE) -> EulerianBC:
         """This method creates a EulerianBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EulerianBC
 
         Parameters
@@ -776,8 +788,9 @@ class BoundaryConditionModel(ModelBase):
                          vmaxFactor: float = 1, volThreshold: float = 0, bufferSize: float = 2) -> EulerianMotionBC:
         """This method creates an EulerianMotionBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EulerianMotionBC
 
         Parameters
@@ -888,8 +901,9 @@ class BoundaryConditionModel(ModelBase):
                               amplitude: str = UNSET, fixed: Boolean = OFF) -> FluidCavityPressureBC:
         """This method creates a FluidCavityPressureBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidCavityPressureBC
 
         Parameters
@@ -928,8 +942,9 @@ class BoundaryConditionModel(ModelBase):
                                   localCsys: str = None) -> MagneticVectorPotentialBC:
         """This method creates a MagneticVectorPotentialBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MagneticVectorPotentialBC
 
         Parameters
@@ -982,8 +997,9 @@ class BoundaryConditionModel(ModelBase):
                        amplitude: str = UNSET, fixed: Boolean = OFF) -> MaterialFlowBC:
         """This method creates a MaterialFlowBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MaterialFlowBC
 
         Parameters
@@ -1029,8 +1045,9 @@ class BoundaryConditionModel(ModelBase):
                        amplitude: str = UNSET, fixed: Boolean = OFF) -> PorePressureBC:
         """This method creates a PorePressureBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PorePressureBC
 
         Parameters
@@ -1076,8 +1093,9 @@ class BoundaryConditionModel(ModelBase):
                             ur3: Boolean = OFF) -> RetainedNodalDofsBC:
         """This method creates a RetainedNodalDofsBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].RetainedNodalDofsBC
 
         Parameters
@@ -1123,8 +1141,9 @@ class BoundaryConditionModel(ModelBase):
     def SecondaryBaseBC(self, name: str, createStepName: str, regions: RegionArray, dofs: tuple) -> SecondaryBaseBC:
         """This method creates a SecondaryBaseBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SecondaryBaseBC
 
         Parameters
@@ -1155,8 +1174,9 @@ class BoundaryConditionModel(ModelBase):
                    intersectionOnly: Boolean = OFF) -> SubmodelBC:
         """This method creates a SubmodelBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SubmodelBC
 
         Parameters
@@ -1228,8 +1248,9 @@ class BoundaryConditionModel(ModelBase):
                       distributionType: SymbolicConstant = UNIFORM, fixed: Boolean = OFF) -> TemperatureBC:
         """This method creates a TemperatureBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].TemperatureBC
 
         Parameters
@@ -1279,8 +1300,9 @@ class BoundaryConditionModel(ModelBase):
                              amplitude: str = UNSET) -> VelocityBaseMotionBC:
         """This method creates a VelocityBaseMotionBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].VelocityBaseMotionBC
 
         Parameters
@@ -1333,8 +1355,9 @@ class BoundaryConditionModel(ModelBase):
                    localCsys: str = None, distributionType: SymbolicConstant = UNIFORM) -> VelocityBC:
         """This method creates a VelocityBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].VelocityBC
 
         Parameters

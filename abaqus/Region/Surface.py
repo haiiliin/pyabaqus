@@ -65,8 +65,9 @@ class Surface:
         surface=mdb.models['Model-1'].parts['Part-1'].Surface(side1Faces=side1Faces,
         name='Surf-1')
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Surface
             - mdb.models[*name*].rootAssembly.Surface
 
@@ -142,8 +143,9 @@ class Surface:
     def __init__(self, name: str, objectToCopy: 'Surface'):
         """This method copies a surface from an existing surface.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Surface
             - mdb.models[*name*].rootAssembly.Surface
 
@@ -167,8 +169,9 @@ class Surface:
         """This method creates a surface by performing a boolean operation on two or more input
         surfaces.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].SurfaceByBoolean
             - mdb.models[*name*].rootAssembly.SurfaceByBoolean
 
@@ -193,8 +196,9 @@ class Surface:
     def SurfaceFromElsets(self, name: str, elementSetSeq: tuple):
         """This method creates a surface from a sequence of element sets in a model database.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.SurfaceFromElsets
 
         Parameters

@@ -33,8 +33,9 @@ class CyclicHardening:
                  parameters: Boolean = OFF):
         """This method creates a CyclicHardening object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Plastic.CyclicHardening
             - session.odbs[name].materials[name].Plastic.CyclicHardening
 

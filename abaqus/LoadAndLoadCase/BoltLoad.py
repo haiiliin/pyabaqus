@@ -38,8 +38,9 @@ class BoltLoad(Load):
                  amplitude: str = UNSET, preTenSecPartLevel: Boolean = False):
         """This method creates a BoltLoad object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BoltLoad
 
         Parameters

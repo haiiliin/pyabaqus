@@ -32,8 +32,9 @@ class CyclicSymmetry(Interaction):
                  positionToleranceMethod: SymbolicConstant = COMPUTED_TOLERANCE):
         """This method creates a CyclicSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CyclicSymmetry
 
         Parameters

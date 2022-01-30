@@ -16,8 +16,9 @@ class OdbLoadCase:
     def __init__(self, name: str):
         """This method creates an OdbLoadCase object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].steps[*name*].LoadCase
 
         Parameters

@@ -18,8 +18,9 @@ class BeamSectionProfileOdb(OdbBase):
     def ArbitraryProfile(self, name: str, table: tuple) -> ArbitraryProfile:
         """This method creates a ArbitraryProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ArbitraryProfile
             - session.odbs[name].ArbitraryProfile
 
@@ -46,8 +47,9 @@ class BeamSectionProfileOdb(OdbBase):
                    t3: float = 0, t4: float = 0) -> BoxProfile:
         """This method creates a BoxProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BoxProfile
             - session.odbs[name].BoxProfile
 
@@ -91,8 +93,9 @@ class BeamSectionProfileOdb(OdbBase):
     def CircularProfile(self, name: str, r: float) -> CircularProfile:
         """This method creates a CircularProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CircularProfile
             - session.odbs[name].CircularProfile
 
@@ -121,8 +124,9 @@ class BeamSectionProfileOdb(OdbBase):
                            gammaW: float) -> GeneralizedProfile:
         """This method creates a GeneralizedProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].GeneralizedProfile
             - session.odbs[name].GeneralizedProfile
 
@@ -160,8 +164,9 @@ class BeamSectionProfileOdb(OdbBase):
     def HexagonalProfile(self, name: str, r: float, t: float) -> HexagonalProfile:
         """This method creates a HexagonalProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].HexagonalProfile
             - session.odbs[name].HexagonalProfile
 
@@ -193,8 +198,9 @@ class BeamSectionProfileOdb(OdbBase):
                  t3: float) -> IProfile:
         """This method creates an IProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].IProfile
             - session.odbs[name].IProfile
 
@@ -234,8 +240,9 @@ class BeamSectionProfileOdb(OdbBase):
     def LProfile(self, name: str, a: float, b: float, t1: float, t2: float) -> LProfile:
         """This method creates a LProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].LProfile
             - session.odbs[name].LProfile
 
@@ -271,8 +278,9 @@ class BeamSectionProfileOdb(OdbBase):
     def PipeProfile(self, name: str, r: float, t: float) -> PipeProfile:
         """This method creates a PipeProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PipeProfile
             - session.odbs[name].PipeProfile
 
@@ -302,8 +310,9 @@ class BeamSectionProfileOdb(OdbBase):
     def RectangularProfile(self, name: str, a: float, b: float) -> RectangularProfile:
         """This method creates a RectangularProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].RectangularProfile
             - session.odbs[name].RectangularProfile
 
@@ -333,8 +342,9 @@ class BeamSectionProfileOdb(OdbBase):
     def TProfile(self, name: str, b: float, h: float, l: float, tf: float, tw: float) -> TProfile:
         """This method creates a TProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].TProfile
             - session.odbs[name].TProfile
 
@@ -373,8 +383,9 @@ class BeamSectionProfileOdb(OdbBase):
     def TrapezoidalProfile(self, name: str, a: float, b: float, c: float, d: float) -> TrapezoidalProfile:
         """This method creates a TrapezoidalProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].TrapezoidalProfile
             - session.odbs[name].TrapezoidalProfile
 

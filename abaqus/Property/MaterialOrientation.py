@@ -45,8 +45,9 @@ class MaterialOrientation:
                  flipPrimaryDirection: Boolean = OFF, primaryAxisVector: tuple = ()):
         """This method creates a MaterialOrientation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].MaterialOrientation
 
         Parameters
@@ -137,8 +138,9 @@ class MaterialOrientation:
                              primaryAxisVector: tuple = ()):
         """This method creates a MaterialOrientation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].compositeLayups[*name*].ReferenceOrientation
 
         Parameters

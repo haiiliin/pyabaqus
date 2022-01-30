@@ -67,8 +67,9 @@ class ConnectorElasticity(ConnectorBehaviorOption):
         """This method creates a connector elasticity behavior option for a ConnectorSection
         object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           import connectorBehavior
             -           connectorBehavior.ConnectorElasticity
             -           import odbConnectorBehavior

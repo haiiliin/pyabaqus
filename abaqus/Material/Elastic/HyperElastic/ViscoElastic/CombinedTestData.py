@@ -30,8 +30,9 @@ class CombinedTestData:
     def __init__(self, table: tuple, volinf: float = None, shrinf: float = None):
         """This method creates a CombinedTestData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].viscoelastic.CombinedTestData
             - session.odbs[name].materials[name].viscoelastic.CombinedTestData
 

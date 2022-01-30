@@ -24,8 +24,9 @@ class FluidCavity(Interaction):
                  useAdiabatic: Boolean = OFF, checkNormals: Boolean = ON):
         """This method creates an FluidCavity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidCavity
 
         Parameters

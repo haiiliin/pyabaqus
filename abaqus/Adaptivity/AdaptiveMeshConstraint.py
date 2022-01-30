@@ -41,8 +41,9 @@ class AdaptiveMeshConstraint:
         the AdaptiveMeshConstraint object are common to all objects derived from the
         AdaptiveMeshConstraint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AdaptiveMeshConstraint
 
         Parameters

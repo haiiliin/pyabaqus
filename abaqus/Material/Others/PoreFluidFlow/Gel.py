@@ -25,8 +25,9 @@ class Gel:
     def __init__(self, table: tuple):
         """This method creates a Gel object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Gel
             - session.odbs[name].materials[name].Gel
 

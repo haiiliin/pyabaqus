@@ -39,8 +39,9 @@ class HomogeneousShellSection(GeometryShellSection):
                  thicknessField: str = '', nodalThicknessField: str = ''):
         """This method creates a HomogeneousShellSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].compositeLayups[i]\
             - .HomogeneousShellSection
             - mdb.models[name].HomogeneousShellSection

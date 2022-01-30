@@ -16,8 +16,9 @@ class PathSession(SessionBase):
              endRadius: typing.Union[SymbolicConstant, float]) -> Path:
         """This method creates a Path object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.Path
 
         Parameters
@@ -95,8 +96,9 @@ class PathSession(SessionBase):
     def Spectrum(self, name: str, colors: tuple) -> Spectrum:
         """This method creates a Spectrum object and places it in the spectrums repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.Spectrum
 
         Parameters
@@ -116,8 +118,9 @@ class PathSession(SessionBase):
     def Stream(self, name: str, numPointsOnRake: str, pointA: tuple = (), pointB: tuple = (), path: str = '') -> Stream:
         """This method creates aStream object and places it in the streams repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.Stream
 
         Parameters

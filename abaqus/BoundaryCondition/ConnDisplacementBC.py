@@ -71,8 +71,9 @@ class ConnDisplacementBC(BoundaryCondition):
         boundary condition may also be applied to a wire set referenced from an assembled
         fastener template model.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConnDisplacementBC
 
         Parameters

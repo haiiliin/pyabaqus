@@ -224,8 +224,9 @@ class CoupledThermalElectricalStructuralStep(AnalysisStep):
                  continueDampingFactors: Boolean = OFF):
         """This method creates a CoupledThermalElectricalStructuralStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CoupledThermalElectricalStructuralStep
 
         Parameters

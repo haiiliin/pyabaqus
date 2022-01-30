@@ -38,8 +38,9 @@ class HeatCapacitance(Inertia):
                  dependencies: int = 0):
         """This method creates a HeatCapacitance object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.HeatCapacitance
             - mdb.models[name].rootAssembly.engineeringFeatures.HeatCapacitance
 

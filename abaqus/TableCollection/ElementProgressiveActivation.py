@@ -22,8 +22,9 @@ class ElementProgressiveActivation:
         """This method creates an ElementProgressiveActivation object and places it in the
         elementProgressiveActivation repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.ElementProgressiveActivation
 
         Parameters

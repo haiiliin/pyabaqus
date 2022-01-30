@@ -30,8 +30,9 @@ class Density:
                  distributionType: SymbolicConstant = UNIFORM, fieldName: str = ''):
         """This method creates a Density object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Density
             - session.odbs[name].materials[name].Density
 

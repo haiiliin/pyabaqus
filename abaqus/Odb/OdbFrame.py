@@ -46,8 +46,9 @@ class OdbFrame:
     def __init__(self, incrementNumber: int, frameValue: float, description: str = ''):
         """This method creates an OdbFrame object and appends it to the frame sequence.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].steps[name].Frame
 
         Parameters
@@ -75,8 +76,9 @@ class OdbFrame:
         the frame sequence. The arguments to the constructor are valid only when
         *domain*=FREQUENCY or *domain*=MODAL.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].steps[name].Frame
 
         Parameters
@@ -100,8 +102,9 @@ class OdbFrame:
         """This constructor creates an OdbFrame object for a specific load case and appends it to
         the frame sequence.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].steps[name].Frame
 
         Parameters
@@ -128,8 +131,9 @@ class OdbFrame:
                     validInvariants: SymbolicConstant = None, isEngineeringTensor: Boolean = OFF):
         """This method creates a FieldOutput object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].steps[name].frames[i].FieldOutput
 
         Parameters
@@ -172,8 +176,9 @@ class OdbFrame:
         """This method creates a FieldOutput object from an existing FieldOutput object of the same
         output database.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].steps[name].frames[i].FieldOutput
 
         Parameters

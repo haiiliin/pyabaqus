@@ -33,8 +33,9 @@ class DerivedComponent:
     def __init__(self):
         """This method creates a DerivedComponent object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent
             - mdb.models[name].sections[name].behaviorOptions[i].DerivedComponent
             - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
@@ -79,8 +80,9 @@ class DerivedComponent:
                 tempDependency: Boolean = OFF, fieldDependencies: int = 0) -> CDCTerm:
         """This method creates a CDCTerm object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.CDCTerm
             - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.CDCTerm
             - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.CDCTerm

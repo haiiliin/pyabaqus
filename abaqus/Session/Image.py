@@ -12,8 +12,9 @@ class Image:
     def __init__(self, name: str, fileName: str):
         """This method creates an Image object from the contents of the specified file.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.Image
 
         Parameters

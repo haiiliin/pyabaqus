@@ -238,8 +238,9 @@ class SoilsStep(AnalysisStep):
                  continueDampingFactors: Boolean = OFF):
         """This method creates a SoilsStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SoilsStep
 
         Parameters

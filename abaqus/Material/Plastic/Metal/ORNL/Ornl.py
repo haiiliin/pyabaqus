@@ -24,8 +24,9 @@ class Ornl:
     def __init__(self, a: float = 0, h: float = None, reset: Boolean = OFF):
         """This method creates an Ornl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].creep.Ornl
             - mdb.models[name].materials[name].Plastic.Ornl
             - session.odbs[name].materials[name].creep.Ornl

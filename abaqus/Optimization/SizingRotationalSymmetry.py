@@ -20,8 +20,9 @@ class SizingRotationalSymmetry(GeometricRestriction):
                  csys: int = None, ignoreFrozenArea: Boolean = OFF):
         """This method creates a SizingRotationalSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SizingRotationalSymmetry
 
         Parameters

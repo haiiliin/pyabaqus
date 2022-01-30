@@ -22,8 +22,9 @@ class IProfile(Profile):
     def __init__(self, name: str, l: float, h: float, b1: float, b2: float, t1: float, t2: float, t3: float):
         """This method creates an IProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].IProfile
             - session.odbs[name].IProfile
 

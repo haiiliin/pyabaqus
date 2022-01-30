@@ -53,8 +53,9 @@ class BeamSection(Section):
                  centroid: tuple[float] = (), shearCenter: tuple[float] = (), profileEnd: str = ''):
         """This method creates a BeamSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BeamSection
             - session.odbs[name].BeamSection
 

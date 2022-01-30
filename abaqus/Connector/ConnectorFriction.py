@@ -51,8 +51,9 @@ class ConnectorFriction(ConnectorBehaviorOption):
         Depending upon the arguments provided, the friction behavior can be Coulomb-like or
         hysteretic in nature.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           import connectorBehavior
             -           connectorBehavior.ConnectorFriction
             -           import odbConnectorBehavior

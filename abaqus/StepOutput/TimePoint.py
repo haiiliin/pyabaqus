@@ -17,8 +17,9 @@ class TimePoint:
     def __init__(self, name: str, points: tuple):
         """This method creates a TimePoint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].TimePoint
 
         Parameters

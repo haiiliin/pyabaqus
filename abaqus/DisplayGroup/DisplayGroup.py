@@ -46,8 +46,9 @@ class DisplayGroup:
     def __init__(self, name: str, leaf: Leaf):
         """This method creates a DisplayGroup object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.DisplayGroup
 
         Parameters

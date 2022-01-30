@@ -32,8 +32,9 @@ class EquallySpacedAmplitude(Amplitude):
                  timeSpan: SymbolicConstant = STEP):
         """This method creates an EquallySpacedAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EquallySpacedAmplitude
             - session.odbs[name].EquallySpacedAmplitude
 

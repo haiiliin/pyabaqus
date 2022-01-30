@@ -43,8 +43,9 @@ class CohesiveBehavior:
                  temperatureDependency: Boolean = OFF, dependencies: int = 0, table: tuple = ()):
         """This method creates a CohesiveBehavior object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].CohesiveBehavior
 
         Parameters

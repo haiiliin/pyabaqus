@@ -113,8 +113,9 @@ class MappedField(AnalyticalField):
                  coordinateScalingFactors: tuple = (), localCsys: str = None, description: str = ''):
         """This method creates an MappedField object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MappedField
 
         Parameters

@@ -28,8 +28,9 @@ class DataTable:
     def __init__(self, label: str):
         """This method creates a DataTable object and places it in the dataTables array.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].tableCollections[name].parameterTables[name].DataTable
 
         Parameters

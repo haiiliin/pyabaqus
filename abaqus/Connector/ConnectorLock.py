@@ -26,8 +26,9 @@ class ConnectorLock(ConnectorBehaviorOption):
                  components: tuple = ()):
         """This method creates a connector lock behavior option for a ConnectorSection.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           import connectorBehavior
             -           connectorBehavior.ConnectorLock
             -           import odbConnectorBehavior

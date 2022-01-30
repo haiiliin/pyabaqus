@@ -32,8 +32,9 @@ class SurfaceToSurfaceContactExp(Interaction):
                  clearanceRegion: Region = Region()):
         """This method creates a SurfaceToSurfaceContactExp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfaceToSurfaceContactExp
 
         Parameters

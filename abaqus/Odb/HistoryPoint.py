@@ -82,8 +82,9 @@ class HistoryPoint:
     def __init__(self, node: OdbMeshNode):
         """This method creates a HistoryPoint object for a node.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - odbAccess.HistoryPoint
 
         Parameters
@@ -102,8 +103,9 @@ class HistoryPoint:
                  face: SymbolicConstant = FACE_UNKNOWN, node: OdbMeshNode = OdbMeshNode()):
         """This method creates a HistoryPoint object for an element.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - odbAccess.HistoryPoint
 
         Parameters
@@ -146,8 +148,9 @@ class HistoryPoint:
     def __init__(self, region: OdbSet):
         """This method creates a HistoryPoint object for a region.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - odbAccess.HistoryPoint
 
         Parameters
@@ -165,8 +168,9 @@ class HistoryPoint:
     def __init__(self, assembly: OdbAssembly):
         """This method creates a HistoryPoint object for the OdbAssembly object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - odbAccess.HistoryPoint
 
         Parameters
@@ -184,8 +188,9 @@ class HistoryPoint:
     def __init__(self, instance: OdbInstance):
         """This method creates a HistoryPoint object for the OdbInstance object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - odbAccess.HistoryPoint
 
         Parameters

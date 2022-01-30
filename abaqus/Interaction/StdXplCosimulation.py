@@ -21,8 +21,9 @@ class StdXplCosimulation(Interaction):
                  stepSizeDefinition: SymbolicConstant = DEFAULT):
         """This method creates a StdXplCosimulation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].StdXplCosimulation
 
         Parameters

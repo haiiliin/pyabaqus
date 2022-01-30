@@ -17,8 +17,9 @@ class AdaptivityStep(StepBase):
         of the AdaptiveMeshConstraintState object are common to all objects derived from the
         AdaptiveMeshConstraintState object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].AdaptiveMeshConstraintState
 
         Parameters
@@ -68,8 +69,9 @@ class AdaptivityStep(StepBase):
         The DisplacementAdaptiveMeshConstraintState object is derived from the
         AdaptiveMeshConstraintState object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].DisplacementAdaptiveMeshConstraintState
 
         Parameters
@@ -150,8 +152,9 @@ class AdaptivityStep(StepBase):
         The VelocityAdaptiveMeshConstraintState object is derived from the
         AdaptiveMeshConstraintState object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].VelocityAdaptiveMeshConstraintState
 
         Parameters
@@ -221,8 +224,9 @@ class AdaptivityStep(StepBase):
 
         This method creates an AdaptiveMeshDomain object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].AdaptiveMeshDomain
 
         Parameters

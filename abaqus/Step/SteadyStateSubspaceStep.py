@@ -175,8 +175,9 @@ class SteadyStateSubspaceStep(AnalysisStep):
                  maxStiffnessChange: float = 0, frictionDamping: Boolean = OFF):
         """This method creates a SteadyStateSubspaceStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SteadyStateSubspaceStep
 
         Parameters

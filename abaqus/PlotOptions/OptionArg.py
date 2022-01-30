@@ -29,8 +29,9 @@ class OptionArg:
                  fillColor: str = '', translucency: Boolean = OFF, translucencyFactor: float = 0):
         """This method creates an OptionArg object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - visualization.OptionArg
 
         Parameters

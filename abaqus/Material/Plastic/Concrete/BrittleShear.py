@@ -40,8 +40,9 @@ class BrittleShear:
                  type: SymbolicConstant = RETENTION_FACTOR):
         """This method creates a BrittleShear object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].brittleCracking.BrittleShear
             - session.odbs[name].materials[name].brittleCracking.BrittleShear
 

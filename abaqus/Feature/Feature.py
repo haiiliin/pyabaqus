@@ -46,8 +46,9 @@ class Feature:
         mesh nodes or coordinates. Optionally, the attachment points can be projected on
         geometric faces or element faces.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].AttachmentPoints
             - mdb.models[*name*].rootAssembly.AttachmentPoints
 
@@ -101,8 +102,9 @@ class Feature:
         Interesting point, or an orphan mesh Node can be specified as the start or end point.
         The direction can be specified using a straight edge or a datum axis.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].AttachmentPointsAlongDirection
             - mdb.models[*name*].rootAssembly.AttachmentPointsAlongDirection
 
@@ -183,8 +185,9 @@ class Feature:
         """This method creates a Feature object by creating attachment points along or offset from
         one or more connected edges.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].AttachmentPointsOffsetFromEdges
             - mdb.models[*name*].rootAssembly.AttachmentPointsOffsetFromEdges
 
@@ -280,8 +283,9 @@ class Feature:
         """This method creates a Feature object and a DatumAxis object along the axis of a cylinder
         or cone.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumAxisByCylFace
             - mdb.models[*name*].parts[*name*].DatumAxisByCylFace
 
@@ -304,8 +308,9 @@ class Feature:
         """This method creates a Feature object and a DatumAxis object normal to the specified
         plane and passing through the specified point.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumAxisByNormalToPlane
             - mdb.models[*name*].parts[*name*].DatumAxisByNormalToPlane
 
@@ -330,8 +335,9 @@ class Feature:
         """This method creates a Feature object and a DatumAxis object parallel to the specified
         edge and passing through the specified point.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumAxisByParToEdge
             - mdb.models[*name*].parts[*name*].DatumAxisByParToEdge
 
@@ -356,8 +362,9 @@ class Feature:
         """This method creates a Feature object and a DatumAxis object along one of the three
         principal axes.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumAxisByPrincipalAxis
             - mdb.models[*name*].parts[*name*].DatumAxisByPrincipalAxis
 
@@ -382,8 +389,9 @@ class Feature:
         """This method creates a Feature object and a DatumAxis object in a three-dimensional model
         by rotating a line about the specified axis through the specified angle.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumAxisByRotation
             - mdb.models[*name*].parts[*name*].DatumAxisByRotation
 
@@ -413,8 +421,9 @@ class Feature:
         """This method creates a Feature object and a DatumAxis object in a two-dimensional model
         by rotating a line about the specified point through the specified angle.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumAxisByRotation
             - mdb.models[*name*].parts[*name*].DatumAxisByRotation
 
@@ -446,8 +455,9 @@ class Feature:
         """This method creates a Feature object and a DatumAxis object normal to the circle
         described by three points and through its center.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumAxisByThreePoint
             - mdb.models[*name*].parts[*name*].DatumAxisByThreePoint
 
@@ -476,8 +486,9 @@ class Feature:
     def DatumAxisByThruEdge(self, edge: str):
         """This method creates a Feature object and a DatumAxis object along the specified edge.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumAxisByThruEdge
             - mdb.models[*name*].parts[*name*].DatumAxisByThruEdge
 
@@ -500,8 +511,9 @@ class Feature:
         """This method creates a Feature object and a DatumAxis object at the intersection of two
         planes.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumAxisByTwoPlane
             - mdb.models[*name*].parts[*name*].DatumAxisByTwoPlane
 
@@ -526,8 +538,9 @@ class Feature:
         """This method creates a Feature object and a DatumAxis object along the line joining two
         points.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumAxisByTwoPoint
             - mdb.models[*name*].parts[*name*].DatumAxisByTwoPoint
 
@@ -552,8 +565,9 @@ class Feature:
         """This method creates a Feature object and a DatumCsys object from the specified default
         coordinate system at the origin.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumCsysByDefault
             - mdb.models[*name*].parts[*name*].DatumCsysByDefault
 
@@ -580,8 +594,9 @@ class Feature:
         """This method creates a Feature object and a DatumCsys object by offsetting the origin of
         an existing datum coordinate system to a specified point.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.DatumCsysByOffset
             - mdb.models[name].parts[name].DatumCsysByOffset
 
@@ -618,8 +633,9 @@ class Feature:
                                line2: str, name: str = ''):
         """This method creates a Feature object and a DatumCsys object from three points.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].DatumCsysByThreePoints
             - mdb.models[name].rootAssembly.DatumCsysByThreePoints
 
@@ -665,8 +681,9 @@ class Feature:
         The origin of the new datum coordinate system is placed at the intersection of the two
         lines.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumCsysByTwoLines
             - mdb.models[*name*].parts[*name*].DatumCsysByTwoLines
 
@@ -698,8 +715,9 @@ class Feature:
         """This method creates a Feature object and a DatumPlane object through the origin along
         one of the three principal planes.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPlaneByPrincipalPlane
             - mdb.models[*name*].parts[*name*].DatumPlaneByPrincipalPlane
 
@@ -726,8 +744,9 @@ class Feature:
         """This method creates a Feature object and a DatumPlane object offset by a specified
         distance from an existing plane.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPlaneByOffset
             - mdb.models[*name*].parts[*name*].DatumPlaneByOffset
 
@@ -756,8 +775,9 @@ class Feature:
         """This method creates a Feature object and a DatumPlane object offset from an existing
         plane and passing through the specified point.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPlaneByOffset
             - mdb.models[*name*].parts[*name*].DatumPlaneByOffset
 
@@ -785,8 +805,9 @@ class Feature:
         """This method creates a Feature object and a DatumPlane object by rotating a plane about
         the specified axis through the specified angle.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPlaneByRotation
             - mdb.models[*name*].parts[*name*].DatumPlaneByRotation
 
@@ -813,8 +834,9 @@ class Feature:
         """This method creates a Feature object and a DatumPlane object defined by passing through
         three points.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPlaneByThreePoints
             - mdb.models[*name*].parts[*name*].DatumPlaneByThreePoints
 
@@ -841,8 +863,9 @@ class Feature:
         """This method creates a Feature object and a DatumPlane object that pass through the
         specified line and through the specified point that does not lie on the line.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPlaneByLinePoint
             - mdb.models[*name*].parts[*name*].DatumPlaneByLinePoint
 
@@ -867,8 +890,9 @@ class Feature:
         """This method creates a Feature object and a DatumPlane object normal to the specified
         line and running through the specified point.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPlaneByPointNormal
             - mdb.models[*name*].parts[*name*].DatumPlaneByPointNormal
 
@@ -893,8 +917,9 @@ class Feature:
         """This method creates a Feature object and a DatumPlane object midway between two points
         and normal to the line connecting the points.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPlaneByTwoPoint
             - mdb.models[*name*].parts[*name*].DatumPlaneByTwoPoint
 
@@ -919,8 +944,9 @@ class Feature:
         """This method creates a Feature object and a DatumPoint object at the point defined by the
         specified coordinates.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPointByCoordinate
             - mdb.models[*name*].parts[*name*].DatumPointByCoordinate
 
@@ -941,8 +967,9 @@ class Feature:
         """This method creates a Feature object and a DatumPoint object offset from an existing
         point by a vector.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPointByOffset
             - mdb.models[*name*].parts[*name*].DatumPointByOffset
 
@@ -963,8 +990,9 @@ class Feature:
     def DatumPointByMidPoint(self, point1: int, point2: int):
         """This method creates a Feature object and a DatumPoint object midway between two points.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPointByMidPoint
             - mdb.models[*name*].parts[*name*].DatumPointByMidPoint
 
@@ -986,8 +1014,9 @@ class Feature:
         """This method creates a Feature object and a DatumPoint object on the specified face,
         offset from two edges.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPointByOnFace
             - mdb.models[*name*].parts[*name*].DatumPointByOnFace
 
@@ -1018,8 +1047,9 @@ class Feature:
         """This method creates a Feature object and a DatumPoint object along an edge at a selected
         distance from one end of the edge.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPointByEdgeParam
             - mdb.models[*name*].parts[*name*].DatumPointByEdgeParam
 
@@ -1045,8 +1075,9 @@ class Feature:
         """This method creates a Feature object and a DatumPoint object along an edge by projecting
         an existing point along the normal to the edge.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPointByProjOnEdge
             - mdb.models[*name*].parts[*name*].DatumPointByProjOnEdge
 
@@ -1071,8 +1102,9 @@ class Feature:
         """This method creates a Feature object and a DatumPoint object on a specified face by
         projecting an existing point onto the face.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DatumPointByProjOnFace
             - mdb.models[*name*].parts[*name*].DatumPointByProjOnFace
 
@@ -1099,8 +1131,9 @@ class Feature:
         """This method creates a Transform object. A Transform object is a 4x3 matrix of Floats
         that represents the transformation from sketch coordinates to part coordinates.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].MakeSketchTransform
             - mdb.models[*name*].rootAssembly.MakeSketchTransform
 
@@ -1136,8 +1169,9 @@ class Feature:
     def PartitionCellByDatumPlane(self, cells: tuple[Cell], datumPlane: DatumPlane):
         """This method partitions one or more cells using the given datum plane.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionCellByDatumPlane
             - mdb.models[*name*].rootAssembly.PartitionCellByDatumPlane
 
@@ -1162,8 +1196,9 @@ class Feature:
         """This method partitions one or more cells by extending the underlying geometry of a given
         face to partition the target cells.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionCellByExtendFace
             - mdb.models[*name*].rootAssembly.PartitionCellByExtendFace
 
@@ -1188,8 +1223,9 @@ class Feature:
         """This method partitions one or more cells by extruding selected edges in the given
         direction.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionCellByExtrudeEdge
             - mdb.models[*name*].rootAssembly.PartitionCellByExtrudeEdge
 
@@ -1222,8 +1258,9 @@ class Feature:
         """This method partitions a cell using an N-sided cutting patch defined by the given corner
         points.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionCellByPatchNCorners
             - mdb.models[*name*].rootAssembly.PartitionCellByPatchNCorners
 
@@ -1248,8 +1285,9 @@ class Feature:
     def PartitionCellByPatchNEdges(self, cell: str, edges: tuple[Edge]):
         """This method partitions a cell using an N-sided cutting patch defined by the given edges.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionCellByPatchNEdges
             - mdb.models[*name*].rootAssembly.PartitionCellByPatchNEdges
 
@@ -1275,8 +1313,9 @@ class Feature:
         """This method partitions one or more cells using a plane normal to an edge at the given
         edge point.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionCellByPlaneNormalToEdge
             - mdb.models[*name*].rootAssembly.PartitionCellByPlaneNormalToEdge
 
@@ -1303,8 +1342,9 @@ class Feature:
         """This method partitions one or more cells using a plane defined by a point and a normal
         direction.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionCellByPlanePointNormal
             - mdb.models[*name*].rootAssembly.PartitionCellByPlanePointNormal
 
@@ -1330,8 +1370,9 @@ class Feature:
     def PartitionCellByPlaneThreePoints(self, cells: tuple[Cell], point1: int, point2: int, point3: int):
         """This method partitions one or more cells using a plane defined by three points.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionCellByPlaneThreePoints
             - mdb.models[*name*].rootAssembly.PartitionCellByPlaneThreePoints
 
@@ -1361,8 +1402,9 @@ class Feature:
         """This method partitions one or more cells by sweeping selected edges along the given
         sweep path.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionCellBySweepEdge
             - mdb.models[*name*].rootAssembly.PartitionCellBySweepEdge
 
@@ -1391,8 +1433,9 @@ class Feature:
     def PartitionEdgeByDatumPlane(self, edges: tuple[Edge], datumPlane: DatumPlane):
         """This method partitions an edge where it intersects with a datum plane.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionEdgeByDatumPlane
             - mdb.models[*name*].rootAssembly.PartitionEdgeByDatumPlane
 
@@ -1416,8 +1459,9 @@ class Feature:
     def PartitionEdgeByParam(self, edges: tuple[Edge], parameter: float):
         """This method partitions one or more edges at the given normalized edge parameter.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionEdgeByParam
             - mdb.models[*name*].rootAssembly.PartitionEdgeByParam
 
@@ -1442,8 +1486,9 @@ class Feature:
     def PartitionEdgeByPoint(self, edge: Edge, point: int):
         """This method partitions an edge at the given point.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionEdgeByPoint
             - mdb.models[*name*].rootAssembly.PartitionEdgeByPoint
 
@@ -1468,8 +1513,9 @@ class Feature:
         """This method automatically partitions a target face into simple regions that can be
         meshed using a structured meshing technique.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionFaceByAuto
             - mdb.models[*name*].rootAssembly.PartitionFaceByAuto
 
@@ -1490,8 +1536,9 @@ class Feature:
         """This method partitions a face normal to two edges, using a curved path between the two
         given edge points defined by the normalized edge parameters.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionFaceByCurvedPathEdgeParams
             - mdb.models[*name*].rootAssembly.PartitionFaceByCurvedPathEdgeParams
 
@@ -1524,8 +1571,9 @@ class Feature:
         """This method partitions a face normal to two edges, using a curved path between the two
         given edge points.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionFaceByCurvedPathEdgePoints
             - mdb.models[*name*].rootAssembly.PartitionFaceByCurvedPathEdgePoints
 
@@ -1555,8 +1603,9 @@ class Feature:
     def PartitionFaceByDatumPlane(self, faces: tuple[Face], datumPlane: DatumPlane):
         """This method partitions one or more faces using the given datum plane.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionFaceByDatumPlane
             - mdb.models[*name*].rootAssembly.PartitionFaceByDatumPlane
 
@@ -1578,8 +1627,9 @@ class Feature:
         """This method partitions one or more faces by extending the underlying geometry of another
         given face to partition the target faces.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionFaceByExtendFace
             - mdb.models[*name*].rootAssembly.PartitionFaceByExtendFace
 
@@ -1602,8 +1652,9 @@ class Feature:
         """This method partitions one or more faces using the given cutting faces to partition the
         target faces.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionFaceByIntersectFace
             - mdb.models[*name*].rootAssembly.PartitionFaceByIntersectFace
 
@@ -1625,8 +1676,9 @@ class Feature:
         """This method partitions one or more faces by projecting the given edges on the target
         faces.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionFaceByProjectingEdges
             - mdb.models[*name*].rootAssembly.PartitionFaceByProjectingEdges
 
@@ -1652,8 +1704,9 @@ class Feature:
         """This method partitions one or more faces using a minimum distance path between the two
         given points.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionFaceByShortestPath
             - mdb.models[*name*].rootAssembly.PartitionFaceByShortestPath
 
@@ -1682,8 +1735,9 @@ class Feature:
                               sketchOrientation: SymbolicConstant = RIGHT):
         """This method partitions one or more planar faces by sketching on them.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionFaceBySketch
             - mdb.models[*name*].rootAssembly.PartitionFaceBySketch
 
@@ -1717,8 +1771,9 @@ class Feature:
         """This method partitions one or more faces by sketching on a sketch plane and then
         projecting the sketch toward the target faces through the given distance.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionFaceBySketchDistance
             - mdb.models[*name*].rootAssembly.PartitionFaceBySketchDistance
 
@@ -1759,8 +1814,9 @@ class Feature:
         projecting the sketch toward the target faces through a distance governed by the
         reference point.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionFaceBySketchRefPoint
             - mdb.models[*name*].rootAssembly.PartitionFaceBySketchRefPoint
 
@@ -1798,8 +1854,9 @@ class Feature:
         """This method partitions one or more faces by sketching on a sketch plane and then
         projecting toward the target faces through an infinite distance.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].PartitionFaceBySketchThruAll
             - mdb.models[*name*].rootAssembly.PartitionFaceBySketchThruAll
 
@@ -1836,8 +1893,9 @@ class Feature:
         """This method creates a Feature object and a ReferencePoint object at the specified
         location.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.ReferencePoint
             - mdb.models[*name*].parts[name].ReferencePoint
 
@@ -1860,8 +1918,9 @@ class Feature:
     def RemoveWireEdges(self, wireEdgeList: tuple[Edge]):
         """This method removes wire edges.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].RemoveWireEdges
             - mdb.models[*name*].rootAssembly.RemoveWireEdges
 
@@ -1885,8 +1944,9 @@ class Feature:
         mesh node, or the coordinates of a point. When such a feature is created at the Assembly
         level, then each point can only be a vertex, a reference point, or an orphan mesh node.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].WirePolyLine
             - mdb.models[*name*].rootAssembly.WirePolyLine
 

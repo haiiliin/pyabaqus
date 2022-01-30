@@ -168,8 +168,9 @@ class PartBase(Feature):
                  twist: Boolean = OFF):
         """This method creates a Part object and places it in the parts repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Part
 
         Parameters
@@ -199,8 +200,9 @@ class PartBase(Feature):
                  compressFeatureList: Boolean = OFF, separate: Boolean = OFF):
         """This method copies a Part object and places the copy in the parts repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Part
 
         Parameters
@@ -241,8 +243,9 @@ class PartBase(Feature):
         """This method creates a Part in the parts repository after subtracting or cutting the
         geometries of a group of part instances from that of a base part instance.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.PartFromBooleanCut
 
         Parameters
@@ -269,8 +272,9 @@ class PartBase(Feature):
         instances. The part instances can be either Abaqus native parts or orphan mesh parts,
         but they cannot be a combination of both.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.PartFromBooleanMerge
 
         Parameters
@@ -309,8 +313,9 @@ class PartBase(Feature):
         """This method creates a Part object by extruding an existing two-dimensional orphan mesh
         Part object in the positive *Z*-direction and places it in the parts repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[modelName].PartFromExtrude2DMesh 
 
         Parameters
@@ -344,8 +349,9 @@ class PartBase(Feature):
                              scale: float = 1, convertToAnalytical: int = 0, convertToPrecise: int = 0):
         """This method creates a Part object and places it in the parts repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[modelName].PartFromGeometryFile 
 
         Parameters
@@ -419,8 +425,9 @@ class PartBase(Feature):
         """This method creates a Part object containing the mesh found in the supplied PartInstance
         objects and places the new Part object in the parts repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.PartFromInstanceMesh
 
         Parameters
@@ -456,8 +463,9 @@ class PartBase(Feature):
         """This method creates a Part object containing the mesh found in the part and places the
         new Part object in the parts repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].PartFromMesh
 
         Parameters
@@ -484,8 +492,9 @@ class PartBase(Feature):
         *mirrorPlane* argument of the Part copy constructor. The *mirrorPlane* argument creates
         only the second half of the part but does not unite the two halves.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[modelName].PartFromMeshMirror 
 
         Parameters
@@ -523,8 +532,9 @@ class PartBase(Feature):
         """This method creates a Part object from nodes and elements and places it in the parts
         repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[modelName].PartFromNodesAndElements 
 
         Parameters
@@ -564,8 +574,9 @@ class PartBase(Feature):
         """This method creates an orphan mesh Part object by reading an output database. The new
         part is placed in the parts repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[modelName].PartFromOdb 
 
         Parameters
@@ -628,8 +639,9 @@ class PartBase(Feature):
         Part object by a plane and places it in the parts repository. This method is valid only
         for orphan mesh parts composed of 8-node brick elements.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[modelName].PartFromSection3DMeshByPlane 
 
         Parameters
@@ -671,8 +683,9 @@ class PartBase(Feature):
         """This method creates a substructure Part object by reading a substructure sim file and
         places it in the parts repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PartFromSubstructure
 
         Parameters
@@ -707,8 +720,9 @@ class PartBase(Feature):
         two-dimensional mesh, the method fails and creates an empty geometry part with a failed
         base shell feature.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[modelName].Part2DGeomFrom2DMesh 
 
         Parameters

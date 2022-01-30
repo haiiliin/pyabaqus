@@ -22,8 +22,9 @@ class EulerianSection(Section):
     def __init__(self, name: str, data: str):
         """This method creates a EulerianSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EulerianSection
             - session.odbs[name].EulerianSection
 

@@ -18,8 +18,9 @@ class BeadPlanarSymmetry(GeometricRestriction):
     def __init__(self, name: str, region: Region, axis: SymbolicConstant = AXIS_1, csys: int = None):
         """This method creates a BeadPlanarSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].BeadPlanarSymmetry
 
         Parameters

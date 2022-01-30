@@ -197,8 +197,9 @@ class SubstructureGenerateStep(AnalysisStep):
                  structuralDampingControl: SymbolicConstant = NONE):
         """This method creates a SubstructureGenerateStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SubstructureGenerateStep
 
         Parameters

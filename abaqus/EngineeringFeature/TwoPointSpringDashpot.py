@@ -32,8 +32,9 @@ class TwoPointSpringDashpot(SpringDashpot):
                  springStiffness: float = 0, dashpotCoefficient: float = 0):
         """This method creates a TwoPointSpringDashpot object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.TwoPointSpringDashpot
             - mdb.models[name].rootAssembly.engineeringFeatures\
             - .TwoPointSpringDashpot

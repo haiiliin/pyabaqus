@@ -24,8 +24,9 @@ class TransverseShearBeam:
                  slendernessCompensation: typing.Union[SymbolicConstant, float] = 0):
         """This method creates a TransverseShearBeam object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sections[name].TransverseShearBeam
             - session.odbs[name].sections[name].TransverseShearBeam
 

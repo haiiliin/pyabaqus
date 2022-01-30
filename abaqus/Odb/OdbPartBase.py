@@ -64,8 +64,9 @@ class OdbPartBase:
         """This method creates an OdbPart object. Nodes and elements are added to this object at a
         later stage.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].Part
 
         Parameters

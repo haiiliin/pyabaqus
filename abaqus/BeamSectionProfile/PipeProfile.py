@@ -22,8 +22,9 @@ class PipeProfile(Profile):
     def __init__(self, name: str, r: float, t: float):
         """This method creates a PipeProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PipeProfile
             - session.odbs[name].PipeProfile
 

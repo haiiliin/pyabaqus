@@ -27,8 +27,9 @@ class DetonationPoint:
     def __init__(self, table: tuple):
         """This method creates a DetonationPoint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].eos.DetonationPoint
             - session.odbs[name].materials[name].eos.DetonationPoint
 

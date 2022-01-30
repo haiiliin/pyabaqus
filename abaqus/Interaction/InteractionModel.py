@@ -205,8 +205,9 @@ class InteractionModel(InteractionContactControlModel,
                           centerCoordinates: tuple = (), directionCosine: tuple = ()) -> AcousticImpedance:
         """This method creates an AcousticImpedance object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AcousticImpedance
 
         Parameters
@@ -264,8 +265,9 @@ class InteractionModel(InteractionContactControlModel,
                               frequencyDependency: Boolean = OFF) -> AcousticImpedanceProp:
         """This method creates an AcousticImpedanceProp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AcousticImpedanceProp
 
         Parameters
@@ -298,8 +300,9 @@ class InteractionModel(InteractionContactControlModel,
                        dof: str, solutionDepVars: tuple) -> ActuatorSensor:
         """This method creates an ActuatorSensor object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ActuatorSensor
 
         Parameters
@@ -341,8 +344,9 @@ class InteractionModel(InteractionContactControlModel,
                            integerProperties: tuple = ()) -> ActuatorSensorProp:
         """This method creates an ActuatorSensorProp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ActuatorSensorProp
 
         Parameters
@@ -382,8 +386,9 @@ class InteractionModel(InteractionContactControlModel,
                         reflectionSymZ: float = None) -> CavityRadiation:
         """This method creates a CavityRadiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CavityRadiation
 
         Parameters
@@ -565,8 +570,9 @@ class InteractionModel(InteractionContactControlModel,
                             property: tuple = ()) -> CavityRadiationProp:
         """This method creates a CavityRadiationProp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CavityRadiationProp
 
         Parameters
@@ -597,8 +603,9 @@ class InteractionModel(InteractionContactControlModel,
                                   sinkDistributionType: SymbolicConstant = UNIFORM) -> ConcentratedFilmCondition:
         """This method creates a ConcentratedFilmCondition object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcentratedFilmCondition
 
         Parameters
@@ -676,8 +683,9 @@ class InteractionModel(InteractionContactControlModel,
                                        distributionType: SymbolicConstant = UNIFORM) -> ConcentratedRadiationToAmbient:
         """This method creates a ConcentratedRadiationToAmbient object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcentratedRadiationToAmbient
 
         Parameters
@@ -741,8 +749,9 @@ class InteractionModel(InteractionContactControlModel,
                    polarityAssignments: PolarityAssignments = PolarityAssignments()) -> ContactExp:
         """This method creates a ContactExp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ContactExp
 
         Parameters
@@ -804,8 +813,9 @@ class InteractionModel(InteractionContactControlModel,
     def ContactProperty(self, name: str) -> ContactProperty:
         """This method creates a ContactProperty object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ContactProperty
 
         Parameters
@@ -839,8 +849,9 @@ class InteractionModel(InteractionContactControlModel,
                    slidingFormulationAssignments: SlidingFormulationAssignment = SlidingFormulationAssignment()) -> ContactStd:
         """This method creates a ContactStd object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ContactStd
 
         Parameters
@@ -918,8 +929,9 @@ class InteractionModel(InteractionContactControlModel,
                        positionToleranceMethod: SymbolicConstant = COMPUTED_TOLERANCE) -> CyclicSymmetry:
         """This method creates a CyclicSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CyclicSymmetry
 
         Parameters
@@ -987,8 +999,9 @@ class InteractionModel(InteractionContactControlModel,
     def ElasticFoundation(self, name: str, createStepName: str, surface: Region, stiffness: float) -> ElasticFoundation:
         """This method creates an ElasticFoundation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ElasticFoundation
 
         Parameters
@@ -1015,8 +1028,9 @@ class InteractionModel(InteractionContactControlModel,
                           warpCutoff: float = 20) -> ExpContactControl:
         """This method creates an ExpContactControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ExpContactControl
 
         Parameters
@@ -1064,8 +1078,9 @@ class InteractionModel(InteractionContactControlModel,
                           stepFraction: float = 1) -> ExpInitialization:
         """This method creates an ExpInitialization object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ExpInitialization
 
         Parameters
@@ -1125,8 +1140,9 @@ class InteractionModel(InteractionContactControlModel,
                       sinkFieldName: str = '', sinkDistributionType: SymbolicConstant = UNIFORM) -> FilmCondition:
         """This method creates a FilmCondition object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FilmCondition
 
         Parameters
@@ -1192,8 +1208,9 @@ class InteractionModel(InteractionContactControlModel,
                           property: tuple = ()) -> FilmConditionProp:
         """This method creates a FilmConditionProp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FilmConditionProp
 
         Parameters
@@ -1224,8 +1241,9 @@ class InteractionModel(InteractionContactControlModel,
                     useAdiabatic: Boolean = OFF, checkNormals: Boolean = ON) -> FluidCavity:
         """This method creates an FluidCavity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidCavity
 
         Parameters
@@ -1273,8 +1291,9 @@ class InteractionModel(InteractionContactControlModel,
                             capacityTable: tuple = ()) -> FluidCavityProperty:
         """This method creates a FluidCavityProperty object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidCavityProperty
 
         Parameters
@@ -1388,8 +1407,9 @@ class InteractionModel(InteractionContactControlModel,
                       exchangeArea: float = 1) -> FluidExchange:
         """This method creates an FluidExchange object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidExchange
 
         Parameters
@@ -1425,8 +1445,9 @@ class InteractionModel(InteractionContactControlModel,
                               fieldDependencies: int = 0) -> FluidExchangeProperty:
         """This method creates a FluidExchangeProperty object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidExchangeProperty
 
         Parameters
@@ -1503,8 +1524,9 @@ class InteractionModel(InteractionContactControlModel,
                       inflationTimeAmplitude: str = '', massFlowAmplitude: str = '') -> FluidInflator:
         """This method creates a FluidInflator object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidInflator
 
         Parameters
@@ -1538,8 +1560,9 @@ class InteractionModel(InteractionContactControlModel,
                               massFraction: tuple = ()) -> FluidInflatorProperty:
         """This method creates a FluidInflatorProperty object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidInflatorProperty
 
         Parameters
@@ -1593,8 +1616,9 @@ class InteractionModel(InteractionContactControlModel,
                      detonationTime: float = None, magnitudeFactor: float = 1) -> IncidentWave:
         """This method creates an IncidentWave object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].IncidentWave
 
         Parameters
@@ -1671,8 +1695,9 @@ class InteractionModel(InteractionContactControlModel,
                              timeFactor: float = 1, pressureFactor: float = 1) -> IncidentWaveProperty:
         """This method creates an IncidentWaveProperty object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].IncidentWaveProperty
 
         Parameters
@@ -1816,8 +1841,9 @@ class InteractionModel(InteractionContactControlModel,
                     activeInStep: Boolean = OFF, includeStrain: Boolean = OFF) -> ModelChange:
         """This method creates a ModelChange object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ModelChange
 
         Parameters
@@ -1858,8 +1884,9 @@ class InteractionModel(InteractionContactControlModel,
                             amplitude: str = UNSET, penetrationTime: float = 0) -> PressurePenetration:
         """This method creates a PressurePenetration object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PressurePenetration
 
         Parameters
@@ -1906,8 +1933,9 @@ class InteractionModel(InteractionContactControlModel,
                            ambientTemperature: float = 0, ambientTemperatureAmp: str = '') -> RadiationToAmbient:
         """This method creates a RadiationToAmbient object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].RadiationToAmbient
 
         Parameters
@@ -1957,8 +1985,9 @@ class InteractionModel(InteractionContactControlModel,
                        mechanicalConstraint: SymbolicConstant = KINEMATIC, contactControls: str = '') -> SelfContactExp:
         """This method creates a SelfContactExp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SelfContactExp
 
         Parameters
@@ -1993,8 +2022,9 @@ class InteractionModel(InteractionContactControlModel,
                        smooth: float = 0, contactControls: str = '') -> SelfContactStd:
         """This method creates a SelfContactStd object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SelfContactStd
 
         Parameters
@@ -2042,8 +2072,9 @@ class InteractionModel(InteractionContactControlModel,
                           enforceWithLagrangeMultipliers: SymbolicConstant = DEFAULT) -> StdContactControl:
         """This method creates an StdContactControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].StdContactControl
 
         Parameters
@@ -2152,8 +2183,9 @@ class InteractionModel(InteractionContactControlModel,
                           openingTolerance: float = None, overclosureTolerance: float = None) -> StdInitialization:
         """This method creates a StdInitialization object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].StdInitialization
 
         Parameters
@@ -2197,8 +2229,9 @@ class InteractionModel(InteractionContactControlModel,
                          reset: Boolean = OFF) -> StdStabilization:
         """This method creates a StdStabilization object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].StdStabilization
 
         Parameters
@@ -2242,8 +2275,9 @@ class InteractionModel(InteractionContactControlModel,
                            stepSizeDefinition: SymbolicConstant = DEFAULT) -> StdXplCosimulation:
         """This method creates a StdXplCosimulation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].StdXplCosimulation
 
         Parameters
@@ -2290,8 +2324,9 @@ class InteractionModel(InteractionContactControlModel,
                                    clearanceRegion: Region = Region()) -> SurfaceToSurfaceContactExp:
         """This method creates a SurfaceToSurfaceContactExp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfaceToSurfaceContactExp
 
         Parameters
@@ -2380,8 +2415,9 @@ class InteractionModel(InteractionContactControlModel,
                                    normalAdjustment: SymbolicConstant = None) -> SurfaceToSurfaceContactStd:
         """This method creates a SurfaceToSurfaceContactStd object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfaceToSurfaceContactStd
 
         Parameters
@@ -2518,8 +2554,9 @@ class InteractionModel(InteractionContactControlModel,
                         allowGrowth: Boolean = ON) -> XFEMCrackGrowth:
         """This method creates an XFEMCrackGrowth object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].XFEMCrackGrowth
 
         Parameters

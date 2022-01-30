@@ -45,8 +45,9 @@ class PointFastener(Fastener):
         for parts and for the assembly, PointFastener objects are currently supported only under
         the assembly.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.PointFastener
             - mdb.models[name].rootAssembly.engineeringFeatures.PointFastener
 

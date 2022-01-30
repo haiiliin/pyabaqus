@@ -57,8 +57,9 @@ class HistoryOutputRequest:
                  useGlobal: Boolean = True):
         """This method creates a HistoryOutputRequest object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].HistoryOutputRequest
 
         Parameters

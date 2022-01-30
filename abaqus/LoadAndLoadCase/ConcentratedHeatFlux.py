@@ -39,8 +39,9 @@ class ConcentratedHeatFlux(Load):
                  dof: int = 11):
         """This method creates a ConcentratedHeatFlux object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcentratedHeatFlux
 
         Parameters

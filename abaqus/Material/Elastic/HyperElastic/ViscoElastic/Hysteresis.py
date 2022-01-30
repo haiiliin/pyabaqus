@@ -27,8 +27,9 @@ class Hysteresis:
     def __init__(self, table: tuple):
         """This method creates a Hysteresis object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].hyperelastic.Hysteresis
             - session.odbs[name].materials[name].hyperelastic.Hysteresis
 

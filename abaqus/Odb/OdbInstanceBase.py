@@ -80,8 +80,9 @@ class OdbInstanceBase:
     def __init__(self, name: str, object: OdbPart, localCoordSystem: tuple = ()):
         """This method creates an OdbInstance object from an OdbPart object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].rootAssembly.Instance
 
         Parameters

@@ -27,8 +27,9 @@ class AnnealTemperature:
     def __init__(self, table: tuple, dependencies: int = 0):
         """This method creates an AnnealTemperature object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Plastic.AnnealTemperature
             - session.odbs[name].materials[name].Plastic.AnnealTemperature
 

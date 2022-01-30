@@ -63,8 +63,9 @@ class ShapeTask(OptimizationTask):
                  updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF):
         """This method creates a ShapeTask object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].ShapeTask
 
         Parameters

@@ -24,8 +24,9 @@ class Stress(PredefinedField):
                  sigma12: float = None, sigma13: float = None, sigma23: float = None):
         """This method creates a Stress predefined field object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Stress
 
         Parameters

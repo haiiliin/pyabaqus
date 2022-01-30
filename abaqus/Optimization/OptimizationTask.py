@@ -51,8 +51,9 @@ class OptimizationTask(OptimizationTaskBase):
                                  stepOptions: StepOptionArray = None) -> SingleTermDesignResponse:
         """This method creates a SingleTermDesignResponse object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SingleTermDesignResponse
 
         Parameters
@@ -97,8 +98,9 @@ class OptimizationTask(OptimizationTaskBase):
                           target: SymbolicConstant = MINIMIZE) -> ObjectiveFunction:
         """This method creates an ObjectiveFunction object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].ObjectiveFunction
 
         Parameters
@@ -122,8 +124,9 @@ class OptimizationTask(OptimizationTaskBase):
                                restrictionMethod: SymbolicConstant = ABSOLUTE_EQUAL) -> OptimizationConstraint:
         """This method creates an OptimizationConstraint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].OptimizationConstraint
 
         Parameters
@@ -153,8 +156,9 @@ class OptimizationTask(OptimizationTaskBase):
                         u3: Boolean = OFF) -> BeadFixedRegion:
         """This method creates a BeadFixedRegion object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].BeadFixedRegion
 
         Parameters
@@ -187,8 +191,9 @@ class OptimizationTask(OptimizationTaskBase):
     def BeadGrowth(self, name: str, region: Region, beadGrowth: float = 0, shrink: float = 0) -> BeadGrowth:
         """This method creates a BeadGrowth object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].BeadGrowth
 
         Parameters
@@ -215,8 +220,9 @@ class OptimizationTask(OptimizationTaskBase):
                              region: Region) -> BeadPenetrationCheck:
         """This method creates a BeadPenetrationCheck object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].BeadPenetrationCheck
 
         Parameters
@@ -240,8 +246,9 @@ class OptimizationTask(OptimizationTaskBase):
                            csys: int = None) -> BeadPlanarSymmetry:
         """This method creates a BeadPlanarSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].BeadPlanarSymmetry
 
         Parameters
@@ -268,8 +275,9 @@ class OptimizationTask(OptimizationTaskBase):
     def BeadPointSymmetry(self, name: str, region: Region, csys: int = None) -> BeadPointSymmetry:
         """This method creates a BeadPointSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].BeadPointSymmetry
 
         Parameters
@@ -294,8 +302,9 @@ class OptimizationTask(OptimizationTaskBase):
                                csys: int = None) -> BeadRotationalSymmetry:
         """This method creates a BeadRotationalSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].BeadRotationalSymmetry
 
         Parameters
@@ -329,8 +338,9 @@ class OptimizationTask(OptimizationTaskBase):
                         u3: Boolean = ON) -> DesignDirection:
         """This method creates a DesignDirection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].DesignDirection
 
         Parameters
@@ -390,8 +400,9 @@ class OptimizationTask(OptimizationTaskBase):
                      tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0) -> DrillControl:
         """This method creates a DrillControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].DrillControl
 
         Parameters
@@ -449,8 +460,9 @@ class OptimizationTask(OptimizationTaskBase):
                     u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF) -> FixedRegion:
         """This method creates a FixedRegion object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].FixedRegion
 
         Parameters
@@ -489,8 +501,9 @@ class OptimizationTask(OptimizationTaskBase):
     def FrozenArea(self, name: str, region: Region = Region()) -> FrozenArea:
         """This method creates a FrozenArea object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].FrozenArea
 
         Parameters
@@ -513,8 +526,9 @@ class OptimizationTask(OptimizationTaskBase):
                presumeFeasibleRegionAtStart: Boolean = ON, shrink: float = 0) -> Growth:
         """This method creates a Growth object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].Growth
 
         Parameters
@@ -547,8 +561,9 @@ class OptimizationTask(OptimizationTaskBase):
                          presumeFeasibleRegionAtStart: Boolean = ON) -> PenetrationCheck:
         """This method creates a PenetrationCheck object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].PenetrationCheck
 
         Parameters
@@ -581,8 +596,9 @@ class OptimizationTask(OptimizationTaskBase):
                            undercutTolerance: float = 0) -> ShapeDemoldControl:
         """This method creates a ShapeDemoldControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].ShapeDemoldControl
 
         Parameters
@@ -642,8 +658,9 @@ class OptimizationTask(OptimizationTaskBase):
                         nodeGroupRegion: str = '') -> ShapeMemberSize:
         """This method creates a ShapeMemberSize object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].ShapeMemberSize
 
         Parameters
@@ -683,8 +700,9 @@ class OptimizationTask(OptimizationTaskBase):
                             tolerance2: float = 0, tolerance3: float = 0) -> ShapePlanarSymmetry:
         """This method creates a ShapePlanarSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].ShapePlanarSymmetry
 
         Parameters
@@ -740,8 +758,9 @@ class OptimizationTask(OptimizationTaskBase):
                            tolerance2: float = 0, tolerance3: float = 0) -> ShapePointSymmetry:
         """This method creates a ShapePointSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].ShapePointSymmetry
 
         Parameters
@@ -790,8 +809,9 @@ class OptimizationTask(OptimizationTaskBase):
                                 tolerance3: float = 0) -> ShapeRotationalSymmetry:
         """This method creates a ShapeRotationalSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].ShapeRotationalSymmetry
 
         Parameters
@@ -854,8 +874,9 @@ class OptimizationTask(OptimizationTaskBase):
     def SizingClusterAreas(self, name: str, regions: tuple) -> SizingClusterAreas:
         """This method creates a SizingClusterAreas object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SizingClusterAreas
 
         Parameters
@@ -877,8 +898,9 @@ class OptimizationTask(OptimizationTaskBase):
                              csys: int = None, ignoreFrozenArea: Boolean = OFF) -> SizingCyclicSymmetry:
         """This method creates a SizingCyclicSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SizingCyclicSymmetry
 
         Parameters
@@ -911,8 +933,9 @@ class OptimizationTask(OptimizationTaskBase):
     def SizingFrozenArea(self, name: str, region: Region) -> SizingFrozenArea:
         """This method creates a SizingFrozenArea object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SizingFrozenArea
 
         Parameters
@@ -932,8 +955,9 @@ class OptimizationTask(OptimizationTaskBase):
     def SizingMemberSize(self, name: str, region: Region, minWidth: float) -> SizingMemberSize:
         """This method creates a SizingMemberSize object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SizingMemberSize
 
         Parameters
@@ -958,8 +982,9 @@ class OptimizationTask(OptimizationTaskBase):
                              ignoreFrozenArea: Boolean = OFF) -> SizingPlanarSymmetry:
         """This method creates a SizingPlanarSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SizingPlanarSymmetry
 
         Parameters
@@ -990,8 +1015,9 @@ class OptimizationTask(OptimizationTaskBase):
                             ignoreFrozenArea: Boolean = OFF) -> SizingPointSymmetry:
         """This method creates a SizingPointSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SizingPointSymmetry
 
         Parameters
@@ -1019,8 +1045,9 @@ class OptimizationTask(OptimizationTaskBase):
                                  csys: int = None, ignoreFrozenArea: Boolean = OFF) -> SizingRotationalSymmetry:
         """This method creates a SizingRotationalSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SizingRotationalSymmetry
 
         Parameters
@@ -1055,8 +1082,9 @@ class OptimizationTask(OptimizationTaskBase):
                            tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0) -> SlideRegionControl:
         """This method creates a SlideRegionControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SlideRegionControl
 
         Parameters
@@ -1117,8 +1145,9 @@ class OptimizationTask(OptimizationTaskBase):
                      tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0) -> StampControl:
         """This method creates a StampControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].StampControl
 
         Parameters
@@ -1175,8 +1204,9 @@ class OptimizationTask(OptimizationTaskBase):
                                csys: int = None, ignoreFrozenArea: Boolean = OFF) -> TopologyCyclicSymmetry:
         """This method creates a TopologyCyclicSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyCyclicSymmetry
 
         Parameters
@@ -1213,8 +1243,9 @@ class OptimizationTask(OptimizationTaskBase):
                               pullDirection: tuple = (), technique: SymbolicConstant = AUTO) -> TopologyDemoldControl:
         """This method creates a TopologyDemoldControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyDemoldControl
 
         Parameters
@@ -1260,8 +1291,9 @@ class OptimizationTask(OptimizationTaskBase):
                            separation: float = 0, sizeRestriction: SymbolicConstant = MINIMUM) -> TopologyMemberSize:
         """This method creates a TopologyMemberSize object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyMemberSize
 
         Parameters
@@ -1297,8 +1329,9 @@ class OptimizationTask(OptimizationTaskBase):
                                radius: float = None) -> TopologyMillingControl:
         """This method creates a TopologyMillingControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyMillingControl
 
         Parameters
@@ -1339,8 +1372,9 @@ class OptimizationTask(OptimizationTaskBase):
                                 technique: SymbolicConstant = AUTO) -> TopologyOverhangControl:
         """This method creates a TopologyOverhangControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyOverhangControl
 
         Parameters
@@ -1389,8 +1423,9 @@ class OptimizationTask(OptimizationTaskBase):
                                ignoreFrozenArea: Boolean = OFF) -> TopologyPlanarSymmetry:
         """This method creates a TopologyPlanarSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyPlanarSymmetry
 
         Parameters
@@ -1423,8 +1458,9 @@ class OptimizationTask(OptimizationTaskBase):
                               ignoreFrozenArea: Boolean = OFF) -> TopologyPointSymmetry:
         """This method creates a TopologyPointSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyPointSymmetry
 
         Parameters
@@ -1454,8 +1490,9 @@ class OptimizationTask(OptimizationTaskBase):
                                    csys: int = None, ignoreFrozenArea: Boolean = OFF) -> TopologyRotationalSymmetry:
         """This method creates a TopologyRotationalSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyRotationalSymmetry
 
         Parameters
@@ -1492,8 +1529,9 @@ class OptimizationTask(OptimizationTaskBase):
                     tolerance2: float = 0, tolerance3: float = 0) -> TurnControl:
         """This method creates a TurnControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TurnControl
 
         Parameters

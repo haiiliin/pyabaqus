@@ -44,8 +44,9 @@ class UniaxialTestData:
                  temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a UniaxialTestData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].hyperelastic.UniaxialTestData
             - mdb.models[name].materials[name].hyperfoam.UniaxialTestData
             - mdb.models[name].materials[name].lowDensityFoam.UniaxialTestData

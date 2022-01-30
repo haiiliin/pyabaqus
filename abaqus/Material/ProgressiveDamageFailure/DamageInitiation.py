@@ -224,8 +224,9 @@ class DamageInitiation:
                                 omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
         """This method creates a DamageInitiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].DuctileDamageInitiation
             - session.odbs[name].materials[name].DuctileDamageInitiation
 
@@ -289,8 +290,9 @@ class DamageInitiation:
                             omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
         """This method creates a DamageInitiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].FldDamageInitiation
             - session.odbs[name].materials[name].FldDamageInitiation
 
@@ -354,8 +356,9 @@ class DamageInitiation:
                              omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
         """This method creates a DamageInitiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].FlsdDamageInitiation
             - session.odbs[name].materials[name].FlsdDamageInitiation
 
@@ -420,8 +423,9 @@ class DamageInitiation:
                                     omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
         """This method creates a DamageInitiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].JohnsonCookDamageInitiation
             - session.odbs[name].materials[name].JohnsonCookDamageInitiation
 
@@ -486,8 +490,9 @@ class DamageInitiation:
                              position: SymbolicConstant = CENTROID):
         """This method creates a DamageInitiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].MaxeDamageInitiation
             - session.odbs[name].materials[name].MaxeDamageInitiation
 
@@ -555,8 +560,9 @@ class DamageInitiation:
                              position: SymbolicConstant = CENTROID):
         """This method creates a DamageInitiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].MaxsDamageInitiation
             - session.odbs[name].materials[name].MaxsDamageInitiation
 
@@ -623,8 +629,9 @@ class DamageInitiation:
                            omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
         """This method creates a DamageInitiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].MkDamageInitiation
             - session.odbs[name].materials[name].MkDamageInitiation
 
@@ -689,8 +696,9 @@ class DamageInitiation:
                               omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
         """This method creates a DamageInitiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].MsfldDamageInitiation
             - session.odbs[name].materials[name].MsfldDamageInitiation
 
@@ -756,8 +764,9 @@ class DamageInitiation:
                               position: SymbolicConstant = CENTROID):
         """This method creates a DamageInitiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].QuadeDamageInitiation
             - session.odbs[name].materials[name].QuadeDamageInitiation
 
@@ -826,8 +835,9 @@ class DamageInitiation:
                               position: SymbolicConstant = CENTROID):
         """This method creates a DamageInitiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].QuadsDamageInitiation
             - session.odbs[name].materials[name].QuadsDamageInitiation
 
@@ -896,8 +906,9 @@ class DamageInitiation:
                               position: SymbolicConstant = CENTROID):
         """This method creates a DamageInitiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].MaxpeDamageInitiation
             - session.odbs[name].materials[name].MaxpeDamageInitiation
 
@@ -966,8 +977,9 @@ class DamageInitiation:
                               position: SymbolicConstant = CENTROID):
         """This method creates a DamageInitiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].MaxpsDamageInitiation
             - session.odbs[name].materials[name].MaxpsDamageInitiation
 
@@ -1035,8 +1047,9 @@ class DamageInitiation:
                               omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
         """This method creates a DamageInitiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].ShearDamageInitiation
             - session.odbs[name].materials[name].ShearDamageInitiation
 
@@ -1101,8 +1114,9 @@ class DamageInitiation:
                                omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
         """This method creates a DamageInitiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].HashinDamageInitiation
             - session.odbs[name].materials[name].HashinDamageInitiation
 

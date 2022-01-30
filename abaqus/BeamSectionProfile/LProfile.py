@@ -22,8 +22,9 @@ class LProfile(Profile):
     def __init__(self, name: str, a: float, b: float, t1: float, t2: float):
         """This method creates a LProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].LProfile
             - session.odbs[name].LProfile
 

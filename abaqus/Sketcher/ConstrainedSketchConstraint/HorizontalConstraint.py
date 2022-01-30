@@ -8,8 +8,9 @@ class HorizontalConstraint(ConstrainedSketchConstraint):
         """This method creates a horizontal constraint. This constraint applies to a line and
         constrains it to be horizontal.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].HorizontalConstraint
 
         Parameters

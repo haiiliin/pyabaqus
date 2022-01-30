@@ -24,8 +24,9 @@ class FluidExchange(Interaction):
                  exchangeArea: float = 1):
         """This method creates an FluidExchange object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidExchange
 
         Parameters

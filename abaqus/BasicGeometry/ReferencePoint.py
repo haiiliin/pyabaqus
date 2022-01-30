@@ -37,8 +37,9 @@ class ReferencePoint:
         """This method creates a Feature object and a ReferencePoint object at the specified
         location.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.ReferencePoint
             - mdb.models[*name*].parts[name].ReferencePoint
 

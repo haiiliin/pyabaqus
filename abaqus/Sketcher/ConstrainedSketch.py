@@ -20,8 +20,9 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         """This method creates a ConstrainedSketch object. If the sketch cannot be created, the
         method returns None.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConstrainedSketch
 
         Parameters
@@ -56,8 +57,9 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         Sketch copy constructor strips the reference geometry from the copied sketch and sets
         the transform matrix to identity, creating a standalone copy.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConstrainedSketch
 
         Parameters
@@ -80,8 +82,9 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
     def ConstrainedSketchFromGeometryFile(self, name: str, geometryFile: AcisFile):
         """This method creates a ConstrainedSketch object and places it in the sketches repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConstrainedSketchFromGeometryFile
 
         Parameters

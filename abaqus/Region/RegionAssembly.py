@@ -27,8 +27,9 @@ class RegionAssembly(RegionAssemblyBase):
         surface=mdb.models['Model-1'].parts['Part-1'].Surface(side1Faces=side1Faces,
         name='Surf-1')
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Surface
             - mdb.models[*name*].rootAssembly.Surface
 
@@ -84,8 +85,9 @@ class RegionAssembly(RegionAssemblyBase):
             skinEdges: tuple = (), stringerEdges: tuple = ()):
         """This method creates a set from a sequence of objects in a model database.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Set
             - mdb.models[*name*].rootAssembly.Set
 
@@ -139,8 +141,9 @@ class RegionAssembly(RegionAssemblyBase):
     def Set(self, name: str, objectToCopy: Set):
         """This method copies a set from an existing set.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Set
             - mdb.models[*name*].rootAssembly.Set
 

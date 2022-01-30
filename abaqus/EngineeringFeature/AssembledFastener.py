@@ -28,8 +28,9 @@ class AssembledFastener(Fastener):
         both for parts and for the assembly, AssembledFastener objects are currently supported
         only under the assembly.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.AssembledFastener
             - mdb.models[name].rootAssembly.engineeringFeatures.AssembledFastener
 

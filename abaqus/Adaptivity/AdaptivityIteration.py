@@ -22,8 +22,9 @@ class AdaptivityIteration:
     def __init__(self, iteration: int, jobName: str, modelName: str, odbPath: str, remeshingErrors: int):
         """This method creates an AdaptivityIteration object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.adaptivityProcesses[name].AdaptivityIteration
 
         Parameters
@@ -51,8 +52,9 @@ class AdaptivityIteration:
         """This method creates an ErrorIndicatorResult with data for an error indicator variable in
         a RemeshingRule for a given adaptivity iteration.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.adaptivityProcesses[name].iterations[i].ruleResults[name].ErrorIndicatorResult
 
         Parameters
@@ -80,8 +82,9 @@ class AdaptivityIteration:
         """This method creates a RuleResult with data for a RemeshingRule for a given adaptivity
         iteration.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.adaptivityProcesses[name].iterations[i].RuleResult
 
         Parameters

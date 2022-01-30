@@ -51,8 +51,9 @@ class Expansion:
                  temperatureDependency: Boolean = OFF, dependencies: int = 0, table: tuple = ()):
         """This method creates an Expansion object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Expansion
             - session.odbs[name].materials[name].Expansion
 

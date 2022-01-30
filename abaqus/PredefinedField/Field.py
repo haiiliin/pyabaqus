@@ -49,8 +49,9 @@ class Field(PredefinedField):
                  interpolate: SymbolicConstant = OFF, magnitudes: str = ''):
         """This method creates a Field object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Field
 
         Parameters

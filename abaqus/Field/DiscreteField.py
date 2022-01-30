@@ -24,8 +24,9 @@ class DiscreteField(Field):
                  orientationType: SymbolicConstant = CARTESIAN, partLevelOrientation: Boolean = OFF):
         """This method creates a DiscreteField object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DiscreteField
 
         Parameters
@@ -71,8 +72,9 @@ class DiscreteField(Field):
         """This method creates a DiscreteField object that represents the volume fraction of each
         element of an Eulerian Instance that is occupied by a reference instance.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.DiscreteFieldByVolumeFraction
 
         Parameters
@@ -110,8 +112,9 @@ class DiscreteField(Field):
     def DiscreteFieldFromAnalytic(self, name: str, location: SymbolicConstant, analyticFieldName: str, region: Region):
         """This method creates a DiscreteField object from a AnalyticalField object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DiscreteFieldFromAnalytic
 
         Parameters

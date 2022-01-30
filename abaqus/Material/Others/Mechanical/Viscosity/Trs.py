@@ -30,8 +30,9 @@ class Trs:
     def __init__(self, definition: SymbolicConstant = WLF, table: tuple = ()):
         """This method creates a Trs object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].viscoelastic.Trs
             - mdb.models[name].materials[name].viscosity.Trs
             - session.odbs[name].materials[name].viscoelastic.Trs

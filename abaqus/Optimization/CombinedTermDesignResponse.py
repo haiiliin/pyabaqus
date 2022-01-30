@@ -19,8 +19,9 @@ class CombinedTermDesignResponse(DesignResponse):
                  method: SymbolicConstant = ADD, weights: tuple = ()):
         """This method creates a CombinedTermDesignResponse object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].CombinedTermDesignResponse
 
         Parameters

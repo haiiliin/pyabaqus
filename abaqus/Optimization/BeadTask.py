@@ -43,8 +43,9 @@ class BeadTask(OptimizationTask):
                  updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF):
         """This method creates a BeadTask object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].BeadTask
 
         Parameters

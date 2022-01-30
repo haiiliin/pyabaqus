@@ -43,8 +43,9 @@ class SizingTask(OptimizationTask):
                  thicknessUpdateStrategy: SymbolicConstant = NORMAL, groupOperator: Boolean = OFF):
         """This method creates a SizingTask object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].SizingTask
 
         Parameters

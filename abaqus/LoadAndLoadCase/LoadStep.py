@@ -9,8 +9,9 @@ class LoadStep(StepBase):
                  includeActiveBaseStateBC: Boolean = ON) -> LoadCase:
         """This method creates a load case in a step.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].LoadCase
 
         Parameters

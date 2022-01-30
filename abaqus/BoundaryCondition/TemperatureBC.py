@@ -46,8 +46,9 @@ class TemperatureBC(BoundaryCondition):
                  distributionType: SymbolicConstant = UNIFORM, fixed: Boolean = OFF):
         """This method creates a TemperatureBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].TemperatureBC
 
         Parameters

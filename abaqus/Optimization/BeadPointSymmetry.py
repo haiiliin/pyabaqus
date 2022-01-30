@@ -17,8 +17,9 @@ class BeadPointSymmetry(GeometricRestriction):
     def __init__(self, name: str, region: Region, csys: int = None):
         """This method creates a BeadPointSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].BeadPointSymmetry
 
         Parameters

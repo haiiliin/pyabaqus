@@ -51,8 +51,9 @@ class RotationalBodyForce(Load):
                  centrifugal: Boolean = OFF, rotaryAcceleration: Boolean = OFF, amplitude: str = UNSET):
         """This method creates a RotationalBodyForce object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].RotationalBodyForce
 
         Parameters

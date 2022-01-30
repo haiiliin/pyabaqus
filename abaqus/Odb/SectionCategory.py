@@ -41,8 +41,9 @@ class SectionCategory:
     def __init__(self, name: str, description: str):
         """This method creates a SectionCategory object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].SectionCategory
 
         Parameters
@@ -61,8 +62,9 @@ class SectionCategory:
     def SectionPoint(self, number: int, description: str) -> SectionPoint:
         """This method creates a SectionPoint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].sectionCategories[*name*].SectionPoint
 
         Parameters

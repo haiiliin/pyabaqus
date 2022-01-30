@@ -31,8 +31,9 @@ class KinematicHardening(PredefinedField):
                  distributionType: SymbolicConstant = MAGNITUDE):
         """This method creates a KinematicHardening object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].KinematicHardening
 
         Parameters

@@ -17,8 +17,9 @@ class BeadPenetrationCheck(GeometricRestriction):
     def __init__(self, name: str, beadPenetrationCheckRegion: Region, region: Region):
         """This method creates a BeadPenetrationCheck object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].BeadPenetrationCheck
 
         Parameters

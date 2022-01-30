@@ -22,8 +22,9 @@ class AcousticInfiniteSection(Section):
     def __init__(self, name: str, material: str, thickness: float = 1, order: int = 10):
         """This method creates an AcousticInfiniteSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AcousticInfiniteSection
             - session.odbs[name].AcousticInfiniteSection
 

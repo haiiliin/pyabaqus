@@ -32,8 +32,9 @@ class SelfContactStd(Interaction):
                  smooth: float = 0, contactControls: str = ''):
         """This method creates a SelfContactStd object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SelfContactStd
 
         Parameters

@@ -47,8 +47,9 @@ class AcousticPressureBC(BoundaryCondition):
                  amplitude: str = UNSET, fixed: Boolean = OFF):
         """This method creates a AcousticPressureBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AcousticPressureBC
 
         Parameters

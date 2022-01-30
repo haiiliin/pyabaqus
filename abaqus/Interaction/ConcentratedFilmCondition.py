@@ -23,8 +23,9 @@ class ConcentratedFilmCondition(Interaction):
                  sinkFieldName: str = '', sinkDistributionType: SymbolicConstant = UNIFORM):
         """This method creates a ConcentratedFilmCondition object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcentratedFilmCondition
 
         Parameters

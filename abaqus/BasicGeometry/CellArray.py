@@ -28,8 +28,9 @@ class CellArray:
     def __init__(self, cells: list[Cell]):
         """This method creates a CellArray object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - part.CellArray
 
         Parameters

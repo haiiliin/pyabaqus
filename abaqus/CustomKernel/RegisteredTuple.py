@@ -16,8 +16,9 @@ class RegisteredTuple(CommandRegister):
     def __init__(self, tuple: tuple):
         """This method creates a RegisteredTuple object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - customKernel.RegisteredTuple
 
         Parameters

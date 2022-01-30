@@ -51,8 +51,9 @@ class CapCreepCohesion:
                  dependencies: int = 0, time: SymbolicConstant = TOTAL):
         """This method creates a CapCreepCohesion object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].capPlasticity.CapCreepCohesion
             - session.odbs[name].materials[name].capPlasticity.CapCreepCohesion
 

@@ -47,8 +47,9 @@ class MaterialFlowBC(BoundaryCondition):
                  amplitude: str = UNSET, fixed: Boolean = OFF):
         """This method creates a MaterialFlowBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MaterialFlowBC
 
         Parameters

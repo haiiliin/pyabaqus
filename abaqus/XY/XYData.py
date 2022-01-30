@@ -58,8 +58,9 @@ class XYData:
                  axis2QuantityType: QuantityType = QuantityType()):
         """This method creates an XYData object from a sequence of *X–Y* data pairs.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.XYData
             - xyPlot.XYData
 
@@ -107,8 +108,9 @@ class XYData:
     def __init__(self, objectToCopy: 'XYData'):
         """This method creates an XYData object by copying an existing XYData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].userData.XYData
             - session.XYData
             - xyPlot.XYData
@@ -135,8 +137,9 @@ class XYData:
                        skipFrequency: int = None):
         """This method creates an XYData object from data in an ASCII file.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.XYDataFromFile
             - xyPlot.XYDataFromFile
 
@@ -194,8 +197,9 @@ class XYData:
                           numericForm: SymbolicConstant = REAL, complexAngle: float = 0, stepTuple: int = None):
         """This method creates an XYData object by reading history data from an Odb object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.XYDataFromHistory
             - xyPlot.XYDataFromHistory
 
@@ -251,8 +255,9 @@ class XYData:
                             operator: SymbolicConstant = None) -> list['XYData']:
         """This method creates a list of XYData objects by reading field data from an Odb object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.xyDataListFromField
             - xyPlot.xyDataListFromField
 
@@ -332,8 +337,9 @@ class XYData:
         """This method creates a list of XYData objects by computing free body data from an Odb
         object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.XYDataFromFreeBody
             - xyPlot.XYDataFromFreeBody
 
@@ -373,8 +379,9 @@ class XYData:
         """This method creates a list of XYData objects by reading through the thickness field data
         from an Odb object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - xyPlot.XYDataFromShellThickness
 
         Parameters
@@ -447,8 +454,9 @@ class XYData:
                        projectOntoMesh: Boolean = False, projectionTolerance: float = 0):
         """This method creates an XYData object from path information.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.XYDataFromPath
             - xyPlot.XYDataFromPath
 

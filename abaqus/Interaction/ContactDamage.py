@@ -197,8 +197,9 @@ class ContactDamage:
                  useStabilization: Boolean = OFF, viscosityCoef: float = None):
         """This method creates a ContactDamage object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].Damage
 
         Parameters

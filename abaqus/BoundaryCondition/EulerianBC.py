@@ -47,8 +47,9 @@ class EulerianBC(BoundaryCondition):
                  inflowType: SymbolicConstant = FREE, outflowType: SymbolicConstant = ZERO_PRESSURE):
         """This method creates a EulerianBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EulerianBC
 
         Parameters

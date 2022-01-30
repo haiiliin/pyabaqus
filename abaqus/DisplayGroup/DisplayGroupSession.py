@@ -8,8 +8,9 @@ class DisplayGroupSession(SessionBase):
     def DisplayGroup(self, name: str, leaf: Leaf) -> DisplayGroup:
         """This method creates a DisplayGroup object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.DisplayGroup
 
         Parameters

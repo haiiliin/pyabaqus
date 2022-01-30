@@ -24,8 +24,9 @@ class SmoothStepAmplitude(Amplitude):
     def __init__(self, name: str, data: tuple, timeSpan: SymbolicConstant = STEP):
         """This method creates a SmoothStepAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SmoothStepAmplitude
             - session.odbs[name].SmoothStepAmplitude
 

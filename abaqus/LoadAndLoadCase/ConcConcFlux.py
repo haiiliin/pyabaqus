@@ -34,8 +34,9 @@ class ConcConcFlux(Load):
                  distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET):
         """This method creates a ConcConcFlux object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcConcFlux
 
         Parameters

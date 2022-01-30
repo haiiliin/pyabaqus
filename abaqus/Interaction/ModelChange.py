@@ -25,8 +25,9 @@ class ModelChange(Interaction):
                  activeInStep: Boolean = OFF, includeStrain: Boolean = OFF):
         """This method creates a ModelChange object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ModelChange
 
         Parameters

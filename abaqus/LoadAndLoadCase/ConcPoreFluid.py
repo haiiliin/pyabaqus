@@ -34,8 +34,9 @@ class ConcPoreFluid(Load):
                  distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET):
         """This method creates a ConcPoreFluid object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcPoreFluid
 
         Parameters

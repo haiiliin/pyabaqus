@@ -41,8 +41,9 @@ class View:
         Note:All dimensions and coordinates are specified in the model coordinate system.
         Note:This method cannot be used to create a View for a Layer object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.View
 
         Parameters

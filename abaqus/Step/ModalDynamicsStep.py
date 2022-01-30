@@ -174,8 +174,9 @@ class ModalDynamicsStep(AnalysisStep):
                  rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency()):
         """This method creates a ModalDynamicsStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ModalDynamicsStep
 
         Parameters

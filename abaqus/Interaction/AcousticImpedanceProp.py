@@ -23,8 +23,9 @@ class AcousticImpedanceProp(ContactProperty):
                  frequencyDependency: Boolean = OFF):
         """This method creates an AcousticImpedanceProp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AcousticImpedanceProp
 
         Parameters

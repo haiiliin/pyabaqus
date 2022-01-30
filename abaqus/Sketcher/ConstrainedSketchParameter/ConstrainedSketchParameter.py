@@ -29,8 +29,9 @@ class ConstrainedSketchParameter:
         """This method creates a parameter and optionally associates a dimension with this
         parameter.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].ConstrainedSketchParameter
 
         Parameters

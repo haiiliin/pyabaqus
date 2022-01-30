@@ -20,8 +20,9 @@ class PenetrationCheck(GeometricRestriction):
                  presumeFeasibleRegionAtStart: Boolean = ON):
         """This method creates a PenetrationCheck object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].PenetrationCheck
 
         Parameters

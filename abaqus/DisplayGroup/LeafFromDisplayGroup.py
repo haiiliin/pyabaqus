@@ -24,8 +24,9 @@ class LeafFromDisplayGroup(Leaf):
     def __init__(self, displayGroup: DisplayGroupArray):
         """This method creates a Leaf object from a sequence of Display Group objects.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromDisplayGroup
 
         Parameters

@@ -31,8 +31,9 @@ class PointMassInertia(Inertia):
                  composite: float = 0):
         """This method creates a PointMassInertia object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.PointMassInertia
             - mdb.models[name].rootAssembly.engineeringFeatures.PointMassInertia
 

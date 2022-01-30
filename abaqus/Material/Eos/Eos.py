@@ -43,8 +43,9 @@ class Eos:
                  table: tuple = ()):
         """This method creates an Eos object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Eos
             - session.odbs[name].materials[name].Eos
 

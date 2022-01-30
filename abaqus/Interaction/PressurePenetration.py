@@ -43,8 +43,9 @@ class PressurePenetration(Interaction):
                  amplitude: str = UNSET, penetrationTime: float = 0):
         """This method creates a PressurePenetration object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PressurePenetration
 
         Parameters

@@ -15,8 +15,9 @@ class FieldModel(ModelBase):
                       partLevelOrientation: Boolean = OFF) -> DiscreteField:
         """This method creates a DiscreteField object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DiscreteField
 
         Parameters
@@ -62,8 +63,9 @@ class FieldModel(ModelBase):
                         description: str = '') -> ExpressionField:
         """This method creates an ExpressionField object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ExpressionField
 
         Parameters
@@ -101,8 +103,9 @@ class FieldModel(ModelBase):
                     coordinateScalingFactors: tuple = (), localCsys: str = None, description: str = '') -> MappedField:
         """This method creates an MappedField object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MappedField
 
         Parameters

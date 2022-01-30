@@ -36,8 +36,9 @@ class SectionBase:
         """This method creates Section objects by reading an output database. The new sections are
         placed in the sections repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].sectionsFromOdb
 
         Parameters

@@ -89,8 +89,9 @@ class Viscous:
                  dependencies: int = 0, time: SymbolicConstant = TOTAL):
         """This method creates a Viscous object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Viscous
             - session.odbs[name].materials[name].Viscous
 

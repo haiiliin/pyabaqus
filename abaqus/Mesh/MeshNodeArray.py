@@ -39,8 +39,9 @@ class MeshNodeArray(list[MeshNode]):
     def __init__(self, nodes: list[MeshNode]):
         """This method creates a MeshNodeArray object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mesh.MeshNodeArray
 
         Parameters

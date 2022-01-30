@@ -18,8 +18,9 @@ class Radiation:
     def __init__(self, mainEmissivity: float, secondaryEmissivity: float, table: tuple):
         """This method creates a Radiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].Radiation
 
         Parameters

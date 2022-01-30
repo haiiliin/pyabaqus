@@ -23,8 +23,9 @@ class LeafFromElementSets(Leaf):
     def __init__(self, elementSets: tuple):
         """This method creates a Leaf object from a sequence of element sets.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromElementSets
 
         Parameters

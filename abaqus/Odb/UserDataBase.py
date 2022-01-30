@@ -65,8 +65,9 @@ class UserDataBase:
                axis2QuantityType: QuantityType = QuantityType()):
         """This method creates an XYData object from a sequence of *X–Y* data pairs.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].userData.XYData
 
         Parameters

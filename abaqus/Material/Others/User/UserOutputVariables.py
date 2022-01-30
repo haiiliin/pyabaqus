@@ -18,8 +18,9 @@ class UserOutputVariables:
     def __init__(self, n: int = 0):
         """This method creates a UserOutputVariables object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].UserOutputVariables
             - session.odbs[name].materials[name].UserOutputVariables
 

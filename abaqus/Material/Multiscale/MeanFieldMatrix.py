@@ -18,8 +18,9 @@ class MeanFieldMatrix:
     def __init__(self, name: str, material: str = '', isotropizationCoefficient: float = None):
         """This method creates a MeanFieldMatrix object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].meanFieldHomogenization.MeanFieldMatrix
             - session.odbs[name].materials[name].meanFieldHomogenization.MeanFieldMatrix
 

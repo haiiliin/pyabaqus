@@ -26,8 +26,9 @@ class PsdDefinition(Amplitude):
                  user: Boolean = OFF, timeSpan: SymbolicConstant = STEP, amplitude: str = ''):
         """This method creates a PsdDefinition object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PsdDefinition
             - session.odbs[name].PsdDefinition
 

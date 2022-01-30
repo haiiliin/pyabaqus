@@ -40,8 +40,9 @@ class ConcreteTensionDamage:
                  temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a ConcreteTensionDamage object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].concreteDamagedPlasticity\
             - .ConcreteTensionDamage
             - session.odbs[name].materials[name].concreteDamagedPlasticity\

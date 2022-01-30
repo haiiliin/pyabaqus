@@ -106,8 +106,9 @@ class ContactTangentialBehavior:
                  nStateDependentVars: int = 0, useProperties: Boolean = OFF):
         """This method creates a ContactTangentialBehavior object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].TangentialBehavior
 
         Parameters

@@ -7,8 +7,9 @@ class CalibrationModel(ModelBase):
     def Calibration(self, name: str) -> Calibration:
         """This method creates a Calibration object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].Calibration
 
         Parameters

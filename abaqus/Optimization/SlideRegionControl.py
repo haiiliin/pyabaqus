@@ -21,8 +21,9 @@ class SlideRegionControl(GeometricRestriction):
                  tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0):
         """This method creates a SlideRegionControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SlideRegionControl
 
         Parameters

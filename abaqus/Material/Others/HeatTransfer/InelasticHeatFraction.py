@@ -19,8 +19,9 @@ class InelasticHeatFraction:
     def __init__(self, fraction: float = 0):
         """This method creates an InelasticHeatFraction object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].InelasticHeatFraction
             - session.odbs[name].materials[name].InelasticHeatFraction
 

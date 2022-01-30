@@ -56,8 +56,9 @@ class SubmodelBC(BoundaryCondition):
                  intersectionOnly: Boolean = OFF):
         """This method creates a SubmodelBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SubmodelBC
 
         Parameters

@@ -45,8 +45,9 @@ class LoadModel(ModelBase):
                    amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM, field: str = '') -> BodyCharge:
         """This method creates a BodyCharge object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BodyCharge
 
         Parameters
@@ -85,8 +86,9 @@ class LoadModel(ModelBase):
                               amplitude: str = UNSET) -> BodyConcentrationFlux:
         """This method creates a BodyConcentrationFlux object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BodyConcentrationFlux
 
         Parameters
@@ -125,8 +127,9 @@ class LoadModel(ModelBase):
                     field: str = '') -> BodyCurrent:
         """This method creates a BodyCurrent object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BodyCurrent
 
         Parameters
@@ -164,8 +167,9 @@ class LoadModel(ModelBase):
                            amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM) -> BodyCurrentDensity:
         """This method creates a BodyCurrentDensity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BodyCurrentDensity
 
         Parameters
@@ -204,8 +208,9 @@ class LoadModel(ModelBase):
                   comp3: float = None, amplitude: str = UNSET) -> BodyForce:
         """This method creates a BodyForce object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BodyForce
 
         Parameters
@@ -248,8 +253,9 @@ class LoadModel(ModelBase):
                      distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET) -> BodyHeatFlux:
         """This method creates a BodyHeatFlux object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BodyHeatFlux
 
         Parameters
@@ -288,8 +294,9 @@ class LoadModel(ModelBase):
                  amplitude: str = UNSET, preTenSecPartLevel: Boolean = False) -> BoltLoad:
         """This method creates a BoltLoad object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BoltLoad
 
         Parameters
@@ -336,8 +343,9 @@ class LoadModel(ModelBase):
                    distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET) -> ConcCharge:
         """This method creates a ConcCharge object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcCharge
 
         Parameters
@@ -376,8 +384,9 @@ class LoadModel(ModelBase):
                      amplitude: str = UNSET) -> ConcConcFlux:
         """This method creates a ConcConcFlux object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcConcFlux
 
         Parameters
@@ -416,8 +425,9 @@ class LoadModel(ModelBase):
                     amplitude: str = UNSET) -> ConcCurrent:
         """This method creates a ConcCurrent object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcCurrent
 
         Parameters
@@ -457,8 +467,9 @@ class LoadModel(ModelBase):
                           localCsys: int = None) -> ConcentratedForce:
         """This method creates a ConcentratedForce object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcentratedForce
 
         Parameters
@@ -511,8 +522,9 @@ class LoadModel(ModelBase):
                              dof: int = 11) -> ConcentratedHeatFlux:
         """This method creates a ConcentratedHeatFlux object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcentratedHeatFlux
 
         Parameters
@@ -554,8 +566,9 @@ class LoadModel(ModelBase):
                       amplitude: str = UNSET) -> ConcPoreFluid:
         """This method creates a ConcPoreFluid object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcPoreFluid
 
         Parameters
@@ -595,8 +608,9 @@ class LoadModel(ModelBase):
         """This method creates a ConnectorForce object on a wire region. Alternatively, the load
         may also be applied to a wire set referenced from an assembled fastener template model.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConnectorForce
 
         Parameters
@@ -646,8 +660,9 @@ class LoadModel(ModelBase):
         """This method creates a ConnectorMoment object on a wire region. Alternatively, the load
         may also be applied to a wire set referenced from an assembled fastener template model.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConnectorMoment
 
         Parameters
@@ -695,8 +710,9 @@ class LoadModel(ModelBase):
                       field: str = '') -> CoriolisForce:
         """This method creates a CoriolisForce object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CoriolisForce
 
         Parameters
@@ -739,8 +755,9 @@ class LoadModel(ModelBase):
                 comp3: float = None, amplitude: str = UNSET) -> Gravity:
         """This method creates a Gravity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Gravity
 
         Parameters
@@ -784,8 +801,9 @@ class LoadModel(ModelBase):
                       localCoordinates: int = None) -> InertiaRelief:
         """This method creates an InertiaRelief object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].InertiaRelief
 
         Parameters
@@ -833,8 +851,9 @@ class LoadModel(ModelBase):
                        amplitude: str = UNSET) -> InwardVolAccel:
         """This method creates a InwardVolAccel object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].InwardVolAccel
 
         Parameters
@@ -874,8 +893,9 @@ class LoadModel(ModelBase):
                  system: SymbolicConstant = GLOBAL) -> LineLoad:
         """This method creates a LineLoad object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].LineLoad
 
         Parameters
@@ -923,8 +943,9 @@ class LoadModel(ModelBase):
                localCsys: int = None, distributionType: SymbolicConstant = UNIFORM, field: str = '') -> Moment:
         """This method creates a Moment object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Moment
 
         Parameters
@@ -977,8 +998,9 @@ class LoadModel(ModelBase):
                 comp2: float = None, comp3: float = None, amplitude: str = UNSET) -> PEGLoad:
         """This method creates a PEGLoad object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PEGLoad
 
         Parameters
@@ -1022,8 +1044,9 @@ class LoadModel(ModelBase):
                      distributionType: SymbolicConstant = UNIFORM, side: SymbolicConstant = INTERNAL) -> PipePressure:
         """This method creates a Pressure object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PipePressure
 
         Parameters
@@ -1073,8 +1096,9 @@ class LoadModel(ModelBase):
                  distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET) -> Pressure:
         """This method creates a Pressure object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Pressure
 
         Parameters
@@ -1124,8 +1148,9 @@ class LoadModel(ModelBase):
                             amplitude: str = UNSET) -> RotationalBodyForce:
         """This method creates a RotationalBodyForce object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].RotationalBodyForce
 
         Parameters
@@ -1179,8 +1204,9 @@ class LoadModel(ModelBase):
                       resultant: Boolean = OFF, traction: SymbolicConstant = NORMAL) -> ShellEdgeLoad:
         """This method creates a ShellEdgeLoad object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ShellEdgeLoad
 
         Parameters
@@ -1255,8 +1281,9 @@ class LoadModel(ModelBase):
                    exteriorTolerance: float = 0, globalIncrement: int = 0) -> SubmodelSB:
         """This method creates a SubmodelSB object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SubmodelSB
 
         Parameters
@@ -1301,8 +1328,9 @@ class LoadModel(ModelBase):
                          amplitude: str = UNSET) -> SubstructureLoad:
         """This method creates a SubstructureLoad object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SubstructureLoad
 
         Parameters
@@ -1334,8 +1362,9 @@ class LoadModel(ModelBase):
                       amplitude: str = UNSET) -> SurfaceCharge:
         """This method creates a SurfaceCharge object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfaceCharge
 
         Parameters
@@ -1375,8 +1404,9 @@ class LoadModel(ModelBase):
                                  amplitude: str = UNSET) -> SurfaceConcentrationFlux:
         """This method creates a SurfaceConcentrationFlux object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfaceConcentrationFlux
 
         Parameters
@@ -1416,8 +1446,9 @@ class LoadModel(ModelBase):
                        amplitude: str = UNSET) -> SurfaceCurrent:
         """This method creates a SurfaceCurrent object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfaceCurrent
 
         Parameters
@@ -1456,8 +1487,9 @@ class LoadModel(ModelBase):
                               amplitude: str = UNSET) -> SurfaceCurrentDensity:
         """This method creates a SurfaceCurrentDensity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfaceCurrentDensity
 
         Parameters
@@ -1495,8 +1527,9 @@ class LoadModel(ModelBase):
                         distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET) -> SurfaceHeatFlux:
         """This method creates a SurfaceHeatFlux object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfaceHeatFlux
 
         Parameters
@@ -1534,8 +1567,9 @@ class LoadModel(ModelBase):
                          distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET) -> SurfacePoreFluid:
         """This method creates a SurfacePoreFluid object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfacePoreFluid
 
         Parameters
@@ -1576,8 +1610,9 @@ class LoadModel(ModelBase):
                         resultant: Boolean = OFF, traction: SymbolicConstant = SHEAR) -> SurfaceTraction:
         """This method creates a SurfaceTraction object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfaceTraction
 
         Parameters

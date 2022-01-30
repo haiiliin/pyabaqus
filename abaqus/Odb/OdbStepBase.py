@@ -64,8 +64,9 @@ class OdbStepBase:
                  previousStepName: str = '', procedure: str = '', totalTime: float = None):
         """This method creates an OdbStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].Step
 
         Parameters

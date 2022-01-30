@@ -8,8 +8,9 @@ class ParallelConstraint(ConstrainedSketchConstraint):
         """This method creates a parallel constraint. This constraint applies to lines and
         constrains them to be parallel.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].ParallelConstraint
 
         Parameters

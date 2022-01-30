@@ -17,8 +17,9 @@ class ErrorIndicatorResult(RuleResult):
         """This method creates an ErrorIndicatorResult with data for an error indicator variable in
         a RemeshingRule for a given adaptivity iteration.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.adaptivityProcesses[name].iterations[i].ruleResults[name].ErrorIndicatorResult
 
         Parameters

@@ -24,8 +24,9 @@ class ModulatedAmplitude(Amplitude):
                  frequency2: float, timeSpan: SymbolicConstant = STEP):
         """This method creates a ModulatedAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ModulatedAmplitude
             - session.odbs[name].ModulatedAmplitude
 

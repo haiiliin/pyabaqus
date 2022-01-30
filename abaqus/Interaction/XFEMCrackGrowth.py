@@ -21,8 +21,9 @@ class XFEMCrackGrowth(Interaction):
     def __init__(self, name: str, createStepName: str, crackName: str, allowGrowth: Boolean = ON):
         """This method creates an XFEMCrackGrowth object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].XFEMCrackGrowth
 
         Parameters

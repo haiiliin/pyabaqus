@@ -37,8 +37,9 @@ class PlanarTestData:
                  temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a PlanarTestData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].hyperelastic.PlanarTestData
             - mdb.models[name].materials[name].hyperfoam.PlanarTestData
             - mdb.models[name].materials[name].mullinsEffect.PlanarTestData

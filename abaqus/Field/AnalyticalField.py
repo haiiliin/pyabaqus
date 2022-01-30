@@ -45,8 +45,9 @@ class AnalyticalField(Field):
                           displayOutputPosition: SymbolicConstant = None) -> OdbMeshRegionData:
         """This method creates an OdbMeshRegionData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].analyticalFields[name].OdbMeshRegionData
 
         Parameters

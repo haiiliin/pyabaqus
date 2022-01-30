@@ -26,8 +26,9 @@ class AdjustPoints(Constraint):
     def __init__(self, name: str, surface: Region, controlPoints: Region):
         """This method creates an AdjustPoints object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AdjustPoints
 
         Parameters

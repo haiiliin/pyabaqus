@@ -35,8 +35,9 @@ class Viscosity:
                  dependencies: int = 0):
         """This method creates a Viscosity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Viscosity
             - session.odbs[name].materials[name].Viscosity
 

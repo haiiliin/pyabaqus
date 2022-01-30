@@ -55,8 +55,9 @@ class BrittleCracking:
                  type: SymbolicConstant = STRAIN):
         """This method creates a BrittleCracking object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].BrittleCracking
             - session.odbs[name].materials[name].BrittleCracking
 

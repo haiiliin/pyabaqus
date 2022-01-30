@@ -18,8 +18,9 @@ class HeatGeneration:
     def __init__(self):
         """This method creates a HeatGeneration object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].HeatGeneration
             - session.odbs[name].materials[name].HeatGeneration
 

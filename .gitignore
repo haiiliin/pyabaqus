@@ -123,3 +123,5 @@ dmypy.json
 /docs/make-apidoc.bat
 /docs/make-html.bat
 /docs/make-pdf.bat
+/tools/
+/abaqus/attributes.py

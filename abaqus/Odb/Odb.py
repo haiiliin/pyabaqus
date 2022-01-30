@@ -17,8 +17,9 @@ class Odb(AmplitudeOdb,
         """This method creates an OdbPart object. Nodes and elements are added to this object at a
         later stage.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].Part
 
         Parameters
@@ -43,8 +44,9 @@ class Odb(AmplitudeOdb,
              previousStepName: str = '', procedure: str = '', totalTime: float = None) -> OdbStep:
         """This method creates an OdbStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].Step
 
         Parameters
@@ -137,8 +139,9 @@ class Odb(AmplitudeOdb,
     def SectionCategory(self, name: str, description: str) -> SectionCategory:
         """This method creates a SectionCategory object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].SectionCategory
 
         Parameters

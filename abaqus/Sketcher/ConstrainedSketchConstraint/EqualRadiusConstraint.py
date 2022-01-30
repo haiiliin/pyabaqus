@@ -8,8 +8,9 @@ class EqualRadiusConstraint(ConstrainedSketchConstraint):
         """This method creates an equal radius constraint. This constraint applies to circles and
         arcs and constrains them such that their radii are equal.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].EqualRadiusConstraint
 
         Parameters

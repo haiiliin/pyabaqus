@@ -8,8 +8,9 @@ class TableCollectionStep(StepBase):
                          expansionTimeConstant: str = '') -> ActivateElements:
         """This method creates an ActivateElements object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ActivateElements
 
         Parameters

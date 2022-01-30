@@ -21,8 +21,9 @@ class RadiationToAmbient(Interaction):
                  ambientTemperature: float = 0, ambientTemperatureAmp: str = ''):
         """This method creates a RadiationToAmbient object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].RadiationToAmbient
 
         Parameters

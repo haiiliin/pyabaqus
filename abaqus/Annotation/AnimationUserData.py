@@ -16,8 +16,9 @@ class AnimationUserData(UserDataBase):
               lineStyle: SymbolicConstant = SOLID, lineThickness: SymbolicConstant = VERY_THIN) -> Arrow:
         """This method creates an Arrow object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.Arrow
             - session.odbs[*name*].userData.Arrow
 
@@ -119,8 +120,9 @@ class AnimationUserData(UserDataBase):
              box: Boolean = OFF, justification: SymbolicConstant = JUSTIFY_LEFT) -> Text:
         """This method creates a Text object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.Text
             - session.odbs[*name*].userData.Text
 

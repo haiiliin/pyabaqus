@@ -24,8 +24,9 @@ class MPCSection(Section):
                  userType: int = 0):
         """This method creates a MPCSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MPCSection
             - session.odbs[name].MPCSection
 

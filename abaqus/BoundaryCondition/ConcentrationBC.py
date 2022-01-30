@@ -46,8 +46,9 @@ class ConcentrationBC(BoundaryCondition):
                  amplitude: str = UNSET, fixed: Boolean = OFF):
         """This method creates a ConcentrationBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcentrationBC
 
         Parameters

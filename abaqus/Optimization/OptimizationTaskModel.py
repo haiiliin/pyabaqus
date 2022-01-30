@@ -23,8 +23,9 @@ class OptimizationTaskModel(ModelBase):
                  updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF) -> BeadTask:
         """This method creates a BeadTask object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].BeadTask
 
         Parameters
@@ -141,8 +142,9 @@ class OptimizationTaskModel(ModelBase):
                   updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF) -> ShapeTask:
         """This method creates a ShapeTask object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].ShapeTask
 
         Parameters
@@ -336,8 +338,9 @@ class OptimizationTaskModel(ModelBase):
                    thicknessUpdateStrategy: SymbolicConstant = NORMAL, groupOperator: Boolean = OFF) -> SizingTask:
         """This method creates a SizingTask object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].SizingTask
 
         Parameters
@@ -417,8 +420,9 @@ class OptimizationTaskModel(ModelBase):
                      groupOperator: Boolean = OFF) -> TopologyTask:
         """This method creates a TopologyTask object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].TopologyTask
 
         Parameters

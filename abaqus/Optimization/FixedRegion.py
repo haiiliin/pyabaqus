@@ -19,8 +19,9 @@ class FixedRegion(GeometricRestriction):
                  u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF):
         """This method creates a FixedRegion object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].FixedRegion
 
         Parameters

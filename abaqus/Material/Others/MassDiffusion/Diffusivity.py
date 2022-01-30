@@ -61,8 +61,9 @@ class Diffusivity:
                  temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a Diffusivity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Diffusivity
             - session.odbs[name].materials[name].Diffusivity
 

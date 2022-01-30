@@ -30,8 +30,9 @@ class Behavior:
     def __init__(self, name: str, typeName: str):
         """This method creates a Behavior object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].calibrations[name].Behavior
 
         Parameters

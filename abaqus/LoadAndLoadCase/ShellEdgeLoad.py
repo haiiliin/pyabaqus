@@ -39,8 +39,9 @@ class ShellEdgeLoad(Load):
                  resultant: Boolean = OFF, traction: SymbolicConstant = NORMAL):
         """This method creates a ShellEdgeLoad object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ShellEdgeLoad
 
         Parameters

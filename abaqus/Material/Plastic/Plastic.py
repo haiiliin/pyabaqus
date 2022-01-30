@@ -94,8 +94,9 @@ class Plastic:
                  numBackstresses: int = 1, temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a Plastic object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Plastic
             - session.odbs[name].materials[name].Plastic
 

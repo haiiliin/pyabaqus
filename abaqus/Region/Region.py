@@ -73,8 +73,9 @@ class Region:
         edges:
         region = regionToolset.Region(faces=f[3:4], xEdges=e[1:3])
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - Region
 
         Parameters
@@ -134,8 +135,9 @@ class Region:
         The arguments are the same as the arguments to the Surface method, except for the *name*
         argument.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - Region
 
         Parameters

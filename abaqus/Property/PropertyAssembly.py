@@ -10,8 +10,9 @@ class PropertyAssembly(AssemblyBase):
                           offset: float = 0, offsetType: SymbolicConstant = SINGLE_VALUE, offsetField: str = ''):
         """This method creates a SectionAssignment object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].SectionAssignment
             - mdb.models[*name*].rootAssembly.SectionAssignment
 

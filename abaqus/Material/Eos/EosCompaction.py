@@ -18,8 +18,9 @@ class EosCompaction:
     def __init__(self, soundSpeed: float, porosity: float, pressure: float, compactionPressure: float):
         """This method creates an EosCompaction object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].eos.EosCompaction
             - session.odbs[name].materials[name].eos.EosCompaction
 

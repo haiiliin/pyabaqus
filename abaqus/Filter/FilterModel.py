@@ -13,8 +13,9 @@ class FilterModel(ModelBase):
                           invariant: SymbolicConstant = NONE) -> ButterworthFilter:
         """This method creates a ButterworthFilter object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ButterworthFilter
             - session.odbs[name].ButterworthFilter
 
@@ -57,8 +58,9 @@ class FilterModel(ModelBase):
                          invariant: SymbolicConstant = NONE) -> Chebyshev1Filter:
         """This method creates a Chebyshev1Filter object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Chebyshev1Filter
             - session.odbs[name].Chebyshev1Filter
 
@@ -104,8 +106,9 @@ class FilterModel(ModelBase):
                          invariant: SymbolicConstant = NONE) -> Chebyshev2Filter:
         """This method creates a Chebyshev2Filter object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Chebyshev2Filter
             - session.odbs[name].Chebyshev2Filter
 
@@ -150,8 +153,9 @@ class FilterModel(ModelBase):
                        halt: Boolean = OFF, limit: float = None, invariant: SymbolicConstant = NONE) -> OperatorFilter:
         """This method creates an OperatorFilter object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].OperatorFilter
             - session.odbs[name].OperatorFilter
 

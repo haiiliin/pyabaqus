@@ -19,8 +19,9 @@ class BeadFixedRegion(GeometricRestriction):
                  u3: Boolean = OFF):
         """This method creates a BeadFixedRegion object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].BeadFixedRegion
 
         Parameters

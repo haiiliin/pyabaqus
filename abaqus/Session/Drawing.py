@@ -88,8 +88,9 @@ class Drawing:
     def __init__(self, name: str):
         """This method creates an empty Drawing object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.Drawing
 
         Parameters

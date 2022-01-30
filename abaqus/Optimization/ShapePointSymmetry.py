@@ -21,8 +21,9 @@ class ShapePointSymmetry(GeometricRestriction):
                  tolerance2: float = 0, tolerance3: float = 0):
         """This method creates a ShapePointSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].ShapePointSymmetry
 
         Parameters

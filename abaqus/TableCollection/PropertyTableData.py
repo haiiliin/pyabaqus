@@ -24,8 +24,9 @@ class PropertyTableData:
                  regularizeTolerance: str = '', data: str = ''):
         """This method creates a PropertyTableData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].tableCollections[name].propertyTables[name].PropertTableData
 
         Parameters

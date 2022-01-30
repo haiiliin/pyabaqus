@@ -26,8 +26,9 @@ class HistoryRegion:
     def __init__(self, name: str, description: str, point: HistoryPoint, loadCase: str = None):
         """This method creates a HistoryRegion object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].steps[name].HistoryRegion
 
         Parameters
@@ -104,8 +105,9 @@ class HistoryRegion:
                       validInvariants: SymbolicConstant = None):
         """This method creates a HistoryOutput object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].steps[name].historyRegions[name].HistoryOutput
 
         Parameters

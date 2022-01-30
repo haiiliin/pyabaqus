@@ -21,8 +21,9 @@ class ActuatorSensorProp(ContactProperty):
     def __init__(self, name: str, realProperties: tuple = (), integerProperties: tuple = ()):
         """This method creates an ActuatorSensorProp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ActuatorSensorProp
 
         Parameters

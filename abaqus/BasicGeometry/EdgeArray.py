@@ -40,8 +40,9 @@ class EdgeArray:
     def __init__(self, edges: list[Edge]):
         """This method creates an EdgeArray object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - part.EdgeArray
 
         Parameters

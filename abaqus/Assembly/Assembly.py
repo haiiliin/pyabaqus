@@ -16,8 +16,9 @@ class Assembly(MeshEditAssembly, MeshAssembly, PropertyAssembly, RegionAssembly,
                              axis2: SymbolicConstant = AXIS_1, angle2: float = 0) -> ConnectorOrientation:
         """This method creates a ConnectorOrientation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.ConnectorOrientation
             - session.odbs[name].rootAssembly.ConnectorOrientation
 

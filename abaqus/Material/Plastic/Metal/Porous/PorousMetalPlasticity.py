@@ -40,8 +40,9 @@ class PorousMetalPlasticity:
                  dependencies: int = 0):
         """This method creates a PorousMetalPlasticity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].PorousMetalPlasticity
             - session.odbs[name].materials[name].PorousMetalPlasticity
 

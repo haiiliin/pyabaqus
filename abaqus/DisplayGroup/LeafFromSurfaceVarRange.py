@@ -23,8 +23,9 @@ class LeafFromSurfaceVarRange(Leaf):
     def __init__(self, minimumRange: float = None, maximumRange: float = 3, insideRange: Boolean = ON):
         """This method creates a Leaf object from surfaces with values lying in a variable range.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromSurfaceVarRange
 
         Parameters

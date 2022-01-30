@@ -66,8 +66,9 @@ class FieldReportOptions:
                      precision: int = 0) -> NumberFormat:
         """This method creates a NumberFormat object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.defaultFieldReportOptions.NumberFormat
             - session.fieldReportOptions.NumberFormat
             - session.journalOptions.NumberFormat

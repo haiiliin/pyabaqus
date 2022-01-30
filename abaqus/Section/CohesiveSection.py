@@ -25,8 +25,9 @@ class CohesiveSection(Section):
                  outOfPlaneThickness: float = None):
         """This method creates a CohesiveSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CohesiveSection
             - session.odbs[name].CohesiveSection
 

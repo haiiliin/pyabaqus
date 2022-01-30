@@ -6,8 +6,9 @@ class Line(ConstrainedSketchGeometry):
     def __init__(self, point1: tuple[float], point2: tuple[float]):
         """This method creates a line between two given points.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].Line
 
         Parameters

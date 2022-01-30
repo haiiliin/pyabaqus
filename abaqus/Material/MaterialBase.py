@@ -299,8 +299,9 @@ class MaterialBase:
     def __init__(self, name: str, description: str = '', materialIdentifier: str = ''):
         """This method creates a Material object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Material
             - session.odbs[name].Material
 
@@ -325,8 +326,9 @@ class MaterialBase:
         """This methods creates Material objects by reading an output database. The new materials
         are placed in the materials repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].materialsFromOdb
 
         Parameters

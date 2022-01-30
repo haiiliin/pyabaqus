@@ -25,8 +25,9 @@ class SubstructureLoad(Load):
                  amplitude: str = UNSET):
         """This method creates a SubstructureLoad object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SubstructureLoad
 
         Parameters

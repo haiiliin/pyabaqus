@@ -79,8 +79,9 @@ class GasketThicknessBehavior:
                  yieldOnsetMethod: SymbolicConstant = RELATIVE_SLOPE_DROP, unloadingTable: tuple = ()):
         """This method creates a GasketThicknessBehavior object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].GasketThicknessBehavior
             - session.odbs[name].materials[name].GasketThicknessBehavior
 

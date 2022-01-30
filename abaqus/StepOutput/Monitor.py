@@ -20,8 +20,9 @@ class Monitor:
         """This method creates a request for a degree of freedom to be monitored in a general or
         modal procedure.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].Monitor
 
         Parameters

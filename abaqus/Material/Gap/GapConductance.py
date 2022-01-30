@@ -32,8 +32,9 @@ class GapConductance:
     def __init__(self, pressureDependency: Boolean = OFF, dependencies: int = 0, table: tuple = ()):
         """This method creates a GapConductance object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].GapConductance
             - session.odbs[name].materials[name].GapConductance
 

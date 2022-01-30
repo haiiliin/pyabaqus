@@ -23,8 +23,9 @@ class Calibration:
     def __init__(self, name: str):
         """This method creates a Calibration object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].Calibration
 
         Parameters
@@ -41,8 +42,9 @@ class Calibration:
     def Behavior(self, name: str, typeName: str) -> Behavior:
         """This method creates a Behavior object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].calibrations[name].Behavior
 
         Parameters
@@ -63,8 +65,9 @@ class Calibration:
     def DataSet(self, name: str, data: tuple = (), type: str = '', form: str = '') -> DataSet:
         """This method creates a DataSet object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].calibrations[name].DataSet
 
         Parameters

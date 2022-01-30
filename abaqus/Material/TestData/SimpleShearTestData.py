@@ -24,8 +24,9 @@ class SimpleShearTestData:
     def __init__(self, table: tuple):
         """This method creates a SimpleShearTestData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].hyperfoam.SimpleShearTestData
             - session.odbs[name].materials[name].hyperfoam.SimpleShearTestData
 

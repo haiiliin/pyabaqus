@@ -29,8 +29,9 @@ class Stringer:
         """This method creates a stringer from a sequence of objects in a model database. At least
         one of the optional arguments needs to be specified.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Stringer
 
         Parameters
@@ -54,8 +55,9 @@ class Stringer:
         """This method modifies underlying entities of the selected stringer. At least one of the
         optional arguments needs to be specified.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].EditStringer
 
         Parameters

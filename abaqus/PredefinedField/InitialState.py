@@ -24,8 +24,9 @@ class InitialState(PredefinedField):
                  updateReferenceConfiguration: Boolean = OFF):
         """This method creates an InitialState predefined field object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].InitialState
 
         Parameters

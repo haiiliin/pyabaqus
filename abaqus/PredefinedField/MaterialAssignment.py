@@ -28,8 +28,9 @@ class MaterialAssignment(PredefinedField):
                  assignmentList: tuple = (), fieldList: tuple = (), colorList: tuple = ()):
         """This method creates a MaterialAssignment predefined field object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MaterialAssignment
 
         Parameters

@@ -19,8 +19,9 @@ class ShearTestData:
     def __init__(self, table: tuple, shrinf: float = None):
         """This method creates a ShearTestData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].viscoelastic.ShearTestData
             - session.odbs[name].materials[name].viscoelastic.ShearTestData
 

@@ -18,8 +18,9 @@ class Damping:
     def __init__(self, alpha: float = 0, beta: float = 0, composite: float = 0, structural: float = 0):
         """This method creates a Damping object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Damping
             - session.odbs[name].materials[name].Damping
 

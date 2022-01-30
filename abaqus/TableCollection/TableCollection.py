@@ -31,8 +31,9 @@ class TableCollection:
         """This method creates a TableCollection object and places it in the tableCollections
         repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].TableCollection
 
         Parameters
@@ -49,8 +50,9 @@ class TableCollection:
     def DataTable(self, label: str) -> DataTable:
         """This method creates a DataTable object and places it in the dataTables array.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].tableCollections[name].parameterTables[name].DataTable
 
         Parameters
@@ -74,8 +76,9 @@ class TableCollection:
         """This method creates a ParameterTable object and places it in the parameterTables
         repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].tableCollections[name].ParameterTable
 
         Parameters
@@ -93,8 +96,9 @@ class TableCollection:
     def PropertyTable(self, name: str, properties: str, variables: str = '') -> PropertyTable:
         """This method creates a PropertyTable object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].tableCollections[name].PropertyTable
 
         Parameters

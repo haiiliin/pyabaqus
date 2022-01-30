@@ -34,8 +34,9 @@ class ContourIntegral(Crack):
         for parts and for the assembly, ContourIntegral objects are currently supported only
         under the assembly.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.ContourIntegral
             - mdb.models[name].rootAssembly.engineeringFeatures.ContourIntegral
 

@@ -16,8 +16,9 @@ class RegisteredList(CommandRegister):
     def __init__(self):
         """This method creates a RegisteredList object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - customKernel.RegisteredList
 
         Parameters

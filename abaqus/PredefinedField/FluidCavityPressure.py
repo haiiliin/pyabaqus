@@ -25,8 +25,9 @@ class FluidCavityPressure(PredefinedField):
     def __init__(self, name: str, fluidCavity: str, fluidPressure: float):
         """This method creates a FluidCavityPressure object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidCavityPressure
 
         Parameters

@@ -24,8 +24,9 @@ class ParameterColumn:
         it in the array data structure. It is accessible from the ParameterTable object using a
         column member.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].tableCollections[name].parameterTables[name].Column
 
         Parameters

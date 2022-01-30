@@ -94,8 +94,9 @@ class DisplacementAdaptiveMeshConstraintState(AdaptiveMeshConstraintState):
                  status: SymbolicConstant = None, amplitude: str = ''):
         """
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].DisplacementAdaptiveMeshConstraintState
 
         Parameters

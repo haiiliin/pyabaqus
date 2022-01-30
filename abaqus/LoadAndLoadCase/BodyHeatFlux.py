@@ -34,8 +34,9 @@ class BodyHeatFlux(Load):
                  distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):
         """This method creates a BodyHeatFlux object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BodyHeatFlux
 
         Parameters

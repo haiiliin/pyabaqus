@@ -19,8 +19,9 @@ class ActivateElements:
                  expansionTimeConstant: str = ''):
         """This method creates an ActivateElements object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ActivateElements
 
         Parameters

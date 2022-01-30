@@ -32,8 +32,9 @@ class InertiaRelief(Load):
                  localCoordinates: int = None):
         """This method creates an InertiaRelief object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].InertiaRelief
 
         Parameters

@@ -18,8 +18,9 @@ class EventSeriesType:
     def __init__(self, name: str, createStepName: str, fields: str = ''):
         """This method creates an EventSeriesType object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EventSeriesType
 
         Parameters

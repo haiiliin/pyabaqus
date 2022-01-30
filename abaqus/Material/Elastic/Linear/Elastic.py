@@ -133,8 +133,9 @@ class Elastic:
                  moduli: SymbolicConstant = LONG_TERM):
         """This method creates an Elastic object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Elastic
             - session.odbs[name].materials[name].Elastic
 

@@ -23,8 +23,9 @@ class LeafFromSurfaceSets(Leaf):
     def __init__(self, surfaceSets: tuple):
         """This method creates a Leaf object from a sequence of surface sets.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromSurfaceSets
 
         Parameters

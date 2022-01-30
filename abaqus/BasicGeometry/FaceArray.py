@@ -38,8 +38,9 @@ class FaceArray:
     def __init__(self, faces: list[Face]):
         """This method creates a FaceArray object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - part.FaceArray
 
         Parameters

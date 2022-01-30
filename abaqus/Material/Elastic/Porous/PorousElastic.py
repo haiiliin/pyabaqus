@@ -41,8 +41,9 @@ class PorousElastic:
                  dependencies: int = 0):
         """This method creates a PorousElastic object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].PorousElastic
             - session.odbs[name].materials[name].PorousElastic
 

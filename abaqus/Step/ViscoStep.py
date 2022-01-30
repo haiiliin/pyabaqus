@@ -227,8 +227,9 @@ class ViscoStep(AnalysisStep):
                  adaptiveDampingRatio: float = 0, continueDampingFactors: Boolean = OFF):
         """This method creates a ViscoStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ViscoStep
 
         Parameters

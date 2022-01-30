@@ -19,8 +19,9 @@ class SizingPlanarSymmetry(GeometricRestriction):
                  ignoreFrozenArea: Boolean = OFF):
         """This method creates a SizingPlanarSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SizingPlanarSymmetry
 
         Parameters

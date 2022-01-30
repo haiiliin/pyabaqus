@@ -9,8 +9,9 @@ class PartModel(ModelBase):
              twist: Boolean = OFF):
         """This method creates a Part object and places it in the parts repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Part
 
         Parameters

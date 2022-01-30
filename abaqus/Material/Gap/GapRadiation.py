@@ -25,8 +25,9 @@ class GapRadiation:
     def __init__(self, mainSurfaceEmissivity: float, secondarySurfaceEmissivity: float, table: tuple):
         """This method creates a GapRadiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Gapradiation
             - session.odbs[name].materials[name].Gapradiation
 

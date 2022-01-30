@@ -161,8 +161,9 @@ class SteadyStateDirectStep(AnalysisStep):
                  frictionDamping: Boolean = OFF):
         """This method creates a SteadyStateDirectStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SteadyStateDirectStep
 
         Parameters

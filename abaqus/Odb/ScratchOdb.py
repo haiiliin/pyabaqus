@@ -19,8 +19,9 @@ class ScratchOdb:
     def __init__(self, odb: Odb):
         """This method creates a new ScratchOdb object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.ScratchOdb
 
         Parameters

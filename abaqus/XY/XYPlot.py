@@ -16,8 +16,9 @@ class XYPlot(XYPlotBase):
     def AreaStyle(color: str = '', fill: Boolean = ON, style: SymbolicConstant = SOLID) -> AreaStyle:
         """This method creates an AreaStyle.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.AreaStyle
             - xyPlot.AreaStyle
 
@@ -49,8 +50,9 @@ class XYPlot(XYPlotBase):
                   thickness: float = 0) -> LineStyle:
         """This method creates a LineStyle.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.LineStyle
             - xyPlot.LineStyle
 
@@ -85,8 +87,9 @@ class XYPlot(XYPlotBase):
     def QuantityType(label: str = '', type: SymbolicConstant = None) -> QuantityType:
         """This method creates a QuantityType object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.QuantityType
             - xyPlot.QuantityType
 
@@ -182,8 +185,9 @@ class XYPlot(XYPlotBase):
                     size: float = 2) -> SymbolStyle:
         """This method creates a SymbolStyle object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.SymbolStyle
             - xyPlot.SymbolStyle
 
@@ -229,8 +233,9 @@ class XYPlot(XYPlotBase):
     def TextStyle(color: str = '', show: Boolean = ON, font: str = '', rotationAngle: float = 0) -> TextStyle:
         """This method creates a TextStyle.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.TextStyle
             - xyPlot.TextStyle
 
@@ -268,8 +273,9 @@ class XYPlot(XYPlotBase):
                axis2QuantityType: QuantityType = None) -> XYData:
         """This method creates an XYData object from a sequence of *X–Y* data pairs.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.XYData
             - xyPlot.XYData
 
@@ -318,8 +324,9 @@ class XYPlot(XYPlotBase):
     def XYData(objectToCopy: XYData) -> XYData:
         """This method creates an XYData object by copying an existing XYData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].userData.XYData
             - session.XYData
             - xyPlot.XYData

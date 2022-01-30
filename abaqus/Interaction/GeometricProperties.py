@@ -21,8 +21,9 @@ class GeometricProperties:
                  useUnsymmetricEqunProcedure: Boolean = OFF, modelType: SymbolicConstant = None):
         """This method creates a GeometricProperties object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].GeometricProperties
 
         Parameters

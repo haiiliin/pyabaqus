@@ -47,8 +47,9 @@ class RateDependent:
                  dependencies: int = 0):
         """This method creates a RateDependent object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].crushableFoam.RateDependent
             - mdb.models[name].materials[name].druckerPrager.RateDependent
             - mdb.models[name].materials[name].Plastic.RateDependent

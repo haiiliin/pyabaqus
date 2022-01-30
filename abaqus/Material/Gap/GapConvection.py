@@ -33,8 +33,9 @@ class GapConvection:
                  dependencies: int = 0):
         """This method creates a GapConvection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].GapConvection
             - session.odbs[name].materials[name].GapConvection
 

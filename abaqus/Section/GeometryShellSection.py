@@ -104,8 +104,9 @@ class GeometryShellSection(ShellSection):
                  density: float = 0):
         """This method creates a GeometryShellSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].compositeLayups[*name*].Section
 
         Parameters
@@ -167,8 +168,9 @@ class GeometryShellSection(ShellSection):
     def RebarLayers(self, rebarSpacing: SymbolicConstant, layerTable: LayerPropertiesArray) -> RebarLayers:
         """This method creates a RebarLayers object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].compositeLayups[i].section.RebarLayers
             - mdb.models[name].sections[name].RebarLayers
             - session.odbs[name].sections[name].RebarLayers

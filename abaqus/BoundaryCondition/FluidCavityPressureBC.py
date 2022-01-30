@@ -40,8 +40,9 @@ class FluidCavityPressureBC(BoundaryCondition):
                  amplitude: str = UNSET, fixed: Boolean = OFF):
         """This method creates a FluidCavityPressureBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidCavityPressureBC
 
         Parameters

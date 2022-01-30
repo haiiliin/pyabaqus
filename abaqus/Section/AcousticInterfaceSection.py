@@ -22,8 +22,9 @@ class AcousticInterfaceSection(Section):
     def __init__(self, name: str, thickness: float = 1):
         """This method creates an AcousticInterfaceSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AcousticInterfaceSection
             - session.odbs[name].AcousticInterfaceSection
 

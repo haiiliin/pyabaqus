@@ -12,8 +12,9 @@ class OdbStep(OdbStepBase):
     def HistoryRegion(self, name: str, description: str, point: HistoryPoint, loadCase: str = None) -> HistoryRegion:
         """This method creates a HistoryRegion object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].steps[name].HistoryRegion
 
         Parameters
@@ -39,8 +40,9 @@ class OdbStep(OdbStepBase):
     def Frame(self, incrementNumber: int, frameValue: float, description: str = '') -> OdbFrame:
         """This method creates an OdbFrame object and appends it to the frame sequence.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].steps[name].Frame
 
         Parameters
@@ -68,8 +70,9 @@ class OdbStep(OdbStepBase):
         the frame sequence. The arguments to the constructor are valid only when
         *domain*=FREQUENCY or *domain*=MODAL.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].steps[name].Frame
 
         Parameters
@@ -93,8 +96,9 @@ class OdbStep(OdbStepBase):
         """This constructor creates an OdbFrame object for a specific load case and appends it to
         the frame sequence.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].steps[name].Frame
 
         Parameters
@@ -121,8 +125,9 @@ class OdbStep(OdbStepBase):
     def OdbLoadCase(self, name: str) -> OdbLoadCase:
         """This method creates an OdbLoadCase object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].steps[*name*].LoadCase
 
         Parameters

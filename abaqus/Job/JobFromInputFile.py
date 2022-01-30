@@ -48,8 +48,9 @@ class JobFromInputFile(Job):
                  licenseType: SymbolicConstant = DEFAULT):
         """This method creates an analysis job using an input file for the model definition.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.JobFromInputFile
 
         Parameters

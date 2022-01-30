@@ -23,8 +23,9 @@ class RuleResult:
         """This method creates a RuleResult with data for a RemeshingRule for a given adaptivity
         iteration.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.adaptivityProcesses[name].iterations[i].RuleResult
 
         Parameters

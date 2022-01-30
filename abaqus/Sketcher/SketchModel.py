@@ -9,8 +9,9 @@ class SketchModel(ModelBase):
         """This method creates a ConstrainedSketch object. If the sketch cannot be created, the
         method returns None.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConstrainedSketch
 
         Parameters

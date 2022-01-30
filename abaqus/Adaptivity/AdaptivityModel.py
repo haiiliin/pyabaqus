@@ -46,8 +46,9 @@ class AdaptivityModel(ModelBase):
         the AdaptiveMeshConstraint object are common to all objects derived from the
         AdaptiveMeshConstraint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AdaptiveMeshConstraint
 
         Parameters
@@ -80,8 +81,9 @@ class AdaptivityModel(ModelBase):
                             standardVolumetricSmoothingWeight: float = 0) -> AdaptiveMeshControl:
         """This method creates an AdaptiveMeshControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AdaptiveMeshControl
 
         Parameters
@@ -155,8 +157,9 @@ class AdaptivityModel(ModelBase):
                                            localCsys: str = None) -> DisplacementAdaptiveMeshConstraint:
         """This method creates a DisplacementAdaptiveMeshConstraint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DisplacementAdaptiveMeshConstraint
 
         Parameters
@@ -224,8 +227,9 @@ class AdaptivityModel(ModelBase):
                       elementCountLimit: int = None) -> RemeshingRule:
         """This method creates a RemeshingRule object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].RemeshingRule
 
         Parameters
@@ -319,8 +323,9 @@ class AdaptivityModel(ModelBase):
                                        motionType: SymbolicConstant = INDEPENDENT) -> VelocityAdaptiveMeshConstraint:
         """This method creates a VelocityAdaptiveMeshConstraint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].VelocityAdaptiveMeshConstraint
 
         Parameters

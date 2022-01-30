@@ -136,8 +136,9 @@ class PartInstance:
     def __init__(self, name: str, part: Part, autoOffset: Boolean = OFF, dependent: Boolean = OFF):
         """This method creates a PartInstance object and puts it into the instances repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.Instance
 
         Parameters
@@ -180,8 +181,9 @@ class PartInstance:
         """This method creates a PartInstance in the instances repository after subtracting or
         cutting the geometries of a group of part instances from that of a base part instance.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.InstanceFromBooleanCut
 
         Parameters
@@ -211,8 +213,9 @@ class PartInstance:
         """This method creates a PartInstance in the instances repository after merging two or more
         part instances.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.InstanceFromBooleanMerge
 
         Parameters
@@ -257,8 +260,9 @@ class PartInstance:
         """This method creates multiple PartInstance objects in a linear pattern and puts them into
         the instances repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.LinearInstancePattern
 
         Parameters
@@ -295,8 +299,9 @@ class PartInstance:
         """This method creates multiple PartInstance objects in a radial pattern and puts them into
         the instances repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.RadialInstancePattern
 
         Parameters

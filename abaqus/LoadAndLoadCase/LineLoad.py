@@ -42,8 +42,9 @@ class LineLoad(Load):
                  system: SymbolicConstant = GLOBAL):
         """This method creates a LineLoad object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].LineLoad
 
         Parameters

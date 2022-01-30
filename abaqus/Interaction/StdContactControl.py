@@ -30,8 +30,9 @@ class StdContactControl(ContactControl):
                  enforceWithLagrangeMultipliers: SymbolicConstant = DEFAULT):
         """This method creates an StdContactControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].StdContactControl
 
         Parameters

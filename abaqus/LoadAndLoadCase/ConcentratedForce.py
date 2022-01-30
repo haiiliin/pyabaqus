@@ -49,8 +49,9 @@ class ConcentratedForce(Load):
                  localCsys: int = None):
         """This method creates a ConcentratedForce object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcentratedForce
 
         Parameters

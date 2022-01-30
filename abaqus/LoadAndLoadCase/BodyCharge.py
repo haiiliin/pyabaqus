@@ -34,8 +34,9 @@ class BodyCharge(Load):
                  amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM, field: str = ''):
         """This method creates a BodyCharge object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BodyCharge
 
         Parameters

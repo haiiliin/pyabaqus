@@ -23,8 +23,9 @@ class ActuatorAmplitude(Amplitude):
     def __init__(self, name: str, timeSpan: SymbolicConstant = STEP):
         """This method creates a ActuatorAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ActuatorAmplitude
             - session.odbs[name].ActuatorAmplitude
 

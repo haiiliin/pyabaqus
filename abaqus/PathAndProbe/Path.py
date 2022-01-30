@@ -27,8 +27,9 @@ class Path:
                  endRadius: typing.Union[SymbolicConstant, float]):
         """This method creates a Path object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.Path
 
         Parameters

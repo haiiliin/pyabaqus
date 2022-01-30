@@ -45,8 +45,9 @@ class DamageStabilizationCohesive:
     def __init__(self, cohesiveCoeff: float = None):
         """This method creates a DamageStabilizationCohesive object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].ductileDamageInitiation\
             - .DamageStabilizationCohesive
             - mdb.models[name].materials[name].fldDamageInitiation\

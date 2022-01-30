@@ -25,8 +25,9 @@ class Chebyshev1Filter(Filter):
                  invariant: SymbolicConstant = NONE):
         """This method creates a Chebyshev1Filter object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Chebyshev1Filter
             - session.odbs[name].Chebyshev1Filter
 

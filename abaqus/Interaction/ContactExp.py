@@ -86,8 +86,9 @@ class ContactExp(Interaction):
                  polarityAssignments: PolarityAssignments = PolarityAssignments()):
         """This method creates a ContactExp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ContactExp
 
         Parameters
@@ -156,8 +157,9 @@ class ContactExp(Interaction):
                  polarityAssignments: SymbolicConstant = None):
         """This method creates a ContactExp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ContactExp
 
         Parameters

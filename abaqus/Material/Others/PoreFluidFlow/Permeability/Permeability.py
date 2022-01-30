@@ -55,8 +55,9 @@ class Permeability:
                  dependencies: int = 0):
         """This method creates a Permeability object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Permeability
             - session.odbs[name].materials[name].Permeability
 

@@ -15,8 +15,9 @@ class OdbInstance(OdbInstanceBase):
                      analyticSurface: AnalyticSurface = AnalyticSurface()) -> OdbRigidBody:
         """This method creates a OdbRigidBody object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].rootAssembly.instances[*name*].RigidBody
             - session.odbs[*name*].rootAssembly.RigidBody
 
@@ -58,8 +59,9 @@ class OdbInstance(OdbInstanceBase):
         instance-level sets) or from a sequence of arrays of OdbMeshNode objects (for
         assembly-level sets).
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].parts[*name*].NodeSet
             - session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
             - session.odbs[*name*].rootAssembly.NodeSet

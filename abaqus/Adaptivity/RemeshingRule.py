@@ -27,8 +27,9 @@ class RemeshingRule:
                  refinementFactor: SymbolicConstant = DEFAULT_LIMIT, elementCountLimit: int = None):
         """This method creates a RemeshingRule object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].RemeshingRule
 
         Parameters

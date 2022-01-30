@@ -144,8 +144,9 @@ class EulerianMotionBC(BoundaryCondition):
                  vmaxFactor: float = 1, volThreshold: float = 0, bufferSize: float = 2):
         """This method creates an EulerianMotionBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EulerianMotionBC
 
         Parameters

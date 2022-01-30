@@ -39,8 +39,9 @@ class AnimationSession(SessionBase):
               timelineEndTime: typing.Union[SymbolicConstant, float] = END_FRAME_TIME) -> Movie:
         """This method creates a Movie object from the contents of the specified file.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.Movie
 
         Parameters

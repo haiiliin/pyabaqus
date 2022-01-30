@@ -20,8 +20,9 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         """This method constructs a ConstrainedSketchDimension object between two
         ConstrainedSketchGeometry objects, with the given angle between them.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].AngularDimension
 
         Parameters
@@ -51,8 +52,9 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         horizontal dimension indicates the horizontal distance along the *X*-axis between two
         vertices.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].HorizontalDimension
 
         Parameters
@@ -81,8 +83,9 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         """This method constructs a ConstrainedSketchDimension object between two vertices. An
         oblique dimension indicates the distance between two vertices.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].ObliqueDimension
 
         Parameters
@@ -112,8 +115,9 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         arc. A radial dimension indicates the radius of an arc or circle or the major or minor
         radius of an ellipse.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].RadialDimension
 
         Parameters
@@ -146,8 +150,9 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         """This method constructs a ConstrainedSketchDimension between two vertices. A vertical
         dimension controls the vertical distance along the *Y*-axis between two vertices.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].VerticalDimension
 
         Parameters
@@ -177,8 +182,9 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         ConstrainedSketchGeometry, or aConstrainedSketchVertex and ConstrainedSketchGeometry
         object. A distance dimension specifies the shortest distance between two entities.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].DistanceDimension
 
         Parameters

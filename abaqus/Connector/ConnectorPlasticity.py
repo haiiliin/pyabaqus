@@ -88,8 +88,9 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
         """This method creates a connector plasticity behavior option for a ConnectorSection
         object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           import connectorBehavior
             -           connectorBehavior.ConnectorPlasticity
             -           import odbConnectorBehavior

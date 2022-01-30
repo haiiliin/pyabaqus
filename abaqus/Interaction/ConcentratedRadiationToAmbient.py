@@ -22,8 +22,9 @@ class ConcentratedRadiationToAmbient(Interaction):
                  distributionType: SymbolicConstant = UNIFORM):
         """This method creates a ConcentratedRadiationToAmbient object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcentratedRadiationToAmbient
 
         Parameters

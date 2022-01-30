@@ -29,8 +29,9 @@ class MoistureSwelling:
     def __init__(self, table: tuple):
         """This method creates a MoistureSwelling object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].MoistureSwelling
             - session.odbs[name].materials[name].MoistureSwelling
 

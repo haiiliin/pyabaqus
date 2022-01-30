@@ -29,8 +29,9 @@ class Hypoelastic:
     def __init__(self, table: tuple, user: Boolean = OFF):
         """This method creates a Hypoelastic object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Hypoelastic
             - session.odbs[name].materials[name].Hypoelastic
 

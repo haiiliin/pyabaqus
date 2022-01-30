@@ -25,8 +25,9 @@ class NetworkDatabaseConnector:
         platform; you cannot access an output database that resides on a remote Windows system.
         You can access only a remote output database; you cannot access a remote model database.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.NetworkDatabaseConnector
 
         Parameters

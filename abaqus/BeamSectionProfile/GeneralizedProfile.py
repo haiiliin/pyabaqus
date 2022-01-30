@@ -24,8 +24,9 @@ class GeneralizedProfile(Profile):
                  gammaW: float):
         """This method creates a GeneralizedProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].GeneralizedProfile
             - session.odbs[name].GeneralizedProfile
 

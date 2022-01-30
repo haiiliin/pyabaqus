@@ -22,8 +22,9 @@ class InterestingPoint:
         """This method creates an interesting point along an edge. An InterestingPoint is a
         temporary object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].InterestingPoint
             - mdb.models[*name*].rootAssembly.instances[*name*].InterestingPoint
 

@@ -25,8 +25,9 @@ class OutputModel(ModelBase):
                            position: SymbolicConstant = INTEGRATION_POINTS):
         """This method creates a FieldOutputRequest object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FieldOutputRequest
 
         Parameters
@@ -134,8 +135,9 @@ class OutputModel(ModelBase):
                              useGlobal: Boolean = True):
         """This method creates a HistoryOutputRequest object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].HistoryOutputRequest
 
         Parameters
@@ -235,8 +237,9 @@ class OutputModel(ModelBase):
                                 localCsys: str = None, projectOrientation: Boolean = OFF) -> IntegratedOutputSection:
         """This method creates an IntegratedOutputSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].IntegratedOutputSection
 
         Parameters
@@ -282,8 +285,9 @@ class OutputModel(ModelBase):
     def TimePoint(self, name: str, points: tuple) -> TimePoint:
         """This method creates a TimePoint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].TimePoint
 
         Parameters

@@ -90,8 +90,9 @@ class Creep:
                  dependencies: int = 0, time: SymbolicConstant = TOTAL):
         """This method creates a Creep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Creep
             - session.odbs[name].materials[name].Creep
 

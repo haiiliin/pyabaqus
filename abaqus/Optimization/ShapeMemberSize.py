@@ -20,8 +20,9 @@ class ShapeMemberSize(GeometricRestriction):
                  nodeGroupRegion: str = ''):
         """This method creates a ShapeMemberSize object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].ShapeMemberSize
 
         Parameters

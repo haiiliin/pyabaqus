@@ -26,8 +26,9 @@ class Feature(BaseFeature):
         of invalid entities. Since a number of geometry repair operations and validity checks
         are performed, it could be a slow operation depending on the complexity of the geometry.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
@@ -44,8 +45,9 @@ class Feature(BaseFeature):
         """This method tries to convert a shell entity to a solid entity. The conversion is not
         always successful.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].AddCells
 
         Parameters
@@ -69,8 +71,9 @@ class Feature(BaseFeature):
         """This method creates a first Feature object for an analytical rigid surface by creating a
         planar wire from the given ConstrainedSketch object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].AnalyticRigidSurf2DPlanar
 
         Parameters
@@ -89,8 +92,9 @@ class Feature(BaseFeature):
         """This method creates a first Feature object for an analytical rigid surface by extruding
         the given ConstrainedSketch object by the given depth, creating a surface.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].AnalyticRigidSurfExtrude
 
         Parameters
@@ -111,8 +115,9 @@ class Feature(BaseFeature):
         """This method creates a first Feature object for an analytical rigid surface by revolving
         the given ConstrainedSketch object by 360° about the *Y*-axis.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].AnalyticRigidSurfRevolve
 
         Parameters
@@ -133,8 +138,9 @@ class Feature(BaseFeature):
         the reference representation and deletes the *cells* from the active representation of
         the part.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].AssignMidsurfaceRegion
 
         Parameters
@@ -155,8 +161,9 @@ class Feature(BaseFeature):
         object by the given depth, creating a solid. The ConstrainedSketch object must define a
         closed profile.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].BaseSolidExtrude
 
         Parameters
@@ -193,8 +200,9 @@ class Feature(BaseFeature):
         closed profile and an axis of revolution. The axis is defined by a single construction
         line.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].BaseSolidRevolve
 
         Parameters
@@ -242,8 +250,9 @@ class Feature(BaseFeature):
         origin of the profile sketch is positioned at the start of the sweep path and swept
         perpendicular to the path. No checks are made for self-intersection.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].BaseSolidSweep
 
         Parameters
@@ -264,8 +273,9 @@ class Feature(BaseFeature):
         """This method creates a first Feature object by creating a planar shell from the given
         ConstrainedSketch object. The ConstrainedSketch object must define a closed profile.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].BaseShell
 
         Parameters
@@ -285,8 +295,9 @@ class Feature(BaseFeature):
         object by the given depth, creating a shell. The ConstrainedSketch object can define
         either an open or closed profile.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].BaseShellExtrude
 
         Parameters
@@ -327,8 +338,9 @@ class Feature(BaseFeature):
         either an open or closed profile and an axis of revolution. The axis is defined by a
         single construction line.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].BaseShellRevolve
 
         Parameters
@@ -373,8 +385,9 @@ class Feature(BaseFeature):
         profile. The origin of the profile sketch is positioned at the start of the sweep path
         and swept perpendicular to the path. No checks are made for self-intersection.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].BaseShellSweep
 
         Parameters
@@ -395,8 +408,9 @@ class Feature(BaseFeature):
         """This method creates a first Feature object by creating a planar wire from the given
         ConstrainedSketch object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].BaseWire
 
         Parameters
@@ -415,8 +429,9 @@ class Feature(BaseFeature):
         """This method creates a Feature object by creating new faces that blends two sets of
         faces.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].BlendFaces
 
         Parameters
@@ -449,8 +464,9 @@ class Feature(BaseFeature):
         """This method creates an additional Feature object by chamfering the given list of edges
         with a given length.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Chamfer
 
         Parameters
@@ -470,8 +486,9 @@ class Feature(BaseFeature):
     def Mirror(self, mirrorPlane: str, keepOriginal: Boolean, keepInternalBoundaries: Boolean = OFF):
         """This method mirrors existing part geometry across a plane to create new geometry.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Mirror
 
         Parameters
@@ -495,8 +512,9 @@ class Feature(BaseFeature):
         """This method attempts to change entities into a simpler form that will speed up
         processing and make entities available during feature operations.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].ConvertToAnalytical
 
         Parameters
@@ -512,8 +530,9 @@ class Feature(BaseFeature):
     def ConvertToPrecise(self, method: SymbolicConstant = RECOMPUTE_GEOMETRY):
         """This method attempts to change imprecise entities so that the geometry becomes precise.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].ConvertToPrecise
 
         Parameters
@@ -535,8 +554,9 @@ class Feature(BaseFeature):
         CoverEdges method generates a face by creating the geometry consisting of the underlying
         surface, associated edges, and vertices.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].CoverEdges
 
         Parameters
@@ -567,8 +587,9 @@ class Feature(BaseFeature):
         """This method creates an additional Feature object by cutting a hole using the given
         ConstrainedSketch object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Cut
 
         Parameters
@@ -604,8 +625,9 @@ class Feature(BaseFeature):
         The CutExtrude method creates a blind cut (using *depth*), an up-to-face cut (using
         *upToFace*), or a through-all cut (if *depth* and *upToFace* are not specified).
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].CutExtrude
 
         Parameters
@@ -664,8 +686,9 @@ class Feature(BaseFeature):
         and cutting away material from the part. You define the sections using a sequence of
         edges from the part or an EdgeArray.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].CutLoft
 
         Parameters
@@ -727,8 +750,9 @@ class Feature(BaseFeature):
         ConstrainedSketch object by the given angle and cutting away material from the part. The
         ConstrainedSketch object must define a closed profile and an axis of revolution.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].CutRevolve
 
         Parameters
@@ -788,8 +812,9 @@ class Feature(BaseFeature):
         plane at the start of the sweep path or it may be created on a Datum plane or a planar
         Face. No checks are made for self-intersection.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].CutSweep
 
         Parameters
@@ -860,8 +885,9 @@ class Feature(BaseFeature):
         the surfaces. One of *distance*, *upToReferenceRep*, or *upToFaces* must be used to
         specify how far the faces need to be extended.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].ExtendFaces
 
         Parameters
@@ -898,8 +924,9 @@ class Feature(BaseFeature):
                              analyticFitTolerance: float = None, associateFace: Boolean = OFF):
         """This method creates a geometry face from a collection of orphan element faces.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].FaceFromElementFaces
 
         Parameters
@@ -937,8 +964,9 @@ class Feature(BaseFeature):
         the part. The center of the hole is offset from two non-parallel straight edges by the
         given distances.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].HoleBlindFromEdges
 
         Parameters
@@ -974,8 +1002,9 @@ class Feature(BaseFeature):
         regions of the part. The center of the hole is offset from two non-parallel straight
         edges by the given distances.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].HoleFromEdges
 
         Parameters
@@ -1006,8 +1035,9 @@ class Feature(BaseFeature):
         The center of the hole is offset from two non-parallel straight edges by the given
         distances.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].HoleThruAllFromEdges
 
         Parameters
@@ -1039,8 +1069,9 @@ class Feature(BaseFeature):
         """This method merges edges either by extending the user selection or using only the
         selected edges.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].MergeEdges
 
         Parameters
@@ -1064,8 +1095,9 @@ class Feature(BaseFeature):
                     trimToReferenceRep: Boolean = OFF):
         """This method creates new faces by offsetting existing faces.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].OffsetFaces
 
         Parameters
@@ -1105,8 +1137,9 @@ class Feature(BaseFeature):
     def RemoveCells(self, cellList: tuple[Cell]):
         """This method converts a solid entity to a shell entity.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].RemoveCells
 
         Parameters
@@ -1128,8 +1161,9 @@ class Feature(BaseFeature):
     def RemoveFaces(self, faceList: tuple[Face], deleteCells: Boolean = False):
         """This method removes faces from a solid entity or from a shell entity.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].RemoveFaces
 
         Parameters
@@ -1151,8 +1185,9 @@ class Feature(BaseFeature):
         """This method removes faces from a solid entity and attempts to close the resulting gap by
         extending the neighboring faces of the solid.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].RemoveFacesAndStitch
 
         Parameters
@@ -1172,8 +1207,9 @@ class Feature(BaseFeature):
         """This method removes redundant edges and vertices from a solid or a shell entity. One of
         the two arguments is required.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].RemoveRedundantEntities
 
         Parameters
@@ -1203,8 +1239,9 @@ class Feature(BaseFeature):
         normals if the solid was originally inside out. When a few shell faces are selected, it
         inverts the normals of the selected faces.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].RepairFaceNormals
 
         Parameters
@@ -1224,8 +1261,9 @@ class Feature(BaseFeature):
         of selected edges are initially invalid and may leave behind invalid edges that could
         not be repaired.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].RepairInvalidEdges
 
         Parameters
@@ -1245,8 +1283,9 @@ class Feature(BaseFeature):
         specified using two points. A face partition is carried out at the specified points and
         the smaller of the two faces is removed.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].RepairSliver
 
         Parameters
@@ -1275,8 +1314,9 @@ class Feature(BaseFeature):
         edges with vertices and extend the adjacent faces and edges. This method might leave
         behind some small edges that cannot be removed.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].RepairSmallEdges
 
         Parameters
@@ -1299,8 +1339,9 @@ class Feature(BaseFeature):
         with edges or vertices and extend the adjacent faces. This method might leave behind
         some small faces that cannot be removed.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].RepairSmallFaces
 
         Parameters
@@ -1322,8 +1363,9 @@ class Feature(BaseFeature):
         """This method replaces the selected faces with a single face. If one single face is
         selected, that alone is replaced with a new face.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].ReplaceFaces
 
         Parameters
@@ -1345,8 +1387,9 @@ class Feature(BaseFeature):
         """This method creates an additional Feature object by rounding (filleting) the given list
         of entities with the given radius.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Round
 
         Parameters
@@ -1375,8 +1418,9 @@ class Feature(BaseFeature):
         given ConstrainedSketch object. The ConstrainedSketch object must define a closed
         profile.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Shell
 
         Parameters
@@ -1411,8 +1455,9 @@ class Feature(BaseFeature):
         ConstrainedSketch object by the given depth, creating a shell protrusion. The
         ConstrainedSketch object can define either an open or closed profile.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].ShellExtrude
 
         Parameters
@@ -1475,8 +1520,9 @@ class Feature(BaseFeature):
         and adding shell faces to the part. You define the sections using a sequence of edges
         from the part or an EdgeArray.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].ShellLoft
 
         Parameters
@@ -1553,8 +1599,9 @@ class Feature(BaseFeature):
         revolution. The axis is defined by a single construction line. For a description of the
         plane positioning arguments, see SolidExtrude.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].ShellRevolve
 
         Parameters
@@ -1617,8 +1664,9 @@ class Feature(BaseFeature):
         of the sweep path or it may be created on a Datum plane or a planar Face. No checks are
         made for self-intersection.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].ShellSweep
 
         Parameters
@@ -1694,8 +1742,9 @@ class Feature(BaseFeature):
         ConstrainedSketch object by the given depth, creating a solid protrusion. The
         ConstrainedSketch object must define a closed profile.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].SolidExtrude
 
         Parameters
@@ -1758,8 +1807,9 @@ class Feature(BaseFeature):
         and adding material to the part. You define the sections using a sequence of edges from
         the part or an EdgeArray.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].SolidLoft
 
         Parameters
@@ -1834,8 +1884,9 @@ class Feature(BaseFeature):
         ConstrainedSketch object must define a closed profile and an axis of revolution. The
         axis is defined by a single construction line.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].SolidRevolve
 
         Parameters
@@ -1898,8 +1949,9 @@ class Feature(BaseFeature):
         created at the normal plane at the start of the sweep path or it may be created on a
         Datum plane or a planar Face. No checks are made for self-intersection.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].SolidSweep
 
         Parameters
@@ -1971,8 +2023,9 @@ class Feature(BaseFeature):
         of all the faces of a part. If *edgeList* is not given, a global stitch will be
         performed. If *stitchTolerance* is not specified, a value of 1.0 will be used.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Stitch
 
         Parameters
@@ -1998,8 +2051,9 @@ class Feature(BaseFeature):
         given ConstrainedSketch object. The ConstrainedSketch object must define a closed
         profile.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Wire
 
         Parameters
@@ -2030,8 +2084,9 @@ class Feature(BaseFeature):
         through a sequence of given points. Each point can be a datum point, a vertex, an
         interesting point, or a tuple.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].WireSpline
 
         Parameters
@@ -2066,8 +2121,9 @@ class Feature(BaseFeature):
         through a sequence of given points. Each point can be a datum point, a vertex, an
         interesting point, or a tuple.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].WirePolyLine
 
         Parameters
@@ -2099,8 +2155,9 @@ class Feature(BaseFeature):
         """This method creates an additional Feature object by creating a Wire by selecting one or
         more Edge objects of a Solid or Shell part.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].WireFromEdge
 
         Parameters

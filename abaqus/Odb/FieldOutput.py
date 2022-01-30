@@ -43,8 +43,9 @@ class FieldOutput:
                  validInvariants: SymbolicConstant = None, isEngineeringTensor: Boolean = OFF):
         """This method creates a FieldOutput object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].steps[name].frames[i].FieldOutput
 
         Parameters
@@ -87,8 +88,9 @@ class FieldOutput:
         """This method creates a FieldOutput object from an existing FieldOutput object of the same
         output database.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].steps[name].frames[i].FieldOutput
 
         Parameters

@@ -31,8 +31,9 @@ class CDCTerm:
                  tempDependency: Boolean = OFF, fieldDependencies: int = 0):
         """This method creates a CDCTerm object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.CDCTerm
             - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.CDCTerm
             - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.CDCTerm
@@ -118,8 +119,9 @@ class CDCTerm:
         """This method creates a connector options object to be used in conjunction with an
         allowable connector behavior option, derived component term, or connector section.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
             - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].ConnectorOptions
             - mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions

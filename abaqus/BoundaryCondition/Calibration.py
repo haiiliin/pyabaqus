@@ -23,8 +23,9 @@ class Calibration:
     def __init__(self, name: str):
         """This method creates a Calibration object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].Calibration
 
         Parameters

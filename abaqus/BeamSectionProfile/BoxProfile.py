@@ -25,8 +25,9 @@ class BoxProfile(Profile):
                  t3: float = 0, t4: float = 0):
         """This method creates a BoxProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BoxProfile
             - session.odbs[name].BoxProfile
 

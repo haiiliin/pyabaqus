@@ -18,8 +18,9 @@ class UserDefinedField:
     def __init__(self):
         """This method defines a UserDefinedField object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].UserDefinedField
             - session.odbs[name].materials[name].UserDefinedField
 

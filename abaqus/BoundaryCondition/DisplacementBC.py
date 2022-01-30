@@ -64,8 +64,9 @@ class DisplacementBC(BoundaryCondition):
                  localCsys: str = None, buckleCase: SymbolicConstant = NOT_APPLICABLE):
         """This method creates a DisplacementBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DisplacementBC
 
         Parameters

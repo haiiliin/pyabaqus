@@ -27,8 +27,9 @@ class SuperElasticHardeningModifications:
     def __init__(self, table: tuple):
         """This method creates a SuperElasticHardeningModifications object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].superElasticity.SuperElasticHardeningModifications
             - session.odbs[name].materials[name].superElasticity.SuperElasticHardeningModifications
 

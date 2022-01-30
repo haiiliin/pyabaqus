@@ -24,8 +24,9 @@ class LatentHeat:
     def __init__(self, table: tuple):
         """This method creates a LatentHeat object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].LatentHeat
             - session.odbs[name].materials[name].LatentHeat
 

@@ -17,8 +17,9 @@ class SizingFrozenArea(GeometricRestriction):
     def __init__(self, name: str, region: Region):
         """This method creates a SizingFrozenArea object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SizingFrozenArea
 
         Parameters

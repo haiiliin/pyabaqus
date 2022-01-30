@@ -23,8 +23,9 @@ class LeafFromPartInstance(Leaf):
     def __init__(self, partInstanceName: tuple):
         """This method creates a Leaf object from a list of part instance names.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromPartInstance
 
         Parameters

@@ -17,8 +17,9 @@ class OptimizationConstraint:
                  restrictionMethod: SymbolicConstant = ABSOLUTE_EQUAL):
         """This method creates an OptimizationConstraint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].OptimizationConstraint
 
         Parameters

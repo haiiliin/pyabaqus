@@ -24,8 +24,9 @@ class Velocity(PredefinedField):
                  distributionType: SymbolicConstant = MAGNITUDE):
         """This method creates a Velocity predefined field object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Velocity
 
         Parameters

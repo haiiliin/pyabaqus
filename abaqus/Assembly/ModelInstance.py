@@ -57,8 +57,9 @@ class ModelInstance:
     def __init__(self, name: str, model: Model, autoOffset: Boolean = OFF):
         """This method creates a ModelInstance object and puts it into the instances repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].rootAssembly.Instance
 
         Parameters

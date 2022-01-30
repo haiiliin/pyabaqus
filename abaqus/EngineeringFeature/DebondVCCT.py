@@ -30,8 +30,9 @@ class DebondVCCT(Crack):
         parts and for the assembly, DebondVCCT objects are currently supported only under the
         assembly.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.DebondVCCT
             - mdb.models[name].rootAssembly.engineeringFeatures.DebondVCCT
 

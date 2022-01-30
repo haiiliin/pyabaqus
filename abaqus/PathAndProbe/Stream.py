@@ -12,8 +12,9 @@ class Stream:
     def __init__(self, name: str, numPointsOnRake: str, pointA: tuple = (), pointB: tuple = (), path: str = ''):
         """This method creates aStream object and places it in the streams repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.Stream
 
         Parameters

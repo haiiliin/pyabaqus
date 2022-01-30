@@ -24,8 +24,9 @@ class PeriodicAmplitude(Amplitude):
                  timeSpan: SymbolicConstant = STEP):
         """This method creates a PeriodicAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PeriodicAmplitude
             - session.odbs[name].PeriodicAmplitude
 

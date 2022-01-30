@@ -108,8 +108,9 @@ class ContactStd(Interaction):
                  slidingFormulationAssignments: SlidingFormulationAssignment = SlidingFormulationAssignment()):
         """This method creates a ContactStd object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ContactStd
 
         Parameters
@@ -189,8 +190,9 @@ class ContactStd(Interaction):
                  slidingTransitionAssignments: SymbolicConstant = None):
         """This method creates a ContactStd object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ContactStd
 
         Parameters

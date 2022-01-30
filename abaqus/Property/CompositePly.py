@@ -21,8 +21,9 @@ class CompositePly:
                  orientation: SymbolicConstant = None, additionalRotationField: str = ''):
         """This method creates a CompositePly object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].parts[*name*].compositeLayups[*name*].CompositePly
 
         Parameters

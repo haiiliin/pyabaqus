@@ -29,8 +29,9 @@ class SurfaceCurrentDensity(Load):
                  distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):
         """This method creates a SurfaceCurrentDensity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfaceCurrentDensity
 
         Parameters

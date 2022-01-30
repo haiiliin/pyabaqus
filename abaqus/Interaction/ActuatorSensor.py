@@ -28,8 +28,9 @@ class ActuatorSensor(Interaction):
                  dof: str, solutionDepVars: tuple):
         """This method creates an ActuatorSensor object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ActuatorSensor
 
         Parameters

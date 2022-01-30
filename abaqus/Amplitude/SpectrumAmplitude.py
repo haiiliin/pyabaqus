@@ -29,8 +29,9 @@ class SpectrumAmplitude(Amplitude):
                  amplitude: str = ''):
         """This method creates a SpectrumAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SpectrumAmplitude
             - session.odbs[name].SpectrumAmplitude
 

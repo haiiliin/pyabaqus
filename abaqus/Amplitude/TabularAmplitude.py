@@ -31,8 +31,9 @@ class TabularAmplitude(Amplitude):
                  timeSpan: SymbolicConstant = STEP):
         """This method creates a TabularAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].TabularAmplitude
             - session.odbs[name].TabularAmplitude
 

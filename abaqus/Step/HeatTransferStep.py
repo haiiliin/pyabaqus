@@ -208,8 +208,9 @@ class HeatTransferStep(AnalysisStep):
                  convertSDI: SymbolicConstant = PROPAGATED):
         """This method creates a HeatTransferStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].HeatTransferStep
 
         Parameters

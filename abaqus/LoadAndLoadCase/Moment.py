@@ -48,8 +48,9 @@ class Moment(Load):
                  localCsys: int = None, distributionType: SymbolicConstant = UNIFORM, field: str = ''):
         """This method creates a Moment object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Moment
 
         Parameters

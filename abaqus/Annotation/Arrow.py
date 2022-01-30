@@ -26,8 +26,9 @@ class Arrow(Annotation):
                  lineStyle: SymbolicConstant = SOLID, lineThickness: SymbolicConstant = VERY_THIN):
         """This method creates an Arrow object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.Arrow
             - session.odbs[*name*].userData.Arrow
 

@@ -31,8 +31,9 @@ class LowDensityFoam:
                  alpha: float = 2):
         """This method creates a LowDensityFoam object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].LowDensityFoam
             - session.odbs[name].materials[name].LowDensityFoam
 

@@ -53,8 +53,9 @@ class QuantityType:
     def __init__(self, label: str = '', type: SymbolicConstant = None):
         """This method creates a QuantityType object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.QuantityType
             - xyPlot.QuantityType
 

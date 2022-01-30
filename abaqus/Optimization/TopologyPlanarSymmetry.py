@@ -20,8 +20,9 @@ class TopologyPlanarSymmetry(GeometricRestriction):
                  ignoreFrozenArea: Boolean = OFF):
         """This method creates a TopologyPlanarSymmetry object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyPlanarSymmetry
 
         Parameters

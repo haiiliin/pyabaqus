@@ -41,8 +41,9 @@ class GapElectricalConductance:
                  pressureDepTable: tuple = ()):
         """This method creates a GapElectricalConductance object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].GapElectricalConductance
 
         Parameters

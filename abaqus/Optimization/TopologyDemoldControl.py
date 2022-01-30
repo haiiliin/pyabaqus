@@ -21,8 +21,9 @@ class TopologyDemoldControl(GeometricRestriction):
                  pullDirection: tuple = (), technique: SymbolicConstant = AUTO):
         """This method creates a TopologyDemoldControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyDemoldControl
 
         Parameters

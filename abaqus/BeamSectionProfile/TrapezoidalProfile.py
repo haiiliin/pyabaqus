@@ -22,8 +22,9 @@ class TrapezoidalProfile(Profile):
     def __init__(self, name: str, a: float, b: float, c: float, d: float):
         """This method creates a TrapezoidalProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].TrapezoidalProfile
             - session.odbs[name].TrapezoidalProfile
 

@@ -8,8 +8,9 @@ class EqualLengthConstraint(ConstrainedSketchConstraint):
         """This method creates an equal length constraint. This constraint applies to lines and
         constrains them such that their lengths are equal.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].EqualLengthConstraint
 
         Parameters

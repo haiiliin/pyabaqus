@@ -47,8 +47,9 @@ class AdaptiveMeshConstraintState:
         of the AdaptiveMeshConstraintState object are common to all objects derived from the
         AdaptiveMeshConstraintState object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].AdaptiveMeshConstraintState
 
         Parameters

@@ -25,8 +25,9 @@ class LeafFromOdbEdgePick(Leaf):
         strings defining the edges picked for each part instance. Leaf objects specify the items
         in a display group.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromOdbEdgePick
 
         Parameters

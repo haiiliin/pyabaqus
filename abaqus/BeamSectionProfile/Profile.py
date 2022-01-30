@@ -21,8 +21,9 @@ class Profile:
         """This method creates Profile objects by reading an output database. The new profiles are
         placed in the profiles repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].beamProfilesFromOdb
 
         Parameters

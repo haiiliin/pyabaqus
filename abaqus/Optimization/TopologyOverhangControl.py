@@ -22,8 +22,9 @@ class TopologyOverhangControl(GeometricRestriction):
                  technique: SymbolicConstant = AUTO):
         """This method creates a TopologyOverhangControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].TopologyOverhangControl
 
         Parameters

@@ -12,8 +12,9 @@ class Section(SectionBase):
                             slendernessCompensation: typing.Union[SymbolicConstant, float] = 0) -> TransverseShearBeam:
         """This method creates a TransverseShearBeam object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sections[name].TransverseShearBeam
             - session.odbs[name].sections[name].TransverseShearBeam
 
@@ -43,8 +44,9 @@ class Section(SectionBase):
     def TransverseShearShell(self, k11: float, k22: float, k12: float) -> TransverseShearShell:
         """This method creates a TransverseShearShell object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sections[name].TransverseShearShell
             - session.odbs[name].sections[name].TransverseShearShell
 

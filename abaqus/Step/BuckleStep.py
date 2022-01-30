@@ -169,8 +169,9 @@ class BuckleStep(AnalysisStep):
                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False):
         """This method creates a BuckleStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BuckleStep
 
         Parameters

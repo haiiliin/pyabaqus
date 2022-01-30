@@ -46,8 +46,9 @@ class DamageStabilization:
                  matrixCompressiveCoeff: float):
         """This method creates a DamageStabilization object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].ductileDamageInitiation\
             - .DamageStabilization
             - mdb.models[name].materials[name].fldDamageInitiation\

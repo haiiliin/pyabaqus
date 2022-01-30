@@ -35,8 +35,9 @@ class MeanFieldInclusion:
                  temperatureGradientConcentrationTensor: tuple = ()):
         """This method creates a MeanFieldInclusion object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].meanFieldHomogenization.MeanFieldInclusion
             - session.odbs[name].materials[name].meanFieldHomogenization.MeanFieldInclusion
 

@@ -193,8 +193,9 @@ class GeostaticStep(AnalysisStep):
                  initialInc: float = None, minInc: float = None, maxInc: float = None):
         """This method creates a GeostaticStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].GeostaticStep
 
         Parameters

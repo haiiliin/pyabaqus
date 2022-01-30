@@ -40,8 +40,9 @@ class TypeBC(BoundaryCondition):
                    buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates an encastre TypeBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EncastreBC
 
         Parameters
@@ -71,8 +72,9 @@ class TypeBC(BoundaryCondition):
                  buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates a pinned TypeBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PinnedBC
 
         Parameters
@@ -102,8 +104,9 @@ class TypeBC(BoundaryCondition):
                 buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates a TypeBC object that specifies symmetry about the *X*-axis.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].XsymmBC
 
         Parameters
@@ -133,8 +136,9 @@ class TypeBC(BoundaryCondition):
                 buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates a TypeBC object that specifies symmetry about the *Y*-axis.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].YsymmBC
 
         Parameters
@@ -164,8 +168,9 @@ class TypeBC(BoundaryCondition):
                 buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates a TypeBC object that specifies symmetry about the *Z*-axis.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ZsymmBC
 
         Parameters
@@ -195,8 +200,9 @@ class TypeBC(BoundaryCondition):
                  buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates a TypeBC object that specifies antisymmetry about the *X*-axis.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].XasymmBC
 
         Parameters
@@ -226,8 +232,9 @@ class TypeBC(BoundaryCondition):
                  buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates a TypeBC object that specifies antisymmetry about the *Y*-axis.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].YasymmBC
 
         Parameters
@@ -257,8 +264,9 @@ class TypeBC(BoundaryCondition):
                  buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method creates a TypeBC object that specifies antisymmetry about the *Z*-axis.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ZasymmBC
 
         Parameters

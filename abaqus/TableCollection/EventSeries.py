@@ -24,8 +24,9 @@ class EventSeries:
                  data: str = ''):
         """This method creates an EventSeries object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].EventSeriesData
 
         Parameters

@@ -32,8 +32,9 @@ class Feature(FeatureBase):
         created between the source face and the closest target face. Subsequent lines are
         created between the target faces.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.AttachmentLines
 
         Parameters
@@ -96,8 +97,9 @@ class Feature(FeatureBase):
         """This method moves an instance so that its selected face is coaxial with the selected
         face of a fixed instance.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.Coaxial
 
         Parameters
@@ -124,8 +126,9 @@ class Feature(FeatureBase):
         """This method moves an instance so that a specified point is coincident with a specified
         point of a fixed instance.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.CoincidentPoint
 
         Parameters
@@ -149,8 +152,9 @@ class Feature(FeatureBase):
         """This method moves an instance so that its edge is parallel to an edge of a fixed
         instance.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.EdgeToEdge
 
         Parameters
@@ -183,8 +187,9 @@ class Feature(FeatureBase):
         """This method moves an instance so that its face is coincident with a face of a fixed
         instance.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.FaceToFace
 
         Parameters
@@ -216,8 +221,9 @@ class Feature(FeatureBase):
         """This method moves an instance so that its Datum coordinate system is parallel to a Datum
         coordinate system of a fixed instance.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.ParallelCsys
 
         Parameters
@@ -242,8 +248,9 @@ class Feature(FeatureBase):
         """This method moves an instance so that its edge is parallel to an edge of a fixed
         instance.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.ParallelEdge
 
         Parameters
@@ -273,8 +280,9 @@ class Feature(FeatureBase):
         """This method moves an instance so that its face is parallel to a face of a fixed
         instance.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].rootAssembly.ParallelFace
 
         Parameters

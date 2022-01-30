@@ -40,8 +40,9 @@ class SubmodelSB(Load):
                  exteriorTolerance: float = 0, globalIncrement: int = 0):
         """This method creates a SubmodelSB object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SubmodelSB
 
         Parameters

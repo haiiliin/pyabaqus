@@ -26,8 +26,9 @@ class LeafFromGeometry(Leaf):
         arguments must specify at least one object--it is not permissible to create an empty
         leaf.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromGeometry
 
         Parameters

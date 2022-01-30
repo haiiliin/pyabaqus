@@ -6,8 +6,9 @@ class ConstrainedSketchVertexModel(ConstrainedSketchBase):
     def Spot(self, point: tuple[float]):
         """This method creates a spot (construction point) located at the specified coordinates.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].Spot
 
         Parameters

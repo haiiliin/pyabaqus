@@ -189,8 +189,9 @@ class ExplicitDynamicsStep(AnalysisStep):
                  maintainAttributes: Boolean = False, improvedDtMethod: Boolean = ON):
         """This method creates an ExplicitDynamicsStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ExplicitDynamicsStep
 
         Parameters

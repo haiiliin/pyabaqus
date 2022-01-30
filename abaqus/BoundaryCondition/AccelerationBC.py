@@ -51,8 +51,9 @@ class AccelerationBC(BoundaryCondition):
                  localCsys: str = None, distributionType: SymbolicConstant = UNIFORM):
         """This method creates an AccelerationBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AccelerationBC
 
         Parameters

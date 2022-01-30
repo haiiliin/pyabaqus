@@ -34,8 +34,9 @@ class ConcCharge(Load):
                  distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET):
         """This method creates a ConcCharge object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcCharge
 
         Parameters

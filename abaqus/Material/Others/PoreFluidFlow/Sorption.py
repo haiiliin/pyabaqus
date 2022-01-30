@@ -35,8 +35,9 @@ class Sorption:
                  scanning: float = 0, exsorptionTable: tuple = ()):
         """This method creates a Sorption object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Sorption
             - session.odbs[name].materials[name].Sorption
 

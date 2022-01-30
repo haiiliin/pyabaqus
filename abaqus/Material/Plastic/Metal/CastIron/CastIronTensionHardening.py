@@ -31,8 +31,9 @@ class CastIronTensionHardening:
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a CastIronTensionHardening object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].castIronPlasticity\
             - .CastIronTensionHardening
             - session.odbs[name].materials[name].castIronPlasticity\

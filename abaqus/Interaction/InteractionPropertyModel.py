@@ -17,8 +17,9 @@ class InteractionPropertyModel(ModelBase):
                               frequencyDependency: Boolean = OFF) -> AcousticImpedanceProp:
         """This method creates an AcousticImpedanceProp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AcousticImpedanceProp
 
         Parameters
@@ -51,8 +52,9 @@ class InteractionPropertyModel(ModelBase):
                            integerProperties: tuple = ()) -> ActuatorSensorProp:
         """This method creates an ActuatorSensorProp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ActuatorSensorProp
 
         Parameters
@@ -78,8 +80,9 @@ class InteractionPropertyModel(ModelBase):
                             property: tuple = ()) -> CavityRadiationProp:
         """This method creates a CavityRadiationProp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CavityRadiationProp
 
         Parameters
@@ -106,8 +109,9 @@ class InteractionPropertyModel(ModelBase):
     def ContactProperty(self, name: str) -> ContactProperty:
         """This method creates a ContactProperty object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ContactProperty
 
         Parameters
@@ -126,8 +130,9 @@ class InteractionPropertyModel(ModelBase):
                           property: tuple = ()) -> FilmConditionProp:
         """This method creates a FilmConditionProp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FilmConditionProp
 
         Parameters
@@ -165,8 +170,9 @@ class InteractionPropertyModel(ModelBase):
                             capacityTable: tuple = ()) -> FluidCavityProperty:
         """This method creates a FluidCavityProperty object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidCavityProperty
 
         Parameters
@@ -285,8 +291,9 @@ class InteractionPropertyModel(ModelBase):
                               fieldDependencies: int = 0) -> FluidExchangeProperty:
         """This method creates a FluidExchangeProperty object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidExchangeProperty
 
         Parameters
@@ -367,8 +374,9 @@ class InteractionPropertyModel(ModelBase):
                               massFraction: tuple = ()) -> FluidInflatorProperty:
         """This method creates a FluidInflatorProperty object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidInflatorProperty
 
         Parameters
@@ -430,8 +438,9 @@ class InteractionPropertyModel(ModelBase):
                              timeFactor: float = 1, pressureFactor: float = 1) -> IncidentWaveProperty:
         """This method creates an IncidentWaveProperty object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].IncidentWaveProperty
 
         Parameters

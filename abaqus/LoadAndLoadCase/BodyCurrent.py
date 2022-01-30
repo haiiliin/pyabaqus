@@ -34,8 +34,9 @@ class BodyCurrent(Load):
                  amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM, field: str = ''):
         """This method creates a BodyCurrent object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BodyCurrent
 
         Parameters

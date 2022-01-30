@@ -44,8 +44,9 @@ class SuperElasticity:
     def __init__(self, table: tuple, nonassociated: float = None):
         """This method creates a SuperElasticity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].SuperElasticity
             - session.odbs[name].materials[name].SuperElasticity
 

@@ -10,8 +10,9 @@ class AcisMdb(MdbBase):
         """This method creates an AcisFile object from a file containing ACIS-format geometry. This
         object is subsequently used by the PartFromGeometryFile method.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.openAcis
 
         Parameters
@@ -41,8 +42,9 @@ class AcisMdb(MdbBase):
         """This method creates an AcisFile object from a file containing V5-format geometry. This
         object is subsequently used by the PartFromGeometryFile method.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.openCatia
 
         Parameters
@@ -76,8 +78,9 @@ class AcisMdb(MdbBase):
         File-format geometry that was created by CATIA V5, I-DEAS, or Pro/ENGINEER. This object
         is subsequently used by the PartFromGeometryFile method.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.openEnf
 
         Parameters
@@ -113,8 +116,9 @@ class AcisMdb(MdbBase):
         """This method creates an AcisFile object from a file containing IGES-format geometry. This
         object is subsequently used by the PartFromGeometryFile method.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.openIges
 
         Parameters
@@ -166,8 +170,9 @@ class AcisMdb(MdbBase):
         """This method creates an AcisFile object from a file containing Parasolid-format geometry.
         This object is subsequently used by the PartFromGeometryFile method.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.openParasolid
 
         Parameters
@@ -192,8 +197,9 @@ class AcisMdb(MdbBase):
         """This method creates an AcisFile object from a file containing STEP-format geometry. This
         object is subsequently used by the PartFromGeometryFile method.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.openStep
 
         Parameters
@@ -220,8 +226,9 @@ class AcisMdb(MdbBase):
         """This method creates an AcisFile object from a file containing VDA-FS-format geometry.
         This object is subsequently used by the PartFromGeometryFile method.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.openVda
 
         Parameters
@@ -245,8 +252,9 @@ class AcisMdb(MdbBase):
         """This method creates an AcisFile object from a file containing Solidworks format
         geometry. This object is subsequently used by the PartFromGeometryFile method.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - openSolidworks
 
         Parameters

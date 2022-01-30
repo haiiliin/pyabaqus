@@ -31,8 +31,9 @@ class VertexArray:
     def __init__(self, vertices: list[Vertex]):
         """This method creates a VertexArray object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - part.VertexArray
 
         Parameters

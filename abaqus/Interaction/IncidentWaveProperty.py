@@ -35,8 +35,9 @@ class IncidentWaveProperty(ContactProperty):
                  timeFactor: float = 1, pressureFactor: float = 1):
         """This method creates an IncidentWaveProperty object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].IncidentWaveProperty
 
         Parameters

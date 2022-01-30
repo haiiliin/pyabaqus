@@ -25,8 +25,9 @@ class SaturationDependence:
     def __init__(self, table: tuple):
         """This method creates a SaturationDependence object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].permeability.SaturationDependence
             - session.odbs[name].materials[name].permeability.SaturationDependence
 

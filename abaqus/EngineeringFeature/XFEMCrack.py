@@ -35,8 +35,9 @@ class XFEMCrack(Crack):
         parts and for the assembly, XFEMCrack objects are currently supported only under the
         assembly.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.XFEMCrack
             - mdb.models[name].rootAssembly.engineeringFeatures.XFEMCrack
 

@@ -66,8 +66,9 @@ class LineStyle:
                  thickness: float = 0):
         """This method creates a LineStyle.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.LineStyle
             - xyPlot.LineStyle
 

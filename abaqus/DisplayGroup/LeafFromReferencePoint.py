@@ -23,8 +23,9 @@ class LeafFromReferencePoint(Leaf):
     def __init__(self, refPtSeq: tuple):
         """This method creates a Leaf object from a sequence of ReferencePoint objects.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromReferencePoint
 
         Parameters

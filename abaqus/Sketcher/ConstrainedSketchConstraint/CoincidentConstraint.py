@@ -9,8 +9,9 @@ class CoincidentConstraint(ConstrainedSketchConstraint):
         a vertex and a ConstrainedSketchGeometry object, or to two ConstrainedSketchGeometry
         objects of the same type and constrains them to be coincident.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].CoincidentConstraint
 
         Parameters

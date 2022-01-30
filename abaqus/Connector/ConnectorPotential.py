@@ -39,8 +39,9 @@ class ConnectorPotential:
         """This method creates a connector potential object to be used in conjunction with an
         allowable connector behavior option.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sections[name].behaviorOptions[i].ConnectorPotential
             - session.odbs[name].sections[name].behaviorOptions[i]\
             - .ConnectorPotential
@@ -103,8 +104,9 @@ class ConnectorPotential:
     def DerivedComponent(self) -> DerivedComponent:
         """This method creates a DerivedComponent object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent
             - mdb.models[name].sections[name].behaviorOptions[i].DerivedComponent
             - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent

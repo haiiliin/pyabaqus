@@ -37,8 +37,9 @@ class Gravity(Load):
                  comp3: float = None, amplitude: str = UNSET):
         """This method creates a Gravity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Gravity
 
         Parameters

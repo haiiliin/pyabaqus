@@ -30,8 +30,9 @@ class DisplayBody(Constraint):
     def __init__(self, name: str, instance: PartInstance, controlPoints: ModelDotArray):
         """This method creates a DisplayBody object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DisplayBody
 
         Parameters

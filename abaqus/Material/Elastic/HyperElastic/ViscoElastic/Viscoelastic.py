@@ -79,8 +79,9 @@ class Viscoelastic:
                  volumetricTable: tuple = ()):
         """This method creates a Viscoelastic object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Viscoelastic
             - session.odbs[name].materials[name].Viscoelastic
 

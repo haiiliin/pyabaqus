@@ -40,8 +40,9 @@ class ConnectorMoment(Load):
         """This method creates a ConnectorMoment object on a wire region. Alternatively, the load
         may also be applied to a wire set referenced from an assembled fastener template model.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConnectorMoment
 
         Parameters

@@ -26,8 +26,9 @@ class OdbRigidBody:
                  analyticSurface: AnalyticSurface = AnalyticSurface()):
         """This method creates a OdbRigidBody object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].rootAssembly.instances[*name*].RigidBody
             - session.odbs[*name*].rootAssembly.RigidBody
 

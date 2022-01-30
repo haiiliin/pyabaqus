@@ -50,8 +50,9 @@ class Conductivity:
                  dependencies: int = 0):
         """This method creates a Conductivity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Conductivity
             - session.odbs[name].materials[name].Conductivity
 

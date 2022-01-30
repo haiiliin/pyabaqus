@@ -50,8 +50,9 @@ class Hyperfoam:
                  table: tuple = ()):
         """This method creates a Hyperfoam object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Hyperfoam
             - session.odbs[name].materials[name].Hyperfoam
 

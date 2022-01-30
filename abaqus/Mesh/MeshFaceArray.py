@@ -18,8 +18,9 @@ class MeshFaceArray(list[MeshFace]):
     def __init__(self, elemFaces: list[MeshFace]):
         """This method creates a MeshFaceArray object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mesh.MeshFaceArray
 
         Parameters

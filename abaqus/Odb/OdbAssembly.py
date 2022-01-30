@@ -16,8 +16,9 @@ class OdbAssembly(OdbAssemblyBase):
         """This method creates an OdbDatumCsys object using three points. A datum coordinate system
         created with this method results in a fixed system.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].rootAssembly.DatumCsysByThreePoints
 
         Parameters
@@ -51,8 +52,9 @@ class OdbAssembly(OdbAssemblyBase):
         position of its origin. The last three arguments are given in the form of an OdbMeshNode
         object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].rootAssembly.DatumCsysByThreeNodes
 
         Parameters
@@ -86,8 +88,9 @@ class OdbAssembly(OdbAssemblyBase):
         cylindrical coordinate system or to the ϕϕ-axis of a spherical coordinate system. The
         line from the origin to the first node defines the rr-axis.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].rootAssembly.DatumCsysByThreeCircNodes
 
         Parameters
@@ -119,8 +122,9 @@ class OdbAssembly(OdbAssemblyBase):
         orientation of the datum coordinate system without regard to the position of its origin.
         The last argument is given in the form of an OdbMeshNode object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].rootAssembly.DatumCsysBy6dofNode
 
         Parameters
@@ -143,8 +147,9 @@ class OdbAssembly(OdbAssemblyBase):
     def DatumCsys(self, name: str, datumCsys: OdbDatumCsys):
         """This method copies oneOdbDatumCsys object to a new OdbDatumCsys object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].rootAssembly.DatumCsys
 
         Parameters
@@ -164,8 +169,9 @@ class OdbAssembly(OdbAssemblyBase):
     def Instance(self, name: str, object: OdbPart, localCoordSystem: tuple = ()) -> OdbInstance:
         """This method creates an OdbInstance object from an OdbPart object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].rootAssembly.Instance
 
         Parameters
@@ -202,8 +208,9 @@ class OdbAssembly(OdbAssemblyBase):
                      analyticSurface: AnalyticSurface = AnalyticSurface()) -> OdbRigidBody:
         """This method creates a OdbRigidBody object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].rootAssembly.instances[*name*].RigidBody
             - session.odbs[*name*].rootAssembly.RigidBody
 
@@ -245,8 +252,9 @@ class OdbAssembly(OdbAssemblyBase):
         instance-level sets) or from a sequence of arrays of OdbMeshNode objects (for
         assembly-level sets).
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].parts[*name*].NodeSet
             - session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
             - session.odbs[*name*].rootAssembly.NodeSet

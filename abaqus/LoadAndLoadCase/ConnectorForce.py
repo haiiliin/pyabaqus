@@ -40,8 +40,9 @@ class ConnectorForce(Load):
         """This method creates a ConnectorForce object on a wire region. Alternatively, the load
         may also be applied to a wire set referenced from an assembled fastener template model.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConnectorForce
 
         Parameters

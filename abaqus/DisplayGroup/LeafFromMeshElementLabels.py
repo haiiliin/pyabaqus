@@ -25,8 +25,9 @@ class LeafFromMeshElementLabels(Leaf):
         """This method creates a Leaf object from a sequence of mesh element objects. Leaf objects
         specify the items in a display group.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromMeshElementLabels
 
         Parameters

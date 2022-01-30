@@ -68,8 +68,9 @@ class MagneticPermeability:
                  dependencies: int = 0, nonlinearBH: Boolean = OFF):
         """This method creates a MagneticPermeability object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].MagneticPermeability
             - session.odbs[name].materials[name].MagneticPermeability
 

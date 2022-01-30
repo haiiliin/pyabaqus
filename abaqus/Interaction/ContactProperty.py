@@ -67,8 +67,9 @@ class ContactProperty(InteractionProperty):
     def __init__(self, name: str):
         """This method creates a ContactProperty object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ContactProperty
 
         Parameters
@@ -93,8 +94,9 @@ class ContactProperty(InteractionProperty):
                            nStateDependentVars: int = 0, useProperties: Boolean = OFF):
         """This method creates a ContactTangentialBehavior object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].TangentialBehavior
 
         Parameters
@@ -161,8 +163,9 @@ class ContactProperty(InteractionProperty):
                        upperQuadraticFactor: float = 0, lowerQuadraticRatio: float = 0):
         """This method creates a NormalBehavior object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].NormalBehavior
 
         Parameters
@@ -241,8 +244,9 @@ class ContactProperty(InteractionProperty):
                 clearanceDependence: SymbolicConstant = STEP, table: tuple = ()):
         """This method creates a ContactDamping object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].Damping
 
         Parameters
@@ -278,8 +282,9 @@ class ContactProperty(InteractionProperty):
                useStabilization: Boolean = OFF, viscosityCoef: float = None):
         """This method creates a ContactDamage object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].Damage
 
         Parameters
@@ -357,8 +362,9 @@ class ContactProperty(InteractionProperty):
                           unstableTolerance: typing.Union[SymbolicConstant, float] = DEFAULT):
         """This method creates a FractureCriterion object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].FractureCriterion
 
         Parameters
@@ -401,8 +407,9 @@ class ContactProperty(InteractionProperty):
                          temperatureDependency: Boolean = OFF, dependencies: int = 0, table: tuple = ()):
         """This method creates a CohesiveBehavior object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].CohesiveBehavior
 
         Parameters
@@ -447,8 +454,9 @@ class ContactProperty(InteractionProperty):
                            pressureDepTable: tuple = ()):
         """This method creates a ThermalConductance object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].ThermalConductance
 
         Parameters
@@ -498,8 +506,9 @@ class ContactProperty(InteractionProperty):
     def HeatGeneration(self, conversionFraction: float = 1, secondaryFraction: float = 0):
         """This method creates a GapHeatGeneration object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].HeatGeneration
 
         Parameters
@@ -521,8 +530,9 @@ class ContactProperty(InteractionProperty):
     def Radiation(self, mainEmissivity: float, secondaryEmissivity: float, table: tuple):
         """This method creates a Radiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].Radiation
 
         Parameters
@@ -547,8 +557,9 @@ class ContactProperty(InteractionProperty):
                             useUnsymmetricEqunProcedure: Boolean = OFF, modelType: SymbolicConstant = None):
         """This method creates a GeometricProperties object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].GeometricProperties
 
         Parameters
@@ -595,8 +606,9 @@ class ContactProperty(InteractionProperty):
                               pressureDepTable: tuple = ()):
         """This method creates a GapElectricalConductance object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].GapElectricalConductance
 
         Parameters

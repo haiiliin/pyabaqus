@@ -18,8 +18,9 @@ class MeshEdgeArray(list[MeshEdge]):
     def __init__(self, elemEdges: list[MeshEdge]):
         """This method creates a MeshEdgeArray object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mesh.MeshEdgeArray
 
         Parameters

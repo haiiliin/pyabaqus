@@ -18,8 +18,9 @@ class FreeBody:
                           csysName: str = ''):
         """This method creates a FreeBody object and places it in the freeBodies repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.FreeBodyFromEdges
 
         Parameters
@@ -50,8 +51,9 @@ class FreeBody:
                           csysName: str = ''):
         """This method creates a FreeBody object and places it in the freeBodies repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.FreeBodyFromFaces
 
         Parameters
@@ -82,8 +84,9 @@ class FreeBody:
                                   csysName: str = ''):
         """This method creates a FreeBody object and places it in the freeBodies repository.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.FreeBodyFromNodesElements
 
         Parameters

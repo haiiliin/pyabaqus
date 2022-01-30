@@ -40,8 +40,9 @@ class TextStyle:
     def __init__(self, color: str = '', show: Boolean = ON, font: str = '', rotationAngle: float = 0):
         """This method creates a TextStyle.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.TextStyle
             - xyPlot.TextStyle
 

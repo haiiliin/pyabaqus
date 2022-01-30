@@ -22,8 +22,9 @@ class DesignDirection(GeometricRestriction):
                  u3: Boolean = ON):
         """This method creates a DesignDirection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].DesignDirection
 
         Parameters

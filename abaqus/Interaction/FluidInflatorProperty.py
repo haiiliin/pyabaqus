@@ -45,8 +45,9 @@ class FluidInflatorProperty(ContactProperty):
                  massFraction: tuple = ()):
         """This method creates a FluidInflatorProperty object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidInflatorProperty
 
         Parameters

@@ -22,8 +22,9 @@ class Regularization:
     def __init__(self, rtol: float = 0, strainRateRegularization: SymbolicConstant = LOGARITHMIC):
         """This method creates a Regularization object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Regularization
             - session.odbs[name].materials[name].Regularization
 

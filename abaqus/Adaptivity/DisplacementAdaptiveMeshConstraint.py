@@ -39,8 +39,9 @@ class DisplacementAdaptiveMeshConstraint(AdaptiveMeshConstraint):
                  amplitude: str = UNSET, motionType: SymbolicConstant = INDEPENDENT, localCsys: str = None):
         """This method creates a DisplacementAdaptiveMeshConstraint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DisplacementAdaptiveMeshConstraint
 
         Parameters

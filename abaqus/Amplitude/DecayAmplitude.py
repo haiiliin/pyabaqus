@@ -24,8 +24,9 @@ class DecayAmplitude(Amplitude):
                  timeSpan: SymbolicConstant = STEP):
         """This method creates a DecayAmplitude object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].DecayAmplitude
             - session.odbs[name].DecayAmplitude
 

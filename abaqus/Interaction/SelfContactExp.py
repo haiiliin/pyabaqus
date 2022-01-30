@@ -19,8 +19,9 @@ class SelfContactExp(Interaction):
                  mechanicalConstraint: SymbolicConstant = KINEMATIC, contactControls: str = ''):
         """This method creates a SelfContactExp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SelfContactExp
 
         Parameters

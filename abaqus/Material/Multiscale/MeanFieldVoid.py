@@ -35,8 +35,9 @@ class MeanFieldVoid:
                  temperatureGradientConcentrationTensor: tuple = ()):
         """This method creates a MeanFieldVoid object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].meanFieldHomogenization.MeanFieldVoid
             - session.odbs[name].materials[name].meanFieldHomogenization.MeanFieldVoid
 

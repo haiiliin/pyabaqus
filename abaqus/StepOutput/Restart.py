@@ -20,8 +20,9 @@ class Restart:
                  frequency: int = 0):
         """This method creates a restart request.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].Restart
 
         Parameters

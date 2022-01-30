@@ -42,8 +42,9 @@ class DruckerPragerCreep:
                  dependencies: int = 0):
         """This method creates a DruckerPragerCreep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].druckerPrager.DruckerPragerCreep
             - session.odbs[name].materials[name].druckerPrager.DruckerPragerCreep
 

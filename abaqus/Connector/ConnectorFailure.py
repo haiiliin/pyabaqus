@@ -26,8 +26,9 @@ class ConnectorFailure(ConnectorBehaviorOption):
                  components: tuple = ()):
         """This method creates a connector failure behavior option for a ConnectorSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           import connectorBehavior
             -           connectorBehavior.ConnectorFailure
             -           import odbConnectorBehavior

@@ -54,8 +54,9 @@ class MdbBase:
     def __init__(self, pathName: str = ''):
         """This constructor creates an empty Mdb object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - Mdb
 
         Parameters
@@ -78,8 +79,9 @@ class MdbBase:
         (AutoCAD) geometry. Only a limited number of entities are supported. This format should
         be used only if no other formats are available.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - importDxf
 
         Parameters
@@ -96,8 +98,9 @@ class MdbBase:
     def openMdb(self, pathName: str):
         """This method opens an existing model database file.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - openMdb
 
         Parameters

@@ -29,8 +29,9 @@ class RigidBody(Constraint):
                  isothermal: Boolean = OFF):
         """This method creates a RigidBody object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].RigidBody
 
         Parameters

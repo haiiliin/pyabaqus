@@ -20,8 +20,9 @@ class RepositorySupport(CommandRegister):
     def __init__(self):
         """This method creates a RepositorySupport object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - customKernel.RepositorySupport
 
         Parameters

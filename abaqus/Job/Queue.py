@@ -19,8 +19,9 @@ class Queue:
         """This method creates a Queue object.
         Note:Remote queues are available only on Linux platforms.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.Queue
 
         Parameters

@@ -22,8 +22,9 @@ class RectangularProfile(Profile):
     def __init__(self, name: str, a: float, b: float):
         """This method creates a RectangularProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].RectangularProfile
             - session.odbs[name].RectangularProfile
 

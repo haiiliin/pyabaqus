@@ -41,8 +41,9 @@ class SecondaryBaseBC(BoundaryCondition):
     def __init__(self, name: str, createStepName: str, regions: RegionArray, dofs: tuple):
         """This method creates a SecondaryBaseBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SecondaryBaseBC
 
         Parameters

@@ -24,8 +24,9 @@ class LeafFromOdbElementMaterials(Leaf):
         """This method creates a Leaf object from a sequence of Strings specifying material names.
         Leaf objects specify the items in a display group.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromOdbElementMaterials
 
         Parameters

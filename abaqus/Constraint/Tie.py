@@ -31,8 +31,9 @@ class Tie(Constraint):
                  thickness: Boolean = ON):
         """This method creates a Tie object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Tie
 
         Parameters

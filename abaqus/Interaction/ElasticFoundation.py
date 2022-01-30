@@ -21,8 +21,9 @@ class ElasticFoundation(Interaction):
     def __init__(self, name: str, createStepName: str, surface: Region, stiffness: float):
         """This method creates an ElasticFoundation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ElasticFoundation
 
         Parameters

@@ -22,8 +22,9 @@ class CircularProfile(Profile):
     def __init__(self, name: str, r: float):
         """This method creates a CircularProfile object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CircularProfile
             - session.odbs[name].CircularProfile
 

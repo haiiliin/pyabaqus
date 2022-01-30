@@ -53,8 +53,9 @@ class ElectricalConductivity:
                  temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates an ElectricalConductivity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].ElectricalConductivity
             - session.odbs[name].materials[name].ElectricalConductivity
 

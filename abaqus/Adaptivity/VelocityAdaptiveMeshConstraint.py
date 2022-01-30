@@ -44,8 +44,9 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
                  localCsys: str = None, motionType: SymbolicConstant = INDEPENDENT):
         """This method creates a VelocityAdaptiveMeshConstraint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].VelocityAdaptiveMeshConstraint
 
         Parameters

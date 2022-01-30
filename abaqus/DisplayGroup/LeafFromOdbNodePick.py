@@ -25,8 +25,9 @@ class LeafFromOdbNodePick(Leaf):
         strings defining the nodes picked for each part instance. Leaf objects specify the items
         in a display group.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromOdbNodePick
 
         Parameters

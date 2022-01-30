@@ -23,8 +23,9 @@ class FilmConditionProp(ContactProperty):
                  property: tuple = ()):
         """This method creates a FilmConditionProp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FilmConditionProp
 
         Parameters

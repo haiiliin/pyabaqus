@@ -41,8 +41,9 @@ class BodyForce(Load):
                  comp3: float = None, amplitude: str = UNSET):
         """This method creates a BodyForce object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].BodyForce
 
         Parameters

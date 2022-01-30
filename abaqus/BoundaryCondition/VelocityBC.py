@@ -51,8 +51,9 @@ class VelocityBC(BoundaryCondition):
                  localCsys: str = None, distributionType: SymbolicConstant = UNIFORM):
         """This method creates a VelocityBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].VelocityBC
 
         Parameters

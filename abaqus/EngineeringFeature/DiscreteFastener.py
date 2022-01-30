@@ -35,8 +35,9 @@ class DiscreteFastener(Fastener):
         both for parts and for the assembly, DiscreteFastener objects are currently supported
         only under the assembly.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.DiscreteFastener
             - mdb.models[name].rootAssembly.engineeringFeatures.DiscreteFastener
 

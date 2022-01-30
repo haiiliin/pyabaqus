@@ -24,8 +24,9 @@ class LeafFromInstance(Leaf):
     def __init__(self, instances: PartInstance):
         """This method creates a Leaf object from a sequence of part instance objects.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - LeafFromInstance
 
         Parameters

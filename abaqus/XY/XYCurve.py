@@ -61,8 +61,9 @@ class XYCurve:
     def Curve(self, name: str, data: XYData):
         """This method creates an XYCurve object from an XYData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.Curve
 
         Parameters

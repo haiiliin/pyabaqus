@@ -55,8 +55,9 @@ class AccelerationBaseMotionBC(BoundaryCondition):
                  secondaryBase: str = '', useComplex: Boolean = OFF, amplitude: str = UNSET):
         """This method creates a AccelerationBaseMotionBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AccelerationBaseMotionBC
 
         Parameters

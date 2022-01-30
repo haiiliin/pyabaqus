@@ -23,8 +23,9 @@ class ConnectorStop(ConnectorBehaviorOption):
     def __init__(self, minMotion: float = None, maxMotion: float = None, components: tuple = ()):
         """This method creates a connector stop behavior option for a ConnectorSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           import connectorBehavior
             -           connectorBehavior.ConnectorStop
             -           import odbConnectorBehavior

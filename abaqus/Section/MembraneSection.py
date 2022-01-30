@@ -30,8 +30,9 @@ class MembraneSection(Section):
                  thicknessField: str = ''):
         """This method creates a MembraneSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].MembraneSection
             - session.odbs[name].MembraneSection
 

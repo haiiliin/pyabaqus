@@ -24,8 +24,9 @@ class AssemblyModel(ModelBase):
         """This method copies a PartInstance object from the specified model and creates a new
         PartInstance object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[*name*].Instance
 
         Parameters

@@ -41,8 +41,9 @@ class CoriolisForce(Load):
                  field: str = ''):
         """This method creates a CoriolisForce object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CoriolisForce
 
         Parameters

@@ -13,8 +13,9 @@ class OutputStep(StepBase):
                         solve: Boolean = ON, mass: Boolean = OFF) -> DiagnosticPrint:
         """This method creates a DiagnosticPrint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].DiagnosticPrint
 
         Parameters
@@ -76,8 +77,9 @@ class OutputStep(StepBase):
         """This method creates a request for a degree of freedom to be monitored in a general or
         modal procedure.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].Monitor
 
         Parameters
@@ -118,8 +120,9 @@ class OutputStep(StepBase):
                 frequency: int = 0) -> Restart:
         """This method creates a restart request.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].steps[name].Restart
 
         Parameters

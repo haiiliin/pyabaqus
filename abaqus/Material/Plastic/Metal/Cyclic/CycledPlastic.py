@@ -28,8 +28,9 @@ class CycledPlastic:
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF):
         """This method creates a CycledPlastic object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Plastic.CycledPlastic
             - session.odbs[name].materials[name].Plastic.CycledPlastic
 

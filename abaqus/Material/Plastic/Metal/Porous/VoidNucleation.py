@@ -31,8 +31,9 @@ class VoidNucleation:
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a VoidNucleation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].porousMetalPlasticity.VoidNucleation
             - session.odbs[name].materials[name].porousMetalPlasticity\
             - .VoidNucleation

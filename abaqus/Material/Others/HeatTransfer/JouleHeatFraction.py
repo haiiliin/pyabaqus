@@ -18,8 +18,9 @@ class JouleHeatFraction:
     def __init__(self, fraction: float = 1):
         """This method creates a JouleHeatFraction object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].JouleHeatFraction
             - session.odbs[name].materials[name].JouleHeatFraction
 

@@ -162,8 +162,9 @@ class CavityRadiation(Interaction):
                  reflectionSymZ: float = None):
         """This method creates a CavityRadiation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CavityRadiation
 
         Parameters

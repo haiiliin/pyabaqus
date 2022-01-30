@@ -157,8 +157,9 @@ class SubspaceDynamicsStep(AnalysisStep):
                  maintainAttributes: Boolean = False):
         """This method creates a SubspaceDynamicsStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SubspaceDynamicsStep
 
         Parameters

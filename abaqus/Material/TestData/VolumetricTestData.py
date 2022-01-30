@@ -39,8 +39,9 @@ class VolumetricTestData:
                  temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a VolumetricTestData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].hyperelastic.VolumetricTestData
             - mdb.models[name].materials[name].hyperfoam.VolumetricTestData
             - mdb.models[name].materials[name].viscoelastic.VolumetricTestData

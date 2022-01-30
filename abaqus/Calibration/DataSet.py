@@ -12,8 +12,9 @@ class DataSet:
     def __init__(self, name: str, data: tuple = (), type: str = '', form: str = ''):
         """This method creates a DataSet object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].calibrations[name].DataSet
 
         Parameters

@@ -48,8 +48,9 @@ class ClayPlasticity:
                  temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a ClayPlasticity object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].ClayPlasticity
             - session.odbs[name].materials[name].ClayPlasticity
 

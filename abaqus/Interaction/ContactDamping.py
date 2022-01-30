@@ -52,8 +52,9 @@ class ContactDamping:
                  clearanceDependence: SymbolicConstant = STEP, table: tuple = ()):
         """This method creates a ContactDamping object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].Damping
 
         Parameters

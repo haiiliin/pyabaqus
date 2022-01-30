@@ -23,8 +23,9 @@ class PEGSection(Section):
                  wedgeAngle2: float = 0):
         """This method creates a PEGSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PEGSection
             - session.odbs[name].PEGSection
 

@@ -19,8 +19,9 @@ class OptimizationProcess:
                  saveEvery: int = None):
         """This method creates an OptimizationProcess object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.OptimizationProcess
 
         Parameters

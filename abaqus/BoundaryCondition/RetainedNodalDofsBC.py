@@ -35,8 +35,9 @@ class RetainedNodalDofsBC(BoundaryCondition):
                  u3: Boolean = OFF, ur1: Boolean = OFF, ur2: Boolean = OFF, ur3: Boolean = OFF):
         """This method creates a RetainedNodalDofsBC object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].RetainedNodalDofsBC
 
         Parameters

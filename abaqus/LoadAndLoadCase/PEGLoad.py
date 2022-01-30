@@ -37,8 +37,9 @@ class PEGLoad(Load):
                  comp2: float = None, comp3: float = None, amplitude: str = UNSET):
         """This method creates a PEGLoad object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].PEGLoad
 
         Parameters

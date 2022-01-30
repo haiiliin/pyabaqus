@@ -33,8 +33,9 @@ class ShearRetention:
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a ShearRetention object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].concrete.ShearRetention
             - session.odbs[name].materials[name].concrete.ShearRetention
 

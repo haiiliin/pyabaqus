@@ -33,8 +33,9 @@ class ConcreteCompressionHardening:
                  dependencies: int = 0):
         """This method creates a ConcreteCompressionHardening object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].concreteDamagedPlasticity.ConcreteCompressionHardening
             - session.odbs[name].materials[name].concreteDamagedPlasticity.ConcreteCompressionHardening
 

@@ -26,8 +26,9 @@ class BiaxialTestData:
                  temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a BiaxialTestData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].hyperelastic.BiaxialTestData
             - mdb.models[name].materials[name].hyperfoam.BiaxialTestData
             - mdb.models[name].materials[name].mullinsEffect.BiaxialTestData

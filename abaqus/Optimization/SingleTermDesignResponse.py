@@ -21,8 +21,9 @@ class SingleTermDesignResponse(DesignResponse):
                  stepOptions: StepOptionArray = None):
         """This method creates a SingleTermDesignResponse object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             -           mdb.models[name].optimizationTasks[name].SingleTermDesignResponse
 
         Parameters

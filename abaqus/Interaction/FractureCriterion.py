@@ -74,8 +74,9 @@ class FractureCriterion:
                  unstableTolerance: typing.Union[SymbolicConstant, float] = DEFAULT):
         """This method creates a FractureCriterion object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].interactionProperties[name].FractureCriterion
 
         Parameters

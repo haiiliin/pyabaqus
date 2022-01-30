@@ -24,8 +24,9 @@ class StdInitialization(ContactInitialization):
                  openingTolerance: float = None, overclosureTolerance: float = None):
         """This method creates a StdInitialization object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].StdInitialization
 
         Parameters

@@ -23,8 +23,9 @@ class CavityRadiationProp(ContactProperty):
                  property: tuple = ()):
         """This method creates a CavityRadiationProp object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].CavityRadiationProp
 
         Parameters

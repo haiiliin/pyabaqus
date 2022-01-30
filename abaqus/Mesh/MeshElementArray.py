@@ -38,8 +38,9 @@ class MeshElementArray(list[MeshElement]):
     def __init__(self, elements: list[MeshElement]):
         """This method creates a MeshElementArray object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mesh.MeshElementArray
 
         Parameters

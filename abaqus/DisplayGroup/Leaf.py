@@ -20,8 +20,9 @@ class Leaf:
     def __init__(self, leafType: SymbolicConstant):
         """This method creates a Leaf object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - Leaf
 
         Parameters

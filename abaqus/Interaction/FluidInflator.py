@@ -22,8 +22,9 @@ class FluidInflator(Interaction):
                  inflationTimeAmplitude: str = '', massFlowAmplitude: str = ''):
         """This method creates a FluidInflator object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].FluidInflator
 
         Parameters

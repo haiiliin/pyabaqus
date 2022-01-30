@@ -28,8 +28,9 @@ class GasketSection(Section):
                  stabilizationStiffness: typing.Union[SymbolicConstant, float] = DEFAULT):
         """This method creates a GasketSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].GasketSection
             - session.odbs[name].GasketSection
 

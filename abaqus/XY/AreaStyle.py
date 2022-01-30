@@ -33,8 +33,9 @@ class AreaStyle:
     def __init__(self, color: str = '', fill: Boolean = ON, style: SymbolicConstant = SOLID):
         """This method creates an AreaStyle.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.AreaStyle
             - xyPlot.AreaStyle
 

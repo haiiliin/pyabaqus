@@ -177,8 +177,9 @@ class RandomResponseStep(AnalysisStep):
                  maintainAttributes: Boolean = False):
         """This method creates a RandomResponseStep object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].RandomResponseStep
 
         Parameters

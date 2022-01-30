@@ -24,8 +24,9 @@ class OperatorFilter(Filter):
                  halt: Boolean = OFF, limit: float = None, invariant: SymbolicConstant = NONE):
         """This method creates an OperatorFilter object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].OperatorFilter
             - session.odbs[name].OperatorFilter
 

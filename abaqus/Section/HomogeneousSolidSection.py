@@ -22,8 +22,9 @@ class HomogeneousSolidSection(SolidSection):
     def __init__(self, name: str, material: str, thickness: float = 1):
         """This method creates a HomogeneousSolidSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].HomogeneousSolidSection
             - session.odbs[name].HomogeneousSolidSection
 

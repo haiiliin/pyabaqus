@@ -27,8 +27,9 @@ class PorousBulkModuli:
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF):
         """This method creates a PorousBulkModuli object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].PorousBulkModuli
             - session.odbs[name].materials[name].PorousBulkModuli
 

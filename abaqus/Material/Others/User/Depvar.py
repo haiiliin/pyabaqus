@@ -18,8 +18,9 @@ class Depvar:
     def __init__(self, deleteVar: int = 0, n: int = 0):
         """This method creates a Depvar object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].Depvar
             - session.odbs[name].materials[name].Depvar
 

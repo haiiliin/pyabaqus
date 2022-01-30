@@ -24,8 +24,9 @@ class LayerProperties:
                  extensionRatio: float = 0, radius: float = 0):
         """This method creates a LayerProperties object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - section.LayerProperties
             - odbSection.LayerProperties
 

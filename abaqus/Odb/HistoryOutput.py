@@ -29,8 +29,9 @@ class HistoryOutput:
                  validInvariants: SymbolicConstant = None):
         """This method creates a HistoryOutput object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[name].steps[name].historyRegions[name].HistoryOutput
 
         Parameters

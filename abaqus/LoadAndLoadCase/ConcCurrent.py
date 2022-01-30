@@ -34,8 +34,9 @@ class ConcCurrent(Load):
                  distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET):
         """This method creates a ConcCurrent object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ConcCurrent
 
         Parameters

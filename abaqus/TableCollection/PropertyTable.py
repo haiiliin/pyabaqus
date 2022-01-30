@@ -28,8 +28,9 @@ class PropertyTable:
     def __init__(self, name: str, properties: str, variables: str = ''):
         """This method creates a PropertyTable object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].tableCollections[name].PropertyTable
 
         Parameters
@@ -75,8 +76,9 @@ class PropertyTable:
                           regularizeTolerance: str = '', data: str = '') -> PropertyTableData:
         """This method creates a PropertyTableData object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].tableCollections[name].propertyTables[name].PropertTableData
 
         Parameters

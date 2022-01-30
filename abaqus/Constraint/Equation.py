@@ -26,8 +26,9 @@ class Equation(Constraint):
     def __init__(self, name: str, terms: tuple):
         """This method creates an Equation object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].Equation
 
         Parameters

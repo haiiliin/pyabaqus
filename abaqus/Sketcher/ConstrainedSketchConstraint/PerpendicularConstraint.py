@@ -9,8 +9,9 @@ class PerpendicularConstraint(ConstrainedSketchConstraint):
         types of ConstrainedSketchGeometry objects and constrains them to be perpendicular to
         each other.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].sketches[name].PerpendicularConstraint
 
         Parameters

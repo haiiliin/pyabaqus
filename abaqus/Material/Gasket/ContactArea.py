@@ -33,8 +33,9 @@ class ContactArea:
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method creates a ContactArea object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].gasketThicknessBehavior.ContactArea
             - session.odbs[name].materials[name].gasketThicknessBehavior.ContactArea
 

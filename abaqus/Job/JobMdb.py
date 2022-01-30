@@ -20,8 +20,9 @@ class JobMdb(MdbBase):
         """This method creates an analysis job using a model on a model database (MDB) for the
         model definition.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.Job
 
         Parameters
@@ -137,8 +138,9 @@ class JobMdb(MdbBase):
                          licenseType: SymbolicConstant = DEFAULT) -> JobFromInputFile:
         """This method creates an analysis job using an input file for the model definition.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.JobFromInputFile
 
         Parameters
@@ -229,8 +231,9 @@ class JobMdb(MdbBase):
                             saveEvery: int = None) -> OptimizationProcess:
         """This method creates an OptimizationProcess object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.OptimizationProcess
 
         Parameters

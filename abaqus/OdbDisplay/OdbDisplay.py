@@ -512,8 +512,9 @@ class OdbDisplay:
                 overrideAveraging: Boolean = ON, referenceFrame: SymbolicConstant = FIRST_FRAME) -> ViewCut:
         """This method creates a ViewCut object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.viewports[name].layers[name].odbDisplay.ViewCut
             - session.viewports[name].odbDisplay.ViewCut
 

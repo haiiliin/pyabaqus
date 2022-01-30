@@ -25,8 +25,9 @@ class SymbolicConstant:
     def __init__(self, text: str):
         """The SymbolicConstant method creates a SymbolicConstant object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - SymbolicConstant
 
         Parameters

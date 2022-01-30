@@ -40,8 +40,9 @@ class CompositeShellSection(GeometryShellSection):
                  layupName: str = '', thicknessField: str = '', nodalThicknessField: str = ''):
         """This method creates a CompositeShellSection object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].compositeLayups[i].CompositeShellSection
             - mdb.models[name].CompositeShellSection
             - session.odbs[name].CompositeShellSection

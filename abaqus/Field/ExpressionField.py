@@ -17,8 +17,9 @@ class ExpressionField(AnalyticalField):
     def __init__(self, name: str, expression: str, localCsys: str = None, description: str = ''):
         """This method creates an ExpressionField object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].ExpressionField
 
         Parameters

@@ -24,8 +24,9 @@ class UserMaterial:
                  hybridFormulation: SymbolicConstant = INCREMENTAL):
         """This method creates a UserMaterial object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].materials[name].UserMaterial
             - session.odbs[name].materials[name].UserMaterial
 

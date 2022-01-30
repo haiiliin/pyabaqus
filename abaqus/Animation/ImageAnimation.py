@@ -18,8 +18,9 @@ class ImageAnimation:
     def __init__(self, fileName: str, format: SymbolicConstant):
         """This method creates an ImageAnimation object from the specified filename and format.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.ImageAnimation
 
         Parameters

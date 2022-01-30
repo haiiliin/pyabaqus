@@ -29,8 +29,9 @@ class NonstructuralMass(Inertia):
                  distribution: SymbolicConstant = MASS_PROPORTIONAL):
         """This method creates a NonstructuralMass object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.NonstructuralMass
             - mdb.models[name].rootAssembly.engineeringFeatures.NonstructuralMass
 

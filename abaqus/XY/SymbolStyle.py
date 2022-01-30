@@ -27,8 +27,9 @@ class SymbolStyle:
                  size: float = 2):
         """This method creates a SymbolStyle object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.SymbolStyle
             - xyPlot.SymbolStyle
 

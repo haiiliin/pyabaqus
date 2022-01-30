@@ -33,8 +33,9 @@ class SectionPoint:
     def __init__(self, number: int, description: str):
         """This method creates a SectionPoint object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - session.odbs[*name*].sectionCategories[*name*].SectionPoint
 
         Parameters

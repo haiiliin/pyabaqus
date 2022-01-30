@@ -26,8 +26,9 @@ class AdaptiveMeshControl:
                  standardVolumetricSmoothingWeight: float = 0):
         """This method creates an AdaptiveMeshControl object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].AdaptiveMeshControl
 
         Parameters

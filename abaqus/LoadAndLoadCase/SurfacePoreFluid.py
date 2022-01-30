@@ -35,8 +35,9 @@ class SurfacePoreFluid(Load):
                  distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):
         """This method creates a SurfacePoreFluid object.
 
-        Path
-        ----
+        Notes
+        -----
+            This function can be accessed by:
             - mdb.models[name].SurfacePoreFluid
 
         Parameters
