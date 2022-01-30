@@ -5,8 +5,11 @@ class ActivateElements:
 
     Notes
     -----
-        This object can be accessed by:
-        - mdb.models[name].steps[name].activateElements[key]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name].steps[name].activateElements[key]
 
     Corresponding analysis keywords
     -------------------------------
@@ -21,8 +24,11 @@ class ActivateElements:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].ActivateElements
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ActivateElements
 
         Parameters
         ----------

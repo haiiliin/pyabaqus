@@ -8,12 +8,6 @@ Access
 ------
     - from material import evaluateMaterial
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 

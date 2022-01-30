@@ -7,11 +7,14 @@ class TangentialBehavior:
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].sections[name].behaviorOptions[i].tangentialBehavior
-        - import odbSection
-        - session.odbs[name].sections[name].behaviorOptions[i].tangentialBehavior
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].sections[name].behaviorOptions[i].tangentialBehavior
+        import odbSection
+        session.odbs[name].sections[name].behaviorOptions[i].tangentialBehavior
 
     Table Data
     ----------
@@ -48,9 +51,12 @@ class TangentialBehavior:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior
-            - session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior
+            session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior
 
         Parameters
         ----------

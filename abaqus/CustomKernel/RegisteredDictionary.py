@@ -9,8 +9,11 @@ class RegisteredDictionary(CommandRegister):
 
     Notes
     -----
-        This object can be accessed by:
-        - import customKernel
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import customKernel
 
     """
 
@@ -19,8 +22,11 @@ class RegisteredDictionary(CommandRegister):
 
         Notes
         -----
-            This function can be accessed by:
-            - customKernel.RegisteredDictionary
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            customKernel.RegisteredDictionary
 
         Parameters
         ----------

@@ -6,12 +6,15 @@ class SectionLayer:
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].parts[name].compositeLayups[i].section.layup[i]
-        - mdb.models[name].sections[name].layup[i]
-        - import odbSection
-        - session.odbs[name].sections[name].layup[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].parts[name].compositeLayups[i].section.layup[i]
+        mdb.models[name].sections[name].layup[i]
+        import odbSection
+        session.odbs[name].sections[name].layup[i]
 
     Corresponding analysis keywords
     -------------------------------
@@ -28,9 +31,12 @@ class SectionLayer:
 
         Notes
         -----
-            This function can be accessed by:
-            - section.SectionLayer 
-            - odbSection.SectionLayer
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            section.SectionLayer 
+            odbSection.SectionLayer
 
         Parameters
         ----------

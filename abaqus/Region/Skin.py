@@ -21,13 +21,16 @@ class Skin:
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].skins[name]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].skins[name]
-        - mdb.models[name].rootAssembly.instances[name].skins[name]
-        - mdb.models[name].rootAssembly.skins[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].skins[name]
+        import assembly
+        mdb.models[name].rootAssembly.allInstances[name].skins[name]
+        mdb.models[name].rootAssembly.instances[name].skins[name]
+        mdb.models[name].rootAssembly.skins[name]
 
     """
 
@@ -47,8 +50,11 @@ class Skin:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Skin
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Skin
 
         Parameters
         ----------
@@ -80,8 +86,11 @@ class Skin:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].EditSkin
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Skin
 
         Parameters
         ----------

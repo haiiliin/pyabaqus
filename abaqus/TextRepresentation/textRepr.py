@@ -8,12 +8,6 @@ Access
 ------
     - import textRepr
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 
@@ -46,9 +40,6 @@ def getIndentedRepr(object, maxRecursionDepth: SymbolicConstant = None,
     -------
         A String. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -83,9 +74,6 @@ def getPaths(object, maxRecursionDepth: SymbolicConstant = None,
     -------
         A String. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -118,9 +106,6 @@ def getTypes(object, maxRecursionDepth: SymbolicConstant = None,
     -------
         A String. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -154,9 +139,6 @@ def prettyPrint(object, maxRecursionDepth: SymbolicConstant = None,
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -191,9 +173,6 @@ def printPaths(object, maxRecursionDepth: SymbolicConstant = None,
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -226,8 +205,5 @@ def printTypes(object, maxRecursionDepth: SymbolicConstant = None,
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass

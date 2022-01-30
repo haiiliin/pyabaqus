@@ -26,9 +26,12 @@ class AdaptiveMeshConstraint:
 
     Notes
     -----
-        This object can be accessed by:
-        - import step
-        - mdb.models[name].adaptiveMeshConstraints[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import step
+        mdb.models[name].adaptiveMeshConstraints[name]
 
     """
 
@@ -57,8 +60,11 @@ class AdaptiveMeshConstraint:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].AdaptiveMeshConstraint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].AdaptiveMeshConstraint
 
         Parameters
         ----------

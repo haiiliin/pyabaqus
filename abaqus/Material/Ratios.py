@@ -6,13 +6,16 @@ class Ratios:
 
     Notes
     -----
-        This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].moistureSwelling.ratios
-        - mdb.models[name].materials[name].swelling.ratios
-        - import odbMaterial
-        - session.odbs[name].materials[name].moistureSwelling.ratios
-        - session.odbs[name].materials[name].swelling.ratios
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].moistureSwelling.ratios
+        mdb.models[name].materials[name].swelling.ratios
+        import odbMaterial
+        session.odbs[name].materials[name].moistureSwelling.ratios
+        session.odbs[name].materials[name].swelling.ratios
 
     Table Data
     ----------
@@ -35,11 +38,14 @@ class Ratios:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].materials[name].moistureSwelling.Ratios
-            - mdb.models[name].materials[name].swelling.Ratios
-            - session.odbs[name].materials[name].moistureSwelling.Ratios
-            - session.odbs[name].materials[name].swelling.Ratios
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].materials[name].moistureSwelling.Ratios
+            mdb.models[name].materials[name].swelling.Ratios
+            session.odbs[name].materials[name].moistureSwelling.Ratios
+            session.odbs[name].materials[name].swelling.Ratios
 
         Parameters
         ----------

@@ -14,12 +14,6 @@ database to a new file.
 Access
 ------
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 
@@ -51,9 +45,6 @@ def isUpgradeRequiredForOd(upgradeRequiredOdbPath: str):
         A Boolean indicating the result of the test. A value of True indicates that the output 
         database needs to be upgraded to the current release. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 

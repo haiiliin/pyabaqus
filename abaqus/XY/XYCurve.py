@@ -37,18 +37,21 @@ class XYCurve:
 
     Notes
     -----
-        This object can be accessed by:
-        - import visualization
-        - session.charts[name].axes1[i].axisData.curves[i]
-        - session.charts[name].axes2[i].axisData.curves[i]
-        - session.charts[name].curves[name]
-        - session.curves[name]
-        - session.defaultChartOptions.defaultAxis1Options.axisData.curves[i]
-        - session.defaultChartOptions.defaultAxis2Options.axisData.curves[i]
-        - session.xyPlots[name].charts[name].axes1[i].axisData.curves[i]
-        - session.xyPlots[name].charts[name].axes2[i].axisData.curves[i]
-        - session.xyPlots[name].charts[name].curves[name]
-        - session.xyPlots[name].curves[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import visualization
+        session.charts[name].axes1[i].axisData.curves[i]
+        session.charts[name].axes2[i].axisData.curves[i]
+        session.charts[name].curves[name]
+        session.curves[name]
+        session.defaultChartOptions.defaultAxis1Options.axisData.curves[i]
+        session.defaultChartOptions.defaultAxis2Options.axisData.curves[i]
+        session.xyPlots[name].charts[name].axes1[i].axisData.curves[i]
+        session.xyPlots[name].charts[name].axes2[i].axisData.curves[i]
+        session.xyPlots[name].charts[name].curves[name]
+        session.xyPlots[name].curves[name]
 
     """
 
@@ -91,8 +94,11 @@ class XYCurve:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.Curve
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.Curve
 
         Parameters
         ----------

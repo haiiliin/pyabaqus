@@ -7,9 +7,12 @@ class AdaptiveMeshDomain:
 
     Notes
     -----
-        This object can be accessed by:
-        - import step
-        - mdb.models[name].steps[name].adaptiveMeshDomains[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import step
+        mdb.models[name].steps[name].adaptiveMeshDomains[name]
 
     """
 
@@ -19,8 +22,11 @@ class AdaptiveMeshDomain:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].steps[name].AdaptiveMeshDomain
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].steps[name].AdaptiveMeshDomain
 
         Parameters
         ----------

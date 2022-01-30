@@ -3,9 +3,12 @@ class Spectrum:
 
     Notes
     -----
-        This object can be accessed by:
-        - import visualization
-        - session.spectrums[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import visualization
+        session.spectrums[name]
 
     """
 
@@ -14,8 +17,11 @@ class Spectrum:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.Spectrum
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.Spectrum
 
         Parameters
         ----------

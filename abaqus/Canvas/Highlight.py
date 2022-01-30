@@ -4,12 +4,6 @@ remove the highlighting.
 Access
 ------
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 
@@ -52,8 +46,6 @@ def highlight(object: str):
     Returns
     -------
 
-    Exceptions
-    ----------
     """
     pass
 
@@ -75,7 +67,5 @@ def unhighlight(object: str):
     Returns
     -------
 
-    Exceptions
-    ----------
     """
     pass

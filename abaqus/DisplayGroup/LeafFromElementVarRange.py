@@ -17,8 +17,11 @@ class LeafFromElementVarRange(Leaf):
 
     Notes
     -----
-        This object can be accessed by:
-        - import displayGroupOdbToolset
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import displayGroupOdbToolset
 
     """
 
@@ -31,8 +34,11 @@ class LeafFromElementVarRange(Leaf):
 
         Notes
         -----
-            This function can be accessed by:
-            - LeafFromElementVarRange
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            LeafFromElementVarRange
 
         Parameters
         ----------

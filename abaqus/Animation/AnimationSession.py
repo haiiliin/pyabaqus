@@ -11,8 +11,11 @@ class AnimationSession(SessionBase):
 
     Notes
     -----
-        This object can be accessed by:
-        - import animation
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import animation
 
     """
 
@@ -41,8 +44,11 @@ class AnimationSession(SessionBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - session.Movie
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.Movie
 
         Parameters
         ----------

@@ -10,12 +10,15 @@ class OdbRigidBody:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].parts[name].rigidBodies[i]
-        - session.odbs[name].rootAssembly.instances[name].rigidBodies[i]
-        - session.odbs[name].rootAssembly.rigidBodies[i]
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.rigidBodies[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name].parts[name].rigidBodies[i]
+        session.odbs[name].rootAssembly.instances[name].rigidBodies[i]
+        session.odbs[name].rootAssembly.rigidBodies[i]
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.rigidBodies[i]
 
     """
 
@@ -28,9 +31,12 @@ class OdbRigidBody:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[*name*].rootAssembly.instances[*name*].RigidBody
-            - session.odbs[*name*].rootAssembly.RigidBody
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[*name*].rootAssembly.instances[*name*].RigidBody
+            session.odbs[*name*].rootAssembly.RigidBody
 
         Parameters
         ----------

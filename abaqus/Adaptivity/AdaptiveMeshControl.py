@@ -8,9 +8,12 @@ class AdaptiveMeshControl:
 
     Notes
     -----
-        This object can be accessed by:
-        - import step
-        - mdb.models[name].adaptiveMeshControls[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import step
+        mdb.models[name].adaptiveMeshControls[name]
 
     """
 
@@ -28,8 +31,11 @@ class AdaptiveMeshControl:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].AdaptiveMeshControl
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].AdaptiveMeshControl
 
         Parameters
         ----------

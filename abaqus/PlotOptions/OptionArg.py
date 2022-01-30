@@ -8,17 +8,20 @@ class OptionArg:
 
     Notes
     -----
-        This object can be accessed by:
-        - import visualization
-        - session.defaultOdbDisplay.viewCutOptions.aboveOptions
-        - session.defaultOdbDisplay.viewCutOptions.belowOptions
-        - session.defaultOdbDisplay.viewCutOptions.onOptions
-        - session.viewports[name].layers[name].odbDisplay.viewCutOptions.aboveOptions
-        - session.viewports[name].layers[name].odbDisplay.viewCutOptions.belowOptions
-        - session.viewports[name].layers[name].odbDisplay.viewCutOptions.onOptions
-        - session.viewports[name].odbDisplay.viewCutOptions.aboveOptions
-        - session.viewports[name].odbDisplay.viewCutOptions.belowOptions
-        - session.viewports[name].odbDisplay.viewCutOptions.onOptions
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import visualization
+        session.defaultOdbDisplay.viewCutOptions.aboveOptions
+        session.defaultOdbDisplay.viewCutOptions.belowOptions
+        session.defaultOdbDisplay.viewCutOptions.onOptions
+        session.viewports[name].layers[name].odbDisplay.viewCutOptions.aboveOptions
+        session.viewports[name].layers[name].odbDisplay.viewCutOptions.belowOptions
+        session.viewports[name].layers[name].odbDisplay.viewCutOptions.onOptions
+        session.viewports[name].odbDisplay.viewCutOptions.aboveOptions
+        session.viewports[name].odbDisplay.viewCutOptions.belowOptions
+        session.viewports[name].odbDisplay.viewCutOptions.onOptions
 
     """
 
@@ -31,8 +34,11 @@ class OptionArg:
 
         Notes
         -----
-            This function can be accessed by:
-            - visualization.OptionArg
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            visualization.OptionArg
 
         Parameters
         ----------

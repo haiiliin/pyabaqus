@@ -17,8 +17,11 @@ class LeafFromOdbNodePick(Leaf):
 
     Notes
     -----
-        This object can be accessed by:
-        - import displayGroupOdbToolset
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import displayGroupOdbToolset
 
     """
 
@@ -33,8 +36,11 @@ class LeafFromOdbNodePick(Leaf):
 
         Notes
         -----
-            This function can be accessed by:
-            - LeafFromOdbNodePick
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            LeafFromOdbNodePick
 
         Parameters
         ----------

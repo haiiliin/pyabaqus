@@ -21,9 +21,12 @@ class InertiaRelief(Load):
 
     Notes
     -----
-        This object can be accessed by:
-        - import load
-        - mdb.models[name].loads[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import load
+        mdb.models[name].loads[name]
 
     """
 
@@ -46,8 +49,11 @@ class InertiaRelief(Load):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].InertiaRelief
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].InertiaRelief
 
         Parameters
         ----------

@@ -9,9 +9,12 @@ class SingleTermDesignResponse(DesignResponse):
 
     Notes
     -----
-        This object can be accessed by:
-        - import optimization
-        - mdb.models[name].optimizationTasks[name].designResponses[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import optimization
+        mdb.models[name].optimizationTasks[name].designResponses[name]
 
     """
 
@@ -23,8 +26,11 @@ class SingleTermDesignResponse(DesignResponse):
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].SingleTermDesignResponse
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].optimizationTasks[name].SingleTermDesignResponse
 
         Parameters
         ----------

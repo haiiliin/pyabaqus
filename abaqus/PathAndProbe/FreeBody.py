@@ -7,9 +7,12 @@ class FreeBody:
 
     Notes
     -----
-        This object can be accessed by:
-        - import visualization
-        - session.freeBodies[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import visualization
+        session.freeBodies[name]
 
     """
 
@@ -20,8 +23,11 @@ class FreeBody:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.FreeBodyFromEdges
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.FreeBodyFromEdges
 
         Parameters
         ----------
@@ -53,8 +59,11 @@ class FreeBody:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.FreeBodyFromFaces
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.FreeBodyFromEdges
 
         Parameters
         ----------
@@ -86,8 +95,11 @@ class FreeBody:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.FreeBodyFromNodesElements
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.FreeBodyFromEdges
 
         Parameters
         ----------

@@ -18,8 +18,11 @@ class LeafFromMeshSurfaceSets(Leaf):
 
     Notes
     -----
-        This object can be accessed by:
-        - import displayGroupMdbToolset
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import displayGroupMdbToolset
 
     """
 
@@ -32,8 +35,11 @@ class LeafFromMeshSurfaceSets(Leaf):
 
         Notes
         -----
-            This function can be accessed by:
-            - LeafFromMeshSurfaceSets
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            LeafFromMeshSurfaceSets
 
         Parameters
         ----------

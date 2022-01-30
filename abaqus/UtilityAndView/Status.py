@@ -5,12 +5,6 @@ import typing
 Access
 ------
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 
@@ -31,9 +25,6 @@ def milestone(message: str):
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -57,9 +48,6 @@ def milestone(message: str, percent: int):
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -88,9 +76,6 @@ def milestone(message: str, object: str, done: int, total: int):
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 

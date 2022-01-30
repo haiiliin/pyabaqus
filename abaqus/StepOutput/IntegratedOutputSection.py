@@ -7,9 +7,12 @@ class IntegratedOutputSection:
 
     Notes
     -----
-        This object can be accessed by:
-        - import step
-        - mdb.models[name].integratedOutputSections[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import step
+        mdb.models[name].integratedOutputSections[name]
 
     """
 
@@ -20,8 +23,11 @@ class IntegratedOutputSection:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].IntegratedOutputSection
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].IntegratedOutputSection
 
         Parameters
         ----------

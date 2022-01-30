@@ -17,8 +17,11 @@ class LeafFromInstanceElementLabels(Leaf):
 
     Notes
     -----
-        This object can be accessed by:
-        - import displayGroupMdbToolset
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import displayGroupMdbToolset
 
     """
 
@@ -32,8 +35,11 @@ class LeafFromInstanceElementLabels(Leaf):
 
         Notes
         -----
-            This function can be accessed by:
-            - LeafFromInstanceElementLabels
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            LeafFromInstanceElementLabels
 
         Parameters
         ----------

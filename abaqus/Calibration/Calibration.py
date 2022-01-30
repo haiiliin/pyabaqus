@@ -15,9 +15,12 @@ class Calibration:
 
     Notes
     -----
-        This object can be accessed by:
-        - import calibration
-        - mdb.models[name].calibrations[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import calibration
+        mdb.models[name].calibrations[name]
 
     """
 
@@ -32,8 +35,11 @@ class Calibration:
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].Calibration
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].Calibration
 
         Parameters
         ----------
@@ -51,8 +57,11 @@ class Calibration:
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].calibrations[name].Behavior
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].Calibration
 
         Parameters
         ----------
@@ -74,8 +83,11 @@ class Calibration:
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].calibrations[name].DataSet
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].Calibration
 
         Parameters
         ----------

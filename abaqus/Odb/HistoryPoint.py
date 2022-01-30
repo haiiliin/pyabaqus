@@ -67,9 +67,12 @@ class HistoryPoint:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].steps[name].historyRegions[name].point
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name].steps[name].historyRegions[name].point
 
     """
 
@@ -134,8 +137,11 @@ class HistoryPoint:
 
         Notes
         -----
-            This function can be accessed by:
-            - odbAccess.HistoryPoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            odbAccess.HistoryPoint
 
         Parameters
         ----------
@@ -155,8 +161,11 @@ class HistoryPoint:
 
         Notes
         -----
-            This function can be accessed by:
-            - odbAccess.HistoryPoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            odbAccess.HistoryPoint
 
         Parameters
         ----------
@@ -200,8 +209,11 @@ class HistoryPoint:
 
         Notes
         -----
-            This function can be accessed by:
-            - odbAccess.HistoryPoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            odbAccess.HistoryPoint
 
         Parameters
         ----------
@@ -220,8 +232,11 @@ class HistoryPoint:
 
         Notes
         -----
-            This function can be accessed by:
-            - odbAccess.HistoryPoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            odbAccess.HistoryPoint
 
         Parameters
         ----------
@@ -240,8 +255,11 @@ class HistoryPoint:
 
         Notes
         -----
-            This function can be accessed by:
-            - odbAccess.HistoryPoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            odbAccess.HistoryPoint
 
         Parameters
         ----------

@@ -16,9 +16,12 @@ class SymbolicConstant:
 
     Notes
     -----
-        This object can be accessed by:
-        - from symbolicConstants import *
-        - from abaqusConstants import *
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        from symbolicConstants import *
+        from abaqusConstants import *
 
     """
 
@@ -27,8 +30,11 @@ class SymbolicConstant:
 
         Notes
         -----
-            This function can be accessed by:
-            - SymbolicConstant
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            SymbolicConstant
 
         Parameters
         ----------

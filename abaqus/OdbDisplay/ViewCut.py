@@ -46,10 +46,13 @@ class ViewCut:
 
     Notes
     -----
-        This object can be accessed by:
-        - import visualization
-        - session.viewports[name].layers[name].odbDisplay.viewCuts[name]
-        - session.viewports[name].odbDisplay.viewCuts[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import visualization
+        session.viewports[name].layers[name].odbDisplay.viewCuts[name]
+        session.viewports[name].odbDisplay.viewCuts[name]
 
     """
 
@@ -107,9 +110,12 @@ class ViewCut:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.viewports[name].layers[name].odbDisplay.ViewCut
-            - session.viewports[name].odbDisplay.ViewCut
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.viewports[name].layers[name].odbDisplay.ViewCut
+            session.viewports[name].odbDisplay.ViewCut
 
         Parameters
         ----------

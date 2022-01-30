@@ -8,8 +8,11 @@ class RegisteredTuple(CommandRegister):
 
     Notes
     -----
-        This object can be accessed by:
-        - import customKernel
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import customKernel
 
     """
 
@@ -18,8 +21,11 @@ class RegisteredTuple(CommandRegister):
 
         Notes
         -----
-            This function can be accessed by:
-            - customKernel.RegisteredTuple
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            customKernel.RegisteredTuple
 
         Parameters
         ----------

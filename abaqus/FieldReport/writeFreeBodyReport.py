@@ -6,12 +6,6 @@ from ..Odb.Odb import Odb
 Access
 ------
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 
@@ -46,7 +40,5 @@ def writeFreeBodyRepor(fileName: str, append: Boolean, step: int = None, frame: 
     Returns
     -------
 
-    Exceptions
-    ----------
     """
     pass

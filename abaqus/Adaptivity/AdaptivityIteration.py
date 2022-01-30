@@ -15,9 +15,12 @@ class AdaptivityIteration:
 
     Notes
     -----
-        This object can be accessed by:
-        - import job
-        - mdb.adaptivityProcesses[name].iterations[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import job
+        mdb.adaptivityProcesses[name].iterations[i]
 
     """
 
@@ -31,8 +34,11 @@ class AdaptivityIteration:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.adaptivityProcesses[name].AdaptivityIteration
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.adaptivityProcesses[name].AdaptivityIteration
 
         Parameters
         ----------
@@ -61,8 +67,11 @@ class AdaptivityIteration:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.adaptivityProcesses[name].iterations[i].ruleResults[name].ErrorIndicatorResult
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.adaptivityProcesses[name].AdaptivityIteration
 
         Parameters
         ----------
@@ -91,8 +100,11 @@ class AdaptivityIteration:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.adaptivityProcesses[name].iterations[i].RuleResult
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.adaptivityProcesses[name].AdaptivityIteration
 
         Parameters
         ----------

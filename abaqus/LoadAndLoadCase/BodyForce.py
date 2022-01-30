@@ -25,9 +25,12 @@ class BodyForce(Load):
 
     Notes
     -----
-        This object can be accessed by:
-        - import load
-        - mdb.models[name].loads[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import load
+        mdb.models[name].loads[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -57,8 +60,11 @@ class BodyForce(Load):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].BodyForce
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].BodyForce
 
         Parameters
         ----------

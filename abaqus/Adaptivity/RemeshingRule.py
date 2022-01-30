@@ -13,9 +13,12 @@ class RemeshingRule:
 
     Notes
     -----
-        This object can be accessed by:
-        - import mesh
-        - mdb.models[name].remeshingRules[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import mesh
+        mdb.models[name].remeshingRules[name]
 
     """
 
@@ -35,8 +38,11 @@ class RemeshingRule:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].RemeshingRule
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].RemeshingRule
 
         Parameters
         ----------

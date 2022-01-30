@@ -15,8 +15,11 @@ class AssemblyModel(ModelBase):
 
     Notes
     -----
-        This object can be accessed by:
-        - import assembly
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import assembly
 
     """
 
@@ -26,8 +29,11 @@ class AssemblyModel(ModelBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].Instance
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].Instance
 
         Parameters
         ----------

@@ -20,8 +20,11 @@ class MeshPart(PartBase):
 
     Notes
     -----
-        This object can be accessed by:
-        - import mesh
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import mesh
 
     """
 
@@ -1007,8 +1010,11 @@ class MeshPart(PartBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Node
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Node
 
         Parameters
         ----------

@@ -46,9 +46,12 @@ class OdbPartBase:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].parts[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name].parts[name]
 
     """
 
@@ -91,8 +94,11 @@ class OdbPartBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].Part
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].Part
 
         Parameters
         ----------

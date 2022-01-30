@@ -16,11 +16,14 @@ class SpringDashpotToGround(SpringDashpot):
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].engineeringFeatures.springDashpots[name]
-        - import assembly
-        - mdb.models[name].rootAssembly.engineeringFeatures.springDashpots[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].engineeringFeatures.springDashpots[name]
+        import assembly
+        mdb.models[name].rootAssembly.engineeringFeatures.springDashpots[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -41,10 +44,13 @@ class SpringDashpotToGround(SpringDashpot):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.SpringDashpotToGround
-            - mdb.models[name].rootAssembly.engineeringFeatures\
-            - .SpringDashpotToGround
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].parts[name].engineeringFeatures.SpringDashpotToGround
+            mdb.models[name].rootAssembly.engineeringFeatures\
+            .SpringDashpotToGround
 
         Parameters
         ----------

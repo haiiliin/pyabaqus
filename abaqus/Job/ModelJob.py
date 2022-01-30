@@ -108,10 +108,13 @@ class ModelJob(Job):
 
     Notes
     -----
-        This object can be accessed by:
-        - import job
-        - mdb.adaptivityProcesses[name].job
-        - mdb.jobs[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import job
+        mdb.adaptivityProcesses[name].job
+        mdb.jobs[name]
 
     """
 
@@ -253,8 +256,11 @@ class ModelJob(Job):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.Job
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.Job
 
         Parameters
         ----------

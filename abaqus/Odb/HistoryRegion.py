@@ -18,9 +18,12 @@ class HistoryRegion:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].steps[name].historyRegions[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name].steps[name].historyRegions[name]
 
     """
 
@@ -36,8 +39,11 @@ class HistoryRegion:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].steps[name].HistoryRegion
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].steps[name].HistoryRegion
 
         Parameters
         ----------
@@ -115,8 +121,11 @@ class HistoryRegion:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].steps[name].historyRegions[name].HistoryOutput
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].steps[name].HistoryRegion
 
         Parameters
         ----------

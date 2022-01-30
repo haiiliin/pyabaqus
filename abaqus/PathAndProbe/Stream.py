@@ -3,9 +3,12 @@ class Stream:
 
     Notes
     -----
-        This object can be accessed by:
-        - import visualization
-        - session.streams[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import visualization
+        session.streams[name]
 
     """
 
@@ -14,8 +17,11 @@ class Stream:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.Stream
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.Stream
 
         Parameters
         ----------

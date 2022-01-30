@@ -20,9 +20,12 @@ class Behavior:
 
     Notes
     -----
-        This object can be accessed by:
-        - import calibration
-        - mdb.models[name].calibrations[name].behaviors[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import calibration
+        mdb.models[name].calibrations[name].behaviors[name]
 
     """
 
@@ -45,8 +48,11 @@ class Behavior:
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].calibrations[name].Behavior
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].calibrations[name].Behavior
 
         Parameters
         ----------

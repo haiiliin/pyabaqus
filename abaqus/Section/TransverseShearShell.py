@@ -5,11 +5,14 @@ class TransverseShearShell:
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].sections[name].transverseShear
-        - import odbSection
-        - session.odbs[name].sections[name].transverseShear
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].sections[name].transverseShear
+        import odbSection
+        session.odbs[name].sections[name].transverseShear
 
     Corresponding analysis keywords
     -------------------------------
@@ -22,9 +25,12 @@ class TransverseShearShell:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].sections[name].TransverseShearShell
-            - session.odbs[name].sections[name].TransverseShearShell
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].sections[name].TransverseShearShell
+            session.odbs[name].sections[name].TransverseShearShell
 
         Parameters
         ----------

@@ -16,8 +16,11 @@ class JournalOptions:
 
     Notes
     -----
-        This object can be accessed by:
-        - session.journalOptions
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        session.journalOptions
 
     """
     # Format of the number
@@ -58,10 +61,13 @@ class JournalOptions:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.defaultFieldReportOptions.NumberFormat
-            - session.fieldReportOptions.NumberFormat
-            - session.journalOptions.NumberFormat
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.defaultFieldReportOptions.NumberFormat
+            session.fieldReportOptions.NumberFormat
+            session.journalOptions.NumberFormat
 
         Parameters
         ----------

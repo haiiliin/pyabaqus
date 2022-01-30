@@ -8,11 +8,14 @@ class TransverseShearBeam:
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].sections[name].beamTransverseShear
-        - import odbSection
-        - session.odbs[name].sections[name].beamTransverseShear
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].sections[name].beamTransverseShear
+        import odbSection
+        session.odbs[name].sections[name].beamTransverseShear
 
     Corresponding analysis keywords
     -------------------------------
@@ -26,9 +29,12 @@ class TransverseShearBeam:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].sections[name].TransverseShearBeam
-            - session.odbs[name].sections[name].TransverseShearBeam
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].sections[name].TransverseShearBeam
+            session.odbs[name].sections[name].TransverseShearBeam
 
         Parameters
         ----------

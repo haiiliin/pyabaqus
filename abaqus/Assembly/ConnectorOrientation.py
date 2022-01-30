@@ -9,11 +9,14 @@ class ConnectorOrientation:
 
     Notes
     -----
-        This object can be accessed by:
-        - import assembly
-        - mdb.models[name].rootAssembly.connectorOrientations[i]
-        - import odbAccess
-        - session.odbs[name].rootAssembly.connectorOrientations[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import assembly
+        mdb.models[name].rootAssembly.connectorOrientations[i]
+        import odbAccess
+        session.odbs[name].rootAssembly.connectorOrientations[i]
 
     """
     region: Set
@@ -32,9 +35,12 @@ class ConnectorOrientation:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.ConnectorOrientation
-            - session.odbs[name].rootAssembly.ConnectorOrientation
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].rootAssembly.ConnectorOrientation
+            session.odbs[name].rootAssembly.ConnectorOrientation
 
         Parameters
         ----------

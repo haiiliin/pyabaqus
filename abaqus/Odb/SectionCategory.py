@@ -17,26 +17,29 @@ class SectionCategory:
 
     Notes
     -----
-        This object can be accessed by:
-        - import
-        - odbAccess
-        - session.odbs[name].parts[name].elements[i].sectionCategory
-        - session.odbs[name].parts[name].elementSets[name].elements[i].sectionCategory
-        - session.odbs[name].parts[name].nodeSets[name].elements[i].sectionCategory
-        - session.odbs[name].parts[name].surfaces[name].elements[i].sectionCategory
-        - session.odbs[name].rootAssembly.elements[i].sectionCategory
-        - session.odbs[name].rootAssembly.elementSets[name].elements[i].sectionCategory
-        - session.odbs[name].rootAssembly.instances[name].elements[i].sectionCategory
-        - session.odbs[name].rootAssembly.instances[name].elementSets[name].elements[i].sectionCategory
-        - session.odbs[name].rootAssembly.instances[name].nodeSets[name].elements[i].sectionCategory
-        - session.odbs[name].rootAssembly.instances[name].surfaces[name].elements[i].sectionCategory
-        - session.odbs[name].rootAssembly.nodeSets[name].elements[i].sectionCategory
-        - session.odbs[name].rootAssembly.surfaces[name].elements[i].sectionCategory
-        - session.odbs[name].sectionCategories[name]
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.elements[i].sectionCategory
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.elementSets[name].elements[i].sectionCategory
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.nodeSets[name].elements[i].sectionCategory
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.surfaces[name].elements[i].sectionCategory
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import
+        odbAccess
+        session.odbs[name].parts[name].elements[i].sectionCategory
+        session.odbs[name].parts[name].elementSets[name].elements[i].sectionCategory
+        session.odbs[name].parts[name].nodeSets[name].elements[i].sectionCategory
+        session.odbs[name].parts[name].surfaces[name].elements[i].sectionCategory
+        session.odbs[name].rootAssembly.elements[i].sectionCategory
+        session.odbs[name].rootAssembly.elementSets[name].elements[i].sectionCategory
+        session.odbs[name].rootAssembly.instances[name].elements[i].sectionCategory
+        session.odbs[name].rootAssembly.instances[name].elementSets[name].elements[i].sectionCategory
+        session.odbs[name].rootAssembly.instances[name].nodeSets[name].elements[i].sectionCategory
+        session.odbs[name].rootAssembly.instances[name].surfaces[name].elements[i].sectionCategory
+        session.odbs[name].rootAssembly.nodeSets[name].elements[i].sectionCategory
+        session.odbs[name].rootAssembly.surfaces[name].elements[i].sectionCategory
+        session.odbs[name].sectionCategories[name]
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.elements[i].sectionCategory
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.elementSets[name].elements[i].sectionCategory
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.nodeSets[name].elements[i].sectionCategory
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.surfaces[name].elements[i].sectionCategory
 
     """
 
@@ -48,8 +51,11 @@ class SectionCategory:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[*name*].SectionCategory
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[*name*].SectionCategory
 
         Parameters
         ----------
@@ -69,8 +75,11 @@ class SectionCategory:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[*name*].sectionCategories[*name*].SectionPoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[*name*].SectionCategory
 
         Parameters
         ----------

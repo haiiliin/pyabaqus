@@ -25,8 +25,11 @@ class Layer:
 
     Notes
     -----
-        This object can be accessed by:
-        - session.viewports[name].layers[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        session.viewports[name].layers[name]
 
     """
 
@@ -52,8 +55,11 @@ class Layer:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.viewports[name].Layer
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.viewports[name].Layer
 
         Parameters
         ----------

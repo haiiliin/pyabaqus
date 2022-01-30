@@ -33,9 +33,12 @@ class EulerianBC(BoundaryCondition):
 
     Notes
     -----
-        This object can be accessed by:
-        - import load
-        - mdb.models[name].boundaryConditions[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import load
+        mdb.models[name].boundaryConditions[name]
 
     """
 
@@ -73,8 +76,11 @@ class EulerianBC(BoundaryCondition):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].EulerianBC
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EulerianBC
 
         Parameters
         ----------

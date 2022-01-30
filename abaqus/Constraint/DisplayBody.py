@@ -19,9 +19,12 @@ class DisplayBody(Constraint):
 
     Notes
     -----
-        This object can be accessed by:
-        - import interaction
-        - mdb.models[name].constraints[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import interaction
+        mdb.models[name].constraints[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -38,8 +41,11 @@ class DisplayBody(Constraint):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].DisplayBody
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].DisplayBody
 
         Parameters
         ----------

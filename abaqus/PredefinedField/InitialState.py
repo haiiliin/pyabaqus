@@ -9,9 +9,12 @@ class InitialState(PredefinedField):
 
     Notes
     -----
-        This object can be accessed by:
-        - import load
-        - mdb.models[name].predefinedFields[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import load
+        mdb.models[name].predefinedFields[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -26,8 +29,11 @@ class InitialState(PredefinedField):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].InitialState
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].InitialState
 
         Parameters
         ----------

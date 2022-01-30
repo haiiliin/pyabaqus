@@ -3,12 +3,6 @@
 Access
 ------
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 
@@ -36,9 +30,6 @@ def addImportCallback(moduleName: str, callback: str, userData: str = ''):
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -63,8 +54,5 @@ def removeImportCallback(callback: str, userData: str):
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass

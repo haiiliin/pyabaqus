@@ -18,8 +18,11 @@ class LeafFromMeshNodeLabels(Leaf):
 
     Notes
     -----
-        This object can be accessed by:
-        - import displayGroupMdbToolset
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import displayGroupMdbToolset
 
     """
 
@@ -33,8 +36,11 @@ class LeafFromMeshNodeLabels(Leaf):
 
         Notes
         -----
-            This function can be accessed by:
-            - LeafFromMeshNodeLabels
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            LeafFromMeshNodeLabels
 
         Parameters
         ----------

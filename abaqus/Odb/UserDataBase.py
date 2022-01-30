@@ -44,9 +44,12 @@ class UserDataBase:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].userData
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name].userData
 
     """
 
@@ -102,8 +105,11 @@ class UserDataBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].userData.XYData
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].userData.XYData
 
         Parameters
         ----------

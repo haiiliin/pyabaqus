@@ -18,8 +18,11 @@ class ParameterTable:
 
     Notes
     -----
-        This object can be accessed by:
-        - mdb.models[name].tableCollections[name].parameterTables[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name].tableCollections[name].parameterTables[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -40,8 +43,11 @@ class ParameterTable:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].tableCollections[name].ParameterTable
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].tableCollections[name].ParameterTable
 
         Parameters
         ----------
@@ -62,8 +68,11 @@ class ParameterTable:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].tableCollections[name].parameterTables[name].Column
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].tableCollections[name].ParameterTable
 
         Parameters
         ----------

@@ -49,8 +49,11 @@ class Region:
 
     Notes
     -----
-        This object can be accessed by:
-        - import regionToolset
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import regionToolset
 
     """
 
@@ -75,8 +78,11 @@ class Region:
 
         Notes
         -----
-            This function can be accessed by:
-            - Region
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            Region
 
         Parameters
         ----------
@@ -137,8 +143,11 @@ class Region:
 
         Notes
         -----
-            This function can be accessed by:
-            - Region
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            Region
 
         Parameters
         ----------

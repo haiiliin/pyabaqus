@@ -7,12 +7,6 @@ from ..Odb.Odb import Odb
 Access
 ------
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 
@@ -90,8 +84,5 @@ def writeFieldRepor(filename: str, append: Boolean, sortItem: str, odb: Odb, ste
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass

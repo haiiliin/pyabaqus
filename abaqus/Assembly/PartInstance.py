@@ -103,10 +103,13 @@ class PartInstance:
 
     Notes
     -----
-        This object can be accessed by:
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name]
-        - mdb.models[name].rootAssembly.instances[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import assembly
+        mdb.models[name].rootAssembly.allInstances[name]
+        mdb.models[name].rootAssembly.instances[name]
 
     """
 
@@ -216,8 +219,11 @@ class PartInstance:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.Instance
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].rootAssembly.Instance
 
         Parameters
         ----------
@@ -261,8 +267,11 @@ class PartInstance:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.InstanceFromBooleanCut
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].rootAssembly.Instance
 
         Parameters
         ----------
@@ -293,8 +302,11 @@ class PartInstance:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.InstanceFromBooleanMerge
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].rootAssembly.Instance
 
         Parameters
         ----------
@@ -340,8 +352,11 @@ class PartInstance:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.LinearInstancePattern
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].rootAssembly.Instance
 
         Parameters
         ----------
@@ -379,8 +394,11 @@ class PartInstance:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.RadialInstancePattern
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].rootAssembly.Instance
 
         Parameters
         ----------

@@ -6,12 +6,15 @@ class MeshFaceArray(list[MeshFace]):
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].elementFaces
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].elementFaces
-        - mdb.models[name].rootAssembly.instances[name].elementFaces
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].elementFaces
+        import assembly
+        mdb.models[name].rootAssembly.allInstances[name].elementFaces
+        mdb.models[name].rootAssembly.instances[name].elementFaces
 
     """
 
@@ -20,8 +23,11 @@ class MeshFaceArray(list[MeshFace]):
 
         Notes
         -----
-            This function can be accessed by:
-            - mesh.MeshFaceArray
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mesh.MeshFaceArray
 
         Parameters
         ----------

@@ -31,20 +31,23 @@ class OdbSet:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].parts[name].elementSets[name]
-        - session.odbs[name].parts[name].nodeSets[name]
-        - session.odbs[name].parts[name].surfaces[name]
-        - session.odbs[name].rootAssembly.elementSets[name]
-        - session.odbs[name].rootAssembly.instances[name].elementSets[name]
-        - session.odbs[name].rootAssembly.instances[name].nodeSets[name]
-        - session.odbs[name].rootAssembly.instances[name].surfaces[name]
-        - session.odbs[name].rootAssembly.nodeSets[name]
-        - session.odbs[name].rootAssembly.surfaces[name]
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.elementSets[name]
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.nodeSets[name]
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.surfaces[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name].parts[name].elementSets[name]
+        session.odbs[name].parts[name].nodeSets[name]
+        session.odbs[name].parts[name].surfaces[name]
+        session.odbs[name].rootAssembly.elementSets[name]
+        session.odbs[name].rootAssembly.instances[name].elementSets[name]
+        session.odbs[name].rootAssembly.instances[name].nodeSets[name]
+        session.odbs[name].rootAssembly.instances[name].surfaces[name]
+        session.odbs[name].rootAssembly.nodeSets[name]
+        session.odbs[name].rootAssembly.surfaces[name]
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.elementSets[name]
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.nodeSets[name]
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.surfaces[name]
 
     """
 
@@ -80,10 +83,13 @@ class OdbSet:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[*name*].parts[*name*].NodeSet
-            - session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
-            - session.odbs[*name*].rootAssembly.NodeSet
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[*name*].parts[*name*].NodeSet
+            session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
+            session.odbs[*name*].rootAssembly.NodeSet
 
         Parameters
         ----------
@@ -104,10 +110,13 @@ class OdbSet:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[*name*].parts[*name*].NodeSetFromNodeLabels
-            - session.odbs[*name*].rootAssembly.instances[*name*].NodeSetFromNodeLabels
-            - session.odbs[*name*].rootAssembly.NodeSetFromNodeLabels
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[*name*].parts[*name*].NodeSet
+            session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
+            session.odbs[*name*].rootAssembly.NodeSet
 
         Parameters
         ----------
@@ -131,9 +140,13 @@ class OdbSet:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[*name*].parts[*name*].ElementSet
-            - session.odbs[*name*].rootAssembly.instances[*name*].ElementSet
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[*name*].parts[*name*].NodeSet
+            session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
+            session.odbs[*name*].rootAssembly.NodeSet
 
         Parameters
         ----------
@@ -155,10 +168,13 @@ class OdbSet:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[*name*].parts[*name*].ElementSetFromElementLabels
-            - session.odbs[*name*].rootAssembly.instances[*name*].ElementSetFromElementLabels
-            - session.odbs[*name*].rootAssembly.ElementSetFromElementLabels
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[*name*].parts[*name*].NodeSet
+            session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
+            session.odbs[*name*].rootAssembly.NodeSet
 
         Parameters
         ----------
@@ -180,10 +196,13 @@ class OdbSet:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[*name*].parts[*name*].MeshSurface
-            - session.odbs[*name*].rootAssembly.instances[*name*].MeshSurface
-            - session.odbs[*name*].rootAssembly.MeshSurface
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[*name*].parts[*name*].NodeSet
+            session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
+            session.odbs[*name*].rootAssembly.NodeSet
 
         Parameters
         ----------
@@ -219,10 +238,13 @@ class OdbSet:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[*name*].parts[*name*].MeshSurfaceFromElsets
-            - session.odbs[*name*].rootAssembly.instances[*name*].MeshSurfaceFromElsets
-            - session.odbs[*name*].rootAssembly.MeshSurfaceFromElsets
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[*name*].parts[*name*].NodeSet
+            session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
+            session.odbs[*name*].rootAssembly.NodeSet
 
         Parameters
         ----------
@@ -245,10 +267,13 @@ class OdbSet:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[*name*].parts[*name*].MeshSurfaceFromLabels
-            - session.odbs[*name*].rootAssembly.instances[*name*].MeshSurfaceFromLabels
-            - session.odbs[*name*].rootAssembly.MeshSurfaceFromLabels
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[*name*].parts[*name*].NodeSet
+            session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
+            session.odbs[*name*].rootAssembly.NodeSet
 
         Parameters
         ----------

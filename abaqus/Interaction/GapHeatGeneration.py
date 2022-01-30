@@ -15,9 +15,12 @@ class GapHeatGeneration:
 
     Notes
     -----
-        This object can be accessed by:
-        - import interaction
-        - mdb.models[name].interactionProperties[name].heatGeneration
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import interaction
+        mdb.models[name].interactionProperties[name].heatGeneration
 
     Corresponding analysis keywords
     -------------------------------
@@ -38,8 +41,11 @@ class GapHeatGeneration:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].HeatGeneration
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].interactionProperties[name].HeatGeneration
 
         Parameters
         ----------

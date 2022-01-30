@@ -9,11 +9,14 @@ class RepositorySupport(CommandRegister):
 
     Notes
     -----
-        This object can be accessed by:
-        - import customKernel
-        - mdb.customData
-        - session.customData
-        - session.odbs[name].customData
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import customKernel
+        mdb.customData
+        session.customData
+        session.odbs[name].customData
 
     """
 
@@ -22,8 +25,11 @@ class RepositorySupport(CommandRegister):
 
         Notes
         -----
-            This function can be accessed by:
-            - customKernel.RepositorySupport
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            customKernel.RepositorySupport
 
         Parameters
         ----------

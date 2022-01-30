@@ -17,8 +17,11 @@ class LeafFromGeometry(Leaf):
 
     Notes
     -----
-        This object can be accessed by:
-        - import displayGroupMdbToolset
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import displayGroupMdbToolset
 
     """
 
@@ -34,8 +37,11 @@ class LeafFromGeometry(Leaf):
 
         Notes
         -----
-            This function can be accessed by:
-            - LeafFromGeometry
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            LeafFromGeometry
 
         Parameters
         ----------

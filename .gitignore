@@ -126,3 +126,4 @@ dmypy.json
 /tools/
 /abaqus/attributes.py
 /docs/source/_build/
+/abaqus/code_blokcs.py

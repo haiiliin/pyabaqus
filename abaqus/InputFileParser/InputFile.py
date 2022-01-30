@@ -20,8 +20,11 @@ class InputFile:
 
     Notes
     -----
-        This object can be accessed by:
-        - import inpParser
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import inpParser
 
     """
 
@@ -44,8 +47,11 @@ class InputFile:
 
         Notes
         -----
-            This function can be accessed by:
-            - inpParser.InputFile
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            inpParser.InputFile
 
         Parameters
         ----------

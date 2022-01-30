@@ -15,12 +15,6 @@ Access
 ------
     - import redentABQ
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 
@@ -47,8 +41,5 @@ def indentFile(path: str, indent: str = '', backup: Boolean = False, runTest: Bo
     -------
         A Boolean. True, if the indentation is successful; otherwise, False. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass

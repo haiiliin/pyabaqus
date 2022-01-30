@@ -14,8 +14,11 @@ class Feature(BaseFeature):
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
 
     """
 
@@ -28,8 +31,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].AutoRepair
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -47,8 +53,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].AddCells
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -73,8 +82,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].AnalyticRigidSurf2DPlanar
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -94,8 +106,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].AnalyticRigidSurfExtrude
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -117,8 +132,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].AnalyticRigidSurfRevolve
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -140,8 +158,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].AssignMidsurfaceRegion
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -163,8 +184,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].BaseSolidExtrude
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -202,8 +226,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].BaseSolidRevolve
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -252,8 +279,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].BaseSolidSweep
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -275,8 +305,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].BaseShell
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -297,8 +330,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].BaseShellExtrude
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -340,8 +376,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].BaseShellRevolve
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -387,8 +426,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].BaseShellSweep
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -410,8 +452,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].BaseWire
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -431,8 +476,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].BlendFaces
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -466,8 +514,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Chamfer
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -488,8 +539,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Mirror
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -514,8 +568,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].ConvertToAnalytical
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -532,8 +589,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].ConvertToPrecise
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -556,8 +616,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].CoverEdges
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -589,8 +652,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Cut
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -627,8 +693,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].CutExtrude
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -688,8 +757,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].CutLoft
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -752,8 +824,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].CutRevolve
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -814,8 +889,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].CutSweep
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -887,8 +965,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].ExtendFaces
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -926,8 +1007,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].FaceFromElementFaces
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -966,8 +1050,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].HoleBlindFromEdges
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1004,8 +1091,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].HoleFromEdges
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1037,8 +1127,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].HoleThruAllFromEdges
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1071,8 +1164,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].MergeEdges
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1097,8 +1193,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].OffsetFaces
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1139,8 +1238,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].RemoveCells
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1163,8 +1265,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].RemoveFaces
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1187,8 +1292,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].RemoveFacesAndStitch
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1209,8 +1317,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].RemoveRedundantEntities
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1241,8 +1352,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].RepairFaceNormals
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1263,8 +1377,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].RepairInvalidEdges
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1285,8 +1402,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].RepairSliver
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1316,8 +1436,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].RepairSmallEdges
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1341,8 +1464,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].RepairSmallFaces
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1365,8 +1491,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].ReplaceFaces
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1389,8 +1518,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Round
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1420,8 +1552,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Shell
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1457,8 +1592,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].ShellExtrude
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1522,8 +1660,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].ShellLoft
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1601,8 +1742,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].ShellRevolve
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1666,8 +1810,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].ShellSweep
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1744,8 +1891,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].SolidExtrude
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1809,8 +1959,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].SolidLoft
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1886,8 +2039,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].SolidRevolve
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -1951,8 +2107,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].SolidSweep
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -2025,8 +2184,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Stitch
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -2053,8 +2215,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Wire
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -2086,8 +2251,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].WireSpline
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -2123,8 +2291,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].WirePolyLine
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------
@@ -2157,8 +2328,11 @@ class Feature(BaseFeature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].WireFromEdge
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AutoRepair
 
         Parameters
         ----------

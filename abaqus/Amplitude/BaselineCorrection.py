@@ -4,11 +4,14 @@ class BaselineCorrection:
 
     Notes
     -----
-        This object can be accessed by:
-        - import amplitude
-        - mdb.models[name].amplitudes[name].baselineCorrection
-        - import odbAmplitude
-        - session.odbs[name].amplitudes[name].baselineCorrection
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import amplitude
+        mdb.models[name].amplitudes[name].baselineCorrection
+        import odbAmplitude
+        session.odbs[name].amplitudes[name].baselineCorrection
 
     Corresponding analysis keywords
     -------------------------------
@@ -21,9 +24,12 @@ class BaselineCorrection:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].amplitudes[name].BaselineCorrection
-            - session.odbs[name].amplitudes[name].BaselineCorrection
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].amplitudes[name].BaselineCorrection
+            session.odbs[name].amplitudes[name].BaselineCorrection
 
         Parameters
         ----------

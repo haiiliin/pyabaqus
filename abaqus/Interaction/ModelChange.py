@@ -10,9 +10,12 @@ class ModelChange(Interaction):
 
     Notes
     -----
-        This object can be accessed by:
-        - import interaction
-        - mdb.models[name].interactions[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import interaction
+        mdb.models[name].interactions[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -27,8 +30,11 @@ class ModelChange(Interaction):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].ModelChange
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ModelChange
 
         Parameters
         ----------

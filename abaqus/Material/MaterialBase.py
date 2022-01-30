@@ -216,11 +216,14 @@ class MaterialBase:
 
     Notes
     -----
-        This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name]
-        - import odbMaterial
-        - session.odbs[name].materials[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name]
+        import odbMaterial
+        session.odbs[name].materials[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -446,9 +449,12 @@ class MaterialBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].Material
-            - session.odbs[name].Material
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Material
+            session.odbs[name].Material
 
         Parameters
         ----------
@@ -473,8 +479,12 @@ class MaterialBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].materialsFromOdb
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Material
+            session.odbs[name].Material
 
         Parameters
         ----------

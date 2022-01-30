@@ -9,9 +9,12 @@ class ShapePointSymmetry(GeometricRestriction):
 
     Notes
     -----
-        This object can be accessed by:
-        - import optimization
-        - mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import optimization
+        mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
 
@@ -23,8 +26,11 @@ class ShapePointSymmetry(GeometricRestriction):
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].ShapePointSymmetry
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].optimizationTasks[name].ShapePointSymmetry
 
         Parameters
         ----------

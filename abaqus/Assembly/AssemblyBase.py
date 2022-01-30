@@ -105,9 +105,12 @@ class AssemblyBase(Feature):
 
     Notes
     -----
-        This object can be accessed by:
-        - import assembly
-        - mdb.models[name].rootAssembly
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import assembly
+        mdb.models[name].rootAssembly
 
     """
 
@@ -214,8 +217,11 @@ class AssemblyBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.Instance
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].rootAssembly.Instance
 
         Parameters
         ----------
@@ -243,8 +249,11 @@ class AssemblyBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.Instance
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].rootAssembly.Instance
 
         Parameters
         ----------
@@ -268,8 +277,11 @@ class AssemblyBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.Instance
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].rootAssembly.Instance
 
         Parameters
         ----------

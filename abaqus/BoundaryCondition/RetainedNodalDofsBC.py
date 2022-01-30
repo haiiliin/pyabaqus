@@ -24,9 +24,12 @@ class RetainedNodalDofsBC(BoundaryCondition):
 
     Notes
     -----
-        This object can be accessed by:
-        - import load
-        - mdb.models[name].boundaryConditions[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import load
+        mdb.models[name].boundaryConditions[name]
 
     """
 
@@ -51,8 +54,11 @@ class RetainedNodalDofsBC(BoundaryCondition):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].RetainedNodalDofsBC
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].RetainedNodalDofsBC
 
         Parameters
         ----------

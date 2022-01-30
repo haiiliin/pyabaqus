@@ -8,8 +8,11 @@ class ParameterColumn:
 
     Notes
     -----
-        This object can be accessed by:
-        - mdb.models[name].tableCollections[name].parameterTables[name].columns[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name].tableCollections[name].parameterTables[name].columns[i]
 
     Corresponding analysis keywords
     -------------------------------
@@ -26,8 +29,11 @@ class ParameterColumn:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].tableCollections[name].parameterTables[name].Column
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].tableCollections[name].parameterTables[name].Column
 
         Parameters
         ----------

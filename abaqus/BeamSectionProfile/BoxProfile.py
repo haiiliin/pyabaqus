@@ -9,11 +9,14 @@ class BoxProfile(Profile):
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].profiles[name]
-        - import odbSection
-        - session.odbs[name].profiles[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].profiles[name]
+        import odbSection
+        session.odbs[name].profiles[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -27,9 +30,12 @@ class BoxProfile(Profile):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].BoxProfile
-            - session.odbs[name].BoxProfile
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].BoxProfile
+            session.odbs[name].BoxProfile
 
         Parameters
         ----------

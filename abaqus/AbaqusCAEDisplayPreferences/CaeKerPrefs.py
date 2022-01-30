@@ -12,9 +12,12 @@ class CaeKerPrefs:
 
     Notes
     -----
-        This object can be accessed by:
-        - import caePrefsAccess
-        - caePrefsAccess.openSessionOptions(...)
+    This object can be accessed by:
+        
+    .. code-block:: python
+
+        import caePrefsAccess
+        caePrefsAccess.openSessionOptions(...)
 
     """
 

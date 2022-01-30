@@ -58,10 +58,13 @@ class OdbInstanceBase:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].rootAssembly.instances[name]
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name].rootAssembly.instances[name]
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance
 
     """
 
@@ -121,8 +124,11 @@ class OdbInstanceBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[*name*].rootAssembly.Instance
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[*name*].rootAssembly.Instance
 
         Parameters
         ----------

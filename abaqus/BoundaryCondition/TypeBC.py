@@ -28,9 +28,12 @@ class TypeBC(BoundaryCondition):
 
     Notes
     -----
-        This object can be accessed by:
-        - import load
-        - mdb.models[name].boundaryConditions[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import load
+        mdb.models[name].boundaryConditions[name]
 
     """
 
@@ -60,8 +63,11 @@ class TypeBC(BoundaryCondition):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].EncastreBC
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EncastreBC
 
         Parameters
         ----------
@@ -92,8 +98,11 @@ class TypeBC(BoundaryCondition):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].PinnedBC
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EncastreBC
 
         Parameters
         ----------
@@ -124,8 +133,11 @@ class TypeBC(BoundaryCondition):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].XsymmBC
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EncastreBC
 
         Parameters
         ----------
@@ -156,8 +168,11 @@ class TypeBC(BoundaryCondition):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].YsymmBC
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EncastreBC
 
         Parameters
         ----------
@@ -188,8 +203,11 @@ class TypeBC(BoundaryCondition):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].ZsymmBC
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EncastreBC
 
         Parameters
         ----------
@@ -220,8 +238,11 @@ class TypeBC(BoundaryCondition):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].XasymmBC
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EncastreBC
 
         Parameters
         ----------
@@ -252,8 +273,11 @@ class TypeBC(BoundaryCondition):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].YasymmBC
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EncastreBC
 
         Parameters
         ----------
@@ -284,8 +308,11 @@ class TypeBC(BoundaryCondition):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].ZasymmBC
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EncastreBC
 
         Parameters
         ----------

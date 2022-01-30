@@ -33,21 +33,24 @@ class XYData:
 
     Notes
     -----
-        This object can be accessed by:
-        - import visualization
-        - session.charts[name].axes1[i].axisData.curves[i].data
-        - session.charts[name].axes2[i].axisData.curves[i].data
-        - session.charts[name].curves[name].data
-        - session.curves[name].data
-        - session.defaultChartOptions.defaultAxis1Options.axisData.curves[i].data
-        - session.defaultChartOptions.defaultAxis2Options.axisData.curves[i].data
-        - import odbAccess
-        - session.odbs[name].userData.xyDataObjects[name]
-        - session.xyDataObjects[name]
-        - session.xyPlots[name].charts[name].axes1[i].axisData.curves[i].data
-        - session.xyPlots[name].charts[name].axes2[i].axisData.curves[i].data
-        - session.xyPlots[name].charts[name].curves[name].data
-        - session.xyPlots[name].curves[name].data
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import visualization
+        session.charts[name].axes1[i].axisData.curves[i].data
+        session.charts[name].axes2[i].axisData.curves[i].data
+        session.charts[name].curves[name].data
+        session.curves[name].data
+        session.defaultChartOptions.defaultAxis1Options.axisData.curves[i].data
+        session.defaultChartOptions.defaultAxis2Options.axisData.curves[i].data
+        import odbAccess
+        session.odbs[name].userData.xyDataObjects[name]
+        session.xyDataObjects[name]
+        session.xyPlots[name].charts[name].axes1[i].axisData.curves[i].data
+        session.xyPlots[name].charts[name].axes2[i].axisData.curves[i].data
+        session.xyPlots[name].charts[name].curves[name].data
+        session.xyPlots[name].curves[name].data
 
     """
 
@@ -70,9 +73,12 @@ class XYData:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.XYData
-            - xyPlot.XYData
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.XYData
+            xyPlot.XYData
 
         Parameters
         ----------
@@ -120,10 +126,12 @@ class XYData:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[*name*].userData.XYData
-            - session.XYData
-            - xyPlot.XYData
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.XYData
+            xyPlot.XYData
 
         Parameters
         ----------
@@ -149,9 +157,12 @@ class XYData:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.XYDataFromFile
-            - xyPlot.XYDataFromFile
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.XYData
+            xyPlot.XYData
 
         Parameters
         ----------
@@ -209,9 +220,12 @@ class XYData:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.XYDataFromHistory
-            - xyPlot.XYDataFromHistory
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.XYData
+            xyPlot.XYData
 
         Parameters
         ----------
@@ -267,9 +281,12 @@ class XYData:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.xyDataListFromField
-            - xyPlot.xyDataListFromField
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.XYData
+            xyPlot.XYData
 
         Parameters
         ----------
@@ -349,9 +366,12 @@ class XYData:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.XYDataFromFreeBody
-            - xyPlot.XYDataFromFreeBody
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.XYData
+            xyPlot.XYData
 
         Parameters
         ----------
@@ -391,8 +411,12 @@ class XYData:
 
         Notes
         -----
-            This function can be accessed by:
-            - xyPlot.XYDataFromShellThickness
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.XYData
+            xyPlot.XYData
 
         Parameters
         ----------
@@ -466,9 +490,12 @@ class XYData:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.XYDataFromPath
-            - xyPlot.XYDataFromPath
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.XYData
+            xyPlot.XYData
 
         Parameters
         ----------

@@ -20,9 +20,12 @@ class FieldOutputRequest:
 
     Notes
     -----
-        This object can be accessed by:
-        - import step
-        - mdb.models[name].fieldOutputRequests[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import step
+        mdb.models[name].fieldOutputRequests[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -65,8 +68,11 @@ class FieldOutputRequest:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].FieldOutputRequest
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].FieldOutputRequest
 
         Parameters
         ----------

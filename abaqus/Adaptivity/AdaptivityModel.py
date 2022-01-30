@@ -18,8 +18,11 @@ class AdaptivityModel(ModelBase):
 
     Notes
     -----
-        This object can be accessed by:
-        - import mesh
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import mesh
 
     """
 
@@ -48,8 +51,11 @@ class AdaptivityModel(ModelBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].AdaptiveMeshConstraint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].AdaptiveMeshConstraint
 
         Parameters
         ----------
@@ -83,8 +89,11 @@ class AdaptivityModel(ModelBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].AdaptiveMeshControl
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].AdaptiveMeshConstraint
 
         Parameters
         ----------
@@ -159,8 +168,11 @@ class AdaptivityModel(ModelBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].DisplacementAdaptiveMeshConstraint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].AdaptiveMeshConstraint
 
         Parameters
         ----------
@@ -229,8 +241,11 @@ class AdaptivityModel(ModelBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].RemeshingRule
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].AdaptiveMeshConstraint
 
         Parameters
         ----------
@@ -325,8 +340,11 @@ class AdaptivityModel(ModelBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].VelocityAdaptiveMeshConstraint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].AdaptiveMeshConstraint
 
         Parameters
         ----------

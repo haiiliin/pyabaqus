@@ -127,9 +127,12 @@ class SteadyStateSubspaceStep(AnalysisStep):
 
     Notes
     -----
-        This object can be accessed by:
-        - import step
-        - mdb.models[name].steps[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import step
+        mdb.models[name].steps[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -280,8 +283,11 @@ class SteadyStateSubspaceStep(AnalysisStep):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].SteadyStateSubspaceStep
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].SteadyStateSubspaceStep
 
         Parameters
         ----------

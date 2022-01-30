@@ -17,33 +17,36 @@ class MeshNode:
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].allInternalSets[name].nodes[i]
-        - mdb.models[name].parts[name].allInternalSurfaces[name].nodes[i]
-        - mdb.models[name].parts[name].allSets[name].nodes[i]
-        - mdb.models[name].parts[name].allSurfaces[name].nodes[i]
-        - mdb.models[name].parts[name].nodes[i]
-        - mdb.models[name].parts[name].retainedNodes[i]
-        - mdb.models[name].parts[name].sets[name].nodes[i]
-        - mdb.models[name].parts[name].surfaces[name].nodes[i]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].nodes[i]
-        - mdb.models[name].rootAssembly.allInstances[name].sets[name].nodes[i]
-        - mdb.models[name].rootAssembly.allInstances[name].surfaces[name].nodes[i]
-        - mdb.models[name].rootAssembly.allInternalSets[name].nodes[i]
-        - mdb.models[name].rootAssembly.allInternalSurfaces[name].nodes[i]
-        - mdb.models[name].rootAssembly.allSets[name].nodes[i]
-        - mdb.models[name].rootAssembly.allSurfaces[name].nodes[i]
-        - mdb.models[name].rootAssembly.instances[name].nodes[i]
-        - mdb.models[name].rootAssembly.instances[name].sets[name].nodes[i]
-        - mdb.models[name].rootAssembly.instances[name].surfaces[name].nodes[i]
-        - mdb.models[name].rootAssembly.modelInstances[i].nodes[i]
-        - mdb.models[name].rootAssembly.modelInstances[i].sets[name].nodes[i]
-        - mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].nodes[i]
-        - mdb.models[name].rootAssembly.nodes[i]
-        - mdb.models[name].rootAssembly.sets[name].nodes[i]
-        - mdb.models[name].rootAssembly.surfaces[name].nodes[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].allInternalSets[name].nodes[i]
+        mdb.models[name].parts[name].allInternalSurfaces[name].nodes[i]
+        mdb.models[name].parts[name].allSets[name].nodes[i]
+        mdb.models[name].parts[name].allSurfaces[name].nodes[i]
+        mdb.models[name].parts[name].nodes[i]
+        mdb.models[name].parts[name].retainedNodes[i]
+        mdb.models[name].parts[name].sets[name].nodes[i]
+        mdb.models[name].parts[name].surfaces[name].nodes[i]
+        import assembly
+        mdb.models[name].rootAssembly.allInstances[name].nodes[i]
+        mdb.models[name].rootAssembly.allInstances[name].sets[name].nodes[i]
+        mdb.models[name].rootAssembly.allInstances[name].surfaces[name].nodes[i]
+        mdb.models[name].rootAssembly.allInternalSets[name].nodes[i]
+        mdb.models[name].rootAssembly.allInternalSurfaces[name].nodes[i]
+        mdb.models[name].rootAssembly.allSets[name].nodes[i]
+        mdb.models[name].rootAssembly.allSurfaces[name].nodes[i]
+        mdb.models[name].rootAssembly.instances[name].nodes[i]
+        mdb.models[name].rootAssembly.instances[name].sets[name].nodes[i]
+        mdb.models[name].rootAssembly.instances[name].surfaces[name].nodes[i]
+        mdb.models[name].rootAssembly.modelInstances[i].nodes[i]
+        mdb.models[name].rootAssembly.modelInstances[i].sets[name].nodes[i]
+        mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].nodes[i]
+        mdb.models[name].rootAssembly.nodes[i]
+        mdb.models[name].rootAssembly.sets[name].nodes[i]
+        mdb.models[name].rootAssembly.surfaces[name].nodes[i]
 
     """
 
@@ -61,8 +64,11 @@ class MeshNode:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Node
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Node
 
         Parameters
         ----------

@@ -17,9 +17,12 @@ class AbaqusBoolean:
 
     Notes
     -----
-        This object can be accessed by:
-        - from symbolicConstants import *
-        - from abaqusConstants import *
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        from symbolicConstants import *
+        from abaqusConstants import *
 
     """
 
@@ -28,8 +31,11 @@ class AbaqusBoolean:
 
         Notes
         -----
-            This function can be accessed by:
-            - AbaqusBoolean
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            AbaqusBoolean
 
         Parameters
         ----------

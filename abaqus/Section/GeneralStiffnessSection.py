@@ -18,11 +18,14 @@ class GeneralStiffnessSection(ShellSection):
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].sections[name]
-        - import odbSection
-        - session.odbs[name].sections[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].sections[name]
+        import odbSection
+        session.odbs[name].sections[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -45,9 +48,12 @@ class GeneralStiffnessSection(ShellSection):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].GeneralStiffnessSection
-            - session.odbs[name].GeneralStiffnessSection
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].GeneralStiffnessSection
+            session.odbs[name].GeneralStiffnessSection
 
         Parameters
         ----------

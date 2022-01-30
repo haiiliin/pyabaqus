@@ -6,11 +6,14 @@ class AnalyticSurfaceSegment:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].parts[name].analyticSurface.segments[i]
-        - session.odbs[name].rootAssembly.instances[name].analyticSurface.segments[i]
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.analyticSurface.segments[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name].parts[name].analyticSurface.segments[i]
+        session.odbs[name].rootAssembly.instances[name].analyticSurface.segments[i]
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.analyticSurface.segments[i]
 
     """
 
@@ -19,8 +22,11 @@ class AnalyticSurfaceSegment:
 
         Notes
         -----
-            This function can be accessed by:
-            - odbAccess.AnalyticSurfaceSegment
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            odbAccess.AnalyticSurfaceSegment
 
         Parameters
         ----------

@@ -28,9 +28,12 @@ class OdbDatumCsys:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].rootAssembly.datumCsyses[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name].rootAssembly.datumCsyses[name]
 
     """
 
@@ -61,8 +64,11 @@ class OdbDatumCsys:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].rootAssembly.DatumCsysByThreePoints
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].rootAssembly.DatumCsysByThreePoints
 
         Parameters
         ----------
@@ -96,8 +102,11 @@ class OdbDatumCsys:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].rootAssembly.DatumCsysByThreeNodes
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].rootAssembly.DatumCsysByThreePoints
 
         Parameters
         ----------
@@ -131,8 +140,11 @@ class OdbDatumCsys:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].rootAssembly.DatumCsysByThreeCircNodes
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].rootAssembly.DatumCsysByThreePoints
 
         Parameters
         ----------
@@ -164,8 +176,11 @@ class OdbDatumCsys:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].rootAssembly.DatumCsysBy6dofNode
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].rootAssembly.DatumCsysByThreePoints
 
         Parameters
         ----------
@@ -188,8 +203,11 @@ class OdbDatumCsys:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].rootAssembly.DatumCsys
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].rootAssembly.DatumCsysByThreePoints
 
         Parameters
         ----------

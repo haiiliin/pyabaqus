@@ -50,9 +50,12 @@ class OdbBase:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name]
 
     """
 
@@ -103,8 +106,11 @@ class OdbBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.Odb
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.Odb
 
         Parameters
         ----------

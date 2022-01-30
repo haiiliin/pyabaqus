@@ -15,11 +15,14 @@ class AssembledFastener(Fastener):
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].engineeringFeatures.fasteners[name]
-        - import assembly
-        - mdb.models[name].rootAssembly.engineeringFeatures.fasteners[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].engineeringFeatures.fasteners[name]
+        import assembly
+        mdb.models[name].rootAssembly.engineeringFeatures.fasteners[name]
 
     """
 
@@ -36,9 +39,12 @@ class AssembledFastener(Fastener):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.AssembledFastener
-            - mdb.models[name].rootAssembly.engineeringFeatures.AssembledFastener
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].parts[name].engineeringFeatures.AssembledFastener
+            mdb.models[name].rootAssembly.engineeringFeatures.AssembledFastener
 
         Parameters
         ----------

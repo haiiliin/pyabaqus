@@ -206,10 +206,13 @@ class OdbDisplay:
 
     Notes
     -----
-        This object can be accessed by:
-        - session.viewports[name].layers[name].odbDisplay
-        - import visualization
-        - session.viewports[name].odbDisplay
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        session.viewports[name].layers[name].odbDisplay
+        import visualization
+        session.viewports[name].odbDisplay
 
     """
 
@@ -683,9 +686,12 @@ class OdbDisplay:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.viewports[name].layers[name].odbDisplay.ViewCut
-            - session.viewports[name].odbDisplay.ViewCut
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.viewports[name].layers[name].odbDisplay.ViewCut
+            session.viewports[name].odbDisplay.ViewCut
 
         Parameters
         ----------

@@ -16,13 +16,16 @@ class Stringer:
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].stringers[name]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].stringers[name]
-        - mdb.models[name].rootAssembly.instances[name].stringers[name]
-        - mdb.models[name].rootAssembly.stringers[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].stringers[name]
+        import assembly
+        mdb.models[name].rootAssembly.allInstances[name].stringers[name]
+        mdb.models[name].rootAssembly.instances[name].stringers[name]
+        mdb.models[name].rootAssembly.stringers[name]
 
     """
 
@@ -38,8 +41,11 @@ class Stringer:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Stringer
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Stringer
 
         Parameters
         ----------
@@ -64,8 +70,11 @@ class Stringer:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].EditStringer
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Stringer
 
         Parameters
         ----------

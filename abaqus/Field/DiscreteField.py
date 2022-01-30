@@ -12,9 +12,12 @@ class DiscreteField(Field):
 
     Notes
     -----
-        This object can be accessed by:
-        - import fields
-        - mdb.models[name].discreteFields[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import fields
+        mdb.models[name].discreteFields[name]
 
     """
 
@@ -26,8 +29,11 @@ class DiscreteField(Field):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].DiscreteField
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].DiscreteField
 
         Parameters
         ----------
@@ -74,8 +80,11 @@ class DiscreteField(Field):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DiscreteFieldByVolumeFraction
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].DiscreteField
 
         Parameters
         ----------
@@ -114,8 +123,11 @@ class DiscreteField(Field):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].DiscreteFieldFromAnalytic
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].DiscreteField
 
         Parameters
         ----------

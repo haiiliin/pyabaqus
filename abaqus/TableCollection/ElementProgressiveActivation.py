@@ -8,8 +8,11 @@ class ElementProgressiveActivation:
 
     Notes
     -----
-        This object can be accessed by:
-        - mdb.models[name].rootAssembly.elementProgressiveActivations[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name].rootAssembly.elementProgressiveActivations[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -24,8 +27,11 @@ class ElementProgressiveActivation:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.ElementProgressiveActivation
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].rootAssembly.ElementProgressiveActivation
 
         Parameters
         ----------

@@ -18,8 +18,11 @@ class LeafFromSets(Leaf):
 
     Notes
     -----
-        This object can be accessed by:
-        - import displayGroupMdbToolset
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import displayGroupMdbToolset
 
     """
 
@@ -32,8 +35,11 @@ class LeafFromSets(Leaf):
 
         Notes
         -----
-            This function can be accessed by:
-            - LeafFromSets
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            LeafFromSets
 
         Parameters
         ----------

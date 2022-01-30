@@ -7,11 +7,14 @@ class Regularization:
 
     Notes
     -----
-        This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].regularization
-        - import odbMaterial
-        - session.odbs[name].materials[name].regularization
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].regularization
+        import odbMaterial
+        session.odbs[name].materials[name].regularization
 
     Corresponding analysis keywords
     -------------------------------
@@ -24,9 +27,12 @@ class Regularization:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].materials[name].Regularization
-            - session.odbs[name].materials[name].Regularization
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].materials[name].Regularization
+            session.odbs[name].materials[name].Regularization
 
         Parameters
         ----------

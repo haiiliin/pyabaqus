@@ -6,32 +6,35 @@ class MeshElementArray(list[MeshElement]):
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].allInternalSets[name].elements
-        - mdb.models[name].parts[name].allInternalSurfaces[name].elements
-        - mdb.models[name].parts[name].allSets[name].elements
-        - mdb.models[name].parts[name].allSurfaces[name].elements
-        - mdb.models[name].parts[name].elements
-        - mdb.models[name].parts[name].sets[name].elements
-        - mdb.models[name].parts[name].surfaces[name].elements
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].elements
-        - mdb.models[name].rootAssembly.allInstances[name].sets[name].elements
-        - mdb.models[name].rootAssembly.allInstances[name].surfaces[name].elements
-        - mdb.models[name].rootAssembly.allInternalSets[name].elements
-        - mdb.models[name].rootAssembly.allInternalSurfaces[name].elements
-        - mdb.models[name].rootAssembly.allSets[name].elements
-        - mdb.models[name].rootAssembly.allSurfaces[name].elements
-        - mdb.models[name].rootAssembly.elements
-        - mdb.models[name].rootAssembly.instances[name].elements
-        - mdb.models[name].rootAssembly.instances[name].sets[name].elements
-        - mdb.models[name].rootAssembly.instances[name].surfaces[name].elements
-        - mdb.models[name].rootAssembly.modelInstances[i].elements
-        - mdb.models[name].rootAssembly.modelInstances[i].sets[name].elements
-        - mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].elements
-        - mdb.models[name].rootAssembly.sets[name].elements
-        - mdb.models[name].rootAssembly.surfaces[name].elements
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].allInternalSets[name].elements
+        mdb.models[name].parts[name].allInternalSurfaces[name].elements
+        mdb.models[name].parts[name].allSets[name].elements
+        mdb.models[name].parts[name].allSurfaces[name].elements
+        mdb.models[name].parts[name].elements
+        mdb.models[name].parts[name].sets[name].elements
+        mdb.models[name].parts[name].surfaces[name].elements
+        import assembly
+        mdb.models[name].rootAssembly.allInstances[name].elements
+        mdb.models[name].rootAssembly.allInstances[name].sets[name].elements
+        mdb.models[name].rootAssembly.allInstances[name].surfaces[name].elements
+        mdb.models[name].rootAssembly.allInternalSets[name].elements
+        mdb.models[name].rootAssembly.allInternalSurfaces[name].elements
+        mdb.models[name].rootAssembly.allSets[name].elements
+        mdb.models[name].rootAssembly.allSurfaces[name].elements
+        mdb.models[name].rootAssembly.elements
+        mdb.models[name].rootAssembly.instances[name].elements
+        mdb.models[name].rootAssembly.instances[name].sets[name].elements
+        mdb.models[name].rootAssembly.instances[name].surfaces[name].elements
+        mdb.models[name].rootAssembly.modelInstances[i].elements
+        mdb.models[name].rootAssembly.modelInstances[i].sets[name].elements
+        mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].elements
+        mdb.models[name].rootAssembly.sets[name].elements
+        mdb.models[name].rootAssembly.surfaces[name].elements
 
     """
 
@@ -40,8 +43,11 @@ class MeshElementArray(list[MeshElement]):
 
         Notes
         -----
-            This function can be accessed by:
-            - mesh.MeshElementArray
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mesh.MeshElementArray
 
         Parameters
         ----------

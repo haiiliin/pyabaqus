@@ -9,9 +9,12 @@ class FractureCriterion:
 
     Notes
     -----
-        This object can be accessed by:
-        - import interaction
-        - mdb.models[name].interactionProperties[name].fractureCriterion
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import interaction
+        mdb.models[name].interactionProperties[name].fractureCriterion
 
     Table Data
     ----------
@@ -76,8 +79,11 @@ class FractureCriterion:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].FractureCriterion
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].interactionProperties[name].FractureCriterion
 
         Parameters
         ----------

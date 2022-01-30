@@ -9,9 +9,12 @@ class DrillControl(GeometricRestriction):
 
     Notes
     -----
-        This object can be accessed by:
-        - import optimization
-        - mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import optimization
+        mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
 
@@ -24,8 +27,11 @@ class DrillControl(GeometricRestriction):
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].DrillControl
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].optimizationTasks[name].DrillControl
 
         Parameters
         ----------

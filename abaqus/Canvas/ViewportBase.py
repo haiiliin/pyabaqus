@@ -212,8 +212,11 @@ class ViewportBase:
 
     Notes
     -----
-        This object can be accessed by:
-        - session.viewports[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        session.viewports[name]
 
     """
 
@@ -439,8 +442,11 @@ class ViewportBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.Viewport
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.Viewport
 
         Parameters
         ----------

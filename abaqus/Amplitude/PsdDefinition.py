@@ -9,11 +9,14 @@ class PsdDefinition(Amplitude):
 
     Notes
     -----
-        This object can be accessed by:
-        - import amplitude
-        - mdb.models[name].amplitudes[name]
-        - import odbAmplitude
-        - session.odbs[name].amplitudes[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import amplitude
+        mdb.models[name].amplitudes[name]
+        import odbAmplitude
+        session.odbs[name].amplitudes[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -28,9 +31,12 @@ class PsdDefinition(Amplitude):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].PsdDefinition
-            - session.odbs[name].PsdDefinition
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].PsdDefinition
+            session.odbs[name].PsdDefinition
 
         Parameters
         ----------

@@ -25,9 +25,12 @@ class HistoryOutputRequest:
 
     Notes
     -----
-        This object can be accessed by:
-        - import step
-        - mdb.models[name].historyOutputRequests[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import step
+        mdb.models[name].historyOutputRequests[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -76,8 +79,11 @@ class HistoryOutputRequest:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].HistoryOutputRequest
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].HistoryOutputRequest
 
         Parameters
         ----------

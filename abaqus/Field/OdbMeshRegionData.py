@@ -103,9 +103,12 @@ class OdbMeshRegionData:
 
     Notes
     -----
-        This object can be accessed by:
-        - import field
-        - mdb.models[name].analyticalFields[name].odbMeshRegionData
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import field
+        mdb.models[name].analyticalFields[name].odbMeshRegionData
 
     """
 
@@ -236,8 +239,11 @@ class OdbMeshRegionData:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].analyticalFields[name].OdbMeshRegionData
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].analyticalFields[name].OdbMeshRegionData
 
         Parameters
         ----------

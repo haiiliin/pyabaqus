@@ -7,11 +7,14 @@ class PEGSection(Section):
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].sections[name]
-        - import odbSection
-        - session.odbs[name].sections[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].sections[name]
+        import odbSection
+        session.odbs[name].sections[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -25,9 +28,12 @@ class PEGSection(Section):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].PEGSection
-            - session.odbs[name].PEGSection
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].PEGSection
+            session.odbs[name].PEGSection
 
         Parameters
         ----------

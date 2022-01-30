@@ -8,11 +8,14 @@ class OperatorFilter(Filter):
 
     Notes
     -----
-        This object can be accessed by:
-        - import filter
-        - mdb.models[name].filters[name]
-        - import odbFilter
-        - session.odbs[name].filters[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import filter
+        mdb.models[name].filters[name]
+        import odbFilter
+        session.odbs[name].filters[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -26,9 +29,12 @@ class OperatorFilter(Filter):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].OperatorFilter
-            - session.odbs[name].OperatorFilter
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].OperatorFilter
+            session.odbs[name].OperatorFilter
 
         Parameters
         ----------

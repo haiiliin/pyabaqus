@@ -6,12 +6,6 @@ from .XYData import XYData
 Access
 ------
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 
@@ -36,8 +30,5 @@ def writeXYRepor(fileName: str, xyData: tuple[XYData], appendMode: Boolean = ON)
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass

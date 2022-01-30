@@ -15,11 +15,14 @@ class NonstructuralMass(Inertia):
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].engineeringFeatures.inertias[name]
-        - import assembly
-        - mdb.models[name].rootAssembly.engineeringFeatures.inertias[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].engineeringFeatures.inertias[name]
+        import assembly
+        mdb.models[name].rootAssembly.engineeringFeatures.inertias[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -36,9 +39,12 @@ class NonstructuralMass(Inertia):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.NonstructuralMass
-            - mdb.models[name].rootAssembly.engineeringFeatures.NonstructuralMass
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].parts[name].engineeringFeatures.NonstructuralMass
+            mdb.models[name].rootAssembly.engineeringFeatures.NonstructuralMass
 
         Parameters
         ----------

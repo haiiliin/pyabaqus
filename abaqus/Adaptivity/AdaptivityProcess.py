@@ -18,9 +18,12 @@ class AdaptivityProcess:
 
     Notes
     -----
-        This object can be accessed by:
-        - import job
-        - mdb.adaptivityProcesses[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import job
+        mdb.adaptivityProcesses[name]
 
     """
 
@@ -37,8 +40,11 @@ class AdaptivityProcess:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.AdaptivityProcess
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.AdaptivityProcess
 
         Parameters
         ----------
@@ -105,8 +111,11 @@ class AdaptivityProcess:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.adaptivityProcesses[name].AdaptivityIteration
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.AdaptivityProcess
 
         Parameters
         ----------

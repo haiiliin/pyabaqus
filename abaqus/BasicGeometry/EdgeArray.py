@@ -8,32 +8,35 @@ class EdgeArray:
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].allInternalSets[name].edges
-        - mdb.models[name].parts[name].allInternalSurfaces[name].edges
-        - mdb.models[name].parts[name].allSets[name].edges
-        - mdb.models[name].parts[name].allSurfaces[name].edges
-        - mdb.models[name].parts[name].edges
-        - mdb.models[name].parts[name].sets[name].edges
-        - mdb.models[name].parts[name].surfaces[name].edges
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].edges
-        - mdb.models[name].rootAssembly.allInstances[name].sets[name].edges
-        - mdb.models[name].rootAssembly.allInstances[name].surfaces[name].edges
-        - mdb.models[name].rootAssembly.allInternalSets[name].edges
-        - mdb.models[name].rootAssembly.allInternalSurfaces[name].edges
-        - mdb.models[name].rootAssembly.allSets[name].edges
-        - mdb.models[name].rootAssembly.allSurfaces[name].edges
-        - mdb.models[name].rootAssembly.edges
-        - mdb.models[name].rootAssembly.instances[name].edges
-        - mdb.models[name].rootAssembly.instances[name].sets[name].edges
-        - mdb.models[name].rootAssembly.instances[name].surfaces[name].edges
-        - mdb.models[name].rootAssembly.modelInstances[i].edges
-        - mdb.models[name].rootAssembly.modelInstances[i].sets[name].edges
-        - mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].edges
-        - mdb.models[name].rootAssembly.sets[name].edges
-        - mdb.models[name].rootAssembly.surfaces[name].edges
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].allInternalSets[name].edges
+        mdb.models[name].parts[name].allInternalSurfaces[name].edges
+        mdb.models[name].parts[name].allSets[name].edges
+        mdb.models[name].parts[name].allSurfaces[name].edges
+        mdb.models[name].parts[name].edges
+        mdb.models[name].parts[name].sets[name].edges
+        mdb.models[name].parts[name].surfaces[name].edges
+        import assembly
+        mdb.models[name].rootAssembly.allInstances[name].edges
+        mdb.models[name].rootAssembly.allInstances[name].sets[name].edges
+        mdb.models[name].rootAssembly.allInstances[name].surfaces[name].edges
+        mdb.models[name].rootAssembly.allInternalSets[name].edges
+        mdb.models[name].rootAssembly.allInternalSurfaces[name].edges
+        mdb.models[name].rootAssembly.allSets[name].edges
+        mdb.models[name].rootAssembly.allSurfaces[name].edges
+        mdb.models[name].rootAssembly.edges
+        mdb.models[name].rootAssembly.instances[name].edges
+        mdb.models[name].rootAssembly.instances[name].sets[name].edges
+        mdb.models[name].rootAssembly.instances[name].surfaces[name].edges
+        mdb.models[name].rootAssembly.modelInstances[i].edges
+        mdb.models[name].rootAssembly.modelInstances[i].sets[name].edges
+        mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].edges
+        mdb.models[name].rootAssembly.sets[name].edges
+        mdb.models[name].rootAssembly.surfaces[name].edges
 
     """
 
@@ -42,8 +45,11 @@ class EdgeArray:
 
         Notes
         -----
-            This function can be accessed by:
-            - part.EdgeArray
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            part.EdgeArray
 
         Parameters
         ----------

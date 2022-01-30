@@ -8,11 +8,14 @@ class ButterworthFilter(Filter):
 
     Notes
     -----
-        This object can be accessed by:
-        - import filter
-        - mdb.models[name].filters[name]
-        - import odbFilter
-        - session.odbs[name].filters[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import filter
+        mdb.models[name].filters[name]
+        import odbFilter
+        session.odbs[name].filters[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -26,9 +29,12 @@ class ButterworthFilter(Filter):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].ButterworthFilter
-            - session.odbs[name].ButterworthFilter
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ButterworthFilter
+            session.odbs[name].ButterworthFilter
 
         Parameters
         ----------

@@ -17,8 +17,11 @@ class PropertyTable:
 
     Notes
     -----
-        This object can be accessed by:
-        - mdb.models[name].tableCollections[name].propertyTables[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name].tableCollections[name].propertyTables[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -35,8 +38,11 @@ class PropertyTable:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].tableCollections[name].PropertyTable
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].tableCollections[name].PropertyTable
 
         Parameters
         ----------
@@ -83,8 +89,11 @@ class PropertyTable:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].tableCollections[name].propertyTables[name].PropertTableData
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].tableCollections[name].PropertyTable
 
         Parameters
         ----------

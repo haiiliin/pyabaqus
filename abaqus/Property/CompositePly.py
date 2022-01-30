@@ -7,9 +7,12 @@ class CompositePly:
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].parts[name].compositeLayups[i].plies[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].parts[name].compositeLayups[i].plies[i]
 
     """
 
@@ -23,8 +26,11 @@ class CompositePly:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].compositeLayups[*name*].CompositePly
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].compositeLayups[*name*].CompositePly
 
         Parameters
         ----------

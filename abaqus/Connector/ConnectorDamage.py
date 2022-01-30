@@ -20,11 +20,14 @@ class ConnectorDamage(ConnectorBehaviorOption):
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].sections[name].behaviorOptions[i]
-        - import odbSection
-        - session.odbs[name].sections[name].behaviorOptions[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].sections[name].behaviorOptions[i]
+        import odbSection
+        session.odbs[name].sections[name].behaviorOptions[i]
 
     Table Data
     ----------
@@ -120,11 +123,14 @@ class ConnectorDamage(ConnectorBehaviorOption):
 
         Notes
         -----
-            This function can be accessed by:
-            -           import connectorBehavior
-            -           connectorBehavior.ConnectorDamage
-            -           import odbConnectorBehavior
-            -           odbConnectorBehavior.ConnectorDamage
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      import connectorBehavior
+                      connectorBehavior.ConnectorDamage
+                      import odbConnectorBehavior
+                      odbConnectorBehavior.ConnectorDamage
 
         Parameters
         ----------

@@ -8,9 +8,12 @@ class SizingFrozenArea(GeometricRestriction):
 
     Notes
     -----
-        This object can be accessed by:
-        - import optimization
-        - mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import optimization
+        mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
 
@@ -19,8 +22,11 @@ class SizingFrozenArea(GeometricRestriction):
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].SizingFrozenArea
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].optimizationTasks[name].SizingFrozenArea
 
         Parameters
         ----------

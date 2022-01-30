@@ -11,9 +11,12 @@ class ImageAnimation:
 
     Notes
     -----
-        This object can be accessed by:
-        - import animation
-        - session.imageAnimation
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import animation
+        session.imageAnimation
 
     """
 
@@ -25,8 +28,11 @@ class ImageAnimation:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.ImageAnimation
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.ImageAnimation
 
         Parameters
         ----------

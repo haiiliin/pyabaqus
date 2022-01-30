@@ -20,9 +20,12 @@ class HistoryOutput:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].steps[name].historyRegions[name].historyOutputs[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name].steps[name].historyRegions[name].historyOutputs[name]
 
     """
 
@@ -42,8 +45,11 @@ class HistoryOutput:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].steps[name].historyRegions[name].HistoryOutput
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].steps[name].historyRegions[name].HistoryOutput
 
         Parameters
         ----------

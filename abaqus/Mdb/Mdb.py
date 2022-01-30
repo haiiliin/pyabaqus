@@ -10,8 +10,11 @@ class Mdb(AcisMdb, JobMdb):
 
     Notes
     -----
-        This object can be accessed by:
-        - mdb
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb
 
     """
 
@@ -24,8 +27,11 @@ class Mdb(AcisMdb, JobMdb):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.Model
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.Model
 
         Parameters
         ----------

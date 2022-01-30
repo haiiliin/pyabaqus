@@ -7,11 +7,14 @@ class AcousticInfiniteSection(Section):
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].sections[name]
-        - import odbSection
-        - session.odbs[name].sections[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].sections[name]
+        import odbSection
+        session.odbs[name].sections[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -24,9 +27,12 @@ class AcousticInfiniteSection(Section):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].AcousticInfiniteSection
-            - session.odbs[name].AcousticInfiniteSection
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].AcousticInfiniteSection
+            session.odbs[name].AcousticInfiniteSection
 
         Parameters
         ----------

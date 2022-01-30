@@ -19,15 +19,18 @@ class ConnectorPotential:
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i]
-        - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i]
-        - mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i]
-        - import odbSection
-        - session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i]
-        - session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i]
-        - session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i]
+        mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i]
+        mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i]
+        import odbSection
+        session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i]
+        session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i]
+        session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i]
 
     Corresponding analysis keywords
     -------------------------------
@@ -47,10 +50,13 @@ class ConnectorPotential:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].sections[name].behaviorOptions[i].ConnectorPotential
-            - session.odbs[name].sections[name].behaviorOptions[i]\
-            - .ConnectorPotential
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].sections[name].behaviorOptions[i].ConnectorPotential
+            session.odbs[name].sections[name].behaviorOptions[i]\
+            .ConnectorPotential
 
         Parameters
         ----------
@@ -112,15 +118,13 @@ class ConnectorPotential:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent
-            - mdb.models[name].sections[name].behaviorOptions[i].DerivedComponent
-            - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
-            - mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent
-            - session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent
-            - session.odbs[name].sections[name].behaviorOptions[i].DerivedComponent
-            - session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
-            - session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].sections[name].behaviorOptions[i].ConnectorPotential
+            session.odbs[name].sections[name].behaviorOptions[i]\
+            .ConnectorPotential
 
         Parameters
         ----------

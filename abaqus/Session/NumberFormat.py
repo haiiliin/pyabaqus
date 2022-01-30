@@ -8,13 +8,16 @@ class NumberFormat:
 
     Notes
     -----
-        This object can be accessed by:
-        - import visualization
-        - session.defaultFieldReportOptions.numberFormat
-        - session.fieldReportOptions.numberFormat
-        - session.journalOptions.defaultFormat
-        - session.journalOptions.fieldReportFormat
-        - session.journalOptions.geometryFormat
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import visualization
+        session.defaultFieldReportOptions.numberFormat
+        session.fieldReportOptions.numberFormat
+        session.journalOptions.defaultFormat
+        session.journalOptions.fieldReportFormat
+        session.journalOptions.geometryFormat
 
     """
 
@@ -24,10 +27,13 @@ class NumberFormat:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.defaultFieldReportOptions.NumberFormat
-            - session.fieldReportOptions.NumberFormat
-            - session.journalOptions.NumberFormat
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.defaultFieldReportOptions.NumberFormat
+            session.fieldReportOptions.NumberFormat
+            session.journalOptions.NumberFormat
 
         Parameters
         ----------

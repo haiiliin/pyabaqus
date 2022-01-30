@@ -12,9 +12,12 @@ class InterestingPoint:
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - import assembly
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        import assembly
 
     """
 
@@ -24,9 +27,12 @@ class InterestingPoint:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].InterestingPoint
-            - mdb.models[*name*].rootAssembly.instances[*name*].InterestingPoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].InterestingPoint
+            mdb.models[*name*].rootAssembly.instances[*name*].InterestingPoint
 
         Parameters
         ----------

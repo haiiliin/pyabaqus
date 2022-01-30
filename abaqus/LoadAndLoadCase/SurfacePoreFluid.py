@@ -24,9 +24,12 @@ class SurfacePoreFluid(Load):
 
     Notes
     -----
-        This object can be accessed by:
-        - import load
-        - mdb.models[name].loads[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import load
+        mdb.models[name].loads[name]
 
     """
 
@@ -51,8 +54,11 @@ class SurfacePoreFluid(Load):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].SurfacePoreFluid
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].SurfacePoreFluid
 
         Parameters
         ----------

@@ -4,12 +4,6 @@ file.
 Access
 ------
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 
@@ -47,8 +41,5 @@ def journalMethodCall(objectPath: str, methodName: str, args: tuple, kargs: str)
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass

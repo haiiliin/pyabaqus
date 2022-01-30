@@ -69,8 +69,11 @@ class Drawing:
 
     Notes
     -----
-        This object can be accessed by:
-        - session.drawings[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        session.drawings[name]
 
     """
 
@@ -152,8 +155,11 @@ class Drawing:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.Drawing
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.Drawing
 
         Parameters
         ----------

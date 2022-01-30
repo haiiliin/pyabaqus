@@ -10,11 +10,14 @@ class Arrow(Annotation):
 
     Notes
     -----
-        This object can be accessed by:
-        - import annotationToolset
-        - mdb.annotations[name]
-        - session.odbs[name].userData.annotations[name]
-        - session.viewports[name].annotationsToPlot[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import annotationToolset
+        mdb.annotations[name]
+        session.odbs[name].userData.annotations[name]
+        session.viewports[name].annotationsToPlot[i]
 
     """
 
@@ -28,9 +31,12 @@ class Arrow(Annotation):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.Arrow
-            - session.odbs[*name*].userData.Arrow
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.Arrow
+            session.odbs[*name*].userData.Arrow
 
         Parameters
         ----------

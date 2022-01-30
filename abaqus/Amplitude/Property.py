@@ -11,12 +11,6 @@ Access
     - import part
     - import section
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 
@@ -43,9 +37,6 @@ def assignBeamSectionOrientatio(region: tuple, method: SymbolicConstant, n1: tup
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -77,9 +68,6 @@ def assignMaterialOrientatio(region: tuple, localCsys: Datum, axis: SymbolicCons
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -111,9 +99,6 @@ def assignRebarOrientatio(region: tuple, localCsys: Datum, axis: SymbolicConstan
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -143,9 +128,6 @@ def flipNorma(regions: Region, referenceRegion: str = ''):
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -168,9 +150,6 @@ def flipTangen(regions: Region):
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -191,9 +170,6 @@ def unassignBeamSectionOrientatio(index: int):
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -214,9 +190,6 @@ def unassignMaterialOrientatio(index: int):
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -238,8 +211,5 @@ def unassignRebarOrientatio(index: int):
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass

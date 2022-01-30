@@ -4,9 +4,12 @@ class TimePoint:
 
     Notes
     -----
-        This object can be accessed by:
-        - import step
-        - mdb.models[name].timePoints[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import step
+        mdb.models[name].timePoints[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -19,8 +22,11 @@ class TimePoint:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].TimePoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].TimePoint
 
         Parameters
         ----------

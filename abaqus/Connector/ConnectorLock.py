@@ -9,11 +9,14 @@ class ConnectorLock(ConnectorBehaviorOption):
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].sections[name].behaviorOptions[i]
-        - import odbSection
-        - session.odbs[name].sections[name].behaviorOptions[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].sections[name].behaviorOptions[i]
+        import odbSection
+        session.odbs[name].sections[name].behaviorOptions[i]
 
     Corresponding analysis keywords
     -------------------------------
@@ -28,11 +31,14 @@ class ConnectorLock(ConnectorBehaviorOption):
 
         Notes
         -----
-            This function can be accessed by:
-            -           import connectorBehavior
-            -           connectorBehavior.ConnectorLock
-            -           import odbConnectorBehavior
-            -           odbConnectorBehavior.ConnectorLock
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      import connectorBehavior
+                      connectorBehavior.ConnectorLock
+                      import odbConnectorBehavior
+                      odbConnectorBehavior.ConnectorLock
 
         Parameters
         ----------

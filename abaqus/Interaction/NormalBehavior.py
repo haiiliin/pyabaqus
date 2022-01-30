@@ -8,9 +8,12 @@ class NormalBehavior:
 
     Notes
     -----
-        This object can be accessed by:
-        - import interaction
-        - mdb.models[name].interactionProperties[name].normalBehavior
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import interaction
+        mdb.models[name].interactionProperties[name].normalBehavior
 
     Table Data
     ----------
@@ -39,8 +42,11 @@ class NormalBehavior:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].NormalBehavior
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].interactionProperties[name].NormalBehavior
 
         Parameters
         ----------

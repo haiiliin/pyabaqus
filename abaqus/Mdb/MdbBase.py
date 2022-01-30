@@ -39,8 +39,11 @@ class MdbBase:
 
     Notes
     -----
-        This object can be accessed by:
-        - mdb
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb
 
     """
 
@@ -81,8 +84,11 @@ class MdbBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - Mdb
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            Mdb
 
         Parameters
         ----------
@@ -106,8 +112,11 @@ class MdbBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - importDxf
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            Mdb
 
         Parameters
         ----------
@@ -125,8 +134,11 @@ class MdbBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - openMdb
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            Mdb
 
         Parameters
         ----------

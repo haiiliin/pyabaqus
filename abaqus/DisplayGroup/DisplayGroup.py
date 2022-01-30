@@ -26,17 +26,20 @@ class DisplayGroup:
 
     Notes
     -----
-        This object can be accessed by:
-        - session.displayGroups[name]
-        - import assembly
-        - session.viewports[name].assemblyDisplay.displayGroup
-        - session.viewports[name].layers[name].assemblyDisplay.displayGroup
-        - import visualization
-        - session.viewports[name].layers[name].odbDisplay.displayGroup
-        - import part
-        - session.viewports[name].layers[name].partDisplay.displayGroup
-        - session.viewports[name].odbDisplay.displayGroup
-        - session.viewports[name].partDisplay.displayGroup
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        session.displayGroups[name]
+        import assembly
+        session.viewports[name].assemblyDisplay.displayGroup
+        session.viewports[name].layers[name].assemblyDisplay.displayGroup
+        import visualization
+        session.viewports[name].layers[name].odbDisplay.displayGroup
+        import part
+        session.viewports[name].layers[name].partDisplay.displayGroup
+        session.viewports[name].odbDisplay.displayGroup
+        session.viewports[name].partDisplay.displayGroup
 
     """
 
@@ -66,8 +69,11 @@ class DisplayGroup:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.DisplayGroup
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.DisplayGroup
 
         Parameters
         ----------

@@ -46,9 +46,12 @@ class OdbStepBase:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].steps[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name].steps[name]
 
     """
 
@@ -99,8 +102,11 @@ class OdbStepBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].Step
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].Step
 
         Parameters
         ----------

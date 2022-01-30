@@ -7,8 +7,11 @@ class ElemType:
 
     Notes
     -----
-        This object can be accessed by:
-        - import mesh
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import mesh
 
     """
 
@@ -29,8 +32,11 @@ class ElemType:
 
         Notes
         -----
-            This function can be accessed by:
-            - mesh.ElemType
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mesh.ElemType
 
         Parameters
         ----------

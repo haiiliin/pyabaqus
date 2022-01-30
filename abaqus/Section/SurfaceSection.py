@@ -14,11 +14,14 @@ class SurfaceSection(Section):
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].sections[name]
-        - import odbSection
-        - session.odbs[name].sections[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].sections[name]
+        import odbSection
+        session.odbs[name].sections[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -34,9 +37,12 @@ class SurfaceSection(Section):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].SurfaceSection
-            - session.odbs[name].SurfaceSection
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].SurfaceSection
+            session.odbs[name].SurfaceSection
 
         Parameters
         ----------

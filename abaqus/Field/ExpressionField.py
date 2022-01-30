@@ -8,9 +8,12 @@ class ExpressionField(AnalyticalField):
 
     Notes
     -----
-        This object can be accessed by:
-        - import fields
-        - mdb.models[name].analyticalFields[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import fields
+        mdb.models[name].analyticalFields[name]
 
     """
 
@@ -19,8 +22,11 @@ class ExpressionField(AnalyticalField):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].ExpressionField
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ExpressionField
 
         Parameters
         ----------

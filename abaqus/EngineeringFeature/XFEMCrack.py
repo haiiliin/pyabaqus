@@ -15,11 +15,14 @@ class XFEMCrack(Crack):
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].engineeringFeatures.cracks[name]
-        - import assembly
-        - mdb.models[name].rootAssembly.engineeringFeatures.cracks[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].engineeringFeatures.cracks[name]
+        import assembly
+        mdb.models[name].rootAssembly.engineeringFeatures.cracks[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -42,9 +45,12 @@ class XFEMCrack(Crack):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.XFEMCrack
-            - mdb.models[name].rootAssembly.engineeringFeatures.XFEMCrack
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].parts[name].engineeringFeatures.XFEMCrack
+            mdb.models[name].rootAssembly.engineeringFeatures.XFEMCrack
 
         Parameters
         ----------

@@ -9,24 +9,27 @@ class AreaStyle:
 
     Notes
     -----
-        This object can be accessed by:
-        - import visualization
-        - session.charts[name].area.style
-        - session.charts[name].gridArea.style
-        - session.charts[name].legend.area.style
-        - session.charts[name].tagAreaStyle
-        - session.defaultChartOptions.areaStyle
-        - session.defaultChartOptions.gridArea.style
-        - session.defaultChartOptions.legend.area.style
-        - session.defaultChartOptions.tagAreaStyle
-        - session.defaultPlot.area.style
-        - session.defaultPlot.title.area.style
-        - session.xyPlots[name].area.style
-        - session.xyPlots[name].charts[name].area.style
-        - session.xyPlots[name].charts[name].gridArea.style
-        - session.xyPlots[name].charts[name].legend.area.style
-        - session.xyPlots[name].charts[name].tagAreaStyle
-        - session.xyPlots[name].title.area.style
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import visualization
+        session.charts[name].area.style
+        session.charts[name].gridArea.style
+        session.charts[name].legend.area.style
+        session.charts[name].tagAreaStyle
+        session.defaultChartOptions.areaStyle
+        session.defaultChartOptions.gridArea.style
+        session.defaultChartOptions.legend.area.style
+        session.defaultChartOptions.tagAreaStyle
+        session.defaultPlot.area.style
+        session.defaultPlot.title.area.style
+        session.xyPlots[name].area.style
+        session.xyPlots[name].charts[name].area.style
+        session.xyPlots[name].charts[name].gridArea.style
+        session.xyPlots[name].charts[name].legend.area.style
+        session.xyPlots[name].charts[name].tagAreaStyle
+        session.xyPlots[name].title.area.style
 
     """
 
@@ -35,9 +38,12 @@ class AreaStyle:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.AreaStyle
-            - xyPlot.AreaStyle
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.AreaStyle
+            xyPlot.AreaStyle
 
         Parameters
         ----------

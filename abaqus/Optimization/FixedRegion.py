@@ -9,9 +9,12 @@ class FixedRegion(GeometricRestriction):
 
     Notes
     -----
-        This object can be accessed by:
-        - import optimization
-        - mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import optimization
+        mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
 
@@ -21,8 +24,11 @@ class FixedRegion(GeometricRestriction):
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].FixedRegion
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].optimizationTasks[name].FixedRegion
 
         Parameters
         ----------

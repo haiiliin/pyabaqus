@@ -11,8 +11,11 @@ class Feature(FeatureBase):
 
     Notes
     -----
-        This object can be accessed by:
-        - import assembly
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import assembly
 
     """
 
@@ -34,8 +37,11 @@ class Feature(FeatureBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.AttachmentLines
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].rootAssembly.AttachmentLines
 
         Parameters
         ----------
@@ -99,8 +105,11 @@ class Feature(FeatureBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.Coaxial
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].rootAssembly.AttachmentLines
 
         Parameters
         ----------
@@ -128,8 +137,11 @@ class Feature(FeatureBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.CoincidentPoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].rootAssembly.AttachmentLines
 
         Parameters
         ----------
@@ -154,8 +166,11 @@ class Feature(FeatureBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.EdgeToEdge
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].rootAssembly.AttachmentLines
 
         Parameters
         ----------
@@ -189,8 +204,11 @@ class Feature(FeatureBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.FaceToFace
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].rootAssembly.AttachmentLines
 
         Parameters
         ----------
@@ -223,8 +241,11 @@ class Feature(FeatureBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.ParallelCsys
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].rootAssembly.AttachmentLines
 
         Parameters
         ----------
@@ -250,8 +271,11 @@ class Feature(FeatureBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.ParallelEdge
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].rootAssembly.AttachmentLines
 
         Parameters
         ----------
@@ -282,8 +306,11 @@ class Feature(FeatureBase):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.ParallelFace
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].rootAssembly.AttachmentLines
 
         Parameters
         ----------

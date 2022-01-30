@@ -5,11 +5,6 @@ class PngOptions:
     """The PngOptions object stores the settings that Abaqus uses when printing in PNG format.
     The PngOptions object has no constructor. Abaqus creates the *pngOptions* member when a 
     session is started. 
-
-    Notes
-    -----
-        This object can be accessed by:
-
     """
 
     def cces(self):

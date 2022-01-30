@@ -12,8 +12,11 @@ class NetworkDatabaseConnector:
 
     Notes
     -----
-        This object can be accessed by:
-        - session.networkDatabaseConnectors[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        session.networkDatabaseConnectors[name]
 
     """
 
@@ -32,8 +35,11 @@ class NetworkDatabaseConnector:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.NetworkDatabaseConnector
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.NetworkDatabaseConnector
 
         Parameters
         ----------

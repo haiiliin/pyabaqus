@@ -9,8 +9,11 @@ class EventSeries:
 
     Notes
     -----
-        This object can be accessed by:
-        - mdb.models[name].eventSeriesDatas[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name].eventSeriesDatas[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -26,8 +29,11 @@ class EventSeries:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].EventSeriesData
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EventSeriesData
 
         Parameters
         ----------

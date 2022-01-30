@@ -3,12 +3,6 @@
 Access
 ------
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 import typing
 
@@ -41,9 +35,6 @@ def getInput(prompt: str, default: str = ''):
     -------
         A String or None if the user clicks Cancel. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -83,9 +74,6 @@ def getInput(fields: tuple, label: str = '', dialogTitle: str = ''):
         box. If the user clicks the Cancel button, the method returns a sequence of None 
         objects. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -121,8 +109,5 @@ def getWarningReply(message: str, buttons: str):
     -------
         The button that the user clicks. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass

@@ -11,9 +11,12 @@ class Leaf:
 
     Notes
     -----
-        This object can be accessed by:
-        - import displayGroupMdbToolset
-        - import displayGroupOdbToolset
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import displayGroupMdbToolset
+        import displayGroupOdbToolset
 
     """
 
@@ -22,8 +25,11 @@ class Leaf:
 
         Notes
         -----
-            This function can be accessed by:
-            - Leaf
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            Leaf
 
         Parameters
         ----------

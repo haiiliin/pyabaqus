@@ -130,9 +130,12 @@ class TempDisplacementDynamicsStep(AnalysisStep):
 
     Notes
     -----
-        This object can be accessed by:
-        - import step
-        - mdb.models[name].steps[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import step
+        mdb.models[name].steps[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -291,8 +294,11 @@ class TempDisplacementDynamicsStep(AnalysisStep):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].TempDisplacementDynamicsStep
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].TempDisplacementDynamicsStep
 
         Parameters
         ----------

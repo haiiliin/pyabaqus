@@ -32,9 +32,12 @@ class TemperatureBC(BoundaryCondition):
 
     Notes
     -----
-        This object can be accessed by:
-        - import load
-        - mdb.models[name].boundaryConditions[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import load
+        mdb.models[name].boundaryConditions[name]
 
     """
 
@@ -69,8 +72,11 @@ class TemperatureBC(BoundaryCondition):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].TemperatureBC
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].TemperatureBC
 
         Parameters
         ----------

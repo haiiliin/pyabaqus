@@ -14,16 +14,19 @@ class SectionAssignment:
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].parts[name].sectionAssignments[i]
-        - import assembly
-        - mdb.models[name].rootAssembly.sectionAssignments[i]
-        - import odbAccess
-        - session.odbs[name].parts[name].sectionAssignments[i]
-        - session.odbs[name].rootAssembly.instances[name].sectionAssignments[i]
-        - session.odbs[name].rootAssembly.sectionAssignments[i]
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.sectionAssignments[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].parts[name].sectionAssignments[i]
+        import assembly
+        mdb.models[name].rootAssembly.sectionAssignments[i]
+        import odbAccess
+        session.odbs[name].parts[name].sectionAssignments[i]
+        session.odbs[name].rootAssembly.instances[name].sectionAssignments[i]
+        session.odbs[name].rootAssembly.sectionAssignments[i]
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.sectionAssignments[i]
 
     """
 
@@ -37,9 +40,12 @@ class SectionAssignment:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].SectionAssignment
-            - mdb.models[*name*].rootAssembly.SectionAssignment
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].SectionAssignment
+            mdb.models[*name*].rootAssembly.SectionAssignment
 
         Parameters
         ----------

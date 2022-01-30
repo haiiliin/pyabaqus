@@ -5,11 +5,14 @@ class OdbSequenceAnalyticSurfaceSegment:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].parts[name].analyticSurface.segments
-        - session.odbs[name].rootAssembly.instances[name].analyticSurface.segments
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.analyticSurface.segments
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name].parts[name].analyticSurface.segments
+        session.odbs[name].rootAssembly.instances[name].analyticSurface.segments
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.analyticSurface.segments
 
     """
 
@@ -18,8 +21,11 @@ class OdbSequenceAnalyticSurfaceSegment:
 
         Notes
         -----
-            This function can be accessed by:
-            - odbAccess.AnalyticSurfaceProfile
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            odbAccess.AnalyticSurfaceProfile
 
         Parameters
         ----------

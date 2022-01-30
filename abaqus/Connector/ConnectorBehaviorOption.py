@@ -36,11 +36,14 @@ class ConnectorBehaviorOption:
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].sections[name].behaviorOptions[i]
-        - import odbSection
-        - session.odbs[name].sections[name].behaviorOptions[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].sections[name].behaviorOptions[i]
+        import odbSection
+        session.odbs[name].sections[name].behaviorOptions[i]
 
     """
 
@@ -82,9 +85,12 @@ class ConnectorBehaviorOption:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior
-            - session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior
+            session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior
 
         Parameters
         ----------
@@ -135,15 +141,12 @@ class ConnectorBehaviorOption:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent
-            - mdb.models[name].sections[name].behaviorOptions[i].DerivedComponent
-            - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
-            - mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent
-            - session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent
-            - session.odbs[name].sections[name].behaviorOptions[i].DerivedComponent
-            - session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
-            - session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior
+            session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior
 
         Parameters
         ----------
@@ -169,21 +172,12 @@ class ConnectorBehaviorOption:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior
+            session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior
 
         Parameters
         ----------

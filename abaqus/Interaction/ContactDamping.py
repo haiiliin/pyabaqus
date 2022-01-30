@@ -25,9 +25,12 @@ class ContactDamping:
 
     Notes
     -----
-        This object can be accessed by:
-        - import interaction
-        - mdb.models[name].interactionProperties[name].damping
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import interaction
+        mdb.models[name].interactionProperties[name].damping
 
     Table Data
     ----------
@@ -71,8 +74,11 @@ class ContactDamping:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].Damping
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].interactionProperties[name].Damping
 
         Parameters
         ----------

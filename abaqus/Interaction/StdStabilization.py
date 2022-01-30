@@ -9,9 +9,12 @@ class StdStabilization(ContactStabilization):
 
     Notes
     -----
-        This object can be accessed by:
-        - import interaction
-        - mdb.models[name].contactStabilizations[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import interaction
+        mdb.models[name].contactStabilizations[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -26,8 +29,11 @@ class StdStabilization(ContactStabilization):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].StdStabilization
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].StdStabilization
 
         Parameters
         ----------

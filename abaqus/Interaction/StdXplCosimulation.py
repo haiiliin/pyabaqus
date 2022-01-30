@@ -10,9 +10,12 @@ class StdXplCosimulation(Interaction):
 
     Notes
     -----
-        This object can be accessed by:
-        - import interaction
-        - mdb.models[name].interactions[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import interaction
+        mdb.models[name].interactions[name]
 
     """
 
@@ -23,8 +26,11 @@ class StdXplCosimulation(Interaction):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].StdXplCosimulation
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].StdXplCosimulation
 
         Parameters
         ----------

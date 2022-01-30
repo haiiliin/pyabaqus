@@ -3,15 +3,13 @@ from abaqusConstants import *
 """The Python module caePrefsAccess contains functions that enable you to edit the 
 Abaqus/CAE preferences file, abaqus_2021.gpr. 
 
-Access
-------
-    - import caePrefsAccess
+Notes
+-----
+This object can be accessed by:
+        
+.. code-block:: python
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
+    import caePrefsAccess
 
 """
 
@@ -21,7 +19,11 @@ def getGuiPrefsFileName():
 
     Path
     ----
-        - caePrefsAccess.getGuiPrefsFileName
+    This function can be accessed by:
+        
+    .. code-block:: python
+
+        caePrefsAccess.getGuiPrefsFileName
 
     Parameters
     ----------
@@ -30,8 +32,6 @@ def getGuiPrefsFileName():
     -------
         A String with the default file name for the GUI preferences file. 
 
-    Exceptions
-    ----------
     """
     pass
 
@@ -41,9 +41,13 @@ def getDisplayNamesInGuiPreferences(fileName: str):
     you use. This function returns a list of every displayName recorded in the preferences
     file.
 
-    Path
-    ----
-        - caePrefsAccess.getDisplayNamesInGuiPreferences
+    Notes
+    -----
+    This function can be accessed by:
+        
+    .. code-block:: python
+
+        caePrefsAccess.getDisplayNamesInGuiPreferences
 
     Parameters
     ----------
@@ -54,9 +58,6 @@ def getDisplayNamesInGuiPreferences(fileName: str):
     -------
         A list of Strings of displayNames. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -67,7 +68,11 @@ def printValuesList(object: str, maxRecursionDepth: SymbolicConstant = None, asS
 
     Path
     ----
-        - caePrefsAccess.printValuesList
+    This function can be accessed by:
+        
+    .. code-block:: python
+
+        caePrefsAccess.printValuesList
 
     Parameters
     ----------
@@ -87,9 +92,6 @@ def printValuesList(object: str, maxRecursionDepth: SymbolicConstant = None, asS
         A String displaying the path, name, and value for all of the options in the object that 
         you select. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -99,9 +101,13 @@ def openGuiPreferences(displayName: str, fileName: str = ''):
     graphical user interface. Abaqus stores preferences for each display you use in a
     separate guiPreferences section of the abaqus_2021.gpr file.
 
-    Path
-    ----
-        - caePrefsAccess.openGuiPreferences
+    Notes
+    -----
+    This function can be accessed by:
+        
+    .. code-block:: python
+
+        caePrefsAccess.openGuiPreferences
 
     Parameters
     ----------
@@ -119,9 +125,6 @@ def openGuiPreferences(displayName: str, fileName: str = ''):
     -------
         A CaeGuiPrefs object. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -134,7 +137,11 @@ def openSessionOptions(fileName: str = '', directory: SymbolicConstant = HOME):
 
     Path
     ----
-        - caePrefsAccess.openSessionOptions
+    This function can be accessed by:
+        
+    .. code-block:: python
+
+        caePrefsAccess.openSessionOptions
 
     Parameters
     ----------
@@ -154,8 +161,5 @@ def openSessionOptions(fileName: str = '', directory: SymbolicConstant = HOME):
     -------
         A CaeKerPrefs object. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass

@@ -7,9 +7,12 @@ class ErrorIndicatorResult(RuleResult):
 
     Notes
     -----
-        This object can be accessed by:
-        - import job
-        - mdb.adaptivityProcesses[name].iterations[i].ruleResults[name].indicatorResults[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import job
+        mdb.adaptivityProcesses[name].iterations[i].ruleResults[name].indicatorResults[name]
 
     """
 
@@ -19,8 +22,11 @@ class ErrorIndicatorResult(RuleResult):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.adaptivityProcesses[name].iterations[i].ruleResults[name].ErrorIndicatorResult
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.adaptivityProcesses[name].iterations[i].ruleResults[name].ErrorIndicatorResult
 
         Parameters
         ----------

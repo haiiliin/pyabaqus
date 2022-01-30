@@ -17,8 +17,11 @@ class DataTable:
 
     Notes
     -----
-        This object can be accessed by:
-        - mdb.models[name].tableCollections[name].parameterTables[name].dataTables[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name].tableCollections[name].parameterTables[name].dataTables[i]
 
     Corresponding analysis keywords
     -------------------------------
@@ -37,8 +40,11 @@ class DataTable:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].tableCollections[name].parameterTables[name].DataTable
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].tableCollections[name].parameterTables[name].DataTable
 
         Parameters
         ----------

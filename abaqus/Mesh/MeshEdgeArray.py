@@ -6,12 +6,15 @@ class MeshEdgeArray(list[MeshEdge]):
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].elementEdges
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].elementEdges
-        - mdb.models[name].rootAssembly.instances[name].elementEdges
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].elementEdges
+        import assembly
+        mdb.models[name].rootAssembly.allInstances[name].elementEdges
+        mdb.models[name].rootAssembly.instances[name].elementEdges
 
     """
 
@@ -20,8 +23,11 @@ class MeshEdgeArray(list[MeshEdge]):
 
         Notes
         -----
-            This function can be accessed by:
-            - mesh.MeshEdgeArray
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mesh.MeshEdgeArray
 
         Parameters
         ----------

@@ -16,9 +16,12 @@ class EmbeddedRegion(Constraint):
 
     Notes
     -----
-        This object can be accessed by:
-        - import interaction
-        - mdb.models[name].constraints[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import interaction
+        mdb.models[name].constraints[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -37,8 +40,11 @@ class EmbeddedRegion(Constraint):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].EmbeddedRegion
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EmbeddedRegion
 
         Parameters
         ----------

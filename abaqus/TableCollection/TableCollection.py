@@ -18,8 +18,11 @@ class TableCollection:
 
     Notes
     -----
-        This object can be accessed by:
-        - mdb.models[name].tableCollections[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name].tableCollections[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -42,8 +45,11 @@ class TableCollection:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].TableCollection
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].TableCollection
 
         Parameters
         ----------
@@ -61,8 +67,11 @@ class TableCollection:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].tableCollections[name].parameterTables[name].DataTable
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].TableCollection
 
         Parameters
         ----------
@@ -87,8 +96,11 @@ class TableCollection:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].tableCollections[name].ParameterTable
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].TableCollection
 
         Parameters
         ----------
@@ -107,8 +119,11 @@ class TableCollection:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].tableCollections[name].PropertyTable
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].TableCollection
 
         Parameters
         ----------

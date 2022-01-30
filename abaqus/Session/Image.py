@@ -4,8 +4,11 @@ class Image:
 
     Notes
     -----
-        This object can be accessed by:
-        - session.images[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        session.images[name]
 
     """
 
@@ -14,8 +17,11 @@ class Image:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.Image
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.Image
 
         Parameters
         ----------

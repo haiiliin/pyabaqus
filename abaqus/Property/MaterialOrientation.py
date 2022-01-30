@@ -21,14 +21,17 @@ class MaterialOrientation:
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].parts[name].compositeLayups[i].orientation
-        - mdb.models[name].parts[name].materialOrientations[i]
-        - import odbAccess
-        - session.odbs[name].parts[name].materialOrientations[i]
-        - session.odbs[name].rootAssembly.instances[name].materialOrientations[i]
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.materialOrientations[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].parts[name].compositeLayups[i].orientation
+        mdb.models[name].parts[name].materialOrientations[i]
+        import odbAccess
+        session.odbs[name].parts[name].materialOrientations[i]
+        session.odbs[name].rootAssembly.instances[name].materialOrientations[i]
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.materialOrientations[i]
 
     """
 
@@ -57,8 +60,11 @@ class MaterialOrientation:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].MaterialOrientation
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].MaterialOrientation
 
         Parameters
         ----------
@@ -150,8 +156,11 @@ class MaterialOrientation:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].compositeLayups[*name*].ReferenceOrientation
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].MaterialOrientation
 
         Parameters
         ----------

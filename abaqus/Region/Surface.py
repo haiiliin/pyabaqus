@@ -31,18 +31,21 @@ class Surface:
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].allInternalSurfaces[name]
-        - mdb.models[name].parts[name].allSurfaces[name]
-        - mdb.models[name].parts[name].surfaces[name]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].surfaces[name]
-        - mdb.models[name].rootAssembly.allInternalSurfaces[name]
-        - mdb.models[name].rootAssembly.allSurfaces[name]
-        - mdb.models[name].rootAssembly.instances[name].surfaces[name]
-        - mdb.models[name].rootAssembly.modelInstances[i].surfaces[name]
-        - mdb.models[name].rootAssembly.surfaces[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].allInternalSurfaces[name]
+        mdb.models[name].parts[name].allSurfaces[name]
+        mdb.models[name].parts[name].surfaces[name]
+        import assembly
+        mdb.models[name].rootAssembly.allInstances[name].surfaces[name]
+        mdb.models[name].rootAssembly.allInternalSurfaces[name]
+        mdb.models[name].rootAssembly.allSurfaces[name]
+        mdb.models[name].rootAssembly.instances[name].surfaces[name]
+        mdb.models[name].rootAssembly.modelInstances[i].surfaces[name]
+        mdb.models[name].rootAssembly.surfaces[name]
 
     """
 
@@ -83,9 +86,12 @@ class Surface:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Surface
-            - mdb.models[*name*].rootAssembly.Surface
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Surface
+            mdb.models[*name*].rootAssembly.Surface
 
         Parameters
         ----------
@@ -161,9 +167,12 @@ class Surface:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Surface
-            - mdb.models[*name*].rootAssembly.Surface
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Surface
+            mdb.models[*name*].rootAssembly.Surface
 
         Parameters
         ----------
@@ -187,9 +196,12 @@ class Surface:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].SurfaceByBoolean
-            - mdb.models[*name*].rootAssembly.SurfaceByBoolean
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Surface
+            mdb.models[*name*].rootAssembly.Surface
 
         Parameters
         ----------
@@ -214,8 +226,12 @@ class Surface:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.SurfaceFromElsets
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Surface
+            mdb.models[*name*].rootAssembly.Surface
 
         Parameters
         ----------

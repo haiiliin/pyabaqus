@@ -129,11 +129,6 @@ class DGSuperimposeOptions:
     coordinateScaleFactors: float
         A tuple of three Floats specifying the coordinate scaling in each of the three
         coordinate directions when **coordinateScale=ON**. The default value is (1, 1, 1).
-
-    Notes
-    -----
-        This object can be accessed by:
-
     """
 
     # A SymbolicConstant specifying the render style of the plot. Possible values are 

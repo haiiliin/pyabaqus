@@ -7,12 +7,15 @@ class RebarLayers:
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].parts[name].compositeLayups[i].section.rebarLayers
-        - mdb.models[name].sections[name].rebarLayers
-        - import odbSection
-        - session.odbs[name].sections[name].rebarLayers
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].parts[name].compositeLayups[i].section.rebarLayers
+        mdb.models[name].sections[name].rebarLayers
+        import odbSection
+        session.odbs[name].sections[name].rebarLayers
 
     Corresponding analysis keywords
     -------------------------------
@@ -25,10 +28,13 @@ class RebarLayers:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].parts[name].compositeLayups[i].section.RebarLayers
-            - mdb.models[name].sections[name].RebarLayers
-            - session.odbs[name].sections[name].RebarLayers
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].parts[name].compositeLayups[i].section.RebarLayers
+            mdb.models[name].sections[name].RebarLayers
+            session.odbs[name].sections[name].RebarLayers
 
         Parameters
         ----------

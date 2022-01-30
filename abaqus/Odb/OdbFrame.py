@@ -32,9 +32,12 @@ class OdbFrame:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].steps[name].frames[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name].steps[name].frames[i]
 
     """
 
@@ -70,8 +73,11 @@ class OdbFrame:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].steps[name].Frame
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].steps[name].Frame
 
         Parameters
         ----------
@@ -100,8 +106,11 @@ class OdbFrame:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].steps[name].Frame
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].steps[name].Frame
 
         Parameters
         ----------
@@ -126,8 +135,11 @@ class OdbFrame:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].steps[name].Frame
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].steps[name].Frame
 
         Parameters
         ----------
@@ -155,8 +167,11 @@ class OdbFrame:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].steps[name].frames[i].FieldOutput
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].steps[name].Frame
 
         Parameters
         ----------
@@ -200,8 +215,11 @@ class OdbFrame:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].steps[name].frames[i].FieldOutput
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].steps[name].Frame
 
         Parameters
         ----------

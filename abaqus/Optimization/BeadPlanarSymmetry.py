@@ -9,9 +9,12 @@ class BeadPlanarSymmetry(GeometricRestriction):
 
     Notes
     -----
-        This object can be accessed by:
-        - import optimization
-        - mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import optimization
+        mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
 
@@ -20,8 +23,11 @@ class BeadPlanarSymmetry(GeometricRestriction):
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].BeadPlanarSymmetry
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].optimizationTasks[name].BeadPlanarSymmetry
 
         Parameters
         ----------

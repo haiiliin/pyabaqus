@@ -128,9 +128,12 @@ class PartBase(Feature):
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name]
 
     """
 
@@ -253,8 +256,11 @@ class PartBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].Part
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Part
 
         Parameters
         ----------
@@ -285,8 +291,11 @@ class PartBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].Part
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Part
 
         Parameters
         ----------
@@ -328,8 +337,11 @@ class PartBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.PartFromBooleanCut
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Part
 
         Parameters
         ----------
@@ -357,8 +369,11 @@ class PartBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.PartFromBooleanMerge
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Part
 
         Parameters
         ----------
@@ -398,8 +413,11 @@ class PartBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[modelName].PartFromExtrude2DMesh 
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Part
 
         Parameters
         ----------
@@ -434,8 +452,11 @@ class PartBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[modelName].PartFromGeometryFile 
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Part
 
         Parameters
         ----------
@@ -510,8 +531,11 @@ class PartBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.PartFromInstanceMesh
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Part
 
         Parameters
         ----------
@@ -548,8 +572,11 @@ class PartBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].parts[name].PartFromMesh
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Part
 
         Parameters
         ----------
@@ -577,8 +604,11 @@ class PartBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[modelName].PartFromMeshMirror 
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Part
 
         Parameters
         ----------
@@ -617,8 +647,11 @@ class PartBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[modelName].PartFromNodesAndElements 
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Part
 
         Parameters
         ----------
@@ -659,8 +692,11 @@ class PartBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[modelName].PartFromOdb 
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Part
 
         Parameters
         ----------
@@ -724,8 +760,11 @@ class PartBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[modelName].PartFromSection3DMeshByPlane 
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Part
 
         Parameters
         ----------
@@ -768,8 +807,11 @@ class PartBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].PartFromSubstructure
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Part
 
         Parameters
         ----------
@@ -805,8 +847,11 @@ class PartBase(Feature):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[modelName].Part2DGeomFrom2DMesh 
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].Part
 
         Parameters
         ----------

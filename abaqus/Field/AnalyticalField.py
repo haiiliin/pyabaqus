@@ -25,9 +25,12 @@ class AnalyticalField(Field):
 
     Notes
     -----
-        This object can be accessed by:
-        - import fields
-        - mdb.models[name].analyticalFields[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import fields
+        mdb.models[name].analyticalFields[name]
 
     """
 
@@ -60,8 +63,11 @@ class AnalyticalField(Field):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].analyticalFields[name].OdbMeshRegionData
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].analyticalFields[name].OdbMeshRegionData
 
         Parameters
         ----------

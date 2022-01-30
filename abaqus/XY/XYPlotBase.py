@@ -25,9 +25,12 @@ class XYPlotBase:
 
     Notes
     -----
-        This object can be accessed by:
-        - import visualization
-        - session.xyPlots[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import visualization
+        session.xyPlots[name]
 
     """
 
@@ -53,8 +56,11 @@ class XYPlotBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.XYPlot
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.XYPlot
 
         Parameters
         ----------

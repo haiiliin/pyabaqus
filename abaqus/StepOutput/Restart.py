@@ -6,9 +6,12 @@ class Restart:
 
     Notes
     -----
-        This object can be accessed by:
-        - import step
-        - mdb.models[name].steps[name].restart
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import step
+        mdb.models[name].steps[name].restart
 
     Corresponding analysis keywords
     -------------------------------
@@ -22,8 +25,11 @@ class Restart:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].steps[name].Restart
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].steps[name].Restart
 
         Parameters
         ----------

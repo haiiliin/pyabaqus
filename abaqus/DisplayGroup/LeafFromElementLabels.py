@@ -18,8 +18,11 @@ class LeafFromElementLabels(Leaf):
 
     Notes
     -----
-        This object can be accessed by:
-        - import displayGroupOdbToolset
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import displayGroupOdbToolset
 
     """
 
@@ -33,8 +36,11 @@ class LeafFromElementLabels(Leaf):
 
         Notes
         -----
-            This function can be accessed by:
-            - LeafFromElementLabels
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            LeafFromElementLabels
 
         Parameters
         ----------

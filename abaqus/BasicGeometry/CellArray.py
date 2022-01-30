@@ -7,21 +7,24 @@ class CellArray:
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].allInternalSets[name].cells
-        - mdb.models[name].parts[name].allSets[name].cells
-        - mdb.models[name].parts[name].cells
-        - mdb.models[name].parts[name].sets[name].cells
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].cells
-        - mdb.models[name].rootAssembly.allInstances[name].sets[name].cells
-        - mdb.models[name].rootAssembly.allInternalSets[name].cells
-        - mdb.models[name].rootAssembly.allSets[name].cells
-        - mdb.models[name].rootAssembly.instances[name].cells
-        - mdb.models[name].rootAssembly.instances[name].sets[name].cells
-        - mdb.models[name].rootAssembly.modelInstances[i].sets[name].cells
-        - mdb.models[name].rootAssembly.sets[name].cells
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].allInternalSets[name].cells
+        mdb.models[name].parts[name].allSets[name].cells
+        mdb.models[name].parts[name].cells
+        mdb.models[name].parts[name].sets[name].cells
+        import assembly
+        mdb.models[name].rootAssembly.allInstances[name].cells
+        mdb.models[name].rootAssembly.allInstances[name].sets[name].cells
+        mdb.models[name].rootAssembly.allInternalSets[name].cells
+        mdb.models[name].rootAssembly.allSets[name].cells
+        mdb.models[name].rootAssembly.instances[name].cells
+        mdb.models[name].rootAssembly.instances[name].sets[name].cells
+        mdb.models[name].rootAssembly.modelInstances[i].sets[name].cells
+        mdb.models[name].rootAssembly.sets[name].cells
 
     """
 
@@ -30,8 +33,11 @@ class CellArray:
 
         Notes
         -----
-            This function can be accessed by:
-            - part.CellArray
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            part.CellArray
 
         Parameters
         ----------

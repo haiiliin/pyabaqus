@@ -17,8 +17,11 @@ class LeafFromNodeLabels(Leaf):
 
     Notes
     -----
-        This object can be accessed by:
-        - import displayGroupOdbToolset
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import displayGroupOdbToolset
 
     """
 
@@ -32,8 +35,11 @@ class LeafFromNodeLabels(Leaf):
 
         Notes
         -----
-            This function can be accessed by:
-            - LeafFromNodeLabels
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            LeafFromNodeLabels
 
         Parameters
         ----------

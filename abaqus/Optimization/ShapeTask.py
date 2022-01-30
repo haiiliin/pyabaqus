@@ -26,9 +26,12 @@ class ShapeTask(OptimizationTask):
 
     Notes
     -----
-        This object can be accessed by:
-        - import optimization
-        - mdb.models[name].optimizationTasks[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import optimization
+        mdb.models[name].optimizationTasks[name]
 
     """
 
@@ -78,8 +81,11 @@ class ShapeTask(OptimizationTask):
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].ShapeTask
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].ShapeTask
 
         Parameters
         ----------

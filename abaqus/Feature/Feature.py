@@ -29,13 +29,16 @@ class Feature:
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].features[name]
-        - mdb.models[name].parts[name].featuresById[i]
-        - import assembly
-        - mdb.models[name].rootAssembly.features[name]
-        - mdb.models[name].rootAssembly.featuresById[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].features[name]
+        mdb.models[name].parts[name].featuresById[i]
+        import assembly
+        mdb.models[name].rootAssembly.features[name]
+        mdb.models[name].rootAssembly.featuresById[i]
 
     """
 
@@ -55,9 +58,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].AttachmentPoints
-            - mdb.models[*name*].rootAssembly.AttachmentPoints
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -111,9 +117,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].AttachmentPointsAlongDirection
-            - mdb.models[*name*].rootAssembly.AttachmentPointsAlongDirection
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -194,9 +203,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].AttachmentPointsOffsetFromEdges
-            - mdb.models[*name*].rootAssembly.AttachmentPointsOffsetFromEdges
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -292,9 +304,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumAxisByCylFace
-            - mdb.models[*name*].parts[*name*].DatumAxisByCylFace
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -317,9 +332,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumAxisByNormalToPlane
-            - mdb.models[*name*].parts[*name*].DatumAxisByNormalToPlane
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -344,9 +362,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumAxisByParToEdge
-            - mdb.models[*name*].parts[*name*].DatumAxisByParToEdge
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -371,9 +392,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumAxisByPrincipalAxis
-            - mdb.models[*name*].parts[*name*].DatumAxisByPrincipalAxis
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -398,9 +422,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumAxisByRotation
-            - mdb.models[*name*].parts[*name*].DatumAxisByRotation
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -430,9 +457,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumAxisByRotation
-            - mdb.models[*name*].parts[*name*].DatumAxisByRotation
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -464,9 +494,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumAxisByThreePoint
-            - mdb.models[*name*].parts[*name*].DatumAxisByThreePoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -495,9 +528,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumAxisByThruEdge
-            - mdb.models[*name*].parts[*name*].DatumAxisByThruEdge
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -520,9 +556,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumAxisByTwoPlane
-            - mdb.models[*name*].parts[*name*].DatumAxisByTwoPlane
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -547,9 +586,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumAxisByTwoPoint
-            - mdb.models[*name*].parts[*name*].DatumAxisByTwoPoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -574,9 +616,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumCsysByDefault
-            - mdb.models[*name*].parts[*name*].DatumCsysByDefault
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -603,9 +648,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.DatumCsysByOffset
-            - mdb.models[name].parts[name].DatumCsysByOffset
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -642,9 +690,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].parts[name].DatumCsysByThreePoints
-            - mdb.models[name].rootAssembly.DatumCsysByThreePoints
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -690,9 +741,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumCsysByTwoLines
-            - mdb.models[*name*].parts[*name*].DatumCsysByTwoLines
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -724,9 +778,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPlaneByPrincipalPlane
-            - mdb.models[*name*].parts[*name*].DatumPlaneByPrincipalPlane
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -753,9 +810,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPlaneByOffset
-            - mdb.models[*name*].parts[*name*].DatumPlaneByOffset
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -784,9 +844,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPlaneByOffset
-            - mdb.models[*name*].parts[*name*].DatumPlaneByOffset
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -814,9 +877,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPlaneByRotation
-            - mdb.models[*name*].parts[*name*].DatumPlaneByRotation
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -843,9 +909,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPlaneByThreePoints
-            - mdb.models[*name*].parts[*name*].DatumPlaneByThreePoints
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -872,9 +941,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPlaneByLinePoint
-            - mdb.models[*name*].parts[*name*].DatumPlaneByLinePoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -899,9 +971,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPlaneByPointNormal
-            - mdb.models[*name*].parts[*name*].DatumPlaneByPointNormal
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -926,9 +1001,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPlaneByTwoPoint
-            - mdb.models[*name*].parts[*name*].DatumPlaneByTwoPoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -953,9 +1031,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPointByCoordinate
-            - mdb.models[*name*].parts[*name*].DatumPointByCoordinate
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -976,9 +1057,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPointByOffset
-            - mdb.models[*name*].parts[*name*].DatumPointByOffset
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -999,9 +1083,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPointByMidPoint
-            - mdb.models[*name*].parts[*name*].DatumPointByMidPoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1023,9 +1110,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPointByOnFace
-            - mdb.models[*name*].parts[*name*].DatumPointByOnFace
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1056,9 +1146,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPointByEdgeParam
-            - mdb.models[*name*].parts[*name*].DatumPointByEdgeParam
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1084,9 +1177,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPointByProjOnEdge
-            - mdb.models[*name*].parts[*name*].DatumPointByProjOnEdge
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1111,9 +1207,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.DatumPointByProjOnFace
-            - mdb.models[*name*].parts[*name*].DatumPointByProjOnFace
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1140,9 +1239,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].MakeSketchTransform
-            - mdb.models[*name*].rootAssembly.MakeSketchTransform
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1178,9 +1280,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionCellByDatumPlane
-            - mdb.models[*name*].rootAssembly.PartitionCellByDatumPlane
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1205,9 +1310,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionCellByExtendFace
-            - mdb.models[*name*].rootAssembly.PartitionCellByExtendFace
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1232,9 +1340,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionCellByExtrudeEdge
-            - mdb.models[*name*].rootAssembly.PartitionCellByExtrudeEdge
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1267,9 +1378,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionCellByPatchNCorners
-            - mdb.models[*name*].rootAssembly.PartitionCellByPatchNCorners
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1294,9 +1408,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionCellByPatchNEdges
-            - mdb.models[*name*].rootAssembly.PartitionCellByPatchNEdges
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1322,9 +1439,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionCellByPlaneNormalToEdge
-            - mdb.models[*name*].rootAssembly.PartitionCellByPlaneNormalToEdge
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1351,9 +1471,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionCellByPlanePointNormal
-            - mdb.models[*name*].rootAssembly.PartitionCellByPlanePointNormal
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1379,9 +1502,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionCellByPlaneThreePoints
-            - mdb.models[*name*].rootAssembly.PartitionCellByPlaneThreePoints
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1411,9 +1537,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionCellBySweepEdge
-            - mdb.models[*name*].rootAssembly.PartitionCellBySweepEdge
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1442,9 +1571,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionEdgeByDatumPlane
-            - mdb.models[*name*].rootAssembly.PartitionEdgeByDatumPlane
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1468,9 +1600,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionEdgeByParam
-            - mdb.models[*name*].rootAssembly.PartitionEdgeByParam
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1495,9 +1630,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionEdgeByPoint
-            - mdb.models[*name*].rootAssembly.PartitionEdgeByPoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1522,9 +1660,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionFaceByAuto
-            - mdb.models[*name*].rootAssembly.PartitionFaceByAuto
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1545,9 +1686,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionFaceByCurvedPathEdgeParams
-            - mdb.models[*name*].rootAssembly.PartitionFaceByCurvedPathEdgeParams
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1580,9 +1724,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionFaceByCurvedPathEdgePoints
-            - mdb.models[*name*].rootAssembly.PartitionFaceByCurvedPathEdgePoints
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1612,9 +1759,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionFaceByDatumPlane
-            - mdb.models[*name*].rootAssembly.PartitionFaceByDatumPlane
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1636,9 +1786,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionFaceByExtendFace
-            - mdb.models[*name*].rootAssembly.PartitionFaceByExtendFace
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1661,9 +1814,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionFaceByIntersectFace
-            - mdb.models[*name*].rootAssembly.PartitionFaceByIntersectFace
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1685,9 +1841,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionFaceByProjectingEdges
-            - mdb.models[*name*].rootAssembly.PartitionFaceByProjectingEdges
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1713,9 +1872,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionFaceByShortestPath
-            - mdb.models[*name*].rootAssembly.PartitionFaceByShortestPath
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1744,9 +1906,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionFaceBySketch
-            - mdb.models[*name*].rootAssembly.PartitionFaceBySketch
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1780,9 +1945,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionFaceBySketchDistance
-            - mdb.models[*name*].rootAssembly.PartitionFaceBySketchDistance
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1823,9 +1991,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionFaceBySketchRefPoint
-            - mdb.models[*name*].rootAssembly.PartitionFaceBySketchRefPoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1863,9 +2034,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].PartitionFaceBySketchThruAll
-            - mdb.models[*name*].rootAssembly.PartitionFaceBySketchThruAll
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1902,9 +2076,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].rootAssembly.ReferencePoint
-            - mdb.models[*name*].parts[name].ReferencePoint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1927,9 +2104,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].RemoveWireEdges
-            - mdb.models[*name*].rootAssembly.RemoveWireEdges
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------
@@ -1953,9 +2133,12 @@ class Feature:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].WirePolyLine
-            - mdb.models[*name*].rootAssembly.WirePolyLine
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].AttachmentPoints
+            mdb.models[*name*].rootAssembly.AttachmentPoints
 
         Parameters
         ----------

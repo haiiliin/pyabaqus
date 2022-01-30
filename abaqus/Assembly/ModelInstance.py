@@ -43,9 +43,12 @@ class ModelInstance:
 
     Notes
     -----
-        This object can be accessed by:
-        - import assembly
-        - mdb.models[name].rootAssembly.modelInstances[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import assembly
+        mdb.models[name].rootAssembly.modelInstances[i]
 
     """
 
@@ -82,8 +85,11 @@ class ModelInstance:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].rootAssembly.Instance
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].rootAssembly.Instance
 
         Parameters
         ----------

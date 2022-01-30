@@ -23,9 +23,12 @@ class BeadTask(OptimizationTask):
 
     Notes
     -----
-        This object can be accessed by:
-        - import optimization
-        - mdb.models[name].optimizationTasks[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import optimization
+        mdb.models[name].optimizationTasks[name]
 
     """
 
@@ -56,8 +59,11 @@ class BeadTask(OptimizationTask):
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].BeadTask
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].BeadTask
 
         Parameters
         ----------

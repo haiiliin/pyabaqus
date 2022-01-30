@@ -6,12 +6,15 @@ class LayerProperties:
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].parts[name].compositeLayups[i].section.rebarLayers.layerTable[i]
-        - mdb.models[name].sections[name].rebarLayers.layerTable[i]
-        - import odbSection
-        - session.odbs[name].sections[name].rebarLayers.layerTable[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].parts[name].compositeLayups[i].section.rebarLayers.layerTable[i]
+        mdb.models[name].sections[name].rebarLayers.layerTable[i]
+        import odbSection
+        session.odbs[name].sections[name].rebarLayers.layerTable[i]
 
     Corresponding analysis keywords
     -------------------------------
@@ -26,9 +29,12 @@ class LayerProperties:
 
         Notes
         -----
-            This function can be accessed by:
-            - section.LayerProperties
-            - odbSection.LayerProperties
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            section.LayerProperties
+            odbSection.LayerProperties
 
         Parameters
         ----------

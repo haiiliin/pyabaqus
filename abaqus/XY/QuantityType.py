@@ -10,43 +10,46 @@ class QuantityType:
 
     Notes
     -----
-        This object can be accessed by:
-        - import visualization
-        - session.charts[name].axes1[i].axisData.curves[i].data.axis1QuantityType
-        - session.charts[name].axes1[i].axisData.curves[i].data.axis2QuantityType
-        - session.charts[name].axes1[i].axisData.quantityType
-        - session.charts[name].axes2[i].axisData.curves[i].data.axis1QuantityType
-        - session.charts[name].axes2[i].axisData.curves[i].data.axis2QuantityType
-        - session.charts[name].axes2[i].axisData.quantityType
-        - session.charts[name].curves[name].data.axis1QuantityType
-        - session.charts[name].curves[name].data.axis2QuantityType
-        - session.curves[name].data.axis1QuantityType
-        - session.curves[name].data.axis2QuantityType
-        - session.defaultChartOptions.defaultAxis1Options.axisData.curves[i].data.axis1QuantityType
-        - session.defaultChartOptions.defaultAxis1Options.axisData.curves[i].data.axis2QuantityType
-        - session.defaultChartOptions.defaultAxis1Options.axisData.quantityType
-        - session.defaultChartOptions.defaultAxis2Options.axisData.curves[i].data.axis1QuantityType
-        - session.defaultChartOptions.defaultAxis2Options.axisData.curves[i].data.axis2QuantityType
-        - session.defaultChartOptions.defaultAxis2Options.axisData.quantityType
-        - import odbAccess
-        - session.odbs[name].userData.axis1QuantityType
-        - session.odbs[name].userData.axis2QuantityType
-        - import visualization
-        - import xyPlot
-        - session.odbs[name].userData.xyDataObjects[name].axis1QuantityType
-        - session.odbs[name].userData.xyDataObjects[name].axis2QuantityType
-        - session.xyDataObjects[name].axis1QuantityType
-        - session.xyDataObjects[name].axis2QuantityType
-        - session.xyPlots[name].charts[name].axes1[i].axisData.curves[i].data.axis1QuantityType
-        - session.xyPlots[name].charts[name].axes1[i].axisData.curves[i].data.axis2QuantityType
-        - session.xyPlots[name].charts[name].axes1[i].axisData.quantityType
-        - session.xyPlots[name].charts[name].axes2[i].axisData.curves[i].data.axis1QuantityType
-        - session.xyPlots[name].charts[name].axes2[i].axisData.curves[i].data.axis2QuantityType
-        - session.xyPlots[name].charts[name].axes2[i].axisData.quantityType
-        - session.xyPlots[name].charts[name].curves[name].data.axis1QuantityType
-        - session.xyPlots[name].charts[name].curves[name].data.axis2QuantityType
-        - session.xyPlots[name].curves[name].data.axis1QuantityType
-        - session.xyPlots[name].curves[name].data.axis2QuantityType
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import visualization
+        session.charts[name].axes1[i].axisData.curves[i].data.axis1QuantityType
+        session.charts[name].axes1[i].axisData.curves[i].data.axis2QuantityType
+        session.charts[name].axes1[i].axisData.quantityType
+        session.charts[name].axes2[i].axisData.curves[i].data.axis1QuantityType
+        session.charts[name].axes2[i].axisData.curves[i].data.axis2QuantityType
+        session.charts[name].axes2[i].axisData.quantityType
+        session.charts[name].curves[name].data.axis1QuantityType
+        session.charts[name].curves[name].data.axis2QuantityType
+        session.curves[name].data.axis1QuantityType
+        session.curves[name].data.axis2QuantityType
+        session.defaultChartOptions.defaultAxis1Options.axisData.curves[i].data.axis1QuantityType
+        session.defaultChartOptions.defaultAxis1Options.axisData.curves[i].data.axis2QuantityType
+        session.defaultChartOptions.defaultAxis1Options.axisData.quantityType
+        session.defaultChartOptions.defaultAxis2Options.axisData.curves[i].data.axis1QuantityType
+        session.defaultChartOptions.defaultAxis2Options.axisData.curves[i].data.axis2QuantityType
+        session.defaultChartOptions.defaultAxis2Options.axisData.quantityType
+        import odbAccess
+        session.odbs[name].userData.axis1QuantityType
+        session.odbs[name].userData.axis2QuantityType
+        import visualization
+        import xyPlot
+        session.odbs[name].userData.xyDataObjects[name].axis1QuantityType
+        session.odbs[name].userData.xyDataObjects[name].axis2QuantityType
+        session.xyDataObjects[name].axis1QuantityType
+        session.xyDataObjects[name].axis2QuantityType
+        session.xyPlots[name].charts[name].axes1[i].axisData.curves[i].data.axis1QuantityType
+        session.xyPlots[name].charts[name].axes1[i].axisData.curves[i].data.axis2QuantityType
+        session.xyPlots[name].charts[name].axes1[i].axisData.quantityType
+        session.xyPlots[name].charts[name].axes2[i].axisData.curves[i].data.axis1QuantityType
+        session.xyPlots[name].charts[name].axes2[i].axisData.curves[i].data.axis2QuantityType
+        session.xyPlots[name].charts[name].axes2[i].axisData.quantityType
+        session.xyPlots[name].charts[name].curves[name].data.axis1QuantityType
+        session.xyPlots[name].charts[name].curves[name].data.axis2QuantityType
+        session.xyPlots[name].curves[name].data.axis1QuantityType
+        session.xyPlots[name].curves[name].data.axis2QuantityType
 
     """
 
@@ -55,9 +58,12 @@ class QuantityType:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.QuantityType
-            - xyPlot.QuantityType
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.QuantityType
+            xyPlot.QuantityType
 
         Parameters
         ----------

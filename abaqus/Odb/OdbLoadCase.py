@@ -5,11 +5,14 @@ class OdbLoadCase:
 
     Notes
     -----
-        This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].steps[name].frames[i].loadCase
-        - session.odbs[name].steps[name].historyRegions[name].loadCase
-        - session.odbs[name].steps[name].loadCases[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name].steps[name].frames[i].loadCase
+        session.odbs[name].steps[name].historyRegions[name].loadCase
+        session.odbs[name].steps[name].loadCases[name]
 
     """
 
@@ -18,8 +21,11 @@ class OdbLoadCase:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[*name*].steps[*name*].LoadCase
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[*name*].steps[*name*].LoadCase
 
         Parameters
         ----------

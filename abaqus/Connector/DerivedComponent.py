@@ -14,17 +14,20 @@ class DerivedComponent:
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent
-        - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent
-        - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent
-        - mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent
-        - import odbSection
-        - session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent
-        - session.odbs[name].sections[name].behaviorOptions[i].derivedComponent
-        - session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent
-        - session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent
+        mdb.models[name].sections[name].behaviorOptions[i].derivedComponent
+        mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent
+        mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent
+        import odbSection
+        session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent
+        session.odbs[name].sections[name].behaviorOptions[i].derivedComponent
+        session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent
+        session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent
 
     Corresponding analysis keywords
     -------------------------------
@@ -40,15 +43,18 @@ class DerivedComponent:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent
-            - mdb.models[name].sections[name].behaviorOptions[i].DerivedComponent
-            - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
-            - mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent
-            - session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent
-            - session.odbs[name].sections[name].behaviorOptions[i].DerivedComponent
-            - session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
-            - session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent
+            mdb.models[name].sections[name].behaviorOptions[i].DerivedComponent
+            mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
+            mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent
+            session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent
+            session.odbs[name].sections[name].behaviorOptions[i].DerivedComponent
+            session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
+            session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent
 
         Parameters
         ----------
@@ -87,15 +93,18 @@ class DerivedComponent:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.CDCTerm
-            - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.CDCTerm
-            - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.CDCTerm
-            - mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.CDCTerm
-            - session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.CDCTerm
-            - session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.CDCTerm
-            - session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.CDCTerm
-            - session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.CDCTerm
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent
+            mdb.models[name].sections[name].behaviorOptions[i].DerivedComponent
+            mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
+            mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent
+            session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent
+            session.odbs[name].sections[name].behaviorOptions[i].DerivedComponent
+            session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
+            session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent
 
         Parameters
         ----------

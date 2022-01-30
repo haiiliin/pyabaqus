@@ -7,9 +7,12 @@ class Queue:
 
     Notes
     -----
-        This object can be accessed by:
-        - import job
-        - session.queues[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import job
+        session.queues[name]
 
     """
 
@@ -21,8 +24,11 @@ class Queue:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.Queue
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.Queue
 
         Parameters
         ----------

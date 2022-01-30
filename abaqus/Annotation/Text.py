@@ -17,11 +17,14 @@ class Text(Annotation):
 
     Notes
     -----
-        This object can be accessed by:
-        - import annotationToolset
-        - mdb.annotations[name]
-        - session.odbs[name].userData.annotations[name]
-        - session.viewports[name].annotationsToPlot[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import annotationToolset
+        mdb.annotations[name]
+        session.odbs[name].userData.annotations[name]
+        session.viewports[name].annotationsToPlot[i]
 
     """
 
@@ -41,9 +44,12 @@ class Text(Annotation):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.Text
-            - session.odbs[*name*].userData.Text
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.Text
+            session.odbs[*name*].userData.Text
 
         Parameters
         ----------

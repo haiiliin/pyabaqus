@@ -7,11 +7,14 @@ class TrapezoidalProfile(Profile):
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].profiles[name]
-        - import odbSection
-        - session.odbs[name].profiles[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].profiles[name]
+        import odbSection
+        session.odbs[name].profiles[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -24,9 +27,12 @@ class TrapezoidalProfile(Profile):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].TrapezoidalProfile
-            - session.odbs[name].TrapezoidalProfile
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].TrapezoidalProfile
+            session.odbs[name].TrapezoidalProfile
 
         Parameters
         ----------

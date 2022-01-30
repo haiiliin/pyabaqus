@@ -7,9 +7,12 @@ class OptimizationProcess:
 
     Notes
     -----
-        This object can be accessed by:
-        - import job
-        - mdb.optimizationProcesses[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import job
+        mdb.optimizationProcesses[name]
 
     """
 
@@ -21,8 +24,11 @@ class OptimizationProcess:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.OptimizationProcess
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.OptimizationProcess
 
         Parameters
         ----------

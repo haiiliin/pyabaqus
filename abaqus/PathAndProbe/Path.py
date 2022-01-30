@@ -16,9 +16,12 @@ class Path:
 
     Notes
     -----
-        This object can be accessed by:
-        - import visualization
-        - session.paths[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import visualization
+        session.paths[name]
 
     """
 
@@ -36,8 +39,11 @@ class Path:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.Path
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.Path
 
         Parameters
         ----------

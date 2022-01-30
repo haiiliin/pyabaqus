@@ -3,9 +3,12 @@ class DataSet:
 
     Notes
     -----
-        This object can be accessed by:
-        - import calibration
-        - mdb.models[name].calibrations[name].dataSets[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import calibration
+        mdb.models[name].calibrations[name].dataSets[name]
 
     """
 
@@ -14,8 +17,11 @@ class DataSet:
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].calibrations[name].DataSet
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].calibrations[name].DataSet
 
         Parameters
         ----------

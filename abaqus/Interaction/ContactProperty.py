@@ -46,9 +46,12 @@ class ContactProperty(InteractionProperty):
 
     Notes
     -----
-        This object can be accessed by:
-        - import interaction
-        - mdb.models[name].interactionProperties[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import interaction
+        mdb.models[name].interactionProperties[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -94,8 +97,11 @@ class ContactProperty(InteractionProperty):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].ContactProperty
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ContactProperty
 
         Parameters
         ----------
@@ -121,8 +127,11 @@ class ContactProperty(InteractionProperty):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].TangentialBehavior
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ContactProperty
 
         Parameters
         ----------
@@ -190,8 +199,11 @@ class ContactProperty(InteractionProperty):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].NormalBehavior
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ContactProperty
 
         Parameters
         ----------
@@ -271,8 +283,11 @@ class ContactProperty(InteractionProperty):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].Damping
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ContactProperty
 
         Parameters
         ----------
@@ -309,8 +324,11 @@ class ContactProperty(InteractionProperty):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].Damage
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ContactProperty
 
         Parameters
         ----------
@@ -389,8 +407,11 @@ class ContactProperty(InteractionProperty):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].FractureCriterion
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ContactProperty
 
         Parameters
         ----------
@@ -434,8 +455,11 @@ class ContactProperty(InteractionProperty):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].CohesiveBehavior
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ContactProperty
 
         Parameters
         ----------
@@ -481,8 +505,11 @@ class ContactProperty(InteractionProperty):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].ThermalConductance
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ContactProperty
 
         Parameters
         ----------
@@ -533,8 +560,11 @@ class ContactProperty(InteractionProperty):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].HeatGeneration
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ContactProperty
 
         Parameters
         ----------
@@ -557,8 +587,11 @@ class ContactProperty(InteractionProperty):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].Radiation
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ContactProperty
 
         Parameters
         ----------
@@ -584,8 +617,11 @@ class ContactProperty(InteractionProperty):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].GeometricProperties
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ContactProperty
 
         Parameters
         ----------
@@ -633,8 +669,11 @@ class ContactProperty(InteractionProperty):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].interactionProperties[name].GapElectricalConductance
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ContactProperty
 
         Parameters
         ----------

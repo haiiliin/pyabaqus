@@ -13,17 +13,20 @@ class CDCTerm:
 
     Notes
     -----
-        This object can be accessed by:
-        - import section
-        - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i]
-        - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i]
-        - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i]
-        - mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i]
-        - import odbSection
-        - session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i]
-        - session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i]
-        - session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i]
-        - session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import section
+        mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i]
+        mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i]
+        mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i]
+        mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i]
+        import odbSection
+        session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i]
+        session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i]
+        session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i]
+        session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i]
 
     """
 
@@ -39,15 +42,18 @@ class CDCTerm:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.CDCTerm
-            - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.CDCTerm
-            - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.CDCTerm
-            - mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.CDCTerm
-            - session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.CDCTerm
-            - session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.CDCTerm
-            - session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.CDCTerm
-            - session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.CDCTerm
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.CDCTerm
+            mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.CDCTerm
+            mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.CDCTerm
+            mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.CDCTerm
+            session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.CDCTerm
+            session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.CDCTerm
+            session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.CDCTerm
+            session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.CDCTerm
 
         Parameters
         ----------
@@ -127,21 +133,18 @@ class CDCTerm:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - mdb.models[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
-            - session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.CDCTerm
+            mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.CDCTerm
+            mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.CDCTerm
+            mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.CDCTerm
+            session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.CDCTerm
+            session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.CDCTerm
+            session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.CDCTerm
+            session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.CDCTerm
 
         Parameters
         ----------

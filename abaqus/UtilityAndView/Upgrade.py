@@ -9,12 +9,6 @@ Access
 ------
     - import upgradeScript
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 
@@ -77,8 +71,5 @@ def upgradeScript(fileNames: str, searchSubdirectories: Boolean = True, backup: 
         The number of changes made or, if *preview* was used, the number of changes that would 
         have been made. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass

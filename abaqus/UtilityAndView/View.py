@@ -26,10 +26,13 @@ class View:
 
     Notes
     -----
-        This object can be accessed by:
-        - session.viewports[name].layers[name].view
-        - session.viewports[name].view
-        - session.views[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        session.viewports[name].layers[name].view
+        session.viewports[name].view
+        session.views[name]
 
     """
 
@@ -57,8 +60,11 @@ class View:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.View
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.View
 
         Parameters
         ----------

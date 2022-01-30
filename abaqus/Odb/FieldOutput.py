@@ -29,10 +29,13 @@ class FieldOutput:
 
     Notes
     -----
-        This object can be accessed by:
-        - import
-        - odbAccess
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import
+        odbAccess
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name]
 
     """
 
@@ -61,8 +64,11 @@ class FieldOutput:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].steps[name].frames[i].FieldOutput
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].steps[name].frames[i].FieldOutput
 
         Parameters
         ----------
@@ -106,8 +112,11 @@ class FieldOutput:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.odbs[name].steps[name].frames[i].FieldOutput
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.odbs[name].steps[name].frames[i].FieldOutput
 
         Parameters
         ----------

@@ -25,7 +25,7 @@ copyright = '2022, WANG Hailin'
 author = 'WANG Hailin'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.11'
+release = '1.0.12'
 
 
 # -- General configuration ---------------------------------------------------
@@ -37,17 +37,11 @@ extensions = [
     'sphinx_toolbox.more_autodoc.overloads',
     'sphinx.ext.autodoc',
     'numpydoc',
-    'sphinx.ext.doctest',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
     # 'sphinx.ext.viewcode',
-    'sphinx.ext.napoleon',
 ]
 
-numpydoc_attributes_as_param_list = True
-numpydoc_class_members_toctree = False
+numpydoc_show_inherited_class_members = True
 
 # True to convert the type definitions in the docstrings as references. Defaults to False.
 napoleon_preprocess_types = True

@@ -17,8 +17,11 @@ class LeafFromOdbElementTypes(Leaf):
 
     Notes
     -----
-        This object can be accessed by:
-        - import displayGroupOdbToolset
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import displayGroupOdbToolset
 
     """
 
@@ -32,8 +35,11 @@ class LeafFromOdbElementTypes(Leaf):
 
         Notes
         -----
-            This function can be accessed by:
-            - LeafFromOdbElementTypes
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            LeafFromOdbElementTypes
 
         Parameters
         ----------

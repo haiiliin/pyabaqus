@@ -17,12 +17,6 @@ Access
 ------
     - import methodCallback
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 
@@ -66,9 +60,6 @@ def addCallback(caller: str, methodName: str, callback: str, userData: str = Non
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass
 
@@ -105,8 +96,5 @@ def removeCallback(caller: str, methodName: str, callback: str, userData: str = 
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass

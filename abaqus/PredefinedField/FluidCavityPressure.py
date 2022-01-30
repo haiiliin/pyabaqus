@@ -14,9 +14,12 @@ class FluidCavityPressure(PredefinedField):
 
     Notes
     -----
-        This object can be accessed by:
-        - import load
-        - mdb.models[name].predefinedFields[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import load
+        mdb.models[name].predefinedFields[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -32,8 +35,11 @@ class FluidCavityPressure(PredefinedField):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].FluidCavityPressure
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].FluidCavityPressure
 
         Parameters
         ----------

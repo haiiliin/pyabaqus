@@ -17,11 +17,14 @@ class TabularAmplitude(Amplitude):
 
     Notes
     -----
-        This object can be accessed by:
-        - import amplitude
-        - mdb.models[name].amplitudes[name]
-        - import odbAmplitude
-        - session.odbs[name].amplitudes[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import amplitude
+        mdb.models[name].amplitudes[name]
+        import odbAmplitude
+        session.odbs[name].amplitudes[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -38,9 +41,12 @@ class TabularAmplitude(Amplitude):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].TabularAmplitude
-            - session.odbs[name].TabularAmplitude
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].TabularAmplitude
+            session.odbs[name].TabularAmplitude
 
         Parameters
         ----------

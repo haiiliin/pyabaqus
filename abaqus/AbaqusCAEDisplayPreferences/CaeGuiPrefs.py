@@ -12,9 +12,12 @@ class CaeGuiPrefs:
 
     Notes
     -----
-        This object can be accessed by:
-        - import caePrefsAccess
-        - caePrefsAccess.openGuiPreferences(...)
+    This object can be accessed by:
+        
+    .. code-block:: python
+
+        import caePrefsAccess
+        caePrefsAccess.openGuiPreferences(...)
 
     """
 

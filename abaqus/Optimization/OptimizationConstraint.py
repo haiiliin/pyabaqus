@@ -7,9 +7,12 @@ class OptimizationConstraint:
 
     Notes
     -----
-        This object can be accessed by:
-        - import optimization
-        - mdb.models[name].optimizationTasks[name].optimizationConstraints[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import optimization
+        mdb.models[name].optimizationTasks[name].optimizationConstraints[name]
 
     """
 
@@ -19,8 +22,11 @@ class OptimizationConstraint:
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].OptimizationConstraint
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].optimizationTasks[name].OptimizationConstraint
 
         Parameters
         ----------

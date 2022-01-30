@@ -29,9 +29,12 @@ class PipePressure(Load):
 
     Notes
     -----
-        This object can be accessed by:
-        - import load
-        - mdb.models[name].loads[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import load
+        mdb.models[name].loads[name]
 
     """
 
@@ -64,8 +67,11 @@ class PipePressure(Load):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].PipePressure
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].PipePressure
 
         Parameters
         ----------

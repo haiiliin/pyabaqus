@@ -60,18 +60,21 @@ class Set:
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].allInternalSets[name]
-        - mdb.models[name].parts[name].allSets[name]
-        - mdb.models[name].parts[name].sets[name]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].sets[name]
-        - mdb.models[name].rootAssembly.allInternalSets[name]
-        - mdb.models[name].rootAssembly.allSets[name]
-        - mdb.models[name].rootAssembly.instances[name].sets[name]
-        - mdb.models[name].rootAssembly.modelInstances[i].sets[name]
-        - mdb.models[name].rootAssembly.sets[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].allInternalSets[name]
+        mdb.models[name].parts[name].allSets[name]
+        mdb.models[name].parts[name].sets[name]
+        import assembly
+        mdb.models[name].rootAssembly.allInstances[name].sets[name]
+        mdb.models[name].rootAssembly.allInternalSets[name]
+        mdb.models[name].rootAssembly.allSets[name]
+        mdb.models[name].rootAssembly.instances[name].sets[name]
+        mdb.models[name].rootAssembly.modelInstances[i].sets[name]
+        mdb.models[name].rootAssembly.sets[name]
 
     """
 
@@ -116,9 +119,12 @@ class Set:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Set
-            - mdb.models[*name*].rootAssembly.Set
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Set
+            mdb.models[*name*].rootAssembly.Set
 
         Parameters
         ----------
@@ -172,9 +178,12 @@ class Set:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Set
-            - mdb.models[*name*].rootAssembly.Set
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Set
+            mdb.models[*name*].rootAssembly.Set
 
         Parameters
         ----------
@@ -197,9 +206,12 @@ class Set:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].SetByBoolean
-            - mdb.models[*name*].rootAssembly.SetByBoolean
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Set
+            mdb.models[*name*].rootAssembly.Set
 
         Parameters
         ----------
@@ -228,8 +240,12 @@ class Set:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].SetFromColor
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Set
+            mdb.models[*name*].rootAssembly.Set
 
         Parameters
         ----------
@@ -251,9 +267,12 @@ class Set:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].SetFromElementLabels
-            - mdb.models[*name*].rootAssembly.SetFromElementLabels
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Set
+            mdb.models[*name*].rootAssembly.Set
 
         Parameters
         ----------
@@ -275,9 +294,12 @@ class Set:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].SetFromNodeLabels
-            - mdb.models[*name*].rootAssembly.SetFromNodeLabels
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Set
+            mdb.models[*name*].rootAssembly.Set
 
         Parameters
         ----------
@@ -302,8 +324,12 @@ class Set:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].MapSetsFromOdb
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].Set
+            mdb.models[*name*].rootAssembly.Set
 
         Parameters
         ----------

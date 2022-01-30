@@ -162,8 +162,11 @@ class ModelBase:
 
     Notes
     -----
-        This object can be accessed by:
-        - mdb.models[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name]
 
     Corresponding analysis keywords
     -------------------------------
@@ -350,8 +353,11 @@ class ModelBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.Model
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.Model
 
         Parameters
         ----------
@@ -395,8 +401,11 @@ class ModelBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.ModelFromInputFile
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.Model
 
         Parameters
         ----------
@@ -419,8 +428,11 @@ class ModelBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.ModelFromOdbFile
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.Model
 
         Parameters
         ----------
@@ -451,8 +463,11 @@ class ModelBase:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.ModelFromNastranFile
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.Model
 
         Parameters
         ----------

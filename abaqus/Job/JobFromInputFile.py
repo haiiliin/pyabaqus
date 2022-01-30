@@ -29,9 +29,12 @@ class JobFromInputFile(Job):
 
     Notes
     -----
-        This object can be accessed by:
-        - import job
-        - mdb.jobs[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import job
+        mdb.jobs[name]
 
     """
 
@@ -69,8 +72,11 @@ class JobFromInputFile(Job):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.JobFromInputFile
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.JobFromInputFile
 
         Parameters
         ----------

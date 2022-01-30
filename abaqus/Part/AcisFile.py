@@ -11,8 +11,11 @@ class AcisFile:
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
 
     """
 
@@ -25,8 +28,11 @@ class AcisFile:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.openAcis
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.openAcis
 
         Parameters
         ----------
@@ -56,8 +62,11 @@ class AcisFile:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.openCatia
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.openAcis
 
         Parameters
         ----------
@@ -91,8 +100,11 @@ class AcisFile:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.openEnf
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.openAcis
 
         Parameters
         ----------
@@ -128,8 +140,11 @@ class AcisFile:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.openIges
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.openAcis
 
         Parameters
         ----------
@@ -181,8 +196,11 @@ class AcisFile:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.openParasolid
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.openAcis
 
         Parameters
         ----------
@@ -207,8 +225,11 @@ class AcisFile:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.openStep
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.openAcis
 
         Parameters
         ----------
@@ -235,8 +256,11 @@ class AcisFile:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.openVda
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.openAcis
 
         Parameters
         ----------
@@ -260,8 +284,11 @@ class AcisFile:
 
         Notes
         -----
-            This function can be accessed by:
-            - openSolidworks
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.openAcis
 
         Parameters
         ----------

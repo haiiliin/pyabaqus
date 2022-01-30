@@ -14,12 +14,6 @@ Access
 ------
     - import deleteObjectCallback
 
-Table Data
-----------
-
-Corresponding analysis keywords
--------------------------------
-
 """
 
 
@@ -58,8 +52,5 @@ def deleteObjectCallback(callback: str, path: str, userData: str = None, include
     -------
         None. 
 
-    Exceptions
-    ----------
-        None. 
     """
     pass

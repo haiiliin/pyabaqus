@@ -23,9 +23,12 @@ class CompositeLayup:
 
     Notes
     -----
-        This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].compositeLayups[i]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import part
+        mdb.models[name].parts[name].compositeLayups[i]
 
     Corresponding analysis keywords
     -------------------------------
@@ -51,8 +54,11 @@ class CompositeLayup:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].CompositeLayup
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].CompositeLayup
 
         Parameters
         ----------
@@ -151,8 +157,11 @@ class CompositeLayup:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].compositeLayups[*name*].CompositePly
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].CompositeLayup
 
         Parameters
         ----------
@@ -237,10 +246,11 @@ class CompositeLayup:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].parts[name].compositeLayups[i].CompositeShellSection
-            - mdb.models[name].CompositeShellSection
-            - session.odbs[name].CompositeShellSection
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].CompositeLayup
 
         Parameters
         ----------
@@ -328,8 +338,11 @@ class CompositeLayup:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].compositeLayups[*name*].Section
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].CompositeLayup
 
         Parameters
         ----------
@@ -402,11 +415,11 @@ class CompositeLayup:
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].parts[name].compositeLayups[i]\
-            - .HomogeneousShellSection
-            - mdb.models[name].HomogeneousShellSection
-            - session.odbs[name].HomogeneousShellSection
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[*name*].parts[*name*].CompositeLayup
 
         Parameters
         ----------

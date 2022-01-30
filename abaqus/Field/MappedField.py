@@ -81,9 +81,12 @@ class MappedField(AnalyticalField):
 
     Notes
     -----
-        This object can be accessed by:
-        - import fields
-        - mdb.models[name].analyticalFields[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import fields
+        mdb.models[name].analyticalFields[name]
 
     """
 
@@ -186,8 +189,11 @@ class MappedField(AnalyticalField):
 
         Notes
         -----
-            This function can be accessed by:
-            - mdb.models[name].MappedField
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].MappedField
 
         Parameters
         ----------

@@ -8,9 +8,12 @@ class LocalStopCondition(StopCondition):
 
     Notes
     -----
-        This object can be accessed by:
-        - import optimization
-        - mdb.models[name].optimizationTasks[name].stopConditions[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import optimization
+        mdb.models[name].optimizationTasks[name].stopConditions[name]
 
     """
 
@@ -23,8 +26,11 @@ class LocalStopCondition(StopCondition):
 
         Notes
         -----
-            This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].LocalStopCondition
+        This function can be accessed by:
+
+        .. code-block:: python
+
+                      mdb.models[name].optimizationTasks[name].LocalStopCondition
 
         Parameters
         ----------

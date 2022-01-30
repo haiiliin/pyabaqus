@@ -18,8 +18,11 @@ class LeafFromDatums(Leaf):
 
     Notes
     -----
-        This object can be accessed by:
-        - import displayGroupMdbToolset
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import displayGroupMdbToolset
 
     """
 
@@ -33,8 +36,11 @@ class LeafFromDatums(Leaf):
 
         Notes
         -----
-            This function can be accessed by:
-            - LeafFromDatums
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            LeafFromDatums
 
         Parameters
         ----------

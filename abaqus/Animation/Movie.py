@@ -22,9 +22,12 @@ class Movie:
 
     Notes
     -----
-        This object can be accessed by:
-        - import animation
-        - session.movies[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import animation
+        session.movies[name]
 
     """
 
@@ -50,8 +53,11 @@ class Movie:
 
         Notes
         -----
-            This function can be accessed by:
-            - session.Movie
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            session.Movie
 
         Parameters
         ----------
