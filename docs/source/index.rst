@@ -27,6 +27,9 @@ Other links
 * PDF version of this documentation: `pyabaqus.pdf <https://github.com/Haiiliin/pyabaqus/releases/latest/download/pyabaqus.pdf>`_
 * Abaqus Executor: `executor_setup.exe <https://github.com/Haiiliin/pyabaqus/releases/latest/download/executor_setup.exe>`_
 
+Documentation
+-------------
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents

@@ -17,6 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
+from re import T
+
+
 project = 'pyabaqus'
 copyright = '2022, WANG Hailin'
 author = 'WANG Hailin'
@@ -33,6 +36,7 @@ release = '1.0.11'
 extensions = [
     'sphinx_toolbox.more_autodoc.overloads',
     'sphinx.ext.autodoc',
+    'numpydoc',
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
@@ -41,6 +45,9 @@ extensions = [
     # 'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
 ]
+
+numpydoc_attributes_as_param_list = True
+numpydoc_class_members_toctree = False
 
 # True to convert the type definitions in the docstrings as references. Defaults to False.
 napoleon_preprocess_types = True

@@ -273,9 +273,8 @@ EosCompaction
 evaluateMaterial
 ~~~~~~~~~~~~~~~~
 
-.. autoclass:: abaqus.Material.evaluateMaterial.evaluateMaterial
-    
-    .. automethod:: __init__
+.. automodule:: abaqus.Material.evaluateMaterial
+    :members:
 
 Gap
 ~~~

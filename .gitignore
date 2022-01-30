@@ -125,3 +125,4 @@ dmypy.json
 /docs/make-pdf.bat
 /tools/
 /abaqus/attributes.py
+/docs/source/_build/
