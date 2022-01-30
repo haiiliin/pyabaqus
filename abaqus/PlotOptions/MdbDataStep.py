@@ -4,16 +4,11 @@ from .MdbDataFrameArray import MdbDataFrameArray
 class MdbDataStep:
     """The MdbDataStep object.It corresponds to same named step in the cae model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.mdbData[name].steps[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -7,16 +7,11 @@ class MdbData:
     is opened or a new model is created. There is one MdbData for each model in session. 
     MdbData is updated when it is displayed in a viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.mdbData[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

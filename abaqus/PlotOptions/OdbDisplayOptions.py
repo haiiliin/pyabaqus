@@ -12,8 +12,9 @@ class OdbDisplayOptions:
     object when an OdbInstance object is created using the display options associated with 
     the current viewport at the time of creation. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import assembly
         - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions
         - session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions
@@ -23,12 +24,6 @@ class OdbDisplayOptions:
         - session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions
         - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions
         - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

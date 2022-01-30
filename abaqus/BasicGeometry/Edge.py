@@ -4,8 +4,9 @@ from abaqusConstants import *
 class Edge:
     """Edges are one-dimensional regions of geometry.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSets[name].edges[i]
         - mdb.models[name].parts[name].allInternalSurfaces[name].edges[i]
@@ -31,12 +32,6 @@ class Edge:
         - mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].edges[i]
         - mdb.models[name].rootAssembly.sets[name].edges[i]
         - mdb.models[name].rootAssembly.surfaces[name].edges[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

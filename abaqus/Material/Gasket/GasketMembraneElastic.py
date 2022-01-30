@@ -5,8 +5,9 @@ class GasketMembraneElastic:
     """The GasketMembraneElastic object defines the elastic parameters for the membrane shear
     behavior of a gasket. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].gasketMembraneElastic
         - import odbMaterial

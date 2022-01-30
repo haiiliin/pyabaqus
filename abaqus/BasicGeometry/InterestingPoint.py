@@ -10,16 +10,11 @@ class InterestingPoint:
     An InterestingPoint object is a temporary object and cannot be accessed from the Mdb 
     object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - import assembly
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

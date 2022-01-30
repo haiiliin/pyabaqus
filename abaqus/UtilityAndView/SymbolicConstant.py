@@ -14,16 +14,11 @@ class SymbolicConstant:
     in the abaqus module. The SymbolicConstant constructor is also defined in the 
     symbolicConstants module. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - from symbolicConstants import *
         - from abaqusConstants import *
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -8,16 +8,11 @@ from .OdbLoadCase import OdbLoadCase
 class OdbFrame:
     """The domain of the OdbFrame object is taken from the parent step.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].steps[name].frames[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

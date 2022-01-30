@@ -7,16 +7,11 @@ class SubmodelBC(BoundaryCondition):
     """The SubmodelBC object stores the data for a submodel boundary condition.
     The SubmodelBC object is derived from the BoundaryCondition object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].boundaryConditions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

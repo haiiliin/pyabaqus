@@ -6,8 +6,9 @@ class GapConvection:
     coefficient for heat transfer between the gap flow and both the top and bottom surfaces 
     of a coupled temperature-pore pressure cohesive element. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].gapConvection
         - import odbMaterial

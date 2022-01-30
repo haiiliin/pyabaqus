@@ -6,16 +6,11 @@ from abaqusConstants import *
 class Control:
     """The Control object is used to provide additional optional general solution controls.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].control
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

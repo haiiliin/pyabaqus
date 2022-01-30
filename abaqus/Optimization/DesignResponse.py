@@ -5,16 +5,11 @@ class DesignResponse:
     The DesponseResponse object has no explicit constructor. The methods and members of the 
     DesignResponse object are common to all objects derived from DesignResponse. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name].designResponses[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

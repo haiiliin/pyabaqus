@@ -2,15 +2,13 @@ class BaselineCorrection:
     """The BaselineCorrection object modifies an acceleration history to minimize the overall
     drift of the displacement obtained from the time integration of the given acceleration. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import amplitude
         - mdb.models[name].amplitudes[name].baselineCorrection
         - import odbAmplitude
         - session.odbs[name].amplitudes[name].baselineCorrection
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -5,16 +5,11 @@ class OptimizationProcess:
     """The OptimizationProcess object defines a process to perform an optimization of a model
     defined using an optimization task. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import job
         - mdb.optimizationProcesses[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

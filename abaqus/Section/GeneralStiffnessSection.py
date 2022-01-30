@@ -9,15 +9,13 @@ class GeneralStiffnessSection(ShellSection):
     stiffness matrix. 
     The GeneralStiffnessSection object is derived from the ShellSection object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name]
         - import odbSection
         - session.odbs[name].sections[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

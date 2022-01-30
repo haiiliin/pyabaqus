@@ -5,13 +5,11 @@ class PolarityAssignments:
     """The PolarityAssignments object stores the polarity assignment definition for surfaces in
     ContactExp objects. The PolarityAssignments object has no constructor or members. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactions[name].polarityAssignments
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

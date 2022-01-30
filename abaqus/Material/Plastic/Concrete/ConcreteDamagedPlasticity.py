@@ -8,8 +8,9 @@ from .ConcreteTensionStiffening import ConcreteTensionStiffening
 class ConcreteDamagedPlasticity:
     """The ConcreteDamagedPlasticity object specifies the concrete damaged plasticity model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].concreteDamagedPlasticity
         - import odbMaterial

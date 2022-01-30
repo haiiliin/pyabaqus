@@ -5,16 +5,11 @@ from .OptimizationObjectiveArray import OptimizationObjectiveArray
 class ObjectiveFunction:
     """The ObjectiveFunction object defines the objective of the optimization.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name].objectiveFunctions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
     # Optimization objectives

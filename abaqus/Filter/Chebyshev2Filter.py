@@ -6,15 +6,13 @@ class Chebyshev2Filter(Filter):
     """The Chebyshev2Filter object defines a Chebyshev type 2 filter.
     The Chebyshev2Filter object is derived from the Filter object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import filter
         - mdb.models[name].filters[name]
         - import odbFilter
         - session.odbs[name].filters[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

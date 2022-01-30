@@ -6,13 +6,11 @@ from abaqusConstants import *
 class FieldOutputRequest:
     """The FieldOutputRequest object defines a field output request.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].fieldOutputRequests[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

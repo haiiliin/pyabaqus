@@ -6,13 +6,11 @@ class SlidingFormulationAssignment:
     definition for surfaces in ContactStd objects. The SlidingFormulationAssignment object 
     has no constructor or members. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactions[name].slidingFormulationAssignments
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

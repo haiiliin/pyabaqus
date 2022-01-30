@@ -6,12 +6,10 @@ class ParameterColumn:
     collectively build the type of parameter table. Once the object is created, it is 
     noneditable. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - mdb.models[name].tableCollections[name].parameterTables[name].columns[i]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

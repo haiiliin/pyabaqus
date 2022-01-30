@@ -5,16 +5,11 @@ from .OdbDiagnosticAttempt import OdbDiagnosticAttempt
 class OdbDiagnosticIncrement:
     """The OdbDiagnosticIncrement object.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].diagnosticData.steps[i].increments[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

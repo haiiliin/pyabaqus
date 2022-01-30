@@ -4,8 +4,9 @@ from abaqusConstants import *
 class Eos:
     """The Eos object specifies an equation of state model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].eos
         - import odbMaterial
@@ -33,9 +34,6 @@ class Eos:
         - F1.
         - F2.
         - εcvol. (Dimensionless.)
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

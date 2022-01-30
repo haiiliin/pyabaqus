@@ -19,18 +19,13 @@ class BasicOptions:
     preferences. 
     - The basic options associated with a particular viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultOdbDisplay.basicOptions
         - session.viewports[name].layers[name].odbDisplay.basicOptions
         - session.viewports[name].odbDisplay.basicOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -7,16 +7,11 @@ class BodyCurrent(Load):
     """The BodyCurrent object stores the data for a body current.
     The BodyCurrent object is derived from the Load object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].loads[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

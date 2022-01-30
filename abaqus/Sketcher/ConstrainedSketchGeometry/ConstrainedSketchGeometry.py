@@ -5,17 +5,12 @@ class ConstrainedSketchGeometry:
     """The ConstrainedSketchGeometry object stores the geometry of a sketch, such as lines,
     circles, arcs, and construction lines. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import sketch
         - mdb.models[name].sketches[name].geometry[i]
         - mdb.models[name].sketches[name].geometry[i][i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

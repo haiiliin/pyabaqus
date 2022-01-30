@@ -21,16 +21,11 @@ class StepBase:
     constructor. The methods and members of the Step object are common to all objects 
     derived from the Step. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

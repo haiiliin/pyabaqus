@@ -17,8 +17,9 @@ class DisplayBodyOptions(DGDisplayBodyOptions):
     - The display body options associated with a particular viewport. 
     The DisplayBodyOptions object is derived from the DGDisplayBodyOptions object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultOdbDisplay.displayBodyOptions
         - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
@@ -29,12 +30,6 @@ class DisplayBodyOptions(DGDisplayBodyOptions):
         - session.viewports[name].odbDisplay.displayBodyOptions
         - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
         - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

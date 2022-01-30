@@ -8,13 +8,11 @@ class FluidExchangeProperty(ContactProperty):
     its environment. 
     The FluidExchangeProperty object is derived from the InteractionProperty object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

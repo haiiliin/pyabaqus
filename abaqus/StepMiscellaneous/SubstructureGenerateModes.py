@@ -2,16 +2,11 @@ class SubstructureGenerateModes:
     """A SubstructureGenerateModes object is used to define the modes to be used in a modal
     dynamic analysis. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].modeRange[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

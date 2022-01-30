@@ -69,15 +69,13 @@ class MaterialBase:
     MaterialOptions was rejected because it would make it more difficult to enforce the fact 
     that one Material object cannot contain two AcousticMedium objects, for example. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name]
         - import odbMaterial
         - session.odbs[name].materials[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

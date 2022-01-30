@@ -6,15 +6,13 @@ class GeneralizedProfile(Profile):
     of inertia, etc. 
     The GeneralizedProfile object is derived from the Profile object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].profiles[name]
         - import odbSection
         - session.odbs[name].profiles[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -7,17 +7,12 @@ class Title:
     """The Title object is used to store the display attributes of the XYPlot title. An Title
     object is automatically created when creating a XYPlot object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultPlot.title
         - session.xyPlots[name].title
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -8,18 +8,13 @@ class BeamOrientation:
     Specifying the beam orientation using an additional node in the element connectivity 
     list is not supported. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].parts[name].beamOrientations[i]
         - session.odbs[name].rootAssembly.instances[name].beamOrientations[i]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.beamOrientations[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

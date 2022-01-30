@@ -10,15 +10,10 @@ class KeywordBlock:
     object has no constructor. A KeywordBlock object is created when you create a model 
     object. A model object contains only one KeywordBlock object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - mdb.models[name].keywordBlock
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

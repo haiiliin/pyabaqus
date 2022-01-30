@@ -10,20 +10,15 @@ from ..Mesh.MeshFace import MeshFace
 class Skin:
     """The Skin object stores information on skin reinforcements created on entities.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].skins[name]
         - import assembly
         - mdb.models[name].rootAssembly.allInstances[name].skins[name]
         - mdb.models[name].rootAssembly.instances[name].skins[name]
         - mdb.models[name].rootAssembly.skins[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

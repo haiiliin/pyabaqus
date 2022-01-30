@@ -1,8 +1,9 @@
 class TriaxialTestData:
     """The TriaxialTestData object provides triaxial test data.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].druckerPrager.triaxialTestData
         - import odbMaterial

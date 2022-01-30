@@ -10,16 +10,11 @@ class FieldValue:
     object using the addData method. For faster, bulk-data access, see Using bulk data 
     access to an output database. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

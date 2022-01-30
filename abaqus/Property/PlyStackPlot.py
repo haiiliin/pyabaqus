@@ -7,16 +7,11 @@ class PlyStackPlot:
     """The PlyStackPlot object is used to plot the stacking of plies in a composite layup or in
     a composite shell section.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - import visualization
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

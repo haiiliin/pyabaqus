@@ -8,19 +8,14 @@ class EngineeringFeatureDisplayOptions:
     The EngineeringFeatureDisplayOptions object has no constructor. When you create a new 
     viewport, the settings are copied from the current viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].assemblyDisplay.engineeringFeatureOptions
         - session.viewports[name].layers[name].assemblyDisplay.engineeringFeatureOptions
         - import part
         - session.viewports[name].layers[name].partDisplay.engineeringFeatureOptions
         - session.viewports[name].partDisplay.engineeringFeatureOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

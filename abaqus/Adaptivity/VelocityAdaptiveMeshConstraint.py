@@ -11,16 +11,11 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
     The VelocityAdaptiveMeshConstraint object is derived from the AdaptiveMeshConstraint 
     object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].adaptiveMeshConstraints[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

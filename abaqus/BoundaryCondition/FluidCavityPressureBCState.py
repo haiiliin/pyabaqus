@@ -10,13 +10,11 @@ class FluidCavityPressureBCState(BoundaryConditionState):
     The FluidCavityPressureBCState object has no constructor or methods. 
     The FluidCavityPressureBCState object is derived from the BoundaryConditionState object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].steps[name].boundaryConditionStates[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -8,18 +8,13 @@ class MeshDisplayOptions:
     The MeshDisplayOptions object has no constructor. When you create a new viewport, the 
     settings are copied from the current viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].assemblyDisplay.meshOptions
         - session.viewports[name].layers[name].assemblyDisplay.meshOptions
         - session.viewports[name].layers[name].partDisplay.meshOptions
         - session.viewports[name].partDisplay.meshOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

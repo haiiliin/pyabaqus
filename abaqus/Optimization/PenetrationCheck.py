@@ -8,16 +8,11 @@ class PenetrationCheck(GeometricRestriction):
     The PenetrationCheck object is derived from the GeometricRestriction object. 
     This page discusses: 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

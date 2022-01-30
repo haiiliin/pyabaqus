@@ -7,20 +7,15 @@ class DGContourOptions:
     *odbDisplayOptions.contourOptions* member when a display group instance is created, 
     using values from *odbDisplay.contourOptions*. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
         - session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
         - session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
         - session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
         - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
         - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

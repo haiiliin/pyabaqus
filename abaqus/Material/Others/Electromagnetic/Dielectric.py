@@ -4,8 +4,9 @@ from abaqusConstants import *
 class Dielectric:
     """The Dielectric object specifies dielectric material properties.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].dielectric
         - import odbMaterial

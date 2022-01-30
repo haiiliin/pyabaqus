@@ -9,13 +9,11 @@ class MaterialAssignment(PredefinedField):
     predefined field, for use with an Eulerian analysis. 
     The MaterialAssignment object is derived from the PredefinedField object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].predefinedFields[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

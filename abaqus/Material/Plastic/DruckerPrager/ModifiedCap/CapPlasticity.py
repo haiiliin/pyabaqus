@@ -7,8 +7,9 @@ from .CapHardening import CapHardening
 class CapPlasticity:
     """The CapPlasticity object specifies the modified Drucker-Prager/Cap plasticity model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].capPlasticity
         - import odbMaterial

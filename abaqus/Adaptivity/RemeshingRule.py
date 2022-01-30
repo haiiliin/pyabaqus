@@ -5,16 +5,11 @@ class RemeshingRule:
     """The RemeshingRule object controls the adaptive remeshing resizing and the error
     indicators written to the output database for a specified region of the model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import mesh
         - mdb.models[name].remeshingRules[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

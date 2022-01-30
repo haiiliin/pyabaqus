@@ -6,8 +6,9 @@ class Viscous:
     """The Viscous object specifies the viscous properties for a two-layer viscoplastic
     material model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].viscous
         - import odbMaterial

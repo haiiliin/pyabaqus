@@ -64,15 +64,10 @@ class SessionBase:
     """The Session object has no constructor. Abaqus creates the *session* member when a
     session is started. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

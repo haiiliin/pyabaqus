@@ -5,15 +5,10 @@ class Drawing:
     """A drawing is the container for a geometric object. The Drawing object stores the vertex
     data and various settings that determine how the drawing will be displayed. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.drawings[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

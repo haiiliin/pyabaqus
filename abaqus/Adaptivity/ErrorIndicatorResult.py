@@ -5,16 +5,11 @@ class ErrorIndicatorResult(RuleResult):
     """The ErrorIndicatorResult object contains result information corresponding to an error
     indicator variable in a RemeshingRule object for an adaptivity iteration. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import job
         - mdb.adaptivityProcesses[name].iterations[i].ruleResults[name].indicatorResults[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

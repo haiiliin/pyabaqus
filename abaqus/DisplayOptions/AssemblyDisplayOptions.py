@@ -22,17 +22,12 @@ class AssemblyDisplayOptions:
     constructor. When you create a new viewport, the settings are copied from the current 
     viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import assembly
         - session.viewports[name].assemblyDisplay
         - session.viewports[name].layers[name].assemblyDisplay
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

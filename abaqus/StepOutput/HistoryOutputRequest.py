@@ -6,13 +6,11 @@ from abaqusConstants import *
 class HistoryOutputRequest:
     """The HistoryOutputRequest object defines a history output request.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].historyOutputRequests[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

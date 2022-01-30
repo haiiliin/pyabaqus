@@ -11,16 +11,11 @@ class ShapeTask(OptimizationTask):
     """The ShapeTask object defines a shape task.
     The ShapeTask object is derived from the OptimizationTask object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

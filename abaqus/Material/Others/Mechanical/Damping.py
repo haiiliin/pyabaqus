@@ -1,15 +1,13 @@
 class Damping:
     """The Damping object specifies material damping.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].damping
         - import odbMaterial
         - session.odbs[name].materials[name].damping
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

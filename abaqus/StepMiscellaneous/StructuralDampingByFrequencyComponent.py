@@ -2,16 +2,11 @@ class StructuralDampingByFrequencyComponent:
     """A StructuralDampingByFrequencyComponent object is used to define structural damping over
     a range of frequencies. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].structuralDampingByFrequency.components[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

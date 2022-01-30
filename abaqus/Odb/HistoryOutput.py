@@ -7,16 +7,11 @@ class HistoryOutput:
     """The HistoryOutput object contains the history output at a point for the specified
     variable. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].steps[name].historyRegions[name].historyOutputs[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

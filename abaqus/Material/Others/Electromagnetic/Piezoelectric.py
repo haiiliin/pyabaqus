@@ -4,8 +4,9 @@ from abaqusConstants import *
 class Piezoelectric:
     """The Piezoelectric object specifies piezoelectric material properties.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].piezoelectric
         - import odbMaterial

@@ -7,16 +7,11 @@ class SelfContactExp(Interaction):
     """The SelfContactExp object defines self-contact during an Abaqus/Explicit analysis.
     The SelfContactExp object is derived from the Interaction object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

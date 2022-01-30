@@ -3,18 +3,13 @@
 class OdbLoadCase:
     """The OdbLoadCase object describes a load case.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].steps[name].frames[i].loadCase
         - session.odbs[name].steps[name].historyRegions[name].loadCase
         - session.odbs[name].steps[name].loadCases[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

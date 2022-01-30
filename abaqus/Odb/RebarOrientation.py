@@ -7,18 +7,13 @@ from .OdbSet import OdbSet
 class RebarOrientation:
     """The RebarOrientation object represents the orientation of the rebar reference.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].parts[name].rebarOrientations[i]
         - session.odbs[name].rootAssembly.instances[name].rebarOrientations[i]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.rebarOrientations[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

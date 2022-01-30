@@ -17,17 +17,12 @@ from ..Section.Section import Section
 class OdbInstanceBase:
     """A part instance is the usage of a part within an assembly.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].rootAssembly.instances[name]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

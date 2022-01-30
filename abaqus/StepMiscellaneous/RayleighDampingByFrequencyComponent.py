@@ -2,16 +2,11 @@ class RayleighDampingByFrequencyComponent:
     """A RayleighDampingByFrequencyComponent object is used to define Rayleigh damping over a
     range of frequencies. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].rayleighDampingByFrequency.components[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

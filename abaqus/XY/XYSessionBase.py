@@ -6,15 +6,10 @@ class XYSessionBase(SessionBase):
     """The following commands operate on Session objects. For more information about the 
     Session object, see Session object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

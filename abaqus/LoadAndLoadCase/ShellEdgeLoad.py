@@ -9,16 +9,11 @@ class ShellEdgeLoad(Load):
     """The ShellEdgeLoad object defines shell edge loads on a region.
     The ShellEdgeLoad object is derived from the Load object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].loads[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -5,8 +5,9 @@ class GapConductance:
     """The GapConductance object specifies conductive heat transfer between closely adjacent
     (or contacting) surfaces. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].gapConductance
         - import odbMaterial

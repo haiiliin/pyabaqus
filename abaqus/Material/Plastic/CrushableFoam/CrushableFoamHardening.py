@@ -5,8 +5,9 @@ class CrushableFoamHardening:
     """The CrushableFoamHardening object specifies hardening for the crushable foam plasticity
     model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].crushableFoam.crushableFoamHardening
         - import odbMaterial

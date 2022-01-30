@@ -7,13 +7,11 @@ class Velocity(PredefinedField):
     """The Velocity object stores the data for an initial velocity predefined field.
     The Velocity object is derived from the PredefinedField object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].predefinedFields[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

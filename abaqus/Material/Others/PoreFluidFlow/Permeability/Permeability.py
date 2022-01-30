@@ -6,8 +6,9 @@ from abaqus.Material.Others.PoreFluidFlow.Permeability.VelocityDependence import
 class Permeability:
     """The Permeability object defines permeability for pore fluid flow.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].permeability
         - import odbMaterial

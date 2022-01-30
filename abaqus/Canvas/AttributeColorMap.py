@@ -8,15 +8,10 @@ class AttributeColorMap:
     AttributeColorMap object to be updated in the session.viewports[name].colorMappings 
     repository. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].colorMappings[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

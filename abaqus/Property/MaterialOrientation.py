@@ -9,8 +9,9 @@ class MaterialOrientation:
     """The MaterialOrientation object represents the orientation of the material properties and
     composite layups. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].parts[name].compositeLayups[i].orientation
         - mdb.models[name].parts[name].materialOrientations[i]
@@ -18,12 +19,6 @@ class MaterialOrientation:
         - session.odbs[name].parts[name].materialOrientations[i]
         - session.odbs[name].rootAssembly.instances[name].materialOrientations[i]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.materialOrientations[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

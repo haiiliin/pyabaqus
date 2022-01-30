@@ -6,15 +6,13 @@ class PeriodicAmplitude(Amplitude):
     """The PeriodicAmplitude object defines an amplitude curve using a Fourier series.
     The PeriodicAmplitude object is derived from the Amplitude object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import amplitude
         - mdb.models[name].amplitudes[name]
         - import odbAmplitude
         - session.odbs[name].amplitudes[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

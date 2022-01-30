@@ -7,13 +7,11 @@ class StdInitialization(ContactInitialization):
     analyses to specify contact initialization data. 
     The StdInitialization object is derived from the ContactInitialization object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].contactInitializations[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

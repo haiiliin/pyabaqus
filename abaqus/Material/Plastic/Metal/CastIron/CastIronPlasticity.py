@@ -6,8 +6,9 @@ from .CastIronTensionHardening import CastIronTensionHardening
 class CastIronPlasticity:
     """The CastIronPlasticity object specifies the Cast Iron plasticity model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].castIronPlasticity
         - import odbMaterial

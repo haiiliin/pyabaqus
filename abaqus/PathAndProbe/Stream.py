@@ -1,16 +1,11 @@
 class Stream:
     """TheStream object defines a set of streamlines in fluid mechanics.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.streams[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -7,15 +7,13 @@ class TwoPointSpringDashpot(SpringDashpot):
     part or an assembly. 
     The TwoPointSpringDashpot object is derived from the SpringDashpot object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].engineeringFeatures.springDashpots[name]
         - import assembly
         - mdb.models[name].rootAssembly.engineeringFeatures.springDashpots[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

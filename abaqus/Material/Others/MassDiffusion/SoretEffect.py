@@ -4,8 +4,9 @@ from abaqusConstants import *
 class SoretEffect:
     """The SoretEffect object defines temperature gradient driven mass diffusion.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].diffusivity.soretEffect
         - import odbMaterial

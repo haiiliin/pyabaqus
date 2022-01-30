@@ -4,8 +4,9 @@ from abaqusConstants import *
 class MagneticPermeability:
     """The MagneticPermeability object specifies magnetic permeability.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].magneticPermeability
         - import odbMaterial

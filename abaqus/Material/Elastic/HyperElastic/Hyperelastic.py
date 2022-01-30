@@ -12,8 +12,9 @@ class Hyperelastic:
     """The Hyperelastic object specifies elastic properties for approximately incompressible
     elastomers. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].hyperelastic
         - import odbMaterial

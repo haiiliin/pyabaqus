@@ -8,18 +8,13 @@ class Arrow(Annotation):
     """The Arrow object stores the visual settings and location of an arrow annotation.
     The Arrow object is derived from the Annotation object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import annotationToolset
         - mdb.annotations[name]
         - session.odbs[name].userData.annotations[name]
         - session.viewports[name].annotationsToPlot[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

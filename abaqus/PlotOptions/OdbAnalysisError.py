@@ -5,16 +5,11 @@ class OdbAnalysisError:
     """The OdbAnalysisError object stores the description of different errors encountered
     during the analysis. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].diagnosticData.analysisErrors[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

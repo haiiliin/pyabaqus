@@ -6,8 +6,9 @@ class SectionAssignment:
     """The SectionAssignment object is used to specify a section assignment on an assembly or
     part. Section assignments on the assembly are limited to connector elements only. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].parts[name].sectionAssignments[i]
         - import assembly
@@ -17,12 +18,6 @@ class SectionAssignment:
         - session.odbs[name].rootAssembly.instances[name].sectionAssignments[i]
         - session.odbs[name].rootAssembly.sectionAssignments[i]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.sectionAssignments[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

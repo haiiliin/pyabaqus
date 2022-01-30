@@ -20,13 +20,11 @@ class ComplexFrequencyStep(AnalysisStep):
     the complex eigenvalues and corresponding complex mode shapes of a system. 
     The ComplexFrequencyStep object is derived from the AnalysisStep object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

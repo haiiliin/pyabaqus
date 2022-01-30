@@ -4,16 +4,11 @@ from abaqusConstants import *
 class HistoryVariable:
     """The HistoryVariable object stores history data.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].historyVariables[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -5,15 +5,13 @@ class PEGSection(Section):
     """The PEGSection object defines the properties of a solid section.
     The PEGSection object is derived from the Section object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name]
         - import odbSection
         - session.odbs[name].sections[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

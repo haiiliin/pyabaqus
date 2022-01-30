@@ -3,8 +3,9 @@ class MeshFace:
     MeshFace object can be accessed via a MeshFaceArray or a repository on a part or part 
     instance. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].elementFaces[i]
         - mdb.models[name].parts[name].elemFaces[i]
@@ -13,12 +14,6 @@ class MeshFace:
         - mdb.models[name].rootAssembly.allInstances[name].elemFaces[i]
         - mdb.models[name].rootAssembly.instances[name].elementFaces[i]
         - mdb.models[name].rootAssembly.instances[name].elemFaces[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

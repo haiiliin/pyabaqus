@@ -6,16 +6,11 @@ class LoadState:
     LoadState object has no explicit constructor or methods. The members of the LoadState 
     object are common to all objects derived from LoadState. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].steps[name].loadStates[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

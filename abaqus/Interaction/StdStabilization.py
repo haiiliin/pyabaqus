@@ -7,13 +7,11 @@ class StdStabilization(ContactStabilization):
     analyses to specify contact stabilization. 
     The StdStabilization object is derived from the ContactStabilization object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].contactStabilizations[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

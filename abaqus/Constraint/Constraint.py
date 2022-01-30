@@ -6,16 +6,11 @@ class Constraint:
     ConstrainedSketchConstraint object has no explicit constructor. The members of the ConstrainedSketchConstraint object are
     common to all objects derived from the ConstrainedSketchConstraint.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].constraints[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -6,8 +6,9 @@ from abaqus.Material.Plastic.MohrCoulomb.TensionCutOff import TensionCutOff
 class MohrCoulombPlasticity:
     """The MohrCoulombPlasticity object specifies the extended Mohr-Coulomb plasticity model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].mohrCoulombPlasticity
         - import odbMaterial

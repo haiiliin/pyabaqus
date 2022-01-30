@@ -1,16 +1,11 @@
 class OdbDataNodeSet:
     """The OdbDataNodeSet object stores node set data.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].nodeSets[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

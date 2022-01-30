@@ -8,16 +8,14 @@ class HomogeneousShellSection(GeometryShellSection):
     """The HomogeneousShellSection object defines the properties of a shell section.
     The HomogeneousShellSection object is derived from the GeometryShellSection object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].parts[name].compositeLayups[i].section
         - mdb.models[name].sections[name]
         - import odbSection
         - session.odbs[name].sections[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

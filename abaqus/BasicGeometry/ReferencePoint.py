@@ -11,8 +11,9 @@ class ReferencePoint:
     is created. The ReferencePoint method creates a Feature object that creates a 
     ReferencePoint object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSets[name].referencePoints[i]
         - mdb.models[name].parts[name].allSets[name].referencePoints[i]
@@ -29,12 +30,6 @@ class ReferencePoint:
         - mdb.models[name].rootAssembly.modelInstances[i].sets[name].referencePoints[i]
         - mdb.models[name].rootAssembly.referencePoints[i]
         - mdb.models[name].rootAssembly.sets[name].referencePoints[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

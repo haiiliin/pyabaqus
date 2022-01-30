@@ -5,8 +5,9 @@ class Trs:
     """The Trs object defines the temperature-time shift for time history viscoelastic
     analysis. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].viscoelastic.trs
         - mdb.models[name].materials[name].viscosity.trs

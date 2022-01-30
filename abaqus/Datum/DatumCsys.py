@@ -10,8 +10,9 @@ class DatumCsys(Datum):
     a DatumCsys object. 
     The DatumCsys object is derived from the Datum object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].datums[i]
         - import assembly
@@ -23,12 +24,6 @@ class DatumCsys(Datum):
         - import odbAccess
         - session.odbs[name].rootAssembly.connectorOrientations[i].localCsys1
         - session.odbs[name].rootAssembly.connectorOrientations[i].localCsys2
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -35,15 +35,10 @@ class BackwardCompatibility:
     print backwardCompatibility.getDeprecatedMembersUsed() 
     print backwardCompatibility.getDeprecatedArgsUsed() 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - backwardCompatibility
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

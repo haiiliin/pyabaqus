@@ -21,8 +21,9 @@ class XYData:
     they are not used anymore. Temporary XYData objects are also created as a result of math 
     operations found in the abaqusMath module. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.charts[name].axes1[i].axisData.curves[i].data
         - session.charts[name].axes2[i].axisData.curves[i].data
@@ -37,12 +38,6 @@ class XYData:
         - session.xyPlots[name].charts[name].axes2[i].axisData.curves[i].data
         - session.xyPlots[name].charts[name].curves[name].data
         - session.xyPlots[name].curves[name].data
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

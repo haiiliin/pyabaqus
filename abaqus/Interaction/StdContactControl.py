@@ -7,13 +7,11 @@ class StdContactControl(ContactControl):
     solution controls for problems involving contact between bodies. 
     The StdContactControl object is derived from the ContactControl object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].contactControls[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

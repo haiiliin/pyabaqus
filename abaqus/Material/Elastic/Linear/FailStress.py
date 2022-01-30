@@ -4,8 +4,9 @@ from abaqusConstants import *
 class FailStress:
     """The FailStress object defines parameters for stress-based failure measures.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].elastic.failStress
         - import odbMaterial

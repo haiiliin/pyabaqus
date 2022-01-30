@@ -9,16 +9,11 @@ class ConcentrationBC(BoundaryCondition):
     """The ConcentrationBC object stores the data for a concentration boundary condition.
     The ConcentrationBC object is derived from the BoundaryCondition object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].boundaryConditions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

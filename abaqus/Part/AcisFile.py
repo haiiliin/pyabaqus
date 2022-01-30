@@ -4,15 +4,10 @@ from abaqusConstants import *
 class AcisFile:
     """The AcisFile object is a file object used to open ACIS-, STEP-, and IGES-format files.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

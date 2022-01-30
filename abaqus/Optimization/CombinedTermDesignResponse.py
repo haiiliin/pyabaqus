@@ -6,16 +6,11 @@ class CombinedTermDesignResponse(DesignResponse):
     """The CombinedTermDesignResponse object defines a combined-term design response.
     The CombinedTermDesignResponse object is derived from the DesignResponse object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name].designResponses[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

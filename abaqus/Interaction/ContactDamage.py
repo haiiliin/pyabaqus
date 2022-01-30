@@ -4,8 +4,9 @@ from abaqusConstants import *
 class ContactDamage:
     """The ContactDamage object specifies damage options for a contact interaction property.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name].damage
 

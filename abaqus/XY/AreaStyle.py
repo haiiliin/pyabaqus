@@ -7,8 +7,9 @@ class AreaStyle:
     AreaStyle objects are automatically created whenever an Area object is created. 
     AreaStyle objects can be created using the methods described below. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.charts[name].area.style
         - session.charts[name].gridArea.style
@@ -26,12 +27,6 @@ class AreaStyle:
         - session.xyPlots[name].charts[name].legend.area.style
         - session.xyPlots[name].charts[name].tagAreaStyle
         - session.xyPlots[name].title.area.style
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

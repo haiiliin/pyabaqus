@@ -6,8 +6,9 @@ from abaqus.Material.Others.MassDiffusion.SoretEffect import SoretEffect
 class Diffusivity:
     """The Diffusivity object specifies mass diffusivity.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].diffusivity
         - import odbMaterial

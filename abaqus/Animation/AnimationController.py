@@ -6,16 +6,11 @@ class AnimationController:
     the viewports. The AnimationController object has no constructor. Abaqus creates the 
     *animationController* member when it creates the Session object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import animation
         - session.viewports[name].animationController
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

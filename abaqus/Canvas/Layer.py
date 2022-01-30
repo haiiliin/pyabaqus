@@ -8,15 +8,10 @@ from ..UtilityAndView.View import View
 class Layer:
     """Objects can be superimposed by displaying them in different layers of a viewport.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].layers[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

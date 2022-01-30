@@ -3,16 +3,11 @@ class CurrentProbeValues:
     """The CurrentProbeValues object has no constructor. The CurrentProbeValues object is
     created when you import the Visualization module. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.currentProbeValues
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

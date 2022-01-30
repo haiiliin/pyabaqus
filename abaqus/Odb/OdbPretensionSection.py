@@ -6,16 +6,11 @@ class OdbPretensionSection:
     """The pretension section object is used to define an assembly load. It associates a
     pretension node with a pretension section. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].rootAssembly.pretensionSections[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

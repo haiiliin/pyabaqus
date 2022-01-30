@@ -17,16 +17,11 @@ class OdbAssemblyBase:
     object is created. Abaqus creates the *rootAssembly* member when an Odb object is 
     created. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].rootAssembly
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

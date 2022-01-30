@@ -9,15 +9,10 @@ class MovieOptions:
     a viewport when the viewport is created using the values in the *movieOptions* member of 
     the current viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].movieOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

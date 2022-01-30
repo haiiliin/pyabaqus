@@ -7,16 +7,11 @@ class Correlation(Amplitude):
     definition of random loading. 
     The Correlation object is derived from the Amplitude object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].boundaryConditions[name].correlation[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

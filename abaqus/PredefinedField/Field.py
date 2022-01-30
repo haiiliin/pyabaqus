@@ -7,13 +7,11 @@ class Field(PredefinedField):
     """The Field object stores the data for field predefined fields.
     The Field object is derived from the PredefinedField object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].predefinedFields[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

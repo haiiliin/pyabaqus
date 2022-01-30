@@ -5,19 +5,14 @@ class IgnoredVertexArray:
     """The IgnoredVertexArray is a sequence of IgnoredVertex objects. If the part is modified,
     then IgnoredVertexArray must be updated for that part. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].ignoredVertices
         - import assembly
         - mdb.models[name].rootAssembly.allInstances[name].ignoredVertices
         - mdb.models[name].rootAssembly.instances[name].ignoredVertices
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

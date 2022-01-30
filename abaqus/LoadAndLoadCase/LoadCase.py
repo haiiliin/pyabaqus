@@ -6,16 +6,11 @@ class LoadCase:
     loading condition and the linear response of a structure subjected to that loading 
     condition. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].loadCases[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -5,15 +5,13 @@ class IProfile(Profile):
     """The IProfile object defines the properties of an I profile. 
     The IProfile object is derived from the Profile object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].profiles[name]
         - import odbSection
         - session.odbs[name].profiles[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

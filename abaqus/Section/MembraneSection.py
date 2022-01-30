@@ -7,15 +7,13 @@ class MembraneSection(Section):
     """The MembraneSection object defines the properties of a membrane section.
     The MembraneSection object is derived from the Section object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name]
         - import odbSection
         - session.odbs[name].sections[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

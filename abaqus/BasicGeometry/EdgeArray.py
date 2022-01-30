@@ -6,8 +6,9 @@ class EdgeArray:
     """The EdgeArray is a sequence of Edge objects. If the part is modified, then EdgeArray
     must be updated for that part. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSets[name].edges
         - mdb.models[name].parts[name].allInternalSurfaces[name].edges
@@ -33,12 +34,6 @@ class EdgeArray:
         - mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].edges
         - mdb.models[name].rootAssembly.sets[name].edges
         - mdb.models[name].rootAssembly.surfaces[name].edges
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -2,8 +2,9 @@ class SuperElasticHardeningModifications:
     """The SuperElasticHardeningModifications object specifies the variation of the
     transformation stress levels of a material model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].superElasticity.SuperElasticHardening
         - import odbMaterial

@@ -1,16 +1,11 @@
 class TieConstraint:
     """The TieConstraint object.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].ties[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

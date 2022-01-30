@@ -4,8 +4,9 @@ from abaqusConstants import *
 class DeformationPlasticity:
     """The DeformationPlasticity object specifies the deformation plasticity model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].deformationPlasticity
         - import odbMaterial

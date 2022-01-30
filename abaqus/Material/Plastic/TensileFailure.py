@@ -4,8 +4,9 @@ from abaqusConstants import *
 class TensileFailure:
     """The TensileFailure object specifies the material tensile failure.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].Plastic.tensileFailure
         - mdb.models[name].materials[name].eos.tensileFailure

@@ -4,8 +4,9 @@ from abaqusConstants import *
 class Density:
     """The Density object specifies the material density.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].density
         - import odbMaterial

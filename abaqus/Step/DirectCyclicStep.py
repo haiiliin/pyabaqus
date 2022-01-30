@@ -22,13 +22,11 @@ class DirectCyclicStep(AnalysisStep):
     at the interfaces in laminated composites in a low-cycle fatigue analysis. 
     The DirectCyclicStep object is derived from the AnalysisStep object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

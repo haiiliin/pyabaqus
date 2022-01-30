@@ -7,16 +7,11 @@ class Movie:
     """The Movie object is used to store values and attributes associated with a movie file.
     Upon creation, the Movie object is added to the session.movies repository. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import animation
         - session.movies[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

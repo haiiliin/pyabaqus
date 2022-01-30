@@ -6,8 +6,9 @@ from abaqus.Material.Plastic.Metal.Porous.VoidNucleation import VoidNucleation
 class PorousMetalPlasticity:
     """The PorousMetalPlasticity object specifies a porous metal plasticity model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].porousMetalPlasticity
         - import odbMaterial

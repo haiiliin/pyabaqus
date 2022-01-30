@@ -11,8 +11,9 @@ from abaqus.Material.Plastic.TensileFailure import TensileFailure
 class Plastic:
     """The Plastic object specifies a metal plasticity model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].Plastic
         - import odbMaterial

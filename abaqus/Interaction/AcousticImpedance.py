@@ -8,13 +8,11 @@ class AcousticImpedance(Interaction):
     boundaries for acoustic and coupled acoustic-structural analyses. 
     The AcousticImpedance object is derived from the Interaction object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactions[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

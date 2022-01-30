@@ -17,16 +17,11 @@ from ..Section.Section import Section
 class OdbBase:
     """The Odb object is the in-memory representation of an output database (ODB) file.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

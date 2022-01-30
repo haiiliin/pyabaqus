@@ -4,8 +4,9 @@ from abaqusConstants import *
 class Solubility:
     """The Solubility object specifies solubility.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].solubility
         - import odbMaterial

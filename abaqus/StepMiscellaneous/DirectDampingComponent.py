@@ -1,16 +1,11 @@
 class DirectDampingComponent:
     """A DirectDampingComponent object is used to define direct damping over a range of modes.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].directDamping.components[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

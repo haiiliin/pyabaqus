@@ -5,15 +5,13 @@ class CircularProfile(Profile):
     """The CircularProfile object defines the properties of a solid circular profile. 
     The CircularProfile object is derived from the Profile object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].profiles[name]
         - import odbSection
         - session.odbs[name].profiles[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

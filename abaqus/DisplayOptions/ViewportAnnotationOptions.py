@@ -13,16 +13,11 @@ class ViewportAnnotationOptions:
     *defaultViewportAnnotationOptions* member when a session is started. When a new viewport 
     is created, the settings are copied from the current viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.defaultViewportAnnotationOptions
         - session.viewports[name].viewportAnnotationOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

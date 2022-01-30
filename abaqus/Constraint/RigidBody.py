@@ -8,13 +8,11 @@ class RigidBody(Constraint):
     the degree of freedom of its associated reference point. 
     The RigidBody object is derived from the ConstrainedSketchConstraint object.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].constraints[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

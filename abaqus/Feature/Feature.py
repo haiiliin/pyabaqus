@@ -20,20 +20,15 @@ class Feature:
     regeneration of the feature. Feature objects contain both the parameters and the 
     resulting model modification. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].features[name]
         - mdb.models[name].parts[name].featuresById[i]
         - import assembly
         - mdb.models[name].rootAssembly.features[name]
         - mdb.models[name].rootAssembly.featuresById[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

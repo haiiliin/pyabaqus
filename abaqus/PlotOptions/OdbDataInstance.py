@@ -1,16 +1,11 @@
 class OdbDataInstance:
     """The OdbDataInstance object instance data.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].instances[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

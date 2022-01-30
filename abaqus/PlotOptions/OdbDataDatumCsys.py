@@ -4,16 +4,11 @@ from abaqusConstants import *
 class OdbDataDatumCsys:
     """The OdbDataDatumCsys object stores coordinate system data.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].datumCsyses[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

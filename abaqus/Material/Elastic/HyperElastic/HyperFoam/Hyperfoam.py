@@ -9,8 +9,9 @@ from abaqus.Material.TestData.VolumetricTestData import VolumetricTestData
 class Hyperfoam:
     """The Hyperfoam object specifies elastic properties for a hyperelastic foam.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].hyperfoam
         - import odbMaterial

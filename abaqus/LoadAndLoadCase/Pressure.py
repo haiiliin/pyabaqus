@@ -7,16 +7,11 @@ class Pressure(Load):
     """The Pressure object defines a pressure load.
     The Pressure object is derived from the Load object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].loads[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

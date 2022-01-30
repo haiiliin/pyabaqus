@@ -7,8 +7,9 @@ class BeamSection(Section):
     """The BeamSection object defines the properties of a beam section.
     The BeamSection object is derived from the Section object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name]
         - import odbSection

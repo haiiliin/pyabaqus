@@ -9,13 +9,11 @@ class SubmodelSBState(LoadState):
     The SubmodelSBState object has no constructor or methods. 
     The SubmodelSBState object is derived from the LoadState object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].steps[name].loadStates[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

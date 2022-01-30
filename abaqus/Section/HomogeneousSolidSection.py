@@ -5,15 +5,13 @@ class HomogeneousSolidSection(SolidSection):
     """The HomogeneousSolidSection object defines the properties of a solid section.
     The HomogeneousSolidSection object is derived from the SolidSection object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name]
         - import odbSection
         - session.odbs[name].sections[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -7,13 +7,11 @@ class FluidExchange(Interaction):
     between a fluid cavity and its environment. 
     The FluidExchange object is derived from the Interaction object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactions[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

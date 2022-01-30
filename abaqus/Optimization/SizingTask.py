@@ -11,16 +11,11 @@ class SizingTask(OptimizationTask):
     """The SizingTask object defines a Sizing task.
     The SizingTask object is derived from the OptimizationTask object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

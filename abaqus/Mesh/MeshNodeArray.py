@@ -4,8 +4,9 @@ from .MeshNode import MeshNode
 class MeshNodeArray(list[MeshNode]):
     """The MeshNodeArray is a sequence of MeshNode objects.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSets[name].nodes
         - mdb.models[name].parts[name].allInternalSurfaces[name].nodes
@@ -32,12 +33,6 @@ class MeshNodeArray(list[MeshNode]):
         - mdb.models[name].rootAssembly.nodes
         - mdb.models[name].rootAssembly.sets[name].nodes
         - mdb.models[name].rootAssembly.surfaces[name].nodes
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

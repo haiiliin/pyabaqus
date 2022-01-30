@@ -7,18 +7,13 @@ from .UniaxialTestDataArray import UniaxialTestDataArray
 class MullinsEffect:
     """The MullinsEffect specifies properties for mullins data.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].mullinsEffect
         - import odbMaterial
         - session.odbs[name].materials[name].mullinsEffect
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -1,16 +1,11 @@
 class RigidBodyConstraint:
     """The RigidBodyConstraint object.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].rigidbodies[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

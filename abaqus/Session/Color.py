@@ -1,15 +1,10 @@
 class Color:
     """The Color object contains the RGB definition of a system color.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.colors[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

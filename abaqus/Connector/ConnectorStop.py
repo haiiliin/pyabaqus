@@ -6,15 +6,13 @@ class ConnectorStop(ConnectorBehaviorOption):
     connector's relative motion. 
     The ConnectorStop object is derived from the ConnectorBehaviorOption object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name].behaviorOptions[i]
         - import odbSection
         - session.odbs[name].sections[name].behaviorOptions[i]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

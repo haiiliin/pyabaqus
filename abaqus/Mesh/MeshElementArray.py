@@ -4,8 +4,9 @@ from .MeshElement import MeshElement
 class MeshElementArray(list[MeshElement]):
     """The MeshElementArray is a sequence of MeshElement objects.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSets[name].elements
         - mdb.models[name].parts[name].allInternalSurfaces[name].elements
@@ -31,12 +32,6 @@ class MeshElementArray(list[MeshElement]):
         - mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].elements
         - mdb.models[name].rootAssembly.sets[name].elements
         - mdb.models[name].rootAssembly.surfaces[name].elements
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

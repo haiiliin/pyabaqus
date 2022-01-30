@@ -7,8 +7,9 @@ class TextStyle:
     TextStyle objects are automatically created when creating a chart or can be created with 
     methods described below. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.charts[name].axes1[i].labelStyle
         - session.charts[name].axes1[i].titleStyle
@@ -33,12 +34,6 @@ class TextStyle:
         - session.xyPlots[name].charts[name].legend.titleStyle
         - session.xyPlots[name].charts[name].tagTextStyle
         - session.xyPlots[name].title.titleStyle
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

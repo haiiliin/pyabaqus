@@ -7,16 +7,11 @@ class BodyCharge(Load):
     """The BodyCharge object stores the data for a body charge.
     The BodyCharge object is derived from the Load object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].loads[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

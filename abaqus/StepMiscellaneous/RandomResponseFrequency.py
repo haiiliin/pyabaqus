@@ -2,16 +2,11 @@ class RandomResponseFrequency:
     """A RandomResponseFrequency is an object used to define frequency over a range of modes.
     This page discusses: 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].freq[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

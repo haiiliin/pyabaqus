@@ -4,16 +4,11 @@ from abaqusConstants import *
 class OdbDiagnosticAttempt:
     """The OdbDiagnosticAttempt object.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].diagnosticData.steps[i].increments[i].attempts[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

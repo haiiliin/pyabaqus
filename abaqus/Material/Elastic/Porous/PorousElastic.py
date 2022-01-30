@@ -4,8 +4,9 @@ from abaqusConstants import *
 class PorousElastic:
     """The PorousElastic object specifies elastic material properties for porous materials.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].porousElastic
         - import odbMaterial

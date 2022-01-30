@@ -12,16 +12,11 @@ class LightOptions:
     member when a session is started. When a new viewport is created, the *lightOptions* 
     member is copied from the current viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.defaultLightOptions
         - session.viewports[name].lightOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

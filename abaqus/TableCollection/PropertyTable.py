@@ -10,12 +10,10 @@ class PropertyTable:
     After PropertyTableDatais instantiated, making changes to PropertyTable may lead to data 
     corruption. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - mdb.models[name].tableCollections[name].propertyTables[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

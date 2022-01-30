@@ -6,18 +6,13 @@ class AnalyticSurface:
     """The AnalyticSurface object is a geometric surface that can be described with straight
     and/or curved line segments. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].parts[name].analyticSurface
         - session.odbs[name].rootAssembly.instances[name].analyticSurface
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.analyticSurface
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -5,15 +5,10 @@ class InputFile:
     """The InputFile object is used to store the definitions in an Abaqus input file. InputFile
     objects can be created using the methods described in this section. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import inpParser
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

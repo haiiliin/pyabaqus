@@ -3,15 +3,10 @@ class Field:
     no explicit constructor. The methods and members of the Field object are common to all 
     objects derived from the Field. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import fields
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

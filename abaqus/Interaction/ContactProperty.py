@@ -19,13 +19,11 @@ class ContactProperty(InteractionProperty):
     """The ContactProperty object defines a contact interaction property.
     The ContactProperty object is derived from the InteractionProperty object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -7,20 +7,15 @@ class DGDisplayBodyOptions:
     *odbDisplayOptions.displayBodyOptions* member when a display group instance is created, 
     using values from *odbDisplay.displayBodyOptions*. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
         - session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
         - session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
         - session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
         - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
         - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

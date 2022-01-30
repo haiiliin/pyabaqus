@@ -7,13 +7,11 @@ class Temperature(PredefinedField):
     """The Temperature object stores the data for temperature predefined fields.
     The Temperature object is derived from the PredefinedField object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].predefinedFields[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

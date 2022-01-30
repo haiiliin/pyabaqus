@@ -7,16 +7,11 @@ class BodyCurrentDensity(Load):
     """The BodyCurrentDensity object stores the data for a body current.
     The BodyCurrentDensity object is derived from the Load object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].loads[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

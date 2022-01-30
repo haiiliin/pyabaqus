@@ -8,17 +8,12 @@ class FieldReportOptions:
     constructor. Abaqus creates the *fieldReportOptions* member when you import the 
     Visualization module. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultFieldReportOptions
         - session.fieldReportOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
     # Format of the number

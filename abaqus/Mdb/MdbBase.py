@@ -12,15 +12,10 @@ class MdbBase:
     """The Mdb object is the high-level Abaqus model database. A model database stores models
     and analysis controls. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - mdb
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

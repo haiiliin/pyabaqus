@@ -20,13 +20,11 @@ class SoilsStep(AnalysisStep):
     response analysis of partially or fully saturated fluid-filled porous media. 
     The SoilsStep object is derived from the AnalysisStep object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

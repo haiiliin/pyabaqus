@@ -6,15 +6,10 @@ class RegisteredList(CommandRegister):
     of notifying the GUI when the contents of the list change. 
     The RegisteredList object is derived from the CommandRegister object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import customKernel
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

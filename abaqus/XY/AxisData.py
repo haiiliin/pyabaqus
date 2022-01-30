@@ -7,8 +7,9 @@ class AxisData:
     """The AxisData object is used to store the data attributes of axes. An AxisData object is
     automatically created when creating an Axis object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.charts[name].axes1[i].axisData
         - session.charts[name].axes2[i].axisData
@@ -16,12 +17,6 @@ class AxisData:
         - session.defaultChartOptions.defaultAxis2Options.axisData
         - session.xyPlots[name].charts[name].axes1[i].axisData
         - session.xyPlots[name].charts[name].axes2[i].axisData
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

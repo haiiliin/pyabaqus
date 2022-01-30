@@ -7,20 +7,15 @@ from ..Mesh.MeshElementArray import MeshElementArray
 class Stringer:
     """The Stringer object stores information on stringer reinforcements created on entities.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].stringers[name]
         - import assembly
         - mdb.models[name].rootAssembly.allInstances[name].stringers[name]
         - mdb.models[name].rootAssembly.instances[name].stringers[name]
         - mdb.models[name].rootAssembly.stringers[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

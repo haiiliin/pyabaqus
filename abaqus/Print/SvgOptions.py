@@ -6,15 +6,10 @@ class SvgOptions:
     The SvgOptions object has no constructor. Abaqus creates the *svgOptions* member when a 
     session is started. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.svgOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

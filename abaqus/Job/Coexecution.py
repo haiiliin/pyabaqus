@@ -6,13 +6,11 @@ class Coexecution:
     """The Coexecution object contains a set of jobs as associated parameters to define a
     co-simulation analysis. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import job
         - mdb.coexecutions[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

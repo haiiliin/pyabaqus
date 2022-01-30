@@ -11,15 +11,10 @@ class GraphicsInfo:
     the name of the server and the name of the client. 
     The members are all read-only. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.graphicsInfo
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

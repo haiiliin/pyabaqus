@@ -6,14 +6,9 @@ class PngOptions:
     The PngOptions object has no constructor. Abaqus creates the *pngOptions* member when a 
     session is started. 
 
-    Access
-    ------
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
+    Notes
+    -----
+        This object can be accessed by:
 
     """
 

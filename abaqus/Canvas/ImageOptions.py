@@ -9,15 +9,10 @@ class ImageOptions:
     a viewport when the viewport is created using the values in the *imageOptions* member of 
     the current viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].imageOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

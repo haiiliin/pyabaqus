@@ -12,18 +12,13 @@ class ConnectorBehaviorOption:
     constructor. The members of the ConnectorBehaviorOption object are common to all objects 
     derived from the ConnectorBehaviorOption. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name].behaviorOptions[i]
         - import odbSection
         - session.odbs[name].sections[name].behaviorOptions[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -4,16 +4,14 @@ class LayerProperties:
     """The LayerProperties object defines the properties of a layer of reinforcement for
     membrane, shell, and surface sections. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].parts[name].compositeLayups[i].section.rebarLayers.layerTable[i]
         - mdb.models[name].sections[name].rebarLayers.layerTable[i]
         - import odbSection
         - session.odbs[name].sections[name].rebarLayers.layerTable[i]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

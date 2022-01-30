@@ -1,8 +1,9 @@
 class OdbMeshNode:
     """OdbMeshNode objects are created with the part.addNodes method.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].parts[name].nodes[i]
         - session.odbs[name].parts[name].nodeSets[name].nodes[i]
@@ -16,12 +17,6 @@ class OdbMeshNode:
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.nodes[i]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.nodeSets[name].nodes[i]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.surfaces[name].nodes[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

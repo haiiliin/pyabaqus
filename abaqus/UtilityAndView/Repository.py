@@ -18,14 +18,9 @@ class Repository(dict):
     - 
     [changeKey(...)](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-utlrepositorypyc.htm?ContextScope=all#simaker-utlrepositorychangekeypyc) 
 
-    Access
-    ------
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
+    Notes
+    -----
+        This object can be accessed by:
 
     """
 

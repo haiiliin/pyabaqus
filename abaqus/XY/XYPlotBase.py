@@ -8,16 +8,11 @@ from .XYCurve import XYCurve
 class XYPlotBase:
     """The XYPlot object is used to display Chart objects.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.xyPlots[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

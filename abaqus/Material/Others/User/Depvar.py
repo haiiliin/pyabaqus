@@ -1,15 +1,13 @@
 class Depvar:
     """The Depvar object specifies solution-dependent state variables.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].depvar
         - import odbMaterial
         - session.odbs[name].materials[name].depvar
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

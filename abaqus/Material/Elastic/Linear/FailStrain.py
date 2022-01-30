@@ -4,8 +4,9 @@ from abaqusConstants import *
 class FailStrain:
     """The FailStrain object defines parameters for strain-based failure measures.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].elastic.failStrain
         - import odbMaterial

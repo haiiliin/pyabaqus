@@ -6,15 +6,13 @@ class DecayAmplitude(Amplitude):
     """The DecayAmplitude object defines an amplitude curve using an exponential decay.
     The DecayAmplitude object is derived from the Amplitude object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import amplitude
         - mdb.models[name].amplitudes[name]
         - import odbAmplitude
         - session.odbs[name].amplitudes[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

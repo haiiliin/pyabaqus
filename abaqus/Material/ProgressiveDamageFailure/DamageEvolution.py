@@ -5,8 +5,9 @@ class DamageEvolution:
     """The DamageEvolution object specifies material properties to define the evolution of
     damage. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].ductileDamageInitiation.damageEvolution
         - mdb.models[name].materials[name].fldDamageInitiation.damageEvolution

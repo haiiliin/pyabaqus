@@ -4,16 +4,11 @@ from abaqusConstants import *
 class OdbDataFrame:
     """The OdbDataFrame object.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].steps[i].frames[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

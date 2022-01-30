@@ -10,13 +10,11 @@ class PressurePenetrationState(InteractionState):
     The PressurePenetrationState object has no constructor or methods. 
     The PressurePenetrationState object is derived from the InteractionState object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].steps[name].interactionStates[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

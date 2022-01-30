@@ -5,8 +5,9 @@ from abaqus.Material.Plastic.SuperElastic.SuperElasticHardeningModifications imp
 class SuperElasticity:
     """The SuperElasticity object specifies a superelastic material model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].superElasticity
         - import odbMaterial

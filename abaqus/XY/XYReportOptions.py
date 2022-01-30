@@ -6,17 +6,12 @@ class XYReportOptions:
     write an XYData object to an ASCII file. The XYReportOptions object has no constructor. 
     Abaqus creates the *xyReportOptions* member when you import the Visualization module. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultXYReportOptions
         - session.xyReportOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

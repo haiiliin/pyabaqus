@@ -8,8 +8,9 @@ class HeatCapacitance(Inertia):
     region. 
     The HeatCapacitance object is derived from the Inertia object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].engineeringFeatures.inertias[name]
         - import assembly

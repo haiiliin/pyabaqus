@@ -8,8 +8,9 @@ class FluidInflatorProperty(ContactProperty):
     entering tank test data. It also defines the mixture of gases entering the fluid cavity. 
     The FluidInflatorProperty object is derived from the InteractionProperty object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name]
 

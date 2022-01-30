@@ -4,8 +4,9 @@ from abaqusConstants import *
 class CapCreepConsolidation:
     """The CapCreepConsolidation object specifies a cap creep model and material properties.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].capPlasticity.capCreepConsolidation
         - import odbMaterial

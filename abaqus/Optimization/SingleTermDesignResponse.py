@@ -7,16 +7,11 @@ class SingleTermDesignResponse(DesignResponse):
     """The SingleTermDesignResponse object defines a single-term design response.
     The SingleTermDesignResponse object is derived from the DesignResponse object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name].designResponses[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

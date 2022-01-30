@@ -8,8 +8,9 @@ class MeshElement:
     refers to the internal numbering of the element repository. The index does not refer to 
     the element label. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSets[name].elements[i]
         - mdb.models[name].parts[name].allInternalSurfaces[name].elements[i]
@@ -35,12 +36,6 @@ class MeshElement:
         - mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].elements[i]
         - mdb.models[name].rootAssembly.sets[name].elements[i]
         - mdb.models[name].rootAssembly.surfaces[name].elements[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

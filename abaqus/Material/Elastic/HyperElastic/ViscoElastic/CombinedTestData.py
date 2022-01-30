@@ -2,8 +2,9 @@ class CombinedTestData:
     """The CombinedTestData object specifies simultaneously the normalized shear and bulk
     compliances or relaxation moduli as functions of time. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].viscoelastic.combinedTestData
         - import odbMaterial

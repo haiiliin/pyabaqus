@@ -5,16 +5,11 @@ class OdbMeshRegionData:
     """The OdbMeshRegionData object defines the external source data of MappedField from an ODB
     file. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import field
         - mdb.models[name].analyticalFields[name].odbMeshRegionData
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

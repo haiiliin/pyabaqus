@@ -20,13 +20,11 @@ class CoupledTempDisplacementStep(AnalysisStep):
     simultaneous solution of the temperature and stress/displacement fields is necessary. 
     The CoupledTempDisplacementStep object is derived from the AnalysisStep object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

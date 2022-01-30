@@ -4,18 +4,13 @@ from abaqusConstants import *
 class AnalyticSurfaceSegment:
     """An individual segment of the analytic surface.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].parts[name].analyticSurface.segments[i]
         - session.odbs[name].rootAssembly.instances[name].analyticSurface.segments[i]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.analyticSurface.segments[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

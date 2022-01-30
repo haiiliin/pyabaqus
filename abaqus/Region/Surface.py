@@ -13,8 +13,9 @@ class Surface:
     geometric or discrete entities but not both. An instance of a Surface object is 
     available from the *surface* member of the Assembly object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSurfaces[name]
         - mdb.models[name].parts[name].allSurfaces[name]
@@ -26,12 +27,6 @@ class Surface:
         - mdb.models[name].rootAssembly.instances[name].surfaces[name]
         - mdb.models[name].rootAssembly.modelInstances[i].surfaces[name]
         - mdb.models[name].rootAssembly.surfaces[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

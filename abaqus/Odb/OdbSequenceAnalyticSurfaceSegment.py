@@ -3,18 +3,13 @@
 class OdbSequenceAnalyticSurfaceSegment:
     """A sequence of AnalyticSurfaceSegment describing an analytic surface profile.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].parts[name].analyticSurface.segments
         - session.odbs[name].rootAssembly.instances[name].analyticSurface.segments
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.analyticSurface.segments
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

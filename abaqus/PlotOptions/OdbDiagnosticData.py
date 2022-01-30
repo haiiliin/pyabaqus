@@ -9,16 +9,11 @@ from .OdbNumericalProblemSummary import OdbNumericalProblemSummary
 class OdbDiagnosticData:
     """The OdbDiagnosticData object.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].diagnosticData
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

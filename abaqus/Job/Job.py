@@ -7,14 +7,12 @@ class Job:
     explicit constructor. The methods and members of the Job object are common to all 
     objects derived from Job. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import job
         - mdb.coexecutions[name].jobs[name]
         - mdb.jobs[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

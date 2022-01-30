@@ -7,18 +7,13 @@ class RepositorySupport(CommandRegister):
     the GUI and are capable of notifying the GUI when the contents of the instance change. 
     The RepositorySupport object is derived from the CommandRegister object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import customKernel
         - mdb.customData
         - session.customData
         - session.odbs[name].customData
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

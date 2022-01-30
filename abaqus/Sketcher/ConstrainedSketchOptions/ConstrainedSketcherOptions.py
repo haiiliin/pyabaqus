@@ -6,16 +6,11 @@ class ConstrainedSketcherOptions:
     be applied to all sketches used in the current session. The ConstrainedSketcherOptions 
     object has no constructor. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import sketch
         - session.sketcherOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

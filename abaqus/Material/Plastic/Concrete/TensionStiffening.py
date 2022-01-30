@@ -5,8 +5,9 @@ class TensionStiffening:
     """The TensionStiffening object defines the retained tensile stress normal to a crack in a
     Concrete model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].concrete.tensionStiffening
         - import odbMaterial

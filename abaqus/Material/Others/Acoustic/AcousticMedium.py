@@ -4,15 +4,13 @@ from abaqusConstants import *
 class AcousticMedium:
     """The AcousticMedium object specifies the acoustic properties of a material.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].acousticMedium
         - import odbMaterial
         - session.odbs[name].materials[name].acousticMedium
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

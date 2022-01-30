@@ -8,16 +8,11 @@ class LoadDisplayOptions:
     The LoadDisplayOptions object has no constructor. When you create a new viewport, the 
     settings are copied from the current viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].assemblyDisplay.loadOptions
         - session.viewports[name].layers[name].assemblyDisplay.loadOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

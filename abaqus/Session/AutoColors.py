@@ -1,15 +1,10 @@
 class AutoColors:
     """The AutoColors object defines a color palette.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.autoColors
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

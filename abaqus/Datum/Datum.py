@@ -4,8 +4,9 @@ class Datum:
     no explicit constructor. The methods and members of the Datum object are common to all 
     objects derived from the Datum. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].datums[i]
         - import assembly
@@ -13,12 +14,6 @@ class Datum:
         - mdb.models[name].rootAssembly.datums[i]
         - mdb.models[name].rootAssembly.instances[name].datums[i]
         - mdb.models[name].rootAssembly.modelInstances[i].datums[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
     pass

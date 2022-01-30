@@ -18,15 +18,10 @@ class MeshAssembly(AssemblyBase):
     """The following commands operate on Assembly objects. For more information about the 
     Assembly object, see Assembly object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import mesh
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

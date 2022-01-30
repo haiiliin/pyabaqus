@@ -4,16 +4,11 @@ from abaqusConstants import *
 class ImageAnimation:
     """The ImageAnimation object is used to build frame by frame animation.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import animation
         - session.imageAnimation
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

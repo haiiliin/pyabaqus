@@ -5,8 +5,9 @@ class Sorption:
     """The Sorption object defines absorption and exsorption behaviors of a partially saturated
     porous medium in the analysis of coupled wetting liquid flow and porous medium stress. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].sorption
         - import odbMaterial

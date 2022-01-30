@@ -7,16 +7,11 @@ class OptimizationObjective:
     """An OptimizationObjective is an object used to define objectives in an objective
     function. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name].objectiveFunctions[name].objectives[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -6,13 +6,11 @@ class XFEMCrackGrowth(Interaction):
     """The XFEMCrackGrowth object defines the enrichment activation state for an XFEMCrack.
     The XFEMCrackGrowth object is derived from the Interaction object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactions[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

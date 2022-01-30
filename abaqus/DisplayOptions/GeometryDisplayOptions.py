@@ -7,18 +7,13 @@ class GeometryDisplayOptions:
     constructor. When you create a new viewport, the settings are copied from the current 
     viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].assemblyDisplay.geometryOptions
         - session.viewports[name].layers[name].assemblyDisplay.geometryOptions
         - session.viewports[name].layers[name].partDisplay.geometryOptions
         - session.viewports[name].partDisplay.geometryOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

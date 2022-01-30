@@ -4,8 +4,9 @@ from abaqusConstants import *
 class PressureEffect:
     """The PressureEffect object defines equivalent pressure stress driven mass diffusion.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].diffusivity.pressureEffect
         - import odbMaterial

@@ -4,8 +4,9 @@ from abaqusConstants import *
 class SpecificHeat:
     """The SpecificHeat object specifies a material's specific heat.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].specificHeat
         - import odbMaterial

@@ -4,13 +4,11 @@ from abaqusConstants import *
 class GeometricProperties:
     """The GeometricProperties object specifies surface interaction properties.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name].geometricProperties
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

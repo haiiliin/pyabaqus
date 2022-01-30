@@ -5,15 +5,10 @@ class ElemType:
     """The ElemType object is an argument object used as an argument in the setElementType
     command. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import mesh
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

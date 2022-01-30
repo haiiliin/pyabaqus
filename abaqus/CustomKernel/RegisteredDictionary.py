@@ -7,15 +7,10 @@ class RegisteredDictionary(CommandRegister):
     RegisteredDictionary must be either strings or integers. 
     The RegisteredDictionary object is derived from the CommandRegister object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import customKernel
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

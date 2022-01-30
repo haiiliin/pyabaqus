@@ -1,16 +1,11 @@
 class MpcConstraint:
     """The MpcConstraint object.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].multiPointConstraints[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

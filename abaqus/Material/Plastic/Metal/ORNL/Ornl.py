@@ -5,17 +5,15 @@ class Ornl:
     """The Ornl object specifies the constitutive model developed by Oak Ridge National
     Laboratory. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].creep.ornl
         - mdb.models[name].materials[name].Plastic.ornl
         - import odbMaterial
         - session.odbs[name].materials[name].creep.ornl
         - session.odbs[name].materials[name].Plastic.ornl
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

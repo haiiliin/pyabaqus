@@ -1,16 +1,11 @@
 class OdbDataSection:
     """The OdbDataSection object stores section data.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].sections[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

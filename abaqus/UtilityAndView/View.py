@@ -10,17 +10,12 @@ class View:
     The Layer View objects store a transformation matrix used to position the contents of 
     the Layer within a viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].layers[name].view
         - session.viewports[name].view
         - session.views[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

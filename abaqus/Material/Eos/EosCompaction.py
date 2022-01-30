@@ -1,15 +1,13 @@
 class EosCompaction:
     """The EosCompaction object specifies material eos compaction.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].eos.eosCompaction
         - import odbMaterial
         - session.odbs[name].materials[name].eos.eosCompaction
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

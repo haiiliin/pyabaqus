@@ -4,16 +4,11 @@ from abaqusConstants import *
 class JobData:
     """The JobData object describes the context in which the analysis was run.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].jobData
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

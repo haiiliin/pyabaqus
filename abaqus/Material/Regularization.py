@@ -5,15 +5,13 @@ class Regularization:
     """The Regularization object defines the tolerance to be used for regularizing material
     data. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].regularization
         - import odbMaterial
         - session.odbs[name].materials[name].regularization
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

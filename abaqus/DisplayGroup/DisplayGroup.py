@@ -6,8 +6,9 @@ class DisplayGroup:
     """DisplayGroup objects are used to select a subset of the entities displayed in the
     viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.displayGroups[name]
         - import assembly
         - session.viewports[name].assemblyDisplay.displayGroup
@@ -18,12 +19,6 @@ class DisplayGroup:
         - session.viewports[name].layers[name].partDisplay.displayGroup
         - session.viewports[name].odbDisplay.displayGroup
         - session.viewports[name].partDisplay.displayGroup
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -6,8 +6,9 @@ class SymbolStyle:
     curves. 
     SymbolStyle objects can be created using the methods described below. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.charts[name].axes1[i].axisData.curves[i].symbolStyle
         - session.charts[name].axes2[i].axisData.curves[i].symbolStyle
@@ -19,12 +20,6 @@ class SymbolStyle:
         - session.xyPlots[name].charts[name].axes2[i].axisData.curves[i].symbolStyle
         - session.xyPlots[name].charts[name].curves[name].symbolStyle
         - session.xyPlots[name].curves[name].symbolStyle
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

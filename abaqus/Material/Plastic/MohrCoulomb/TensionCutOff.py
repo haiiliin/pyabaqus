@@ -5,8 +5,9 @@ class TensionCutOff:
     """The TensionCutOff object specifies tension cutoff for different material models for
     example the Mohr-Coulomb plasticity model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].mohrCoulombPlasticity.tensionCutOff
         - import odbMaterial

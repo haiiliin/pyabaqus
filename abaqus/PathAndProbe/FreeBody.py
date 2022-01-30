@@ -5,16 +5,11 @@ class FreeBody:
     """The FreeBody object defines a section across which resultant forces and moments are
     computed. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.freeBodies[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

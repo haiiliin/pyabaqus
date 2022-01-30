@@ -6,16 +6,11 @@ class SymbolDisplayOptions:
     displayed in a particular viewport. The SymbolDisplayOptions object has no constructor. 
     When you create a new viewport, the settings are copied from the current viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].assemblyDisplay.symbolOptions
         - session.viewports[name].layers[name].assemblyDisplay.symbolOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

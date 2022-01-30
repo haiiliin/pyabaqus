@@ -7,20 +7,15 @@ class DGOrientationOptions:
     creates an *odbDisplayOptions.materialOrientationOptions* member when a display group 
     instance is created, using values from *odbDisplay.materialOrientationOptions*. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions
         - session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions
         - session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions
         - session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions
         - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions
         - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -13,15 +13,10 @@ class AssemblyModel(ModelBase):
     """The following commands operate on Model objects. For more information about the Model 
     object, see Model object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import assembly
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

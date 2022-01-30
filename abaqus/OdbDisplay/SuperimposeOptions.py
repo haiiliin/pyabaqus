@@ -18,8 +18,9 @@ class SuperimposeOptions(DGSuperimposeOptions):
     - The superimpose options associated with a particular viewport. 
     The SuperimposeOptions object is derived from the DGSuperimposeOptions object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultOdbDisplay.superimposeOptions
         - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
@@ -30,12 +31,6 @@ class SuperimposeOptions(DGSuperimposeOptions):
         - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
         - session.viewports[name].odbDisplay.superimposeOptions
         - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

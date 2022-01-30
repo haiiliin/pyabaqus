@@ -5,8 +5,9 @@ from .ClayHardening import ClayHardening
 class ClayPlasticity:
     """The ClayPlasticity object specifies the extended Cam-clay plasticity model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].clayPlasticity
         - import odbMaterial

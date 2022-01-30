@@ -10,16 +10,11 @@ class AnalyticalField(Field):
     AnalyticalField object are common to all objects derived from the AnalyticalField. 
     The AnalyticalField object is derived from the Field object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import fields
         - mdb.models[name].analyticalFields[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

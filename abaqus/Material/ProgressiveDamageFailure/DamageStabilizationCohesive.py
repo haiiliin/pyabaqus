@@ -2,8 +2,9 @@ class DamageStabilizationCohesive:
     """The DamageStabilizationCohesive object specifies the viscosity coefficients for the
     damage model for surface-based cohesive behavior or enriched cohesive behavior. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].ductileDamageInitiation.damageStabilizationCohesive
         - mdb.models[name].materials[name].fldDamageInitiation.damageStabilizationCohesive
@@ -34,9 +35,6 @@ class DamageStabilizationCohesive:
         - session.odbs[name].materials[name].quadeDamageInitiation.damageStabilizationCohesive
         - session.odbs[name].materials[name].quadsDamageInitiation.damageStabilizationCohesive
         - session.odbs[name].materials[name].shearDamageInitiation.damageStabilizationCohesive
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

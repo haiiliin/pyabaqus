@@ -2,16 +2,11 @@ class RayleighDampingComponent:
     """A RayleighDampingComponent object is used to define Rayleigh damping over a range of
     modes. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].rayleighDamping.components[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

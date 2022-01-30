@@ -8,12 +8,10 @@ class DataTable:
     should be created when all the required ParameterColumn objects are created for the 
     current ParameterTable. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - mdb.models[name].tableCollections[name].parameterTables[name].dataTables[i]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

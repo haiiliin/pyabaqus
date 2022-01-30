@@ -13,8 +13,9 @@ class ConnectorOptions:
     ConnectorOptions constructors associated with that behavior—isotropicOptions and 
     kinematicOptions. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i].options
         - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i].options
@@ -35,9 +36,6 @@ class ConnectorOptions:
         - session.odbs[name].sections[name].behaviorOptions[i].isotropicOptions
         - session.odbs[name].sections[name].behaviorOptions[i].kinematicOptions
         - session.odbs[name].sections[name].behaviorOptions[i].options
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

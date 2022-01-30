@@ -5,8 +5,9 @@ class PlanarTestData:
     """The PlanarTestData object specifies planar test (or pure shear) data (compression and/or
     tension). 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].hyperelastic.planarTestData
         - mdb.models[name].materials[name].hyperfoam.planarTestData

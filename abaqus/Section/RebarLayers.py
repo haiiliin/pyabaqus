@@ -5,16 +5,14 @@ from .LayerPropertiesArray import LayerPropertiesArray
 class RebarLayers:
     """The RebarLayers object defines the rebar properties of a section.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].parts[name].compositeLayups[i].section.rebarLayers
         - mdb.models[name].sections[name].rebarLayers
         - import odbSection
         - session.odbs[name].sections[name].rebarLayers
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

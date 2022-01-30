@@ -7,16 +7,11 @@ class GeometricRestriction:
     members of the GeometricRestriction object are common to all objects derived from 
     GeometricRestriction. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

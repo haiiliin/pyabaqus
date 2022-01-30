@@ -2,15 +2,13 @@ class ShearTestData:
     """The ShearTestData object specifies the normalized shear creep compliance or relaxation
     modulus as a function of time. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].viscoelastic.shearTestData
         - import odbMaterial
         - session.odbs[name].materials[name].viscoelastic.shearTestData
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

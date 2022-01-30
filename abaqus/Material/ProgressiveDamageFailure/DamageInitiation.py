@@ -8,8 +8,9 @@ class DamageInitiation:
     """The DamageInitiation object specifies material properties to define the initiation of
     damage. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].ductileDamageInitiation
         - mdb.models[name].materials[name].fldDamageInitiation

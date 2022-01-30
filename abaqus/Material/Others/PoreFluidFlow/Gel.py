@@ -1,8 +1,9 @@
 class Gel:
     """The Gel object defines a swelling gel.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].gel
         - import odbMaterial

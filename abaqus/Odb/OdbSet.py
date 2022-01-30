@@ -8,8 +8,9 @@ from .OdbMeshNodeArray import OdbMeshNodeArray
 class OdbSet:
     """The set objects are used to identify regions of a model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].parts[name].elementSets[name]
         - session.odbs[name].parts[name].nodeSets[name]
@@ -23,12 +24,6 @@ class OdbSet:
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.elementSets[name]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.nodeSets[name]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.surfaces[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

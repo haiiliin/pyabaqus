@@ -6,8 +6,9 @@ class MeshEdge:
     MeshEdge object can be accessed via a MeshEdgeArray or a repository on a part or part 
     instance. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].elemEdges[i]
         - mdb.models[name].parts[name].elementEdges[i]
@@ -16,12 +17,6 @@ class MeshEdge:
         - mdb.models[name].rootAssembly.allInstances[name].elementEdges[i]
         - mdb.models[name].rootAssembly.instances[name].elemEdges[i]
         - mdb.models[name].rootAssembly.instances[name].elementEdges[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

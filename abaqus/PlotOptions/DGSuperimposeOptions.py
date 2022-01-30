@@ -20,14 +20,9 @@ class DGSuperimposeOptions:
     session.viewports[name].partDisplay.displayGroupInstances[name]\ 
     .odbDisplayOptions.superimposeOptions 
 
-    Access
-    ------
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
+    Notes
+    -----
+        This object can be accessed by:
 
     """
 

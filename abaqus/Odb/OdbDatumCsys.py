@@ -9,16 +9,11 @@ class OdbDatumCsys:
     you exit Abaqus/CAE. Alternatively, the analysis code can write the datum coordinate 
     system to the output database. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].rootAssembly.datumCsyses[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

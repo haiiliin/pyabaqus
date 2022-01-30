@@ -6,18 +6,13 @@ class Amplitude:
     Amplitude object has no explicit constructor. The methods and members of the Amplitude 
     object are common to all objects derived from the Amplitude. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import amplitude
         - mdb.models[name].amplitudes[name]
         - import odbAmplitude
         - session.odbs[name].amplitudes[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

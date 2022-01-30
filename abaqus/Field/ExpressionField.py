@@ -6,16 +6,11 @@ class ExpressionField(AnalyticalField):
     from a user-supplied mathematical expression. 
     The ExpressionField object is derived from the AnalyticalField object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import fields
         - mdb.models[name].analyticalFields[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

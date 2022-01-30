@@ -8,16 +8,11 @@ class FieldState(PredefinedFieldState):
     The FieldState object has no constructor or methods. 
     The FieldState object is derived from the PredefinedFieldState object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].steps[name].predefinedFieldStates[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

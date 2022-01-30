@@ -10,13 +10,11 @@ class ConcentratedConcentrationFluxState(LoadState):
     The ConcentratedConcentrationFluxState object has no constructor or methods. 
     The ConcentratedConcentrationFluxState object is derived from the LoadState object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].steps[name].loadStates[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

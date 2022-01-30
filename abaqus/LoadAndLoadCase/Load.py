@@ -6,16 +6,11 @@ class Load:
     explicit constructor. The methods and members of the Load object are common to all 
     objects derived from Load. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].loads[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -4,15 +4,10 @@ class DrawingArea:
     """The DrawingArea object specifies the location and size of the drawing area used for
     placement of viewports. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.drawingArea
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -19,16 +19,11 @@ class OdbPartBase:
     """The OdbPart object is similar to the kernel Part object and contains nodes and elements,
     but not geometry. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].parts[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

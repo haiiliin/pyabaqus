@@ -7,8 +7,9 @@ class DerivedComponent:
     """A DerivedComponent object describes user-customized components for use in defining
     ConnectorFriction and Potential objects. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent
         - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent
@@ -19,9 +20,6 @@ class DerivedComponent:
         - session.odbs[name].sections[name].behaviorOptions[i].derivedComponent
         - session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent
         - session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

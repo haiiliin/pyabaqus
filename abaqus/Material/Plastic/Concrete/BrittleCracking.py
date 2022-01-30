@@ -7,8 +7,9 @@ class BrittleCracking:
     """The BrittleCracking object specifies cracking and postcracking properties for the
     brittle cracking material model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].brittleCracking
         - import odbMaterial

@@ -4,16 +4,11 @@ from .DirectDampingByFrequencyComponentArray import DirectDampingByFrequencyComp
 class DirectDampingByFrequency:
     """A DirectDampingByFrequency object contains direct damping parameters.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].directDampingByFrequency
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -4,19 +4,14 @@ from .MeshFace import MeshFace
 class MeshFaceArray(list[MeshFace]):
     """The MeshFaceArray is a sequence of MeshFace objects.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].elementFaces
         - import assembly
         - mdb.models[name].rootAssembly.allInstances[name].elementFaces
         - mdb.models[name].rootAssembly.instances[name].elementFaces
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

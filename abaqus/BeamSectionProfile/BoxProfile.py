@@ -7,15 +7,13 @@ class BoxProfile(Profile):
     """The BoxProfile object defines the properties of a box profile. 
     The BoxProfile object is derived from the Profile object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].profiles[name]
         - import odbSection
         - session.odbs[name].profiles[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

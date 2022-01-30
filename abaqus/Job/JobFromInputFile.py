@@ -8,16 +8,11 @@ class JobFromInputFile(Job):
     input file. 
     The JobFromInputFile object is derived from the Job object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import job
         - mdb.jobs[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

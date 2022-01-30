@@ -6,15 +6,10 @@ class DetailPlotOptions:
     object. The DetailPlotOptions object has no constructor command. Abaqus creates the 
     *detailPlotOptions* member whenever a Viewport is created. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].detailPlotOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

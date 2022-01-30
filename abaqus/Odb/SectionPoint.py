@@ -2,8 +2,9 @@ class SectionPoint:
     """The SectionPoint object describes the location of a section point within a section
     category. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import
         - odbAccess
         - session.odbs[name].parts[name].elements[i].sectionCategory.sectionPoints[i]
@@ -26,12 +27,6 @@ class SectionPoint:
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.nodeSets[name].elements[i].sectionCategory.sectionPoints[i]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.surfaces[name].elements[i].sectionCategory.sectionPoints[i]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].sectionPoint
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

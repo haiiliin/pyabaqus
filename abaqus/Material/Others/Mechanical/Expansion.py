@@ -4,8 +4,9 @@ from abaqusConstants import *
 class Expansion:
     """The Expansion object specifies thermal expansion.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].expansion
         - import odbMaterial

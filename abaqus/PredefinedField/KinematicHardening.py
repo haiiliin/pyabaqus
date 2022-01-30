@@ -8,13 +8,11 @@ class KinematicHardening(PredefinedField):
     and, if relevant, the initial backstress tensor. 
     The KinematicHardening object is derived from the PredefinedField object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].predefinedFields[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

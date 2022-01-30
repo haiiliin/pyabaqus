@@ -9,15 +9,10 @@ class Feature(FeatureBase):
     """The following commands operate on Feature objects. For more information about the 
     Feature object, see Feature object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import assembly
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

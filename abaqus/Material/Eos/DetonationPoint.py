@@ -3,8 +3,9 @@ class DetonationPoint:
     object defines either isotropic linear elastic shear or linear viscous shear behavior 
     for a hydrodynamic material. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].eos.detonationPoint
         - import odbMaterial

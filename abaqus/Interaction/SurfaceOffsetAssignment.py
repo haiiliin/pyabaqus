@@ -8,13 +8,11 @@ class SurfaceOffsetAssignment:
     definition for surfaces in ContactExp and ContactStd objects. The 
     SurfaceOffsetAssignment object has no constructor or members. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactions[name].surfaceOffsetAssignments
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

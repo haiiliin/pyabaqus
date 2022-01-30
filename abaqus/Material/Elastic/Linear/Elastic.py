@@ -6,8 +6,9 @@ from abaqus.Material.Elastic.Linear.FailStress import FailStress
 class Elastic:
     """The Elastic object specifies elastic material properties.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].elastic
         - import odbMaterial

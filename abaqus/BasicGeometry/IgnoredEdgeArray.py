@@ -5,19 +5,14 @@ class IgnoredEdgeArray:
     """The IgnoredEdgeArray is a sequence of IgnoredEdge objects. If the part is modified, then
     IgnoredEdgeArray must be updated for that part. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].ignoredEdges
         - import assembly
         - mdb.models[name].rootAssembly.allInstances[name].ignoredEdges
         - mdb.models[name].rootAssembly.instances[name].ignoredEdges
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -2,8 +2,9 @@ class DamageStabilization:
     """The DamageStabilization object specifies the viscosity coefficients for the damage model
     for fiber-reinforced materials. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].ductileDamageInitiation.damageStabilization
         - mdb.models[name].materials[name].fldDamageInitiation.damageStabilization
@@ -34,9 +35,6 @@ class DamageStabilization:
         - session.odbs[name].materials[name].quadeDamageInitiation.damageStabilization
         - session.odbs[name].materials[name].quadsDamageInitiation.damageStabilization
         - session.odbs[name].materials[name].shearDamageInitiation.damageStabilization
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

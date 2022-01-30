@@ -23,15 +23,10 @@ class ViewportBase:
     object stores the various settings that determine how objects are displayed within that 
     viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

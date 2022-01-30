@@ -4,16 +4,11 @@ from .CompositeDampingComponentArray import CompositeDampingComponentArray
 class CompositeDamping:
     """A CompositeDamping object contains composite modal damping parameters.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].compositeDamping
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

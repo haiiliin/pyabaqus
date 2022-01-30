@@ -8,8 +8,9 @@ from abaqus.Material.TestData.VolumetricTestData import VolumetricTestData
 class Viscoelastic:
     """The Viscoelastic object specifies dissipative behavior for use with elasticity.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].viscoelastic
         - import odbMaterial

@@ -5,18 +5,13 @@ class Fastener:
     """The Fastener object is the abstract base type for PointFastener, DiscreteFastener, and
     AssembledFastener. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].engineeringFeatures.fasteners[name]
         - import assembly
         - mdb.models[name].rootAssembly.engineeringFeatures.fasteners[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

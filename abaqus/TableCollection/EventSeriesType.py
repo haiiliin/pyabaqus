@@ -3,12 +3,10 @@
 class EventSeriesType:
     """The EventSeriesType object is used to define a type of event in a process.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - mdb.models[name].eventSeriesTypes[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

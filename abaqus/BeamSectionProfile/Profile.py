@@ -4,18 +4,13 @@ class Profile:
     """The Profile object defines the geometrical properties of a beam cross-section. Profile 
     is an abstract base type. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].profiles[name]
         - import odbSection
         - session.odbs[name].profiles[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -6,16 +6,11 @@ class AnnotationsToPlotArray(list[Annotation]):
     annotations. By adding annotations to and removing annotations from this sequence, you 
     can control which annotations are displayed in a particular viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import annotationToolset
         - session.viewports[name].annotationsToPlot
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

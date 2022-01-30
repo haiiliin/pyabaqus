@@ -9,15 +9,10 @@ class AnimationSession(SessionBase):
     """The following commands operate on Session objects. For more information about the
     Session object, see Session object.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import animation
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

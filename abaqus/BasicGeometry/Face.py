@@ -4,8 +4,9 @@ from abaqusConstants import *
 class Face:
     """Faces are two-dimensional regions of geometry.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSets[name].faces[i]
         - mdb.models[name].parts[name].allInternalSurfaces[name].faces[i]
@@ -29,12 +30,6 @@ class Face:
         - mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].faces[i]
         - mdb.models[name].rootAssembly.sets[name].faces[i]
         - mdb.models[name].rootAssembly.surfaces[name].faces[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

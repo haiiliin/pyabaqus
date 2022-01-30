@@ -6,16 +6,11 @@ class ConstrainedSketchImageOptions:
     associated with the background image for a particular sketch. The 
     ConstrainedSketchImageOptions object has no constructor. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import sketch
         - mdb.models[name].sketches[name].imageOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

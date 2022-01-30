@@ -12,13 +12,11 @@ from ..Section.SectionLayerArray import SectionLayerArray
 class CompositeLayup:
     """The CompositeLayup object is used to specify a composite layup on a part.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].compositeLayups[i]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

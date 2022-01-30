@@ -9,16 +9,11 @@ class TemperatureBC(BoundaryCondition):
     """The TemperatureBC object stores the data for a temperature boundary condition.
     The TemperatureBC object is derived from the BoundaryCondition object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].boundaryConditions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

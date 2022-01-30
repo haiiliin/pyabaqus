@@ -23,17 +23,12 @@ from ..Region.Surface import Surface
 class PartInstance:
     """A PartInstance object is an instance of a Part object.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import assembly
         - mdb.models[name].rootAssembly.allInstances[name]
         - mdb.models[name].rootAssembly.instances[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

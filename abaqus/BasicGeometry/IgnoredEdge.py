@@ -2,19 +2,14 @@ class IgnoredEdge:
     """An IgnoredEdge object is a one-dimensional region of geometry that has been abstracted
     away by a virtual topology feature. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].ignoredEdges[i]
         - import assembly
         - mdb.models[name].rootAssembly.allInstances[name].ignoredEdges[i]
         - mdb.models[name].rootAssembly.instances[name].ignoredEdges[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

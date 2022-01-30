@@ -4,16 +4,11 @@ from abaqusConstants import *
 class ConstrainedSketchGeometryArray:
     """The ConstrainedSketchGeometryArray is a sequence of ConstrainedSketchGeometry objects.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import sketch
         - mdb.models[name].sketches[name].geometry[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

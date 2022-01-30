@@ -21,13 +21,11 @@ class StaticRiksStep(AnalysisStep):
     static load step using the modified Riks method for proportional loading cases. 
     The StaticRiksStep object is derived from the AnalysisStep object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

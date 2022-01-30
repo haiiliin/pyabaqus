@@ -4,16 +4,14 @@ from abaqusConstants import *
 class SectionLayer:
     """The SectionLayer object defines the material layer in a composite shell.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].parts[name].compositeLayups[i].section.layup[i]
         - mdb.models[name].sections[name].layup[i]
         - import odbSection
         - session.odbs[name].sections[name].layup[i]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

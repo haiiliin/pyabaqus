@@ -5,8 +5,9 @@ class ConcreteTensionStiffening:
     """The ConcreteTensionStiffening object specifies hardening for the concrete damaged
     plasticity model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].concreteDamagedPlasticity.concreteTensionStiffening
         - import odbMaterial

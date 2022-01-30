@@ -6,16 +6,11 @@ class QuickTimeOptions:
     generating QuickTime animation. The QuickTimeOptions object has no constructor. Abaqus 
     creates the *quickTimeOptions* member when the animation module is imported. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import animation
         - session.quickTimeOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

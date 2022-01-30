@@ -16,8 +16,9 @@ class ContourOptions(DGContourOptions):
     - The contour options associated with a particular viewport. 
     The ContourOptions object is derived from the DGContourOptions object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultOdbDisplay.contourOptions
         - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
@@ -28,12 +29,6 @@ class ContourOptions(DGContourOptions):
         - session.viewports[name].odbDisplay.contourOptions
         - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
         - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

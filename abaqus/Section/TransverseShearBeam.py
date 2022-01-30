@@ -6,15 +6,13 @@ from abaqusConstants import *
 class TransverseShearBeam:
     """The TransverseShearBeam object defines the transverse shear stiffness properties of a beam section. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name].beamTransverseShear
         - import odbSection
         - session.odbs[name].sections[name].beamTransverseShear
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

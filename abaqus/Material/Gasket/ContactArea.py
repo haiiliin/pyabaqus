@@ -7,8 +7,9 @@ class ContactArea:
     defines the contact area or contact width versus closure curves to output an average 
     pressure through variable CS11. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].gasketThicknessBehavior.contactArea
         - import odbMaterial

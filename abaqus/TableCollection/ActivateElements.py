@@ -3,12 +3,10 @@ class ActivateElements:
     """The ActivateElements object is used turn on progressive element activation within a step
     definition. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - mdb.models[name].steps[name].activateElements[key]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

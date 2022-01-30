@@ -4,8 +4,9 @@ from abaqusConstants import *
 class Conductivity:
     """The Conductivity object specifies thermal conductivity.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].conductivity
         - import odbMaterial

@@ -4,8 +4,9 @@ from abaqusConstants import *
 class PorousBulkModuli:
     """The PorousBulkModuli object defines bulk moduli for soils and rocks.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].porousBulkModuli
         - import odbMaterial

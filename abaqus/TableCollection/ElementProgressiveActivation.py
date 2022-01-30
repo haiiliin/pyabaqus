@@ -6,12 +6,10 @@ class ElementProgressiveActivation:
     """The ElementProgressiveActivation object is used to specify elements that can be
     activated during an analysis. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - mdb.models[name].rootAssembly.elementProgressiveActivations[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

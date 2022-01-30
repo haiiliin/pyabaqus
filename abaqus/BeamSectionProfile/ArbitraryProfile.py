@@ -5,8 +5,9 @@ class ArbitraryProfile(Profile):
     """The ArbitraryProfile object defines the properties of an arbitrary profile. 
     The ArbitraryProfile object is derived from the Profile object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].profiles[name]
         - import odbSection

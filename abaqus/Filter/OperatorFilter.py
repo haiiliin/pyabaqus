@@ -6,15 +6,13 @@ class OperatorFilter(Filter):
     """The OperatorFilter object defines an operator filter.
     The OperatorFilter object is derived from the Filter object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import filter
         - mdb.models[name].filters[name]
         - import odbFilter
         - session.odbs[name].filters[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -8,15 +8,13 @@ class ContourIntegral(Crack):
     assembly regions are supported. 
     The ContourIntegral object is derived from the Crack object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].engineeringFeatures.cracks[name]
         - import assembly
         - mdb.models[name].rootAssembly.engineeringFeatures.cracks[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

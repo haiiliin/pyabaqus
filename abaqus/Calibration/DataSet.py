@@ -1,16 +1,11 @@
 class DataSet:
     """The DataSetobject specifies material test data.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import calibration
         - mdb.models[name].calibrations[name].dataSets[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -6,20 +6,15 @@ class NumberFormat:
     certain numeric output.This page 
     discusses:Access[NumberFormat(...)](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-numberformatpyc.htm?ContextScope=all#simaker-numberformatnumberformatpyc)Members 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultFieldReportOptions.numberFormat
         - session.fieldReportOptions.numberFormat
         - session.journalOptions.defaultFormat
         - session.journalOptions.fieldReportFormat
         - session.journalOptions.geometryFormat
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

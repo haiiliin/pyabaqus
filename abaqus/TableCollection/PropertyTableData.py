@@ -7,12 +7,10 @@ class PropertyTableData:
     The values in each column in the PropertyTableData object corresponds to the properties 
     and variables mentioned in the PropertyTable object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - mdb.models[name].tableCollections[name].propertyTables[name].propertyTableDatas[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

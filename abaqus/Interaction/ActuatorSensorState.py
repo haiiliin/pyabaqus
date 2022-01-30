@@ -9,16 +9,11 @@ class ActuatorSensorState(InteractionState):
     The ActuatorSensorState object has no constructor, methods, or members. 
     The ActuatorSensorState object is derived from the InteractionState object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].steps[name].interactionStates[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

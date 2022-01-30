@@ -21,13 +21,11 @@ class GeostaticStep(AnalysisStep):
     if needed, to obtain equilibrium. 
     The GeostaticStep object is derived from the AnalysisStep object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import
         - step mdb.models[name].steps[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

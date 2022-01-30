@@ -8,16 +8,11 @@ class FieldBulkData:
     """The FieldBulkData object represents the entire field data for a class of elements or
     nodes. All elements in a class correspond to the same element type and material. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].bulkDataBlocks[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

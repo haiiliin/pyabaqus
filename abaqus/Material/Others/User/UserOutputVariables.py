@@ -1,15 +1,13 @@
 class UserOutputVariables:
     """The UserOutputVariables object specifies the number of user-defined output variables.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].userOutputVariables
         - import odbMaterial
         - session.odbs[name].materials[name].userOutputVariables
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

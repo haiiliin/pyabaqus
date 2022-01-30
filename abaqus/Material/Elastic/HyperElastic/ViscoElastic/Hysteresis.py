@@ -3,8 +3,9 @@ class Hysteresis:
     """The Hysteresis object specifies the creep part of the material model for the hysteretic
     behavior of elastomers. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].hyperelastic.hysteresis
         - import odbMaterial

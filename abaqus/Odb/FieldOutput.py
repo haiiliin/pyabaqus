@@ -11,17 +11,12 @@ from .SectionPoint import SectionPoint
 class FieldOutput:
     """A FieldOutput object contains field data for a specific output variable.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import
         - odbAccess
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

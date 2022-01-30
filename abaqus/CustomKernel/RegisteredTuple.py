@@ -6,15 +6,10 @@ class RegisteredTuple(CommandRegister):
     of notifying the GUI when the contents of any of the tuple's members change. 
     The RegisteredTuple object is derived from the CommandRegister object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import customKernel
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

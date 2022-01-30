@@ -9,18 +9,13 @@ class EngineeringFeatureBase:
     """The EngineeringFeature object is a container for various specific engineering feature
     repositories. The EngineeringFeature object has no explicit constructor or methods. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].engineeringFeatures
         - import assembly
         - mdb.models[name].rootAssembly.engineeringFeatures
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -15,16 +15,11 @@ class GraphicsOptions:
     Abaqus/CAE, or if you wish to override the default graphics options, you can modify 
     settings in the environment file. For more information, see Tuning graphics cards. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.defaultGraphicsOptions
         - session.graphicsOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

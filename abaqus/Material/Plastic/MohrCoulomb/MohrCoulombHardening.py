@@ -5,8 +5,9 @@ class MohrCoulombHardening:
     """The MohrCoulombHardening object specifies hardening for the Mohr-Coulomb plasticity
     model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].mohrCoulombPlasticity.mohrCoulombHardening
         - import odbMaterial

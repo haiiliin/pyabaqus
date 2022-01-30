@@ -9,15 +9,10 @@ class JournalOptions:
     numeric output. The JournalOptions object has no constructor. Abaqus creates the 
     *journalOptions* member when a session is started. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.journalOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
     # Format of the number

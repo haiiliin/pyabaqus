@@ -5,18 +5,13 @@ class Inertia:
     """The Inertia object is the abstract base type for HeatCapacitance, NonstructuralMass, and
     PointMassInertia. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].engineeringFeatures.inertias[name]
         - import assembly
         - mdb.models[name].rootAssembly.engineeringFeatures.inertias[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

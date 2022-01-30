@@ -5,8 +5,9 @@ class ConcreteCompressionHardening:
     """The ConcreteCompressionHardening object specifies hardening for the concrete damaged
     plasticity model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].concreteDamagedPlasticity.concreteCompressionHardening
         - import odbMaterial

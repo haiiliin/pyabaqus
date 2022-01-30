@@ -8,18 +8,13 @@ class Text(Annotation):
     """The Text object stores the text settings and location of a text annotation.
     The Text object is derived from the Annotation object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import annotationToolset
         - mdb.annotations[name]
         - session.odbs[name].userData.annotations[name]
         - session.viewports[name].annotationsToPlot[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

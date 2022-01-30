@@ -4,15 +4,13 @@ from abaqusConstants import *
 class MeanFieldHomogenization:
     """The MeanFieldHomogenization object specifies the multiscale material definition.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].meanFieldHomogenization
         - import odbMaterial
         - session.odbs[name].materials[name].meanFieldHomogenization
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

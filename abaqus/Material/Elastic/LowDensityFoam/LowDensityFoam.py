@@ -5,15 +5,13 @@ from abaqus.Material.TestData.UniaxialTestData import UniaxialTestData
 class LowDensityFoam:
     """The LowDensityFoam object specifies properties for low-density foam.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].lowDensityFoam
         - import odbMaterial
         - session.odbs[name].materials[name].lowDensityFoam
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

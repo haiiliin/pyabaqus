@@ -6,8 +6,9 @@ from abaqusConstants import *
 class NormalBehavior:
     """The NormalBehavior object specifies normal behavior for a contact interaction property.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name].normalBehavior
 

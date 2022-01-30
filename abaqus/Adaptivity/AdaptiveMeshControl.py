@@ -6,16 +6,11 @@ class AdaptiveMeshControl:
     Lagrangian Eularian (ALE) style adaptive smoothing and advection algorithms applied to 
     an ALE adaptive mesh domain. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].adaptiveMeshControls[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

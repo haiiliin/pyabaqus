@@ -7,13 +7,11 @@ class AcousticImpedanceProp(ContactProperty):
     referred to by an AcousticImpedance object. 
     The AcousticImpedanceProp object is derived from the InteractionProperty object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

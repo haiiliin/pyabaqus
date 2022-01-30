@@ -5,16 +5,11 @@ from ..Region.Region import Region
 class IntegratedOutputSection:
     """The IntegratedOutputSection object specifies parameters used for integrated output.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].integratedOutputSections[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

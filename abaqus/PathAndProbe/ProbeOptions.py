@@ -8,17 +8,12 @@ class ProbeOptions:
     module. When probing is initiated for the first time, the values in the *probeOptions* 
     member are initialized using the values from the *defaultProbeOptions* member. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultProbeOptions
         - session.probeOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -6,15 +6,13 @@ class ButterworthFilter(Filter):
     """The ButterworthFilter object defines a Butterworth type filter.
     The ButterworthFilter object is derived from the Filter object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import filter
         - mdb.models[name].filters[name]
         - import odbFilter
         - session.odbs[name].filters[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

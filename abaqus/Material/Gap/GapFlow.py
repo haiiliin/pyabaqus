@@ -5,8 +5,9 @@ class GapFlow:
     """The GapFlow object specifies tangential flow constitutive parameters for pore pressure
     cohesive elements. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].gapFlow
         - import odbMaterial

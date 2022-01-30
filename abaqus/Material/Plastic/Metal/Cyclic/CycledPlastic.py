@@ -5,8 +5,9 @@ class CycledPlastic:
     """The CycledPlastic object specifies cycled yield stress data for the ORNL constitutive
     model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].Plastic.cycledPlastic
         - import odbMaterial

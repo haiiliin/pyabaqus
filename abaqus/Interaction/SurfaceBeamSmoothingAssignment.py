@@ -5,13 +5,11 @@ class SurfaceBeamSmoothingAssignment:
     definition for surfaces in ContactStd objects. The SurfaceBeamSmoothingAssignment object 
     has no constructor or members. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactions[name].surfaceBeamSmoothingAssignments
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

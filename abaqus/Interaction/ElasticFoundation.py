@@ -6,13 +6,11 @@ class ElasticFoundation(Interaction):
     """The ElasticFoundation object defines a mechanical foundation.
     The ElasticFoundation object is derived from the Interaction object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactions[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -4,16 +4,11 @@ from .DirectDampingComponentArray import DirectDampingComponentArray
 class DirectDamping:
     """A DirectDamping object contains direct modal damping parameters.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].directDamping
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

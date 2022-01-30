@@ -22,13 +22,11 @@ class ContactStd(Interaction):
     contact in an Abaqus/Standard analysis. 
     The ContactStd object is derived from the Interaction object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactions[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -1,16 +1,11 @@
 class Spectrum:
     """The Spectrum object defines a color spectrum for the contour display.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.spectrums[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

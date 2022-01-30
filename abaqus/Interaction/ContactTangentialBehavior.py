@@ -5,8 +5,9 @@ class ContactTangentialBehavior:
     """The ContactTangentialBehavior object specifies tangential behavior for a contact
     interaction property. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name].tangentialBehavior
 

@@ -8,15 +8,10 @@ class MesherOptions:
     MesherOptions commands are intended for use at the beginning of scripts and in the 
     abaqus_v6.env file only; they should not be used during an Abaqus/CAE session. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.defaultMesherOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

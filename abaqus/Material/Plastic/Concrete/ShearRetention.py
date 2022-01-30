@@ -5,8 +5,9 @@ class ShearRetention:
     """The ShearRetention object defines the reduction of the shear modulus associated with
     crack surfaces in a Concrete model as a function of the tensile strain across the crack. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].concrete.shearRetention
         - import odbMaterial

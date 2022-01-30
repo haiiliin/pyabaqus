@@ -8,13 +8,11 @@ class SurfaceThicknessAssignment:
     for surfaces in ContactExp and ContactStd objects. The SurfaceThicknessAssignment object 
     has no constructor or members. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactions[name].surfaceThicknessAssignments
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

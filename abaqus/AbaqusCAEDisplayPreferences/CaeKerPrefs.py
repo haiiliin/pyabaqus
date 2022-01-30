@@ -4,16 +4,11 @@ from abaqusConstants import *
 class CaeKerPrefs:
     """The CaeKerPrefs object contains the details of the sessionOptions.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import caePrefsAccess
         - caePrefsAccess.openSessionOptions(...)
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

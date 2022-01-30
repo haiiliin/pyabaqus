@@ -7,16 +7,11 @@ class ConcentratedHeatFlux(Load):
     """The ConcentratedHeatFlux object stores the data for a concentrated heat flux load.
     The ConcentratedHeatFlux object is derived from the Load object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].loads[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

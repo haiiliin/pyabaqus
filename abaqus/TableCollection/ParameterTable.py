@@ -9,12 +9,10 @@ class ParameterTable:
     contents of ParameterColumn. After DataTable is instantiated, making changes to 
     ParameterColumn may lead to data corruption. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - mdb.models[name].tableCollections[name].parameterTables[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

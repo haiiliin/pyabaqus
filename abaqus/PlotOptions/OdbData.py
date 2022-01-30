@@ -21,16 +21,11 @@ class OdbData:
     *odbData* repository when you import the Visualization module. Abaqus creates a OdbData 
     object when an odb is opened. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

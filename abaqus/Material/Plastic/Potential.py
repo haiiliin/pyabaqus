@@ -4,8 +4,9 @@ from abaqusConstants import *
 class Potential:
     """The Potential object defines an anisotropic yield/creep model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].creep.potential
         - mdb.models[name].materials[name].Plastic.potential

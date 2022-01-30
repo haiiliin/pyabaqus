@@ -4,13 +4,11 @@ from abaqusConstants import *
 class Restart:
     """The Restart object defines a restart request.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].restart
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -7,8 +7,9 @@ from abaqus.Material.Plastic.Concrete.TensionStiffening import TensionStiffening
 class Concrete:
     """The Concrete object defines concrete properties beyond the elastic range.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].concrete
         - import odbMaterial

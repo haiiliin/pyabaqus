@@ -7,16 +7,11 @@ class PredefinedFieldState:
     PredefinedFieldState object are common to all objects derived from PredefinedFieldState. 
     The PredefinedFieldState object has no constructor or methods. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].steps[name].predefinedFieldStates[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

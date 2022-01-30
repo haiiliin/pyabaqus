@@ -4,8 +4,9 @@ from abaqusConstants import *
 class Ratios:
     """The Ratios object specifies ratios that define anisotropic swelling.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].moistureSwelling.ratios
         - mdb.models[name].materials[name].swelling.ratios

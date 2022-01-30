@@ -8,16 +8,11 @@ from .HistoryPoint import HistoryPoint
 class HistoryRegion:
     """The HistoryRegion object contains history data for a single location in the model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].steps[name].historyRegions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

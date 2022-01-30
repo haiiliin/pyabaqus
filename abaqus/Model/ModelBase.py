@@ -40,12 +40,10 @@ from ..TableCollection.TableCollection import TableCollection
 class ModelBase:
     """Abaqus creates a Model object named `Model-1` when a session is started.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - mdb.models[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -5,16 +5,11 @@ class Transform:
     direct constructor. A Transform object is a 4×3 matrix of Floats that represents the 
     transformation from sketch coordinates to assembly coordinates or to part coordinates. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - import assembly
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

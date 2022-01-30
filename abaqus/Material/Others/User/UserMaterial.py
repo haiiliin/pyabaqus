@@ -5,15 +5,13 @@ class UserMaterial:
     """The UserMaterial object defines material constants for use in subroutines UMAT, UMATHT,
     or VUMAT. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].userMaterial
         - import odbMaterial
         - session.odbs[name].materials[name].userMaterial
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

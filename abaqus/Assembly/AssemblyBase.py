@@ -30,16 +30,11 @@ class AssemblyBase(Feature):
     constructor command. Abaqus creates the *rootAssembly* member when a Model object is 
     created. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import assembly
         - mdb.models[name].rootAssembly
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

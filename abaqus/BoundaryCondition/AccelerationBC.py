@@ -9,16 +9,11 @@ class AccelerationBC(BoundaryCondition):
     """The AccelerationBC object stores the data for an acceleration boundary condition. 
     The AccelerationBC object is derived from the BoundaryCondition object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].boundaryConditions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

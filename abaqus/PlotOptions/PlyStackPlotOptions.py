@@ -6,15 +6,10 @@ class PlyStackPlotOptions:
     object. The PlyStackPlotOptions object has no constructor command. Abaqus creates the 
     *detailPlotOptions.plyStackPlotPlotOptions* member whenever a Viewport is created. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].detailPlotOptions.plyStackPlotOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

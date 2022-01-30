@@ -4,8 +4,9 @@ from abaqusConstants import *
 class ClayHardening:
     """The ClayHardening object specifies hardening for the clay plasticity model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].clayPlasticity.clayHardening
         - import odbMaterial

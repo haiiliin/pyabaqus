@@ -8,16 +8,11 @@ class TopologyMillingControl(GeometricRestriction):
     restriction. 
     The TopologyMillingControl object is derived from the GeometricRestriction object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

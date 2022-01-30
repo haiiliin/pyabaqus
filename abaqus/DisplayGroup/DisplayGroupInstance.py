@@ -8,8 +8,9 @@ class DisplayGroupInstance:
     plotted in a viewport, Abaqus/CAE creates a DisplayGroupInstance object for each display 
     group and places it in the DisplayGroupInstanceRepository object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import assembly
         - session.viewports[name].assemblyDisplay.displayGroupInstances[name]
         - session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name]
@@ -19,12 +20,6 @@ class DisplayGroupInstance:
         - session.viewports[name].layers[name].partDisplay.displayGroupInstances[name]
         - session.viewports[name].odbDisplay.displayGroupInstances[name]
         - session.viewports[name].partDisplay.displayGroupInstances[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

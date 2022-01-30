@@ -17,8 +17,9 @@ class OrientationOptions(DGOrientationOptions):
     - The material orientation options associated with a particular viewport. 
     The OrientationOptions object is derived from the DGOrientationOptions object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultOdbDisplay.materialOrientationOptions
         - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions
@@ -29,12 +30,6 @@ class OrientationOptions(DGOrientationOptions):
         - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions
         - session.viewports[name].odbDisplay.materialOrientationOptions
         - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

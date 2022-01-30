@@ -11,19 +11,14 @@ class GeometryShellSection(ShellSection):
     GeometryShellSection object is an abstract base type. 
     The GeometryShellSection object is derived from the ShellSection object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].parts[name].compositeLayups[i].section
         - mdb.models[name].sections[name]
         - import odbSection
         - session.odbs[name].sections[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

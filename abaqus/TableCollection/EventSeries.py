@@ -7,12 +7,10 @@ class EventSeries:
     After EventSeries is instantiated, making changes to EventSeriesType may lead to data 
     corruption. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - mdb.models[name].eventSeriesDatas[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -4,16 +4,11 @@ from .OdbAuxiliaryData import OdbAuxiliaryData
 class OdbContactDiagnostics:
     """The OdbDiagnosticContact object.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].diagnosticData.steps[i].contactDiagnostics[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

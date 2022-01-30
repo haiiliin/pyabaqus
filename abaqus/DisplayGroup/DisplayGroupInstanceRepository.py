@@ -6,17 +6,12 @@ class DisplayGroupInstanceRepository:
     addition to all the standard Python repository methods, the DisplayGroupInstance 
     repository defines additional methods as described below. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.viewports[name].layers[name].odbDisplay.displayGroupInstances
         - session.viewports[name].odbDisplay.displayGroupInstances
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

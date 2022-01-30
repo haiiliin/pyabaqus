@@ -5,16 +5,11 @@ from ..Region.Region import Region
 class CompositePly:
     """The CompositePly object defines the material layers in a composite layup.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].parts[name].compositeLayups[i].plies[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

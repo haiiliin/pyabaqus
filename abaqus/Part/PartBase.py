@@ -43,16 +43,11 @@ class PartBase(Feature):
     """The Part object defines the physical attributes of a structure. Parts are instanced into
     the assembly and positioned before an analysis. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

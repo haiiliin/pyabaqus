@@ -9,15 +9,10 @@ class LeafFromInstanceElementLabels(Leaf):
     DisplayGroup commands. 
     The LeafFromInstanceElementLabels object is derived from the Leaf object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import displayGroupMdbToolset
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

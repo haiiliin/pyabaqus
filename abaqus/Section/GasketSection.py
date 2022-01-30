@@ -8,15 +8,13 @@ class GasketSection(Section):
     """The GasketSection object defines the properties of a gasket section.
     The GasketSection object is derived from the Section object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name]
         - import odbSection
         - session.odbs[name].sections[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

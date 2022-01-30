@@ -6,8 +6,9 @@ class OptionArg:
     associated with a viewCutOptions object. The OptionArg object has only a constructor 
     command. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultOdbDisplay.viewCutOptions.aboveOptions
         - session.defaultOdbDisplay.viewCutOptions.belowOptions
@@ -18,12 +19,6 @@ class OptionArg:
         - session.viewports[name].odbDisplay.viewCutOptions.aboveOptions
         - session.viewports[name].odbDisplay.viewCutOptions.belowOptions
         - session.viewports[name].odbDisplay.viewCutOptions.onOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

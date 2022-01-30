@@ -10,16 +10,11 @@ class HistoryOutputRequestState:
     the HistoryOutputRequest object. 
     The HistoryOutputRequestState object has no constructor or methods. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].historyOutputRequestState[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

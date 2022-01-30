@@ -4,8 +4,9 @@ from abaqusConstants import *
 class BiaxialTestData:
     """The BiaxialTestData object provides equibiaxial test data (compression and/or tension).
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].hyperelastic.biaxialTestData
         - mdb.models[name].materials[name].hyperfoam.biaxialTestData
@@ -14,9 +15,6 @@ class BiaxialTestData:
         - session.odbs[name].materials[name].hyperelastic.biaxialTestData
         - session.odbs[name].materials[name].hyperfoam.biaxialTestData
         - session.odbs[name].materials[name].mullinsEffect.biaxialTests[i]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

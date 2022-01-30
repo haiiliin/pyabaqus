@@ -4,8 +4,9 @@ from abaqusConstants import *
 class VoidNucleation:
     """The VoidNucleation object defines the nucleation of voids in a porous material.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].porousMetalPlasticity.voidNucleation
         - import odbMaterial

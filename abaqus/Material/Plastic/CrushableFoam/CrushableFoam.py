@@ -6,8 +6,9 @@ from abaqus.Material.Plastic.Metal.RateDependent.RateDependent import RateDepend
 class CrushableFoam:
     """The CrushableFoam object specifies the crushable foam plasticity model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].crushableFoam
         - import odbMaterial

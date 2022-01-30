@@ -5,8 +5,9 @@ class GasketTransverseShearElastic:
     """The GasketTransverseShearElastic object defines the elastic parameters for the
     transverse shear behavior of a gasket. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].gasketTransverseShearElastic
         - import odbMaterial

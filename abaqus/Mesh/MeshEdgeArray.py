@@ -4,19 +4,14 @@ from .MeshEdge import MeshEdge
 class MeshEdgeArray(list[MeshEdge]):
     """The MeshEdgeArray is a sequence of MeshEdge objects.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].elementEdges
         - import assembly
         - mdb.models[name].rootAssembly.allInstances[name].elementEdges
         - mdb.models[name].rootAssembly.instances[name].elementEdges
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

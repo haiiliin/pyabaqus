@@ -6,15 +6,13 @@ class ModulatedAmplitude(Amplitude):
     """The ModulatedAmplitude object defines a modulated amplitude curve.
     The ModulatedAmplitude object is derived from the Amplitude object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import amplitude
         - mdb.models[name].amplitudes[name]
         - import odbAmplitude
         - session.odbs[name].amplitudes[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

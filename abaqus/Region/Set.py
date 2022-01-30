@@ -35,8 +35,9 @@ class Set:
 
     transmissionSet.elements[6]=mdb.models['Transmission'].rootAssembly.instances['housing-'].elements[47] 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSets[name]
         - mdb.models[name].parts[name].allSets[name]
@@ -48,12 +49,6 @@ class Set:
         - mdb.models[name].rootAssembly.instances[name].sets[name]
         - mdb.models[name].rootAssembly.modelInstances[i].sets[name]
         - mdb.models[name].rootAssembly.sets[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

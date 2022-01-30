@@ -9,16 +9,11 @@ class SurfaceTraction(Load):
     """The SurfaceTraction object defines surface traction on a region.
     The SurfaceTraction object is derived from the Load object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].loads[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

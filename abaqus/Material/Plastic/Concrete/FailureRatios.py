@@ -5,8 +5,9 @@ class FailureRatios:
     """The FailureRatios object specifies the shape of the failure surface for a Concrete
     model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].concrete.failureRatios
         - import odbMaterial

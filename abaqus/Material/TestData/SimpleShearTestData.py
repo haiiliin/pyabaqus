@@ -1,8 +1,9 @@
 class SimpleShearTestData:
     """The SimpleShearTestData object provides simple shear test data.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].hyperfoam.simpleShearTestData
         - import odbMaterial

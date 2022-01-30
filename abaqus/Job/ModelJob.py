@@ -8,17 +8,12 @@ class ModelJob(Job):
     (MDB). 
     The ModelJob object is derived from the Job object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import job
         - mdb.adaptivityProcesses[name].job
         - mdb.jobs[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

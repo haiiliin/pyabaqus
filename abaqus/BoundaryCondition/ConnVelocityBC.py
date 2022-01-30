@@ -9,16 +9,11 @@ class ConnVelocityBC(BoundaryCondition):
     """The ConnVelocityBC object stores the data for a connector velocity boundary condition.
     The ConnVelocityBC object is derived from the BoundaryCondition object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].boundaryConditions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

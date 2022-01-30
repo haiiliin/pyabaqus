@@ -6,8 +6,9 @@ class FaceArray:
     """The FaceArray is a sequence of Face objects. If the part is modified, then FaceArray
     must be updated for that part. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSets[name].faces
         - mdb.models[name].parts[name].allInternalSurfaces[name].faces
@@ -31,12 +32,6 @@ class FaceArray:
         - mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].faces
         - mdb.models[name].rootAssembly.sets[name].faces
         - mdb.models[name].rootAssembly.surfaces[name].faces
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

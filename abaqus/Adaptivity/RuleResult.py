@@ -10,16 +10,11 @@ class RuleResult:
     """The RuleResult object contains result information corresponding to a RemeshingRule
     object for an adaptivity iteration. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import job
         - mdb.adaptivityProcesses[name].iterations[i].ruleResults[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

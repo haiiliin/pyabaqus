@@ -5,16 +5,11 @@ from .DataSet import DataSet
 class Behavior:
     """The Behavior object specifies the method used for calibrating a material.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import calibration
         - mdb.models[name].calibrations[name].behaviors[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

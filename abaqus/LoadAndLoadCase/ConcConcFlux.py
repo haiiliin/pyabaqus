@@ -7,16 +7,11 @@ class ConcConcFlux(Load):
     """The ConcConcFlux object stores the data for a concentrated concentration flux.
     The ConcConcFlux object is derived from the Load object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].loads[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

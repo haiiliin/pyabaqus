@@ -1,17 +1,12 @@
 class ConstrainedSketchVertex:
     """The ConstrainedSketchVertex object stores the vertex position.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import sketch
         - mdb.models[name].sketches[name].vertices[i]
         - mdb.models[name].sketches[name].vertices[i][i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

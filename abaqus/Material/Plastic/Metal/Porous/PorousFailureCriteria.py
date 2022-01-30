@@ -2,15 +2,13 @@ class PorousFailureCriteria:
     """The PorousFailureCriteria object specifies the material failure criteria for a porous
     metal. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].porousMetalPlasticity.porousFailureCriteria
         - import odbMaterial
         - session.odbs[name].materials[name].porousMetalPlasticity.porousFailureCriteria
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

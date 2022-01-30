@@ -7,16 +7,11 @@ class FixedRegion(GeometricRestriction):
     """The FixedRegion object defines a fixed region geometric restriction.
     The FixedRegion object is derived from the GeometricRestriction object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

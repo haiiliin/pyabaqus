@@ -1,8 +1,9 @@
 class LatentHeat:
     """The LatentHeat object specifies a material's latent heat.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].latentHeat
         - import odbMaterial

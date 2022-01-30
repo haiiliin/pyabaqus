@@ -12,17 +12,12 @@ class PartDisplayOptions:
     in a particular viewport. The PartDisplayOptions object has no constructor. When you 
     create a new viewport, the settings are copied from the current viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].layers[name].partDisplay
         - import part
         - session.viewports[name].partDisplay
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -4,8 +4,9 @@ from abaqusConstants import *
 class BrittleFailure:
     """The BrittleFailure object specifies the brittle failure of the material.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].brittleCracking.brittleFailure
         - import odbMaterial

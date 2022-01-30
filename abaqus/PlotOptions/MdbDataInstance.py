@@ -2,16 +2,11 @@ class MdbDataInstance:
     """The MdbDataInstance object instance data. It corresponds to same named part instance
     with a mesh in the cae model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.mdbData[name].instances[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

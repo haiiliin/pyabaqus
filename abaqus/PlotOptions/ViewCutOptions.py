@@ -14,18 +14,13 @@ class ViewCutOptions:
     preferences. 
     - The view cut options associated with a particular viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultOdbDisplay.viewCutOptions
         - session.viewports[name].layers[name].odbDisplay.viewCutOptions
         - session.viewports[name].odbDisplay.viewCutOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

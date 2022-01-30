@@ -6,8 +6,9 @@ class VertexArray:
     """The VertexArray is a sequence of ConstrainedSketchVertex objects. If the part is modified, then
     VertexArray must be updated for that part. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSets[name].vertices
         - mdb.models[name].parts[name].allSets[name].vertices
@@ -24,12 +25,6 @@ class VertexArray:
         - mdb.models[name].rootAssembly.modelInstances[i].vertices
         - mdb.models[name].rootAssembly.sets[name].vertices
         - mdb.models[name].rootAssembly.vertices
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

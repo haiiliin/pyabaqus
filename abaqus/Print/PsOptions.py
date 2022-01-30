@@ -6,15 +6,10 @@ class PsOptions:
     format. The PsOptions object has no constructor. Abaqus creates the *psOptions* member 
     when a session is started. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.psOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

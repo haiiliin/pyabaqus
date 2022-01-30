@@ -10,13 +10,11 @@ class HydrostaticFluidFlowState(LoadState):
     The HydrostaticFluidFlowState object has no constructor or methods. 
     The HydrostaticFluidFlowState object is derived from the LoadState object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].steps[name].loadStates[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

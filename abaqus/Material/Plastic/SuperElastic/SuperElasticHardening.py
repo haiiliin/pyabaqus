@@ -2,8 +2,9 @@ class SuperElasticHardening:
     """The SuperElasticHardening object specifies the dependence of the yield stress on the
     total strain to define the piecewise linear hardening of a martensite material model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].superElasticity.SuperElasticHardening
         - import odbMaterial

@@ -6,14 +6,9 @@ class DataObject:
     has no methods. The members of a DataObject object depend on the type of the object. All 
     DataObject instances have the following members, regardless of type: 
 
-    Access
-    ------
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
+    Notes
+    -----
+        This object can be accessed by:
 
     """
 

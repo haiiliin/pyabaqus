@@ -4,16 +4,11 @@ from .StructuralDampingComponentArray import StructuralDampingComponentArray
 class StructuralDamping:
     """A StructuralDamping object contains structural damping parameters.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].structuralDamping
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

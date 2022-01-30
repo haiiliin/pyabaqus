@@ -2,16 +2,11 @@ class StructuralDampingComponent:
     """A StructuralDampingComponent object is used to define structural damping over a range of
     modes. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].structuralDamping.components[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

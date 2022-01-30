@@ -7,13 +7,11 @@ class FluidCavityPressure(PredefinedField):
     base class*region* argument can not be specifed with this object. 
     The FluidCavityPressure object is derived from the PredefinedField object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].predefinedFields[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

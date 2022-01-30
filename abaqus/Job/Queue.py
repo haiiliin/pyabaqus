@@ -5,16 +5,11 @@ class Queue:
     """A Queue object tells the job where and how to submit a job remotely. A Queue object can
     be used as the *queue* argument to the Job method. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import job
         - session.queues[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

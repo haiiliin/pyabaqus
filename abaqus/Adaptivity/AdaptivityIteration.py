@@ -6,16 +6,11 @@ class AdaptivityIteration:
     """The AdaptivityIteration object contains information about a given iteration of the
     varying topology adaptivity process (adaptive remeshing). 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import job
         - mdb.adaptivityProcesses[name].iterations[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

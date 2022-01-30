@@ -4,16 +4,11 @@ from .RayleighDampingByFrequencyComponentArray import RayleighDampingByFrequency
 class RayleighDampingByFrequency:
     """A RayleighDampingByFrequency object contains Rayleigh Damping parameters.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].rayleighDampingByFrequency
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

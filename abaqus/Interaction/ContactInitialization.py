@@ -5,16 +5,11 @@ class ContactInitialization:
     ContactInitialization objects. The ContactInitialization object has no explicit 
     constructor, members, or methods. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].contactInitializations[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
     pass

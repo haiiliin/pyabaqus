@@ -5,8 +5,9 @@ class DruckerPragerHardening:
     """The DruckerPragerHardening object specifies hardening for Drucker-Prager plasticity
     models. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].druckerPrager.druckerPragerHardening
         - import odbMaterial

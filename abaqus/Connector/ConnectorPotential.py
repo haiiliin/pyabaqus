@@ -11,8 +11,9 @@ class ConnectorPotential:
     for damage evolution), there are two ConnectorPotential constructors associated with 
     that behavior—IniPotential and EvoPotential. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i]
         - mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i]
@@ -21,9 +22,6 @@ class ConnectorPotential:
         - session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i]
         - session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i]
         - session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

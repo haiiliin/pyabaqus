@@ -8,16 +8,11 @@ class MappedField(AnalyticalField):
     an external source data. 
     The MappedField object is derived from the AnalyticalField object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import fields
         - mdb.models[name].analyticalFields[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

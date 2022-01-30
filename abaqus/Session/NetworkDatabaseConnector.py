@@ -5,15 +5,10 @@ class NetworkDatabaseConnector:
     """The NetworkDatabaseConnector object allows you to access an output database on a remote
     system. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.networkDatabaseConnectors[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

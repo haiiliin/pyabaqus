@@ -4,16 +4,11 @@ from abaqusConstants import *
 class ConstrainedSketchVertexArray:
     """The ConstrainedSketchVertexArray is a sequence of ConstrainedSketchVertex objects.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import sketch
         - mdb.models[name].sketches[name].vertices[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

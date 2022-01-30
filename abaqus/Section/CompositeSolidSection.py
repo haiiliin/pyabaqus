@@ -7,15 +7,13 @@ class CompositeSolidSection(Section):
     """The CompositeSolidSection object defines the properties of a composite solid section.
     The CompositeSolidSection object is derived from the Section object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name]
         - import odbSection
         - session.odbs[name].sections[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

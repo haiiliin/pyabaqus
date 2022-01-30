@@ -3,15 +3,13 @@ class TransverseShearShell:
     """The TransverseShearShell object defines the transverse shear stiffness properties of a
     shell section. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name].transverseShear
         - import odbSection
         - session.odbs[name].sections[name].transverseShear
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

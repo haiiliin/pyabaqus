@@ -13,17 +13,12 @@ class Chart:
     """The Chart object is used to display XYCurve objects. A Chart object is automatically
     created when creating an XYPlot object 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.charts[name]
         - session.xyPlots[name].charts[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

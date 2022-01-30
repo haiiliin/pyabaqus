@@ -4,8 +4,9 @@ from abaqusConstants import *
 class Vertex:
     """Vertices are point regions of geometry.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSets[name].vertices[i]
         - mdb.models[name].parts[name].allSets[name].vertices[i]
@@ -22,12 +23,6 @@ class Vertex:
         - mdb.models[name].rootAssembly.modelInstances[i].vertices[i]
         - mdb.models[name].rootAssembly.sets[name].vertices[i]
         - mdb.models[name].rootAssembly.vertices[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

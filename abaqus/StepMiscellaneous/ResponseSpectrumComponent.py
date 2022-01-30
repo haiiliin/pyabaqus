@@ -1,16 +1,11 @@
 class ResponseSpectrumComponent:
     """A ResponseSpectrumComponent is an element of the ResponseSpectrumComponentArray.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].components[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

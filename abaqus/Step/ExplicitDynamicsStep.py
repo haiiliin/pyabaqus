@@ -21,13 +21,11 @@ class ExplicitDynamicsStep(AnalysisStep):
     analysis using explicit integration in Abaqus/Explicit. 
     The ExplicitDynamicsStep object is derived from the AnalysisStep object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

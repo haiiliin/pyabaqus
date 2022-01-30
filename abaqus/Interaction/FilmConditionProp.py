@@ -7,13 +7,11 @@ class FilmConditionProp(ContactProperty):
     as a function of temperature and field variables. 
     The FilmConditionProp object is derived from the InteractionProperty object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -6,16 +6,11 @@ class FrozenArea(GeometricRestriction):
     """The FrozenArea object defines a frozen area geometric restriction.
     The FrozenArea object is derived from the GeometricRestriction object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

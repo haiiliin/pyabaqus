@@ -9,13 +9,11 @@ class SubmodelBCState(BoundaryConditionState):
     The SubmodelBCState object has no constructor or methods. 
     The SubmodelBCState object is derived from the BoundaryConditionState object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].steps[name].boundaryConditionStates[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

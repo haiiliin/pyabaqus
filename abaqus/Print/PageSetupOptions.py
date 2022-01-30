@@ -8,15 +8,10 @@ class PageSetupOptions:
     Windows printer. The PageSetupOptions object has no constructor. Abaqus creates the 
     *pageSetupOptions* member when a session is started. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.pageSetupOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

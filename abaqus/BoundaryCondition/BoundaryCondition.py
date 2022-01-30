@@ -8,16 +8,11 @@ class BoundaryCondition:
     members of the BoundaryCondition object are common to all objects derived from the 
     BoundaryCondition. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].boundaryConditions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

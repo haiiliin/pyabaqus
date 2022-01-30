@@ -16,8 +16,9 @@ class CommonOptions(DGCommonOptions):
     - The common options associated with a particular viewport. 
     The CommonOptions object is derived from the DGCommonOptions object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultOdbDisplay.commonOptions
         - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
@@ -28,12 +29,6 @@ class CommonOptions(DGCommonOptions):
         - session.viewports[name].odbDisplay.commonOptions
         - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
         - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -5,8 +5,9 @@ class TangentialBehavior:
     """The TangentialBehavior object specifies tangential behavior for a connector friction
     behavior option. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name].behaviorOptions[i].tangentialBehavior
         - import odbSection

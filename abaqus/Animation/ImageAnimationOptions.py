@@ -6,16 +6,11 @@ class ImageAnimationOptions:
     saving viewport animations. The ImageAnimationOptions object has no constructor. Abaqus 
     creates the *imageAnimationOptions* member when the animation module is imported. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import animation
         - session.imageAnimationOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

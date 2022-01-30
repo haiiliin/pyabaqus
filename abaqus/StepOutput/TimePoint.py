@@ -2,13 +2,11 @@ class TimePoint:
     """The TimePoint object defines time points at which data are written to the output
     database or restart files. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].timePoints[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

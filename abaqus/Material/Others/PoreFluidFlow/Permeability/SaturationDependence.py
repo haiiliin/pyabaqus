@@ -3,8 +3,9 @@ class SaturationDependence:
     """The SaturationDependence object specifies the dependence of the permeability of a
     material on the saturation of the wetting liquid. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].permeability.saturationDependence
         - import odbMaterial

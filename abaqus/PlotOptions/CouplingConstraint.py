@@ -1,18 +1,13 @@
 class CouplingConstraint:
     """The CouplingConstraint object.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].kinematicCouplings[i]
         - session.odbData[name].distributingCouplings[i]
         - session.odbData[name].shellSolidCouplings[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -14,18 +14,13 @@ class StreamOptions:
     preferences. 
     - The stream options associated with a particular viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultOdbDisplay.streamOptions
         - session.viewports[name].layers[name].odbDisplay.streamOptions
         - session.viewports[name].odbDisplay.streamOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

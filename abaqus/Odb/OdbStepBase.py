@@ -11,16 +11,11 @@ from .OdbLoadCase import OdbLoadCase
 class OdbStepBase:
     """An output database contains the same steps of the model database that originated it.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].steps[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -8,19 +8,14 @@ class OdbRigidBody:
     """The Rigid body object is used to bind a set of elements and/or a set of nodes and/or an
     analytical surface with a reference node. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].parts[name].rigidBodies[i]
         - session.odbs[name].rootAssembly.instances[name].rigidBodies[i]
         - session.odbs[name].rootAssembly.rigidBodies[i]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.rigidBodies[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

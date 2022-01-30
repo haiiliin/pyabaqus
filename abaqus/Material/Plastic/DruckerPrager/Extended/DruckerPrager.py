@@ -8,8 +8,9 @@ from abaqus.Material.Plastic.DruckerPrager.Extended.TriaxialTestData import Tria
 class DruckerPrager:
     """The DruckerPrager object specifies the extended Drucker-Prager plasticity model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].druckerPrager
         - import odbMaterial

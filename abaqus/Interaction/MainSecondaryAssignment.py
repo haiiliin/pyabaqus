@@ -6,13 +6,11 @@ class MainSecondaryAssignment:
     surfaces in ContactExp and ContactStd objects. The MainSecondaryAssignment object has no 
     constructor or members. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactions[name].mainSecondaryAssignments
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

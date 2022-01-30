@@ -1,16 +1,11 @@
 class OdbDataMaterial:
     """The OdbDataMaterial object stores material data.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].materials[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

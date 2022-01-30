@@ -7,15 +7,10 @@ class MonitorMgr:
     be confused with the degree of freedom (DOF) monitor that is constructed from the Step 
     object.) 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - monitorManager
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

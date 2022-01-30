@@ -8,15 +8,10 @@ class EpsOptions:
     Encapsulated PostScript format. The EpsOptions object has no constructor. Abaqus creates 
     the *epsOptions* member when a session is started. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.epsOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

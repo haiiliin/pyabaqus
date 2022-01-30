@@ -4,8 +4,9 @@ from abaqus.Material.Ratios import Ratios
 class MoistureSwelling:
     """The MoistureSwelling object defines moisture-driven swelling.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].moistureSwelling
         - import odbMaterial

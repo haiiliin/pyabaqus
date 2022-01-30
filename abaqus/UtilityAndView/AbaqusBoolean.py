@@ -15,16 +15,11 @@ class AbaqusBoolean:
     Scripting Interface commands that expect an AbaqusBoolean object will also accept a 
     Python bool (True, False), or a Python int (1, 0). 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - from symbolicConstants import *
         - from abaqusConstants import *
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

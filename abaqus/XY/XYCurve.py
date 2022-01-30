@@ -7,8 +7,9 @@ from .XYData import XYData
 class XYCurve:
     """The XYCurve object is used to plot *X–Y* data and to store its display attributes.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.charts[name].axes1[i].axisData.curves[i]
         - session.charts[name].axes2[i].axisData.curves[i]
@@ -20,12 +21,6 @@ class XYCurve:
         - session.xyPlots[name].charts[name].axes2[i].axisData.curves[i]
         - session.xyPlots[name].charts[name].curves[name]
         - session.xyPlots[name].curves[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -6,16 +6,11 @@ class ViewerOptions:
     ViewerOptions object has no constructor. Abaqus creates the *viewerOptions* member when 
     a session is started. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.viewerOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

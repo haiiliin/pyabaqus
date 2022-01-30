@@ -18,8 +18,9 @@ class SymbolOptions(DGSymbolOptions):
     - The symbol options associated with a particular viewport. 
     The SymbolOptions object is derived from the DGSymbolOptions object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultOdbDisplay.symbolOptions
         - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
@@ -30,12 +31,6 @@ class SymbolOptions(DGSymbolOptions):
         - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
         - session.viewports[name].odbDisplay.symbolOptions
         - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

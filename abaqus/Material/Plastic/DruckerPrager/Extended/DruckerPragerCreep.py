@@ -4,8 +4,9 @@ from abaqusConstants import *
 class DruckerPragerCreep:
     """The DruckerPragerCreep object specifies creep for Drucker-Prager plasticity models.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].druckerPrager.druckerPragerCreep
         - import odbMaterial

@@ -5,8 +5,9 @@ from abaqus.Material.Others.Mechanical.Viscosity.Trs import Trs
 class Viscosity:
     """The Viscosity object specifies mechanical viscosity.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].viscosity
         - import odbMaterial

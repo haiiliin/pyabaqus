@@ -9,17 +9,12 @@ class ViewCut:
     accessed via the OdbDisplay object cause the ViewCut object to be added to the 
     session.viewports[name].odbDisplay.viewCuts repository. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.viewports[name].layers[name].odbDisplay.viewCuts[name]
         - session.viewports[name].odbDisplay.viewCuts[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

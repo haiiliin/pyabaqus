@@ -7,16 +7,11 @@ class SizingPlanarSymmetry(GeometricRestriction):
     """The SizingPlanarSymmetry object defines a sizing planar symmetry geometric restriction.
     The SizingPlanarSymmetry object is derived from the GeometricRestriction object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

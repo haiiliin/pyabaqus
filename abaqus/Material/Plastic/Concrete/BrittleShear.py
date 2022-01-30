@@ -5,8 +5,9 @@ class BrittleShear:
     """The BrittleShear object specifies the postcracking shear behavior of a material used in
     a brittle cracking model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].brittleCracking.brittleShear
         - import odbMaterial

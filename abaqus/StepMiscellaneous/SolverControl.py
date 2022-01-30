@@ -6,16 +6,11 @@ from abaqusConstants import *
 class SolverControl:
     """The SolverControl object is used to provide additional optional solver controls.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].solverControl
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

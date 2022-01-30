@@ -2,8 +2,9 @@ class VelocityDependence:
     """The VelocityDependence object specifies the dependence of the permeability of a material
     on the velocity of fluid flow. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].permeability.velocityDependence
         - import odbMaterial

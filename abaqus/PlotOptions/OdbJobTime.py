@@ -1,16 +1,11 @@
 class OdbJobTime:
     """The OdbJobTime object stores the analysis time of a job.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].diagnosticData.jobTime
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

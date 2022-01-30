@@ -2,8 +2,9 @@
 class AnnealTemperature:
     """The AnnealTemperature object specifies the material annealing temperature.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].Plastic.annealTemperature
         - import odbMaterial

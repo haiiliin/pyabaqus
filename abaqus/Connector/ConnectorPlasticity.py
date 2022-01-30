@@ -9,8 +9,9 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
     connector's relative motion. 
     The ConnectorPlasticity object is derived from the ConnectorBehaviorOption object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name].behaviorOptions[i]
         - import odbSection

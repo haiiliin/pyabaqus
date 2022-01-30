@@ -6,8 +6,9 @@ from abaqusConstants import *
 class ContactDamping:
     """The ContactDamping object specifies damping for a contact interaction property.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name].damping
 

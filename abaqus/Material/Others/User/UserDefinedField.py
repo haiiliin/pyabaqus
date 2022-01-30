@@ -1,15 +1,13 @@
 class UserDefinedField:
     """The UserDefinedField object redefines field variables at a material point.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].userDefinedField
         - import odbMaterial
         - session.odbs[name].materials[name].userDefinedField
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

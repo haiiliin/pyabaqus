@@ -4,8 +4,9 @@ from abaqusConstants import *
 class UniaxialTestData:
     """The UniaxialTestData object provides uniaxial test data (compression and/or tension).
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].hyperelastic.uniaxialTestData
         - mdb.models[name].materials[name].hyperfoam.uniaxialTestData

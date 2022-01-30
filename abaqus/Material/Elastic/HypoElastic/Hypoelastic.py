@@ -4,8 +4,9 @@ from abaqusConstants import *
 class Hypoelastic:
     """The Hypoelastic object specifies hypoelastic material properties.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].hypoelastic
         - import odbMaterial

@@ -18,15 +18,10 @@ class MeshPart(PartBase):
     """The following commands operate on Part objects. For more information about the Part 
     object, see Part object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import mesh
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

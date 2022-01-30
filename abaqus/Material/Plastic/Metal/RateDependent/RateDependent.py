@@ -5,8 +5,9 @@ from abaqusConstants import *
 class RateDependent:
     """The RateDependent object defines a rate-dependent viscoplastic model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].crushableFoam.rateDependent
         - mdb.models[name].materials[name].druckerPrager.rateDependent

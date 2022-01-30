@@ -6,8 +6,9 @@ from abaqus.Material.Plastic.Potential import Potential
 class Creep:
     """The Creep object defines a creep law.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].creep
         - import odbMaterial

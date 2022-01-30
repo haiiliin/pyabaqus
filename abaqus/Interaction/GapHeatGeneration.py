@@ -4,13 +4,11 @@ class GapHeatGeneration:
     """The GapHeatGeneration object specifies heat generation for a contact interaction
     property. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name].heatGeneration
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -10,16 +10,11 @@ class DiscreteField(Field):
     points within a domain. 
     The DiscreteField object is derived from the Field object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import fields
         - mdb.models[name].discreteFields[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

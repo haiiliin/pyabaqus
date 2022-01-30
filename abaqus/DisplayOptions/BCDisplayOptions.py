@@ -8,16 +8,11 @@ class BCDisplayOptions:
     The BCDisplayOptions object has no constructor. When you create a new viewport, the 
     settings are copied from the current viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].assemblyDisplay.bcOptions
         - session.viewports[name].layers[name].assemblyDisplay.bcOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

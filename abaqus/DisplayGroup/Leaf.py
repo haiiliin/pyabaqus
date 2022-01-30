@@ -9,16 +9,11 @@ class Leaf:
     the DisplayGroup expression is evaluated, and they can have SymbolicConstant values 
     (which are also evaluated when the DisplayGroup expression is evaluated). 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import displayGroupMdbToolset
         - import displayGroupOdbToolset
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

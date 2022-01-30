@@ -6,8 +6,9 @@ class OdbMeshElement:
     """OdbMeshElement objects are created with the part.addElements or rootAssembly.addElements
     methods. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].parts[name].elements[i]
         - session.odbs[name].parts[name].elementSets[name].elements[i]
@@ -25,12 +26,6 @@ class OdbMeshElement:
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.elementSets[name].elements[i]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.nodeSets[name].elements[i]
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.surfaces[name].elements[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

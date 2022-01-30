@@ -6,13 +6,11 @@ class SmoothingAssignment:
     surfaces in ContactExp and ContactStd objects. The SmoothingAssignment object has no 
     constructor or members. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactions[name].smoothingAssignments
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

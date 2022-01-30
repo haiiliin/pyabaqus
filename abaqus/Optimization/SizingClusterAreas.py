@@ -5,16 +5,11 @@ class SizingClusterAreas(GeometricRestriction):
     """The SizingClusterAreas object defines a sizing cluster areas geometric restriction.
     The SizingClusterAreas object is derived from the GeometricRestriction object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

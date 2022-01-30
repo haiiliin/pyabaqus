@@ -2,15 +2,13 @@ class InelasticHeatFraction:
     """The InelasticHeatFraction object defines the fraction of the rate of inelastic
     dissipation that appears as a heat source. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].inelasticHeatFraction
         - import odbMaterial
         - session.odbs[name].materials[name].inelasticHeatFraction
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

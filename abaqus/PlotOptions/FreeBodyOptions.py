@@ -14,18 +14,13 @@ class FreeBodyOptions:
     preferences. 
     - The free body options associated with a particular viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultOdbDisplay.freeBodyOptions
         - session.viewports[name].layers[name].odbDisplay.freeBodyOptions
         - session.viewports[name].odbDisplay.freeBodyOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -12,15 +12,10 @@ class Feature(BaseFeature):
     """The following commands operate on Feature objects. For more information about the 
     Feature object, see Feature object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

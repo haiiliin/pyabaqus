@@ -7,13 +7,11 @@ class CavityRadiationProp(ContactProperty):
     function of temperature and field variables. 
     The CavityRadiationProp object is derived from the InteractionProperty object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

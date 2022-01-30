@@ -5,8 +5,9 @@ from .ConnectorOptions import ConnectorOptions
 class CDCTerm:
     """The CDCTerm object is used to create contributing terms for a DerivedComponent object.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].derivedComponent.cdcTerms[i]
         - mdb.models[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i]
@@ -17,12 +18,6 @@ class CDCTerm:
         - session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.cdcTerms[i]
         - session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.cdcTerms[i]
         - session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

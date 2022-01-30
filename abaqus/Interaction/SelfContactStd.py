@@ -7,16 +7,11 @@ class SelfContactStd(Interaction):
     """The SelfContactStd object defines self-contact during an Abaqus/Standard analysis.
     The SelfContactStd object is derived from the Interaction object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

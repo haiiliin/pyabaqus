@@ -6,16 +6,11 @@ class LocalStopCondition(StopCondition):
     """The LocalStopCondition object defines a local stop condition.
     The LocalStopCondition object is derived from the StopCondition object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name].stopConditions[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

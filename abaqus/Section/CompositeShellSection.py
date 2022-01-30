@@ -9,16 +9,14 @@ class CompositeShellSection(GeometryShellSection):
     """The CompositeShellSection object defines the properties of a composite shell section.
     The CompositeShellSection object is derived from the GeometryShellSection object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import section
         - mdb.models[name].parts[name].compositeLayups[i].section
         - mdb.models[name].sections[name]
         - import odbSection
         - session.odbs[name].sections[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

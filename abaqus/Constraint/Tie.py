@@ -8,13 +8,11 @@ class Tie(Constraint):
     simulation. 
     The Tie object is derived from the ConstrainedSketchConstraint object.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].constraints[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -5,8 +5,9 @@ from abaqus.Material.Ratios import Ratios
 class Swelling:
     """The Swelling object specifies time-dependent volumetric swelling for a material.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].swelling
         - import odbMaterial

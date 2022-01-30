@@ -7,20 +7,15 @@ class DatumPlane(Datum):
     that creates a DatumPlane object. 
     The DatumPlane object is derived from the Datum object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].datums[i]
         - import assembly
         - mdb.models[name].rootAssembly.allInstances[name].datums[i]
         - mdb.models[name].rootAssembly.datums[i]
         - mdb.models[name].rootAssembly.instances[name].datums[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

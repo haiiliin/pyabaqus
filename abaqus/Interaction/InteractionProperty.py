@@ -5,13 +5,11 @@ class InteractionProperty:
     objects. The InteractionProperty object has no explicit constructor, members, or 
     methods. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

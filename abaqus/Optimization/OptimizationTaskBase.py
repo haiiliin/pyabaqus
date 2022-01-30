@@ -12,16 +12,11 @@ class OptimizationTaskBase:
     members of the OptimizationTask object are common to all objects derived from 
     OptimizationTask. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

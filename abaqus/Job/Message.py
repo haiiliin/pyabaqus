@@ -6,17 +6,12 @@ class Message:
     messages are not returned if a script is run without the Abaqus/CAE GUI (using the noGUI 
     option). 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import job
         - mdb.coexecutions[name].jobs[name].messages[i]
         - mdb.jobs[name].messages[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

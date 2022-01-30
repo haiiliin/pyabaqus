@@ -6,16 +6,11 @@ class InteractionState:
     objects. The InteractionState object has no explicit constructor. The members of the 
     InteractionState object are common to all objects derived from InteractionState. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].steps[name].interactionStates[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -29,13 +29,11 @@ class ResponseSpectrumStep(AnalysisStep):
     modes of the system. 
     The ResponseSpectrumStep object is derived from the AnalysisStep object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

@@ -18,16 +18,11 @@ class Model:
 class ModelInstance:
     """A ModelInstance object is an instance of a Model.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import assembly
         - mdb.models[name].rootAssembly.modelInstances[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

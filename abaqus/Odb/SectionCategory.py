@@ -10,8 +10,9 @@ class SectionCategory:
     in the output database. For more information, see Beam Section profile commands and 
     Section commands. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import
         - odbAccess
         - session.odbs[name].parts[name].elements[i].sectionCategory
@@ -31,12 +32,6 @@ class SectionCategory:
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.elementSets[name].elements[i].sectionCategory
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.nodeSets[name].elements[i].sectionCategory
         - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.surfaces[name].elements[i].sectionCategory
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

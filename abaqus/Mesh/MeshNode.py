@@ -6,8 +6,9 @@ class MeshNode:
     object can be accessed via a part or part instance using an index that refers to the 
     internal numbering of the node repository. The index does not refer to the node label. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSets[name].nodes[i]
         - mdb.models[name].parts[name].allInternalSurfaces[name].nodes[i]
@@ -34,12 +35,6 @@ class MeshNode:
         - mdb.models[name].rootAssembly.nodes[i]
         - mdb.models[name].rootAssembly.sets[name].nodes[i]
         - mdb.models[name].rootAssembly.surfaces[name].nodes[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

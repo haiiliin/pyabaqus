@@ -7,16 +7,11 @@ class BoundaryConditionState:
     constructor or methods. The members of the BoundaryConditionState object are common to 
     all objects derived from the BoundaryConditionState object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].steps[name].boundaryConditionStates[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

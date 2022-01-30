@@ -6,8 +6,9 @@ class LineStyle:
     objects. 
     LineStyle objects can be created using the methods described below. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.charts[name].area.border
         - session.charts[name].axes1[i].axisData.curves[i].lineStyle
@@ -58,12 +59,6 @@ class LineStyle:
         - session.xyPlots[name].charts[name].tagBorder
         - session.xyPlots[name].curves[name].lineStyle
         - session.xyPlots[name].title.area.border
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

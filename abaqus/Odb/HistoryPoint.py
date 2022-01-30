@@ -15,16 +15,11 @@ class HistoryPoint:
     HistoryPoint object is a temporary object used as an argument to the HistoryRegion 
     method. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].steps[name].historyRegions[name].point
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

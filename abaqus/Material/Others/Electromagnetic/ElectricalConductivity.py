@@ -4,8 +4,9 @@ from abaqusConstants import *
 class ElectricalConductivity:
     """The ElectricalConductivity object specifies electrical conductivity.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].electricalConductivity
         - import odbMaterial

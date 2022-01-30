@@ -5,16 +5,11 @@ class ConstrainedSketchOptions:
     """The ConstrainedSketchOptions object is used to store values and attributes associated
     with a particular sketch. The ConstrainedSketchOptions object has no constructor. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import sketch
         - mdb.models[name].sketches[name].sketchOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

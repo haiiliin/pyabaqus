@@ -4,16 +4,11 @@ from abaqusConstants import *
 class MassScaling:
     """A MassScaling object defines the region and controls that govern mass scaling.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].massScaling[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

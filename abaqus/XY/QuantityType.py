@@ -8,8 +8,9 @@ class QuantityType:
     odb. 
     QuantityType objects can be created using the methods described below. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.charts[name].axes1[i].axisData.curves[i].data.axis1QuantityType
         - session.charts[name].axes1[i].axisData.curves[i].data.axis2QuantityType
@@ -46,12 +47,6 @@ class QuantityType:
         - session.xyPlots[name].charts[name].curves[name].data.axis2QuantityType
         - session.xyPlots[name].curves[name].data.axis1QuantityType
         - session.xyPlots[name].curves[name].data.axis2QuantityType
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

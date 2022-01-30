@@ -5,16 +5,11 @@ class OptimizationConstraint:
     """The OptimizationConstraint object constrains an optimization from making changes to the
     topology of the model. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name].optimizationConstraints[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -1,16 +1,11 @@
 class OdbDataSurfaceSet:
     """The OdbDataSurfaceSet object stores surface set data.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.odbData[name].surfaceSets[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

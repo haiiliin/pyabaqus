@@ -9,16 +9,11 @@ class LeafFromDisplayGroup(Leaf):
     are constructed as temporary objects, which are then used as arguments to DisplayGroup 
     commands.The LeafFromDisplayGroup object is derived from the Leaf object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import displayGroupMdbToolset
         - import displayGroupOdbToolset
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

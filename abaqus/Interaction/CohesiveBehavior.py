@@ -4,8 +4,9 @@ from abaqusConstants import *
 class CohesiveBehavior:
     """The CohesiveBehaviour
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name].cohesiveBehavior
 

@@ -4,8 +4,9 @@ from abaqusConstants import *
 class Cell:
     """Cells are volumetric regions of geometry.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSets[name].cells[i]
         - mdb.models[name].parts[name].allSets[name].cells[i]
@@ -20,12 +21,6 @@ class Cell:
         - mdb.models[name].rootAssembly.instances[name].sets[name].cells[i]
         - mdb.models[name].rootAssembly.modelInstances[i].sets[name].cells[i]
         - mdb.models[name].rootAssembly.sets[name].cells[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

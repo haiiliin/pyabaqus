@@ -13,16 +13,11 @@ class TopologyTask(OptimizationTask):
     """The TopologyTask object defines a topology task.
     The TopologyTask object is derived from the OptimizationTask object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

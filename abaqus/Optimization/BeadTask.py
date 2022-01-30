@@ -10,16 +10,11 @@ class BeadTask(OptimizationTask):
     """The BeadTask object defines a bead task.
     The BeadTask object is derived from the OptimizationTask object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import optimization
         - mdb.models[name].optimizationTasks[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

@@ -6,8 +6,9 @@ class GasketThicknessBehavior:
     """The GasketThicknessBehavior object defines the behavior in the thickness direction for a
     gasket. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import material
         - mdb.models[name].materials[name].gasketThicknessBehavior
         - import odbMaterial

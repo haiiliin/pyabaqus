@@ -5,8 +5,9 @@ class GapElectricalConductance:
     """The GapElectricalConductance object specifies electrical conductance for a contact
     interaction property. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import interaction
         - mdb.models[name].interactionProperties[name].electricalConductance
 

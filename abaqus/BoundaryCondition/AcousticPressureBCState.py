@@ -10,13 +10,11 @@ class AcousticPressureBCState(BoundaryConditionState):
     The AcousticPressureBCState object has no constructor or methods. 
     The AcousticPressureBCState object is derived from the BoundaryConditionState object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].steps[name].boundaryConditionStates[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

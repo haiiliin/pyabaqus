@@ -5,16 +5,11 @@ class IMAField:
     """A IMAField is an object used to define material instance name volume fractions for the
     MaterialAssignment predefined field. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].predefinedFields[name].fieldList
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

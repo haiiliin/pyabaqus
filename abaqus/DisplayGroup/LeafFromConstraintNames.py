@@ -10,15 +10,10 @@ class LeafFromConstraintNames(Leaf):
     (DisplayGroup object) commands. 
     The LeafFromConstraintNames object is derived from the Leaf object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import displayGroupOdbToolset
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

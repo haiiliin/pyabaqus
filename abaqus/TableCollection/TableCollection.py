@@ -7,12 +7,10 @@ class TableCollection:
     """A TableCollection is an object used to define the containers that encapsulate the
     ParameterTable and PropertyTable objects. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - mdb.models[name].tableCollections[name]
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

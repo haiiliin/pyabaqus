@@ -8,16 +8,11 @@ class TemperatureState(PredefinedFieldState):
     The TemperatureState object has no constructor or methods. 
     The TemperatureState object is derived from the PredefinedFieldState object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import load
         - mdb.models[name].steps[name].predefinedFieldStates[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

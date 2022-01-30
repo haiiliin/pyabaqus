@@ -8,8 +8,9 @@ class Area:
     no constructor. Area objects are automatically created whenever a XYPlot, Chart, 
     PlotTitle, or Legend objects are created. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.charts[name].area
         - session.charts[name].gridArea
@@ -23,12 +24,6 @@ class Area:
         - session.xyPlots[name].charts[name].gridArea
         - session.xyPlots[name].charts[name].legend.area
         - session.xyPlots[name].title.area
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

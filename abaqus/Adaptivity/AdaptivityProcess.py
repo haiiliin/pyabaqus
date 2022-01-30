@@ -7,16 +7,11 @@ class AdaptivityProcess:
     """The AdaptivityProcess object defines a series of jobs that will be submitted for
     analysis. Abaqus performs adaptive remeshing between each job. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import job
         - mdb.adaptivityProcesses[name]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

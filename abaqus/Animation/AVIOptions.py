@@ -6,16 +6,11 @@ class AVIOptions:
     AVI animation. The AVIOptions object has no constructor. Abaqus creates the *aviOptions* 
     member when the animation module is imported. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import animation
         - session.aviOptions
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

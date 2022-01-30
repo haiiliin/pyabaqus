@@ -5,8 +5,9 @@ from .Cell import Cell
 class CellArray:
     """The CellArray is a sequence of Cell objects.
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import part
         - mdb.models[name].parts[name].allInternalSets[name].cells
         - mdb.models[name].parts[name].allSets[name].cells
@@ -21,12 +22,6 @@ class CellArray:
         - mdb.models[name].rootAssembly.instances[name].sets[name].cells
         - mdb.models[name].rootAssembly.modelInstances[i].sets[name].cells
         - mdb.models[name].rootAssembly.sets[name].cells
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

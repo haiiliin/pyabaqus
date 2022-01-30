@@ -47,15 +47,10 @@ class Region:
     The flags indicate the region space, the type of region and the whether the region is an 
     internal set. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import regionToolset
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

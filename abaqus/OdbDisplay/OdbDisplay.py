@@ -35,17 +35,12 @@ class OdbDisplay:
     other *odbDisplay* members are created and can be set to customize user preferences. 
     - The output database display options associated with a particular viewport. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - session.viewports[name].layers[name].odbDisplay
         - import visualization
         - session.viewports[name].odbDisplay
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

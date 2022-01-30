@@ -5,13 +5,11 @@ class DiagnosticPrint:
     """The DiagnosticPrint object is used to request detailed diagnostic output or to disable
     specific diagnostic checks 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].diagnosticPrint
-
-    Table Data
-    ----------
 
     Corresponding analysis keywords
     -------------------------------

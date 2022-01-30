@@ -2,16 +2,11 @@ class CompositeDampingComponent:
     """A CompositeDampingComponent object is used to define composite damping over a range of
     modes. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import step
         - mdb.models[name].steps[name].compositeDamping.components[i]
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

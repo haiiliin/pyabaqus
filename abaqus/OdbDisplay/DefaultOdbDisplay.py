@@ -14,16 +14,11 @@ class DefaultOdbDisplay:
     """The DefaultOdbDisplay object is a limited-functionality version of the OdbDisplay
     object. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import visualization
         - session.defaultOdbDisplay
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 

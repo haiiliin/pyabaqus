@@ -7,16 +7,11 @@ class UserDataBase:
     """The UserData object contains user-defined XY data. The UserData object has no
     constructor; it is created automatically when an Odb object is created. 
 
-    Access
-    ------
+    Notes
+    -----
+        This object can be accessed by:
         - import odbAccess
         - session.odbs[name].userData
-
-    Table Data
-    ----------
-
-    Corresponding analysis keywords
-    -------------------------------
 
     """
 
