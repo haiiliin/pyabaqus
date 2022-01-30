@@ -7,6 +7,15 @@ class DefaultPlot:
     object attributes are used whenever an XYPlot object is created. A DefaultPlot object is 
     automatically created when opening a session. 
 
+    Attributes
+    ----------
+    area: Area
+        An Area object specifying an Area used to hold on to the default display properties for
+        the plot area.
+    title: Title
+        A Title object specifying a Title object used to hold on to the default properties of
+        the XY-Plot title.
+
     Notes
     -----
         This object can be accessed by:

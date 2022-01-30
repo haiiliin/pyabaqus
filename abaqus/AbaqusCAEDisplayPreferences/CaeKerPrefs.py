@@ -4,6 +4,12 @@ from abaqusConstants import *
 class CaeKerPrefs:
     """The CaeKerPrefs object contains the details of the sessionOptions.
 
+    Attributes
+    ----------
+    fileName: str
+        A String specifying the path to the preferences file that the CaeKerPrefs object
+        represents.
+
     Notes
     -----
         This object can be accessed by:

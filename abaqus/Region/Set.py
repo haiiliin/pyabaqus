@@ -35,6 +35,29 @@ class Set:
 
     transmissionSet.elements[6]=mdb.models['Transmission'].rootAssembly.instances['housing-'].elements[47] 
 
+    Attributes
+    ----------
+    elements: MeshElementArray
+        A MeshElementArray object.
+    nodes: MeshNodeArray
+        A MeshNodeArray object.
+    vertices: VertexArray
+        A VertexArray object.
+    edges: EdgeArray
+        An EdgeArray object.
+    faces: FaceArray
+        A FaceArray object.
+    cells: CellArray
+        A CellArray object.
+    xVertices: VertexArray
+        A VertexArray object.
+    xEdges: EdgeArray
+        An EdgeArray object.
+    xFaces: FaceArray
+        A FaceArray object.
+    referencePoints: ReferencePointArray
+        A ReferencePointArray object.
+
     Notes
     -----
         This object can be accessed by:

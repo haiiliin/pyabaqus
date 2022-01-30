@@ -8,6 +8,12 @@ class ConnectorElasticity(ConnectorBehaviorOption):
     connector's relative motion. 
     The ConnectorElasticity object is derived from the ConnectorBehaviorOption object. 
 
+    Attributes
+    ----------
+    options: ConnectorOptions
+        A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+        for this ConnectorBehaviorOption.
+
     Notes
     -----
         This object can be accessed by:

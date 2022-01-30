@@ -7,6 +7,19 @@ class Movie:
     """The Movie object is used to store values and attributes associated with a movie file.
     Upon creation, the Movie object is added to the session.movies repository. 
 
+    Attributes
+    ----------
+    width: int
+        An Int specifying the width of the movie in pixels.
+    height: int
+        An Int specifying the height of the movie in pixels.
+    numFrames: int
+        An Int specifying the total number of frames on the movie file.
+    duration: float
+        A Float specifying the duration of the movie in seconds.
+    memory: int
+        An Int specifying the memory taken by the movie frames as selected.
+
     Notes
     -----
         This object can be accessed by:

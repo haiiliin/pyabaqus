@@ -8,6 +8,13 @@ class HomogeneousShellSection(GeometryShellSection):
     """The HomogeneousShellSection object defines the properties of a shell section.
     The HomogeneousShellSection object is derived from the GeometryShellSection object. 
 
+    Attributes
+    ----------
+    rebarLayers: RebarLayers
+        A RebarLayers object specifying reinforcement properties.
+    transverseShear: TransverseShearShell
+        A TransverseShearShell object specifying the transverse shear stiffness properties.
+
     Notes
     -----
         This object can be accessed by:

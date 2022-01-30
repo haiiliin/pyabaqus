@@ -9,6 +9,12 @@ class DiscreteFastener(Fastener):
     """The DiscreteFastener object defines a discrete fastener.
     The DiscreteFastener object is derived from the Fastener object. 
 
+    Attributes
+    ----------
+    suppressed: Boolean
+        A Boolean specifying whether the fastener is suppressed or not. The default value is
+        OFF.
+
     Notes
     -----
         This object can be accessed by:

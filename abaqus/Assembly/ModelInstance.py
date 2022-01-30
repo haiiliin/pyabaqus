@@ -18,6 +18,29 @@ class Model:
 class ModelInstance:
     """A ModelInstance object is an instance of a Model.
 
+    Attributes
+    ----------
+    sets: dict[str, Set]
+        A repository of Set objects specifying the sets created on the assembly. For more
+        information, see [Region
+        commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
+    surfaces: dict[str, Surface]
+        A repository of Surface objects specifying the surfaces created on the assembly. For
+        more information, see [Region
+        commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
+    vertices: VertexArray
+        A VertexArray object.
+    edges: EdgeArray
+        An EdgeArray object.
+    elements: MeshElementArray
+        A MeshElementArray object.
+    nodes: MeshNodeArray
+        A MeshNodeArray object.
+    datums: dict[str, Datum]
+        A repository of Datum objects.
+    referencePoints: dict[str, ReferencePoint]
+        A repository of ReferencePoint objects.
+
     Notes
     -----
         This object can be accessed by:

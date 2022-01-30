@@ -30,6 +30,79 @@ class AssemblyBase(Feature):
     constructor command. Abaqus creates the *rootAssembly* member when a Model object is 
     created. 
 
+    Attributes
+    ----------
+    isOutOfDate: int
+        An Int specifying that feature parameters have been modified but that the assembly has
+        not been regenerated. Possible values are 0 and 1.
+    timeStamp: float
+        A Float specifying which gives an indication when the assembly was last modified.
+    isLocked: int
+        An Int specifying whether the assembly is locked or not. Possible values are 0 and 1.
+    regenerateConstraintsTogether: Boolean
+        A Boolean specifying whether the positioning constraints in the assembly should be
+        regenerated together before regenerating other assembly features. The default value is
+        ON.If the assembly has position constraint features and you modify the value of
+        **regenerateConstraintsTogether**, Abaqus/CAE will regenerate the assembly features.
+    vertices: VertexArray
+        A VertexArray object specifying all the vertices existing at the assembly level. This
+        member does not provide access to the vertices at the instance level.
+    edges: EdgeArray
+        An EdgeArray object specifying all the edges existing at the assembly level. This member
+        does not provide access to the edges at the instance level.
+    elements: MeshElementArray
+        A MeshElementArray object specifying all the elements existing at the assembly level.
+        This member does not provide access to the elements at the instance level.
+    nodes: MeshNodeArray
+        A MeshNodeArray object specifying all the nodes existing at the assembly level. This
+        member does not provide access to the nodes at the instance level.
+    instances: dict[str, PartInstance]
+        A repository of PartInstance objects.
+    datums: list[Datum]
+        A repository of Datum objects specifying all Datum objects in the assembly.
+    features: dict[str, Feature]
+        A repository of Feature objects specifying all Feature objects in the assembly.
+    featuresById: dict[str, Feature]
+        A repository of Feature objects specifying all Feature objects in the assembly.The
+        Feature objects in the featuresById repository are the same as the Feature objects in
+        the features repository. However, the key to the objects in the featuresById repository
+        is an integer specifying the **ID**, whereas the key to the objects in the features
+        repository is a string specifying the **name**.
+    surfaces: dict[str, Surface]
+        A repository of Surface objects specifying for more information, see [Region
+        commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
+    allSurfaces: dict[str, Surface]
+        A repository of Surface objects specifying for more information, see [Region
+        commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
+    allInternalSurfaces: dict[str, Surface]
+        A repository of Surface objects specifying picked regions.
+    sets: dict[str, Set]
+        A repository of Set objects.
+    allSets: dict[str, Set]
+        A repository of Set objects specifying for more information, see [Region
+        commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
+    allInternalSets: dict[str, Set]
+        A repository of Set objects specifying picked regions.
+    skins: dict[str, Skin]
+        A repository of Skin objects specifying the skins created on the assembly.
+    stringers: dict[str, Stringer]
+        A repository of Stringer objects specifying the stringers created on the assembly.
+    referencePoints: dict[str, ReferencePoint]
+        A repository of ReferencePoint objects.
+    modelInstances: dict[str, ModelInstance]
+        A repository of ModelInstance objects.
+    allInstances: dict[str, typing.Union[PartInstance, ModelInstance]]
+        A PartInstance object specifying the PartInstances and A ModelInstance object specifying
+        the ModelInstances.
+    engineeringFeatures: EngineeringFeature
+        An EngineeringFeature object.
+    modelName: str
+        A String specifying the name of the model to which the assembly belongs.
+    connectorOrientations: ConnectorOrientationArray
+        A ConnectorOrientationArray object.
+    sectionAssignments: SectionAssignmentArray
+        A SectionAssignmentArray object.
+
     Notes
     -----
         This object can be accessed by:

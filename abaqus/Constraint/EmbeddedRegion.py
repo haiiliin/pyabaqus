@@ -8,6 +8,12 @@ class EmbeddedRegion(Constraint):
     region of the model or within the whole model. 
     The EmbeddedRegion object is derived from the ConstrainedSketchConstraint object.
 
+    Attributes
+    ----------
+    suppressed: Boolean
+        A Boolean specifying whether the constraint is suppressed or not. The default value is
+        OFF.
+
     Notes
     -----
         This object can be accessed by:

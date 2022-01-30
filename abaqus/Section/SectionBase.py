@@ -10,6 +10,17 @@ class SectionBase:
     constructor. The methods and members of the Section object are common to all objects 
     derived from the Section. 
 
+    Attributes
+    ----------
+    behaviorOptions: ConnectorBehaviorOptionArray
+        A ConnectorBehaviorOptionArray object.
+    name: str
+        A String specifying the repository key.
+    beamTransverseShear: TransverseShearBeam
+        A TransverseShearBeam object.
+    transverseShear: TransverseShearShell
+        A TransverseShearShell object.
+
     Notes
     -----
         This object can be accessed by:

@@ -12,6 +12,21 @@ class OdbDisplayOptions:
     object when an OdbInstance object is created using the display options associated with 
     the current viewport at the time of creation. 
 
+    Attributes
+    ----------
+    commonOptions: DGCommonOptions
+        A DGCommonOptions object.
+    superimposeOptions: DGSuperimposeOptions
+        A DGSuperimposeOptions object.
+    contourOptions: DGContourOptions
+        A DGContourOptions object.
+    symbolOptions: DGSymbolOptions
+        A DGSymbolOptions object.
+    materialOrientationOptions: DGOrientationOptions
+        A DGOrientationOptions object.
+    displayBodyOptions: DGDisplayBodyOptions
+        A DGDisplayBodyOptions object.
+
     Notes
     -----
         This object can be accessed by:

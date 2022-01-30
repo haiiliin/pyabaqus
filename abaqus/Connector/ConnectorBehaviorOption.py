@@ -12,6 +12,28 @@ class ConnectorBehaviorOption:
     constructor. The members of the ConnectorBehaviorOption object are common to all objects 
     derived from the ConnectorBehaviorOption. 
 
+    Attributes
+    ----------
+    connectorPotentials: ConnectorPotentialArray
+        A ConnectorPotentialArray object.
+    derivedComponent: DerivedComponent
+        A DerivedComponent object.
+    evolutionPotentials: ConnectorPotentialArray
+        A ConnectorPotentialArray object.
+    initiationPotentials: ConnectorPotentialArray
+        A ConnectorPotentialArray object.
+    initiationOptions: ConnectorOptions
+        A ConnectorOptions object.
+    isotropicOptions: ConnectorOptions
+        A ConnectorOptions object.
+    kinematicOptions: ConnectorOptions
+        A ConnectorOptions object.
+    options: ConnectorOptions
+        A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+        for this ConnectorBehaviorOption.
+    tangentialBehavior: TangentialBehavior
+        A TangentialBehavior object
+
     Notes
     -----
         This object can be accessed by:

@@ -8,6 +8,13 @@ class KinematicHardening(PredefinedField):
     and, if relevant, the initial backstress tensor. 
     The KinematicHardening object is derived from the PredefinedField object. 
 
+    Attributes
+    ----------
+    field: str
+        A String specifying the name of the AnalyticalField object associated with this
+        predefined field. The **field** argument applies only when
+        **distributionType=ANALYTICAL_FIELD**. The default value is an empty string.
+
     Notes
     -----
         This object can be accessed by:

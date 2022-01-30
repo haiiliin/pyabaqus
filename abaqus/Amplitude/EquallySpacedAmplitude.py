@@ -10,6 +10,11 @@ class EquallySpacedAmplitude(Amplitude):
     intervals beginning at a specified value of time. 
     The EquallySpacedAmplitude object is derived from the Amplitude object. 
 
+    Attributes
+    ----------
+    baselineCorrection: BaselineCorrection
+        A BaselineCorrection object.
+
     Notes
     -----
         This object can be accessed by:

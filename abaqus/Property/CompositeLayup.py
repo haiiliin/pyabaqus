@@ -12,6 +12,15 @@ from ..Section.SectionLayerArray import SectionLayerArray
 class CompositeLayup:
     """The CompositeLayup object is used to specify a composite layup on a part.
 
+    Attributes
+    ----------
+    section: GeometryShellSection
+        A GeometryShellSection object.
+    orientation: MaterialOrientation
+        A MaterialOrientation object.
+    plies: CompositePlyArray
+        A CompositePlyArray object specifying the plies that make up this composite layup.
+
     Notes
     -----
         This object can be accessed by:

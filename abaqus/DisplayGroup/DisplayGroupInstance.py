@@ -8,6 +8,21 @@ class DisplayGroupInstance:
     plotted in a viewport, Abaqus/CAE creates a DisplayGroupInstance object for each display 
     group and places it in the DisplayGroupInstanceRepository object. 
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the repository key.
+    lockOptions: Boolean
+        A Boolean specifying whether the display options stored on the DisplayGroupInstance
+        object should be synchronized with changes to the viewport display options. This member
+        is available only for DisplayGroupInstance objects that are members of the
+        DisplayGroupInstance repository member of the OdbDisplay object. The default value is
+        OFF.
+    odbDisplayOptions: OdbDisplayOptions
+        An OdbDisplayOptions object specifying this member is available only for
+        DisplayGroupInstance objects that are members of the DisplayGroupInstance repository
+        member of the OdbDisplay object.
+
     Notes
     -----
         This object can be accessed by:

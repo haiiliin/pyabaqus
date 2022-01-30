@@ -7,6 +7,13 @@ class SubstructureLoad(Load):
     """The SubstructureLoad object defines a substructure load.
     The SubstructureLoad object is derived from the Load object. 
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the load repository key.
+    region: Region
+        A Region object specifying the region to which the load is applied.
+
     Notes
     -----
         This object can be accessed by:

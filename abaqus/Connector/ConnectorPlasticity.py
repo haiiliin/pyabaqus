@@ -9,6 +9,15 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
     connector's relative motion. 
     The ConnectorPlasticity object is derived from the ConnectorBehaviorOption object. 
 
+    Attributes
+    ----------
+    isotropicOptions: ConnectorOptions
+        A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+        for the isotropic hardening table.
+    kinematicOptions: ConnectorOptions
+        A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+        for the kinematic hardening table.
+
     Notes
     -----
         This object can be accessed by:

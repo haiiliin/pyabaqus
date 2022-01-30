@@ -19,6 +19,31 @@ class OdbPartBase:
     """The OdbPart object is similar to the kernel Part object and contains nodes and elements,
     but not geometry. 
 
+    Attributes
+    ----------
+    nodes: OdbMeshNodeArray
+        An OdbMeshNodeArray object.
+    elements: OdbMeshElementArray
+        An OdbMeshElementArray object.
+    nodeSets: dict[str, OdbSet]
+        A repository of OdbSet objects specifying node sets.
+    elementSets: dict[str, OdbSet]
+        A repository of OdbSet objects specifying element sets.
+    surfaces: dict[str, OdbSet]
+        A repository of OdbSet objects specifying surfaces.
+    sectionAssignments: SectionAssignmentArray
+        A SectionAssignmentArray object.
+    beamOrientations: BeamOrientationArray
+        A BeamOrientationArray object.
+    materialOrientations: MaterialOrientationArray
+        A MaterialOrientationArray object.
+    rebarOrientations: RebarOrientationArray
+        A RebarOrientationArray object.
+    rigidBodies: OdbRigidBodyArray
+        An OdbRigidBodyArray object.
+    analyticSurface: AnalyticSurface
+        An AnalyticSurface object specifying analytic Surface defined on the instance.
+
     Notes
     -----
         This object can be accessed by:

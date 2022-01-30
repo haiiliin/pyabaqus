@@ -7,6 +7,19 @@ class SelfContactStd(Interaction):
     """The SelfContactStd object defines self-contact during an Abaqus/Standard analysis.
     The SelfContactStd object is derived from the Interaction object. 
 
+    Attributes
+    ----------
+    contactTracking: SymbolicConstant
+        A SymbolicConstant specifying the choice of contact tracking algorithm. The STATE
+        tracking algorithm uses only normal projections and is specified by using ONE_CONFIG.
+        The PATH tracking algorithm uses crossing and normal projections and is specified by
+        using TWO_CONFIG. Possible values are ONE_CONFIG and TWO_CONFIG. The default value is
+        TWO_CONFIG.This argument is valid only when **enforcement=SURFACE_TO_SURFACE**.
+    supplementaryContact: SymbolicConstant
+        A SymbolicConstant specifying the manner in which mid-face constraints are employed.
+        Possible values are SELECTIVE, NEVER, and ALWAYS. The default value is SELECTIVE.This
+        argument is valid only when **enforcement=NODE_TO_SURFACE**.
+
     Notes
     -----
         This object can be accessed by:

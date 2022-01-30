@@ -69,6 +69,151 @@ class MaterialBase:
     MaterialOptions was rejected because it would make it more difficult to enforce the fact 
     that one Material object cannot contain two AcousticMedium objects, for example. 
 
+    Attributes
+    ----------
+    acousticMedium: AcousticMedium
+        An AcousticMedium object.
+    brittleCracking: BrittleCracking
+        A BrittleCracking object.
+    capPlasticity: CapPlasticity
+        A CapPlasticity object.
+    castIronPlasticity: CastIronPlasticity
+        A CastIronPlasticity object.
+    clayPlasticity: ClayPlasticity
+        A ClayPlasticity object.
+    concrete: Concrete
+        A Concrete object.
+    concreteDamagedPlasticity: ConcreteDamagedPlasticity
+        A ConcreteDamagedPlasticity object.
+    conductivity: Conductivity
+        A Conductivity object.
+    creep: Creep
+        A Creep object.
+    crushableFoam: CrushableFoam
+        A CrushableFoam object.
+    ductileDamageInitiation: DamageInitiation
+        A DamageInitiation object.
+    fldDamageInitiation: DamageInitiation
+        A DamageInitiation object.
+    flsdDamageInitiation: DamageInitiation
+        A DamageInitiation object.
+    johnsonCookDamageInitiation: DamageInitiation
+        A DamageInitiation object.
+    maxeDamageInitiation: DamageInitiation
+        A DamageInitiation object.
+    maxsDamageInitiation: DamageInitiation
+        A DamageInitiation object.
+    maxpeDamageInitiation: DamageInitiation
+        A DamageInitiation object.
+    maxpsDamageInitiation: DamageInitiation
+        A DamageInitiation object.
+    mkDamageInitiation: DamageInitiation
+        A DamageInitiation object.
+    msfldDamageInitiation: DamageInitiation
+        A DamageInitiation object.
+    quadeDamageInitiation: DamageInitiation
+        A DamageInitiation object.
+    quadsDamageInitiation: DamageInitiation
+        A DamageInitiation object.
+    shearDamageInitiation: DamageInitiation
+        A DamageInitiation object.
+    hashinDamageInitiation: DamageInitiation
+        A DamageInitiation object.
+    damping: Damping
+        A Damping object.
+    deformationPlasticity: DeformationPlasticity
+        A DeformationPlasticity object.
+    density: Density
+        A Density object.
+    depvar: Depvar
+        A Depvar object.
+    dielectric: Dielectric
+        A Dielectric object.
+    diffusivity: Diffusivity
+        A Diffusivity object.
+    druckerPrager: DruckerPrager
+        A DruckerPrager object.
+    elastic: Elastic
+        An Elastic object.
+    electricalConductivity: ElectricalConductivity
+        An ElectricalConductivity object.
+    eos: Eos
+        An Eos object.
+    expansion: Expansion
+        An Expansion object.
+    fluidLeakoff: FluidLeakoff
+        A FluidLeakoff object.
+    gapFlow: GapFlow
+        A GapFlow object.
+    gasketThicknessBehavior: GasketThicknessBehavior
+        A GasketThicknessBehavior object.
+    gasketTransverseShearElastic: GasketTransverseShearElastic
+        A GasketTransverseShearElastic object.
+    gasketMembraneElastic: GasketMembraneElastic
+        A GasketMembraneElastic object.
+    gel: Gel
+        A Gel object.
+    heatGeneration: HeatGeneration
+        A HeatGeneration object.
+    hyperelastic: Hyperelastic
+        A Hyperelastic object.
+    hyperfoam: Hyperfoam
+        A Hyperfoam object.
+    hypoelastic: Hypoelastic
+        A Hypoelastic object.
+    inelasticHeatFraction: InelasticHeatFraction
+        An InelasticHeatFraction object.
+    jouleHeatFraction: JouleHeatFraction
+        A JouleHeatFraction object.
+    latentHeat: LatentHeat
+        A LatentHeat object.
+    lowDensityFoam: LowDensityFoam
+        A LowDensityFoam object.
+    magneticPermeability: MagneticPermeability
+        A MagneticPermeability object.
+    mohrCoulombPlasticity: MohrCoulombPlasticity
+        A MohrCoulombPlasticity object.
+    moistureSwelling: MoistureSwelling
+        A MoistureSwelling object.
+    mullinsEffect: MullinsEffect
+        A MullinsEffect object.
+    permeability: Permeability
+        A Permeability object.
+    piezoelectric: Piezoelectric
+        A Piezoelectric object.
+    plastic: Plastic
+        A Plastic object.
+    poreFluidExpansion: PoreFluidExpansion
+        A PoreFluidExpansion object.
+    porousBulkModuli: PorousBulkModuli
+        A PorousBulkModuli object.
+    porousElastic: PorousElastic
+        A PorousElastic object.
+    porousMetalPlasticity: PorousMetalPlasticity
+        A PorousMetalPlasticity object.
+    regularization: Regularization
+        A Regularization object.
+    solubility: Solubility
+        A Solubility object.
+    sorption: Sorption
+        A Sorption object.
+    specificHeat: SpecificHeat
+        A SpecificHeat object.
+    swelling: Swelling
+        A Swelling object.
+    userDefinedField: UserDefinedField
+        A UserDefinedField object.
+    userMaterial: UserMaterial
+        A UserMaterial object.
+    userOutputVariables: UserOutputVariables
+        A UserOutputVariables object.
+    viscoelastic: Viscoelastic
+        A Viscoelastic object.
+    viscosity: Viscosity
+        A Viscosity object.
+    viscous: Viscous
+        A Viscous object.
+
     Notes
     -----
         This object can be accessed by:

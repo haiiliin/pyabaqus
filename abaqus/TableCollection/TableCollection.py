@@ -7,6 +7,15 @@ class TableCollection:
     """A TableCollection is an object used to define the containers that encapsulate the
     ParameterTable and PropertyTable objects. 
 
+    Attributes
+    ----------
+    propertyTables: dict[str, PropertyTable]
+        A repository of the PropertyTable object.
+    parameterTables: dict[str, ParameterTable]
+        A repository of the ParameterTable object
+    dataTables: list[DataTable]
+        sequence of the DataTable object
+
     Notes
     -----
         This object can be accessed by:

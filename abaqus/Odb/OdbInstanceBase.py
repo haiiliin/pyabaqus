@@ -17,6 +17,45 @@ from ..Section.Section import Section
 class OdbInstanceBase:
     """A part instance is the usage of a part within an assembly.
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the instance name.
+    type: SymbolicConstant
+        A SymbolicConstant specifying the type of the Part object. Only a value of
+        DEFORMABLE_BODY is currently supported.
+    embeddedSpace: SymbolicConstant
+        A SymbolicConstant specifying the dimensionality of the Part object. Possible values are
+        THREE_D, TWO_D_PLANAR, AXISYMMETRIC, and UNKNOWN_DIMENSION.
+    resultState: SymbolicConstant
+        A SymbolicConstant specifying the state of the Instance as modified by the analysis.
+        This member is only present if the Instance is part of the RootAssemblyState tree.
+        Possible values are:PROPAGATED, specifying that the value is the same as the previous
+        frame or the original rootAssembly.MODIFIED, specifying that the geometry of the
+        instance has been changed at this frame.The default value is PROPAGATED.
+    nodes: OdbMeshNodeArray
+        An OdbMeshNodeArray object.
+    elements: OdbMeshElementArray
+        An OdbMeshElementArray object.
+    nodeSets: dict[str, OdbSet]
+        A repository of OdbSet objects specifying node sets.
+    elementSets: dict[str, OdbSet]
+        A repository of OdbSet objects specifying element sets.
+    surfaces: dict[str, OdbSet]
+        A repository of OdbSet objects specifying surfaces.
+    sectionAssignments: SectionAssignmentArray
+        A SectionAssignmentArray object.
+    rigidBodies: OdbRigidBodyArray
+        An OdbRigidBodyArray object.
+    beamOrientations: BeamOrientationArray
+        A BeamOrientationArray object.
+    materialOrientations: MaterialOrientationArray
+        A MaterialOrientationArray object.
+    rebarOrientations: RebarOrientationArray
+        A RebarOrientationArray object.
+    analyticSurface: AnalyticSurface
+        An AnalyticSurface object specifying analytic Surface defined on the instance.
+
     Notes
     -----
         This object can be accessed by:

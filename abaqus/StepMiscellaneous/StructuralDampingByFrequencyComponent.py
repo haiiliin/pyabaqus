@@ -2,6 +2,13 @@ class StructuralDampingByFrequencyComponent:
     """A StructuralDampingByFrequencyComponent object is used to define structural damping over
     a range of frequencies. 
 
+    Attributes
+    ----------
+    frequency: float
+        A Float specifying the frequency value in cycles/time.
+    factor: float
+        A Float specifying the damping factor, s.
+
     Notes
     -----
         This object can be accessed by:

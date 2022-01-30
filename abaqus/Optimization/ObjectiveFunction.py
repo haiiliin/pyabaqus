@@ -5,6 +5,11 @@ from .OptimizationObjectiveArray import OptimizationObjectiveArray
 class ObjectiveFunction:
     """The ObjectiveFunction object defines the objective of the optimization.
 
+    Attributes
+    ----------
+    objectives: OptimizationObjectiveArray
+        Optimization objectives
+
     Notes
     -----
         This object can be accessed by:

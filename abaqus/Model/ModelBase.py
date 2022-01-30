@@ -40,6 +40,126 @@ from ..TableCollection.TableCollection import TableCollection
 class ModelBase:
     """Abaqus creates a Model object named `Model-1` when a session is started.
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the repository key.
+    stefanBoltzmann: float
+        None or a Float specifying the Stefan-Boltzmann constant. The default value is None.
+    absoluteZero: float
+        None or a Float specifying the absolute zero constant. The default value is None.
+    waveFormulation: SymbolicConstant
+        A SymbolicConstant specifying the type of incident wave formulation to be used in
+        acoustic problems. Possible values are NOT_SET, SCATTERED, and TOTAL. The default value
+        is NOT_SET.
+    universalGas: float
+        None or a Float specifying the universal gas constant. The default value is None.
+    noPartsInputFile: Boolean
+        A Boolean specifying whether an input file should be written without parts and
+        assemblies. The default value is OFF.
+    restartIncrement: SymbolicConstant
+        An Int specifying the increment, interval, iteration or cycle where the restart analysis
+        will start. To select the end of the step use the SymbolicConstant STEP_END.
+    endRestartStep: Boolean
+        A Boolean specifying that the step specified by **restartStep** should be terminated at
+        the increment specified by **restartIncrement**.
+    shellToSolid: Boolean
+        A Boolean specifying that a shell global model drives a solid submodel.
+    lastChangedCount: float
+        A Float specifying the time stamp that indicates when the model was last changed.
+    description: str
+        A String specifying the purpose and contents of the Model object. The default value is
+        an empty string.
+    restartJob: str
+        A String specifying the name of the job that generated the restart data.
+    restartStep: str
+        A String specifying the name of the step where the restart analysis will start.
+    globalJob: str
+        A String specifying the name of the job that generated the results for the global model.
+    copyConstraints: Boolean
+        A boolean specifying the status of constraints created in a model, in the model which
+        instances this model.
+    copyConnectors: Boolean
+        A boolean specifying the status of connectors created in a model, in the model which
+        instances this model.
+    copyInteractions: Boolean
+        A boolean specifying the status of interactions created in a model, in the model which
+        instances this model.
+    keywordBlock: KeywordBlock
+        A KeywordBlock object.
+    rootAssembly: Assembly
+        An Assembly object.
+    amplitudes: dict[str, Amplitude]
+        A repository of Amplitude objects.
+    profiles: dict[str, Profile]
+        A repository of Profile objects.
+    boundaryConditions: dict[str, BoundaryCondition]
+        A repository of BoundaryCondition objects.
+    constraints: dict[str, Constraint]
+        A repository of ConstrainedSketchConstraint objects.
+    analyticalFields: dict[str, AnalyticalField]
+        A repository of AnalyticalField objects.
+    discreteFields: dict[str, DiscreteField]
+        A repository of DiscreteField objects.
+    predefinedFields: dict[str, PredefinedField]
+        A repository of PredefinedField objects.
+    interactions: dict[str, Interaction]
+        A repository of Interaction objects.
+    interactionProperties: dict[str, ContactProperty]
+        A repository of InteractionProperty objects.
+    contactControls: dict[str, ContactControl]
+        A repository of ContactControl objects.
+    contactInitializations: dict[str, ContactInitialization]
+        A repository of ContactInitialization objects.
+    contactStabilizations: dict[str, ContactStabilization]
+        A repository of ContactStabilization objects.
+    linkedInstances: tuple
+        A tuple of tuples of Strings specifying the linked child PartInstance name in the
+        current model to the corresponding parent PartInstance name in a different model.
+    linkedParts: tuple
+        A tuple of tuples of Strings specifying the linked child Part name in the current model
+        to the corresponding parent Part name in a different model.
+    loads: dict[str, Load]
+        A repository of Load objects.
+    materials: dict[str, Material]
+        A repository of Material objects.
+    calibrations: dict[str, Calibration]
+        A repository of Calibration objects.
+    sections: dict[str, Section]
+        A repository of Section objects.
+    remeshingRules: dict[str, RemeshingRule]
+        A repository of RemeshingRule objects.
+    sketches: dict[str, ConstrainedSketch]
+        A repository of ConstrainedSketch objects.
+    parts: dict[str, Part]
+        A repository of Part objects.
+    steps: dict[str, Step]
+        A repository of Step objects.
+    featureOptions: FeatureOptions
+        A FeatureOptions object.
+    adaptiveMeshConstraints: dict[str, AdaptiveMeshConstraint]
+        A repository of AdaptiveMeshConstraint objects.
+    adaptiveMeshControls: dict[str, AdaptiveMeshControl]
+        A repository of AdaptiveMeshControl objects.
+    timePoints: dict[str, TimePoint]
+        A repository of TimePoint objects.
+    filters: dict[str, Filter]
+        A repository of Filter objects.
+    integratedOutputSections: dict[str, IntegratedOutputSection]
+        A repository of IntegratedOutputSection objects.
+    fieldOutputRequests: dict[str, FieldOutputRequest]
+        A repository of FieldOutputRequest objects.
+    historyOutputRequests: dict[str, HistoryOutputRequest]
+        A repository of HistoryOutputRequest objects.
+    optimizationTasks: dict[str, OptimizationTask]
+        A repository of OptimizationTask objects.
+    tableCollections: dict[str, TableCollection]
+        A repository of TableCollection objects.
+    eventSeriesTypes: dict[str, EventSeriesType]
+        A repository of EventSeriesType objects.
+    eventSeriesDatas: dict[str, EventSeriesData]
+        A repository of EventSeriesData objects.
+
     Notes
     -----
         This object can be accessed by:

@@ -21,6 +21,113 @@ class TempDisplacementDynamicsStep(AnalysisStep):
     thermal-stress analysis using explicit integration. 
     The TempDisplacementDynamicsStep object is derived from the AnalysisStep object. 
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the repository key.
+    timePeriod: float
+        A Float specifying the time period of the step. The default value is 1.0.
+    nlgeom: Boolean
+        A Boolean specifying whether geometric nonlinearities should be accounted for during the
+        step. The default value is OFF.
+    timeIncrementationMethod: SymbolicConstant
+        A SymbolicConstant specifying the time incrementation method to be used. Possible values
+        are AUTOMATIC_GLOBAL, AUTOMATIC_EBE, FIXED_USER_DEFINED_INC, and FIXED_EBE. The default
+        value is AUTOMATIC_GLOBAL.
+    maxIncrement: float
+        None or a Float specifying the maximum time increment allowed. If there is no upper
+        limit, **maxIncrement=None**. The default value is None.
+    scaleFactor: float
+        A Float specifying the factor that is used to scale the time increment. This argument is
+        required only when **timeIncrementationMethod=AUTOMATIC_GLOBAL**, AUTOMATIC_EBE, or
+        FIXED_EBE. The default value is 1.0.
+    userDefinedInc: float
+        None or a Float specifying the user-defined time increment. The default value is None.
+    linearBulkViscosity: float
+        A Float specifying the linear bulk viscosity parameter, b1b1. The default value is 0.06.
+    quadBulkViscosity: float
+        A Float specifying the quadratic bulk viscosity parameter, b2b2. The default value is
+        1.2.
+    improvedDtMethod: Boolean
+        A Boolean specifying whether to use the "improved" (**improvedDtMethod=ON**) or
+        "conservative" (**improvedDtMethod=OFF**) method to estimate the element stable time
+        increment for three-dimensional continuum elements and elements with plane stress
+        formulations (shell, membrane, and two-dimensional plane stress elements). The default
+        value is ON.
+    previous: str
+        A String specifying the name of the previous step. The new step appears after this step
+        in the list of analysis steps.
+    description: str
+        A String specifying a description of the new step. The default value is an empty string.
+    massScaling: MassScalingArray
+        A MassScalingArray object specifying mass scaling controls. The default value is
+        PREVIOUS_STEP.
+    explicit: SymbolicConstant
+        A SymbolicConstant specifying whether the step has an explicit procedure type
+        (**procedureType=ANNEAL**, DYNAMIC_EXPLICIT, or DYNAMIC_TEMP_DISPLACEMENT).
+    perturbation: Boolean
+        A Boolean specifying whether the step has a perturbation procedure type.
+    nonmechanical: Boolean
+        A Boolean specifying whether the step has a mechanical procedure type.
+    procedureType: SymbolicConstant
+        A SymbolicConstant specifying the Abaqus procedure. Possible values are:
+        - ANNEAL
+        - BUCKLE
+        - COMPLEX_FREQUENCY
+        - COUPLED_TEMP_DISPLACEMENT
+        - COUPLED_THERMAL_ELECTRIC
+        - DIRECT_CYCLIC
+        - DYNAMIC_IMPLICIT
+        - DYNAMIC_EXPLICIT
+        - DYNAMIC_SUBSPACE
+        - DYNAMIC_TEMP_DISPLACEMENT
+        - COUPLED_THERMAL_ELECTRICAL_STRUCTURAL
+        - FREQUENCY
+        - GEOSTATIC
+        - HEAT_TRANSFER
+        - MASS_DIFFUSION
+        - MODAL_DYNAMICS
+        - RANDOM_RESPONSE
+        - RESPONSE_SPECTRUM
+        - SOILS
+        - STATIC_GENERAL
+        - STATIC_LINEAR_PERTURBATION
+        - STATIC_RIKS
+        - STEADY_STATE_DIRECT
+        - STEADY_STATE_MODAL
+        - STEADY_STATE_SUBSPACE
+        - VISCO
+    suppressed: Boolean
+        A Boolean specifying whether the step is suppressed or not. The default value is OFF.
+    fieldOutputRequestState: dict[str, FieldOutputRequestState]
+        A repository of FieldOutputRequestState objects.
+    historyOutputRequestState: dict[str, HistoryOutputRequestState]
+        A repository of HistoryOutputRequestState objects.
+    diagnosticPrint: DiagnosticPrint
+        A DiagnosticPrint object.
+    monitor: Monitor
+        A Monitor object.
+    restart: Restart
+        A Restart object.
+    adaptiveMeshConstraintStates: dict[str, AdaptiveMeshConstraintState]
+        A repository of AdaptiveMeshConstraintState objects.
+    adaptiveMeshDomains: dict[str, AdaptiveMeshDomain]
+        A repository of AdaptiveMeshDomain objects.
+    control: Control
+        A Control object.
+    solverControl: SolverControl
+        A SolverControl object.
+    boundaryConditionStates: dict[str, BoundaryConditionState]
+        A repository of BoundaryConditionState objects.
+    interactionStates: int
+        A repository of InteractionState objects.
+    loadStates: dict[str, LoadState]
+        A repository of LoadState objects.
+    loadCases: dict[str, LoadCase]
+        A repository of LoadCase objects.
+    predefinedFieldStates: dict[str, PredefinedFieldState]
+        A repository of PredefinedFieldState objects.
+
     Notes
     -----
         This object can be accessed by:

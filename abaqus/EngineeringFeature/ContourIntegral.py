@@ -8,6 +8,11 @@ class ContourIntegral(Crack):
     assembly regions are supported. 
     The ContourIntegral object is derived from the Crack object. 
 
+    Attributes
+    ----------
+    suppressed: Boolean
+        A Boolean specifying whether the crack is suppressed or not. The default value is OFF.
+
     Notes
     -----
         This object can be accessed by:

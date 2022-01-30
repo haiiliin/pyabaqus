@@ -6,6 +6,13 @@ class Calibration:
     """A Calibration object is the object used to specify a material calibration. The
     Calibration object stores the data that is used for specifying materials from test data. 
 
+    Attributes
+    ----------
+    dataSets: DataSet
+        A DataSet object.
+    behaviors: Behavior
+        A Behavior object.
+
     Notes
     -----
         This object can be accessed by:

@@ -9,6 +9,17 @@ class EngineeringFeatureBase:
     """The EngineeringFeature object is a container for various specific engineering feature
     repositories. The EngineeringFeature object has no explicit constructor or methods. 
 
+    Attributes
+    ----------
+    inertias: dict[str, Inertia]
+        A repository of Inertia objects.
+    cracks: dict[str, Crack]
+        A repository of Crack objects.
+    fasteners: dict[str, Fastener]
+        A repository of Fastener objects.
+    springDashpots: dict[str, SpringDashpot]
+        A repository of SpringDashpot objects.
+
     Notes
     -----
         This object can be accessed by:

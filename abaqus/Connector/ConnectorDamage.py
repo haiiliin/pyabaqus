@@ -9,6 +9,15 @@ class ConnectorDamage(ConnectorBehaviorOption):
     connector's relative motion. 
     The ConnectorDamage object is derived from the ConnectorBehaviorOption object. 
 
+    Attributes
+    ----------
+    initiationOptions: ConnectorOptions
+        A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+        for the damage initiation table.
+    evolutionOptions: ConnectorOptions
+        A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+        for the damage evolution table.
+
     Notes
     -----
         This object can be accessed by:

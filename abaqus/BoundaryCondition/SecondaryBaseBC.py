@@ -8,6 +8,25 @@ class SecondaryBaseBC(BoundaryCondition):
     """The SecondaryBaseBC object stores the data for a secondary base boundary condition.
     The SecondaryBaseBC object is derived from the BoundaryCondition object. 
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the boundary condition repository key.
+    dofs: int
+        A tuple of tuples of Ints specifying the constrained degrees-of-freedom.
+    regions: RegionArray
+        A RegionArray object specifying the region to which the boundary condition is applied.
+        Note that the usual **region** is ignored. The default value is MODEL.
+    category: SymbolicConstant
+        A SymbolicConstant specifying the category of the boundary condition. Possible values
+        are MECHANICAL and THERMAL.
+    region: Region
+        A Region object specifying the region to which the boundary condition is applied.
+    localCsys: str
+        None or a DatumCsys object specifying the local coordinate system of the boundary
+        condition's degrees of freedom. If **localCsys=None**, the degrees of freedom are defined
+        in the global coordinate system. The default value is None.
+
     Notes
     -----
         This object can be accessed by:

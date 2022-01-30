@@ -7,6 +7,11 @@ class DerivedComponent:
     """A DerivedComponent object describes user-customized components for use in defining
     ConnectorFriction and Potential objects. 
 
+    Attributes
+    ----------
+    cdcTerms: CDCTermArray
+        A CDCTermArray object.
+
     Notes
     -----
         This object can be accessed by:

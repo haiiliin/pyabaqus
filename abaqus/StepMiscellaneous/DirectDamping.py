@@ -4,6 +4,11 @@ from .DirectDampingComponentArray import DirectDampingComponentArray
 class DirectDamping:
     """A DirectDamping object contains direct modal damping parameters.
 
+    Attributes
+    ----------
+    components: DirectDampingComponentArray
+        A DirectDampingComponentArray object.
+
     Notes
     -----
         This object can be accessed by:

@@ -8,6 +8,11 @@ class HeatCapacitance(Inertia):
     region. 
     The HeatCapacitance object is derived from the Inertia object. 
 
+    Attributes
+    ----------
+    suppressed: Boolean
+        A Boolean specifying whether the inertia is suppressed or not. The default value is OFF.
+
     Notes
     -----
         This object can be accessed by:

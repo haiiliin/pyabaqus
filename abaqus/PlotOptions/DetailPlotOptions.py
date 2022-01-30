@@ -6,6 +6,11 @@ class DetailPlotOptions:
     object. The DetailPlotOptions object has no constructor command. Abaqus creates the 
     *detailPlotOptions* member whenever a Viewport is created. 
 
+    Attributes
+    ----------
+    plyStackPlotOptions: PlyStackPlotOptions
+        A PlyStackPlotOptions object.
+
     Notes
     -----
         This object can be accessed by:

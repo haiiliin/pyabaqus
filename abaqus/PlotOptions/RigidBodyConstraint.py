@@ -1,6 +1,11 @@
 class RigidBodyConstraint:
     """The RigidBodyConstraint object.
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the rigidbody constraint name. This attribute is read-only.
+
     Notes
     -----
         This object can be accessed by:

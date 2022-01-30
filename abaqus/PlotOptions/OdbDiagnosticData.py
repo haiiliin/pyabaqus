@@ -9,6 +9,35 @@ from .OdbNumericalProblemSummary import OdbNumericalProblemSummary
 class OdbDiagnosticData:
     """The OdbDiagnosticData object.
 
+    Attributes
+    ----------
+    analysisErrors: dict[str, OdbAnalysisError]
+        A repository of OdbAnalysisError objects.
+    analysisWarnings: dict[str, OdbAnalysisWarning]
+        A repository of OdbAnalysisWarning objects.
+    steps: dict[str, OdbDiagnosticStep]
+        A repository of OdbDiagnosticStep objects.
+    jobTime: OdbJobTime
+        An OdbJobTime object.
+    numericalProblemSummary: OdbNumericalProblemSummary
+        An OdbNumericalProblemSummary object.
+    isXplDoublePrecision: Boolean
+        A boolean specifying whether or not double precision is used for the analysis. This
+        attribute is read-only.
+    jobStatus: str
+        A String specifying the job status after the analysis. This attribute is read-only.
+    numDomains: str
+        An int specifying the number of domains. This attribute is read-only.
+    numberOfAnalysisErrors: str
+        An int specifying the number of analysis errors encountered. This attribute is
+        read-only.
+    numberOfAnalysisWarnings: str
+        An int specifying the number of analysis warnings encountered. This attribute is
+        read-only.
+    numberOfSteps: str
+        An int specifying the number of steps present in the analysis. This attribute is
+        read-only.
+
     Notes
     -----
         This object can be accessed by:

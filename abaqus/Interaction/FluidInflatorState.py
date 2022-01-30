@@ -9,6 +9,21 @@ class FluidInflatorState(InteractionState):
     The FluidInflatorState object has no constructor or methods. 
     The FluidInflatorState object is derived from the InteractionState object. 
 
+    Attributes
+    ----------
+    status: SymbolicConstant
+        A **SymbolicConstant** specifying the propagation state of the InteractionState object.
+        Possible values are:
+        - NOT_YET_ACTIVE
+        - CREATED
+        - PROPAGATED
+        - MODIFIED
+        - DEACTIVATED
+        - NO_LONGER_ACTIVE
+        - TYPE_NOT_APPLICABLE
+        - INSTANCE_NOT_APPLICABLE
+        - BUILT_INTO_BASE_STATE
+
     Notes
     -----
         This object can be accessed by:

@@ -8,6 +8,13 @@ class Text(Annotation):
     """The Text object stores the text settings and location of a text annotation.
     The Text object is derived from the Annotation object. 
 
+    Attributes
+    ----------
+    width: float
+        A Float specifying the width in millimeters of the Text object.
+    height: float
+        A Float specifying the height in millimeters of the Text object.
+
     Notes
     -----
         This object can be accessed by:

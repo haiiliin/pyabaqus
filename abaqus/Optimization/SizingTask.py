@@ -11,6 +11,19 @@ class SizingTask(OptimizationTask):
     """The SizingTask object defines a Sizing task.
     The SizingTask object is derived from the OptimizationTask object. 
 
+    Attributes
+    ----------
+    designResponses: dict[str, DesignResponse]
+        A repository of DesignResponse objects.
+    objectiveFunctions: dict[str, ObjectiveFunction]
+        A repository of ObjectiveFunction objects.
+    optimizationConstraints: dict[str, OptimizationConstraint]
+        A repository of OptimizationConstraint objects.
+    geometricRestrictions: dict[str, GeometricRestriction]
+        A repository of GeometricRestriction objects.
+    stopConditions: dict[str, StopCondition]
+        A repository of StopCondition objects.
+
     Notes
     -----
         This object can be accessed by:

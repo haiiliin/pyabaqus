@@ -6,6 +6,18 @@ from abaqusConstants import *
 class FieldOutputRequest:
     """The FieldOutputRequest object defines a field output request.
 
+    Attributes
+    ----------
+    boltLoad: str
+        A String specifying a bolt load from which output is requested.
+    region: SymbolicConstant
+        The SymbolicConstant MODEL or a Region object specifying the region from which output is
+        requested. The SymbolicConstant MODEL represents the whole model. The default value is
+        MODEL.
+    interactions: tuple
+        None or a tuple of Strings specifying the interaction names. The default value is
+        None.The sequence can contain only one String.
+
     Notes
     -----
         This object can be accessed by:

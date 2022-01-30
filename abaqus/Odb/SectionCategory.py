@@ -10,6 +10,11 @@ class SectionCategory:
     in the output database. For more information, see Beam Section profile commands and 
     Section commands. 
 
+    Attributes
+    ----------
+    sectionPoints: SectionPointArray
+        A SectionPointArray object.
+
     Notes
     -----
         This object can be accessed by:

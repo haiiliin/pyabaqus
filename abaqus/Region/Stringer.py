@@ -7,6 +7,13 @@ from ..Mesh.MeshElementArray import MeshElementArray
 class Stringer:
     """The Stringer object stores information on stringer reinforcements created on entities.
 
+    Attributes
+    ----------
+    elements: MeshElementArray
+        A MeshElementArray object.
+    edges: EdgeArray
+        An EdgeArray object.
+
     Notes
     -----
         This object can be accessed by:

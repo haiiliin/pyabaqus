@@ -7,6 +7,11 @@ class FluidCavityPressure(PredefinedField):
     base class*region* argument can not be specifed with this object. 
     The FluidCavityPressure object is derived from the PredefinedField object. 
 
+    Attributes
+    ----------
+    region: Region
+        A Region object on which the **fluidCavity** interaction is specified.
+
     Notes
     -----
         This object can be accessed by:

@@ -7,6 +7,12 @@ class AssembledFastener(Fastener):
     """The AssembledFastener object defines an assembled fastener.
     The AssembledFastener object is derived from the Fastener object. 
 
+    Attributes
+    ----------
+    suppressed: Boolean
+        A Boolean specifying whether the fastener is suppressed or not. The default value is
+        OFF.
+
     Notes
     -----
         This object can be accessed by:

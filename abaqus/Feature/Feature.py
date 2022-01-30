@@ -20,6 +20,13 @@ class Feature:
     regeneration of the feature. Feature objects contain both the parameters and the 
     resulting model modification. 
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the repository key.
+    id: int
+        An Int specifying the ID of the feature.
+
     Notes
     -----
         This object can be accessed by:

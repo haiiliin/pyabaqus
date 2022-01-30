@@ -9,6 +9,13 @@ class GeneralStiffnessSection(ShellSection):
     stiffness matrix. 
     The GeneralStiffnessSection object is derived from the ShellSection object. 
 
+    Attributes
+    ----------
+    rebarLayers: RebarLayers
+        A RebarLayers object specifying reinforcement properties.
+    transverseShear: TransverseShearShell
+        A TransverseShearShell object specifying the transverse shear stiffness properties.
+
     Notes
     -----
         This object can be accessed by:

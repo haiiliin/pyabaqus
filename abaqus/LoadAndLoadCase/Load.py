@@ -6,6 +6,13 @@ class Load:
     explicit constructor. The methods and members of the Load object are common to all 
     objects derived from Load. 
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the load repository key.
+    region: Region
+        A Region object specifying the region to which the load is applied.
+
     Notes
     -----
         This object can be accessed by:

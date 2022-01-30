@@ -4,6 +4,11 @@ from .RayleighDampingByFrequencyComponentArray import RayleighDampingByFrequency
 class RayleighDampingByFrequency:
     """A RayleighDampingByFrequency object contains Rayleigh Damping parameters.
 
+    Attributes
+    ----------
+    components: RayleighDampingByFrequencyComponentArray
+        A RayleighDampingByFrequencyComponentArray object.
+
     Notes
     -----
         This object can be accessed by:

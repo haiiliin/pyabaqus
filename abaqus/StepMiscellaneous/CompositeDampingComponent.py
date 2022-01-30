@@ -2,6 +2,13 @@ class CompositeDampingComponent:
     """A CompositeDampingComponent object is used to define composite damping over a range of
     modes. 
 
+    Attributes
+    ----------
+    start: int
+        An Int specifying the mode number of the lowest mode of a range.
+    end: int
+        An Int specifying the mode number of the highest mode of a range.
+
     Notes
     -----
         This object can be accessed by:

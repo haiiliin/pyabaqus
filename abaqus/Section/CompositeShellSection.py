@@ -9,6 +9,13 @@ class CompositeShellSection(GeometryShellSection):
     """The CompositeShellSection object defines the properties of a composite shell section.
     The CompositeShellSection object is derived from the GeometryShellSection object. 
 
+    Attributes
+    ----------
+    rebarLayers: RebarLayers
+        A RebarLayers object specifying reinforcement properties.
+    transverseShear: TransverseShearShell
+        A TransverseShearShell object specifying the transverse shear stiffness properties.
+
     Notes
     -----
         This object can be accessed by:

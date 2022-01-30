@@ -17,6 +17,31 @@ class OdbAssemblyBase:
     object is created. Abaqus creates the *rootAssembly* member when an Odb object is 
     created. 
 
+    Attributes
+    ----------
+    instances: dict[str, OdbInstance]
+        A repository of OdbInstance objects.
+    nodeSets: dict[str, OdbSet]
+        A repository of OdbSet objects specifying node sets.
+    elementSets: dict[str, OdbSet]
+        A repository of OdbSet objects specifying element sets.
+    surfaces: dict[str, OdbSet]
+        A repository of OdbSet objects specifying surfaces.
+    nodes: OdbMeshNodeArray
+        An OdbMeshNodeArray object.
+    elements: OdbMeshElementArray
+        An OdbMeshElementArray object.
+    datumCsyses: dict[str, OdbDatumCsys]
+        A repository of OdbDatumCsys objects.
+    sectionAssignments: SectionAssignmentArray
+        A SectionAssignmentArray object.
+    rigidBodies: OdbRigidBodyArray
+        An OdbRigidBodyArray object.
+    pretensionSections: OdbPretensionSectionArray
+        An OdbPretensionSectionArray object.
+    connectorOrientations: ConnectorOrientationArray
+        A ConnectorOrientationArray object.
+
     Notes
     -----
         This object can be accessed by:

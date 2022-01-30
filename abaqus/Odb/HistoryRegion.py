@@ -8,6 +8,14 @@ from .HistoryPoint import HistoryPoint
 class HistoryRegion:
     """The HistoryRegion object contains history data for a single location in the model.
 
+    Attributes
+    ----------
+    position: SymbolicConstant
+        A SymbolicConstant specifying the position of the history output. Possible values are
+        NODAL, INTEGRATION_POINT, WHOLE_ELEMENT, WHOLE_REGION, and WHOLE_MODEL.
+    historyOutputs: dict[str, HistoryOutput]
+        A repository of HistoryOutput objects.
+
     Notes
     -----
         This object can be accessed by:

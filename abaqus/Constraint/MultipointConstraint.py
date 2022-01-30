@@ -8,6 +8,12 @@ class MultipointConstraint(Constraint):
     MultipointConstraint nodes located on a region and a reference point. 
     The MultipointConstraint object is derived from the ConstrainedSketchConstraint object.
 
+    Attributes
+    ----------
+    suppressed: Boolean
+        A Boolean specifying whether the constraint is suppressed or not. The default value is
+        OFF.
+
     Notes
     -----
         This object can be accessed by:

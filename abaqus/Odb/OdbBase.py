@@ -17,6 +17,37 @@ from ..Section.Section import Section
 class OdbBase:
     """The Odb object is the in-memory representation of an output database (ODB) file.
 
+    Attributes
+    ----------
+    isReadOnly: Boolean
+        A Boolean specifying whether the output database was opened with read-only access.
+    amplitudes: dict[str, Amplitude]
+        A repository of Amplitude objects.
+    filters: dict[str, Filter]
+        A repository of Filter objects.
+    rootAssembly: OdbAssembly
+        An OdbAssembly object.
+    jobData: JobData
+        A JobData object.
+    parts: dict[str, OdbPart]
+        A repository of OdbPart objects.
+    materials: dict[str, Material]
+        A repository of Material objects.
+    steps: dict[str, OdbStep]
+        A repository of OdbStep objects.
+    sections: dict[str, Section]
+        A repository of Section objects.
+    sectionCategories: dict[str, SectionCategory]
+        A repository of SectionCategory objects.
+    sectorDefinition: SectorDefinition
+        A SectorDefinition object.
+    userData: UserData
+        A UserData object.
+    customData: RepositorySupport
+        A RepositorySupport object.
+    profiles: dict[str, Profile]
+        A repository of Profile objects.
+
     Notes
     -----
         This object can be accessed by:

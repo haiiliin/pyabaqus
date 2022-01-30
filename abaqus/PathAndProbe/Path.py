@@ -7,6 +7,13 @@ class Path:
     """The Path object defines a line through your model by specifying a series of nodes or
     points. 
 
+    Attributes
+    ----------
+    coordinates: list[tuple[float]]
+        If **type=NODE_LIST**, **coordinates** is a sequence of tuples of three Floats. This can be
+        used as the value for the **expression** argument when creating a Path object of **type** =
+        POINT_LIST.
+
     Notes
     -----
         This object can be accessed by:

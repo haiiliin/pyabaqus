@@ -9,6 +9,11 @@ class MaterialAssignment(PredefinedField):
     predefined field, for use with an Eulerian analysis. 
     The MaterialAssignment object is derived from the PredefinedField object. 
 
+    Attributes
+    ----------
+    region: Region
+        A Region object specifying the region to which the predefined field is applied.
+
     Notes
     -----
         This object can be accessed by:

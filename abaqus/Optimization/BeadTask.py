@@ -10,6 +10,17 @@ class BeadTask(OptimizationTask):
     """The BeadTask object defines a bead task.
     The BeadTask object is derived from the OptimizationTask object. 
 
+    Attributes
+    ----------
+    designResponses: dict[str, DesignResponse]
+        A repository of DesignResponse objects.
+    objectiveFunctions: dict[str, ObjectiveFunction]
+        A repository of ObjectiveFunction objects.
+    optimizationConstraints: dict[str, OptimizationConstraint]
+        A repository of OptimizationConstraint objects.
+    geometricRestrictions: dict[str, GeometricRestriction]
+        A repository of GeometricRestriction objects.
+
     Notes
     -----
         This object can be accessed by:

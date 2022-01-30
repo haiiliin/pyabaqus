@@ -21,6 +21,16 @@ class XYData:
     they are not used anymore. Temporary XYData objects are also created as a result of math 
     operations found in the abaqusMath module. 
 
+    Attributes
+    ----------
+    sourceType: SymbolicConstant
+        A SymbolicConstant specifying the source type of the XYData object. Possible values are
+        FROM_ODB, FROM_KEYBOARD, FROM_ASCII_FILE, FROM_OPERATION, and FROM_USER_DEFINED.
+    fileName: str
+        A String specifying the source file name of the XYData object.
+    description: str
+        A String specifying the complete description of the XYData object.
+
     Notes
     -----
         This object can be accessed by:

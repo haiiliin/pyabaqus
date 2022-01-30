@@ -6,6 +6,13 @@ class AdaptivityIteration:
     """The AdaptivityIteration object contains information about a given iteration of the
     varying topology adaptivity process (adaptive remeshing). 
 
+    Attributes
+    ----------
+    ruleResults: dict[str, RuleResult]
+        A repository of RuleResult objects specifying the calculated results from sizing
+        functions corresponding to the RemeshingRule objects for this iteration of an adaptivity
+        process.
+
     Notes
     -----
         This object can be accessed by:

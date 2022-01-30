@@ -64,6 +64,155 @@ class SessionBase:
     """The Session object has no constructor. Abaqus creates the *session* member when a
     session is started. 
 
+    Attributes
+    ----------
+    attachedToGui: Boolean
+        A Boolean specifying whether an Abaqus interactive session is running.
+    replayInProgress: Boolean
+        A Boolean specifying whether Abaqus is executing a replay file.
+    kernelMemoryFootprint: float
+        A Float specifying the memory usage value for the Abaqus/CAE kernel process in
+        megabytes.
+    kernelMemoryMaxFootprint: float
+        A Float specifying the maximum value for the memory usage for the Abaqus/CAE kernel
+        process in megabytes.
+    kernelMemoryLimit: float
+        A Float specifying the limit for the memory use for the Abaqus/CAE kernel process in
+        megabytes.
+    colors: dict[str, Color]
+        A repository of Color objects.
+    journalOptions: JournalOptions
+        A JournalOptions object specifying how to record selection of geometry in the journal
+        and replay files.
+    memoryReductionOptions: MemoryReductionOptions
+        A MemoryReductionOptions object specifying options for running in reduced memory mode.
+    nodeQuery: NodeQuery
+        A NodeQuery object specifying nodes and their coordinates in a path.
+    sketcherOptions: ConstrainedSketcherOptions
+        A ConstrainedSketcherOptions object specifying common options for all sketches.
+    viewerOptions: ViewerOptions
+        A ViewerOptions object.
+    animationOptions: AnimationOptions
+        An AnimationOptions object.
+    aviOptions: AVIOptions
+        An AVIOptions object.
+    imageAnimationOptions: ImageAnimationOptions
+        An ImageAnimationOptions object.
+    imageAnimation: ImageAnimation
+        An ImageAnimation object.
+    quickTimeOptions: QuickTimeOptions
+        A QuickTimeOptions object.
+    viewports: dict[str, Viewport]
+        A repository of Viewport objects.
+    customData: RepositorySupport
+        A RepositorySupport object.
+    defaultFieldReportOptions: FieldReportOptions
+        A FieldReportOptions object.
+    defaultFreeBodyReportOptions: FreeBodyReportOptions
+        A FreeBodyReportOptions object.
+    fieldReportOptions: FieldReportOptions
+        A FieldReportOptions object.
+    freeBodyReportOptions: FreeBodyReportOptions
+        A FreeBodyReportOptions object.
+    odbs: dict[str, Odb]
+        A repository of Odb objects.
+    scratchOdbs: dict[str, ScratchOdb]
+        A repository of ScratchOdb objects.
+    defaultOdbDisplay: DefaultOdbDisplay
+        A DefaultOdbDisplay object.
+    defaultPlot: DefaultPlot
+        A DefaultPlot object.
+    defaultChartOptions: DefaultChartOptions
+        A DefaultChartOptions object.
+    odbData: dict[str, OdbData]
+        A repository of OdbData objects.
+    mdbData: dict[str, MdbData]
+        A repository of MdbData objects.
+    paths: dict[str, Path]
+        A repository of Path objects.
+    freeBodies: dict[str, FreeBody]
+        A repository of FreeBody objects.
+    streams: dict[str, Stream]
+        A repository of Stream objects.
+    spectrums: dict[str, Spectrum]
+        A repository of Spectrum objects.
+    currentProbeValues: CurrentProbeValues
+        A CurrentProbeValues object.
+    defaultProbeOptions: ProbeOptions
+        A ProbeOptions object.
+    probeOptions: ProbeOptions
+        A ProbeOptions object.
+    probeReport: ProbeReport
+        A ProbeReport object.
+    defaultProbeReport: ProbeReport
+        A ProbeReport object.
+    selectedProbeValues: SelectedProbeValues
+        A SelectedProbeValues object.
+    printOptions: PrintOptions
+        A PrintOptions object.
+    epsOptions: EpsOptions
+        An EpsOptions object.
+    pageSetupOptions: PageSetupOptions
+        A PageSetupOptions object.
+    pngOptions: PngOptions
+        A PngOptions object.
+    psOptions: PsOptions
+        A PsOptions object.
+    svgOptions: SvgOptions
+        A SvgOptions object.
+    tiffOptions: TiffOptions
+        A TiffOptions object.
+    autoColors: AutoColors
+        An AutoColors object specifying the color palette to be used for color coding.
+    xyColors: AutoColors
+        An AutoColors object specifying the color palette to be used forXYCurve objects.
+    xyDataObjects: dict[str, XYData]
+        A repository of XYData objects.
+    curves: dict[str, XYCurve]
+        A repository of XYCurve objects.
+    xyPlots: dict[str, XYPlot]
+        A repository of XYPlot objects.
+    charts: dict[str, Chart]
+        A repository of Chart objects.
+    defaultXYReportOptions: XYReportOptions
+        An XYReportOptions object.
+    xyReportOptions: XYReportOptions
+        An XYReportOptions object.
+    views: dict[str, View]
+        A repository of View objects.
+    networkDatabaseConnectors: dict[str, NetworkDatabaseConnector]
+        A repository of NetworkDatabaseConnector objects.
+    displayGroups: dict[str, DisplayGroup]
+        A repository of DisplayGroup objects.
+    graphicsInfo: GraphicsInfo
+        A GraphicsInfo object.
+    defaultGraphicsOptions: GraphicsOptions
+        A GraphicsOptions object.
+    graphicsOptions: GraphicsOptions
+        A GraphicsOptions object.
+    defaultViewportAnnotationOptions: ViewportAnnotationOptions
+        A ViewportAnnotationOptions object.
+    queues: dict[str, Queue]
+        A repository of Queue objects.
+    currentViewportName: str
+        A String specifying the name of the current viewport.
+    sessionState: dict
+        A Dictionary object specifying the viewports and their associated models. The Dictionary
+        key specifies the viewport name. The Dictionary value is a Dictionary specifying the
+        model name.
+    images: dict[str, Image]
+        A repository of Image objects.
+    movies: dict[str, Movie]
+        A repository of Movie objects.
+    defaultLightOptions: LightOptions
+        A LightOptions object.
+    drawingArea: DrawingArea
+        A DrawingArea object.
+    defaultMesherOptions: MesherOptions
+        A MesherOptions object specifying how to control default settings in the Mesh module.
+    drawings: dict[str, Drawing]
+        A repository of Drawing objects.
+
     Notes
     -----
         This object can be accessed by:

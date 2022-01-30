@@ -8,6 +8,13 @@ class DataTable:
     should be created when all the required ParameterColumn objects are created for the 
     current ParameterTable. 
 
+    Attributes
+    ----------
+    label: str
+        A String specifying the label of the data table.
+    columns: str
+        A DataColumnArray specifying all the dataColumns in the DataTable object.
+
     Notes
     -----
         This object can be accessed by:

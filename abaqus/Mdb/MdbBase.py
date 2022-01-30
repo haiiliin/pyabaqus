@@ -12,6 +12,31 @@ class MdbBase:
     """The Mdb object is the high-level Abaqus model database. A model database stores models
     and analysis controls. 
 
+    Attributes
+    ----------
+    version: int
+        An Int specifying the release number of the Mdb object in memory.
+    lastChangedCount: float
+        A Float specifying the value of a counter associated with the Mdb object. The counter
+        indicates when the Mdb object was last changed.
+    jobs: dict[str, Job]
+        A repository of Job objects.
+    adaptivityProcesses: dict[str, AdaptivityProcess]
+        A repository of AdaptivityProcess objects.
+    coexecutions: dict[str, Coexecution]
+        A repository of Coexecution objects.
+    optimizationProcesses: dict[str, OptimizationProcess]
+        A repository of OptimizationProcess objects.
+    meshEditOptions: MeshEditOptions
+        A MeshEditOptions object specifying the undo/redo behavior when editing meshes on parts
+        or part instances.
+    models: dict[str, Model]
+        A repository of Model objects.
+    customData: RepositorySupport
+        A RepositorySupport object.
+    annotations: dict[str, Annotation]
+        A repository of Annotation objects.
+
     Notes
     -----
         This object can be accessed by:

@@ -1,6 +1,13 @@
 class CouplingConstraint:
     """The CouplingConstraint object.
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the coupling name. This attribute is read-only.
+    type: str
+        A String specifying the type of coupling. This attribute is read-only.
+
     Notes
     -----
         This object can be accessed by:

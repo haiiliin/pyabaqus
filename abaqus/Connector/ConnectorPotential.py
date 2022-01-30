@@ -11,6 +11,12 @@ class ConnectorPotential:
     for damage evolution), there are two ConnectorPotential constructors associated with 
     that behavior—IniPotential and EvoPotential. 
 
+    Attributes
+    ----------
+    derivedComponent: DerivedComponent
+        A DerivedComponent object specifying the DerivedComponent used in the contribution. This
+        argument is applicable only if **componentStyle=DERIVED_COMPONENT**.
+
     Notes
     -----
         This object can be accessed by:

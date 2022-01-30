@@ -7,6 +7,18 @@ class InertiaRelief(Load):
     """The InertiaRelief object defines an inertia relief load.
     The InertiaRelief object is derived from the Load object. 
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the load repository key.
+    localCoordinates: int
+        None or a DatumCsys object specifying the local coordinate system of the rigid body
+        degrees of freedom for the inertia relief load. If **localCoordinates=None**, the free
+        directions are defined in the global coordinate system. When this member is queried, it
+        returns an Int. The default value is None.
+    region: Region
+        A Region object specifying the region to which the load is applied.
+
     Notes
     -----
         This object can be accessed by:

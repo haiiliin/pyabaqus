@@ -10,6 +10,20 @@ class View:
     The Layer View objects store a transformation matrix used to position the contents of 
     the Layer within a viewport. 
 
+    Attributes
+    ----------
+    displayedObjectScreenWidth: float
+        A Float specifying the width in viewport millimeters of the bounding rectangle around
+        the viewport contents. This value does not include annotations or symbols and it is not
+        clipped to the size of the viewport window.
+    displayedObjectScreenHeight: float
+        A Float specifying the height in viewport millimeters of the bounding rectangle around
+        the viewport contents. This value does not include annotations or symbols and it is not
+        clipped to the size of the viewport window.
+    layerTransform: float
+        A tuple of Floats specifying a transformation matrix used to position the contents of
+        the Layer within a viewport.
+
     Notes
     -----
         This object can be accessed by:

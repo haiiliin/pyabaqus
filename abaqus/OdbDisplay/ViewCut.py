@@ -9,6 +9,41 @@ class ViewCut:
     accessed via the OdbDisplay object cause the ViewCut object to be added to the 
     session.viewports[name].odbDisplay.viewCuts repository. 
 
+    Attributes
+    ----------
+    angle: float
+        A Float specifying the rotation angle of the cut defined with a **shape** set to PLANE.
+    motion: SymbolicConstant
+        A SymbolicConstant specifying the type of motion for the cut defined with a **shape** set
+        to PLANE. Possible values are TRANSLATE and ROTATE. The default value is TRANSLATE.
+    position: float
+        A Float specifying the position of the cut defined with a **shape** set to PLANE.
+    radius: float
+        A Float specifying the radius of the cut defined with a **shape** set to CYLINDER or
+        SPHERE.
+    rotationAxis: SymbolicConstant
+        A SymbolicConstant specifying the rotation axis for the cut defined with a **shape** set
+        to PLANE. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default value is AXIS_2.
+    value: float
+        A Float specifying the value of the cut defined with a **shape** set to ISOSURFACE.
+    showModelAboveCut: Boolean
+        A Boolean specifying whether to display the model above the cut. The default value is
+        OFF.
+    showModelOnCut: Boolean
+        A Boolean specifying whether to display the model on the cut. The default value is ON.
+    showModelBelowCut: Boolean
+        A Boolean specifying whether to display the model below the cut. The default value is
+        ON.
+    showFreeBodyCut: Boolean
+        A Boolean specifying whether to display the free body cut. The default value is OFF.
+    active: Boolean
+        A Boolean specifying whether the cut is displayed.
+    cutRange: tuple[float]
+        A pair of Floats specifying the acceptable range for positioning the cut.
+    crossSectionalArea: float
+        A Float returning the cross-sectional area of the cut when **showFreeBodyCut** is set to
+        ON.
+
     Notes
     -----
         This object can be accessed by:

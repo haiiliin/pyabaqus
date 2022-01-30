@@ -10,6 +10,12 @@ class PointFastener(Fastener):
     """The PointFastener object defines a point fastener.
     The PointFastener object is derived from the Fastener object. 
 
+    Attributes
+    ----------
+    suppressed: Boolean
+        A Boolean specifying whether the fastener is suppressed or not. The default value is
+        OFF.
+
     Notes
     -----
         This object can be accessed by:

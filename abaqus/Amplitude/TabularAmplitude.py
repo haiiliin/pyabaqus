@@ -10,6 +10,11 @@ class TabularAmplitude(Amplitude):
     convenient points on the time scale. 
     The TabularAmplitude object is derived from the Amplitude object. 
 
+    Attributes
+    ----------
+    baselineCorrection: BaselineCorrection
+        A BaselineCorrection object.
+
     Notes
     -----
         This object can be accessed by:

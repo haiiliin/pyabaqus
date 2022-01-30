@@ -11,6 +11,19 @@ class ConnectorFriction(ConnectorBehaviorOption):
     one or more components of a connector's relative motion. 
     The ConnectorFriction object is derived from the ConnectorBehaviorOption object. 
 
+    Attributes
+    ----------
+    tangentialBehavior: TangentialBehavior
+        A TangentialBehavior object.
+    derivedComponent: DerivedComponent
+        A DerivedComponent object specifying the DerivedComponent used to compute the contact
+        force component direction. This argument applies only if
+        **frictionModel=USER_CUSTOMIZED**, if **useContactForceComponent=ON**, and if
+        **contactForceStyle=DERIVED_COMPONENT**.
+    options: ConnectorOptions
+        A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+        for this ConnectorBehaviorOption.
+
     Notes
     -----
         This object can be accessed by:

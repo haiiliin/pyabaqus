@@ -8,6 +8,21 @@ from ..UtilityAndView.View import View
 class Layer:
     """Objects can be superimposed by displaying them in different layers of a viewport.
 
+    Attributes
+    ----------
+    displayedObject: Displayable
+        A Displayable object specifying the object to be displayed. The Displayable type is an
+        abstract generalization. The concrete possible types are Part, Assembly,
+        ConstrainedSketch, Odb, or XYPlot.
+    view: View
+        A View object specifying the object that controls viewing of the layer.
+    odbDisplay: OdbDisplay
+        An OdbDisplay object specifying the display options for the Odb object.
+    partDisplay: PartDisplayOptions
+        A PartDisplayOptions object specifying the display options for the Part object.
+    assemblyDisplay: AssemblyDisplayOptions
+        An AssemblyDisplayOptions object specifying the display options for the Assembly object.
+
     Notes
     -----
         This object can be accessed by:

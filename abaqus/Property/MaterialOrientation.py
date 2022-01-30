@@ -9,6 +9,16 @@ class MaterialOrientation:
     """The MaterialOrientation object represents the orientation of the material properties and
     composite layups. 
 
+    Attributes
+    ----------
+    additionalRotationType: SymbolicConstant
+        A SymbolicConstant specifying the method used to describe the additional rotation when a
+        valid orientation is specified. Possible values are ROTATION_NONE, ROTATION_ANGLE, and
+        ROTATION_FIELD. The default value is ROTATION_NONE.
+    additionalRotationField: str
+        A String specifying the name of the DiscreteField object specifying the additional
+        rotation. The default value is an empty string.
+
     Notes
     -----
         This object can be accessed by:

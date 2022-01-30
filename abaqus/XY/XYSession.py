@@ -554,14 +554,6 @@ class XYSession(XYSessionBase):
         -------
             A list of XYData objects. and RangeError.
         """
-        # xyDataObjects: list[XYData] = []
-        # for var in variable:
-        #     variable, position, components = var
-        #     for component in components:
-        #         Type, invariant = component
-        #         key = '{}:{}'.format(variable, invariant)
-        #         self.xyDataObjects[key] = xyData = XYData(())
-        #         xyDataObjects.append(xyData)
         self.xyDataObjects['name'] = xyData = XYData(())
         return [xyData]
 

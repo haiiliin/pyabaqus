@@ -5,6 +5,12 @@ class RemeshingRule:
     """The RemeshingRule object controls the adaptive remeshing resizing and the error
     indicators written to the output database for a specified region of the model. 
 
+    Attributes
+    ----------
+    suppressed: Boolean
+        A Boolean specifying whether the remeshing rule is suppressed. Remeshing of the
+        remeshing rule's region will not occur if you suppress a rule. The default value is OFF.
+
     Notes
     -----
         This object can be accessed by:

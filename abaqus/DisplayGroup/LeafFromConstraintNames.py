@@ -10,6 +10,12 @@ class LeafFromConstraintNames(Leaf):
     (DisplayGroup object) commands. 
     The LeafFromConstraintNames object is derived from the Leaf object. 
 
+    Attributes
+    ----------
+    leafType: SymbolicConstant
+        A SymbolicConstant specifying the leaf type. Possible values are TIE,
+        SHELL_TO_SOLID_COUPLING, DISTRIBUTING_COUPLING, KINEMATIC_COUPLING, RIGID_BODY, and MPC.
+
     Notes
     -----
         This object can be accessed by:

@@ -10,6 +10,15 @@ from ..Mesh.MeshFace import MeshFace
 class Skin:
     """The Skin object stores information on skin reinforcements created on entities.
 
+    Attributes
+    ----------
+    elements: MeshElementArray
+        A MeshElementArray object.
+    edges: EdgeArray
+        An EdgeArray object.
+    faces: FaceArray
+        A FaceArray object.
+
     Notes
     -----
         This object can be accessed by:

@@ -11,6 +11,22 @@ from .SectionPoint import SectionPoint
 class FieldOutput:
     """A FieldOutput object contains field data for a specific output variable.
 
+    Attributes
+    ----------
+    dim: int
+        An Int specifying the dimension of vector or the first dimension (number of rows) of
+        matrix.
+    dim2: int
+        An Int specifying the second dimension (number of columns) of matrix.
+    isComplex: Boolean
+        A Boolean specifying whether the data are complex.
+    locations: FieldLocationArray
+        A FieldLocationArray object.
+    values: int
+        A FieldValueArray object specifying the order of the objects in the array is determined
+        by the Abaqus Scripting Interface; see the **data** argument to the addData method for a
+        description of the order.
+
     Notes
     -----
         This object can be accessed by:

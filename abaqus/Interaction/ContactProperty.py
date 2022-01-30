@@ -19,6 +19,31 @@ class ContactProperty(InteractionProperty):
     """The ContactProperty object defines a contact interaction property.
     The ContactProperty object is derived from the InteractionProperty object. 
 
+    Attributes
+    ----------
+    tangentialBehavior: ContactTangentialBehavior
+        A ContactTangentialBehavior object.
+    normalBehavior: NormalBehavior
+        A NormalBehavior object.
+    damping: ContactDamping
+        A ContactDamping object.
+    damage: ContactDamage
+        A ContactDamage object.
+    fractureCriterion: FractureCriterion
+        A FractureCriterion object.
+    cohesiveBehavior: CohesiveBehavior
+        A CohesiveBehavior object.
+    thermalConductance: ThermalConductance
+        A ThermalConductance object.
+    heatGeneration: GapHeatGeneration
+        A GapHeatGeneration object.
+    radiation: Radiation
+        A Radiation object.
+    geometricProperties: GeometricProperties
+        A GeometricProperties object.
+    electricalConductance: GapElectricalConductance
+        A GapElectricalConductance object.
+
     Notes
     -----
         This object can be accessed by:

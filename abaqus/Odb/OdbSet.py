@@ -8,6 +8,27 @@ from .OdbMeshNodeArray import OdbMeshNodeArray
 class OdbSet:
     """The set objects are used to identify regions of a model.
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the name of the set and the repository key.
+    instanceNames: tuple
+        A tuple of Strings specifying the namespaces for the nodes, elements, and faces; None if
+        the set is on a Part or an OdbInstance object.
+    nodes: OdbMeshNodeArray
+        An OdbMeshNodeArray object specifying the nodes of an OdbSet. If a set spans more than
+        one part instance, this member is a sequence of sequences for each part instance.
+    elements: OdbMeshElementArray
+        An OdbMeshElementArray object specifying the elements of an OdbSet. If a set spans more
+        than one part instance, this member is a sequence of sequences for each part instance.
+    faces: SymbolicConstant
+        A tuple of SymbolicConstants specifying the element face. If a set spans more than one
+        part instance, this member is a sequence of sequences for each part instance.
+    instances: str
+        A repository of an OdbInstance object.
+    isInternal: Boolean
+        A Boolean specifying whether the set is internal.
+
     Notes
     -----
         This object can be accessed by:

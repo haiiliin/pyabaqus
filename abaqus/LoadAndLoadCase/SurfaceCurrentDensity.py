@@ -7,6 +7,16 @@ class SurfaceCurrentDensity(Load):
     """The SurfaceCurrentDensity object stores the data for a surface current.
     The SurfaceCurrentDensity object is derived from the Load object. 
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the load repository key.
+    distributionType: SymbolicConstant
+        A SymbolicConstant specifying how the load is distributed spatially. Possible values are
+        UNIFORM and USER_DEFINED. The default value is UNIFORM.
+    region: Region
+        A Region object specifying the region to which the load is applied.
+
     Notes
     -----
         This object can be accessed by:

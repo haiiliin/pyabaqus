@@ -10,6 +10,11 @@ class PropertyTable:
     After PropertyTableDatais instantiated, making changes to PropertyTable may lead to data 
     corruption. 
 
+    Attributes
+    ----------
+    propertyTableDatas: dict[str, PropertyTableData]
+        A repository of PropertyTableData. Specifies all the propertyTableData in PropertyTable
+
     Notes
     -----
         This object can be accessed by:

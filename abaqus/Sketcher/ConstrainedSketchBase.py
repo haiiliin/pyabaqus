@@ -13,6 +13,25 @@ class ConstrainedSketchBase:
     such as Line, Arc, and Spline. ConstrainedSketchVertex, ConstrainedSketchDimension, ConstrainedSketchConstraint, and ConstrainedSketchParameter objects are
     contained in their respective repositories. 
 
+    Attributes
+    ----------
+    constraints: dict[str, ConstrainedSketchConstraint]
+        A repository of ConstrainedSketchConstraint objects.
+    dimensions: dict[str, ConstrainedSketchDimension]
+        A repository of ConstrainedSketchDimension objects.
+    geometry: ConstrainedSketchGeometryArray
+        A ConstrainedSketchGeometryArray object specifying the sketch geometry, such as lines,
+        arcs, circles, and splines.
+    parameters: dict[str, ConstrainedSketchParameter]
+        A repository of ConstrainedSketchParameter objects specifying sketch parameters, which
+        may be associated with dimensions.
+    sketchOptions: ConstrainedSketchOptions
+        A ConstrainedSketchOptions object specifying the sketch option settings.
+    vertices: ConstrainedSketchVertexArray
+        A ConstrainedSketchVertexArray object.
+    imageOptions: ConstrainedSketchImageOptions
+        A ConstrainedSketchImageOptions object.
+
     Notes
     -----
         This object can be accessed by:

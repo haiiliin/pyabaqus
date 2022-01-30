@@ -7,6 +7,24 @@ class CoriolisForce(Load):
     """The CoriolisForce object stores the data for a coriolis force.
     The CoriolisForce object is derived from the Load object. 
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the load repository key.
+    distributionType: SymbolicConstant
+        A SymbolicConstant specifying how the load is distributed spatially. Possible values are
+        UNIFORM and FIELD. The default value is UNIFORM.
+    point1: float
+        A tuple of Floats specifying the first point on the axis of rotation for the load.
+    point2: float
+        A tuple of Floats specifying the second point on the axis of rotation for the load.
+    field: str
+        A String specifying the name of the AnalyticalField object associated with this load.
+        The **field** argument applies only when **distributionType=FIELD**. The default value is an
+        empty string.
+    region: Region
+        A Region object specifying the region to which the load is applied.
+
     Notes
     -----
         This object can be accessed by:

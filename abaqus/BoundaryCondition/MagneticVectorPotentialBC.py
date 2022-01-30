@@ -8,6 +8,23 @@ class MagneticVectorPotentialBC(BoundaryCondition):
     boundary condition. 
     The MagneticVectorPotentialBC object is derived from the BoundaryCondition object. 
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the boundary condition repository key.
+    distributionType: SymbolicConstant
+        A SymbolicConstant specifying how the boundary condition is distributed spatially.
+        Possible values are UNIFORM and USER_DEFINED. The default value is UNIFORM.
+    category: SymbolicConstant
+        A SymbolicConstant specifying the category of the boundary condition. Possible values
+        are MECHANICAL and THERMAL.
+    region: Region
+        A Region object specifying the region to which the boundary condition is applied.
+    localCsys: str
+        None or a DatumCsys object specifying the local coordinate system of the boundary
+        condition's degrees of freedom. If **localCsys=None**, the degrees of freedom are defined
+        in the global coordinate system. The default value is None.
+
     Notes
     -----
         This object can be accessed by:

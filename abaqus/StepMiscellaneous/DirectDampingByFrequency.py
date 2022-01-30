@@ -4,6 +4,11 @@ from .DirectDampingByFrequencyComponentArray import DirectDampingByFrequencyComp
 class DirectDampingByFrequency:
     """A DirectDampingByFrequency object contains direct damping parameters.
 
+    Attributes
+    ----------
+    components: DirectDampingByFrequencyComponentArray
+        A DirectDampingByFrequencyComponentArray object.
+
     Notes
     -----
         This object can be accessed by:

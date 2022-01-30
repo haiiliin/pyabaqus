@@ -7,6 +7,11 @@ class BeamSection(Section):
     """The BeamSection object defines the properties of a beam section.
     The BeamSection object is derived from the Section object. 
 
+    Attributes
+    ----------
+    beamTransverseShear: TransverseShearBeam
+        A TransverseShearBeam object specifying the transverse shear stiffness properties.
+
     Notes
     -----
         This object can be accessed by:

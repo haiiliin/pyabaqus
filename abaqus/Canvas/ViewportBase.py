@@ -23,6 +23,193 @@ class ViewportBase:
     object stores the various settings that determine how objects are displayed within that 
     viewport. 
 
+    Attributes
+    ----------
+    displayMode: SymbolicConstant
+        A SymbolicConstant specifying the display mode of the viewport. Possible values
+        are:SINGLE, specifying a single **displayedObject**.OVERLAY, specifying one or more layers
+        to be displayed simultaneously—each layer contains one **displayedObject**.
+    viewManipLayers: SymbolicConstant
+        A SymbolicConstant specifying which layer or layers will be controlled by the view
+        manipulation tools when **displayMode=OVERLAY**. Possible values are ALL and CURRENT.
+    layerOffset: float
+        A Float specifying a factor to be used in offsetting layers in the screen Z direction.
+        Possible values are –1 to 1. A negative value reverses the apparent order in which the
+        layers are plotted.
+    windowState: SymbolicConstant
+        A SymbolicConstant specifying the current state of a viewport. Possible values are
+        NORMAL, MAXIMIZED, and MINIMIZED.
+    currentWidth: float
+        A Float specifying the width in millimeters of the current viewport, regardless of the
+        value of **windowState**.
+    currentHeight: float
+        A Float specifying the height in millimeters of the current viewport, regardless of the
+        value of **windowState**, and including the title bar.
+    applyLinkedCommands: Boolean
+        A Boolean specifying whether the viewport is linked for synchronization. The default
+        value is ON.
+    activeColorModes: SymbolicConstant
+        A SymbolicConstant specifying the currently active color mappings. Possible values
+        are:
+        DEFAULT_COLORS
+        PART_GEOM_MAP_COLORS
+        ASSEMBLY_MAP_COLORS
+        PART_MAP_COLORS
+        INSTANCE_MAP_COLORS
+        INSTANCE_TYPE_MAP_COLORS
+        SECTION_MAP_COLORS
+        MATERIAL_MAP_COLORS
+        LOAD_MAP_COLORS
+        BC_MAP_COLORS
+        INTERACTION_MAP_COLORS
+        CONSTRAINT_MAP_COLORS
+        SET_MAP_COLORS
+        SURFACE_MAP_COLORS
+        INTERNAL_SET_MAP_COLORS
+        INTERNAL_SURFACE_MAP_COLORS
+        DISPLAY_GRP_MAP_COLORS
+        SELECTION_GRP_MAP_COLORS
+        ELTYPE_MAP_COLORS
+        PLOT_MAP_COLORS
+        MESH_MAP_COLORS
+        The default value is DEFAULT_COLORS.
+    colorMode: SymbolicConstant
+        A SymbolicConstant specifying the last applied color mapping. Possible values
+        are:
+        DEFAULT_COLORS
+        PART_GEOM_MAP_COLORS
+        ASSEMBLY_MAP_COLORS
+        PART_MAP_COLORS
+        INSTANCE_MAP_COLORS
+        INSTANCE_TYPE_MAP_COLORS
+        SECTION_MAP_COLORS
+        MATERIAL_MAP_COLORS
+        LOAD_MAP_COLORS
+        BC_MAP_COLORS
+        INTERACTION_MAP_COLORS
+        CONSTRAINT_MAP_COLORS
+        SET_MAP_COLORS
+        SURFACE_MAP_COLORS
+        INTERNAL_SET_MAP_COLORS
+        INTERNAL_SURFACE_MAP_COLORS
+        DISPLAY_GRP_MAP_COLORS
+        SELECTION_GRP_MAP_COLORS
+        ELTYPE_MAP_COLORS
+        PLOT_MAP_COLORS
+        MESH_MAP_COLORS
+        The default value is DEFAULT_COLORS.
+    translucency: float
+        A Float specifying the translucency that will be applied to objects colored using
+        **initialColor** and it needs to be set along with **initialColor**. If **initialColor** is
+        set to 'As is' then translucency will have no effect.
+    animationConnect: Boolean
+        A Boolean specifying whether an animation is connected to the viewport.
+    colorMappings: dict[str, AttributeColorMap]
+        A repository of AttributeColorMap objects specifying the objects cannot be constructed
+        but the following attribute maps are supported:
+        "type"
+        "Element set"
+        "Material"
+        "Section"
+        "Default"
+        "Part"
+        "Part instance"
+        "Element type"
+        "Averaging region"
+        "Assembly"
+        "Property"
+        "Set"
+        "Surface"
+        "Skin"
+        "Profile"
+        "Part shape"
+        "Part status"
+        "Part geometry"
+        "Meshability"
+        "Instance type"
+        "Load"
+        "Boundary condition"
+        "Interaction"
+        "Constraint"
+        "Interaction type"
+        "Constraint type"
+        "Display group"
+        "Selection group"
+        "Interaction property"
+        "Connector"
+        "Connector type"
+        "Connector property"
+        "Internal set"
+        "Internal surface"
+        "mapColors"
+        "autoColors"
+        "overrides"
+        "defaultAutoColors"
+        "defaultOverrides"
+        "objectToCopy"
+        "colorMapping"
+        "colorMappings"
+        "colorMode"
+        "attributeColors"
+        "updateOverrides"
+        "colorCodeOverride"
+        "initialColor"
+        "Layup"
+        "Ply"
+    initialColor: str
+        A String specifying the color that will be applied to all objects in the viewport at the
+        start of color coding. The possible values are 'As is', 'Default' or a string with a
+        hexadecimal representation of a color.
+    currentLayer: str
+        A String specifying which layer is affected by options settings when **displayMode**
+        =OVERLAY. The current layer is also the only layer affected by view manipulations
+        when**viewManipLayers** =CURRENT.
+    displayedObject: Displayable
+        A Displayable object specifying the object to be displayed. The Displayable type is an
+        abstract generalization. The concrete possible types are Part, Assembly,
+        ConstrainedSketch, Odb, PlyStackPlot, or XYPlot. If **displayedObject=None**, Abaqus
+        displays an empty viewport.
+    layers: dict[str, Layer]
+        A repository of Layer objects specifying the key to the repository is a String with the
+        name of the layer.
+    view: View
+        A View object specifying the object that controls viewing of the viewport content.
+    odbDisplay: OdbDisplay
+        An OdbDisplay object specifying the display options for the Odb object.
+    partDisplay: PartDisplayOptions
+        A PartDisplayOptions object specifying the display options for the Part object.
+    assemblyDisplay: AssemblyDisplayOptions
+        An AssemblyDisplayOptions object specifying the display options for the Assembly object.
+    viewportAnnotationOptions: ViewportAnnotationOptions
+        A ViewportAnnotationOptions object.
+    detailPlotOptions: DetailPlotOptions
+        A DetailPlotOptions object.
+    annotationsToPlot: AnnotationsToPlotArray
+        An AnnotationsToPlotArray object.
+    visibleLayers: tuple
+        A tuple of Strings specifying the names of layers that will be displayed in the viewport
+        when **displayMode** = OVERLAY.
+    currentOrigin: tuple[float]
+        A pair of Floats specifying the **X**- and **Y**-coordinates in millimeters in the canvas
+        coordinate system of the lower left corner of the current viewport, regardless of the
+        value of **windowState**.
+    iconOrigin: tuple[float]
+        A pair of Floats specifying the **X**- and **Y**-coordinates in millimeters of the lower
+        left corner of the current viewport from a coordinate system having its origin in the
+        lower left corner of the drawing area. This origin refers to the viewport location when
+        **windowState** =MINIMIZED.
+    lightOptions: LightOptions
+        A LightOptions object.
+    imageOptions: ImageOptions
+        An ImageOptions object.
+    movieOptions: MovieOptions
+        A MovieOptions object.
+    animationController: AnimationController
+        An AnimationController object.
+    drawings: tuple
+        A tuple of Strings specifying keys to the session.drawings repository. The default value
+        is an empty sequence.
+
     Notes
     -----
         This object can be accessed by:

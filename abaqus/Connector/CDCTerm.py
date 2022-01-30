@@ -5,6 +5,12 @@ from .ConnectorOptions import ConnectorOptions
 class CDCTerm:
     """The CDCTerm object is used to create contributing terms for a DerivedComponent object.
 
+    Attributes
+    ----------
+    options: ConnectorOptions
+        A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+        for this ConnectorBehaviorOption.
+
     Notes
     -----
         This object can be accessed by:

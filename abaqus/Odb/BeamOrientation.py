@@ -8,6 +8,17 @@ class BeamOrientation:
     Specifying the beam orientation using an additional node in the element connectivity 
     list is not supported. 
 
+    Attributes
+    ----------
+    method: SymbolicConstant
+        A SymbolicConstant specifying the orientation assignment method. Possible values are
+        N1_COSINES, CSYS, and VECT.
+    region: OdbSet
+        An OdbSet object specifying a region for which the beam orientation is defined.
+    vector: float
+        A tuple of Floats specifying direction cosines of the n1-direction of the beam
+        cross-section.
+
     Notes
     -----
         This object can be accessed by:

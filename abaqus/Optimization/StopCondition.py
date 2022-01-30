@@ -6,6 +6,14 @@ class StopCondition:
     StopCondition object has no explicit constructor. The methods and members of the 
     StopCondition object are common to all objects derived from StopCondition. 
 
+    Attributes
+    ----------
+    name: str
+        A String specifying the stop condition repository key.
+    region: SymbolicConstant
+        The SymbolicConstant MODEL or a Region object specifying the region to which the stop
+        condition is applied. The default value is MODEL.
+
     Notes
     -----
         This object can be accessed by:

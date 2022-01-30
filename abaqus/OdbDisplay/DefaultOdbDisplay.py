@@ -14,6 +14,29 @@ class DefaultOdbDisplay:
     """The DefaultOdbDisplay object is a limited-functionality version of the OdbDisplay
     object. 
 
+    Attributes
+    ----------
+    basicOptions: BasicOptions
+        A BasicOptions object.
+    commonOptions: CommonOptions
+        A CommonOptions object.
+    contourOptions: ContourOptions
+        A ContourOptions object.
+    displayBodyOptions: DisplayBodyOptions
+        A DisplayBodyOptions object.
+    freeBodyOptions: FreeBodyOptions
+        A FreeBodyOptions object.
+    streamOptions: StreamOptions
+        A StreamOptions object.
+    materialOrientationOptions: OrientationOptions
+        An OrientationOptions object.
+    superimposeOptions: SuperimposeOptions
+        A SuperimposeOptions object.
+    symbolOptions: SymbolOptions
+        A SymbolOptions object.
+    viewCutOptions: ViewCutOptions
+        A ViewCutOptions object.
+
     Notes
     -----
         This object can be accessed by:

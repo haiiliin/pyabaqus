@@ -10,6 +10,20 @@ class DatumCsys(Datum):
     a DatumCsys object. 
     The DatumCsys object is derived from the Datum object. 
 
+    Attributes
+    ----------
+    coordSysType: SymbolicConstant
+        A SymbolicConstant specifying the type of the coordinate system. Possible values are
+        CARTESIAN, CYLINDRICAL, and SPHERICAL.
+    origin: DatumPoint
+        A DatumPoint object specifying the origin of the coordinate system.
+    axis1: DatumAxis
+        A DatumAxis object specifying the 1-direction of the coordinate system.
+    axis2: DatumAxis
+        A DatumAxis object specifying the 2-direction of the coordinate system.
+    axis3: DatumAxis
+        A DatumAxis object specifying the 3-direction of the coordinate system.
+
     Notes
     -----
         This object can be accessed by:

@@ -22,6 +22,88 @@ class AssemblyDisplayOptions:
     constructor. When you create a new viewport, the settings are copied from the current 
     viewport. 
 
+    Attributes
+    ----------
+    bcs: Boolean
+        A Boolean specifying whether boundary conditions are shown. The default value is OFF.
+    connectors: Boolean
+        A Boolean specifying whether connectors are shown. The default value is OFF.
+    cnxEndPoints: Boolean
+        A Boolean specifying whether the connector end points are shown. This member is
+        applicable only if **connectors=ON**. The default value is ON.
+    cnxLocalAxes: Boolean
+        A Boolean specifying whether the connector local coordinate system axes are shown. This
+        member is applicable only if **connectors=ON**. The default value is ON.
+    cnxTypeLabels: Boolean
+        A Boolean specifying whether the connector section type labels are shown. This member is
+        applicable only if **connectors=ON**. The default value is ON.
+    cnxTagDisplay: Boolean
+        A Boolean specifying whether the tag information is displayed along with the connector
+        section type labels. This member is applicable only if **connectors=ON** and if
+        **cnxTypeLabels=ON**. The default value is OFF.
+    constraints: Boolean
+        A Boolean specifying whether constraints are shown. The default value is OFF.
+    engineeringFeatures: Boolean
+        A Boolean specifying whether to display engineering features. The default value is OFF.
+    geometricRestrictions: Boolean
+        A Boolean specifying whether geometric restrictions are shown. The default value is OFF.
+    renderBeamProfiles: Boolean
+        A Boolean specifying whether to render the beam profiles. The default value is OFF.
+    beamScaleFactor: float
+        A Float specifying the beam profile scale factor. The beamScaleFactor must be greater
+        than zero. The default value is 1.0.
+    predefinedFields: Boolean
+        A Boolean specifying whether fields and initial conditions are shown. The default value
+        is OFF.
+    interactions: Boolean
+        A Boolean specifying whether interactions are shown. The default value is OFF.
+    loads: Boolean
+        A Boolean specifying whether loads are shown. The default value is OFF.
+    mesh: Boolean
+        A Boolean specifying whether the mesh is shown. The default value is OFF.
+    optimizationTasks: Boolean
+        A Boolean specifying whether optimization tasks are shown. The default value is OFF.
+    stopConditions: Boolean
+        A Boolean specifying whether stop conditions are shown. The default value is OFF.
+    renderStyle: SymbolicConstant
+        A SymbolicConstant specifying how the image in the viewport is rendered. Possible values
+        are WIREFRAME, HIDDEN, SHADED, and FILLED. The default value is WIREFRAME.
+    bcOptions: BCDisplayOptions
+        A BCDisplayOptions object.
+    constraintOptions: ConstraintDisplayOptions
+        A ConstraintDisplayOptions object.
+    displayGroup: DisplayGroup
+        A DisplayGroup object specifying the current display group and referring to an object in
+        the **displayGroups** member of Session.
+    displayGroupInstances: dict[str, DisplayGroupInstance]
+        A repository of DisplayGroupInstance objects.
+    engineeringFeatureOptions: EngineeringFeatureDisplayOptions
+        An EngineeringFeatureDisplayOptions object.
+    predefinedFieldOptions: PredefinedFieldDisplayOptions
+        A PredefinedFieldDisplayOptions object.
+    geometricRestrictionOptions: GeometricRestrictionDisplayOptions
+        A GeometricRestrictionDisplayOptions object.
+    geometryOptions: GeometryDisplayOptions
+        A GeometryDisplayOptions object.
+    interactionOptions: InteractionDisplayOptions
+        An InteractionDisplayOptions object.
+    loadOptions: LoadDisplayOptions
+        A LoadDisplayOptions object.
+    meshOptions: MeshDisplayOptions
+        A MeshDisplayOptions object.
+    optimizationTaskOptions: OptimizationTaskDisplayOptions
+        An OptimizationTaskDisplayOptions object.
+    stopConditionOptions: StopConditionDisplayOptions
+        A StopConditionDisplayOptions object.
+    symbolOptions: SymbolDisplayOptions
+        A SymbolDisplayOptions object.
+    visibleInstances: tuple
+        A tuple of Strings specifying the names of the part instances that are visible in the
+        viewport. The default value is an empty sequence.
+    step: str
+        A String specifying the step for which objects are to be displayed. Possible values are
+        any valid step name. The default value is "Initial".
+
     Notes
     -----
         This object can be accessed by:

@@ -4,7 +4,6 @@ from abaqusConstants import *
 from .AccelerationBC import AccelerationBC
 from .AccelerationBCState import AccelerationBCState
 from .AccelerationBaseMotionBC import AccelerationBaseMotionBC
-# from .AccelerationBaseMotionBCState import AccelerationBaseMotionBCState
 from .AccelerationBaseMotionBCState import AccelerationBaseMotionBCState
 from .AcousticPressureBC import AcousticPressureBC
 from .AcousticPressureBCState import AcousticPressureBCState
@@ -989,7 +988,6 @@ class BoundaryConditionModel(ModelBase):
                                                                                       component1, component2,
                                                                                       component3, amplitude,
                                                                                       distributionType, localCsys)
-        # self.steps[createStepName].boundaryConditionStates[name] = MagneticVectorPotentialBCState()
         return boundaryCondition
 
     def MaterialFlowBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
@@ -1135,7 +1133,6 @@ class BoundaryConditionModel(ModelBase):
         """
         self.boundaryConditions[name] = boundaryCondition = RetainedNodalDofsBC(name, createStepName, region, u1, u2,
                                                                                 u3, ur1, ur2, ur3)
-        # self.steps[createStepName].boundaryConditionStates[name] = RetainedNodalDofsBCState()
         return boundaryCondition
 
     def SecondaryBaseBC(self, name: str, createStepName: str, regions: RegionArray, dofs: tuple) -> SecondaryBaseBC:

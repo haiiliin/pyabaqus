@@ -5,6 +5,11 @@ class NetworkDatabaseConnector:
     """The NetworkDatabaseConnector object allows you to access an output database on a remote
     system. 
 
+    Attributes
+    ----------
+    connected: Boolean
+        A Boolean specifying if the connection between the client and the server is established.
+
     Notes
     -----
         This object can be accessed by:

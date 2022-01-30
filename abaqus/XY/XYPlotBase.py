@@ -8,6 +8,21 @@ from .XYCurve import XYCurve
 class XYPlotBase:
     """The XYPlot object is used to display Chart objects.
 
+    Attributes
+    ----------
+    area: Area
+        An Area object specifying position, padding, background and borders of the XYPlot
+        object.
+    title: Title
+        A Title object specifying the title of the XYPlot object.
+    charts: dict[str, Chart]
+        A repository of Chart objects.
+    curves: dict[str, XYCurve]
+        A repository of XYCurve objects.
+    transform: float
+        A tuple of Floats specifying a transformation matrix used to scale or pan along the axes
+        of the active Chart object of this XYPlot.
+
     Notes
     -----
         This object can be accessed by:

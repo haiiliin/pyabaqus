@@ -6,6 +6,12 @@ class SectionAssignment:
     """The SectionAssignment object is used to specify a section assignment on an assembly or
     part. Section assignments on the assembly are limited to connector elements only. 
 
+    Attributes
+    ----------
+    suppressed: Boolean
+        A Boolean specifying whether the section assignment is suppressed or not. The default
+        value is OFF.
+
     Notes
     -----
         This object can be accessed by:

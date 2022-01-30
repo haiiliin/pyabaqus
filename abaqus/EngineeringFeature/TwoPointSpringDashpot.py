@@ -7,6 +7,12 @@ class TwoPointSpringDashpot(SpringDashpot):
     part or an assembly. 
     The TwoPointSpringDashpot object is derived from the SpringDashpot object. 
 
+    Attributes
+    ----------
+    suppressed: Boolean
+        A Boolean specifying whether the spring/dashpot is suppressed or not. The default value
+        is OFF.
+
     Notes
     -----
         This object can be accessed by:

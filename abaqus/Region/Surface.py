@@ -13,6 +13,22 @@ class Surface:
     geometric or discrete entities but not both. An instance of a Surface object is 
     available from the *surface* member of the Assembly object. 
 
+    Attributes
+    ----------
+    edges: EdgeArray
+        An EdgeArray object.
+    faces: FaceArray
+        A FaceArray object.
+    elements: MeshElementArray
+        A MeshElementArray object.
+    nodes: MeshNodeArray
+        A MeshNodeArray object.
+    sides: SymbolicConstant
+        A tuple of SymbolicConstants specifying the sides; for example, (SIDE1, SIDE2).
+    instances: int
+        A tuple of Ints specifying the instances. This member is not applicable for a Surface
+        object on an output database.
+
     Notes
     -----
         This object can be accessed by:

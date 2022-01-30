@@ -7,6 +7,17 @@ class MdbData:
     is opened or a new model is created. There is one MdbData for each model in session. 
     MdbData is updated when it is displayed in a viewport. 
 
+    Attributes
+    ----------
+    stepPeriods: float
+        A tuple of (String, Float) tuples specifying the stepName and the stepPeriod.
+    steps: dict[str, MdbDataStep]
+        A repository of MdbDataStep objects specifying the list of steps. The repository is
+        read-only.
+    instances: dict[str, MdbDataInstance]
+        A repository of MdbDataInstance objects specifying the list of instances. The repository
+        is read-only.
+
     Notes
     -----
         This object can be accessed by:
