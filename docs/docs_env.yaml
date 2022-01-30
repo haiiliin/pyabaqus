@@ -20,3 +20,4 @@ dependencies:
     - numpy
     - PyQt5
     - sphinx-toolbox
+    - numpydoc

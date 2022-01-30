@@ -41,7 +41,7 @@ extensions = [
     # 'sphinx.ext.viewcode',
 ]
 
-numpydoc_show_inherited_class_members = True
+# numpydoc_show_inherited_class_members = True
 
 # True to convert the type definitions in the docstrings as references. Defaults to False.
 napoleon_preprocess_types = True

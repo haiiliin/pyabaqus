@@ -20,7 +20,10 @@ class AdaptivityStep(StepBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].steps[name].AdaptiveMeshConstraintState
+
+            .. code-block:: python
+
+                mdb.models[name].steps[name].AdaptiveMeshConstraintState
 
         Parameters
         ----------
@@ -72,7 +75,10 @@ class AdaptivityStep(StepBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].steps[name].DisplacementAdaptiveMeshConstraintState
+
+            .. code-block:: python
+
+                mdb.models[name].steps[name].DisplacementAdaptiveMeshConstraintState
 
         Parameters
         ----------
@@ -155,7 +161,10 @@ class AdaptivityStep(StepBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].steps[name].VelocityAdaptiveMeshConstraintState
+
+            .. code-block:: python
+
+                mdb.models[name].steps[name].VelocityAdaptiveMeshConstraintState
 
         Parameters
         ----------
@@ -227,7 +236,10 @@ class AdaptivityStep(StepBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].steps[name].AdaptiveMeshDomain
+
+            .. code-block:: python
+
+                mdb.models[name].steps[name].AdaptiveMeshDomain
 
         Parameters
         ----------
