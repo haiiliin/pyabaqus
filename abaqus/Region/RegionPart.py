@@ -18,6 +18,15 @@ from ..Mesh.MeshNode import MeshNode
 
 
 class RegionPart(RegionPartBase):
+    """The following commands operate on Part objects. For more information about the Part 
+    object, see Part object. 
+
+    Notes
+    -----
+        This object can be accessed by:
+        - import regionToolset
+
+    """
 
     def Surface(self, side1Faces: tuple[Face] = None, side2Faces: tuple[Face] = None, side12Faces: tuple[Face] = None,
                 end1Edges: tuple[Face] = None, end2Edges: tuple[Face] = None, circumEdges: tuple[Face] = None,
