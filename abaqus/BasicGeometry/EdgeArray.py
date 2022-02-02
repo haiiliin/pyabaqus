@@ -50,9 +50,6 @@ class EdgeArray:
         .. code-block:: python
 
             part.EdgeArray
-
-        Parameters
-        ----------
         edges
             A list of Edge objects. 
 
@@ -76,9 +73,6 @@ class EdgeArray:
         findAt will always try to find objects among all the edges in the part or assembly
         instance and will not restrict itself to a subset even if the EdgeArray represents such
         subset.
-
-        Parameters
-        ----------
         coordinates
             A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the object to 
             find.findAt returns either an Edge object or a sequence of Edge objects based on the 
@@ -101,9 +95,6 @@ class EdgeArray:
     def getClosest(self, coordinates: tuple, searchTolerance: str = ''):
         """This method returns an object or objects in the EdgeArray closest to the given set of
         points, where the given points need not lie on the edges in the EdgeArray.
-
-        Parameters
-        ----------
         coordinates
             A sequence of a sequence of floats, where each sequence of floats describes the *X*-, 
             *Y*-, and *Z*-coordinates of a 
@@ -132,9 +123,6 @@ class EdgeArray:
         specified *mask*. This command is generated when the JournalOptions are set to
         COMPRESSEDINDEX. When a large number of objects are involved, this method is highly
         efficient.
-
-        Parameters
-        ----------
         mask
             A String specifying the object or objects. 
 
@@ -153,9 +141,6 @@ class EdgeArray:
     def getMask(self):
         """This method returns a string specifying the object or objects.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A String specifying the object or objects. . 
@@ -166,9 +151,6 @@ class EdgeArray:
     def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
                          zMax: str = ''):
         """This method returns an array of edge objects that lie within the specified bounding box.
-
-        Parameters
-        ----------
         xMin
             A float specifying the minimum *X*-boundary of the bounding box. 
         yMin
@@ -192,9 +174,6 @@ class EdgeArray:
     def getByBoundingCylinder(self, center1: tuple, center2: tuple, radius: str):
         """This method returns an array of edge objects that lie within the specified bounding
         cylinder.
-
-        Parameters
-        ----------
         center1
             A tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the first end of the 
             cylinder. 
@@ -214,9 +193,6 @@ class EdgeArray:
     def getByBoundingSphere(self, center: tuple, radius: str):
         """This method returns an array of edge objects that lie within the specified bounding
         sphere.
-
-        Parameters
-        ----------
         center
             A tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the sphere. 
         radius
@@ -232,9 +208,6 @@ class EdgeArray:
     def getBoundingBox(self):
         """This method returns a dictionary of two tuples representing minimum and maximum boundary
         values of the bounding box of the minimum size containing the edge sequence.
-
-        Parameters
-        ----------
 
         Returns
         -------

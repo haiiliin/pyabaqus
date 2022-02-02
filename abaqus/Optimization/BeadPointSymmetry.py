@@ -27,9 +27,6 @@ class BeadPointSymmetry(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].BeadPointSymmetry
-
-        Parameters
-        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -48,9 +45,6 @@ class BeadPointSymmetry(GeometricRestriction):
 
     def setValues(self, csys: int = None):
         """This method modifies the BeadPointSymmetry object.
-
-        Parameters
-        ----------
         csys
             None or a DatumCsys object specifying the position of the symmetry point defined as the 
             origin of a local coordinate system. If *csys*=None, the global coordinate system is 

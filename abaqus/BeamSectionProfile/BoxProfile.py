@@ -36,9 +36,6 @@ class BoxProfile(Profile):
 
             mdb.models[name].BoxProfile
             session.odbs[name].BoxProfile
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         a
@@ -76,9 +73,6 @@ class BoxProfile(Profile):
 
     def setValues(self, t2: float = 0, t3: float = 0, t4: float = 0):
         """This method modifies the BoxProfile object.
-
-        Parameters
-        ----------
         t2
             A Float specifying the wall thickness of the second segment. *t2* is required only when 
             *uniformThickness*=OFF. The default value is 0.0. 

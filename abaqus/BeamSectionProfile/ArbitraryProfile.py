@@ -43,9 +43,6 @@ class ArbitraryProfile(Profile):
 
             mdb.models[name].ArbitraryProfile
             session.odbs[name].ArbitraryProfile
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         table
@@ -65,13 +62,6 @@ class ArbitraryProfile(Profile):
 
     def setValues(self):
         """This method modifies the ArbitraryProfile object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

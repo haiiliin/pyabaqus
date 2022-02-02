@@ -41,9 +41,6 @@ class LeafFromOdbElementPick(Leaf):
         .. code-block:: python
 
             LeafFromOdbElementPick
-
-        Parameters
-        ----------
         elementPick
             A sequence of tuples of the form [part name, entity count, machine readable pick 
             strings]. 

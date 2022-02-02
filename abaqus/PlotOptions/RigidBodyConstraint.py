@@ -20,9 +20,6 @@ class RigidBodyConstraint:
     def constraintData(self):
         """This method returns constraint data if any are associated with the object.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A String Value: NONE in the absence of constraint data. . 

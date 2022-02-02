@@ -66,9 +66,6 @@ class SizingTask(OptimizationTask):
         .. code-block:: python
 
                       mdb.models[name].SizingTask
-
-        Parameters
-        ----------
         name
             A String specifying the optimization task repository key. 
         abaqusSensitivities
@@ -122,9 +119,6 @@ class SizingTask(OptimizationTask):
                   stopCriteriaDesignCycle: int = 4, thicknessMoveLimit: float = 0,
                   thicknessUpdateStrategy: SymbolicConstant = NORMAL, groupOperator: Boolean = OFF):
         """This method modifies the SizingTask object.
-
-        Parameters
-        ----------
         abaqusSensitivities
             A Boolean specifying whether to use Abaqus to compute the design responses and their 
             sensitivities. The default value is True. 

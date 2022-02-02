@@ -33,9 +33,6 @@ class ObjectiveFunction:
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].ObjectiveFunction
-
-        Parameters
-        ----------
         name
             A String specifying the objective function repository key. 
         objectives
@@ -52,9 +49,6 @@ class ObjectiveFunction:
 
     def setValues(self, target: SymbolicConstant = MINIMIZE):
         """This method modifies the ObjectiveFunction object.
-
-        Parameters
-        ----------
         target
             A SymbolicConstant specifying the target of the objective function. Possible values are 
             MINIMIZE, MAXIMIZE, and MINIMIZE_MAXIMUM. The default value is MINIMIZE.

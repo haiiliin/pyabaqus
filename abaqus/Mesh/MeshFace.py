@@ -33,9 +33,6 @@ class MeshFace:
     def getElemEdges(self):
         """This method returns a tuple of unique element edges on the element face.
 
-        Parameters
-        ----------
-
         Returns
         -------
         edges: tuple[MeshEdge]
@@ -46,9 +43,6 @@ class MeshFace:
     def getElements(self):
         """This method returns a tuple of elements that share the element face.
 
-        Parameters
-        ----------
-
         Returns
         -------
         elements: tuple[MeshElement]
@@ -58,9 +52,6 @@ class MeshFace:
 
     def getNodes(self):
         """This method returns a tuple of nodes on the element face.
-
-        Parameters
-        ----------
 
         Returns
         -------
@@ -73,9 +64,6 @@ class MeshFace:
         """This method returns an array of mesh node objects that are obtained by recursively
         finding adjacent element faces that are at an angle of less than or equal to the
         specified angle.
-
-        Parameters
-        ----------
         angle
             A float specifying the value of the face angle. 
 
@@ -89,9 +77,6 @@ class MeshFace:
     def getNormal(self):
         """This method returns the normal direction for the element face.
 
-        Parameters
-        ----------
-
         Returns
         -------
         normal: tuple[float]
@@ -104,9 +89,6 @@ class MeshFace:
         """This method returns an array of element face objects that are obtained by recursively
         finding adjacent element faces that are at an angle of less than or equal to the
         specified angle.
-
-        Parameters
-        ----------
         angle
             A float specifying the value of the face angle. 
 
@@ -121,9 +103,6 @@ class MeshFace:
         """This method returns an array of element edge objects that are obtained by recursively
         finding adjacent element edges that are at an angle of less than or equal to the
         specified face angle.
-
-        Parameters
-        ----------
         angle
             A float specifying the value of the face angle in degrees. 
 
@@ -138,9 +117,6 @@ class MeshFace:
         """This method returns an array of mesh Element objects that are obtained by recursively
         finding adjacent element faces that are at an angle of less than or equal to the
         specified angle.
-
-        Parameters
-        ----------
         angle
             A float specifying the value of the face angle. 
 
@@ -155,9 +131,6 @@ class MeshFace:
         """This method returns an array of element edge objects that are obtained by recursively
         finding adjacent element faces that are at an angle of less than or equal to the
         specified face angle with the seed face.
-
-        Parameters
-        ----------
         angle
             A float specifying the value of the face angle in degrees. 
 
@@ -172,9 +145,6 @@ class MeshFace:
         """This method returns an array of mesh Element objects that are obtained by recursively
         finding adjacent elements via topology.
 
-        Parameters
-        ----------
-
         Returns
         -------
         elements: MeshElementArray
@@ -186,9 +156,6 @@ class MeshFace:
         """This method returns an array of element face objects, obtained by traversing shell
         elements or the exterior of a solid mesh, and recursively finding adjacent element faces
         by layer.
-
-        Parameters
-        ----------
         numLayers
             A int specifying the value of the number of layers. 
 

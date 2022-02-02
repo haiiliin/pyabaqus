@@ -21,9 +21,6 @@ class SmoothingAssignment:
     def changeValuesInStep(self, stepName: str, index: int, value: SymbolicConstant):
         """This method allows modification of surface smoothing assignments already defined on
         surfaces in a given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the surface smoothing assignments are 
             to be modified. 
@@ -41,9 +38,6 @@ class SmoothingAssignment:
     def appendInStep(self, stepName: str, assignments: SymbolicConstant):
         """This method allows addition of surface smoothing assignments to new surfaces in a given
         step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which new surface smoothing assignments are 
             to be defined. 
@@ -59,9 +53,6 @@ class SmoothingAssignment:
     def delete(self, indices: tuple):
         """The delete method allows you to delete existing surface smoothing assignments from
         ContactExp and ContactStd objects.
-
-        Parameters
-        ----------
         indices
             A sequence of Ints specifying the index of each surface smoothing assignment to delete. 
         """

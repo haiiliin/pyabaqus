@@ -28,9 +28,6 @@ class RegisteredDictionary(CommandRegister):
 
             customKernel.RegisteredDictionary
 
-        Parameters
-        ----------
-
         Returns
         -------
             A RegisteredDictionary object. . 
@@ -41,17 +38,11 @@ class RegisteredDictionary(CommandRegister):
     def Methods(self):
         """The RegisteredDictionary object supports the same methods as a Python dictionary. In
         addition, the RegisteredDictionary object supports the changeKey method.
-
-        Parameters
-        ----------
         """
         pass
 
     def changeKey(self, fromName: str, toName: str):
         """This method changes the name of a key in the dictionary.
-
-        Parameters
-        ----------
         fromName
             A String or an integer specifying the name of the key to be changed. 
         toName

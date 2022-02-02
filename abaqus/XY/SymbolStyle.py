@@ -38,9 +38,6 @@ class SymbolStyle:
 
             session.SymbolStyle
             xyPlot.SymbolStyle
-
-        Parameters
-        ----------
         color
             A String specifying the color to be used when drawing a marker with this SymbolStyle 
             object. The default value is "White". 
@@ -79,9 +76,6 @@ class SymbolStyle:
     def setValues(self, color: str = '', show: Boolean = ON, marker: SymbolicConstant = FILLED_CIRCLE,
                   size: float = 2):
         """This method modifies the SymbolStyle object.
-
-        Parameters
-        ----------
         color
             A String specifying the color to be used when drawing a marker with this SymbolStyle 
             object. The default value is "White". 

@@ -12,6 +12,8 @@ Before you can access the Abaqus model and output database, you need to import s
 
 In the module `abaqus`, two import objects are provided, `mdb` and `session`, which represent the Abaqus model database and a object controls the Abaqus options. 
 
-.. autoclass:: abaqus.Mdb.Mdb.Mdb
+The `mdb` object is the high-level Abaqus model database. A model database stores models and analysis controls.
 
-.. autoclass:: abaqus.Session.Session.Session
+.. autoclass:: abaqus.Mdb.Mdb.Mdb
+    :members:
+    :inherited-members:

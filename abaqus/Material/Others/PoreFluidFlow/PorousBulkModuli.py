@@ -32,9 +32,6 @@ class PorousBulkModuli:
             This function can be accessed by:
             - mdb.models[name].materials[name].PorousBulkModuli
             - session.odbs[name].materials[name].PorousBulkModuli
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -48,8 +45,5 @@ class PorousBulkModuli:
 
     def setValues(self):
         """This method modifies the PorousBulkModuli object.
-
-        Parameters
-        ----------
         """
         pass

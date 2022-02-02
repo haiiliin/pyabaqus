@@ -32,9 +32,6 @@ class SuperElasticHardeningModifications:
             This function can be accessed by:
             - mdb.models[name].materials[name].superElasticity.SuperElasticHardeningModifications
             - session.odbs[name].materials[name].superElasticity.SuperElasticHardeningModifications
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below or user-defined 
             data if the dependence of the transformation stress levels on Plastic strain is
@@ -52,13 +49,6 @@ class SuperElasticHardeningModifications:
 
     def setValues(self):
         """This method modifies the SuperElasticHardeningModifications object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

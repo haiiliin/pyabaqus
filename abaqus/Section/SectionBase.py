@@ -57,9 +57,6 @@ class SectionBase:
         .. code-block:: python
 
             mdb.models[*name*].sectionsFromOdb
-
-        Parameters
-        ----------
         fileName
             A String specifying the name of the output database file (including the .odb extension) 
             to be read. This String can also be the full path to the output database file if it is 

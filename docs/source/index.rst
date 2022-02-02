@@ -36,8 +36,8 @@ Documentation
 
    getting_started
    tutorials
-   .. references
    user
+   api
 
 Indices and tables
 ==================

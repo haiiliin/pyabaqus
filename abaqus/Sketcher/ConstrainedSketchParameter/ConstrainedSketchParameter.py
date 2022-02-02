@@ -33,9 +33,6 @@ class ConstrainedSketchParameter:
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].ConstrainedSketchParameter
-
-        Parameters
-        ----------
         name
             A String specifying the name of the ConstrainedSketchParameter object. No two parameters 
             in the same ConstrainedSketch can have the same name. 

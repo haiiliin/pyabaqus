@@ -52,9 +52,6 @@ class CrushableFoam:
             This function can be accessed by:
             - mdb.models[name].materials[name].CrushableFoam
             - session.odbs[name].materials[name].CrushableFoam
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         hardening
@@ -77,13 +74,6 @@ class CrushableFoam:
 
     def setValues(self):
         """This method modifies the CrushableFoam object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

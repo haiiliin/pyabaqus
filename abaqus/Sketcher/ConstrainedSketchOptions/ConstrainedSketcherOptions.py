@@ -20,9 +20,6 @@ class ConstrainedSketcherOptions:
                   autoConstrainOptions: SymbolicConstant = None,
                   dragMethod: SymbolicConstant = MINIMUM_MOVE, editMethod: SymbolicConstant = STANDARD):
         """This method modifies the ConstrainedSketchOptions object.
-
-        Parameters
-        ----------
         constructionGeometry
             A Boolean specifying whether construction geometry is shown. The default value is ON. 
         gridSnap

@@ -57,9 +57,6 @@ class ConcreteTensionStiffening:
             - .ConcreteTensionStiffening
             - session.odbs[name].materials[name].concreteDamagedPlasticity\
             - .ConcreteTensionStiffening
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         rate
@@ -88,13 +85,6 @@ class ConcreteTensionStiffening:
 
     def setValues(self):
         """This method modifies the ConcreteTensionStiffening object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

@@ -62,9 +62,6 @@ class Vertex:
         """This method returns a sequence consisting of the edge ids of the edges which share this
         vertex.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A tuple of integers. . 
@@ -75,9 +72,6 @@ class Vertex:
     def getNodes(self):
         """This method returns an array of node objects that are associated with the vertex.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A MeshNodeArray object which is a sequence of MeshNode objects. . 
@@ -87,9 +81,6 @@ class Vertex:
 
     def getElements(self):
         """This method returns an array of element objects that are associated with the vertex.
-
-        Parameters
-        ----------
 
         Returns
         -------

@@ -34,9 +34,6 @@ class PEGSection(Section):
 
             mdb.models[name].PEGSection
             session.odbs[name].PEGSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         material
@@ -60,9 +57,6 @@ class PEGSection(Section):
 
     def setValues(self, thickness: float = 1, wedgeAngle1: float = 0, wedgeAngle2: float = 0):
         """This method modifies the PEGSection object.
-
-        Parameters
-        ----------
         thickness
             A Float specifying the thickness of the section. Possible values are *thickness* >> 0.0. 
             The default value is 1.0. 

@@ -358,9 +358,6 @@ class ModelBase:
         .. code-block:: python
 
             mdb.Model
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         description
@@ -406,9 +403,6 @@ class ModelBase:
         .. code-block:: python
 
             mdb.Model
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         inputFileName
@@ -433,9 +427,6 @@ class ModelBase:
         .. code-block:: python
 
             mdb.Model
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         odbFileName
@@ -468,9 +459,6 @@ class ModelBase:
         .. code-block:: python
 
             mdb.Model
-
-        Parameters
-        ----------
         modelName
             A String specifying the repository key. 
         inputFileName
@@ -535,9 +523,6 @@ class ModelBase:
                   globalJob: str = '', shellToSolid: Boolean = OFF, copyConstraints: Boolean = OFF,
                   copyConnectors: Boolean = OFF, copyInteractions: Boolean = OFF):
         """This method modifies the Model object.
-
-        Parameters
-        ----------
         description
             A String specifying the purpose and contents of the Model object. The default value is 
             an empty string. 

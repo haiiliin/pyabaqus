@@ -47,9 +47,6 @@ class ConcreteTensionDamage:
             - .ConcreteTensionDamage
             - session.odbs[name].materials[name].concreteDamagedPlasticity\
             - .ConcreteTensionDamage
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         compressionRecovery
@@ -78,13 +75,6 @@ class ConcreteTensionDamage:
 
     def setValues(self):
         """This method modifies the ConcreteTensionDamage object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

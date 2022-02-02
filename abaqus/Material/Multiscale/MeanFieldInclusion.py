@@ -40,9 +40,6 @@ class MeanFieldInclusion:
             This function can be accessed by:
             - mdb.models[name].materials[name].meanFieldHomogenization.MeanFieldInclusion
             - session.odbs[name].materials[name].meanFieldHomogenization.MeanFieldInclusion
-
-        Parameters
-        ----------
         name
             A String specifying the constituent repository key. 
         table
@@ -91,13 +88,6 @@ class MeanFieldInclusion:
 
     def setValues(self):
         """This method modifies the MeanFieldInclusion object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

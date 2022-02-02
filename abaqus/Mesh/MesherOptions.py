@@ -19,9 +19,6 @@ class MesherOptions:
                   quadAlgorithm: SymbolicConstant = ADVANCING_FRONT, allowMapped: Boolean = OFF,
                   minTransition: Boolean = ON, guiPreferredElements: SymbolicConstant = None):
         """This method modifies the MesherOptions object.
-
-        Parameters
-        ----------
         elemShape2D
             A SymbolicConstant specifying the default element shape for meshing two-dimensional 
             objects. Possible values are QUAD, QUAD_DOMINATED, and TRI. The default value is 

@@ -58,9 +58,6 @@ class Movie:
         .. code-block:: python
 
             session.Movie
-
-        Parameters
-        ----------
         name
             A String specifying the repository name for the movie. 
         fileName
@@ -108,9 +105,6 @@ class Movie:
                   timelineEndFrame: int = None, timelineStartTime: float = 0,
                   timelineEndTime: typing.Union[SymbolicConstant, float] = END_FRAME_TIME):
         """This method modifies the Movie object.
-
-        Parameters
-        ----------
         startFrame
             An Int specifying the first frame to be displayed from this movie. The default value is 
             0. 

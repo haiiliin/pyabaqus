@@ -26,9 +26,6 @@ class IgnoredVertexArray:
         findAt will always try to find objects among all the ignored vertices in the part or
         assembly instance and will not restrict itself to a subset even if the
         IgnoredVertexArray represents such subset.
-
-        Parameters
-        ----------
         coordinates
             A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the object to 
             find.findAt returns either a IgnoredVertex object or a sequence of IgnoredVertex objects 
@@ -54,9 +51,6 @@ class IgnoredVertexArray:
         specified *mask*. This command is generated when the JournalOptions are set to
         COMPRESSEDINDEX. When large number of objects are involved, this method is highly
         efficient.
-
-        Parameters
-        ----------
         mask
             A String specifying the object or objects. 
 
@@ -70,9 +64,6 @@ class IgnoredVertexArray:
     def getMask(self):
         """This method returns a string specifying the object or objects.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A String specifying the object or objects. . 
@@ -84,9 +75,6 @@ class IgnoredVertexArray:
         """This method returns a object or objects in the IgnoredVertexArray closest to the given
         set of points, where the given points need not lie on the vertices in the
         IgnoredVertexArray.
-
-        Parameters
-        ----------
         coordinates
             A sequence of a sequence of floats, where each sequence of floats describes the *X*-, 
             *Y*-, and *Z*-coordinates of a 

@@ -16,9 +16,6 @@ class FeatureOptions:
     def setValues(self, checkSelfIntersection: Boolean = ON, autoCaching: Boolean = ON,
                   maxCachedStates: int = 5):
         """This method modifies the FeatureOptions object for the specified model.
-
-        Parameters
-        ----------
         checkSelfIntersection
             A Boolean specifying whether Abaqus/CAE should perform self-intersection checks while 
             regenerating features. The default value is ON. 

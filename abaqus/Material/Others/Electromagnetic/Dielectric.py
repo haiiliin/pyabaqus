@@ -58,9 +58,6 @@ class Dielectric:
             This function can be accessed by:
             - mdb.models[name].materials[name].Dielectric
             - session.odbs[name].materials[name].Dielectric
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type
@@ -81,8 +78,5 @@ class Dielectric:
 
     def setValues(self):
         """This method modifies the Dielectric object.
-
-        Parameters
-        ----------
         """
         pass

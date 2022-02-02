@@ -34,9 +34,6 @@ class StdStabilization(ContactStabilization):
         .. code-block:: python
 
             mdb.models[name].StdStabilization
-
-        Parameters
-        ----------
         name
             A String specifying the contact stabilization repository key. 
         zeroDistance
@@ -73,9 +70,6 @@ class StdStabilization(ContactStabilization):
     def setValues(self, zeroDistance: float = None, reductionFactor: float = 0, scaleFactor: float = 1,
                   tangentialFactor: float = 0, amplitude: str = '', reset: Boolean = OFF):
         """This method modifies the StdStabilization object.
-
-        Parameters
-        ----------
         zeroDistance
             None or a Float specifying the clearance distance at which the stabilization becomes 
             zero. The default value is None. 

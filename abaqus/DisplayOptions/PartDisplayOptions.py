@@ -84,9 +84,6 @@ class PartDisplayOptions:
                   visibleDisplayGroups: tuple[DisplayGroup] = (), engineeringFeatures: Boolean = OFF,
                   renderBeamProfiles: Boolean = OFF, beamScaleFactor: float = 1):
         """This method modifies the PartDisplayOptions object.
-
-        Parameters
-        ----------
         renderStyle
             A SymbolicConstant specifying how the image in the viewport is rendered. Possible values 
             are WIREFRAME, HIDDEN, and SHADED. The default value is WIREFRAME. 

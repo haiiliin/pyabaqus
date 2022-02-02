@@ -15,9 +15,6 @@ class JobSession(SessionBase):
         -----
             This function can be accessed by:
             - session.Queue
-
-        Parameters
-        ----------
         name
             A String specifying the name of the new Queue object.
         queueName

@@ -33,9 +33,6 @@ class AnimationController:
 
     def play(self, duration: SymbolicConstant = UNLIMITED):
         """This method begins the animation.
-
-        Parameters
-        ----------
         duration
             The SymbolicConstant UNLIMITED or an Int specifying how many seconds to play the 
             animation. The default value is UNLIMITED.
@@ -49,33 +46,21 @@ class AnimationController:
 
     def stop(self):
         """This method stops the animation.
-
-        Parameters
-        ----------
         """
         pass
 
     def incrementFrame(self):
         """This method increments the animation frame.
-
-        Parameters
-        ----------
         """
         pass
 
     def decrementFrame(self):
         """This method decrements the animation frame.
-
-        Parameters
-        ----------
         """
         pass
 
     def showFrame(self, frame: int = None, value: float = None):
         """This method renders the specified frame of the animation.
-
-        Parameters
-        ----------
         frame
             An Int specifying the frame number. 
         value
@@ -88,25 +73,16 @@ class AnimationController:
 
     def showFirstFrame(self):
         """This method renders the first frame of the animation.
-
-        Parameters
-        ----------
         """
         pass
 
     def showLastFrame(self):
         """This method renders the last frame of the animation.
-
-        Parameters
-        ----------
         """
         pass
 
     def setValues(self, animationType: SymbolicConstant = NONE):
         """This method modifies the AnimationController object.
-
-        Parameters
-        ----------
         animationType
             A SymbolicConstant specifying the type of movie to play. Possible values are 
             SCALE_FACTOR, HARMONIC, TIME_HISTORY, and NONE. The default value is NONE.

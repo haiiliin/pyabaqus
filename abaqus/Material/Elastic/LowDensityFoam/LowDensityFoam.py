@@ -36,9 +36,6 @@ class LowDensityFoam:
             This function can be accessed by:
             - mdb.models[name].materials[name].LowDensityFoam
             - session.odbs[name].materials[name].LowDensityFoam
-
-        Parameters
-        ----------
         elementRemoval
             A Boolean specifying whether elements are removed if exceeding maximum principal tensile 
             stress. This argument is valid only when *maxAllowablePrincipalStress* is defined. The 
@@ -71,13 +68,6 @@ class LowDensityFoam:
 
     def setValues(self):
         """This method modifies the LowDensityFoam object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

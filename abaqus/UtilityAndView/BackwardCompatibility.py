@@ -70,9 +70,6 @@ class BackwardCompatibility:
         """This method returns a list of deprecated methods used since the last call to
         resetDeprecatedMethodsUsed.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A list of Strings. . 
@@ -83,9 +80,6 @@ class BackwardCompatibility:
         """This method returns a list of deprecated arguments used since the last call to
         resetDeprecatedArgsUsed.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A list of Strings. . 
@@ -94,26 +88,17 @@ class BackwardCompatibility:
 
     def resetDeprecatedMethodsUsed(self):
         """This method clears the list of deprecated methods used.
-
-        Parameters
-        ----------
         """
         pass
 
     def resetDeprecatedArgsUsed(self):
         """This method clears the list of deprecated arguments used.
-
-        Parameters
-        ----------
         """
         pass
 
     def setValues(self, includeDeprecated: Boolean = ON, reportDeprecated: Boolean = True,
                   showKeysInReport: Boolean = False):
         """This method modifies the BackwardCompatibility object.
-
-        Parameters
-        ----------
         includeDeprecated
             A Boolean specifying whether deprecated members, methods, and arguments can be seen and 
             used. The default value is ON. 

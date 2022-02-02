@@ -44,9 +44,6 @@ class AreaStyle:
 
             session.AreaStyle
             xyPlot.AreaStyle
-
-        Parameters
-        ----------
         color
             A String specifying the color to be used when filling an area with this AreaStyle 
             object. The default value is "White". 
@@ -69,9 +66,6 @@ class AreaStyle:
 
     def setValues(self, color: str = '', fill: Boolean = ON, style: SymbolicConstant = SOLID):
         """This method modifies the AreaStyle object.
-
-        Parameters
-        ----------
         color
             A String specifying the color to be used when filling an area with this AreaStyle 
             object. The default value is "White". 

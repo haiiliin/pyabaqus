@@ -17,9 +17,6 @@ class OutputStep(StepBase):
         -----
             This function can be accessed by:
             - mdb.models[name].steps[name].DiagnosticPrint
-
-        Parameters
-        ----------
         allke
             A Boolean specifying a request for a column containing the total kinetic energy. This
             argument is valid only for an Abaqus/Explicit analysis. The default value is ON.
@@ -81,9 +78,6 @@ class OutputStep(StepBase):
         -----
             This function can be accessed by:
             - mdb.models[name].steps[name].Monitor
-
-        Parameters
-        ----------
         node
             A String specifying the name of the region to be monitored.
         dof
@@ -124,9 +118,6 @@ class OutputStep(StepBase):
         -----
             This function can be accessed by:
             - mdb.models[name].steps[name].Restart
-
-        Parameters
-        ----------
         numberIntervals
             An Int specifying the number of intervals during the step at which restart information
             will be written. The default value is 0. The default value is 1.

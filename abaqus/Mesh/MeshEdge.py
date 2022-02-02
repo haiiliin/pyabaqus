@@ -23,9 +23,6 @@ class MeshEdge:
     def getElements(self):
         """This method returns a tuple of elements that share the element edge.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A tuple of MeshElement objects. . 
@@ -35,9 +32,6 @@ class MeshEdge:
     def getElementsViaTopology(self, domain: MeshElementArray = MeshElementArray([])):
         """This method returns an array of MeshElement objects that are obtained by recursively
         finding adjacent elements via topology.
-
-        Parameters
-        ----------
         domain
             A MeshElementArray object specifying the domain to include in the search. By default, 
             all elements in the mesh are included. 
@@ -51,9 +45,6 @@ class MeshEdge:
     def getNodesViaTopology(self, domain: MeshElementArray = MeshElementArray([])):
         """This method returns an array of MeshNode objects that lie along element edges
         topologically in line with the element edge.
-
-        Parameters
-        ----------
         domain
             A MeshElementArray object specifying the domain to include in the search. By default, 
             all elements in the mesh are included. 
@@ -67,9 +58,6 @@ class MeshEdge:
     def getElemFaces(self):
         """This method returns a tuple of unique MeshFace objects that share the element edge.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A tuple of MeshFace objects. . 
@@ -78,9 +66,6 @@ class MeshEdge:
 
     def getNodes(self):
         """This method returns a tuple of nodes on the element edge.
-
-        Parameters
-        ----------
 
         Returns
         -------

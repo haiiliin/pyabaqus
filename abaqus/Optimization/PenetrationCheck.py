@@ -30,9 +30,6 @@ class PenetrationCheck(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].PenetrationCheck
-
-        Parameters
-        ----------
         name
             A String specifying the geometric restriction repository key. 
         penetrationCheckRegion
@@ -54,9 +51,6 @@ class PenetrationCheck(GeometricRestriction):
 
     def setValues(self, presumeFeasibleRegionAtStart: Boolean = ON):
         """This method modifies the PenetrationCheck object.
-
-        Parameters
-        ----------
         presumeFeasibleRegionAtStart
             A Boolean specifying whether to ignore the geometric restriction in the first design 
             cycle. The default value is ON. 

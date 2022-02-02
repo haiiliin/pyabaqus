@@ -180,9 +180,6 @@ class OdbDiagnosticStep:
     def extractData(self, incrementStatistics: str):
         """This method creates a temporary XYData object, with increments on the x-axis and
         requested output on the y-axis.
-
-        Parameters
-        ----------
         incrementStatistics
             An enum specifying the requested output variable for the data table. Possible enum 
             values are NUM_ATTEMPTS (the number of attempts), NUM_SDI (the number of severe 

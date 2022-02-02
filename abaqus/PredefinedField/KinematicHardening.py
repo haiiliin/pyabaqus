@@ -48,9 +48,6 @@ class KinematicHardening(PredefinedField):
         .. code-block:: python
 
             mdb.models[name].KinematicHardening
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         region
@@ -87,9 +84,6 @@ class KinematicHardening(PredefinedField):
                   sectPtNum: tuple = (), definition: SymbolicConstant = KINEMATIC_HARDENING,
                   rebarLayerNames: tuple = (), distributionType: SymbolicConstant = MAGNITUDE):
         """This method modifies the KinematicHardening object.
-
-        Parameters
-        ----------
         numBackStress
             An Int specifying the number of backstresses. The default value is 1. 
         equivPlasticStrain

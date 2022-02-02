@@ -261,9 +261,6 @@ class PartBase(Feature):
         .. code-block:: python
 
             mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         dimensionality
@@ -296,9 +293,6 @@ class PartBase(Feature):
         .. code-block:: python
 
             mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         objectToCopy
@@ -342,9 +336,6 @@ class PartBase(Feature):
         .. code-block:: python
 
             mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         instanceToBeCut
@@ -374,9 +365,6 @@ class PartBase(Feature):
         .. code-block:: python
 
             mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         instances
@@ -418,9 +406,6 @@ class PartBase(Feature):
         .. code-block:: python
 
             mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         part
@@ -457,9 +442,6 @@ class PartBase(Feature):
         .. code-block:: python
 
             mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         geometryFile
@@ -536,9 +518,6 @@ class PartBase(Feature):
         .. code-block:: python
 
             mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         partInstances
@@ -577,9 +556,6 @@ class PartBase(Feature):
         .. code-block:: python
 
             mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         copySets
@@ -609,9 +585,6 @@ class PartBase(Feature):
         .. code-block:: python
 
             mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         part
@@ -652,9 +625,6 @@ class PartBase(Feature):
         .. code-block:: python
 
             mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         dimensionality
@@ -697,9 +667,6 @@ class PartBase(Feature):
         .. code-block:: python
 
             mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         odb
@@ -765,9 +732,6 @@ class PartBase(Feature):
         .. code-block:: python
 
             mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         part
@@ -812,9 +776,6 @@ class PartBase(Feature):
         .. code-block:: python
 
             mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         substructureFile
@@ -852,9 +813,6 @@ class PartBase(Feature):
         .. code-block:: python
 
             mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         part
@@ -889,9 +847,6 @@ class PartBase(Feature):
     def setValues(self, *args, **kwargs):
         """This method modifies the Part object.
 
-        Parameters
-        ----------
-
         Raises
         ------
             RangeError. 
@@ -902,9 +857,6 @@ class PartBase(Feature):
         """This method converts a part into a sketch by projecting all of the edges of the part
         onto the X-Y plane of the sketch. You can use addGeomToSketch with a part of any
         modeling space.
-
-        Parameters
-        ----------
         sketch
             A ConstrainedSketch object. 
         """
@@ -914,9 +866,6 @@ class PartBase(Feature):
                         bottomFaces: tuple[Face] = ()):
         """This method assigns thickness data to shell faces. The thickness can be used while
         assigning shell and membrane sections to faces.
-
-        Parameters
-        ----------
         faces
             A sequence of Face objects specifying the regions where thickness will be applied. 
         thickness
@@ -942,18 +891,12 @@ class PartBase(Feature):
     def backup(self):
         """This method makes a backup copy of the features in the part. Use the restore method to
         retrieve the part's features from the backup.
-
-        Parameters
-        ----------
         """
         pass
 
     def checkGeometry(self, detailed: Boolean = OFF, reportFacetErrors: Boolean = OFF, level: int = None):
         """This method checks the validity of the geometry of the part and prints a count of all
         topological entities on the part (faces, edges, vertices, etc.).
-
-        Parameters
-        ----------
         detailed
             A Boolean specifying whether detailed output will be printed to the replay file. The 
             default value is OFF. 
@@ -971,25 +914,16 @@ class PartBase(Feature):
     def clearGeometryCache(self):
         """This method clears the geometry cache. Clearing the geometry cache reduces the amount of
         memory being used to cache part features.
-
-        Parameters
-        ----------
         """
         pass
 
     def deleteAllFeatures(self):
         """This method deletes all the features in the part.
-
-        Parameters
-        ----------
         """
         pass
 
     def deleteFeatures(self, featureNames: tuple):
         """This method deletes the given features.
-
-        Parameters
-        ----------
         featureNames
             A sequence of Strings specifying the feature names that will be deleted from the part. 
         """
@@ -997,9 +931,6 @@ class PartBase(Feature):
 
     def getAngle(self, plane1: str, plane2: str, line1: str, line2: str, commonVertex: str = ''):
         """This method returns the angle between the specified entities.
-
-        Parameters
-        ----------
         plane1
             A Face, MeshFace, or a Datum object specifying the first plane. The Datum object must 
             represent a datum plane. The *plane1* and *line1* arguments are mutually exclusive. One 
@@ -1030,9 +961,6 @@ class PartBase(Feature):
 
     def getArea(self, faces: tuple[Face], relativeAccuracy: float = 0):
         """This method returns the total surface area of a given face or group of faces.
-
-        Parameters
-        ----------
         faces
             A sequence of Face objects whose area the method will calculate. 
         relativeAccuracy
@@ -1052,9 +980,6 @@ class PartBase(Feature):
         Associative Import capability. The root file can be the assembly file or the part file,
         depending on what which one was imported.
 
-        Parameters
-        ----------
-
         Returns
         -------`
         paths: tuple
@@ -1068,9 +993,6 @@ class PartBase(Feature):
         softwares using the Associative Import capability, and if the parameter names defined in
         that CAD software are prefixed with the string ABQ.
 
-        Parameters
-        ----------
-
         Returns
         -------
         paras: dict
@@ -1083,9 +1005,6 @@ class PartBase(Feature):
         """Depending on the arguments provided, this method returns the following:
         - The location of the centroid of a given face or group of faces.
         - The location of the centroid of a given cell or group of cells.
-
-        Parameters
-        ----------
         faces
             A sequence of Face objects whose centroid the method will calculate. The arguments 
             *faces* and *cells* are mutually exclusive. 
@@ -1105,9 +1024,6 @@ class PartBase(Feature):
 
     def getCoordinates(self, entity: str):
         """This method returns the coordinates of specified point.
-
-        Parameters
-        ----------
         entity
             A ConstrainedSketchVertex, Datum point, MeshNode, or ReferencePoint specifying the entity to query.
 
@@ -1122,9 +1038,6 @@ class PartBase(Feature):
         the curvature is constant over the entire edge, and equal to the inverse of the radius.
         For a straight line, the curvature is constant and equal to 0. For a spline edge, the
         curvature varies over a range, and this methods computes the maximum.
-
-        Parameters
-        ----------
         edges
             A sequence of Edge objects whose curvature the method will calculate. 
         samplePoints
@@ -1144,9 +1057,6 @@ class PartBase(Feature):
         - The distance between two points.
         - The minimum distance between a point and an edge.
         - The minimum distance between two edges.
-
-        Parameters
-        ----------
         entity1
             A ConstrainedSketchVertex, Datum point, MeshNode, or Edge specifying the first entity from which to
             measure. 
@@ -1163,9 +1073,6 @@ class PartBase(Feature):
 
     def getLength(self, edges: tuple[Edge]):
         """This method returns the length of a given edge or group of edges.
-
-        Parameters
-        ----------
         edges
             A sequence of Edge objects whose total length the method will calculate. 
 
@@ -1181,9 +1088,6 @@ class PartBase(Feature):
         need to be on the same part. If the specified faces have shared edges, these edges are
         excluded from the computation, thus providing the length of the outer perimeter of the
         specified faces.
-
-        Parameters
-        ----------
         faces
             A sequence of Face objects whose perimeter the method will calculate. 
 
@@ -1196,9 +1100,6 @@ class PartBase(Feature):
 
     def getVolume(self, cells: tuple[Cell], relativeAccuracy: float = 0):
         """This method returns the volume area of a given cell or group of cells.
-
-        Parameters
-        ----------
         cells
             A sequence of Cell objects whose volume the method will calculate. 
         relativeAccuracy
@@ -1217,9 +1118,6 @@ class PartBase(Feature):
                           thickness: str = '', miAboutCenterOfMass: Boolean = True, miAboutPoint: tuple = ()):
         """This method returns the mass properties of a part or region. Only beams, trusses,
         shells, solids, point, nonstructural mass, and rotary inertia elements are supported.
-
-        Parameters
-        ----------
         regions
             A MeshElementArray, CellArray, FaceArray, or EdgeArray specifying the regions whose mass 
             properties are to be queried. The whole part is queried by default. 
@@ -1323,9 +1221,6 @@ class PartBase(Feature):
 
     def getFeatureFaces(self, name: str):
         """This method returns a sequence of Face objects that are created by the given feature.
-
-        Parameters
-        ----------
         name
             A string specifying the feature name. 
 
@@ -1343,9 +1238,6 @@ class PartBase(Feature):
 
     def getFeatureEdges(self, name: str):
         """This method returns a sequence of Edge objects that are created by the given feature.
-
-        Parameters
-        ----------
         name
             A string specifying the feature name. 
 
@@ -1363,9 +1255,6 @@ class PartBase(Feature):
 
     def getFeatureCells(self, name: str):
         """This method returns a sequence of Cell objects that are created by the given feature.
-
-        Parameters
-        ----------
         name
             A string specifying the feature name. 
 
@@ -1383,9 +1272,6 @@ class PartBase(Feature):
 
     def getFeatureVertices(self, name: str):
         """This method returns a sequence of ConstrainedSketchVertex objects that are created by the given feature.
-
-        Parameters
-        ----------
         name
             A string specifying the feature name. 
 
@@ -1405,9 +1291,6 @@ class PartBase(Feature):
         """This method checks if the normal of an analytical rigid surface part is aligned with
         that of its sketch.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A Boolean value of True if the part is aligned with the sketch and False if it is not 
@@ -1423,9 +1306,6 @@ class PartBase(Feature):
     def printAssignedSections(self):
         """This method prints information on each section that has been assigned to a region of the
         part.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -1437,9 +1317,6 @@ class PartBase(Feature):
         depending on the angle of the plane of projection. By default, the projected edge will
         be constrained to the background geometry. You can remove this constraint by setting
         *constrainToBackground* to False.
-
-        Parameters
-        ----------
         sketch
             The ConstrainedSketch object on which the edges are projected. 
         edges
@@ -1456,9 +1333,6 @@ class PartBase(Feature):
         """This method projects the vertices of specified edges, and datum points from the part
         onto the specified ConstrainedSketch object. The vertices and datum points appear on the
         sketch as reference geometry.
-
-        Parameters
-        ----------
         sketch
             The ConstrainedSketch object on which the edges, vertices, and datum points are 
             projected. 
@@ -1486,9 +1360,6 @@ class PartBase(Feature):
         - whether twist is included (only available when the modeling space is axisymmetric and
         the analysis type is deformable); and
         - the number of vertices, edges, faces and cells if applicable.
-
-        Parameters
-        ----------
         printResults
             A Boolean which specifies whether the above information is to be printed. The default 
             value is True 
@@ -1505,9 +1376,6 @@ class PartBase(Feature):
     def queryCachedStates(self):
         """This method displays the position of geometric states relative to the sequence of
         features in the part cache. The output is displayed in the message area.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -1520,9 +1388,6 @@ class PartBase(Feature):
         - a 3D point representing the maximum of the part's bounding box;
         - a 3D point representing the part's centroid (only on 3D solid parts); and
         - the volume (only on 3D solid parts).
-
-        Parameters
-        ----------
         relativeAccuracy
             A Float specifying that the property computations should stop when the specified 
             relative accuracy has been achieved. The default value is 0.000001 (0.0001%). 
@@ -1542,9 +1407,6 @@ class PartBase(Feature):
         """This method returns all regions in the part that do not have a section assignment but
         require one for analysis.
 
-        Parameters
-        ----------
-
         Returns
         -------
         region: Region
@@ -1555,9 +1417,6 @@ class PartBase(Feature):
     def queryDisjointPlyRegions(self):
         """This method provides a list of all composite plys in the current part which have
         disjoint regions.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -1565,17 +1424,11 @@ class PartBase(Feature):
         """This method regenerates a part. When you modify features, it may be convenient to
         postpone regeneration until you make all your changes, since regeneration can be time
         consuming.
-
-        Parameters
-        ----------
         """
         pass
 
     def regenerationWarnings(self):
         """This method prints any regeneration warnings associated with the features.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -1585,9 +1438,6 @@ class PartBase(Feature):
         single feature (such as an imported part).
         Note:This may remove valid entities that are connected to invalid ones. You can identify
         invalid entities using the query toolset before using this command.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -1595,25 +1445,16 @@ class PartBase(Feature):
         """This method restores the parameters of all features in the assembly to the value they
         had before a failed regeneration. Use the restore method after a failed regeneration,
         followed by a regenerate command.
-
-        Parameters
-        ----------
         """
         pass
 
     def resumeAllFeatures(self):
         """This method resumes all the suppressed features in the part.
-
-        Parameters
-        ----------
         """
         pass
 
     def resumeFeatures(self, featureNames: tuple):
         """This method resumes the specified suppressed features in the part.
-
-        Parameters
-        ----------
         featureNames
             A tuple of names of features which are to be resumed. 
         """
@@ -1621,18 +1462,12 @@ class PartBase(Feature):
 
     def resumeLastSetFeatures(self):
         """This method resumes the last set of features to be suppressed in the part.
-
-        Parameters
-        ----------
         """
         pass
 
     def saveGeometryCache(self):
         """This method caches the current geometry. Caching the current geometry improves
         regeneration performance.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -1642,9 +1477,6 @@ class PartBase(Feature):
         Associative Import capability. The root file can be the assembly file or the part file,
         depending on the one that was imported. This method can be used to specify the new paths
         when the CAD data is moved to a different directory.
-
-        Parameters
-        ----------
         partFile
             A String specifying the name of the associated CAD part file. 
         rootFile
@@ -1655,9 +1487,6 @@ class PartBase(Feature):
 
     def suppressFeatures(self, featureNames: tuple):
         """This method suppresses the given features.
-
-        Parameters
-        ----------
         featureNames
             A tuple of names of features which are to be suppressed in the part. 
         """
@@ -1665,9 +1494,6 @@ class PartBase(Feature):
 
     def writeAcisFile(self, fileName: str, version: float = None):
         """This method exports the geometry of the part to a named file in ACIS format.
-
-        Parameters
-        ----------
         fileName
             A String specifying the name of the file to which to write. 
         version
@@ -1684,9 +1510,6 @@ class PartBase(Feature):
     def writeCADParameters(self, paramFile: str, modifiedParams: tuple = (), updatePaths: str = ''):
         """This method writes the parameters that were imported from the CAD system to a parameter
         file.
-
-        Parameters
-        ----------
         paramFile
             A String specifying the parameter file name. 
         modifiedParams
@@ -1701,9 +1524,6 @@ class PartBase(Feature):
 
     def writeIgesFile(self, fileName: str, flavor: SymbolicConstant):
         """This method exports the geometry of the part to a named file in IGES format.
-
-        Parameters
-        ----------
         fileName
             A String specifying the name of the file to which to write. 
         flavor
@@ -1719,9 +1539,6 @@ class PartBase(Feature):
 
     def writeStepFile(self, fileName: str):
         """This method exports the geometry of the part to a named file in STEP format.
-
-        Parameters
-        ----------
         fileName
             A String specifying the name of the file to which to write.
 
@@ -1734,9 +1551,6 @@ class PartBase(Feature):
 
     def writeVdaFile(self, fileName: str):
         """This method exports the geometry of the part to a named file in VDA-FS format.
-
-        Parameters
-        ----------
         fileName
             A String specifying the name of the file to which to write.
 
@@ -1753,9 +1567,6 @@ class PartBase(Feature):
         """This method copies a mesh pattern from a source region consisting of a set of shell
         elements or element faces onto a target face, mapping nodes and elements in a one-one
         correspondence between source and target.
-
-        Parameters
-        ----------
         elements
             A sequence of MeshElement objects or a Set object containing elements and specifying the 
             source region. 
@@ -1781,9 +1592,6 @@ class PartBase(Feature):
     def smoothNodes(self, nodes: tuple[MeshNode]):
         """This method smooths the given nodes of a native mesh, moving them locally to a more
         optimal location that improves the quality of the mesh
-
-        Parameters
-        ----------
         nodes
             A sequence of MeshNode objects or a Set object containing nodes. 
         """
@@ -1792,18 +1600,12 @@ class PartBase(Feature):
     def Lock(self):
         """This method locks the part. Locking the part prevents any further changes to the part
         that can trigger regeneration of the part.
-
-        Parameters
-        ----------
         """
         pass
 
     def Unlock(self):
         """This method unlocks the part. Unlocking the part allows it to be regenerated after any
         modifications to the part.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -1811,8 +1613,5 @@ class PartBase(Feature):
         """This method locks the part for upgrade. Locking the part prevents any further changes to
         the part that can trigger regeneration of the part. When the part is unlocked, all the
         parts are upgraded and regenrated.
-
-        Parameters
-        ----------
         """
         pass

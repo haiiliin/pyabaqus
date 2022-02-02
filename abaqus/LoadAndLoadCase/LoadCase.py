@@ -38,9 +38,6 @@ class LoadCase:
         .. code-block:: python
 
             mdb.models[name].steps[name].LoadCase
-
-        Parameters
-        ----------
         name
             A String specifying the name of the object. 
         boundaryConditions
@@ -62,26 +59,17 @@ class LoadCase:
 
     def resume(self):
         """This method resumes the load case that was previously suppressed.
-
-        Parameters
-        ----------
         """
         pass
 
     def suppress(self):
         """This method suppresses the load case.
-
-        Parameters
-        ----------
         """
         pass
 
     def setValues(self, boundaryConditions: tuple = (), loads: tuple = (),
                   includeActiveBaseStateBC: Boolean = ON):
         """This method modifies the LoadCase object.
-
-        Parameters
-        ----------
         boundaryConditions
             A sequence of (String, Float) sequences specifying the name of a BoundaryCondition 
             followed by a nonzero Float scaling factor. The default value is an empty sequence. 

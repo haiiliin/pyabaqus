@@ -34,9 +34,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].AcousticInfiniteSection
             - session.odbs[name].AcousticInfiniteSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         material
@@ -64,9 +61,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].AcousticInterfaceSection
             - session.odbs[name].AcousticInterfaceSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         thickness
@@ -97,9 +91,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].BeamSection
             - session.odbs[name].BeamSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         integration
@@ -210,9 +201,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].CohesiveSection
             - session.odbs[name].CohesiveSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         response
@@ -262,9 +250,6 @@ class SectionOdb(OdbBase):
             - mdb.models[name].parts[name].compositeLayups[i].CompositeShellSection
             - mdb.models[name].CompositeShellSection
             - session.odbs[name].CompositeShellSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         layup
@@ -347,9 +332,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].CompositeSolidSection
             - session.odbs[name].CompositeSolidSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         layup
@@ -385,9 +367,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].ConnectorSection
             - session.odbs[name].ConnectorSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         assembledType
@@ -486,9 +465,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].EulerianSection
             - session.odbs[name].EulerianSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         data
@@ -513,9 +489,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].GasketSection
             - session.odbs[name].GasketSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         material
@@ -559,9 +532,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].GeneralStiffnessSection
             - session.odbs[name].GeneralStiffnessSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         stiffnessMatrix
@@ -627,9 +597,6 @@ class SectionOdb(OdbBase):
             - .HomogeneousShellSection
             - mdb.models[name].HomogeneousShellSection
             - session.odbs[name].HomogeneousShellSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         material
@@ -714,9 +681,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].HomogeneousSolidSection
             - session.odbs[name].HomogeneousSolidSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         material
@@ -743,9 +707,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].MembraneSection
             - session.odbs[name].MembraneSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         material
@@ -794,9 +755,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].MPCSection
             - session.odbs[name].MPCSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         mpcType
@@ -831,9 +789,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].PEGSection
             - session.odbs[name].PEGSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         material
@@ -863,9 +818,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].SurfaceSection
             - session.odbs[name].SurfaceSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         useDensity
@@ -894,9 +846,6 @@ class SectionOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].TrussSection
             - session.odbs[name].TrussSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         material

@@ -45,9 +45,6 @@ class AdaptivityProcess:
         .. code-block:: python
 
             mdb.AdaptivityProcess
-
-        Parameters
-        ----------
         name
             A String specifying the name of the Adaptivity Process. 
         job
@@ -75,9 +72,6 @@ class AdaptivityProcess:
     def submit(self, waitForCompletion: Boolean = OFF, datacheckJob: Boolean = False,
                continueJob: Boolean = False):
         """This method begins the process of analysis and adaptive remeshing.
-
-        Parameters
-        ----------
         waitForCompletion
             A Boolean specifying whether to interrupt the execution of a script until the end of the 
             adaptive remeshing process is reached. 
@@ -92,9 +86,6 @@ class AdaptivityProcess:
 
     def setValues(self, maxIterations: int = 3, jobPrefix: str = ''):
         """This method modifies the AdaptivityProcess object.
-
-        Parameters
-        ----------
         maxIterations
             An Int specifying the maximum number of analysis jobs that will be run by the Adaptivity 
             Process. Abaqus performs adaptive remeshing between each analysis. The default value is 
@@ -116,9 +107,6 @@ class AdaptivityProcess:
         .. code-block:: python
 
             mdb.AdaptivityProcess
-
-        Parameters
-        ----------
         iteration
             An Int specifying the sequence number for this iteration in the adaptivity process.
         jobName

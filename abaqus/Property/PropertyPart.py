@@ -20,9 +20,6 @@ class PropertyPart(PartBase):
         -----
             This function can be accessed by:
             - mdb.models[*name*].parts[*name*].CompositeLayup
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         description
@@ -67,9 +64,6 @@ class PropertyPart(PartBase):
             This function can be accessed by:
             - mdb.models[*name*].parts[*name*].SectionAssignment
             - mdb.models[*name*].rootAssembly.SectionAssignment
-
-        Parameters
-        ----------
         region
             A Set object specifying the region to which the section is assigned.
         sectionName
@@ -115,9 +109,6 @@ class PropertyPart(PartBase):
         -----
             This function can be accessed by:
             - mdb.models[*name*].parts[*name*].MaterialOrientation
-
-        Parameters
-        ----------
         region
             A Set object specifying a region for which the material orientation is defined.
         localCsys

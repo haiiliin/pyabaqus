@@ -12,9 +12,6 @@ class EqualRadiusConstraint(ConstrainedSketchConstraint):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].EqualRadiusConstraint
-
-        Parameters
-        ----------
         entity1
             A ConstrainedSketchGeometry object specifying the first arc or circle. 
         entity2

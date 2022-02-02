@@ -20,9 +20,6 @@ class OdbAssembly(OdbAssemblyBase):
         -----
             This function can be accessed by:
             - session.odbs[name].rootAssembly.DatumCsysByThreePoints
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         coordSysType
@@ -56,9 +53,6 @@ class OdbAssembly(OdbAssemblyBase):
         -----
             This function can be accessed by:
             - session.odbs[name].rootAssembly.DatumCsysByThreeNodes
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         coordSysType
@@ -92,9 +86,6 @@ class OdbAssembly(OdbAssemblyBase):
         -----
             This function can be accessed by:
             - session.odbs[name].rootAssembly.DatumCsysByThreeCircNodes
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         coordSysType
@@ -126,9 +117,6 @@ class OdbAssembly(OdbAssemblyBase):
         -----
             This function can be accessed by:
             - session.odbs[name].rootAssembly.DatumCsysBy6dofNode
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         coordSysType
@@ -151,9 +139,6 @@ class OdbAssembly(OdbAssemblyBase):
         -----
             This function can be accessed by:
             - session.odbs[name].rootAssembly.DatumCsys
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         datumCsys
@@ -173,9 +158,6 @@ class OdbAssembly(OdbAssemblyBase):
         -----
             This function can be accessed by:
             - session.odbs[*name*].rootAssembly.Instance
-
-        Parameters
-        ----------
         name
             A String specifying the instance name.
         object
@@ -213,9 +195,6 @@ class OdbAssembly(OdbAssemblyBase):
             This function can be accessed by:
             - session.odbs[*name*].rootAssembly.instances[*name*].RigidBody
             - session.odbs[*name*].rootAssembly.RigidBody
-
-        Parameters
-        ----------
         referenceNode
             An OdbSet object specifying the reference node set associated with the rigid body.
         position
@@ -258,9 +237,6 @@ class OdbAssembly(OdbAssemblyBase):
             - session.odbs[*name*].parts[*name*].NodeSet
             - session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
             - session.odbs[*name*].rootAssembly.NodeSet
-
-        Parameters
-        ----------
         name
             A String specifying the name of the set and the repository key.
         nodes

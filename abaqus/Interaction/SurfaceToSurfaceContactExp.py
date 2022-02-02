@@ -42,9 +42,6 @@ class SurfaceToSurfaceContactExp(Interaction):
         .. code-block:: python
 
             mdb.models[name].SurfaceToSurfaceContactExp
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -107,9 +104,6 @@ class SurfaceToSurfaceContactExp(Interaction):
     def swapSurfaces(self):
         """This method switches the main and secondary surfaces of a surface-to-surface contact
         pair. This command is valid only during the step in which the interaction is created.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -124,9 +118,6 @@ class SurfaceToSurfaceContactExp(Interaction):
                   clearanceRegion: Region = Region()):
         """This method modifies the data for an existing SurfaceToSurfaceContactExp object in the
         step where it is created.
-
-        Parameters
-        ----------
         mechanicalConstraint
             A SymbolicConstant specifying the mechanical constraint formulation. Possible values are 
             KINEMATIC and PENALTY. The default value is KINEMATIC. 
@@ -169,9 +160,6 @@ class SurfaceToSurfaceContactExp(Interaction):
     def setValuesInStep(self, stepName: str, interactionProperty: str = '', contactControls: str = ''):
         """This method modifies the propagating data for an existing SurfaceToSurfaceContactExp
         object in the specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         interactionProperty

@@ -32,9 +32,6 @@ class ShapeDemoldControl(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].ShapeDemoldControl
-
-        Parameters
-        ----------
         name
             A String specifying the geometric restriction repository key. 
         pullDirection
@@ -85,9 +82,6 @@ class ShapeDemoldControl(GeometricRestriction):
                   presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                   tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0):
         """This method modifies the ShapeDemoldControl object.
-
-        Parameters
-        ----------
         collisionCheckRegion
             The SymbolicConstant DEMOLD_REGION or a Region object specifying the collision check 
             region. If the value is DEMOLD_REGION, then the value of *region* is used as both the 

@@ -211,9 +211,6 @@ class AnimationOptions:
                   xySymbolMarker: SymbolicConstant = DEFAULT, xySymbolSize: SymbolicConstant = MEDIUM,
                   xySymbolColor: str = ''):
         """This method modifies the AnimationOptions object.
-
-        Parameters
-        ----------
         mode
             A SymbolicConstant specifying the animation mode. Possible values are PLAY_ONCE, LOOP, 
             LOOP_BACKWARD, and SWING. The default value is LOOP. 

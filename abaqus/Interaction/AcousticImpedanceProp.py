@@ -33,9 +33,6 @@ class AcousticImpedanceProp(ContactProperty):
         .. code-block:: python
 
             mdb.models[name].AcousticImpedanceProp
-
-        Parameters
-        ----------
         name
             A String specifying the interaction property repository key. 
         tableType
@@ -61,9 +58,6 @@ class AcousticImpedanceProp(ContactProperty):
 
     def setValues(self, frequencyDependency: Boolean = OFF):
         """This method modifies the AcousticImpedanceProp object.
-
-        Parameters
-        ----------
         frequencyDependency
             A Boolean specifying whether the *table* data depend on frequency. The default value is 
             OFF. 

@@ -10,9 +10,6 @@ class PngOptions:
     def cces(self):
         """session.pngOptions
 
-        Parameters
-        ----------
-
         Returns
         -------
 
@@ -23,9 +20,6 @@ class PngOptions:
 
     def setValues(self, imageSize: SymbolicConstant = SIZE_ON_SCREEN):
         """This method modifies the PngOptions object.
-
-        Parameters
-        ----------
         imageSize
             The SymbolicConstant SIZE_ON_SCREEN or a pair of Ints specifying the width and height of 
             the image in pixels. Possible values are (*minWidth*, *minHeight*) ≤ *imageSize* ≤ 

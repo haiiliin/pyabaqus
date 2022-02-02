@@ -24,9 +24,6 @@ class HeatGeneration:
             - mdb.models[name].materials[name].HeatGeneration
             - session.odbs[name].materials[name].HeatGeneration
 
-        Parameters
-        ----------
-
         Returns
         -------
             A HeatGeneration object. . 

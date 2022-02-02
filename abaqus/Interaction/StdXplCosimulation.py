@@ -31,9 +31,6 @@ class StdXplCosimulation(Interaction):
         .. code-block:: python
 
             mdb.models[name].StdXplCosimulation
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -65,9 +62,6 @@ class StdXplCosimulation(Interaction):
     def setValues(self, incrementation: SymbolicConstant = ALLOW_SUBCYCLING, stepSize: float = 0,
                   stepSizeDefinition: SymbolicConstant = DEFAULT):
         """This method modifies the StdXplCosimulation object.
-
-        Parameters
-        ----------
         incrementation
             A SymbolicConstant specifying whether the analysis programs use the same time increments 
             or one is allowed to use more time increments than the other before exchanging data. 

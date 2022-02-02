@@ -53,9 +53,6 @@ class ClayPlasticity:
             This function can be accessed by:
             - mdb.models[name].materials[name].ClayPlasticity
             - session.odbs[name].materials[name].ClayPlasticity
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         intercept
@@ -82,13 +79,6 @@ class ClayPlasticity:
 
     def setValues(self):
         """This method modifies the ClayPlasticity object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

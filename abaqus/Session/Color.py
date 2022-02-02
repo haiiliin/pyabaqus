@@ -26,9 +26,6 @@ class Color:
     def setByRGB(self, rgb: tuple):
         """This method changes the RGB value of a user-defined color. However, users cannot define
         colors, and this method does not modify system-defined colors.
-
-        Parameters
-        ----------
         rgb
             A sequence of three Floats specifying the RGB value of the color. The Float values must 
             be between 0.0 and 1.0. 

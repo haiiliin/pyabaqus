@@ -27,9 +27,6 @@ class AdaptiveMeshDomain:
         .. code-block:: python
 
             mdb.models[name].steps[name].AdaptiveMeshDomain
-
-        Parameters
-        ----------
         region
             A Region object specifying the region to which the adaptive mesh domain is applied. 
         controls
@@ -56,13 +53,6 @@ class AdaptiveMeshDomain:
 
     def setValues(self):
         """This method modifies the AdaptiveMeshDomain object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

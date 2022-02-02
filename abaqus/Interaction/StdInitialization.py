@@ -34,9 +34,6 @@ class StdInitialization(ContactInitialization):
         .. code-block:: python
 
             mdb.models[name].StdInitialization
-
-        Parameters
-        ----------
         name
             A String specifying the contact initialization repository key. 
         overclosureType
@@ -73,9 +70,6 @@ class StdInitialization(ContactInitialization):
                   clearanceDistance: float = None, openingTolerance: float = None,
                   overclosureTolerance: float = None):
         """This method modifies the StdInitialization object.
-
-        Parameters
-        ----------
         overclosureType
             A SymbolicConstant specifying the type of overclosure to be defined. Possible values are 
             ADJUST, INTERFERENCE, and CLEARANCE. The default value is ADJUST. 

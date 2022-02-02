@@ -22,9 +22,6 @@ class Stream:
         .. code-block:: python
 
             session.Stream
-
-        Parameters
-        ----------
         name
             A string name for the stream. 
         numPointsOnRake

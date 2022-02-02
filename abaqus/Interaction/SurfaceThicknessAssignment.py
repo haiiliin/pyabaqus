@@ -23,9 +23,6 @@ class SurfaceThicknessAssignment:
     def changeValuesInStep(self, stepName: str, index: int, value: typing.Union[SymbolicConstant, float]):
         """This method allows modification of surface thickness assignments already defined on
         surfaces in a given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the surface thickness assignments are 
             to be modified. 
@@ -47,9 +44,6 @@ class SurfaceThicknessAssignment:
     def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant, float]):
         """This method allows addition of surface thickness assignments to new surfaces in a given
         step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which new surface thickness assignments are 
             to be defined. 
@@ -69,9 +63,6 @@ class SurfaceThicknessAssignment:
 
     def delete(self, indices: tuple):
         """The delete method allows you to delete existing surface thickness assignments.
-
-        Parameters
-        ----------
         indices
             A sequence of Ints specifying the index of each surface thickness assignment to delete. 
         """

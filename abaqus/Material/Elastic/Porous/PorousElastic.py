@@ -46,9 +46,6 @@ class PorousElastic:
             This function can be accessed by:
             - mdb.models[name].materials[name].PorousElastic
             - session.odbs[name].materials[name].PorousElastic
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         shear
@@ -71,13 +68,6 @@ class PorousElastic:
 
     def setValues(self):
         """This method modifies the PorousElastic object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

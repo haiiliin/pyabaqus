@@ -60,9 +60,6 @@ class Layer:
         .. code-block:: python
 
             session.viewports[name].Layer
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         copyViewName
@@ -76,9 +73,6 @@ class Layer:
 
     def moveBefore(self, name: str):
         """This method moves the layer object before another object in the layer repository.
-
-        Parameters
-        ----------
         name
             A String specifying the name of the other Layer object. 
         """
@@ -86,9 +80,6 @@ class Layer:
 
     def moveAfter(self, name: str):
         """This method moves the layer object after another object in the layer repository.
-
-        Parameters
-        ----------
         name
             A String specifying the name of the other Layer object. 
         """

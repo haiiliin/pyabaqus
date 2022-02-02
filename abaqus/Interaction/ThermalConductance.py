@@ -54,9 +54,6 @@ class ThermalConductance:
         .. code-block:: python
 
             mdb.models[name].interactionProperties[name].ThermalConductance
-
-        Parameters
-        ----------
         definition
             A SymbolicConstant specifying how the thermal conductance is defined. Possible values 
             are TABULAR and USER_DEFINED. The default value is TABULAR. 
@@ -97,8 +94,5 @@ class ThermalConductance:
 
     def setValues(self):
         """This method modifies the ThermalConductance object.
-
-        Parameters
-        ----------
         """
         pass

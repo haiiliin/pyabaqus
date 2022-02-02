@@ -48,9 +48,6 @@ class ParameterTable:
         .. code-block:: python
 
             mdb.models[name].tableCollections[name].ParameterTable
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
 
@@ -73,9 +70,6 @@ class ParameterTable:
         .. code-block:: python
 
             mdb.models[name].tableCollections[name].ParameterTable
-
-        Parameters
-        ----------
         type
             A SymbolicConstant specifying the data type of the parameter. Possible values are
             STRING, INTEGER, and FLOAT.

@@ -66,9 +66,6 @@ class Diffusivity:
             This function can be accessed by:
             - mdb.models[name].materials[name].Diffusivity
             - session.odbs[name].materials[name].Diffusivity
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type
@@ -94,13 +91,6 @@ class Diffusivity:
 
     def setValues(self):
         """This method modifies the Diffusivity object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

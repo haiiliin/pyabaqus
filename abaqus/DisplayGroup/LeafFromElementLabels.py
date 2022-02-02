@@ -41,9 +41,6 @@ class LeafFromElementLabels(Leaf):
         .. code-block:: python
 
             LeafFromElementLabels
-
-        Parameters
-        ----------
         partInstanceName
             A String specifying the name of the part instance to which *elementLabels* refers. 
         elementLabels

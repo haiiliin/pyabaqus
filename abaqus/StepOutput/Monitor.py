@@ -30,9 +30,6 @@ class Monitor:
         .. code-block:: python
 
             mdb.models[name].steps[name].Monitor
-
-        Parameters
-        ----------
         node
             A String specifying the name of the region to be monitored. 
         dof
@@ -69,13 +66,6 @@ class Monitor:
 
     def setValues(self):
         """This method modifies the Monitor object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

@@ -23,9 +23,6 @@ class SurfaceOffsetAssignment:
     def changeValuesInStep(self, stepName: str, index: int, value: typing.Union[SymbolicConstant, float]):
         """This method allows modification of surface offset fraction assignments already defined
         on surfaces in a given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the surface offset assignments are to 
             be modified. 
@@ -43,9 +40,6 @@ class SurfaceOffsetAssignment:
     def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant, float]):
         """This method allows addition of surface offset fraction assignments to new surfaces in a
         given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which new surface offset fraction 
             assignments are to be defined. 
@@ -61,9 +55,6 @@ class SurfaceOffsetAssignment:
 
     def delete(self, indices: tuple):
         """The delete method allows you to delete existing surface offset fraction assignments.
-
-        Parameters
-        ----------
         indices
             A sequence of Ints specifying the index of each surface offset fraction assignment to 
             delete. 

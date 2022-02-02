@@ -50,9 +50,6 @@ class TwoPointSpringDashpot(SpringDashpot):
             mdb.models[name].parts[name].engineeringFeatures.TwoPointSpringDashpot
             mdb.models[name].rootAssembly.engineeringFeatures\
             .TwoPointSpringDashpot
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         regionPairs
@@ -101,9 +98,6 @@ class TwoPointSpringDashpot(SpringDashpot):
                   dashpotBehavior: Boolean = OFF, springStiffness: float = 0,
                   dashpotCoefficient: float = 0):
         """This method modifies the TwoPointSpringDashpot object.
-
-        Parameters
-        ----------
         dof1
             An Int specifying the degree of freedom with which the springs and/or dashpots are 
             associated at their first points. The *dof1* argument applies only when 

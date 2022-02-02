@@ -32,9 +32,6 @@ class RegionAssembly(RegionAssemblyBase):
             This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Surface
             - mdb.models[*name*].rootAssembly.Surface
-
-        Parameters
-        ----------
                 side1Faces
                 side2Faces
                 side12Faces
@@ -90,9 +87,6 @@ class RegionAssembly(RegionAssemblyBase):
             This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Set
             - mdb.models[*name*].rootAssembly.Set
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         nodes
@@ -146,9 +140,6 @@ class RegionAssembly(RegionAssemblyBase):
             This function can be accessed by:
             - mdb.models[*name*].parts[*name*].Set
             - mdb.models[*name*].rootAssembly.Set
-
-        Parameters
-        ----------
         name
             A String specifying the name of the set.
         objectToCopy

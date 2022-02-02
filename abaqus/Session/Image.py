@@ -22,9 +22,6 @@ class Image:
         .. code-block:: python
 
             session.Image
-
-        Parameters
-        ----------
         name
             A String specifying the repository name for the image. 
         fileName
@@ -50,9 +47,6 @@ class Image:
 
     def ImageFromMovie(self, name: str, movieName: str, frame: int, time: float):
         """This method creates an Image object from a given frame of an existing Movie object.
-
-        Parameters
-        ----------
         name
             A String specifying the repository name for the image. 
         movieName

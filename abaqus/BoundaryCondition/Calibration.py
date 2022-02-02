@@ -40,9 +40,6 @@ class Calibration:
         .. code-block:: python
 
                       mdb.models[name].Calibration
-
-        Parameters
-        ----------
         name
             A String specifying the name of the new calibration. 
 

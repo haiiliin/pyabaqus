@@ -33,9 +33,6 @@ class TProfile(Profile):
 
             mdb.models[name].TProfile
             session.odbs[name].TProfile
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         b
@@ -68,13 +65,6 @@ class TProfile(Profile):
 
     def setValues(self):
         """This method modifies the TProfile object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

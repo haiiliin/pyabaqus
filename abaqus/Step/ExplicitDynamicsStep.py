@@ -311,9 +311,6 @@ class ExplicitDynamicsStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].ExplicitDynamicsStep
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         previous
@@ -380,9 +377,6 @@ class ExplicitDynamicsStep(AnalysisStep):
                   quadBulkViscosity: float = 1, userDefinedInc: float = None,
                   improvedDtMethod: Boolean = ON):
         """This method modifies the ExplicitDynamicsStep object.
-
-        Parameters
-        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         timePeriod

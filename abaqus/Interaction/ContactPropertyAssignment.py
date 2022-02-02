@@ -21,9 +21,6 @@ class ContactPropertyAssignment:
     def changeValuesInStep(self, stepName: str, index: int, value: str):
         """This method allows modification of contact property assignments to domain pairs already
         defined in a given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the contact property assignments are 
             to be modified. 
@@ -39,9 +36,6 @@ class ContactPropertyAssignment:
     def appendInStep(self, stepName: str, assignments: SymbolicConstant):
         """This method allows addition of contact property assignments to new domain pairs in a
         given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which new contact property assignments are 
             to be defined. 
@@ -57,9 +51,6 @@ class ContactPropertyAssignment:
 
     def delete(self, indices: tuple, surfPair: SymbolicConstant):
         """The delete method allows you to delete existing contact property assignments.
-
-        Parameters
-        ----------
         indices
             A sequence of Ints specifying the index of each contact property assignment to delete. 
             The *indices* and *surfPair* arguments are mutually exclusive. 

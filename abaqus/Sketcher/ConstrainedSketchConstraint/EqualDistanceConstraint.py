@@ -16,9 +16,6 @@ class EqualDistanceConstraint(ConstrainedSketchConstraint):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].EqualDistanceConstraint
-
-        Parameters
-        ----------
         entity1
             AConstrainedSketchGeometry object specifying the first line or ConstrainedSketchVertex object.
         entity2

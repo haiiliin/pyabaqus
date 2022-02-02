@@ -66,9 +66,6 @@ class FluidCavityPressureBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].FluidCavityPressureBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -96,9 +93,6 @@ class FluidCavityPressureBC(BoundaryCondition):
     def setValues(self, magnitude: float = 0, amplitude: str = UNSET, fixed: Boolean = OFF):
         """This method modifies the data for an existing FluidCavityPressureBC object in the step
         where it is created.
-
-        Parameters
-        ----------
         magnitude
             A Float specifying the fluid cavity pressure magnitude. The default value is 0. 
         amplitude
@@ -117,9 +111,6 @@ class FluidCavityPressureBC(BoundaryCondition):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing FluidCavityPressureBC object
         in the specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         magnitude

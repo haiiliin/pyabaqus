@@ -386,9 +386,6 @@ class DirectCyclicStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].DirectCyclicStep
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         previous
@@ -490,9 +487,6 @@ class DirectCyclicStep(AnalysisStep):
                   matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
                   extrapolation: SymbolicConstant = LINEAR, convertSDI: SymbolicConstant = PROPAGATED):
         """This method modifies the DirectCyclicStep object.
-
-        Parameters
-        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         timePeriod

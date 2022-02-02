@@ -170,9 +170,6 @@ class OdbData:
 
     def setValues(self, activeFrames: SymbolicConstant = None, stepPeriods: tuple = ()):
         """This method modifies the OdbData object.
-
-        Parameters
-        ----------
         activeFrames
             A sequence specifying the active frames, or the SymbolicConstant ALL. Each item in the 
             sequence is a tuple defining the stepName followed by a sequence of expressions 

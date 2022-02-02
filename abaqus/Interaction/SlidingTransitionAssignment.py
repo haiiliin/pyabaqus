@@ -21,9 +21,6 @@ class SlidingTransitionAssignment:
     def changeValuesInStep(self, stepName: str, index: int, value: SymbolicConstant):
         """This method allows you to modify sliding transition assignments already defined on
         surface pairs in a given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the sliding transition assignments are 
             to be modified. 
@@ -40,9 +37,6 @@ class SlidingTransitionAssignment:
     def appendInStep(self, stepName: str, assignments: SymbolicConstant):
         """This method allows you to add sliding transition assignments to new surface pairs in a
         given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the sliding transition assignments are 
             to be defined. 
@@ -57,9 +51,6 @@ class SlidingTransitionAssignment:
 
     def delete(self, indices: tuple):
         """The delete method allows you to delete existing sliding transition assignments.
-
-        Parameters
-        ----------
         indices
             A sequence of Ints specifying the index of each sliding transition assignment to delete. 
         """

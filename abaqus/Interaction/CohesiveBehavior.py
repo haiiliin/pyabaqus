@@ -53,9 +53,6 @@ class CohesiveBehavior:
         .. code-block:: python
 
             mdb.models[name].interactionProperties[name].CohesiveBehavior
-
-        Parameters
-        ----------
         repeatedContacts
             A Boolean specifying whether to enforce cohesive behavior for recurrent contacts at 
             nodes on the secondary surface subsequent to ultimate failure. The default value is OFF. 
@@ -88,8 +85,5 @@ class CohesiveBehavior:
 
     def setValues(self):
         """This method modifies the CohesiveBehavior object.
-
-        Parameters
-        ----------
         """
         pass

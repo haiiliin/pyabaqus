@@ -12,9 +12,6 @@ class EllipseByCenterPerimeter(ConstrainedSketchGeometry):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].EllipseByCenterPerimeter
-
-        Parameters
-        ----------
         center
             A pair of Floats specifying the center point of the ellipse. 
         axisPoint1

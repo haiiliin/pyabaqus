@@ -57,9 +57,6 @@ class ConnectorPotential:
             mdb.models[name].sections[name].behaviorOptions[i].ConnectorPotential
             session.odbs[name].sections[name].behaviorOptions[i]\
             .ConnectorPotential
-
-        Parameters
-        ----------
         componentStyle
             A SymbolicConstant specifying whether a component number or the name of the 
             DerivedComponent object will be used in the contribution. Possible values are 
@@ -100,13 +97,6 @@ class ConnectorPotential:
     def setValues(self):
         """This method modifies the ConnectorPotential object.
 
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
-
         Raises
         ------
             ValueError. 
@@ -125,9 +115,6 @@ class ConnectorPotential:
             mdb.models[name].sections[name].behaviorOptions[i].ConnectorPotential
             session.odbs[name].sections[name].behaviorOptions[i]\
             .ConnectorPotential
-
-        Parameters
-        ----------
 
         Returns
         -------

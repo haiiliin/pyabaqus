@@ -92,9 +92,6 @@ class Surface:
 
             mdb.models[*name*].parts[*name*].Surface
             mdb.models[*name*].rootAssembly.Surface
-
-        Parameters
-        ----------
         kwargs
 
             On three-dimensional solid faces, you can use the following arguments:
@@ -173,9 +170,6 @@ class Surface:
 
             mdb.models[*name*].parts[*name*].Surface
             mdb.models[*name*].rootAssembly.Surface
-
-        Parameters
-        ----------
         name
             A String specifying the name of the surface. 
         objectToCopy
@@ -202,9 +196,6 @@ class Surface:
 
             mdb.models[*name*].parts[*name*].Surface
             mdb.models[*name*].rootAssembly.Surface
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         surfaces
@@ -232,9 +223,6 @@ class Surface:
 
             mdb.models[*name*].parts[*name*].Surface
             mdb.models[*name*].rootAssembly.Surface
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         elementSetSeq

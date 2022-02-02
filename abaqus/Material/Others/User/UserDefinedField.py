@@ -24,9 +24,6 @@ class UserDefinedField:
             - mdb.models[name].materials[name].UserDefinedField
             - session.odbs[name].materials[name].UserDefinedField
 
-        Parameters
-        ----------
-
         Returns
         -------
             A UserDefinedField object. . 

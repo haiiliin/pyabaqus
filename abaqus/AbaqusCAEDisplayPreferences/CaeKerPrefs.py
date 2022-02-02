@@ -27,9 +27,6 @@ class CaeKerPrefs:
 
     def save(self, backupFile: Boolean = OFF):
         """This method saves the sessionOptions in the current *fileName*.
-
-        Parameters
-        ----------
         backupFile
             A Boolean specifying whether save a numbered backup copy of the preferences file, 
             *fileName*. Default is True. 
@@ -38,9 +35,6 @@ class CaeKerPrefs:
 
     def saveAs(self, fileName: str, directory: SymbolicConstant):
         """This method saves the sessionOptions to the specified location.
-
-        Parameters
-        ----------
         fileName
             A String specifying the path to the preferences file. 
         directory

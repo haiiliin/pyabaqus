@@ -47,9 +47,6 @@ class Concrete:
             This function can be accessed by:
             - mdb.models[name].materials[name].Concrete
             - session.odbs[name].materials[name].Concrete
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -69,13 +66,6 @@ class Concrete:
 
     def setValues(self):
         """This method modifies the Concrete object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

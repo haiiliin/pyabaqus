@@ -59,9 +59,6 @@ class RetainedNodalDofsBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].RetainedNodalDofsBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -101,9 +98,6 @@ class RetainedNodalDofsBC(BoundaryCondition):
                   ur2: Boolean = OFF, ur3: Boolean = OFF):
         """This method modifies the data for an existing RetainedNodalDofsBC object in the step
         where it is created.
-
-        Parameters
-        ----------
         u1
             A Boolean specifying whether to retain the degree of freedom in the 1-direction. The 
             default value is OFF indicating that the degree of freedom is not retained. 
@@ -132,9 +126,6 @@ class RetainedNodalDofsBC(BoundaryCondition):
                         ur1: Boolean = OFF, ur2: Boolean = OFF, ur3: Boolean = OFF):
         """This method modifies the propagating data for an existing RetainedNodalDofsBC object in
         the specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         u1

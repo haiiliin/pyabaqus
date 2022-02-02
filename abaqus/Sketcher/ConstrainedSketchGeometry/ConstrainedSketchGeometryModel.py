@@ -12,9 +12,6 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].Arc3Points
-
-        Parameters
-        ----------
         point1
             A pair of Floats specifying the first endpoint of the arc.
         point2
@@ -39,9 +36,6 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].ArcByCenterEnds
-
-        Parameters
-        ----------
         center
             A pair of Floats specifying the center point of the arc.
         point1
@@ -71,9 +65,6 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].ArcByStartEndTangent
-
-        Parameters
-        ----------
         point1
             A pair of Floats specifying the first endpoint of the arc.
         point2
@@ -96,9 +87,6 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].CircleByCenterPerimeter
-
-        Parameters
-        ----------
         center
             A pair of Floats specifying the center point of the circle.
         point1
@@ -120,9 +108,6 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].ConstructionCircleByCenterPerimeter
-
-        Parameters
-        ----------
         center
             A pair of Floats specifying the center point of the construction circle.
         point1
@@ -144,9 +129,6 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].EllipseByCenterPerimeter
-
-        Parameters
-        ----------
         center
             A pair of Floats specifying the center point of the ellipse.
         axisPoint1
@@ -170,9 +152,6 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].FilletByRadius
-
-        Parameters
-        ----------
         radius
             A Float specifying the radius of the fillet arc. Possible values are Floats > 0.
         curve1
@@ -207,9 +186,6 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].Line
-
-        Parameters
-        ----------
         point1
             A pair of Floats specifying the first endpoint.
         point2
@@ -229,9 +205,6 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].ConstructionLine
-
-        Parameters
-        ----------
         point1
             A pair of Floats specifying the first endpoint.
         point2
@@ -251,9 +224,6 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].Spline
-
-        Parameters
-        ----------
         points
             A sequence of pairs of Floats specifying the points through which the spline passes.
         constrainPoints
@@ -276,9 +246,6 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].Spot
-
-        Parameters
-        ----------
         point
             A pair of Floats specifying the coordinates of the spot construction point.
 
@@ -293,9 +260,6 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         """This method returns an list of ConstrainedSketchVertex objects which are a part of the
         given ConstrainedSketchGeometry object.
 
-        Parameters
-        ----------
-
         Returns
         -------
         vertices: list[ConstrainedSketchVertex]
@@ -305,9 +269,6 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
     def getSize(self):
         """This method returns the length of the given ConstrainedSketchGeometry object.
-
-        Parameters
-        ----------
 
         Returns
         -------
@@ -320,9 +281,6 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         """This method returns a point offset along the given ConstrainedSketchGeometry from the
         given end by a specified arc length distance or a percentage of the total length of the
         ConstrainedSketchGeometry object.
-
-        Parameters
-        ----------
         point
             A pair of Floats specifying the point from which the distance is to be measured.
         distance

@@ -370,9 +370,6 @@ class StaticRiksStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].StaticRiksStep
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         previous
@@ -467,9 +464,6 @@ class StaticRiksStep(AnalysisStep):
                   extrapolation: SymbolicConstant = LINEAR, fullyPlastic: str = '', noStop: Boolean = OFF,
                   useLongTermSolution: Boolean = OFF, convertSDI: SymbolicConstant = PROPAGATED):
         """This method modifies the StaticRiksStep object.
-
-        Parameters
-        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         nlgeom

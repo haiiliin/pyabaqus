@@ -393,9 +393,6 @@ class StaticStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].StaticStep
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         previous
@@ -501,9 +498,6 @@ class StaticStep(AnalysisStep):
                   reformKernel: int = 8, convertSDI: SymbolicConstant = PROPAGATED,
                   adaptiveDampingRatio: float = 0, continueDampingFactors: Boolean = OFF):
         """This method modifies the StaticStep object.
-
-        Parameters
-        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         timePeriod

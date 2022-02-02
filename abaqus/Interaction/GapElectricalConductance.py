@@ -51,9 +51,6 @@ class GapElectricalConductance:
         .. code-block:: python
 
             mdb.models[name].interactionProperties[name].GapElectricalConductance
-
-        Parameters
-        ----------
         definition
             A SymbolicConstant specifying how the electrical conductance is defined. Possible values 
             are TABULAR and USER_DEFINED. The default value is TABULAR. 
@@ -88,8 +85,5 @@ class GapElectricalConductance:
 
     def setValues(self):
         """This method modifies the GapElectricalConductance object.
-
-        Parameters
-        ----------
         """
         pass

@@ -69,9 +69,6 @@ class BeamSection(Section):
 
             mdb.models[name].BeamSection
             session.odbs[name].BeamSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         integration
@@ -178,9 +175,6 @@ class BeamSection(Section):
                   table: tuple = (), outputPts: tuple = (), centroid: tuple[float] = (),
                   shearCenter: tuple[float] = (), profileEnd: str = ''):
         """This method modifies the BeamSection object.
-
-        Parameters
-        ----------
         poissonRatio
             A Float specifying the Poisson's ratio of the section. The default value is 0.0. 
         thermalExpansion

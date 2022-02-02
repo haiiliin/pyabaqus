@@ -63,9 +63,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].AccelerationBaseMotionBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -119,9 +116,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].AccelerationBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -188,9 +182,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].AcousticPressureBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -234,9 +225,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].Calibration
-
-        Parameters
-        ----------
         name
             A String specifying the name of the new calibration.
 
@@ -257,9 +245,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ConcentrationBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -312,9 +297,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ConnAccelerationBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -395,9 +377,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ConnDisplacementBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -484,9 +463,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ConnVelocityBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -560,9 +536,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].DisplacementBaseMotionBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -617,9 +590,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].DisplacementBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -697,9 +667,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ElectricPotentialBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -744,9 +711,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].EulerianBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -791,9 +755,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].EulerianMotionBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -904,9 +865,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].FluidCavityPressureBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -945,9 +903,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].MagneticVectorPotentialBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -999,9 +954,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].MaterialFlowBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -1047,9 +999,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].PorePressureBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -1095,9 +1044,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].RetainedNodalDofsBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -1142,9 +1088,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SecondaryBaseBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -1175,9 +1118,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SubmodelBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -1249,9 +1189,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].TemperatureBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -1301,9 +1238,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].VelocityBaseMotionBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName
@@ -1356,9 +1290,6 @@ class BoundaryConditionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].VelocityBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key.
         createStepName

@@ -24,9 +24,6 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].AngularDimension
-
-        Parameters
-        ----------
         line1
             A ConstrainedSketchGeometry object specifying the first line.
         line2
@@ -56,9 +53,6 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].HorizontalDimension
-
-        Parameters
-        ----------
         vertex1
             A ConstrainedSketchVertex object specifying the first endpoint.
         vertex2
@@ -87,9 +81,6 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].ObliqueDimension
-
-        Parameters
-        ----------
         vertex1
             A ConstrainedSketchVertex object specifying the first endpoint.
         vertex2
@@ -119,9 +110,6 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].RadialDimension
-
-        Parameters
-        ----------
         curve
             A ConstrainedSketchGeometry object specifying the circular or elliptical arc.
         textPoint
@@ -154,9 +142,6 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].VerticalDimension
-
-        Parameters
-        ----------
         vertex1
             A ConstrainedSketchVertex object specifying the first endpoint.
         vertex2
@@ -186,9 +171,6 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].DistanceDimension
-
-        Parameters
-        ----------
         entity1
             A ConstrainedSketchVertex object or ConstrainedSketchGeometry object.
         entity2

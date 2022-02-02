@@ -64,9 +64,6 @@ class QuantityType:
 
             session.QuantityType
             xyPlot.QuantityType
-
-        Parameters
-        ----------
         label
             A String specifying the label for this quantity type. 
         type
@@ -153,8 +150,5 @@ class QuantityType:
 
     def setValues(self):
         """This method modifies the QuantityType object.
-
-        Parameters
-        ----------
         """
         pass

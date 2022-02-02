@@ -22,9 +22,6 @@ class ImageOptions:
                   xScale: float = 1, yScale: float = 1, origin: tuple[float] = (),
                   translucency: float = 1, options: str = None):
         """This method modifies the ImageOptions object.
-
-        Parameters
-        ----------
         imageName
             A String specifying the name of the image. A list of valid image names is in the 
             *images* repository in the *session* object. 

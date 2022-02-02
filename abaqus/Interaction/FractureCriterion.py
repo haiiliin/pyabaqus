@@ -84,9 +84,6 @@ class FractureCriterion:
         .. code-block:: python
 
             mdb.models[name].interactionProperties[name].FractureCriterion
-
-        Parameters
-        ----------
         initTable
             A sequence of sequences of Floats specifying the value defining the fracture criterion. 
             The items in the table data are described below. 
@@ -120,8 +117,5 @@ class FractureCriterion:
 
     def setValues(self):
         """This method modifies the FractureCriterion object.
-
-        Parameters
-        ----------
         """
         pass

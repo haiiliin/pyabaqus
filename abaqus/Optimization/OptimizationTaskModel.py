@@ -27,9 +27,6 @@ class OptimizationTaskModel(ModelBase):
         -----
             This function can be accessed by:
             -           mdb.models[name].BeadTask
-
-        Parameters
-        ----------
         name
             A String specifying the optimization task repository key.
         abaqusSensitivities
@@ -146,9 +143,6 @@ class OptimizationTaskModel(ModelBase):
         -----
             This function can be accessed by:
             -           mdb.models[name].ShapeTask
-
-        Parameters
-        ----------
         name
             A String specifying the optimization task repository key.
         abaqusSensitivities
@@ -342,9 +336,6 @@ class OptimizationTaskModel(ModelBase):
         -----
             This function can be accessed by:
             -           mdb.models[name].SizingTask
-
-        Parameters
-        ----------
         name
             A String specifying the optimization task repository key.
         abaqusSensitivities
@@ -424,9 +415,6 @@ class OptimizationTaskModel(ModelBase):
         -----
             This function can be accessed by:
             -           mdb.models[name].TopologyTask
-
-        Parameters
-        ----------
         name
             A String specifying the optimization task repository key.
         abaqusSensitivities

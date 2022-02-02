@@ -54,9 +54,6 @@ class InertiaRelief(Load):
         .. code-block:: python
 
             mdb.models[name].InertiaRelief
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -99,9 +96,6 @@ class InertiaRelief(Load):
                   localCoordinates: int = None):
         """This method modifies the data for an existing InertiaRelief object in the step where it
         is created.
-
-        Parameters
-        ----------
         u1
             A Boolean specifying the 1-direction as a free direction.Note:Although *u1*, *u2*, *u3*, 
             *ur1*, *ur2*, and *ur3* are optional arguments, at least one of them must be specified. 
@@ -135,9 +129,6 @@ class InertiaRelief(Load):
                         fixed: Boolean = OFF):
         """This method modifies the propagating data for an existing InertiaRelief object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         u1

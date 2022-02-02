@@ -30,9 +30,6 @@ class Gel:
             This function can be accessed by:
             - mdb.models[name].materials[name].Gel
             - session.odbs[name].materials[name].Gel
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
 
@@ -44,8 +41,5 @@ class Gel:
 
     def setValues(self):
         """This method modifies the Gel object.
-
-        Parameters
-        ----------
         """
         pass

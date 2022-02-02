@@ -27,9 +27,6 @@ class RegisteredList(CommandRegister):
 
             customKernel.RegisteredList
 
-        Parameters
-        ----------
-
         Returns
         -------
             A RegisteredList object. . 
@@ -39,8 +36,5 @@ class RegisteredList(CommandRegister):
 
     def Methods(self):
         """The RegisteredList object supports the same methods as a standard Python list object.
-
-        Parameters
-        ----------
         """
         pass

@@ -17,9 +17,6 @@ class InteractionContactInitializationModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ExpInitialization
-
-        Parameters
-        ----------
         name
             A String specifying the contact initialization repository key.
         overclosureType
@@ -82,9 +79,6 @@ class InteractionContactInitializationModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].StdInitialization
-
-        Parameters
-        ----------
         name
             A String specifying the contact initialization repository key.
         overclosureType

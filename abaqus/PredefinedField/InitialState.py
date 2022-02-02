@@ -34,9 +34,6 @@ class InitialState(PredefinedField):
         .. code-block:: python
 
             mdb.models[name].InitialState
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         instances
@@ -66,9 +63,6 @@ class InitialState(PredefinedField):
     def setValues(self, endStep: SymbolicConstant = LAST_STEP, endIncrement: SymbolicConstant = STEP_END,
                   updateReferenceConfiguration: Boolean = OFF):
         """This method modifies the InitialState object.
-
-        Parameters
-        ----------
         endStep
             The SymbolicConstant LAST_STEP or an Int specifying the step from which the initial 
             state values are to be read or the SymbolicConstant LAST_STEP. The default value is 

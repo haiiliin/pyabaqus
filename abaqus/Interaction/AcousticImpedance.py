@@ -36,9 +36,6 @@ class AcousticImpedance(Interaction):
         .. code-block:: python
 
             mdb.models[name].AcousticImpedance
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -91,9 +88,6 @@ class AcousticImpedance(Interaction):
                   directionCosine: tuple = ()):
         """This method modifies the data for an existing AcousticImpedance object in the step where
         it is created.
-
-        Parameters
-        ----------
         definition
             A SymbolicConstant specifying the type of acoustic impedance to be defined. Possible 
             values are TABULAR and NONREFLECTING. The default value is TABULAR. 
@@ -131,9 +125,6 @@ class AcousticImpedance(Interaction):
     def setValuesInStep(self, stepName: str, interactionProperty: str = ''):
         """This method modifies the propagating data for an existing AcousticImpedance object in
         the specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         interactionProperty

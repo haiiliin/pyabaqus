@@ -23,9 +23,6 @@ class MeanFieldMatrix:
             This function can be accessed by:
             - mdb.models[name].materials[name].meanFieldHomogenization.MeanFieldMatrix
             - session.odbs[name].materials[name].meanFieldHomogenization.MeanFieldMatrix
-
-        Parameters
-        ----------
         name
             A String specifying the constituent repository key. 
         material
@@ -46,13 +43,6 @@ class MeanFieldMatrix:
 
     def setValues(self):
         """This method modifies the MeanFieldMatrix object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

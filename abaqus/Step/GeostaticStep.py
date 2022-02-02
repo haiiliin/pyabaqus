@@ -320,9 +320,6 @@ class GeostaticStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].GeostaticStep
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         previous
@@ -394,9 +391,6 @@ class GeostaticStep(AnalysisStep):
                   timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
                   initialInc: float = None, minInc: float = None, maxInc: float = None):
         """This method modifies the GeostaticStep object.
-
-        Parameters
-        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         nlgeom

@@ -135,9 +135,6 @@ class Chart:
     def autoColor(self, lines: Boolean = OFF, symbols: Boolean = OFF):
         """This method distributes the colors on all curves displayed in the chart using the color
         palette defined by the xyColors object.
-
-        Parameters
-        ----------
         lines
             A Boolean defining whether color distribution affects curve lines. 
         symbols
@@ -147,26 +144,17 @@ class Chart:
 
     def autoSymbol(self):
         """This method distributes the symbols on all curves displayed in the chart.
-
-        Parameters
-        ----------
         """
         pass
 
     def fitCurves(self):
         """This method resets the transform of the chart. It cancels any zoom or pan action.
-
-        Parameters
-        ----------
         """
         pass
 
     def getAxis1(self, curve: str, quantityType: str):
         """This method returns the Axis object used for displaying the Axis1 of the XYCurve
         specified by name or object or used for the given QuantityType object.
-
-        Parameters
-        ----------
         curve
             The name or the XYCurve object associated to the Axis object. 
         quantityType
@@ -190,9 +178,6 @@ class Chart:
     def getAxis2(self, curve: str, quantityType: str):
         """This method returns the Axis object used for displaying the Axis2 of the XYCurve
         specified by name or object or used for the given QuantityType object.
-
-        Parameters
-        ----------
         curve
             The name or the XYCurve object associated to the Axis object. 
         quantityType
@@ -216,9 +201,6 @@ class Chart:
     def moveAxisUp(self, axis: str):
         """This method moves the relative position of the given Axis object up in the axis sequence
         of the Chart.
-
-        Parameters
-        ----------
         axis
             The Axis object to be moved. 
         """
@@ -227,9 +209,6 @@ class Chart:
     def moveAxisDown(self, axis: str):
         """This method moves the relative position of the given Axis object down in the axis
         sequence of the Chart.
-
-        Parameters
-        ----------
         axis
             The Axis object to be moved. 
         """
@@ -237,9 +216,6 @@ class Chart:
 
     def removeCurve(self, curve: str):
         """This method removes the given XYCurve from the Chart.
-
-        Parameters
-        ----------
         curve
             The XYCurve name or the XYCurve object or a sequence of XYCurve names or XYCurve objects 
             to be removed from the Chart. 
@@ -249,9 +225,6 @@ class Chart:
     def setValues(self, chart: 'Chart' = None, curvesToPlot: tuple[XYCurve] = (), aspectRatio: float = None,
                   transform: tuple = (), view: View = None, useQuantityType: Boolean = ON):
         """This method modifies the Chart object.
-
-        Parameters
-        ----------
         chart
             A Chart object from which attributes are to be copied. 
         curvesToPlot

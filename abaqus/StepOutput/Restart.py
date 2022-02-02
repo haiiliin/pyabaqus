@@ -30,9 +30,6 @@ class Restart:
         .. code-block:: python
 
             mdb.models[name].steps[name].Restart
-
-        Parameters
-        ----------
         numberIntervals
             An Int specifying the number of intervals during the step at which restart information 
             will be written. The default value is 0. The default value is 1. 
@@ -60,13 +57,6 @@ class Restart:
 
     def setValues(self):
         """This method modifies the Restart object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

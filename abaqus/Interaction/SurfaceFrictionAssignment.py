@@ -23,9 +23,6 @@ class SurfaceFrictionAssignment:
     def changeValuesInStep(self, stepName: str, index: int, value: float):
         """This method allows modification of surface friction assignments already defined on
         surfaces in a given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the surface friction assignments are 
             to be modified. 
@@ -43,9 +40,6 @@ class SurfaceFrictionAssignment:
     def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant, float]):
         """This method allows addition of surface friction assignments to new surfaces in a given
         step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which new surface friction assignments are 
             to be defined. 
@@ -61,9 +55,6 @@ class SurfaceFrictionAssignment:
 
     def delete(self, indices: tuple):
         """The delete method allows you to delete existing surface friction assignments.
-
-        Parameters
-        ----------
         indices
             A sequence of Ints specifying the index of each surface friction assignment to delete. 
         """

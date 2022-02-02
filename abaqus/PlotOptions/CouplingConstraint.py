@@ -27,9 +27,6 @@ class CouplingConstraint:
     def constraintData(self):
         """This method returns node numbers of the surface being controlled by the control point.
 
-        Parameters
-        ----------
-
         Returns
         -------
             Tuple-of-Ints Dictionary specifying the node numbers on the controlled surface. . 

@@ -56,9 +56,6 @@ class RateDependent:
             - session.odbs[name].materials[name].crushableFoam.RateDependent
             - session.odbs[name].materials[name].druckerPrager.RateDependent
             - session.odbs[name].materials[name].Plastic.RateDependent
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type
@@ -81,13 +78,6 @@ class RateDependent:
 
     def setValues(self):
         """This method modifies the RateDependent object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

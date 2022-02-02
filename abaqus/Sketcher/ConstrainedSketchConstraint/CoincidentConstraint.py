@@ -13,9 +13,6 @@ class CoincidentConstraint(ConstrainedSketchConstraint):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].CoincidentConstraint
-
-        Parameters
-        ----------
         entity1
             A ConstrainedSketchGeometry object or a ConstrainedSketchVertex object specifying the first object.
         entity2

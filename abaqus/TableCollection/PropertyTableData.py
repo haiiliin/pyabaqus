@@ -34,9 +34,6 @@ class PropertyTableData:
         .. code-block:: python
 
             mdb.models[name].tableCollections[name].propertyTables[name].PropertTableData
-
-        Parameters
-        ----------
         label
             A String specifying a unique label name for the current PropertyTable object. 
         regularize
@@ -66,9 +63,6 @@ class PropertyTableData:
 
     def setValues(self):
         """This method modifies the PropertyTableData object.
-
-        Parameters
-        ----------
 
         Returns
         -------

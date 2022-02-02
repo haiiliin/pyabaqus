@@ -18,9 +18,6 @@ class Light:
     def setValues(self, enabled: Boolean = OFF, type: SymbolicConstant = DIRECTIONAL, latitude: float = 0,
                   longitude: float = 0, diffuseColor: str = '', specularColor: str = ''):
         """This method modifies the Light object.
-
-        Parameters
-        ----------
         enabled
             A Boolean specifying whether the light is on or off. The default value is OFF. 
         type

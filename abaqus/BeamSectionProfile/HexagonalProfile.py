@@ -33,9 +33,6 @@ class HexagonalProfile(Profile):
 
             mdb.models[name].HexagonalProfile
             session.odbs[name].HexagonalProfile
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         r
@@ -60,13 +57,6 @@ class HexagonalProfile(Profile):
 
     def setValues(self):
         """This method modifies the HexagonalProfile object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

@@ -33,9 +33,6 @@ class CavityRadiationProp(ContactProperty):
         .. code-block:: python
 
             mdb.models[name].CavityRadiationProp
-
-        Parameters
-        ----------
         name
             A String specifying the interaction property repository key. 
         temperatureDependency
@@ -56,9 +53,6 @@ class CavityRadiationProp(ContactProperty):
 
     def setValues(self, temperatureDependency: Boolean = OFF, dependencies: int = 0, property: tuple = ()):
         """This method modifies the CavityRadiationProp object.
-
-        Parameters
-        ----------
         temperatureDependency
             A Boolean specifying whether the data depend on temperature. The default value is OFF. 
         dependencies

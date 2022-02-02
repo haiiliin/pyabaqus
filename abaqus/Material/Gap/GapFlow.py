@@ -59,9 +59,6 @@ class GapFlow:
             This function can be accessed by:
             - mdb.models[name].materials[name].GapFlow
             - session.odbs[name].materials[name].GapFlow
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         kmax
@@ -84,8 +81,5 @@ class GapFlow:
 
     def setValues(self):
         """This method modifies the GapFlow object.
-
-        Parameters
-        ----------
         """
         pass

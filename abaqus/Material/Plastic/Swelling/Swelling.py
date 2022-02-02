@@ -39,9 +39,6 @@ class Swelling:
             This function can be accessed by:
             - mdb.models[name].materials[name].Swelling
             - session.odbs[name].materials[name].Swelling
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below.This argument is 
             valid only when *law*=INPUT. 
@@ -65,13 +62,6 @@ class Swelling:
 
     def setValues(self):
         """This method modifies the Swelling object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

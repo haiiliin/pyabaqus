@@ -21,9 +21,6 @@ class TextReprOptions:
     def setValues(self, style: SymbolicConstant = None, maxRecursionDepth: SymbolicConstant = None, 
                   maxRecursionString: str = '', maxElementsInSequence: SymbolicConstant = None):
         """This method modifies the TextReprOptions object.
-
-        Parameters
-        ----------
         style
             A SymbolicConstant specifying the style of the text representation. Possible values 
             are:RECURSIVE: return a recursive representation of the object.SIMPLE: return a String 

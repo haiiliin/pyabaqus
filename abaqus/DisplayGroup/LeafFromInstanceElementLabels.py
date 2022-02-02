@@ -40,9 +40,6 @@ class LeafFromInstanceElementLabels(Leaf):
         .. code-block:: python
 
             LeafFromInstanceElementLabels
-
-        Parameters
-        ----------
         elementLabels
             A sequence of sequences specifying element labels. Each inner sequence consists of a 
             PartInstance object followed by a sequence of Strings specifying element labels. 

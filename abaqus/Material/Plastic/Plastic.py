@@ -99,9 +99,6 @@ class Plastic:
             This function can be accessed by:
             - mdb.models[name].materials[name].Plastic
             - session.odbs[name].materials[name].Plastic
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         hardening
@@ -136,13 +133,6 @@ class Plastic:
 
     def setValues(self):
         """This method modifies the Plastic object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

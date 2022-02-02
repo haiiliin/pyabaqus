@@ -89,17 +89,18 @@ class MdbBase:
         .. code-block:: python
 
             Mdb
-
+            
         Parameters
         ----------
-        pathName
+        pathName: str
             A String specifying the path to be used when the model database is saved to a file. If 
             you do not provide a file extension, .cae is appended automatically to the path. The 
             default value is an empty string. 
 
         Returns
         -------
-            A Mdb object. . 
+        Mdb
+            A Mdb object
         """
         self.pathName = pathName
         self.models['Model-1'] = Model('Model-1')
@@ -117,7 +118,7 @@ class MdbBase:
         .. code-block:: python
 
             Mdb
-
+            
         Parameters
         ----------
         fileName
@@ -125,7 +126,8 @@ class MdbBase:
 
         Returns
         -------
-            A Mdb object. . 
+        Mdb
+            A Mdb object
         """
         pass
 
@@ -139,38 +141,39 @@ class MdbBase:
         .. code-block:: python
 
             Mdb
-
+            
         Parameters
         ----------
-        pathName
+        pathName: str
             A String specifying the path to the model database file to open. If you do not provide a 
             file extension, Abaqus/CAE attempts to open the file with .cae appended to the path. 
 
         Returns
         -------
-            An Mdb object. 
+        Mdb
+            A Mdb object
 
         Raises
         ------
-            - If the file is an invalid model database: 
-              MdbError: invalid model database. 
-            - If the file contains a model database from an Abaqus release other than the Abaqus 
-            release you are currently running: 
-              MdbError: incompatible release number, expected *<Abaqus release>*, got *<earlier or 
-            later Abaqus release>* 
-            - If the model database file is already opened in write mode: 
-              MdbError: cannot open file: May be in use by another CAE session 
-            - If the command fails to open the model database file for reasons not mentioned above: 
-              MdbError: cannot open file... 
+        MdbError
+            invalid model database; 
+            If the file is an invalid model database
+        MdbError
+            incompatible release number, expected *<Abaqus release>*, got *<earlier or later Abaqus release>*; 
+            If the file contains a model database from an Abaqus release other than the Abaqus 
+            release you are currently running
+        MdbError
+            cannot open file; may be in use by another CAE session;
+            If the model database file is already opened in write mode
+        MdbError
+            cannot open file; 
+            If the command fails to open the model database file for reasons not mentioned above
         """
         pass
 
     def close(self):
         """This method closes an open Mdb object but does not save the Mdb object to disk. After
         closing the Mdb object, this method creates a new unnamed empty Mdb object.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -178,62 +181,62 @@ class MdbBase:
         """This method saves an Mdb object to disk at the location specified by *pathName*
         (*pathName* is a member of the Mdb object).
 
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
-
         Raises
         ------
-            - If *pathName* is empty: 
-              MdbError: cannot save file: pathname member is empty 
-            - If *pathName* is abaqus.cae: 
-              MdbError: “abaqus.cae” is an invalid CAE filename. 
-            - If the command fails to save the Mdb object to disk for reasons not mentioned above: 
-              MdbError: cannot save file... 
+        MdbError 
+            cannot save file: pathname member is empty; 
+            If *pathName* is empty
+        MdbError
+            “abaqus.cae” is an invalid CAE filename; 
+            If *pathName* is abaqus.cae
+        MdbError
+            cannot save file; 
+            If the command fails to save the Mdb object to disk for reasons not mentioned above
         """
         pass
 
     def saveAs(self, pathName: str):
         """This method saves an Mdb object to disk at the specified location.
-
+            
         Parameters
         ----------
-        pathName
+        pathName: str
             A String specifying the path to be used when the model database is saved to a file. If 
             you do not provide a file extension, .cae is appended automatically to the path.
 
         Raises
         ------
-            - If *pathName* is abaqus.cae: 
-              MdbError: “abaqus.cae” is an invalid CAE filename. 
-            - If the command fails to save the Mdb object to disk for reasons not mentioned above: 
-              MdbError: cannot save file... 
+        MdbError
+            “abaqus.cae” is an invalid CAE filename; 
+            If *pathName* is abaqus.cae
+        MdbError
+            cannot save file; 
+            If the command fails to save the Mdb object to disk for reasons not mentioned above
         """
         pass
 
     def openAuxMdb(self, pathName: str):
         """This method opens an auxiliary Mdb object on the disk at the specified location. This
         enables models from the auxiliary Mdb object to be copied into the current Mdb.
-
+            
         Parameters
         ----------
-        pathName
+        pathName: str
             A String specifying the path to the auxiliary Mdb which is to be opened. If you do not 
             provide a file extension, .cae is appended automatically to the path.
 
         Raises
         ------
-            - If the file is an invalid model database: 
-              MdbError: invalid model database. 
-            - If the file contains a model database from an Abaqus release other than the Abaqus 
-            release you are currently running: 
-              MdbError: incompatible release number, expected *<Abaqus release>*, got *<earlier or 
-            later Abaqus release>*. 
-            - If the command fails to open the model database file for reasons not mentioned above: 
-              MdbError: cannot open file... 
+        MdbError
+            invalid model database;
+            If the file is an invalid model database
+        MdbError
+            incompatible release number;
+            If the file contains a model database from an Abaqus release other than the Abaqus 
+            release you are currently running
+        MdbError
+            cannot open file; 
+            If the command fails to open the model database file for reasons not mentioned above
         """
         pass
 
@@ -241,17 +244,11 @@ class MdbBase:
         """This method closes the auxiliary Mdb which had been opened earlier using the openAuxMdb
         command.
 
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
-
         Raises
         ------
-            - If the auxiliary Mdb was not opened earlier. 
-              MdbError: The auxiliary Mdb was not opened.. 
+        MdbError
+            The auxiliary Mdb was not opened;
+            If the auxiliary Mdb was not opened earlier
         """
         pass
 
@@ -259,24 +256,22 @@ class MdbBase:
         """This method returns a list of model names present in the auxiliary Mdb which had been
         opened earlier using the openAuxMdb command.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A list of model names present in the auxiliaryMdb 
 
         Raises
         ------
-            - If the auxiliary Mdb was not opened earlier. 
-              MdbError: The auxiliary Mdb was not opened.. 
+        MdbError
+            The auxiliary Mdb was not opened; 
+            If the auxiliary Mdb was not opened earlier
         """
         pass
 
     def copyAuxMdbModel(self, fromName: str, toName: str = ''):
         """This method copies a specified model from the auxiliary Mdb which had been opened
         earlier using the openAuxMdb command.
-
+            
         Parameters
         ----------
         fromName
@@ -288,9 +283,11 @@ class MdbBase:
 
         Raises
         ------
-            - If the auxiliary Mdb was not opened earlier. 
-              MdbError: The auxiliary Mdb was not opened. 
-            - If the model fromName does not exist in the auxiliary Mdb. 
-              KeyError: fromName does not exist. 
+        MdbError
+            The auxiliary Mdb was not opened;
+            If the auxiliary Mdb was not opened earlier
+        KeyError
+            fromName does not exist;
+            If the model fromName does not exist in the auxiliary Mdb
         """
         pass

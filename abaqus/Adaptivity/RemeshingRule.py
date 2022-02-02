@@ -43,9 +43,6 @@ class RemeshingRule:
         .. code-block:: python
 
             mdb.models[name].RemeshingRule
-
-        Parameters
-        ----------
         name
             A String specifying the name of the object. 
         stepName
@@ -124,18 +121,12 @@ class RemeshingRule:
 
     def resume(self):
         """This method resumes the remeshing rule that was previously suppressed.
-
-        Parameters
-        ----------
         """
         pass
 
     def suppress(self):
         """This method suppresses the remeshing rule. Abaqus will not remesh regions where the
         rules are suppressed.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -147,9 +138,6 @@ class RemeshingRule:
                   specifyMaxSize: Boolean = ON, coarseningFactor: SymbolicConstant = DEFAULT_LIMIT,
                   refinementFactor: SymbolicConstant = DEFAULT_LIMIT, elementCountLimit: int = None):
         """This method modifies the RemeshingRule object.
-
-        Parameters
-        ----------
         description
             A String specifying a descriptive string for this rule. The default value is an empty 
             string. 

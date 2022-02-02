@@ -104,9 +104,6 @@ class DamageStabilizationCohesive:
             - .DamageStabilizationCohesive
             - session.odbs[name].materials[name].shearDamageInitiation\
             - .DamageStabilizationCohesive
-
-        Parameters
-        ----------
         cohesiveCoeff
             None or a Float specifying the viscosity coefficient. The default value is None. 
 
@@ -122,13 +119,6 @@ class DamageStabilizationCohesive:
 
     def setValues(self):
         """This method modifies the DamageStabilizationCohesive object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

@@ -74,9 +74,6 @@ class Face:
     def getCentroid(self):
         """This method returns the centroid of a face.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the centroid of 
@@ -87,9 +84,6 @@ class Face:
 
     def getCurvature(self, point: tuple, uParam: float, vParam: float):
         """This method returns information about the curvature at a location on the face.
-
-        Parameters
-        ----------
         point
             A tuple specifying the *X*-, *Y*-, and *Z* coordinates of the point where the curvature 
             is desired. If the *point* does not lie on the face it will be projected onto the face. 
@@ -116,9 +110,6 @@ class Face:
     def getElements(self):
         """This method returns an array of element objects that are associated with the face.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A MeshElementArray object which is a sequence of MeshElement objects. . 
@@ -129,9 +120,6 @@ class Face:
     def getElementFaces(self, faceSide: SymbolicConstant = BOTH_SIDES):
         """This method returns an array of mesh face objects. Each mesh face object contains the
         element label and the side of the element that lies on the geometric face.
-
-        Parameters
-        ----------
         faceSide
             A symbolic constant specifying the side of the geometric face of a solid from which the 
             element faces should be retrieved. Possible values are *SIDE1*, *SIDE2*, and 
@@ -147,9 +135,6 @@ class Face:
     def getNodes(self, faceSide: SymbolicConstant = BOTH_SIDES):
         """This method returns an array of mesh node objects. Each mesh node object contains the
         label of the node that lies on the geometric face.
-
-        Parameters
-        ----------
         faceSide
             A symbolic constant specifying the side of the geometric face of a solid from which the 
             nodes should be retrieved. Possible values are xo*SIDE1*, *SIDE2*, and *BOTH_SIDES*. The 
@@ -168,9 +153,6 @@ class Face:
         """This method returns the normal to a face at the location specified by the *pointOn*
         member. The normal at a different location on the face can be obtained by specifying the
         optional *point* argument.
-
-        Parameters
-        ----------
         point
             A tuple specifying the *X*-, *Y*-, and *Z* coordinates of the point where the normal to 
             the face is desired. If the *point* does not lie on the face it will be projected onto 
@@ -191,9 +173,6 @@ class Face:
 
     def getSize(self, printResults: str = True):
         """This method returns a Float indicating the area of the face.
-
-        Parameters
-        ----------
         printResults
             A Bool specifying whether verbose output is printed. The default value is True. 
 
@@ -207,9 +186,6 @@ class Face:
     def getEdges(self):
         """This method returns a sequence consisting of the edge ids of the edges on the face.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A tuple of integers. . 
@@ -219,9 +195,6 @@ class Face:
 
     def getVertices(self):
         """This method returns a sequence consisting of the vertex ids of the vertices of the face.
-
-        Parameters
-        ----------
 
         Returns
         -------
@@ -234,9 +207,6 @@ class Face:
         """This method returns a sequence consisting of the cell ids of the cells to which this
         face belongs.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A tuple of integers. . 
@@ -246,9 +216,6 @@ class Face:
 
     def getAdjacentFaces(self):
         """This method returns an array of face objects that share at least one edge of the face.
-
-        Parameters
-        ----------
 
         Returns
         -------
@@ -260,9 +227,6 @@ class Face:
     def getFacesByFaceAngle(self, angle: str):
         """This method returns an array of Face objects that are obtained by recursively finding
         adjacent faces that are at an angle of less than or equal to the specified angle.
-
-        Parameters
-        ----------
         angle
             A float specifying the value of the face angle. 
 
@@ -277,9 +241,6 @@ class Face:
         """This method returns an array of Face objects that are obtained by recursively finding
         adjacent faces that share the same curvature.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A FaceArray object, which is a sequence of Face objects. . 
@@ -291,9 +252,6 @@ class Face:
         """This method determines whether the normal to the face is flipped from its default
         direction by the use of the flipNormal method on a Part object.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A Boolean value of True if the normal is flipped and False if not. . 
@@ -304,9 +262,6 @@ class Face:
     def getCADAttributes(self):
         """This method returns an array of CAD attribute strings associated with the Face when the
         part was created from CAD data.
-
-        Parameters
-        ----------
 
         Returns
         -------

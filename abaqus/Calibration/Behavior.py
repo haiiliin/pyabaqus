@@ -53,9 +53,6 @@ class Behavior:
         .. code-block:: python
 
                       mdb.models[name].calibrations[name].Behavior
-
-        Parameters
-        ----------
         name
             A String specifying the name of the new behavior. 
         typeName
@@ -77,9 +74,6 @@ class Behavior:
                   uPrimary: str = '', bMullinsReload: str = '', bMullinsUnload: str = '',
                   bPYieldPoint: tuple = (), bPermSet: str = '', bPrimary: str = ''):
         """This method modifies the data for an existing behavior object.
-
-        Parameters
-        ----------
         E
             Young's modulus. Only valid if the behavior type is ElasIsoBehavior. 
         nu
@@ -163,9 +157,6 @@ class Behavior:
         poisson's ratio. For ElasPlasIsoBehavior it appends the young's modulus, poisson's ratio
         and Plastic points range and for FeFpBehavior it appends Plastic points range and
         Mullins effect properties.
-
-        Parameters
-        ----------
         materialName
             A String specifying the name of the existing material 
         """
@@ -174,9 +165,6 @@ class Behavior:
     def compute_E(self, dataSet: DataSet):
         """This method computes the value of young's modulus from the existing DataSet object. The
         method is only valid for ElasIsoBehavior type of behavior.
-
-        Parameters
-        ----------
         dataSet
             A DataSet object. 
 
@@ -190,9 +178,6 @@ class Behavior:
     def compute_nu(self, dataSet: DataSet):
         """This method computes the value of Poisson's Ratio from the existing DataSet object. The
         method is only valid for ElasIsoBehavior and ElasPlasIsoBehavior type of behavior.
-
-        Parameters
-        ----------
         dataSet
             A DataSet object. 
 
@@ -206,9 +191,6 @@ class Behavior:
     def compute_ultimatePoint(self, dataSet: DataSet):
         """This method computes the coordinates of the Ultimate point from the existing DataSet
         object. The method is only valid for ElasPlasIsoBehavior type of behavior.
-
-        Parameters
-        ----------
         dataSet
             A DataSet object. 
 
@@ -221,9 +203,6 @@ class Behavior:
     def compute_elasticModulus(self, yieldPoint: tuple):
         """This method computes the value of the elastic modulus from the yieldpoint value. The
         method is only valid for ElasPlasIsoBehavior type of behavior.
-
-        Parameters
-        ----------
         yieldPoint
             A tuple consisting of coordinates of the yieldpoint. 
 
@@ -236,9 +215,6 @@ class Behavior:
     def compute_plasticPoints(self, dataSet: DataSet, slider_val: str, start_index: str, end_index: str, yp: str = ''):
         """This method extracts the coordinates of the Plastic Points. The method is only valid for
         ElasPlasIsoBehavior type of behavior.
-
-        Parameters
-        ----------
         dataSet
             A DataSet object. 
         slider_val
@@ -259,9 +235,6 @@ class Behavior:
     def xyDataDissect(self, dsName: str, modelName: str, calibrationName: str, biaxial: Boolean = True):
         """This method extracts primary, unload, reload and permanent DataSet objects from the
         existing DataSet object.The method is only valid for FeFpBehavior type of behavior.
-
-        Parameters
-        ----------
         dsName
             A string specifying the name of the uniaxial/biaxial test dataset. 
         modelName

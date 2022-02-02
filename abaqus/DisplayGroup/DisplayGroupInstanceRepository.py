@@ -18,9 +18,6 @@ class DisplayGroupInstanceRepository:
     def syncOptions(self, name: str, updateInstances: Boolean = ON):
         """This method synchronizes the display options stored on the OdbDisplay object with the
         display options stored on the DisplayGroupInstance object.
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         updateInstances

@@ -40,9 +40,6 @@ class LeafFromOdbElementMaterials(Leaf):
         .. code-block:: python
 
             LeafFromOdbElementMaterials
-
-        Parameters
-        ----------
         elementMaterials
             A sequence of Strings specifying element materials. 
 

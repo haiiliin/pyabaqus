@@ -23,9 +23,6 @@ class Depvar:
             This function can be accessed by:
             - mdb.models[name].materials[name].Depvar
             - session.odbs[name].materials[name].Depvar
-
-        Parameters
-        ----------
         deleteVar
             An Int specifying the state variable number controlling the element deletion flag. The 
             default value is 0.This argument applies only to Abaqus/Explicit analyses. 
@@ -45,13 +42,6 @@ class Depvar:
 
     def setValues(self):
         """This method modifies the Depvar object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

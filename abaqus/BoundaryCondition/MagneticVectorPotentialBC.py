@@ -68,9 +68,6 @@ class MagneticVectorPotentialBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].MagneticVectorPotentialBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -114,9 +111,6 @@ class MagneticVectorPotentialBC(BoundaryCondition):
                   distributionType: SymbolicConstant = UNIFORM, localCsys: str = None):
         """This method modifies the data for an existing MagneticVectorPotentialBC object in the
         step where it is created.
-
-        Parameters
-        ----------
         component1
             A Complex, or a SymbolicConstant specifying the magnetic vector potential component in 
             the 1-direction. Possible values for the SymbolicConstant are UNSET and SET. The default 
@@ -148,9 +142,6 @@ class MagneticVectorPotentialBC(BoundaryCondition):
                         component3: SymbolicConstant = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing MagneticVectorPotentialBC
         object in the specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         component1

@@ -32,9 +32,6 @@ class FilmCondition(Interaction):
         .. code-block:: python
 
             mdb.models[name].FilmCondition
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -94,9 +91,6 @@ class FilmCondition(Interaction):
                   sinkFieldName: str = '', sinkDistributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing FilmCondition object in the step where it
         is created.
-
-        Parameters
-        ----------
         interactionProperty
             A String specifying the name of the FilmConditionProp object associated with this 
             interaction. The *interactionProperty* argument applies only when 
@@ -139,9 +133,6 @@ class FilmCondition(Interaction):
     def setValuesInStep(self, stepName: str):
         """This method modifies the propagating data of an existing FilmCondition object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         """

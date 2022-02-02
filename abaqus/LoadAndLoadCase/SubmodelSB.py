@@ -68,9 +68,6 @@ class SubmodelSB(Load):
         .. code-block:: python
 
             mdb.models[name].SubmodelSB
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -110,9 +107,6 @@ class SubmodelSB(Load):
                   exteriorTolerance: float = 0, globalIncrement: int = 0):
         """This method modifies the data for an existing SubmodelSB object in the step where it is
         created.
-
-        Parameters
-        ----------
         globalDrivingRegion
             A String specifying the element set in the global model that will be searched for 
             elements whose responses will be used to drive the submodel. An empty string indicates 
@@ -135,9 +129,6 @@ class SubmodelSB(Load):
     def setValuesInStep(self, stepName: str, fixed: Boolean = ON, globalStep: str = '', globalIncrement: int = 0):
         """This method modifies the propagating data for an existing SubmodelSB object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         fixed

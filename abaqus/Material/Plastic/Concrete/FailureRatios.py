@@ -38,9 +38,6 @@ class FailureRatios:
             This function can be accessed by:
             - mdb.models[name].materials[name].concrete.FailureRatios
             - session.odbs[name].materials[name].concrete.FailureRatios
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -60,13 +57,6 @@ class FailureRatios:
 
     def setValues(self):
         """This method modifies the FailureRatios object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

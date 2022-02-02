@@ -11,9 +11,6 @@ class Spline(ConstrainedSketchGeometry):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].Spline
-
-        Parameters
-        ----------
         points
             A sequence of pairs of Floats specifying the points through which the spline passes. 
         constrainPoints

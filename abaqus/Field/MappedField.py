@@ -194,9 +194,6 @@ class MappedField(AnalyticalField):
         .. code-block:: python
 
             mdb.models[name].MappedField
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         regionType
@@ -284,9 +281,6 @@ class MappedField(AnalyticalField):
                   gridPointData: tuple = (), xyzPointData: tuple = (),
                   coordinateScalingFactors: tuple = (), localCsys: str = None, description: str = ''):
         """This method modifies the MappedField object.
-
-        Parameters
-        ----------
         regionType
             A SymbolicConstant specifying the data source region type. It can be either an ODB mesh 
             or a cloud of points. Possible values are MESH and POINT. The default value is POINT. 

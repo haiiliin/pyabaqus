@@ -40,9 +40,6 @@ class LeafFromOdbElementLayups(Leaf):
         .. code-block:: python
 
             LeafFromOdbElementLayups
-
-        Parameters
-        ----------
         elementLayups
             A sequence of Strings specifying element layups. 
 

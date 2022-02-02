@@ -28,9 +28,6 @@ class MeshEditPart(PartBase):
     def adjustMidsideNode(self, cornerNodes: tuple[Node], parameter: float):
         """This method is used to adjust the midside node of second-order elements of an orphan
         mesh part.
-
-        Parameters
-        ----------
         cornerNodes
             A sequence of Node objects specifying the nodes towards which connected midside nodes 
             will be biased. 
@@ -45,9 +42,6 @@ class MeshEditPart(PartBase):
                   thicknessDir: float = None, moveLayers: Boolean = False):
         """This method is used to collapse short element edges and delete collapsed elements, or
         grow short element edges, on an orphan mesh part composed of linear elements.
-
-        Parameters
-        ----------
         mergeTolerance
             A Float specifying the edge length tolerance. During the operation, edges shorter than 
             the given tolerance will be collapsed, or grown to the specified length. 
@@ -81,9 +75,6 @@ class MeshEditPart(PartBase):
     def collapseMeshEdge(self, edge: str, collapseMethod: SymbolicConstant):
         """This method collapses an edge of a quadrilateral or triangular element of an orphan mesh
         part or part instance.
-
-        Parameters
-        ----------
         edge
             A single MeshEdge object specifying the element edge to collapse. 
         collapseMethod
@@ -95,9 +86,6 @@ class MeshEditPart(PartBase):
     def combineElement(self, elements: tuple):
         """This method combines two triangular elements of an orphan mesh part or an Abaqus native
         mesh.
-
-        Parameters
-        ----------
         elements
             A sequence of triangular MeshElement objects specifying the elements to combine. 
         """
@@ -106,9 +94,6 @@ class MeshEditPart(PartBase):
     def convertSolidMeshToShell(self):
         """This method removes all solid elements from an orphan mesh part and creates triangular
         or quadrilateral shell elements along their outer faces.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -116,9 +101,6 @@ class MeshEditPart(PartBase):
         """This method deletes the given elements from an orphan mesh part or an Abaqus native
         mesh. If the elements belong to an Abaqus native mesh then the elements must have been
         generated using the bottom-up meshing technique.
-
-        Parameters
-        ----------
         elements
             A sequence of MeshElement objects or a Set object containing elements. 
         deleteUnreferencedNodes
@@ -129,9 +111,6 @@ class MeshEditPart(PartBase):
 
     def deleteNode(self, nodes: tuple[MeshNode], deleteUnreferencedNodes: Boolean = OFF):
         """This method deletes the given nodes from an orphan mesh part.
-
-        Parameters
-        ----------
         nodes
             A sequence of MeshNode objects or a Set object containing nodes. 
         deleteUnreferencedNodes
@@ -147,9 +126,6 @@ class MeshEditPart(PartBase):
                  projectToGeometry: Boolean = ON):
         """This method changes the coordinates of the given nodes on an orphan mesh part or on an
         Abaqus native mesh.
-
-        Parameters
-        ----------
         nodes
             A sequence of MeshNode objects or a Set object containing nodes. 
         coordinate1
@@ -193,9 +169,6 @@ class MeshEditPart(PartBase):
     def projectNode(self, nodes: tuple[MeshNode], projectionReference: str):
         """This method projects the given nodes onto a mesh entity, geometric entity, or a datum
         object. The nodes may belong to an orphan mesh part or to an Abaqus native mesh.
-
-        Parameters
-        ----------
         nodes
             A sequence of MeshNode objects to be projected. 
         projectionReference
@@ -207,9 +180,6 @@ class MeshEditPart(PartBase):
 
     def generateMesh(self, elemShape: SymbolicConstant = None):
         """This method generates a new mesh on an orphan mesh part based on the original mesh.
-
-        Parameters
-        ----------
         elemShape
             A SymbolicConstant specifying the element shape to be used for meshing. Possible values 
             are:TRIRefine a planar triangular mesh and replace it with a new one. If no element 
@@ -224,9 +194,6 @@ class MeshEditPart(PartBase):
                              constantThicknessCorners: Boolean = False, extendElementSets: Boolean = False):
         """This method generates a solid or shell mesh from an orphan mesh surface by generating
         layers of elements that propagate out normal to the surface boundary.
-
-        Parameters
-        ----------
         region
             A Region object specifying the domain to be offset. 
         meshType
@@ -264,9 +231,6 @@ class MeshEditPart(PartBase):
     def mergeElement(self, edge: str, elements: str):
         """Merge a selection of elements arranged in layers on an orphan mesh part into a single
         layer.
-
-        Parameters
-        ----------
         edge
             A MeshEdge of one of the specified elements that serves as a reference edge to indicate 
             the topological direction for merging elements. All specified elements must be reachable 
@@ -283,9 +247,6 @@ class MeshEditPart(PartBase):
                    keepHighLabels: Boolean = False):
         """Merge the nodes of an orphan mesh part, or nodes that were generated using the bottom-up
         meshing technique.
-
-        Parameters
-        ----------
         nodes
             A sequence of Node objects specifying the nodes to merge.
         tolerance
@@ -308,9 +269,6 @@ class MeshEditPart(PartBase):
         """Merge two nodes of an orphan mesh part or an Abaqus native mesh. If the nodes belong to
         an Abaqus native mesh then at least one of the two nodes must have been generated using
         the bottom-up meshing technique.
-
-        Parameters
-        ----------
         node1
             A MeshNode object specifying the first node to merge. 
         node2
@@ -330,9 +288,6 @@ class MeshEditPart(PartBase):
 
     def orientElements(self, pickedElements: tuple[MeshElement], referenceRegion: MeshFace):
         """This method orients the stack direction of elements in a continuum shell or gasket mesh.
-
-        Parameters
-        ----------
         pickedElements
             A sequence of MeshElement objects specifying the elements to orient. 
         referenceRegion
@@ -343,18 +298,12 @@ class MeshEditPart(PartBase):
 
     def removeElementSize(self):
         """This method removes the global element size from an orphan mesh part.
-
-        Parameters
-        ----------
         """
         pass
 
     def renumberElement(self, elements: tuple = (), startLabel: int = None, increment: int = None, offset: int = None,
                         labels: str = ''):
         """This method assigns new labels to orphan mesh elements.
-
-        Parameters
-        ----------
         elements
             A MeshElementArray or a tuple or list of MeshElement objects, or a Set containing 
             elements to be renumbered. If unspecified, all elements in the part will be renumbered. 
@@ -385,9 +334,6 @@ class MeshEditPart(PartBase):
     def renumberNode(self, nodes: tuple = (), startLabel: int = None, increment: int = None, offset: int = None,
                      labels: str = ''):
         """This method assigns new labels to orphan mesh nodes.
-
-        Parameters
-        ----------
         nodes
             A MeshNodeArray or a tuple or list of MeshNode objects, or a Set containing nodes to be 
             renumbered. If unspecified, all nodes in the part will be renumbered. 
@@ -417,9 +363,6 @@ class MeshEditPart(PartBase):
 
     def setElementSize(self, size: float):
         """This method sets the global element size for an orphan mesh part.
-
-        Parameters
-        ----------
         size
             A Float specifying the desired element size. 
         """
@@ -428,9 +371,6 @@ class MeshEditPart(PartBase):
     def splitElement(self, elements: tuple):
         """This method splits quadrilateral elements of an orphan mesh part or a Abaqus native mesh
         into triangular elements.
-
-        Parameters
-        ----------
         elements
             A sequence of quadrilateral MeshElement objects specifying the elements to split. Each 
             quadrilateral element is split into two triangular elements by the shorter diagonal. 
@@ -440,9 +380,6 @@ class MeshEditPart(PartBase):
     def splitMeshEdge(self, edge: str, parameter: float = 0):
         """This method splits an edge of a quadrilateral or triangular element of an orphan mesh
         part or an Abaqus native mesh.
-
-        Parameters
-        ----------
         edge
             A single MeshEdge object specifying the element edge to split. 
         parameter
@@ -454,9 +391,6 @@ class MeshEditPart(PartBase):
     def subdivideElement(self, elements: str = '', divisionNumber: int = None, face: MeshFace = MeshFace(),
                          edge: MeshEdge = MeshEdge()):
         """Subdivide a selection of elements on an orphan mesh part in one or more directions.
-
-        Parameters
-        ----------
         elements
             A MeshElementArray, a list of MeshElement objects, a Set, or a list of Set objects 
             containing the elements to be subdivided. By default all the elements of the part are 
@@ -482,9 +416,6 @@ class MeshEditPart(PartBase):
     def swapMeshEdge(self, edge: str):
         """This method swaps the diagonal of two adjacent triangular elements of an orphan mesh
         part or an Abaqus native mesh.
-
-        Parameters
-        ----------
         edge
             A single MeshEdge object specifying the element edge to swap. 
         """
@@ -492,9 +423,6 @@ class MeshEditPart(PartBase):
 
     def wrapMesh(self, radius: float):
         """This method wraps a planar orphan mesh part about the *Z*-axis.
-
-        Parameters
-        ----------
         radius
             A Float specifying the radius of the cylinder about which the part is to be wrapped. The 
             wrapping procedure will relocate a node at point (xx, yy) on the planar mesh to 
@@ -509,9 +437,6 @@ class MeshEditPart(PartBase):
         the part and that the user has not subsequently executed any further edit mesh commands
         on the assembly. It also implies that the user provided a sufficient cache allowance to
         store the undo operation.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -521,8 +446,5 @@ class MeshEditPart(PartBase):
         available for the part. This implies that prior to executing an edit mesh command on the
         part, the user enabled edit mesh undo with a sufficient cache allowance to store the
         edit mesh operation.
-
-        Parameters
-        ----------
         """
         pass

@@ -77,9 +77,6 @@ class TemperatureBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].TemperatureBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -118,9 +115,6 @@ class TemperatureBC(BoundaryCondition):
                   distributionType: SymbolicConstant = UNIFORM, fixed: Boolean = OFF):
         """This method modifies the data for an existing TemperatureBC object in the step where it
         is created.
-
-        Parameters
-        ----------
         fieldName
             A String specifying the name of the AnalyticalField object associated with this boundary 
             condition. The *fieldName* argument applies only when *distributionType*=FIELD. The 
@@ -149,9 +143,6 @@ class TemperatureBC(BoundaryCondition):
                         dof: tuple = (), amplitude: str = ''):
         """This method modifies the propagating data for an existing TemperatureBC object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         magnitude

@@ -333,9 +333,6 @@ class CommonOptions(DGCommonOptions):
                   normalArrowheadStyle: SymbolicConstant = WIRE, translucency: Boolean = OFF,
                   translucencyFactor: float = 0):
         """This method modifies the CommonOptions object.
-
-        Parameters
-        ----------
         options
             A CommonOptions object from which values are to be copied. If other arguments are also 
             supplied to setValues, they will override the values in *options*. The default value is 

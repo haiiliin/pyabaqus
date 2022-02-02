@@ -14,9 +14,6 @@ class ObliqueDimension(ConstrainedSketchDimension):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].ObliqueDimension
-
-        Parameters
-        ----------
         vertex1
             A ConstrainedSketchVertex object specifying the first endpoint. 
         vertex2

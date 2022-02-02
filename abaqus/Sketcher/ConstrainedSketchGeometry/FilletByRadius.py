@@ -12,9 +12,6 @@ class FilletByRadius(ConstrainedSketchGeometry):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].FilletByRadius
-
-        Parameters
-        ----------
         radius
             A Float specifying the radius of the fillet arc. Possible values are Floats > 0. 
         curve1

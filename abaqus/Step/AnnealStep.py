@@ -224,9 +224,6 @@ class AnnealStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].AnnealStep
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         previous
@@ -254,9 +251,6 @@ class AnnealStep(AnalysisStep):
 
     def setValues(self, description: str = '', refTemp: float = None):
         """This method modifies the AnnealStep object.
-
-        Parameters
-        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         refTemp

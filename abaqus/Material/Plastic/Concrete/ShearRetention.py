@@ -38,9 +38,6 @@ class ShearRetention:
             This function can be accessed by:
             - mdb.models[name].materials[name].concrete.ShearRetention
             - session.odbs[name].materials[name].concrete.ShearRetention
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -60,13 +57,6 @@ class ShearRetention:
 
     def setValues(self):
         """This method modifies the ShearRetention object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

@@ -33,9 +33,6 @@ class RuleResult:
         .. code-block:: python
 
             mdb.adaptivityProcesses[name].iterations[i].RuleResult
-
-        Parameters
-        ----------
         name
             A String specifying the name of the Remeshing Rule to which these results correspond. 
         indicatorResults

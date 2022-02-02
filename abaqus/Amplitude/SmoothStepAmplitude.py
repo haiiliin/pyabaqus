@@ -35,9 +35,6 @@ class SmoothStepAmplitude(Amplitude):
 
             mdb.models[name].SmoothStepAmplitude
             session.odbs[name].SmoothStepAmplitude
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         data
@@ -56,9 +53,6 @@ class SmoothStepAmplitude(Amplitude):
 
     def setValues(self, timeSpan: SymbolicConstant = STEP):
         """This method modifies the SmoothStepAmplitude object.
-
-        Parameters
-        ----------
         timeSpan
             A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
             and TOTAL. The default value is STEP.

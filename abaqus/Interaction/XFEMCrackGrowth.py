@@ -31,9 +31,6 @@ class XFEMCrackGrowth(Interaction):
         .. code-block:: python
 
             mdb.models[name].XFEMCrackGrowth
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -54,9 +51,6 @@ class XFEMCrackGrowth(Interaction):
     def setValues(self, allowGrowth: Boolean = ON):
         """This method modifies the data for an existing XFEMCrackGrowth object in the step where
         it is created.
-
-        Parameters
-        ----------
         allowGrowth
             A Boolean specifying whether the crack is allowed to grow (propagate) during this 
             analysis step. The default value is ON. 
@@ -66,9 +60,6 @@ class XFEMCrackGrowth(Interaction):
     def setValuesInStep(self, stepName: str, allowGrowth: Boolean = ON):
         """This method modifies the propagating data for an existing XFEMCrackGrowth object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         allowGrowth

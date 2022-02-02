@@ -49,9 +49,6 @@ class BodyCurrentDensity(Load):
         .. code-block:: python
 
             mdb.models[name].BodyCurrentDensity
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -83,9 +80,6 @@ class BodyCurrentDensity(Load):
     def setValues(self, amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing BodyCurrentDensity object in the step
         where it is created.
-
-        Parameters
-        ----------
         amplitude
             A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. 
             UNSET should be used if the load has no amplitude reference. The default value is UNSET. 
@@ -99,9 +93,6 @@ class BodyCurrentDensity(Load):
     def setValuesInStep(self, stepName: str, comp1: str = '', comp2: str = '', comp3: str = '', amplitude: str = ''):
         """This method modifies the propagating data for an existing BodyCurrentDensity object in
         the specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         comp1

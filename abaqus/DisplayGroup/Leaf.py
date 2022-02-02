@@ -30,9 +30,6 @@ class Leaf:
         .. code-block:: python
 
             Leaf
-
-        Parameters
-        ----------
         leafType
             A SymbolicConstant specifying the leaf type. Possible values are EMPTY_LEAF, 
             DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES. 

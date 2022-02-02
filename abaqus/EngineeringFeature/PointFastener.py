@@ -62,9 +62,6 @@ class PointFastener(Fastener):
 
             mdb.models[name].parts[name].engineeringFeatures.PointFastener
             mdb.models[name].rootAssembly.engineeringFeatures.PointFastener
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         region
@@ -185,9 +182,6 @@ class PointFastener(Fastener):
                   connectorOrientationLocalCsys2: int = None, axis2: SymbolicConstant = AXIS_1,
                   angle2: float = 0, unsorted: Boolean = OFF):
         """This method modifies the PointFastener object.
-
-        Parameters
-        ----------
         directionVector
             A VertexArray object of length 2 specifying the direction of projection. Instead of 
             through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. The

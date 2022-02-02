@@ -102,9 +102,6 @@ class ContactProperty(InteractionProperty):
         .. code-block:: python
 
             mdb.models[name].ContactProperty
-
-        Parameters
-        ----------
         name
             A String specifying the interaction property repository key. 
 
@@ -132,9 +129,6 @@ class ContactProperty(InteractionProperty):
         .. code-block:: python
 
             mdb.models[name].ContactProperty
-
-        Parameters
-        ----------
         formulation
             A SymbolicConstant specifying the friction formulation. Possible values are
             FRICTIONLESS, PENALTY, EXPONENTIAL_DECAY, ROUGH, LAGRANGE, and USER_DEFINED. The default
@@ -204,9 +198,6 @@ class ContactProperty(InteractionProperty):
         .. code-block:: python
 
             mdb.models[name].ContactProperty
-
-        Parameters
-        ----------
         contactStiffness
             The SymbolicConstant DEFAULT or a Float specifying the contact stiffness. This argument
             is valid for *pressureOverclosure*=LINEAR. This argument is also valid for
@@ -288,9 +279,6 @@ class ContactProperty(InteractionProperty):
         .. code-block:: python
 
             mdb.models[name].ContactProperty
-
-        Parameters
-        ----------
         definition
             A SymbolicConstant specifying the method used to define the damping. Possible values are
             DAMPING_COEFFICIENT and CRITICAL_DAMPING_FRACTION. The default value is
@@ -329,9 +317,6 @@ class ContactProperty(InteractionProperty):
         .. code-block:: python
 
             mdb.models[name].ContactProperty
-
-        Parameters
-        ----------
         initTable
             A sequence of sequences of Floats specifying the values defining the damage initiation.
             The items in the table data are described below.
@@ -412,9 +397,6 @@ class ContactProperty(InteractionProperty):
         .. code-block:: python
 
             mdb.models[name].ContactProperty
-
-        Parameters
-        ----------
         initTable
             A sequence of sequences of Floats specifying the value defining the fracture criterion.
             The items in the table data are described below.
@@ -460,9 +442,6 @@ class ContactProperty(InteractionProperty):
         .. code-block:: python
 
             mdb.models[name].ContactProperty
-
-        Parameters
-        ----------
         repeatedContacts
             A Boolean specifying whether to enforce cohesive behavior for recurrent contacts at
             nodes on the secondary surface subsequent to ultimate failure. The default value is OFF.
@@ -510,9 +489,6 @@ class ContactProperty(InteractionProperty):
         .. code-block:: python
 
             mdb.models[name].ContactProperty
-
-        Parameters
-        ----------
         definition
             A SymbolicConstant specifying how the thermal conductance is defined. Possible values
             are TABULAR and USER_DEFINED. The default value is TABULAR.
@@ -565,9 +541,6 @@ class ContactProperty(InteractionProperty):
         .. code-block:: python
 
             mdb.models[name].ContactProperty
-
-        Parameters
-        ----------
         conversionFraction
             A Float specifying the fraction of dissipated energy caused by friction or electric
             currents that is converted to heat. The default value is 1.0.
@@ -592,9 +565,6 @@ class ContactProperty(InteractionProperty):
         .. code-block:: python
 
             mdb.models[name].ContactProperty
-
-        Parameters
-        ----------
         mainEmissivity
             A Float specifying the emissivity of the main surface.
         secondaryEmissivity
@@ -622,9 +592,6 @@ class ContactProperty(InteractionProperty):
         .. code-block:: python
 
             mdb.models[name].ContactProperty
-
-        Parameters
-        ----------
         contactArea
             A Float specifying the out-of-plane thickness of the surface for a two-dimensional model
             or cross-sectional area for every node in the node-based surface. The default value is
@@ -674,9 +641,6 @@ class ContactProperty(InteractionProperty):
         .. code-block:: python
 
             mdb.models[name].ContactProperty
-
-        Parameters
-        ----------
         definition
             A SymbolicConstant specifying how the electrical conductance is defined. Possible values
             are TABULAR and USER_DEFINED. The default value is TABULAR.

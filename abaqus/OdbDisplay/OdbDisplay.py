@@ -421,18 +421,12 @@ class OdbDisplay:
         """This method specifies a new position for the camera. It is available only when
         *movieMode*=ON (in the View object). The new camera position is the origin of the
         coordinate system specified by the *cameraCsysName* member of the BasicOptions object.
-
-        Parameters
-        ----------
         """
         pass
 
     def setDeformedVariable(self, variableLabel: str, field: str):
         """This method specifies the field output variable or FieldOutput object to be used when
         displaying the deformed shape of the model.
-
-        Parameters
-        ----------
         variableLabel
             A String specifying the field output variable. 
         field
@@ -449,9 +443,6 @@ class OdbDisplay:
     @typing.overload
     def setFrame(self, step: int, frame: int):
         """This method specifies the step and frame for the OdbDisplay object.
-
-        Parameters
-        ----------
         step
             An Int specifying the step index. Possible values are 0 ≤≤ *step* ≤≤ (*numSteps* − 1). 
         frame
@@ -474,9 +465,6 @@ class OdbDisplay:
     @typing.overload
     def setFrame(self, frame: OdbFrame):
         """This method specifies the frame for the OdbDisplay object.
-
-        Parameters
-        ----------
         frame
             An OdbFrame object. 
         """
@@ -488,9 +476,6 @@ class OdbDisplay:
     def setPrimaryVariable(self, variableLabel: str, field: str, outputPosition: SymbolicConstant,
                            refinement: SymbolicConstant = None, sectionPoint: dict = None):
         """This method specifies the field output variable for which to obtain results.
-
-        Parameters
-        ----------
         variableLabel
             A String specifying the field output variable. The *variableLabel* and *field* arguments 
             are mutually exclusive. 
@@ -525,9 +510,6 @@ class OdbDisplay:
     def setPrimarySectionPoint(self, sectionPoint: dict, activePly: str):
         """This method specifies the section point for the current primary, symbol and status
         variables.
-
-        Parameters
-        ----------
         sectionPoint
             A Dictionary with String keys and String values. Each key specifies a region in the 
             model; the corresponding value specifies a section point within that region. For 
@@ -551,9 +533,6 @@ class OdbDisplay:
                           applyStatusToUndeformed: Boolean = False):
         """This method specifies the field output variable for filtering element display based on a
         status criteria.
-
-        Parameters
-        ----------
         variableLabel
             A String specifying the field output variable. The *variableLabel* and *field* arguments 
             are mutually exclusive. 
@@ -606,9 +585,6 @@ class OdbDisplay:
         symbol plots. This variable must be in the form of vector or tensor data. The output
         quantity can also be specified with this command to control the display of resultants,
         or components.
-
-        Parameters
-        ----------
         variableLabel
             A String specifying the field output variable. The *variableLabel* and *field* arguments 
             are mutually exclusive. 
@@ -649,9 +625,6 @@ class OdbDisplay:
     def setStreamVariable(self, variableLabel: str):
         """This method specifies the field output variable for which to obtain results used for
         stream plots. This variable must be in the form of nodal vector data.
-
-        Parameters
-        ----------
         variableLabel
             A String specifying the field output variable.
 
@@ -665,9 +638,6 @@ class OdbDisplay:
 
     def setValues(self, visibleDisplayGroups: str = '', viewCut: Boolean = OFF, viewCutNames: str = ''):
         """This method specifies member values for the OdbDisplay object.
-
-        Parameters
-        ----------
         visibleDisplayGroups
             A List of DisplayGroup objects. 
         viewCut
@@ -692,9 +662,6 @@ class OdbDisplay:
 
             session.viewports[name].layers[name].odbDisplay.ViewCut
             session.viewports[name].odbDisplay.ViewCut
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         shape

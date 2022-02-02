@@ -40,9 +40,6 @@ class SpectrumAmplitude(Amplitude):
 
             mdb.models[name].SpectrumAmplitude
             session.odbs[name].SpectrumAmplitude
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         method
@@ -95,9 +92,6 @@ class SpectrumAmplitude(Amplitude):
                   gravity: float = 1, criticalDamping: Boolean = OFF, timeSpan: SymbolicConstant = STEP,
                   amplitude: str = ''):
         """This method modifies the SpectrumAmplitude object.
-
-        Parameters
-        ----------
         specificationUnits
             A SymbolicConstant specifying the units used for specifying the spectrum. Possible 
             values are DISPLACEMENT, VELOCITY, ACCELERATION, and GRAVITY. The default value is 

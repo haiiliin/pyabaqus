@@ -138,9 +138,6 @@ class Elastic:
             This function can be accessed by:
             - mdb.models[name].materials[name].Elastic
             - session.odbs[name].materials[name].Elastic
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type
@@ -180,13 +177,6 @@ class Elastic:
 
     def setValues(self):
         """This method modifies the Elastic object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

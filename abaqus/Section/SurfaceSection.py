@@ -43,9 +43,6 @@ class SurfaceSection(Section):
 
             mdb.models[name].SurfaceSection
             session.odbs[name].SurfaceSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         useDensity

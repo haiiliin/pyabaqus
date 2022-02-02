@@ -12,9 +12,6 @@ class ConstructionCircleByCenterPerimeter(ConstrainedSketchGeometry):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].ConstructionCircleByCenterPerimeter
-
-        Parameters
-        ----------
         center
             A pair of Floats specifying the center point of the construction circle. 
         point1

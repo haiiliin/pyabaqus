@@ -111,9 +111,6 @@ class OdbBase:
         .. code-block:: python
 
             session.Odb
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         analysisTitle
@@ -134,9 +131,6 @@ class OdbBase:
 
     def close(self):
         """This method closes an output database.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -145,9 +139,6 @@ class OdbBase:
         interpolate values between frames. The method is not applicable to an Odb object
         containing steps with different domains or to an Odb object containing a step with load
         case specific data.
-
-        Parameters
-        ----------
         frameValue
             A Double specifying the value at which the frame is required. *frameValue* can be the 
             total time or frequency. 
@@ -173,13 +164,6 @@ class OdbBase:
     def save(self):
         """This method saves output to an output database (.odb ) file.
 
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
-
         Raises
         ------
             - OdbError 
@@ -193,9 +177,6 @@ class OdbBase:
         data to the associated output database. update checks if additional steps have been
         written to the output database since it was opened or last updated. If additional steps
         have been written to the output database, update adds them to the Odb object.
-
-        Parameters
-        ----------
 
         Returns
         -------

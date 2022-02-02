@@ -41,9 +41,6 @@ class LeafFromMeshElementLabels(Leaf):
         .. code-block:: python
 
             LeafFromMeshElementLabels
-
-        Parameters
-        ----------
         elementSeq
             A sequence of MeshElement objects specifying elements. 
 

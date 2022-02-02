@@ -30,9 +30,6 @@ class TopologyPlanarSymmetry(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].TopologyPlanarSymmetry
-
-        Parameters
-        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -58,9 +55,6 @@ class TopologyPlanarSymmetry(GeometricRestriction):
 
     def setValues(self, axis: SymbolicConstant = AXIS_1, csys: int = None, ignoreFrozenArea: Boolean = OFF):
         """This method modifies the TopologyPlanarSymmetry object.
-
-        Parameters
-        ----------
         axis
             A SymbolicConstant specifying the axis of symmetry. Possible values are AXIS_1, AXIS_2, 
             and AXIS_3. The default value is AXIS_1. 

@@ -78,9 +78,6 @@ class Field(PredefinedField):
         .. code-block:: python
 
             mdb.models[name].Field
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -168,9 +165,6 @@ class Field(PredefinedField):
 
     def move(self, fromStepName: str, toStepName: str):
         """This method moves the FieldState object from one step to a different step.
-
-        Parameters
-        ----------
         fromStepName
             A String specifying the name of the step from which the PredefinedFieldState is moved. 
         toStepName
@@ -191,9 +185,6 @@ class Field(PredefinedField):
                   interpolate: SymbolicConstant = OFF, magnitudes: str = ''):
         """This method modifies the data for an existing Field object in the step where it is
         created.
-
-        Parameters
-        ----------
         outputVariable
             A String specifying the scalar nodal output variable that will be read from an output 
             database and used to initialize a specified predefined field. This argument is a 
@@ -273,9 +264,6 @@ class Field(PredefinedField):
                         magnitudes: str = ''):
         """This method modifies the propagating data for an existing Field object in the specified
         step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the predefined field is modified. 
         outputVariable

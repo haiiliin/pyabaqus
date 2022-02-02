@@ -34,9 +34,6 @@ class AssemblyModel(ModelBase):
         .. code-block:: python
 
             mdb.models[*name*].Instance
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         objectToCopy
@@ -51,9 +48,6 @@ class AssemblyModel(ModelBase):
     def convertAllSketches(self, regenerate: Boolean = True, convertReversedSketches: Boolean = True):
         """This method converts all sketches from Abaqus 6.5 or earlier to the equivalent
         ConstrainedSketch objects.
-
-        Parameters
-        ----------
         regenerate
             A Boolean specifying if all the features in assembly as well as in all the parts in the 
             model should be regenerated after the conversion. The default value is True. 
@@ -74,9 +68,6 @@ class AssemblyModel(ModelBase):
         objects from the specified models. If all instances of a Part are selected for linking,
         the Part will be linked as well. If not, a new linked child Part object will be created
         and added to the repository.
-
-        Parameters
-        ----------
         instancesMap
             A tuple of tuples containing the instance name to be linked and the corresponding 
             PartInstance object to which it will be linked. 

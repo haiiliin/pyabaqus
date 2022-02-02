@@ -56,9 +56,6 @@ class Expansion:
             This function can be accessed by:
             - mdb.models[name].materials[name].Expansion
             - session.odbs[name].materials[name].Expansion
-
-        Parameters
-        ----------
         type
             A SymbolicConstant specifying the type of expansion. Possible values are ISOTROPIC, 
             ORTHOTROPIC, ANISOTROPIC, and SHORT_FIBER. The default value is ISOTROPIC. 
@@ -88,13 +85,6 @@ class Expansion:
 
     def setValues(self):
         """This method modifies the Expansion object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

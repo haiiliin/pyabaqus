@@ -40,9 +40,6 @@ class LeafFromOdbElementTypes(Leaf):
         .. code-block:: python
 
             LeafFromOdbElementTypes
-
-        Parameters
-        ----------
         elementTypes
             A sequence of Strings specifying element Types. 
 

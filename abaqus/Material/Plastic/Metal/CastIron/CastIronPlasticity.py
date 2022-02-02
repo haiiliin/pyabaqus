@@ -43,9 +43,6 @@ class CastIronPlasticity:
             This function can be accessed by:
             - mdb.models[name].materials[name].CastIronPlasticity
             - session.odbs[name].materials[name].CastIronPlasticity
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -65,13 +62,6 @@ class CastIronPlasticity:
 
     def setValues(self):
         """This method modifies the CastIronPlasticity object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

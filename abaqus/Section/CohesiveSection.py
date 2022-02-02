@@ -36,9 +36,6 @@ class CohesiveSection(Section):
 
             mdb.models[name].CohesiveSection
             session.odbs[name].CohesiveSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         response
@@ -74,9 +71,6 @@ class CohesiveSection(Section):
     def setValues(self, initialThicknessType: SymbolicConstant = SOLVER_DEFAULT, initialThickness: float = 1,
                   outOfPlaneThickness: float = None):
         """This method modifies the CohesiveSection object.
-
-        Parameters
-        ----------
         initialThicknessType
             A SymbolicConstant specifying the method used to compute the initial thickness. Possible 
             values are:SOLVER_DEFAULT, specifying that Abaqus will use the analysis product 

@@ -18,9 +18,6 @@ class SolverControl:
                   relativeTolerance: typing.Union[SymbolicConstant, float] = DEFAULT,
                   maxIterations: SymbolicConstant = DEFAULT, fillInLevel: SymbolicConstant = DEFAULT):
         """This method modifies the SolverControl object.
-
-        Parameters
-        ----------
         allowPropagation
             A Boolean specifying whether to allow all solver control values to propagate from a 
             previous step. Setting this argument to ON automatically sets *resetDefaultValues* to 

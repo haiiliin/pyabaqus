@@ -59,9 +59,6 @@ class CompositeLayup:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].CompositeLayup
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         description
@@ -96,25 +93,16 @@ class CompositeLayup:
 
     def suppress(self):
         """This method suppresses a composite layup.
-
-        Parameters
-        ----------
         """
         pass
 
     def resume(self):
         """This method resumes a composite layup that was previously suppressed.
-
-        Parameters
-        ----------
         """
         pass
 
     def deletePlies(self):
         """This method deletes all of the plies from a composite layup.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -122,9 +110,6 @@ class CompositeLayup:
                   offsetValues: float = 0, elementType: SymbolicConstant = SHELL,
                   symmetric: Boolean = OFF):
         """This method modifies the CompositeLayup object.
-
-        Parameters
-        ----------
         description
             A String specifying a description of the composite layup. 
         offsetType
@@ -162,9 +147,6 @@ class CompositeLayup:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].CompositeLayup
-
-        Parameters
-        ----------
         thickness
             A Float specifying the thickness of the section layer.
         region
@@ -251,9 +233,6 @@ class CompositeLayup:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].CompositeLayup
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         layup
@@ -343,9 +322,6 @@ class CompositeLayup:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].CompositeLayup
-
-        Parameters
-        ----------
         nodalThicknessField
             A String specifying the name of the AnalyticalField or DiscreteField object used to
             define the thickness of the shell elements at each node. The *nodalThicknessField*
@@ -420,9 +396,6 @@ class CompositeLayup:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].CompositeLayup
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         material

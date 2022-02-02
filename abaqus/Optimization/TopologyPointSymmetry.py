@@ -29,9 +29,6 @@ class TopologyPointSymmetry(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].TopologyPointSymmetry
-
-        Parameters
-        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -54,9 +51,6 @@ class TopologyPointSymmetry(GeometricRestriction):
 
     def setValues(self, csys: int = None, ignoreFrozenArea: Boolean = OFF):
         """This method modifies the TopologyPointSymmetry object.
-
-        Parameters
-        ----------
         csys
             None or a DatumCsys object specifying the position of the symmetry point defined as the 
             origin of a local coordinate system. If *csys*=None, the global coordinate system is 

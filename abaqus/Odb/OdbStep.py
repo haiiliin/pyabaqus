@@ -16,9 +16,6 @@ class OdbStep(OdbStepBase):
         -----
             This function can be accessed by:
             - session.odbs[name].steps[name].HistoryRegion
-
-        Parameters
-        ----------
         name
             A String specifying the name of the HistoryRegion object.
         description
@@ -44,9 +41,6 @@ class OdbStep(OdbStepBase):
         -----
             This function can be accessed by:
             - session.odbs[name].steps[name].Frame
-
-        Parameters
-        ----------
         incrementNumber
             An Int specifying the frame increment number within the step. The base frame has
             normally increment number 0, and the results run from 1. In case of multiple load cases,
@@ -74,9 +68,6 @@ class OdbStep(OdbStepBase):
         -----
             This function can be accessed by:
             - session.odbs[name].steps[name].Frame
-
-        Parameters
-        ----------
         mode
             An Int specifying the eigenmode. This member is valid only if *domain*=MODAL.
         frequency
@@ -100,9 +91,6 @@ class OdbStep(OdbStepBase):
         -----
             This function can be accessed by:
             - session.odbs[name].steps[name].Frame
-
-        Parameters
-        ----------
         loadCase
             An OdbLoadCase object specifying the load case for the frame.
         description
@@ -129,9 +117,6 @@ class OdbStep(OdbStepBase):
         -----
             This function can be accessed by:
             - session.odbs[*name*].steps[*name*].LoadCase
-
-        Parameters
-        ----------
         name
             A String specifying the name of the OdbLoadCase object.
 

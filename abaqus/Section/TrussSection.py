@@ -33,9 +33,6 @@ class TrussSection(Section):
 
             mdb.models[name].TrussSection
             session.odbs[name].TrussSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         material
@@ -57,9 +54,6 @@ class TrussSection(Section):
 
     def setValues(self, area: float = 1):
         """This method modifies the TrussSection object.
-
-        Parameters
-        ----------
         area
             A Float specifying the cross-sectional area for the section. Possible values are *area* 
             >> 0. The default value is 1.0.

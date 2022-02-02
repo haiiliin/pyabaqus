@@ -31,9 +31,6 @@ class GeometricProperties:
         .. code-block:: python
 
             mdb.models[name].interactionProperties[name].GeometricProperties
-
-        Parameters
-        ----------
         contactArea
             A Float specifying the out-of-plane thickness of the surface for a two-dimensional model 
             or cross-sectional area for every node in the node-based surface. The default value is 
@@ -69,8 +66,5 @@ class GeometricProperties:
 
     def setValues(self):
         """This method modifies the GeometricProperties object.
-
-        Parameters
-        ----------
         """
         pass

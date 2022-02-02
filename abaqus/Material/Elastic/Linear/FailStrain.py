@@ -38,9 +38,6 @@ class FailStrain:
             This function can be accessed by:
             - mdb.models[name].materials[name].elastic.FailStrain
             - session.odbs[name].materials[name].elastic.FailStrain
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -60,13 +57,6 @@ class FailStrain:
 
     def setValues(self):
         """This method modifies the FailStrain object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

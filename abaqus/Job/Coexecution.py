@@ -135,18 +135,12 @@ class Coexecution:
 
     def kill(self):
         """This method kills the analysis of a co-execution.
-
-        Parameters
-        ----------
         """
         pass
 
     def submit(self, consistencyChecking: Boolean = ON, datacheckJob: Boolean = False,
                continueJob: Boolean = False):
         """This method submits a co-execution for analysis.
-
-        Parameters
-        ----------
         consistencyChecking
             A Boolean specifying whether to perform consistency checking for the individual jobs. 
             The default value is ON. It is not recommended to turn the consistency checking off 
@@ -164,9 +158,6 @@ class Coexecution:
 
     def writeInput(self, consistencyChecking: Boolean = ON):
         """This method writes an input file for each analysis in the co-execution.
-
-        Parameters
-        ----------
         consistencyChecking
             A Boolean specifying whether to perform consistency checking for the individual jobs. 
             The default value is ON. It is not recommended to turn the consistency checking off 
@@ -179,8 +170,5 @@ class Coexecution:
         you call the waitForCompletion method and the *status* member is neither SUBMITTED nor
         RUNNING, Abaqus assumes the analysis has either completed or aborted and returns
         immediately.
-
-        Parameters
-        ----------
         """
         pass

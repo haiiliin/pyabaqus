@@ -27,9 +27,6 @@ class StreamOptions:
     def setValues(self, colorMethod: SymbolicConstant = UNIFORM, uniformColor: str = '',
                   lineThickness: float = 6, showArrow: Boolean = OFF, numArrows: int = 10):
         """This method modifies the StreamOptions object.
-
-        Parameters
-        ----------
         colorMethod
             A SymbolicConstant specifying the method for coloring stream lines. Possible values are 
             UNIFORM, SPECTRUM, and CONTINUOUS. The default value is UNIFORM. 

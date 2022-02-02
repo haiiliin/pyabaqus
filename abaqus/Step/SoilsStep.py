@@ -396,9 +396,6 @@ class SoilsStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].SoilsStep
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         previous
@@ -507,9 +504,6 @@ class SoilsStep(AnalysisStep):
                   convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0,
                   continueDampingFactors: Boolean = OFF):
         """This method modifies the SoilsStep object.
-
-        Parameters
-        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         response

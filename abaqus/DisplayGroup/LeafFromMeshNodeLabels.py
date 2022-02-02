@@ -41,9 +41,6 @@ class LeafFromMeshNodeLabels(Leaf):
         .. code-block:: python
 
             LeafFromMeshNodeLabels
-
-        Parameters
-        ----------
         nodeSeq
             A sequence of MeshNode objects specifying nodes. 
 

@@ -45,9 +45,6 @@ class AssembledFastener(Fastener):
 
             mdb.models[name].parts[name].engineeringFeatures.AssembledFastener
             mdb.models[name].rootAssembly.engineeringFeatures.AssembledFastener
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         region
@@ -89,9 +86,6 @@ class AssembledFastener(Fastener):
 
     def setValues(self, orientMethod: SymbolicConstant = NORMALS, localCsys: int = None, scriptName: str = ''):
         """This method modifies the AssembledFastener object.
-
-        Parameters
-        ----------
         orientMethod
             A SymbolicConstant specifying the method used to orient the virtual instances of the 
             template model at each attachment point. Possible values are NORMALS and CSYS. The 

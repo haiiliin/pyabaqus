@@ -37,9 +37,6 @@ class PsdDefinition(Amplitude):
 
             mdb.models[name].PsdDefinition
             session.odbs[name].PsdDefinition
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         data
@@ -79,9 +76,6 @@ class PsdDefinition(Amplitude):
                   referenecePower: float = 0, user: Boolean = OFF, timeSpan: SymbolicConstant = STEP,
                   amplitude: str = ''):
         """This method modifies the PsdDefinition object.
-
-        Parameters
-        ----------
         unitType
             A SymbolicConstant specifying the type of units for specifying the frequency function. 
             FORCE implies power units. BASE implies gravity used to define base motion. DB implies 

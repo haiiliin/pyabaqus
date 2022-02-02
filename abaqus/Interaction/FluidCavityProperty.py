@@ -45,9 +45,6 @@ class FluidCavityProperty(ContactProperty):
         .. code-block:: python
 
             mdb.models[name].FluidCavityProperty
-
-        Parameters
-        ----------
         name
             A String specifying the interaction property repository key. 
         definition
@@ -156,9 +153,6 @@ class FluidCavityProperty(ContactProperty):
                   capacityTempDep: Boolean = OFF, capacityDependencies: int = 0,
                   capacityTable: tuple = ()):
         """This method modifies the FluidCavityProperty object.
-
-        Parameters
-        ----------
         definition
             A SymbolicConstant specifying the type of fluid cavity property to be defined. Possible 
             values are HYDRAULIC and PNEUMATIC. The default value is HYDRAULIC. 

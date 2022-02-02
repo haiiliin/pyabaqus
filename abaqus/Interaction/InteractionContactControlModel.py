@@ -15,9 +15,6 @@ class InteractionContactControlModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ExpContactControl
-
-        Parameters
-        ----------
         name
             A String specifying the contact controls repository key.
         globTrkChoice
@@ -69,9 +66,6 @@ class InteractionContactControlModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].StdContactControl
-
-        Parameters
-        ----------
         name
             A String specifying the contact controls repository key.
         stiffnessScaleFactor

@@ -82,9 +82,6 @@ class AccelerationBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].AccelerationBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -147,9 +144,6 @@ class AccelerationBC(BoundaryCondition):
                   localCsys: str = None, distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing AccelerationBC object in the step where it
         is created.
-
-        Parameters
-        ----------
         fieldName
             A String specifying the name of the AnalyticalField object associated with this boundary 
             condition. The *fieldName* argument applies only when *distributionType*=FIELD. The 
@@ -202,9 +196,6 @@ class AccelerationBC(BoundaryCondition):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing AccelerationBC object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         a1

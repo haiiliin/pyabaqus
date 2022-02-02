@@ -29,9 +29,6 @@ class TopologyMemberSize(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].TopologyMemberSize
-
-        Parameters
-        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -59,9 +56,6 @@ class TopologyMemberSize(GeometricRestriction):
     def setValues(self, maxThickness: float = 0, minThickness: float = 0, separation: float = 0,
                   sizeRestriction: SymbolicConstant = MINIMUM):
         """This method modifies the TopologyMemberSize object.
-
-        Parameters
-        ----------
         maxThickness
             A Float specifying the maximum thickness. The default value is 0.0. 
         minThickness

@@ -60,17 +60,11 @@ class AttributeColorMap:
 
     def setDefaults(self):
         """This method resets the AttributeColorMap object to its default state.
-
-        Parameters
-        ----------
         """
         pass
 
     def setValues(self, overrides: dict = None, defaultOverrides: dict = None):
         """This method modifies the AttributeColorMap object.
-
-        Parameters
-        ----------
         overrides
             A Dictionary object specifying a color mapping. Each key is of String type and specifies 
             an attribute in the map; the corresponding values specify the color definition to apply 
@@ -87,9 +81,6 @@ class AttributeColorMap:
 
     def updateOverrides(self, overrides: dict = None, defaultOverrides: dict = None):
         """This method specifies additional overrides to be added to the current object definition.
-
-        Parameters
-        ----------
         overrides
             A Dictionary object specifying a color mapping. Each key is of String type and specifies 
             an attribute in the map; the corresponding values specify the color definition to apply 

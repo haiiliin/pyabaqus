@@ -55,9 +55,6 @@ class SelfContactStd(Interaction):
         .. code-block:: python
 
             mdb.models[name].SelfContactStd
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -93,9 +90,6 @@ class SelfContactStd(Interaction):
                   smooth: float = 0, contactControls: str = ''):
         """This method modifies the data for an existing SelfContactStd object in the step where it
         is created.
-
-        Parameters
-        ----------
         enforcement
             A SymbolicConstant specifying the discretization method. Possible values are 
             NODE_TO_SURFACE and SURFACE_TO_SURFACE. The default value is SURFACE_TO_SURFACE. 
@@ -116,9 +110,6 @@ class SelfContactStd(Interaction):
     def setValuesInStep(self, stepName: str, interactionProperty: str = '', contactControls: str = ''):
         """This method modifies the propagating data of an existing SelfContactStd object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         interactionProperty

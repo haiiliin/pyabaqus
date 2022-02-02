@@ -478,9 +478,6 @@ class GraphicsOptions:
                   shadersAvailable: Boolean = OFF, translucencyMode: int = 4, options: str = None,
                   contourRangeTexturePrecision: float = 0):
         """This method modifies the GraphicsOptions object.
-
-        Parameters
-        ----------
         graphicsDriver
             A SymbolicConstant specifying the graphics driver to use. Abaqus/CAE currently uses 
             OpenGL exclusively so the only possible value is OPEN_GL. OPEN_GL takes advantage of 

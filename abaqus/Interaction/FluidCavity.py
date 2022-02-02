@@ -34,9 +34,6 @@ class FluidCavity(Interaction):
         .. code-block:: python
 
             mdb.models[name].FluidCavity
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -70,9 +67,6 @@ class FluidCavity(Interaction):
     def setValues(self, ambientPressure: float = 0, thickness: float = 1, useAdiabatic: Boolean = OFF,
                   checkNormals: Boolean = ON):
         """This method modifies the FluidCavity object.
-
-        Parameters
-        ----------
         ambientPressure
             A Float specifying the magnitude of the ambient pressure. The default value is 0.0. 
         thickness

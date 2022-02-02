@@ -66,9 +66,6 @@ class ConcentratedHeatFlux(Load):
         .. code-block:: python
 
             mdb.models[name].ConcentratedHeatFlux
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -104,9 +101,6 @@ class ConcentratedHeatFlux(Load):
                   dof: int = 11):
         """This method modifies the data for an existing ConcentratedHeatFlux object in the step
         where it is created.
-
-        Parameters
-        ----------
         distributionType
             A SymbolicConstant specifying how the load is distributed spatially. Possible values are 
             UNIFORM and FIELD. The default value is UNIFORM. 
@@ -127,9 +121,6 @@ class ConcentratedHeatFlux(Load):
     def setValuesInStep(self, stepName: str, magnitude: float = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing ConcentratedHeatFlux object in
         the specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         magnitude

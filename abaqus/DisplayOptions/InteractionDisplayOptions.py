@@ -21,9 +21,6 @@ class InteractionDisplayOptions:
                   radiationAmbient: Boolean = ON, filmCondition: Boolean = ON,
                   concentratedRadiationToAmbient: Boolean = ON, concentratedFilmCondition: Boolean = ON):
         """This method modifies the InteractionDisplayOptions object.
-
-        Parameters
-        ----------
         surfaceContact
             A Boolean specifying whether surface contact symbols are shown. The default value is ON. 
         selfContact

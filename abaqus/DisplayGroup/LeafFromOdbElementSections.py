@@ -40,9 +40,6 @@ class LeafFromOdbElementSections(Leaf):
         .. code-block:: python
 
             LeafFromOdbElementSections
-
-        Parameters
-        ----------
         elementSections
             A sequence of Strings specifying element Sections. 
 

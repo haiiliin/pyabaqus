@@ -52,9 +52,6 @@ class InputFile:
         .. code-block:: python
 
             inpParser.InputFile
-
-        Parameters
-        ----------
         file
             A String specifying the path to the input file. 
         directory
@@ -69,9 +66,6 @@ class InputFile:
     def parse(self, organize: Boolean = False, verbose: Boolean = False, bulk: Boolean = True,
               usePyArray: Boolean = False):
         """This method parses the input file associated with the InputFile object.
-
-        Parameters
-        ----------
         organize
             A Boolean specifying whether keywords should be organized into suboptions. The default 
             is False. 

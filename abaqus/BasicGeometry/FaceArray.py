@@ -48,9 +48,6 @@ class FaceArray:
         .. code-block:: python
 
             part.FaceArray
-
-        Parameters
-        ----------
         faces
             A list of Face objects. 
 
@@ -74,9 +71,6 @@ class FaceArray:
         findAt will always try to find objects among all the faces in the part or assembly
         instance and will not restrict itself to a subset even if the FaceArray represents such
         subset.
-
-        Parameters
-        ----------
         coordinates
             A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the object to 
             find.findAt returns either a Face object or a sequence of Face objects based on the type 
@@ -104,9 +98,6 @@ class FaceArray:
         """This method returns the edges on the exterior of the faces in the FaceArray. That is, it
         returns the edges that are referenced by exactly one of the faces in the sequence.
 
-        Parameters
-        ----------
-
         Returns
         -------
             An EdgeArray object specifying the exterior edges. . 
@@ -119,9 +110,6 @@ class FaceArray:
         specified *mask*. This command is generated when the JournalOptions are set to
         COMPRESSEDINDEX. When a large number of objects are involved, this method is highly
         efficient.
-
-        Parameters
-        ----------
         mask
             A String specifying the object or objects. 
 
@@ -135,9 +123,6 @@ class FaceArray:
     def getMask(self):
         """This method returns a string specifying the object or objects.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A String specifying the object or objects. . 
@@ -148,9 +133,6 @@ class FaceArray:
     def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
                          zMax: str = ''):
         """This method returns an array of face objects that lie within the specified bounding box.
-
-        Parameters
-        ----------
         xMin
             A float specifying the minimum *X*-boundary of the bounding box. 
         yMin
@@ -174,9 +156,6 @@ class FaceArray:
     def getByBoundingCylinder(self, center1: tuple, center2: tuple, radius: str):
         """This method returns an array of face objects that lie within the specified bounding
         cylinder.
-
-        Parameters
-        ----------
         center1
             A tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the first end of the 
             cylinder. 
@@ -196,9 +175,6 @@ class FaceArray:
     def getByBoundingSphere(self, center: tuple, radius: str):
         """This method returns an array of face objects that lie within the specified bounding
         sphere.
-
-        Parameters
-        ----------
         center
             A tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the sphere. 
         radius
@@ -215,9 +191,6 @@ class FaceArray:
         """This method returns a dictionary of two tuples representing minimum and maximum boundary
         values of the bounding box of the minimum size containing the face sequence.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A Dictionary object with the following items: 
@@ -232,9 +205,6 @@ class FaceArray:
     def getClosest(self, coordinates: tuple, searchTolerance: str = ''):
         """This method returns an object or objects in the FaceArray closest to the given set of
         points, where the given points need not lie on the faces in the FaceArray.
-
-        Parameters
-        ----------
         coordinates
             A sequence of a sequence of floats, where each sequence of floats describes the *X*-, 
             *Y*-, and *Z*-coordinates of a 

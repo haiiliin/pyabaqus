@@ -46,9 +46,6 @@ class Stringer:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].Stringer
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. The default value is an empty string. 
         edges
@@ -75,9 +72,6 @@ class Stringer:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].Stringer
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. The default value is an empty string. 
         edges

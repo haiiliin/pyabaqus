@@ -36,9 +36,6 @@ class GasketTransverseShearElastic:
             This function can be accessed by:
             - mdb.models[name].materials[name].GasketTransverseShearElastic
             - session.odbs[name].materials[name].GasketTransverseShearElastic
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         variableUnits
@@ -61,13 +58,6 @@ class GasketTransverseShearElastic:
 
     def setValues(self):
         """This method modifies the GasketTransverseShearElastic object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

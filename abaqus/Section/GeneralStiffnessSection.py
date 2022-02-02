@@ -54,9 +54,6 @@ class GeneralStiffnessSection(ShellSection):
 
             mdb.models[name].GeneralStiffnessSection
             session.odbs[name].GeneralStiffnessSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         stiffnessMatrix
@@ -109,9 +106,6 @@ class GeneralStiffnessSection(ShellSection):
                   useDensity: Boolean = OFF, density: float = 0, thermalStresses: tuple = (),
                   scalingData: tuple = ()):
         """This method modifies the GeneralStiffnessSection object.
-
-        Parameters
-        ----------
         referenceTemperature
             None or a Float specifying the reference temperature for thermal expansion. The default 
             value is None. 

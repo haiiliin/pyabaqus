@@ -31,9 +31,6 @@ class DefaultChartOptions:
                   tagBorder: LineStyle = LineStyle(), tagTextStyle: TextStyle = TextStyle(),
                   useQuantityType: Boolean = ON):
         """This method modifies the DefaultChartOptions object.
-
-        Parameters
-        ----------
         areaStyle
             An AreaStyle object specifying an AreaStyle used to hold on to the default display 
             properties for the chart area. 

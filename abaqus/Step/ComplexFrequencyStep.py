@@ -277,9 +277,6 @@ class ComplexFrequencyStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].ComplexFrequencyStep
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         previous
@@ -332,9 +329,6 @@ class ComplexFrequencyStep(AnalysisStep):
                   minEigen: float = None, maxEigen: float = None,
                   propertyEvaluationFrequency: float = None):
         """This method modifies the ComplexFrequencyStep object.
-
-        Parameters
-        ----------
         numEigen
             The SymbolicConstant ALL or an Int specifying the number of complex eigenmodes to be 
             calculated or a SymbolicConstant ALL. The default value is ALL. 

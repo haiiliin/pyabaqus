@@ -33,9 +33,6 @@ class AcousticInfiniteSection(Section):
 
             mdb.models[name].AcousticInfiniteSection
             session.odbs[name].AcousticInfiniteSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         material
@@ -57,9 +54,6 @@ class AcousticInfiniteSection(Section):
 
     def setValues(self, thickness: float = 1, order: int = 10):
         """This method modifies the AcousticInfiniteSection object.
-
-        Parameters
-        ----------
         thickness
             A Float specifying the thickness of the section. Possible values are *thickness* >> 0.0. 
             The default value is 1.0. 

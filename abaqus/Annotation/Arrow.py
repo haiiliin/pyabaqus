@@ -37,9 +37,6 @@ class Arrow(Annotation):
 
             mdb.Arrow
             session.odbs[*name*].userData.Arrow
-
-        Parameters
-        ----------
         name
             A String specifying the annotation repository key.
         startPoint
@@ -130,9 +127,6 @@ class Arrow(Annotation):
 
     def translateStartPoint(self, x: float = None, y: float = None):
         """This method translates the start point of the Arrow object on the viewport plane.
-
-        Parameters
-        ----------
         x
             A Float specifying the *X* translation amount in millimeters. 
         y
@@ -143,9 +137,6 @@ class Arrow(Annotation):
 
     def translateEndPoint(self, x: float = None, y: float = None):
         """This method translates the end point of the Arrow object on the viewport plane.
-
-        Parameters
-        ----------
         x
             A Float specifying the *X* translation amount in millimeters. 
         y
@@ -161,9 +152,6 @@ class Arrow(Annotation):
                   startGap: float = 0, endGap: float = 0, color: str = '',
                   lineStyle: SymbolicConstant = SOLID, lineThickness: SymbolicConstant = VERY_THIN):
         """This method modifies the Arrow object.
-
-        Parameters
-        ----------
         startPoint
             A pair of Floats specifying the start point *X*- and *Y*-offsets in millimeters from 
             *startAnchor*. The default value is (0, 0). 

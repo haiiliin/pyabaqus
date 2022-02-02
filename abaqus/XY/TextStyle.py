@@ -51,9 +51,6 @@ class TextStyle:
 
             session.TextStyle
             xyPlot.TextStyle
-
-        Parameters
-        ----------
         color
             A String specifying the color to be used when drawing text with this TextStyle object. 
             The default value is "White". 
@@ -79,9 +76,6 @@ class TextStyle:
 
     def setValues(self, color: str = '', show: Boolean = ON, font: str = '', rotationAngle: float = 0):
         """This method modifies the TextStyle object.
-
-        Parameters
-        ----------
         color
             A String specifying the color to be used when drawing text with this TextStyle object. 
             The default value is "White". 

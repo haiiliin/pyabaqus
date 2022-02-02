@@ -59,9 +59,6 @@ class CompositeShellSection(GeometryShellSection):
             mdb.models[name].parts[name].compositeLayups[i].CompositeShellSection
             mdb.models[name].CompositeShellSection
             session.odbs[name].CompositeShellSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         layup
@@ -140,9 +137,6 @@ class CompositeShellSection(GeometryShellSection):
                   thicknessModulus: float = None, useDensity: Boolean = OFF, density: float = 0,
                   layupName: str = '', thicknessField: str = '', nodalThicknessField: str = ''):
         """This method modifies the CompositeShellSection object.
-
-        Parameters
-        ----------
         symmetric
             A Boolean specifying whether or not the layup should be made symmetric by the analysis. 
             The default value is OFF. 

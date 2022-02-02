@@ -134,9 +134,6 @@ class DisplayBodyOptions(DGDisplayBodyOptions):
                   coordinateScaleFactors: tuple = (), translucency: Boolean = OFF,
                   translucencyFactor: float = 0):
         """This method modifies the DisplayBodyOptions object.
-
-        Parameters
-        ----------
         options
             A DisplayBodyOptions object from which values are to be copied. If other arguments are 
             also supplied to setValues, they will override the values in *options*. The default 

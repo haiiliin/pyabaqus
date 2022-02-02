@@ -22,9 +22,6 @@ class RegionPairs:
     def setValuesInStep(self, stepName: str, useAllstar: Boolean = OFF, addPairs: SymbolicConstant = None,
                         removePairs: SymbolicConstant = None):
         """This method allows addition and removal of domain pairs in a given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the region pair assignments are to be 
             modified. 

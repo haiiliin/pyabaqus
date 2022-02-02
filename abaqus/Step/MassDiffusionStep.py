@@ -305,9 +305,6 @@ class MassDiffusionStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].MassDiffusionStep
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         previous
@@ -372,9 +369,6 @@ class MassDiffusionStep(AnalysisStep):
                   end: SymbolicConstant = PERIOD, dcmax: float = 0, amplitude: SymbolicConstant = STEP,
                   extrapolation: SymbolicConstant = LINEAR, convertSDI: SymbolicConstant = PROPAGATED):
         """This method modifies the MassDiffusionStep object.
-
-        Parameters
-        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         response

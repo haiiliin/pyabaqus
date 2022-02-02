@@ -37,9 +37,6 @@ class GapConductance:
             This function can be accessed by:
             - mdb.models[name].materials[name].GapConductance
             - session.odbs[name].materials[name].GapConductance
-
-        Parameters
-        ----------
         pressureDependency
             A Boolean specifying whether the data depend on pressure. The default value is OFF. 
         dependencies
@@ -58,9 +55,6 @@ class GapConductance:
 
     def setValues(self):
         """This method modifies the GapConductance object.
-
-        Parameters
-        ----------
 
         Returns
         -------

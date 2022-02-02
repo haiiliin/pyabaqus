@@ -39,9 +39,6 @@ class LeafFromPartInstance(Leaf):
         .. code-block:: python
 
             LeafFromPartInstance
-
-        Parameters
-        ----------
         partInstanceName
             A sequence of Strings specifying the names of the part instances. 
 

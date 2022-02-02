@@ -46,9 +46,6 @@ class ConnectorSection(Section):
 
             mdb.models[name].ConnectorSection
             session.odbs[name].ConnectorSection
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         assembledType
@@ -144,9 +141,6 @@ class ConnectorSection(Section):
                   extrapolation: SymbolicConstant = CONSTANT,
                   behaviorOptions: ConnectorBehaviorOptionArray = None):
         """This method modifies the ConnectorSection object.
-
-        Parameters
-        ----------
         assembledType
             A SymbolicConstant specifying the assembled connection type. Possible values 
             are:NONEBEAMBUSHINGCVJOINTCYLINDRICALHINGEPLANARRETRACTORSLIPRINGTRANSLATORUJOINTWELDThe 

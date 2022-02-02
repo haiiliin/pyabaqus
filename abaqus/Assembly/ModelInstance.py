@@ -90,9 +90,6 @@ class ModelInstance:
         .. code-block:: python
 
             mdb.models[name].rootAssembly.Instance
-
-        Parameters
-        ----------
         name
             The repository key. The name must be a valid Abaqus object name. 
         model
@@ -112,26 +109,17 @@ class ModelInstance:
         """This method converts the position constraints of an instance to absolute positions. The
         method deletes the constraint features on the instance but preserves the position in
         space.
-
-        Parameters
-        ----------
         """
         pass
 
     def getPosition(self):
         """This method prints the sum of the translations and rotations applied to the
         ModelInstance object.
-
-        Parameters
-        ----------
         """
         pass
 
     def replace(self, instanceOf: Model, applyConstraints: Boolean = True):
         """This method replaces one instance with an instance of another model.
-
-        Parameters
-        ----------
         instanceOf
             A Model object to be instanced. If the model does not exist, no ModelInstance object is 
             created. 
@@ -145,9 +133,6 @@ class ModelInstance:
 
     def translate(self, vector: tuple):
         """This method translates an instance by the specified amount.
-
-        Parameters
-        ----------
         vector
             A sequence of three Floats specifying a translation vector. 
         """

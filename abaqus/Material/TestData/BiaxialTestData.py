@@ -35,9 +35,6 @@ class BiaxialTestData:
             - session.odbs[name].materials[name].hyperelastic.BiaxialTestData
             - session.odbs[name].materials[name].hyperfoam.BiaxialTestData
             - session.odbs[name].materials[name].mullinsEffect.BiaxialTestData
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the following: 
             - Nominal stress, TB. 
@@ -61,8 +58,5 @@ class BiaxialTestData:
 
     def setValues(self):
         """This method modifies the BiaxialTestData object.
-
-        Parameters
-        ----------
         """
         pass

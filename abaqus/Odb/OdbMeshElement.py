@@ -73,9 +73,6 @@ class OdbMeshElement:
     def getNormal(self, faceIndex: str, stepName: str = '', frameValue: str = '',
                   match: SymbolicConstant = CLOSEST):
         """This method returns the normal direction for the element face.
-
-        Parameters
-        ----------
         faceIndex
             The value of *faceIndex* is 0 for a shell element and can range from 0 to 5 for a solid 
             element. 

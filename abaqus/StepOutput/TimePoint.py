@@ -27,9 +27,6 @@ class TimePoint:
         .. code-block:: python
 
             mdb.models[name].TimePoint
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         points
@@ -44,13 +41,6 @@ class TimePoint:
 
     def setValues(self):
         """This method modifies the TimePoint object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

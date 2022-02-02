@@ -18,9 +18,6 @@ class AVIOptions:
                   codecOptions: str = '', sizeDefinition: SymbolicConstant = SIZE_ON_SCREEN,
                   imageSize: int = None):
         """This method modifies the AVIOptions object.
-
-        Parameters
-        ----------
         compressionMethod
             A SymbolicConstant specifying the compression method for the AVI format. Possible values 
             are: 

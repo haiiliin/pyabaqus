@@ -31,9 +31,6 @@ class TurnControl(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].TurnControl
-
-        Parameters
-        ----------
         name
             A String specifying the geometric restriction repository key. 
         clientDirection
@@ -79,9 +76,6 @@ class TurnControl(GeometricRestriction):
                   presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                   tolerance2: float = 0, tolerance3: float = 0):
         """This method modifies the TurnControl object.
-
-        Parameters
-        ----------
         csys
             None or a DatumCsys object specifying the local coordinate system. If *csys*=None, the 
             global coordinate system is used. When this member is queried, it returns an Int. The 

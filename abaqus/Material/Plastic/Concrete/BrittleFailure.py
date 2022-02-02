@@ -42,9 +42,6 @@ class BrittleFailure:
             This function can be accessed by:
             - mdb.models[name].materials[name].brittleCracking.BrittleFailure
             - session.odbs[name].materials[name].brittleCracking.BrittleFailure
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -67,13 +64,6 @@ class BrittleFailure:
 
     def setValues(self):
         """This method modifies the BrittleFailure object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

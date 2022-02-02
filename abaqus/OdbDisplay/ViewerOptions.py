@@ -18,9 +18,6 @@ class ViewerOptions:
                   cutVariableCaching: Boolean = ON, odbUpdateChecking: Boolean = ON,
                   odbUpdateCheckInterval: int = 0):
         """This method modifies the ViewerOptions object.
-
-        Parameters
-        ----------
         primaryVariableCaching
             A Boolean specifying whether results are currently cached. Caching improves the 
             performance of subsequent access. The default value is ON. 

@@ -22,9 +22,6 @@ class MeshDisplayOptions:
                   meshVisibleEdges: SymbolicConstant = EXTERIOR, featureAngle: float = 20,
                   meshEdgesInShaded: Boolean = ON, meshTechnique: Boolean = OFF, seeds: Boolean = OFF):
         """This method modifies the MeshDisplayOptions object.
-
-        Parameters
-        ----------
         nodeLabels
             A Boolean specifying whether node labels are shown. The default value is OFF. 
         elementLabels

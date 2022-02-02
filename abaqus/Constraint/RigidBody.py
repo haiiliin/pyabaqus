@@ -45,9 +45,6 @@ class RigidBody(Constraint):
         .. code-block:: python
 
             mdb.models[name].RigidBody
-
-        Parameters
-        ----------
         name
             A String specifying the constraint repository key. 
         refPointRegion
@@ -81,9 +78,6 @@ class RigidBody(Constraint):
     def setValues(self, bodyRegion: str = None, tieRegion: str = None, pinRegion: str = None,
                   surfaceRegion: str = None, refPointAtCOM: Boolean = OFF, isothermal: Boolean = OFF):
         """This method modifies the RigidBody object.
-
-        Parameters
-        ----------
         bodyRegion
             None or a Region object specifying the elements constrained to the movement of the 
             reference point. The default value is None. 

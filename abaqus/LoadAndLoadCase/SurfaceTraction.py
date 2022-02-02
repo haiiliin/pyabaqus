@@ -137,9 +137,6 @@ class SurfaceTraction(Load):
         .. code-block:: python
 
             mdb.models[name].SurfaceTraction
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -207,9 +204,6 @@ class SurfaceTraction(Load):
                   resultant: Boolean = OFF, traction: SymbolicConstant = SHEAR):
         """This method modifies the data for an existing SurfaceTraction object in the step where
         it is created.
-
-        Parameters
-        ----------
         distributionType
             A SymbolicConstant specifying how the surface traction is distributed spatially. 
             Possible values are UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM. 
@@ -262,9 +256,6 @@ class SurfaceTraction(Load):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing SurfaceTraction object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         magnitude

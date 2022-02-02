@@ -79,9 +79,6 @@ class MeshElement:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].Element
-
-        Parameters
-        ----------
         nodes
             A sequence of MeshNode objects. 
         elemShape
@@ -100,9 +97,6 @@ class MeshElement:
     def getNodes(self):
         """This method returns a tuple of node objects of the element.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A tuple of MeshNode objects. . 
@@ -111,9 +105,6 @@ class MeshElement:
 
     def getElemEdges(self):
         """This method returns a tuple of unique element edge objects on the element.
-
-        Parameters
-        ----------
 
         Returns
         -------
@@ -124,9 +115,6 @@ class MeshElement:
     def getElemFaces(self):
         """This method returns a tuple of unique element face objects on the element.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A tuple of MeshFace objects. . 
@@ -135,9 +123,6 @@ class MeshElement:
 
     def getAdjacentElements(self):
         """This method returns an array of element objects adjacent to the mesh element.
-
-        Parameters
-        ----------
 
         Returns
         -------
@@ -149,9 +134,6 @@ class MeshElement:
         """This method returns an array of mesh element objects that are obtained by recursively
         finding adjacent elements along a feature edge with a face angle of less than or equal
         to the specified angle.
-
-        Parameters
-        ----------
         angle
             A float specifying the value of the face angle in degrees. 
 
@@ -163,9 +145,6 @@ class MeshElement:
 
     def setValues(self, label: int = None):
         """This method modifies the MeshElement object.
-
-        Parameters
-        ----------
         label
             An Int specifying the element label. This member may only be edited if the element 
             belongs to an orphan mesh part. The specified label must be non-negative and must not be 

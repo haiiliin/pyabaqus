@@ -32,9 +32,6 @@ class JournalOptions:
                   fieldReportFormat: NumberFormat = NumberFormat(),
                   geometryFormat: NumberFormat = NumberFormat()):
         """This method modifies the JournalOptions object.
-
-        Parameters
-        ----------
         replayGeometry
             A SymbolicConstant specifying the format of the geometry in the replay file. Possible 
             values are COORDINATE, INDEX, and COMPRESSEDINDEX. The default value is COMPRESSEDINDEX. 
@@ -68,9 +65,6 @@ class JournalOptions:
             session.defaultFieldReportOptions.NumberFormat
             session.fieldReportOptions.NumberFormat
             session.journalOptions.NumberFormat
-
-        Parameters
-        ----------
         blankPad
             A Boolean specifying whether the printed digits should be padded with blank characters
             to ensure equal sized fields. The *blankPad* argument is useful when your printed output

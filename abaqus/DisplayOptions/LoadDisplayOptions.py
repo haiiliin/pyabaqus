@@ -28,9 +28,6 @@ class LoadDisplayOptions:
                   bodyConcentrationFlux: str = ON, surfaceConcentrationFlux: str = ON,
                   concentratedConcentrationFlux: str = ON):
         """This method modifies the LoadDisplayOptions object.
-
-        Parameters
-        ----------
         concentratedForce
             ​		A Boolean specifying whether concentrated force symbols are shown. The default value 
             is ON. 

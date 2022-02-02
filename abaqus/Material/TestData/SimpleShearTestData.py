@@ -29,9 +29,6 @@ class SimpleShearTestData:
             This function can be accessed by:
             - mdb.models[name].materials[name].hyperfoam.SimpleShearTestData
             - session.odbs[name].materials[name].hyperfoam.SimpleShearTestData
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
 
@@ -43,8 +40,5 @@ class SimpleShearTestData:
 
     def setValues(self):
         """This method modifies the SimpleShearTestData object.
-
-        Parameters
-        ----------
         """
         pass

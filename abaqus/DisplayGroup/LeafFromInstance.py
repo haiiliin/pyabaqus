@@ -40,9 +40,6 @@ class LeafFromInstance(Leaf):
         .. code-block:: python
 
             LeafFromInstance
-
-        Parameters
-        ----------
         instances
             A PartInstance object or a Sequence of PartInstance objects. 
 

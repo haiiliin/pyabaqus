@@ -31,9 +31,6 @@ class ActuatorSensorProp(ContactProperty):
         .. code-block:: python
 
             mdb.models[name].ActuatorSensorProp
-
-        Parameters
-        ----------
         name
             A String specifying the interaction property repository key. 
         realProperties
@@ -52,9 +49,6 @@ class ActuatorSensorProp(ContactProperty):
 
     def setValues(self, realProperties: tuple = (), integerProperties: tuple = ()):
         """This method modifies the ActuatorSensorProp object.
-
-        Parameters
-        ----------
         realProperties
             A sequence of Floats specifying the PROPS array used by user subroutine UEL. The default 
             value is an empty sequence. 

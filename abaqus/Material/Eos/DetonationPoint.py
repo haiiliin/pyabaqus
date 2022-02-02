@@ -32,9 +32,6 @@ class DetonationPoint:
             This function can be accessed by:
             - mdb.models[name].materials[name].eos.DetonationPoint
             - session.odbs[name].materials[name].eos.DetonationPoint
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
 
@@ -46,8 +43,5 @@ class DetonationPoint:
 
     def setValues(self):
         """This method modifies the DetonationPoint object.
-
-        Parameters
-        ----------
         """
         pass

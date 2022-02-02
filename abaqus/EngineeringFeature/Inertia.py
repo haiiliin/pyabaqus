@@ -30,16 +30,10 @@ class Inertia:
 
     def resume(self):
         """This method resumes the inertia that was previously suppressed.
-
-        Parameters
-        ----------
         """
         pass
 
     def suppress(self):
         """This method suppresses the inertia.
-
-        Parameters
-        ----------
         """
         pass

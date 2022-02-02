@@ -29,9 +29,6 @@ class SizingPlanarSymmetry(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].SizingPlanarSymmetry
-
-        Parameters
-        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -55,8 +52,5 @@ class SizingPlanarSymmetry(GeometricRestriction):
 
     def setValues(self):
         """This method modifies the sizingPlanarSymmetry object.
-
-        Parameters
-        ----------
         """
         pass

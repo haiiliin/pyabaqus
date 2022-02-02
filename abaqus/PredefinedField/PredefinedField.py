@@ -45,9 +45,6 @@ class PredefinedField:
     def move(self, fromStepName: str, toStepName: str):
         """This method moves a specific PredefinedFieldState object from one step to a different
         step.
-
-        Parameters
-        ----------
         fromStepName
             A String specifying the name of the step from which the PredefinedFieldState object is 
             moved. 
@@ -63,25 +60,16 @@ class PredefinedField:
 
     def resume(self):
         """This method resumes the predefined field that was previously suppressed.
-
-        Parameters
-        ----------
         """
         pass
 
     def suppress(self):
         """This method suppresses the predefined field.
-
-        Parameters
-        ----------
         """
         pass
 
     def delete(self, indices: tuple):
         """This method allows you to delete existing fields.
-
-        Parameters
-        ----------
         indices
             A sequence of Ints specifying the index of each field to delete. 
         """

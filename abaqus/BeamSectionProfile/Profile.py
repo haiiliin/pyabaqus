@@ -36,9 +36,6 @@ class Profile:
         .. code-block:: python
 
             mdb.models[*name*].beamProfilesFromOdb
-
-        Parameters
-        ----------
         fileName
             A String specifying the name of the output database file (including the .odb extension) 
             to be read. The String can also be the full path to the output database file if it is 

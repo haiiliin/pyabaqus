@@ -17,9 +17,6 @@ class SymbolDisplayOptions:
     def setValues(self, otherSymbolSize: int = 12, arrowSymbolSize: int = 12, faceSymbolDensity: int = 5,
                   edgeSymbolDensity: int = 5, meshSymbolFraction: float = 1, showFields: Boolean = ON):
         """This method modifies the SymbolDisplayOptions object.
-
-        Parameters
-        ----------
         otherSymbolSize
             An Int specifying the size of the scalar attribute symbols. Possible values are 1 ≤≤ 
             *scalarSymbolSize* ≤≤ 30. The default value is 12. 

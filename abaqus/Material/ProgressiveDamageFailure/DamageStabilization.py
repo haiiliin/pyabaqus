@@ -105,9 +105,6 @@ class DamageStabilization:
             - .DamageStabilization
             - session.odbs[name].materials[name].shearDamageInitiation\
             - .DamageStabilization
-
-        Parameters
-        ----------
         fiberTensileCoeff
             A Float specifying the viscosity coefficient for the fiber tensile failure mode. 
         fiberCompressiveCoeff
@@ -129,13 +126,6 @@ class DamageStabilization:
 
     def setValues(self):
         """This method modifies the DamageStabilization object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

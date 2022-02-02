@@ -42,9 +42,6 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[*name*].rootAssembly.AttachmentLines
-
-        Parameters
-        ----------
         name
             A String specifying a unique Feature name.
         points
@@ -110,9 +107,6 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[*name*].rootAssembly.AttachmentLines
-
-        Parameters
-        ----------
         movableAxis
             A cylindrical or conical Face on the part instance to be moved. 
         fixedAxis
@@ -142,9 +136,6 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[*name*].rootAssembly.AttachmentLines
-
-        Parameters
-        ----------
         movablePoint
             A ConstrainedSketchVertex, a Datum point, or a ReferencePoint or a mesh node from an orphan mesh on the
             part instance to be moved. 
@@ -171,9 +162,6 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[*name*].rootAssembly.AttachmentLines
-
-        Parameters
-        ----------
         movableAxis
             A straight Edge, a Datum axis, or an element edge from an orphan mesh on the part 
             instance to be moved. 
@@ -209,9 +197,6 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[*name*].rootAssembly.AttachmentLines
-
-        Parameters
-        ----------
         movablePlane
             A planar face, a Datum plane, or a face from an orphan mesh on the part instance to be 
             moved. 
@@ -246,9 +231,6 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[*name*].rootAssembly.AttachmentLines
-
-        Parameters
-        ----------
         movableCsys
             A Datum coordinate system on the part instance to be moved. 
         fixedCsys
@@ -276,9 +258,6 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[*name*].rootAssembly.AttachmentLines
-
-        Parameters
-        ----------
         movableAxis
             A straight Edge, a Datum axis, or an element edge from an orphan mesh on the part 
             instance to be moved. 
@@ -311,9 +290,6 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[*name*].rootAssembly.AttachmentLines
-
-        Parameters
-        ----------
         movablePlane
             A planar face, a Datum plane, or a face from an orphan mesh on the part instance to be
             moved.

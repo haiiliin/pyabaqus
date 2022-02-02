@@ -23,9 +23,6 @@ class GeometryDisplayOptions:
                   referencePointLabels: Boolean = ON, referencePointSymbols: Boolean = ON,
                   referenceRepresentation: Boolean = OFF, referenceRepTranslucency: Boolean = ON):
         """This method modifies the GeometryDisplayOptions object.
-
-        Parameters
-        ----------
         geometryEdgesInShaded
             A Boolean specifying whether geometry edges are displayed in shaded mode. The default 
             value is ON. 

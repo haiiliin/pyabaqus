@@ -32,9 +32,6 @@ class DesignDirection(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].DesignDirection
-
-        Parameters
-        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -85,9 +82,6 @@ class DesignDirection(GeometricRestriction):
                   presumeFeasibleRegionAtStart: Boolean = ON, u1: Boolean = ON, u2: Boolean = ON,
                   u3: Boolean = ON):
         """This method modifies the DesignDirection object.
-
-        Parameters
-        ----------
         csys
             None or a DatumCsys object specifying the local coordinate system. If *csys*=None, the 
             global coordinate system is used. When this member is queried, it returns an Int. The 

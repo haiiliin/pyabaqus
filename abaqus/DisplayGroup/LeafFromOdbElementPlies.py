@@ -40,9 +40,6 @@ class LeafFromOdbElementPlies(Leaf):
         .. code-block:: python
 
             LeafFromOdbElementPlies
-
-        Parameters
-        ----------
         elementPlies
             A sequence of Strings specifying element plies. 
 

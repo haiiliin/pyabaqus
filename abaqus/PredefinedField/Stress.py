@@ -34,9 +34,6 @@ class Stress(PredefinedField):
         .. code-block:: python
 
             mdb.models[name].Stress
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         region
@@ -69,9 +66,6 @@ class Stress(PredefinedField):
                   sigma22: float = None, sigma33: float = None, sigma12: float = None,
                   sigma13: float = None, sigma23: float = None):
         """This method modifies the Stress object.
-
-        Parameters
-        ----------
         distributionType
             A SymbolicConstant specifying whether the load is uniform. Possible values are UNIFORM 
             and FROM_FILE. The default value is UNIFORM. 

@@ -46,9 +46,6 @@ class GapHeatGeneration:
         .. code-block:: python
 
             mdb.models[name].interactionProperties[name].HeatGeneration
-
-        Parameters
-        ----------
         conversionFraction
             A Float specifying the fraction of dissipated energy caused by friction or electric 
             currents that is converted to heat. The default value is 1.0. 
@@ -64,8 +61,5 @@ class GapHeatGeneration:
 
     def setValues(self):
         """This method modifies the GapHeatGeneration object.
-
-        Parameters
-        ----------
         """
         pass

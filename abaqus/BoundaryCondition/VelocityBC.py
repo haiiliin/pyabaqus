@@ -82,9 +82,6 @@ class VelocityBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].VelocityBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -147,9 +144,6 @@ class VelocityBC(BoundaryCondition):
                   localCsys: str = None, distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing VelocityBC object in the step where it is
         created.
-
-        Parameters
-        ----------
         fieldName
             A String specifying the name of the AnalyticalField object associated with this boundary 
             condition. The *fieldName* argument applies only when *distributionType*=FIELD. The 
@@ -202,9 +196,6 @@ class VelocityBC(BoundaryCondition):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing VelocityBC object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         v1

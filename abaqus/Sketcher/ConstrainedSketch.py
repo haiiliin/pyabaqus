@@ -24,9 +24,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         -----
             This function can be accessed by:
             - mdb.models[name].ConstrainedSketch
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         sheetSize
@@ -61,9 +58,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         -----
             This function can be accessed by:
             - mdb.models[name].ConstrainedSketch
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         objectToCopy
@@ -86,9 +80,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         -----
             This function can be accessed by:
             - mdb.models[name].ConstrainedSketchFromGeometryFile
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         geometryFile
@@ -108,18 +99,12 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         - The number of geometry curves (the number of ConstrainedSketchGeometry objects).
         - The number of dimensions (the number of ConstrainedSketchDimension objects).
         - The number of vertices (the number of ConstrainedSketchVertex objects).
-
-        Parameters
-        ----------
         """
         pass
 
     def assignCenterline(self, line: ConstrainedSketchGeometry):
         """This method indicates the construction line that will be used as a centerline for
         revolved features.
-
-        Parameters
-        ----------
         line
             A ConstrainedSketchGeometry object specifying a construction line that indicates the
             centerline of revolved features.
@@ -129,9 +114,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
     def assignCenterOfTwist(self, point: ConstrainedSketchVertex):
         """This method indicates the isolated point that will be used as the center of twist when
         an extruded feature is created with twist.
-
-        Parameters
-        ----------
         point
             A ConstrainedSketchVertex object specifying an isolated point that indicates the center
             of twist for extruded features that use a twist angle.
@@ -141,9 +123,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
     def autoDimension(self, objectList: tuple):
         """This method applies dimensions to the selected ConstrainedSketchGeometry objects in an
         effort to make the ConstrainedSketch well defined.
-
-        Parameters
-        ----------
         objectList
             A sequence specifying the ConstrainedSketchGeometry objects to dimension.
         """
@@ -153,9 +132,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         """This method automatically trims a selected ConstrainedSketchGeometry object at the
         specified location. If the object does not intersect other ConstrainedSketchGeometry
         objects, the entire selected object will be deleted.
-
-        Parameters
-        ----------
         curve1
             The ConstrainedSketchGeometry object to be trimmed.
         point1
@@ -174,9 +150,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         ConstrainedSketchGeometry objects intersect, then only *curve1* will be broken; *curve2*
         is not affected by the operation. The location for the break is determined by the
         specified point values.
-
-        Parameters
-        ----------
         curve1
             A ConstrainedSketchGeometry object specifying the object to be broken.
         point1
@@ -194,9 +167,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         """This method creates copies of the given ConstrainedSketchGeometry objects, mirrors them
         about a selected line, and inserts them into the appropriate repositories of the
         ConstrainedSketch object.
-
-        Parameters
-        ----------
         mirrorLine
             A ConstrainedSketchGeometry object specifying the line about which Abaqus will mirror
             the sketch.
@@ -210,9 +180,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         """This method creates copies of the given ConstrainedSketchGeometry objects, moves them
         from their original position, and inserts them into the appropriate repositories of the
         ConstrainedSketch object.
-
-        Parameters
-        ----------
         vector
             A sequence of two Floats specifying the translation vector.
         objectList
@@ -223,9 +190,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
     def copyRotate(self, centerPoint: tuple[float], angle: float, objectList: tuple[ConstrainedSketchGeometry]):
         """This method creates copies of the given ConstrainedSketchGeometry objects, rotates them,
         and inserts them into the appropriate repositories of the ConstrainedSketch object.
-
-        Parameters
-        ----------
         centerPoint
             A pair of Floats specifying the center of rotation.
         angle
@@ -240,9 +204,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         """This method creates copies of the given ConstrainedSketchGeometry objects, scales them
         by the specified value about a selected point, and inserts them into the appropriate
         repositories of the ConstrainedSketch object.
-
-        Parameters
-        ----------
         scaleValue
             A Float specifying the value for scaling.
         scaleCenter
@@ -255,9 +216,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
     def delete(self, objectList: tuple):
         """This method deletes the given ConstrainedSketchGeometry, ConstrainedSketchDimension, or
         ConstrainedSketchConstraint objects.
-
-        Parameters
-        ----------
         objectList
             A sequence of ConstrainedSketchGeometry, ConstrainedSketchDimension, or
             ConstrainedSketchConstraint objects to be deleted.
@@ -266,9 +224,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
     def deleteParameter(self, name: str):
         """The command deletes a specified parameter.
-
-        Parameters
-        ----------
         name
             A String specifying the name of the parameter to delete.
         """
@@ -277,9 +232,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
     def dragEntity(self, entity: str, points: tuple):
         """This method drags a specified ConstrainedSketchGeometry or ConstrainedSketchVertex
         object to a specific location.
-
-        Parameters
-        ----------
         entity
             A ConstrainedSketchGeometry or ConstrainedSketchVertex object specifying the object to
             drag.
@@ -297,9 +249,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         """This method copies ConstrainedSketchGeometry objects in a linear pattern along one or
         two directions. This method also copies any associated dimension or constraint objects
         that exist between the given objects.
-
-        Parameters
-        ----------
         number1
             An Integer specifying the total number of copies, including the original objects, that
             appear along the first direction in the pattern. Possible values are 1 ≤≤ *number1* ≤≤
@@ -345,9 +294,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         merge all ConstrainedSketchVertex objects that lie within the specified distance of that
         vertex. If more than one vertex is selected, the search will be restricted to only the
         selected ConstrainedSketchVertex objects.
-
-        Parameters
-        ----------
         value
             A Float specifying the search radius.
         vertexList
@@ -357,9 +303,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
     def move(self, vector: tuple, objectList: tuple[ConstrainedSketchGeometry]):
         """This method translates the given ConstrainedSketchGeometry objects by the given vector.
-
-        Parameters
-        ----------
         vector
             A sequence of two Floats specifying the translation vector.
         objectList
@@ -373,9 +316,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         them by the specified distance in the specified direction, and inserts them into the
         ConstrainedSketch object's appropriate repositories. If connected objects are selected,
         trim or extend is carried out to complete the offset.
-
-        Parameters
-        ----------
         distance
             A Float specifying the distance to be offset.
         objectList
@@ -393,9 +333,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
                       geomList: tuple[ConstrainedSketchGeometry] = ()):
         """This method copies ConstrainedSketchGeometry objects in a radial pattern about a
         specified center point.
-
-        Parameters
-        ----------
         number
             An Int specifying the total number of copies, including the original objects, that
             appear in the radial pattern. Possible values are 2 ≤≤ *number2* ≤≤ 1000.
@@ -416,9 +353,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
     def resetView(self):
         """This method resets the view to be perpendicular to the sketching plane.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -426,9 +360,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         """This method creates four lines that form a rectangle with diagonal corners defined by
         the given points and inserts them into the geometry repository of the ConstrainedSketch
         object.
-
-        Parameters
-        ----------
         point1
             A pair of Floats specifying the first corner of the rectangle.
         point2
@@ -444,9 +375,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
     def removeGapsAndOverlaps(self, tolerance: str, geomList: tuple[ConstrainedSketchGeometry]):
         """This method removes gaps and overlaps between sketch geometries specified by the user.
         This method is particularly useful when cleaning up imported sketches
-
-        Parameters
-        ----------
         tolerance
             A float value which specifies the largest size of the gap or overlap between entities
             that is to be removed. Typically this value is small and is used to close gaps and
@@ -463,9 +391,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         edges whose lengths are smaller than the specified tolerance and healing the resultant
         gap in the sketch. This method is particularly useful in conjunction with
         removeGapsAndOverlap when cleaning up imported sketches.
-
-        Parameters
-        ----------
         geomList
             A sequence of ConstrainedSketchGeometry objects where the short edges are to be removed.
         tolerance
@@ -482,9 +407,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         ConstrainedSketch object. The new objects are added to the existing objects (if any).
         The objects in the specified ConstrainedSketch object are not modified by the retrieve
         operation.
-
-        Parameters
-        ----------
         sketch
             A ConstrainedSketch object specifying the object from which to copy.
         """
@@ -493,9 +415,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
     def rotate(self, centerPoint: tuple[float], angle: float, objectList: tuple):
         """This method rotates the given ConstrainedSketchGeometry objects by the given angle and
         about the given point.
-
-        Parameters
-        ----------
         centerPoint
             A pair of Floats specifying the center of rotation.
         angle
@@ -509,9 +428,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
               objectList: tuple[ConstrainedSketchGeometry]):
         """This method scales the given ConstrainedSketchGeometry objects by the given scale factor
         and about the given point.
-
-        Parameters
-        ----------
         scaleValue
             A Float specifying the value of scale.
         scaleCenter
@@ -525,9 +441,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         """This method makes the ConstrainedSketch object the primary object in the current
         viewport. The sketch remains the primary object in the current viewport until an
         unsetPrimaryobject command is issued.
-
-        Parameters
-        ----------
         option
             A SymbolicConstant specifying how the sketch is displayed. Possible values
             are:STANDALONE: Indicates a new stand-alone sketch. The current viewport is cleared and
@@ -543,9 +456,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         using another specified ConstrainedSketchGeometry object (*curve2*). *curve2* is not
         affected by the operation. The location for the trim or extend is determined by the
         specified point values.
-
-        Parameters
-        ----------
         curve1
             The ConstrainedSketchGeometry object specifying the object to be trimmed or extended.
         point1
@@ -562,9 +472,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
     def undo(self):
         """This method undoes the effects of the last ConstrainedSketch object method.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -574,17 +481,11 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         SUPERIMPOSE, the viewport will be returned to the view orientation that was in place
         when the setPrimaryobject command was issued. If the *option* argument was set to
         STANDALONE, the viewport will be left empty.
-
-        Parameters
-        ----------
         """
         pass
 
     def writeAcisFile(self, fileName: str, version: float = None):
         """This method exports the geometry of the sketch to a named file in ACIS format.
-
-        Parameters
-        ----------
         fileName
             A String specifying the file name.
         version
@@ -595,9 +496,6 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
     def writeIgesFile(self, filename: str, flavor: SymbolicConstant = None):
         """This method exports the geometry of the sketch to a named file in IGES format.
-
-        Parameters
-        ----------
         filename
             A String specifying the file name.
         flavor

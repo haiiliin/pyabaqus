@@ -258,9 +258,6 @@ class SubspaceDynamicsStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].SubspaceDynamicsStep
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         previous
@@ -303,9 +300,6 @@ class SubspaceDynamicsStep(AnalysisStep):
                   nlgeom: Boolean = OFF, maxNumInc: int = 100, incSize: float = 0,
                   amplitude: SymbolicConstant = STEP):
         """This method modifies the SubspaceDynamicsStep object.
-
-        Parameters
-        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         timePeriod

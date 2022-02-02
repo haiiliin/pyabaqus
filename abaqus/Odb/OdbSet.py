@@ -90,9 +90,6 @@ class OdbSet:
             session.odbs[*name*].parts[*name*].NodeSet
             session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
             session.odbs[*name*].rootAssembly.NodeSet
-
-        Parameters
-        ----------
         name
             A String specifying the name of the set and the repository key. 
         nodes
@@ -117,9 +114,6 @@ class OdbSet:
             session.odbs[*name*].parts[*name*].NodeSet
             session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
             session.odbs[*name*].rootAssembly.NodeSet
-
-        Parameters
-        ----------
         name
             A String specifying the name of the set and the repository key. 
         nodeLabels
@@ -147,9 +141,6 @@ class OdbSet:
             session.odbs[*name*].parts[*name*].NodeSet
             session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
             session.odbs[*name*].rootAssembly.NodeSet
-
-        Parameters
-        ----------
         name
             A String specifying the name of the set and the repository key. 
         elements
@@ -175,9 +166,6 @@ class OdbSet:
             session.odbs[*name*].parts[*name*].NodeSet
             session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
             session.odbs[*name*].rootAssembly.NodeSet
-
-        Parameters
-        ----------
         name
             A String specifying the name of the set and the repository key. 
         elementLabels
@@ -203,9 +191,6 @@ class OdbSet:
             session.odbs[*name*].parts[*name*].NodeSet
             session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
             session.odbs[*name*].rootAssembly.NodeSet
-
-        Parameters
-        ----------
         name
             A String specifying the name of the set and the repository key. 
         meshSurfaces
@@ -245,9 +230,6 @@ class OdbSet:
             session.odbs[*name*].parts[*name*].NodeSet
             session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
             session.odbs[*name*].rootAssembly.NodeSet
-
-        Parameters
-        ----------
         name
             A String specifying the name of the set and the repository key. 
         elementSetSeq
@@ -274,9 +256,6 @@ class OdbSet:
             session.odbs[*name*].parts[*name*].NodeSet
             session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
             session.odbs[*name*].rootAssembly.NodeSet
-
-        Parameters
-        ----------
         name
             A String specifying the name of the set and the repository key. 
         surfaceLabels

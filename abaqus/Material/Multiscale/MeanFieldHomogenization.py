@@ -27,9 +27,6 @@ class MeanFieldHomogenization:
             This function can be accessed by:
             - mdb.models[name].materials[name].MeanFieldHomogenization
             - session.odbs[name].materials[name].MeanFieldHomogenization
-
-        Parameters
-        ----------
         angleSubdivision
             An Int specifying the number of angle increments used for the discretization of the 
             orientation space. 
@@ -55,13 +52,6 @@ class MeanFieldHomogenization:
 
     def setValues(self):
         """This method modifies the MeanFieldHomogenization object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

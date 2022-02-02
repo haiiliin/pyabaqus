@@ -34,9 +34,6 @@ class ParameterColumn:
         .. code-block:: python
 
             mdb.models[name].tableCollections[name].parameterTables[name].Column
-
-        Parameters
-        ----------
         type
             A SymbolicConstant specifying the data type of the parameter. Possible values are 
             STRING, INTEGER, and FLOAT. 

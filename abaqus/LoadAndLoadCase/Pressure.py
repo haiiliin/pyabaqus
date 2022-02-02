@@ -61,9 +61,6 @@ class Pressure(Load):
         .. code-block:: python
 
             mdb.models[name].Pressure
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -106,9 +103,6 @@ class Pressure(Load):
                   amplitude: str = UNSET):
         """This method modifies the data for an existing Pressure object in the step where it is
         created.
-
-        Parameters
-        ----------
         field
             A String specifying the name of the AnalyticalField or DiscreteField object associated 
             with this load. The *field* argument applies only when *distributionType*=FIELD or 
@@ -131,9 +125,6 @@ class Pressure(Load):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing Pressure object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         magnitude

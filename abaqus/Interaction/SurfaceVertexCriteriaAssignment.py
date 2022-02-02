@@ -23,9 +23,6 @@ class SurfaceVertexCriteriaAssignment:
     def changeValuesInStep(self, stepName: str, index: int, value: typing.Union[SymbolicConstant, float]):
         """This method allows modification of surface vertex criteria assignments already defined
         on surfaces in a given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the surface vertex criteria 
             assignments are to be modified. 
@@ -43,9 +40,6 @@ class SurfaceVertexCriteriaAssignment:
     def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant, float]):
         """This method allows addition of surface vertex criteria assignments to new surfaces in a
         given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which new surface vertex criteria 
             assignments are to be defined. 
@@ -62,9 +56,6 @@ class SurfaceVertexCriteriaAssignment:
     def delete(self, indices: tuple):
         """The delete method allows you to delete existing surface vertex criteria assignments from
         a ContactStd object.
-
-        Parameters
-        ----------
         indices
             A sequence of Ints specifying the index of each surface vertex criteria assignment to 
             delete. 

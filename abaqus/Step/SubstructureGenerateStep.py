@@ -321,9 +321,6 @@ class SubstructureGenerateStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].SubstructureGenerateStep
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         previous
@@ -410,9 +407,6 @@ class SubstructureGenerateStep(AnalysisStep):
                   viscousDampingControl: SymbolicConstant = NONE,
                   structuralDampingControl: SymbolicConstant = NONE):
         """This method modifies the SubstructureGenerateStep object.
-
-        Parameters
-        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         recoveryMatrix

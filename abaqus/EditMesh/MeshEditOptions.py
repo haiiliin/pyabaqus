@@ -16,9 +16,6 @@ class MeshEditOptions:
 
     def setValues(self, maxUndoCacheElements: float = 0, enableUndo: Boolean = OFF, _suspendUndo: Boolean = OFF):
         """This method modifies the MeshEditOptions object.
-
-        Parameters
-        ----------
         maxUndoCacheElements
             A Float specifying the maximum allowable mesh edit undo cache size in millions of 
             elements. If this value is set to at least the number of elements on a given part or 

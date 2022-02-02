@@ -83,9 +83,6 @@ class Region:
         .. code-block:: python
 
             Region
-
-        Parameters
-        ----------
         elements
             A sequence of Element objects. The default value is None. 
         nodes
@@ -148,9 +145,6 @@ class Region:
         .. code-block:: python
 
             Region
-
-        Parameters
-        ----------
         side1Faces
             A sequence of Face objects (surface applies to SIDE1 of face). The default value is 
             None. 

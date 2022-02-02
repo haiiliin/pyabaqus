@@ -81,9 +81,6 @@ class AdaptiveMeshConstraintState:
         .. code-block:: python
 
             mdb.models[name].steps[name].AdaptiveMeshConstraintState
-
-        Parameters
-        ----------
         amplitudeState
              A SymbolicConstant specifying the propagation state of the amplitude reference. Possible  values are
              UNSET, SET, UNCHANGED, FREED, and MODIFIED.

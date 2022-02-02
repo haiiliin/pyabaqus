@@ -33,9 +33,6 @@ class PipeProfile(Profile):
 
             mdb.models[name].PipeProfile
             session.odbs[name].PipeProfile
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         r
@@ -59,13 +56,6 @@ class PipeProfile(Profile):
 
     def setValues(self):
         """This method modifies the PipeProfile object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

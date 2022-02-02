@@ -35,9 +35,6 @@ class ViewportAnnotationOptions:
                   compass: Boolean = ON, compassScale: float = 0,
                   compassPrivilegedPlane: SymbolicConstant = XZPLANE):
         """This method modifies the ViewportAnnotationOptions object.
-
-        Parameters
-        ----------
         triad
             A Boolean specifying whether the view orientation triad is shown. The default value is 
             ON. 

@@ -226,18 +226,12 @@ class Job:
 
     def kill(self):
         """This method kills the analysis of a job.
-
-        Parameters
-        ----------
         """
         pass
 
     def submit(self, consistencyChecking: Boolean = ON, datacheckJob: Boolean = False,
                continueJob: Boolean = False):
         """This method submits a job for analysis.
-
-        Parameters
-        ----------
         consistencyChecking
             A Boolean specifying whether to perform consistency checking for the job. The default 
             value is ON. It is not recommended to turn the consistency checking off unless you are 
@@ -256,16 +250,10 @@ class Job:
         call the waitForCompletion method and the *status* member is neither SUBMITTED nor
         RUNNING, Abaqus assumes the analysis has either completed or aborted and returns
         immediately.
-
-        Parameters
-        ----------
         """
         pass
 
     def clearMessage(self):
         """This method clears *messages* and sets the *status* to NONE.
-
-        Parameters
-        ----------
         """
         pass

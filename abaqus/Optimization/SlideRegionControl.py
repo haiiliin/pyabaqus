@@ -31,9 +31,6 @@ class SlideRegionControl(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].SlideRegionControl
-
-        Parameters
-        ----------
         name
             A String specifying the geometric restriction repository key. 
         clientDirection
@@ -83,9 +80,6 @@ class SlideRegionControl(GeometricRestriction):
                   presumeFeasibleRegionAtStart: Boolean = ON, revolvedRegion: str = None,
                   tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0):
         """This method modifies the SlideRegionControl object.
-
-        Parameters
-        ----------
         approach
             A SymbolicConstant specifying the restriction approach. The SymbolicConstant FREE_FORM 
             indicates a free-form slide region, and the SymbolicConstant TURN indicates that the 

@@ -30,9 +30,6 @@ class TopologyRotationalSymmetry(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].TopologyRotationalSymmetry
-
-        Parameters
-        ----------
         name
             A String specifying the geometric restriction repository key. 
         angle
@@ -60,9 +57,6 @@ class TopologyRotationalSymmetry(GeometricRestriction):
 
     def setValues(self, axis: SymbolicConstant = AXIS_1, csys: int = None, ignoreFrozenArea: Boolean = OFF):
         """This method modifies the TopologyRotationalSymmetry object.
-
-        Parameters
-        ----------
         axis
             A SymbolicConstant specifying the axis of symmetry. Possible values are AXIS_1, AXIS_2, 
             and AXIS_3. The default value is AXIS_1. 

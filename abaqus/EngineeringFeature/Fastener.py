@@ -32,16 +32,10 @@ class Fastener:
 
     def resume(self):
         """This method resumes the fastener that was previously suppressed.
-
-        Parameters
-        ----------
         """
         pass
 
     def suppress(self):
         """This method suppresses the fastener.
-
-        Parameters
-        ----------
         """
         pass

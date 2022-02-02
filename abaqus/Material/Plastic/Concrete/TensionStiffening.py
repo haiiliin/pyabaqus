@@ -44,9 +44,6 @@ class TensionStiffening:
             This function can be accessed by:
             - mdb.models[name].materials[name].concrete.TensionStiffening
             - session.odbs[name].materials[name].concrete.TensionStiffening
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type
@@ -69,13 +66,6 @@ class TensionStiffening:
 
     def setValues(self):
         """This method modifies the TensionStiffening object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

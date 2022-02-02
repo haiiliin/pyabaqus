@@ -46,9 +46,6 @@ class DisplayBody(Constraint):
         .. code-block:: python
 
             mdb.models[name].DisplayBody
-
-        Parameters
-        ----------
         name
             A String specifying the constraint repository key. 
         instance
@@ -69,8 +66,5 @@ class DisplayBody(Constraint):
 
     def setValues(self):
         """This method modifies the DisplayBody object.
-
-        Parameters
-        ----------
         """
         pass

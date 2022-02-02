@@ -11,9 +11,6 @@ class Viewport(AnnotationViewport):
         -----
             This function can be accessed by:
             - session.viewports[name].Layer
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         copyViewName

@@ -39,9 +39,6 @@ class ConnectorFailure(ConnectorBehaviorOption):
                       connectorBehavior.ConnectorFailure
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorFailure
-
-        Parameters
-        ----------
         releaseComponent
             The SymbolicConstant ALL or an Int specifying the motion components that fail. If an Int 
             is specified, only that motion component fails when the failure criteria are satisfied. 
@@ -78,13 +75,6 @@ class ConnectorFailure(ConnectorBehaviorOption):
 
     def setValues(self):
         """This method modifies the ConnectorFailure object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

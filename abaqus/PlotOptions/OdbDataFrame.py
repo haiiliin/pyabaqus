@@ -14,9 +14,6 @@ class OdbDataFrame:
 
     def setValues(self, activateFrame: Boolean, update: Boolean = OFF):
         """This method modifies the OdbDataFrame object.
-
-        Parameters
-        ----------
         activateFrame
             A Boolean specifying whether to activate the frame. 
         update

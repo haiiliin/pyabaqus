@@ -49,9 +49,6 @@ class MeshNodeArray(list[MeshNode]):
         .. code-block:: python
 
             mesh.MeshNodeArray
-
-        Parameters
-        ----------
         nodes
             A list of MeshNode objects. 
 
@@ -63,9 +60,6 @@ class MeshNodeArray(list[MeshNode]):
 
     def getFromLabel(self, label: int):
         """This method returns the object in the MeshNodeArray with the given label.
-
-        Parameters
-        ----------
         label
             An Int specifying the label of the object. 
 
@@ -79,9 +73,6 @@ class MeshNodeArray(list[MeshNode]):
         """This method returns the objects in the MeshNodeArray identified using the specified
         *mask*. This command is generated when the JournalOptions are set to COMPRESSEDINDEX.
         When a large number of objects are involved, this method is highly efficient.
-
-        Parameters
-        ----------
         mask
             A String specifying the object or objects. 
 
@@ -94,9 +85,6 @@ class MeshNodeArray(list[MeshNode]):
     def getMask(self):
         """This method returns a string specifying the object or objects.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A String specifying the object or objects. . 
@@ -106,9 +94,6 @@ class MeshNodeArray(list[MeshNode]):
     def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
                          zMax: str = ''):
         """This method returns an array of nodes that lie within the specified bounding box.
-
-        Parameters
-        ----------
         xMin
             A float specifying the minimum X boundary of the bounding box. 
         yMin
@@ -131,9 +116,6 @@ class MeshNodeArray(list[MeshNode]):
     def getByBoundingCylinder(self, center1: tuple, center2: tuple, radius: str):
         """This method returns an array of node objects that lie within the specified bounding
         cylinder.
-
-        Parameters
-        ----------
         center1
             A tuple of the X-, Y-, and Z-coordinates of the center of the first end of the cylinder. 
         center2
@@ -151,9 +133,6 @@ class MeshNodeArray(list[MeshNode]):
     def getByBoundingSphere(self, center: tuple, radius: str):
         """This method returns an array of node objects that lie within the specified bounding
         sphere.
-
-        Parameters
-        ----------
         center
             A tuple of the X-, Y-, and Z-coordinates of the center of the sphere. 
         radius
@@ -168,9 +147,6 @@ class MeshNodeArray(list[MeshNode]):
     def getBoundingBox(self):
         """This method returns a dictionary of two tuples representing minimum and maximum boundary
         values of the bounding box of the minimum size containing the node sequence.
-
-        Parameters
-        ----------
 
         Returns
         -------
@@ -187,9 +163,6 @@ class MeshNodeArray(list[MeshNode]):
 
     def getClosest(self, coordinates: str, numToFind: str = 1, searchTolerance: str = ''):
         """This method returns the node or nodes closest to the given point or set of points.
-
-        Parameters
-        ----------
         coordinates
             A point defined by x, y, and z values or a list of such points. 
         numToFind
@@ -210,9 +183,6 @@ class MeshNodeArray(list[MeshNode]):
     def sequenceFromLabels(self, labels: tuple):
         """This method returns the objects in the MeshNodeArray identified using the specified
         labels.
-
-        Parameters
-        ----------
         labels
             A sequence of Ints specifying the labels. 
 

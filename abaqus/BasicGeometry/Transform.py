@@ -16,9 +16,6 @@ class Transform:
     def matrix(self):
         """This method returns the transformation matrix as a tuple of 12 Floats.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A tuple of 12 Floats. . 

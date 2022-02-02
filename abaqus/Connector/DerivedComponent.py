@@ -56,9 +56,6 @@ class DerivedComponent:
             session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
             session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent
 
-        Parameters
-        ----------
-
         Returns
         -------
             A DerivedComponent object. 
@@ -71,13 +68,6 @@ class DerivedComponent:
 
     def setValues(self):
         """This method modifies the DerivedComponent object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------
@@ -105,9 +95,6 @@ class DerivedComponent:
             session.odbs[name].sections[name].behaviorOptions[i].DerivedComponent
             session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
             session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent
-
-        Parameters
-        ----------
         intrinsicComponents
             A sequence of Ints specifying the components of relative motion for which the
             contributing term is defined. Possible values are 1 ≤≤ *intrinsicComponents* ≤≤ 6. Only

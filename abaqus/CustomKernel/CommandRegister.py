@@ -26,9 +26,6 @@ class CommandRegister:
 
             customKernel.CommandRegister
 
-        Parameters
-        ----------
-
         Returns
         -------
             A CommandRegister object. . 

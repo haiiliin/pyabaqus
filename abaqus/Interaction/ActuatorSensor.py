@@ -38,9 +38,6 @@ class ActuatorSensor(Interaction):
         .. code-block:: python
 
             mdb.models[name].ActuatorSensor
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -74,8 +71,5 @@ class ActuatorSensor(Interaction):
 
     def setValues(self):
         """This method modifies the ActuatorSensor object.
-
-        Parameters
-        ----------
         """
         pass

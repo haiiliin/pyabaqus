@@ -29,9 +29,6 @@ class OptimizationProcess:
         .. code-block:: python
 
             mdb.OptimizationProcess
-
-        Parameters
-        ----------
         name
             A String specifying name of the optimization process. 
         model
@@ -81,17 +78,11 @@ class OptimizationProcess:
 
     def writeParAndInputFiles(self):
         """This method allows you to write par and input files for an optimization task.
-
-        Parameters
-        ----------
         """
         pass
 
     def submit(self, validate: Boolean = False):
         """This method submits an optimization process.
-
-        Parameters
-        ----------
         validate
             A Boolean specifying whether Abaqus should perform the validation of the optimization 
             process only. The default value is False. 
@@ -103,9 +94,6 @@ class OptimizationProcess:
         you call the waitForCompletion method and the *status* member is neither SUBMITTED nor
         RUNNING, Abaqus assumes the analysis has either completed or aborted and returns
         immediately.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -114,9 +102,6 @@ class OptimizationProcess:
                 extractFormat: tuple = OPT_EXTRACT_SMOOTH_ABAQUS_INPUT_FILE, resultFiltering: str = OFF,
                 instances: str = ''):
         """This method extracts a surface mesh from the optimized model.
-
-        Parameters
-        ----------
         outputFileName
             Name of the output file for the extracted surface mesh. 
         designCycle
@@ -159,9 +144,6 @@ class OptimizationProcess:
                   dataSaveFrequency: str = OPT_DATASAVE_SPECIFY_CYCLE, saveInitial: Boolean = True,
                   saveFirst: Boolean = True, saveLast: Boolean = True, saveEvery: int = None):
         """This method modifies the OptimizationProcess object.
-
-        Parameters
-        ----------
         description
             A String specifying a description of the optimization process. 
         maxDesignCycle

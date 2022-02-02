@@ -267,9 +267,6 @@ class CavityRadiation(Interaction):
         .. code-block:: python
 
             mdb.models[name].CavityRadiation
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -448,9 +445,6 @@ class CavityRadiation(Interaction):
                   reflectionSymZ: float = None):
         """This method modifies the data for an existing CavityRadiation object in the step where
         it is created.
-
-        Parameters
-        ----------
         surfaceEmissivities
             A sequence of Strings specifying the names of the Cavity Radiation properties containing 
             the surface emissivity data. One name per specified surface. The emissivity data is 
@@ -602,9 +596,6 @@ class CavityRadiation(Interaction):
                         surfaceReflection: Boolean = ON, viewfactorAccurTol: float = 0):
         """This method modifies the propagating data of an existing CavityRadiation object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         blocking

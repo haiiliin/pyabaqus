@@ -193,16 +193,10 @@ class StepBase:
 
     def resume(self):
         """This method resumes the step that was previously suppressed.
-
-        Parameters
-        ----------
         """
         pass
 
     def suppress(self):
         """This method suppresses the step.
-
-        Parameters
-        ----------
         """
         pass

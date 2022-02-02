@@ -24,9 +24,6 @@ class JobMdb(MdbBase):
         -----
             This function can be accessed by:
             - mdb.Job
-
-        Parameters
-        ----------
         name
             A String specifying the name of the new job. The name must be a valid Abaqus/CAE object
             name.
@@ -142,9 +139,6 @@ class JobMdb(MdbBase):
         -----
             This function can be accessed by:
             - mdb.JobFromInputFile
-
-        Parameters
-        ----------
         name
             A String specifying the name of the new job. The name must be a valid Abaqus/CAE object
             name.
@@ -235,9 +229,6 @@ class JobMdb(MdbBase):
         -----
             This function can be accessed by:
             - mdb.OptimizationProcess
-
-        Parameters
-        ----------
         name
             A String specifying name of the optimization process.
         model

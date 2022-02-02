@@ -38,9 +38,6 @@ class CellArray:
         .. code-block:: python
 
             part.CellArray
-
-        Parameters
-        ----------
         cells
             A list of Cell objects. 
 
@@ -63,9 +60,6 @@ class CellArray:
         findAt will always try to find objects among all the cells in the part or assembly
         instance and will not restrict itself to a subset even if the CellArray represents such
         subset.
-
-        Parameters
-        ----------
         coordinates
             A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the object to 
             find.findAt returns either a Cell object or a sequence of Cell objects based on the type 
@@ -91,9 +85,6 @@ class CellArray:
         """This method returns the cell faces on the exterior of the CellArray. That is, it returns
         the faces that are referenced by exactly one of the cells in the sequence.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A FaceArray object representing the faces on the exterior of the cells. . 
@@ -106,9 +97,6 @@ class CellArray:
         specified *mask*. This command is generated when the JournalOptions are set to
         COMPRESSEDINDEX. When large number of objects are involved, this method is highly
         efficient.
-
-        Parameters
-        ----------
         mask
             A String specifying the object or objects. 
 
@@ -127,9 +115,6 @@ class CellArray:
     def getMask(self):
         """This method returns a string specifying the object or objects.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A String specifying the object or objects. . 
@@ -140,9 +125,6 @@ class CellArray:
     def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
                          zMax: str = ''):
         """This method returns an array of cell objects that lie within the specified bounding box.
-
-        Parameters
-        ----------
         xMin
             A float specifying the minimum *X*-boundary of the bounding box. 
         yMin
@@ -166,9 +148,6 @@ class CellArray:
     def getByBoundingCylinder(self, center1: tuple, center2: tuple, radius: str):
         """This method returns an array of cell objects that lie within the specified bounding
         cylinder.
-
-        Parameters
-        ----------
         center1
             A tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the first end of the 
             cylinder. 
@@ -188,9 +167,6 @@ class CellArray:
     def getByBoundingSphere(self, center: tuple, radius: str):
         """This method returns an array of cell objects that lie within the specified bounding
         sphere.
-
-        Parameters
-        ----------
         center
             A tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the sphere. 
         radius
@@ -206,9 +182,6 @@ class CellArray:
     def getBoundingBox(self):
         """This method returns a dictionary of two tuples representing minimum and maximum boundary
         values of the bounding box of the minimum size containing the cell sequence.
-
-        Parameters
-        ----------
 
         Returns
         -------

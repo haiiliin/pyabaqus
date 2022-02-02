@@ -20,9 +20,6 @@ class FreeBodyReportOptions:
                   numberFormat: SymbolicConstant = SCIENTIFIC,
                   reportFormat: SymbolicConstant = NORMAL_ANNOTATED, csysType: SymbolicConstant = GLOBAL):
         """This method modifies the FreeBodyReportOptions object.
-
-        Parameters
-        ----------
         numDigits
             An Int specifying the number of decimal places. The default value is 3. 
         forceThreshold

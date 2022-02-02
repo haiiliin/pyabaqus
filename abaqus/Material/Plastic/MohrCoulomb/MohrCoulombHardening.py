@@ -38,9 +38,6 @@ class MohrCoulombHardening:
             - .MohrCoulombHardening
             - session.odbs[name].materials[name].mohrCoulombPlasticity\
             - .MohrCoulombHardening
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -60,13 +57,6 @@ class MohrCoulombHardening:
 
     def setValues(self):
         """This method modifies the MohrCoulombHardening object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

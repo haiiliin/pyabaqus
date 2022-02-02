@@ -45,9 +45,6 @@ class EmbeddedRegion(Constraint):
         .. code-block:: python
 
             mdb.models[name].EmbeddedRegion
-
-        Parameters
-        ----------
         name
             A String specifying the constraint repository key. 
         embeddedRegion
@@ -84,9 +81,6 @@ class EmbeddedRegion(Constraint):
     def setValues(self, weightFactorTolerance: float = None, toleranceMethod: SymbolicConstant = BOTH,
                   absoluteTolerance: float = 0, fractionalTolerance: float = 0):
         """This method modifies the EmbeddedRegion object.
-
-        Parameters
-        ----------
         weightFactorTolerance
             A Float specifying a small value below which the weighting factors will be zeroed out. 
             The default value is 10–6. 

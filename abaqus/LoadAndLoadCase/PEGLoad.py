@@ -61,9 +61,6 @@ class PEGLoad(Load):
         .. code-block:: python
 
             mdb.models[name].PEGLoad
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -101,9 +98,6 @@ class PEGLoad(Load):
                   comp2: float = None, comp3: float = None, amplitude: str = UNSET):
         """This method modifies the data for an existing PEGLoad object in the step where it is
         created.
-
-        Parameters
-        ----------
         distributionType
             A SymbolicConstant specifying how the load is distributed spatially. Possible values are 
             UNIFORM and FIELD. The default value is UNIFORM. 
@@ -133,9 +127,6 @@ class PEGLoad(Load):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing PEGLoad object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         comp1

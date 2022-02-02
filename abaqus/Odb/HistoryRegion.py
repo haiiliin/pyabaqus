@@ -44,9 +44,6 @@ class HistoryRegion:
         .. code-block:: python
 
             session.odbs[name].steps[name].HistoryRegion
-
-        Parameters
-        ----------
         name
             A String specifying the name of the HistoryRegion object. 
         description
@@ -66,9 +63,6 @@ class HistoryRegion:
     @typing.overload
     def getSubset(self, variableName: str):
         """This method returns a subset of the data in the HistoryRegion object.
-
-        Parameters
-        ----------
         variableName
             A String specifying the name of the output variable to return. 
 
@@ -81,9 +75,6 @@ class HistoryRegion:
     @typing.overload
     def getSubset(self, start: float):
         """This method returns a subset of the data in the HistoryRegion object.
-
-        Parameters
-        ----------
         start
             A Float specifying the start of the subset. This is the same as the first item in the 
             data array member of the HistoryOutput object. 
@@ -97,9 +88,6 @@ class HistoryRegion:
     @typing.overload
     def getSubset(self, start: float, end: float):
         """This method returns a subset of the data in the HistoryRegion object.
-
-        Parameters
-        ----------
         start
             A Float specifying the start of the subset. This is the same as the first item in the 
             data array member of the HistoryOutput object. 
@@ -126,9 +114,6 @@ class HistoryRegion:
         .. code-block:: python
 
             session.odbs[name].steps[name].HistoryRegion
-
-        Parameters
-        ----------
         name
             A String specifying the output variable name.
         description

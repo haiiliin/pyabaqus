@@ -27,9 +27,6 @@ class AnalyticSurfaceSegment:
         .. code-block:: python
 
             odbAccess.AnalyticSurfaceSegment
-
-        Parameters
-        ----------
         type
             A SymbolicConstant specifying the type of AnalyticSurfaceSegment. Possible values are 
             START, LINE, CIRCLE, and PARABOLA. 

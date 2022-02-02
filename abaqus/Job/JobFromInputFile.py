@@ -77,9 +77,6 @@ class JobFromInputFile(Job):
         .. code-block:: python
 
             mdb.JobFromInputFile
-
-        Parameters
-        ----------
         name
             A String specifying the name of the new job. The name must be a valid Abaqus/CAE object 
             name. 
@@ -176,9 +173,6 @@ class JobFromInputFile(Job):
                   activateLoadBalancing: Boolean = OFF, multiprocessingMode: SymbolicConstant = DEFAULT,
                   licenseType: SymbolicConstant = DEFAULT):
         """This method modifies the JobFromInputFile object.
-
-        Parameters
-        ----------
         type
             A SymbolicConstant specifying the type of job. Possible values are ANALYSIS, 
             SYNTAXCHECK, and RECOVER. The default value is ANALYSIS.For theJobFromInputFile object, 

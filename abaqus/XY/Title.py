@@ -44,9 +44,6 @@ class Title:
     def setValues(self, title: 'Title' = None, text: str = '', area: Area = Area(),
                   useDefault: Boolean = OFF, titleStyle: TextStyle = TextStyle()):
         """This method modifies the Title object.
-
-        Parameters
-        ----------
         title
             A Title object from which attributes are to be copied. 
         text

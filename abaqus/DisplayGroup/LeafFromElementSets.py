@@ -39,9 +39,6 @@ class LeafFromElementSets(Leaf):
         .. code-block:: python
 
             LeafFromElementSets
-
-        Parameters
-        ----------
         elementSets
             A sequence of Strings specifying element sets or a String specifying a single element 
             set. 

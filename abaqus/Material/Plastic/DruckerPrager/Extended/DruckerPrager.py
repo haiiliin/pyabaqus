@@ -69,9 +69,6 @@ class DruckerPrager:
             This function can be accessed by:
             - mdb.models[name].materials[name].DruckerPrager
             - session.odbs[name].materials[name].DruckerPrager
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         shearCriterion
@@ -105,13 +102,6 @@ class DruckerPrager:
 
     def setValues(self):
         """This method modifies the DruckerPrager object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

@@ -48,9 +48,6 @@ class EquallySpacedAmplitude(Amplitude):
 
             mdb.models[name].EquallySpacedAmplitude
             session.odbs[name].EquallySpacedAmplitude
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         fixedInterval
@@ -80,9 +77,6 @@ class EquallySpacedAmplitude(Amplitude):
     def setValues(self, begin: float = 0, smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
                   timeSpan: SymbolicConstant = STEP):
         """This method modifies the EquallySpacedAmplitude object.
-
-        Parameters
-        ----------
         begin
             A Float specifying the time at which the first amplitude data are given. Possible values 
             are non-negative numbers. The default value is 0.0. 

@@ -377,9 +377,6 @@ class ViscoStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].ViscoStep
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         previous
@@ -479,9 +476,6 @@ class ViscoStep(AnalysisStep):
                   convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0,
                   continueDampingFactors: Boolean = OFF):
         """This method modifies the ViscoStep object.
-
-        Parameters
-        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         timePeriod

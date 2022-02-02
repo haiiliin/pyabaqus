@@ -47,9 +47,6 @@ class DruckerPragerCreep:
             This function can be accessed by:
             - mdb.models[name].materials[name].druckerPrager.DruckerPragerCreep
             - session.odbs[name].materials[name].druckerPrager.DruckerPragerCreep
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         law
@@ -74,13 +71,6 @@ class DruckerPragerCreep:
 
     def setValues(self):
         """This method modifies the DruckerPragerCreep object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

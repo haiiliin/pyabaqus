@@ -42,9 +42,6 @@ class AdjustPoints(Constraint):
         .. code-block:: python
 
             mdb.models[name].AdjustPoints
-
-        Parameters
-        ----------
         name
             A String specifying the constraint repository key. 
         surface
@@ -61,8 +58,5 @@ class AdjustPoints(Constraint):
 
     def setValues(self):
         """This method modifies the AdjustPoints object.
-
-        Parameters
-        ----------
         """
         pass

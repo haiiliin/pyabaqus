@@ -84,9 +84,6 @@ class Viscoelastic:
             This function can be accessed by:
             - mdb.models[name].materials[name].Viscoelastic
             - session.odbs[name].materials[name].Viscoelastic
-
-        Parameters
-        ----------
         domain
             A SymbolicConstant specifying the domain definition. Possible values are:
             - FREQUENCY, specifying a frequency domain. This domain is only available for an Abaqus/Standard analysis.
@@ -136,13 +133,6 @@ class Viscoelastic:
 
     def setValues(self):
         """This method modifies the Viscoelastic object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

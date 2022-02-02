@@ -29,9 +29,6 @@ class IgnoredEdgeArray:
         findAt will always try to find objects among all the ignored edges in the part or
         assembly instance and will not restrict itself to a subset even if the IgnoredEdgeArray
         represents such subset.
-
-        Parameters
-        ----------
         coordinates
             A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the object to 
             find.findAt returns either an IgnoredEdge object or a sequence of IgnoredEdge objects 
@@ -57,9 +54,6 @@ class IgnoredEdgeArray:
         specified *mask*. This command is generated when the JournalOptions are set to
         COMPRESSEDINDEX. When large number of objects are involved, this method is highly
         efficient.
-
-        Parameters
-        ----------
         mask
             A String specifying the object or objects. 
 
@@ -73,9 +67,6 @@ class IgnoredEdgeArray:
     def getMask(self):
         """This method returns a string specifying the object or objects.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A String specifying the object or objects. . 
@@ -86,9 +77,6 @@ class IgnoredEdgeArray:
     def getClosest(self, coordinates: tuple, searchTolerance: str = ''):
         """This method returns a object or objects in the IgnoredEdgeArray closest to the given set
         of points, where the given points need not lie on the edges in the IgnoredEdgeArray.
-
-        Parameters
-        ----------
         coordinates
             A sequence of a sequence of floats, where each sequence of floats describes the *X*-, 
             *Y*-, and *Z*-coordinates of a 

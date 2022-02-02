@@ -55,9 +55,6 @@ class Hyperfoam:
             This function can be accessed by:
             - mdb.models[name].materials[name].Hyperfoam
             - session.odbs[name].materials[name].Hyperfoam
-
-        Parameters
-        ----------
         testData
             A Boolean specifying whether test data are supplied. The default value is OFF. 
         poisson
@@ -87,13 +84,6 @@ class Hyperfoam:
 
     def setValues(self):
         """This method modifies the Hyperfoam object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

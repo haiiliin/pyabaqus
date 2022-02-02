@@ -11,9 +11,6 @@ class MaterialModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].Material
-
-        Parameters
-        ----------
         name
             A String specifying the name of the new material.
         description

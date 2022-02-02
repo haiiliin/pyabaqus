@@ -28,9 +28,6 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -----
             This function can be accessed by:
             - mdb.models[name].Field
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         createStepName
@@ -127,9 +124,6 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -----
             This function can be accessed by:
             - mdb.models[name].FluidCavityPressure
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         fluidCavity
@@ -153,9 +147,6 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -----
             This function can be accessed by:
             - mdb.models[name].InitialState
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         instances
@@ -193,9 +184,6 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -----
             This function can be accessed by:
             - mdb.models[name].KinematicHardening
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         region
@@ -240,9 +228,6 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -----
             This function can be accessed by:
             - mdb.models[name].MaterialAssignment
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         instanceList
@@ -285,9 +270,6 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -----
             This function can be accessed by:
             - mdb.models[name].Stress
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         region
@@ -331,9 +313,6 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -----
             This function can be accessed by:
             - mdb.models[name].Temperature
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         createStepName
@@ -434,9 +413,6 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -----
             This function can be accessed by:
             - mdb.models[name].Velocity
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         region

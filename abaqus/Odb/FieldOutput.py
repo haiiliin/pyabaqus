@@ -69,9 +69,6 @@ class FieldOutput:
         .. code-block:: python
 
             session.odbs[name].steps[name].frames[i].FieldOutput
-
-        Parameters
-        ----------
         name
             A String specifying the output variable name. 
         description
@@ -117,9 +114,6 @@ class FieldOutput:
         .. code-block:: python
 
             session.odbs[name].steps[name].frames[i].FieldOutput
-
-        Parameters
-        ----------
         field
             A FieldOutput object. 
         name
@@ -141,9 +135,6 @@ class FieldOutput:
     def addData(self, position: SymbolicConstant, instance: OdbInstance, labels: tuple, data: tuple,
                 sectionPoint: SectionPoint = None, localCoordSystem: tuple = ()):
         """This method adds data to a FieldOutput object.
-
-        Parameters
-        ----------
         position
             A SymbolicConstant specifying the position of the output. Possible values are: 
             - NODAL, specifying the values calculated at the nodes. 
@@ -201,9 +192,6 @@ class FieldOutput:
         """This method adds the data from a field created using the getSubset method and
         mathematical operators to the database. The user must create a field to contain the new
         data and then use the addData method to assign the data from the fields.
-
-        Parameters
-        ----------
         field
             A FieldOutput object specifying the data to add.
 
@@ -219,9 +207,6 @@ class FieldOutput:
     def addData(self, position: SymbolicConstant, set: OdbSet, data: tuple,
                 sectionPoint: SectionPoint = None, conjugateData: float = None):
         """This method adds data to a FieldOutput object.
-
-        Parameters
-        ----------
         position
             A SymbolicConstant specifying the position of the output. Possible values are:NODAL, 
             specifying the values calculated at the nodes.INTEGRATION_POINT, specifying the values 
@@ -278,9 +263,6 @@ class FieldOutput:
         parent field. Abaqus will perform this operation on only the real part of the
         FieldOutput object. The operation is not performed on the conjugate data (the imaginary
         portion of a complex result).
-
-        Parameters
-        ----------
         invariant
             A SymbolicConstant specifying the invariant. Possible values areMAGNITUDE, MISES, 
             TRESCA, PRESS, INV3, MAX_PRINCIPAL, MID_PRINCIPAL, MIN_PRINCIPAL, MAX_INPLANE_PRINCIPAL, 
@@ -299,9 +281,6 @@ class FieldOutput:
         parent field. Abaqus will perform this operation on only the real part of the
         FieldOutput object. The operation is not performed on the conjugate data (the imaginary
         portion of a complex result).
-
-        Parameters
-        ----------
         componentLabel
             A String specifying the component label, such as “S11”. 
 
@@ -317,9 +296,6 @@ class FieldOutput:
     @typing.overload
     def getSubset(self, position: SymbolicConstant = None, readOnly: Boolean = OFF):
         """A FieldOutput object with a subset of the field values.
-
-        Parameters
-        ----------
         position
             *position* 
             A SymbolicConstant specifying the position of the output in the element. Possible values 
@@ -349,9 +325,6 @@ class FieldOutput:
     @typing.overload
     def getSubset(self, region: str = ''):
         """A FieldOutput object with a subset of the field values.
-
-        Parameters
-        ----------
         region
             An OdbSet specifying the region for which to extract values. For better performance, the 
             node or element labels in the sets are preferred to be sorted in ascending order. 
@@ -365,9 +338,6 @@ class FieldOutput:
     @typing.overload
     def getSubset(self, localCoordSystem: tuple = ()):
         """A FieldOutput object with a subset of the field values.
-
-        Parameters
-        ----------
         localCoordSystem
             A sequence of sequences of Floats specifying the 3 × 3 matrix of direction cosines. 
             Field values associated with the supplied coordinate system will be extracted. 
@@ -381,9 +351,6 @@ class FieldOutput:
     @typing.overload
     def getSubset(self, sectionPoint: SectionPoint = None):
         """A FieldOutput object with a subset of the field values.
-
-        Parameters
-        ----------
         sectionPoint
             A SectionPoint object. 
 
@@ -396,9 +363,6 @@ class FieldOutput:
     @typing.overload
     def getSubset(self, location: FieldLocation = FieldLocation()):
         """A FieldOutput object with a subset of the field values.
-
-        Parameters
-        ----------
         location
             A FieldLocation object. 
 
@@ -411,9 +375,6 @@ class FieldOutput:
     @typing.overload
     def getSubset(self, region: str = ''):
         """A FieldOutput object with a subset of the field values.
-
-        Parameters
-        ----------
         region
             An OdbMeshElement specifying the region for which to extract values. 
 
@@ -426,9 +387,6 @@ class FieldOutput:
     @typing.overload
     def getSubset(self, region: str = ''):
         """A FieldOutput object with a subset of the field values.
-
-        Parameters
-        ----------
         region
             An OdbMeshNode specifying the region for which to extract values. 
 
@@ -441,9 +399,6 @@ class FieldOutput:
     @typing.overload
     def getSubset(self, region: str = ''):
         """A FieldOutput object with a subset of the field values.
-
-        Parameters
-        ----------
         region
             An OdbInstance specifying the region for which to extract values. 
 
@@ -456,9 +411,6 @@ class FieldOutput:
     @typing.overload
     def getSubset(self, elementType: str = ''):
         """A FieldOutput object with a subset of the field values.
-
-        Parameters
-        ----------
         elementType
             A String specifying the element type for which to extract values. The string must 
             correspond to a valid Abaqus element type. 
@@ -480,9 +432,6 @@ class FieldOutput:
         specified by the input DatumCsys object. Abaqus will perform this operation on only the
         real part of the FieldOutput object. The operation is not performed on the conjugate
         data (the imaginary portion of a complex result).
-
-        Parameters
-        ----------
         datumCsys
             A valid DatumCsys object designating the coordinate system. Valid systems can be fixed 
             or positioned with respect to nodes on the model and can be cartesian, cylindrical, or 
@@ -517,9 +466,6 @@ class FieldOutput:
         specified by the input DatumCsys object. Abaqus will perform this operation on only the
         real part of the FieldOutput object. The operation is not performed on the conjugate
         data (the imaginary portion of a complex result).
-
-        Parameters
-        ----------
         datumCsys
             A valid DatumCsys object designating the coordinate system. Valid systems can be fixed 
             or positioned with respect to nodes on the model and can be cartesian, cylindrical, or 
@@ -558,9 +504,6 @@ class FieldOutput:
         specified by the input DatumCsys object. Abaqus will perform this operation on only the
         real part of the FieldOutput object. The operation is not performed on the conjugate
         data (the imaginary portion of a complex result).
-
-        Parameters
-        ----------
         datumCsys
             A valid DatumCsys object designating the coordinate system. Valid systems can be fixed 
             or positioned with respect to nodes on the model and can be cartesian, cylindrical, or 
@@ -602,9 +545,6 @@ class FieldOutput:
         values for the same connector elements as the parent field. Some connection types such
         as Axial, Link, Slip Ring, and Radial Thrust require that the deformationField be
         specified.
-
-        Parameters
-        ----------
         deformationField
             A FieldOutput object specifying the nodal displacement vectors required by moving 
             coordinate systems to determine instantaneous configurations. 
@@ -623,9 +563,6 @@ class FieldOutput:
 
     def setComponentLabels(self, componentLabels: tuple):
         """This method sets the component labels for the FieldOutput object.
-
-        Parameters
-        ----------
         componentLabels
             A sequence of Strings specifying the labels for each component of the value. The length 
             of the sequence must match the type. If *type*=TENSOR, the default value is *name* with 
@@ -637,9 +574,6 @@ class FieldOutput:
 
     def setDataType(self, type: SymbolicConstant):
         """This method sets the data type of a FieldOutput object.
-
-        Parameters
-        ----------
         type
             A SymbolicConstant specifying the output type. Possible values are SCALAR, VECTOR, 
             TENSOR_3D_FULL, TENSOR_3D_PLANAR, TENSOR_3D_SURFACE, TENSOR_2D_PLANAR, and 
@@ -649,9 +583,6 @@ class FieldOutput:
 
     def setValidInvariants(self, validInvariants: SymbolicConstant):
         """This method sets the invariants valid for the FieldOutput object.
-
-        Parameters
-        ----------
         validInvariants
             A sequence of SymbolicConstants specifying which invariants should be calculated for 
             this field. An empty sequence indicates that no invariants are valid for this field. 

@@ -29,9 +29,6 @@ class Load:
 
     def deactivate(self, stepName: str):
         """This method deactivates the load in the specified step and all its subsequent steps.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the load is deactivated.
         """
@@ -39,9 +36,6 @@ class Load:
 
     def move(self, fromStepName: str, toStepName: str):
         """This method moves the load state object from one step to a different step.
-
-        Parameters
-        ----------
         fromStepName
             A String specifying the name of the step from which the load state is moved. 
         toStepName
@@ -52,9 +46,6 @@ class Load:
     def reset(self, stepName: str):
         """This method resets the load state of the specified step to the state of the previous
         general analysis step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the load state is reset.
         """
@@ -62,25 +53,16 @@ class Load:
 
     def resume(self):
         """This method resumes the load that was previously suppressed.
-
-        Parameters
-        ----------
         """
         pass
 
     def suppress(self):
         """This method suppresses the load.
-
-        Parameters
-        ----------
         """
         pass
 
     def delete(self, indices: tuple):
         """This method allows you to delete existing loads.
-
-        Parameters
-        ----------
         indices
             A sequence of Ints specifying the index of each load to delete. 
         """

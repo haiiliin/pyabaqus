@@ -59,9 +59,6 @@ class SurfacePoreFluid(Load):
         .. code-block:: python
 
             mdb.models[name].SurfacePoreFluid
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -93,9 +90,6 @@ class SurfacePoreFluid(Load):
     def setValues(self, field: str = '', distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):
         """This method modifies the data for an existing SurfacePoreFluid object in the step where
         it is created.
-
-        Parameters
-        ----------
         field
             A String specifying the name of the AnalyticalField object associated with this load. 
             The *field* argument applies only when *distributionType*=FIELD. The default value is an 
@@ -113,9 +107,6 @@ class SurfacePoreFluid(Load):
     def setValuesInStep(self, stepName: str, magnitude: float = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing SurfacePoreFluid object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the surface pore fluid flow is 
             modified. 

@@ -299,9 +299,6 @@ class TempDisplacementDynamicsStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].TempDisplacementDynamicsStep
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         previous
@@ -362,9 +359,6 @@ class TempDisplacementDynamicsStep(AnalysisStep):
                   massScaling: MassScalingArray = PREVIOUS_STEP, linearBulkViscosity: float = 0,
                   quadBulkViscosity: float = 1, improvedDtMethod: Boolean = ON):
         """This method modifies the TempDisplacementDynamicsStep object.
-
-        Parameters
-        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         timePeriod

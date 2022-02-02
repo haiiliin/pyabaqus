@@ -49,9 +49,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].BodyCharge
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -90,9 +87,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].BodyConcentrationFlux
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -131,9 +125,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].BodyCurrent
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -171,9 +162,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].BodyCurrentDensity
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -212,9 +200,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].BodyForce
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -257,9 +242,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].BodyHeatFlux
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -298,9 +280,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].BoltLoad
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -347,9 +326,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ConcCharge
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -388,9 +364,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ConcConcFlux
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -429,9 +402,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ConcCurrent
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -471,9 +441,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ConcentratedForce
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -526,9 +493,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ConcentratedHeatFlux
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -570,9 +534,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ConcPoreFluid
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -612,9 +573,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ConnectorForce
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -664,9 +622,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ConnectorMoment
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -714,9 +669,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].CoriolisForce
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -759,9 +711,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].Gravity
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -805,9 +754,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].InertiaRelief
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -855,9 +801,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].InwardVolAccel
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -897,9 +840,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].LineLoad
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -947,9 +887,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].Moment
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -1002,9 +939,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].PEGLoad
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -1048,9 +982,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].PipePressure
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -1100,9 +1031,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].Pressure
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -1152,9 +1080,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].RotationalBodyForce
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -1208,9 +1133,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ShellEdgeLoad
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -1285,9 +1207,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SubmodelSB
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -1332,9 +1251,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SubstructureLoad
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -1366,9 +1282,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SurfaceCharge
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -1408,9 +1321,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SurfaceConcentrationFlux
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -1450,9 +1360,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SurfaceCurrent
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -1491,9 +1398,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SurfaceCurrentDensity
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -1531,9 +1435,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SurfaceHeatFlux
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -1571,9 +1472,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SurfacePoreFluid
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName
@@ -1614,9 +1512,6 @@ class LoadModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SurfaceTraction
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key.
         createStepName

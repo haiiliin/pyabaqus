@@ -41,9 +41,6 @@ class LeafFromPartNodeLabels(Leaf):
         .. code-block:: python
 
             LeafFromPartNodeLabels
-
-        Parameters
-        ----------
         part
             A Part object. 
         nodeLabels

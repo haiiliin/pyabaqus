@@ -13,9 +13,6 @@ class PartModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].Part
-
-        Parameters
-        ----------
         name
             A String specifying the repository key.
         dimensionality

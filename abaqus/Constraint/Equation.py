@@ -42,9 +42,6 @@ class Equation(Constraint):
         .. code-block:: python
 
             mdb.models[name].Equation
-
-        Parameters
-        ----------
         name
             A String specifying the constraint repository key. 
         terms
@@ -65,13 +62,6 @@ class Equation(Constraint):
 
     def setValues(self):
         """This method modifies the Equation object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

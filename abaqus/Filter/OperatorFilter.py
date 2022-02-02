@@ -35,9 +35,6 @@ class OperatorFilter(Filter):
 
             mdb.models[name].OperatorFilter
             session.odbs[name].OperatorFilter
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. This name ANTIALIASING is reserved for filters 
             generated internally by the program. 
@@ -72,9 +69,6 @@ class OperatorFilter(Filter):
     def setValues(self, order: int = 2, operation: SymbolicConstant = NONE, halt: Boolean = OFF,
                   limit: float = None, invariant: SymbolicConstant = NONE):
         """This method modifies the OperatorFilter object.
-
-        Parameters
-        ----------
         order
             An Int specifying the highest power of the filter transfer function. Possible values are 
             non-negative numbers less than or equal to 20. Order is not available for 

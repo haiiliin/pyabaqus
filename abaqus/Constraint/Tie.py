@@ -47,9 +47,6 @@ class Tie(Constraint):
         .. code-block:: python
 
             mdb.models[name].Tie
-
-        Parameters
-        ----------
         name
             A String specifying the constraint repository key. 
         main
@@ -93,9 +90,6 @@ class Tie(Constraint):
     def swapSurfaces(self):
         """This method switches the main and secondary surfaces of a tied constraint. This command
         is valid only during the step in which the interaction is created.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -104,9 +98,6 @@ class Tie(Constraint):
                   constraintRatioMethod: SymbolicConstant = DEFAULT, constraintRatio: float = 0,
                   constraintEnforcement: SymbolicConstant = SOLVER_DEFAULT, thickness: Boolean = ON):
         """This method modifies the Tie object.
-
-        Parameters
-        ----------
         adjust
             A Boolean specifying whether initial positions of tied secondary nodes are adjusted to 
             lie on the main surface. The default value is ON. 

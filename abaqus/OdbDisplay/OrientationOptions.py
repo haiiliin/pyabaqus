@@ -119,9 +119,6 @@ class OrientationOptions(DGOrientationOptions):
                   lineThickness: SymbolicConstant = VERY_THIN, orientation: SymbolicConstant = PLY,
                   arrowheadStyle: SymbolicConstant = NONE, scaleMode: SymbolicConstant = MODEL_SIZE):
         """This method modifies the OrientationOptions object.
-
-        Parameters
-        ----------
         options
             An OrientationOptions object from which values are to be copied. If other arguments are 
             also supplied to setValues, they will override the values in *options*. The default 

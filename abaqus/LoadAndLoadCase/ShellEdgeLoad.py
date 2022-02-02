@@ -63,9 +63,6 @@ class ShellEdgeLoad(Load):
         .. code-block:: python
 
             mdb.models[name].ShellEdgeLoad
-
-        Parameters
-        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -135,9 +132,6 @@ class ShellEdgeLoad(Load):
                   resultant: Boolean = OFF, traction: SymbolicConstant = NORMAL):
         """This method modifies the data for an existing ShellEdgeLoad object in the step where it
         is created.
-
-        Parameters
-        ----------
         distributionType
             A SymbolicConstant specifying how the shell edge load is distributed spatially. Possible 
             values are UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM. 
@@ -192,9 +186,6 @@ class ShellEdgeLoad(Load):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ShellEdgeLoad object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the surface pore fluid flow is 
             modified. 

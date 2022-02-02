@@ -73,9 +73,6 @@ class FieldOutputRequest:
         .. code-block:: python
 
             mdb.models[name].FieldOutputRequest
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -158,9 +155,6 @@ class FieldOutputRequest:
     def deactivate(self, stepName: str):
         """This method deactivates the field output request in the specified step and all its
         subsequent steps.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the field output request is 
             deactivated.
@@ -170,9 +164,6 @@ class FieldOutputRequest:
     def move(self, fromStepName: str, toStepName: str):
         """This method moves the field output request state object from one step to a different
         step.
-
-        Parameters
-        ----------
         fromStepName
             A String specifying the name of the step from which the field output request state is 
             moved. 
@@ -185,9 +176,6 @@ class FieldOutputRequest:
     def reset(self, stepName: str):
         """This method resets the field output request state of the specified step to the state of
         the previous step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the field output request state is 
             reset.
@@ -196,17 +184,11 @@ class FieldOutputRequest:
 
     def resume(self):
         """This method resumes the field output request that was previously suppressed.
-
-        Parameters
-        ----------
         """
         pass
 
     def suppress(self):
         """This method suppresses the field output request.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -223,9 +205,6 @@ class FieldOutputRequest:
                   position: SymbolicConstant = INTEGRATION_POINTS):
         """This method modifies the data for an existing FieldOutputRequest object in the step
         where it is created.
-
-        Parameters
-        ----------
         region
             The SymbolicConstant MODEL or a Region object specifying the region from which output is 
             requested. The SymbolicConstant MODEL represents the whole model. The default value is 
@@ -307,9 +286,6 @@ class FieldOutputRequest:
                         numIntervals: int = 20, timePoints: str = None, timeMarks: Boolean = OFF):
         """This method modifies the propagating data for an existing FieldOutputRequest object in
         the specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the field output request is modified. 
         variables

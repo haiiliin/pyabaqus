@@ -81,9 +81,6 @@ class EulerianBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].EulerianBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -112,9 +109,6 @@ class EulerianBC(BoundaryCondition):
                   inflowType: SymbolicConstant = FREE, outflowType: SymbolicConstant = ZERO_PRESSURE):
         """This method modifies the data for an existing EulerianBC object in the step where it is
         created.
-
-        Parameters
-        ----------
         region
             A Region object specifying the region to which the boundary condition is applied. 
         definition
@@ -134,9 +128,6 @@ class EulerianBC(BoundaryCondition):
                         inflowType: SymbolicConstant = FREE, outflowType: SymbolicConstant = ZERO_PRESSURE):
         """This method modifies the propagating data for an existing EulerianBC object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         definition

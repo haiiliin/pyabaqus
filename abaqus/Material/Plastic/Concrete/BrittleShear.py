@@ -45,9 +45,6 @@ class BrittleShear:
             This function can be accessed by:
             - mdb.models[name].materials[name].brittleCracking.BrittleShear
             - session.odbs[name].materials[name].brittleCracking.BrittleShear
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -70,13 +67,6 @@ class BrittleShear:
 
     def setValues(self):
         """This method modifies the BrittleShear object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

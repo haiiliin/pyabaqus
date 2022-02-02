@@ -33,9 +33,6 @@ class Regularization:
 
             mdb.models[name].materials[name].Regularization
             session.odbs[name].materials[name].Regularization
-
-        Parameters
-        ----------
         rtol
             A Float specifying the tolerance to be used for regularizing material data. The default 
             value is 0.03. 
@@ -56,13 +53,6 @@ class Regularization:
 
     def setValues(self):
         """This method modifies the Regularization object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

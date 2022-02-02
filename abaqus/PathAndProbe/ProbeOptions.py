@@ -179,9 +179,6 @@ class ProbeOptions:
                   nodeFieldResults: Boolean = ON, legend: Boolean = ON, xValue: Boolean = ON,
                   yValue: Boolean = ON, sequenceID: Boolean = ON, interpolateXy: Boolean = OFF):
         """This method modifies the settings on the ProbeOptions object.
-
-        Parameters
-        ----------
         options
             A ProbeOptions object from which values are to be copied. If other arguments are also 
             supplied to setValues, they will override the values in *options*. The default value is 

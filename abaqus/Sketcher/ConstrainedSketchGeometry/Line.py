@@ -10,9 +10,6 @@ class Line(ConstrainedSketchGeometry):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].Line
-
-        Parameters
-        ----------
         point1
             A pair of Floats specifying the first endpoint. 
         point2

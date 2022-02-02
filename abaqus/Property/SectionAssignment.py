@@ -46,9 +46,6 @@ class SectionAssignment:
 
             mdb.models[*name*].parts[*name*].SectionAssignment
             mdb.models[*name*].rootAssembly.SectionAssignment
-
-        Parameters
-        ----------
         region
             A Set object specifying the region to which the section is assigned. 
         sectionName
@@ -75,26 +72,17 @@ class SectionAssignment:
 
     def resume(self):
         """This method resumes the section assignment that was previously suppressed.
-
-        Parameters
-        ----------
         """
         pass
 
     def suppress(self):
         """This method suppresses the section assignment.
-
-        Parameters
-        ----------
         """
         pass
 
     def getVertices(self):
         """This method is only valid for connector section assignments. This method returns a
         sequence consisting of tuples of coordinates of the connector's endpoints.
-
-        Parameters
-        ----------
 
         Returns
         -------
@@ -110,8 +98,5 @@ class SectionAssignment:
 
     def setValues(self):
         """This method modifies the SectionAssignment object.
-
-        Parameters
-        ----------
         """
         pass

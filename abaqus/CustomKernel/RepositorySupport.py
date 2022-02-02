@@ -31,9 +31,6 @@ class RepositorySupport(CommandRegister):
 
             customKernel.RepositorySupport
 
-        Parameters
-        ----------
-
         Returns
         -------
             A RepositorySupport object. . 
@@ -47,9 +44,6 @@ class RepositorySupport(CommandRegister):
         The objects stored in the repository are assumed to have an attribute called *name* that
         stores the key used to access the object in the repository. The name attribute will be
         modified by the changeKey method.
-
-        Parameters
-        ----------
         name
             A String specifying the name of the repository. 
         constructors

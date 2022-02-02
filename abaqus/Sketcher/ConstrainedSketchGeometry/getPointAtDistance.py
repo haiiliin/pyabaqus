@@ -8,9 +8,6 @@ class getPointAtDistance(ConstrainedSketchGeometry):
         """This method returns a point offset along the given ConstrainedSketchGeometry from the
         given end by a specified arc length distance or a percentage of the total length of the
         ConstrainedSketchGeometry object.
-
-        Parameters
-        ----------
         point
             A pair of Floats specifying the point from which the distance is to be measured. 
         distance

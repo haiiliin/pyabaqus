@@ -35,9 +35,6 @@ class GeneralizedProfile(Profile):
 
             mdb.models[name].GeneralizedProfile
             session.odbs[name].GeneralizedProfile
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         area
@@ -69,13 +66,6 @@ class GeneralizedProfile(Profile):
 
     def setValues(self):
         """This method modifies the GeneralizedProfile object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

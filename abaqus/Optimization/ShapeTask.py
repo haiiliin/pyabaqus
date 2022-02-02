@@ -86,9 +86,6 @@ class ShapeTask(OptimizationTask):
         .. code-block:: python
 
                       mdb.models[name].ShapeTask
-
-        Parameters
-        ----------
         name
             A String specifying the optimization task repository key. 
         abaqusSensitivities
@@ -276,9 +273,6 @@ class ShapeTask(OptimizationTask):
                   tetSkew: float = 100, triMaxAngle: float = 140, triMinAngle: float = 20,
                   updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF):
         """This method modifies the ShapeTask object.
-
-        Parameters
-        ----------
         abaqusSensitivities
             A Boolean specifying whether to use Abaqus to compute the design responses and their 
             sensitivities. The default value is True. 

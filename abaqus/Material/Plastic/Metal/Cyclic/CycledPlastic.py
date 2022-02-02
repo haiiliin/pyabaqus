@@ -33,9 +33,6 @@ class CycledPlastic:
             This function can be accessed by:
             - mdb.models[name].materials[name].Plastic.CycledPlastic
             - session.odbs[name].materials[name].Plastic.CycledPlastic
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -49,8 +46,5 @@ class CycledPlastic:
 
     def setValues(self):
         """This method modifies the CycledPlastic object.
-
-        Parameters
-        ----------
         """
         pass

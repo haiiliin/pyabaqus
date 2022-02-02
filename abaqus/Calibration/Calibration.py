@@ -40,9 +40,6 @@ class Calibration:
         .. code-block:: python
 
                       mdb.models[name].Calibration
-
-        Parameters
-        ----------
         name
             A String specifying the name of the new calibration. 
 
@@ -62,9 +59,6 @@ class Calibration:
         .. code-block:: python
 
                       mdb.models[name].Calibration
-
-        Parameters
-        ----------
         name
             A String specifying the name of the new behavior.
         typeName
@@ -88,9 +82,6 @@ class Calibration:
         .. code-block:: python
 
                       mdb.models[name].Calibration
-
-        Parameters
-        ----------
         name
             A String specifying the name of the new dataset.
         data

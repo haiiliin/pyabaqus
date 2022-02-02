@@ -90,9 +90,6 @@ class ConnectorDamping(ConnectorBehaviorOption):
                       connectorBehavior.ConnectorDamping
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorDamping
-
-        Parameters
-        ----------
         behavior
             A SymbolicConstant specifying if the damping behavior is linear or nonlinear. Possible 
             values are LINEAR and NONLINEAR. The default value is LINEAR. 
@@ -138,13 +135,6 @@ class ConnectorDamping(ConnectorBehaviorOption):
 
     def setValues(self):
         """This method modifies the ConnectorDamping object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

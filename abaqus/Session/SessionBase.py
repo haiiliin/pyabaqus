@@ -438,9 +438,6 @@ class SessionBase:
 
     def setValues(self, kernelMemoryLimit: float = None):
         """This method modifies the Session object.
-
-        Parameters
-        ----------
         kernelMemoryLimit
             A Float specifying the memory limit value for the Abaqus/CAE kernel process in 
             megabytes. If the limit is exceeded, Abaqus/CAE displays an error message.The default 
@@ -458,9 +455,6 @@ class SessionBase:
 
     def enableCADConnection(self, CADName: str, portNum: int = None):
         """This method enables the Abaqus/CAE listening port for the specified *CAD* system.
-
-        Parameters
-        ----------
         CADName
             A String specifying the CAD system. Available options are Pro/ENGINEER, CATIA V5, CATIA 
             V6, NX and SolidWorks. 
@@ -479,9 +473,6 @@ class SessionBase:
     def isCADConnectionEnabled(self):
         """This method checks the status of CAD Connection.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A Boolean value of True if the CAD connection enabled and False if the CAD connection 
@@ -491,9 +482,6 @@ class SessionBase:
 
     def disableCADConnection(self, CADName: str):
         """This method disables an associative import CAD connection that was enabled.
-
-        Parameters
-        ----------
         CADName
             A String specifying the CAD system for which associative import will be disabled. 
             Available options are Pro/ENGINEER, CATIA V5, and CATIA V6, NX and SolidWorks. 
@@ -503,9 +491,6 @@ class SessionBase:
     def enableParameterUpdate(self, CADName: str, CADVersion: str, CADPort: int = None):
         """This method enables parameter updates for ProE and NX by establishing a connection with
         the listening port previously setup by the CAD application.
-
-        Parameters
-        ----------
         CADName
             A String specifying the CAD system for which parameter update will be enabled. Available 
             options are Pro/ENGINEER and NX. 
@@ -525,9 +510,6 @@ class SessionBase:
         """This method enables parameter updates for CATIA V5 and CATIA V6 by establishing a
         connection with the listening port previously setup by the CAD application. This port
         number is used to send the parameter information to the CAD system.
-
-        Parameters
-        ----------
         CADName
             A String specifying the CAD system for which the port number will be saved. The 
             available options are 'CATIA V5' and ' CATIA V6'. 
@@ -541,9 +523,6 @@ class SessionBase:
                             CADPartName: str = ''):
         """This method updates the parameters for the specified model using the specified parameter
         file.
-
-        Parameters
-        ----------
         modelName
             A String specifying the model name to update. 
         CADName
@@ -569,9 +548,6 @@ class SessionBase:
 
     def disableParameterUpdate(self, CADName: str):
         """This method disables an associative CAD connection using parameters.
-
-        Parameters
-        ----------
         CADName
             A String specifying the CAD system for which the parameter update will be disabled. 
             Available option is Pro/ENGINEER. 
@@ -582,9 +558,6 @@ class SessionBase:
                     compression: Boolean = OFF):
         """This method prints canvas objects to a file using the attributes stored in the
         PrintOptions object and the appropriate format options object.
-
-        Parameters
-        ----------
         fileName
             A String specifying the file to which the image is to be written. If no file extension 
             is supplied, an extension is added based on the selected image format (.ps, .eps, .png, 
@@ -606,9 +579,6 @@ class SessionBase:
         attributes used for printing to a Windows printer are stored in the PrintOptions object
         and the PageSetupOptions object; the attributes used for printing to a PostScript
         printer are stored in the PrintOptions object and the PsOptions object.
-
-        Parameters
-        ----------
         printCommand
             A String specifying the operating system command or printer name to issue for printing 
             to the printer. The default value is “lpr” or the value specified by the printOptions 
@@ -642,9 +612,6 @@ class SessionBase:
 
     def saveOptions(self, directory: SymbolicConstant):
         """This method saves your customized display settings.
-
-        Parameters
-        ----------
         directory
             A SymbolicConstant specifying the directory in which Abaqus saves the file that will be 
             used to restore your customized settings (abaqus_2021.gpr). Possible values are HOME and 
@@ -654,9 +621,6 @@ class SessionBase:
 
     def writeVrmlFile(self, fileName: str, format: Boolean = OFF, canvasObjects: tuple[Canvas] = ()):
         """This method exports the current viewport objects to a file.
-
-        Parameters
-        ----------
         fileName
             A String specifying the file to which the graphics data is to be written. If no file 
             extension is supplied, an extension is added based on the selected format (.wrl, .wrz). 
@@ -670,9 +634,6 @@ class SessionBase:
 
     def write3DXMLFile(self, fileName: str, format: Boolean = OFF, canvasObjects: tuple[Canvas] = ()):
         """This method exports the current viewport objects to a file.
-
-        Parameters
-        ----------
         fileName
             A String specifying the file to which the graphics data is to be written. If no file 
             extension is supplied, (.3dxml) will be added. 
@@ -686,9 +647,6 @@ class SessionBase:
 
     def writeOBJFile(self, fileName: str, canvasObjects: tuple[Canvas] = ()):
         """This method exports the current viewport objects to a file.
-
-        Parameters
-        ----------
         fileName
             A String specifying the file to which the graphics data is to be written. If no file 
             extension is supplied, (.obj) will be added. 
@@ -704,9 +662,6 @@ class SessionBase:
         output database is open at any time. For example
         import odbAccess
         shockLoadOdb = odbAccess.openOdb(path='myOdb.odb')
-
-        Parameters
-        ----------
         path
             A String specifying the path to an existing output database (.odb) file.
         readOnly
@@ -744,9 +699,6 @@ class SessionBase:
         output database. For example
         import visualization
         session.openOdb(name='myOdb', path='stress.odb', readOnly=True)
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. If the*name* is not the same as the*path* to the
             output database (.odb) file, the *path* must be specified as well. Additionally, to
@@ -784,9 +736,6 @@ class SessionBase:
         output database is open at any time. For example
         import odbAccess
         shockLoadOdb = odbAccess.openOdb(path='myOdb.odb')
-
-        Parameters
-        ----------
         path
             A String specifying the path to an existing output database (.odb) file.
         readOnly

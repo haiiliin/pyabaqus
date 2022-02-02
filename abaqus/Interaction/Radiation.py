@@ -28,9 +28,6 @@ class Radiation:
         .. code-block:: python
 
             mdb.models[name].interactionProperties[name].Radiation
-
-        Parameters
-        ----------
         mainEmissivity
             A Float specifying the emissivity of the main surface. 
         secondaryEmissivity
@@ -47,8 +44,5 @@ class Radiation:
 
     def setValues(self):
         """This method modifies the Radiation object.
-
-        Parameters
-        ----------
         """
         pass

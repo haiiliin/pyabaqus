@@ -36,9 +36,6 @@ class TensionCutOff:
             This function can be accessed by:
             - mdb.models[name].materials[name].mohrCoulombPlasticity.TensionCutOff
             - session.odbs[name].materials[name].mohrCoulombPlasticity.TensionCutOff
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -58,13 +55,6 @@ class TensionCutOff:
 
     def setValues(self):
         """This method modifies the TensionCutOff object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

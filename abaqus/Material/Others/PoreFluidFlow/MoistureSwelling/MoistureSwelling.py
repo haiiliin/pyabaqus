@@ -34,9 +34,6 @@ class MoistureSwelling:
             This function can be accessed by:
             - mdb.models[name].materials[name].MoistureSwelling
             - session.odbs[name].materials[name].MoistureSwelling
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
 
@@ -48,8 +45,5 @@ class MoistureSwelling:
 
     def setValues(self):
         """This method modifies the MoistureSwelling object.
-
-        Parameters
-        ----------
         """
         pass

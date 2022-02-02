@@ -74,9 +74,6 @@ class Legend:
                   title: str = '', numberFormat: SymbolicConstant = AUTOMATIC, numDigits: int = 2,
                   textStyle: TextStyle = TextStyle(), titleStyle: TextStyle = TextStyle()):
         """This method modifies the Legend object.
-
-        Parameters
-        ----------
         legend
             A Legend object from which attributes are to be copied. 
         show

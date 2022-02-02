@@ -39,9 +39,6 @@ class DruckerPragerHardening:
             - mdb.models[name].materials[name].druckerPrager.DruckerPragerHardening
             - session.odbs[name].materials[name].druckerPrager\
             - .DruckerPragerHardening
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type
@@ -66,13 +63,6 @@ class DruckerPragerHardening:
 
     def setValues(self):
         """This method modifies the DruckerPragerHardening object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

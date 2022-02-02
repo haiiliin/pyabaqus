@@ -51,9 +51,6 @@ class CapPlasticity:
             This function can be accessed by:
             - mdb.models[name].materials[name].CapPlasticity
             - session.odbs[name].materials[name].CapPlasticity
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -73,13 +70,6 @@ class CapPlasticity:
 
     def setValues(self):
         """This method modifies the CapPlasticity object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

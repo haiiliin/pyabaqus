@@ -11,9 +11,6 @@ class CircleByCenterPerimeter(ConstrainedSketchGeometry):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].CircleByCenterPerimeter
-
-        Parameters
-        ----------
         center
             A pair of Floats specifying the center point of the circle. 
         point1

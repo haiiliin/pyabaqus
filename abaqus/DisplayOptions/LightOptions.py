@@ -99,9 +99,6 @@ class LightOptions:
     def setValues(self, shading: SymbolicConstant = GOURAUD, viewpoint: SymbolicConstant = INFINITE,
                   ambientColor: str = '', materialShininess: float = 105):
         """This method modifies the LightOptions object.
-
-        Parameters
-        ----------
         shading
             A SymbolicConstant specifying the shading technique that should be used to fill facets 
             for geometric bodies when *renderStyle* =SHADED. The lighting of facets for meshed 

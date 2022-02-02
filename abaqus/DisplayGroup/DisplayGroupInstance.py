@@ -61,9 +61,6 @@ class DisplayGroupInstance:
         objects that are members of the DisplayGroupInstance repository member of OdbDisplay
         object.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A Dictionary object. . 
@@ -78,9 +75,6 @@ class DisplayGroupInstance:
         method is available only for DisplayGroupInstance objects that are members of the
         DisplayGroupInstance repository member of the OdbDisplay object.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A Dictionary object. . 
@@ -91,9 +85,6 @@ class DisplayGroupInstance:
         """This method modifies the DisplayGroupInstance object. The setValues method is available
         only for DisplayGroupInstance objects that are members of the DisplayGroupInstance
         repository member of the OdbDisplay object.
-
-        Parameters
-        ----------
         lockOptions
             A Boolean specifying whether the display options stored on the DisplayGroupInstance 
             object should be synchronized with changes to the viewport display options. This member 

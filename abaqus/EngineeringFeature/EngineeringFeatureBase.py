@@ -44,9 +44,6 @@ class EngineeringFeatureBase:
 
     def assignSeam(self, regions: tuple[Region]):
         """This method creates a seam crack along an edge or a face.
-
-        Parameters
-        ----------
         regions
             A sequence of Region objects specifying the domain of the seam crack. The Region objects 
             must be faces or edges. 
@@ -55,9 +52,6 @@ class EngineeringFeatureBase:
 
     def deleteSeam(self, regions: tuple[Region]):
         """This method deletes a seam crack.
-
-        Parameters
-        ----------
         regions
             A sequence of Region objects specifying the domain of the seam crack. The Region objects 
             must be faces or edges. 

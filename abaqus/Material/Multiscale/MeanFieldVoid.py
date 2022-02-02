@@ -40,9 +40,6 @@ class MeanFieldVoid:
             This function can be accessed by:
             - mdb.models[name].materials[name].meanFieldHomogenization.MeanFieldVoid
             - session.odbs[name].materials[name].meanFieldHomogenization.MeanFieldVoid
-
-        Parameters
-        ----------
         name
             A String specifying the constituent repository key. 
         table
@@ -91,13 +88,6 @@ class MeanFieldVoid:
 
     def setValues(self):
         """This method modifies the MeanFieldVoid object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

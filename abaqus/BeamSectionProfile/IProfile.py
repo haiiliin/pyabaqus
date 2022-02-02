@@ -33,9 +33,6 @@ class IProfile(Profile):
 
             mdb.models[name].IProfile
             session.odbs[name].IProfile
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         l
@@ -69,13 +66,6 @@ class IProfile(Profile):
 
     def setValues(self):
         """This method modifies the IProfile object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

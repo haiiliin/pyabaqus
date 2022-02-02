@@ -29,16 +29,10 @@ class Crack:
 
     def resume(self):
         """This method resumes the crack that was previously suppressed.
-
-        Parameters
-        ----------
         """
         pass
 
     def suppress(self):
         """This method suppresses the crack.
-
-        Parameters
-        ----------
         """
         pass

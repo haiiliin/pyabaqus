@@ -60,9 +60,6 @@ class Permeability:
             This function can be accessed by:
             - mdb.models[name].materials[name].Permeability
             - session.odbs[name].materials[name].Permeability
-
-        Parameters
-        ----------
         specificWeight
             A Float specifying the specific weight of the wetting liquid, γwγw. 
         inertialDragCoefficient
@@ -89,13 +86,6 @@ class Permeability:
 
     def setValues(self):
         """This method modifies the Permeability object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

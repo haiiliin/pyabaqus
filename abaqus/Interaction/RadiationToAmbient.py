@@ -31,9 +31,6 @@ class RadiationToAmbient(Interaction):
         .. code-block:: python
 
             mdb.models[name].RadiationToAmbient
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -78,9 +75,6 @@ class RadiationToAmbient(Interaction):
                   ambientTemperatureAmp: str = ''):
         """This method modifies the data for an existing RadiationToAmbient object in the step
         where it is created.
-
-        Parameters
-        ----------
         field
             A String specifying the name of the AnalyticalField object associated with this 
             interaction. The *field* argument applies only when *distributionType*=ANALYTICAL_FIELD. 
@@ -109,9 +103,6 @@ class RadiationToAmbient(Interaction):
     def setValuesInStep(self, stepName: str):
         """This method modifies the propagating data of an existing RadiationToAmbient object in
         the specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         """

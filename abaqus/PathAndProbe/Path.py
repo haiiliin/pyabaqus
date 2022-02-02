@@ -44,9 +44,6 @@ class Path:
         .. code-block:: python
 
             session.Path
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         type

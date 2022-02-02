@@ -35,9 +35,6 @@ class SymbolicConstant:
         .. code-block:: python
 
             SymbolicConstant
-
-        Parameters
-        ----------
         text
             A String specifying the text of the SymbolicConstant object. The String must contain 
             only capital letters, digits, or underscores and must not start with a digit. 

@@ -30,9 +30,6 @@ class BeadRotationalSymmetry(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].BeadRotationalSymmetry
-
-        Parameters
-        ----------
         name
             A String specifying the geometric restriction repository key. 
         angle
@@ -56,9 +53,6 @@ class BeadRotationalSymmetry(GeometricRestriction):
 
     def setValues(self, axis: SymbolicConstant = AXIS_1, csys: int = None):
         """This method modifies the BeadRotationalSymmetry object.
-
-        Parameters
-        ----------
         axis
             A SymbolicConstant specifying the axis of symmetry. Possible values are AXIS_1, AXIS_2, 
             and AXIS_3. The default value is AXIS_1. 

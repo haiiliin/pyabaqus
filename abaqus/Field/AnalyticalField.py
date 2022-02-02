@@ -68,9 +68,6 @@ class AnalyticalField(Field):
         .. code-block:: python
 
             mdb.models[name].analyticalFields[name].OdbMeshRegionData
-
-        Parameters
-        ----------
         odbFileName
             A String specifying the name of the output database file (including the .odb extension)
             to be read into as the source data. This String can also be the full path to the output

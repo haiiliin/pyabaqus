@@ -31,9 +31,6 @@ class TopologyDemoldControl(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].TopologyDemoldControl
-
-        Parameters
-        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -72,9 +69,6 @@ class TopologyDemoldControl(GeometricRestriction):
                   collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, pointRegion: Region = Region(),
                   pullDirection: tuple = (), technique: SymbolicConstant = AUTO):
         """This method modifies the TopologyDemoldControl object.
-
-        Parameters
-        ----------
         csys
             None or a DatumCsys object specifying the local coordinate system of the 
             *pullDirection*. If *csys*=None, the global coordinate system is used. When this member 

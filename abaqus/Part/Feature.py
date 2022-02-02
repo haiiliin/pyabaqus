@@ -37,9 +37,6 @@ class Feature(BaseFeature):
 
             mdb.models[*name*].parts[*name*].AutoRepair
 
-        Parameters
-        ----------
-
         Returns
         -------
         feature: Feature
@@ -58,9 +55,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         faceList
             A sequence of Face objects specifying the faces bounding the cell to add. 
         flipped
@@ -87,9 +81,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketch
             A ConstrainedSketch object specifying the planar wire. 
 
@@ -111,9 +102,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketch
             A ConstrainedSketch object specifying the planar wire. 
         depth
@@ -137,9 +125,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketch
             A ConstrainedSketch object specifying the surface to be revolved. 
 
@@ -163,9 +148,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         cellList
             A sequence of Cell objects specifying the regions that will be used for mid-surface 
             construction. These regions will be copied to the reference representation of the part. 
@@ -189,9 +171,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketch
             A ConstrainedSketch object specifying the plane shape to be extruded. 
         depth
@@ -231,9 +210,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketch
             A ConstrainedSketch object specifying the shape to be revolved. 
         angle
@@ -284,9 +260,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketch
             A ConstrainedSketch object specifying the profile to be swept. 
         path
@@ -310,9 +283,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketch
             A ConstrainedSketch object specifying the planar shell. 
 
@@ -335,9 +305,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketch
             A ConstrainedSketch object specifying the shape to be extruded. 
         depth
@@ -381,9 +348,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketch
             A ConstrainedSketch object specifying the shape to be revolved. 
         angle
@@ -431,9 +395,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketch
             A ConstrainedSketch object specifying the section to be swept. 
         path
@@ -457,9 +418,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketch
             A ConstrainedSketch object specifying the planar wire. 
 
@@ -481,9 +439,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         side1
             A sequence of Edge objects specifying one side of the blend. The edges must form a 
             continuous chain without branches. 
@@ -519,9 +474,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         length
             A Float specifying the length of the chamfer. 
         edgeList
@@ -544,9 +496,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         mirrorPlane
             A Datum plane object or a planar Face object. 
         keepOriginal
@@ -574,9 +523,6 @@ class Feature(BaseFeature):
 
             mdb.models[*name*].parts[*name*].AutoRepair
 
-        Parameters
-        ----------
-
         Returns
         -------
         feature: Feature
@@ -594,9 +540,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         method
             A SymbolicConstant specifying the method to be used to convert the part to precise. 
             Possible values are RECOMPUTE_GEOMETRY and TIGHTEN_GAPS. The default value is 
@@ -621,9 +564,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         edgeList
             A sequence of Edge objects specifying the edges that bound the new face. 
         tryAnalytical
@@ -657,9 +597,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketchPlane
             A Datum plane object or a planar Face object. 
         sketchPlaneSide
@@ -698,9 +635,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketchPlane
             A Datum plane object or a planar Face object. 
         sketchPlaneSide
@@ -762,9 +696,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         loftsections
             A sequence of sequences of edges specifying the cross-sections to be lofted. Each outer 
             sequence specifies a section through which the method will pass the loft feature. Each 
@@ -829,9 +760,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketchPlane
             A Datum plane object or a planar Face object. 
         sketchPlaneSide
@@ -894,9 +822,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         path
             Path may either be a ConstrainedSketch object or a sequence of Edge objects specifying 
             the path of the sweep. 
@@ -970,9 +895,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         faces
             A sequence of Face objects specifying the faces to be extended. The faces cannot belong 
             to the reference representation. The *faces* and *extendAlong* arguments are mutually 
@@ -1012,9 +934,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         elementFaces
             A Region object specifying the collection of orphan element faces. 
         stitch
@@ -1055,9 +974,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         plane
             A Datum plane object or a planar Face object. 
         planeSide
@@ -1096,9 +1012,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         diameter
             A Float specifying the diameter of the hole. 
         edge1
@@ -1132,9 +1045,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         plane
             A Datum plane object or a planar Face object. 
         planeSide
@@ -1169,9 +1079,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         edgeList
             A sequence of Edge objects specifying the edges to be merged. 
         extendSelection
@@ -1198,9 +1105,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         faceList
             A sequence of Face objects specifying the faces that will be offset. The faces may 
             belong to the part or to the reference representation associated with the part. 
@@ -1243,9 +1147,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         cellList
             A sequence of Cell objects specifying the cells to remove. 
 
@@ -1270,9 +1171,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         faceList
             A sequence of Face objects specifying the faces to remove. 
         deleteCells
@@ -1297,9 +1195,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         faceList
             A sequence of Face objects specifying the faces to remove. 
 
@@ -1322,9 +1217,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         vertexList
             A sequence of ConstrainedSketchVertex objects specifying the vertices to be removed.
         edgeList
@@ -1357,9 +1249,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         faceList
             A sequence of Face objects. 
 
@@ -1382,9 +1271,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         edgeList
             A sequence of Edge objects. 
 
@@ -1407,9 +1293,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         face
             A Face object specifying the face on which the sliver is located. 
         point1
@@ -1441,9 +1324,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         edgeList
             A sequence of Edge objects. 
         toleranceChecks
@@ -1469,9 +1349,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         faceList
             A sequence of Face objects. 
         toleranceChecks
@@ -1496,9 +1373,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         faceList
             A sequence of Face objects to be replaced. 
         stitch
@@ -1523,9 +1397,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         radius
             A Float specifying the radius of the fillets. 
         edgeList
@@ -1557,9 +1428,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketchPlane
             A Datum plane object or a planar Face object. 
         sketchPlaneSide
@@ -1597,9 +1465,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketchPlane
             A Datum plane object or a planar Face object. 
         sketchPlaneSide
@@ -1665,9 +1530,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         loftsections
             A sequence of sequences of edges specifying the cross-sections to be lofted. Each outer 
             sequence specifies a section through which the method will pass the loft feature. Each 
@@ -1747,9 +1609,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketchPlane
             A Datum plane object or a planar Face object. 
         sketchPlaneSide
@@ -1815,9 +1674,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         path
             Path may either be a ConstrainedSketch object or a sequence of Edge objects specifying 
             the path of the sweep. 
@@ -1896,9 +1752,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketchPlane
             A Datum plane object or a planar Face object. 
         sketchPlaneSide
@@ -1964,9 +1817,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         loftsections
             A sequence of sequences of edges specifying the cross-sections to be lofted. Each outer 
             sequence specifies a section through which Abaqus will pass the loft feature. Each outer 
@@ -2044,9 +1894,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketchPlane
             A Datum plane object or a planar Face object. 
         sketchPlaneSide
@@ -2112,9 +1959,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         path
             Path may either be a ConstrainedSketch object or a sequence of Edge objects specifying 
             the path of the sweep. 
@@ -2189,9 +2033,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         edgeList
             A sequence of Edge objects specifying the edges that need to be stitched. 
         stitchTolerance
@@ -2220,9 +2061,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         sketchPlane
             A Datum plane object or a planar Face object specifying the plane on which to sketch. 
         sketchPlaneSide
@@ -2256,9 +2094,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         points
             A sequence of ConstrainedSketchVertex, Datum point, or InterestingPoint objects specifying the points
             through which the spline wire will pass. *points* can also be a sequence of tuples of 
@@ -2296,9 +2131,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         points
             A sequence of ConstrainedSketchVertex, Datum point, or InterestingPoint objects specifying the points
             through which the polyline wire will pass. *points* can also be a sequence of tuples of 
@@ -2333,9 +2165,6 @@ class Feature(BaseFeature):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].AutoRepair
-
-        Parameters
-        ----------
         edgeList
             A list of Edge objects specifying the edges from which the wire is to be created. 
 

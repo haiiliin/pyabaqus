@@ -428,9 +428,6 @@ class FrequencyStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].FrequencyStep
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         previous
@@ -553,9 +550,6 @@ class FrequencyStep(AnalysisStep):
                   secondCutoffMultiplier: float = 1, residualModeRegion: str = None,
                   residualModeDof: str = None, limitSavedEigenvectorRegion: SymbolicConstant = None):
         """This method modifies the FrequencyStep object.
-
-        Parameters
-        ----------
         numEigen
             The SymbolicConstant ALL or an Int specifying the number of eigenvalues to be calculated 
             or ALL. The default value is ALL. 

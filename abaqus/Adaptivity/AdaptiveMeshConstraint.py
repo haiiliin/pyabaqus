@@ -65,9 +65,6 @@ class AdaptiveMeshConstraint:
         .. code-block:: python
 
             mdb.models[name].AdaptiveMeshConstraint
-
-        Parameters
-        ----------
         name
              A String specifying the adaptive mesh constraint repository key.
         category
@@ -85,9 +82,6 @@ class AdaptiveMeshConstraint:
     def deactivate(self, stepName: str):
         """This method deactivates the adaptive mesh constraint in the specified step and all
         subsequent steps.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the adaptive mesh constraint is 
             deactivated.
@@ -100,9 +94,6 @@ class AdaptiveMeshConstraint:
 
     def move(self, fromStepName: str, toStepName: str):
         """This method moves the adaptive mesh constraint state from one step to a different step.
-
-        Parameters
-        ----------
         fromStepName
             A String specifying the name of the step from which the adaptive mesh constraint state 
             is moved. 
@@ -119,9 +110,6 @@ class AdaptiveMeshConstraint:
     def reset(self, stepName: str):
         """This method resets the adaptive mesh constraint state of the specified step to the state
         of the previous analysis step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the adaptive mesh constraint state is 
             reset.
@@ -134,25 +122,16 @@ class AdaptiveMeshConstraint:
 
     def resume(self):
         """This method resumes the adaptive mesh constraint that was previously suppressed.
-
-        Parameters
-        ----------
         """
         pass
 
     def suppress(self):
         """This method suppresses the adaptive mesh constraint.
-
-        Parameters
-        ----------
         """
         pass
 
     def delete(self, indices: tuple):
         """This method allows you to delete existing adaptive mesh constraints.
-
-        Parameters
-        ----------
         indices
             A sequence of Ints specifying the index of each adaptive mesh constraint to delete. 
         """

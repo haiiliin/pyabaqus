@@ -27,9 +27,6 @@ class SizingFrozenArea(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].SizingFrozenArea
-
-        Parameters
-        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -44,8 +41,5 @@ class SizingFrozenArea(GeometricRestriction):
 
     def setValues(self):
         """This method modifies the SizingFrozenArea object.
-
-        Parameters
-        ----------
         """
         pass

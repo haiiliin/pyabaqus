@@ -95,9 +95,6 @@ class SubmodelBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].SubmodelBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -159,9 +156,6 @@ class SubmodelBC(BoundaryCondition):
                   centerZoneSize: float = None, intersectionOnly: Boolean = OFF):
         """This method modifies the data for an existing SubmodelBC object in the step where it is
         created.
-
-        Parameters
-        ----------
         globalDrivingRegion
             A String specifying the element set in the global model that will be searched for 
             elements whose responses will be used to drive the submodel. An empty string indicates 
@@ -196,9 +190,6 @@ class SubmodelBC(BoundaryCondition):
                         globalIncrement: int = 0, centerZoneSize: float = None):
         """This method modifies the propagating data for an existing SubmodelBC object in the
         specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         fixed

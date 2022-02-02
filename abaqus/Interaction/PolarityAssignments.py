@@ -20,9 +20,6 @@ class PolarityAssignments:
     def changeValuesInStep(self, stepName: str, index: int, value: SymbolicConstant):
         """This method allows you to modify polarity assignments already defined on surface pairs
         in a given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the main-secondary assignments are to 
             be modified. 
@@ -36,9 +33,6 @@ class PolarityAssignments:
 
     def appendInStep(self, stepName: str, assignments: SymbolicConstant):
         """This method allows you to add polarity assignments to new surface pairs in a given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the polarity assignments are to be 
             defined. 
@@ -54,9 +48,6 @@ class PolarityAssignments:
 
     def delete(self, indices: tuple):
         """The delete method allows you to delete existing polarity assignments.
-
-        Parameters
-        ----------
         indices
             A sequence of Ints specifying the index of each polarity assignment to delete. 
         """

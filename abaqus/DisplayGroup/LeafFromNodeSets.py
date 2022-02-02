@@ -39,9 +39,6 @@ class LeafFromNodeSets(Leaf):
         .. code-block:: python
 
             LeafFromNodeSets
-
-        Parameters
-        ----------
         nodeSets
             A sequence of Strings specifying node sets or a String specifying a single node set. 
 

@@ -98,9 +98,6 @@ class ConnAccelerationBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].ConnAccelerationBC
-
-        Parameters
-        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -169,9 +166,6 @@ class ConnAccelerationBC(BoundaryCondition):
                   distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing ConnAccelerationBC object in the step
         where it is created.
-
-        Parameters
-        ----------
         region
             The wire region to which the boundary condition is applied. This argument is not valid 
             when *fastenerName* and *fastenerSetName* are specified. 
@@ -231,9 +225,6 @@ class ConnAccelerationBC(BoundaryCondition):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ConnAccelerationBC object in
         the specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         a1

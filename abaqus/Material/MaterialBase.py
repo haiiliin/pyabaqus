@@ -455,9 +455,6 @@ class MaterialBase:
 
             mdb.models[name].Material
             session.odbs[name].Material
-
-        Parameters
-        ----------
         name
             A String specifying the name of the new material. 
         description
@@ -485,9 +482,6 @@ class MaterialBase:
 
             mdb.models[name].Material
             session.odbs[name].Material
-
-        Parameters
-        ----------
         fileName
             A String specifying the name of the output database file (including the .odb extension) 
             to be read. This String can also be the full path to the output database file if it is 

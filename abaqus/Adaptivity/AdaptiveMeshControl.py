@@ -36,9 +36,6 @@ class AdaptiveMeshControl:
         .. code-block:: python
 
             mdb.models[name].AdaptiveMeshControl
-
-        Parameters
-        ----------
         name
             A String specifying the name of the object.
         remapping
@@ -107,9 +104,6 @@ class AdaptiveMeshControl:
                   originalConfigurationProjectionWeight: float = 1,
                   standardVolumetricSmoothingWeight: float = 0):
         """This method modifies the AdaptiveMeshControl object.
-
-        Parameters
-        ----------
         remapping
             A SymbolicConstant specifying the remapping algorithm. Possible values are 
             FIRST_ORDER_ADVECTION and SECOND_ORDER_ADVECTION. The default value is 

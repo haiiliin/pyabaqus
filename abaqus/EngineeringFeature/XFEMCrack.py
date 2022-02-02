@@ -51,9 +51,6 @@ class XFEMCrack(Crack):
 
             mdb.models[name].parts[name].engineeringFeatures.XFEMCrack
             mdb.models[name].rootAssembly.engineeringFeatures.XFEMCrack
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         crackDomain
@@ -105,9 +102,6 @@ class XFEMCrack(Crack):
                   nodeId: tuple = (), hasCrackFront: tuple = (), crackPlaneDist: tuple = (),
                   crackFrontDist: tuple = (), autoDetectValue: str = ''):
         """This method modifies the XFEMCrack object.
-
-        Parameters
-        ----------
         allowCrackGrowth
             A Boolean specifying whether the crack is allowed to propagate (grow). The default value 
             is ON. 

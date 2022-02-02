@@ -38,9 +38,6 @@ class ConcreteCompressionHardening:
             This function can be accessed by:
             - mdb.models[name].materials[name].concreteDamagedPlasticity.ConcreteCompressionHardening
             - session.odbs[name].materials[name].concreteDamagedPlasticity.ConcreteCompressionHardening
-
-        Parameters
-        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         rate
@@ -62,13 +59,6 @@ class ConcreteCompressionHardening:
 
     def setValues(self):
         """This method modifies the ConcreteCompressionHardening object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

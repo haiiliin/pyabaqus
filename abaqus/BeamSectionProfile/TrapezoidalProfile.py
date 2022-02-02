@@ -33,9 +33,6 @@ class TrapezoidalProfile(Profile):
 
             mdb.models[name].TrapezoidalProfile
             session.odbs[name].TrapezoidalProfile
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         a
@@ -63,13 +60,6 @@ class TrapezoidalProfile(Profile):
 
     def setValues(self):
         """This method modifies the TrapezoidalProfile object.
-
-        Parameters
-        ----------
-
-        Returns
-        -------
-            None. 
 
         Raises
         ------

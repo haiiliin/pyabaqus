@@ -35,9 +35,6 @@ class RebarLayers:
             mdb.models[name].parts[name].compositeLayups[i].section.RebarLayers
             mdb.models[name].sections[name].RebarLayers
             session.odbs[name].sections[name].RebarLayers
-
-        Parameters
-        ----------
         rebarSpacing
             A SymbolicConstant specifying the type of rebar geometry. Possible values are CONSTANT, 
             ANGULAR, and LIFT_EQUATION. 
@@ -52,8 +49,5 @@ class RebarLayers:
 
     def setValues(self):
         """This method modifies the RebarLayers object.
-
-        Parameters
-        ----------
         """
         pass

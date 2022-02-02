@@ -24,9 +24,6 @@ class Repository(dict):
     def changeKey(self, fromName: str, toName: str):
         """This method changes the name of a key in a repository and the *name* member of the value
         object.
-
-        Parameters
-        ----------
         fromName
             A String specifying the old name of the repository key. 
         toName

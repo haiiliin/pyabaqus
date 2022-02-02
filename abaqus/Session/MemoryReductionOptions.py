@@ -15,9 +15,6 @@ class MemoryReductionOptions:
 
     def setValues(self, reducedMemoryMode: Boolean = ON, percentThreshold: float = 75):
         """This method modifies the MemoryReductionOptions object.
-
-        Parameters
-        ----------
         reducedMemoryMode
             A Boolean specifying whether Abaqus/CAE should run in reduced memory mode. The default 
             value is ON. 

@@ -41,9 +41,6 @@ class LeafFromConstraintNames(Leaf):
         .. code-block:: python
 
             LeafFromConstraintNames
-
-        Parameters
-        ----------
         name
             A sequence of tuples of name objects. 
         type

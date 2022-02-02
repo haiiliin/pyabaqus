@@ -261,9 +261,6 @@ class ModelJob(Job):
         .. code-block:: python
 
             mdb.Job
-
-        Parameters
-        ----------
         name
             A String specifying the name of the new job. The name must be a valid Abaqus/CAE object
             name.
@@ -357,9 +354,6 @@ class ModelJob(Job):
 
     def writeInput(self, consistencyChecking: Boolean = ON):
         """This method writes an input file.
-
-        Parameters
-        ----------
         consistencyChecking
             A Boolean specifying whether to perform consistency checking for the job. The default 
             value is ON.It is not recommended to turn the consistency checking off unless you are 
@@ -369,8 +363,5 @@ class ModelJob(Job):
 
     def setValues(self):
         """This method modifies the ModelJob object.
-
-        Parameters
-        ----------
         """
         pass

@@ -74,9 +74,6 @@ class SurfaceToSurfaceContactStd(Interaction):
         .. code-block:: python
 
             mdb.models[name].SurfaceToSurfaceContactStd
-
-        Parameters
-        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -197,9 +194,6 @@ class SurfaceToSurfaceContactStd(Interaction):
     def swapSurfaces(self):
         """This method switches the main and secondary surfaces of a surface-to-surface contact
         pair. This command is valid only for the step in which the interaction is created.
-
-        Parameters
-        ----------
         """
         pass
 
@@ -219,9 +213,6 @@ class SurfaceToSurfaceContactStd(Interaction):
                   normalAdjustment: SymbolicConstant = None):
         """This method modifies the data for an existing SurfaceToSurfaceContactStd object in the
         step where it is created.
-
-        Parameters
-        ----------
         interferenceType
             A SymbolicConstant specifying the type of time-dependent allowable interference for 
             contact pairs and contact elements. Possible values are: 
@@ -324,9 +315,6 @@ class SurfaceToSurfaceContactStd(Interaction):
                         direction: tuple = (), amplitude: str = '', contactControls: str = ''):
         """This method modifies the propagating data for an existing SurfaceToSurfaceContactStd
         object in the specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         interactionProperty

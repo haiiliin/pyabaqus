@@ -129,9 +129,6 @@ class OdbInstanceBase:
         .. code-block:: python
 
             session.odbs[*name*].rootAssembly.Instance
-
-        Parameters
-        ----------
         name
             A String specifying the instance name. 
         object
@@ -160,9 +157,6 @@ class OdbInstanceBase:
 
     def assignBeamOrientation(self, region: str, method: SymbolicConstant, vector: tuple):
         """This method assigns a beam section orientation to a region of a part instance.
-
-        Parameters
-        ----------
         region
             An OdbSet specifying a region on an instance. 
         method
@@ -178,9 +172,6 @@ class OdbInstanceBase:
                                   angle: float = 0,
                                   stackDirection: SymbolicConstant = STACK_3):
         """This method assigns a material orientation to a region of a part instance.
-
-        Parameters
-        ----------
         region
             An OdbSet specifying a region on an instance. 
         localCsys
@@ -203,9 +194,6 @@ class OdbInstanceBase:
     def assignRebarOrientation(self, region: str, localCsys: OdbDatumCsys, axis: SymbolicConstant = AXIS_1,
                                angle: float = 0):
         """This method assigns a rebar reference orientation to a region of a part instance.
-
-        Parameters
-        ----------
         region
             An OdbSet specifying a region on an instance. 
         localCsys
@@ -224,9 +212,6 @@ class OdbInstanceBase:
     def getElementFromLabel(self, label: int):
         """This method is used to retrieved an element with a specific label from an instance
         object.
-
-        Parameters
-        ----------
         label
             An Int specifying the element label. 
 
@@ -243,9 +228,6 @@ class OdbInstanceBase:
 
     def getNodeFromLabel(self, label: int):
         """This method is used to retrieved a node with a specific label from an instance object.
-
-        Parameters
-        ----------
         label
             An Int specifying the node label.
 
@@ -262,9 +244,6 @@ class OdbInstanceBase:
 
     def assignSection(self, region: str, section: Section):
         """This method is used to assign a section to a region on an instance.
-
-        Parameters
-        ----------
         region
             An OdbSet specifying a region on an instance. 
         section
@@ -281,9 +260,6 @@ class OdbInstanceBase:
 
     def AnalyticRigidSurf2DPlanar(self, name: str, profile: tuple[AnalyticSurfaceSegment], filletRadius: str = 0):
         """This method is used to define a two-dimensional AnalyticSurface object on the instance.
-
-        Parameters
-        ----------
         name
             The name of the analytic surface. 
         profile
@@ -305,9 +281,6 @@ class OdbInstanceBase:
                                  localCoordData: tuple = ()):
         """This method is used to define a three-dimensional cylindrical AnalyticSurface on the
         instance.
-
-        Parameters
-        ----------
         name
             The name of the analytic surface. 
         profile
@@ -332,9 +305,6 @@ class OdbInstanceBase:
                                  localCoordData: tuple = ()):
         """This method is used to define a three-dimensional AnalyticSurface of revolution on the
         instance.
-
-        Parameters
-        ----------
         name
             The name of the analytic surface. 
         profile
@@ -358,9 +328,6 @@ class OdbInstanceBase:
     def RigidBody(self, referenceNode: str, position: str = INPUT, isothermal: Boolean = OFF, elset: str = '',
                   pinNodes: str = '', tieNodes: str = '', analyticSurface: str = ''):
         """This method defines an OdbRigidBody on the instance.
-
-        Parameters
-        ----------
         referenceNode
             An OdbSet specifying the reference node assigned to the rigid body. 
         position

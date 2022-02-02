@@ -73,9 +73,6 @@ class Edge:
         """This method determines whether the tangent to the edge is flipped from its default
         direction by the use of the flipTangent method on a Part object.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A Boolean value of True if the tangent is flipped and False if not. . 
@@ -85,9 +82,6 @@ class Edge:
 
     def getCurvature(self, parameter: float, point: tuple):
         """This method returns curvature information at a location on the edge.
-
-        Parameters
-        ----------
         parameter
             A Float specifying the normalized parameter location on the edge where the curvature is 
             to be computed. This argument is mutually exclusive with the argument *point*. 
@@ -114,9 +108,6 @@ class Edge:
         """This method returns a sequence consisting of the face ids of the faces which share this
         edge.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A tuple of integers. . 
@@ -126,9 +117,6 @@ class Edge:
 
     def getAdjacentEdges(self):
         """This method returns an array of Edge objects that share at least one vertex of the edge.
-
-        Parameters
-        ----------
 
         Returns
         -------
@@ -140,9 +128,6 @@ class Edge:
     def getEdgesByEdgeAngle(self, angle: str):
         """This method returns an array of Edge objects that are obtained by recursively finding
         adjacent edges that are at an angle of less than or equal to the specified face angle.
-
-        Parameters
-        ----------
         angle
             A float specifying the value of the face angle in degrees. 
 
@@ -156,9 +141,6 @@ class Edge:
     def getNodes(self):
         """This method returns an array of node objects that are associated with the edge.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A MeshNodeArray object, which is a sequence of MeshNode objects. . 
@@ -169,9 +151,6 @@ class Edge:
     def getElements(self):
         """This method returns an array of element objects that are associated with the edge.
 
-        Parameters
-        ----------
-
         Returns
         -------
             A MeshElementArray object which is a sequence of MeshElement objects. . 
@@ -181,9 +160,6 @@ class Edge:
 
     def getRadius(self):
         """This method returns the radius of circular edges.
-
-        Parameters
-        ----------
 
         Returns
         -------
@@ -198,9 +174,6 @@ class Edge:
 
     def getSize(self, printResults: str = True):
         """This method returns a Float indicating the length of the edge.
-
-        Parameters
-        ----------
         printResults
             A Bool specifying whether verbose output is printed. The default is True. 
 
@@ -216,9 +189,6 @@ class Edge:
         first index refers to the vertex where the normalized curve parameter = 0.0, and the
         second index refers to the vertex where the normalized curve parameter = 1.0. If the
         edge is a closed curve, only one vertex index is returned.
-
-        Parameters
-        ----------
 
         Returns
         -------

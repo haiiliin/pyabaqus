@@ -63,9 +63,6 @@ class DisplacementAdaptiveMeshConstraint(AdaptiveMeshConstraint):
         .. code-block:: python
 
             mdb.models[name].DisplacementAdaptiveMeshConstraint
-
-        Parameters
-        ----------
         name
             A String specifying the adaptive mesh constraint repository key. 
         createStepName
@@ -125,9 +122,6 @@ class DisplacementAdaptiveMeshConstraint(AdaptiveMeshConstraint):
                   motionType: SymbolicConstant = INDEPENDENT, localCsys: str = None):
         """This method modifies the data for an existing DisplacementAdaptiveMeshConstraint object
         in the step where it is created.
-
-        Parameters
-        ----------
         u1
             A Float or a SymbolicConstant specifying the displacement component in the 1-direction. 
             Possible values for the SymbolicConstant are UNSET and SET. The default value is 
@@ -177,9 +171,6 @@ class DisplacementAdaptiveMeshConstraint(AdaptiveMeshConstraint):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing
         DisplacementAdaptiveMeshConstraint object in the specified step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the adaptive mesh constraint is 
             modified. 

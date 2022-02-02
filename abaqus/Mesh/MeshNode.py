@@ -69,9 +69,6 @@ class MeshNode:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].Node
-
-        Parameters
-        ----------
         coordinates
             A sequence of three Floats specifying the coordinates of the new node. 
         localCsys
@@ -90,9 +87,6 @@ class MeshNode:
     def getElemEdges(self):
         """This method returns a tuple of element edge objects that share the node.
 
-        Parameters
-        ----------
-
         Returns
         -------
         edges: tuple[MeshEdge]
@@ -103,9 +97,6 @@ class MeshNode:
     def getElemFaces(self):
         """This method returns a tuple of element face objects that share the node.
 
-        Parameters
-        ----------
-
         Returns
         -------
         faces: tuple[MeshFace]
@@ -115,9 +106,6 @@ class MeshNode:
 
     def getElements(self):
         """This method returns a tuple of element objects that share the node.
-
-        Parameters
-        ----------
 
         Returns
         -------
@@ -130,9 +118,6 @@ class MeshNode:
         """This method returns an array of mesh node objects that are obtained by recursively
         finding adjacent nodes along a feature edge that are at an angle of less than or equal
         to the specified face angle.
-
-        Parameters
-        ----------
         angle
             A float specifying the value of the face angle in degrees. 
 
@@ -145,9 +130,6 @@ class MeshNode:
 
     def setValues(self, label: int = None):
         """This method modifies the MeshNode object.
-
-        Parameters
-        ----------
         label
             An Int specifying the node label. This member may only be edited if the node belongs to 
             an orphan mesh part. The specified label must be non-negative and must not be in use by 

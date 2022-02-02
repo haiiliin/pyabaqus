@@ -26,9 +26,6 @@ class GeometricRestrictionDisplayOptions:
                   topologyPlanarSymmetry: Boolean = ON, topologyPointSymmetry: Boolean = ON,
                   topologyRotationalSymmetry: Boolean = ON, turnControl: Boolean = ON):
         """This method modifies the GeometricRestrictionDisplayOptions object.
-
-        Parameters
-        ----------
         drillControl
             A Boolean specifying whether drill control geometric restriction symbols are shown. The 
             default value is ON. 

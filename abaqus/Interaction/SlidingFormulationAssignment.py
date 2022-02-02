@@ -21,9 +21,6 @@ class SlidingFormulationAssignment:
     def changeValuesInStep(self, stepName: str, index: int, value: SymbolicConstant):
         """This method allows you to modify sliding formulation assignments already defined on
         surface pairs in a given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the sliding formulation assignments 
             are to be modified. 
@@ -40,9 +37,6 @@ class SlidingFormulationAssignment:
     def appendInStep(self, stepName: str, assignments: SymbolicConstant):
         """This method allows you to add sliding formulation assignments to new surface pairs in a
         given step.
-
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the sliding formulation assignments 
             are to be defined. 
@@ -57,9 +51,6 @@ class SlidingFormulationAssignment:
 
     def delete(self, indices: tuple):
         """The delete method allows you to delete existing sliding formulation assignments.
-
-        Parameters
-        ----------
         indices
             A sequence of Ints specifying the index of each sliding formulation assignment to 
             delete. 
