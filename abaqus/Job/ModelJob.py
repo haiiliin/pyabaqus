@@ -11,7 +11,7 @@ class ModelJob(Job):
     Attributes
     ----------
     name: str
-        A String specifying the name of the new job. The name must be a valid Abaqus/CAE object
+        A String specifying the name of the new job. The name must be a valid Abaqus/:py:class:`~.CAE` object
         name.
     echoPrint: Boolean
         A Boolean specifying whether an echo of the input data is printed. The default value is
@@ -25,13 +25,13 @@ class ModelJob(Job):
     historyPrint: Boolean
         A Boolean specifying whether history data are printed. The default value is OFF.
     model: str
-        A String specifying the name of the model to be analyzed or a Model object specifying
+        A String specifying the name of the model to be analyzed or a :py:class:`~abaqus.Assembly.ModelInstance.Model` object specifying
         the model to be analyzed.
     description: str
         A String specifying a description of the job.
     type: SymbolicConstant
-        A SymbolicConstant specifying the type of job. Possible values are ANALYSIS,
-        SYNTAXCHECK, RECOVER, and RESTART. The default value is ANALYSIS.If the object has the
+        A SymbolicConstant specifying :py:class:`~.the` type of job. Possible values are ANALYSIS,
+        SYNTAXCHECK, RECOVER, and RESTART. The default value is ANALYSIS.If :py:class:`~.the` object has :py:class:`~.the`
         type JobFromInputFile, **type=RESTART** is not available.
     waitHours: int
         An Int specifying the number of hours to wait before submitting the job. This argument
@@ -78,22 +78,22 @@ class ModelJob(Job):
         multiple processes that communicate through a message passing interface (MPI). Possible
         values are DEFAULT, THREADS, and MPI. The default value is DEFAULT.
     analysis: SymbolicConstant
-        A SymbolicConstant specifying whether the job will be analyzed by Abaqus/Standard or
-        Abaqus/Explicit. Possible values are STANDARD, EXPLICIT, and UNKNOWN.If the object has
-        the type JobFromInputFile, **analysis=UNKNOWN**.
+        A SymbolicConstant specifying whe:py:class:`~.the`r :py:class:`~.the` job will be analyzed by Abaqus/Standard or
+        Abaqus/Explicit. Possible values are STANDARD, EXPLICIT, and UNKNOWN.If :py:class:`~.the` object has
+        :py:class:`~.the` type JobFromInputFile, **analysis=UNKNOWN**.
     status: SymbolicConstant
         A SymbolicConstant specifying the status of the analysis. Possible values are SUBMITTED,
         RUNNING, ABORTED, TERMINATED, COMPLETED, CHECK_RUNNING, and CHECK_COMPLETED.If the
         **message** member is empty, **status** is set to NONE.
     queue: str
         A String specifying the name of the queue to which to submit the job. The default value
-        is an empty string.Note:You can use the **queue** argument when creating a Job object on a
+        is an empty string.Note:You can use the **queue** argument when creating a :py:class:`~abaqus.Job.Job.Job` object on a
         Windows workstation; however, remote queues are available only on Linux platforms.
     atTime: str
         A String specifying the time at which to submit the job. If **queue** is empty, the string
         syntax must be valid for the Linux `at` command. If **queue** is set, the syntax must be
         valid according to the system administrator. The default value is an empty
-        string.Note:You can use the **atTime** argument when creating a Job object on a Windows
+        string.Note:You can use the **atTime** argument when creating a :py:class:`~abaqus.Job.Job.Job` object on a Windows
         workstation; however, the `at` command is available only on Linux platforms.
     scratch: str
         A String specifying the location of the scratch directory. The default value is an empty
@@ -102,7 +102,7 @@ class ModelJob(Job):
         A String specifying the file containing the user's subroutine definitions. The default
         value is an empty string.
     messages: MessageArray
-        A MessageArray object specifying the messages received during an analysis.
+        A :py:class:`~abaqus.Job.MessageArray.MessageArray` object specifying the messages received during an analysis.
     environment: tuple
         A tuple of Strings specifying the environment variables and their values.
 

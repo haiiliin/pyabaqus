@@ -11,7 +11,7 @@ class StopCondition:
     name: str
         A String specifying the stop condition repository key.
     region: SymbolicConstant
-        The SymbolicConstant MODEL or a Region object specifying the region to which the stop
+        The SymbolicConstant MODEL or a :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the stop
         condition is applied. The default value is MODEL.
 
     Notes

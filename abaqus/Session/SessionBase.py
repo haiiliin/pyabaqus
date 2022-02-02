@@ -80,138 +80,138 @@ class SessionBase:
         A Float specifying the limit for the memory use for the Abaqus/CAE kernel process in
         megabytes.
     colors: dict[str, Color]
-        A repository of Color objects.
+        A repository of :py:class:`~abaqus.Session.Color.Color` objects.
     journalOptions: JournalOptions
-        A JournalOptions object specifying how to record selection of geometry in the journal
+        A :py:class:`~abaqus.Session.JournalOptions.JournalOptions` object specifying how to record selection of geometry in the journal
         and replay files.
     memoryReductionOptions: MemoryReductionOptions
-        A MemoryReductionOptions object specifying options for running in reduced memory mode.
+        A :py:class:`~abaqus.Session.MemoryReductionOptions.MemoryReductionOptions` object specifying options for running in reduced memory mode.
     nodeQuery: NodeQuery
-        A NodeQuery object specifying nodes and their coordinates in a path.
+        A :py:class:`~abaqus.PathAndProbe.NodeQuery.NodeQuery` object specifying nodes and their coordinates in a path.
     sketcherOptions: ConstrainedSketcherOptions
-        A ConstrainedSketcherOptions object specifying common options for all sketches.
+        A :py:class:`~abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketcherOptions.ConstrainedSketcherOptions` object specifying common options for all sketches.
     viewerOptions: ViewerOptions
-        A ViewerOptions object.
+        A :py:class:`~abaqus.OdbDisplay.ViewerOptions.ViewerOptions` object.
     animationOptions: AnimationOptions
-        An AnimationOptions object.
+        An :py:class:`~abaqus.Animation.AnimationOptions.AnimationOptions` object.
     aviOptions: AVIOptions
-        An AVIOptions object.
+        An :py:class:`~abaqus.Animation.AVIOptions.AVIOptions` object.
     imageAnimationOptions: ImageAnimationOptions
-        An ImageAnimationOptions object.
+        An :py:class:`~abaqus.Animation.ImageAnimationOptions.ImageAnimationOptions` object.
     imageAnimation: ImageAnimation
-        An ImageAnimation object.
+        An :py:class:`~abaqus.Animation.ImageAnimation.ImageAnimation` object.
     quickTimeOptions: QuickTimeOptions
-        A QuickTimeOptions object.
+        A :py:class:`~abaqus.Animation.QuickTimeOptions.QuickTimeOptions` object.
     viewports: dict[str, Viewport]
-        A repository of Viewport objects.
+        A repository of :py:class:`~abaqus.Canvas.Viewport.Viewport` objects.
     customData: RepositorySupport
-        A RepositorySupport object.
+        A :py:class:`~abaqus.CustomKernel.RepositorySupport.RepositorySupport` object.
     defaultFieldReportOptions: FieldReportOptions
-        A FieldReportOptions object.
+        A :py:class:`~abaqus.FieldReport.FieldReportOptions.FieldReportOptions` object.
     defaultFreeBodyReportOptions: FreeBodyReportOptions
-        A FreeBodyReportOptions object.
+        A :py:class:`~abaqus.FieldReport.FreeBodyReportOptions.FreeBodyReportOptions` object.
     fieldReportOptions: FieldReportOptions
-        A FieldReportOptions object.
+        A :py:class:`~abaqus.FieldReport.FieldReportOptions.FieldReportOptions` object.
     freeBodyReportOptions: FreeBodyReportOptions
-        A FreeBodyReportOptions object.
+        A :py:class:`~abaqus.FieldReport.FreeBodyReportOptions.FreeBodyReportOptions` object.
     odbs: dict[str, Odb]
-        A repository of Odb objects.
+        A repository of :py:class:`~abaqus.Odb.Odb.Odb` objects.
     scratchOdbs: dict[str, ScratchOdb]
-        A repository of ScratchOdb objects.
+        A repository of :py:class:`~abaqus.Odb.ScratchOdb.ScratchOdb` objects.
     defaultOdbDisplay: DefaultOdbDisplay
-        A DefaultOdbDisplay object.
+        A :py:class:`~abaqus.OdbDisplay.DefaultOdbDisplay.DefaultOdbDisplay` object.
     defaultPlot: DefaultPlot
-        A DefaultPlot object.
+        A :py:class:`~abaqus.XY.DefaultPlot.DefaultPlot` object.
     defaultChartOptions: DefaultChartOptions
-        A DefaultChartOptions object.
+        A :py:class:`~abaqus.XY.DefaultChartOptions.DefaultChartOptions` object.
     odbData: dict[str, OdbData]
-        A repository of OdbData objects.
+        A repository of :py:class:`~abaqus.PlotOptions.OdbData.OdbData` objects.
     mdbData: dict[str, MdbData]
-        A repository of MdbData objects.
+        A repository of :py:class:`~abaqus.PlotOptions.MdbData.MdbData` objects.
     paths: dict[str, Path]
-        A repository of Path objects.
+        A repository of :py:class:`~abaqus.PathAndProbe.Path.Path` objects.
     freeBodies: dict[str, FreeBody]
-        A repository of FreeBody objects.
+        A repository of :py:class:`~abaqus.PathAndProbe.FreeBody.FreeBody` objects.
     streams: dict[str, Stream]
-        A repository of Stream objects.
+        A repository of :py:class:`~abaqus.PathAndProbe.Stream.Stream` objects.
     spectrums: dict[str, Spectrum]
-        A repository of Spectrum objects.
+        A repository of :py:class:`~abaqus.PathAndProbe.Spectrum.Spectrum` objects.
     currentProbeValues: CurrentProbeValues
-        A CurrentProbeValues object.
+        A :py:class:`~abaqus.PathAndProbe.CurrentProbeValues.CurrentProbeValues` object.
     defaultProbeOptions: ProbeOptions
-        A ProbeOptions object.
+        A :py:class:`~abaqus.PathAndProbe.ProbeOptions.ProbeOptions` object.
     probeOptions: ProbeOptions
-        A ProbeOptions object.
+        A :py:class:`~abaqus.PathAndProbe.ProbeOptions.ProbeOptions` object.
     probeReport: ProbeReport
-        A ProbeReport object.
+        A :py:class:`~abaqus.PathAndProbe.ProbeReport.ProbeReport` object.
     defaultProbeReport: ProbeReport
-        A ProbeReport object.
+        A :py:class:`~abaqus.PathAndProbe.ProbeReport.ProbeReport` object.
     selectedProbeValues: SelectedProbeValues
-        A SelectedProbeValues object.
+        A :py:class:`~abaqus.PathAndProbe.SelectedProbeValues.SelectedProbeValues` object.
     printOptions: PrintOptions
-        A PrintOptions object.
+        A :py:class:`~abaqus.Print.PrintOptions.PrintOptions` object.
     epsOptions: EpsOptions
-        An EpsOptions object.
+        An :py:class:`~abaqus.Print.EpsOptions.EpsOptions` object.
     pageSetupOptions: PageSetupOptions
-        A PageSetupOptions object.
+        A :py:class:`~abaqus.Print.PageSetupOptions.PageSetupOptions` object.
     pngOptions: PngOptions
-        A PngOptions object.
+        A :py:class:`~abaqus.Print.PngOptions.PngOptions` object.
     psOptions: PsOptions
-        A PsOptions object.
+        A :py:class:`~abaqus.Print.PsOptions.PsOptions` object.
     svgOptions: SvgOptions
-        A SvgOptions object.
+        A :py:class:`~abaqus.Print.SvgOptions.SvgOptions` object.
     tiffOptions: TiffOptions
-        A TiffOptions object.
+        A :py:class:`~abaqus.PredefinedField.TiffOptions.TiffOptions` object.
     autoColors: AutoColors
-        An AutoColors object specifying the color palette to be used for color coding.
+        An :py:class:`~abaqus.Session.AutoColors.AutoColors` object specifying the color palette to be used for color coding.
     xyColors: AutoColors
-        An AutoColors object specifying the color palette to be used forXYCurve objects.
+        An :py:class:`~abaqus.Session.AutoColors.AutoColors` object specifying the color palette to be used :py:class:`~.forXYCurve` objects.
     xyDataObjects: dict[str, XYData]
-        A repository of XYData objects.
+        A repository of :py:class:`~abaqus.XY.XYData.XYData` objects.
     curves: dict[str, XYCurve]
-        A repository of XYCurve objects.
+        A repository of :py:class:`~abaqus.XY.XYCurve.XYCurve` objects.
     xyPlots: dict[str, XYPlot]
-        A repository of XYPlot objects.
+        A repository of :py:class:`~abaqus.XY.XYPlot.XYPlot` objects.
     charts: dict[str, Chart]
-        A repository of Chart objects.
+        A repository of :py:class:`~abaqus.XY.Chart.Chart` objects.
     defaultXYReportOptions: XYReportOptions
-        An XYReportOptions object.
+        An :py:class:`~abaqus.XY.XYReportOptions.XYReportOptions` object.
     xyReportOptions: XYReportOptions
-        An XYReportOptions object.
+        An :py:class:`~abaqus.XY.XYReportOptions.XYReportOptions` object.
     views: dict[str, View]
-        A repository of View objects.
+        A repository of :py:class:`~abaqus.UtilityAndView.View.View` objects.
     networkDatabaseConnectors: dict[str, NetworkDatabaseConnector]
-        A repository of NetworkDatabaseConnector objects.
+        A repository of :py:class:`~abaqus.Session.NetworkDatabaseConnector.NetworkDatabaseConnector` objects.
     displayGroups: dict[str, DisplayGroup]
-        A repository of DisplayGroup objects.
+        A repository of :py:class:`~abaqus.DisplayGroup.DisplayGroup.DisplayGroup` objects.
     graphicsInfo: GraphicsInfo
-        A GraphicsInfo object.
+        A :py:class:`~abaqus.DisplayOptions.GraphicsInfo.GraphicsInfo` object.
     defaultGraphicsOptions: GraphicsOptions
-        A GraphicsOptions object.
+        A :py:class:`~abaqus.DisplayOptions.GraphicsOptions.GraphicsOptions` object.
     graphicsOptions: GraphicsOptions
-        A GraphicsOptions object.
+        A :py:class:`~abaqus.DisplayOptions.GraphicsOptions.GraphicsOptions` object.
     defaultViewportAnnotationOptions: ViewportAnnotationOptions
-        A ViewportAnnotationOptions object.
+        A :py:class:`~abaqus.DisplayOptions.ViewportAnnotationOptions.ViewportAnnotationOptions` object.
     queues: dict[str, Queue]
-        A repository of Queue objects.
+        A repository of :py:class:`~abaqus.Job.Queue.Queue` objects.
     currentViewportName: str
         A String specifying the name of the current viewport.
     sessionState: dict
-        A Dictionary object specifying the viewports and their associated models. The Dictionary
-        key specifies the viewport name. The Dictionary value is a Dictionary specifying the
+        A :py:class:`~.Dictionary` object specifying the viewports and their associated models. The :py:class:`~.Dictionary`
+        key specifies the viewport name. The :py:class:`~.Dictionary` value is a :py:class:`~.Dictionary` specifying the
         model name.
     images: dict[str, Image]
-        A repository of Image objects.
+        A repository of :py:class:`~abaqus.Session.Image.Image` objects.
     movies: dict[str, Movie]
-        A repository of Movie objects.
+        A repository of :py:class:`~abaqus.Animation.Movie.Movie` objects.
     defaultLightOptions: LightOptions
-        A LightOptions object.
+        A :py:class:`~abaqus.DisplayOptions.LightOptions.LightOptions` object.
     drawingArea: DrawingArea
-        A DrawingArea object.
+        A :py:class:`~abaqus.Canvas.DrawingArea.DrawingArea` object.
     defaultMesherOptions: MesherOptions
-        A MesherOptions object specifying how to control default settings in the Mesh module.
+        A :py:class:`~abaqus.Mesh.MesherOptions.MesherOptions` object specifying how to control default settings in the Mesh module.
     drawings: dict[str, Drawing]
-        A repository of Drawing objects.
+        A repository of :py:class:`~abaqus.Session.Drawing.Drawing` objects.
 
     Notes
     -----

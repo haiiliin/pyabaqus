@@ -13,12 +13,12 @@ class OdbMeshElement:
     type: str
         A String specifying the element type.
     sectionCategory: SectionCategory
-        A SectionCategory object specifying the element section properties.
+        A :py:class:`~abaqus.Odb.SectionCategory.SectionCategory` object specifying the element section properties.
     connectivity: int
         A tuple of Ints specifying the element connectivity. For connector elements connected to
         ground, the other node is repeated in the connectivity data. The position of the ground
         node cannot be ascertained. This is a limitation. It is important to note the difference
-        with MeshElement object of MDB where the connectivity is node indices instead of node
+        with :py:class:`~abaqus.Mesh.MeshElement.MeshElement` object of MDB where the connectivity is node indices instead of node
         labels.
     instanceNames: tuple
         A tuple of Strings specifying the instance names for nodes in the element connectivity.

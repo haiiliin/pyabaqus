@@ -22,27 +22,27 @@ class ContactProperty(InteractionProperty):
     Attributes
     ----------
     tangentialBehavior: ContactTangentialBehavior
-        A ContactTangentialBehavior object.
+        A :py:class:`~abaqus.Interaction.ContactTangentialBehavior.ContactTangentialBehavior` object.
     normalBehavior: NormalBehavior
-        A NormalBehavior object.
+        A :py:class:`~abaqus.Interaction.NormalBehavior.NormalBehavior` object.
     damping: ContactDamping
-        A ContactDamping object.
+        A :py:class:`~abaqus.Interaction.ContactDamping.ContactDamping` object.
     damage: ContactDamage
-        A ContactDamage object.
+        A :py:class:`~abaqus.Interaction.ContactDamage.ContactDamage` object.
     fractureCriterion: FractureCriterion
-        A FractureCriterion object.
+        A :py:class:`~abaqus.Interaction.FractureCriterion.FractureCriterion` object.
     cohesiveBehavior: CohesiveBehavior
-        A CohesiveBehavior object.
+        A :py:class:`~abaqus.Interaction.CohesiveBehavior.CohesiveBehavior` object.
     thermalConductance: ThermalConductance
-        A ThermalConductance object.
+        A :py:class:`~abaqus.Interaction.ThermalConductance.ThermalConductance` object.
     heatGeneration: GapHeatGeneration
-        A GapHeatGeneration object.
+        A :py:class:`~abaqus.Interaction.GapHeatGeneration.GapHeatGeneration` object.
     radiation: Radiation
-        A Radiation object.
+        A :py:class:`~abaqus.Interaction.Radiation.Radiation` object.
     geometricProperties: GeometricProperties
-        A GeometricProperties object.
+        A :py:class:`~abaqus.Interaction.GeometricProperties.GeometricProperties` object.
     electricalConductance: GapElectricalConductance
-        A GapElectricalConductance object.
+        A :py:class:`~abaqus.Interaction.GapElectricalConductance.GapElectricalConductance` object.
 
     Notes
     -----

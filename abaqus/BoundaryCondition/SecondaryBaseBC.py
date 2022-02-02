@@ -15,15 +15,15 @@ class SecondaryBaseBC(BoundaryCondition):
     dofs: int
         A tuple of tuples of Ints specifying the constrained degrees-of-freedom.
     regions: RegionArray
-        A RegionArray object specifying the region to which the boundary condition is applied.
+        A :py:class:`~abaqus.Region.RegionArray.RegionArray` object specifying the region to which the boundary condition is applied.
         Note that the usual **region** is ignored. The default value is MODEL.
     category: SymbolicConstant
         A SymbolicConstant specifying the category of the boundary condition. Possible values
         are MECHANICAL and THERMAL.
     region: Region
-        A Region object specifying the region to which the boundary condition is applied.
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the boundary condition is applied.
     localCsys: str
-        None or a DatumCsys object specifying the local coordinate system of the boundary
+        None or a :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the local coordinate system of the boundary
         condition's degrees of freedom. If **localCsys=None**, the degrees of freedom are defined
         in the global coordinate system. The default value is None.
 

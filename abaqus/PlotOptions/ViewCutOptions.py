@@ -55,13 +55,13 @@ class ViewCutOptions:
         A SymbolicConstant specifying the component resolution choice for the free body cut.
         Possible values are NORMAL_TANGENTIAL and CSYS. The default value is NORMAL_TANGENTIAL.
     belowOptions: str
-        None or an OptionArg object specifying values to be used for defining the options
+        None or an :py:class:`~abaqus.PlotOptions.OptionArg.OptionArg` object specifying values to be used for defining the options
         applicable on the model below the cut. The default value is None.
     onOptions: str
-        None or an OptionArg object specifying values to be used for defining the options
+        None or an :py:class:`~abaqus.PlotOptions.OptionArg.OptionArg` object specifying values to be used for defining the options
         applicable on the model on the cut. The default value is None.
     aboveOptions: str
-        None or an OptionArg object specifying values to be used for defining the options
+        None or an :py:class:`~abaqus.PlotOptions.OptionArg.OptionArg` object specifying values to be used for defining the options
         applicable on the model above the cut. The default value is None.
     csysName: SymbolicConstant
         The SymbolicConstant GLOBAL or a String specifying the coordinate system name for the

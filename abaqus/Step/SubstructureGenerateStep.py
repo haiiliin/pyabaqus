@@ -64,12 +64,12 @@ class SubstructureGenerateStep(AnalysisStep):
         A String specifying a unique identifier for the substructure. The default value is an
         empty string.
     recoveryRegion: Region
-        A Region object specifying the region for substructure recovery. This argument is
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region for substructure recovery. This argument is
         required when **recoveryMatrix=REGION**.
     frequencyRange: SubstructureGenerateFrequencyArray
-        A SubstructureGenerateFrequencyArray object.
+        A :py:class:`~abaqus.StepMiscellaneous.SubstructureGenerateFrequencyArray.SubstructureGenerateFrequencyArray` object.
     modeRange: SubstructureGenerateModesArray
-        A SubstructureGenerateModesArray object.
+        A :py:class:`~abaqus.StepMiscellaneous.SubstructureGenerateModesArray.SubstructureGenerateModesArray` object.
     explicit: SymbolicConstant
         A SymbolicConstant specifying whether the step has an explicit procedure type
         (**procedureType=ANNEAL**, DYNAMIC_EXPLICIT, or DYNAMIC_TEMP_DISPLACEMENT).
@@ -108,33 +108,33 @@ class SubstructureGenerateStep(AnalysisStep):
     suppressed: Boolean
         A Boolean specifying whether the step is suppressed or not. The default value is OFF.
     fieldOutputRequestState: dict[str, FieldOutputRequestState]
-        A repository of FieldOutputRequestState objects.
+        A repository of :py:class:`~abaqus.StepOutput.FieldOutputRequestState.FieldOutputRequestState` objects.
     historyOutputRequestState: dict[str, HistoryOutputRequestState]
-        A repository of HistoryOutputRequestState objects.
+        A repository of :py:class:`~abaqus.StepOutput.HistoryOutputRequestState.HistoryOutputRequestState` objects.
     diagnosticPrint: DiagnosticPrint
-        A DiagnosticPrint object.
+        A :py:class:`~abaqus.StepOutput.DiagnosticPrint.DiagnosticPrint` object.
     monitor: Monitor
-        A Monitor object.
+        A :py:class:`~abaqus.StepOutput.Monitor.Monitor` object.
     restart: Restart
-        A Restart object.
+        A :py:class:`~abaqus.StepOutput.Restart.Restart` object.
     adaptiveMeshConstraintStates: dict[str, AdaptiveMeshConstraintState]
-        A repository of AdaptiveMeshConstraintState objects.
+        A repository of :py:class:`~abaqus.Adaptivity.AdaptiveMeshConstraintState.AdaptiveMeshConstraintState` objects.
     adaptiveMeshDomains: dict[str, AdaptiveMeshDomain]
-        A repository of AdaptiveMeshDomain objects.
+        A repository of :py:class:`~abaqus.Adaptivity.AdaptiveMeshDomain.AdaptiveMeshDomain` objects.
     control: Control
-        A Control object.
+        A :py:class:`~abaqus.StepMiscellaneous.Control.Control` object.
     solverControl: SolverControl
-        A SolverControl object.
+        A :py:class:`~abaqus.StepMiscellaneous.SolverControl.SolverControl` object.
     boundaryConditionStates: dict[str, BoundaryConditionState]
-        A repository of BoundaryConditionState objects.
+        A repository of :py:class:`~abaqus.BoundaryCondition.BoundaryConditionState.BoundaryConditionState` objects.
     interactionStates: int
-        A repository of InteractionState objects.
+        A repository of :py:class:`~abaqus.Interaction.InteractionState.InteractionState` objects.
     loadStates: dict[str, LoadState]
-        A repository of LoadState objects.
+        A repository of :py:class:`~abaqus.LoadAndLoadCase.LoadState.LoadState` objects.
     loadCases: dict[str, LoadCase]
-        A repository of LoadCase objects.
+        A repository of :py:class:`~abaqus.LoadAndLoadCase.LoadCase.LoadCase` objects.
     predefinedFieldStates: dict[str, PredefinedFieldState]
-        A repository of PredefinedFieldState objects.
+        A repository of :py:class:`~abaqus.PredefinedField.PredefinedFieldState.PredefinedFieldState` objects.
 
     Notes
     -----

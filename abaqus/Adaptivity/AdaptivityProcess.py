@@ -13,7 +13,7 @@ class AdaptivityProcess:
         A SymbolicConstant specifying the status of the adaptivity process. Possible values are
         SUBMITTED, RUNNING, ABORTED, TERMINATED, and COMPLETED.
     iterations: dict[int, AdaptivityIteration]
-        A repository of AdaptivityIteration objects specifying the AdaptivityIteration objects
+        A repository of :py:class:`~abaqus.Adaptivity.:py:class:`~abaqus.Adaptivity.AdaptivityIteration.AdaptivityIteration`.:py:class:`~abaqus.Adaptivity.AdaptivityIteration.AdaptivityIteration`` objects specifying the :py:class:`~abaqus.Adaptivity.:py:class:`~abaqus.Adaptivity.AdaptivityIteration.AdaptivityIteration`.:py:class:`~abaqus.Adaptivity.AdaptivityIteration.AdaptivityIteration`` objects
         received during running the adaptivity process.
 
     Notes

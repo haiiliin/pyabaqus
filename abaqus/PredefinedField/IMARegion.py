@@ -8,7 +8,7 @@ class IMARegion:
     Attributes
     ----------
     region: Region
-        A Region object specifying the sub-region of the selected part instance to which the
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the sub-region of the selected part instance to which the
         volume fractions will be applied.
     fractionList: float
         A tuple of Floats specifying the volume fractions, per material instance name. The

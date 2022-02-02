@@ -16,13 +16,13 @@ class Surface:
     Attributes
     ----------
     edges: EdgeArray
-        An EdgeArray object.
+        An :py:class:`~abaqus.BasicGeometry.EdgeArray.EdgeArray` object.
     faces: FaceArray
-        A FaceArray object.
+        A :py:class:`~abaqus.BasicGeometry.FaceArray.FaceArray` object.
     elements: MeshElementArray
-        A MeshElementArray object.
+        A :py:class:`~abaqus.Mesh.MeshElementArray.MeshElementArray` object.
     nodes: MeshNodeArray
-        A MeshNodeArray object.
+        A :py:class:`~abaqus.Mesh.MeshNodeArray.MeshNodeArray` object.
     sides: SymbolicConstant
         A tuple of SymbolicConstants specifying the sides; for example, (SIDE1, SIDE2).
     instances: int

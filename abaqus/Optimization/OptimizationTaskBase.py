@@ -17,18 +17,18 @@ class OptimizationTaskBase:
     name: str
         A String specifying the optimization task repository key.
     region: SymbolicConstant
-        The SymbolicConstant MODEL or a Region object specifying the region to which the
+        The SymbolicConstant MODEL or a :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the
         optimization task is applied. The default value is MODEL.
     designResponses: dict[str, DesignResponse]
-        A repository of DesignResponse objects.
+        A repository of :py:class:`~abaqus.Optimization.DesignResponse.DesignResponse` objects.
     objectiveFunctions: dict[str, ObjectiveFunction]
-        A repository of ObjectiveFunction objects.
+        A repository of :py:class:`~abaqus.Optimization.ObjectiveFunction.ObjectiveFunction` objects.
     optimizationConstraints: dict[str, OptimizationConstraint]
-        A repository of OptimizationConstraint objects.
+        A repository of :py:class:`~abaqus.Optimization.OptimizationConstraint.OptimizationConstraint` objects.
     geometricRestrictions: dict[str, GeometricRestriction]
-        A repository of GeometricRestriction objects.
+        A repository of :py:class:`~abaqus.Optimization.GeometricRestriction.GeometricRestriction` objects.
     stopConditions: dict[str, StopCondition]
-        A repository of StopCondition objects.
+        A repository of :py:class:`~abaqus.Optimization.StopCondition.StopCondition` objects.
 
     Notes
     -----

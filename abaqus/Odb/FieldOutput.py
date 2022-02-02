@@ -21,11 +21,11 @@ class FieldOutput:
     isComplex: Boolean
         A Boolean specifying whether the data are complex.
     locations: FieldLocationArray
-        A FieldLocationArray object.
+        A :py:class:`~abaqus.Odb.FieldLocationArray.FieldLocationArray` object.
     values: int
-        A FieldValueArray object specifying the order of the objects in the array is determined
-        by the Abaqus Scripting Interface; see the **data** argument to the addData method for a
-        description of the order.
+        A :py:class:`~.FieldValueArray` object specifying :py:class:`~.the` order of :py:class:`~.the` objects in :py:class:`~.the` array is determined
+        by :py:class:`~.the` Abaqus Scripting Interface; see :py:class:`~.the` **data** argument to :py:class:`~.the` addData method for a
+        description of :py:class:`~.the` order.
 
     Notes
     -----

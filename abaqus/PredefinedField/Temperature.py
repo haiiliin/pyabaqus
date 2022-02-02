@@ -16,13 +16,13 @@ class Temperature(PredefinedField):
         are UNIFORM, USER_DEFINED, FROM_FILE, FIELD, FROM_FILE_AND_USER_DEFINED, and
         DISCRETE_FIELD. The default value is UNIFORM.
     field: str
-        A String specifying the name of the AnalyticalField or DiscreteField object associated
+        A String specifying the name of the AnalyticalField or :py:class:`~abaqus.Field.DiscreteField.DiscreteField` object associated
         with this predefined field. The **field** argument applies only when
         **distributionType=FIELD** or **distributionType=DISCRETE_FIELD**. The default value is an
         empty string.
     region: Region
-        A Region object specifying the region to which the predefined field is applied. **Region**
-        is ignored if the predefined field has an **instances** member available. **Region** is also
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the predefined field is applied. **:py:class:`~abaqus.Region.Region.Region`**
+        is ignored if the predefined field has an **instances** member available. **:py:class:`~abaqus.Region.Region.Region`** is also
         ignored if the predefined field has a **distributionType** member available, and
         **distributionType=FROM_FILE** or FROM_FILE_AND_USER_DEFINED.
 

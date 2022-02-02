@@ -18,11 +18,11 @@ class AnimationOptions:
     frameCounter: Boolean
         A Boolean specifying whether to show the frame counter. The default value is ON.
     relativeScaling: SymbolicConstant
-        A SymbolicConstant specifying the relative scaling when the AnimationController object's
+        A SymbolicConstant specifying the relative scaling when the :py:class:`~abaqus.Animation.AnimationController.AnimationController` object's
         **animationType=SCALE_FACTOR** or HARMONIC. Possible values are FULL_CYCLE and HALF_CYCLE.
         The default value is HALF_CYCLE.
     numScaleFactorFrames: int
-        An Int specifying the number of frames to be used when the AnimationController object's
+        An Int specifying the number of frames to be used when the :py:class:`~abaqus.Animation.AnimationController.AnimationController` object's
         **animationType=SCALE_FACTOR** or HARMONIC. The default value is 7.
     timeHistoryMode: SymbolicConstant
         A SymbolicConstant specifying whether the time history animation is time based or frame

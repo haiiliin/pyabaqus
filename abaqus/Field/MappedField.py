@@ -68,12 +68,12 @@ class MappedField(AnalyticalField):
         data item is defining the XYZ coordinates of a point and its field value. The default
         value is an empty sequence.
     odbMeshRegionData: OdbMeshRegionData
-        An OdbMeshRegionData object specifying the external source data from ODB mesh region.
+        An :py:class:`~abaqus.Field.OdbMeshRegionData.OdbMeshRegionData` object specifying the external source data from ODB mesh region.
     coordinateScalingFactors: float
         A tuple of Floats specifying the scaling factors for the global 1, 2 and 3 directions.
         The default value is (1.0, 1.0, 1.0).
     localCsys: str
-        None or a DatumCsys object specifying the local coordinate system of the field. If
+        None or a :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the local coordinate system of the field. If
         **localCsys=None**, the field is defined in the global coordinate system. The default
         value is None.
     description: str

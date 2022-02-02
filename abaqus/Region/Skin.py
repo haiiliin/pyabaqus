@@ -13,11 +13,11 @@ class Skin:
     Attributes
     ----------
     elements: MeshElementArray
-        A MeshElementArray object.
+        A :py:class:`~abaqus.Mesh.MeshElementArray.MeshElementArray` object.
     edges: EdgeArray
-        An EdgeArray object.
+        An :py:class:`~abaqus.BasicGeometry.EdgeArray.EdgeArray` object.
     faces: FaceArray
-        A FaceArray object.
+        A :py:class:`~abaqus.BasicGeometry.FaceArray.FaceArray` object.
 
     Notes
     -----

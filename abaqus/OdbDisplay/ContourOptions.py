@@ -138,7 +138,7 @@ class ContourOptions(DGContourOptions):
         each interval in the plot when **contourType=LINE**. The size of the outer sequence must
         be equal to **numIntervals**-1. The inner sequence consists of two SymbolicConstants
         specifying the line style and line thickness. For possible values, refer to the
-        **edgeLineStyle** and **edgeLineThickness** members of the DGCommonOptions object. The
+        **edgeLineStyle** and **edgeLineThickness** members of the :py:class:`~abaqus.PlotOptions.DGCommonOptions.DGCommonOptions` object. The
         default is ((SOLID, VERY_THIN), ).
     legendHideOutsideLimits: Boolean
         A Boolean specifying whether to hide the values outside the specified min/max in the

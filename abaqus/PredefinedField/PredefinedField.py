@@ -15,8 +15,8 @@ class PredefinedField:
     name: str
         A String specifying the repository key.
     region: Region
-        A Region object specifying the region to which the predefined field is applied. **Region**
-        is ignored if the predefined field has an **instances** member available. **Region** is also
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the predefined field is applied. **:py:class:`~abaqus.Region.Region.Region`**
+        is ignored if the predefined field has an **instances** member available. **:py:class:`~abaqus.Region.Region.Region`** is also
         ignored if the predefined field has a **distributionType** member available, and
         **distributionType=FROM_FILE** or FROM_FILE_AND_USER_DEFINED.
     fieldList: IMAField

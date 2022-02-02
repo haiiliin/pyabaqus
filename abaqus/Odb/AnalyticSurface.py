@@ -11,13 +11,13 @@ class AnalyticSurface:
     name: str
         A String specifying the name of the analytic surface.
     type: SymbolicConstant
-        A SymbolicConstant specifying the type of AnalyticSurface object. Possible values are
+        A SymbolicConstant specifying the type of :py:class:`~abaqus.Odb.AnalyticSurface.AnalyticSurface` object. Possible values are
         SEGMENTS, CYLINDER, and REVOLUTION.
     filletRadius: float
         A Float specifying radius of curvature to smooth discontinuities between adjoining
         segments. The default value is 0.0.
     segments: OdbSequenceAnalyticSurfaceSegment
-        An OdbSequenceAnalyticSurfaceSegment object specifying the profile associated with the
+        An :py:class:`~abaqus.Odb.OdbSequenceAnalyticSurfaceSegment.OdbSequenceAnalyticSurfaceSegment` object specifying the profile associated with the
         surface.
     localCoordData: float
         A tuple of tuples of Floats specifying the global coordinates of points representing the

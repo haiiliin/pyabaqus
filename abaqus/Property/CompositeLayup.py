@@ -15,11 +15,11 @@ class CompositeLayup:
     Attributes
     ----------
     section: GeometryShellSection
-        A GeometryShellSection object.
+        A :py:class:`~abaqus.Section.GeometryShellSection.GeometryShellSection` object.
     orientation: MaterialOrientation
-        A MaterialOrientation object.
+        A :py:class:`~abaqus.Property.MaterialOrientation.MaterialOrientation` object.
     plies: CompositePlyArray
-        A CompositePlyArray object specifying the plies that make up this composite layup.
+        A :py:class:`~abaqus.Property.CompositePlyArray.CompositePlyArray` object specifying the plies that make up this composite layup.
 
     Notes
     -----

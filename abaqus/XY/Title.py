@@ -12,12 +12,12 @@ class Title:
     useDefault: Boolean
         A Boolean specifying whether to show the default title. The default value is OFF.
     area: Area
-        An Area object specifying the area of the title.
+        An :py:class:`~abaqus.XY.Area.Area` object specifying the area of the title.
     text: str
         A String specifying the text to appear as a title. By default the title is set to the
-        XYPlot object name. The default value is an empty string.
+        :py:class:`~abaqus.XY.XYPlot.XYPlot` object name. The default value is an empty string.
     titleStyle: TextStyle
-        A TextStyle object specifying the text properties used to display the legend title.
+        A :py:class:`~abaqus.XY.TextStyle.TextStyle` object specifying the text properties used to display the legend title.
 
     Notes
     -----

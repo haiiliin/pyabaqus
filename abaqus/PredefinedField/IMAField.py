@@ -8,7 +8,7 @@ class IMAField:
     Attributes
     ----------
     region: Region
-        A Region object specifying the sub-region of the selected part instance to which the
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the sub-region of the selected part instance to which the
         volume fractions will be applied.
     discFieldList: tuple
         A tuple of Strings specifying the name of the discrete fields that contain the volume

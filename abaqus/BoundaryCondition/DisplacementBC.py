@@ -26,7 +26,7 @@ class DisplacementBC(BoundaryCondition):
         analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and
         PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE.
     fieldName: str
-        A String specifying the name of the AnalyticalField or DiscreteField object associated
+        A String specifying the name of the AnalyticalField or :py:class:`~abaqus.Field.DiscreteField.DiscreteField` object associated
         with this boundary condition. The **fieldName** argument applies only when
         **distributionType=FIELD** or **distributionType=DISCRETE_FIELD**. The default value is an
         empty string.
@@ -34,9 +34,9 @@ class DisplacementBC(BoundaryCondition):
         A SymbolicConstant specifying the category of the boundary condition. Possible values
         are MECHANICAL and THERMAL.
     region: Region
-        A Region object specifying the region to which the boundary condition is applied.
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the boundary condition is applied.
     localCsys: str
-        None or a DatumCsys object specifying the local coordinate system of the boundary
+        None or a :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the local coordinate system of the boundary
         condition's degrees of freedom. If **localCsys=None**, the degrees of freedom are defined
         in the global coordinate system. The default value is None.
 

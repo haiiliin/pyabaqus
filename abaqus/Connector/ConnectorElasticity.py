@@ -11,7 +11,7 @@ class ConnectorElasticity(ConnectorBehaviorOption):
     Attributes
     ----------
     options: ConnectorOptions
-        A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+        A :py:class:`~abaqus.Connector.ConnectorOptions.ConnectorOptions` object specifying the :py:class:`~abaqus.Connector.ConnectorOptions.ConnectorOptions` used to define tabular options
         for this ConnectorBehaviorOption.
 
     Notes

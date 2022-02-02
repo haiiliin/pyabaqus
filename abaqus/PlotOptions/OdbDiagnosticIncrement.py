@@ -8,7 +8,7 @@ class OdbDiagnosticIncrement:
     Attributes
     ----------
     attempts: dict[str, OdbDiagnosticAttempt]
-        A repository of OdbDiagnosticAttempt objects.
+        A repository of :py:class:`~abaqus.PlotOptions.OdbDiagnosticAttempt.OdbDiagnosticAttempt` objects.
     initialSize: str
         A float specifying the size of the initial increment. This attribute is read-only.
     isConverged: Boolean

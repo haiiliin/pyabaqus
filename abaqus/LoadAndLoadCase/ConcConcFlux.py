@@ -15,11 +15,11 @@ class ConcConcFlux(Load):
         A SymbolicConstant specifying how the load is distributed spatially. Possible values are
         UNIFORM and FIELD. The default value is UNIFORM.
     field: str
-        A String specifying the name of the AnalyticalField object associated with this load.
+        A String specifying the name of the :py:class:`~abaqus.Field.AnalyticalField.AnalyticalField` object associated with this load.
         The **field** argument applies only when **distributionType=FIELD**. The default value is an
         empty string.
     region: Region
-        A Region object specifying the region to which the load is applied.
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the load is applied.
 
     Notes
     -----

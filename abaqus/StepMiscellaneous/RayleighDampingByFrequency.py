@@ -7,7 +7,7 @@ class RayleighDampingByFrequency:
     Attributes
     ----------
     components: RayleighDampingByFrequencyComponentArray
-        A RayleighDampingByFrequencyComponentArray object.
+        A :py:class:`~abaqus.StepMiscellaneous.RayleighDampingByFrequencyComponentArray.RayleighDampingByFrequencyComponentArray` object.
 
     Notes
     -----

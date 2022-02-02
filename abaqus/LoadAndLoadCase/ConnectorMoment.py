@@ -23,7 +23,7 @@ class ConnectorMoment(Load):
         applied. This argument is not valid when **region** is specified. When this argument is
         specified, **fastenerName** must also be specified. The default value is an empty string.
     region: Region
-        A Region object specifying the region to which the load is applied.
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the load is applied.
 
     Notes
     -----

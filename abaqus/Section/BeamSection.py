@@ -10,7 +10,7 @@ class BeamSection(Section):
     Attributes
     ----------
     beamTransverseShear: TransverseShearBeam
-        A TransverseShearBeam object specifying the transverse shear stiffness properties.
+        A :py:class:`~abaqus.Section.TransverseShearBeam.TransverseShearBeam` object specifying the transverse shear stiffness properties.
 
     Notes
     -----

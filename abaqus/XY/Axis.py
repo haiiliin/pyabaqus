@@ -36,17 +36,17 @@ class Axis:
         placed on the inside of the axis.OUTSIDE, specifying that the labels are placed on the
         outside of the axis.The default value is INSIDE.
     axisData: AxisData
-        An AxisData object specifying the numerical data of the axis.
+        An :py:class:`~abaqus.XY.AxisData.AxisData` object specifying the numerical data of the axis.
     lineStyle: LineStyle
-        A LineStyle object specifying the line properties used to display the axis.
+        A :py:class:`~abaqus.XY.LineStyle.LineStyle` object specifying the line properties used to display the axis.
     labelStyle: TextStyle
-        A TextStyle object specifying the text properties to be used when displaying axis
+        A :py:class:`~abaqus.XY.TextStyle.TextStyle` object specifying the text properties to be used when displaying axis
         labels.
     titleStyle: TextStyle
-        A TextStyle object specifying the text properties to be used when displaying the axis
+        A :py:class:`~abaqus.XY.TextStyle.TextStyle` object specifying the text properties to be used when displaying the axis
         title.
     tickStyle: LineStyle
-        A LineStyle object specifying the line properties to be used when displaying axis ticks.
+        A :py:class:`~abaqus.XY.LineStyle.LineStyle` object specifying the line properties to be used when displaying axis ticks.
 
     Notes
     -----

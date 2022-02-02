@@ -36,7 +36,7 @@ class SurfaceTraction(Load):
         A SymbolicConstant specifying how the surface traction is distributed spatially.
         Possible values are UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM.
     field: str
-        A String specifying the name of the AnalyticalField object associated with this load.
+        A String specifying the name of the :py:class:`~abaqus.Field.AnalyticalField.AnalyticalField` object associated with this load.
         The **field** argument applies only when **distributionType=FIELD**. The default value is an
         empty string.
     userCsys: str
@@ -44,17 +44,17 @@ class SurfaceTraction(Load):
         of freedom are defined in the global coordinate system or by the **localCsys** parameter
         if defined. The default value is "None".
     localCsys: int
-        None or a DatumCsys object specifying the local coordinate system of the load's degrees
+        None or a :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the local coordinate system of the load's degrees
         of freedom. If **localCsys=None**, the degrees of freedom are defined in the global
         coordinate system or by the **userCsys** parameter if defined. When this member is
         queried, it returns an Int. The default value is None.
     directionVector: tuple
-        A VertexArray object of length 2 specifying the direction of the load. Instead of
+        A :py:class:`~abaqus.BasicGeometry.VertexArray.VertexArray` object of length 2 specifying the direction of the load. Instead of
         through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. If
         **traction** is SHEAR, then **directionVector** will be projected onto the region surface.
         This parameter is available only if **traction** is GENERAL or SHEAR.
     region: Region
-        A Region object specifying the region to which the load is applied.
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the load is applied.
 
     Notes
     -----

@@ -8,7 +8,7 @@ class ObjectiveFunction:
     Attributes
     ----------
     objectives: OptimizationObjectiveArray
-        Optimization objectives
+        :py:class:`~.Optimization` objectives
 
     Notes
     -----

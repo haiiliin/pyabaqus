@@ -15,17 +15,17 @@ class OdbDisplayOptions:
     Attributes
     ----------
     commonOptions: DGCommonOptions
-        A DGCommonOptions object.
+        A :py:class:`~abaqus.PlotOptions.DGCommonOptions.DGCommonOptions` object.
     superimposeOptions: DGSuperimposeOptions
-        A DGSuperimposeOptions object.
+        A :py:class:`~abaqus.PlotOptions.DGSuperimposeOptions.DGSuperimposeOptions` object.
     contourOptions: DGContourOptions
-        A DGContourOptions object.
+        A :py:class:`~abaqus.PlotOptions.DGContourOptions.DGContourOptions` object.
     symbolOptions: DGSymbolOptions
-        A DGSymbolOptions object.
+        A :py:class:`~abaqus.PlotOptions.DGSymbolOptions.DGSymbolOptions` object.
     materialOrientationOptions: DGOrientationOptions
-        A DGOrientationOptions object.
+        A :py:class:`~abaqus.PlotOptions.DGOrientationOptions.DGOrientationOptions` object.
     displayBodyOptions: DGDisplayBodyOptions
-        A DGDisplayBodyOptions object.
+        A :py:class:`~abaqus.PlotOptions.DGDisplayBodyOptions.DGDisplayBodyOptions` object.
 
     Notes
     -----

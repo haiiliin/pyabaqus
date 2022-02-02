@@ -11,9 +11,9 @@ class Text(Annotation):
     Attributes
     ----------
     width: float
-        A Float specifying the width in millimeters of the Text object.
+        A Float specifying the width in millimeters of the :py:class:`~abaqus.Annotation.Text.Text` object.
     height: float
-        A Float specifying the height in millimeters of the Text object.
+        A Float specifying the height in millimeters of the :py:class:`~abaqus.Annotation.Text.Text` object.
 
     Notes
     -----

@@ -283,7 +283,7 @@ class BasicOptions:
         The SymbolicConstant GLOBAL or a String specifying the name of the pattern's coordinate
         system. The default value is GLOBAL.
     datumCsys: DatumCsys
-        A DatumCsys object specifying the coordinate system to use for results transformation
+        A :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the coordinate system to use for results transformation
         when **transformationType=USER_SPECIFIED**.
     selectedSectorNumbers: int
         A tuple of Ints specifying which sectors to display when

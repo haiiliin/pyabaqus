@@ -7,7 +7,7 @@ class StructuralDampingByFrequency:
     Attributes
     ----------
     components: StructuralDampingByFrequencyComponentArray
-        A StructuralDampingByFrequencyComponentArray object.
+        A :py:class:`~abaqus.StepMiscellaneous.StructuralDampingByFrequencyComponentArray.StructuralDampingByFrequencyComponentArray` object.
 
     Notes
     -----

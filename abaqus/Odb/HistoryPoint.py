@@ -55,15 +55,15 @@ class HistoryPoint:
         - WHOLE_PART_INSTANCE, specifying the results for an entire part instance of the model.
         - WHOLE_MODEL, specifying the results for the entire model.
     element: OdbMeshElement
-        An OdbMeshElement object specifying the element for which the data are to be collected.
+        An :py:class:`~abaqus.Odb.OdbMeshElement.OdbMeshElement` object specifying the element for which the data are to be collected.
     sectionPoint: SectionPoint
-        A SectionPoint object.
+        A :py:class:`~abaqus.Odb.SectionPoint.SectionPoint` object.
     region: OdbSet
-        An OdbSet object specifying the region for which the data are to be collected.
+        An :py:class:`~abaqus.Odb.OdbSet.OdbSet` object specifying the region for which the data are to be collected.
     assembly: OdbAssembly
-        An OdbAssembly object specifying the assembly for which the data are to be collected.
+        An :py:class:`~abaqus.Odb.OdbAssembly.OdbAssembly` object specifying the assembly for which the data are to be collected.
     instance: OdbInstance
-        An OdbInstance object specifying the instance for which the data are to be collected.
+        An :py:class:`~abaqus.Odb.OdbInstance.OdbInstance` object specifying the instance for which the data are to be collected.
 
     Notes
     -----

@@ -14,14 +14,14 @@ class ConnectorFriction(ConnectorBehaviorOption):
     Attributes
     ----------
     tangentialBehavior: TangentialBehavior
-        A TangentialBehavior object.
+        A :py:class:`~abaqus.Connector.TangentialBehavior.TangentialBehavior` object.
     derivedComponent: DerivedComponent
-        A DerivedComponent object specifying the DerivedComponent used to compute the contact
+        A :py:class:`~abaqus.Connector.DerivedComponent.DerivedComponent` object specifying the :py:class:`~abaqus.Connector.DerivedComponent.DerivedComponent` used to compute the contact
         force component direction. This argument applies only if
         **frictionModel=USER_CUSTOMIZED**, if **useContactForceComponent=ON**, and if
         **contactForceStyle=DERIVED_COMPONENT**.
     options: ConnectorOptions
-        A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+        A :py:class:`~abaqus.Connector.ConnectorOptions.ConnectorOptions` object specifying the :py:class:`~abaqus.Connector.ConnectorOptions.ConnectorOptions` used to define tabular options
         for this ConnectorBehaviorOption.
 
     Notes

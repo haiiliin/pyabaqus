@@ -36,7 +36,8 @@ Documentation
 
    getting_started
    tutorials
-   references
+   .. references
+   user
 
 Indices and tables
 ==================

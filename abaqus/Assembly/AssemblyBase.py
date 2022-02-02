@@ -45,63 +45,63 @@ class AssemblyBase(Feature):
         ON.If the assembly has position constraint features and you modify the value of
         **regenerateConstraintsTogether**, Abaqus/CAE will regenerate the assembly features.
     vertices: VertexArray
-        A VertexArray object specifying all the vertices existing at the assembly level. This
+        A :py:class:`~abaqus.BasicGeometry.VertexArray.VertexArray` object specifying all the vertices existing at the assembly level. This
         member does not provide access to the vertices at the instance level.
     edges: EdgeArray
-        An EdgeArray object specifying all the edges existing at the assembly level. This member
+        An :py:class:`~abaqus.BasicGeometry.EdgeArray.EdgeArray` object specifying all the edges existing at the assembly level. This member
         does not provide access to the edges at the instance level.
     elements: MeshElementArray
-        A MeshElementArray object specifying all the elements existing at the assembly level.
+        A :py:class:`~abaqus.Mesh.MeshElementArray.MeshElementArray` object specifying all the elements existing at the assembly level.
         This member does not provide access to the elements at the instance level.
     nodes: MeshNodeArray
-        A MeshNodeArray object specifying all the nodes existing at the assembly level. This
+        A :py:class:`~abaqus.Mesh.MeshNodeArray.MeshNodeArray` object specifying all the nodes existing at the assembly level. This
         member does not provide access to the nodes at the instance level.
     instances: dict[str, PartInstance]
-        A repository of PartInstance objects.
+        A repository of :py:class:`~abaqus.Assembly.PartInstance.PartInstance` objects.
     datums: list[Datum]
-        A repository of Datum objects specifying all Datum objects in the assembly.
+        A repository of :py:class:`~abaqus.:py:class:`~abaqus.Datum.Datum.Datum`.:py:class:`~abaqus.Datum.Datum.Datum`.:py:class:`~abaqus.Datum.Datum.Datum`` objects specifying all :py:class:`~abaqus.:py:class:`~abaqus.Datum.Datum.Datum`.:py:class:`~abaqus.Datum.Datum.Datum`.:py:class:`~abaqus.Datum.Datum.Datum`` objects in the assembly.
     features: dict[str, Feature]
-        A repository of Feature objects specifying all Feature objects in the assembly.
+        A repository of :py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature`` objects specifying all :py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature`` objects in the assembly.
     featuresById: dict[str, Feature]
-        A repository of Feature objects specifying all Feature objects in the assembly.The
-        Feature objects in the featuresById repository are the same as the Feature objects in
-        the features repository. However, the key to the objects in the featuresById repository
-        is an integer specifying the **ID**, whereas the key to the objects in the features
-        repository is a string specifying the **name**.
+        A repository of :py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature```.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature```` objects specifying all :py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature```.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature```` objects in :py:class:`~.:py:class:`~.the`` assembly.The
+        :py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature```.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature```` objects in :py:class:`~.:py:class:`~.the`` featuresById repository are :py:class:`~.:py:class:`~.the`` same as :py:class:`~.:py:class:`~.the`` :py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature```.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature```` objects in
+        :py:class:`~.:py:class:`~.the`` features repository. However, :py:class:`~.:py:class:`~.the`` key to :py:class:`~.:py:class:`~.the`` objects in :py:class:`~.:py:class:`~.the`` featuresById repository
+        is an integer specifying :py:class:`~.:py:class:`~.the`` **ID**, whereas :py:class:`~.:py:class:`~.the`` key to :py:class:`~.:py:class:`~.the`` objects in :py:class:`~.:py:class:`~.the`` features
+        repository is a string specifying :py:class:`~.:py:class:`~.the`` **name**.
     surfaces: dict[str, Surface]
-        A repository of Surface objects specifying for more information, see [Region
+        A repository of :py:class:`~abaqus.Region.Surface.Surface` objects specifying for more information, see [Region
         commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
     allSurfaces: dict[str, Surface]
-        A repository of Surface objects specifying for more information, see [Region
+        A repository of :py:class:`~abaqus.Region.Surface.Surface` objects specifying for more information, see [Region
         commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
     allInternalSurfaces: dict[str, Surface]
-        A repository of Surface objects specifying picked regions.
+        A repository of :py:class:`~abaqus.Region.Surface.Surface` objects specifying picked regions.
     sets: dict[str, Set]
-        A repository of Set objects.
+        A repository of :py:class:`~abaqus.Region.Set.Set` objects.
     allSets: dict[str, Set]
-        A repository of Set objects specifying for more information, see [Region
+        A repository of :py:class:`~abaqus.Region.Set.Set` objects specifying for more information, see [Region
         commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
     allInternalSets: dict[str, Set]
-        A repository of Set objects specifying picked regions.
+        A repository of :py:class:`~abaqus.Region.Set.Set` objects specifying picked regions.
     skins: dict[str, Skin]
-        A repository of Skin objects specifying the skins created on the assembly.
+        A repository of :py:class:`~abaqus.Region.Skin.Skin` objects specifying the skins created on the assembly.
     stringers: dict[str, Stringer]
-        A repository of Stringer objects specifying the stringers created on the assembly.
+        A repository of :py:class:`~abaqus.Region.Stringer.Stringer` objects specifying the stringers created on the assembly.
     referencePoints: dict[str, ReferencePoint]
-        A repository of ReferencePoint objects.
+        A repository of :py:class:`~abaqus.BasicGeometry.ReferencePoint.ReferencePoint` objects.
     modelInstances: dict[str, ModelInstance]
-        A repository of ModelInstance objects.
+        A repository of :py:class:`~abaqus.Assembly.ModelInstance.ModelInstance` objects.
     allInstances: dict[str, typing.Union[PartInstance, ModelInstance]]
-        A PartInstance object specifying the PartInstances and A ModelInstance object specifying
-        the ModelInstances.
+        A :py:class:`~abaqus.Assembly.PartInstance.PartInstance` object specifying the :py:class:`~abaqus.Assembly.PartInstance.PartInstance`s and A :py:class:`~abaqus.Assembly.ModelInstance.ModelInstance` object specifying
+        the :py:class:`~abaqus.Assembly.ModelInstance.ModelInstance`s.
     engineeringFeatures: EngineeringFeature
-        An EngineeringFeature object.
+        An :py:class:`~abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature` object.
     modelName: str
         A String specifying the name of the model to which the assembly belongs.
     connectorOrientations: ConnectorOrientationArray
-        A ConnectorOrientationArray object.
+        A :py:class:`~abaqus.Assembly.ConnectorOrientationArray.ConnectorOrientationArray` object.
     sectionAssignments: SectionAssignmentArray
-        A SectionAssignmentArray object.
+        A :py:class:`~abaqus.Property.SectionAssignmentArray.SectionAssignmentArray` object.
 
     Notes
     -----

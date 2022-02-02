@@ -27,7 +27,7 @@ class LightOptions:
         only be set to PHONG when the **shadersAvailable** member of GraphicsOptions is
         True.Printed output will only contain Phong shading if the output format is raster and
         the **accelerateOffScreen** member of GraphicsOptions is ON.The **renderStyle** setting is
-        part of AssemblyDisplayOptions, PartDisplayOptions, and various other options objects
+        part of AssemblyDisplayOptions, PartDisplayOptions, and various other :py:class:`~.options` objects
         not listed here since they are generally used for meshed geometry.
     viewpoint: SymbolicConstant
         A SymbolicConstant specifying how specular highlights should be calculated. Possible
@@ -43,7 +43,7 @@ class LightOptions:
         **materialShininess** argument, the more focused the specular highlight. Possible values
         are 0.0 ≤≤ **polygonOffsetConstant** ≤≤ 128.0. The default value is 105.0.
     lights: LightArray
-        A LightArray object of length 8.
+        A :py:class:`~abaqus.DisplayOptions.LightArray.LightArray` object of length 8.
     ambientColor: str
         A String specifying the light applied evenly to the entire scene independent of any
         individual light. The initial value is 20% gray. A list of valid color strings is in the

@@ -89,9 +89,9 @@ class FieldValue:
         when the **validInvariants** member includes OUTOFPLANE_PRINCIPAL; otherwise, the value is
         indeterminate. Conjugate data will be ignored in invariant calculation.
     instance: OdbInstance
-        An OdbInstance object specifying the part to which the labels belong.
+        An :py:class:`~abaqus.Odb.OdbInstance.OdbInstance` object specifying the part to which the labels belong.
     sectionPoint: SectionPoint
-        A SectionPoint object.
+        A :py:class:`~abaqus.Odb.SectionPoint.SectionPoint` object.
     localCoordSystem: tuple
         A tuple of tuples of Floats specifying the 3 × 3 matrix of Floats specifying the
         direction cosines of the local coordinate system (the rotation from global to local).

@@ -24,12 +24,12 @@ class XYData:
     Attributes
     ----------
     sourceType: SymbolicConstant
-        A SymbolicConstant specifying the source type of the XYData object. Possible values are
+        A SymbolicConstant specifying the source type of the :py:class:`~abaqus.XY.XYData.XYData` object. Possible values are
         FROM_ODB, FROM_KEYBOARD, FROM_ASCII_FILE, FROM_OPERATION, and FROM_USER_DEFINED.
     fileName: str
-        A String specifying the source file name of the XYData object.
+        A String specifying the source file name of the :py:class:`~abaqus.XY.XYData.XYData` object.
     description: str
-        A String specifying the complete description of the XYData object.
+        A String specifying the complete description of the :py:class:`~abaqus.XY.XYData.XYData` object.
 
     Notes
     -----

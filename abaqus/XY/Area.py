@@ -51,9 +51,9 @@ class Area:
     pb: float
         A Float specifying the bottom padding of the area in mm. The default value is 1.0.
     style: AreaStyle
-        An AreaStyle object specifying whether and how to fill the area.
+        An :py:class:`~abaqus.XY.AreaStyle.AreaStyle` object specifying whether and how to fill the area.
     border: LineStyle
-        A LineStyle object specifying whether and how to draw the border of the area.
+        A :py:class:`~abaqus.XY.LineStyle.LineStyle` object specifying whether and how to draw the border of the area.
     origin: tuple[float]
         A pair of Floats specifying the X- and Y-offsets in millimeters from the lower-left
         corner of the XYPlot.

@@ -127,3 +127,4 @@ dmypy.json
 /abaqus/attributes.py
 /docs/source/_build/
 /abaqus/code_blokcs.py
+/abaqus/Guess.py

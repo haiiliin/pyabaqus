@@ -9,7 +9,7 @@ class DetailPlotOptions:
     Attributes
     ----------
     plyStackPlotOptions: PlyStackPlotOptions
-        A PlyStackPlotOptions object.
+        A :py:class:`~abaqus.PlotOptions.PlyStackPlotOptions.PlyStackPlotOptions` object.
 
     Notes
     -----

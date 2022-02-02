@@ -69,39 +69,39 @@ class AssemblyDisplayOptions:
         A SymbolicConstant specifying how the image in the viewport is rendered. Possible values
         are WIREFRAME, HIDDEN, SHADED, and FILLED. The default value is WIREFRAME.
     bcOptions: BCDisplayOptions
-        A BCDisplayOptions object.
+        A :py:class:`~abaqus.DisplayOptions.BCDisplayOptions.BCDisplayOptions` object.
     constraintOptions: ConstraintDisplayOptions
-        A ConstraintDisplayOptions object.
+        A :py:class:`~abaqus.DisplayOptions.ConstraintDisplayOptions.ConstraintDisplayOptions` object.
     displayGroup: DisplayGroup
-        A DisplayGroup object specifying the current display group and referring to an object in
+        A :py:class:`~abaqus.DisplayGroup.DisplayGroup.DisplayGroup` object specifying the current display group :py:class:`~.an`d referring to :py:class:`~.an` object in
         the **displayGroups** member of Session.
     displayGroupInstances: dict[str, DisplayGroupInstance]
-        A repository of DisplayGroupInstance objects.
+        A repository of :py:class:`~abaqus.DisplayGroup.DisplayGroupInstance.DisplayGroupInstance` objects.
     engineeringFeatureOptions: EngineeringFeatureDisplayOptions
-        An EngineeringFeatureDisplayOptions object.
+        An :py:class:`~abaqus.DisplayOptions.EngineeringFeatureDisplayOptions.EngineeringFeatureDisplayOptions` object.
     predefinedFieldOptions: PredefinedFieldDisplayOptions
-        A PredefinedFieldDisplayOptions object.
+        A :py:class:`~abaqus.DisplayOptions.PredefinedFieldDisplayOptions.PredefinedFieldDisplayOptions` object.
     geometricRestrictionOptions: GeometricRestrictionDisplayOptions
-        A GeometricRestrictionDisplayOptions object.
+        A :py:class:`~abaqus.DisplayOptions.GeometricRestrictionDisplayOptions.GeometricRestrictionDisplayOptions` object.
     geometryOptions: GeometryDisplayOptions
-        A GeometryDisplayOptions object.
+        A :py:class:`~abaqus.DisplayOptions.GeometryDisplayOptions.GeometryDisplayOptions` object.
     interactionOptions: InteractionDisplayOptions
-        An InteractionDisplayOptions object.
+        An :py:class:`~abaqus.DisplayOptions.InteractionDisplayOptions.InteractionDisplayOptions` object.
     loadOptions: LoadDisplayOptions
-        A LoadDisplayOptions object.
+        A :py:class:`~abaqus.DisplayOptions.LoadDisplayOptions.LoadDisplayOptions` object.
     meshOptions: MeshDisplayOptions
-        A MeshDisplayOptions object.
+        A :py:class:`~abaqus.DisplayOptions.MeshDisplayOptions.MeshDisplayOptions` object.
     optimizationTaskOptions: OptimizationTaskDisplayOptions
-        An OptimizationTaskDisplayOptions object.
+        An :py:class:`~abaqus.DisplayOptions.OptimizationTaskDisplayOptions.OptimizationTaskDisplayOptions` object.
     stopConditionOptions: StopConditionDisplayOptions
-        A StopConditionDisplayOptions object.
+        A :py:class:`~abaqus.DisplayOptions.StopConditionDisplayOptions.StopConditionDisplayOptions` object.
     symbolOptions: SymbolDisplayOptions
-        A SymbolDisplayOptions object.
+        A :py:class:`~abaqus.DisplayOptions.SymbolDisplayOptions.SymbolDisplayOptions` object.
     visibleInstances: tuple
         A tuple of Strings specifying the names of the part instances that are visible in the
         viewport. The default value is an empty sequence.
     step: str
-        A String specifying the step for which objects are to be displayed. Possible values are
+        A String specifying the step for :py:class:`~.which` objects are to be displayed. Possible values are
         any valid step name. The default value is "Initial".
 
     Notes

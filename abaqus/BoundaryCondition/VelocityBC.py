@@ -17,16 +17,16 @@ class VelocityBC(BoundaryCondition):
         A SymbolicConstant specifying how the boundary condition is distributed spatially.
         Possible values are UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM.
     fieldName: str
-        A String specifying the name of the AnalyticalField object associated with this boundary
+        A String specifying the name of the :py:class:`~abaqus.Field.AnalyticalField.AnalyticalField` object associated with this boundary
         condition. The **fieldName** argument applies only when **distributionType=FIELD**. The
         default value is an empty string.
     category: SymbolicConstant
         A SymbolicConstant specifying the category of the boundary condition. Possible values
         are MECHANICAL and THERMAL.
     region: Region
-        A Region object specifying the region to which the boundary condition is applied.
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the boundary condition is applied.
     localCsys: str
-        None or a DatumCsys object specifying the local coordinate system of the boundary
+        None or a :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the local coordinate system of the boundary
         condition's degrees of freedom. If **localCsys=None**, the degrees of freedom are defined
         in the global coordinate system. The default value is None.
 

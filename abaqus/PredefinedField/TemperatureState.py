@@ -81,7 +81,7 @@ class TemperatureState(PredefinedFieldState):
         - If **crossSectionDistribution=POINTS_THROUGH_SECTION** then **magnitudes** is a sequence
         of Doubles specifying the temperature at each point.
     status: SymbolicConstant
-        A SymbolicConstant specifying the propagation state of the PredefinedFieldState object.
+        A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.PredefinedField.:py:class:`~abaqus.PredefinedField.PredefinedFieldState.PredefinedFieldState`.:py:class:`~abaqus.PredefinedField.PredefinedFieldState.PredefinedFieldState`` object.
         Possible values are:
         - NOT_YET_ACTIVE
         - CREATED
@@ -96,7 +96,7 @@ class TemperatureState(PredefinedFieldState):
         - BUILT_INTO_BASE_STATE
         - TYPE_NOT_APPLICABLE
         - INSTANCE_NOT_APPLICABLE
-        This member exists in all PredefinedFieldState objects, but different predefined fields
+        This member exists in all :py:class:`~abaqus.PredefinedField.:py:class:`~abaqus.PredefinedField.PredefinedFieldState.PredefinedFieldState`.:py:class:`~abaqus.PredefinedField.PredefinedFieldState.PredefinedFieldState`` objects, but different predefined fields
         use different subsets of the entire list of possible values depending on propagation
         rules.
 

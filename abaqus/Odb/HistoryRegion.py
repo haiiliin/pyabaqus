@@ -14,7 +14,7 @@ class HistoryRegion:
         A SymbolicConstant specifying the position of the history output. Possible values are
         NODAL, INTEGRATION_POINT, WHOLE_ELEMENT, WHOLE_REGION, and WHOLE_MODEL.
     historyOutputs: dict[str, HistoryOutput]
-        A repository of HistoryOutput objects.
+        A repository of :py:class:`~abaqus.Odb.HistoryOutput.HistoryOutput` objects.
 
     Notes
     -----

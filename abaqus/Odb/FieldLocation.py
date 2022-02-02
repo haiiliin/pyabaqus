@@ -19,7 +19,7 @@ class FieldLocation:
         points.ELEMENT_FACE.CENTROID, specifying the value at the centroid obtained by
         extrapolating results calculated at the integration points.
     sectionPoints: SectionPointArray
-        A SectionPointArray object.
+        A :py:class:`~abaqus.Odb.SectionPointArray.SectionPointArray` object.
 
     Notes
     -----

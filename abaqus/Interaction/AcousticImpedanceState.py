@@ -16,10 +16,10 @@ class AcousticImpedanceState(InteractionState):
         A SymbolicConstant specifying the propagation state of the **interactionProperty** member.
         Possible values are UNSET, SET, UNCHANGED, and FREED.
     interactionProperty: str
-        A String specifying the name of the AcousticImpedanceProp object associated with this
+        A String specifying the name of the :py:class:`~abaqus.Interaction.AcousticImpedanceProp.AcousticImpedanceProp` object associated with this
         interaction.
     status: SymbolicConstant
-        A SymbolicConstant specifying the propagation state of the InteractionState object.
+        A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.Interaction.InteractionState.InteractionState` object.
         Possible values are:
         - NOT_YET_ACTIVE
         - CREATED

@@ -9,7 +9,7 @@ class Coexecution:
     Attributes
     ----------
     name: str
-        A String specifying the name of the new job. The name must be a valid Abaqus/CAE object
+        A String specifying the name of the new job. The name must be a valid Abaqus/:py:class:`~.CAE` object
         name.
     type: SymbolicConstant
         A SymbolicConstant specifying the type of analysis to execute for the co-execution.
@@ -34,17 +34,17 @@ class Coexecution:
     queue: str
         A String specifying the name of the queue to which to submit the co-execution. The
         default value is an empty string.Note:You can use the **queue** argument when creating a
-        Coexecution object on a Windows workstation; however, remote queues are available only
+        :py:class:`~abaqus.Job.Coexecution.Coexecution` object on a Windows workstation; however, remote queues are available only
         on Linux platforms.
     atTime: str
         A String specifying the time at which to submit the co-execution. If **queue** is empty,
         the string syntax must be valid for the Linux `at` command. If **queue** is set, the
         syntax must be valid according to the system administrator. The default value is an
-        empty string.Note:You can use the **atTime** argument when creating a Coexecution object
+        empty string.Note:You can use the **atTime** argument when creating a :py:class:`~abaqus.Job.Coexecution.Coexecution` object
         on a Windows workstation; however, the `at` command is available only on Linux
         platforms.
     jobs: dict[str, Job]
-        A repository of Job objects specifying the jobs that comprise this co-execution.
+        A repository of :py:class:`~abaqus.Job.Job.Job` objects specifying the jobs that comprise this co-execution.
     secondaryModels: tuple
         A tuple of Strings specifying the names of the secondary models for the co-execution.
     secondaryAnalysisProducts: SymbolicConstant

@@ -73,20 +73,20 @@ class CavityRadiation(Interaction):
         A String specifying the name of the step in which the cavity radiation interaction
         should be created.
     surfaces: RegionArray
-        A RegionArray object specifying the surfaces for which radiation viewfactor control is
+        A :py:class:`~abaqus.Region.RegionArray.RegionArray` object specifying the surfaces for which radiation viewfactor control is
         being specified.
     surfaceEmissivities: tuple
         A tuple of Strings specifying the names of the Cavity Radiation properties containing
         the surface emissivity data. One name per specified surface. The emissivity data is
         ignored when **surfaceReflection=OFF**.
     cyclicRotPt: ModelDot
-        A ModelDot object specifying the rotation axis point. This argument applies only when
+        A :py:class:`~abaqus.BasicGeometry.ModelDot.ModelDot` object specifying the rotation axis point. This argument applies only when
         **cyclicSymmetry=ON**.
     cyclicRotEndPt: ModelDot
-        A ModelDot object specifying the rotation axis end point. This argument applies only for
+        A :py:class:`~abaqus.BasicGeometry.ModelDot.ModelDot` object specifying the rotation axis end point. This argument applies only for
         three-dimensional models, and only when **cyclicSymmetry=ON**.
     cyclicSymPt: ModelDot
-        A ModelDot object specifying the symmetry axis end point. This argument applies only
+        A :py:class:`~abaqus.BasicGeometry.ModelDot.ModelDot` object specifying the symmetry axis end point. This argument applies only
         when **cyclicSymmetry=ON**.
     periodicDistance_1: tuple
         A tuple of tuples of Floats specifying the two points of the vector that describes the

@@ -13,13 +13,13 @@ class BeadTask(OptimizationTask):
     Attributes
     ----------
     designResponses: dict[str, DesignResponse]
-        A repository of DesignResponse objects.
+        A repository of :py:class:`~abaqus.Optimization.DesignResponse.DesignResponse` objects.
     objectiveFunctions: dict[str, ObjectiveFunction]
-        A repository of ObjectiveFunction objects.
+        A repository of :py:class:`~abaqus.Optimization.ObjectiveFunction.ObjectiveFunction` objects.
     optimizationConstraints: dict[str, OptimizationConstraint]
-        A repository of OptimizationConstraint objects.
+        A repository of :py:class:`~abaqus.Optimization.OptimizationConstraint.OptimizationConstraint` objects.
     geometricRestrictions: dict[str, GeometricRestriction]
-        A repository of GeometricRestriction objects.
+        A repository of :py:class:`~abaqus.Optimization.GeometricRestriction.GeometricRestriction` objects.
 
     Notes
     -----

@@ -7,7 +7,7 @@ class DirectDamping:
     Attributes
     ----------
     components: DirectDampingComponentArray
-        A DirectDampingComponentArray object.
+        A :py:class:`~abaqus.StepMiscellaneous.DirectDampingComponentArray.DirectDampingComponentArray` object.
 
     Notes
     -----

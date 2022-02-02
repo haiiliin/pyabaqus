@@ -10,7 +10,7 @@ class FluidCavityPressure(PredefinedField):
     Attributes
     ----------
     region: Region
-        A Region object on which the **fluidCavity** interaction is specified.
+        A :py:class:`~abaqus.Region.Region.Region` object on which the **fluidCavity** interaction is specified.
 
     Notes
     -----

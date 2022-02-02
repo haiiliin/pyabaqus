@@ -18,17 +18,17 @@ class OdbFrame:
         Possible values are TIME, FREQUENCY, and MODAL.
     frequency: float
         A Float specifying the frequency. This member is valid only if **domain=FREQUENCY** or if
-        the **procedureType** member of the Step object=FREQUENCY. The default value is 0.0.
+        the **procedureType** member of the :py:class:`~abaqus.Step.Step.Step` object=FREQUENCY. The default value is 0.0.
     mode: int
         An Int specifying the eigenmode. This member is valid only if **domain=MODAL**.
     associatedFrame: 'OdbFrame'
-        An OdbFrame object specifying the real or imaginary portion of the data corresponding to
+        An :py:class:`~abaqus.Odb.OdbFrame.OdbFrame` object specifying the real or imaginary portion of the data corresponding to
         this cyclic symmetry mode.
     fieldOutputs: dict[str, FieldOutput]
-        A repository of FieldOutput objects specifying the key to the **fieldOutputs**repository
+        A repository of :py:class:`~abaqus.Odb.FieldOutput.FieldOutput` objects specifying the key to the **fieldOutputs**repository
         is a String representing an output variable.
     loadCase: OdbLoadCase
-        An OdbLoadCase object specifying the load case for the frame.
+        An :py:class:`~abaqus.Odb.OdbLoadCase.OdbLoadCase` object specifying the load case for the frame.
 
     Notes
     -----

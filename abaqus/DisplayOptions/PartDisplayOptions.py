@@ -27,16 +27,16 @@ class PartDisplayOptions:
         A SymbolicConstant specifying how the image in the viewport is rendered. Possible values
         are WIREFRAME, HIDDEN, and SHADED. The default value is WIREFRAME.
     displayGroup: DisplayGroup
-        A DisplayGroup object specifying the current display group and referring to an object in
+        A :py:class:`~abaqus.DisplayGroup.DisplayGroup.DisplayGroup` object specifying the current display group :py:class:`~.an`d referring to :py:class:`~.an` object in
         the **displayGroups** member of Session.
     displayGroupInstances: dict[str, DisplayGroupInstance]
-        A repository of DisplayGroupInstance objects.
+        A repository of :py:class:`~abaqus.DisplayGroup.DisplayGroupInstance.DisplayGroupInstance` objects.
     engineeringFeatureOptions: EngineeringFeatureDisplayOptions
-        An EngineeringFeatureDisplayOptions object.
+        An :py:class:`~abaqus.DisplayOptions.EngineeringFeatureDisplayOptions.EngineeringFeatureDisplayOptions` object.
     geometryOptions: GeometryDisplayOptions
-        A GeometryDisplayOptions object.
+        A :py:class:`~abaqus.DisplayOptions.GeometryDisplayOptions.GeometryDisplayOptions` object.
     meshOptions: MeshDisplayOptions
-        A MeshDisplayOptions object.
+        A :py:class:`~abaqus.DisplayOptions.MeshDisplayOptions.MeshDisplayOptions` object.
 
     Notes
     -----

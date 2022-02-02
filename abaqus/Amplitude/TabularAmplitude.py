@@ -13,7 +13,7 @@ class TabularAmplitude(Amplitude):
     Attributes
     ----------
     baselineCorrection: BaselineCorrection
-        A BaselineCorrection object.
+        A :py:class:`~abaqus.Amplitude.BaselineCorrection.BaselineCorrection` object.
 
     Notes
     -----

@@ -19,11 +19,11 @@ class CoriolisForce(Load):
     point2: float
         A tuple of Floats specifying the second point on the axis of rotation for the load.
     field: str
-        A String specifying the name of the AnalyticalField object associated with this load.
+        A String specifying the name of the :py:class:`~abaqus.Field.AnalyticalField.AnalyticalField` object associated with this load.
         The **field** argument applies only when **distributionType=FIELD**. The default value is an
         empty string.
     region: Region
-        A Region object specifying the region to which the load is applied.
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the load is applied.
 
     Notes
     -----

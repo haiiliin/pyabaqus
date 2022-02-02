@@ -7,7 +7,7 @@ class StructuralDamping:
     Attributes
     ----------
     components: StructuralDampingComponentArray
-        A StructuralDampingComponentArray object.
+        A :py:class:`~abaqus.StepMiscellaneous.StructuralDampingComponentArray.StructuralDampingComponentArray` object.
 
     Notes
     -----

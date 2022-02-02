@@ -11,7 +11,7 @@ class KinematicHardening(PredefinedField):
     Attributes
     ----------
     field: str
-        A String specifying the name of the AnalyticalField object associated with this
+        A String specifying the name of the :py:class:`~abaqus.Field.AnalyticalField.AnalyticalField` object associated with this
         predefined field. The **field** argument applies only when
         **distributionType=ANALYTICAL_FIELD**. The default value is an empty string.
 

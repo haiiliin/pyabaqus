@@ -12,7 +12,7 @@ class IncidentWaveState(InteractionState):
     Attributes
     ----------
     status: SymbolicConstant
-        A SymbolicConstant specifying the propagation state of the InteractionState object.
+        A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.Interaction.InteractionState.InteractionState` object.
         Possible values
         are:NOT_YET_ACTIVECREATEDPROPAGATEDMODIFIEDDEACTIVATEDNO_LONGER_ACTIVETYPE_NOT_APPLICABLEINSTANCE_NOT_APPLICABLEBUILT_INTO_BASE_STATE
 

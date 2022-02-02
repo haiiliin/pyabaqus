@@ -13,7 +13,7 @@ class SectionCategory:
     Attributes
     ----------
     sectionPoints: SectionPointArray
-        A SectionPointArray object.
+        A :py:class:`~abaqus.Odb.SectionPointArray.SectionPointArray` object.
 
     Notes
     -----

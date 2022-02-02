@@ -83,10 +83,10 @@ class AxisData:
         A Boolean specifying whether the title to use for the axis title is system defined or
         user defined. The default value is ON.
     curves: XYCurveArray
-        An XYCurveArray object specifying a read-only sequence of Curve objects associated to
+        An :py:class:`~abaqus.XY.XY:py:class:`~.Curve`Array.XY:py:class:`~.Curve`Array` object specifying a read-only sequence of :py:class:`~.Curve` objects associated to
         this axis.
     quantityType: QuantityType
-        A QuantityType object specifying the quantity type: i.e. the physical dimension and
+        A :py:class:`~abaqus.XY.QuantityType.QuantityType` object specifying the quantity type: i.e. the physical dimension and
         associated label of the data represented by this axis.
     tickValues: float
         A tuple of Floats specifying the read-only major tick values shown.

@@ -12,10 +12,10 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
     Attributes
     ----------
     isotropicOptions: ConnectorOptions
-        A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+        A :py:class:`~abaqus.Connector.ConnectorOptions.ConnectorOptions` object specifying the :py:class:`~abaqus.Connector.ConnectorOptions.ConnectorOptions` used to define tabular options
         for the isotropic hardening table.
     kinematicOptions: ConnectorOptions
-        A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+        A :py:class:`~abaqus.Connector.ConnectorOptions.ConnectorOptions` object specifying the :py:class:`~abaqus.Connector.ConnectorOptions.ConnectorOptions` used to define tabular options
         for the kinematic hardening table.
 
     Notes

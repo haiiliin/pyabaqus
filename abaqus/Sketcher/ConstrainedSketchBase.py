@@ -16,21 +16,21 @@ class ConstrainedSketchBase:
     Attributes
     ----------
     constraints: dict[str, ConstrainedSketchConstraint]
-        A repository of ConstrainedSketchConstraint objects.
+        A repository of :py:class:`~abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint` objects.
     dimensions: dict[str, ConstrainedSketchDimension]
-        A repository of ConstrainedSketchDimension objects.
+        A repository of :py:class:`~abaqus.Sketcher.ConstrainedSketchDimension.ConstrainedSketchDimension.ConstrainedSketchDimension` objects.
     geometry: ConstrainedSketchGeometryArray
-        A ConstrainedSketchGeometryArray object specifying the sketch geometry, such as lines,
+        A :py:class:`~abaqus.Amplitude.ConstrainedSketchGeometryArray.ConstrainedSketchGeometryArray` object specifying the sketch geometry, such as lines,
         arcs, circles, and splines.
     parameters: dict[str, ConstrainedSketchParameter]
-        A repository of ConstrainedSketchParameter objects specifying sketch parameters, which
+        A repository of :py:class:`~abaqus.Sketcher.ConstrainedSketchParameter.ConstrainedSketchParameter.ConstrainedSketchParameter` objects specifying sketch parameters, which
         may be associated with dimensions.
     sketchOptions: ConstrainedSketchOptions
-        A ConstrainedSketchOptions object specifying the sketch option settings.
+        A :py:class:`~abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchOptions.ConstrainedSketchOptions` object specifying the sketch option settings.
     vertices: ConstrainedSketchVertexArray
-        A ConstrainedSketchVertexArray object.
+        A :py:class:`~abaqus.Sketcher.ConstrainedSketchVertex.ConstrainedSketchVertexArray.ConstrainedSketchVertexArray` object.
     imageOptions: ConstrainedSketchImageOptions
-        A ConstrainedSketchImageOptions object.
+        A :py:class:`~abaqus.Sketcher.ConstrainedSketchOptions.ConstrainedSketchImageOptions.ConstrainedSketchImageOptions` object.
 
     Notes
     -----

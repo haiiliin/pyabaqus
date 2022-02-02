@@ -10,10 +10,10 @@ class DefaultPlot:
     Attributes
     ----------
     area: Area
-        An Area object specifying an Area used to hold on to the default display properties for
+        An :py:class:`~abaqus.XY.Area.Area` object specifying an :py:class:`~abaqus.XY.Area.Area` used to hold on to the default display properties for
         the plot area.
     title: Title
-        A Title object specifying a Title object used to hold on to the default properties of
+        A :py:class:`~abaqus.XY.:py:class:`~abaqus.XY.Title.Title`.:py:class:`~abaqus.XY.Title.Title`` object specifying a :py:class:`~abaqus.XY.:py:class:`~abaqus.XY.Title.Title`.:py:class:`~abaqus.XY.Title.Title`` object used to hold on to the default properties of
         the XY-Plot title.
 
     Notes

@@ -10,7 +10,7 @@ class MembraneSection(Section):
     Attributes
     ----------
     rebarLayers: RebarLayers
-        A RebarLayers object specifying reinforcement properties.
+        A :py:class:`~abaqus.Section.RebarLayers.RebarLayers` object specifying reinforcement properties.
 
     Notes
     -----

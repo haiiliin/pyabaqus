@@ -18,7 +18,7 @@ class MeshElement:
         A String specifying the name of the part instance that owns this element.
     connectivity: int
         A tuple of Ints specifying the internal node indices that define the nodal connectivity.
-        It is important to note the difference with OdbMeshElement object of ODB where the
+        It is important to note the difference with :py:class:`~abaqus.Odb.OdbMeshElement.OdbMeshElement` object of ODB where the
         connectivity is node labels instead of node indices.
 
     Notes

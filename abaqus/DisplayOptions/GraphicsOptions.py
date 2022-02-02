@@ -19,7 +19,7 @@ class GraphicsOptions:
     ----------
     backgroundOverride: Boolean
         A Boolean specifying whether a viewport background style of GRADIENT can be overridden
-        when displaying certain objects, such as sketches or XY plots. When overridden, the
+        when displaying :py:class:`~.certain` objects, such as sketches or XY plots. When overridden, the
         background will be the top color of the gradient background.
     backfaceCulling: Boolean
         A Boolean specifying whether facets that are determined to be facing away from the
@@ -171,7 +171,7 @@ class GraphicsOptions:
         A Boolean specifying whether a backing store will be used to refresh a viewport after a
         window occluding the viewport is moved or dismissed. The default value is ON.
     highlightMethod: SymbolicConstant
-        A SymbolicConstant specifying the highlight method. For the GraphicsOptions object,
+        A SymbolicConstant specifying the highlight method. For the :py:class:`~abaqus.DisplayOptions.GraphicsOptions.GraphicsOptions` object,
         possible values of the member are HARDWARE_OVERLAY, XOR, SOFTWARE_OVERLAY, and BLEND.
     hardwareOverlayAvailable: Boolean
         A Boolean specifying if the graphics hardware supports hardware overlay.
@@ -190,9 +190,9 @@ class GraphicsOptions:
         range' colors may be incorrectly shown for values near the range limits. The default
         value is 0.5×10–5.
     options: str
-        None or a GraphicsOptions object specifying the object from which values are to be
-        copied. If other arguments are also supplied to setValues, they will override the values
-        in the **options** member. The default value is None.
+        None or a :py:class:`~abaqus.DisplayOptions.GraphicsOptions.GraphicsOptions` object specifying :py:class:`~.the` object from which values are to be
+        copied. If o:py:class:`~.the`r arguments are also supplied to setValues, :py:class:`~.the`y will override :py:class:`~.the` values
+        in :py:class:`~.the` **options** member. The default value is None.
     highlightMethodHint: SymbolicConstant
         A tuple of SymbolicConstants specifying a hint used to modify the highlight method.
         Possible values are:HARDWARE_OVERLAY, specifying a hint of hardware overlay. The best
@@ -214,11 +214,11 @@ class GraphicsOptions:
     backgroundColor: str
         A String specifying one of the two background colors for all viewport windows. The
         initial color is black. A list of valid color strings is in the **colors** map in the
-        Session object.
+        :py:class:`~abaqus.Session.Session.Session` object.
     backgroundBottomColor: str
         A String specifying one of the two background colors for all viewport windows. This
         color is used only if **backgroundStyle** =GRADIENT. The initial color is black. A list of
-        valid color strings is in the **colors** map in the Session object.
+        valid color strings is in the **colors** map in the :py:class:`~abaqus.Session.Session.Session` object.
 
     Notes
     -----

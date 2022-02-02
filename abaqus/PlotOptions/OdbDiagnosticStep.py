@@ -14,7 +14,7 @@ class OdbDiagnosticStep:
         A float specifying the characteristic element length for the step. This attribute is
         read-only.
     contactDiagnostics: dict[str, OdbContactDiagnostics]
-        A repository of OdbContactDiagnostics objects.
+        A repository of :py:class:`~abaqus.PlotOptions.OdbContactDiagnostics.OdbContactDiagnostics` objects.
     explicitIncrementStatus: tuple
         A sequence of string specifying the explicit increment status. This attribute is
         read-only.
@@ -27,7 +27,7 @@ class OdbDiagnosticStep:
     incrementsCompleted: str
         An int specifying the number of completed increments. This attribute is read-only.
     increments: dict[str, OdbDiagnosticIncrement]
-        A repository of OdbDiagnosticIncrement objects.
+        A repository of :py:class:`~abaqus.PlotOptions.OdbDiagnosticIncrement.OdbDiagnosticIncrement` objects.
     initialTimeIncrement: str
         A float specifying the initial increment size for the step. This attribute is read-only.
     isNlgeom: Boolean

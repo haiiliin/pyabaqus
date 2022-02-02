@@ -19,11 +19,11 @@ Assembly Attributes
 - **mdb.models[name].rootAssembly.datums**: A repository of :py:class:`abaqus.Datum.Datum.Datum` objects specifying all :py:class:`abaqus.Datum.Datum.Datum` objects in the assembly.
 - **mdb.models[name].rootAssembly.features**: A repository of :py:class:`abaqus.Assembly.Feature.Feature` objects specifying all :py:class:`abaqus.Assembly.Feature.Feature` objects in the assembly.
 - **mdb.models[name].rootAssembly.featuresById**: A repository of :py:class:`abaqus.Assembly.Feature.Feature` objects specifying all :py:class:`abaqus.Assembly.Feature.Feature` objects in the assembly.The :py:class:`abaqus.Assembly.Feature.Feature` objects in the featuresById repository are the same as the :py:class:`abaqus.Assembly.Feature.Feature` objects in the features repository. However, the key to the objects in the featuresById repository is an integer specifying the **ID**, whereas the key to the objects in the features repository is a string specifying the **name**.
-- **mdb.models[name].rootAssembly.surfaces**: A repository of :py:class:`abaqus.Region.Surface.Surface` objects specifying for more information, see :doc:`/mdb/model/part_assembly/region`.
-- **mdb.models[name].rootAssembly.allSurfaces**: A repository of :py:class:`abaqus.Region.Surface.Surface` objects specifying for more information, see :doc:`/mdb/model/part_assembly/region`.
+- **mdb.models[name].rootAssembly.surfaces**: A repository of :py:class:`abaqus.Region.Surface.Surface` objects specifying for more information, see :doc:`/reference/mdb/model/part_assembly/region`.
+- **mdb.models[name].rootAssembly.allSurfaces**: A repository of :py:class:`abaqus.Region.Surface.Surface` objects specifying for more information, see :doc:`/reference/mdb/model/part_assembly/region`.
 - **mdb.models[name].rootAssembly.allInternalSurfaces**: A repository of :py:class:`abaqus.Region.Surface.Surface` objects specifying picked regions.
 - **mdb.models[name].rootAssembly.sets**: A repository of :py:class:`abaqus.Region.Set.Set` objects.
-- **mdb.models[name].rootAssembly.allSets**: A repository of :py:class:`abaqus.Region.Set.Set` objects specifying for more information, see :doc:`/mdb/model/part_assembly/region`.
+- **mdb.models[name].rootAssembly.allSets**: A repository of :py:class:`abaqus.Region.Set.Set` objects specifying for more information, see :doc:`/reference/mdb/model/part_assembly/region`.
 - **mdb.models[name].rootAssembly.allInternalSets**: A repository of :py:class:`abaqus.Region.Set.Set` objects specifying picked regions.
 - **mdb.models[name].rootAssembly.skins**: A repository of :py:class:`abaqus.Region.Skin.Skin` objects specifying the skins created on the assembly.
 - **mdb.models[name].rootAssembly.stringers**: A repository of :py:class:`abaqus.Region.Stringer.Stringer` objects specifying the stringers created on the assembly.
@@ -46,10 +46,10 @@ PartInstance Attributes
 - **mdb.models[name].rootAssembly.instances[name].analysisType**: A SymbolicConstant specifying the part type. Possible values are DEFORMABLE_BODY, EULERIAN, DISCRETE_RIGID_SURFACE, and ANALYTIC_RIGID_SURFACE.
 - **mdb.models[name].rootAssembly.instances[name].referenceNode**: An Int specifying the reference node number. This member is valid only if **analysisType**=DISCRETE_RIGID_SURFACE or ANALYTIC_RIGID_SURFACE.
 - **mdb.models[name].rootAssembly.instances[name].part**: A :py:class:`abaqus.Part.Part.Part` object specifying the instanced part.
-- **mdb.models[name].rootAssembly.instances[name].sets**: A repository of :py:class:`abaqus.Region.Set.Set` objects specifying the sets created on the part. For more information, see :doc:`/mdb/model/part_assembly/region`.
-- **mdb.models[name].rootAssembly.instances[name].surfaces**: A repository of :py:class:`abaqus.Region.Surface.Surface` objects specifying the surfaces created on the part. For more information, see :doc:`/mdb/model/part_assembly/region`.
-- **mdb.models[name].rootAssembly.instances[name].skins**: A repository of :py:class:`abaqus.Region.Skin.Skin` objects specifying the skins created on the part. For more information, see :doc:`/mdb/model/part_assembly/region`.
-- **mdb.models[name].rootAssembly.instances[name].stringers**: A repository of :py:class:`abaqus.Region.Stringer.Stringer` objects specifying the stringers created on the part. For more information, see :doc:`/mdb/model/part_assembly/region`.
+- **mdb.models[name].rootAssembly.instances[name].sets**: A repository of :py:class:`abaqus.Region.Set.Set` objects specifying the sets created on the part. For more information, see :doc:`/reference/mdb/model/part_assembly/region`.
+- **mdb.models[name].rootAssembly.instances[name].surfaces**: A repository of :py:class:`abaqus.Region.Surface.Surface` objects specifying the surfaces created on the part. For more information, see :doc:`/reference/mdb/model/part_assembly/region`.
+- **mdb.models[name].rootAssembly.instances[name].skins**: A repository of :py:class:`abaqus.Region.Skin.Skin` objects specifying the skins created on the part. For more information, see :doc:`/reference/mdb/model/part_assembly/region`.
+- **mdb.models[name].rootAssembly.instances[name].stringers**: A repository of :py:class:`abaqus.Region.Stringer.Stringer` objects specifying the stringers created on the part. For more information, see :doc:`/reference/mdb/model/part_assembly/region`.
 - **mdb.models[name].rootAssembly.instances[name].vertices**: A :py:class:`abaqus.BasicGeometry.VertexArray.VertexArray` object.
 - **mdb.models[name].rootAssembly.instances[name].ignoredVertices**: An :py:class:`abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray` object.
 - **mdb.models[name].rootAssembly.instances[name].edges**: An :py:class:`abaqus.BasicGeometry.EdgeArray.EdgeArray` object.
@@ -70,8 +70,8 @@ PartInstance Attributes
 ModelInstance Attributes
 ------------------------
 
-- **mdb.models[name].rootAssembly.instances[name].sets**: A repository of :py:class:`abaqus.Region.Set.Set` objects specifying the sets created on the assembly. For more information, see :doc:`/mdb/model/part_assembly/region`.
-- **mdb.models[name].rootAssembly.instances[name].surfaces**: A repository of :py:class:`abaqus.Region.Surface.Surface` objects specifying the surfaces created on the assembly. For more information, see :doc:`/mdb/model/part_assembly/region`.
+- **mdb.models[name].rootAssembly.instances[name].sets**: A repository of :py:class:`abaqus.Region.Set.Set` objects specifying the sets created on the assembly. For more information, see :doc:`/reference/mdb/model/part_assembly/region`.
+- **mdb.models[name].rootAssembly.instances[name].surfaces**: A repository of :py:class:`abaqus.Region.Surface.Surface` objects specifying the surfaces created on the assembly. For more information, see :doc:`/reference/mdb/model/part_assembly/region`.
 - **mdb.models[name].rootAssembly.instances[name].vertices**: A :py:class:`abaqus.BasicGeometry.VertexArray.VertexArray` object.
 - **mdb.models[name].rootAssembly.instances[name].edges**: An :py:class:`abaqus.BasicGeometry.EdgeArray.EdgeArray` object.
 - **mdb.models[name].rootAssembly.instances[name].elements**: A :py:class:`abaqus.Mesh.MeshElementArray.MeshElementArray` object.

@@ -57,7 +57,7 @@ class FieldOutputRequestState:
         The SymbolicConstant ALL or a tuple of Ints specifying a list of eigenmodes for which
         output is desired. The default value is ALL.
     timePoint: str
-        A String specifying the name of a time point object used to determine which output
+        A String specifying the name of a time :py:class:`~.point` object used to determine which output
         database states are to be written. The default value is an empty string.
     frequencyType: str
         A String specifying a read-only SymbolicConstant describing which type of frequency of

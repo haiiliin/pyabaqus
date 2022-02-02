@@ -11,17 +11,17 @@ class Layer:
     Attributes
     ----------
     displayedObject: Displayable
-        A Displayable object specifying the object to be displayed. The Displayable type is an
+        A :py:class:`~abaqus.Canvas.Displayable.Displayable` object specifying :py:class:`~.the` object to be displayed. The :py:class:`~abaqus.Canvas.Displayable.Displayable` type is an
         abstract generalization. The concrete possible types are Part, Assembly,
         ConstrainedSketch, Odb, or XYPlot.
     view: View
-        A View object specifying the object that controls viewing of the layer.
+        A :py:class:`~abaqus.UtilityAndView.View.View` object specifying :py:class:`~.the` object that controls viewing of :py:class:`~.the` layer.
     odbDisplay: OdbDisplay
-        An OdbDisplay object specifying the display options for the Odb object.
+        An :py:class:`~abaqus.:py:class:`~abaqus.Odb.Odb.Odb`Display.:py:class:`~abaqus.Odb.Odb.Odb`Display.:py:class:`~abaqus.Odb.Odb.Odb`Display` object specifying the display options for the :py:class:`~abaqus.Odb.Odb.Odb` object.
     partDisplay: PartDisplayOptions
-        A PartDisplayOptions object specifying the display options for the Part object.
+        A :py:class:`~abaqus.DisplayOptions.:py:class:`~abaqus.Part.Part.Part`DisplayOptions.:py:class:`~abaqus.Part.Part.Part`DisplayOptions` object specifying the display options for the :py:class:`~abaqus.Part.Part.Part` object.
     assemblyDisplay: AssemblyDisplayOptions
-        An AssemblyDisplayOptions object specifying the display options for the Assembly object.
+        An :py:class:`~abaqus.DisplayOptions.:py:class:`~abaqus.Assembly.Assembly.Assembly`DisplayOptions.:py:class:`~abaqus.Assembly.Assembly.Assembly`DisplayOptions` object specifying the display options for the :py:class:`~abaqus.Assembly.Assembly.Assembly` object.
 
     Notes
     -----

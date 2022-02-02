@@ -13,7 +13,7 @@ class ShellSection(Section):
     name: str
         A String specifying the repository key.
     transverseShear: TransverseShearShell
-        A TransverseShearShell object specifying the transverse shear stiffness properties.
+        A :py:class:`~abaqus.Section.TransverseShearShell.TransverseShearShell` object specifying the transverse shear stiffness properties.
 
     Notes
     -----

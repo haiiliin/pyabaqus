@@ -25,9 +25,9 @@ class FieldBulkData:
         TENSOR_3D_FULL, TENSOR_3D_PLANAR, TENSOR_3D_SURFACE, TENSOR_2D_PLANAR, and
         TENSOR_2D_SURFACE.
     instance: OdbInstance
-        An OdbInstance object specifying the part to which the labels belong.
+        An :py:class:`~abaqus.Odb.OdbInstance.OdbInstance` object specifying the part to which the labels belong.
     sectionPoint: SectionPoint
-        A SectionPoint object specifying the section point number of the current block of data.
+        A :py:class:`~abaqus.Odb.SectionPoint.SectionPoint` object specifying the section point number of the current block of data.
     elementLabels: tuple
         A sequence of Ints specifying the element labels of the elements in the block.
         **elementLabels** is valid only if **position=INTEGRATION_POINT**, CENTROID, ELEMENT_NODAL,

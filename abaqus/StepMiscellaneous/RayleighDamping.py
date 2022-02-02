@@ -7,7 +7,7 @@ class RayleighDamping:
     Attributes
     ----------
     components: RayleighDampingComponentArray
-        A RayleighDampingComponentArray object.
+        A :py:class:`~abaqus.StepMiscellaneous.RayleighDampingComponentArray.RayleighDampingComponentArray` object.
 
     Notes
     -----

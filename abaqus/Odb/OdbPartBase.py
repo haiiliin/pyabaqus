@@ -22,27 +22,27 @@ class OdbPartBase:
     Attributes
     ----------
     nodes: OdbMeshNodeArray
-        An OdbMeshNodeArray object.
+        An :py:class:`~abaqus.Odb.OdbMeshNodeArray.OdbMeshNodeArray` object.
     elements: OdbMeshElementArray
-        An OdbMeshElementArray object.
+        An :py:class:`~abaqus.Odb.OdbMeshElementArray.OdbMeshElementArray` object.
     nodeSets: dict[str, OdbSet]
-        A repository of OdbSet objects specifying node sets.
+        A repository of :py:class:`~abaqus.Odb.OdbSet.OdbSet` objects specifying node sets.
     elementSets: dict[str, OdbSet]
-        A repository of OdbSet objects specifying element sets.
+        A repository of :py:class:`~abaqus.Odb.OdbSet.OdbSet` objects specifying element sets.
     surfaces: dict[str, OdbSet]
-        A repository of OdbSet objects specifying surfaces.
+        A repository of :py:class:`~abaqus.Odb.OdbSet.OdbSet` objects specifying surfaces.
     sectionAssignments: SectionAssignmentArray
-        A SectionAssignmentArray object.
+        A :py:class:`~abaqus.Property.SectionAssignmentArray.SectionAssignmentArray` object.
     beamOrientations: BeamOrientationArray
-        A BeamOrientationArray object.
+        A :py:class:`~abaqus.Odb.BeamOrientationArray.BeamOrientationArray` object.
     materialOrientations: MaterialOrientationArray
-        A MaterialOrientationArray object.
+        A :py:class:`~abaqus.Property.MaterialOrientationArray.MaterialOrientationArray` object.
     rebarOrientations: RebarOrientationArray
-        A RebarOrientationArray object.
+        A :py:class:`~abaqus.Odb.RebarOrientationArray.RebarOrientationArray` object.
     rigidBodies: OdbRigidBodyArray
-        An OdbRigidBodyArray object.
+        An :py:class:`~abaqus.Odb.OdbRigidBodyArray.OdbRigidBodyArray` object.
     analyticSurface: AnalyticSurface
-        An AnalyticSurface object specifying analytic Surface defined on the instance.
+        An :py:class:`~abaqus.Odb.AnalyticSurface.AnalyticSurface` object specifying analytic Surface defined on the instance.
 
     Notes
     -----

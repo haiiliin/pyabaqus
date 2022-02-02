@@ -21,16 +21,16 @@ class ConcentratedForce(Load):
         each node of the region. You should provide the **follower** argument only if it is valid
         for the specified step. The default value is OFF.
     localCsys: int
-        None or a DatumCsys object specifying the local coordinate system of the load's degrees
+        None or a :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the local coordinate system of the load's degrees
         of freedom. If **localCsys=None**, the degrees of freedom are defined in the global
         coordinate system. When this member is queried, it returns an Int. The default value is
         None.
     field: str
-        A String specifying the name of the AnalyticalField object associated with this load.
+        A String specifying the name of the :py:class:`~abaqus.Field.AnalyticalField.AnalyticalField` object associated with this load.
         The **field** argument applies only when **distributionType=FIELD**. The default value is an
         empty string.
     region: Region
-        A Region object specifying the region to which the load is applied.
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the load is applied.
 
     Notes
     -----

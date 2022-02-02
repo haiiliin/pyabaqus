@@ -12,7 +12,7 @@ class HistoryOutputRequest:
         A String specifying a bolt load from which output is requested. The default value is an
         empty string.
     region: SymbolicConstant
-        The SymbolicConstant MODEL or a Region object specifying the region from which output is
+        The SymbolicConstant MODEL or a :py:class:`~abaqus.Region.Region.Region` object specifying the region from which output is
         requested. The SymbolicConstant MODEL represents the whole model. The default value is
         MODEL.If the region is a surface region, the surface must lie within the general contact
         surface domain.

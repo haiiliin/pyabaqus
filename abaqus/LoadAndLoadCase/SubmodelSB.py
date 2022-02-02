@@ -23,7 +23,7 @@ class SubmodelSB(Load):
         elements whose responses will be used to drive the submodel. An empty string indicates
         that the entire global model will be searched. The default value is an empty string.
     region: Region
-        A Region object specifying the region to which the load is applied.
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the load is applied.
 
     Notes
     -----

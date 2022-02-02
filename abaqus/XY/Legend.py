@@ -22,14 +22,14 @@ class Legend:
         A Boolean specifying whether to display the minimum and maximum values. The default
         value is OFF.
     area: Area
-        An Area object specifying the area of the legend.
+        An :py:class:`~abaqus.XY.Area.Area` object specifying the area of the legend.
     textStyle: TextStyle
-        A TextStyle object specifying the text properties used to display the legend text.
+        A :py:class:`~abaqus.XY.TextStyle.TextStyle` object specifying the text properties used to display the legend text.
     title: str
         A String specifying the title to appear on the legend. The default value is an empty
         string.
     titleStyle: TextStyle
-        A TextStyle object specifying the text properties used to display the legend title.
+        A :py:class:`~abaqus.XY.TextStyle.TextStyle` object specifying the text properties used to display the legend title.
 
     Notes
     -----

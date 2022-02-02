@@ -12,15 +12,15 @@ class OdbDiagnosticData:
     Attributes
     ----------
     analysisErrors: dict[str, OdbAnalysisError]
-        A repository of OdbAnalysisError objects.
+        A repository of :py:class:`~abaqus.PlotOptions.OdbAnalysisError.OdbAnalysisError` objects.
     analysisWarnings: dict[str, OdbAnalysisWarning]
-        A repository of OdbAnalysisWarning objects.
+        A repository of :py:class:`~abaqus.PlotOptions.OdbAnalysisWarning.OdbAnalysisWarning` objects.
     steps: dict[str, OdbDiagnosticStep]
-        A repository of OdbDiagnosticStep objects.
+        A repository of :py:class:`~abaqus.PlotOptions.OdbDiagnosticStep.OdbDiagnosticStep` objects.
     jobTime: OdbJobTime
-        An OdbJobTime object.
+        An :py:class:`~abaqus.PlotOptions.OdbJobTime.OdbJobTime` object.
     numericalProblemSummary: OdbNumericalProblemSummary
-        An OdbNumericalProblemSummary object.
+        An :py:class:`~abaqus.PlotOptions.OdbNumericalProblemSummary.OdbNumericalProblemSummary` object.
     isXplDoublePrecision: Boolean
         A boolean specifying whether or not double precision is used for the analysis. This
         attribute is read-only.

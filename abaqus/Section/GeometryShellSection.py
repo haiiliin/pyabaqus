@@ -58,19 +58,19 @@ class GeometryShellSection(ShellSection):
         A Float specifying the value of density to apply to this section. The default value is
         0.0.
     thicknessField: str
-        A String specifying the name of the AnalyticalField or DiscreteField object used to
+        A String specifying the name of the AnalyticalField or :py:class:`~abaqus.Field.DiscreteField.DiscreteField` object used to
         define the thickness of the shell elements. The **thicknessField** argument applies only
         when **thicknessType=ANALYTICAL_FIELD** or **thicknessType=DISCRETE_FIELD**. The default
         value is an empty string.
     rebarLayers: RebarLayers
-        A RebarLayers object specifying reinforcement properties.
+        A :py:class:`~abaqus.Section.RebarLayers.RebarLayers` object specifying reinforcement properties.
     nodalThicknessField: str
-        A String specifying the name of the AnalyticalField or DiscreteField object used to
+        A String specifying the name of the AnalyticalField or :py:class:`~abaqus.Field.DiscreteField.DiscreteField` object used to
         define the thickness of the shell elements at each node. The **nodalThicknessField**
         argument applies only when **thicknessType=NODAL_ANALYTICAL_FIELD** or
         **thicknessType=NODAL_DISCRETE_FIELD**. The default value is an empty string.
     transverseShear: TransverseShearShell
-        A TransverseShearShell object specifying the transverse shear stiffness properties.
+        A :py:class:`~abaqus.Section.TransverseShearShell.TransverseShearShell` object specifying the transverse shear stiffness properties.
 
     Notes
     -----

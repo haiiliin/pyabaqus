@@ -10,7 +10,7 @@ class DerivedComponent:
     Attributes
     ----------
     cdcTerms: CDCTermArray
-        A CDCTermArray object.
+        A :py:class:`~abaqus.Connector.CDCTermArray.CDCTermArray` object.
 
     Notes
     -----

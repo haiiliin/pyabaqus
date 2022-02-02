@@ -36,52 +36,52 @@ class OdbData:
         A tuple of (String, Float) tuples specifying the stepName and the stepPeriod.
         Alternatively, this member may take the value ODB_VALUES.
     historyVariables: dict[str, HistoryVariable]
-        A repository of HistoryVariable objects specifying the history request label. The
+        A repository of :py:class:`~abaqus.PlotOptions.HistoryVariable.HistoryVariable` objects specifying the history request label. The
         repository is read-only.
     steps: dict[str, OdbDataStep]
-        A repository of OdbDataStep objects specifying the list of steps. The repository is
+        A repository of :py:class:`~abaqus.PlotOptions.OdbDataStep.OdbDataStep` objects specifying the list of steps. The repository is
         read-only.
     instances: dict[str, OdbDataInstance]
-        A repository of OdbDataInstance objects specifying the list of instances. The repository
+        A repository of :py:class:`~abaqus.PlotOptions.OdbDataInstance.OdbDataInstance` objects specifying the list of instances. The repository
         is read-only.
     materials: dict[str, OdbDataMaterial]
-        A repository of OdbDataMaterial objects specifying the list of materials. The repository
+        A repository of :py:class:`~abaqus.PlotOptions.OdbDataMaterial.OdbDataMaterial` objects specifying the list of materials. The repository
         is read-only.
     sections: dict[str, OdbDataSection]
-        A repository of OdbDataSection objects specifying the list of sections. The repository
+        A repository of :py:class:`~abaqus.PlotOptions.OdbDataSection.OdbDataSection` objects specifying the list of sections. The repository
         is read-only.
     elementSets: dict[str, OdbDataElementSet]
-        A repository of OdbDataElementSet objects specifying the list of element sets. The
+        A repository of :py:class:`~abaqus.PlotOptions.OdbDataElementSet.OdbDataElementSet` objects specifying the list of element sets. The
         repository is read-only.
     nodeSets: dict[str, OdbDataNodeSet]
-        A repository of OdbDataNodeSet objects specifying the list of node sets. The repository
+        A repository of :py:class:`~abaqus.PlotOptions.OdbDataNodeSet.OdbDataNodeSet` objects specifying the list of node sets. The repository
         is read-only.
     surfaceSets: dict[str, OdbDataSurfaceSet]
-        A repository of OdbDataSurfaceSet objects specifying the list of surface sets. The
+        A repository of :py:class:`~abaqus.PlotOptions.OdbDataSurfaceSet.OdbDataSurfaceSet` objects specifying the list of surface sets. The
         repository is read-only.
     datumCsyses: dict[str, OdbDataDatumCsys]
-        A repository of OdbDataDatumCsys objects specifying the list of coordinate systems
+        A repository of :py:class:`~abaqus.PlotOptions.OdbDataDatumCsys.OdbDataDatumCsys` objects specifying the list of coordinate systems
         defined in the model. The repository is read-only.
     kinematicCouplings: dict[str, CouplingConstraint]
-        A repository of CouplingConstraint objects specifying the list of kinematic couplings.
+        A repository of :py:class:`~abaqus.PlotOptions.CouplingConstraint.CouplingConstraint` objects specifying the list of kinematic couplings.
         The repository is read-only.
     distributingCouplings: dict[str, CouplingConstraint]
-        A repository of CouplingConstraint objects specifying the list of distributing
+        A repository of :py:class:`~abaqus.PlotOptions.CouplingConstraint.CouplingConstraint` objects specifying the list of distributing
         couplings. The repository is read-only.
     shellSolidCouplings: dict[str, CouplingConstraint]
-        A repository of CouplingConstraint objects specifying the list of shellsolid couplings.
+        A repository of :py:class:`~abaqus.PlotOptions.CouplingConstraint.CouplingConstraint` objects specifying the list of shellsolid couplings.
         The repository is read-only.
     rigidbodies: dict[str, RigidBodyConstraint]
-        A repository of RigidBodyConstraint objects specifying the list of rigid body
+        A repository of :py:class:`~abaqus.PlotOptions.RigidBodyConstraint.RigidBodyConstraint` objects specifying the list of rigid body
         constraints. The repository is read-only.
     multiPointConstraints: dict[str, MpcConstraint]
-        A repository of MpcConstraint objects specifying the list of multipoint constraints. The
+        A repository of :py:class:`~abaqus.PlotOptions.MpcConstraint.MpcConstraint` objects specifying the list of multipoint constraints. The
         repository is read-only.
     ties: dict[str, TieConstraint]
-        A repository of TieConstraint objects specifying the list of Tie constraints. The
+        A repository of :py:class:`~abaqus.PlotOptions.TieConstraint.TieConstraint` objects specifying the list of Tie constraints. The
         repository is read-only.
     diagnosticData: OdbDiagnosticData
-        An OdbDiagnosticData object.
+        An :py:class:`~abaqus.PlotOptions.OdbDiagnosticData.OdbDiagnosticData` object.
 
     Notes
     -----

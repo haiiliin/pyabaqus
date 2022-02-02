@@ -38,15 +38,15 @@ class ConcentratedFilmConditionState(InteractionState):
         A SymbolicConstant specifying the propagation state of the **nodalArea** member. Possible
         values are UNSET, SET, UNCHANGED, and FREED.
     interactionProperty: str
-        A String specifying the FilmConditionProp object associated with this interaction.
+        A String specifying the :py:class:`~abaqus.Interaction.FilmConditionProp.FilmConditionProp` object associated with this interaction.
     sinkAmplitude: str
-        A String specifying the name of the Amplitude object that gives the variation of the
+        A String specifying the name of the :py:class:`~abaqus.Amplitude.Amplitude.Amplitude` object that gives the variation of the
         sink temperature.
     filmCoeffAmplitude: str
-        A String specifying the name of the Amplitude object that gives the variation of the
+        A String specifying the name of the :py:class:`~abaqus.Amplitude.Amplitude.Amplitude` object that gives the variation of the
         film coefficient.
     status: SymbolicConstant
-        A SymbolicConstant specifying the propagation state of the InteractionState object.
+        A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.Interaction.InteractionState.InteractionState` object.
         Possible values are:
         - NOT_YET_ACTIVE
         - CREATED

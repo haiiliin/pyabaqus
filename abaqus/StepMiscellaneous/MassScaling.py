@@ -7,7 +7,7 @@ class MassScaling:
     Attributes
     ----------
     objective: SymbolicConstant
-        A SymbolicConstant specifying the objective of the mass scaling definition. Possible
+        A SymbolicConstant specifying :py:class:`~.the` objective of :py:class:`~.the` mass scaling definition. Possible
         values are SEMI_AUTOMATIC, AUTOMATIC, and REINITIALIZE. The default value is
         SEMI_AUTOMATIC.
     occurs: SymbolicConstant
@@ -37,7 +37,7 @@ class MassScaling:
         A SymbolicConstant specifying the rolling direction. Possible values are GLOBAL_X,
         GLOBAL_Y, GLOBAL_Z, and GLOBAL_NONE. The default value is GLOBAL_X.
     region: SymbolicConstant
-        The SymbolicConstant MODEL or a Region object specifying where the mass scaling is
+        The SymbolicConstant MODEL or a :py:class:`~abaqus.Region.Region.Region` object specifying where the mass scaling is
         applied. The default value is MODEL.
 
     Notes

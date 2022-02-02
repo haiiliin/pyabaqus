@@ -38,7 +38,7 @@ class PressurePenetrationState(InteractionState):
         A tuple of Floats specifying the critical contact pressure below which fluid penetration
         starts to occur.
     status: SymbolicConstant
-        A SymbolicConstant specifying the propagation state of the InteractionState object.
+        A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.Interaction.InteractionState.InteractionState` object.
         Possible values are:
         - NOT_YET_ACTIVE
         - CREATED

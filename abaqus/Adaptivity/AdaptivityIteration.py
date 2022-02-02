@@ -9,8 +9,8 @@ class AdaptivityIteration:
     Attributes
     ----------
     ruleResults: dict[str, RuleResult]
-        A repository of RuleResult objects specifying the calculated results from sizing
-        functions corresponding to the RemeshingRule objects for this iteration of an adaptivity
+        A repository of :py:class:`~abaqus.Adaptivity.RuleResult.RuleResult` objects specifying the calculated results from sizing
+        functions corresponding to the :py:class:`~abaqus.Adaptivity.RemeshingRule.RemeshingRule` objects for this iteration of an adaptivity
         process.
 
     Notes

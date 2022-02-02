@@ -10,7 +10,7 @@ class OptimizationObjective:
     Attributes
     ----------
     suppress: Boolean
-        A Boolean specifying whether the objective is suppressed or not. The default value is
+        A Boolean specifying whe:py:class:`~.the`r :py:class:`~.the` objective is suppressed or not. The default value is
         OFF.
     weight: float
         A Float specifying the weight applied to the design response value. The default value is

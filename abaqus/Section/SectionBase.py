@@ -13,13 +13,13 @@ class SectionBase:
     Attributes
     ----------
     behaviorOptions: ConnectorBehaviorOptionArray
-        A ConnectorBehaviorOptionArray object.
+        A :py:class:`~abaqus.Connector.ConnectorBehaviorOptionArray.ConnectorBehaviorOptionArray` object.
     name: str
         A String specifying the repository key.
     beamTransverseShear: TransverseShearBeam
-        A TransverseShearBeam object.
+        A :py:class:`~abaqus.Section.TransverseShearBeam.TransverseShearBeam` object.
     transverseShear: TransverseShearShell
-        A TransverseShearShell object.
+        A :py:class:`~abaqus.Section.TransverseShearShell.TransverseShearShell` object.
 
     Notes
     -----

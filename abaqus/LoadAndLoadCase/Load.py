@@ -11,7 +11,7 @@ class Load:
     name: str
         A String specifying the load repository key.
     region: Region
-        A Region object specifying the region to which the load is applied.
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the load is applied.
 
     Notes
     -----

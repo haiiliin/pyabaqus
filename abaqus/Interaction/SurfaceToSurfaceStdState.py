@@ -42,13 +42,13 @@ class SurfaceToSurfaceStdState(InteractionState):
         A SymbolicConstant specifying the propagation state of the **contactControls** member.
         Possible values are UNSET, SET, UNCHANGED, and FREED.
     interactionProperty: str
-        A String specifying the name of the ContactProperty object associated with this
+        A String specifying the name of the :py:class:`~abaqus.Interaction.ContactProperty.ContactProperty` object associated with this
         interaction.
     amplitude: str
-        A String specifying the name of the Amplitude object that defines the magnitude of the
+        A String specifying the name of the :py:class:`~abaqus.Amplitude.Amplitude.Amplitude` object that defines the magnitude of the
         prescribed interference during the step.
     contactControls: str
-        A String specifying the name of the ContactControl object associated with this
+        A String specifying the name of the :py:class:`~abaqus.Interaction.ContactControl.ContactControl` object associated with this
         interaction.
     direction: float
         A tuple of three Floats specifying the following:
@@ -56,7 +56,7 @@ class SurfaceToSurfaceStdState(InteractionState):
         - Y-direction cosine of the interference direction vector.
         - Z-direction cosine of the interference direction vector.
     status: SymbolicConstant
-        A SymbolicConstant specifying the propagation state of the InteractionState object.
+        A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.Interaction.InteractionState.InteractionState` object.
         Possible values are:
         - NOT_YET_ACTIVE
         - CREATED

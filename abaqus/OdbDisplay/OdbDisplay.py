@@ -65,44 +65,44 @@ class OdbDisplay:
         - **element10**: A sequence of machine readable strings encoding the currently active
         frame numbers.
     fieldVariables: OdbFieldVarList
-        An OdbFieldVarList object.
+        An :py:class:`~abaqus.FieldReport.OdbFieldVarList.OdbFieldVarList` object.
     modelVariableList: OdbModelFieldVarList
-        An OdbModelFieldVarList object.
+        An :py:class:`~abaqus.FieldReport.OdbModelFieldVarList.OdbModelFieldVarList` object.
     nodeSet: dict[str, OdbSet]
-        A repository of OdbSet objects specifying the set label. The repository is read-only.
+        A repository of :py:class:`~abaqus.Odb.OdbSet.OdbSet` objects specifying the set label. The repository is read-only.
     elementSet: dict[str, OdbSet]
-        A repository of OdbSet objects specifying the set label. The repository is read-only.
+        A repository of :py:class:`~abaqus.Odb.OdbSet.OdbSet` objects specifying the set label. The repository is read-only.
     surfaceSet: dict[str, OdbSet]
-        A repository of OdbSet objects specifying the set label. The repository is read-only.
+        A repository of :py:class:`~abaqus.Odb.OdbSet.OdbSet` objects specifying the set label. The repository is read-only.
     display: DisplayOptions
-        A DisplayOptions object.
+        A :py:class:`~abaqus.PlotOptions.DisplayOptions.DisplayOptions` object.
     contourOptions: ContourOptions
-        A ContourOptions object.
+        A :py:class:`~abaqus.OdbDisplay.ContourOptions.ContourOptions` object.
     commonOptions: CommonOptions
-        A CommonOptions object.
+        A :py:class:`~abaqus.OdbDisplay.CommonOptions.CommonOptions` object.
     symbolOptions: SymbolOptions
-        A SymbolOptions object.
+        A :py:class:`~abaqus.OdbDisplay.SymbolOptions.SymbolOptions` object.
     superimposeOptions: SuperimposeOptions
-        A SuperimposeOptions object.
+        A :py:class:`~abaqus.OdbDisplay.SuperimposeOptions.SuperimposeOptions` object.
     displayBodyOptions: DisplayBodyOptions
-        A DisplayBodyOptions object.
+        A :py:class:`~abaqus.OdbDisplay.DisplayBodyOptions.DisplayBodyOptions` object.
     freeBodyOptions: FreeBodyOptions
-        A FreeBodyOptions object.
+        A :py:class:`~abaqus.PlotOptions.FreeBodyOptions.FreeBodyOptions` object.
     streamOptions: StreamOptions
-        A StreamOptions object.
+        A :py:class:`~abaqus.PlotOptions.StreamOptions.StreamOptions` object.
     viewCutOptions: ViewCutOptions
-        A ViewCutOptions object.
+        A :py:class:`~abaqus.PlotOptions.ViewCutOptions.ViewCutOptions` object.
     viewCuts: dict[str, ViewCut]
-        A repository of ViewCut objects.
+        A repository of :py:class:`~abaqus.OdbDisplay.ViewCut.ViewCut` objects.
     displayGroup: DisplayGroup
-        A DisplayGroup object specifying the current display group and referring to an object in
+        A :py:class:`~abaqus.DisplayGroup.DisplayGroup.DisplayGroup` object specifying the current display group :py:class:`~.an`d referring to :py:class:`~.an` object in
         the **displayGroups** member of Session.
     displayGroupInstances: DisplayGroupInstanceRepository
-        A DisplayGroupInstanceRepository object.
+        A :py:class:`~abaqus.DisplayGroup.DisplayGroupInstanceRepository.DisplayGroupInstanceRepository` object.
     basicOptions: BasicOptions
-        A BasicOptions object.
+        A :py:class:`~abaqus.PlotOptions.BasicOptions.BasicOptions` object.
     materialOrientationOptions: OrientationOptions
-        An OrientationOptions object.
+        An :py:class:`~abaqus.OdbDisplay.OrientationOptions.OrientationOptions` object.
     fieldFrame: tuple[str]
         A tuple of Strings specifying the step label and the frame label when the current step
         is user defined. Alternatively, **fieldFrame** maybe specified as a pair of Ints with the

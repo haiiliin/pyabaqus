@@ -21,11 +21,11 @@ class PipePressure(Load):
     diameter: float
         A Float specifying the effective inner or outer diameter.
     field: str
-        A String specifying the name of the AnalyticalField object associated with this load.
+        A String specifying the name of the :py:class:`~abaqus.Field.AnalyticalField.AnalyticalField` object associated with this load.
         The **field** argument applies only when **distributionType=FIELD**. The default value is an
         empty string.
     region: Region
-        A Region object specifying the region to which the load is applied.
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the load is applied.
 
     Notes
     -----

@@ -42,7 +42,7 @@ class CyclicSymmetryState(InteractionState):
         A SymbolicConstant specifying the propagation state of the **excitiationNodalDiameter**
         member. Possible values are UNSET, SET, UNCHANGED, and FREED.
     status: SymbolicConstant
-        A SymbolicConstant specifying the propagation state of the InteractionState object.
+        A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.Interaction.InteractionState.InteractionState` object.
         Possible values are:
         - NOT_YET_ACTIVE
         - CREATED

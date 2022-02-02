@@ -17,7 +17,7 @@ class Drawing:
         An Int specifying the number of colors in the color array after a call to the setColors
         method. The default value is 0.
     show: Boolean
-        A Boolean specifying whether the drawing object will be rendered when referenced. The
+        A Boolean specifying whether the :py:class:`~.drawing` object will be rendered when referenced. The
         default value is OFF.
     cullBackfaces: Boolean
         A Boolean specifying whether polygonal graphics primitives facing away from the viewer
@@ -63,8 +63,8 @@ class Drawing:
         A tuple of three Floats specifying the **Red**, **Green**, and **Blue** component values for
         the point color. Possible values for each component are between 0.0 and 1.0.
     depthTest: Boolean
-        A Boolean specifying whether an object's depth will be considered during rendering. The
-        default value is ON.When OFF, the object will not be hidden by other objects in front of
+        A Boole:py:class:`~.an` specifying whe:py:class:`~.the`r :py:class:`~.an` object's depth will be considered during rendering. The
+        default value is ON.When OFF, :py:class:`~.the` object will not be hidden by o:py:class:`~.the`r objects in front of
         it.
 
     Notes

@@ -15,7 +15,7 @@ class KeywordBlock:
     edited: Boolean
         A Boolean specifying whether the Keywords Editor has been used to change the model.
     lastSynchCount: float
-        A Float specifying the value of the counter associated with the Mdb object at the most
+        A Float specifying the value of the counter associated with the :py:class:`~abaqus.abaqus.Mdb` object at the most
         recent synchronization.
     sieBlocks: tuple
         A tuple of Strings specifying a sequence of Strings that is identical to the information

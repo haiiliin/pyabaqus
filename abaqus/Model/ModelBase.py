@@ -68,7 +68,7 @@ class ModelBase:
     lastChangedCount: float
         A Float specifying the time stamp that indicates when the model was last changed.
     description: str
-        A String specifying the purpose and contents of the Model object. The default value is
+        A String specifying the purpose and contents of the :py:class:`~abaqus.Assembly.ModelInstance.Model` object. The default value is
         an empty string.
     restartJob: str
         A String specifying the name of the job that generated the restart data.
@@ -86,33 +86,33 @@ class ModelBase:
         A boolean specifying the status of interactions created in a model, in the model which
         instances this model.
     keywordBlock: KeywordBlock
-        A KeywordBlock object.
+        A :py:class:`~abaqus.Model.KeywordBlock.KeywordBlock` object.
     rootAssembly: Assembly
-        An Assembly object.
+        An :py:class:`~abaqus.Assembly.Assembly.Assembly` object.
     amplitudes: dict[str, Amplitude]
-        A repository of Amplitude objects.
+        A repository of :py:class:`~abaqus.Amplitude.Amplitude.Amplitude` objects.
     profiles: dict[str, Profile]
-        A repository of Profile objects.
+        A repository of :py:class:`~abaqus.BeamSectionProfile.Profile.Profile` objects.
     boundaryConditions: dict[str, BoundaryCondition]
-        A repository of BoundaryCondition objects.
+        A repository of :py:class:`~abaqus.BoundaryCondition.BoundaryCondition.BoundaryCondition` objects.
     constraints: dict[str, Constraint]
-        A repository of ConstrainedSketchConstraint objects.
+        A repository of :py:class:`~abaqus.Sketcher.ConstrainedSketchConstraint.ConstrainedSketchConstraint.ConstrainedSketchConstraint` objects.
     analyticalFields: dict[str, AnalyticalField]
-        A repository of AnalyticalField objects.
+        A repository of :py:class:`~abaqus.Field.AnalyticalField.AnalyticalField` objects.
     discreteFields: dict[str, DiscreteField]
-        A repository of DiscreteField objects.
+        A repository of :py:class:`~abaqus.Field.DiscreteField.DiscreteField` objects.
     predefinedFields: dict[str, PredefinedField]
-        A repository of PredefinedField objects.
+        A repository of :py:class:`~abaqus.PredefinedField.PredefinedField.PredefinedField` objects.
     interactions: dict[str, Interaction]
-        A repository of Interaction objects.
+        A repository of :py:class:`~abaqus.Interaction.Interaction.Interaction` objects.
     interactionProperties: dict[str, ContactProperty]
-        A repository of InteractionProperty objects.
+        A repository of :py:class:`~abaqus.Interaction.InteractionProperty.InteractionProperty` objects.
     contactControls: dict[str, ContactControl]
-        A repository of ContactControl objects.
+        A repository of :py:class:`~abaqus.Interaction.ContactControl.ContactControl` objects.
     contactInitializations: dict[str, ContactInitialization]
-        A repository of ContactInitialization objects.
+        A repository of :py:class:`~abaqus.Interaction.ContactInitialization.ContactInitialization` objects.
     contactStabilizations: dict[str, ContactStabilization]
-        A repository of ContactStabilization objects.
+        A repository of :py:class:`~abaqus.Interaction.ContactStabilization.ContactStabilization` objects.
     linkedInstances: tuple
         A tuple of tuples of Strings specifying the linked child PartInstance name in the
         current model to the corresponding parent PartInstance name in a different model.
@@ -120,45 +120,45 @@ class ModelBase:
         A tuple of tuples of Strings specifying the linked child Part name in the current model
         to the corresponding parent Part name in a different model.
     loads: dict[str, Load]
-        A repository of Load objects.
+        A repository of :py:class:`~abaqus.LoadAndLoadCase.Load.Load` objects.
     materials: dict[str, Material]
-        A repository of Material objects.
+        A repository of :py:class:`~abaqus.Material.Material.Material` objects.
     calibrations: dict[str, Calibration]
-        A repository of Calibration objects.
+        A repository of :py:class:`~abaqus.BoundaryCondition.Calibration.Calibration` objects.
     sections: dict[str, Section]
-        A repository of Section objects.
+        A repository of :py:class:`~abaqus.Section.Section.Section` objects.
     remeshingRules: dict[str, RemeshingRule]
-        A repository of RemeshingRule objects.
+        A repository of :py:class:`~abaqus.Adaptivity.RemeshingRule.RemeshingRule` objects.
     sketches: dict[str, ConstrainedSketch]
-        A repository of ConstrainedSketch objects.
+        A repository of :py:class:`~abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch` objects.
     parts: dict[str, Part]
-        A repository of Part objects.
+        A repository of :py:class:`~abaqus.Part.Part.Part` objects.
     steps: dict[str, Step]
-        A repository of Step objects.
+        A repository of :py:class:`~abaqus.Step.Step.Step` objects.
     featureOptions: FeatureOptions
-        A FeatureOptions object.
+        A :py:class:`~abaqus.Feature.FeatureOptions.FeatureOptions` object.
     adaptiveMeshConstraints: dict[str, AdaptiveMeshConstraint]
-        A repository of AdaptiveMeshConstraint objects.
+        A repository of :py:class:`~abaqus.Adaptivity.AdaptiveMeshConstraint.AdaptiveMeshConstraint` objects.
     adaptiveMeshControls: dict[str, AdaptiveMeshControl]
-        A repository of AdaptiveMeshControl objects.
+        A repository of :py:class:`~abaqus.Adaptivity.AdaptiveMeshControl.AdaptiveMeshControl` objects.
     timePoints: dict[str, TimePoint]
-        A repository of TimePoint objects.
+        A repository of :py:class:`~abaqus.StepOutput.TimePoint.TimePoint` objects.
     filters: dict[str, Filter]
-        A repository of Filter objects.
+        A repository of :py:class:`~abaqus.Filter.Filter.Filter` objects.
     integratedOutputSections: dict[str, IntegratedOutputSection]
-        A repository of IntegratedOutputSection objects.
+        A repository of :py:class:`~abaqus.StepOutput.IntegratedOutputSection.IntegratedOutputSection` objects.
     fieldOutputRequests: dict[str, FieldOutputRequest]
-        A repository of FieldOutputRequest objects.
+        A repository of :py:class:`~abaqus.StepOutput.FieldOutputRequest.FieldOutputRequest` objects.
     historyOutputRequests: dict[str, HistoryOutputRequest]
-        A repository of HistoryOutputRequest objects.
+        A repository of :py:class:`~abaqus.StepOutput.HistoryOutputRequest.HistoryOutputRequest` objects.
     optimizationTasks: dict[str, OptimizationTask]
-        A repository of OptimizationTask objects.
+        A repository of :py:class:`~abaqus.Optimization.OptimizationTask.OptimizationTask` objects.
     tableCollections: dict[str, TableCollection]
-        A repository of TableCollection objects.
+        A repository of :py:class:`~abaqus.TableCollection.TableCollection.TableCollection` objects.
     eventSeriesTypes: dict[str, EventSeriesType]
-        A repository of EventSeriesType objects.
+        A repository of :py:class:`~abaqus.TableCollection.EventSeriesType.EventSeriesType` objects.
     eventSeriesDatas: dict[str, EventSeriesData]
-        A repository of EventSeriesData objects.
+        A repository of :py:class:`~abaqus.TableCollection.EventSeriesData.EventSeriesData` objects.
 
     Notes
     -----

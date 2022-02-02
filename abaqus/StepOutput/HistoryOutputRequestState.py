@@ -51,7 +51,7 @@ class HistoryOutputRequestState:
         The SymbolicConstant ALL or a tuple of Ints specifying a list of eigenmodes for which
         output is desired. The default value is ALL.
     timePoint: str
-        A String specifying the name of a time point object used to determine at which points in
+        A String specifying the name of a time :py:class:`~.point` object used to determine at which :py:class:`~.point`s in
         the time period data is written to the output database. The default value is an empty
         string.
     frequencyType: str

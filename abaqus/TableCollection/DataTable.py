@@ -13,7 +13,7 @@ class DataTable:
     label: str
         A String specifying the label of the data table.
     columns: str
-        A DataColumnArray specifying all the dataColumns in the DataTable object.
+        A DataColumnArray specifying all the dataColumns in the :py:class:`~abaqus.Field.DataTable.DataTable` object.
 
     Notes
     -----

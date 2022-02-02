@@ -15,27 +15,27 @@ class MdbBase:
     Attributes
     ----------
     version: int
-        An Int specifying the release number of the Mdb object in memory.
+        An Int specifying the release number of the :py:class:`~abaqus.abaqus.Mdb` object in memory.
     lastChangedCount: float
-        A Float specifying the value of a counter associated with the Mdb object. The counter
-        indicates when the Mdb object was last changed.
+        A Float specifying the value of a counter associated with the :py:class:`~abaqus.abaqus.:py:class:`~abaqus.abaqus.Mdb`` object. The counter
+        indicates when the :py:class:`~abaqus.abaqus.:py:class:`~abaqus.abaqus.Mdb`` object was last changed.
     jobs: dict[str, Job]
-        A repository of Job objects.
+        A repository of :py:class:`~abaqus.Job.Job.Job` objects.
     adaptivityProcesses: dict[str, AdaptivityProcess]
-        A repository of AdaptivityProcess objects.
+        A repository of :py:class:`~abaqus.Adaptivity.AdaptivityProcess.AdaptivityProcess` objects.
     coexecutions: dict[str, Coexecution]
-        A repository of Coexecution objects.
+        A repository of :py:class:`~abaqus.Job.Coexecution.Coexecution` objects.
     optimizationProcesses: dict[str, OptimizationProcess]
-        A repository of OptimizationProcess objects.
+        A repository of :py:class:`~abaqus.Job.OptimizationProcess.OptimizationProcess` objects.
     meshEditOptions: MeshEditOptions
-        A MeshEditOptions object specifying the undo/redo behavior when editing meshes on parts
+        A :py:class:`~abaqus.EditMesh.MeshEditOptions.MeshEditOptions` object specifying the undo/redo behavior when editing meshes on parts
         or part instances.
     models: dict[str, Model]
-        A repository of Model objects.
+        A repository of :py:class:`~abaqus.Assembly.ModelInstance.Model` objects.
     customData: RepositorySupport
-        A RepositorySupport object.
+        A :py:class:`~abaqus.CustomKernel.RepositorySupport.RepositorySupport` object.
     annotations: dict[str, Annotation]
-        A repository of Annotation objects.
+        A repository of :py:class:`~abaqus.Annotation.Annotation.Annotation` objects.
 
     Notes
     -----

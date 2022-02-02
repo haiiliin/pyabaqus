@@ -8,7 +8,7 @@ class OdbDataStep:
     Attributes
     ----------
     frames: OdbDataFrameArray
-        An OdbDataFrameArray object specifying the list of frames. The list is read-only.
+        An :py:class:`~abaqus.PlotOptions.OdbDataFrameArray.OdbDataFrameArray` object specifying the list of frames. The list is read-only.
 
     Notes
     -----

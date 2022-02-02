@@ -74,7 +74,7 @@ class ProbeOptions:
         A Boolean specifying whether field output is available for probing when
         **probeObject=XYPlot**. This member is read-only.
     probeObject: str
-        A String specifying the type of the displayed object being probed. Possible values are
+        A String specifying the type of the :py:class:`~.displayed` object being probed. Possible values are
         "ODB" and "XYPlot". This member is read-only.
 
     Notes

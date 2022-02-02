@@ -23,11 +23,11 @@ class OdbStepBase:
     acousticMass: float
         A Float specifying the current value of the mass of the acoustic media of the model.
     frames: OdbFrameArray
-        An OdbFrameArray object.
+        An :py:class:`~abaqus.Odb.OdbFrameArray.OdbFrameArray` object.
     historyRegions: dict[str, HistoryRegion]
-        A repository of HistoryRegion objects.
+        A repository of :py:class:`~abaqus.Odb.HistoryRegion.HistoryRegion` objects.
     loadCases: dict[str, OdbLoadCase]
-        A repository of OdbLoadCase objects.
+        A repository of :py:class:`~abaqus.Odb.OdbLoadCase.OdbLoadCase` objects.
     massCenter: float
         A tuple of Floats specifying the coordinates of the center of mass.
     inertiaAboutCenter: float

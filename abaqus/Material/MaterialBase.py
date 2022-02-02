@@ -72,147 +72,147 @@ class MaterialBase:
     Attributes
     ----------
     acousticMedium: AcousticMedium
-        An AcousticMedium object.
+        An :py:class:`~abaqus.Material.Others.Acoustic.AcousticMedium.AcousticMedium` object.
     brittleCracking: BrittleCracking
-        A BrittleCracking object.
+        A :py:class:`~abaqus.Material.Plastic.Concrete.BrittleCracking.BrittleCracking` object.
     capPlasticity: CapPlasticity
-        A CapPlasticity object.
+        A :py:class:`~abaqus.Material.Plastic.DruckerPrager.ModifiedCap.CapPlasticity.CapPlasticity` object.
     castIronPlasticity: CastIronPlasticity
-        A CastIronPlasticity object.
+        A :py:class:`~abaqus.Material.Plastic.Metal.CastIron.CastIronPlasticity.CastIronPlasticity` object.
     clayPlasticity: ClayPlasticity
-        A ClayPlasticity object.
+        A :py:class:`~abaqus.Material.Plastic.CriticalStateClay.ClayPlasticity.ClayPlasticity` object.
     concrete: Concrete
-        A Concrete object.
+        A :py:class:`~abaqus.Material.Plastic.Concrete.Concrete.Concrete` object.
     concreteDamagedPlasticity: ConcreteDamagedPlasticity
-        A ConcreteDamagedPlasticity object.
+        A :py:class:`~abaqus.Material.Plastic.Concrete.ConcreteDamagedPlasticity.ConcreteDamagedPlasticity` object.
     conductivity: Conductivity
-        A Conductivity object.
+        A :py:class:`~abaqus.Material.Others.HeatTransfer.Conductivity.Conductivity` object.
     creep: Creep
-        A Creep object.
+        A :py:class:`~abaqus.Material.Plastic.Creep.Creep.Creep` object.
     crushableFoam: CrushableFoam
-        A CrushableFoam object.
+        A :py:class:`~abaqus.Material.Plastic.CrushableFoam.CrushableFoam.CrushableFoam` object.
     ductileDamageInitiation: DamageInitiation
-        A DamageInitiation object.
+        A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     fldDamageInitiation: DamageInitiation
-        A DamageInitiation object.
+        A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     flsdDamageInitiation: DamageInitiation
-        A DamageInitiation object.
+        A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     johnsonCookDamageInitiation: DamageInitiation
-        A DamageInitiation object.
+        A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     maxeDamageInitiation: DamageInitiation
-        A DamageInitiation object.
+        A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     maxsDamageInitiation: DamageInitiation
-        A DamageInitiation object.
+        A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     maxpeDamageInitiation: DamageInitiation
-        A DamageInitiation object.
+        A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     maxpsDamageInitiation: DamageInitiation
-        A DamageInitiation object.
+        A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     mkDamageInitiation: DamageInitiation
-        A DamageInitiation object.
+        A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     msfldDamageInitiation: DamageInitiation
-        A DamageInitiation object.
+        A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     quadeDamageInitiation: DamageInitiation
-        A DamageInitiation object.
+        A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     quadsDamageInitiation: DamageInitiation
-        A DamageInitiation object.
+        A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     shearDamageInitiation: DamageInitiation
-        A DamageInitiation object.
+        A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     hashinDamageInitiation: DamageInitiation
-        A DamageInitiation object.
+        A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     damping: Damping
-        A Damping object.
+        A :py:class:`~abaqus.Material.Others.Mechanical.Damping.Damping` object.
     deformationPlasticity: DeformationPlasticity
-        A DeformationPlasticity object.
+        A :py:class:`~abaqus.Material.Plastic.Metal.Deformation.DeformationPlasticity.DeformationPlasticity` object.
     density: Density
-        A Density object.
+        A :py:class:`~abaqus.Material.Density.Density.Density` object.
     depvar: Depvar
-        A Depvar object.
+        A :py:class:`~abaqus.Material.Others.User.Depvar.Depvar` object.
     dielectric: Dielectric
-        A Dielectric object.
+        A :py:class:`~abaqus.Material.Others.Electromagnetic.Dielectric.Dielectric` object.
     diffusivity: Diffusivity
-        A Diffusivity object.
+        A :py:class:`~abaqus.Material.Others.MassDiffusion.Diffusivity.Diffusivity` object.
     druckerPrager: DruckerPrager
-        A DruckerPrager object.
+        A :py:class:`~abaqus.Material.Plastic.DruckerPrager.Extended.DruckerPrager.DruckerPrager` object.
     elastic: Elastic
-        An Elastic object.
+        An :py:class:`~abaqus.Material.Elastic.Linear.Elastic.Elastic` object.
     electricalConductivity: ElectricalConductivity
-        An ElectricalConductivity object.
+        An :py:class:`~abaqus.Material.Others.Electromagnetic.ElectricalConductivity.ElectricalConductivity` object.
     eos: Eos
-        An Eos object.
+        An :py:class:`~abaqus.Material.Eos.Eos.Eos` object.
     expansion: Expansion
-        An Expansion object.
+        An :py:class:`~abaqus.Material.Others.Mechanical.Expansion.Expansion` object.
     fluidLeakoff: FluidLeakoff
-        A FluidLeakoff object.
+        A :py:class:`~abaqus.Material.Others.PoreFluidFlow.FluidLeakoff.FluidLeakoff` object.
     gapFlow: GapFlow
-        A GapFlow object.
+        A :py:class:`~abaqus.Material.Gap.GapFlow.GapFlow` object.
     gasketThicknessBehavior: GasketThicknessBehavior
-        A GasketThicknessBehavior object.
+        A :py:class:`~abaqus.Material.Gasket.GasketThicknessBehavior.GasketThicknessBehavior` object.
     gasketTransverseShearElastic: GasketTransverseShearElastic
-        A GasketTransverseShearElastic object.
+        A :py:class:`~abaqus.Material.Gasket.GasketTransverseShearElastic.GasketTransverseShearElastic` object.
     gasketMembraneElastic: GasketMembraneElastic
-        A GasketMembraneElastic object.
+        A :py:class:`~abaqus.Material.Gasket.GasketMembraneElastic.GasketMembraneElastic` object.
     gel: Gel
-        A Gel object.
+        A :py:class:`~abaqus.Material.Others.PoreFluidFlow.Gel.Gel` object.
     heatGeneration: HeatGeneration
-        A HeatGeneration object.
+        A :py:class:`~abaqus.Material.Others.HeatTransfer.HeatGeneration.HeatGeneration` object.
     hyperelastic: Hyperelastic
-        A Hyperelastic object.
+        A :py:class:`~abaqus.Material.Elastic.HyperElastic.Hyperelastic.Hyperelastic` object.
     hyperfoam: Hyperfoam
-        A Hyperfoam object.
+        A :py:class:`~abaqus.Material.Elastic.HyperElastic.HyperFoam.Hyperfoam.Hyperfoam` object.
     hypoelastic: Hypoelastic
-        A Hypoelastic object.
+        A :py:class:`~abaqus.Material.Elastic.HypoElastic.Hypoelastic.Hypoelastic` object.
     inelasticHeatFraction: InelasticHeatFraction
-        An InelasticHeatFraction object.
+        An :py:class:`~abaqus.Material.Others.HeatTransfer.InelasticHeatFraction.InelasticHeatFraction` object.
     jouleHeatFraction: JouleHeatFraction
-        A JouleHeatFraction object.
+        A :py:class:`~abaqus.Material.Others.HeatTransfer.JouleHeatFraction.JouleHeatFraction` object.
     latentHeat: LatentHeat
-        A LatentHeat object.
+        A :py:class:`~abaqus.Material.Others.HeatTransfer.LatentHeat.LatentHeat` object.
     lowDensityFoam: LowDensityFoam
-        A LowDensityFoam object.
+        A :py:class:`~abaqus.Material.Elastic.LowDensityFoam.LowDensityFoam.LowDensityFoam` object.
     magneticPermeability: MagneticPermeability
-        A MagneticPermeability object.
+        A :py:class:`~abaqus.Material.Others.Electromagnetic.MagneticPermeability.MagneticPermeability` object.
     mohrCoulombPlasticity: MohrCoulombPlasticity
-        A MohrCoulombPlasticity object.
+        A :py:class:`~abaqus.Material.Plastic.MohrCoulomb.MohrCoulombPlasticity.MohrCoulombPlasticity` object.
     moistureSwelling: MoistureSwelling
-        A MoistureSwelling object.
+        A :py:class:`~abaqus.Material.Others.PoreFluidFlow.MoistureSwelling.MoistureSwelling.MoistureSwelling` object.
     mullinsEffect: MullinsEffect
-        A MullinsEffect object.
+        A :py:class:`~abaqus.Material.TestData.MullinsEffect.MullinsEffect` object.
     permeability: Permeability
-        A Permeability object.
+        A :py:class:`~abaqus.Material.Others.PoreFluidFlow.Permeability.Permeability.Permeability` object.
     piezoelectric: Piezoelectric
-        A Piezoelectric object.
+        A :py:class:`~abaqus.Material.Others.Electromagnetic.Piezoelectric.Piezoelectric` object.
     plastic: Plastic
-        A Plastic object.
+        A :py:class:`~abaqus.Material.Plastic.Plastic.Plastic` object.
     poreFluidExpansion: PoreFluidExpansion
-        A PoreFluidExpansion object.
+        A :py:class:`~abaqus.Material.Others.Mechanical.PoreFluidExpansion.PoreFluidExpansion` object.
     porousBulkModuli: PorousBulkModuli
-        A PorousBulkModuli object.
+        A :py:class:`~abaqus.Material.Others.PoreFluidFlow.PorousBulkModuli.PorousBulkModuli` object.
     porousElastic: PorousElastic
-        A PorousElastic object.
+        A :py:class:`~abaqus.Material.Elastic.Porous.PorousElastic.PorousElastic` object.
     porousMetalPlasticity: PorousMetalPlasticity
-        A PorousMetalPlasticity object.
+        A :py:class:`~abaqus.Material.Plastic.Metal.Porous.PorousMetalPlasticity.PorousMetalPlasticity` object.
     regularization: Regularization
-        A Regularization object.
+        A :py:class:`~abaqus.Material.Regularization.Regularization` object.
     solubility: Solubility
-        A Solubility object.
+        A :py:class:`~abaqus.Material.Others.MassDiffusion.Solubility.Solubility` object.
     sorption: Sorption
-        A Sorption object.
+        A :py:class:`~abaqus.Material.Others.PoreFluidFlow.Sorption.Sorption` object.
     specificHeat: SpecificHeat
-        A SpecificHeat object.
+        A :py:class:`~abaqus.Material.Others.HeatTransfer.SpecificHeat.SpecificHeat` object.
     swelling: Swelling
-        A Swelling object.
+        A :py:class:`~abaqus.Material.Plastic.Swelling.Swelling.Swelling` object.
     userDefinedField: UserDefinedField
-        A UserDefinedField object.
+        A :py:class:`~abaqus.Material.Others.User.UserDefinedField.UserDefinedField` object.
     userMaterial: UserMaterial
-        A UserMaterial object.
+        A :py:class:`~abaqus.Material.Others.User.UserMaterial.UserMaterial` object.
     userOutputVariables: UserOutputVariables
-        A UserOutputVariables object.
+        A :py:class:`~abaqus.Material.Others.User.UserOutputVariables.UserOutputVariables` object.
     viscoelastic: Viscoelastic
-        A Viscoelastic object.
+        A :py:class:`~abaqus.Material.Elastic.HyperElastic.ViscoElastic.Viscoelastic.Viscoelastic` object.
     viscosity: Viscosity
-        A Viscosity object.
+        A :py:class:`~abaqus.Material.Others.Mechanical.Viscosity.Viscosity.Viscosity` object.
     viscous: Viscous
-        A Viscous object.
+        A :py:class:`~abaqus.Material.Plastic.Metal.TwoLayerViscoPlasticity.Viscous.Viscous` object.
 
     Notes
     -----

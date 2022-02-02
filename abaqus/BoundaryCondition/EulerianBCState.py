@@ -34,7 +34,7 @@ class EulerianBCState(BoundaryConditionState):
         A SymbolicConstant specifying the propagation state of the amplitude reference. Possible
         values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.
     status: SymbolicConstant
-        A SymbolicConstant specifying the propagation state of the BoundaryConditionState object. Possible values are:
+        A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.BoundaryCondition.BoundaryConditionState.BoundaryConditionState` object. Possible values are:
         NOT_YET_ACTIVE
         CREATED
         PROPAGATED

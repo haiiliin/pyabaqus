@@ -20,27 +20,27 @@ class OdbAssemblyBase:
     Attributes
     ----------
     instances: dict[str, OdbInstance]
-        A repository of OdbInstance objects.
+        A repository of :py:class:`~abaqus.Odb.OdbInstance.OdbInstance` objects.
     nodeSets: dict[str, OdbSet]
-        A repository of OdbSet objects specifying node sets.
+        A repository of :py:class:`~abaqus.Odb.OdbSet.OdbSet` objects specifying node sets.
     elementSets: dict[str, OdbSet]
-        A repository of OdbSet objects specifying element sets.
+        A repository of :py:class:`~abaqus.Odb.OdbSet.OdbSet` objects specifying element sets.
     surfaces: dict[str, OdbSet]
-        A repository of OdbSet objects specifying surfaces.
+        A repository of :py:class:`~abaqus.Odb.OdbSet.OdbSet` objects specifying surfaces.
     nodes: OdbMeshNodeArray
-        An OdbMeshNodeArray object.
+        An :py:class:`~abaqus.Odb.OdbMeshNodeArray.OdbMeshNodeArray` object.
     elements: OdbMeshElementArray
-        An OdbMeshElementArray object.
+        An :py:class:`~abaqus.Odb.OdbMeshElementArray.OdbMeshElementArray` object.
     datumCsyses: dict[str, OdbDatumCsys]
-        A repository of OdbDatumCsys objects.
+        A repository of :py:class:`~abaqus.Odb.OdbDatumCsys.OdbDatumCsys` objects.
     sectionAssignments: SectionAssignmentArray
-        A SectionAssignmentArray object.
+        A :py:class:`~abaqus.Property.SectionAssignmentArray.SectionAssignmentArray` object.
     rigidBodies: OdbRigidBodyArray
-        An OdbRigidBodyArray object.
+        An :py:class:`~abaqus.Odb.OdbRigidBodyArray.OdbRigidBodyArray` object.
     pretensionSections: OdbPretensionSectionArray
-        An OdbPretensionSectionArray object.
+        An :py:class:`~abaqus.Odb.OdbPretensionSectionArray.OdbPretensionSectionArray` object.
     connectorOrientations: ConnectorOrientationArray
-        A ConnectorOrientationArray object.
+        A :py:class:`~abaqus.Assembly.ConnectorOrientationArray.ConnectorOrientationArray` object.
 
     Notes
     -----

@@ -15,7 +15,7 @@ class BodyCurrentDensity(Load):
         A SymbolicConstant specifying how the load is distributed spatially. Possible values are
         UNIFORM and USER_DEFINED. The default value is UNIFORM.
     region: Region
-        A Region object specifying the region to which the load is applied.
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the load is applied.
 
     Notes
     -----

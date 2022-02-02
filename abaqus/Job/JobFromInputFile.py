@@ -15,15 +15,15 @@ class JobFromInputFile(Job):
         datacheck or analysis run and use those values in subsequent submissions. The default
         value is ON.
     analysis: SymbolicConstant
-        A SymbolicConstant specifying whether the job will be analyzed by Abaqus/Standard or
-        Abaqus/Explicit. Possible values are STANDARD, EXPLICIT, and UNKNOWN.If the object has
-        the type JobFromInputFile, **analysis=UNKNOWN**.
+        A SymbolicConstant specifying whe:py:class:`~.the`r :py:class:`~.the` job will be analyzed by Abaqus/Standard or
+        Abaqus/Explicit. Possible values are STANDARD, EXPLICIT, and UNKNOWN.If :py:class:`~.the` object has
+        :py:class:`~.the` type JobFromInputFile, **analysis=UNKNOWN**.
     status: SymbolicConstant
         A SymbolicConstant specifying the status of the analysis. Possible values are SUBMITTED,
         RUNNING, ABORTED, TERMINATED, COMPLETED, CHECK_RUNNING, and CHECK_COMPLETED.If the
         **message** member is empty, **status** is set to NONE.
     messages: MessageArray
-        A MessageArray object specifying the messages received during an analysis.
+        A :py:class:`~abaqus.Job.MessageArray.MessageArray` object specifying the messages received during an analysis.
     environment: tuple
         A tuple of Strings specifying the environment variables and their values.
 

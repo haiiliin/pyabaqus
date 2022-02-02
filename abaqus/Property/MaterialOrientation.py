@@ -16,7 +16,7 @@ class MaterialOrientation:
         valid orientation is specified. Possible values are ROTATION_NONE, ROTATION_ANGLE, and
         ROTATION_FIELD. The default value is ROTATION_NONE.
     additionalRotationField: str
-        A String specifying the name of the DiscreteField object specifying the additional
+        A String specifying the name of the :py:class:`~abaqus.Field.DiscreteField.DiscreteField` object specifying the additional
         rotation. The default value is an empty string.
 
     Notes

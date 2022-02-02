@@ -13,15 +13,15 @@ class DisplayGroupInstance:
     name: str
         A String specifying the repository key.
     lockOptions: Boolean
-        A Boolean specifying whether the display options stored on the DisplayGroupInstance
+        A Boolean specifying whether the display options stored on the :py:class:`~abaqus.DisplayGroup.DisplayGroupInstance.DisplayGroupInstance`
         object should be synchronized with changes to the viewport display options. This member
-        is available only for DisplayGroupInstance objects that are members of the
-        DisplayGroupInstance repository member of the OdbDisplay object. The default value is
+        is available only for :py:class:`~abaqus.DisplayGroup.DisplayGroupInstance.DisplayGroupInstance` objects that are members of the
+        :py:class:`~abaqus.DisplayGroup.DisplayGroupInstance.DisplayGroupInstance` repository member of the :py:class:`~abaqus.OdbDisplay.OdbDisplay.OdbDisplay` object. The default value is
         OFF.
     odbDisplayOptions: OdbDisplayOptions
-        An OdbDisplayOptions object specifying this member is available only for
-        DisplayGroupInstance objects that are members of the DisplayGroupInstance repository
-        member of the OdbDisplay object.
+        An :py:class:`~abaqus.PlotOptions.:py:class:`~abaqus.OdbDisplay.OdbDisplay.OdbDisplay`Options.:py:class:`~abaqus.OdbDisplay.OdbDisplay.OdbDisplay`Options` object specifying this member is available only for
+        :py:class:`~abaqus.DisplayGroup.DisplayGroupInstance.DisplayGroupInstance` objects that are members of the :py:class:`~abaqus.DisplayGroup.DisplayGroupInstance.DisplayGroupInstance` repository
+        member of the :py:class:`~abaqus.OdbDisplay.OdbDisplay.OdbDisplay` object.
 
     Notes
     -----

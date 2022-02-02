@@ -23,11 +23,11 @@ class XYCurve:
         generated. Possible values are CURVE_LEGEND, CURVE_NAME, and CURVE_NAME_LEGEND. The
         default value is CURVE_LEGEND.
     data: XYData
-        An XYData object specifying the data for the curve.
+        An :py:class:`~abaqus.XY.XYData.XYData` object specifying the data for the curve.
     lineStyle: LineStyle
-        A LineStyle object specifying the line properties used to display the curve.
+        A :py:class:`~abaqus.XY.LineStyle.LineStyle` object specifying the line properties used to display the curve.
     symbolStyle: SymbolStyle
-        A SymbolStyle object specifying the symbol properties used to display the curve.
+        A :py:class:`~abaqus.XY.SymbolStyle.SymbolStyle` object specifying the symbol properties used to display the curve.
     legendLabel: str
         A String specifying the label to be displayed in the legend. By default, the label is
         system defined.

@@ -12,9 +12,9 @@ class CompositeShellSection(GeometryShellSection):
     Attributes
     ----------
     rebarLayers: RebarLayers
-        A RebarLayers object specifying reinforcement properties.
+        A :py:class:`~abaqus.Section.RebarLayers.RebarLayers` object specifying reinforcement properties.
     transverseShear: TransverseShearShell
-        A TransverseShearShell object specifying the transverse shear stiffness properties.
+        A :py:class:`~abaqus.Section.TransverseShearShell.TransverseShearShell` object specifying the transverse shear stiffness properties.
 
     Notes
     -----

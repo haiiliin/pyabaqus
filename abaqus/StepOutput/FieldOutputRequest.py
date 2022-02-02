@@ -11,7 +11,7 @@ class FieldOutputRequest:
     boltLoad: str
         A String specifying a bolt load from which output is requested.
     region: SymbolicConstant
-        The SymbolicConstant MODEL or a Region object specifying the region from which output is
+        The SymbolicConstant MODEL or a :py:class:`~abaqus.Region.Region.Region` object specifying the region from which output is
         requested. The SymbolicConstant MODEL represents the whole model. The default value is
         MODEL.
     interactions: tuple

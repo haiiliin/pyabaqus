@@ -30,7 +30,7 @@ class SubmodelSBState(LoadState):
         A SymbolicConstant specifying the propagation state of the **amplitude** member. Possible
         values are UNSET, SET, UNCHANGED, and FREED.
     status: SymbolicConstant
-        A SymbolicConstant specifying the propagation state of the LoadState object. Possible
+        A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.LoadAndLoadCase.LoadState.LoadState` object. Possible
         values are:
         - NOT_YET_ACTIVE
         - CREATED

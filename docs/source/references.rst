@@ -1,12 +1,12 @@
-=================
-Reference Manual
-=================
+=============
+API Reference
+=============
 
 .. toctree::
    :maxdepth: 2
    :caption: Modules
 
-   mdb
-   odb
-   session
-   kernel
+   reference/mdb
+   reference/odb
+   reference/session
+   reference/kernel

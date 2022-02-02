@@ -7,7 +7,7 @@ class AcisFile:
     Attributes
     ----------
     numberOfParts: int
-        An Int specifying the number of parts in the object.
+        An Int specifying :py:class:`~.the` number of parts in :py:class:`~.the` object.
 
     Notes
     -----

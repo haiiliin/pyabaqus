@@ -7,7 +7,7 @@ class CompositeDamping:
     Attributes
     ----------
     components: CompositeDampingComponentArray
-        A CompositeDampingComponentArray object.
+        A :py:class:`~abaqus.StepMiscellaneous.CompositeDampingComponentArray.CompositeDampingComponentArray` object.
 
     Notes
     -----

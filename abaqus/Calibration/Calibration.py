@@ -9,9 +9,9 @@ class Calibration:
     Attributes
     ----------
     dataSets: DataSet
-        A DataSet object.
+        A :py:class:`~abaqus.Calibration.DataSet.DataSet` object.
     behaviors: Behavior
-        A Behavior object.
+        A :py:class:`~abaqus.Calibration.Behavior.Behavior` object.
 
     Notes
     -----

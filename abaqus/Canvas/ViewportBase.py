@@ -99,14 +99,14 @@ class ViewportBase:
         MESH_MAP_COLORS
         The default value is DEFAULT_COLORS.
     translucency: float
-        A Float specifying the translucency that will be applied to objects colored using
-        **initialColor** and it needs to be set along with **initialColor**. If **initialColor** is
-        set to 'As is' then translucency will have no effect.
+        A Float specifying the translucency that will be applied :py:class:`~.to` objects colored using
+        **initialColor** and it needs :py:class:`~.to` be set along with **initialColor**. If **initialColor** is
+        set :py:class:`~.to` 'As is' then translucency will have no effect.
     animationConnect: Boolean
         A Boolean specifying whether an animation is connected to the viewport.
     colorMappings: dict[str, AttributeColorMap]
-        A repository of AttributeColorMap objects specifying the objects cannot be constructed
-        but the following attribute maps are supported:
+        A repository of :py:class:`~abaqus.Canvas.AttributeColorMap.AttributeColorMap` objects specifying :py:class:`~.the` objects cannot be constructed
+        but :py:class:`~.the` following attribute maps are supported:
         "type"
         "Element set"
         "Material"
@@ -157,7 +157,7 @@ class ViewportBase:
         "Layup"
         "Ply"
     initialColor: str
-        A String specifying the color that will be applied to all objects in the viewport at the
+        A String specifying the color that will be applied to :py:class:`~.all` objects in the viewport at the
         start of color coding. The possible values are 'As is', 'Default' or a string with a
         hexadecimal representation of a color.
     currentLayer: str
@@ -165,27 +165,27 @@ class ViewportBase:
         =OVERLAY. The current layer is also the only layer affected by view manipulations
         when**viewManipLayers** =CURRENT.
     displayedObject: Displayable
-        A Displayable object specifying the object to be displayed. The Displayable type is an
+        A :py:class:`~abaqus.Canvas.Displayable.Displayable` object specifying :py:class:`~.the` object to be displayed. The :py:class:`~abaqus.Canvas.Displayable.Displayable` type is an
         abstract generalization. The concrete possible types are Part, Assembly,
         ConstrainedSketch, Odb, PlyStackPlot, or XYPlot. If **displayedObject=None**, Abaqus
         displays an empty viewport.
     layers: dict[str, Layer]
-        A repository of Layer objects specifying the key to the repository is a String with the
+        A repository of :py:class:`~abaqus.Canvas.Layer.Layer` objects specifying the key to the repository is a String with the
         name of the layer.
     view: View
-        A View object specifying the object that controls viewing of the viewport content.
+        A :py:class:`~abaqus.UtilityAndView.View.View` object specifying :py:class:`~.the` object that controls viewing of :py:class:`~.the` viewport content.
     odbDisplay: OdbDisplay
-        An OdbDisplay object specifying the display options for the Odb object.
+        An :py:class:`~abaqus.:py:class:`~abaqus.Odb.Odb.Odb`Display.:py:class:`~abaqus.Odb.Odb.Odb`Display.:py:class:`~abaqus.Odb.Odb.Odb`Display` object specifying the display options for the :py:class:`~abaqus.Odb.Odb.Odb` object.
     partDisplay: PartDisplayOptions
-        A PartDisplayOptions object specifying the display options for the Part object.
+        A :py:class:`~abaqus.DisplayOptions.:py:class:`~abaqus.Part.Part.Part`DisplayOptions.:py:class:`~abaqus.Part.Part.Part`DisplayOptions` object specifying the display options for the :py:class:`~abaqus.Part.Part.Part` object.
     assemblyDisplay: AssemblyDisplayOptions
-        An AssemblyDisplayOptions object specifying the display options for the Assembly object.
+        An :py:class:`~abaqus.DisplayOptions.:py:class:`~abaqus.Assembly.Assembly.Assembly`DisplayOptions.:py:class:`~abaqus.Assembly.Assembly.Assembly`DisplayOptions` object specifying the display options for the :py:class:`~abaqus.Assembly.Assembly.Assembly` object.
     viewportAnnotationOptions: ViewportAnnotationOptions
-        A ViewportAnnotationOptions object.
+        A :py:class:`~abaqus.DisplayOptions.ViewportAnnotationOptions.ViewportAnnotationOptions` object.
     detailPlotOptions: DetailPlotOptions
-        A DetailPlotOptions object.
+        A :py:class:`~abaqus.PlotOptions.DetailPlotOptions.DetailPlotOptions` object.
     annotationsToPlot: AnnotationsToPlotArray
-        An AnnotationsToPlotArray object.
+        An :py:class:`~abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray` object.
     visibleLayers: tuple
         A tuple of Strings specifying the names of layers that will be displayed in the viewport
         when **displayMode** = OVERLAY.
@@ -199,13 +199,13 @@ class ViewportBase:
         lower left corner of the drawing area. This origin refers to the viewport location when
         **windowState** =MINIMIZED.
     lightOptions: LightOptions
-        A LightOptions object.
+        A :py:class:`~abaqus.DisplayOptions.LightOptions.LightOptions` object.
     imageOptions: ImageOptions
-        An ImageOptions object.
+        An :py:class:`~abaqus.Canvas.ImageOptions.ImageOptions` object.
     movieOptions: MovieOptions
-        A MovieOptions object.
+        A :py:class:`~abaqus.Canvas.MovieOptions.MovieOptions` object.
     animationController: AnimationController
-        An AnimationController object.
+        An :py:class:`~abaqus.Animation.AnimationController.AnimationController` object.
     drawings: tuple
         A tuple of Strings specifying keys to the session.drawings repository. The default value
         is an empty sequence.

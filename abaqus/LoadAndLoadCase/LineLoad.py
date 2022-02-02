@@ -20,11 +20,11 @@ class LineLoad(Load):
         A SymbolicConstant specifying whether the load is applied in a global or the beam local
         frame of reference. Possible values are GLOBAL and LOCAL. The default value is GLOBAL.
     field: str
-        A String specifying the name of the AnalyticalField object associated with this load.
+        A String specifying the name of the :py:class:`~abaqus.Field.AnalyticalField.AnalyticalField` object associated with this load.
         The **field** argument applies only when **distributionType=FIELD**. The default value is an
         empty string.
     region: Region
-        A Region object specifying the region to which the load is applied.
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the load is applied.
 
     Notes
     -----

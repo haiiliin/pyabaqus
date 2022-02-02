@@ -7,7 +7,7 @@ class DirectDampingByFrequency:
     Attributes
     ----------
     components: DirectDampingByFrequencyComponentArray
-        A DirectDampingByFrequencyComponentArray object.
+        A :py:class:`~abaqus.StepMiscellaneous.DirectDampingByFrequencyComponentArray.DirectDampingByFrequencyComponentArray` object.
 
     Notes
     -----

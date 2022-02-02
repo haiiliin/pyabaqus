@@ -7,7 +7,7 @@ class CaeKerPrefs:
     Attributes
     ----------
     fileName: str
-        A String specifying the path to the preferences file that the CaeKerPrefs object
+        A String specifying the path to the preferences file that the :py:class:`~abaqus.AbaqusCAEDisplayPreferences.CaeKerPrefs.CaeKerPrefs` object
         represents.
 
     Notes

@@ -18,13 +18,13 @@ class SelfContactExpState(InteractionState):
         A SymbolicConstant specifying the propagation state of the **contactControls** member.
         Possible values are UNSET, SET, UNCHANGED, and FREED.
     interactionProperty: str
-        A String specifying the name of the ContactProperty object associated with this
+        A String specifying the name of the :py:class:`~abaqus.Interaction.ContactProperty.ContactProperty` object associated with this
         interaction.
     contactControls: str
-        A String specifying the name of the ContactControl object associated with this
+        A String specifying the name of the :py:class:`~abaqus.Interaction.ContactControl.ContactControl` object associated with this
         interaction.
     status: SymbolicConstant
-        A SymbolicConstant specifying the propagation state of the InteractionState object.
+        A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.Interaction.InteractionState.InteractionState` object.
         Possible values are:
         - NOT_YET_ACTIVE
         - CREATED

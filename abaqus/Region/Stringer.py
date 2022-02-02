@@ -10,9 +10,9 @@ class Stringer:
     Attributes
     ----------
     elements: MeshElementArray
-        A MeshElementArray object.
+        A :py:class:`~abaqus.Mesh.MeshElementArray.MeshElementArray` object.
     edges: EdgeArray
-        An EdgeArray object.
+        An :py:class:`~abaqus.BasicGeometry.EdgeArray.EdgeArray` object.
 
     Notes
     -----

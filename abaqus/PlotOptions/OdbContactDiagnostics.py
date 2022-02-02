@@ -7,7 +7,7 @@ class OdbContactDiagnostics:
     Attributes
     ----------
     data: dict[str, OdbAuxiliaryData]
-        A repository of OdbAuxiliaryData objects. This attribute is read-only.
+        A repository of :py:class:`~abaqus.PlotOptions.OdbAuxiliaryData.OdbAuxiliaryData` objects. This attribute is read-only.
     description: str
         A string specifying the opening/overclosure status of the contact. This attribute is
         read-only.

@@ -16,7 +16,7 @@ class Chart:
     Attributes
     ----------
     name: str
-        A String specifying the name of the Chart object.
+        A String specifying the name of the :py:class:`~abaqus.XY.Chart.Chart` object.
     useQuantityType: Boolean
         A Boolean specifying whether to use the QuantityType to associate curves with axes. The
         default value is ON.
@@ -24,38 +24,38 @@ class Chart:
         A Float specifying the aspect ratio of the grid area. A value of -1 specifies that the
         gridArea will take up all available space. The default value is −1.
     curves: dict[str, XYCurve]
-        A repository of XYCurve objects specifying a repository of XYCurve objects to display in
+        A repository of :py:class:`~abaqus.XY.:py:class:`~abaqus.XY.XYCurve.XYCurve`.:py:class:`~abaqus.XY.XYCurve.XYCurve`` objects specifying a repository of :py:class:`~abaqus.XY.:py:class:`~abaqus.XY.XYCurve.XYCurve`.:py:class:`~abaqus.XY.XYCurve.XYCurve`` objects to display in
         the Chart.
     axes1: AxisArray
-        An AxisArray object specifying a read-only sequence of axis objects displayed as axes1 -
+        An :py:class:`~abaqus.XY.AxisArray.AxisArray` object specifying a read-only sequence of :py:class:`~.axis` objects displayed as axes1 -
         the abscissa for a Cartesian chart.
     axes2: AxisArray
-        An AxisArray object specifying a read-only sequence of axis objects displayed as axes2 -
+        An :py:class:`~abaqus.XY.AxisArray.AxisArray` object specifying a read-only sequence of :py:class:`~.axis` objects displayed as axes2 -
         the ordinate for a Cartesian chart.
     area: Area
-        An Area object specifying position, padding, background and borders of the chart.
+        An :py:class:`~abaqus.XY.Area.Area` object specifying position, padding, background and borders of the chart.
     gridArea: Area
-        An Area object specifying how to display the grid area.
+        An :py:class:`~abaqus.XY.Area.Area` object specifying how to display the grid area.
     legend: Legend
-        A Legend object specifying the attributes for the legend of the chart.
+        A :py:class:`~abaqus.XY.Legend.Legend` object specifying the attributes for the legend of the chart.
     majorAxis1GridStyle: LineStyle
-        A LineStyle object specifying the line properties to be used when drawing major
+        A :py:class:`~abaqus.XY.LineStyle.LineStyle` object specifying the line properties to be used when drawing major
         gridlines along axis 1.
     majorAxis2GridStyle: LineStyle
-        A LineStyle object specifying the line properties to be used when drawing major
+        A :py:class:`~abaqus.XY.LineStyle.LineStyle` object specifying the line properties to be used when drawing major
         gridlines along axis 2.
     minorAxis1GridStyle: LineStyle
-        A LineStyle object specifying the line properties to be used when drawing minor
+        A :py:class:`~abaqus.XY.LineStyle.LineStyle` object specifying the line properties to be used when drawing minor
         gridlines along axis 1.
     minorAxis2GridStyle: LineStyle
-        A LineStyle object specifying the line properties to be used when drawing minor
+        A :py:class:`~abaqus.XY.LineStyle.LineStyle` object specifying the line properties to be used when drawing minor
         gridlines along axis 2.
     tagTextStyle: TextStyle
-        A TextStyle object specifying the text properties to be used when creating tags.
+        A :py:class:`~abaqus.XY.TextStyle.TextStyle` object specifying the text properties to be used when creating tags.
     tagAreaStyle: AreaStyle
-        An AreaStyle object specifying the area properties to be used when creating tags.
+        An :py:class:`~abaqus.XY.AreaStyle.AreaStyle` object specifying the area properties to be used when creating tags.
     tagBorder: LineStyle
-        A LineStyle object specifying the tag area border properties to be used when creating
+        A :py:class:`~abaqus.XY.LineStyle.LineStyle` object specifying the tag area border properties to be used when creating
         tags.
     transform: float
         A tuple of Floats specifying a transformation matrix used to scale or pan along the axes

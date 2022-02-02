@@ -9,11 +9,11 @@ class OdbPretensionSection:
     Attributes
     ----------
     node: OdbSet
-        An OdbSet object specifying the node set containing the pretension node.
+        An :py:class:`~abaqus.Odb.OdbSet.OdbSet` object specifying the node set containing the pretension node.
     element: OdbSet
-        An OdbSet object specifying the element set that defines the pretension section.
+        An :py:class:`~abaqus.Odb.OdbSet.OdbSet` object specifying the element set that defines the pretension section.
     surface: OdbSet
-        An OdbSet object specifying the surface set that defines the pretension section.
+        An :py:class:`~abaqus.Odb.OdbSet.OdbSet` object specifying the surface set that defines the pretension section.
     normal: float
         A tuple of Floats specifying the components of the normal to the pretension section.
 

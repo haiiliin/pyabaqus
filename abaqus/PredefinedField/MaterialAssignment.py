@@ -12,7 +12,7 @@ class MaterialAssignment(PredefinedField):
     Attributes
     ----------
     region: Region
-        A Region object specifying the region to which the predefined field is applied.
+        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the predefined field is applied.
 
     Notes
     -----

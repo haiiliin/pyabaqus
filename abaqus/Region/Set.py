@@ -38,25 +38,25 @@ class Set:
     Attributes
     ----------
     elements: MeshElementArray
-        A MeshElementArray object.
+        A :py:class:`~abaqus.Mesh.MeshElementArray.MeshElementArray` object.
     nodes: MeshNodeArray
-        A MeshNodeArray object.
+        A :py:class:`~abaqus.Mesh.MeshNodeArray.MeshNodeArray` object.
     vertices: VertexArray
-        A VertexArray object.
+        A :py:class:`~abaqus.BasicGeometry.VertexArray.VertexArray` object.
     edges: EdgeArray
-        An EdgeArray object.
+        An :py:class:`~abaqus.BasicGeometry.EdgeArray.EdgeArray` object.
     faces: FaceArray
-        A FaceArray object.
+        A :py:class:`~abaqus.BasicGeometry.FaceArray.FaceArray` object.
     cells: CellArray
-        A CellArray object.
+        A :py:class:`~abaqus.BasicGeometry.CellArray.CellArray` object.
     xVertices: VertexArray
-        A VertexArray object.
+        A :py:class:`~abaqus.BasicGeometry.VertexArray.VertexArray` object.
     xEdges: EdgeArray
-        An EdgeArray object.
+        An :py:class:`~abaqus.BasicGeometry.EdgeArray.EdgeArray` object.
     xFaces: FaceArray
-        A FaceArray object.
+        A :py:class:`~abaqus.BasicGeometry.FaceArray.FaceArray` object.
     referencePoints: ReferencePointArray
-        A ReferencePointArray object.
+        A :py:class:`~abaqus.BasicGeometry.ReferencePointArray.ReferencePointArray` object.
 
     Notes
     -----
