@@ -39,8 +39,8 @@ class RateDependent:
             - C.
             - ˙ε0.
 
-        The corresponding analysis keywords are:
-            - RATE DEPENDENT
+    The corresponding analysis keywords are:
+        - RATE DEPENDENT
 
     """
 

@@ -58,8 +58,8 @@ class ConnectorElasticity(ConnectorBehaviorOption):
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CONNECTOR ELASTICITY
+    The corresponding analysis keywords are:
+        - CONNECTOR ELASTICITY
 
     """
 

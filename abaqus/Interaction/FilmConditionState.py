@@ -60,8 +60,8 @@ class FilmConditionState(InteractionState):
             import interaction
             mdb.models[name].steps[name].interactionStates[name]
 
-        The corresponding analysis keywords are:
-            - SFILM
+    The corresponding analysis keywords are:
+        - SFILM
             - FILM
 
     """

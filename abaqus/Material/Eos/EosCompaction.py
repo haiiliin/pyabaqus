@@ -12,8 +12,8 @@ class EosCompaction:
             import odbMaterial
             session.odbs[name].materials[name].eos.eosCompaction
 
-        The corresponding analysis keywords are:
-            - EOS COMPACTION
+    The corresponding analysis keywords are:
+        - EOS COMPACTION
 
     """
 

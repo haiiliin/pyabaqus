@@ -32,8 +32,8 @@ class HeatCapacitance(Inertia):
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - HEATCAP
+    The corresponding analysis keywords are:
+        - HEATCAP
 
     """
 

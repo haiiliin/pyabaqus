@@ -24,8 +24,8 @@ class ConcreteCompressionDamage:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CONCRETE COMPRESSION DAMAGE
+    The corresponding analysis keywords are:
+        - CONCRETE COMPRESSION DAMAGE
 
     """
 

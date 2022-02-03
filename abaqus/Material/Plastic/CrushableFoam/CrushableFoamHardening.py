@@ -24,8 +24,8 @@ class CrushableFoamHardening:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CRUSHABLE FOAM HARDENING
+    The corresponding analysis keywords are:
+        - CRUSHABLE FOAM HARDENING
 
     """
 
@@ -40,7 +40,7 @@ class CrushableFoamHardening:
             
                 mdb.models[name].materials[name].crushableFoam.CrushableFoamHardening
                 session.odbs[name].materials[name].crushableFoam\
-                - .CrushableFoamHardening
+            - .CrushableFoamHardening
         
         Parameters
         ----------

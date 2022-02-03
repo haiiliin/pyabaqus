@@ -22,8 +22,8 @@ class Equation(Constraint):
         import interaction
         mdb.models[name].constraints[name]
 
-        The corresponding analysis keywords are:
-            - EQUATION
+    The corresponding analysis keywords are:
+        - EQUATION
 
     """
 
@@ -56,7 +56,7 @@ class Equation(Constraint):
 
         Raises
         ------
-                - If *terms* does not contain more than one entry: 
+            - If *terms* does not contain more than one entry: 
               Equation must have two or more terms. 
         """
         super().__init__()
@@ -67,7 +67,7 @@ class Equation(Constraint):
 
         Raises
         ------
-                - If *terms* does not contain more than one entry: 
+            - If *terms* does not contain more than one entry: 
               Equation must have two or more terms. 
         """
         pass

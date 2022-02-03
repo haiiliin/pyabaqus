@@ -30,8 +30,8 @@ class GapElectricalConductance:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - GAP ELECTRICAL CONDUCTANCE
+    The corresponding analysis keywords are:
+        - GAP ELECTRICAL CONDUCTANCE
 
     """
 

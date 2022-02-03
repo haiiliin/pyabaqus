@@ -30,8 +30,8 @@ class CompositeLayup:
         import part
         mdb.models[name].parts[name].compositeLayups[i]
 
-        The corresponding analysis keywords are:
-            - SHELL SECTION
+    The corresponding analysis keywords are:
+        - SHELL SECTION
             - SHELL GENERAL SECTION
             - SOLID SECTION
 
@@ -57,7 +57,7 @@ class CompositeLayup:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].CompositeLayup
+            mdb.models[name].parts[*name*].CompositeLayup
         
         Parameters
         ----------
@@ -151,7 +151,7 @@ class CompositeLayup:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].CompositeLayup
+            mdb.models[name].parts[*name*].CompositeLayup
         
         Parameters
         ----------
@@ -240,7 +240,7 @@ class CompositeLayup:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].CompositeLayup
+            mdb.models[name].parts[*name*].CompositeLayup
         
         Parameters
         ----------
@@ -332,7 +332,7 @@ class CompositeLayup:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].CompositeLayup
+            mdb.models[name].parts[*name*].CompositeLayup
         
         Parameters
         ----------
@@ -409,7 +409,7 @@ class CompositeLayup:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].CompositeLayup
+            mdb.models[name].parts[*name*].CompositeLayup
         
         Parameters
         ----------

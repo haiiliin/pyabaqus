@@ -23,8 +23,8 @@ class CapHardening:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CAP HARDENING
+    The corresponding analysis keywords are:
+        - CAP HARDENING
 
     """
 

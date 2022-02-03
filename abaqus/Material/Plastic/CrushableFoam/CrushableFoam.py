@@ -33,8 +33,8 @@ class CrushableFoam:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CRUSHABLE FOAM
+    The corresponding analysis keywords are:
+        - CRUSHABLE FOAM
 
     """
 

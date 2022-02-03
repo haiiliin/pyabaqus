@@ -24,8 +24,8 @@ class MohrCoulombHardening:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - MOHR COULOMB HARDENING
+    The corresponding analysis keywords are:
+        - MOHR COULOMB HARDENING
 
     """
 
@@ -39,9 +39,9 @@ class MohrCoulombHardening:
             .. code-block:: python
             
                 mdb.models[name].materials[name].mohrCoulombPlasticity\
-                - .MohrCoulombHardening
+            - .MohrCoulombHardening
                 session.odbs[name].materials[name].mohrCoulombPlasticity\
-                - .MohrCoulombHardening
+            - .MohrCoulombHardening
         
         Parameters
         ----------

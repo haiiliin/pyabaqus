@@ -15,8 +15,8 @@ class ElasticFoundation(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-        The corresponding analysis keywords are:
-            - FOUNDATION
+    The corresponding analysis keywords are:
+        - FOUNDATION
 
     """
 

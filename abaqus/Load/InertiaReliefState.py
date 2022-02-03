@@ -92,8 +92,8 @@ class InertiaReliefState(LoadState):
             import load
             mdb.models[name].steps[name].loadStates[name]
 
-        The corresponding analysis keywords are:
-            - INERTIA RELIEF
+    The corresponding analysis keywords are:
+        - INERTIA RELIEF
 
     """
 

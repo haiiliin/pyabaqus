@@ -62,8 +62,8 @@ class Piezoelectric:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - PIEZOELECTRIC
+    The corresponding analysis keywords are:
+        - PIEZOELECTRIC
 
     """
 

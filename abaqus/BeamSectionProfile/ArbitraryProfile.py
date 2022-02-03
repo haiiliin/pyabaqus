@@ -25,8 +25,8 @@ class ArbitraryProfile(Profile):
             - 2–coordinate of the next point defining the profile.
             - The thickness of the segment ending at that point.
 
-        The corresponding analysis keywords are:
-            - BEAM SECTION
+    The corresponding analysis keywords are:
+        - BEAM SECTION
 
     """
 

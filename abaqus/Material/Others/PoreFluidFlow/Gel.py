@@ -18,8 +18,8 @@ class Gel:
             - Number of gel particles per unit volume, ka.
             - Relaxation time constant for long-term swelling of gel particles, τ1.
 
-        The corresponding analysis keywords are:
-            - GEL
+    The corresponding analysis keywords are:
+        - GEL
 
     """
 

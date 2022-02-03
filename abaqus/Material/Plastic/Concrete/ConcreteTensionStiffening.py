@@ -42,8 +42,8 @@ class ConcreteTensionStiffening:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CONCRETE TENSION STIFFENING
+    The corresponding analysis keywords are:
+        - CONCRETE TENSION STIFFENING
 
     """
 
@@ -58,9 +58,9 @@ class ConcreteTensionStiffening:
             .. code-block:: python
             
                 mdb.models[name].materials[name].concreteDamagedPlasticity\
-                - .ConcreteTensionStiffening
+            - .ConcreteTensionStiffening
                 session.odbs[name].materials[name].concreteDamagedPlasticity\
-                - .ConcreteTensionStiffening
+            - .ConcreteTensionStiffening
         
         Parameters
         ----------
@@ -71,9 +71,9 @@ class ConcreteTensionStiffening:
         type
             A SymbolicConstant specifying the type of postcracking behavior data. Possible values 
             are: 
-                - STRAIN, specifying postfailure stress as a function of cracking strain. 
-                - DISPLACEMENT, specifying postfailure stress as a function of cracking displacement. 
-                - GFI, specifying failure stress as a function of the fracture energy. 
+            - STRAIN, specifying postfailure stress as a function of cracking strain. 
+            - DISPLACEMENT, specifying postfailure stress as a function of cracking displacement. 
+            - GFI, specifying failure stress as a function of the fracture energy. 
             The default value is STRAIN. 
         temperatureDependency
             A Boolean specifying whether the data depend on temperature. The default value is OFF. 

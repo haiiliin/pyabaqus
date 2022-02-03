@@ -150,8 +150,8 @@ class DamageInitiation:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - DAMAGE INITIATION
+    The corresponding analysis keywords are:
+        - DAMAGE INITIATION
 
     """
 

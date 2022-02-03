@@ -35,7 +35,7 @@ class Profile:
 
         .. code-block:: python
 
-            mdb.models[*name*].beamProfilesFromOdb
+            mdb.models[name].beamProfilesFromOdb
         
         Parameters
         ----------

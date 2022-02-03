@@ -56,7 +56,7 @@ class SectionBase:
 
         .. code-block:: python
 
-            mdb.models[*name*].sectionsFromOdb
+            mdb.models[name].sectionsFromOdb
         
         Parameters
         ----------

@@ -400,16 +400,16 @@ class CommonOptions(DGCommonOptions):
             A Boolean specifying whether to plot the node symbols. The default value is OFF. 
         nodeSymbolType
             A SymbolicConstant specifying the node symbol types. Possible values are: 
-                - FILLED_CIRCLE 
-                - FILLED_SQUARE 
-                - FILLED_DIAMOND 
-                - FILLED_TRI 
-                - HOLLOW_CIRCLE 
-                - HOLLOW_SQUARE 
-                - HOLLOW_DIAMOND 
-                - HOLLOW_TRI 
-                - CROSS 
-                - XMARKER 
+            - FILLED_CIRCLE 
+            - FILLED_SQUARE 
+            - FILLED_DIAMOND 
+            - FILLED_TRI 
+            - HOLLOW_CIRCLE 
+            - HOLLOW_SQUARE 
+            - HOLLOW_DIAMOND 
+            - HOLLOW_TRI 
+            - CROSS 
+            - XMARKER 
             The default value is HOLLOW_CIRCLE. 
         nodeSymbolColor
             A String specifying the color to be used to plot the node symbols. The default value is 

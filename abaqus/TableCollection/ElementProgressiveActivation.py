@@ -14,8 +14,8 @@ class ElementProgressiveActivation:
 
         mdb.models[name].rootAssembly.elementProgressiveActivations[name]
 
-        The corresponding analysis keywords are:
-            - *ELEMENT PROGRESSIVE ACTIVATION
+    The corresponding analysis keywords are:
+        - *ELEMENT PROGRESSIVE ACTIVATION
 
     """
 

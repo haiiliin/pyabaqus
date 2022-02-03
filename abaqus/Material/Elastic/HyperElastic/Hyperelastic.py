@@ -67,8 +67,8 @@ class Hyperelastic:
             - Temperature, if the data depend on temperature. Temperature dependence is not allowed in an Abaqus/Explicit analysis.
         The None object is the default value if *testData*=ON.
 
-        The corresponding analysis keywords are:
-            - HYPERELASTIC
+    The corresponding analysis keywords are:
+        - HYPERELASTIC
 
     """
 
@@ -117,17 +117,17 @@ class Hyperelastic:
             A SymbolicConstant specifying the type of strain energy potential. Possible values 
             are:
             
-                - ARRUDA_BOYCE
-                - MARLOW
-                - MOONEY_RIVLIN
-                - NEO_HOOKE
-                - OGDEN
-                - POLYNOMIAL
-                - REDUCED_POLYNOMIAL
-                - USER
-                - VAN_DER_WAALS
-                - YEOH
-                - UNKNOWN
+            - ARRUDA_BOYCE
+            - MARLOW
+            - MOONEY_RIVLIN
+            - NEO_HOOKE
+            - OGDEN
+            - POLYNOMIAL
+            - REDUCED_POLYNOMIAL
+            - USER
+            - VAN_DER_WAALS
+            - YEOH
+            - UNKNOWN
             
             The default value is UNKNOWN. 
         moduliTimeScale

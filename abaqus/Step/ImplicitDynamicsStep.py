@@ -179,8 +179,8 @@ class ImplicitDynamicsStep(AnalysisStep):
         import step
         mdb.models[name].steps[name]
 
-        The corresponding analysis keywords are:
-            - DYNAMIC
+    The corresponding analysis keywords are:
+        - DYNAMIC
             - STEP
 
     """

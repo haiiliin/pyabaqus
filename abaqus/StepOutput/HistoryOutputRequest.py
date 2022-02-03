@@ -32,8 +32,8 @@ class HistoryOutputRequest:
         import step
         mdb.models[name].historyOutputRequests[name]
 
-        The corresponding analysis keywords are:
-            - CONTACT OUTPUT
+    The corresponding analysis keywords are:
+        - CONTACT OUTPUT
             - ELEMENT OUTPUT
             - ENERGY OUTPUT
             - INCREMENTATION OUTPUT

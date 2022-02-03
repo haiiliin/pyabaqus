@@ -81,8 +81,8 @@ class ConnVelocityBCState(BoundaryConditionState):
             import load
             mdb.models[name].steps[name].boundaryConditionStates[name]
 
-        The corresponding analysis keywords are:
-            - CONNECTOR MOTION
+    The corresponding analysis keywords are:
+        - CONNECTOR MOTION
 
     """
 

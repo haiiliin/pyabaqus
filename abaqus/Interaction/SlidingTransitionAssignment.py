@@ -15,8 +15,8 @@ class SlidingTransitionAssignment:
             import interaction
             mdb.models[name].interactions[name].slidingTransitionAssignments
 
-        The corresponding analysis keywords are:
-            - CONTACT FORMULATION
+    The corresponding analysis keywords are:
+        - CONTACT FORMULATION
 
     """
 

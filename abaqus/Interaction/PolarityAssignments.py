@@ -14,8 +14,8 @@ class PolarityAssignments:
             import interaction
             mdb.models[name].interactions[name].polarityAssignments
 
-        The corresponding analysis keywords are:
-            - CONTACT FORMULATION
+    The corresponding analysis keywords are:
+        - CONTACT FORMULATION
 
     """
 
@@ -47,9 +47,9 @@ class PolarityAssignments:
         assignments
             A sequence of tuples specifying the polarity assignments. Each tuple contains two 
             entries: 
-                - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
+            - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
             polarity attribute is assigned. 
-                - A SymbolicConstant specifying the overriding polarity value to be used for the first 
+            - A SymbolicConstant specifying the overriding polarity value to be used for the first 
             surface. Possible values of the SymbolicConstant are SPOS, SNEG, and TWO_SIDED. 
         """
         pass

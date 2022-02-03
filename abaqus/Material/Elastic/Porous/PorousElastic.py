@@ -33,8 +33,8 @@ class PorousElastic:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - POROUS ELASTIC
+    The corresponding analysis keywords are:
+        - POROUS ELASTIC
 
     """
 

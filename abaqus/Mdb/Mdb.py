@@ -11,10 +11,10 @@ class Mdb(AcisMdb, JobMdb):
     Attributes
     ----------
     version: int
-        An Int specifying the release number of the :py:class:`~abaqus.abaqus.Mdb.Mdb` object in memory.
+        An Int specifying the release number of the :py:class:`~abaqus.Mdb.Mdb.Mdb` object in memory.
     lastChangedCount: float
         A Float specifying the value of a counter associated with the :py:class:`~abaqus.abaqus.Mdb` object. The counter
-        indicates when the :py:class:`~abaqus.abaqus.Mdb.Mdb` object was last changed.
+        indicates when the :py:class:`~abaqus.Mdb.Mdb.Mdb` object was last changed.
     jobs: dict[str, Job]
         A repository of :py:class:`~abaqus.Job.Job.Job` objects.
     adaptivityProcesses: dict[str, AdaptivityProcess]

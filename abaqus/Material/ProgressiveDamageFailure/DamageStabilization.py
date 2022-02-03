@@ -39,8 +39,8 @@ class DamageStabilization:
             session.odbs[name].materials[name].quadsDamageInitiation.damageStabilization
             session.odbs[name].materials[name].shearDamageInitiation.damageStabilization
 
-        The corresponding analysis keywords are:
-            - DAMAGE STABILIZATION
+    The corresponding analysis keywords are:
+        - DAMAGE STABILIZATION
 
     """
 
@@ -55,61 +55,61 @@ class DamageStabilization:
             .. code-block:: python
             
                 mdb.models[name].materials[name].ductileDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 mdb.models[name].materials[name].fldDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 mdb.models[name].materials[name].flsdDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 mdb.models[name].materials[name].hashinDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 mdb.models[name].materials[name].johnsonCookDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 mdb.models[name].materials[name].maxeDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 mdb.models[name].materials[name].maxpeDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 mdb.models[name].materials[name].maxpsDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 mdb.models[name].materials[name].maxsDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 mdb.models[name].materials[name].mkDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 mdb.models[name].materials[name].msfldDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 mdb.models[name].materials[name].quadeDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 mdb.models[name].materials[name].quadsDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 mdb.models[name].materials[name].shearDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 session.odbs[name].materials[name].ductileDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 session.odbs[name].materials[name].fldDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 session.odbs[name].materials[name].flsdDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 session.odbs[name].materials[name].hashinDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 session.odbs[name].materials[name].johnsonCookDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 session.odbs[name].materials[name].maxeDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 session.odbs[name].materials[name].maxpeDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 session.odbs[name].materials[name].maxpsDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 session.odbs[name].materials[name].maxsDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 session.odbs[name].materials[name].mkDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 session.odbs[name].materials[name].msfldDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 session.odbs[name].materials[name].quadeDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 session.odbs[name].materials[name].quadsDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
                 session.odbs[name].materials[name].shearDamageInitiation\
-                - .DamageStabilization
+            - .DamageStabilization
         
         Parameters
         ----------

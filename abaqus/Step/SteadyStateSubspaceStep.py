@@ -134,8 +134,8 @@ class SteadyStateSubspaceStep(AnalysisStep):
         import step
         mdb.models[name].steps[name]
 
-        The corresponding analysis keywords are:
-            - STEADY STATE DYNAMICS
+    The corresponding analysis keywords are:
+        - STEADY STATE DYNAMICS
             - STEP
 
     """

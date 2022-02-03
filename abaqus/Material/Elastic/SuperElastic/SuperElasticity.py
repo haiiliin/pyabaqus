@@ -29,8 +29,8 @@ class SuperElasticity:
             - Loading.
             - Unloading.
 
-        The corresponding analysis keywords are:
-            - SUPERELASTIC
+    The corresponding analysis keywords are:
+        - SUPERELASTIC
 
     """
 

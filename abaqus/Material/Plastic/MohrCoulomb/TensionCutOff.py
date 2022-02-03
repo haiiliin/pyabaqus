@@ -24,8 +24,8 @@ class TensionCutOff:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - TENSION CUTOFF
+    The corresponding analysis keywords are:
+        - TENSION CUTOFF
 
     """
 

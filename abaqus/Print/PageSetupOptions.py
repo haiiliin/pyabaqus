@@ -62,9 +62,9 @@ class PageSetupOptions:
         RangeError
             Note:The minimum value of width and height (*minWidth* and *minHeight*) is 10 mm 
             (approximately 0.4 inches). 
-                - If *leftMargin* + *rightMargin* is out of range: 
+            - If *leftMargin* + *rightMargin* is out of range: 
               RangeError: leftMargin and rightMargin must produce image width >= minWidth 
-                - If *topMargin* + *bottomMargin* is out of range: 
+            - If *topMargin* + *bottomMargin* is out of range: 
               RangeError: topMargin and bottomMargin must produce image height >= minHeight 
         """
         pass

@@ -34,8 +34,8 @@ class DruckerPragerCreep:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - DRUCKER PRAGER CREEP
+    The corresponding analysis keywords are:
+        - DRUCKER PRAGER CREEP
 
     """
 

@@ -14,8 +14,8 @@ class SurfaceBeamSmoothingAssignment:
             import interaction
             mdb.models[name].interactions[name].surfaceBeamSmoothingAssignments
 
-        The corresponding analysis keywords are:
-            - SURFACE PROPERTY ASSIGNMENT
+    The corresponding analysis keywords are:
+        - SURFACE PROPERTY ASSIGNMENT
 
     """
 

@@ -26,8 +26,8 @@ class Hyperfoam:
             - νi.
             - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an Abaqus/Explicit analysis.
 
-        The corresponding analysis keywords are:
-            - HYPERFOAM
+    The corresponding analysis keywords are:
+        - HYPERFOAM
 
     """
 

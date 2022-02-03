@@ -17,8 +17,8 @@ class IncidentWave(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-        The corresponding analysis keywords are:
-            - INCIDENT WAVE INTERACTION
+    The corresponding analysis keywords are:
+        - INCIDENT WAVE INTERACTION
 
     """
 

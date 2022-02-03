@@ -12,8 +12,8 @@ class Damping:
             import odbMaterial
             session.odbs[name].materials[name].damping
 
-        The corresponding analysis keywords are:
-            - DAMPING
+    The corresponding analysis keywords are:
+        - DAMPING
 
     """
 

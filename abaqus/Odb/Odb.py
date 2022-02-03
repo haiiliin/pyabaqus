@@ -178,7 +178,7 @@ class Odb(AmplitudeOdb,
 
         Raises
         ------
-                - If *previousStepName* is invalid:
+            - If *previousStepName* is invalid:
               ValueError: previousStepName is invalid
         """
         self.steps[name] = odbStep = OdbStep(name, description, domain, timePeriod, previousStepName, procedure,

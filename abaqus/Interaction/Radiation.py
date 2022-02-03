@@ -12,8 +12,8 @@ class Radiation:
         import interaction
         mdb.models[name].interactionProperties[name].radiation
 
-        The corresponding analysis keywords are:
-            - GAP RADIATION
+    The corresponding analysis keywords are:
+        - GAP RADIATION
 
     """
 

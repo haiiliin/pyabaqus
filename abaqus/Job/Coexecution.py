@@ -67,8 +67,8 @@ class Coexecution:
             import job
             mdb.coexecutions[name]
 
-        The corresponding analysis keywords are:
-            - HEADING
+    The corresponding analysis keywords are:
+        - HEADING
             - PREPRINT
 
     """

@@ -16,8 +16,8 @@ class UserMaterial:
             import odbMaterial
             session.odbs[name].materials[name].userMaterial
 
-        The corresponding analysis keywords are:
-            - USER MATERIAL
+    The corresponding analysis keywords are:
+        - USER MATERIAL
 
     """
 

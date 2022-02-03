@@ -30,7 +30,7 @@ class CompositePly:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].compositeLayups[*name*].CompositePly
+            mdb.models[name].parts[*name*].compositeLayups[*name*].CompositePly
         
         Parameters
         ----------

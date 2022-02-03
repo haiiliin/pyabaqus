@@ -63,8 +63,8 @@ class ConnectorDamping(ConnectorBehaviorOption):
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CONNECTOR DAMPING
+    The corresponding analysis keywords are:
+        - CONNECTOR DAMPING
 
     """
 

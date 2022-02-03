@@ -23,8 +23,8 @@ class DeformationPlasticity:
             - Yield offset, α.
             - Temperature, if the data depend on temperature.
 
-        The corresponding analysis keywords are:
-            - DEFORMATION PLASTICITY
+    The corresponding analysis keywords are:
+        - DEFORMATION PLASTICITY
 
     """
 

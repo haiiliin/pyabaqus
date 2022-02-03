@@ -20,8 +20,8 @@ class DetonationPoint:
             - Z value for coordinate of detonation point.
             - Detonation delay time.
 
-        The corresponding analysis keywords are:
-            - DETONATION POINT
+    The corresponding analysis keywords are:
+        - DETONATION POINT
 
     """
 

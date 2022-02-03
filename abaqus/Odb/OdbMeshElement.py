@@ -102,11 +102,11 @@ class OdbMeshElement:
 
         Raises
         ------
-                - If the exact frame is not found: 
+            - If the exact frame is not found: 
               OdbError: Frame not found. 
-                - If the step name is not found: 
+            - If the step name is not found: 
               OdbError: Step is not present in the ODB. 
-                - If *frameValue* is not provided and *stepName* is empty: 
+            - If *frameValue* is not provided and *stepName* is empty: 
               *frameValue*OdbError: *stepName* should be specified with *frameValue*. 
         """
         pass

@@ -25,8 +25,8 @@ class ConcreteCompressionHardening:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CONCRETE COMPRESSION HARDENING
+    The corresponding analysis keywords are:
+        - CONCRETE COMPRESSION HARDENING
 
     """
 

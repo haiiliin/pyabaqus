@@ -11,8 +11,8 @@ class TimePoint:
         import step
         mdb.models[name].timePoints[name]
 
-        The corresponding analysis keywords are:
-            - TIME POINTS
+    The corresponding analysis keywords are:
+        - TIME POINTS
 
     """
 

@@ -17,8 +17,8 @@ class ConnectorStop(ConnectorBehaviorOption):
         import odbSection
         session.odbs[name].sections[name].behaviorOptions[i]
 
-        The corresponding analysis keywords are:
-            - CONNECTOR STOP
+    The corresponding analysis keywords are:
+        - CONNECTOR STOP
 
     """
 

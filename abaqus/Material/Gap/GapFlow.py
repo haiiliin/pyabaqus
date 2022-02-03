@@ -46,8 +46,8 @@ class GapFlow:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - GAP FLOW
+    The corresponding analysis keywords are:
+        - GAP FLOW
 
     """
 

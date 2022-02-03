@@ -169,8 +169,8 @@ class ContactDamage:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - DAMAGE INITIATION
+    The corresponding analysis keywords are:
+        - DAMAGE INITIATION
             - DAMAGE EVOLUTION
             - DAMAGE STABILIZATION
 

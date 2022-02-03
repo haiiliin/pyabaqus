@@ -45,8 +45,8 @@ class Dielectric:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - DIELECTRIC
+    The corresponding analysis keywords are:
+        - DIELECTRIC
 
     """
 

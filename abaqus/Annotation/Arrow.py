@@ -54,15 +54,15 @@ class Arrow(Annotation):
             A sequence of three Floats specifies the *X*-, *Y*-, and *Z*-coordinates of a point in
             the model coordinate system. A SymbolicConstant indicates a relative position. Possible
             values are:
-                - BOTTOM_LEFT
-                - BOTTOM_CENTER
-                - BOTTOM_RIGHT
-                - CENTER_LEFT
-                - CENTER
-                - CENTER_RIGHT
-                - TOP_LEFT
-                - TOP_CENTER
-                - TOP_RIGHT
+            - BOTTOM_LEFT
+            - BOTTOM_CENTER
+            - BOTTOM_RIGHT
+            - CENTER_LEFT
+            - CENTER
+            - CENTER_RIGHT
+            - TOP_LEFT
+            - TOP_CENTER
+            - TOP_RIGHT
             The default value is BOTTOM_LEFT.
         endAnchor
             A SymbolicConstant or a sequence of Floats specifying a point. A sequence of two Floats
@@ -70,39 +70,39 @@ class Arrow(Annotation):
             A Sequence of three Floats specifies the *X*-, *Y*-, and *Z*-coordinates of a point in
             the model coordinate system. A SymbolicConstant indicates a relative position. Possible
             values are:
-                - BOTTOM_LEFT
-                - BOTTOM_CENTER
-                - BOTTOM_RIGHT
-                - CENTER_LEFT
-                - CENTER
-                - CENTER_RIGHT
-                - TOP_LEFT
-                - TOP_CENTER
-                - TOP_RIGHT
+            - BOTTOM_LEFT
+            - BOTTOM_CENTER
+            - BOTTOM_RIGHT
+            - CENTER_LEFT
+            - CENTER
+            - CENTER_RIGHT
+            - TOP_LEFT
+            - TOP_CENTER
+            - TOP_RIGHT
             The default value is BOTTOM_LEFT.
         startHeadStyle
             A SymbolicConstant specifying the style of the start head. Possible values are:
-                - ARROW
-                - FILLED_ARROW
-                - HOLLOW_CIRCLE
-                - FILLED_CIRCLE
-                - HOLLOW_DIAMOND
-                - FILLED_DIAMOND
-                - HOLLOW_SQUARE
-                - FILLED_SQUARE
-                - NONE
+            - ARROW
+            - FILLED_ARROW
+            - HOLLOW_CIRCLE
+            - FILLED_CIRCLE
+            - HOLLOW_DIAMOND
+            - FILLED_DIAMOND
+            - HOLLOW_SQUARE
+            - FILLED_SQUARE
+            - NONE
             The default value is NONE.
         endHeadStyle
             A SymbolicConstant specifying the style of the end head. Possible values are:
             ARROW
-                - FILLED_ARROW
-                - HOLLOW_CIRCLE
-                - FILLED_CIRCLE
-                - HOLLOW_DIAMOND
-                - FILLED_DIAMOND
-                - HOLLOW_SQUARE
-                - FILLED_SQUARE
-                - NONE
+            - FILLED_ARROW
+            - HOLLOW_CIRCLE
+            - FILLED_CIRCLE
+            - HOLLOW_DIAMOND
+            - FILLED_DIAMOND
+            - HOLLOW_SQUARE
+            - FILLED_SQUARE
+            - NONE
             The default value is FILLED_ARROW.
         startGap
             A Float specifying the distance in millimeters between the arrow start point and the

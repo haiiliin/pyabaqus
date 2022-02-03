@@ -36,8 +36,8 @@ class UniaxialTestData:
             - Nominal strain, ϵU.
             - Nominal strain rate, ϵU˙.
 
-        The corresponding analysis keywords are:
-            - UNIAXIAL TEST DATA
+    The corresponding analysis keywords are:
+        - UNIAXIAL TEST DATA
 
     """
 

@@ -23,8 +23,8 @@ class SurfaceSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-        The corresponding analysis keywords are:
-            - SURFACE SECTION
+    The corresponding analysis keywords are:
+        - SURFACE SECTION
 
     """
 

@@ -23,8 +23,8 @@ class NormalBehavior:
             - Pressure.
             - Overclosure.
 
-        The corresponding analysis keywords are:
-            - SURFACE BEHAVIOR
+    The corresponding analysis keywords are:
+        - SURFACE BEHAVIOR
 
     """
 

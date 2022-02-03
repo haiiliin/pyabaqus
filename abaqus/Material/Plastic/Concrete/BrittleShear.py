@@ -32,8 +32,8 @@ class BrittleShear:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - BRITTLE SHEAR
+    The corresponding analysis keywords are:
+        - BRITTLE SHEAR
 
     """
 

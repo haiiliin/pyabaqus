@@ -41,7 +41,7 @@ class Feature(FeatureBase):
 
         .. code-block:: python
 
-            mdb.models[*name*].rootAssembly.AttachmentLines
+            mdb.models[name].rootAssembly.AttachmentLines
         
         Parameters
         ----------
@@ -109,7 +109,7 @@ class Feature(FeatureBase):
 
         .. code-block:: python
 
-            mdb.models[*name*].rootAssembly.AttachmentLines
+            mdb.models[name].rootAssembly.AttachmentLines
         
         Parameters
         ----------
@@ -141,7 +141,7 @@ class Feature(FeatureBase):
 
         .. code-block:: python
 
-            mdb.models[*name*].rootAssembly.AttachmentLines
+            mdb.models[name].rootAssembly.AttachmentLines
         
         Parameters
         ----------
@@ -170,7 +170,7 @@ class Feature(FeatureBase):
 
         .. code-block:: python
 
-            mdb.models[*name*].rootAssembly.AttachmentLines
+            mdb.models[name].rootAssembly.AttachmentLines
         
         Parameters
         ----------
@@ -208,7 +208,7 @@ class Feature(FeatureBase):
 
         .. code-block:: python
 
-            mdb.models[*name*].rootAssembly.AttachmentLines
+            mdb.models[name].rootAssembly.AttachmentLines
         
         Parameters
         ----------
@@ -245,7 +245,7 @@ class Feature(FeatureBase):
 
         .. code-block:: python
 
-            mdb.models[*name*].rootAssembly.AttachmentLines
+            mdb.models[name].rootAssembly.AttachmentLines
         
         Parameters
         ----------
@@ -275,7 +275,7 @@ class Feature(FeatureBase):
 
         .. code-block:: python
 
-            mdb.models[*name*].rootAssembly.AttachmentLines
+            mdb.models[name].rootAssembly.AttachmentLines
         
         Parameters
         ----------
@@ -310,7 +310,7 @@ class Feature(FeatureBase):
 
         .. code-block:: python
 
-            mdb.models[*name*].rootAssembly.AttachmentLines
+            mdb.models[name].rootAssembly.AttachmentLines
         
         Parameters
         ----------

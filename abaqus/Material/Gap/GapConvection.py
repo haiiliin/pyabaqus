@@ -25,8 +25,8 @@ class GapConvection:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - GAP CONVECTION
+    The corresponding analysis keywords are:
+        - GAP CONVECTION
 
     """
 

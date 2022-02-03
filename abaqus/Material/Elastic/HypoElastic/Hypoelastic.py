@@ -22,8 +22,8 @@ class Hypoelastic:
             - Second strain invariant, I2.
             - Third strain invariant, I3.
 
-        The corresponding analysis keywords are:
-            - HYPOELASTIC
+    The corresponding analysis keywords are:
+        - HYPOELASTIC
 
     """
 

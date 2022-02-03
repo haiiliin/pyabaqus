@@ -19,8 +19,8 @@ class MoistureSwelling:
             - Volumetric moisture swelling strain, εm⁢s.
             - Saturation, s. This value must lie in the range 0≤s≤1.0.
 
-        The corresponding analysis keywords are:
-            - MOISTURE SWELLING
+    The corresponding analysis keywords are:
+        - MOISTURE SWELLING
 
     """
 

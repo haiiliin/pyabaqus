@@ -23,8 +23,8 @@ class Tie(Constraint):
         import interaction
         mdb.models[name].constraints[name]
 
-        The corresponding analysis keywords are:
-            - TIE
+    The corresponding analysis keywords are:
+        - TIE
 
     """
 

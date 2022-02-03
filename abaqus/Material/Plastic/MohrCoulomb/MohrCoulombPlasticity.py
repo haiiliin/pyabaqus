@@ -26,8 +26,8 @@ class MohrCoulombPlasticity:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - MOHR COULOMB
+    The corresponding analysis keywords are:
+        - MOHR COULOMB
 
     """
 

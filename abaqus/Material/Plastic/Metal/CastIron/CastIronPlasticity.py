@@ -25,8 +25,8 @@ class CastIronPlasticity:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CAST IRON PLASTICITY
+    The corresponding analysis keywords are:
+        - CAST IRON PLASTICITY
 
     """
 

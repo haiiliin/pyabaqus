@@ -32,8 +32,8 @@ class ThermalConductance:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - GAP CONDUCTANCE
+    The corresponding analysis keywords are:
+        - GAP CONDUCTANCE
 
     """
 

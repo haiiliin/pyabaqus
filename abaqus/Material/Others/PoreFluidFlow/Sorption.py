@@ -26,8 +26,8 @@ class Sorption:
             - s0.
             - s1.
 
-        The corresponding analysis keywords are:
-            - SORPTION
+    The corresponding analysis keywords are:
+        - SORPTION
 
     """
 

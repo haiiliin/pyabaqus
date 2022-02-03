@@ -30,8 +30,8 @@ class PropertyAssembly(AssemblyBase):
             
             .. code-block:: python
             
-                mdb.models[*name*].parts[*name*].SectionAssignment
-                mdb.models[*name*].rootAssembly.SectionAssignment
+                mdb.models[name].parts[*name*].SectionAssignment
+                mdb.models[name].rootAssembly.SectionAssignment
         
         Parameters
         ----------

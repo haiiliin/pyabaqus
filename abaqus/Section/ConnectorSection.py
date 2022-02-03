@@ -18,8 +18,8 @@ class ConnectorSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-        The corresponding analysis keywords are:
-            - CONNECTOR SECTION
+    The corresponding analysis keywords are:
+        - CONNECTOR SECTION
             - CONNECTOR BEHAVIOR
             - CONNECTOR CONSTITUTIVE REFERENCE
 

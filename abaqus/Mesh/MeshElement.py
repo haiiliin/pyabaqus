@@ -78,7 +78,7 @@ class MeshElement:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].Element
+            mdb.models[name].parts[*name*].Element
         
         Parameters
         ----------

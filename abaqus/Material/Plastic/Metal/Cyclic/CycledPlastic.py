@@ -21,8 +21,8 @@ class CycledPlastic:
             - Plastic strain.
             - Temperature, if the data depend on temperature.
 
-        The corresponding analysis keywords are:
-            - CYCLED PLASTIC
+    The corresponding analysis keywords are:
+        - CYCLED PLASTIC
 
     """
 

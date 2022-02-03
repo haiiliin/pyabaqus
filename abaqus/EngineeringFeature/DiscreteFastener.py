@@ -26,8 +26,8 @@ class DiscreteFastener(Fastener):
         import assembly
         mdb.models[name].rootAssembly.engineeringFeatures.fasteners[name]
 
-        The corresponding analysis keywords are:
-            - COUPLING
+    The corresponding analysis keywords are:
+        - COUPLING
 
     """
 

@@ -17,8 +17,8 @@ class SuperElasticHardening:
             - Yield Stress.
             - Total Strain.
 
-        The corresponding analysis keywords are:
-            - SUPERELASTIC HARDENING
+    The corresponding analysis keywords are:
+        - SUPERELASTIC HARDENING
 
     """
 

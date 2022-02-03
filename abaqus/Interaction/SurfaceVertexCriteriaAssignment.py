@@ -17,8 +17,8 @@ class SurfaceVertexCriteriaAssignment:
             import interaction
             mdb.models[name].interactions[name].surfacevertexCriteriaAssignments
 
-        The corresponding analysis keywords are:
-            - SURFACE PROPERTY ASSIGNMENT
+    The corresponding analysis keywords are:
+        - SURFACE PROPERTY ASSIGNMENT
 
     """
 
@@ -37,7 +37,7 @@ class SurfaceVertexCriteriaAssignment:
         value
             A tuple specifying the value of the surface vertex criteria assignments for the surface 
             whose index is referenced. Each tuple contains: 
-                - A Float or a SymbolicConstant specifying the vertex criteria value to be used for the 
+            - A Float or a SymbolicConstant specifying the vertex criteria value to be used for the 
             surface. Possible values of the SymbolicConstant are ALL_VERTICES or NO_VERTICES. 
         """
         pass
@@ -54,9 +54,9 @@ class SurfaceVertexCriteriaAssignment:
         assignments
             A sequence of tuples specifying the surface vertex criteria assignments. Each tuple 
             contains two entries: 
-                - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
+            - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
             which the vertex criteria is assigned. 
-                - A Float or a SymbolicConstant specifying the vertex criteria value to be used for the 
+            - A Float or a SymbolicConstant specifying the vertex criteria value to be used for the 
             surface. Possible values of the SymbolicConstant are ALL_VERTICES or NO_VERTICES. 
         """
         pass

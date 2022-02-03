@@ -23,7 +23,7 @@ def assignBeamSectionOrientatio(region: tuple, method: SymbolicConstant, n1: tup
         
         .. code-block:: python
         
-            mdb.models[*name*].parts[*name*].assignBeamSectionOrientation
+            mdb.models[name].parts[*name*].assignBeamSectionOrientation
 
     Parameters
     ----------
@@ -50,7 +50,7 @@ def assignMaterialOrientatio(region: tuple, localCsys: Datum, axis: SymbolicCons
         
         .. code-block:: python
         
-            mdb.models[*name*].parts[*name*].assignMaterialOrientation
+            mdb.models[name].parts[*name*].assignMaterialOrientation
 
     Parameters
     ----------
@@ -81,7 +81,7 @@ def assignRebarOrientatio(region: tuple, localCsys: Datum, axis: SymbolicConstan
         
         .. code-block:: python
         
-            mdb.models[*name*].parts[*name*].assignRebarOrientation
+            mdb.models[name].parts[*name*].assignRebarOrientation
 
     Parameters
     ----------
@@ -113,7 +113,7 @@ def flipNorma(regions: Region, referenceRegion: str = ''):
         
         .. code-block:: python
         
-            mdb.models[*name*].parts[*name*].flipNormal
+            mdb.models[name].parts[*name*].flipNormal
 
     Parameters
     ----------
@@ -142,7 +142,7 @@ def flipTangen(regions: Region):
         
         .. code-block:: python
         
-            mdb.models[*name*].parts[*name*].flipTangent
+            mdb.models[name].parts[*name*].flipTangent
 
     Parameters
     ----------
@@ -163,7 +163,7 @@ def unassignBeamSectionOrientatio(index: int):
         
         .. code-block:: python
         
-            mdb.models[*name*].parts[*name*].unassignBeamSectionOrientation
+            mdb.models[name].parts[*name*].unassignBeamSectionOrientation
 
     Parameters
     ----------
@@ -183,7 +183,7 @@ def unassignMaterialOrientatio(index: int):
         
         .. code-block:: python
         
-            mdb.models[*name*].parts[*name*].unassignMaterialOrientation
+            mdb.models[name].parts[*name*].unassignMaterialOrientation
 
     Parameters
     ----------
@@ -203,7 +203,7 @@ def unassignRebarOrientatio(index: int):
         
         .. code-block:: python
         
-            mdb.models[*name*].parts[*name*].unassignRebarOrientation
+            mdb.models[name].parts[*name*].unassignRebarOrientation
 
     Parameters
     ----------

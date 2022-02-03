@@ -15,8 +15,8 @@ class InitializationAssignment:
             import interaction
             mdb.models[name].interactions[name].initializationAssignments
 
-        The corresponding analysis keywords are:
-            - CONTACT INITIALIZATION ASSIGNMENT
+    The corresponding analysis keywords are:
+        - CONTACT INITIALIZATION ASSIGNMENT
 
     """
 
@@ -50,13 +50,10 @@ class InitializationAssignment:
         assignments
             A sequence of tuples specifying the initializations assigned to each surface pair. Each 
             tuple contains four entries (fourth entry is for Abaqus/Explicit and is optional): 
-                - A region object or the SymbolicConstant GLOBAL (for Abaqus/Standard only). 
-                - A region object or the SymbolicConstant SELF (for Abaqus/Standard only). 
-                - A String specifying a StdInitialization or ExpInitializationobject associated with 
-            this pair of regions. 
-                - A String specifying a secondary surface type. This entry is applicable only if the 
-            ExpInitialization object is defined with *overclosureType*=CLEARANCE and 
-            *adjustNodalCoords*=True. 
+            - A region object or the SymbolicConstant GLOBAL (for Abaqus/Standard only). 
+            - A region object or the SymbolicConstant SELF (for Abaqus/Standard only). 
+            - A String specifying a StdInitialization or ExpInitializationobject associated with this pair of regions. 
+            - A String specifying a secondary surface type. This entry is applicable only if the ExpInitialization object is defined with *overclosureType*=CLEARANCE and *adjustNodalCoords*=True. 
         """
         pass
 

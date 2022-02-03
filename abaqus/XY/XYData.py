@@ -603,25 +603,25 @@ class XYData:
 
         Raises
         ------
-                - If *path* is invalid: 
+            - If *path* is invalid: 
               ErrorPathNotFound: Path not found. 
-                - If *viewport* is invalid: 
+            - If *viewport* is invalid: 
               ErrorCurrentVPNotFound: Current viewport not found. 
-                - If *step* and/or *frame* are invalid: 
+            - If *step* and/or *frame* are invalid: 
               ErrorInvalidUserStepAndFrame: The user step and frame specified have not been defined. 
-                - If the *variable* argument is empty: 
+            - If the *variable* argument is empty: 
               ErrorNoVarInPathExtract: No variable selection for XY data extraction from path. 
-                - If the specified output variable is not available in the output database: 
+            - If the specified output variable is not available in the output database: 
               ErrorUnavailableSelectedVariable: The selected variable is not available for the 
             current frame. 
-                - If the specified output variable cannot be used to obtain *X–Y* data: 
+            - If the specified output variable cannot be used to obtain *X–Y* data: 
               ErrorUnusableVarInPathExtract: Specified variable cannot be used in XY data extraction 
             from path. 
-                - If the SymbolicConstant specifying the refinement type is invalid: 
+            - If the SymbolicConstant specifying the refinement type is invalid: 
               ErrorUnsupportedRefinementType: Unsupported refinement type. 
-                - If the label specifying the refinement invariant or component is invalid: 
+            - If the label specifying the refinement invariant or component is invalid: 
               ErrorInvalidRefinementSpecification: Invalid refinement specification. 
-                - If *deformedMag* does not contain three Floats: 
+            - If *deformedMag* does not contain three Floats: 
               ErrorDeformedMagTupleInPathExtract: Deformed magnification tuple must contain X, Y and 
             Z values. 
         """

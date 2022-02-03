@@ -16,8 +16,8 @@ class Stress(PredefinedField):
         import load
         mdb.models[name].predefinedFields[name]
 
-        The corresponding analysis keywords are:
-            - INITIAL CONDITIONS
+    The corresponding analysis keywords are:
+        - INITIAL CONDITIONS
 
     """
 

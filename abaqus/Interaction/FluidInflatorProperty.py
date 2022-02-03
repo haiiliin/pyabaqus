@@ -35,8 +35,8 @@ class FluidInflatorProperty(ContactProperty):
             - Inflator gas temperature.
             - Inflator mass flow rate.
 
-        The corresponding analysis keywords are:
-            - FLUID INFLATOR PROPERTY
+    The corresponding analysis keywords are:
+        - FLUID INFLATOR PROPERTY
 
     """
 

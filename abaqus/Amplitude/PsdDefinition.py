@@ -18,8 +18,8 @@ class PsdDefinition(Amplitude):
         import odbAmplitude
         session.odbs[name].amplitudes[name]
 
-        The corresponding analysis keywords are:
-            - PSD-DEFINITION
+    The corresponding analysis keywords are:
+        - PSD-DEFINITION
 
     """
 

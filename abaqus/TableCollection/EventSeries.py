@@ -15,8 +15,8 @@ class EventSeries:
 
         mdb.models[name].eventSeriesDatas[name]
 
-        The corresponding analysis keywords are:
-            - EVENT SERIES TYPE
+    The corresponding analysis keywords are:
+        - EVENT SERIES TYPE
             - EVENT SERIES
 
     """

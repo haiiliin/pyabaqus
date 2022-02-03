@@ -22,7 +22,7 @@ class PropertyPart(PartBase):
             
             .. code-block:: python
             
-                mdb.models[*name*].parts[*name*].CompositeLayup
+                mdb.models[name].parts[*name*].CompositeLayup
         
         Parameters
         ----------
@@ -71,8 +71,8 @@ class PropertyPart(PartBase):
             
             .. code-block:: python
             
-                mdb.models[*name*].parts[*name*].SectionAssignment
-                mdb.models[*name*].rootAssembly.SectionAssignment
+                mdb.models[name].parts[*name*].SectionAssignment
+                mdb.models[name].rootAssembly.SectionAssignment
         
         Parameters
         ----------
@@ -123,7 +123,7 @@ class PropertyPart(PartBase):
             
             .. code-block:: python
             
-                mdb.models[*name*].parts[*name*].MaterialOrientation
+                mdb.models[name].parts[*name*].MaterialOrientation
         
         Parameters
         ----------

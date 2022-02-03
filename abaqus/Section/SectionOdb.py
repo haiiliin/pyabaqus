@@ -672,7 +672,7 @@ class SectionOdb(OdbBase):
             .. code-block:: python
             
                 mdb.models[name].parts[name].compositeLayups[i]\
-                - .HomogeneousShellSection
+            - .HomogeneousShellSection
                 mdb.models[name].HomogeneousShellSection
                 session.odbs[name].HomogeneousShellSection
         

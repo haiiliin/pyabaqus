@@ -33,8 +33,8 @@ class BeamSection(Section):
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - BEAM GENERAL SECTION
+    The corresponding analysis keywords are:
+        - BEAM GENERAL SECTION
             - BEAM SECTION
             - BEAM FLUID INERTIA
             - CENTROID

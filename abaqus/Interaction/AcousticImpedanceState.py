@@ -40,8 +40,8 @@ class AcousticImpedanceState(InteractionState):
             import interaction
             mdb.models[name].steps[name].interactionStates[name]
 
-        The corresponding analysis keywords are:
-            - SIMPEDANCE
+    The corresponding analysis keywords are:
+        - SIMPEDANCE
 
     """
 

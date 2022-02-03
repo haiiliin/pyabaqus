@@ -65,8 +65,8 @@ class GasketThicknessBehavior:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - GASKET THICKNESS BEHAVIOR
+    The corresponding analysis keywords are:
+        - GASKET THICKNESS BEHAVIOR
 
     """
 

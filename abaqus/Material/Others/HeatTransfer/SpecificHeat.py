@@ -22,8 +22,8 @@ class SpecificHeat:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - SPECIFIC HEAT
+    The corresponding analysis keywords are:
+        - SPECIFIC HEAT
 
     """
 

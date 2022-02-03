@@ -12,8 +12,8 @@ class JouleHeatFraction:
             import odbMaterial
             session.odbs[name].materials[name].jouleHeatFraction
 
-        The corresponding analysis keywords are:
-            - JOULE HEAT FRACTION
+    The corresponding analysis keywords are:
+        - JOULE HEAT FRACTION
 
     """
 

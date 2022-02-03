@@ -76,8 +76,8 @@ class Creep:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CREEP
+    The corresponding analysis keywords are:
+        - CREEP
 
     """
 

@@ -129,8 +129,8 @@ class ComplexFrequencyStep(AnalysisStep):
         import step
         mdb.models[name].steps[name]
 
-        The corresponding analysis keywords are:
-            - COMPLEX FREQUENCY
+    The corresponding analysis keywords are:
+        - COMPLEX FREQUENCY
             - STEP
 
     """

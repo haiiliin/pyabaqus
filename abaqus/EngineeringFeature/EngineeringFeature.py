@@ -548,7 +548,7 @@ class EngineeringFeature(EngineeringFeatureBase):
             
                 mdb.models[name].parts[name].engineeringFeatures.SpringDashpotToGround
                 mdb.models[name].rootAssembly.engineeringFeatures\
-                - .SpringDashpotToGround
+            - .SpringDashpotToGround
         
         Parameters
         ----------
@@ -600,7 +600,7 @@ class EngineeringFeature(EngineeringFeatureBase):
             
                 mdb.models[name].parts[name].engineeringFeatures.TwoPointSpringDashpot
                 mdb.models[name].rootAssembly.engineeringFeatures\
-                - .TwoPointSpringDashpot
+            - .TwoPointSpringDashpot
         
         Parameters
         ----------

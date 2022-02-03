@@ -17,8 +17,8 @@ class SurfaceFeatureAssignment:
             import interaction
             mdb.models[name].interactions[name].surfaceFeatureAssignments
 
-        The corresponding analysis keywords are:
-            - SURFACE PROPERTY ASSIGNMENT
+    The corresponding analysis keywords are:
+        - SURFACE PROPERTY ASSIGNMENT
 
     """
 
@@ -38,16 +38,16 @@ class SurfaceFeatureAssignment:
             A tuple specifying the value of the surface feature assignments for the surface whose 
             index is referenced. Each tuple contains two entries for Abaqus/Standard and three 
             entries for Abaqus/Explicit: 
-                - A Float or a SymbolicConstant specifying the overriding surface primary feature angle 
+            - A Float or a SymbolicConstant specifying the overriding surface primary feature angle 
             value to be used for the surface. Possible values of the SymbolicConstant are PERIMETER, 
             ALL, PICKED, or NONE. The ALL and PICKED values cannot be specified with the GLOBAL 
             region constant and can be used only in the Abaqus/Explicit version of general contact. 
-                - A Float or a SymbolicConstant specifying the overriding surface secondary feature 
+            - A Float or a SymbolicConstant specifying the overriding surface secondary feature 
             angle value to be used for the surface. Possible values of the SymbolicConstant are 
             PERIMETER, ALL, PICKED, or NONE. The ALL and PICKED values cannot be specified with the 
             GLOBAL region constant and can be used only in the Abaqus/Explicit version of general 
             contact. 
-                - A SymbolicConstant ORIGINAL or CURRENT specifying the configuration. 
+            - A SymbolicConstant ORIGINAL or CURRENT specifying the configuration. 
         """
         pass
 
@@ -63,18 +63,18 @@ class SurfaceFeatureAssignment:
         assignments
             A sequence of tuples specifying the surface feature angle assignments. Each tuple 
             contains three entries for Abaqus/Standard and four entries for Abaqus/Explicit: 
-                - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
+            - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
             which the feature angle is assigned. 
-                - A Float or a SymbolicConstant specifying the overriding surface primary feature angle 
+            - A Float or a SymbolicConstant specifying the overriding surface primary feature angle 
             value to be used for the surface. Possible values of the SymbolicConstant are PERIMETER, 
             ALL, PICKED, or NONE. The ALL and PICKED values cannot be specified with the GLOBAL 
             region constant and can be used only in the Abaqus/Explicit version of general contact. 
-                - A Float or a SymbolicConstant specifying the overriding surface secondary feature 
+            - A Float or a SymbolicConstant specifying the overriding surface secondary feature 
             angle value to be used for the surface. Possible values of the SymbolicConstant are 
             PERIMETER, ALL, PICKED, or NONE. The ALL and PICKED values cannot be specified with the 
             GLOBAL region constant and can be used only in the Abaqus/Explicit version of general 
             contact. 
-                - A SymbolicConstant ORIGINAL or CURRENT specifying the configuration. 
+            - A SymbolicConstant ORIGINAL or CURRENT specifying the configuration. 
         """
         pass
 

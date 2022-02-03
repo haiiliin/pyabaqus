@@ -24,15 +24,15 @@ class PsOptions:
         ----------
         paperSize
             A SymbolicConstant specifying the paper size. Possible values are: 
-                - LETTER 
-                - LEGAL 
-                - LEDGER 
-                - A0 
-                - A1 
-                - A2 
-                - A3 
-                - A4 
-                - A5 
+            - LETTER 
+            - LEGAL 
+            - LEDGER 
+            - A0 
+            - A1 
+            - A2 
+            - A3 
+            - A4 
+            - A5 
             The default value is LETTER. 
         topMargin
             A Float specifying the top margin of the paper in inches. Possible values are 
@@ -75,9 +75,9 @@ class PsOptions:
         RangeError
             Note:The minimum value of width and height (*minWidth* and *minHeight*) is 10 mm 
             (approximately 0.4 inches). 
-                - If *leftMargin* + *rightMargin* is out of range: 
+            - If *leftMargin* + *rightMargin* is out of range: 
               RangeError: leftMargin and rightMargin must produce image width >= minWidth 
-                - If *topMargin* + *bottomMargin* is out of range: 
+            - If *topMargin* + *bottomMargin* is out of range: 
               RangeError: topMargin and bottomMargin must produce image height >= minHeight 
         """
         pass

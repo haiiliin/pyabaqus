@@ -44,8 +44,8 @@ class BodyCurrentState(LoadState):
             import load
             mdb.models[name].steps[name].loadStates[name]
 
-        The corresponding analysis keywords are:
-            - DECURRENT
+    The corresponding analysis keywords are:
+        - DECURRENT
 
     """
 

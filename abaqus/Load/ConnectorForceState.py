@@ -60,8 +60,8 @@ class ConnectorForceState(LoadState):
             import load
             mdb.models[name].steps[name].loadStates[name]
 
-        The corresponding analysis keywords are:
-            - CONNECTOR LOAD
+    The corresponding analysis keywords are:
+        - CONNECTOR LOAD
 
     """
 

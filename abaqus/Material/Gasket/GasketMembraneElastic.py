@@ -24,8 +24,8 @@ class GasketMembraneElastic:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - GASKET ELASTICITY
+    The corresponding analysis keywords are:
+        - GASKET ELASTICITY
 
     """
 

@@ -79,8 +79,8 @@ class ContactTangentialBehavior:
         If *formulation*=USER_DEFINED, the table data specify the following:
             - Friction property.
 
-        The corresponding analysis keywords are:
-            - FRICTION
+    The corresponding analysis keywords are:
+        - FRICTION
             - CHANGE FRICTION
 
     """

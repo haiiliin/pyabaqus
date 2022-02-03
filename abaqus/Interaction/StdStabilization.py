@@ -16,8 +16,8 @@ class StdStabilization(ContactStabilization):
         import interaction
         mdb.models[name].contactStabilizations[name]
 
-        The corresponding analysis keywords are:
-            - CONTACT STABILIZATION
+    The corresponding analysis keywords are:
+        - CONTACT STABILIZATION
 
     """
 

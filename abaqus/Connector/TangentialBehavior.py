@@ -35,8 +35,8 @@ class TangentialBehavior:
             - Reference slip rate, ˙γ2γ˙2, used to measure the dynamic friction coefficient.
             - Kinetic friction coefficient, μ∞μ∞. This value corresponds to the asymptotic value of the friction coefficient at infinite slip rate, ˙γ∞γ˙∞.
 
-        The corresponding analysis keywords are:
-            - FRICTION
+    The corresponding analysis keywords are:
+        - FRICTION
 
     """
 

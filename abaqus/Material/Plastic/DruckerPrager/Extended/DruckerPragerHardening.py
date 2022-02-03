@@ -25,8 +25,8 @@ class DruckerPragerHardening:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - DRUCKER PRAGER HARDENING
+    The corresponding analysis keywords are:
+        - DRUCKER PRAGER HARDENING
 
     """
 
@@ -42,7 +42,7 @@ class DruckerPragerHardening:
             
                 mdb.models[name].materials[name].druckerPrager.DruckerPragerHardening
                 session.odbs[name].materials[name].druckerPrager\
-                - .DruckerPragerHardening
+            - .DruckerPragerHardening
         
         Parameters
         ----------

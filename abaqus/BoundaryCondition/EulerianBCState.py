@@ -60,8 +60,8 @@ class EulerianBCState(BoundaryConditionState):
             import load
             mdb.models[name].steps[name].boundaryConditionStates[name]
 
-        The corresponding analysis keywords are:
-            - EULERIAN BOUNDARY
+    The corresponding analysis keywords are:
+        - EULERIAN BOUNDARY
 
     """
 

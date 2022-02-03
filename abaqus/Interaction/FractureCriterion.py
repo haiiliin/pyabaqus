@@ -63,8 +63,8 @@ class FractureCriterion:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - FRACTURE CRITERION
+    The corresponding analysis keywords are:
+        - FRACTURE CRITERION
 
     """
 

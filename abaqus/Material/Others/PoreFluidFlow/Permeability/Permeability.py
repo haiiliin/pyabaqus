@@ -38,8 +38,8 @@ class Permeability:
             - Void ratio, e.
             - Temperature, if the data depend on temperature.
 
-        The corresponding analysis keywords are:
-            - PERMEABILITY
+    The corresponding analysis keywords are:
+        - PERMEABILITY
 
     """
 

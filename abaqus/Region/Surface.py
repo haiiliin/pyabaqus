@@ -90,8 +90,8 @@ class Surface:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].Surface
-            mdb.models[*name*].rootAssembly.Surface
+            mdb.models[name].parts[*name*].Surface
+            mdb.models[name].rootAssembly.Surface
         kwargs
 
             On three-dimensional solid faces, you can use the following arguments:
@@ -171,8 +171,8 @@ class Surface:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].Surface
-            mdb.models[*name*].rootAssembly.Surface
+            mdb.models[name].parts[*name*].Surface
+            mdb.models[name].rootAssembly.Surface
         
         Parameters
         ----------
@@ -200,8 +200,8 @@ class Surface:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].Surface
-            mdb.models[*name*].rootAssembly.Surface
+            mdb.models[name].parts[*name*].Surface
+            mdb.models[name].rootAssembly.Surface
         
         Parameters
         ----------
@@ -230,8 +230,8 @@ class Surface:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].Surface
-            mdb.models[*name*].rootAssembly.Surface
+            mdb.models[name].parts[*name*].Surface
+            mdb.models[name].rootAssembly.Surface
         
         Parameters
         ----------

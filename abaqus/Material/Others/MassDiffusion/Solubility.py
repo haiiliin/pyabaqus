@@ -22,8 +22,8 @@ class Solubility:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - SOLUBILITY
+    The corresponding analysis keywords are:
+        - SOLUBILITY
 
     """
 

@@ -42,8 +42,8 @@ class ContactDamping:
         If *definition*=CRITICAL_DAMPING_FRACTION, the table data specify the following:
             - Critical damping fraction.
 
-        The corresponding analysis keywords are:
-            - CONTACT DAMPING
+    The corresponding analysis keywords are:
+        - CONTACT DAMPING
 
     """
 

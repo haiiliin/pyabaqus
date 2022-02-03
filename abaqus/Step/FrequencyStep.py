@@ -192,8 +192,8 @@ class FrequencyStep(AnalysisStep):
         import step
         mdb.models[name].steps[name]
 
-        The corresponding analysis keywords are:
-            - FREQUENCY
+    The corresponding analysis keywords are:
+        - FREQUENCY
             - STEP
 
     """

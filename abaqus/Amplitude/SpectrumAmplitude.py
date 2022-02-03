@@ -18,8 +18,8 @@ class SpectrumAmplitude(Amplitude):
         import odbAmplitude
         session.odbs[name].amplitudes[name]
 
-        The corresponding analysis keywords are:
-            - SPECTRUM
+    The corresponding analysis keywords are:
+        - SPECTRUM
 
     """
 

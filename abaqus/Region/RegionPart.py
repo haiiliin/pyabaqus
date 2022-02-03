@@ -49,8 +49,8 @@ class RegionPart(RegionPartBase):
             
             .. code-block:: python
             
-                mdb.models[*name*].parts[*name*].Surface
-                mdb.models[*name*].rootAssembly.Surface
+                mdb.models[name].parts[*name*].Surface
+                mdb.models[name].rootAssembly.Surface
         kwargs
 
             On three-dimensional solid faces, you can use the following arguments:
@@ -141,8 +141,8 @@ class RegionPart(RegionPartBase):
             
             .. code-block:: python
             
-                mdb.models[*name*].parts[*name*].Set
-                mdb.models[*name*].rootAssembly.Set
+                mdb.models[name].parts[*name*].Set
+                mdb.models[name].rootAssembly.Set
         
         Parameters
         ----------
@@ -201,8 +201,8 @@ class RegionPart(RegionPartBase):
             
             .. code-block:: python
             
-                mdb.models[*name*].parts[*name*].Set
-                mdb.models[*name*].rootAssembly.Set
+                mdb.models[name].parts[*name*].Set
+                mdb.models[name].rootAssembly.Set
         
         Parameters
         ----------
@@ -227,8 +227,8 @@ class RegionPart(RegionPartBase):
             
             .. code-block:: python
             
-                mdb.models[*name*].parts[*name*].Set
-                mdb.models[*name*].rootAssembly.Set
+                mdb.models[name].parts[*name*].Set
+                mdb.models[name].rootAssembly.Set
         
         Parameters
         ----------
@@ -289,7 +289,7 @@ class RegionPart(RegionPartBase):
             
             .. code-block:: python
             
-                mdb.models[*name*].parts[*name*].Skin
+                mdb.models[name].parts[*name*].Skin
         
         Parameters
         ----------
@@ -327,7 +327,7 @@ class RegionPart(RegionPartBase):
             
             .. code-block:: python
             
-                mdb.models[*name*].parts[*name*].EditSkin
+                mdb.models[name].parts[*name*].EditSkin
         
         Parameters
         ----------
@@ -364,7 +364,7 @@ class RegionPart(RegionPartBase):
             
             .. code-block:: python
             
-                mdb.models[*name*].parts[*name*].Stringer
+                mdb.models[name].parts[*name*].Stringer
         
         Parameters
         ----------

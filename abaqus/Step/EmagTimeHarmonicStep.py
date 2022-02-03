@@ -104,8 +104,8 @@ class EmagTimeHarmonicStep(AnalysisStep):
         import step
         mdb.models[name].steps[name]
 
-        The corresponding analysis keywords are:
-            - ELECTROMAGNETIC TIME HARMONIC
+    The corresponding analysis keywords are:
+        - ELECTROMAGNETIC TIME HARMONIC
             - STEP
 
     """

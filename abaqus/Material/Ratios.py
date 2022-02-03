@@ -26,8 +26,8 @@ class Ratios:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - RATIOS
+    The corresponding analysis keywords are:
+        - RATIOS
 
     """
 

@@ -111,8 +111,8 @@ class EulerianMotionBCState(BoundaryConditionState):
             import load
             mdb.models[name].steps[name].boundaryConditionStates[name]
 
-        The corresponding analysis keywords are:
-            - EULERIAN MESH MOTION
+    The corresponding analysis keywords are:
+        - EULERIAN MESH MOTION
 
     """
 

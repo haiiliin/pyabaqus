@@ -108,8 +108,8 @@ class Job:
             mdb.coexecutions[name].jobs[name]
             mdb.jobs[name]
 
-        The corresponding analysis keywords are:
-            - HEADING
+    The corresponding analysis keywords are:
+        - HEADING
             - PREPRINT
 
     """

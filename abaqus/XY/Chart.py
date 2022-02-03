@@ -177,9 +177,9 @@ class Chart:
         ------
             If the given XYCurve is not used in the Chart. 
             XypError: Curve not found: 
-                - If both arguments are specified. 
+            - If both arguments are specified. 
               TypeError: Specify curve or quantityType; too many arguments; expected 1, got 2. 
-                - If the given QuantityType is not used in the Chart. 
+            - If the given QuantityType is not used in the Chart. 
               ValueError: QuantityType not found 
         """
         pass
@@ -203,9 +203,9 @@ class Chart:
         ------
             If the given XYCurve is not used in the Chart. 
             XypError: Curve not found: 
-                - If both arguments are specified. 
+            - If both arguments are specified. 
               TypeError: Specify curve or quantityType; too many arguments; expected 1, got 2. 
-                - If the given QuantityType is not used in the Chart. 
+            - If the given QuantityType is not used in the Chart. 
               ValueError: QuantityType not found 
         """
         pass

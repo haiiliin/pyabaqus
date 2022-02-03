@@ -74,8 +74,8 @@ class SubmodelBCState(BoundaryConditionState):
             import load
             mdb.models[name].steps[name].boundaryConditionStates[name]
 
-        The corresponding analysis keywords are:
-            - SUBMODEL
+    The corresponding analysis keywords are:
+        - SUBMODEL
             - BOUNDARY
 
     """

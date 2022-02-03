@@ -25,8 +25,8 @@ class FluidLeakoff:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - FLUID LEAKOFF
+    The corresponding analysis keywords are:
+        - FLUID LEAKOFF
 
     """
 

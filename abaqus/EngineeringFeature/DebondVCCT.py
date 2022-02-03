@@ -23,8 +23,8 @@ class DebondVCCT(Crack):
         import assembly
         mdb.models[name].rootAssembly.engineeringFeatures.cracks[name]
 
-        The corresponding analysis keywords are:
-            - DEBOND
+    The corresponding analysis keywords are:
+        - DEBOND
 
     """
 

@@ -224,8 +224,8 @@ class Material(MaterialBase):
         import odbMaterial
         session.odbs[name].materials[name]
 
-        The corresponding analysis keywords are:
-            - MATERIAL
+    The corresponding analysis keywords are:
+        - MATERIAL
 
     """
 
@@ -262,19 +262,19 @@ class Material(MaterialBase):
             *volumetricTable*. The default value is 0. 
         bulkTable
             A sequence of sequences of Floats specifying the following: 
-                - Bulk modulus. 
-                - Temperature, if the data depend on temperature. 
-                - Value of the first field variable, if the data depend on field variables. 
-                - Value of the second field variable. 
-                - Etc. 
+            - Bulk modulus. 
+            - Temperature, if the data depend on temperature. 
+            - Value of the first field variable, if the data depend on field variables. 
+            - Value of the second field variable. 
+            - Etc. 
         volumetricTable
             A sequence of sequences of Floats specifying the following: 
-                - Volumetric drag. 
-                - Frequency. 
-                - Temperature, if the data depend on temperature. 
-                - Value of the first field variable, if the data depend on field variables. 
-                - Value of the second field variable. 
-                - Etc. 
+            - Volumetric drag. 
+            - Frequency. 
+            - Temperature, if the data depend on temperature. 
+            - Value of the first field variable, if the data depend on field variables. 
+            - Value of the second field variable. 
+            - Etc. 
             The default value is an empty sequence. 
 
         Returns
@@ -887,16 +887,16 @@ class Material(MaterialBase):
             A sequence of sequences of Floats specifying the items described below. 
         type
             A SymbolicConstant specifying the type of elasticity data provided. Possible values are: 
-                - ISOTROPIC 
-                - ORTHOTROPIC 
-                - ANISOTROPIC 
-                - ENGINEERING_CONSTANTS 
-                - LAMINA 
-                - TRACTION 
-                - COUPLED_TRACTION 
-                - SHORT_FIBER 
-                - SHEAR 
-                - BILAMINA 
+            - ISOTROPIC 
+            - ORTHOTROPIC 
+            - ANISOTROPIC 
+            - ENGINEERING_CONSTANTS 
+            - LAMINA 
+            - TRACTION 
+            - COUPLED_TRACTION 
+            - SHORT_FIBER 
+            - SHEAR 
+            - BILAMINA 
             The default value is ISOTROPIC. 
         noCompression
             A Boolean specifying whether compressive stress is allowed. The default value is OFF. 
@@ -991,44 +991,44 @@ class Material(MaterialBase):
             A Float specifying the detonation energy text field. The default value is 0.0. 
         solidTable
             A sequence of sequences of Floats specifying the following: 
-                - $A_{s}$. 
-                - $B_{s}$. 
-                - ${\omega}_{s}$. 
-                - $R_{1s}$. 
-                - $R_{2s}$. 
+            - $A_{s}$. 
+            - $B_{s}$. 
+            - ${\omega}_{s}$. 
+            - $R_{1s}$. 
+            - $R_{2s}$. 
             The default value is an empty sequence. 
         gasTable
             A sequence of sequences of Floats specifying the following: 
-                - $A_{g}$. 
-                - $B_{g}$. 
-                - ${\omega}_{g}$. 
-                - $R_{1g}$. 
-                - $R_{2g}$. 
+            - $A_{g}$. 
+            - $B_{g}$. 
+            - ${\omega}_{g}$. 
+            - $R_{1g}$. 
+            - $R_{2g}$. 
             The default value is an empty sequence. 
         reactionTable
             A sequence of sequences of Floats specifying the following: 
-                - Initial Pressure, $I$. 
-                - Product co-volume, $a$. 
-                - Exponent on the unreacted fraction (ignition term), $x$. 
-                - First burn rate coefficient, $G_{1}$ 
-                - Exponent on the unreacted fraction (growth term), $c$. 
-                - Exponent on the reacted fraction (growth term), $d$. 
-                - Pressure exponent (growth term), $y$. 
-                - Second burn rate coefficient, $G_{2}$. 
-                - Exponent on the unreacted fraction (completion term), $e$. 
-                - Exponent on the reacted fraction (completion term), $g$. 
-                - Pressure exponent (completion term), $z$. 
-                - Initial reacted fraction, ${F^{max}}_{ig}$. 
-                - Maximum reacted fraction for the growth term, ${F^{max}}_{G1}$. 
-                - Minimum reacted fraction, ${F^{min}}_{G2}$. 
+            - Initial Pressure, $I$. 
+            - Product co-volume, $a$. 
+            - Exponent on the unreacted fraction (ignition term), $x$. 
+            - First burn rate coefficient, $G_{1}$ 
+            - Exponent on the unreacted fraction (growth term), $c$. 
+            - Exponent on the reacted fraction (growth term), $d$. 
+            - Pressure exponent (growth term), $y$. 
+            - Second burn rate coefficient, $G_{2}$. 
+            - Exponent on the unreacted fraction (completion term), $e$. 
+            - Exponent on the reacted fraction (completion term), $g$. 
+            - Pressure exponent (completion term), $z$. 
+            - Initial reacted fraction, ${F^{max}}_{ig}$. 
+            - Maximum reacted fraction for the growth term, ${F^{max}}_{G1}$. 
+            - Minimum reacted fraction, ${F^{min}}_{G2}$. 
             The default value is an empty sequence. 
         gasSpecificTable
             A sequence of sequences of Floats specifying the following: 
-                - Specific Heat per unit mass. 
-                - Temperature dependent data. 
-                - Value of first field variable. 
-                - Value of second field variable. 
-                - Etc. 
+            - Specific Heat per unit mass. 
+            - Temperature dependent data. 
+            - Value of first field variable. 
+            - Value of second field variable. 
+            - Etc. 
             The default value is an empty sequence. 
         table
             A sequence of sequences of Floats specifying the items described below. The default 
@@ -2292,8 +2292,8 @@ class Material(MaterialBase):
         ----------
         domain
             A SymbolicConstant specifying the domain definition. Possible values are:
-                - FREQUENCY, specifying a frequency domain. This domain is only available for an Abaqus/Standard analysis.
-                - TIME, specifying a time domain.
+            - FREQUENCY, specifying a frequency domain. This domain is only available for an Abaqus/Standard analysis.
+            - TIME, specifying a time domain.
         table
             A sequence of sequences of Floats specifying the items described below. 
         frequency

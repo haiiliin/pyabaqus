@@ -17,8 +17,8 @@ class SimpleShearTestData:
             - Nominal shear strain, γ.
             - Nominal transverse stress, TT (normal to edge with shear stress). This stress value is optional.
 
-        The corresponding analysis keywords are:
-            - SIMPLE SHEAR TEST DATA
+    The corresponding analysis keywords are:
+        - SIMPLE SHEAR TEST DATA
 
     """
 

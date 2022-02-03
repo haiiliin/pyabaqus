@@ -40,8 +40,8 @@ class XFEMCrackGrowthState(InteractionState):
             import interaction
             mdb.models[name].steps[name].interactionStates[name]
 
-        The corresponding analysis keywords are:
-            - ENRICHMENT ACTIVATION
+    The corresponding analysis keywords are:
+        - ENRICHMENT ACTIVATION
 
     """
 

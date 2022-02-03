@@ -25,8 +25,8 @@ class IncidentWaveState(InteractionState):
             import interaction
             mdb.models[name].steps[name].interactionStates[name]
 
-        The corresponding analysis keywords are:
-            - INCIDENT WAVE INTERACTION
+    The corresponding analysis keywords are:
+        - INCIDENT WAVE INTERACTION
 
     """
 

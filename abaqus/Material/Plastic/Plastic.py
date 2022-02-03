@@ -64,8 +64,8 @@ class Plastic:
         If *hardening*=USER, the table data specify the following:
             - Hardening properties.
 
-        The corresponding analysis keywords are:
-            - PLASTIC
+    The corresponding analysis keywords are:
+        - PLASTIC
 
     """
 

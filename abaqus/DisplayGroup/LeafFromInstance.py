@@ -52,7 +52,7 @@ class LeafFromInstance(Leaf):
 
         Raises
         ------
-                - If an invalid argument is passed to this method: 
+            - If an invalid argument is passed to this method: 
               Cannot define empty leaf. 
         """
         super().__init__(DEFAULT_MODEL)

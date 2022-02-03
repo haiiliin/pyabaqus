@@ -16,8 +16,8 @@ class TriaxialTestData:
             - Sign and magnitude of confining stress, σ1=σ2.
             - Sign and magnitude of the stress in loading direction, σ3.
 
-        The corresponding analysis keywords are:
-            - TRIAXIAL TEST DATA
+    The corresponding analysis keywords are:
+        - TRIAXIAL TEST DATA
 
     """
 

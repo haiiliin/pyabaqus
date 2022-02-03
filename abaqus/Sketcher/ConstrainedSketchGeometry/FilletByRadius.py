@@ -39,7 +39,7 @@ class FilletByRadius(ConstrainedSketchGeometry):
 
         Raises
         ------
-                - If the radius given cannot be used to create a fillet between the two curves given: 
+            - If the radius given cannot be used to create a fillet between the two curves given: 
               Range Error: cannot construct the Fillet specified 
             
         """

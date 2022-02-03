@@ -24,8 +24,8 @@ class CastIronTensionHardening:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CAST IRON TENSION HARDENING
+    The corresponding analysis keywords are:
+        - CAST IRON TENSION HARDENING
 
     """
 
@@ -39,9 +39,9 @@ class CastIronTensionHardening:
             .. code-block:: python
             
                 mdb.models[name].materials[name].castIronPlasticity\
-                - .CastIronTensionHardening
+            - .CastIronTensionHardening
                 session.odbs[name].materials[name].castIronPlasticity\
-                - .CastIronTensionHardening
+            - .CastIronTensionHardening
         
         Parameters
         ----------

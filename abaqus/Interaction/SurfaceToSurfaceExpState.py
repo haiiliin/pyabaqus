@@ -46,8 +46,8 @@ class SurfaceToSurfaceExpState(InteractionState):
             import interaction
             mdb.models[name].steps[name].interactionStates[name]
 
-        The corresponding analysis keywords are:
-            - CONTACT CONTROLS
+    The corresponding analysis keywords are:
+        - CONTACT CONTROLS
             - CONTACT PAIR
 
     """

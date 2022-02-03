@@ -32,8 +32,8 @@ class ConcreteTensionDamage:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CONCRETE TENSION DAMAGE
+    The corresponding analysis keywords are:
+        - CONCRETE TENSION DAMAGE
 
     """
 
@@ -48,9 +48,9 @@ class ConcreteTensionDamage:
             .. code-block:: python
             
                 mdb.models[name].materials[name].concreteDamagedPlasticity\
-                - .ConcreteTensionDamage
+            - .ConcreteTensionDamage
                 session.odbs[name].materials[name].concreteDamagedPlasticity\
-                - .ConcreteTensionDamage
+            - .ConcreteTensionDamage
         
         Parameters
         ----------

@@ -17,8 +17,8 @@ class ButterworthFilter(Filter):
         import odbFilter
         session.odbs[name].filters[name]
 
-        The corresponding analysis keywords are:
-            - FILTER
+    The corresponding analysis keywords are:
+        - FILTER
 
     """
 

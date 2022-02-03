@@ -13,8 +13,8 @@ class InelasticHeatFraction:
             import odbMaterial
             session.odbs[name].materials[name].inelasticHeatFraction
 
-        The corresponding analysis keywords are:
-            - INELASTIC HEAT FRACTION
+    The corresponding analysis keywords are:
+        - INELASTIC HEAT FRACTION
 
     """
 

@@ -15,8 +15,8 @@ class RegionPairs:
             mdb.models[name].interactions[name].excludedPairs
             mdb.models[name].interactions[name].includedPairs
 
-        The corresponding analysis keywords are:
-            - CONTACT INCLUSIONS
+    The corresponding analysis keywords are:
+        - CONTACT INCLUSIONS
             - CONTACT EXCLUSIONS
 
     """

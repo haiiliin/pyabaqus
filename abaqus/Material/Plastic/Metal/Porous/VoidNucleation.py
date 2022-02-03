@@ -24,8 +24,8 @@ class VoidNucleation:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - VOID NUCLEATION
+    The corresponding analysis keywords are:
+        - VOID NUCLEATION
 
     """
 
@@ -40,7 +40,7 @@ class VoidNucleation:
             
                 mdb.models[name].materials[name].porousMetalPlasticity.VoidNucleation
                 session.odbs[name].materials[name].porousMetalPlasticity\
-                - .VoidNucleation
+            - .VoidNucleation
         
         Parameters
         ----------

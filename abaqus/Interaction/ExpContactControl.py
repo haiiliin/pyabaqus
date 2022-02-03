@@ -16,8 +16,8 @@ class ExpContactControl(ContactControl):
         import interaction
         mdb.models[name].contactControls[name]
 
-        The corresponding analysis keywords are:
-            - CONTACT CONTROLS
+    The corresponding analysis keywords are:
+        - CONTACT CONTROLS
 
     """
 

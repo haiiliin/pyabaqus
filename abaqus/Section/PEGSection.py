@@ -16,8 +16,8 @@ class PEGSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-        The corresponding analysis keywords are:
-            - SOLID SECTION
+    The corresponding analysis keywords are:
+        - SOLID SECTION
 
     """
 

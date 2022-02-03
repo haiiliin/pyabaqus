@@ -43,8 +43,8 @@ class DisplacementBaseMotionBCState(BoundaryConditionState):
             import load
             mdb.models[name].steps[name].boundaryConditionStates[name]
 
-        The Corresponding analysis keywords are:
-            - BASE MOTION
+    The corresponding analysis keywords are:
+        - BASE MOTION
 
     """
 

@@ -830,7 +830,7 @@ class AssemblyBase(Feature):
 
         Raises
         ------
-                - If one or more features in the assembly fails to regenerate: 
+            - If one or more features in the assembly fails to regenerate: 
               FeatureError: Regeneration failed 
         """
         pass

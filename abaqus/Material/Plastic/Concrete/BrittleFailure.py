@@ -29,8 +29,8 @@ class BrittleFailure:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - BRITTLE FAILURE
+    The corresponding analysis keywords are:
+        - BRITTLE FAILURE
 
     """
 

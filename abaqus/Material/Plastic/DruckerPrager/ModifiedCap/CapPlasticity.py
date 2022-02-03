@@ -30,8 +30,8 @@ class CapPlasticity:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CAP PLASTICITY
+    The corresponding analysis keywords are:
+        - CAP PLASTICITY
 
     """
 

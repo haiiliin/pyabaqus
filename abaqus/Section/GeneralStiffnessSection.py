@@ -27,8 +27,8 @@ class GeneralStiffnessSection(ShellSection):
         import odbSection
         session.odbs[name].sections[name]
 
-        The corresponding analysis keywords are:
-            - SHELL GENERAL SECTION
+    The corresponding analysis keywords are:
+        - SHELL GENERAL SECTION
 
     """
 

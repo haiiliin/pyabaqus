@@ -13,8 +13,8 @@ class PorousFailureCriteria:
             import odbMaterial
             session.odbs[name].materials[name].porousMetalPlasticity.porousFailureCriteria
 
-        The corresponding analysis keywords are:
-            - POROUS FAILURE CRITERIA
+    The corresponding analysis keywords are:
+        - POROUS FAILURE CRITERIA
 
     """
 
@@ -28,9 +28,9 @@ class PorousFailureCriteria:
             .. code-block:: python
             
                 mdb.models[name].materials[name].porousMetalPlasticity\
-                - .PorousFailureCriteria
+            - .PorousFailureCriteria
                 session.odbs[name].materials[name].porousMetalPlasticity\
-                - .PorousFailureCriteria
+            - .PorousFailureCriteria
         
         Parameters
         ----------

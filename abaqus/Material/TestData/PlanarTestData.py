@@ -29,8 +29,8 @@ class PlanarTestData:
             - Nominal strain in the direction of loading, ϵp.
             - Nominal transverse strain, ϵ3. The default value is 0.
 
-        The corresponding analysis keywords are:
-            - PLANAR TEST DATA
+    The corresponding analysis keywords are:
+        - PLANAR TEST DATA
 
     """
 

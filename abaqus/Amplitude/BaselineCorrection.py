@@ -13,8 +13,8 @@ class BaselineCorrection:
         import odbAmplitude
         session.odbs[name].amplitudes[name].baselineCorrection
 
-        The corresponding analysis keywords are:
-            - BASELINE CORRECTION
+    The corresponding analysis keywords are:
+        - BASELINE CORRECTION
 
     """
 

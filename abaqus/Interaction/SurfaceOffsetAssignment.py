@@ -17,8 +17,8 @@ class SurfaceOffsetAssignment:
             import interaction
             mdb.models[name].interactions[name].surfaceOffsetAssignments
 
-        The corresponding analysis keywords are:
-            - SURFACE PROPERTY ASSIGNMENT
+    The corresponding analysis keywords are:
+        - SURFACE PROPERTY ASSIGNMENT
 
     """
 
@@ -37,7 +37,7 @@ class SurfaceOffsetAssignment:
         value
             A tuple specifying the value of the surface offset assignments for the surface whose 
             index is referenced. Each tuple contains one entry: 
-                - A Float or a SymbolicConstant specifying the surface offset fraction value to be used 
+            - A Float or a SymbolicConstant specifying the surface offset fraction value to be used 
             for the surface. Possible values of the SymbolicConstant are ORIGINAL, SPOS, and SNEG. 
         """
         pass
@@ -54,9 +54,9 @@ class SurfaceOffsetAssignment:
         assignments
             A sequence of tuples specifying the surface offset fraction assignments. Each tuple 
             contains two entries: 
-                - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
+            - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
             which the offset fraction is assigned. 
-                - A Float or a SymbolicConstant specifying the surface offset fraction value to be used 
+            - A Float or a SymbolicConstant specifying the surface offset fraction value to be used 
             for the surface. Possible values of the SymbolicConstant are ORIGINAL, SPOS, and SNEG. 
         """
         pass

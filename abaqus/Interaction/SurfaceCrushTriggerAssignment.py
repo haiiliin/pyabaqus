@@ -17,8 +17,8 @@ class SurfaceCrushTriggerAssignment:
             import interaction
             mdb.models[name].interactions[name].surfaceCrushTriggerAssignments
 
-        The corresponding analysis keywords are:
-            - SURFACE PROPERTY ASSIGNMENT
+    The corresponding analysis keywords are:
+        - SURFACE PROPERTY ASSIGNMENT
 
     """
 
@@ -37,11 +37,11 @@ class SurfaceCrushTriggerAssignment:
         value
             A tuple specifying the value of the surface crush trigger assignments for the surface 
             whose index is referenced. Each tuple contains three entries: 
-                - A SymbolicConstant specifying the trigger option to be used for the surface. Possible 
+            - A SymbolicConstant specifying the trigger option to be used for the surface. Possible 
             values of the SymbolicConstant are TRIGGER, NO_TRIGGER, or NO_CRUSH. 
-                - A Float specifying the crush stress value to be used for the surface. 
-                - A Float specifying the crush initiation angle value to be used for the surface. 
-                - A Float specifying the crush continuation angle value to be used for the surface. 
+            - A Float specifying the crush stress value to be used for the surface. 
+            - A Float specifying the crush initiation angle value to be used for the surface. 
+            - A Float specifying the crush continuation angle value to be used for the surface. 
         """
         pass
 
@@ -57,13 +57,13 @@ class SurfaceCrushTriggerAssignment:
         assignments
             A sequence of tuples specifying the surface crush trigger assignments. Each tuple 
             contains four entries: 
-                - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
+            - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
             which the feature angle is assigned. 
-                - A SymbolicConstant specifying the trigger option to be used for the surface. Possible 
+            - A SymbolicConstant specifying the trigger option to be used for the surface. Possible 
             values of the SymbolicConstant are TRIGGER, NO_TRIGGER, or NO_CRUSH. 
-                - A Float specifying the crush stress value to be used for the surface. 
-                - A Float specifying the crush initiation angle value to be used for the surface. 
-                - A Float specifying the crush continuation angle value to be used for the surface. 
+            - A Float specifying the crush stress value to be used for the surface. 
+            - A Float specifying the crush initiation angle value to be used for the surface. 
+            - A Float specifying the crush continuation angle value to be used for the surface. 
         """
         pass
 

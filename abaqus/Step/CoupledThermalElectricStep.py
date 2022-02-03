@@ -149,8 +149,8 @@ class CoupledThermalElectricStep(AnalysisStep):
         import step
         mdb.models[name].steps[name]
 
-        The corresponding analysis keywords are:
-            - COUPLED THERMAL-ELECTRICAL
+    The corresponding analysis keywords are:
+        - COUPLED THERMAL-ELECTRICAL
             - SOLUTION TECHNIQUE
             - STEP
 

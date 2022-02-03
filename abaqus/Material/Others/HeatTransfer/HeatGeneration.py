@@ -12,8 +12,8 @@ class HeatGeneration:
             import odbMaterial
             session.odbs[name].materials[name].heatGeneration
 
-        The corresponding analysis keywords are:
-            - HEAT GENERATION
+    The corresponding analysis keywords are:
+        - HEAT GENERATION
 
     """
 

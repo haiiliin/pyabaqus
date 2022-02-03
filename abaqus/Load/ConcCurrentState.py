@@ -44,8 +44,8 @@ class ConcCurrentState(LoadState):
             import load
             mdb.models[name].steps[name].loadStates[name]
 
-        The corresponding analysis keywords are:
-            - CECURRENT
+    The corresponding analysis keywords are:
+        - CECURRENT
 
     """
 

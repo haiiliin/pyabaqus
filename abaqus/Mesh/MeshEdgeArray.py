@@ -55,7 +55,7 @@ class MeshEdgeArray(list[MeshEdge]):
 
         Raises
         ------
-                - An exception occurs if the resulting sequence is empty. 
+            - An exception occurs if the resulting sequence is empty. 
               Error: The mask results in an empty sequence 
         """
         pass

@@ -23,8 +23,8 @@ class PoreFluidExpansion:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - EXPANSION
+    The corresponding analysis keywords are:
+        - EXPANSION
 
     """
 

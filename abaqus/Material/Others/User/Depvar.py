@@ -12,8 +12,8 @@ class Depvar:
             import odbMaterial
             session.odbs[name].materials[name].depvar
 
-        The corresponding analysis keywords are:
-            - DEPVAR
+    The corresponding analysis keywords are:
+        - DEPVAR
 
     """
 

@@ -17,8 +17,8 @@ class RebarLayers:
         import odbSection
         session.odbs[name].sections[name].rebarLayers
 
-        The corresponding analysis keywords are:
-            - REBAR LAYER
+    The corresponding analysis keywords are:
+        - REBAR LAYER
 
     """
 

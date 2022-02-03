@@ -32,8 +32,8 @@ class BodyForce(Load):
         import load
         mdb.models[name].loads[name]
 
-        The corresponding analysis keywords are:
-            - DLOAD
+    The corresponding analysis keywords are:
+        - DLOAD
 
     """
 

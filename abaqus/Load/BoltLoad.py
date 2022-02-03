@@ -28,8 +28,8 @@ class BoltLoad(Load):
         import load
         mdb.models[name].loads[name]
 
-        The corresponding analysis keywords are:
-            - PRE-TENSION SECTION
+    The corresponding analysis keywords are:
+        - PRE-TENSION SECTION
             - NODE
             - NSET
 

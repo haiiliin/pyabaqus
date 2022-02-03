@@ -20,8 +20,8 @@ class PorousBulkModuli:
             - Bulk modulus of permeating fluid.
             - Temperature, if the data depend on temperature.
 
-        The corresponding analysis keywords are:
-            - POROUS BULK MODULI
+    The corresponding analysis keywords are:
+        - POROUS BULK MODULI
 
     """
 

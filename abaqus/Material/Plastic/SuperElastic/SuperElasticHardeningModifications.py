@@ -20,8 +20,8 @@ class SuperElasticHardeningModifications:
             - End of Transformation (Unloading).
             - Plastic Strain.
 
-        The corresponding analysis keywords are:
-            - SUPERELASTIC HARDENING MODIFICATIONS
+    The corresponding analysis keywords are:
+        - SUPERELASTIC HARDENING MODIFICATIONS
 
     """
 

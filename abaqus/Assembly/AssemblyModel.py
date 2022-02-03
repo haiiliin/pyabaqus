@@ -32,7 +32,7 @@ class AssemblyModel(ModelBase):
 
         .. code-block:: python
 
-            mdb.models[*name*].Instance
+            mdb.models[name].Instance
         
         Parameters
         ----------

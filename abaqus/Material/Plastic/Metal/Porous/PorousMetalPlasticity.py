@@ -26,8 +26,8 @@ class PorousMetalPlasticity:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - POROUS METAL PLASTICITY
+    The corresponding analysis keywords are:
+        - POROUS METAL PLASTICITY
 
     """
 

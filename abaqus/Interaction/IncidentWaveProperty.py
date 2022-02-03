@@ -16,8 +16,8 @@ class IncidentWaveProperty(ContactProperty):
         import interaction
         mdb.models[name].interactionProperties[name]
 
-        The corresponding analysis keywords are:
-            - INCIDENT WAVE INTERACTION PROPERTY
+    The corresponding analysis keywords are:
+        - INCIDENT WAVE INTERACTION PROPERTY
             - UNDEX CHARGE PROPERTY
             - CONWEP CHARGE PROPERTY
 

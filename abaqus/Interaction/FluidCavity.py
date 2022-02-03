@@ -16,8 +16,8 @@ class FluidCavity(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-        The corresponding analysis keywords are:
-            - FLUID CAVITY
+    The corresponding analysis keywords are:
+        - FLUID CAVITY
 
     """
 

@@ -113,8 +113,8 @@ class CavityRadiation(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-        The corresponding analysis keywords are:
-            - CAVITY DEFINITION
+    The corresponding analysis keywords are:
+        - CAVITY DEFINITION
             - CYCLIC
             - EMISSIVITY
             - PERIODIC

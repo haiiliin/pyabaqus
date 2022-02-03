@@ -28,8 +28,8 @@ class FailStress:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - FAIL STRESS
+    The corresponding analysis keywords are:
+        - FAIL STRESS
 
     """
 

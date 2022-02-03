@@ -131,8 +131,8 @@ class RandomResponseStep(AnalysisStep):
         import step
         mdb.models[name].steps[name]
 
-        The corresponding analysis keywords are:
-            - DAMPING
+    The corresponding analysis keywords are:
+        - DAMPING
             - MODAL DAMPING
             - RANDOM RESPONSE
             - STEP

@@ -31,8 +31,8 @@ class TensionStiffening:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - TENSION STIFFENING
+    The corresponding analysis keywords are:
+        - TENSION STIFFENING
 
     """
 

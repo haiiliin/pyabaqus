@@ -23,8 +23,8 @@ class Swelling:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - SWELLING
+    The corresponding analysis keywords are:
+        - SWELLING
 
     """
 

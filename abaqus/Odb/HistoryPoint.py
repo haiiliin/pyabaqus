@@ -181,18 +181,18 @@ class HistoryPoint:
             A SymbolicConstant specifying the element face. This argument is used to define a 
             history output position of ELEMENT_FACE or ELEMENT_FACE_INTEGRATION_POINT. Possible 
             values are: 
-                - FACE_UNKOWN, specifying this value indicates that no value has been specified. 
-                - FACE1, specifying this value indicates that element face 1 has been specified. 
-                - FACE2, specifying this value indicates that element face 2 has been specified. 
-                - FACE3, specifying this value indicates that element face 3 has been specified. 
-                - FACE4, specifying this value indicates that element face 4 has been specified. 
-                - FACE5, specifying this value indicates that element face 5 has been specified. 
-                - FACE6, specifying this value indicates that element face 6 has been specified. 
-                - SIDE1, specifying this value indicates that element side 1 has been specified. 
-                - SIDE2, specifying this value indicates element side 2 has been specified. 
-                - END1, specifying this value indicates that element end 1 has been specified. 
-                - END2, specifying this value indicates that element end 2 has been specified. 
-                - END3, specifying this value indicates that element end 3 has been specified. 
+            - FACE_UNKOWN, specifying this value indicates that no value has been specified. 
+            - FACE1, specifying this value indicates that element face 1 has been specified. 
+            - FACE2, specifying this value indicates that element face 2 has been specified. 
+            - FACE3, specifying this value indicates that element face 3 has been specified. 
+            - FACE4, specifying this value indicates that element face 4 has been specified. 
+            - FACE5, specifying this value indicates that element face 5 has been specified. 
+            - FACE6, specifying this value indicates that element face 6 has been specified. 
+            - SIDE1, specifying this value indicates that element side 1 has been specified. 
+            - SIDE2, specifying this value indicates element side 2 has been specified. 
+            - END1, specifying this value indicates that element end 1 has been specified. 
+            - END2, specifying this value indicates that element end 2 has been specified. 
+            - END3, specifying this value indicates that element end 3 has been specified. 
             The default value is FACE_UNKNOWN. 
         node
             An OdbMeshNode object specifying the node for which the data are to be collected. 

@@ -64,7 +64,7 @@ class MaterialOrientation:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].MaterialOrientation
+            mdb.models[name].parts[*name*].MaterialOrientation
         
         Parameters
         ----------
@@ -160,7 +160,7 @@ class MaterialOrientation:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].MaterialOrientation
+            mdb.models[name].parts[*name*].MaterialOrientation
         
         Parameters
         ----------

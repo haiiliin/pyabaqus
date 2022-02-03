@@ -135,8 +135,8 @@ class DamageEvolution:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - DAMAGE EVOLUTION
+    The corresponding analysis keywords are:
+        - DAMAGE EVOLUTION
 
     """
 
@@ -154,13 +154,13 @@ class DamageEvolution:
             .. code-block:: python
             
                 mdb.models[name].materials[name].ductileDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
                 mdb.models[name].materials[name].fldDamageInitiation.DamageEvolution
                 mdb.models[name].materials[name].flsdDamageInitiation.DamageEvolution
                 mdb.models[name].materials[name].hashinDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
                 mdb.models[name].materials[name].johnsonCookDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
                 mdb.models[name].materials[name].maxeDamageInitiation.DamageEvolution
                 mdb.models[name].materials[name].maxpeDamageInitiation.DamageEvolution
                 mdb.models[name].materials[name].maxpsDamageInitiation.DamageEvolution
@@ -171,31 +171,31 @@ class DamageEvolution:
                 mdb.models[name].materials[name].quadsDamageInitiation.DamageEvolution
                 mdb.models[name].materials[name].shearDamageInitiation.DamageEvolution
                 session.odbs[name].materials[name].ductileDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
                 session.odbs[name].materials[name].fldDamageInitiation.DamageEvolution
                 session.odbs[name].materials[name].flsdDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
                 session.odbs[name].materials[name].hashinDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
                 session.odbs[name].materials[name].johnsonCookDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
                 session.odbs[name].materials[name].maxeDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
                 session.odbs[name].materials[name].maxpeDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
                 session.odbs[name].materials[name].maxpsDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
                 session.odbs[name].materials[name].maxsDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
                 session.odbs[name].materials[name].mkDamageInitiation.DamageEvolution
                 session.odbs[name].materials[name].msfldDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
                 session.odbs[name].materials[name].quadeDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
                 session.odbs[name].materials[name].quadsDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
                 session.odbs[name].materials[name].shearDamageInitiation\
-                - .DamageEvolution
+            - .DamageEvolution
         
         Parameters
         ----------

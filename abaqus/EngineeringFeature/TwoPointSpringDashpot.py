@@ -24,8 +24,8 @@ class TwoPointSpringDashpot(SpringDashpot):
         import assembly
         mdb.models[name].rootAssembly.engineeringFeatures.springDashpots[name]
 
-        The corresponding analysis keywords are:
-            - ELEMENT
+    The corresponding analysis keywords are:
+        - ELEMENT
             - SPRING
             - DASHPOT
 

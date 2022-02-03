@@ -488,11 +488,11 @@ class ViewportBase:
         Raises
         ------
         RangeError
-                - If the user attempts to delete the only viewport: 
+            - If the user attempts to delete the only viewport: 
               SystemError: the current viewport may not be deleted. 
-                - If *width* is out of range: 
+            - If *width* is out of range: 
               RangeError: width must be a Float in the range: 30 <= width <= *maxWidth* 
-                - If *height* is out of range: 
+            - If *height* is out of range: 
               RangeError: height must be a Float in the range: 30 <= width <= *maxHeight* 
         """
         pass

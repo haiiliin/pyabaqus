@@ -54,8 +54,8 @@ class SubmodelSBState(LoadState):
             import load
             mdb.models[name].steps[name].loadStates[name]
 
-        The corresponding analysis keywords are:
-            - SUBMODEL
+    The corresponding analysis keywords are:
+        - SUBMODEL
             - DSLOAD
 
     """

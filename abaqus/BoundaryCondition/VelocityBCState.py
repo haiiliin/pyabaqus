@@ -71,8 +71,8 @@ class VelocityBCState(BoundaryConditionState):
             import load
             mdb.models[name].steps[name].boundaryConditionStates[name]
 
-        The corresponding analysis keywords are:
-            - BOUNDARY
+    The corresponding analysis keywords are:
+        - BOUNDARY
 
     """
 

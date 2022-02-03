@@ -279,7 +279,7 @@ class OdbPartBase:
 
         Raises
         ------
-                - If no element with the specified label exists: 
+            - If no element with the specified label exists: 
               OdbError: Invalid element label 
         """
         pass
@@ -298,7 +298,7 @@ class OdbPartBase:
 
         Raises
         ------
-                - If no node with the specified label exists: 
+            - If no node with the specified label exists: 
               OdbError: Invalid node label 
         """
         pass
@@ -320,7 +320,7 @@ class OdbPartBase:
 
         Raises
         ------
-                - If OdbPart is of type THREE_D: 
+            - If OdbPart is of type THREE_D: 
               OdbError: 2D-Planar Analytic Rigid Surface can be defined only if the part is of type 
             TWO_D_PLANAR or AXISYMMETRIC. 
         """
@@ -343,7 +343,7 @@ class OdbPartBase:
 
         Raises
         ------
-                - If OdbPart is not of type THREE_D: 
+            - If OdbPart is not of type THREE_D: 
               OdbError: Analytic Rigid Surface of type CYLINDER can be defined only if the part is 
             of type THREE_D. 
         """
@@ -366,7 +366,7 @@ class OdbPartBase:
 
         Raises
         ------
-                - If OdbPart is not of type THREE_D: 
+            - If OdbPart is not of type THREE_D: 
               OdbError: Analytic Rigid Surface of type REVOLUTION can be defined only if the part is 
             of type THREE_D. 
         """

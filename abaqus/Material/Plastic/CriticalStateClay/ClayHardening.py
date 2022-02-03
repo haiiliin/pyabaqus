@@ -23,8 +23,8 @@ class ClayHardening:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CLAY HARDENING
+    The corresponding analysis keywords are:
+        - CLAY HARDENING
 
     """
 

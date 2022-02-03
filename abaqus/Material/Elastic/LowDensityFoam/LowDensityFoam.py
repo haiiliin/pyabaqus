@@ -16,8 +16,8 @@ class LowDensityFoam:
             import odbMaterial
             session.odbs[name].materials[name].lowDensityFoam
 
-        The corresponding analysis keywords are:
-            - LOW DENSITY FOAM
+    The corresponding analysis keywords are:
+        - LOW DENSITY FOAM
 
     """
 

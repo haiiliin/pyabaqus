@@ -78,8 +78,8 @@ class Viscous:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - VISCOUS
+    The corresponding analysis keywords are:
+        - VISCOUS
 
     """
 

@@ -18,8 +18,8 @@ class GapRadiation:
             - Gap clearance.
             - Repeat this data line as often as necessary to define the dependence of the view factor on gap clearance.
 
-        The corresponding analysis keywords are:
-            - GAP RADIATION
+    The corresponding analysis keywords are:
+        - GAP RADIATION
 
     """
 

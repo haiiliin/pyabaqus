@@ -46,8 +46,8 @@ class SubstructureLoadState(LoadState):
             import load
             mdb.models[name].steps[name].loadStates[name]
 
-        The corresponding analysis keywords are:
-            - SLOAD
+    The corresponding analysis keywords are:
+        - SLOAD
 
     """
 

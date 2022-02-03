@@ -24,8 +24,8 @@ class TensileFailure:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - TENSILE FAILURE
+    The corresponding analysis keywords are:
+        - TENSILE FAILURE
 
     """
 

@@ -44,8 +44,8 @@ class BodyHeatFluxState(LoadState):
             import load
             mdb.models[name].steps[name].loadStates[name]
 
-        The corresponding analysis keywords are:
-            - DFLUX
+    The corresponding analysis keywords are:
+        - DFLUX
 
     """
 

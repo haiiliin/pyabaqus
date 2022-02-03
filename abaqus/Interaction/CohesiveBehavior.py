@@ -34,8 +34,8 @@ class CohesiveBehavior:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - COHESIVE BEHAVIOR
+    The corresponding analysis keywords are:
+        - COHESIVE BEHAVIOR
 
     """
 

@@ -62,8 +62,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -121,8 +121,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -207,8 +207,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -308,8 +308,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -336,8 +336,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -366,8 +366,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -396,8 +396,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -426,8 +426,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -461,8 +461,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -498,8 +498,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -532,8 +532,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -560,8 +560,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -590,8 +590,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -620,8 +620,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -652,8 +652,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -694,8 +694,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -745,8 +745,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -782,8 +782,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -814,8 +814,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -848,8 +848,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -881,8 +881,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -913,8 +913,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -945,8 +945,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -975,8 +975,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1005,8 +1005,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1035,8 +1035,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1061,8 +1061,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1087,8 +1087,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1114,8 +1114,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1150,8 +1150,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1167,11 +1167,7 @@ class Feature:
 
         Raises
         ------
-            AbaqusException
-            
-        Raises
-        ------
-        InvalidNameError
+        AbaqusException
         RangeError 
         """
         pass
@@ -1186,8 +1182,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1216,8 +1212,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1248,8 +1244,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1275,7 +1271,7 @@ class Feature:
 
         Raises
         ------
-                - If the sketchUpEdge is parallel to the sketchPlane: 
+            - If the sketchUpEdge is parallel to the sketchPlane: 
               Up direction is parallel to plane normal 
         """
         pass
@@ -1289,8 +1285,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1319,8 +1315,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1349,8 +1345,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1387,8 +1383,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1417,8 +1413,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1448,8 +1444,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1480,8 +1476,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1511,8 +1507,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1546,8 +1542,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1580,8 +1576,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1609,8 +1605,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1639,8 +1635,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1669,8 +1665,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1695,8 +1691,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1733,8 +1729,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1768,8 +1764,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1795,8 +1791,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1823,8 +1819,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1850,8 +1846,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1881,8 +1877,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1915,8 +1911,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -1954,8 +1950,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -2000,8 +1996,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -2043,8 +2039,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -2085,8 +2081,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -2113,8 +2109,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------
@@ -2142,8 +2138,8 @@ class Feature:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].AttachmentPoints
-            mdb.models[*name*].rootAssembly.AttachmentPoints
+            mdb.models[name].parts[*name*].AttachmentPoints
+            mdb.models[name].rootAssembly.AttachmentPoints
         
         Parameters
         ----------

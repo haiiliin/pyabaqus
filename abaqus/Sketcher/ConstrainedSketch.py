@@ -339,7 +339,7 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
         Raises
         ------
-                - AbaqusException
+            - AbaqusException
               Number must be greater than 1 for at least one direction
             !img
         """

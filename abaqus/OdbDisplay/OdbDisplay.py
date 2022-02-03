@@ -437,7 +437,7 @@ class OdbDisplay:
 
         Raises
         ------
-                - If the viewport is not associated with any Odb object: 
+            - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
         """
@@ -458,12 +458,12 @@ class OdbDisplay:
 
         Raises
         ------
-                - If the viewport is not associated with any Odb object: 
+            - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
-                - If the Odb object does not contain valid step data: 
+            - If the Odb object does not contain valid step data: 
               There are no valid step data on the odb. Requested operation cancelled. 
-                - If an invalid step index is passed in as argument: 
+            - If an invalid step index is passed in as argument: 
               Invalid step index:step. Available step indices: 0 - n 
         """
         pass
@@ -513,7 +513,7 @@ class OdbDisplay:
 
         Raises
         ------
-                - If the viewport is not associated with any Odb object: 
+            - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
         """
@@ -535,7 +535,7 @@ class OdbDisplay:
 
         Raises
         ------
-                - If the viewport is not associated with any Odb object: 
+            - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
         """
@@ -590,7 +590,7 @@ class OdbDisplay:
 
         Raises
         ------
-                - If the viewport is not associated with any Odb object: 
+            - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
         """
@@ -637,7 +637,7 @@ class OdbDisplay:
 
         Raises
         ------
-                - If the viewport is not associated with any Odb object: 
+            - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
         """
@@ -654,7 +654,7 @@ class OdbDisplay:
 
         Raises
         ------
-                - If the viewport is not associated with any Odb object: 
+            - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
         """

@@ -16,8 +16,8 @@ class ExpInitialization(ContactInitialization):
         import interaction
         mdb.models[name].contactInitializations[name]
 
-        The corresponding analysis keywords are:
-            - CONTACT INITIALIZATION DATA
+    The corresponding analysis keywords are:
+        - CONTACT INITIALIZATION DATA
 
     """
 

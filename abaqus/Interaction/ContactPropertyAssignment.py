@@ -15,8 +15,8 @@ class ContactPropertyAssignment:
             import interaction
             mdb.models[name].interactions[name].contactPropertyAssignments
 
-        The corresponding analysis keywords are:
-            - CONTACT PROPERTY ASSIGNMENT
+    The corresponding analysis keywords are:
+        - CONTACT PROPERTY ASSIGNMENT
 
     """
 

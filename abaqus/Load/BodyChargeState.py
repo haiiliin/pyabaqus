@@ -44,8 +44,8 @@ class BodyChargeState(LoadState):
             import load
             mdb.models[name].steps[name].loadStates[name]
 
-        The corresponding analysis keywords are:
-            - DECHARGE
+    The corresponding analysis keywords are:
+        - DECHARGE
 
     """
 

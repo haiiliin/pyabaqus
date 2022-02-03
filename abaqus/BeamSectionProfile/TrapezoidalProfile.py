@@ -16,8 +16,8 @@ class TrapezoidalProfile(Profile):
         import odbSection
         session.odbs[name].profiles[name]
 
-        The corresponding analysis keywords are:
-            - BEAM SECTION
+    The corresponding analysis keywords are:
+        - BEAM SECTION
 
     """
 

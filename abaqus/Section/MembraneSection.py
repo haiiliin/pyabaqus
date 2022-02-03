@@ -23,8 +23,8 @@ class MembraneSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-        The corresponding analysis keywords are:
-            - MEMBRANE SECTION
+    The corresponding analysis keywords are:
+        - MEMBRANE SECTION
 
     """
 

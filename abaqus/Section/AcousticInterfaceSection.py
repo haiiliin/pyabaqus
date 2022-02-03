@@ -16,8 +16,8 @@ class AcousticInterfaceSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-        The corresponding analysis keywords are:
-            - INTERFACE
+    The corresponding analysis keywords are:
+        - INTERFACE
 
     """
 

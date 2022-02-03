@@ -63,8 +63,8 @@ class CyclicSymmetryState(InteractionState):
             import interaction
             mdb.models[name].steps[name].interactionStates[name]
 
-        The corresponding analysis keywords are:
-            - CLOAD
+    The corresponding analysis keywords are:
+        - CLOAD
             - DLOAD
             - DSLOAD
             - SELECT CYCLIC SYMMETRY MODES

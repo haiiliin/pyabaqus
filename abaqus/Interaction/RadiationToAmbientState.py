@@ -50,8 +50,8 @@ class RadiationToAmbientState(InteractionState):
             import interaction
             mdb.models[name].steps[name].interactionStates[name]
 
-        The corresponding analysis keywords are:
-            - SRADIATE
+    The corresponding analysis keywords are:
+        - SRADIATE
 
     """
 

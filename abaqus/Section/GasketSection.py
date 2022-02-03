@@ -19,8 +19,8 @@ class GasketSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-        The corresponding analysis keywords are:
-            - GASKET SECTION
+    The corresponding analysis keywords are:
+        - GASKET SECTION
 
     """
 

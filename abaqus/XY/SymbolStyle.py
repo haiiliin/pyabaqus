@@ -50,17 +50,17 @@ class SymbolStyle:
         marker
             A SymbolicConstant specifying the marker type be used when drawing symbols using this 
             SymbolStyle object. Possible values are: 
-                - FILLED_CIRCLE 
-                - FILLED_SQUARE 
-                - FILLED_DIAMOND 
-                - FILLED_TRI 
-                - HOLLOW_CIRCLE 
-                - HOLLOW_SQUARE 
-                - HOLLOW_DIAMOND 
-                - HOLLOW_TRI 
-                - CROSS 
-                - XMARKER 
-                - POINT 
+            - FILLED_CIRCLE 
+            - FILLED_SQUARE 
+            - FILLED_DIAMOND 
+            - FILLED_TRI 
+            - HOLLOW_CIRCLE 
+            - HOLLOW_SQUARE 
+            - HOLLOW_DIAMOND 
+            - HOLLOW_TRI 
+            - CROSS 
+            - XMARKER 
+            - POINT 
             The default value is FILLED_CIRCLE. 
         size
             A Float specifying the marker size to be used when drawing markers using this 
@@ -91,17 +91,17 @@ class SymbolStyle:
         marker
             A SymbolicConstant specifying the marker type be used when drawing symbols using this 
             SymbolStyle object. Possible values are: 
-                - FILLED_CIRCLE 
-                - FILLED_SQUARE 
-                - FILLED_DIAMOND 
-                - FILLED_TRI 
-                - HOLLOW_CIRCLE 
-                - HOLLOW_SQUARE 
-                - HOLLOW_DIAMOND 
-                - HOLLOW_TRI 
-                - CROSS 
-                - XMARKER 
-                - POINT 
+            - FILLED_CIRCLE 
+            - FILLED_SQUARE 
+            - FILLED_DIAMOND 
+            - FILLED_TRI 
+            - HOLLOW_CIRCLE 
+            - HOLLOW_SQUARE 
+            - HOLLOW_DIAMOND 
+            - HOLLOW_TRI 
+            - CROSS 
+            - XMARKER 
+            - POINT 
             The default value is FILLED_CIRCLE. 
         size
             A Float specifying the marker size to be used when drawing markers using this 

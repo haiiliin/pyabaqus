@@ -41,8 +41,8 @@ class BrittleCracking:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - BRITTLE CRACKING
+    The corresponding analysis keywords are:
+        - BRITTLE CRACKING
 
     """
 

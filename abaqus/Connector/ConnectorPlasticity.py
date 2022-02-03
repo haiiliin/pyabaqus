@@ -72,8 +72,8 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CONNECTOR PLASTICITY
+    The corresponding analysis keywords are:
+        - CONNECTOR PLASTICITY
             - CONNECTOR HARDENING
             - CONNECTOR POTENTIAL
 

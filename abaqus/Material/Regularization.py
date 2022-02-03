@@ -16,8 +16,8 @@ class Regularization:
         import odbMaterial
         session.odbs[name].materials[name].regularization
 
-        The corresponding analysis keywords are:
-            - DASHPOT
+    The corresponding analysis keywords are:
+        - DASHPOT
 
     """
 

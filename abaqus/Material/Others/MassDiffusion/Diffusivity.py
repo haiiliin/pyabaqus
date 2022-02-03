@@ -47,8 +47,8 @@ class Diffusivity:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - DIFFUSIVITY
+    The corresponding analysis keywords are:
+        - DIFFUSIVITY
 
     """
 

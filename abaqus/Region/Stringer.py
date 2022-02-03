@@ -45,7 +45,7 @@ class Stringer:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].Stringer
+            mdb.models[name].parts[*name*].Stringer
         
         Parameters
         ----------
@@ -74,7 +74,7 @@ class Stringer:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].Stringer
+            mdb.models[name].parts[*name*].Stringer
         
         Parameters
         ----------

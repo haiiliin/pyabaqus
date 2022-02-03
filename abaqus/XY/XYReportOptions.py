@@ -58,7 +58,7 @@ class XYReportOptions:
         Raises
         ------
         RangeError
-                - If *xyData*, *total*, and *minMax* are all OFF: 
+            - If *xyData*, *total*, and *minMax* are all OFF: 
               At least one of the data print methods must be selected 
         """
         pass

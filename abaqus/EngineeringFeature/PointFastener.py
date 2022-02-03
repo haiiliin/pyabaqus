@@ -27,8 +27,8 @@ class PointFastener(Fastener):
         import assembly
         mdb.models[name].rootAssembly.engineeringFeatures.fasteners[name]
 
-        The corresponding analysis keywords are:
-            - FASTENER
+    The corresponding analysis keywords are:
+        - FASTENER
 
     """
 

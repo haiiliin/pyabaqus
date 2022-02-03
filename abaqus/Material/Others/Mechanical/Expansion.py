@@ -43,8 +43,8 @@ class Expansion:
             - Etc.
         If *type*=SHORT_FIBER, there is no table data.
 
-        The corresponding analysis keywords are:
-            - EXPANSION
+    The corresponding analysis keywords are:
+        - EXPANSION
 
     """
 

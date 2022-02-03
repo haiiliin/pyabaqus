@@ -26,8 +26,8 @@ class FailStrain:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - FAIL STRAIN
+    The corresponding analysis keywords are:
+        - FAIL STRAIN
 
     """
 

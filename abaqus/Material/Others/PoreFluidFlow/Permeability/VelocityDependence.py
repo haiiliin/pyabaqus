@@ -17,8 +17,8 @@ class VelocityDependence:
             - β. Only β> 0.0 is allowed.
             - Void ratio, ee.
 
-        The corresponding analysis keywords are:
-            - PERMEABILITY
+    The corresponding analysis keywords are:
+        - PERMEABILITY
 
     """
 

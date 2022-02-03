@@ -108,78 +108,78 @@ class XYPlot(XYPlotBase):
             A String specifying the label for this quantity type.
         type
             A SymbolicConstant specifying the physical dimension of the axis. Possible values are:
-                - NONE.
-                - ACCELERATION.
-                - ACOUSTIC_INTENSITY.
-                - ANGLE.
-                - ANGULAR_MOMENTUM.
-                - ARC_LENGTH.
-                - AREA.
-                - AREA_VELOCITY_SQUARED, specifying "Velocity squared per area".
-                - BIMOMENT.
-                - CURVATURE.
-                - CORIOLIS_LOAD.
-                - DAMAGE.
-                - DAMAGE_CRITERION.
-                - DENSITY.
-                - DENSITY_ROTATIONAL_ACCELERATION, specifying "Density * Angular acceleration".
-                - DISPLACEMENT.
-                - ECURRENT_AREA_TIME, specifying "Time integrated electric current per area".
-                - ELECTRIC_CHARGE.
-                - ELECTRIC_CURRENT.
-                - ELECTRIC_CURRENT_AREA, specifying "Electric current per unit area".
-                - ELECTRIC_POTENTIAL.
-                - ENERGY.
-                - ENERGY_DENSITY.
-                - ENERGY_RELEASE_RATE.
-                - EPOTENTIAL_GRADIENT, specifying "Electric potential gradient".
-                - FREQUENCY.
-                - FORCE.
-                - FORCE_VOLUME, specifying "Force per volume".
-                - HEAT_FLUX.
-                - HEAT_FLUX_AREA, specifying "Heat flux per area".
-                - HEAT_FLUX_RATE.
-                - HEAT_FLUX_VOLUME, specifying "Heat flux per volume".
-                - LENGTH.
-                - LINEAR_PRESSURE.
-                - LUMIN, specifying "Luminous intensity".
-                - MASS.
-                - MASS_FLOW_AREA, specifying "Mass flow per area".
-                - MASS_FLOW_AREA_RATE, specifying "Mass flow rate per area".
-                - MASS_FLOW_RATE.
-                - MODE_NUMBER.
-                - MOMENT.
-                - NUMBER.
-                - PATH.
-                - PHASE.
-                - POSITION.
-                - PRESSURE.
-                - PRESSURE_GRADIENT.
-                - RATE.
-                - ROTARY_INERTIA.
-                - ROTATIONAL_ACCELERATION.
-                - ROTATIONAL_VELOCITY.
-                - STATUS.
-                - STRAIN.
-                - STRAIN_RATE.
-                - STRESS.
-                - STRESS_INTENS_FACTOR, specifying "Stress intensity factor".
-                - SUBSTANCE, specifying "Amount of substance".
-                - TEMPERATURE.
-                - THICKNESS.
-                - TIME.
-                - TIME_INCREMENT.
-                - TIME_HEAT_FLUX, specifying "Time integrated heat flux".
-                - TIME_HEAT_FLUX_AREA, specifying "Time integrated heat flux per area".
-                - TIME_VOLUME, specifying "Time integrated volume".
-                - TIME_VOLUME_FLUX, specifying "Time integrated volume flux per area".
-                - TWIST.
-                - VELOCITY.
-                - VELOCITY_SQUARED.
-                - VOLUME.
-                - VOLUME_FLUX.
-                - VOLUME_FLUX_AREA, specifying "Volume flux per area".
-                - VOLUME_FRACTION.
+            - NONE.
+            - ACCELERATION.
+            - ACOUSTIC_INTENSITY.
+            - ANGLE.
+            - ANGULAR_MOMENTUM.
+            - ARC_LENGTH.
+            - AREA.
+            - AREA_VELOCITY_SQUARED, specifying "Velocity squared per area".
+            - BIMOMENT.
+            - CURVATURE.
+            - CORIOLIS_LOAD.
+            - DAMAGE.
+            - DAMAGE_CRITERION.
+            - DENSITY.
+            - DENSITY_ROTATIONAL_ACCELERATION, specifying "Density * Angular acceleration".
+            - DISPLACEMENT.
+            - ECURRENT_AREA_TIME, specifying "Time integrated electric current per area".
+            - ELECTRIC_CHARGE.
+            - ELECTRIC_CURRENT.
+            - ELECTRIC_CURRENT_AREA, specifying "Electric current per unit area".
+            - ELECTRIC_POTENTIAL.
+            - ENERGY.
+            - ENERGY_DENSITY.
+            - ENERGY_RELEASE_RATE.
+            - EPOTENTIAL_GRADIENT, specifying "Electric potential gradient".
+            - FREQUENCY.
+            - FORCE.
+            - FORCE_VOLUME, specifying "Force per volume".
+            - HEAT_FLUX.
+            - HEAT_FLUX_AREA, specifying "Heat flux per area".
+            - HEAT_FLUX_RATE.
+            - HEAT_FLUX_VOLUME, specifying "Heat flux per volume".
+            - LENGTH.
+            - LINEAR_PRESSURE.
+            - LUMIN, specifying "Luminous intensity".
+            - MASS.
+            - MASS_FLOW_AREA, specifying "Mass flow per area".
+            - MASS_FLOW_AREA_RATE, specifying "Mass flow rate per area".
+            - MASS_FLOW_RATE.
+            - MODE_NUMBER.
+            - MOMENT.
+            - NUMBER.
+            - PATH.
+            - PHASE.
+            - POSITION.
+            - PRESSURE.
+            - PRESSURE_GRADIENT.
+            - RATE.
+            - ROTARY_INERTIA.
+            - ROTATIONAL_ACCELERATION.
+            - ROTATIONAL_VELOCITY.
+            - STATUS.
+            - STRAIN.
+            - STRAIN_RATE.
+            - STRESS.
+            - STRESS_INTENS_FACTOR, specifying "Stress intensity factor".
+            - SUBSTANCE, specifying "Amount of substance".
+            - TEMPERATURE.
+            - THICKNESS.
+            - TIME.
+            - TIME_INCREMENT.
+            - TIME_HEAT_FLUX, specifying "Time integrated heat flux".
+            - TIME_HEAT_FLUX_AREA, specifying "Time integrated heat flux per area".
+            - TIME_VOLUME, specifying "Time integrated volume".
+            - TIME_VOLUME_FLUX, specifying "Time integrated volume flux per area".
+            - TWIST.
+            - VELOCITY.
+            - VELOCITY_SQUARED.
+            - VOLUME.
+            - VOLUME_FLUX.
+            - VOLUME_FLUX_AREA, specifying "Volume flux per area".
+            - VOLUME_FRACTION.
             The default value is NONE
 
         Returns
@@ -214,17 +214,17 @@ class XYPlot(XYPlotBase):
         marker
             A SymbolicConstant specifying the marker type be used when drawing symbols using this
             SymbolStyle object. Possible values are:
-                - FILLED_CIRCLE
-                - FILLED_SQUARE
-                - FILLED_DIAMOND
-                - FILLED_TRI
-                - HOLLOW_CIRCLE
-                - HOLLOW_SQUARE
-                - HOLLOW_DIAMOND
-                - HOLLOW_TRI
-                - CROSS
-                - XMARKER
-                - POINT
+            - FILLED_CIRCLE
+            - FILLED_SQUARE
+            - FILLED_DIAMOND
+            - FILLED_TRI
+            - HOLLOW_CIRCLE
+            - HOLLOW_SQUARE
+            - HOLLOW_DIAMOND
+            - HOLLOW_TRI
+            - CROSS
+            - XMARKER
+            - POINT
             The default value is FILLED_CIRCLE.
         size
             A Float specifying the marker size to be used when drawing markers using this

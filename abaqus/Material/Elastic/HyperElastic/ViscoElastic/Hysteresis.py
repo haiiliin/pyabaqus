@@ -20,8 +20,8 @@ class Hysteresis:
             - Effective stress exponent.
             - Creep strain exponent.
 
-        The corresponding analysis keywords are:
-            - HYSTERESIS
+    The corresponding analysis keywords are:
+        - HYSTERESIS
 
     """
 

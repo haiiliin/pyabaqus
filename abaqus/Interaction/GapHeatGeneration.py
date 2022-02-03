@@ -22,8 +22,8 @@ class GapHeatGeneration:
         import interaction
         mdb.models[name].interactionProperties[name].heatGeneration
 
-        The corresponding analysis keywords are:
-            - GAP HEAT GENERATION
+    The corresponding analysis keywords are:
+        - GAP HEAT GENERATION
 
     """
 

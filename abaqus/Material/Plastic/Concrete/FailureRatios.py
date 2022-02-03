@@ -26,8 +26,8 @@ class FailureRatios:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - FAILURE RATIOS
+    The corresponding analysis keywords are:
+        - FAILURE RATIOS
 
     """
 

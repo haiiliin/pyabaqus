@@ -31,8 +31,8 @@ class ConcreteDamagedPlasticity:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CONCRETE DAMAGED PLASTICITY
+    The corresponding analysis keywords are:
+        - CONCRETE DAMAGED PLASTICITY
 
     """
 

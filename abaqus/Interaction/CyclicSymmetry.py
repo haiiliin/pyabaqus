@@ -16,8 +16,8 @@ class CyclicSymmetry(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-        The corresponding analysis keywords are:
-            - CLOAD
+    The corresponding analysis keywords are:
+        - CLOAD
             - CYCLIC SYMMETRY MODEL
             - DLOAD
             - DSLOAD

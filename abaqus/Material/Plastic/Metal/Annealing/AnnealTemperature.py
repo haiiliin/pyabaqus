@@ -20,8 +20,8 @@ class AnnealTemperature:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - ANNEAL TEMPERATURE
+    The corresponding analysis keywords are:
+        - ANNEAL TEMPERATURE
 
     """
 

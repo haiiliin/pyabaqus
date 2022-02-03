@@ -374,7 +374,7 @@ class TypeBC(BoundaryCondition):
 
         Raises
         ------
-                - Value Error: 
+            - Value Error: 
               A Symmetry/Antisymmetry/Encastre BC cannot be edited in a propagated step. 
         """
         pass

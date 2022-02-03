@@ -23,8 +23,8 @@ class CombinedTestData:
             - Normalized volumetric (bulk) compliance, jK⁢(t) (jK(t)≥1)
             - Time t (t>0)
 
-        The corresponding analysis keywords are:
-            - COMBINED TEST DATA
+    The corresponding analysis keywords are:
+        - COMBINED TEST DATA
 
     """
 

@@ -95,11 +95,11 @@ class Movie:
         Raises
         ------
             ValueError. 
-                - If *fileName* does not exist or can not be read: 
+            - If *fileName* does not exist or can not be read: 
               ValueError: Unable to open movie file 
-                - If *fileName* references an unsupported movie file format: 
+            - If *fileName* references an unsupported movie file format: 
               ValueError: Unsupported movie format 
-                - If the contents of *fileName* are corrupt or can not be decoded: 
+            - If the contents of *fileName* are corrupt or can not be decoded: 
               ValueError: Unable to decode movie file 
         """
         pass
@@ -136,7 +136,7 @@ class Movie:
         Raises
         ------
         RangeError
-                - If 
+            - If 
             *startFrame*,*endFrame*,*timelineStartFrame*,*timelineEndFrame*,*timelineStartTime*, 
             or*timelineEndTime* are outside their respective valid range. 
               RangeError: startFrame must be an Integer in the range: 0 to numFrames-1 

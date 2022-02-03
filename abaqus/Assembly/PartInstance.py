@@ -443,7 +443,7 @@ class PartInstance:
 
         Raises
         ------
-                - An exception is thrown if this is a dependent part instance and *level* was either not 
+            - An exception is thrown if this is a dependent part instance and *level* was either not 
             specified or was set to 20, because the validity status cannot be updated for a 
             dependent part instance. In this case, this command should be called on the Part 
             instead. 

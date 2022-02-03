@@ -22,8 +22,8 @@ class AdjustPoints(Constraint):
         import interaction
         mdb.models[name].constraints[name]
 
-        The corresponding analysis keywords are:
-            - ADJUST
+    The corresponding analysis keywords are:
+        - ADJUST
 
     """
 

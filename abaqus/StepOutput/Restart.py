@@ -13,8 +13,8 @@ class Restart:
         import step
         mdb.models[name].steps[name].restart
 
-        The corresponding analysis keywords are:
-            - RESTART
+    The corresponding analysis keywords are:
+        - RESTART
 
     """
 

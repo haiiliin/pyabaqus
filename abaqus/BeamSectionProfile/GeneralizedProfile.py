@@ -17,8 +17,8 @@ class GeneralizedProfile(Profile):
         import odbSection
         session.odbs[name].profiles[name]
 
-        The corresponding analysis keywords are:
-            - BEAM GENERAL SECTION
+    The corresponding analysis keywords are:
+        - BEAM GENERAL SECTION
 
     """
 

@@ -11,8 +11,8 @@ class ActivateElements:
 
         mdb.models[name].steps[name].activateElements[key]
 
-        The corresponding analysis keywords are:
-            - ActivateElements
+    The corresponding analysis keywords are:
+        - ActivateElements
             - ElementProgressiveActivation
 
     """

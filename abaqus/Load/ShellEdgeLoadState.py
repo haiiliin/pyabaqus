@@ -44,8 +44,8 @@ class ShellEdgeLoadState(LoadState):
             import load
             mdb.models[name].steps[name].loadStates[name]
 
-        The corresponding analysis keywords are:
-            - DSLOAD
+    The corresponding analysis keywords are:
+        - DSLOAD
             - DLOAD
 
     """

@@ -26,8 +26,8 @@ class ContactArea:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - GASKET CONTACT AREA
+    The corresponding analysis keywords are:
+        - GASKET CONTACT AREA
 
     """
 

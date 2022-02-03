@@ -34,8 +34,8 @@ class StdXplCosimulationState(InteractionState):
             import interaction
             mdb.models[name].steps[name].interactionStates[name]
 
-        The corresponding analysis keywords are:
-            - CO-SIMULATION
+    The corresponding analysis keywords are:
+        - CO-SIMULATION
             - CO-SIMULATION REGION
             - CO-SIMULATION CONTROLS
 

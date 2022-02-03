@@ -23,8 +23,8 @@ class RigidBody(Constraint):
         import interaction
         mdb.models[name].constraints[name]
 
-        The corresponding analysis keywords are:
-            - RIGID BODY
+    The corresponding analysis keywords are:
+        - RIGID BODY
 
     """
 

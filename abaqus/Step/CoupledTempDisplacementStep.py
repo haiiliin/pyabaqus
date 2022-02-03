@@ -169,8 +169,8 @@ class CoupledTempDisplacementStep(AnalysisStep):
         import step
         mdb.models[name].steps[name]
 
-        The corresponding analysis keywords are:
-            - COUPLED TEMPERATURE-DISPLACEMENT
+    The corresponding analysis keywords are:
+        - COUPLED TEMPERATURE-DISPLACEMENT
             - SOLUTION TECHNIQUE
             - STEP
 

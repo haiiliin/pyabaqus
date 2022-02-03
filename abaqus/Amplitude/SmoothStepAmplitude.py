@@ -18,8 +18,8 @@ class SmoothStepAmplitude(Amplitude):
         import odbAmplitude
         session.odbs[name].amplitudes[name]
 
-        The corresponding analysis keywords are:
-            - AMPLITUDE
+    The corresponding analysis keywords are:
+        - AMPLITUDE
 
     """
 

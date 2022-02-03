@@ -37,8 +37,8 @@ class ClayPlasticity:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CLAY PLASTICITY
+    The corresponding analysis keywords are:
+        - CLAY PLASTICITY
 
     """
 

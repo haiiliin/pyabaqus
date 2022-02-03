@@ -46,8 +46,8 @@ class ReferencePoint:
 
         .. code-block:: python
 
-            mdb.models[*name*].rootAssembly.ReferencePoint
-            mdb.models[*name*].parts[name].ReferencePoint
+            mdb.models[name].rootAssembly.ReferencePoint
+            mdb.models[name].parts[name].ReferencePoint
         
         Parameters
         ----------

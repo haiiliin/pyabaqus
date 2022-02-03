@@ -12,8 +12,8 @@ class UserOutputVariables:
             import odbMaterial
             session.odbs[name].materials[name].userOutputVariables
 
-        The corresponding analysis keywords are:
-            - USER OUTPUT VARIABLES
+    The corresponding analysis keywords are:
+        - USER OUTPUT VARIABLES
 
     """
 

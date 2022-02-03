@@ -42,8 +42,8 @@ class Conductivity:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CONDUCTIVITY
+    The corresponding analysis keywords are:
+        - CONDUCTIVITY
 
     """
 

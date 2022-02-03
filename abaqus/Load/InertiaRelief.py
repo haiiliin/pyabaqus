@@ -156,9 +156,9 @@ class InertiaRelief(Load):
             A sequence of Floats specifying the point about which rotations are defined. The point 
             can be specified only for certain combinations of free directions. The *referencePoint* 
             argument can be one of the following: 
-                - The *X*, *Y* and *Z*-coordinates of a fixed rotation point. 
-                - A point on the rotation axis. 
-                - A point on the symmetry line. 
+            - The *X*, *Y* and *Z*-coordinates of a fixed rotation point. 
+            - A point on the rotation axis. 
+            - A point on the symmetry line. 
         fixed
             A Boolean specifying whether the inertia relief loading should remain fixed at the 
             current loading at the start of the step. The default value is OFF. 

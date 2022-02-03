@@ -122,7 +122,7 @@ class OdbAssemblyBase:
 
         Raises
         ------
-                - If *region* is not an element set: 
+            - If *region* is not an element set: 
               OdbError: Connector orientation assignment requires element set. 
         """
         pass
@@ -140,7 +140,7 @@ class OdbAssemblyBase:
 
         Raises
         ------
-                - If *region* is not an element set: 
+            - If *region* is not an element set: 
               OdbError: Section assignment requires element set. 
         """
         pass
@@ -173,10 +173,10 @@ class OdbAssemblyBase:
 
         Raises
         ------
-                - Only certain element types are permitted at the assembly level. e.g., connector 
+            - Only certain element types are permitted at the assembly level. e.g., connector 
             elements. 
               OdbError: Addition of this element type is not permitted at the assembly level 
-                - If length of label array does not match connectivity data length: 
+            - If length of label array does not match connectivity data length: 
               OdbError: Connectivity array must be provided for all element 
         """
         pass
@@ -197,9 +197,9 @@ class OdbAssemblyBase:
 
         Raises
         ------
-                - If length of labels does not match length of coordinates: 
+            - If length of labels does not match length of coordinates: 
               OdbError: Number of node labels and coordinates does not match 
-                - If width of coordinate array does not match assembly dimension: 
+            - If width of coordinate array does not match assembly dimension: 
               OdbError: Node location specification does not correspond to part dimensions 
         """
         pass
@@ -229,7 +229,7 @@ class OdbAssemblyBase:
 
         Raises
         ------
-                - If *referenceNode* is not a node set: 
+            - If *referenceNode* is not a node set: 
               OdbError: Rigid body definition requires a node set. 
         """
         pass

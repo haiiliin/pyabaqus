@@ -107,8 +107,8 @@ class InteractionContactControlModel(ModelBase):
         frictionOnset
             A SymbolicConstant specifying when the application of friction occurs. Possible values
             are:
-                - IMMEDIATE, specifying the friction is included in the increment when contact occurs.
-                - DELAYED, specifying the application of friction is delayed until the increment after
+            - IMMEDIATE, specifying the friction is included in the increment when contact occurs.
+            - DELAYED, specifying the application of friction is delayed until the increment after
             contact occurs.
         automaticTolerances
             A Boolean specifying whether Abaqus/Standard should automatically compute an overclosure

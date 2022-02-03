@@ -25,8 +25,8 @@ class CyclicHardening:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - CYCLIC HARDENING
+    The corresponding analysis keywords are:
+        - CYCLIC HARDENING
 
     """
 

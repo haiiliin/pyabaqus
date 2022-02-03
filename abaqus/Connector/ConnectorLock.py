@@ -18,8 +18,8 @@ class ConnectorLock(ConnectorBehaviorOption):
         import odbSection
         session.odbs[name].sections[name].behaviorOptions[i]
 
-        The corresponding analysis keywords are:
-            - CONNECTOR LOCK
+    The corresponding analysis keywords are:
+        - CONNECTOR LOCK
 
     """
 

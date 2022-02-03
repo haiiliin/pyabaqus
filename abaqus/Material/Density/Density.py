@@ -22,8 +22,8 @@ class Density:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - DENSITY
+    The corresponding analysis keywords are:
+        - DENSITY
 
     """
 

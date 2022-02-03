@@ -26,8 +26,8 @@ class ShearRetention:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - SHEAR RETENTION
+    The corresponding analysis keywords are:
+        - SHEAR RETENTION
 
     """
 

@@ -39,11 +39,11 @@ class Image:
         Raises
         ------
             ValueError. 
-                - If *fileName* does not exist or can not be read: 
+            - If *fileName* does not exist or can not be read: 
               ValueError: Unable to open image file 
-                - If *fileName* references an unsupported image file format: 
+            - If *fileName* references an unsupported image file format: 
               ValueError: Unsupported image format 
-                - If the contents of *fileName* are corrupt or can not be decoded: 
+            - If the contents of *fileName* are corrupt or can not be decoded: 
               ValueError: Unable to decode image file 
         """
         pass
@@ -71,13 +71,13 @@ class Image:
         ------
             ValueError. 
             TypeError. 
-                - If *movieName* does not exist: 
+            - If *movieName* does not exist: 
               ValueError: There is no movie object with this name: 'movieName' 
-                - If *frame* references an non existing frame: 
+            - If *frame* references an non existing frame: 
               ValueError: Could not load frame n from movie: 'movieName' 
-                - If *time* references an non existing frame: 
+            - If *time* references an non existing frame: 
               ValueError: Could not load frame at time 't' from movie: 'movieName' 
-                - If *time* and *frame* are given in the same command: 
+            - If *time* and *frame* are given in the same command: 
               TypeError: keyword error on time 
         """
         pass

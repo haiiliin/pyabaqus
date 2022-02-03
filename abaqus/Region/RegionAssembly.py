@@ -47,8 +47,8 @@ class RegionAssembly(RegionAssemblyBase):
             
             .. code-block:: python
             
-                mdb.models[*name*].parts[*name*].Surface
-                mdb.models[*name*].rootAssembly.Surface
+                mdb.models[name].parts[*name*].Surface
+                mdb.models[name].rootAssembly.Surface
                 side1Faces
                 side2Faces
                 side12Faces
@@ -108,8 +108,8 @@ class RegionAssembly(RegionAssemblyBase):
             
             .. code-block:: python
             
-                mdb.models[*name*].parts[*name*].Set
-                mdb.models[*name*].rootAssembly.Set
+                mdb.models[name].parts[*name*].Set
+                mdb.models[name].rootAssembly.Set
         
         Parameters
         ----------
@@ -167,8 +167,8 @@ class RegionAssembly(RegionAssemblyBase):
             
             .. code-block:: python
             
-                mdb.models[*name*].parts[*name*].Set
-                mdb.models[*name*].rootAssembly.Set
+                mdb.models[name].parts[*name*].Set
+                mdb.models[name].rootAssembly.Set
         
         Parameters
         ----------

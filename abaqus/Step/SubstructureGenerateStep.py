@@ -145,8 +145,8 @@ class SubstructureGenerateStep(AnalysisStep):
         import step
         mdb.models[name].steps[name]
 
-        The corresponding analysis keywords are:
-            - SUBSTRUCTURE GENERATE
+    The corresponding analysis keywords are:
+        - SUBSTRUCTURE GENERATE
             - STEP
 
     """

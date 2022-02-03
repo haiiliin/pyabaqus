@@ -17,8 +17,8 @@ class LatentHeat:
             - Solidus temperature.
             - Liquidus temperature.
 
-        The corresponding analysis keywords are:
-            - LATENT HEAT
+    The corresponding analysis keywords are:
+        - LATENT HEAT
 
     """
 

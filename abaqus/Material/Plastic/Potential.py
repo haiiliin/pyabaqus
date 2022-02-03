@@ -31,8 +31,8 @@ class Potential:
             - Value of the second field variable.
             - Etc.
 
-        The corresponding analysis keywords are:
-            - POTENTIAL
+    The corresponding analysis keywords are:
+        - POTENTIAL
 
     """
 

@@ -45,7 +45,7 @@ class AnimationController:
 
         Raises
         ------
-                - If *animationType*=NONE: 
+            - If *animationType*=NONE: 
               AnimationError: animationType not set 
         """
         pass

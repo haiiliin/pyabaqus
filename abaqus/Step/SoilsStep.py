@@ -177,8 +177,8 @@ class SoilsStep(AnalysisStep):
         import step
         mdb.models[name].steps[name]
 
-        The corresponding analysis keywords are:
-            - SOILS
+    The corresponding analysis keywords are:
+        - SOILS
             - STEP
 
     """

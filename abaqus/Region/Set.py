@@ -123,8 +123,8 @@ class Set:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].Set
-            mdb.models[*name*].rootAssembly.Set
+            mdb.models[name].parts[*name*].Set
+            mdb.models[name].rootAssembly.Set
         
         Parameters
         ----------
@@ -182,8 +182,8 @@ class Set:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].Set
-            mdb.models[*name*].rootAssembly.Set
+            mdb.models[name].parts[*name*].Set
+            mdb.models[name].rootAssembly.Set
         
         Parameters
         ----------
@@ -210,8 +210,8 @@ class Set:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].Set
-            mdb.models[*name*].rootAssembly.Set
+            mdb.models[name].parts[*name*].Set
+            mdb.models[name].rootAssembly.Set
         
         Parameters
         ----------
@@ -244,8 +244,8 @@ class Set:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].Set
-            mdb.models[*name*].rootAssembly.Set
+            mdb.models[name].parts[*name*].Set
+            mdb.models[name].rootAssembly.Set
         
         Parameters
         ----------
@@ -271,8 +271,8 @@ class Set:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].Set
-            mdb.models[*name*].rootAssembly.Set
+            mdb.models[name].parts[*name*].Set
+            mdb.models[name].rootAssembly.Set
         
         Parameters
         ----------
@@ -298,8 +298,8 @@ class Set:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].Set
-            mdb.models[*name*].rootAssembly.Set
+            mdb.models[name].parts[*name*].Set
+            mdb.models[name].rootAssembly.Set
         
         Parameters
         ----------
@@ -328,8 +328,8 @@ class Set:
 
         .. code-block:: python
 
-            mdb.models[*name*].parts[*name*].Set
-            mdb.models[*name*].rootAssembly.Set
+            mdb.models[name].parts[*name*].Set
+            mdb.models[name].rootAssembly.Set
         
         Parameters
         ----------

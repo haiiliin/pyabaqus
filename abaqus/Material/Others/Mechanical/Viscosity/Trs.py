@@ -23,8 +23,8 @@ class Trs:
             - Calibration constant, C1C1.
             - Calibration constant, C2C2.
 
-        The corresponding analysis keywords are:
-            - TRS
+    The corresponding analysis keywords are:
+        - TRS
 
     """
 

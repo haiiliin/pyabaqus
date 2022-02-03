@@ -12,8 +12,8 @@ class UserDefinedField:
             import odbMaterial
             session.odbs[name].materials[name].userDefinedField
 
-        The corresponding analysis keywords are:
-            - USER DEFINED FIELD
+    The corresponding analysis keywords are:
+        - USER DEFINED FIELD
 
     """
 
