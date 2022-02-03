@@ -11,14 +11,14 @@ Create jobs
 .. automethod:: abaqus.Job.JobMdb.JobMdb.Job
     :noindex:
 
-Job
----
-
-.. autoclass:: abaqus.Job.Job.Job
-    :noindex:
-
 Create queues in Session
 ------------------------
 
 .. automethod:: abaqus.Job.JobSession.JobSession.Queue
+    :noindex:
+
+Job
+---
+
+.. autoclass:: abaqus.Job.Job.Job
     :noindex:
