@@ -18,10 +18,11 @@ In Mdb
 ~~~~~~
 
 .. autoclass:: abaqus.Section.SectionModel.SectionModel
+    :noindex:
 
 
 In Odb
 ~~~~~~
 
 .. autoclass:: abaqus.Section.SectionOdb.SectionOdb
-
+    :noindex:

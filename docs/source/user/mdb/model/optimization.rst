@@ -8,8 +8,10 @@ Create optimization tasks
 -------------------------
 
 .. autoclass:: abaqus.Optimization.OptimizationTaskModel.OptimizationTaskModel
+    :noindex:
 
 Assign features to optimization tasks
 -------------------------------------
 
 .. autoclass:: abaqus.Optimization.OptimizationTask.OptimizationTask
+    :noindex:

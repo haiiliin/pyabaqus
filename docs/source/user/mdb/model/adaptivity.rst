@@ -9,9 +9,11 @@ Create adaptivity mesh control features
 ---------------------------------------
 
 .. autoclass:: abaqus.Adaptivity.AdaptivityModel.AdaptivityModel
+    :noindex:
 
 
 Create adaptivity mesh state features
 -------------------------------------
 
 .. autoclass:: abaqus.Adaptivity.AdaptivityStep.AdaptivityStep
+    :noindex:

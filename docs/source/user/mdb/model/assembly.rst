@@ -8,3 +8,4 @@ Create instances
 ----------------
 
 .. automethod:: abaqus.Assembly.AssemblyModel.AssemblyModel.Instance
+    :noindex:

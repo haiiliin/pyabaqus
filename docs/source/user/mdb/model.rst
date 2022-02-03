@@ -8,11 +8,13 @@ Create models
 -------------
 
 .. automethod:: abaqus.Mdb.Mdb.Mdb.Model
+    :noindex:
 
 Model
 -----
 
 .. autoclass:: abaqus.Model.Model.Model
+    :noindex:
 
 .. toctree::
    :maxdepth: 1

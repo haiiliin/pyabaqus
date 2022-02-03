@@ -9,3 +9,4 @@ Create constraints
 ------------------
 
 .. autoclass:: abaqus.Constraint.ConstraintModel.ConstraintModel
+    :noindex:

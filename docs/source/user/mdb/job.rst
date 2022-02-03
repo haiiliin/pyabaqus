@@ -9,15 +9,18 @@ Create jobs
 -----------
 
 .. autoclass:: abaqus.Job.JobMdb.JobMdb
+    :noindex:
     :members: Job
 
 Job
 ---
 
 .. autoclass:: abaqus.Job.Job.Job
+    :noindex:
 
 Create queues in Session
 ------------------------
 
 .. autoclass:: abaqus.Job.JobSession.JobSession
+    :noindex:
     :members: Queue

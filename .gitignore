@@ -129,3 +129,4 @@ dmypy.json
 /abaqus/code_blokcs.py
 /abaqus/Guess.py
 /abaqus/fix-parameters.py
+/abaqus/noindex.py

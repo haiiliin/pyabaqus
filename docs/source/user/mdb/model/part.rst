@@ -8,8 +8,10 @@ Create parts
 ------------
 
 .. autoclass:: abaqus.Part.PartModel.PartModel
+    :noindex:
 
 .. autosummary::
+    :noindex:
     :doctree: From other files
     
     .. automethod:: abaqus.Part.PartBase.PartBase.PartFromBooleanCut

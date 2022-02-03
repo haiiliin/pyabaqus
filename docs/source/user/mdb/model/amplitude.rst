@@ -11,9 +11,11 @@ In Mdb
 ~~~~~~
 
 .. autoclass:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel
+    :noindex:
 
 
 In Odb
 ~~~~~~
 
 .. autoclass:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb
+    :noindex:

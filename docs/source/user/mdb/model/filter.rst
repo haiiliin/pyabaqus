@@ -11,9 +11,10 @@ In Mdb
 ~~~~~~
 
 .. autoclass:: abaqus.Filter.FilterModel.FilterModel
+    :noindex:
 
 In Odb
 ~~~~~~
 
 .. autoclass:: abaqus.Filter.FilterOdb.FilterOdb
-
+    :noindex:

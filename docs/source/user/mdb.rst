@@ -10,3 +10,4 @@ Abaqus Model Database
    mdb/job
 
 .. autoclass:: abaqus.Mdb.Mdb.Mdb
+    :noindex:

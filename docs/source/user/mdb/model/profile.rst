@@ -11,9 +11,10 @@ In Mdb
 ~~~~~~
 
 .. autoclass:: abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel
+    :noindex:
 
 In Odb
 ~~~~~~
 
 .. autoclass:: abaqus.BeamSectionProfile.BeamSectionProfileOdb.BeamSectionProfileOdb
-
+    :noindex:

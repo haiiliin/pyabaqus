@@ -9,8 +9,10 @@ Create output requests for Model
 --------------------------------
 
 .. autoclass:: abaqus.StepOutput.OutputModel.OutputModel
+    :noindex:
 
 Create DiagnosticPrint, Monitor and Restart information for Step
 ---------------------------------------------------------
 
 .. autoclass:: abaqus.StepOutput.OutputStep.OutputStep
+    :noindex:
