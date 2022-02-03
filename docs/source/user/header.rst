@@ -10,7 +10,7 @@ Before you can access the Abaqus model and output database, you need to import s
     from abaqusConstants import *
     from driverUtils import *
 
-In the module `abaqus`, two import objects are provided, `mdb` and `session`, which represent the Abaqus model database and a object controls the Abaqus options. 
+In the module `abaqus`, two important objects are provided, `mdb` and `session`, which represent the Abaqus model database and a object controls the Abaqus options. 
 
 - The `mdb` object is the high-level Abaqus model database. A model database stores models and analysis controls. For more information about the `mdb` object, see :doc:`mdb Summary <mdb>` or :doc:`mdb API Reference <../reference/mdb>`.
 
