@@ -2,7 +2,7 @@
 Header of the Python script
 ===========================
 
-Before you can access the Abaqus model and output database, you need to import some modules. In most cases, `abaqus`, `abaqusConstants`, and `driverUtils` is required:
+Before you can access the Abaqus model and output database, you need to import some modules. In most cases, `abaqus`, `abaqusConstants`, and `driverUtils` are required:
 
 .. code-block:: python
 
