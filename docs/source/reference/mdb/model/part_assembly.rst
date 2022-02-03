@@ -3,7 +3,7 @@ Part and Assembly
 =================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Objects for and Assembly
 
    part

@@ -29,6 +29,9 @@ class Queue:
         .. code-block:: python
 
             session.Queue
+            
+        Parameters
+        ----------
         name
             A String specifying the name of the new Queue object. 
         queueName

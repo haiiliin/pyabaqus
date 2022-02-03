@@ -10,14 +10,56 @@ Create beam section profiles
 In Mdb
 ~~~~~~
 
-.. autoclass:: abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel
-    :members:
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.ArbitraryProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.BoxProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.CircularProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.GeneralizedProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.HexagonalProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.IProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.LProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.PipeProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.RectangularProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.TProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.TrapezoidalProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.beamProfilesFromOdb
 
 In Odb
 ~~~~~~
 
-.. autoclass:: abaqus.BeamSectionProfile.BeamSectionProfileOdb.BeamSectionProfileOdb
-    :members:
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileOdb.BeamSectionProfileOdb.ArbitraryProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileOdb.BeamSectionProfileOdb.BoxProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileOdb.BeamSectionProfileOdb.CircularProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileOdb.BeamSectionProfileOdb.GeneralizedProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileOdb.BeamSectionProfileOdb.HexagonalProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileOdb.BeamSectionProfileOdb.IProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileOdb.BeamSectionProfileOdb.LProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileOdb.BeamSectionProfileOdb.PipeProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileOdb.BeamSectionProfileOdb.RectangularProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileOdb.BeamSectionProfileOdb.TProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileOdb.BeamSectionProfileOdb.TrapezoidalProfile
+
+.. automethod:: abaqus.BeamSectionProfile.BeamSectionProfileOdb.BeamSectionProfileOdb.beamProfilesFromOdb
 
 
 Object features

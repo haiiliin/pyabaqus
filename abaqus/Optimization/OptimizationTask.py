@@ -54,7 +54,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].SingleTermDesignResponse
+            - mdb.models[name].optimizationTasks[name].SingleTermDesignResponse
         name
             A String specifying the design response repository key.
         identifier
@@ -98,7 +98,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].ObjectiveFunction
+            - mdb.models[name].optimizationTasks[name].ObjectiveFunction
         name
             A String specifying the objective function repository key.
         objectives
@@ -121,7 +121,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].OptimizationConstraint
+            - mdb.models[name].optimizationTasks[name].OptimizationConstraint
         name
             A String specifying the optimization constraint repository key.
         designResponse
@@ -150,7 +150,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].BeadFixedRegion
+            - mdb.models[name].optimizationTasks[name].BeadFixedRegion
         name
             A String specifying the geometric restriction repository key.
         region
@@ -182,7 +182,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].BeadGrowth
+            - mdb.models[name].optimizationTasks[name].BeadGrowth
         name
             A String specifying the geometric restriction repository key.
         region
@@ -208,7 +208,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].BeadPenetrationCheck
+            - mdb.models[name].optimizationTasks[name].BeadPenetrationCheck
         name
             A String specifying the geometric restriction repository key.
         beadPenetrationCheckRegion
@@ -231,7 +231,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].BeadPlanarSymmetry
+            - mdb.models[name].optimizationTasks[name].BeadPlanarSymmetry
         name
             A String specifying the geometric restriction repository key.
         region
@@ -257,7 +257,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].BeadPointSymmetry
+            - mdb.models[name].optimizationTasks[name].BeadPointSymmetry
         name
             A String specifying the geometric restriction repository key.
         region
@@ -281,7 +281,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].BeadRotationalSymmetry
+            - mdb.models[name].optimizationTasks[name].BeadRotationalSymmetry
         name
             A String specifying the geometric restriction repository key.
         angle
@@ -314,7 +314,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].DesignDirection
+            - mdb.models[name].optimizationTasks[name].DesignDirection
         name
             A String specifying the geometric restriction repository key.
         region
@@ -373,7 +373,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].DrillControl
+            - mdb.models[name].optimizationTasks[name].DrillControl
         name
             A String specifying the geometric restriction repository key.
         clientDirection
@@ -430,7 +430,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].FixedRegion
+            - mdb.models[name].optimizationTasks[name].FixedRegion
         name
             A String specifying the geometric restriction repository key.
         region
@@ -468,7 +468,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].FrozenArea
+            - mdb.models[name].optimizationTasks[name].FrozenArea
         name
             A String specifying the geometric restriction repository key.
         region
@@ -490,7 +490,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].Growth
+            - mdb.models[name].optimizationTasks[name].Growth
         name
             A String specifying the geometric restriction repository key.
         region
@@ -522,7 +522,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].PenetrationCheck
+            - mdb.models[name].optimizationTasks[name].PenetrationCheck
         name
             A String specifying the geometric restriction repository key.
         penetrationCheckRegion
@@ -554,7 +554,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].ShapeDemoldControl
+            - mdb.models[name].optimizationTasks[name].ShapeDemoldControl
         name
             A String specifying the geometric restriction repository key.
         pullDirection
@@ -613,7 +613,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].ShapeMemberSize
+            - mdb.models[name].optimizationTasks[name].ShapeMemberSize
         name
             A String specifying the geometric restriction repository key.
         region
@@ -652,7 +652,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].ShapePlanarSymmetry
+            - mdb.models[name].optimizationTasks[name].ShapePlanarSymmetry
         name
             A String specifying the geometric restriction repository key.
         clientDirection
@@ -707,7 +707,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].ShapePointSymmetry
+            - mdb.models[name].optimizationTasks[name].ShapePointSymmetry
         name
             A String specifying the geometric restriction repository key.
         region
@@ -755,7 +755,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].ShapeRotationalSymmetry
+            - mdb.models[name].optimizationTasks[name].ShapeRotationalSymmetry
         name
             A String specifying the geometric restriction repository key.
         clientDirection
@@ -817,7 +817,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].SizingClusterAreas
+            - mdb.models[name].optimizationTasks[name].SizingClusterAreas
         name
             A String specifying the geometric restriction repository key.
         regions
@@ -838,7 +838,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].SizingCyclicSymmetry
+            - mdb.models[name].optimizationTasks[name].SizingCyclicSymmetry
         name
             A String specifying the geometric restriction repository key.
         region
@@ -870,7 +870,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].SizingFrozenArea
+            - mdb.models[name].optimizationTasks[name].SizingFrozenArea
         name
             A String specifying the geometric restriction repository key.
         region
@@ -889,7 +889,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].SizingMemberSize
+            - mdb.models[name].optimizationTasks[name].SizingMemberSize
         name
             A String specifying the geometric restriction repository key.
         region
@@ -913,7 +913,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].SizingPlanarSymmetry
+            - mdb.models[name].optimizationTasks[name].SizingPlanarSymmetry
         name
             A String specifying the geometric restriction repository key.
         region
@@ -943,7 +943,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].SizingPointSymmetry
+            - mdb.models[name].optimizationTasks[name].SizingPointSymmetry
         name
             A String specifying the geometric restriction repository key.
         region
@@ -970,7 +970,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].SizingRotationalSymmetry
+            - mdb.models[name].optimizationTasks[name].SizingRotationalSymmetry
         name
             A String specifying the geometric restriction repository key.
         angle
@@ -1004,7 +1004,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].SlideRegionControl
+            - mdb.models[name].optimizationTasks[name].SlideRegionControl
         name
             A String specifying the geometric restriction repository key.
         clientDirection
@@ -1064,7 +1064,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].StampControl
+            - mdb.models[name].optimizationTasks[name].StampControl
         name
             A String specifying the geometric restriction repository key.
         clientDirection
@@ -1120,7 +1120,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].TopologyCyclicSymmetry
+            - mdb.models[name].optimizationTasks[name].TopologyCyclicSymmetry
         name
             A String specifying the geometric restriction repository key.
         region
@@ -1156,7 +1156,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].TopologyDemoldControl
+            - mdb.models[name].optimizationTasks[name].TopologyDemoldControl
         name
             A String specifying the geometric restriction repository key.
         region
@@ -1201,7 +1201,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].TopologyMemberSize
+            - mdb.models[name].optimizationTasks[name].TopologyMemberSize
         name
             A String specifying the geometric restriction repository key.
         region
@@ -1236,7 +1236,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].TopologyMillingControl
+            - mdb.models[name].optimizationTasks[name].TopologyMillingControl
         name
             A String specifying the geometric restriction repository key.
         millingDirections
@@ -1276,7 +1276,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].TopologyOverhangControl
+            - mdb.models[name].optimizationTasks[name].TopologyOverhangControl
         name
             A String specifying the geometric restriction repository key.
         pullDirection
@@ -1324,7 +1324,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].TopologyPlanarSymmetry
+            - mdb.models[name].optimizationTasks[name].TopologyPlanarSymmetry
         name
             A String specifying the geometric restriction repository key.
         region
@@ -1356,7 +1356,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].TopologyPointSymmetry
+            - mdb.models[name].optimizationTasks[name].TopologyPointSymmetry
         name
             A String specifying the geometric restriction repository key.
         region
@@ -1385,7 +1385,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].TopologyRotationalSymmetry
+            - mdb.models[name].optimizationTasks[name].TopologyRotationalSymmetry
         name
             A String specifying the geometric restriction repository key.
         angle
@@ -1421,7 +1421,7 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].optimizationTasks[name].TurnControl
+            - mdb.models[name].optimizationTasks[name].TurnControl
         name
             A String specifying the geometric restriction repository key.
         clientDirection

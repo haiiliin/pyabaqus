@@ -74,10 +74,10 @@ class Assembly(MeshEditAssembly, MeshAssembly, PropertyAssembly, RegionAssembly,
     referencePoints: dict[str, ReferencePoint]
         A repository of :py:class:`~abaqus.BasicGeometry.ReferencePoint.ReferencePoint` objects.
     modelInstances: dict[str, ModelInstance]
-        A repository of :py:class:`~abaqus.Assembly.ModelInstance.ModelInstance` objects.
+        A repository of :py:class:`~abaqus.Model.Model.ModelInstance` objects.
     allInstances: dict[str, typing.Union[PartInstance, ModelInstance]]
-        A :py:class:`~abaqus.Assembly.PartInstance.PartInstance` object specifying the :py:class:`~abaqus.Assembly.PartInstance.PartInstance`s and A :py:class:`~abaqus.Assembly.ModelInstance.ModelInstance` object specifying
-        the :py:class:`~abaqus.Assembly.ModelInstance.ModelInstance`s.
+        A :py:class:`~abaqus.Assembly.PartInstance.PartInstance` object specifying the :py:class:`~abaqus.Assembly.PartInstance.PartInstance`s and A :py:class:`~abaqus.Model.Model.ModelInstance` object specifying
+        the :py:class:`~abaqus.Model.Model.ModelInstance`s.
     engineeringFeatures: EngineeringFeature
         An :py:class:`~abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature` object.
     modelName: str

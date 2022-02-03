@@ -1,4 +1,5 @@
-===============
-Output Database
-===============
+======================
+Abaqus Output Database
+======================
 
+.. autoclass:: abaqus.Odb.Odb.Odb

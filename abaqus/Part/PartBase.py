@@ -69,12 +69,12 @@ class PartBase(Feature):
     features: dict[str, Feature]
         A repository of :py:class:`~abaqus.Assembly.Feature.Feature` objects specifying all the features in the part.
     featuresById: dict[str, Feature]
-        A repository of :py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``` objects specifying all :py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``` objects in :py:class:`~.:py:class:`~.the`` part. The :py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature```
-        objects in :py:class:`~.:py:class:`~.the`` featuresById repository are :py:class:`~.:py:class:`~.the`` same as :py:class:`~.:py:class:`~.the`` :py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``.:py:class:`~abaqus.Assembly.:py:class:`~abaqus.Assembly.Feature.Feature`.:py:class:`~abaqus.Assembly.Feature.Feature``` objects in :py:class:`~.:py:class:`~.the``
-        features repository. However, :py:class:`~.:py:class:`~.the`` key to :py:class:`~.:py:class:`~.the`` objects in :py:class:`~.:py:class:`~.the`` featuresById repository is
-        an integer specifying :py:class:`~.:py:class:`~.the`` **ID**, whereas :py:class:`~.:py:class:`~.the`` key to :py:class:`~.:py:class:`~.the`` objects in :py:class:`~.:py:class:`~.the`` features
-        repository is a string specifying :py:class:`~.:py:class:`~.the`` **name**.
-    datums: list[Datum]
+        A repository of :py:class:`~abaqus.Feature.Feature.Feature` objects specifying all Feature objects in the part. The Feature 
+        objects in the featuresById repository are the same as the Feature objects in the 
+        features repository. However, the key to the objects in the featuresById repository is 
+        an integer specifying the *ID*, whereas the key to the objects in the features 
+        repository is a string specifying the **name**.
+        datums: list[Datum]
         A repository of :py:class:`~abaqus.Datum.Datum.Datum` objects specifying all the datums in the part.
     elements: MeshElementArray
         A :py:class:`~abaqus.Mesh.MeshElementArray.MeshElementArray` object specifying all the elements in the part.
@@ -92,7 +92,7 @@ class PartBase(Feature):
     sets: dict[str, Set]
         A repository of :py:class:`~abaqus.Region.Set.Set` objects specifying for more information, see :py:class:`~abaqus.Region.Set.Set`.
     allSets: dict[str, Set]
-        A repository of :py:class:`~abaqus.Region.Set.Set` objects specifying the contents of the **all:py:class:`~abaqus.Region.Set.Set`s** repository is the
+        A repository of :py:class:`~abaqus.Region.Set.Set` objects specifying the contents of the **all :py:class:`~abaqus.Region.Set.Set`s** repository is the
         same as the contents of the **sets** repository.
     allInternalSets: dict[str, Set]
         A repository of :py:class:`~abaqus.Region.Set.Set` objects specifying picked regions.

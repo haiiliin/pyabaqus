@@ -39,6 +39,9 @@ class AdaptivityIteration:
         .. code-block:: python
 
             mdb.adaptivityProcesses[name].AdaptivityIteration
+        
+        Parameters
+        ----------
         iteration
             An Int specifying the sequence number for this iteration in the adaptivity process. 
         jobName
@@ -69,6 +72,9 @@ class AdaptivityIteration:
         .. code-block:: python
 
             mdb.adaptivityProcesses[name].AdaptivityIteration
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the error indicator variable to which these results
             correspond.
@@ -99,6 +105,9 @@ class AdaptivityIteration:
         .. code-block:: python
 
             mdb.adaptivityProcesses[name].AdaptivityIteration
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the Remeshing Rule to which these results correspond.
         indicatorResults

@@ -128,3 +128,4 @@ dmypy.json
 /docs/source/_build/
 /abaqus/code_blokcs.py
 /abaqus/Guess.py
+/abaqus/fix-parameters.py

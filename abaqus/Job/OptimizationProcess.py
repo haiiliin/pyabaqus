@@ -29,6 +29,9 @@ class OptimizationProcess:
         .. code-block:: python
 
             mdb.OptimizationProcess
+            
+        Parameters
+        ----------
         name
             A String specifying name of the optimization process. 
         model

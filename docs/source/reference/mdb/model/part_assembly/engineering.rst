@@ -8,8 +8,27 @@ A specific type of engineering feature object is designed for each type of engin
 Create engineering features
 ---------------------------
 
-.. autoclass:: abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature
-    :members:
+.. automethod:: abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.AssembledFastener
+
+.. automethod:: abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.ContourIntegral
+
+.. automethod:: abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.DebondVCCT
+
+.. automethod:: abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.DiscreteFastener
+
+.. automethod:: abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.HeatCapacitance
+
+.. automethod:: abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.NonstructuralMass
+
+.. automethod:: abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.PointFastener
+
+.. automethod:: abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.PointMassInertia
+
+.. automethod:: abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.SpringDashpotToGround
+
+.. automethod:: abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.TwoPointSpringDashpot
+
+.. automethod:: abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.XFEMCrack
 
 Object features
 ---------------

@@ -155,6 +155,9 @@ class DisplacementAdaptiveMeshConstraintState(AdaptiveMeshConstraintState):
         .. code-block:: python
 
             mdb.models[name].steps[name].DisplacementAdaptiveMeshConstraintState
+        
+        Parameters
+        ----------
         u1
              A Float or a Complex specifying the displacement component in the 1-direction.
         u2

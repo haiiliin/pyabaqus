@@ -25,7 +25,7 @@ class ModelJob(Job):
     historyPrint: Boolean
         A Boolean specifying whether history data are printed. The default value is OFF.
     model: str
-        A String specifying the name of the model to be analyzed or a :py:class:`~abaqus.Assembly.ModelInstance.Model` object specifying
+        A String specifying the name of the model to be analyzed or a :py:class:`~abaqus.Model.Model.Model` object specifying
         the model to be analyzed.
     description: str
         A String specifying a description of the job.
@@ -261,6 +261,9 @@ class ModelJob(Job):
         .. code-block:: python
 
             mdb.Job
+            
+        Parameters
+        ----------
         name
             A String specifying the name of the new job. The name must be a valid Abaqus/CAE object
             name.

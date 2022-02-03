@@ -65,23 +65,33 @@ class AdaptiveMeshConstraint:
         .. code-block:: python
 
             mdb.models[name].AdaptiveMeshConstraint
+        
+        
+        Parameters
+        ----------
         name
-             A String specifying the adaptive mesh constraint repository key.
+            A String specifying the adaptive mesh constraint repository key.
         category
-             A SymbolicConstant specifying the category of the adaptive mesh constraint. Possible values are
-             MECHANICAL and THERMAL.
+            A SymbolicConstant specifying the category of the adaptive mesh constraint. Possible values are
+            MECHANICAL and THERMAL.
         region
-             A Region object specifying the region to which the adaptive mesh constraint is applied.
+            A Region object specifying the region to which the adaptive mesh constraint is applied.
         localCsys
-             None or a DatumCsys object specifying the local coordinate system of the adaptive mesh  constraint's
-             degrees of freedom. If *localCsys*=None, the degrees of freedom are defined  in the global coordinate
-             system. The default value is None.
+            None or a DatumCsys object specifying the local coordinate system of the adaptive mesh  constraint's
+            degrees of freedom. If *localCsys*=None, the degrees of freedom are defined  in the global coordinate
+            system. The default value is None.
         """
         pass
 
     def deactivate(self, stepName: str):
         """This method deactivates the adaptive mesh constraint in the specified step and all
         subsequent steps.
+        
+        Parameters
+        ----------
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the adaptive mesh constraint is 
             deactivated.
@@ -94,6 +104,12 @@ class AdaptiveMeshConstraint:
 
     def move(self, fromStepName: str, toStepName: str):
         """This method moves the adaptive mesh constraint state from one step to a different step.
+        
+        Parameters
+        ----------
+        
+        Parameters
+        ----------
         fromStepName
             A String specifying the name of the step from which the adaptive mesh constraint state 
             is moved. 
@@ -110,6 +126,12 @@ class AdaptiveMeshConstraint:
     def reset(self, stepName: str):
         """This method resets the adaptive mesh constraint state of the specified step to the state
         of the previous analysis step.
+        
+        Parameters
+        ----------
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the adaptive mesh constraint state is 
             reset.
@@ -132,6 +154,12 @@ class AdaptiveMeshConstraint:
 
     def delete(self, indices: tuple):
         """This method allows you to delete existing adaptive mesh constraints.
+        
+        Parameters
+        ----------
+        
+        Parameters
+        ----------
         indices
             A sequence of Ints specifying the index of each adaptive mesh constraint to delete. 
         """

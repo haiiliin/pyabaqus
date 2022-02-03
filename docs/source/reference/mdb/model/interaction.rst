@@ -7,23 +7,81 @@ A specific type of interaction object and a specific type of interaction state o
 Create interactions
 -------------------
 
-InteractionContactControlModel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.contactDetection
 
-.. autoclass:: abaqus.Interaction.InteractionContactControlModel.InteractionContactControlModel
-    :members:
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.AcousticImpedance
 
-InteractionContactInitializationModel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.AcousticImpedanceProp
 
-.. autoclass:: abaqus.Interaction.InteractionContactInitializationModel.InteractionContactInitializationModel
-    :members:
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.ActuatorSensor
 
-InteractionPropertyModel
-~~~~~~~~~~~~~~~~~~~~~~~~
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.ActuatorSensorProp
 
-.. autoclass:: abaqus.Interaction.InteractionPropertyModel.InteractionPropertyModel
-    :members:
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.CavityRadiation
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.CavityRadiationProp
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.ConcentratedFilmCondition
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.ConcentratedRadiationToAmbient
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.ContactExp
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.ContactProperty
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.ContactStd
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.CyclicSymmetry
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.ElasticFoundation
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.ExpContactControl
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.ExpInitialization
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.FilmCondition
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.FilmConditionProp
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.FluidCavity
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.FluidCavityProperty
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.FluidExchange
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.FluidExchangeProperty
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.FluidInflator
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.FluidInflatorProperty
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.IncidentWave
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.IncidentWaveProperty
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.ModelChange
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.PressurePenetration
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.RadiationToAmbient
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.SelfContactExp
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.SelfContactStd
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.StdContactControl
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.StdInitialization
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.StdStabilization
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.StdXplCosimulation
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.SurfaceToSurfaceContactExp
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.SurfaceToSurfaceContactStd
+
+.. automethod:: abaqus.Interaction.InteractionModel.InteractionModel.XFEMCrackGrowth
 
 
 Object features

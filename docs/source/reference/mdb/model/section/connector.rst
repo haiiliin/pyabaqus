@@ -8,90 +8,29 @@ A connector describes the relative motions between two points. A connector also 
 Create connectors
 -----------------
 
-CDCTerm
-~~~~~~~
+.. automethod:: abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorDamage
 
-.. autoclass:: abaqus.Connector.CDCTerm.CDCTerm
+.. automethod:: abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorDamping
 
-    .. automethod:: __init__
+.. automethod:: abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorElasticity
 
+.. automethod:: abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorFailure
 
-ConnectorDamage
-~~~~~~~~~~~~~~~
+.. automethod:: abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorFriction
 
-.. autoclass:: abaqus.Connector.ConnectorDamage.ConnectorDamage
-    
-    .. automethod:: __init__
+.. automethod:: abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorLock
 
-ConnectorDamping
-~~~~~~~~~~~~~~~~
+.. automethod:: abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorPlasticity
 
-.. autoclass:: abaqus.Connector.ConnectorDamping.ConnectorDamping
-    
-    .. automethod:: __init__
+.. automethod:: abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorPotential
 
-ConnectorElasticity
-~~~~~~~~~~~~~~~~~~~
+.. automethod:: abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorStop
 
-.. autoclass:: abaqus.Connector.ConnectorElasticity.ConnectorElasticity
-    
-    .. automethod:: __init__
+.. automethod:: abaqus.Connector.ConnectorSection.ConnectorSection.DerivedComponent
 
-ConnectorFailure
-~~~~~~~~~~~~~~~~
+.. automethod:: abaqus.Connector.ConnectorSection.ConnectorSection.TangentialBehavior
 
-.. autoclass:: abaqus.Connector.ConnectorFailure.ConnectorFailure
-    
-    .. automethod:: __init__
-
-ConnectorFriction
-~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Connector.ConnectorFriction.ConnectorFriction
-    
-    .. automethod:: __init__
-
-ConnectorLock
-~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Connector.ConnectorLock.ConnectorLock
-    
-    .. automethod:: __init__
-
-ConnectorPlasticity
-~~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Connector.ConnectorPlasticity.ConnectorPlasticity
-    
-    .. automethod:: __init__
-
-ConnectorPotential
-~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Connector.ConnectorPotential.ConnectorPotential
-    
-    .. automethod:: __init__
-
-ConnectorStop
-~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Connector.ConnectorStop.ConnectorStop
-    
-    .. automethod:: __init__
-
-DerivedComponent
-~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Connector.DerivedComponent.DerivedComponent
-    
-    .. automethod:: __init__
-
-TangentialBehavior
-~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Connector.TangentialBehavior.TangentialBehavior
-    
-    .. automethod:: __init__
+.. automethod:: abaqus.Connector.DerivedComponent.DerivedComponent.CDCTerm
 
 
 Object features

@@ -231,7 +231,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         calibration: Calibration
-            A Calibration object..
+            A Calibration object.
         """
         self.boundaryConditions[name] = boundaryCondition = Calibration(name)
         return boundaryCondition

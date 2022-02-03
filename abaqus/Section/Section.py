@@ -1,12 +1,13 @@
 import typing
-
-from abaqus.Section.TransverseShearBeam import TransverseShearBeam
-from abaqus.Section.TransverseShearShell import TransverseShearShell
 from abaqusConstants import *
-from abaqus.Section.SectionBase import SectionBase
+
+from .TransverseShearBeam import TransverseShearBeam
+from .TransverseShearShell import TransverseShearShell
+from .SectionBase import SectionBase
+from ..Connector.ConnectorSection import ConnectorSection
 
 
-class Section(SectionBase):
+class Section(ConnectorSection):
 
     def TransverseShearBeam(self, scfDefinition: SymbolicConstant, k23: float = None, k13: float = None,
                             slendernessCompensation: typing.Union[SymbolicConstant, float] = 0) -> TransverseShearBeam:

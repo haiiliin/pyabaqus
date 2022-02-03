@@ -33,14 +33,22 @@ Assembly sets contain regions of an assembly and are used by many commands that 
 Create regions for Part
 -----------------------
 
-.. autoclass:: abaqus.Region.RegionPart.RegionPart
-    :members:
+.. automethod:: abaqus.Region.RegionPart.RegionPart.Surface
+
+.. automethod:: abaqus.Region.RegionPart.RegionPart.Set
+
+.. automethod:: abaqus.Region.RegionPart.RegionPart.Skin
+
+.. automethod:: abaqus.Region.RegionPart.RegionPart.EditSkin
+
+.. automethod:: abaqus.Region.RegionPart.RegionPart.Stringer
 
 Create regions for Assembly
 ---------------------------
 
-.. autoclass:: abaqus.Region.RegionAssembly.RegionAssembly
-    :members:
+.. automethod:: abaqus.Region.RegionAssembly.RegionAssembly.Surface
+
+.. automethod:: abaqus.Region.RegionAssembly.RegionAssembly.Set
 
 
 Object features

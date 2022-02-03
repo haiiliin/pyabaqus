@@ -8,15 +8,27 @@ The Adaptivity commands are used to define objects, perform analyses, and calcul
 Create adaptivity mesh control features
 ---------------------------------------
 
-.. autoclass:: abaqus.Adaptivity.AdaptivityModel.AdaptivityModel
-    :members:
+.. automethod:: abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.AdaptiveMeshConstraint
+
+.. automethod:: abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.AdaptiveMeshControl
+
+.. automethod:: abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.DisplacementAdaptiveMeshConstraint
+
+.. automethod:: abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.RemeshingRule
+
+.. automethod:: abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.VelocityAdaptiveMeshConstraint
 
 
 Create adaptivity mesh state features
 -------------------------------------
 
-.. autoclass:: abaqus.Adaptivity.AdaptivityStep.AdaptivityStep
-    :members:
+.. automethod:: abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.AdaptiveMeshConstraintState
+
+.. automethod:: abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.DisplacementAdaptiveMeshConstraintState
+
+.. automethod:: abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.VelocityAdaptiveMeshConstraintState
+
+.. automethod:: abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.AdaptiveMeshDomain
 
 
 Create features for AdaptivityIteration
@@ -85,9 +97,15 @@ ErrorIndicatorResult
     :members:
 
 RemeshingRule
+~~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Adaptivity.RemeshingRule.RemeshingRule
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    :members:
+
+RuleResult
+~~~~~~~~~~
+    
+.. autoclass:: abaqus.Adaptivity.RuleResult.RuleResult
     :members:
 
 VelocityAdaptiveMeshConstraint
@@ -101,4 +119,3 @@ VelocityAdaptiveMeshConstraintState
 
 .. autoclass:: abaqus.Adaptivity.VelocityAdaptiveMeshConstraintState.VelocityAdaptiveMeshConstraintState
     :members:
-

@@ -31,7 +31,7 @@ class MdbBase:
         A :py:class:`~abaqus.EditMesh.MeshEditOptions.MeshEditOptions` object specifying the undo/redo behavior when editing meshes on parts
         or part instances.
     models: dict[str, Model]
-        A repository of :py:class:`~abaqus.Assembly.ModelInstance.Model` objects.
+        A repository of :py:class:`~abaqus.Model.Model.Model` objects.
     customData: RepositorySupport
         A :py:class:`~abaqus.CustomKernel.RepositorySupport.RepositorySupport` object.
     annotations: dict[str, Annotation]

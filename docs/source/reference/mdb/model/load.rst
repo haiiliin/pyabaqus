@@ -15,8 +15,75 @@ The Load object is the abstract base type for other Load objects. The Load objec
 Create loads
 ~~~~~~~~~~~~
 
-.. autoclass:: abaqus.LoadAndLoadCase.LoadModel.LoadModel
-    :members:
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.BodyCharge
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.BodyConcentrationFlux
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.BodyCurrent
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.BodyCurrentDensity
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.BodyForce
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.BodyHeatFlux
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.BoltLoad
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConcCharge
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConcConcFlux
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConcCurrent
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConcPoreFluid
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConcentratedForce
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConcentratedHeatFlux
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConnectorForce
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConnectorMoment
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.CoriolisForce
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.Gravity
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.InertiaRelief
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.InwardVolAccel
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.LineLoad
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.Moment
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.PEGLoad
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.PipePressure
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.Pressure
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.RotationalBodyForce
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ShellEdgeLoad
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SubmodelSB
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SubstructureLoad
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SurfaceCharge
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SurfaceConcentrationFlux
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SurfaceCurrent
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SurfaceCurrentDensity
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SurfaceHeatFlux
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SurfacePoreFluid
+
+.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SurfaceTraction
 
 
 Object features of loads

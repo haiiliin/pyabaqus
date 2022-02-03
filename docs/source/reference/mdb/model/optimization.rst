@@ -7,15 +7,88 @@ Optimization commands are used to perform topology, shape, or sizing optimizatio
 Create optimization tasks
 -------------------------
 
-.. autoclass:: abaqus.Optimization.OptimizationTaskModel.OptimizationTaskModel
-    :members:
+.. automethod:: abaqus.Optimization.OptimizationTaskModel.OptimizationTaskModel.BeadTask
 
-Add features to optimization tasks
-----------------------------------
+.. automethod:: abaqus.Optimization.OptimizationTaskModel.OptimizationTaskModel.ShapeTask
 
-.. autoclass:: abaqus.Optimization.OptimizationTask.OptimizationTask
-    :members:
-    :inherited-members:
+.. automethod:: abaqus.Optimization.OptimizationTaskModel.OptimizationTaskModel.SizingTask
+
+.. automethod:: abaqus.Optimization.OptimizationTaskModel.OptimizationTaskModel.TopologyTask
+
+Assign features to optimization tasks
+-------------------------------------
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.BeadFixedRegion
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.BeadGrowth
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.BeadPenetrationCheck
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.BeadPlanarSymmetry
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.BeadPointSymmetry
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.BeadRotationalSymmetry
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.DesignDirection
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.DrillControl
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.FixedRegion
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.FrozenArea
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.Growth
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.ObjectiveFunction
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.OptimizationConstraint
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.PenetrationCheck
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.ShapeDemoldControl
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.ShapeMemberSize
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.ShapePlanarSymmetry
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.ShapePointSymmetry
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.ShapeRotationalSymmetry
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.SizingCyclicSymmetry
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.SizingFrozenArea
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.SizingMemberSize
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.SizingPlanarSymmetry
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.SizingPointSymmetry
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.SizingRotationalSymmetry
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.SlideRegionControl
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.StampControl
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyCyclicSymmetry
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyDemoldControl
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyMemberSize
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyMillingControl
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyOverhangControl
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyPlanarSymmetry
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyPointSymmetry
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyRotationalSymmetry
+
+.. automethod:: abaqus.Optimization.OptimizationTask.OptimizationTask.TurnControl
 
 
 Object features

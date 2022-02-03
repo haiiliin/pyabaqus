@@ -4,25 +4,6 @@ Odb
 
 The Python ODB API commands are used to read and write data from an output database (.odb) file. The path to the Odb object can be via the session.odbs repository or via a variable. In this chapter the Access and Path statements refer to a variable called odb that represents an existing Odb object.
 
-Attributes
-----------
-
-- **session.odbs[name].isReadOnly**: A Boolean specifying whether the output database was opened with read-only access.
-- **session.odbs[name].amplitudes**: A repository of :py:class:`abaqus.Amplitude.Amplitude.Amplitude` objects.
-- **session.odbs[name].filters**: A repository of :py:class:`abaqus.Filter.Filter.Filter` objects.
-- **session.odbs[name].rootAssembly**: An :py:class:`abaqus.Odb.OdbAssembly.OdbAssembly` object.
-- **session.odbs[name].jobData**: A :py:class:`abaqus.Odb.JobData.JobData` object.
-- **session.odbs[name].parts**: A repository of :py:class:`abaqus.Odb.OdbPart.OdbPart` objects.
-- **session.odbs[name].materials**: A repository of :py:class:`abaqus.Material.Material.Material` objects.
-- **session.odbs[name].steps**: A repository of :py:class:`abaqus.Odb.OdbStep.OdbStep` objects.
-- **session.odbs[name].sections**: A repository of :py:class:`abaqus.Section.Section.Section` objects.
-- **session.odbs[name].sectionCategories**: A repository of :py:class:`abaqus.Odb.SectionCategory.SectionCategory` objects.
-- **session.odbs[name].sectorDefinition**: A :py:class:`abaqus.Odb.SectorDefinition.SectorDefinition` object.
-- **session.odbs[name].userData**: A :py:class:`abaqus.Odb.UserData.UserData` object.
-- **session.odbs[name].customData**: A :py:class:`abaqus.CustomKernel.RepositorySupport.RepositorySupport` object.
-- **session.odbs[name].profiles**: A repository of :py:class:`abaqus.BeamSectionProfile.Profile.Profile` objects.
-
-
 Object features
 ---------------
 

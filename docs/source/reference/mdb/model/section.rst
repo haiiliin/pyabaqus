@@ -5,7 +5,7 @@ Section
 The Section commands are used to create sections and profiles with their associated properties and behavior. The various section objects are all derived from the Section object. The various profile objects are all derived from the Profile object. See Property commands for the property assignment commands.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Objects for Section
 
    section/connector
@@ -17,15 +17,77 @@ Create sections
 In Mdb
 ~~~~~~
 
-.. autoclass:: abaqus.Section.SectionModel.SectionModel
-    :members:
+.. automethod:: abaqus.Section.SectionModel.SectionModel.AcousticInfiniteSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.AcousticInterfaceSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.BeamSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.CohesiveSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.CompositeShellSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.CompositeSolidSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.ConnectorSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.EulerianSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.GasketSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.GeneralStiffnessSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.HomogeneousShellSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.HomogeneousSolidSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.MPCSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.MembraneSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.PEGSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.SurfaceSection
+
+.. automethod:: abaqus.Section.SectionModel.SectionModel.TrussSection
 
 
 In Odb
 ~~~~~~
 
-.. autoclass:: abaqus.Section.SectionOdb.SectionOdb
-    :members:
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.AcousticInfiniteSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.AcousticInterfaceSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.BeamSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.CohesiveSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.CompositeShellSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.CompositeSolidSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.ConnectorSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.EulerianSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.GasketSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.GeneralStiffnessSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.HomogeneousShellSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.HomogeneousSolidSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.MPCSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.MembraneSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.PEGSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.SurfaceSection
+
+.. automethod:: abaqus.Section.SectionOdb.SectionOdb.TrussSection
 
 
 Object features

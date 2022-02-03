@@ -22,14 +22,17 @@ class AdaptivityStep(StepBase):
             This function can be accessed by:
 
             .. code-block:: python
-
-                mdb.models[name].steps[name].AdaptiveMeshConstraintState
+              
+            mdb.models[name].steps[name].AdaptiveMeshConstraintState
+        
+        Parameters
+        ----------
         amplitudeState
-             A SymbolicConstant specifying the propagation state of the amplitude reference. Possible  values are
-             UNSET, SET, UNCHANGED, FREED, and MODIFIED.
+            A SymbolicConstant specifying the propagation state of the amplitude reference. Possible  values are
+            UNSET, SET, UNCHANGED, FREED, and MODIFIED.
         status
-             A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible
-             values are:
+            A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible
+            values are:
                  - NOT_YET_ACTIVE
                  - CREATED
                  - PROPAGATED
@@ -43,8 +46,8 @@ class AdaptivityStep(StepBase):
                  - DEACTIVATED_FROM_BASE_STATE
                  - BUILT_INTO_MODES
         amplitude
-             A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh
-             constraint has no amplitude reference.
+            A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh
+            constraint has no amplitude reference.
         """
         self.adaptiveMeshConstraintStates[amplitude] = adaptiveMeshConstraintState = AdaptiveMeshConstraintState(
             amplitudeState, status, amplitude)
@@ -76,6 +79,9 @@ class AdaptivityStep(StepBase):
             .. code-block:: python
 
                 mdb.models[name].steps[name].DisplacementAdaptiveMeshConstraintState
+        
+        Parameters
+        ----------
         u1
              A Float or a Complex specifying the displacement component in the 1-direction.
         u2
@@ -159,6 +165,9 @@ class AdaptivityStep(StepBase):
             .. code-block:: python
 
                 mdb.models[name].steps[name].VelocityAdaptiveMeshConstraintState
+        
+        Parameters
+        ----------
         v1
              A Float specifying the velocity component in the 1-direction.
         v2
@@ -212,7 +221,8 @@ class AdaptivityStep(StepBase):
              constraint has no amplitude reference.
         """
         super().__init__(amplitudeState, status, amplitude)
-        self.adaptiveMeshConstraintStates[amplitude] = adaptiveMeshConstraintState = VelocityAdaptiveMeshConstraintState(
+        self.adaptiveMeshConstraintStates[
+            amplitude] = adaptiveMeshConstraintState = VelocityAdaptiveMeshConstraintState(
             v1, v2, v3, vr1, vr2, vr3, v1State, v2State, v3State, vr1State, vr2State, vr3State, amplitudeState, status,
             amplitude)
         return adaptiveMeshConstraintState
@@ -231,6 +241,9 @@ class AdaptivityStep(StepBase):
             .. code-block:: python
 
                 mdb.models[name].steps[name].AdaptiveMeshDomain
+        
+        Parameters
+        ----------
         region
             A Region object specifying the region to which the adaptive mesh domain is applied.
         controls

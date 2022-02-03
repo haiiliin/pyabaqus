@@ -8,8 +8,11 @@ The Property commands are used to create and manage reinforcements and to assign
 Create properties for Part
 --------------------------
 
-.. autoclass:: abaqus.Property.PropertyPart.PropertyPart
-    :members:
+.. automethod:: abaqus.Property.PropertyPart.PropertyPart.CompositeLayup
+
+.. automethod:: abaqus.Property.PropertyPart.PropertyPart.SectionAssignment
+
+.. automethod:: abaqus.Property.PropertyPart.PropertyPart.MaterialOrientation
 
 Object features
 ---------------

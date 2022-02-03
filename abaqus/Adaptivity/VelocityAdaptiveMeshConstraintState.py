@@ -150,6 +150,9 @@ class VelocityAdaptiveMeshConstraintState(AdaptiveMeshConstraintState):
         .. code-block:: python
 
             mdb.models[name].steps[name].VelocityAdaptiveMeshConstraintState
+        
+        Parameters
+        ----------
         v1
              A Float specifying the velocity component in the 1-direction.
         v2

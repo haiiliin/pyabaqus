@@ -68,6 +68,9 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
         .. code-block:: python
 
             mdb.models[name].VelocityAdaptiveMeshConstraint
+        
+        Parameters
+        ----------
         name
             A String specifying the adaptive mesh constraint repository key. 
         createStepName
@@ -128,6 +131,12 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
                   localCsys: str = None, motionType: SymbolicConstant = INDEPENDENT):
         """This method modifies the data for an existing VelocityAdaptiveMeshConstraint object in
         the step where it is created.
+        
+        Parameters
+        ----------
+        
+        Parameters
+        ----------
         v1
             A Float or a SymbolicConstant specifying the velocity component in the 1-direction. 
             Possible values for the SymbolicConstant are UNSET and SET. The default value is 
@@ -177,6 +186,12 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing VelocityAdaptiveMeshConstraint
         object in the specified step.
+        
+        Parameters
+        ----------
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the adaptive mesh constraint is 
             modified. 

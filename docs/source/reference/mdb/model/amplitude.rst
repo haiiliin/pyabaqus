@@ -4,28 +4,55 @@ Amplitude
 
 Amplitude commands are used to create arbitrary time or frequency variations of load, displacement, and some interaction attributes throughout a step using step time or throughout an analysis using total time.
 
-Attributes
-----------
-
-- **mdb.models[name].amplitudes[name].name**: A String specifying the repository key.
-- **mdb.models[name].amplitudes[name].timeSpan**: A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP and TOTAL. The default value is STEP.
-
-
 Create amplitudes
 -----------------
 
 In Mdb
 ~~~~~~
 
-.. autoclass:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel
-    :members:
+.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.ActuatorAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.DecayAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.EquallySpacedAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.ModulatedAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.PeriodicAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.PsdDefinition
+
+.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.SmoothStepAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.SolutionDependentAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.SpectrumAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.TabularAmplitude
 
 
 In Odb
 ~~~~~~
 
-.. autoclass:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb
-    :members:
+.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.ActuatorAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.DecayAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.EquallySpacedAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.ModulatedAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.PeriodicAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.PsdDefinition
+
+.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.SmoothStepAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.SolutionDependentAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.SpectrumAmplitude
+
+.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.TabularAmplitude
 
 
 Object features

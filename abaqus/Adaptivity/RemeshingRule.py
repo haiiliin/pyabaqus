@@ -43,6 +43,9 @@ class RemeshingRule:
         .. code-block:: python
 
             mdb.models[name].RemeshingRule
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the object. 
         stepName
@@ -138,6 +141,12 @@ class RemeshingRule:
                   specifyMaxSize: Boolean = ON, coarseningFactor: SymbolicConstant = DEFAULT_LIMIT,
                   refinementFactor: SymbolicConstant = DEFAULT_LIMIT, elementCountLimit: int = None):
         """This method modifies the RemeshingRule object.
+        
+        Parameters
+        ----------
+        
+        Parameters
+        ----------
         description
             A String specifying a descriptive string for this rule. The default value is an empty 
             string. 

@@ -27,6 +27,9 @@ class ErrorIndicatorResult(RuleResult):
         .. code-block:: python
 
             mdb.adaptivityProcesses[name].iterations[i].ruleResults[name].ErrorIndicatorResult
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the error indicator variable to which these results 
             correspond. 

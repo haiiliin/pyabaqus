@@ -1,9 +1,13 @@
 from abaqusConstants import *
 from .ConnectorOptions import ConnectorOptions
 from .ConnectorPotentialArray import ConnectorPotentialArray
-from .DerivedComponent import DerivedComponent
 
 from .TangentialBehavior import TangentialBehavior
+
+
+# Prevent circular import
+class DerivedComponent:
+    pass
 
 
 class ConnectorBehaviorOption:

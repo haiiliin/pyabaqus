@@ -32,10 +32,10 @@ class ConnectorStop(ConnectorBehaviorOption):
 
         .. code-block:: python
 
-                      import connectorBehavior
-                      connectorBehavior.ConnectorStop
-                      import odbConnectorBehavior
-                      odbConnectorBehavior.ConnectorStop
+            import connectorBehavior
+            connectorBehavior.ConnectorStop
+            import odbConnectorBehavior
+            odbConnectorBehavior.ConnectorStop
         minMotion
             None or a Float specifying the lower bound for the connector's relative position for all 
             specified components, or no lower bound. The default value is None. 

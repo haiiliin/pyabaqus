@@ -29,6 +29,12 @@ class AdaptivityModel(ModelBase):
     def adaptiveRemesh(self, odb: Odb):
         """This method remeshes the model using the active remesh rules in the model and the error
         indicator results from a previous analysis.
+        
+        Parameters
+        ----------
+        
+        Parameters
+        ----------
         odb
             An Odb object containing error output field results. 
 
@@ -53,6 +59,9 @@ class AdaptivityModel(ModelBase):
         .. code-block:: python
 
             mdb.models[name].AdaptiveMeshConstraint
+        
+        Parameters
+        ----------
         name
              A String specifying the adaptive mesh constraint repository key.
         category
@@ -88,6 +97,9 @@ class AdaptivityModel(ModelBase):
         .. code-block:: python
 
             mdb.models[name].AdaptiveMeshConstraint
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the object.
         remapping
@@ -164,6 +176,9 @@ class AdaptivityModel(ModelBase):
         .. code-block:: python
 
             mdb.models[name].AdaptiveMeshConstraint
+        
+        Parameters
+        ----------
         name
             A String specifying the adaptive mesh constraint repository key.
         createStepName
@@ -234,6 +249,9 @@ class AdaptivityModel(ModelBase):
         .. code-block:: python
 
             mdb.models[name].AdaptiveMeshConstraint
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the object.
         stepName
@@ -330,6 +348,9 @@ class AdaptivityModel(ModelBase):
         .. code-block:: python
 
             mdb.models[name].AdaptiveMeshConstraint
+        
+        Parameters
+        ----------
         name
             A String specifying the adaptive mesh constraint repository key.
         createStepName

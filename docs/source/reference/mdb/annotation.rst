@@ -8,8 +8,11 @@ Annotation commands are used to create, position, and modify viewport annotation
 Create annotations
 ------------------
 
-.. autoclass:: abaqus.Annotation.AnimationUserData.AnimationUserData
-    :members:
+.. automethod:: abaqus.Annotation.AnimationUserData.AnimationUserData.Arrow
+
+.. automethod:: abaqus.Annotation.AnimationUserData.AnimationUserData.Text
+
+.. automethod:: abaqus.Annotation.AnimationUserData.AnimationUserData.XYData
 
 
 Object features

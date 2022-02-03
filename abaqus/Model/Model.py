@@ -53,7 +53,7 @@ class Model(AdaptivityModel, AssemblyModel, AmplitudeModel, BoundaryConditionMod
     lastChangedCount: float
         A Float specifying the time stamp that indicates when the model was last changed.
     description: str
-        A String specifying the purpose and contents of the :py:class:`~abaqus.Assembly.ModelInstance.Model` object. The default value is
+        A String specifying the purpose and contents of the :py:class:`~abaqus.Model.Model.Model` object. The default value is
         an empty string.
     restartJob: str
         A String specifying the name of the job that generated the restart data.

@@ -8,17 +8,11 @@ A Field object stores the non-propagating data of a field as well as a number of
 Create fields
 -------------
 
-In Mdb
-~~~~~~
+.. automethod:: abaqus.Field.FieldModel.FieldModel.DiscreteField
 
-.. autoclass:: abaqus.Field.FieldModel.FieldModel
-    :members:
+.. automethod:: abaqus.Field.FieldModel.FieldModel.ExpressionField
 
-In Odb
-~~~~~~
-
-.. autoclass:: abaqus.Field.FieldOdb.FieldOdb
-    :members:
+.. automethod:: abaqus.Field.FieldModel.FieldModel.MappedField
 
 
 Object features
