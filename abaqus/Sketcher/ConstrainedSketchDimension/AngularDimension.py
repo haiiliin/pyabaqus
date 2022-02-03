@@ -13,7 +13,10 @@ class AngularDimension(ConstrainedSketchDimension):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].AngularDimension
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].AngularDimension
         
         Parameters
         ----------
@@ -31,7 +34,7 @@ class AngularDimension(ConstrainedSketchDimension):
 
         Returns
         -------
-            A ConstrainedSketchDimension object (None if the dimension cannot be created). . 
-            !img 
+            A ConstrainedSketchDimension object (None if the dimension cannot be created).
+            
         """
         pass

@@ -4,9 +4,9 @@ from abaqusConstants import *
 the output from the str() function into a formatted string, indented for each object in 
 the recursive listing of a Python object. 
 
-Access
-------
-    - import textRepr
+Notes
+-----
+        import textRepr
 
 """
 
@@ -135,10 +135,6 @@ def prettyPrint(object, maxRecursionDepth: SymbolicConstant = None,
         An Int specifying the number of significant digits for Floats in the output. Possible 
         values are 0 << *significantDigits* ≤≤ 15. The default value is 6. 
 
-    Returns
-    -------
-        None. 
-
     """
     pass
 
@@ -169,10 +165,6 @@ def printPaths(object, maxRecursionDepth: SymbolicConstant = None,
         each path found. The default value is None, implying that the path to *object* will be 
         used. 
 
-    Returns
-    -------
-        None. 
-
     """
     pass
 
@@ -200,10 +192,6 @@ def printTypes(object, maxRecursionDepth: SymbolicConstant = None,
         A String specifying the root of the paths to be printed. This String is prepended to 
         each path found. The default value is None, implying that the path to *object* will be 
         used. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass

@@ -10,7 +10,10 @@ class Spline(ConstrainedSketchGeometry):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].Spline
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].Spline
         
         Parameters
         ----------
@@ -23,7 +26,7 @@ class Spline(ConstrainedSketchGeometry):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the spline cannot be created). . 
-            !img 
+            A ConstrainedSketchGeometry object (None if the spline cannot be created).
+            
         """
         pass

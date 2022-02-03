@@ -5,13 +5,19 @@ from abaqusConstants import *
 
 
 class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
-    """The ConstrainedSketchDimension object stores the dimensions associated with a sketch.
+    """A ConstrainedSketch object contains the entities that are used to create a sketch. The
+    objects include ConstrainedSketchGeometry objects contained in the ConstrainedSketchGeometry Repository,
+    such as Line, Arc, and Spline. ConstrainedSketchVertex, ConstrainedSketchDimension, ConstrainedSketchConstraint, and ConstrainedSketchParameter objects are
+    contained in their respective repositories. 
 
     Notes
     -----
         This object can be accessed by:
-        - import sketch
-        - mdb.models[name].sketches[name].dimensions[i]
+        
+        .. code-block:: python
+            
+            import sketch
+            mdb.models[name].sketches[name]
 
     """
 
@@ -23,7 +29,10 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].AngularDimension
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].AngularDimension
         
         Parameters
         ----------
@@ -55,7 +64,10 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].HorizontalDimension
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].HorizontalDimension
         
         Parameters
         ----------
@@ -86,7 +98,10 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].ObliqueDimension
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].ObliqueDimension
         
         Parameters
         ----------
@@ -118,7 +133,10 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].RadialDimension
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].RadialDimension
         
         Parameters
         ----------
@@ -153,7 +171,10 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].VerticalDimension
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].VerticalDimension
         
         Parameters
         ----------
@@ -185,7 +206,10 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].DistanceDimension
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].DistanceDimension
         
         Parameters
         ----------

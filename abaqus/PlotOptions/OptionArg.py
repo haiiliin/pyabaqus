@@ -79,6 +79,6 @@ class OptionArg:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

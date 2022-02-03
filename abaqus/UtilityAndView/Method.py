@@ -13,9 +13,13 @@ def myCallback(callingObject, arguments, keywordArguments, userData):
     print 'An input file  is about to be written.' 
 methodCallback.addCallback(JobType, 'writeInput', myCallback) 
 
-Access
-------
-    - import methodCallback
+Notes
+-----
+    This object can be accessed by:
+    
+    .. code-block:: python
+    
+        import methodCallback
 
 """
 
@@ -25,9 +29,13 @@ def addCallback(caller: str, methodName: str, callback: str, userData: str = Non
     """This method adds a callback function that will be invoked when certain Abaqus/CAE
     commands are about to be executed.
 
-    Path
-    ----
-        - methodCallback.addCallback
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            methodCallback.addCallback
 
     Parameters
     ----------
@@ -56,10 +64,6 @@ def addCallback(caller: str, methodName: str, callback: str, userData: str = Non
         including the following statement:`returnValue = getMethodReturnValue()`The 
         getMethodReturnValue function is in the global namespace of the callback function. 
 
-    Returns
-    -------
-        None. 
-
     """
     pass
 
@@ -68,9 +72,13 @@ def removeCallback(caller: str, methodName: str, callback: str, userData: str = 
     """This method removes a callback added by the addCallback method. To successfully remove a
     callback, all arguments must exactly match those used when the callback was added.
 
-    Path
-    ----
-        - methodCallback.removeCallback
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            methodCallback.removeCallback
 
     Parameters
     ----------
@@ -91,10 +99,6 @@ def removeCallback(caller: str, methodName: str, callback: str, userData: str = 
     userData
         Any type of data. This data will be passed to the callback function. The default value 
         is None. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass

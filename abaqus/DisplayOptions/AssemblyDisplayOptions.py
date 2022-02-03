@@ -107,9 +107,12 @@ class AssemblyDisplayOptions:
     Notes
     -----
         This object can be accessed by:
-        - import assembly
-        - session.viewports[name].assemblyDisplay
-        - session.viewports[name].layers[name].assemblyDisplay
+        
+        .. code-block:: python
+            
+            import assembly
+            session.viewports[name].assemblyDisplay
+            session.viewports[name].layers[name].assemblyDisplay
 
     """
 
@@ -296,6 +299,6 @@ class AssemblyDisplayOptions:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

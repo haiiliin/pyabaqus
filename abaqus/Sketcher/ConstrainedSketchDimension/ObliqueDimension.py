@@ -13,7 +13,10 @@ class ObliqueDimension(ConstrainedSketchDimension):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].ObliqueDimension
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].ObliqueDimension
         
         Parameters
         ----------
@@ -31,7 +34,7 @@ class ObliqueDimension(ConstrainedSketchDimension):
 
         Returns
         -------
-            A ConstrainedSketchDimension object (None if the dimension cannot be created). . 
-            !img 
+            A ConstrainedSketchDimension object (None if the dimension cannot be created).
+            
         """
         pass

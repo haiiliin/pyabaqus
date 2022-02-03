@@ -104,7 +104,7 @@ class MagneticVectorPotentialBC(BoundaryCondition):
 
         Returns
         -------
-            A MagneticVectorPotentialBC object. . 
+            A MagneticVectorPotentialBC object.
         """
         super().__init__()
         pass

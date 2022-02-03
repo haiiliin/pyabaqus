@@ -23,9 +23,8 @@ class MultipointConstraint(Constraint):
         import interaction
         mdb.models[name].constraints[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - MPC
+        The corresponding analysis keywords are:
+            - MPC
 
     """
 
@@ -73,7 +72,7 @@ class MultipointConstraint(Constraint):
 
         Returns
         -------
-            A MultipointConstraint object. . 
+            A MultipointConstraint object.
         """
         super().__init__()
         pass

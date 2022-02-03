@@ -17,28 +17,26 @@ class FluidInflatorProperty(ContactProperty):
         import interaction
         mdb.models[name].interactionProperties[name]
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *definition*=DUAL PRESSURE, the table data specify the following:
-        - Inflation time.
-        - Inflator pressure.
-        - Tank pressure.
+            - Inflation time.
+            - Inflator pressure.
+            - Tank pressure.
         If *definition*=PRESSURE AND MASS, the table data specify the following:
-        - Inflation time.
-        - Inflator pressure.
-        - Inflator mass flow rate.
+            - Inflation time.
+            - Inflator pressure.
+            - Inflator mass flow rate.
         If *definition*=TANK TEST, the table data specify the following:
-        - Inflation time.
-        - Inflator gas temperature.
-        - Tank pressure.
+            - Inflation time.
+            - Inflator gas temperature.
+            - Tank pressure.
         If *definition*=TEMPERATURE AND MASS, the table data specify the following:
-        - Inflation time.
-        - Inflator gas temperature.
-        - Inflator mass flow rate.
+            - Inflation time.
+            - Inflator gas temperature.
+            - Inflator mass flow rate.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - FLUID INFLATOR PROPERTY
+        The corresponding analysis keywords are:
+            - FLUID INFLATOR PROPERTY
 
     """
 
@@ -92,7 +90,7 @@ class FluidInflatorProperty(ContactProperty):
 
         Returns
         -------
-            A FluidInflatorProperty object. . 
+            A FluidInflatorProperty object.
         """
         super().__init__(name)
         pass

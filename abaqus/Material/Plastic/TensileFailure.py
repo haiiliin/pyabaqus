@@ -7,24 +7,25 @@ class TensileFailure:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].Plastic.tensileFailure
-        - mdb.models[name].materials[name].eos.tensileFailure
-        - import odbMaterial
-        - session.odbs[name].materials[name].Plastic.tensileFailure
-        - session.odbs[name].materials[name].eos.tensileFailure
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].Plastic.tensileFailure
+            mdb.models[name].materials[name].eos.tensileFailure
+            import odbMaterial
+            session.odbs[name].materials[name].Plastic.tensileFailure
+            session.odbs[name].materials[name].eos.tensileFailure
 
-    Table Data
-    ----------
-        - The Hydrostatic cutoff stress (positive in tension).
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - The Hydrostatic cutoff stress (positive in tension).
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - TENSILE FAILURE
+        The corresponding analysis keywords are:
+            - TENSILE FAILURE
 
     """
 
@@ -36,10 +37,13 @@ class TensileFailure:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Plastic.TensileFailure
-            - mdb.models[name].materials[name].eos.TensileFailure
-            - session.odbs[name].materials[name].Plastic.TensileFailure
-            - session.odbs[name].materials[name].eos.TensileFailure
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Plastic.TensileFailure
+                mdb.models[name].materials[name].eos.TensileFailure
+                session.odbs[name].materials[name].Plastic.TensileFailure
+                session.odbs[name].materials[name].eos.TensileFailure
         
         Parameters
         ----------
@@ -64,7 +68,7 @@ class TensileFailure:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -73,6 +77,6 @@ class TensileFailure:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

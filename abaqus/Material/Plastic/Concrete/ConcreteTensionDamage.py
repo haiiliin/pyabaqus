@@ -8,31 +8,32 @@ class ConcreteTensionDamage:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].concreteDamagedPlasticity.concreteTensionDamage
-        - import odbMaterial
-        - session.odbs[name].materials[name].concreteDamagedPlasticity.concreteTensionDamage
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].concreteDamagedPlasticity.concreteTensionDamage
+            import odbMaterial
+            session.odbs[name].materials[name].concreteDamagedPlasticity.concreteTensionDamage
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *type*=STRAIN, the table data specify the following:
-        - Tensile damage variable, dt.
-        - Direct cracking strain, ϵtc⁢k.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Tensile damage variable, dt.
+            - Direct cracking strain, ϵtc⁢k.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=DISPLACEMENT, the table data specify the following:
-        - Tensile damage variable, dt.
-        - Direct cracking displacement, utc⁢k.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Tensile damage variable, dt.
+            - Direct cracking displacement, utc⁢k.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONCRETE TENSION DAMAGE
+        The corresponding analysis keywords are:
+            - CONCRETE TENSION DAMAGE
 
     """
 
@@ -43,10 +44,13 @@ class ConcreteTensionDamage:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].concreteDamagedPlasticity\
-            - .ConcreteTensionDamage
-            - session.odbs[name].materials[name].concreteDamagedPlasticity\
-            - .ConcreteTensionDamage
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].concreteDamagedPlasticity\
+                - .ConcreteTensionDamage
+                session.odbs[name].materials[name].concreteDamagedPlasticity\
+                - .ConcreteTensionDamage
         
         Parameters
         ----------
@@ -72,7 +76,7 @@ class ConcreteTensionDamage:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -81,6 +85,6 @@ class ConcreteTensionDamage:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

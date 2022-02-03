@@ -8,23 +8,24 @@ class CastIronTensionHardening:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].castIronPlasticity.castIronTensionHardening
-        - import odbMaterial
-        - session.odbs[name].materials[name].castIronPlasticity.castIronTensionHardening
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].castIronPlasticity.castIronTensionHardening
+            import odbMaterial
+            session.odbs[name].materials[name].castIronPlasticity.castIronTensionHardening
 
-    Table Data
-    ----------
-        - Yield stress in uniaxial tension, σt.
-        - The absolute value of the corresponding Plastic strain.(The first tabular value entered must always be zero.)
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Yield stress in uniaxial tension, σt.
+            - The absolute value of the corresponding Plastic strain.(The first tabular value entered must always be zero.)
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CAST IRON TENSION HARDENING
+        The corresponding analysis keywords are:
+            - CAST IRON TENSION HARDENING
 
     """
 
@@ -34,10 +35,13 @@ class CastIronTensionHardening:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].castIronPlasticity\
-            - .CastIronTensionHardening
-            - session.odbs[name].materials[name].castIronPlasticity\
-            - .CastIronTensionHardening
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].castIronPlasticity\
+                - .CastIronTensionHardening
+                session.odbs[name].materials[name].castIronPlasticity\
+                - .CastIronTensionHardening
         
         Parameters
         ----------
@@ -54,7 +58,7 @@ class CastIronTensionHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -63,6 +67,6 @@ class CastIronTensionHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

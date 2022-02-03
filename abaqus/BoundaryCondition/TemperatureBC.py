@@ -109,7 +109,7 @@ class TemperatureBC(BoundaryCondition):
 
         Returns
         -------
-            A TemperatureBC object. . 
+            A TemperatureBC object.
         """
         super().__init__()
         pass

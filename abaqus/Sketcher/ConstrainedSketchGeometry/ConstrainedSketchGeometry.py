@@ -8,9 +8,12 @@ class ConstrainedSketchGeometry:
     Notes
     -----
         This object can be accessed by:
-        - import sketch
-        - mdb.models[name].sketches[name].geometry[i]
-        - mdb.models[name].sketches[name].geometry[i][i]
+        
+        .. code-block:: python
+            
+            import sketch
+            mdb.models[name].sketches[name].geometry[i]
+            mdb.models[name].sketches[name].geometry[i][i]
 
     """
 

@@ -1,8 +1,5 @@
 """The following commands are used to request data entry from a user.
 
-Access
-------
-
 """
 import typing
 
@@ -20,9 +17,13 @@ def getInput(prompt: str, default: str = ''):
     the command line and passing the script name to the command line options **-start**,
     **-script**, **-replay**, or **-noGUI**.
 
-    Path
-    ----
-        - getInput
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            getInput
 
     Parameters
     ----------
@@ -50,9 +51,13 @@ def getInput(fields: tuple, label: str = '', dialogTitle: str = ''):
     the command line and passing the script name to the command line options **-start**,
     **-script**, **-replay**, or **-noGUI**.
 
-    Path
-    ----
-        - getInputs
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            getInputs
 
     Parameters
     ----------
@@ -93,9 +98,13 @@ def getWarningReply(message: str, buttons: str):
     from the command line and passing the script name to the command line options
     **-start**, **-script**, **-replay**, or **-noGUI**.
 
-    Path
-    ----
-        - getWarningReply
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            getWarningReply
 
     Parameters
     ----------

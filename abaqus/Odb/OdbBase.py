@@ -128,7 +128,7 @@ class OdbBase:
 
         Returns
         -------
-            An Odb object. . 
+            An Odb object.
         """
         pass
 
@@ -162,7 +162,7 @@ class OdbBase:
 
         Raises
         ------
-            - If the exact frame is not found: 
+                - If the exact frame is not found: 
               OdbError: Frame not found. 
         """
         pass
@@ -172,7 +172,7 @@ class OdbBase:
 
         Raises
         ------
-            - OdbError 
+                - OdbError 
               Database save failed. The database was opened as read-only. Modification of data is 
             not permitted. 
         """
@@ -186,6 +186,6 @@ class OdbBase:
 
         Returns
         -------
-            A Boolean specifying whether additional steps or frames were added to the Odb object. . 
+            A Boolean specifying whether additional steps or frames were added to the Odb object.
         """
         pass

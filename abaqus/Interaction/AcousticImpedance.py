@@ -17,9 +17,8 @@ class AcousticImpedance(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SIMPEDANCE
+        The corresponding analysis keywords are:
+            - SIMPEDANCE
 
     """
 
@@ -80,7 +79,7 @@ class AcousticImpedance(Interaction):
 
         Returns
         -------
-            An AcousticImpedance object. . 
+            An AcousticImpedance object.
         """
         super().__init__()
         pass

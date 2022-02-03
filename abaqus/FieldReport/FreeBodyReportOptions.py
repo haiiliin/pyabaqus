@@ -10,9 +10,12 @@ class FreeBodyReportOptions:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.defaultFreeBodyReportOptions
-        - session.freeBodyReportOptions
+        
+        .. code-block:: python
+            
+            import visualization
+            session.defaultFreeBodyReportOptions
+            session.freeBodyReportOptions
 
     """
 
@@ -41,6 +44,6 @@ class FreeBodyReportOptions:
 
         Returns
         -------
-            A FreeBodyReportOptions object. . 
+            A FreeBodyReportOptions object.
         """
         pass

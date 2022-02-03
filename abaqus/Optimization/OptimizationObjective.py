@@ -26,8 +26,11 @@ class OptimizationObjective:
     Notes
     -----
         This object can be accessed by:
-        - import optimization
-        - mdb.models[name].optimizationTasks[name].objectiveFunctions[name].objectives[i]
+        
+        .. code-block:: python
+            
+            import optimization
+            mdb.models[name].optimizationTasks[name].objectiveFunctions[name].objectives[i]
 
     """
 

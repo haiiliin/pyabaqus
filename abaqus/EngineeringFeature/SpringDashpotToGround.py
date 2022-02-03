@@ -25,11 +25,10 @@ class SpringDashpotToGround(SpringDashpot):
         import assembly
         mdb.models[name].rootAssembly.engineeringFeatures.springDashpots[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - ELEMENT
-        - SPRING
-        - DASHPOT
+        The corresponding analysis keywords are:
+            - ELEMENT
+            - SPRING
+            - DASHPOT
 
     """
 
@@ -82,7 +81,7 @@ class SpringDashpotToGround(SpringDashpot):
 
         Returns
         -------
-            A SpringDashpotToGround object. . 
+            A SpringDashpotToGround object.
         """
         super().__init__()
         pass

@@ -24,11 +24,10 @@ class TwoPointSpringDashpot(SpringDashpot):
         import assembly
         mdb.models[name].rootAssembly.engineeringFeatures.springDashpots[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - ELEMENT
-        - SPRING
-        - DASHPOT
+        The corresponding analysis keywords are:
+            - ELEMENT
+            - SPRING
+            - DASHPOT
 
     """
 
@@ -92,7 +91,7 @@ class TwoPointSpringDashpot(SpringDashpot):
 
         Returns
         -------
-            A TwoPointSpringDashpot object. . 
+            A TwoPointSpringDashpot object.
         """
         super().__init__()
         pass

@@ -8,11 +8,14 @@ class IgnoredVertexArray:
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].ignoredVertices
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].ignoredVertices
-        - mdb.models[name].rootAssembly.instances[name].ignoredVertices
+        
+        .. code-block:: python
+            
+            import part
+            mdb.models[name].parts[name].ignoredVertices
+            import assembly
+            mdb.models[name].rootAssembly.allInstances[name].ignoredVertices
+            mdb.models[name].rootAssembly.instances[name].ignoredVertices
 
     """
 
@@ -44,8 +47,8 @@ class IgnoredVertexArray:
 
         Returns
         -------
-            An IgnoredVertex object or a sequence of IgnoredVertex objects. . 
-            !img 
+            An IgnoredVertex object or a sequence of IgnoredVertex objects.
+            
         """
         pass
 
@@ -62,8 +65,8 @@ class IgnoredVertexArray:
 
         Returns
         -------
-            An IgnoredVertex object or a sequence of IgnoredVertex objects. . 
-            !img 
+            An IgnoredVertex object or a sequence of IgnoredVertex objects.
+            
         """
         pass
 
@@ -72,8 +75,8 @@ class IgnoredVertexArray:
 
         Returns
         -------
-            A String specifying the object or objects. . 
-            !img 
+            A String specifying the object or objects.
+            
         """
         pass
 
@@ -106,8 +109,8 @@ class IgnoredVertexArray:
 
         Raises
         ------
-            - An exception occurs if the resulting sequence is empty. 
+                - An exception occurs if the resulting sequence is empty. 
               Error: The mask results in an empty sequence 
-            !img 
+            
         """
         pass

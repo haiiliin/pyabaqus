@@ -18,8 +18,11 @@ class OdbInstance(OdbInstanceBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[*name*].rootAssembly.instances[*name*].RigidBody
-            - session.odbs[*name*].rootAssembly.RigidBody
+            
+            .. code-block:: python
+            
+                session.odbs[*name*].rootAssembly.instances[*name*].RigidBody
+                session.odbs[*name*].rootAssembly.RigidBody
         
         Parameters
         ----------
@@ -48,7 +51,7 @@ class OdbInstance(OdbInstanceBase):
 
         Returns
         -------
-            An OdbRigidBody object..
+            An OdbRigidBody object.
         """
         odbRigidBody = OdbRigidBody(referenceNode, position, isothermal, elements, tieNodes, pinNodes, analyticSurface)
         self.rigidBodies.append(odbRigidBody)
@@ -62,9 +65,12 @@ class OdbInstance(OdbInstanceBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[*name*].parts[*name*].NodeSet
-            - session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
-            - session.odbs[*name*].rootAssembly.NodeSet
+            
+            .. code-block:: python
+            
+                session.odbs[*name*].parts[*name*].NodeSet
+                session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
+                session.odbs[*name*].rootAssembly.NodeSet
         
         Parameters
         ----------
@@ -76,7 +82,7 @@ class OdbInstance(OdbInstanceBase):
 
         Returns
         -------
-            An OdbSet object..
+            An OdbSet object.
         """
         self.nodeSets[name] = odbSet = OdbSet(name, nodes)
         return odbSet

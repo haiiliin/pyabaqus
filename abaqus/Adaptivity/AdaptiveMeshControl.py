@@ -157,6 +157,6 @@ class AdaptiveMeshControl:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

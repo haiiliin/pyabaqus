@@ -27,17 +27,20 @@ class DatumCsys(Datum):
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].datums[i]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].datums[i]
-        - mdb.models[name].rootAssembly.connectorOrientations[i].localCsys1
-        - mdb.models[name].rootAssembly.connectorOrientations[i].localCsys2
-        - mdb.models[name].rootAssembly.datums[i]
-        - mdb.models[name].rootAssembly.instances[name].datums[i]
-        - import odbAccess
-        - session.odbs[name].rootAssembly.connectorOrientations[i].localCsys1
-        - session.odbs[name].rootAssembly.connectorOrientations[i].localCsys2
+        
+        .. code-block:: python
+            
+            import part
+            mdb.models[name].parts[name].datums[i]
+            import assembly
+            mdb.models[name].rootAssembly.allInstances[name].datums[i]
+            mdb.models[name].rootAssembly.connectorOrientations[i].localCsys1
+            mdb.models[name].rootAssembly.connectorOrientations[i].localCsys2
+            mdb.models[name].rootAssembly.datums[i]
+            mdb.models[name].rootAssembly.instances[name].datums[i]
+            import odbAccess
+            session.odbs[name].rootAssembly.connectorOrientations[i].localCsys1
+            session.odbs[name].rootAssembly.connectorOrientations[i].localCsys2
 
     """
 

@@ -51,6 +51,17 @@ from ..Region.RegionArray import RegionArray
 
 
 class BoundaryConditionModel(ModelBase):
+    """Abaqus creates a Model object named `Model-1` when a session is started.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name]
+
+    """
 
     def AccelerationBaseMotionBC(self, name: str, createStepName: str, dof: SymbolicConstant,
                                  amplitudeScaleFactor: float = 1,
@@ -62,7 +73,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].AccelerationBaseMotionBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].AccelerationBaseMotionBC
         
         Parameters
         ----------
@@ -95,7 +109,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: AccelerationBC
-            An AccelerationBaseMotionBC object..
+            An AccelerationBaseMotionBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = AccelerationBaseMotionBC(name, createStepName, dof,
                                                                                      amplitudeScaleFactor,
@@ -118,7 +132,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].AccelerationBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].AccelerationBC
         
         Parameters
         ----------
@@ -171,7 +188,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: AccelerationBC
-            An AccelerationBC object..
+            An AccelerationBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = AccelerationBC(name, createStepName, region, fieldName, a1,
                                                                            a2, a3, ar1, ar2, ar3, amplitude, localCsys,
@@ -187,7 +204,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].AcousticPressureBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].AcousticPressureBC
         
         Parameters
         ----------
@@ -219,7 +239,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: AcousticPressureBC
-            An AcousticPressureBC object..
+            An AcousticPressureBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = AcousticPressureBC(name, createStepName, region, fieldName,
                                                                                magnitude, distributionType, amplitude,
@@ -233,7 +253,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].Calibration
+            
+            .. code-block:: python
+            
+                mdb.models[name].Calibration
         
         Parameters
         ----------
@@ -256,7 +279,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ConcentrationBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].ConcentrationBC
         
         Parameters
         ----------
@@ -288,7 +314,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: ConcentrationBC
-            A ConcentrationBC object..
+            A ConcentrationBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = ConcentrationBC(name, createStepName, region, fieldName,
                                                                             magnitude, distributionType, amplitude,
@@ -311,7 +337,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ConnAccelerationBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].ConnAccelerationBC
         
         Parameters
         ----------
@@ -369,7 +398,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: ConnAccelerationBC
-            A ConnAccelerationBC object..
+            A ConnAccelerationBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = ConnAccelerationBC(name, createStepName, region,
                                                                                fastenerName, fastenerSetName, a1, a2,
@@ -394,7 +423,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ConnDisplacementBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].ConnDisplacementBC
         
         Parameters
         ----------
@@ -459,7 +491,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: ConnDisplacementBC
-            A ConnDisplacementBC object..
+            A ConnDisplacementBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = ConnDisplacementBC(name, createStepName, region,
                                                                                fastenerName, fastenerSetName, u1, u2,
@@ -483,7 +515,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ConnVelocityBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].ConnVelocityBC
         
         Parameters
         ----------
@@ -541,7 +576,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: ConnVelocityBC
-            A ConnVelocityBC object..
+            A ConnVelocityBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = ConnVelocityBC(name, createStepName, region, fastenerName,
                                                                            fastenerSetName, v1, v2, v3, vr1, vr2, vr3,
@@ -559,7 +594,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].DisplacementBaseMotionBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].DisplacementBaseMotionBC
         
         Parameters
         ----------
@@ -592,7 +630,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: DisplacementBaseMotionBC
-            A DisplacementBaseMotionBC object..
+            A DisplacementBaseMotionBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = DisplacementBaseMotionBC(name, createStepName, dof,
                                                                                      amplitudeScaleFactor,
@@ -616,7 +654,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].DisplacementBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].DisplacementBC
         
         Parameters
         ----------
@@ -696,7 +737,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ElectricPotentialBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].ElectricPotentialBC
         
         Parameters
         ----------
@@ -728,7 +772,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: ElectricPotentialBC
-            An ElectricPotentialBC object..
+            An ElectricPotentialBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = ElectricPotentialBC(name, createStepName, region, fieldName,
                                                                                 magnitude, distributionType, amplitude,
@@ -743,7 +787,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].EulerianBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].EulerianBC
         
         Parameters
         ----------
@@ -767,7 +814,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: EulerianBC
-            An EulerianBC object..
+            An EulerianBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = EulerianBC(name, createStepName, region, definition,
                                                                        inflowType, outflowType)
@@ -790,7 +837,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].EulerianMotionBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].EulerianMotionBC
         
         Parameters
         ----------
@@ -881,7 +931,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: EulerianMotionBC
-            An EulerianMotionBC object..
+            An EulerianMotionBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = EulerianMotionBC(name, createStepName, instanceName,
                                                                              followRegion, region, materialName,
@@ -903,7 +953,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].FluidCavityPressureBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].FluidCavityPressureBC
         
         Parameters
         ----------
@@ -927,7 +980,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: FluidCavityPressureBC
-            A FluidCavityPressureBC object..
+            A FluidCavityPressureBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = FluidCavityPressureBC(name, createStepName, fluidCavity,
                                                                                   magnitude, amplitude, fixed)
@@ -944,7 +997,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].MagneticVectorPotentialBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].MagneticVectorPotentialBC
         
         Parameters
         ----------
@@ -982,7 +1038,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: MagneticVectorPotentialBC
-            A MagneticVectorPotentialBC object..
+            A MagneticVectorPotentialBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = MagneticVectorPotentialBC(name, createStepName, region,
                                                                                       component1, component2,
@@ -998,7 +1054,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].MaterialFlowBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].MaterialFlowBC
         
         Parameters
         ----------
@@ -1030,7 +1089,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: MaterialFlowBC
-            A MaterialFlowBC object..
+            A MaterialFlowBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = MaterialFlowBC(name, createStepName, region, fieldName,
                                                                            magnitude, distributionType, amplitude,
@@ -1046,7 +1105,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].PorePressureBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].PorePressureBC
         
         Parameters
         ----------
@@ -1078,7 +1140,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: PorePressureBC
-            A PorePressureBC object..
+            A PorePressureBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = PorePressureBC(name, createStepName, region, fieldName,
                                                                            magnitude, distributionType, amplitude,
@@ -1094,7 +1156,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].RetainedNodalDofsBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].RetainedNodalDofsBC
         
         Parameters
         ----------
@@ -1129,7 +1194,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: RetainedNodalDofsBC
-            A RetainedNodalDofsBC object..
+            A RetainedNodalDofsBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = RetainedNodalDofsBC(name, createStepName, region, u1, u2,
                                                                                 u3, ur1, ur2, ur3)
@@ -1141,7 +1206,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SecondaryBaseBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].SecondaryBaseBC
         
         Parameters
         ----------
@@ -1158,7 +1226,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: SecondaryBaseBC
-            A SecondaryBaseBC object..
+            A SecondaryBaseBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = SecondaryBaseBC(name, createStepName, regions, dofs)
         self.steps[createStepName].boundaryConditionStates[name] = SecondaryBaseBCState()
@@ -1174,7 +1242,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SubmodelBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].SubmodelBC
         
         Parameters
         ----------
@@ -1230,7 +1301,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: SubmodelBC
-            A SubmodelBC object..
+            A SubmodelBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = SubmodelBC(name, createStepName, region, dof, globalStep,
                                                                        timeScale, shellThickness, globalDrivingRegion,
@@ -1248,7 +1319,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].TemperatureBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].TemperatureBC
         
         Parameters
         ----------
@@ -1282,7 +1356,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: TemperatureBC
-            A TemperatureBC object..
+            A TemperatureBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = TemperatureBC(name, createStepName, region, fieldName,
                                                                           magnitude, dof, amplitude, distributionType,
@@ -1300,7 +1374,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].VelocityBaseMotionBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].VelocityBaseMotionBC
         
         Parameters
         ----------
@@ -1333,7 +1410,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: VelocityBaseMotionBC
-            A VelocityBaseMotionBC object..
+            A VelocityBaseMotionBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = VelocityBaseMotionBC(name, createStepName, dof,
                                                                                  amplitudeScaleFactor, centerOfRotation,
@@ -1355,7 +1432,10 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].VelocityBC
+            
+            .. code-block:: python
+            
+                mdb.models[name].VelocityBC
         
         Parameters
         ----------
@@ -1408,7 +1488,7 @@ class BoundaryConditionModel(ModelBase):
         Returns
         -------
         bc: VelocityBC
-            A VelocityBC object..
+            A VelocityBC object.
         """
         self.boundaryConditions[name] = boundaryCondition = VelocityBC(name, createStepName, region, fieldName, v1, v2,
                                                                        v3, vr1, vr2, vr3, amplitude, localCsys,

@@ -25,29 +25,32 @@ class Face:
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].allInternalSets[name].faces[i]
-        - mdb.models[name].parts[name].allInternalSurfaces[name].faces[i]
-        - mdb.models[name].parts[name].allSets[name].faces[i]
-        - mdb.models[name].parts[name].allSurfaces[name].faces[i]
-        - mdb.models[name].parts[name].faces[i]
-        - mdb.models[name].parts[name].sets[name].faces[i]
-        - mdb.models[name].parts[name].surfaces[name].faces[i]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].faces[i]
-        - mdb.models[name].rootAssembly.allInstances[name].sets[name].faces[i]
-        - mdb.models[name].rootAssembly.allInstances[name].surfaces[name].faces[i]
-        - mdb.models[name].rootAssembly.allInternalSets[name].faces[i]
-        - mdb.models[name].rootAssembly.allInternalSurfaces[name].faces[i]
-        - mdb.models[name].rootAssembly.allSets[name].faces[i]
-        - mdb.models[name].rootAssembly.allSurfaces[name].faces[i]
-        - mdb.models[name].rootAssembly.instances[name].faces[i]
-        - mdb.models[name].rootAssembly.instances[name].sets[name].faces[i]
-        - mdb.models[name].rootAssembly.instances[name].surfaces[name].faces[i]
-        - mdb.models[name].rootAssembly.modelInstances[i].sets[name].faces[i]
-        - mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].faces[i]
-        - mdb.models[name].rootAssembly.sets[name].faces[i]
-        - mdb.models[name].rootAssembly.surfaces[name].faces[i]
+        
+        .. code-block:: python
+            
+            import part
+            mdb.models[name].parts[name].allInternalSets[name].faces[i]
+            mdb.models[name].parts[name].allInternalSurfaces[name].faces[i]
+            mdb.models[name].parts[name].allSets[name].faces[i]
+            mdb.models[name].parts[name].allSurfaces[name].faces[i]
+            mdb.models[name].parts[name].faces[i]
+            mdb.models[name].parts[name].sets[name].faces[i]
+            mdb.models[name].parts[name].surfaces[name].faces[i]
+            import assembly
+            mdb.models[name].rootAssembly.allInstances[name].faces[i]
+            mdb.models[name].rootAssembly.allInstances[name].sets[name].faces[i]
+            mdb.models[name].rootAssembly.allInstances[name].surfaces[name].faces[i]
+            mdb.models[name].rootAssembly.allInternalSets[name].faces[i]
+            mdb.models[name].rootAssembly.allInternalSurfaces[name].faces[i]
+            mdb.models[name].rootAssembly.allSets[name].faces[i]
+            mdb.models[name].rootAssembly.allSurfaces[name].faces[i]
+            mdb.models[name].rootAssembly.instances[name].faces[i]
+            mdb.models[name].rootAssembly.instances[name].sets[name].faces[i]
+            mdb.models[name].rootAssembly.instances[name].surfaces[name].faces[i]
+            mdb.models[name].rootAssembly.modelInstances[i].sets[name].faces[i]
+            mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].faces[i]
+            mdb.models[name].rootAssembly.sets[name].faces[i]
+            mdb.models[name].rootAssembly.surfaces[name].faces[i]
 
     """
 
@@ -77,8 +80,8 @@ class Face:
         Returns
         -------
             A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the centroid of 
-            the face. . 
-            !img 
+            the face.
+            
         """
         pass
 
@@ -105,8 +108,8 @@ class Face:
             'curvature1', 'curvature2' and 'gaussianCurvature'. Where the evaluationPoint specifies 
             the location at which the curvature was evaluated. 'principalAxis1' and 'principalAxis2' 
             refer to the vectors specifying the two principal axes of the face. 'curvature1' and 
-            'curvature2' specify the curvatures along the two principal axes. . 
-            !img 
+            'curvature2' specify the curvatures along the two principal axes.
+            
         """
         pass
 
@@ -115,8 +118,8 @@ class Face:
 
         Returns
         -------
-            A MeshElementArray object which is a sequence of MeshElement objects. . 
-            !img 
+            A MeshElementArray object which is a sequence of MeshElement objects.
+            
         """
         pass
 
@@ -133,8 +136,8 @@ class Face:
 
         Returns
         -------
-            A MeshFaceArray object which is a sequence of MeshFace objects. . 
-            !img 
+            A MeshFaceArray object which is a sequence of MeshFace objects.
+            
         """
         pass
 
@@ -153,8 +156,8 @@ class Face:
 
         Returns
         -------
-            A MeshNodeArray object which is a sequence of MeshNode objects. . 
-            !img 
+            A MeshNodeArray object which is a sequence of MeshNode objects.
+            
         """
         pass
 
@@ -179,7 +182,7 @@ class Face:
         ------
             An exception is raised if the optional argument *point* is provided but the point cannot 
             be projected onto the face. 
-            !img 
+            
         """
         pass
 
@@ -193,8 +196,8 @@ class Face:
 
         Returns
         -------
-            A Float. . 
-            !img 
+            A Float.
+            
         """
         pass
 
@@ -203,8 +206,8 @@ class Face:
 
         Returns
         -------
-            A tuple of integers. . 
-            !img 
+            A tuple of integers.
+            
         """
         pass
 
@@ -213,8 +216,8 @@ class Face:
 
         Returns
         -------
-            A tuple of integers. . 
-            !img 
+            A tuple of integers.
+            
         """
         pass
 
@@ -224,8 +227,8 @@ class Face:
 
         Returns
         -------
-            A tuple of integers. . 
-            !img 
+            A tuple of integers.
+            
         """
         pass
 
@@ -234,8 +237,8 @@ class Face:
 
         Returns
         -------
-            A FaceArray object which is a sequence of Face objects. . 
-            !img 
+            A FaceArray object which is a sequence of Face objects.
+            
         """
         pass
 
@@ -250,8 +253,8 @@ class Face:
 
         Returns
         -------
-            A FaceArray object, which is a sequence of Face objects. . 
-            !img 
+            A FaceArray object, which is a sequence of Face objects.
+            
         """
         pass
 
@@ -261,8 +264,8 @@ class Face:
 
         Returns
         -------
-            A FaceArray object, which is a sequence of Face objects. . 
-            !img 
+            A FaceArray object, which is a sequence of Face objects.
+            
         """
         pass
 
@@ -272,8 +275,8 @@ class Face:
 
         Returns
         -------
-            A Boolean value of True if the normal is flipped and False if not. . 
-            !img 
+            A Boolean value of True if the normal is flipped and False if not.
+            
         """
         pass
 
@@ -284,6 +287,6 @@ class Face:
         Returns
         -------
             An array of String . 
-            !img 
+            
         """
         pass

@@ -1,5 +1,5 @@
-from abaqusConstants import *
 from abaqus.Material.Gasket.ContactArea import ContactArea
+from abaqusConstants import *
 
 
 class GasketThicknessBehavior:
@@ -9,63 +9,64 @@ class GasketThicknessBehavior:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].gasketThicknessBehavior
-        - import odbMaterial
-        - session.odbs[name].materials[name].gasketThicknessBehavior
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].gasketThicknessBehavior
+            import odbMaterial
+            session.odbs[name].materials[name].gasketThicknessBehavior
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *variableUnits*=STRESS, the loading table data specify the following:
-        - Pressure; this value must be positive.
-        - Closure; this value must be positive.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Pressure; this value must be positive.
+            - Closure; this value must be positive.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *variableUnits*=FORCE, the loading table data specify the following:
-        - Force or force per unit length; this value must be positive.
-        - Closure; this value must be positive.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Force or force per unit length; this value must be positive.
+            - Closure; this value must be positive.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *variableUnits*=STRESS and *type*=ELASTIC_PLASTIC, the *unloadingTable* data specify the following:
-        - Pressure; this value must be positive.
-        - Closure; this value must be positive.
-        - Plastic closure; this value must be positive.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Pressure; this value must be positive.
+            - Closure; this value must be positive.
+            - Plastic closure; this value must be positive.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *variableUnits*=FORCE and *type*=ELASTIC_PLASTIC, the *unloadingTable* data specify the following:
-        - Pressure; this value must be positive.
-        - Closure; this value must be positive.
-        - Plastic closure; this value must be positive.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Pressure; this value must be positive.
+            - Closure; this value must be positive.
+            - Plastic closure; this value must be positive.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *variableUnits*=STRESS and *type*=DAMAGE, the *unloadingTable* data specify the following:
-        - Pressure; this value must be positive.
-        - Closure; this value must be positive.
-        - Maximum closure reached while loading the gasket; this value must be positive.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Pressure; this value must be positive.
+            - Closure; this value must be positive.
+            - Maximum closure reached while loading the gasket; this value must be positive.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *variableUnits*=FORCE and *type*=DAMAGE, the *unloadingTable* data specify the following:
-        - Force or force per unit length; this value must be positive.
-        - Closure; this value must be positive.
-        - Maximum closure reached while loading the gasket; this value must be positive.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Force or force per unit length; this value must be positive.
+            - Closure; this value must be positive.
+            - Maximum closure reached while loading the gasket; this value must be positive.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - GASKET THICKNESS BEHAVIOR
+        The corresponding analysis keywords are:
+            - GASKET THICKNESS BEHAVIOR
 
     """
 
@@ -82,8 +83,11 @@ class GasketThicknessBehavior:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].GasketThicknessBehavior
-            - session.odbs[name].materials[name].GasketThicknessBehavior
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].GasketThicknessBehavior
+                session.odbs[name].materials[name].GasketThicknessBehavior
         
         Parameters
         ----------
@@ -132,7 +136,7 @@ class GasketThicknessBehavior:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -141,6 +145,6 @@ class GasketThicknessBehavior:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

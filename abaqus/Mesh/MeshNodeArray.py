@@ -57,7 +57,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Returns
         -------
-            A MeshNodeArray object. . 
+            A MeshNodeArray object.
         """
         super().__init__()
 
@@ -71,7 +71,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Returns
         -------
-            A MeshNode object. . 
+            A MeshNode object.
         """
         pass
 
@@ -87,7 +87,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Returns
         -------
-            A MeshNodeArray object. . 
+            A MeshNodeArray object.
         """
         pass
 
@@ -96,7 +96,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Returns
         -------
-            A String specifying the object or objects. . 
+            A String specifying the object or objects.
         """
         pass
 
@@ -121,7 +121,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Returns
         -------
-            A MeshNodeArray object, which is a sequence of MeshNode objects. . 
+            A MeshNodeArray object, which is a sequence of MeshNode objects.
         """
         pass
 
@@ -141,7 +141,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Returns
         -------
-            A MeshNodeArray object, which is a sequence of MeshNode objects. . 
+            A MeshNodeArray object, which is a sequence of MeshNode objects.
         """
         pass
 
@@ -158,7 +158,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Returns
         -------
-            A MeshNodeArray object, which is a sequence of MeshNode objects. . 
+            A MeshNodeArray object, which is a sequence of MeshNode objects.
         """
         pass
 
@@ -197,7 +197,7 @@ class MeshNodeArray(list[MeshNode]):
         Returns
         -------
             A MeshNode, or a list of MeshNode objects, or a list of lists of MeshNode objects, 
-            depending on the number of points given and the number of nodes requested. . 
+            depending on the number of points given and the number of nodes requested.
         """
         pass
 
@@ -216,7 +216,7 @@ class MeshNodeArray(list[MeshNode]):
 
         Raises
         ------
-            - An exception occurs if the resulting sequence is empty. 
+                - An exception occurs if the resulting sequence is empty. 
               Error: The mask results in an empty sequence 
         """
         pass

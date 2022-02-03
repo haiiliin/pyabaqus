@@ -10,10 +10,13 @@ class MullinsEffect:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].mullinsEffect
-        - import odbMaterial
-        - session.odbs[name].materials[name].mullinsEffect
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].mullinsEffect
+            import odbMaterial
+            session.odbs[name].materials[name].mullinsEffect
 
     """
 

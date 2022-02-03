@@ -1,6 +1,6 @@
-from abaqusConstants import *
 from abaqus.Material.Others.MassDiffusion.PressureEffect import PressureEffect
 from abaqus.Material.Others.MassDiffusion.SoretEffect import SoretEffect
+from abaqusConstants import *
 
 
 class Diffusivity:
@@ -9,45 +9,46 @@ class Diffusivity:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].diffusivity
-        - import odbMaterial
-        - session.odbs[name].materials[name].diffusivity
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].diffusivity
+            import odbMaterial
+            session.odbs[name].materials[name].diffusivity
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *type*=ISOTROPIC, the table data specify the following:
-        - Diffusivity, D.
-        - Concentration, c.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Diffusivity, D.
+            - Concentration, c.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=ORTHOTROPIC, the table data specify the following:
-        - D11.
-        - D22.
-        - D33.
-        - Concentration, c.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - D11.
+            - D22.
+            - D33.
+            - Concentration, c.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=ANISOTROPIC, the table data specify the following:
-        - D11.
-        - D12.
-        - D22.
-        - D13.
-        - D23.
-        - D33.
-        - Concentration, c.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - D11.
+            - D12.
+            - D22.
+            - D13.
+            - D23.
+            - D33.
+            - Concentration, c.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - DIFFUSIVITY
+        The corresponding analysis keywords are:
+            - DIFFUSIVITY
 
     """
 
@@ -64,8 +65,11 @@ class Diffusivity:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Diffusivity
-            - session.odbs[name].materials[name].Diffusivity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Diffusivity
+                session.odbs[name].materials[name].Diffusivity
         
         Parameters
         ----------
@@ -88,7 +92,7 @@ class Diffusivity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -97,6 +101,6 @@ class Diffusivity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

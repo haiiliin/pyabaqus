@@ -18,7 +18,10 @@ class FieldModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].DiscreteField
+            
+            .. code-block:: python
+            
+                mdb.models[name].DiscreteField
         
         Parameters
         ----------
@@ -66,7 +69,10 @@ class FieldModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ExpressionField
+            
+            .. code-block:: python
+            
+                mdb.models[name].ExpressionField
         
         Parameters
         ----------
@@ -106,7 +112,10 @@ class FieldModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].MappedField
+            
+            .. code-block:: python
+            
+                mdb.models[name].MappedField
         
         Parameters
         ----------

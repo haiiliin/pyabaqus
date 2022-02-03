@@ -4,8 +4,11 @@ class ConstrainedSketchConstraint:
     Notes
     -----
         This object can be accessed by:
-        - import sketch
-        - mdb.models[name].sketches[name].constraints[i]
+        
+        .. code-block:: python
+            
+            import sketch
+            mdb.models[name].sketches[name].constraints[i]
 
     """
     pass

@@ -60,9 +60,8 @@ class ContactExp(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONTACT
+        The corresponding analysis keywords are:
+            - CONTACT
 
     """
 
@@ -175,7 +174,7 @@ class ContactExp(Interaction):
 
         Returns
         -------
-            A ContactExp object. . 
+            A ContactExp object.
         """
         super().__init__()
         pass
@@ -215,19 +214,19 @@ class ContactExp(Interaction):
         surfaceCrushTriggerAssignments
             A sequence of tuples specifying the surface crush trigger assignments. Each tuple 
             contains four entries: 
-            - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
+                - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
             which the feature angle is assigned. 
-            - A SymbolicConstant specifying the trigger option to be used for the surface. Possible 
+                - A SymbolicConstant specifying the trigger option to be used for the surface. Possible 
             values of the SymbolicConstant are TRIGGER, NO_TRIGGER, or NO_CRUSH. 
-            - A Float specifying the crush stress value to be used for the surface. 
-            - A Float specifying the crush initiation angle value to be used for the surface. 
-            - A Float specifying the crush continuation angle value to be used for the surface. 
+                - A Float specifying the crush stress value to be used for the surface. 
+                - A Float specifying the crush initiation angle value to be used for the surface. 
+                - A Float specifying the crush continuation angle value to be used for the surface. 
         surfaceFrictionAssignments
             A sequence of tuples specifying the surface friction assignments. Each tuple contains 
             two entries: 
-            - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
+                - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
             which the friction coefficient is assigned. 
-            - A Float specifying the overriding friction coefficient to be used in the contact 
+                - A Float specifying the overriding friction coefficient to be used in the contact 
             definition. 
         useAllstar
             A Boolean specifying whether the contacting surface pair consists of all exterior faces, 
@@ -244,63 +243,63 @@ class ContactExp(Interaction):
         contactPropertyAssignments
             A sequence of tuples specifying the properties assigned to each surface pair. Each tuple 
             contains three entries: 
-            - A Region object or the SymbolicConstant GLOBAL. 
-            - A Region object or the SymbolicConstant SELF. 
-            - A String specifying an InteractionProperty object associated with this pair of 
+                - A Region object or the SymbolicConstant GLOBAL. 
+                - A Region object or the SymbolicConstant SELF. 
+                - A String specifying an InteractionProperty object associated with this pair of 
             regions. 
         surfaceThicknessAssignments
             A sequence of tuples specifying the surface thickness assignments in the contact domain. 
             Each tuple contains three entries: 
-            - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
+                - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
             surface thickness is assigned. 
-            - A Float or a SymbolicConstant specifying the overriding thickness value to be used in 
+                - A Float or a SymbolicConstant specifying the overriding thickness value to be used in 
             the contact definition. Possible values of the SymbolicConstant are ORIGINAL or 
             THINNING. 
-            - A Float specifying a scale factor that multiplies the thickness value specified in the 
+                - A Float specifying a scale factor that multiplies the thickness value specified in the 
             second entry. 
         surfaceOffsetAssignments
             A sequence of tuples specifying the surface offset fraction assignments in the contact 
             domain. Each tuple contains two entries: 
-            - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
+                - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
             surface offset fraction is assigned. 
-            - A Float or a SymbolicConstant specifying the offset fraction value to be used in the 
+                - A Float or a SymbolicConstant specifying the offset fraction value to be used in the 
             contact definition. Possible values of the SymbolicConstant are ORIGINAL, SPOS, or SNEG. 
         surfaceFeatureAssignments
             A sequence of tuples specifying the surface feature angle assignments in the contact 
             domain. Each tuple contains two entries: 
-            - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
+                - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
             surface feature angle is assigned. 
-            - A Float or a SymbolicConstant specifying the overriding feature angle value to be used 
+                - A Float or a SymbolicConstant specifying the overriding feature angle value to be used 
             in the contact definition. Possible values of the SymbolicConstant are PERIMETER, ALL, 
             PICKED, or NONE. 
         smoothingAssignments
             A sequence of tuples specifying the surface smoothing assignments in the contact domain. 
             Each tuple contains two entries: 
-            - A region object specifying the surface to which the smoothing option is assigned. 
-            - A SymbolicConstant specifying the smoothing option to be used in the contact 
+                - A region object specifying the surface to which the smoothing option is assigned. 
+                - A SymbolicConstant specifying the smoothing option to be used in the contact 
             definition. Possible values of the SymbolicConstant are NONE, REVOLUTION, SPHERICAL, or 
             TOROIDAL. 
         mainSecondaryAssignments
             A sequence of tuples specifying pure main-secondary assignments in the contact domain. 
             Each tuple contains three entries: 
-            - A region object or the SymbolicConstant GLOBAL specifying the first surface that 
+                - A region object or the SymbolicConstant GLOBAL specifying the first surface that 
             defines the main-secondary assignment. 
-            - A region object specifying the second surface in the main-secondary assignment 
+                - A region object specifying the second surface in the main-secondary assignment 
             definition. 
-            - A SymbolicConstant specifying the status of the first surface. Possible values are 
+                - A SymbolicConstant specifying the status of the first surface. Possible values are 
             MAIN and SECONDARY. 
         polarityAssignments
             A sequence of tuples specifying polarity assignments in the contact domain. Each tuple 
             contains three entries: 
-            - A region object or the SymbolicConstant GLOBAL specifying the first surface that 
+                - A region object or the SymbolicConstant GLOBAL specifying the first surface that 
             defines the polarity assignment. 
-            - A region object specifying the second surface in the polarity assignment definition. 
-            - A SymbolicConstant specifying the polarity of the second surface. Possible values are 
+                - A region object specifying the second surface in the polarity assignment definition. 
+                - A SymbolicConstant specifying the polarity of the second surface. Possible values are 
             SPOS, SNEG, and TWO_SIDED. 
 
         Returns
         -------
-            A ContactExp object. . 
+            A ContactExp object.
         """
         super().__init__()
         pass

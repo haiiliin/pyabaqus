@@ -224,9 +224,8 @@ class Material(MaterialBase):
         import odbMaterial
         session.odbs[name].materials[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - MATERIAL
+        The corresponding analysis keywords are:
+            - MATERIAL
 
     """
 
@@ -238,8 +237,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].AcousticMedium
-            - session.odbs[name].materials[name].AcousticMedium
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].AcousticMedium
+                session.odbs[name].materials[name].AcousticMedium
         
         Parameters
         ----------
@@ -260,19 +262,19 @@ class Material(MaterialBase):
             *volumetricTable*. The default value is 0. 
         bulkTable
             A sequence of sequences of Floats specifying the following: 
-            - Bulk modulus. 
-            - Temperature, if the data depend on temperature. 
-            - Value of the first field variable, if the data depend on field variables. 
-            - Value of the second field variable. 
-            - Etc. 
+                - Bulk modulus. 
+                - Temperature, if the data depend on temperature. 
+                - Value of the first field variable, if the data depend on field variables. 
+                - Value of the second field variable. 
+                - Etc. 
         volumetricTable
             A sequence of sequences of Floats specifying the following: 
-            - Volumetric drag. 
-            - Frequency. 
-            - Temperature, if the data depend on temperature. 
-            - Value of the first field variable, if the data depend on field variables. 
-            - Value of the second field variable. 
-            - Etc. 
+                - Volumetric drag. 
+                - Frequency. 
+                - Temperature, if the data depend on temperature. 
+                - Value of the first field variable, if the data depend on field variables. 
+                - Value of the second field variable. 
+                - Etc. 
             The default value is an empty sequence. 
 
         Returns
@@ -281,7 +283,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.acousticMedium = AcousticMedium(acousticVolumetricDrag, temperatureDependencyB, temperatureDependencyV,
                                              dependenciesB, dependenciesV, bulkTable, volumetricTable)
@@ -294,8 +296,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].BrittleCracking
-            - session.odbs[name].materials[name].BrittleCracking
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].BrittleCracking
+                session.odbs[name].materials[name].BrittleCracking
         
         Parameters
         ----------
@@ -311,7 +316,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A BrittleCracking object. . 
+            A BrittleCracking object.
         """
         self.brittleCracking = BrittleCracking(table, temperatureDependency, dependencies, type)
         return self.brittleCracking
@@ -322,8 +327,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].CapPlasticity
-            - session.odbs[name].materials[name].CapPlasticity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].CapPlasticity
+                session.odbs[name].materials[name].CapPlasticity
         
         Parameters
         ----------
@@ -340,7 +348,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.capPlasticity = CapPlasticity(table, temperatureDependency, dependencies)
         return self.capPlasticity
@@ -352,8 +360,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].CastIronPlasticity
-            - session.odbs[name].materials[name].CastIronPlasticity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].CastIronPlasticity
+                session.odbs[name].materials[name].CastIronPlasticity
         
         Parameters
         ----------
@@ -370,7 +381,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.castIronPlasticity = CastIronPlasticity(table, temperatureDependency, dependencies)
         return self.castIronPlasticity
@@ -382,8 +393,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].ClayPlasticity
-            - session.odbs[name].materials[name].ClayPlasticity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].ClayPlasticity
+                session.odbs[name].materials[name].ClayPlasticity
         
         Parameters
         ----------
@@ -407,7 +421,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.clayPlasticity = ClayPlasticity(table, intercept, hardening, temperatureDependency, dependencies)
         return self.clayPlasticity
@@ -418,8 +432,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Concrete
-            - session.odbs[name].materials[name].Concrete
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Concrete
+                session.odbs[name].materials[name].Concrete
         
         Parameters
         ----------
@@ -436,7 +453,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.concrete = Concrete(table, temperatureDependency, dependencies)
         return self.concrete
@@ -448,8 +465,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].ConcreteDamagedPlasticity
-            - session.odbs[name].materials[name].ConcreteDamagedPlasticity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].ConcreteDamagedPlasticity
+                session.odbs[name].materials[name].ConcreteDamagedPlasticity
         
         Parameters
         ----------
@@ -466,7 +486,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.concreteDamagedPlasticity = ConcreteDamagedPlasticity(table, temperatureDependency, dependencies)
         return self.concreteDamagedPlasticity
@@ -478,8 +498,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Conductivity
-            - session.odbs[name].materials[name].Conductivity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Conductivity
+                session.odbs[name].materials[name].Conductivity
         
         Parameters
         ----------
@@ -499,7 +522,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.conductivity = Conductivity(table, type, temperatureDependency, dependencies)
         return self.conductivity
@@ -511,8 +534,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Creep
-            - session.odbs[name].materials[name].Creep
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Creep
+                session.odbs[name].materials[name].Creep
         
         Parameters
         ----------
@@ -536,7 +562,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.creep = Creep(table, law, temperatureDependency, dependencies, time)
         return self.creep
@@ -548,8 +574,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].CrushableFoam
-            - session.odbs[name].materials[name].CrushableFoam
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].CrushableFoam
+                session.odbs[name].materials[name].CrushableFoam
         
         Parameters
         ----------
@@ -569,7 +598,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.crushableFoam = CrushableFoam(table, hardening, temperatureDependency, dependencies)
         return self.crushableFoam
@@ -580,8 +609,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Damping
-            - session.odbs[name].materials[name].Damping
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Damping
+                session.odbs[name].materials[name].Damping
         
         Parameters
         ----------
@@ -605,7 +637,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.damping = Damping(alpha, beta, composite, structural)
         return self.damping
@@ -616,8 +648,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].DeformationPlasticity
-            - session.odbs[name].materials[name].DeformationPlasticity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].DeformationPlasticity
+                session.odbs[name].materials[name].DeformationPlasticity
         
         Parameters
         ----------
@@ -632,7 +667,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.deformationPlasticity = DeformationPlasticity(table, temperatureDependency)
         return self.deformationPlasticity
@@ -644,8 +679,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Density
-            - session.odbs[name].materials[name].Density
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Density
+                session.odbs[name].materials[name].Density
         
         Parameters
         ----------
@@ -670,7 +708,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.density = Density(table, temperatureDependency, dependencies, distributionType, fieldName)
         return self.density
@@ -681,8 +719,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Depvar
-            - session.odbs[name].materials[name].Depvar
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Depvar
+                session.odbs[name].materials[name].Depvar
         
         Parameters
         ----------
@@ -699,7 +740,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.depvar = Depvar(deleteVar, n)
         return self.depvar
@@ -711,8 +752,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Dielectric
-            - session.odbs[name].materials[name].Dielectric
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Dielectric
+                session.odbs[name].materials[name].Dielectric
         
         Parameters
         ----------
@@ -730,7 +774,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A Dielectric object. . 
+            A Dielectric object.
         """
         self.dielectric = Dielectric(table, type, frequencyDependency, temperatureDependency, dependencies)
         return self.dielectric
@@ -742,8 +786,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Diffusivity
-            - session.odbs[name].materials[name].Diffusivity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Diffusivity
+                session.odbs[name].materials[name].Diffusivity
         
         Parameters
         ----------
@@ -766,7 +813,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.diffusivity = Diffusivity(table, type, law, temperatureDependency, dependencies)
         return self.diffusivity
@@ -779,8 +826,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].DruckerPrager
-            - session.odbs[name].materials[name].DruckerPrager
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].DruckerPrager
+                session.odbs[name].materials[name].DruckerPrager
         
         Parameters
         ----------
@@ -811,7 +861,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.druckerPrager = DruckerPrager(table, shearCriterion, eccentricity, testData, temperatureDependency,
                                            dependencies)
@@ -825,8 +875,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Elastic
-            - session.odbs[name].materials[name].Elastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Elastic
+                session.odbs[name].materials[name].Elastic
         
         Parameters
         ----------
@@ -834,16 +887,16 @@ class Material(MaterialBase):
             A sequence of sequences of Floats specifying the items described below. 
         type
             A SymbolicConstant specifying the type of elasticity data provided. Possible values are: 
-            - ISOTROPIC 
-            - ORTHOTROPIC 
-            - ANISOTROPIC 
-            - ENGINEERING_CONSTANTS 
-            - LAMINA 
-            - TRACTION 
-            - COUPLED_TRACTION 
-            - SHORT_FIBER 
-            - SHEAR 
-            - BILAMINA 
+                - ISOTROPIC 
+                - ORTHOTROPIC 
+                - ANISOTROPIC 
+                - ENGINEERING_CONSTANTS 
+                - LAMINA 
+                - TRACTION 
+                - COUPLED_TRACTION 
+                - SHORT_FIBER 
+                - SHEAR 
+                - BILAMINA 
             The default value is ISOTROPIC. 
         noCompression
             A Boolean specifying whether compressive stress is allowed. The default value is OFF. 
@@ -863,7 +916,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.elastic = Elastic(table, type, noCompression, noTension, temperatureDependency, dependencies, moduli)
         return self.elastic
@@ -876,8 +929,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].ElectricalConductivity
-            - session.odbs[name].materials[name].ElectricalConductivity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].ElectricalConductivity
+                session.odbs[name].materials[name].ElectricalConductivity
         
         Parameters
         ----------
@@ -899,7 +955,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.electricalConductivity = ElectricalConductivity(table, type, frequencyDependency, temperatureDependency,
                                                              dependencies)
@@ -914,8 +970,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Eos
-            - session.odbs[name].materials[name].Eos
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Eos
+                session.odbs[name].materials[name].Eos
         
         Parameters
         ----------
@@ -932,44 +991,44 @@ class Material(MaterialBase):
             A Float specifying the detonation energy text field. The default value is 0.0. 
         solidTable
             A sequence of sequences of Floats specifying the following: 
-            - $A_{s}$. 
-            - $B_{s}$. 
-            - ${\omega}_{s}$. 
-            - $R_{1s}$. 
-            - $R_{2s}$. 
+                - $A_{s}$. 
+                - $B_{s}$. 
+                - ${\omega}_{s}$. 
+                - $R_{1s}$. 
+                - $R_{2s}$. 
             The default value is an empty sequence. 
         gasTable
             A sequence of sequences of Floats specifying the following: 
-            - $A_{g}$. 
-            - $B_{g}$. 
-            - ${\omega}_{g}$. 
-            - $R_{1g}$. 
-            - $R_{2g}$. 
+                - $A_{g}$. 
+                - $B_{g}$. 
+                - ${\omega}_{g}$. 
+                - $R_{1g}$. 
+                - $R_{2g}$. 
             The default value is an empty sequence. 
         reactionTable
             A sequence of sequences of Floats specifying the following: 
-            - Initial Pressure, $I$. 
-            - Product co-volume, $a$. 
-            - Exponent on the unreacted fraction (ignition term), $x$. 
-            - First burn rate coefficient, $G_{1}$ 
-            - Exponent on the unreacted fraction (growth term), $c$. 
-            - Exponent on the reacted fraction (growth term), $d$. 
-            - Pressure exponent (growth term), $y$. 
-            - Second burn rate coefficient, $G_{2}$. 
-            - Exponent on the unreacted fraction (completion term), $e$. 
-            - Exponent on the reacted fraction (completion term), $g$. 
-            - Pressure exponent (completion term), $z$. 
-            - Initial reacted fraction, ${F^{max}}_{ig}$. 
-            - Maximum reacted fraction for the growth term, ${F^{max}}_{G1}$. 
-            - Minimum reacted fraction, ${F^{min}}_{G2}$. 
+                - Initial Pressure, $I$. 
+                - Product co-volume, $a$. 
+                - Exponent on the unreacted fraction (ignition term), $x$. 
+                - First burn rate coefficient, $G_{1}$ 
+                - Exponent on the unreacted fraction (growth term), $c$. 
+                - Exponent on the reacted fraction (growth term), $d$. 
+                - Pressure exponent (growth term), $y$. 
+                - Second burn rate coefficient, $G_{2}$. 
+                - Exponent on the unreacted fraction (completion term), $e$. 
+                - Exponent on the reacted fraction (completion term), $g$. 
+                - Pressure exponent (completion term), $z$. 
+                - Initial reacted fraction, ${F^{max}}_{ig}$. 
+                - Maximum reacted fraction for the growth term, ${F^{max}}_{G1}$. 
+                - Minimum reacted fraction, ${F^{min}}_{G2}$. 
             The default value is an empty sequence. 
         gasSpecificTable
             A sequence of sequences of Floats specifying the following: 
-            - Specific Heat per unit mass. 
-            - Temperature dependent data. 
-            - Value of first field variable. 
-            - Value of second field variable. 
-            - Etc. 
+                - Specific Heat per unit mass. 
+                - Temperature dependent data. 
+                - Value of first field variable. 
+                - Value of second field variable. 
+                - Etc. 
             The default value is an empty sequence. 
         table
             A sequence of sequences of Floats specifying the items described below. The default 
@@ -992,8 +1051,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Expansion
-            - session.odbs[name].materials[name].Expansion
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Expansion
+                session.odbs[name].materials[name].Expansion
         
         Parameters
         ----------
@@ -1020,7 +1082,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.expansion = Expansion(type, userSubroutine, zero, temperatureDependency, dependencies, table)
         return self.expansion
@@ -1032,8 +1094,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].FluidLeakoff
-            - session.odbs[name].materials[name].FluidLeakoff
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].FluidLeakoff
+                session.odbs[name].materials[name].FluidLeakoff
         
         Parameters
         ----------
@@ -1050,7 +1115,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A FluidLeakoff object. . 
+            A FluidLeakoff object.
         """
         self.fluidLeakoff = FluidLeakoff(temperatureDependency, dependencies, type, table)
         return self.fluidLeakoff
@@ -1062,8 +1127,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].GapFlow
-            - session.odbs[name].materials[name].GapFlow
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].GapFlow
+                session.odbs[name].materials[name].GapFlow
         
         Parameters
         ----------
@@ -1083,7 +1151,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A GapFlow object. . 
+            A GapFlow object.
         """
         self.gapFlow = GapFlow(table, kmax, temperatureDependency, dependencies, type)
         return self.gapFlow
@@ -1095,8 +1163,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].GasketMembraneElastic
-            - session.odbs[name].materials[name].GasketMembraneElastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].GasketMembraneElastic
+                session.odbs[name].materials[name].GasketMembraneElastic
         
         Parameters
         ----------
@@ -1113,7 +1184,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.gasketMembraneElastic = GasketMembraneElastic(table, temperatureDependency, dependencies)
         return self.gasketMembraneElastic
@@ -1129,8 +1200,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].GasketThicknessBehavior
-            - session.odbs[name].materials[name].GasketThicknessBehavior
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].GasketThicknessBehavior
+                session.odbs[name].materials[name].GasketThicknessBehavior
         
         Parameters
         ----------
@@ -1179,7 +1253,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.gasketThicknessBehavior = GasketThicknessBehavior(table, temperatureDependency, dependencies,
                                                                tensileStiffnessFactor, type, unloadingDependencies,
@@ -1195,8 +1269,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].GasketTransverseShearElastic
-            - session.odbs[name].materials[name].GasketTransverseShearElastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].GasketTransverseShearElastic
+                session.odbs[name].materials[name].GasketTransverseShearElastic
         
         Parameters
         ----------
@@ -1216,7 +1293,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.gasketTransverseShearElastic = GasketTransverseShearElastic(table, variableUnits, temperatureDependency,
                                                                          dependencies)
@@ -1228,8 +1305,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Gel
-            - session.odbs[name].materials[name].Gel
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Gel
+                session.odbs[name].materials[name].Gel
         
         Parameters
         ----------
@@ -1238,7 +1318,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A Gel object. . 
+            A Gel object.
         """
         self.gel = Gel(table)
         return self.gel
@@ -1258,8 +1338,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Hyperelastic
-            - session.odbs[name].materials[name].Hyperelastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Hyperelastic
+                session.odbs[name].materials[name].Hyperelastic
         
         Parameters
         ----------
@@ -1325,7 +1408,12 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A Hyperelastic object.  and RangeError. 
+            A Hyperelastic object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         self.hyperelastic = Hyperelastic(table, type, moduliTimeScale, temperatureDependency, n, beta, testData,
                                          compressible, properties, deviatoricResponse, volumetricResponse, poissonRatio,
@@ -1341,8 +1429,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Hyperfoam
-            - session.odbs[name].materials[name].Hyperfoam
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Hyperfoam
+                session.odbs[name].materials[name].Hyperfoam
         
         Parameters
         ----------
@@ -1369,7 +1460,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.hyperfoam = Hyperfoam(testData, poisson, n, temperatureDependency, moduli, table)
         return self.hyperfoam
@@ -1380,8 +1471,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Hypoelastic
-            - session.odbs[name].materials[name].Hypoelastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Hypoelastic
+                session.odbs[name].materials[name].Hypoelastic
         
         Parameters
         ----------
@@ -1393,7 +1487,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A Hypoelastic object. . 
+            A Hypoelastic object.
         """
         self.hypoelastic = Hypoelastic(table, user)
         return self.hypoelastic
@@ -1404,8 +1498,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].InelasticHeatFraction
-            - session.odbs[name].materials[name].InelasticHeatFraction
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].InelasticHeatFraction
+                session.odbs[name].materials[name].InelasticHeatFraction
         
         Parameters
         ----------
@@ -1420,7 +1517,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.inelasticHeatFraction = InelasticHeatFraction(fraction)
         return self.inelasticHeatFraction
@@ -1431,8 +1528,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].JouleHeatFraction
-            - session.odbs[name].materials[name].JouleHeatFraction
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].JouleHeatFraction
+                session.odbs[name].materials[name].JouleHeatFraction
         
         Parameters
         ----------
@@ -1446,7 +1546,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.jouleHeatFraction = JouleHeatFraction(fraction)
         return self.jouleHeatFraction
@@ -1457,8 +1557,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].LatentHeat
-            - session.odbs[name].materials[name].LatentHeat
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].LatentHeat
+                session.odbs[name].materials[name].LatentHeat
         
         Parameters
         ----------
@@ -1471,7 +1574,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.latentHeat = LatentHeat(table)
         return self.latentHeat
@@ -1485,8 +1588,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].LowDensityFoam
-            - session.odbs[name].materials[name].LowDensityFoam
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].LowDensityFoam
+                session.odbs[name].materials[name].LowDensityFoam
         
         Parameters
         ----------
@@ -1516,7 +1622,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.lowDensityFoam = LowDensityFoam(elementRemoval, maxAllowablePrincipalStress, extrapolateStressStrainCurve,
                                              strainRateType, mu0, mu1, alpha)
@@ -1530,8 +1636,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].MagneticPermeability
-            - session.odbs[name].materials[name].MagneticPermeability
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].MagneticPermeability
+                session.odbs[name].materials[name].MagneticPermeability
         
         Parameters
         ----------
@@ -1566,7 +1675,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.magneticPermeability = MagneticPermeability(table, table2, table3, type, frequencyDependency,
                                                          temperatureDependency, dependencies, nonlinearBH)
@@ -1581,8 +1690,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].MohrCoulombPlasticity
-            - session.odbs[name].materials[name].MohrCoulombPlasticity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].MohrCoulombPlasticity
+                session.odbs[name].materials[name].MohrCoulombPlasticity
         
         Parameters
         ----------
@@ -1609,7 +1721,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.mohrCoulombPlasticity = MohrCoulombPlasticity(table, deviatoricEccentricity, meridionalEccentricity,
                                                            temperatureDependency, dependencies, useTensionCutoff)
@@ -1621,8 +1733,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].MoistureSwelling
-            - session.odbs[name].materials[name].MoistureSwelling
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].MoistureSwelling
+                session.odbs[name].materials[name].MoistureSwelling
         
         Parameters
         ----------
@@ -1631,7 +1746,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A MoistureSwelling object. . 
+            A MoistureSwelling object.
         """
         self.moistureSwelling = MoistureSwelling(table)
         return self.moistureSwelling
@@ -1644,8 +1759,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Permeability
-            - session.odbs[name].materials[name].Permeability
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Permeability
+                session.odbs[name].materials[name].Permeability
         
         Parameters
         ----------
@@ -1669,7 +1787,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.permeability = Permeability(specificWeight, inertialDragCoefficient, table, type, temperatureDependency,
                                          dependencies)
@@ -1682,8 +1800,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Piezoelectric
-            - session.odbs[name].materials[name].Piezoelectric
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Piezoelectric
+                session.odbs[name].materials[name].Piezoelectric
         
         Parameters
         ----------
@@ -1699,7 +1820,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A Piezoelectric object. . 
+            A Piezoelectric object.
         """
         self.piezoelectric = Piezoelectric(table, type, temperatureDependency, dependencies)
         return self.piezoelectric
@@ -1712,8 +1833,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Plastic
-            - session.odbs[name].materials[name].Plastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Plastic
+                session.odbs[name].materials[name].Plastic
         
         Parameters
         ----------
@@ -1745,7 +1869,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.plastic = Plastic(table, hardening, rate, dataType, strainRangeDependency, numBackstresses,
                                temperatureDependency, dependencies)
@@ -1758,8 +1882,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].PoreFluidExpansion
-            - session.odbs[name].materials[name].PoreFluidExpansion
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].PoreFluidExpansion
+                session.odbs[name].materials[name].PoreFluidExpansion
         
         Parameters
         ----------
@@ -1778,7 +1905,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.poreFluidExpansion = PoreFluidExpansion(table, zero, temperatureDependency, dependencies)
         return self.poreFluidExpansion
@@ -1789,8 +1916,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].PorousBulkModuli
-            - session.odbs[name].materials[name].PorousBulkModuli
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].PorousBulkModuli
+                session.odbs[name].materials[name].PorousBulkModuli
         
         Parameters
         ----------
@@ -1801,7 +1931,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A PorousBulkModuli object. . 
+            A PorousBulkModuli object.
         """
         self.porousBulkModuli = PorousBulkModuli(table, temperatureDependency)
         return self.porousBulkModuli
@@ -1813,8 +1943,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].PorousElastic
-            - session.odbs[name].materials[name].PorousElastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].PorousElastic
+                session.odbs[name].materials[name].PorousElastic
         
         Parameters
         ----------
@@ -1834,7 +1967,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.porousElastic = PorousElastic(table, shear, temperatureDependency, dependencies)
         return self.porousElastic
@@ -1846,8 +1979,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].PorousMetalPlasticity
-            - session.odbs[name].materials[name].PorousMetalPlasticity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].PorousMetalPlasticity
+                session.odbs[name].materials[name].PorousMetalPlasticity
         
         Parameters
         ----------
@@ -1867,7 +2003,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.porousMetalPlasticity = PorousMetalPlasticity(table, relativeDensity, temperatureDependency, dependencies)
         return self.porousMetalPlasticity
@@ -1879,8 +2015,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Regularization
-            - session.odbs[name].materials[name].Regularization
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Regularization
+                session.odbs[name].materials[name].Regularization
         
         Parameters
         ----------
@@ -1898,7 +2037,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.regularization = Regularization(rtol, strainRateRegularization)
         return self.regularization
@@ -1909,8 +2048,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Solubility
-            - session.odbs[name].materials[name].Solubility
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Solubility
+                session.odbs[name].materials[name].Solubility
         
         Parameters
         ----------
@@ -1927,7 +2069,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.solubility = Solubility(table, temperatureDependency, dependencies)
         return self.solubility
@@ -1940,8 +2082,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Sorption
-            - session.odbs[name].materials[name].Sorption
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Sorption
+                session.odbs[name].materials[name].Sorption
         
         Parameters
         ----------
@@ -1969,7 +2114,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.sorption = Sorption(absorptionTable, lawAbsorption, exsorption, lawExsorption, scanning, exsorptionTable)
         return self.sorption
@@ -1981,8 +2126,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].SpecificHeat
-            - session.odbs[name].materials[name].SpecificHeat
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].SpecificHeat
+                session.odbs[name].materials[name].SpecificHeat
         
         Parameters
         ----------
@@ -2002,7 +2150,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.specificHeat = SpecificHeat(table, law, temperatureDependency, dependencies)
         return self.specificHeat
@@ -2014,8 +2162,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Swelling
-            - session.odbs[name].materials[name].Swelling
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Swelling
+                session.odbs[name].materials[name].Swelling
         
         Parameters
         ----------
@@ -2036,7 +2187,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.swelling = Swelling(table, law, temperatureDependency, dependencies)
         return self.swelling
@@ -2049,8 +2200,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].UserMaterial
-            - session.odbs[name].materials[name].UserMaterial
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].UserMaterial
+                session.odbs[name].materials[name].UserMaterial
         
         Parameters
         ----------
@@ -2085,7 +2239,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.userMaterial = UserMaterial(type, unsymm, mechanicalConstants, thermalConstants, effmod, hybridFormulation)
         return self.userMaterial
@@ -2096,8 +2250,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].UserOutputVariables
-            - session.odbs[name].materials[name].UserOutputVariables
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].UserOutputVariables
+                session.odbs[name].materials[name].UserOutputVariables
         
         Parameters
         ----------
@@ -2111,7 +2268,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.userOutputVariables = UserOutputVariables(n)
         return self.userOutputVariables
@@ -2125,15 +2282,18 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Viscoelastic
-            - session.odbs[name].materials[name].Viscoelastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Viscoelastic
+                session.odbs[name].materials[name].Viscoelastic
         
         Parameters
         ----------
         domain
             A SymbolicConstant specifying the domain definition. Possible values are:
-            - FREQUENCY, specifying a frequency domain. This domain is only available for an Abaqus/Standard analysis.
-            - TIME, specifying a time domain.
+                - FREQUENCY, specifying a frequency domain. This domain is only available for an Abaqus/Standard analysis.
+                - TIME, specifying a time domain.
         table
             A sequence of sequences of Floats specifying the items described below. 
         frequency
@@ -2173,7 +2333,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.viscoelastic = Viscoelastic(domain, table, frequency, type, preload, time, errtol, nmax, volumetricTable)
         return self.viscoelastic
@@ -2185,8 +2345,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Viscosity
-            - session.odbs[name].materials[name].Viscosity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Viscosity
+                session.odbs[name].materials[name].Viscosity
         
         Parameters
         ----------
@@ -2205,7 +2368,7 @@ class Material(MaterialBase):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         self.viscosity = Viscosity(table, type, temperatureDependency, dependencies)
         return self.viscosity
@@ -2217,8 +2380,11 @@ class Material(MaterialBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Viscous
-            - session.odbs[name].materials[name].Viscous
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Viscous
+                session.odbs[name].materials[name].Viscous
         
         Parameters
         ----------
@@ -2238,7 +2404,7 @@ class Material(MaterialBase):
 
         Returns
         -------
-            A Viscous object. . 
+            A Viscous object.
         """
         self.viscous = Viscous(table, law, temperatureDependency, dependencies, time)
         return self.viscous

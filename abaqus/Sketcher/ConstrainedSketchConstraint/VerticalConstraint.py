@@ -11,7 +11,10 @@ class VerticalConstraint(ConstrainedSketchConstraint):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].VerticalConstraint
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].VerticalConstraint
         
         Parameters
         ----------
@@ -20,7 +23,7 @@ class VerticalConstraint(ConstrainedSketchConstraint):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object. . 
-            !img 
+            A ConstrainedSketchConstraint object.
+            
         """
         pass

@@ -25,8 +25,11 @@ class BoundaryCondition:
     Notes
     -----
         This object can be accessed by:
-        - import load
-        - mdb.models[name].boundaryConditions[name]
+        
+        .. code-block:: python
+            
+            import load
+            mdb.models[name].boundaryConditions[name]
 
     """
 

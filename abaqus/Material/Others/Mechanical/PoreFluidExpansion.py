@@ -8,22 +8,23 @@ class PoreFluidExpansion:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].poreFluidExpansion
-        - import odbMaterial
-        - session.odbs[name].materials[name].poreFluidExpansion
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].poreFluidExpansion
+            import odbMaterial
+            session.odbs[name].materials[name].poreFluidExpansion
 
-    Table Data
-    ----------
-        - Mean coefficient of thermal expansion, α.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Mean coefficient of thermal expansion, α.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - EXPANSION
+        The corresponding analysis keywords are:
+            - EXPANSION
 
     """
 
@@ -34,8 +35,11 @@ class PoreFluidExpansion:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].PoreFluidExpansion
-            - session.odbs[name].materials[name].PoreFluidExpansion
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].PoreFluidExpansion
+                session.odbs[name].materials[name].PoreFluidExpansion
         
         Parameters
         ----------
@@ -54,7 +58,7 @@ class PoreFluidExpansion:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -63,6 +67,6 @@ class PoreFluidExpansion:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

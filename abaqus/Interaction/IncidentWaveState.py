@@ -19,12 +19,14 @@ class IncidentWaveState(InteractionState):
     Notes
     -----
         This object can be accessed by:
-        - import interaction
-        - mdb.models[name].steps[name].interactionStates[name]
+        
+        .. code-block:: python
+            
+            import interaction
+            mdb.models[name].steps[name].interactionStates[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - INCIDENT WAVE INTERACTION
+        The corresponding analysis keywords are:
+            - INCIDENT WAVE INTERACTION
 
     """
 

@@ -92,7 +92,7 @@ class RetainedNodalDofsBC(BoundaryCondition):
 
         Returns
         -------
-            A RetainedNodalDofsBC object. . 
+            A RetainedNodalDofsBC object.
         """
         super().__init__()
         pass

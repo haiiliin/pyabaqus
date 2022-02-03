@@ -86,11 +86,11 @@ class AnimationSession(SessionBase):
         Raises
         ------
             ValueError.
-            - If *fileName* does not exist or can not be read:
+                - If *fileName* does not exist or can not be read:
               ValueError: Unable to open movie file
-            - If *fileName* references an unsupported movie file format:
+                - If *fileName* references an unsupported movie file format:
               ValueError: Unsupported movie format
-            - If the contents of *fileName* are corrupt or can not be decoded:
+                - If the contents of *fileName* are corrupt or can not be decoded:
               ValueError: Unable to decode movie file
         """
         self.movies[name] = movie = Movie(name, fileName, startFrame, endFrame, timelineStartFrame, timelineEndFrame,

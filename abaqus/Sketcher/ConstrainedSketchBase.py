@@ -35,8 +35,11 @@ class ConstrainedSketchBase:
     Notes
     -----
         This object can be accessed by:
-        - import sketch
-        - mdb.models[name].sketches[name]
+        
+        .. code-block:: python
+            
+            import sketch
+            mdb.models[name].sketches[name]
 
     """
 

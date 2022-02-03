@@ -7,29 +7,30 @@ class BrittleFailure:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].brittleCracking.brittleFailure
-        - import odbMaterial
-        - session.odbs[name].materials[name].brittleCracking.brittleFailure
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].brittleCracking.brittleFailure
+            import odbMaterial
+            session.odbs[name].materials[name].brittleCracking.brittleFailure
 
-    Table Data
-    ----------
+        The table data for this object are:
         If parent [BrittleCracking](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-brittlecrackingpyc.htm?ContextScope=all) member *type*=STRAIN the table data specify the following:
-        - Direct cracking failure strain.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Direct cracking failure strain.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If parent [BrittleCracking](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-brittlecrackingpyc.htm?ContextScope=all) member *type*=DISPLACEMENT or *type*=GFI the table data specify the following:
-        - Direct cracking failure displacement.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Direct cracking failure displacement.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - BRITTLE FAILURE
+        The corresponding analysis keywords are:
+            - BRITTLE FAILURE
 
     """
 
@@ -40,8 +41,11 @@ class BrittleFailure:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].brittleCracking.BrittleFailure
-            - session.odbs[name].materials[name].brittleCracking.BrittleFailure
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].brittleCracking.BrittleFailure
+                session.odbs[name].materials[name].brittleCracking.BrittleFailure
         
         Parameters
         ----------
@@ -61,7 +65,7 @@ class BrittleFailure:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -70,6 +74,6 @@ class BrittleFailure:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

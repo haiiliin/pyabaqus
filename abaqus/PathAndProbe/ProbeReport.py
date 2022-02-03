@@ -11,9 +11,12 @@ class ProbeReport:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.defaultProbeReport
-        - session.probeReport
+        
+        .. code-block:: python
+            
+            import visualization
+            session.defaultProbeReport
+            session.probeReport
 
     """
 

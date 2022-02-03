@@ -74,7 +74,7 @@ class DesignDirection(GeometricRestriction):
 
         Returns
         -------
-            A DesignDirection object. . 
+            A DesignDirection object.
         """
         super().__init__()
         pass

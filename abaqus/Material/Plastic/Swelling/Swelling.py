@@ -1,5 +1,5 @@
-from abaqusConstants import *
 from abaqus.Material.Ratios import Ratios
+from abaqusConstants import *
 
 
 class Swelling:
@@ -8,22 +8,23 @@ class Swelling:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].swelling
-        - import odbMaterial
-        - session.odbs[name].materials[name].swelling
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].swelling
+            import odbMaterial
+            session.odbs[name].materials[name].swelling
 
-    Table Data
-    ----------
-        - Volumetric swelling strain rate.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Volumetric swelling strain rate.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SWELLING
+        The corresponding analysis keywords are:
+            - SWELLING
 
     """
 
@@ -37,8 +38,11 @@ class Swelling:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Swelling
-            - session.odbs[name].materials[name].Swelling
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Swelling
+                session.odbs[name].materials[name].Swelling
         
         Parameters
         ----------
@@ -59,7 +63,7 @@ class Swelling:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -68,6 +72,6 @@ class Swelling:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

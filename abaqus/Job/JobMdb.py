@@ -6,6 +6,18 @@ from ..Mdb.MdbBase import MdbBase
 
 
 class JobMdb(MdbBase):
+    """The Mdb object is the high-level Abaqus model database. A model database stores models
+    and analysis controls.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb
+
+    """
 
     def Job(self, name: str, model: str, description: str = '', type: SymbolicConstant = ANALYSIS,
             queue: str = '', waitHours: int = 0, waitMinutes: int = 0, atTime: str = '',
@@ -23,7 +35,10 @@ class JobMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.Job
+            
+            .. code-block:: python
+            
+                mdb.Job
             
         Parameters
         ----------
@@ -141,7 +156,10 @@ class JobMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.JobFromInputFile
+            
+            .. code-block:: python
+            
+                mdb.JobFromInputFile
             
         Parameters
         ----------
@@ -234,7 +252,10 @@ class JobMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.OptimizationProcess
+            
+            .. code-block:: python
+            
+                mdb.OptimizationProcess
             
         Parameters
         ----------

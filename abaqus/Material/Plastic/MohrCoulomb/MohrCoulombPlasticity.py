@@ -1,6 +1,6 @@
+from abaqus.Material.Plastic.MohrCoulomb.TensionCutOff import TensionCutOff
 from abaqusConstants import *
 from .MohrCoulombHardening import MohrCoulombHardening
-from abaqus.Material.Plastic.MohrCoulomb.TensionCutOff import TensionCutOff
 
 
 class MohrCoulombPlasticity:
@@ -9,24 +9,25 @@ class MohrCoulombPlasticity:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].mohrCoulombPlasticity
-        - import odbMaterial
-        - session.odbs[name].materials[name].mohrCoulombPlasticity
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].mohrCoulombPlasticity
+            import odbMaterial
+            session.odbs[name].materials[name].mohrCoulombPlasticity
 
-    Table Data
-    ----------
+        The table data for this object are:
         The table data specify the following:
-        - Friction angle (given in degrees), ϕ, at high confining pressure in the p–Rm⁢c⁢q plane.
-        - Dilation angle, ψ, at high confining pressure in the p–Rm⁢w⁢q plane.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Friction angle (given in degrees), ϕ, at high confining pressure in the p–Rm⁢c⁢q plane.
+            - Dilation angle, ψ, at high confining pressure in the p–Rm⁢w⁢q plane.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - MOHR COULOMB
+        The corresponding analysis keywords are:
+            - MOHR COULOMB
 
     """
 
@@ -44,8 +45,11 @@ class MohrCoulombPlasticity:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].MohrCoulombPlasticity
-            - session.odbs[name].materials[name].MohrCoulombPlasticity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].MohrCoulombPlasticity
+                session.odbs[name].materials[name].MohrCoulombPlasticity
         
         Parameters
         ----------
@@ -72,7 +76,7 @@ class MohrCoulombPlasticity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -81,6 +85,6 @@ class MohrCoulombPlasticity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

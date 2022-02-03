@@ -63,7 +63,7 @@ class TopologyDemoldControl(GeometricRestriction):
 
         Returns
         -------
-            A TopologyDemoldControl object. . 
+            A TopologyDemoldControl object.
         """
         super().__init__()
         pass

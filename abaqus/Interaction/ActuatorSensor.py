@@ -18,11 +18,10 @@ class ActuatorSensor(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - ELEMENT
-        - USER ELEMENT
-        - INITIAL CONDITIONS
+        The corresponding analysis keywords are:
+            - ELEMENT
+            - USER ELEMENT
+            - INITIAL CONDITIONS
 
     """
 
@@ -67,7 +66,7 @@ class ActuatorSensor(Interaction):
 
         Returns
         -------
-            An ActuatorSensor object. . 
+            An ActuatorSensor object.
         """
         super().__init__()
         pass

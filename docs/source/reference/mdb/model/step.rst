@@ -6,7 +6,7 @@ The Step commands described in this chapter are used to create and configure ana
 
 .. toctree::
    :maxdepth: 1
-   :caption: Objects for Step
+   :caption: Objects in Step
 
    step/step_miscellaneous
 

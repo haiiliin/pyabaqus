@@ -27,26 +27,28 @@ class SurfaceToSurfaceExpState(InteractionState):
     status: SymbolicConstant
         A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.Interaction.InteractionState.InteractionState` object.
         Possible values are:
-        - NOT_YET_ACTIVE
-        - CREATED
-        - PROPAGATED
-        - MODIFIED
-        - DEACTIVATED
-        - NO_LONGER_ACTIVE
-        - TYPE_NOT_APPLICABLE
-        - INSTANCE_NOT_APPLICABLE
-        - BUILT_INTO_BASE_STATE
+            - NOT_YET_ACTIVE
+            - CREATED
+            - PROPAGATED
+            - MODIFIED
+            - DEACTIVATED
+            - NO_LONGER_ACTIVE
+            - TYPE_NOT_APPLICABLE
+            - INSTANCE_NOT_APPLICABLE
+            - BUILT_INTO_BASE_STATE
 
     Notes
     -----
         This object can be accessed by:
-        - import interaction
-        - mdb.models[name].steps[name].interactionStates[name]
+        
+        .. code-block:: python
+            
+            import interaction
+            mdb.models[name].steps[name].interactionStates[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONTACT CONTROLS
-        - CONTACT PAIR
+        The corresponding analysis keywords are:
+            - CONTACT CONTROLS
+            - CONTACT PAIR
 
     """
 

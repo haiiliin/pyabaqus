@@ -4,14 +4,16 @@ class Damping:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].damping
-        - import odbMaterial
-        - session.odbs[name].materials[name].damping
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].damping
+            import odbMaterial
+            session.odbs[name].materials[name].damping
 
-    Corresponding analysis keywords
-    -------------------------------
-        - DAMPING
+        The corresponding analysis keywords are:
+            - DAMPING
 
     """
 
@@ -21,8 +23,11 @@ class Damping:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Damping
-            - session.odbs[name].materials[name].Damping
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Damping
+                session.odbs[name].materials[name].Damping
         
         Parameters
         ----------
@@ -46,7 +51,7 @@ class Damping:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -55,6 +60,6 @@ class Damping:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

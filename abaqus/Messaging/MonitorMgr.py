@@ -10,7 +10,10 @@ class MonitorMgr:
     Notes
     -----
         This object can be accessed by:
-        - monitorManager
+        
+        .. code-block:: python
+        
+            monitorManager
 
     """
 
@@ -50,32 +53,32 @@ class MonitorMgr:
         messageType
             A SymbolicConstant specifying which message type will call this callback. Possible 
             values are: 
-            - ABORTED 
-            - ANY_JOB 
-            - ANY_MESSAGE_TYPE 
-            - COMPLETED 
-            - END_STEP 
-            - ERROR 
-            - HEADING 
-            - HEALER_JOB 
-            - HEALER_TYPE 
-            - INTERRUPTED 
-            - ITERATION 
-            - JOB_ABORTED 
-            - JOB_COMPLETED 
-            - JOB_INTERRUPTED 
-            - JOB_SUBMITTED 
-            - MONITOR_DATA 
-            - ODB_FILE 
-            - ODB_FRAME 
-            - SIMULATION_ABORTED 
-            - SIMULATION_COMPLETED 
-            - SIMULATION_INTERRUPTED 
-            - SIMULATION_SUBMITTED 
-            - STARTED 
-            - STATUS 
-            - STEP 
-            - WARNING 
+                - ABORTED 
+                - ANY_JOB 
+                - ANY_MESSAGE_TYPE 
+                - COMPLETED 
+                - END_STEP 
+                - ERROR 
+                - HEADING 
+                - HEALER_JOB 
+                - HEALER_TYPE 
+                - INTERRUPTED 
+                - ITERATION 
+                - JOB_ABORTED 
+                - JOB_COMPLETED 
+                - JOB_INTERRUPTED 
+                - JOB_SUBMITTED 
+                - MONITOR_DATA 
+                - ODB_FILE 
+                - ODB_FRAME 
+                - SIMULATION_ABORTED 
+                - SIMULATION_COMPLETED 
+                - SIMULATION_INTERRUPTED 
+                - SIMULATION_SUBMITTED 
+                - STARTED 
+                - STATUS 
+                - STEP 
+                - WARNING 
         callback
             A Python function to be called; it must be the same as the *callback* argument specified 
             in the original call to addMessageCallback. 
@@ -90,7 +93,7 @@ class MonitorMgr:
 
         Raises
         ------
-            - MonitorError: 
-              Status is not ENABLED 
+        MonitorError 
+            Status is not ENABLED 
         """
         pass

@@ -18,11 +18,10 @@ class ConnectorSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONNECTOR SECTION
-        - CONNECTOR BEHAVIOR
-        - CONNECTOR CONSTITUTIVE REFERENCE
+        The corresponding analysis keywords are:
+            - CONNECTOR SECTION
+            - CONNECTOR BEHAVIOR
+            - CONNECTOR CONSTITUTIVE REFERENCE
 
     """
 
@@ -129,7 +128,12 @@ class ConnectorSection(Section):
 
         Returns
         -------
-            A ConnectorSection object.  and RangeError. 
+            A ConnectorSection object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -225,6 +229,6 @@ class ConnectorSection(Section):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

@@ -16,9 +16,8 @@ class Regularization:
         import odbMaterial
         session.odbs[name].materials[name].regularization
 
-    Corresponding analysis keywords
-    -------------------------------
-        - DASHPOT
+        The corresponding analysis keywords are:
+            - DASHPOT
 
     """
 
@@ -50,7 +49,7 @@ class Regularization:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -59,6 +58,6 @@ class Regularization:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

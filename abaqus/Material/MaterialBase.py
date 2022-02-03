@@ -225,9 +225,8 @@ class MaterialBase:
         import odbMaterial
         session.odbs[name].materials[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - MATERIAL
+        The corresponding analysis keywords are:
+            - MATERIAL
 
     """
 
@@ -469,7 +468,7 @@ class MaterialBase:
 
         Returns
         -------
-            A Material object. . 
+            A Material object.
         """
         self.name, self.description, self.materialIdentifier = name, description, materialIdentifier
 
@@ -495,6 +494,6 @@ class MaterialBase:
 
         Returns
         -------
-            A list of Material objects. . 
+            A list of Material objects.
         """
         pass

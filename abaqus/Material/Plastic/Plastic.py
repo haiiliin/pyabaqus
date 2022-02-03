@@ -1,11 +1,11 @@
-from abaqusConstants import *
 from abaqus.Material.Plastic.Metal.Annealing.AnnealTemperature import AnnealTemperature
 from abaqus.Material.Plastic.Metal.Cyclic.CycledPlastic import CycledPlastic
 from abaqus.Material.Plastic.Metal.Cyclic.CyclicHardening import CyclicHardening
 from abaqus.Material.Plastic.Metal.ORNL.Ornl import Ornl
-from abaqus.Material.Plastic.Potential import Potential
 from abaqus.Material.Plastic.Metal.RateDependent.RateDependent import RateDependent
+from abaqus.Material.Plastic.Potential import Potential
 from abaqus.Material.Plastic.TensileFailure import TensileFailure
+from abaqusConstants import *
 
 
 class Plastic:
@@ -14,57 +14,58 @@ class Plastic:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].Plastic
-        - import odbMaterial
-        - session.odbs[name].materials[name].Plastic
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].Plastic
+            import odbMaterial
+            session.odbs[name].materials[name].Plastic
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *hardening*=ISOTROPIC, or if *hardening*=COMBINED and *dataType*=HALF_CYCLE, the table data specify the following:
-        - Yield stress.
-        - Plastic strain.
-        - Equivalent Plastic strain rate, ε¯˙p⁢l.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Yield stress.
+            - Plastic strain.
+            - Equivalent Plastic strain rate, ε¯˙p⁢l.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *hardening*=COMBINED and *dataType*=STABILIZED, the table data specify the following:
-        - Yield stress.
-        - Plastic strain.
-        - Strain range, if the data depend on strain range.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Yield stress.
+            - Plastic strain.
+            - Strain range, if the data depend on strain range.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *hardening*=COMBINED and *dataType*=PARAMETERS, the table data specify the following:
-        - Yield stress at zero Plastic strain.
-        - The first kinematic hardening parameter, C1.
-        - The first kinematic hardening parameter, γ1.
-        - If applicable, the second kinematic hardening parameter, C2.
-        - If applicable, the second kinematic hardening parameter, γ2.
-        - Etc.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Yield stress at zero Plastic strain.
+            - The first kinematic hardening parameter, C1.
+            - The first kinematic hardening parameter, γ1.
+            - If applicable, the second kinematic hardening parameter, C2.
+            - If applicable, the second kinematic hardening parameter, γ2.
+            - Etc.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *hardening*=KINEMATIC, the table data specify the following:
-        - Yield stress.
-        - Plastic strain.
-        - Temperature, if the data depend on temperature.
+            - Yield stress.
+            - Plastic strain.
+            - Temperature, if the data depend on temperature.
         If *hardening*=JOHNSON_COOK, the table data specify the following:
-        - A.
-        - B.
-        - n.
-        - m.
-        - Melting temperature.
-        - Transition temperature.
+            - A.
+            - B.
+            - n.
+            - m.
+            - Melting temperature.
+            - Transition temperature.
         If *hardening*=USER, the table data specify the following:
-        - Hardening properties.
+            - Hardening properties.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - PLASTIC
+        The corresponding analysis keywords are:
+            - PLASTIC
 
     """
 
@@ -97,8 +98,11 @@ class Plastic:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Plastic
-            - session.odbs[name].materials[name].Plastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Plastic
+                session.odbs[name].materials[name].Plastic
         
         Parameters
         ----------
@@ -130,7 +134,7 @@ class Plastic:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -139,6 +143,6 @@ class Plastic:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

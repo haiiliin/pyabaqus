@@ -101,7 +101,7 @@ class OdbSet:
 
         Returns
         -------
-            An OdbSet object. . 
+            An OdbSet object.
         """
         pass
 
@@ -129,7 +129,7 @@ class OdbSet:
 
         Returns
         -------
-            An OdbSet object. . 
+            An OdbSet object.
         """
         pass
 
@@ -159,7 +159,7 @@ class OdbSet:
 
         Returns
         -------
-            An OdbSet object. . 
+            An OdbSet object.
         """
         pass
 
@@ -187,7 +187,7 @@ class OdbSet:
 
         Returns
         -------
-            An OdbSet object. . 
+            An OdbSet object.
         """
         pass
 
@@ -229,7 +229,7 @@ class OdbSet:
 
         Returns
         -------
-            An OdbSet object. . 
+            An OdbSet object.
         """
         pass
 
@@ -258,7 +258,7 @@ class OdbSet:
 
         Returns
         -------
-            An OdbSet object. . 
+            An OdbSet object.
         """
         pass
 
@@ -286,6 +286,6 @@ class OdbSet:
 
         Returns
         -------
-            An OdbSet object. . 
+            An OdbSet object.
         """
         pass

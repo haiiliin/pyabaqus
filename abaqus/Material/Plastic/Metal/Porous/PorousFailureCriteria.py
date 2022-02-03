@@ -5,14 +5,16 @@ class PorousFailureCriteria:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].porousMetalPlasticity.porousFailureCriteria
-        - import odbMaterial
-        - session.odbs[name].materials[name].porousMetalPlasticity.porousFailureCriteria
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].porousMetalPlasticity.porousFailureCriteria
+            import odbMaterial
+            session.odbs[name].materials[name].porousMetalPlasticity.porousFailureCriteria
 
-    Corresponding analysis keywords
-    -------------------------------
-        - POROUS FAILURE CRITERIA
+        The corresponding analysis keywords are:
+            - POROUS FAILURE CRITERIA
 
     """
 
@@ -22,10 +24,13 @@ class PorousFailureCriteria:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].porousMetalPlasticity\
-            - .PorousFailureCriteria
-            - session.odbs[name].materials[name].porousMetalPlasticity\
-            - .PorousFailureCriteria
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].porousMetalPlasticity\
+                - .PorousFailureCriteria
+                session.odbs[name].materials[name].porousMetalPlasticity\
+                - .PorousFailureCriteria
         
         Parameters
         ----------
@@ -41,7 +46,7 @@ class PorousFailureCriteria:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -50,6 +55,6 @@ class PorousFailureCriteria:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

@@ -34,6 +34,6 @@ class OdbLoadCase:
 
         Returns
         -------
-            An OdbLoadCase object. . 
+            An OdbLoadCase object.
         """
         pass

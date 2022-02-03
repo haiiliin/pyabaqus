@@ -4,7 +4,7 @@ class AutoColors:
     Notes
     -----
         This object can be accessed by:
-        - session.autoColors
+            session.autoColors
 
     """
 

@@ -7,42 +7,43 @@ class Conductivity:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].conductivity
-        - import odbMaterial
-        - session.odbs[name].materials[name].conductivity
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].conductivity
+            import odbMaterial
+            session.odbs[name].materials[name].conductivity
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *type*=ISOTROPIC, the table data specify the following:
-        - Conductivity, k.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Conductivity, k.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=ORTHOTROPIC, the table data specify the following:
-        - k11.
-        - k22.
-        - k33.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - k11.
+            - k22.
+            - k33.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=ANISOTROPIC, the table data specify the following:
-        - k11.
-        - k12.
-        - k22.
-        - k13.
-        - k23.
-        - k33.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - k11.
+            - k12.
+            - k22.
+            - k13.
+            - k23.
+            - k33.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONDUCTIVITY
+        The corresponding analysis keywords are:
+            - CONDUCTIVITY
 
     """
 
@@ -53,8 +54,11 @@ class Conductivity:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Conductivity
-            - session.odbs[name].materials[name].Conductivity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Conductivity
+                session.odbs[name].materials[name].Conductivity
         
         Parameters
         ----------
@@ -74,7 +78,7 @@ class Conductivity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -83,6 +87,6 @@ class Conductivity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

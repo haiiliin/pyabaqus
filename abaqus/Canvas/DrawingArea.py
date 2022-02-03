@@ -17,7 +17,7 @@ class DrawingArea:
     Notes
     -----
         This object can be accessed by:
-        - session.drawingArea
+            session.drawingArea
 
     """
 

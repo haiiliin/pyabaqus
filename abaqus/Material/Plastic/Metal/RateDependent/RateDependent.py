@@ -8,38 +8,39 @@ class RateDependent:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].crushableFoam.rateDependent
-        - mdb.models[name].materials[name].druckerPrager.rateDependent
-        - mdb.models[name].materials[name].Plastic.rateDependent
-        - import odbMaterial
-        - session.odbs[name].materials[name].crushableFoam.rateDependent
-        - session.odbs[name].materials[name].druckerPrager.rateDependent
-        - session.odbs[name].materials[name].Plastic.rateDependent
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].crushableFoam.rateDependent
+            mdb.models[name].materials[name].druckerPrager.rateDependent
+            mdb.models[name].materials[name].Plastic.rateDependent
+            import odbMaterial
+            session.odbs[name].materials[name].crushableFoam.rateDependent
+            session.odbs[name].materials[name].druckerPrager.rateDependent
+            session.odbs[name].materials[name].Plastic.rateDependent
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *type*=POWER_LAW, the table data specify the following:
-        - D.
-        - n.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - D.
+            - n.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=YIELD_RATIO, the table data specify the following:
-        - Yield stress ratio, R=¯σ/σ0.
-        - Equivalent Plastic strain rate, ˙¯εpl.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Yield stress ratio, R=¯σ/σ0.
+            - Equivalent Plastic strain rate, ˙¯εpl.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=JOHNSON_COOK, the table data specify the following:
-        - C.
-        - ˙ε0.
+            - C.
+            - ˙ε0.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - RATE DEPENDENT
+        The corresponding analysis keywords are:
+            - RATE DEPENDENT
 
     """
 
@@ -50,12 +51,15 @@ class RateDependent:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].crushableFoam.RateDependent
-            - mdb.models[name].materials[name].druckerPrager.RateDependent
-            - mdb.models[name].materials[name].Plastic.RateDependent
-            - session.odbs[name].materials[name].crushableFoam.RateDependent
-            - session.odbs[name].materials[name].druckerPrager.RateDependent
-            - session.odbs[name].materials[name].Plastic.RateDependent
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].crushableFoam.RateDependent
+                mdb.models[name].materials[name].druckerPrager.RateDependent
+                mdb.models[name].materials[name].Plastic.RateDependent
+                session.odbs[name].materials[name].crushableFoam.RateDependent
+                session.odbs[name].materials[name].druckerPrager.RateDependent
+                session.odbs[name].materials[name].Plastic.RateDependent
         
         Parameters
         ----------
@@ -75,7 +79,7 @@ class RateDependent:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -84,6 +88,6 @@ class RateDependent:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

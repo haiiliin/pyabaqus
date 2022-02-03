@@ -16,14 +16,13 @@ class CyclicSymmetry(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CLOAD
-        - CYCLIC SYMMETRY MODEL
-        - DLOAD
-        - DSLOAD
-        - SELECT CYCLIC SYMMETRY MODES
-        - TIE
+        The corresponding analysis keywords are:
+            - CLOAD
+            - CYCLIC SYMMETRY MODEL
+            - DLOAD
+            - DSLOAD
+            - SELECT CYCLIC SYMMETRY MODES
+            - TIE
 
     """
 
@@ -96,7 +95,7 @@ class CyclicSymmetry(Interaction):
 
         Returns
         -------
-            A CyclicSymmetry object. . 
+            A CyclicSymmetry object.
         """
         super().__init__()
         pass

@@ -51,7 +51,7 @@ class SizingRotationalSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A SizingRotationalSymmetry object. . 
+            A SizingRotationalSymmetry object.
         """
         super().__init__()
         pass

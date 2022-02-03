@@ -13,8 +13,11 @@ class SubstructureGenerateFrequency:
     Notes
     -----
         This object can be accessed by:
-        - import step
-        - mdb.models[name].steps[name].frequencyRange[i]
+        
+        .. code-block:: python
+        
+           import step
+           mdb.models[name].steps[name].frequencyRange[i]
 
     """
 

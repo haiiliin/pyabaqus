@@ -10,7 +10,7 @@ class MeshEditOptions:
     Notes
     -----
         This object can be accessed by:
-        - mdb.meshEditOptions
+            mdb.meshEditOptions
 
     """
 

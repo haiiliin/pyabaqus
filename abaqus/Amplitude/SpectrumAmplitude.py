@@ -18,9 +18,8 @@ class SpectrumAmplitude(Amplitude):
         import odbAmplitude
         session.odbs[name].amplitudes[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SPECTRUM
+        The corresponding analysis keywords are:
+            - SPECTRUM
 
     """
 
@@ -84,7 +83,12 @@ class SpectrumAmplitude(Amplitude):
 
         Returns
         -------
-            A SpectrumAmplitude object.  and RangeError. 
+            A SpectrumAmplitude object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -131,6 +135,6 @@ class SpectrumAmplitude(Amplitude):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

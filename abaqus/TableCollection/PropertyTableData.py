@@ -15,10 +15,9 @@ class PropertyTableData:
 
         mdb.models[name].tableCollections[name].propertyTables[name].propertyTableDatas[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - PROPERTY TABLE TYPE
-        - PROPERTY TABLE
+        The corresponding analysis keywords are:
+            - PROPERTY TABLE TYPE
+            - PROPERTY TABLE
 
     """
 
@@ -60,7 +59,7 @@ class PropertyTableData:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -72,6 +71,6 @@ class PropertyTableData:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

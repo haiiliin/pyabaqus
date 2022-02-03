@@ -13,8 +13,7 @@ from ..Region.Region import Region
 
 
 class AdaptivityModel(ModelBase):
-    """The following commands operate on Model objects. For more information about the Model 
-    object, see Model object. 
+    """Abaqus creates a Model object named `Model-1` when a session is started.
 
     Notes
     -----
@@ -22,7 +21,7 @@ class AdaptivityModel(ModelBase):
 
     .. code-block:: python
 
-        import mesh
+        mdb.models[name]
 
     """
 
@@ -37,7 +36,7 @@ class AdaptivityModel(ModelBase):
 
         Returns
         -------
-            An AdaptivityIteration Object. . 
+            An AdaptivityIteration object.
         """
         pass
 

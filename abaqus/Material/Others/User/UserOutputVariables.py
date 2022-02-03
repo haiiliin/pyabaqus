@@ -4,14 +4,16 @@ class UserOutputVariables:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].userOutputVariables
-        - import odbMaterial
-        - session.odbs[name].materials[name].userOutputVariables
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].userOutputVariables
+            import odbMaterial
+            session.odbs[name].materials[name].userOutputVariables
 
-    Corresponding analysis keywords
-    -------------------------------
-        - USER OUTPUT VARIABLES
+        The corresponding analysis keywords are:
+            - USER OUTPUT VARIABLES
 
     """
 
@@ -21,8 +23,11 @@ class UserOutputVariables:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].UserOutputVariables
-            - session.odbs[name].materials[name].UserOutputVariables
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].UserOutputVariables
+                session.odbs[name].materials[name].UserOutputVariables
         
         Parameters
         ----------
@@ -36,7 +41,7 @@ class UserOutputVariables:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -45,6 +50,6 @@ class UserOutputVariables:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

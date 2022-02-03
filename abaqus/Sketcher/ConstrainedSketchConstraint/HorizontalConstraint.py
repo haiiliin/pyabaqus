@@ -11,7 +11,10 @@ class HorizontalConstraint(ConstrainedSketchConstraint):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].HorizontalConstraint
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].HorizontalConstraint
         
         Parameters
         ----------
@@ -20,7 +23,7 @@ class HorizontalConstraint(ConstrainedSketchConstraint):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object. . 
-            !img 
+            A ConstrainedSketchConstraint object.
+            
         """
         pass

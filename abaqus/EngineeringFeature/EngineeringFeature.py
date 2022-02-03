@@ -30,8 +30,11 @@ class EngineeringFeature(EngineeringFeatureBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.AssembledFastener
-            - mdb.models[name].rootAssembly.engineeringFeatures.AssembledFastener
+            
+            .. code-block:: python
+            
+                mdb.models[name].parts[name].engineeringFeatures.AssembledFastener
+                mdb.models[name].rootAssembly.engineeringFeatures.AssembledFastener
         
         Parameters
         ----------
@@ -69,7 +72,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            An AssembledFastener object..
+            An AssembledFastener object.
         """
         self.fasteners[name] = assembledFastener = AssembledFastener(name, region, templateModel, controlSet,
                                                                      templateSurfaces, assignedSurfaces, propertyPrefix,
@@ -88,8 +91,11 @@ class EngineeringFeature(EngineeringFeatureBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.ContourIntegral
-            - mdb.models[name].rootAssembly.engineeringFeatures.ContourIntegral
+            
+            .. code-block:: python
+            
+                mdb.models[name].parts[name].engineeringFeatures.ContourIntegral
+                mdb.models[name].rootAssembly.engineeringFeatures.ContourIntegral
         
         Parameters
         ----------
@@ -141,7 +147,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A ContourIntegral object..
+            A ContourIntegral object.
         """
         self.cracks[name] = contourIntegral = ContourIntegral(name, crackFront, crackTip, extensionDirectionMethod,
                                                               symmetric, listOfRegions, crackFrontName, crackTipName,
@@ -158,8 +164,11 @@ class EngineeringFeature(EngineeringFeatureBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.DebondVCCT
-            - mdb.models[name].rootAssembly.engineeringFeatures.DebondVCCT
+            
+            .. code-block:: python
+            
+                mdb.models[name].parts[name].engineeringFeatures.DebondVCCT
+                mdb.models[name].rootAssembly.engineeringFeatures.DebondVCCT
         
         Parameters
         ----------
@@ -180,7 +189,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A DebondVCCT object..
+            A DebondVCCT object.
         """
         self.cracks[name] = debondVCCT = DebondVCCT(name, initiationStep, surfToSurfInteraction,
                                                     debondingForceAmplitude, printToDATFrequency)
@@ -197,8 +206,11 @@ class EngineeringFeature(EngineeringFeatureBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.DiscreteFastener
-            - mdb.models[name].rootAssembly.engineeringFeatures.DiscreteFastener
+            
+            .. code-block:: python
+            
+                mdb.models[name].parts[name].engineeringFeatures.DiscreteFastener
+                mdb.models[name].rootAssembly.engineeringFeatures.DiscreteFastener
         
         Parameters
         ----------
@@ -236,7 +248,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A DiscreteFastener object..
+            A DiscreteFastener object.
         """
         self.fasteners[name] = discreteFastener = DiscreteFastener(name, region, influenceRadius, ur1, ur2, ur3,
                                                                    coupling, weightingMethod, localCsys)
@@ -249,8 +261,11 @@ class EngineeringFeature(EngineeringFeatureBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.HeatCapacitance
-            - mdb.models[name].rootAssembly.engineeringFeatures.HeatCapacitance
+            
+            .. code-block:: python
+            
+                mdb.models[name].parts[name].engineeringFeatures.HeatCapacitance
+                mdb.models[name].rootAssembly.engineeringFeatures.HeatCapacitance
         
         Parameters
         ----------
@@ -268,7 +283,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A HeatCapacitance object..
+            A HeatCapacitance object.
         """
         self.inertias[name] = heatCapacitance = HeatCapacitance(name, region, table, temperatureDependency,
                                                                 dependencies)
@@ -281,8 +296,11 @@ class EngineeringFeature(EngineeringFeatureBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.NonstructuralMass
-            - mdb.models[name].rootAssembly.engineeringFeatures.NonstructuralMass
+            
+            .. code-block:: python
+            
+                mdb.models[name].parts[name].engineeringFeatures.NonstructuralMass
+                mdb.models[name].rootAssembly.engineeringFeatures.NonstructuralMass
         
         Parameters
         ----------
@@ -302,7 +320,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A NonstructuralMass object..
+            A NonstructuralMass object.
         """
         self.inertias[name] = nonstructuralMass = NonstructuralMass(name, region, units, magnitude, distribution)
         return nonstructuralMass
@@ -327,8 +345,11 @@ class EngineeringFeature(EngineeringFeatureBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.PointFastener
-            - mdb.models[name].rootAssembly.engineeringFeatures.PointFastener
+            
+            .. code-block:: python
+            
+                mdb.models[name].parts[name].engineeringFeatures.PointFastener
+                mdb.models[name].rootAssembly.engineeringFeatures.PointFastener
         
         Parameters
         ----------
@@ -434,7 +455,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A PointFastener object..
+            A PointFastener object.
         """
         self.fasteners[name] = pointFastener = PointFastener(name, region, physicalRadius, directionVector,
                                                              targetSurfaces, ur1, ur2, ur3, attachmentMethod,
@@ -455,8 +476,11 @@ class EngineeringFeature(EngineeringFeatureBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.PointMassInertia
-            - mdb.models[name].rootAssembly.engineeringFeatures.PointMassInertia
+            
+            .. code-block:: python
+            
+                mdb.models[name].parts[name].engineeringFeatures.PointMassInertia
+                mdb.models[name].rootAssembly.engineeringFeatures.PointMassInertia
         
         Parameters
         ----------
@@ -505,7 +529,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A PointMassInertia object..
+            A PointMassInertia object.
         """
         self.inertias[name] = pointMassInertia = PointMassInertia(name, region, mass, mass1, mass2, mass3, i11, i22,
                                                                   i33, i12, i13, i23, localCsys, alpha, composite)
@@ -519,9 +543,12 @@ class EngineeringFeature(EngineeringFeatureBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.SpringDashpotToGround
-            - mdb.models[name].rootAssembly.engineeringFeatures\
-            - .SpringDashpotToGround
+            
+            .. code-block:: python
+            
+                mdb.models[name].parts[name].engineeringFeatures.SpringDashpotToGround
+                mdb.models[name].rootAssembly.engineeringFeatures\
+                - .SpringDashpotToGround
         
         Parameters
         ----------
@@ -553,7 +580,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A SpringDashpotToGround object..
+            A SpringDashpotToGround object.
         """
         self.springDashpots[name] = springDashpotToGround = SpringDashpotToGround(name, region, dof, orientation,
                                                                                   springBehavior, dashpotBehavior,
@@ -568,9 +595,12 @@ class EngineeringFeature(EngineeringFeatureBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.TwoPointSpringDashpot
-            - mdb.models[name].rootAssembly.engineeringFeatures\
-            - .TwoPointSpringDashpot
+            
+            .. code-block:: python
+            
+                mdb.models[name].parts[name].engineeringFeatures.TwoPointSpringDashpot
+                mdb.models[name].rootAssembly.engineeringFeatures\
+                - .TwoPointSpringDashpot
         
         Parameters
         ----------
@@ -613,7 +643,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A TwoPointSpringDashpot object..
+            A TwoPointSpringDashpot object.
         """
         self.springDashpots[name] = twoPointSpringDashpot = TwoPointSpringDashpot(name, regionPairs, axis, dof1, dof2,
                                                                                   orientation, springBehavior,
@@ -633,8 +663,11 @@ class EngineeringFeature(EngineeringFeatureBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].parts[name].engineeringFeatures.XFEMCrack
-            - mdb.models[name].rootAssembly.engineeringFeatures.XFEMCrack
+            
+            .. code-block:: python
+            
+                mdb.models[name].parts[name].engineeringFeatures.XFEMCrack
+                mdb.models[name].rootAssembly.engineeringFeatures.XFEMCrack
         
         Parameters
         ----------
@@ -679,7 +712,7 @@ class EngineeringFeature(EngineeringFeatureBase):
 
         Returns
         -------
-            A XFEMCrack object..
+            A XFEMCrack object.
         """
         self.cracks[name] = xFEMCrack = XFEMCrack(name, crackDomain, allowCrackGrowth, crackLocation,
                                                   singularityCalcRadius, interactionProperty, elemId, nodeId,

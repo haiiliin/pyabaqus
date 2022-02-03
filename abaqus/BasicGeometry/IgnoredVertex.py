@@ -12,11 +12,14 @@ class IgnoredVertex:
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].ignoredVertices[i]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].ignoredVertices[i]
-        - mdb.models[name].rootAssembly.instances[name].ignoredVertices[i]
+        
+        .. code-block:: python
+            
+            import part
+            mdb.models[name].parts[name].ignoredVertices[i]
+            import assembly
+            mdb.models[name].rootAssembly.allInstances[name].ignoredVertices[i]
+            mdb.models[name].rootAssembly.instances[name].ignoredVertices[i]
 
     """
 

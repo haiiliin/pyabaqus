@@ -48,7 +48,7 @@ class Calibration:
 
         Returns
         -------
-            A Calibration object. . 
+            A Calibration object.
         """
         pass
 
@@ -73,7 +73,7 @@ class Calibration:
 
         Returns
         -------
-            A Behavior object..
+            A Behavior object.
         """
         self.behaviors = behavior = Behavior(name, typeName)
         return behavior
@@ -106,7 +106,7 @@ class Calibration:
 
         Returns
         -------
-            A DataSet object..
+            A DataSet object.
         """
         self.dataSets = dataSet = DataSet(name, data, type, form)
         return dataSet

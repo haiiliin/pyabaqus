@@ -69,7 +69,7 @@ class XYPlotBase:
 
         Returns
         -------
-            An XYPlot object. . 
+            An XYPlot object.
         """
         pass
 

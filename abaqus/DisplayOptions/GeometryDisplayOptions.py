@@ -10,10 +10,10 @@ class GeometryDisplayOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.viewports[name].assemblyDisplay.geometryOptions
-        - session.viewports[name].layers[name].assemblyDisplay.geometryOptions
-        - session.viewports[name].layers[name].partDisplay.geometryOptions
-        - session.viewports[name].partDisplay.geometryOptions
+            session.viewports[name].assemblyDisplay.geometryOptions
+            session.viewports[name].layers[name].assemblyDisplay.geometryOptions
+            session.viewports[name].layers[name].partDisplay.geometryOptions
+            session.viewports[name].partDisplay.geometryOptions
 
     """
 
@@ -55,6 +55,6 @@ class GeometryDisplayOptions:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

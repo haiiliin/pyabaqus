@@ -7,23 +7,24 @@ class CapHardening:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].capPlasticity.capHardening
-        - import odbMaterial
-        - session.odbs[name].materials[name].capPlasticity.capHardening
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].capPlasticity.capHardening
+            import odbMaterial
+            session.odbs[name].materials[name].capPlasticity.capHardening
 
-    Table Data
-    ----------
-        - Hydrostatic pressure yield stress.
-        - Absolute value of the corresponding volumetric inelastic strain.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Hydrostatic pressure yield stress.
+            - Absolute value of the corresponding volumetric inelastic strain.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CAP HARDENING
+        The corresponding analysis keywords are:
+            - CAP HARDENING
 
     """
 
@@ -33,8 +34,11 @@ class CapHardening:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].capPlasticity.CapHardening
-            - session.odbs[name].materials[name].capPlasticity.CapHardening
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].capPlasticity.CapHardening
+                session.odbs[name].materials[name].capPlasticity.CapHardening
         
         Parameters
         ----------
@@ -51,7 +55,7 @@ class CapHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -60,6 +64,6 @@ class CapHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

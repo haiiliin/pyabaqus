@@ -12,8 +12,11 @@ class StructuralDamping:
     Notes
     -----
         This object can be accessed by:
-        - import step
-        - mdb.models[name].steps[name].structuralDamping
+        
+        .. code-block:: python
+        
+           import step
+           mdb.models[name].steps[name].structuralDamping
 
     """
 

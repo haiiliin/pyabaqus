@@ -4,9 +4,9 @@ from io import BytesIO
 
 import matplotlib
 import matplotlib.pyplot as plt
-from PyQt5.QtCore import Qt, QSize, QFileInfo
+from PyQt5.QtCore import QSize, QFileInfo
 from PyQt5.QtGui import QPixmap, QImage
-from PyQt5.QtWidgets import QMessageBox, QLabel, QVBoxLayout
+from PyQt5.QtWidgets import QMessageBox, QLabel
 from matplotlib.axes import Axes
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 from matplotlib.figure import Figure

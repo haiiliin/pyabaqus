@@ -7,23 +7,24 @@ class SoretEffect:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].diffusivity.soretEffect
-        - import odbMaterial
-        - session.odbs[name].materials[name].diffusivity.soretEffect
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].diffusivity.soretEffect
+            import odbMaterial
+            session.odbs[name].materials[name].diffusivity.soretEffect
 
-    Table Data
-    ----------
-        - Soret effect factor, κs.
-        - Concentration.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Soret effect factor, κs.
+            - Concentration.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - KAPPA
+        The corresponding analysis keywords are:
+            - KAPPA
 
     """
 
@@ -33,8 +34,11 @@ class SoretEffect:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].diffusivity.SoretEffect
-            - session.odbs[name].materials[name].diffusivity.SoretEffect
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].diffusivity.SoretEffect
+                session.odbs[name].materials[name].diffusivity.SoretEffect
         
         Parameters
         ----------
@@ -51,7 +55,7 @@ class SoretEffect:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -60,6 +64,6 @@ class SoretEffect:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

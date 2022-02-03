@@ -10,23 +10,24 @@ class ContactArea:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].gasketThicknessBehavior.contactArea
-        - import odbMaterial
-        - session.odbs[name].materials[name].gasketThicknessBehavior.contactArea
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].gasketThicknessBehavior.contactArea
+            import odbMaterial
+            session.odbs[name].materials[name].gasketThicknessBehavior.contactArea
 
-    Table Data
-    ----------
-        - Contact area or width; this value must be positive.
-        - Closure; this value must be positive.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Contact area or width; this value must be positive.
+            - Closure; this value must be positive.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - GASKET CONTACT AREA
+        The corresponding analysis keywords are:
+            - GASKET CONTACT AREA
 
     """
 
@@ -36,8 +37,11 @@ class ContactArea:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].gasketThicknessBehavior.ContactArea
-            - session.odbs[name].materials[name].gasketThicknessBehavior.ContactArea
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].gasketThicknessBehavior.ContactArea
+                session.odbs[name].materials[name].gasketThicknessBehavior.ContactArea
         
         Parameters
         ----------
@@ -52,7 +56,7 @@ class ContactArea:
 
         Returns
         -------
-            A ContactArea object. . 
+            A ContactArea object.
         """
         pass
 

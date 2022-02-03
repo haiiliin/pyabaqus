@@ -8,23 +8,24 @@ class MohrCoulombHardening:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].mohrCoulombPlasticity.mohrCoulombHardening
-        - import odbMaterial
-        - session.odbs[name].materials[name].mohrCoulombPlasticity.mohrCoulombHardening
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].mohrCoulombPlasticity.mohrCoulombHardening
+            import odbMaterial
+            session.odbs[name].materials[name].mohrCoulombPlasticity.mohrCoulombHardening
 
-    Table Data
-    ----------
-        - Cohesion yield stress.
-        - The absolute value of the corresponding Plastic strain.(The first tabular value entered must always be zero.)
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Cohesion yield stress.
+            - The absolute value of the corresponding Plastic strain.(The first tabular value entered must always be zero.)
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - MOHR COULOMB HARDENING
+        The corresponding analysis keywords are:
+            - MOHR COULOMB HARDENING
 
     """
 
@@ -34,10 +35,13 @@ class MohrCoulombHardening:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].mohrCoulombPlasticity\
-            - .MohrCoulombHardening
-            - session.odbs[name].materials[name].mohrCoulombPlasticity\
-            - .MohrCoulombHardening
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].mohrCoulombPlasticity\
+                - .MohrCoulombHardening
+                session.odbs[name].materials[name].mohrCoulombPlasticity\
+                - .MohrCoulombHardening
         
         Parameters
         ----------
@@ -54,7 +58,7 @@ class MohrCoulombHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -63,6 +67,6 @@ class MohrCoulombHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

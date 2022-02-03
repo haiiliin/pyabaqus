@@ -1,9 +1,4 @@
 from abaqusConstants import *
-from .ConnectorPotentialArray import ConnectorPotentialArray
-from .DerivedComponent import DerivedComponent
-from .TangentialBehavior import TangentialBehavior
-from ..Section.SectionBase import SectionBase
-
 from .ConnectorDamage import ConnectorDamage
 from .ConnectorDamping import ConnectorDamping
 from .ConnectorElasticity import ConnectorElasticity
@@ -12,7 +7,11 @@ from .ConnectorFriction import ConnectorFriction
 from .ConnectorLock import ConnectorLock
 from .ConnectorPlasticity import ConnectorPlasticity
 from .ConnectorPotential import ConnectorPotential
+from .ConnectorPotentialArray import ConnectorPotentialArray
 from .ConnectorStop import ConnectorStop
+from .DerivedComponent import DerivedComponent
+from .TangentialBehavior import TangentialBehavior
+from ..Section.SectionBase import SectionBase
 
 
 class ConnectorSection(SectionBase):

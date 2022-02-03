@@ -17,9 +17,8 @@ class ButterworthFilter(Filter):
         import odbFilter
         session.odbs[name].filters[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - FILTER
+        The corresponding analysis keywords are:
+            - FILTER
 
     """
 
@@ -64,7 +63,12 @@ class ButterworthFilter(Filter):
 
         Returns
         -------
-            A ButterworthFilter object.  and RangeError. 
+            A ButterworthFilter object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -95,6 +99,6 @@ class ButterworthFilter(Filter):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

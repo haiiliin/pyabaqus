@@ -22,7 +22,10 @@ class Keyword:
     Notes
     -----
         This object can be accessed by:
-        - import inpParser
+        
+        .. code-block:: python
+            
+            import inpParser
 
     """
 

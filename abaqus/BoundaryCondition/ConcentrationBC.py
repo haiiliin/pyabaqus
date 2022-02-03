@@ -107,7 +107,7 @@ class ConcentrationBC(BoundaryCondition):
 
         Returns
         -------
-            A ConcentrationBC object. . 
+            A ConcentrationBC object.
         """
         super().__init__()
         pass

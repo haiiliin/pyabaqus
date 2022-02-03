@@ -5,6 +5,20 @@ from ..Region.Region import Region
 
 
 class TableCollectionAssembly(AssemblyBase):
+    """An Assembly object is a container for instances of parts. The Assembly object has no
+    constructor command. Abaqus creates the *rootAssembly* member when a Model object is 
+    created. 
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import assembly
+        mdb.models[name].rootAssembly
+
+    """
 
     elementProgressiveActivations: dict[str, ElementProgressiveActivation] = dict[str, ElementProgressiveActivation]()
 
@@ -16,7 +30,10 @@ class TableCollectionAssembly(AssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].rootAssembly.ElementProgressiveActivation
+            
+            .. code-block:: python
+            
+                mdb.models[name].rootAssembly.ElementProgressiveActivation
         
         Parameters
         ----------

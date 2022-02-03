@@ -12,8 +12,11 @@ class CompositeDamping:
     Notes
     -----
         This object can be accessed by:
-        - import step
-        - mdb.models[name].steps[name].compositeDamping
+        
+        .. code-block:: python
+        
+           import step
+           mdb.models[name].steps[name].compositeDamping
 
     """
 

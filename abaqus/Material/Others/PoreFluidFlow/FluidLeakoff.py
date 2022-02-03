@@ -8,24 +8,25 @@ class FluidLeakoff:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].fluidLeakoff
-        - import odbMaterial
-        - session.odbs[name].materials[name].fluidLeakoff
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].fluidLeakoff
+            import odbMaterial
+            session.odbs[name].materials[name].fluidLeakoff
 
-    Table Data
-    ----------
+        The table data for this object are:
         The table data specify the following:
-        - Fluid leak-off coefficient at top element surface.
-        - Fluid leak-off coefficient at bottom element surface.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Fluid leak-off coefficient at top element surface.
+            - Fluid leak-off coefficient at bottom element surface.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - FLUID LEAKOFF
+        The corresponding analysis keywords are:
+            - FLUID LEAKOFF
 
     """
 
@@ -36,8 +37,11 @@ class FluidLeakoff:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].FluidLeakoff
-            - session.odbs[name].materials[name].FluidLeakoff
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].FluidLeakoff
+                session.odbs[name].materials[name].FluidLeakoff
         
         Parameters
         ----------
@@ -54,7 +58,7 @@ class FluidLeakoff:
 
         Returns
         -------
-            A FluidLeakoff object. . 
+            A FluidLeakoff object.
         """
         pass
 

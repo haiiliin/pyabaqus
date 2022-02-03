@@ -17,9 +17,8 @@ class DecayAmplitude(Amplitude):
         import odbAmplitude
         session.odbs[name].amplitudes[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - AMPLITUDE
+        The corresponding analysis keywords are:
+            - AMPLITUDE
 
     """
 
@@ -54,7 +53,12 @@ class DecayAmplitude(Amplitude):
 
         Returns
         -------
-            A DecayAmplitude object.  and RangeError. 
+            A DecayAmplitude object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -70,6 +74,6 @@ class DecayAmplitude(Amplitude):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

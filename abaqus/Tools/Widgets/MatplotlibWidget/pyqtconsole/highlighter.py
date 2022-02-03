@@ -1,7 +1,7 @@
+import keyword
+
 from qtpy.QtCore import QRegExp
 from qtpy.QtGui import (QColor, QTextCharFormat, QFont, QSyntaxHighlighter)
-
-import keyword
 
 
 def format(color, style=''):

@@ -49,8 +49,8 @@ class VertexArray:
 
         Returns
         -------
-            A VertexArray object. . 
-            !img 
+            A VertexArray object.
+            
         """
         pass
 
@@ -82,7 +82,7 @@ class VertexArray:
         Returns
         -------
             A ConstrainedSketchVertex object or a sequence of ConstrainedSketchVertex objects.. 
-            !img 
+            
         """
         pass
 
@@ -100,7 +100,7 @@ class VertexArray:
         Returns
         -------
             A ConstrainedSketchVertex object or a sequence of ConstrainedSketchVertex objects.. 
-            !img 
+            
         """
         pass
 
@@ -109,8 +109,8 @@ class VertexArray:
 
         Returns
         -------
-            A String specifying the object or objects. . 
-            !img 
+            A String specifying the object or objects.
+            
         """
         pass
 
@@ -137,7 +137,7 @@ class VertexArray:
         Returns
         -------
             A VertexArray object, which is a sequence of ConstrainedSketchVertex objects.. 
-            !img 
+            
         """
         pass
 
@@ -159,7 +159,7 @@ class VertexArray:
         Returns
         -------
             A VertexArray object, which is a sequence of ConstrainedSketchVertex objects.. 
-            !img 
+            
         """
         pass
 
@@ -177,7 +177,7 @@ class VertexArray:
         Returns
         -------
             A VertexArray object, which is a sequence of ConstrainedSketchVertex objects.. 
-            !img 
+            
         """
         pass
 
@@ -191,8 +191,8 @@ class VertexArray:
             *low*: a tuple of three floats representing the minimum *X*-, *Y*-, and *Z*-boundary 
             values of the bounding box. 
             *high*: a tuple of three floats representing the maximum *X*-, *Y*-, and *Z*-boundary 
-            values of the bounding box. . 
-            !img 
+            values of the bounding box.
+            
         """
         pass
 
@@ -224,8 +224,8 @@ class VertexArray:
 
         Raises
         ------
-            - An exception occurs if the resulting sequence is empty. 
+                - An exception occurs if the resulting sequence is empty. 
               Error: The mask results in an empty sequence 
-            !img 
+            
         """
         pass

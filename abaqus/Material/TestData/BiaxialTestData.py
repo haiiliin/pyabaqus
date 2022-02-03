@@ -7,18 +7,20 @@ class BiaxialTestData:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].hyperelastic.biaxialTestData
-        - mdb.models[name].materials[name].hyperfoam.biaxialTestData
-        - mdb.models[name].materials[name].mullinsEffect.biaxialTests[i]
-        - import odbMaterial
-        - session.odbs[name].materials[name].hyperelastic.biaxialTestData
-        - session.odbs[name].materials[name].hyperfoam.biaxialTestData
-        - session.odbs[name].materials[name].mullinsEffect.biaxialTests[i]
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].hyperelastic.biaxialTestData
+            mdb.models[name].materials[name].hyperfoam.biaxialTestData
+            mdb.models[name].materials[name].mullinsEffect.biaxialTests[i]
+            import odbMaterial
+            session.odbs[name].materials[name].hyperelastic.biaxialTestData
+            session.odbs[name].materials[name].hyperfoam.biaxialTestData
+            session.odbs[name].materials[name].mullinsEffect.biaxialTests[i]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - BIAXIAL TEST DATA
+        The corresponding analysis keywords are:
+            - BIAXIAL TEST DATA
 
     """
 
@@ -29,19 +31,22 @@ class BiaxialTestData:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].hyperelastic.BiaxialTestData
-            - mdb.models[name].materials[name].hyperfoam.BiaxialTestData
-            - mdb.models[name].materials[name].mullinsEffect.BiaxialTestData
-            - session.odbs[name].materials[name].hyperelastic.BiaxialTestData
-            - session.odbs[name].materials[name].hyperfoam.BiaxialTestData
-            - session.odbs[name].materials[name].mullinsEffect.BiaxialTestData
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].hyperelastic.BiaxialTestData
+                mdb.models[name].materials[name].hyperfoam.BiaxialTestData
+                mdb.models[name].materials[name].mullinsEffect.BiaxialTestData
+                session.odbs[name].materials[name].hyperelastic.BiaxialTestData
+                session.odbs[name].materials[name].hyperfoam.BiaxialTestData
+                session.odbs[name].materials[name].mullinsEffect.BiaxialTestData
         
         Parameters
         ----------
         table
             A sequence of sequences of Floats specifying the following: 
-            - Nominal stress, TB. 
-            - Nominal strain, ϵB. 
+                - Nominal stress, TB. 
+                - Nominal strain, ϵB. 
         smoothing
             None or an Int specifying the value for smoothing. If *smoothing*=None, no smoothing is 
             employed. The default value is None. 
@@ -55,7 +60,7 @@ class BiaxialTestData:
 
         Returns
         -------
-            A BiaxialTestData object. . 
+            A BiaxialTestData object.
         """
         pass
 

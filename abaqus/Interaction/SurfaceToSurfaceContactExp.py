@@ -99,7 +99,7 @@ class SurfaceToSurfaceContactExp(Interaction):
 
         Returns
         -------
-            A SurfaceToSurfaceContactExp object. . 
+            A SurfaceToSurfaceContactExp object.
         """
         super().__init__()
         pass

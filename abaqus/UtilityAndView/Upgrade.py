@@ -5,9 +5,13 @@ later release. The upgradeScript module allows you to upgrade over several relea
 one time. It also allows you to upgrade only kernel commands, only GUI commands, or 
 both. 
 
-Access
-------
-    - import upgradeScript
+Notes
+-----
+    This object can be accessed by:
+    
+    .. code-block:: python
+    
+        import upgradeScript
 
 """
 
@@ -23,9 +27,13 @@ def upgradeScript(fileNames: str, searchSubdirectories: Boolean = True, backup: 
     upgrade scripts. For more information, see the summary of changed commands at the end of
     this guide.
 
-    Path
-    ----
-        - upgradeScript.upgradeScript
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            upgradeScript.upgradeScript
 
     Parameters
     ----------

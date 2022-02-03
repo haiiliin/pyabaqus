@@ -41,9 +41,9 @@ class PartDisplayOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.viewports[name].layers[name].partDisplay
-        - import part
-        - session.viewports[name].partDisplay
+            session.viewports[name].layers[name].partDisplay
+            import part
+            session.viewports[name].partDisplay
 
     """
 
@@ -104,6 +104,6 @@ class PartDisplayOptions:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

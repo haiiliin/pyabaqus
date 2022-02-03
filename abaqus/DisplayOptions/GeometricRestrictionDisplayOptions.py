@@ -11,8 +11,8 @@ class GeometricRestrictionDisplayOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.viewports[name].assemblyDisplay.geometricRestrictionOptions
-        - session.viewports[name].layers[name].assemblyDisplay.geometricRestrictionOptions
+            session.viewports[name].assemblyDisplay.geometricRestrictionOptions
+            session.viewports[name].layers[name].assemblyDisplay.geometricRestrictionOptions
 
     """
 
@@ -92,6 +92,6 @@ class GeometricRestrictionDisplayOptions:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

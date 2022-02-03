@@ -7,36 +7,37 @@ class UniaxialTestData:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].hyperelastic.uniaxialTestData
-        - mdb.models[name].materials[name].hyperfoam.uniaxialTestData
-        - mdb.models[name].materials[name].lowDensityFoam.uniaxialCompressionTestData
-        - mdb.models[name].materials[name].lowDensityFoam.uniaxialTensionTestData
-        - mdb.models[name].materials[name].mullinsEffect.uniaxialTests[i]
-        - import odbMaterial
-        - session.odbs[name].materials[name].hyperelastic.uniaxialTestData
-        - session.odbs[name].materials[name].hyperfoam.uniaxialTestData
-        - session.odbs[name].materials[name].lowDensityFoam.uniaxialCompressionTestData
-        - session.odbs[name].materials[name].lowDensityFoam.uniaxialTensionTestData
-        - session.odbs[name].materials[name].mullinsEffect.uniaxialTests[i]
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].hyperelastic.uniaxialTestData
+            mdb.models[name].materials[name].hyperfoam.uniaxialTestData
+            mdb.models[name].materials[name].lowDensityFoam.uniaxialCompressionTestData
+            mdb.models[name].materials[name].lowDensityFoam.uniaxialTensionTestData
+            mdb.models[name].materials[name].mullinsEffect.uniaxialTests[i]
+            import odbMaterial
+            session.odbs[name].materials[name].hyperelastic.uniaxialTestData
+            session.odbs[name].materials[name].hyperfoam.uniaxialTestData
+            session.odbs[name].materials[name].lowDensityFoam.uniaxialCompressionTestData
+            session.odbs[name].materials[name].lowDensityFoam.uniaxialTensionTestData
+            session.odbs[name].materials[name].mullinsEffect.uniaxialTests[i]
 
-    Table Data
-    ----------
+        The table data for this object are:
         For a hyperelastic material model, the table data specify the following:
-        - Nominal stress, TU.
-        - Nominal strain, ϵU.
+            - Nominal stress, TU.
+            - Nominal strain, ϵU.
         For a hyperfoam material model, the table data specify the following:
-        - Nominal stress, TL.
-        - Nominal strain, ϵU.
-        - Nominal lateral strain, ϵ2=ϵ3. The default value is 0.
+            - Nominal stress, TL.
+            - Nominal strain, ϵU.
+            - Nominal lateral strain, ϵ2=ϵ3. The default value is 0.
         For a low-density foam material model, the table data specify the following:
-        - Nominal stress, TU.
-        - Nominal strain, ϵU.
-        - Nominal strain rate, ϵU˙.
+            - Nominal stress, TU.
+            - Nominal strain, ϵU.
+            - Nominal strain rate, ϵU˙.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - UNIAXIAL TEST DATA
+        The corresponding analysis keywords are:
+            - UNIAXIAL TEST DATA
 
     """
 
@@ -47,14 +48,17 @@ class UniaxialTestData:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].hyperelastic.UniaxialTestData
-            - mdb.models[name].materials[name].hyperfoam.UniaxialTestData
-            - mdb.models[name].materials[name].lowDensityFoam.UniaxialTestData
-            - mdb.models[name].materials[name].mullinsEffect.UniaxialTestData
-            - session.odbs[name].materials[name].hyperelastic.UniaxialTestData
-            - session.odbs[name].materials[name].hyperfoam.UniaxialTestData
-            - session.odbs[name].materials[name].lowDensityFoam.UniaxialTestData
-            - session.odbs[name].materials[name].mullinsEffect.UniaxialTestData
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].hyperelastic.UniaxialTestData
+                mdb.models[name].materials[name].hyperfoam.UniaxialTestData
+                mdb.models[name].materials[name].lowDensityFoam.UniaxialTestData
+                mdb.models[name].materials[name].mullinsEffect.UniaxialTestData
+                session.odbs[name].materials[name].hyperelastic.UniaxialTestData
+                session.odbs[name].materials[name].hyperfoam.UniaxialTestData
+                session.odbs[name].materials[name].lowDensityFoam.UniaxialTestData
+                session.odbs[name].materials[name].mullinsEffect.UniaxialTestData
         
         Parameters
         ----------
@@ -73,7 +77,7 @@ class UniaxialTestData:
 
         Returns
         -------
-            A UniaxialTestData object. . 
+            A UniaxialTestData object.
         """
         pass
 

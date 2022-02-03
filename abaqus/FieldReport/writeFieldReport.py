@@ -4,9 +4,6 @@ from ..Odb.Odb import Odb
 
 """This command writes a field output report to a file. 
 
-Access
-------
-
 """
 
 
@@ -16,9 +13,13 @@ def writeFieldRepor(filename: str, append: Boolean, sortItem: str, odb: Odb, ste
                     complexAngle: float = None, stepFrame: SymbolicConstant = SPECIFY):
     """This method writes a FieldOutput object to a user-defined ASCII file.
 
-    Path
-    ----
-        - session.writeFieldReport
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            session.writeFieldReport
 
     Parameters
     ----------
@@ -47,18 +48,18 @@ def writeFieldRepor(filename: str, append: Boolean, sortItem: str, odb: Odb, ste
         A sequence of variable description sequences specifying one or more field output 
         variables for which to obtain data. Each variable description sequence contains the 
         following elements: 
-        - *element0*: A String specifying the name of the variable. 
-        - *element1*: A SymbolicConstant specifying the output position at which to report data. 
+            - *element0*: A String specifying the name of the variable. 
+            - *element1*: A SymbolicConstant specifying the output position at which to report data. 
         Possible values are ELEMENT_CENTROID, ELEMENT_FACE, ELEMENT_NODAL, GENERAL_PARTICLE, 
         INTEGRATION_POINT, NODAL, WHOLE_ELEMENT, WHOLE_MODEL, WHOLE_PART_INSTANCE, and 
         WHOLE_REGION. 
-        - *element2*: A Sequence of tuples each consisting of a SymbolicConstant specifying the 
+            - *element2*: A Sequence of tuples each consisting of a SymbolicConstant specifying the 
         refinement (COMPONENT or INVARIANT), followed by a String specifying the name of a 
         component or invariant for which to obtain values. 
         If this element is omitted, data are written for all components and invariants (if 
         applicable). This element is required if *element3* (the following element in the tuple) 
         is included. 
-        - *element3 (if applicable)*: A Dictionary with a String key and a String value 
+            - *element3 (if applicable)*: A Dictionary with a String key and a String value 
         specifying a single section point at which to report data. The key specifies a region in 
         the model; the corresponding value specifies a section point within that region. For 
         example: 
@@ -79,10 +80,6 @@ def writeFieldRepor(filename: str, append: Boolean, sortItem: str, odb: Odb, ste
         A SymbolicConstant indicating whether to obtain the values from the specified frame or 
         from all active frames. Possible values are SPECIFY and ALL. The default value is 
         SPECIFY. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass

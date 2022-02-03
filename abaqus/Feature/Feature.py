@@ -1167,7 +1167,12 @@ class Feature:
 
         Raises
         ------
-            AbaqusException and RangeError. 
+            AbaqusException
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         pass
 
@@ -1270,7 +1275,7 @@ class Feature:
 
         Raises
         ------
-            - If the sketchUpEdge is parallel to the sketchPlane: 
+                - If the sketchUpEdge is parallel to the sketchPlane: 
               Up direction is parallel to plane normal 
         """
         pass
@@ -2176,7 +2181,7 @@ class Feature:
 
         Returns
         -------
-            A Boolean value of True if the feature is suppressed and False if it is not suppressed. . 
+            A Boolean value of True if the feature is suppressed and False if it is not suppressed.
         """
         pass
 

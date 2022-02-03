@@ -1,11 +1,11 @@
 import typing
 
-from abaqusConstants import *
-from abaqus.Material.TestData.BiaxialTestData import BiaxialTestData
 from abaqus.Material.Elastic.HyperElastic.ViscoElastic.Hysteresis import Hysteresis
+from abaqus.Material.TestData.BiaxialTestData import BiaxialTestData
 from abaqus.Material.TestData.PlanarTestData import PlanarTestData
 from abaqus.Material.TestData.UniaxialTestData import UniaxialTestData
 from abaqus.Material.TestData.VolumetricTestData import VolumetricTestData
+from abaqusConstants import *
 
 
 class Hyperelastic:
@@ -15,59 +15,60 @@ class Hyperelastic:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].hyperelastic
-        - import odbMaterial
-        - session.odbs[name].materials[name].hyperelastic
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].hyperelastic
+            import odbMaterial
+            session.odbs[name].materials[name].hyperelastic
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *type*=ARRUDA_BOYCE, the table data specify the following:
-        - μ.
-        - λm.
-        - D.
-        - Temperature, if the data depend on temperature.
+            - μ.
+            - λm.
+            - D.
+            - Temperature, if the data depend on temperature.
         If *type*=MOONEY_RIVLIN, the table data specify the following:
-        - C10.
-        - C01.
-        - D1.
-        - Temperature, if the data depend on temperature.
+            - C10.
+            - C01.
+            - D1.
+            - Temperature, if the data depend on temperature.
         If *type*=NEO_HOOKE, the table data specify the following:
-        - C10.
-        - D1.
-        - Temperature, if the data depend on temperature.
+            - C10.
+            - D1.
+            - Temperature, if the data depend on temperature.
         If *type*=OGDEN, the table data specify the following for values of nn:
-        - μi and αi for ii from 1 to n.
-        - nn coefficients Di.
-        - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an Abaqus/Explicit analysis.
+            - μi and αi for ii from 1 to n.
+            - nn coefficients Di.
+            - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an Abaqus/Explicit analysis.
         If *type*=POLYNOMIAL, the table data specify the following for values of nn:
-        - CijCi⁢j for each value of (i+j) from 11 to n with ii decreasing from (i+j) to zero and j increasing from zero to (i+j).
-        - n coefficients Di.
-        - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 3 ≤n≤ 6 in an Abaqus/Explicit analysis.
+            - CijCi⁢j for each value of (i+j) from 11 to n with ii decreasing from (i+j) to zero and j increasing from zero to (i+j).
+            - n coefficients Di.
+            - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 3 ≤n≤ 6 in an Abaqus/Explicit analysis.
         If *type*=REDUCED_POLYNOMIAL, the table data specify the following for values of nn:
-        - Ci⁢0 for ii from 1 to n.
-        - n coefficients Di.
-        - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an Abaqus/Explicit analysis.
+            - Ci⁢0 for ii from 1 to n.
+            - n coefficients Di.
+            - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an Abaqus/Explicit analysis.
         If *type*=VAN_DER_WAALS, the table data specify the following:
-        - μ.
-        - λm.
-        - a.
-        - β.
-        - D.
-        - Temperature, if the data depend on temperature.
+            - μ.
+            - λm.
+            - a.
+            - β.
+            - D.
+            - Temperature, if the data depend on temperature.
         If *type*=YEOH, the table data specify the following:
-        - C10.
-        - C20.
-        - C30.
-        - D1.
-        - D2.
-        - D3.
-        - Temperature, if the data depend on temperature. Temperature dependence is not allowed in an Abaqus/Explicit analysis.
+            - C10.
+            - C20.
+            - C30.
+            - D1.
+            - D2.
+            - D3.
+            - Temperature, if the data depend on temperature. Temperature dependence is not allowed in an Abaqus/Explicit analysis.
         The None object is the default value if *testData*=ON.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - HYPERELASTIC
+        The corresponding analysis keywords are:
+            - HYPERELASTIC
 
     """
 
@@ -101,8 +102,11 @@ class Hyperelastic:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Hyperelastic
-            - session.odbs[name].materials[name].Hyperelastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Hyperelastic
+                session.odbs[name].materials[name].Hyperelastic
         
         Parameters
         ----------
@@ -113,17 +117,17 @@ class Hyperelastic:
             A SymbolicConstant specifying the type of strain energy potential. Possible values 
             are:
             
-            - ARRUDA_BOYCE
-            - MARLOW
-            - MOONEY_RIVLIN
-            - NEO_HOOKE
-            - OGDEN
-            - POLYNOMIAL
-            - REDUCED_POLYNOMIAL
-            - USER
-            - VAN_DER_WAALS
-            - YEOH
-            - UNKNOWN
+                - ARRUDA_BOYCE
+                - MARLOW
+                - MOONEY_RIVLIN
+                - NEO_HOOKE
+                - OGDEN
+                - POLYNOMIAL
+                - REDUCED_POLYNOMIAL
+                - USER
+                - VAN_DER_WAALS
+                - YEOH
+                - UNKNOWN
             
             The default value is UNKNOWN. 
         moduliTimeScale
@@ -181,7 +185,12 @@ class Hyperelastic:
 
         Returns
         -------
-            A Hyperelastic object.  and RangeError. 
+            A Hyperelastic object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         pass
 
@@ -190,6 +199,6 @@ class Hyperelastic:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

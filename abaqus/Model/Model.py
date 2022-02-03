@@ -7,7 +7,7 @@ from ..Calibration.CalibrationModel import CalibrationModel
 from ..Constraint.ConstraintModel import ConstraintModel
 from ..Filter.FilterModel import FilterModel
 from ..Interaction.InteractionModel import InteractionModel
-from ..LoadAndLoadCase.LoadModel import LoadModel
+from ..Load.LoadModel import LoadModel
 from ..Material.MaterialModel import MaterialModel
 from ..Optimization.OptimizationTaskModel import OptimizationTaskModel
 from ..Part.PartModel import PartModel
@@ -19,7 +19,7 @@ from ..StepOutput.OutputModel import OutputModel
 from ..TableCollection.TableCollectionModel import TableCollectionModel
 
 
-class Model(AdaptivityModel, AssemblyModel, AmplitudeModel, BoundaryConditionModel, CalibrationModel, ConstraintModel,
+class Model(AdaptivityModel, AmplitudeModel, AssemblyModel, BoundaryConditionModel, CalibrationModel, ConstraintModel,
             FilterModel, InteractionModel, LoadModel, MaterialModel, OptimizationTaskModel, PartModel,
             PredefinedFieldModel, BeamSectionProfileModel, OutputModel, SectionModel, SketchModel, StepModel,
             TableCollectionModel):
@@ -105,7 +105,7 @@ class Model(AdaptivityModel, AssemblyModel, AmplitudeModel, BoundaryConditionMod
         A tuple of tuples of Strings specifying the linked child Part name in the current model
         to the corresponding parent Part name in a different model.
     loads: dict[str, Load]
-        A repository of :py:class:`~abaqus.LoadAndLoadCase.Load.Load` objects.
+        A repository of :py:class:`~abaqus.Load.Load.Load` objects.
     materials: dict[str, Material]
         A repository of :py:class:`~abaqus.Material.Material.Material` objects.
     calibrations: dict[str, Calibration]
@@ -153,9 +153,8 @@ class Model(AdaptivityModel, AssemblyModel, AmplitudeModel, BoundaryConditionMod
 
         mdb.models[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - PHYSICAL CONSTANTS
+        The corresponding analysis keywords are:
+            - PHYSICAL CONSTANTS
 
     """
     pass

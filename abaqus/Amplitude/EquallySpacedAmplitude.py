@@ -26,9 +26,8 @@ class EquallySpacedAmplitude(Amplitude):
         import odbAmplitude
         session.odbs[name].amplitudes[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - AMPLITUDE
+        The corresponding analysis keywords are:
+            - AMPLITUDE
 
     """
 
@@ -72,7 +71,12 @@ class EquallySpacedAmplitude(Amplitude):
 
         Returns
         -------
-            An EquallySpacedAmplitude object.  and RangeError. 
+            An EquallySpacedAmplitude object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -97,6 +101,6 @@ class EquallySpacedAmplitude(Amplitude):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

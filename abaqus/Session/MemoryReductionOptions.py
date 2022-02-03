@@ -9,7 +9,7 @@ class MemoryReductionOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.memoryReductionOptions
+            session.memoryReductionOptions
 
     """
 

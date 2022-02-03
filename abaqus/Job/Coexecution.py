@@ -61,13 +61,15 @@ class Coexecution:
     Notes
     -----
         This object can be accessed by:
-        - import job
-        - mdb.coexecutions[name]
+        
+        .. code-block:: python
+            
+            import job
+            mdb.coexecutions[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - HEADING
-        - PREPRINT
+        The corresponding analysis keywords are:
+            - HEADING
+            - PREPRINT
 
     """
 

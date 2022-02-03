@@ -6,19 +6,20 @@ class SaturationDependence:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].permeability.saturationDependence
-        - import odbMaterial
-        - session.odbs[name].materials[name].permeability.saturationDependence
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].permeability.saturationDependence
+            import odbMaterial
+            session.odbs[name].materials[name].permeability.saturationDependence
 
-    Table Data
-    ----------
-        - ks. (Dimensionless.)
-        - Saturation, s. (Dimensionless.)
+        The table data for this object are:
+            - ks. (Dimensionless.)
+            - Saturation, s. (Dimensionless.)
 
-    Corresponding analysis keywords
-    -------------------------------
-        - PERMEABILITY
+        The corresponding analysis keywords are:
+            - PERMEABILITY
 
     """
 
@@ -28,8 +29,11 @@ class SaturationDependence:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].permeability.SaturationDependence
-            - session.odbs[name].materials[name].permeability.SaturationDependence
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].permeability.SaturationDependence
+                session.odbs[name].materials[name].permeability.SaturationDependence
         
         Parameters
         ----------
@@ -42,7 +46,7 @@ class SaturationDependence:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -51,6 +55,6 @@ class SaturationDependence:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

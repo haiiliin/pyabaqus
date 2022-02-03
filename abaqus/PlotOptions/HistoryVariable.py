@@ -20,8 +20,11 @@ class HistoryVariable:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.odbData[name].historyVariables[i]
+        
+        .. code-block:: python
+            
+            import visualization
+            session.odbData[name].historyVariables[i]
 
     """
 

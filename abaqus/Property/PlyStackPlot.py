@@ -10,8 +10,11 @@ class PlyStackPlot:
     Notes
     -----
         This object can be accessed by:
-        - import section
-        - import visualization
+        
+        .. code-block:: python
+            
+            import section
+            import visualization
 
     """
 
@@ -20,9 +23,13 @@ def MdbPlyStackPlot(part: Part, region: Region):
     """This method creates a PlyStackPlot object from a region of a part that contains a
     composite shell layup.
 
-    Path
-    ----
-        - section.MdbPlyStackPlot
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            section.MdbPlyStackPlot
 
     Parameters
     ----------
@@ -46,9 +53,13 @@ def OdbPlyStackPlot(odb: Odb, sectionName: str, offset: float = 0):
     """This method creates a PlyStackPlot object from a composite shell section of an Odb
     object.
 
-    Path
-    ----
-        - visualization.OdbPlyStackPlot
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            visualization.OdbPlyStackPlot
 
     Parameters
     ----------

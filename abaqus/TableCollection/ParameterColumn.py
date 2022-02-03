@@ -14,10 +14,9 @@ class ParameterColumn:
 
         mdb.models[name].tableCollections[name].parameterTables[name].columns[i]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - *PARAMETER TABLE TYPE
-        - *PARAMETER TABLE
+        The corresponding analysis keywords are:
+            - *PARAMETER TABLE TYPE
+            - *PARAMETER TABLE
 
     """
 

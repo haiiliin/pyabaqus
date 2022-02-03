@@ -16,9 +16,8 @@ class ExpContactControl(ContactControl):
         import interaction
         mdb.models[name].contactControls[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONTACT CONTROLS
+        The corresponding analysis keywords are:
+            - CONTACT CONTROLS
 
     """
 
@@ -67,7 +66,7 @@ class ExpContactControl(ContactControl):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         super().__init__()
         pass
@@ -103,6 +102,6 @@ class ExpContactControl(ContactControl):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

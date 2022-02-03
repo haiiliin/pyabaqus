@@ -17,9 +17,8 @@ class ModelChange(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - MODEL CHANGE
+        The corresponding analysis keywords are:
+            - MODEL CHANGE
 
     """
 
@@ -63,7 +62,7 @@ class ModelChange(Interaction):
 
         Returns
         -------
-            A ModelChange object. . 
+            A ModelChange object.
         """
         super().__init__()
         pass

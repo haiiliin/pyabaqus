@@ -18,8 +18,11 @@ class AnimationController:
     Notes
     -----
         This object can be accessed by:
-        - import animation
-        - session.viewports[name].animationController
+        
+        .. code-block:: python
+            
+            import animation
+            session.viewports[name].animationController
 
     """
 
@@ -42,7 +45,7 @@ class AnimationController:
 
         Raises
         ------
-            - If *animationType*=NONE: 
+                - If *animationType*=NONE: 
               AnimationError: animationType not set 
         """
         pass
@@ -98,6 +101,6 @@ class AnimationController:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

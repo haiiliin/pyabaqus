@@ -16,9 +16,8 @@ class EulerianSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - EULERIAN SECTION
+        The corresponding analysis keywords are:
+            - EULERIAN SECTION
 
     """
 
@@ -44,7 +43,7 @@ class EulerianSection(Section):
 
         Returns
         -------
-            An EulerianSection object. . 
+            An EulerianSection object.
         """
         super().__init__()
         pass

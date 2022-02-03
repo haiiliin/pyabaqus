@@ -6,21 +6,22 @@ class DetonationPoint:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].eos.detonationPoint
-        - import odbMaterial
-        - session.odbs[name].materials[name].eos.detonationPoint
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].eos.detonationPoint
+            import odbMaterial
+            session.odbs[name].materials[name].eos.detonationPoint
 
-    Table Data
-    ----------
-        - X value for coordinate of detonation point.
-        - Y value for coordinate of detonation point.
-        - Z value for coordinate of detonation point.
-        - Detonation delay time.
+        The table data for this object are:
+            - X value for coordinate of detonation point.
+            - Y value for coordinate of detonation point.
+            - Z value for coordinate of detonation point.
+            - Detonation delay time.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - DETONATION POINT
+        The corresponding analysis keywords are:
+            - DETONATION POINT
 
     """
 
@@ -30,8 +31,11 @@ class DetonationPoint:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].eos.DetonationPoint
-            - session.odbs[name].materials[name].eos.DetonationPoint
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].eos.DetonationPoint
+                session.odbs[name].materials[name].eos.DetonationPoint
         
         Parameters
         ----------
@@ -40,7 +44,7 @@ class DetonationPoint:
 
         Returns
         -------
-            A DetonationPoint object. . 
+            A DetonationPoint object.
         """
         pass
 

@@ -12,9 +12,12 @@ class TextReprOptions:
     Notes
     -----
         This object can be accessed by:
-        - import textRepr
-        - textReprOptions
-        - session.textReprOptions
+        
+        .. code-block:: python
+            
+            import textRepr
+            - textReprOptions
+            session.textReprOptions
 
     """
 

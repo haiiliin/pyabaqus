@@ -9,8 +9,11 @@ class ConstrainedSketcherOptions:
     Notes
     -----
         This object can be accessed by:
-        - import sketch
-        - session.sketcherOptions
+        
+        .. code-block:: python
+            
+            import sketch
+            session.sketcherOptions
 
     """
 
@@ -63,7 +66,7 @@ class ConstrainedSketcherOptions:
 
         Raises
         ------
-            RangeError. 
-            !img 
+        RangeError
+            
         """
         pass

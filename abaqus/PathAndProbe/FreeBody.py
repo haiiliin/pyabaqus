@@ -48,7 +48,7 @@ class FreeBody:
 
         Returns
         -------
-            A FreeBody object. . 
+            A FreeBody object.
         """
         pass
 
@@ -84,7 +84,7 @@ class FreeBody:
 
         Returns
         -------
-            A FreeBody object. . 
+            A FreeBody object.
         """
         pass
 
@@ -122,6 +122,6 @@ class FreeBody:
 
         Returns
         -------
-            A FreeBody object. . 
+            A FreeBody object.
         """
         pass

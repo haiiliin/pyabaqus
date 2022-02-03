@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
-import threading
 import ctypes
+import threading
 from abc import abstractmethod
 
 from qtpy.QtCore import Qt, QThread, QEvent, Slot
-from qtpy.QtWidgets import QPlainTextEdit, QApplication, QHBoxLayout, QFrame
 from qtpy.QtGui import QFontMetrics, QTextCursor, QClipboard
+from qtpy.QtWidgets import QPlainTextEdit, QApplication, QHBoxLayout, QFrame
 
-from .interpreter import PythonInterpreter
-from .stream import Stream
-from .highlighter import PythonHighlighter, PromptHighlighter
-from .commandhistory import CommandHistory
 from .autocomplete import AutoComplete, COMPLETE_MODE
+from .commandhistory import CommandHistory
+from .highlighter import PythonHighlighter, PromptHighlighter
+from .interpreter import PythonInterpreter
 from .prompt import PromptArea
+from .stream import Stream
 
 try:
     import jedi

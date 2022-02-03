@@ -16,9 +16,8 @@ class ExpInitialization(ContactInitialization):
         import interaction
         mdb.models[name].contactInitializations[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONTACT INITIALIZATION DATA
+        The corresponding analysis keywords are:
+            - CONTACT INITIALIZATION DATA
 
     """
 
@@ -80,7 +79,7 @@ class ExpInitialization(ContactInitialization):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         super().__init__()
         pass
@@ -128,6 +127,6 @@ class ExpInitialization(ContactInitialization):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

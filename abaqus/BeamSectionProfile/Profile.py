@@ -46,7 +46,7 @@ class Profile:
 
         Returns
         -------
-            A list of Profile objects. . 
-            !img 
+            A list of Profile objects.
+            
         """
         pass

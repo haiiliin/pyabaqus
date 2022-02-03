@@ -9,8 +9,11 @@ class SolverControl:
     Notes
     -----
         This object can be accessed by:
-        - import step
-        - mdb.models[name].steps[name].solverControl
+        
+        .. code-block:: python
+        
+           import step
+           mdb.models[name].steps[name].solverControl
 
     """
 
@@ -40,6 +43,6 @@ class SolverControl:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

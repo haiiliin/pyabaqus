@@ -16,8 +16,8 @@ class ViewportAnnotationOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.defaultViewportAnnotationOptions
-        - session.viewports[name].viewportAnnotationOptions
+            session.defaultViewportAnnotationOptions
+            session.viewports[name].viewportAnnotationOptions
 
     """
 
@@ -142,6 +142,6 @@ class ViewportAnnotationOptions:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

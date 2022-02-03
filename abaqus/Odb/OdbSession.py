@@ -11,7 +11,10 @@ class OdbSession(SessionBase):
         Notes
         -----
             This function can be accessed by:
-            - session.ScratchOdb
+            
+            .. code-block:: python
+            
+                session.ScratchOdb
         
         Parameters
         ----------
@@ -20,7 +23,7 @@ class OdbSession(SessionBase):
 
         Returns
         -------
-            A ScratchOdb object..
+            A ScratchOdb object.
         """
         self.scratchOdbs['odb'] = scratchOdb = ScratchOdb(odb)
         return scratchOdb

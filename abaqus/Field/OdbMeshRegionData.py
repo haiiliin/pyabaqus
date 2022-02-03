@@ -18,34 +18,34 @@ class OdbMeshRegionData:
         obtained only from the position at which they were written to the output database during
         the analysis. This position should be aligned with the field output variable. Possible
         values are:
-        - UNDEFINED_POSITION
-        - NODAL
-        - INTEGRATION_POINT
-        - ELEMENT_FACE
-        - ELEMENT_NODAL
-        - ELEMENT_CENTROID
-        - WHOLE_ELEMENT
-        - WHOLE_REGION
-        - WHOLE_PART_INSTANCE
-        - WHOLE_MODEL
-        - GENERAL_PARTICLE
+            - UNDEFINED_POSITION
+            - NODAL
+            - INTEGRATION_POINT
+            - ELEMENT_FACE
+            - ELEMENT_NODAL
+            - ELEMENT_CENTROID
+            - WHOLE_ELEMENT
+            - WHOLE_REGION
+            - WHOLE_PART_INSTANCE
+            - WHOLE_MODEL
+            - GENERAL_PARTICLE
         The default value is UNDEFINED_POSITION.
     dataType: SymbolicConstant
         A SymbolicConstant specifying the data type of the field output variable which should be
         aligned with the variable. Currently only SCALAR is supported. Possible values are:
-        - ENUMERATION
-        - BOOLEAN
-        - INTEGER
-        - SCALAR
-        - VECTOR
-        - QUATERNION_2D
-        - QUATERNION_3D
-        - TENSOR
-        - TENSOR_3D_FULL
-        - TENSOR_3D_PLANAR
-        - TENSOR_3D_SURFACE
-        - TENSOR_2D_PLANAR
-        - TENSOR_2D_SURFACE
+            - ENUMERATION
+            - BOOLEAN
+            - INTEGER
+            - SCALAR
+            - VECTOR
+            - QUATERNION_2D
+            - QUATERNION_3D
+            - TENSOR
+            - TENSOR_3D_FULL
+            - TENSOR_3D_PLANAR
+            - TENSOR_3D_SURFACE
+            - TENSOR_2D_PLANAR
+            - TENSOR_2D_SURFACE
         The default value is SCALAR.
     storageType: SymbolicConstant
         A SymbolicConstant specifying the storage type of the field output variable which should
@@ -264,34 +264,34 @@ class OdbMeshRegionData:
             database. Data can be obtained only from the position at which it was written to the 
             output database during the analysis. This position should be aligned with the field 
             output variable. Possible values are: 
-            - UNDEFINED_POSITION 
-            - NODAL 
-            - INTEGRATION_POINT 
-            - ELEMENT_FACE 
-            - ELEMENT_NODAL 
-            - ELEMENT_CENTROID 
-            - WHOLE_ELEMENT 
-            - WHOLE_REGION 
-            - WHOLE_PART_INSTANCE 
-            - WHOLE_MODEL 
-            - GENERAL_PARTICLE 
+                - UNDEFINED_POSITION 
+                - NODAL 
+                - INTEGRATION_POINT 
+                - ELEMENT_FACE 
+                - ELEMENT_NODAL 
+                - ELEMENT_CENTROID 
+                - WHOLE_ELEMENT 
+                - WHOLE_REGION 
+                - WHOLE_PART_INSTANCE 
+                - WHOLE_MODEL 
+                - GENERAL_PARTICLE 
             ​	The default value is UNDEFINED_POSITION. 
         dataType
             A SymbolicConstant specifying the data type of the field output variable which should be 
             aligned with the variable. Currently only SCALAR is supported. Possible values are: 
-            - ENUMERATION 
-            - BOOLEAN 
-            - INTEGER 
-            - SCALAR 
-            - VECTOR 
-            - QUATERNION_2D 
-            - QUATERNION_3D 
-            - TENSOR 
-            - TENSOR_3D_FULL 
-            - TENSOR_3D_PLANAR 
-            - TENSOR_3D_SURFACE 
-            - TENSOR_2D_PLANAR 
-            - TENSOR_2D_SURFACE 
+                - ENUMERATION 
+                - BOOLEAN 
+                - INTEGER 
+                - SCALAR 
+                - VECTOR 
+                - QUATERNION_2D 
+                - QUATERNION_3D 
+                - TENSOR 
+                - TENSOR_3D_FULL 
+                - TENSOR_3D_PLANAR 
+                - TENSOR_3D_SURFACE 
+                - TENSOR_2D_PLANAR 
+                - TENSOR_2D_SURFACE 
             The default value is SCALAR. 
         storageType
             ​	A SymbolicConstant specifying the storage type of the field output variable which 

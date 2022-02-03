@@ -44,7 +44,7 @@ class InterestingPoint:
 
         Returns
         -------
-            An InterestingPoint object. . 
-            !img 
+            An InterestingPoint object.
+            
         """
         pass

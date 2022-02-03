@@ -50,7 +50,10 @@ class BackwardCompatibility:
     Notes
     -----
         This object can be accessed by:
-        - backwardCompatibility
+        
+        .. code-block:: python
+        
+            backwardCompatibility
 
     """
 
@@ -72,7 +75,7 @@ class BackwardCompatibility:
 
         Returns
         -------
-            A list of Strings. . 
+            A list of Strings.
         """
         pass
 
@@ -82,7 +85,7 @@ class BackwardCompatibility:
 
         Returns
         -------
-            A list of Strings. . 
+            A list of Strings.
         """
         pass
 

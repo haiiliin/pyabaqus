@@ -32,7 +32,7 @@ class AttributeColorMap:
     Notes
     -----
         This object can be accessed by:
-        - session.viewports[name].colorMappings[name]
+            session.viewports[name].colorMappings[name]
 
     """
 

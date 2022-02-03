@@ -7,17 +7,4 @@ A specific type of interaction object and a specific type of interaction state o
 Create interactions
 -------------------
 
-InteractionContactControlModel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Interaction.InteractionContactControlModel.InteractionContactControlModel
-
-InteractionContactInitializationModel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Interaction.InteractionContactInitializationModel.InteractionContactInitializationModel
-
-InteractionPropertyModel
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Interaction.InteractionPropertyModel.InteractionPropertyModel
+.. autoclass:: abaqus.Interaction.InteractionModel.InteractionModel

@@ -54,7 +54,7 @@ class LeafFromSurfaceVarRange(Leaf):
 
         Returns
         -------
-            A LeafFromSurfaceVarRange object. . 
+            A LeafFromSurfaceVarRange object.
         """
         super().__init__(DEFAULT_MODEL)
         pass

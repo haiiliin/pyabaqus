@@ -1,2 +1,2 @@
-from .PlainTextEditor import PlainTextEditor
 from .MatplotlibWidget import MatplotlibWidget
+from .PlainTextEditor import PlainTextEditor

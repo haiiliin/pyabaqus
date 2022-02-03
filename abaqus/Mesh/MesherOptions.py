@@ -11,7 +11,7 @@ class MesherOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.defaultMesherOptions
+            session.defaultMesherOptions
 
     """
 

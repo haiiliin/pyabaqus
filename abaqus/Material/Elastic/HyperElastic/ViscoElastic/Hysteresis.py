@@ -6,21 +6,22 @@ class Hysteresis:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].hyperelastic.hysteresis
-        - import odbMaterial
-        - session.odbs[name].materials[name].hyperelastic.hysteresis
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].hyperelastic.hysteresis
+            import odbMaterial
+            session.odbs[name].materials[name].hyperelastic.hysteresis
 
-    Table Data
-    ----------
-        - Stress scaling factor.
-        - Creep parameter.
-        - Effective stress exponent.
-        - Creep strain exponent.
+        The table data for this object are:
+            - Stress scaling factor.
+            - Creep parameter.
+            - Effective stress exponent.
+            - Creep strain exponent.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - HYSTERESIS
+        The corresponding analysis keywords are:
+            - HYSTERESIS
 
     """
 
@@ -30,8 +31,11 @@ class Hysteresis:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].hyperelastic.Hysteresis
-            - session.odbs[name].materials[name].hyperelastic.Hysteresis
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].hyperelastic.Hysteresis
+                session.odbs[name].materials[name].hyperelastic.Hysteresis
         
         Parameters
         ----------
@@ -44,7 +48,7 @@ class Hysteresis:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -53,6 +57,6 @@ class Hysteresis:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

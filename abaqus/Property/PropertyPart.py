@@ -19,7 +19,10 @@ class PropertyPart(PartBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].CompositeLayup
+            
+            .. code-block:: python
+            
+                mdb.models[*name*].parts[*name*].CompositeLayup
         
         Parameters
         ----------
@@ -65,8 +68,11 @@ class PropertyPart(PartBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].SectionAssignment
-            - mdb.models[*name*].rootAssembly.SectionAssignment
+            
+            .. code-block:: python
+            
+                mdb.models[*name*].parts[*name*].SectionAssignment
+                mdb.models[*name*].rootAssembly.SectionAssignment
         
         Parameters
         ----------
@@ -114,7 +120,10 @@ class PropertyPart(PartBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].MaterialOrientation
+            
+            .. code-block:: python
+            
+                mdb.models[*name*].parts[*name*].MaterialOrientation
         
         Parameters
         ----------
@@ -187,7 +196,7 @@ class PropertyPart(PartBase):
         Returns
         -------
         orientation: MaterialOrientation
-            A MaterialOrientation object..
+            A MaterialOrientation object.
         """
         materialOrientation = MaterialOrientation(region, localCsys, axis, angle, stackDirection, fieldName,
                                                   orientationType, normalAxisDirection, normalAxisDefinition,

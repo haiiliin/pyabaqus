@@ -1,6 +1,7 @@
 from matplotlib.backends.backend_qt5agg import \
     FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
+
 from .pyqtconsole.console import PythonConsole
 from .pyqtconsole.console import PythonInterpreter
 from .pyqtconsole.interpreter import redirected_io

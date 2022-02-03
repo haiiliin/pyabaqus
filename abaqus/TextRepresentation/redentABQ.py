@@ -11,9 +11,9 @@ where the following options are available to customize the redentABQ process:
 For more information on running the **abaqus Python** execution procedure, see Python 
 execution. 
 
-Access
-------
-    - import redentABQ
+Notes
+-----
+        import redentABQ
 
 """
 

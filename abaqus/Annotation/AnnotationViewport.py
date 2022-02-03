@@ -9,7 +9,10 @@ class AnnotationViewport(ViewportBase):
     Notes
     -----
         This object can be accessed by:
-        - import annotationToolset
+        
+        .. code-block:: python
+            
+            import annotationToolset
 
     """
 

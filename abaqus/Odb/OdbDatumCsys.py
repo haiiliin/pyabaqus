@@ -87,7 +87,7 @@ class OdbDatumCsys:
 
         Returns
         -------
-            An OdbDatumCsys object. . 
+            An OdbDatumCsys object.
         """
         pass
 
@@ -124,7 +124,7 @@ class OdbDatumCsys:
 
         Returns
         -------
-            An OdbDatumCsys object. . 
+            An OdbDatumCsys object.
         """
         pass
 
@@ -162,7 +162,7 @@ class OdbDatumCsys:
 
         Returns
         -------
-            An OdbDatumCsys object. . 
+            An OdbDatumCsys object.
         """
         pass
 
@@ -194,7 +194,7 @@ class OdbDatumCsys:
 
         Returns
         -------
-            An OdbDatumCsys object. . 
+            An OdbDatumCsys object.
         """
         pass
 
@@ -218,6 +218,6 @@ class OdbDatumCsys:
 
         Returns
         -------
-            An OdbDatumCsys object. . 
+            An OdbDatumCsys object.
         """
         pass

@@ -8,25 +8,26 @@ class Sorption:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].sorption
-        - import odbMaterial
-        - session.odbs[name].materials[name].sorption
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].sorption
+            import odbMaterial
+            session.odbs[name].materials[name].sorption
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *lawAbsorption*=TABULAR or *lawExsorption*=TABULAR, the *absorptionTable* and *exsorptionTable* data respectively specify the following:
-        - Pore pressure, uw.
-        - Saturation, s.
+            - Pore pressure, uw.
+            - Saturation, s.
         If *lawAbsorption*=LOG or *lawExsorption*=LOG, the *absorptionTable* and *exsorptionTable* data respectively specify the following:
-        - A.
-        - B.
-        - s0.
-        - s1.
+            - A.
+            - B.
+            - s0.
+            - s1.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SORPTION
+        The corresponding analysis keywords are:
+            - SORPTION
 
     """
 
@@ -38,8 +39,11 @@ class Sorption:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Sorption
-            - session.odbs[name].materials[name].Sorption
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Sorption
+                session.odbs[name].materials[name].Sorption
         
         Parameters
         ----------
@@ -67,7 +71,7 @@ class Sorption:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -76,6 +80,6 @@ class Sorption:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

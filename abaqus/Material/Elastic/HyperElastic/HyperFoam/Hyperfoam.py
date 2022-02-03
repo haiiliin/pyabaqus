@@ -1,9 +1,9 @@
-from abaqusConstants import *
 from abaqus.Material.TestData.BiaxialTestData import BiaxialTestData
 from abaqus.Material.TestData.PlanarTestData import PlanarTestData
 from abaqus.Material.TestData.SimpleShearTestData import SimpleShearTestData
 from abaqus.Material.TestData.UniaxialTestData import UniaxialTestData
 from abaqus.Material.TestData.VolumetricTestData import VolumetricTestData
+from abaqusConstants import *
 
 
 class Hyperfoam:
@@ -12,21 +12,22 @@ class Hyperfoam:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].hyperfoam
-        - import odbMaterial
-        - session.odbs[name].materials[name].hyperfoam
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].hyperfoam
+            import odbMaterial
+            session.odbs[name].materials[name].hyperfoam
 
-    Table Data
-    ----------
+        The table data for this object are:
         The items in the table data specify the following for values of nn:
-        - μi and αi for i from 1 to n.
-        - νi.
-        - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an Abaqus/Explicit analysis.
+            - μi and αi for i from 1 to n.
+            - νi.
+            - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an Abaqus/Explicit analysis.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - HYPERFOAM
+        The corresponding analysis keywords are:
+            - HYPERFOAM
 
     """
 
@@ -53,8 +54,11 @@ class Hyperfoam:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Hyperfoam
-            - session.odbs[name].materials[name].Hyperfoam
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Hyperfoam
+                session.odbs[name].materials[name].Hyperfoam
         
         Parameters
         ----------
@@ -81,7 +85,7 @@ class Hyperfoam:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -90,6 +94,6 @@ class Hyperfoam:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

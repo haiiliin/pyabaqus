@@ -21,8 +21,11 @@ class MdbData:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.mdbData[name]
+        
+        .. code-block:: python
+            
+            import visualization
+            session.mdbData[name]
 
     """
 

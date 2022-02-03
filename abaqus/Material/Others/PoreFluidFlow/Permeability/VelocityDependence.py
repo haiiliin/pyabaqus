@@ -5,19 +5,20 @@ class VelocityDependence:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].permeability.velocityDependence
-        - import odbMaterial
-        - session.odbs[name].materials[name].permeability.velocityDependence
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].permeability.velocityDependence
+            import odbMaterial
+            session.odbs[name].materials[name].permeability.velocityDependence
 
-    Table Data
-    ----------
-        - β. Only β> 0.0 is allowed.
-        - Void ratio, ee.
+        The table data for this object are:
+            - β. Only β> 0.0 is allowed.
+            - Void ratio, ee.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - PERMEABILITY
+        The corresponding analysis keywords are:
+            - PERMEABILITY
 
     """
 
@@ -27,8 +28,11 @@ class VelocityDependence:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].permeability.VelocityDependence
-            - session.odbs[name].materials[name].permeability.VelocityDependence
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].permeability.VelocityDependence
+                session.odbs[name].materials[name].permeability.VelocityDependence
         
         Parameters
         ----------
@@ -41,7 +45,7 @@ class VelocityDependence:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -50,6 +54,6 @@ class VelocityDependence:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

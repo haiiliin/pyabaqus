@@ -4,20 +4,21 @@ class LatentHeat:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].latentHeat
-        - import odbMaterial
-        - session.odbs[name].materials[name].latentHeat
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].latentHeat
+            import odbMaterial
+            session.odbs[name].materials[name].latentHeat
 
-    Table Data
-    ----------
-        - Latent heat per unit mass.
-        - Solidus temperature.
-        - Liquidus temperature.
+        The table data for this object are:
+            - Latent heat per unit mass.
+            - Solidus temperature.
+            - Liquidus temperature.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - LATENT HEAT
+        The corresponding analysis keywords are:
+            - LATENT HEAT
 
     """
 
@@ -27,8 +28,11 @@ class LatentHeat:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].LatentHeat
-            - session.odbs[name].materials[name].LatentHeat
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].LatentHeat
+                session.odbs[name].materials[name].LatentHeat
         
         Parameters
         ----------
@@ -41,7 +45,7 @@ class LatentHeat:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -50,6 +54,6 @@ class LatentHeat:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

@@ -30,7 +30,7 @@ class RegisteredDictionary(CommandRegister):
 
         Returns
         -------
-            A RegisteredDictionary object. . 
+            A RegisteredDictionary object.
         """
         super().__init__()
         pass

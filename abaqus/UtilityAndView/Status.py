@@ -2,9 +2,6 @@ import typing
 
 """These functions display status information. 
 
-Access
-------
-
 """
 
 
@@ -12,18 +9,18 @@ Access
 def milestone(message: str):
     """This function displays a string in the prompt area.
 
-    Path
-    ----
-        - milestone
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            milestone
 
     Parameters
     ----------
     message
         A String specifying the text to display. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass
@@ -33,9 +30,13 @@ def milestone(message: str):
 def milestone(message: str, percent: int):
     """This function displays a percentage complete message in the prompt area.
 
-    Path
-    ----
-        - milestone
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            milestone
 
     Parameters
     ----------
@@ -43,10 +44,6 @@ def milestone(message: str, percent: int):
         A String specifying the text to display. 
     percent
         An Int specifying the percentage complete. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass
@@ -57,9 +54,13 @@ def milestone(message: str, object: str, done: int, total: int):
     """This function displays a message in the prompt area indicating the number done out of a
     total. The form of the message is `operation: object nn out of nn`
 
-    Path
-    ----
-        - milestone
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            milestone
 
     Parameters
     ----------
@@ -71,10 +72,6 @@ def milestone(message: str, object: str, done: int, total: int):
         An Int specifying the number being processed. 
     total
         An Int specifying the total number. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass

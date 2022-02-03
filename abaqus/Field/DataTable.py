@@ -20,8 +20,11 @@ class DataTable:
     Notes
     -----
         This object can be accessed by:
-        - import field
-        - mdb.models[name].discreteFields[name].data[i]
+        
+        .. code-block:: python
+            
+            import field
+            mdb.models[name].discreteFields[name].data[i]
 
     """
 

@@ -14,7 +14,10 @@ class DistanceDimension(ConstrainedSketchDimension):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].DistanceDimension
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].DistanceDimension
         
         Parameters
         ----------
@@ -32,7 +35,7 @@ class DistanceDimension(ConstrainedSketchDimension):
 
         Returns
         -------
-            A ConstrainedSketchDimension object (None if the dimension cannot be created). . 
-            !img 
+            A ConstrainedSketchDimension object (None if the dimension cannot be created).
+            
         """
         pass

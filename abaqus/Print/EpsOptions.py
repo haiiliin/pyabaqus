@@ -11,7 +11,7 @@ class EpsOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.epsOptions
+            session.epsOptions
 
     """
 
@@ -50,8 +50,8 @@ class EpsOptions:
 
         Raises
         ------
-            RangeError. 
-            - If either element of *imageSize* is out of range: 
+        RangeError
+                - If either element of *imageSize* is out of range: 
               RangeError: imageSize must be SIZE_ON_SCREEN or a sequence of 2 Floats >= (*minWidth*, 
             *minHeight*) 
         """

@@ -3,7 +3,7 @@ import typing
 
 import pandas as pd
 from PyQt5.QtCore import Qt, QProcess
-from PyQt5.QtGui import QKeySequence, QIcon, QKeyEvent, QPalette, QTextDocument, QTextCursor
+from PyQt5.QtGui import QKeyEvent, QPalette, QTextDocument, QTextCursor
 from PyQt5.QtWidgets import QMainWindow, QApplication, QStyle, QFileDialog, QMessageBox, QPlainTextEdit, QMdiSubWindow, \
     QDialog
 

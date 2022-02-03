@@ -9,9 +9,12 @@ class DisplayGroupInstanceRepository:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.viewports[name].layers[name].odbDisplay.displayGroupInstances
-        - session.viewports[name].odbDisplay.displayGroupInstances
+        
+        .. code-block:: python
+            
+            import visualization
+            session.viewports[name].layers[name].odbDisplay.displayGroupInstances
+            session.viewports[name].odbDisplay.displayGroupInstances
 
     """
 

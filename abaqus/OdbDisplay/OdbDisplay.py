@@ -44,25 +44,25 @@ class OdbDisplay:
         A tuple of Strings specifying field steps.
         Each item in the sequence consists of a tuple that contains the following step
         information:
-        - **element0**: A String specifying the step name.
-        - **element1**: A String specifying the step description.
-        - **element2**: A Float specifying the time value at the start of the step.
-        - **element3**: A Float specifying the time period of the step.
-        - **element4**: A Float specifying the user modified time period of the step.
-        - **element5**: An Int specifying the domain type of the step. Possible values are:
-        - 0: Time domain
-        - 1: Frequency domain
-        - 2: Modal domain
-        - 3: Arc Length (Riks) domain
-        - **element6**: A String specifying the default frame label.
-        - **element7**: A sequence of strings specifying the frame labels for all available frames
+            - **element0**: A String specifying the step name.
+            - **element1**: A String specifying the step description.
+            - **element2**: A Float specifying the time value at the start of the step.
+            - **element3**: A Float specifying the time period of the step.
+            - **element4**: A Float specifying the user modified time period of the step.
+            - **element5**: An Int specifying the domain type of the step. Possible values are:
+            - 0: Time domain
+            - 1: Frequency domain
+            - 2: Modal domain
+            - 3: Arc Length (Riks) domain
+            - **element6**: A String specifying the default frame label.
+            - **element7**: A sequence of strings specifying the frame labels for all available frames
         in the step.
-        - **element8**: A sequence of floats specifying the frame values for all available frames
+            - **element8**: A sequence of floats specifying the frame values for all available frames
         in the step.
-        - **element9**: A Int specifying whether the step is user defined. Possible values are 0
+            - **element9**: A Int specifying whether the step is user defined. Possible values are 0
         indicating the step is defined in the analysis and 1 indicating the step is user
         defined.
-        - **element10**: A sequence of machine readable strings encoding the currently active
+            - **element10**: A sequence of machine readable strings encoding the currently active
         frame numbers.
     fieldVariables: OdbFieldVarList
         An :py:class:`~abaqus.FieldReport.OdbFieldVarList.OdbFieldVarList` object.
@@ -110,64 +110,64 @@ class OdbDisplay:
     primaryVariable: tuple
         A tuple specifying variables.
         Each item in the sequence consists of a tuple containing the following elements:
-        - Element 0: A String specifying the variable label.
-        - Element 1: An Int specifying the output position. Possible integer values are:
-        - 0: UNDEFINED_POSITION
-        - 1: NODAL
-        - 2: INTEGRATION_POINT
-        - 3: ELEMENT_FACE
-        - 4: ELEMENT_NODAL
-        - 5: WHOLE_ELEMENT
-        - 6: ELEMENT_CENTROID
-        - 7: WHOLE_REGION
-        - 8: WHOLE_PART_INSTANCE
-        - 9: WHOLE_MODEL
-        - 10: GENERAL_PARTICLE
-        - Element 2: An Int specifying the data type. Possible values are:
-        - 0: ENUMERATION
-        - 1: BOOLEAN
-        - 2: INTEGER
-        - 3: SCALAR
-        - 4: VECTOR
-        - 5: QUATERNION_2D
-        - 6: QUATERNION_3D
-        - 7: TENSOR
-        - 8: TENSOR_3D_FULL
-        - 9: TENSOR_3D_PLANAR
-        - 10: TENSOR_3D_SURFACE
-        - 11: TENSOR_2D_PLANAR
-        - 12: TENSOR_2D_SURFACE
-        - Element 3: An Int specifying the storage type. Possible values are:
-        - 0: FLOAT
-        - 1: DOUBLE
-        - 2: INTEGER
-        - 3: BOOLEAN
-        - Element 4: An Int specifying the refinement type. Possible values are:
-        - 0: NO_REFINEMENT
-        - 1: INVARIANT
-        - 2: COMPONENT
-        - Element 5: A String specifying the refinement label.
-        - Element 6: An Int specifying the refinement index.
-        - Element 7: An Int specifying whether section point information is available. Possible
+            - Element 0: A String specifying the variable label.
+            - Element 1: An Int specifying the output position. Possible integer values are:
+            - 0: UNDEFINED_POSITION
+            - 1: NODAL
+            - 2: INTEGRATION_POINT
+            - 3: ELEMENT_FACE
+            - 4: ELEMENT_NODAL
+            - 5: WHOLE_ELEMENT
+            - 6: ELEMENT_CENTROID
+            - 7: WHOLE_REGION
+            - 8: WHOLE_PART_INSTANCE
+            - 9: WHOLE_MODEL
+            - 10: GENERAL_PARTICLE
+            - Element 2: An Int specifying the data type. Possible values are:
+            - 0: ENUMERATION
+            - 1: BOOLEAN
+            - 2: INTEGER
+            - 3: SCALAR
+            - 4: VECTOR
+            - 5: QUATERNION_2D
+            - 6: QUATERNION_3D
+            - 7: TENSOR
+            - 8: TENSOR_3D_FULL
+            - 9: TENSOR_3D_PLANAR
+            - 10: TENSOR_3D_SURFACE
+            - 11: TENSOR_2D_PLANAR
+            - 12: TENSOR_2D_SURFACE
+            - Element 3: An Int specifying the storage type. Possible values are:
+            - 0: FLOAT
+            - 1: DOUBLE
+            - 2: INTEGER
+            - 3: BOOLEAN
+            - Element 4: An Int specifying the refinement type. Possible values are:
+            - 0: NO_REFINEMENT
+            - 1: INVARIANT
+            - 2: COMPONENT
+            - Element 5: A String specifying the refinement label.
+            - Element 6: An Int specifying the refinement index.
+            - Element 7: An Int specifying whether section point information is available. Possible
         values are 1 when section point information is available; 0, when this information is
         unavailable.
-        - Element 8: A sequence of a String specifying the name of the ply and category
+            - Element 8: A sequence of a String specifying the name of the ply and category
         selection tuples (see below) specifying the section point information.
         A category selection tuple consists of the following elements:
-        - Element 0: A String specifying the category label.
-        - Element 1: An Int specifying whether to use both top and bottom section points to
+            - Element 0: A String specifying the category label.
+            - Element 1: An Int specifying whether to use both top and bottom section points to
         obtain results. Possible values are 1 to use both section points and 0 to use only the
         top section point.
-        - Element 2: An Int specifying the top section point index.
-        - Element 3: A String specifying the top section label.
-        - Element 4: An Int specifying the bottom section point index.
-        - Element 5: A String specifying the bottom section label.
-        - Element 6: An Int specifying the category id.
-        - Element 9: An Int specifying whether the data are complex. Possible values are 1 when
+            - Element 2: An Int specifying the top section point index.
+            - Element 3: A String specifying the top section label.
+            - Element 4: An Int specifying the bottom section point index.
+            - Element 5: A String specifying the bottom section label.
+            - Element 6: An Int specifying the category id.
+            - Element 9: An Int specifying whether the data are complex. Possible values are 1 when
         the data are complex; 0, when the data is not complex.
-        - Element 10: A Float specifying the minimum possible value for the data.
-        - Element 11: A Float specifying the maximum possible value for the data.
-        - Element 12: An Int specifying whether the data is derived. Possible values are 1 when
+            - Element 10: A Float specifying the minimum possible value for the data.
+            - Element 11: A Float specifying the maximum possible value for the data.
+            - Element 12: An Int specifying whether the data is derived. Possible values are 1 when
         the data is derived; 0, when the data is not derived.
     deformedVariable: tuple
         A tuple specifying variables.For information on the sequence, see the member
@@ -437,7 +437,7 @@ class OdbDisplay:
 
         Raises
         ------
-            - If the viewport is not associated with any Odb object: 
+                - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
         """
@@ -458,12 +458,12 @@ class OdbDisplay:
 
         Raises
         ------
-            - If the viewport is not associated with any Odb object: 
+                - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
-            - If the Odb object does not contain valid step data: 
+                - If the Odb object does not contain valid step data: 
               There are no valid step data on the odb. Requested operation cancelled. 
-            - If an invalid step index is passed in as argument: 
+                - If an invalid step index is passed in as argument: 
               Invalid step index:step. Available step indices: 0 - n 
         """
         pass
@@ -513,7 +513,7 @@ class OdbDisplay:
 
         Raises
         ------
-            - If the viewport is not associated with any Odb object: 
+                - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
         """
@@ -535,7 +535,7 @@ class OdbDisplay:
 
         Raises
         ------
-            - If the viewport is not associated with any Odb object: 
+                - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
         """
@@ -590,7 +590,7 @@ class OdbDisplay:
 
         Raises
         ------
-            - If the viewport is not associated with any Odb object: 
+                - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
         """
@@ -637,7 +637,7 @@ class OdbDisplay:
 
         Raises
         ------
-            - If the viewport is not associated with any Odb object: 
+                - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
         """
@@ -654,7 +654,7 @@ class OdbDisplay:
 
         Raises
         ------
-            - If the viewport is not associated with any Odb object: 
+                - If the viewport is not associated with any Odb object: 
               The current viewport is not associated with an ODB file. Requested operation 
             cancelled. 
         """
@@ -737,7 +737,7 @@ class OdbDisplay:
 
         Returns
         -------
-            A ViewCut object..
+            A ViewCut object.
         """
         self.viewCuts[name] = viewCut = ViewCut(name, shape, origin, normal, axis2, csysName, cylinderAxis,
                                                 followDeformation, overrideAveraging, referenceFrame)

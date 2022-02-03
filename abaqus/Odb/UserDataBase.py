@@ -144,6 +144,6 @@ class UserDataBase:
 
         Returns
         -------
-            An XYData object. . 
+            An XYData object.
         """
         pass

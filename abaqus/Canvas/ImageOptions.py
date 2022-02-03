@@ -12,7 +12,7 @@ class ImageOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.viewports[name].imageOptions
+            session.viewports[name].imageOptions
 
     """
 
@@ -75,6 +75,6 @@ class ImageOptions:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

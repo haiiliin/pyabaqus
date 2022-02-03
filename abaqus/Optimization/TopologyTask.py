@@ -199,7 +199,7 @@ class TopologyTask(OptimizationTask):
 
         Returns
         -------
-            A TopologyTask object. . 
+            A TopologyTask object.
         """
         super().__init__()
         pass

@@ -1,6 +1,6 @@
-==================
-Load and Load Case
-==================
+====
+Load
+====
 
 A specific type of load object and a specific type of load state object are designed for each type of load. A load object stores the nonpropagating data of a load as well as a number of instances of the corresponding load state object, each of which stores the propagating data of the load in a single step. Instances of the load state object are created and deleted internally by its corresponding load object.
 
@@ -15,75 +15,75 @@ The Load object is the abstract base type for other Load objects. The Load objec
 Create loads
 ~~~~~~~~~~~~
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.BodyCharge
+.. automethod:: abaqus.Load.LoadModel.LoadModel.BodyCharge
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.BodyConcentrationFlux
+.. automethod:: abaqus.Load.LoadModel.LoadModel.BodyConcentrationFlux
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.BodyCurrent
+.. automethod:: abaqus.Load.LoadModel.LoadModel.BodyCurrent
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.BodyCurrentDensity
+.. automethod:: abaqus.Load.LoadModel.LoadModel.BodyCurrentDensity
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.BodyForce
+.. automethod:: abaqus.Load.LoadModel.LoadModel.BodyForce
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.BodyHeatFlux
+.. automethod:: abaqus.Load.LoadModel.LoadModel.BodyHeatFlux
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.BoltLoad
+.. automethod:: abaqus.Load.LoadModel.LoadModel.BoltLoad
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConcCharge
+.. automethod:: abaqus.Load.LoadModel.LoadModel.ConcCharge
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConcConcFlux
+.. automethod:: abaqus.Load.LoadModel.LoadModel.ConcConcFlux
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConcCurrent
+.. automethod:: abaqus.Load.LoadModel.LoadModel.ConcCurrent
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConcPoreFluid
+.. automethod:: abaqus.Load.LoadModel.LoadModel.ConcPoreFluid
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConcentratedForce
+.. automethod:: abaqus.Load.LoadModel.LoadModel.ConcentratedForce
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConcentratedHeatFlux
+.. automethod:: abaqus.Load.LoadModel.LoadModel.ConcentratedHeatFlux
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConnectorForce
+.. automethod:: abaqus.Load.LoadModel.LoadModel.ConnectorForce
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ConnectorMoment
+.. automethod:: abaqus.Load.LoadModel.LoadModel.ConnectorMoment
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.CoriolisForce
+.. automethod:: abaqus.Load.LoadModel.LoadModel.CoriolisForce
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.Gravity
+.. automethod:: abaqus.Load.LoadModel.LoadModel.Gravity
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.InertiaRelief
+.. automethod:: abaqus.Load.LoadModel.LoadModel.InertiaRelief
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.InwardVolAccel
+.. automethod:: abaqus.Load.LoadModel.LoadModel.InwardVolAccel
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.LineLoad
+.. automethod:: abaqus.Load.LoadModel.LoadModel.LineLoad
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.Moment
+.. automethod:: abaqus.Load.LoadModel.LoadModel.Moment
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.PEGLoad
+.. automethod:: abaqus.Load.LoadModel.LoadModel.PEGLoad
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.PipePressure
+.. automethod:: abaqus.Load.LoadModel.LoadModel.PipePressure
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.Pressure
+.. automethod:: abaqus.Load.LoadModel.LoadModel.Pressure
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.RotationalBodyForce
+.. automethod:: abaqus.Load.LoadModel.LoadModel.RotationalBodyForce
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.ShellEdgeLoad
+.. automethod:: abaqus.Load.LoadModel.LoadModel.ShellEdgeLoad
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SubmodelSB
+.. automethod:: abaqus.Load.LoadModel.LoadModel.SubmodelSB
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SubstructureLoad
+.. automethod:: abaqus.Load.LoadModel.LoadModel.SubstructureLoad
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SurfaceCharge
+.. automethod:: abaqus.Load.LoadModel.LoadModel.SurfaceCharge
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SurfaceConcentrationFlux
+.. automethod:: abaqus.Load.LoadModel.LoadModel.SurfaceConcentrationFlux
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SurfaceCurrent
+.. automethod:: abaqus.Load.LoadModel.LoadModel.SurfaceCurrent
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SurfaceCurrentDensity
+.. automethod:: abaqus.Load.LoadModel.LoadModel.SurfaceCurrentDensity
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SurfaceHeatFlux
+.. automethod:: abaqus.Load.LoadModel.LoadModel.SurfaceHeatFlux
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SurfacePoreFluid
+.. automethod:: abaqus.Load.LoadModel.LoadModel.SurfacePoreFluid
 
-.. automethod:: abaqus.LoadAndLoadCase.LoadModel.LoadModel.SurfaceTraction
+.. automethod:: abaqus.Load.LoadModel.LoadModel.SurfaceTraction
 
 
 Object features of loads
@@ -92,433 +92,433 @@ Object features of loads
 Load
 ****
 
-.. autoclass:: abaqus.LoadAndLoadCase.Load.Load
+.. autoclass:: abaqus.Load.Load.Load
     :members:
 
 LoadState
 *********
 
-.. autoclass:: abaqus.LoadAndLoadCase.LoadState.LoadState
+.. autoclass:: abaqus.Load.LoadState.LoadState
     :members:
 
 BodyCharge
 **********
 
-.. autoclass:: abaqus.LoadAndLoadCase.BodyCharge.BodyCharge
+.. autoclass:: abaqus.Load.BodyCharge.BodyCharge
     :members:
 
 BodyChargeState
 ***************
 
-.. autoclass:: abaqus.LoadAndLoadCase.BodyChargeState.BodyChargeState
+.. autoclass:: abaqus.Load.BodyChargeState.BodyChargeState
     :members:
 
 BodyConcentrationFlux
 *********************
 
-.. autoclass:: abaqus.LoadAndLoadCase.BodyConcentrationFlux.BodyConcentrationFlux
+.. autoclass:: abaqus.Load.BodyConcentrationFlux.BodyConcentrationFlux
     :members:
 
 BodyConcentrationFluxState
 **************************
 
-.. autoclass:: abaqus.LoadAndLoadCase.BodyConcentrationFluxState.BodyConcentrationFluxState
+.. autoclass:: abaqus.Load.BodyConcentrationFluxState.BodyConcentrationFluxState
     :members:
 
 BodyCurrent
 ***********
 
-.. autoclass:: abaqus.LoadAndLoadCase.BodyCurrent.BodyCurrent
+.. autoclass:: abaqus.Load.BodyCurrent.BodyCurrent
     :members:
 
 BodyCurrentDensity
 ******************
 
-.. autoclass:: abaqus.LoadAndLoadCase.BodyCurrentDensity.BodyCurrentDensity
+.. autoclass:: abaqus.Load.BodyCurrentDensity.BodyCurrentDensity
     :members:
 
 BodyCurrentState
 ****************
 
-.. autoclass:: abaqus.LoadAndLoadCase.BodyCurrentState.BodyCurrentState
+.. autoclass:: abaqus.Load.BodyCurrentState.BodyCurrentState
     :members:
 
 BodyForce
 *********
 
-.. autoclass:: abaqus.LoadAndLoadCase.BodyForce.BodyForce
+.. autoclass:: abaqus.Load.BodyForce.BodyForce
     :members:
 
 BodyForceState
 **************
 
-.. autoclass:: abaqus.LoadAndLoadCase.BodyForceState.BodyForceState
+.. autoclass:: abaqus.Load.BodyForceState.BodyForceState
     :members:
 
 BodyHeatFlux
 ************
 
-.. autoclass:: abaqus.LoadAndLoadCase.BodyHeatFlux.BodyHeatFlux
+.. autoclass:: abaqus.Load.BodyHeatFlux.BodyHeatFlux
     :members:
 
 BodyHeatFluxState
 *****************
 
-.. autoclass:: abaqus.LoadAndLoadCase.BodyHeatFluxState.BodyHeatFluxState
+.. autoclass:: abaqus.Load.BodyHeatFluxState.BodyHeatFluxState
     :members:
 
 BoltLoad
 ********
 
-.. autoclass:: abaqus.LoadAndLoadCase.BoltLoad.BoltLoad
+.. autoclass:: abaqus.Load.BoltLoad.BoltLoad
     :members:
 
 BoltLoadState
 *************
 
-.. autoclass:: abaqus.LoadAndLoadCase.BoltLoadState.BoltLoadState
+.. autoclass:: abaqus.Load.BoltLoadState.BoltLoadState
     :members:
 
 ConcCharge
 **********
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConcCharge.ConcCharge
+.. autoclass:: abaqus.Load.ConcCharge.ConcCharge
     :members:
 
 ConcConcFlux
 ************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConcConcFlux.ConcConcFlux
+.. autoclass:: abaqus.Load.ConcConcFlux.ConcConcFlux
     :members:
 
 ConcCurrent
 ***********
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConcCurrent.ConcCurrent
+.. autoclass:: abaqus.Load.ConcCurrent.ConcCurrent
     :members:
 
 ConcCurrentState
 ****************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConcCurrentState.ConcCurrentState
+.. autoclass:: abaqus.Load.ConcCurrentState.ConcCurrentState
     :members:
 
 ConcentratedChargeState
 ***********************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConcentratedChargeState.ConcentratedChargeState
+.. autoclass:: abaqus.Load.ConcentratedChargeState.ConcentratedChargeState
     :members:
 
 ConcentratedConcentrationFluxState
 **********************************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConcentratedConcentrationFluxState.ConcentratedConcentrationFluxState
+.. autoclass:: abaqus.Load.ConcentratedConcentrationFluxState.ConcentratedConcentrationFluxState
     :members:
 
 ConcentratedForce
 *****************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConcentratedForce.ConcentratedForce
+.. autoclass:: abaqus.Load.ConcentratedForce.ConcentratedForce
     :members:
 
 ConcentratedForceState
 **********************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConcentratedForceState.ConcentratedForceState
+.. autoclass:: abaqus.Load.ConcentratedForceState.ConcentratedForceState
     :members:
 
 ConcentratedHeatFlux
 ********************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConcentratedHeatFlux.ConcentratedHeatFlux
+.. autoclass:: abaqus.Load.ConcentratedHeatFlux.ConcentratedHeatFlux
     :members:
 
 ConcentratedHeatFluxState
 *************************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConcentratedHeatFluxState.ConcentratedHeatFluxState
+.. autoclass:: abaqus.Load.ConcentratedHeatFluxState.ConcentratedHeatFluxState
     :members:
 
 ConcentratedPoreFluidState
 **************************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConcentratedPoreFluidState.ConcentratedPoreFluidState
+.. autoclass:: abaqus.Load.ConcentratedPoreFluidState.ConcentratedPoreFluidState
     :members:
 
 ConcPoreFluid
 *************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConcPoreFluid.ConcPoreFluid
+.. autoclass:: abaqus.Load.ConcPoreFluid.ConcPoreFluid
     :members:
 
 ConnectorForce
 **************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConnectorForce.ConnectorForce
+.. autoclass:: abaqus.Load.ConnectorForce.ConnectorForce
     :members:
 
 ConnectorForceState
 *******************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConnectorForceState.ConnectorForceState
+.. autoclass:: abaqus.Load.ConnectorForceState.ConnectorForceState
     :members:
 
 ConnectorMoment
 ***************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConnectorMoment.ConnectorMoment
+.. autoclass:: abaqus.Load.ConnectorMoment.ConnectorMoment
     :members:
 
 ConnectorMomentState
 ********************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ConnectorMomentState.ConnectorMomentState
+.. autoclass:: abaqus.Load.ConnectorMomentState.ConnectorMomentState
     :members:
 
 CoriolisForce
 *************
 
-.. autoclass:: abaqus.LoadAndLoadCase.CoriolisForce.CoriolisForce
+.. autoclass:: abaqus.Load.CoriolisForce.CoriolisForce
     :members:
 
 CoriolisForceState
 ******************
 
-.. autoclass:: abaqus.LoadAndLoadCase.CoriolisForceState.CoriolisForceState
+.. autoclass:: abaqus.Load.CoriolisForceState.CoriolisForceState
     :members:
 
 Gravity
 *******
 
-.. autoclass:: abaqus.LoadAndLoadCase.Gravity.Gravity
+.. autoclass:: abaqus.Load.Gravity.Gravity
     :members:
 
 GravityState
 ************
 
-.. autoclass:: abaqus.LoadAndLoadCase.GravityState.GravityState
+.. autoclass:: abaqus.Load.GravityState.GravityState
     :members:
 
 HydrostaticFluidFlowState
 *************************
 
-.. autoclass:: abaqus.LoadAndLoadCase.HydrostaticFluidFlowState.HydrostaticFluidFlowState
+.. autoclass:: abaqus.Load.HydrostaticFluidFlowState.HydrostaticFluidFlowState
     :members:
 
 InertiaRelief
 *************
 
-.. autoclass:: abaqus.LoadAndLoadCase.InertiaRelief.InertiaRelief
+.. autoclass:: abaqus.Load.InertiaRelief.InertiaRelief
     :members:
 
 InertiaReliefState
 ******************
 
-.. autoclass:: abaqus.LoadAndLoadCase.InertiaReliefState.InertiaReliefState
+.. autoclass:: abaqus.Load.InertiaReliefState.InertiaReliefState
     :members:
 
 InwardVolAccel
 **************
 
-.. autoclass:: abaqus.LoadAndLoadCase.InwardVolAccel.InwardVolAccel
+.. autoclass:: abaqus.Load.InwardVolAccel.InwardVolAccel
     :members:
 
 InwardVolAccelState
 *******************
 
-.. autoclass:: abaqus.LoadAndLoadCase.InwardVolAccelState.InwardVolAccelState
+.. autoclass:: abaqus.Load.InwardVolAccelState.InwardVolAccelState
     :members:
 
 LineLoad
 ********
 
-.. autoclass:: abaqus.LoadAndLoadCase.LineLoad.LineLoad
+.. autoclass:: abaqus.Load.LineLoad.LineLoad
     :members:
 
 LineLoadState
 *************
 
-.. autoclass:: abaqus.LoadAndLoadCase.LineLoadState.LineLoadState
+.. autoclass:: abaqus.Load.LineLoadState.LineLoadState
     :members:
 
 LoadStep
 ********
 
-.. autoclass:: abaqus.LoadAndLoadCase.LoadStep.LoadStep
+.. autoclass:: abaqus.Load.LoadStep.LoadStep
     :members:
 
 Moment
 ******
 
-.. autoclass:: abaqus.LoadAndLoadCase.Moment.Moment
+.. autoclass:: abaqus.Load.Moment.Moment
     :members:
 
 MomentState
 ***********
 
-.. autoclass:: abaqus.LoadAndLoadCase.MomentState.MomentState
+.. autoclass:: abaqus.Load.MomentState.MomentState
     :members:
 
 PEGLoad
 *******
 
-.. autoclass:: abaqus.LoadAndLoadCase.PEGLoad.PEGLoad
+.. autoclass:: abaqus.Load.PEGLoad.PEGLoad
     :members:
 
 PEGLoadState
 ************
 
-.. autoclass:: abaqus.LoadAndLoadCase.PEGLoadState.PEGLoadState
+.. autoclass:: abaqus.Load.PEGLoadState.PEGLoadState
     :members:
 
 PipePressure
 ************
 
-.. autoclass:: abaqus.LoadAndLoadCase.PipePressure.PipePressure
+.. autoclass:: abaqus.Load.PipePressure.PipePressure
     :members:
 
 PipePressureState
 *****************
 
-.. autoclass:: abaqus.LoadAndLoadCase.PipePressureState.PipePressureState
+.. autoclass:: abaqus.Load.PipePressureState.PipePressureState
     :members:
 
 Pressure
 ********
 
-.. autoclass:: abaqus.LoadAndLoadCase.Pressure.Pressure
+.. autoclass:: abaqus.Load.Pressure.Pressure
     :members:
 
 PressureState
 *************
 
-.. autoclass:: abaqus.LoadAndLoadCase.PressureState.PressureState
+.. autoclass:: abaqus.Load.PressureState.PressureState
     :members:
 
 RotationalBodyForce
 *******************
 
-.. autoclass:: abaqus.LoadAndLoadCase.RotationalBodyForce.RotationalBodyForce
+.. autoclass:: abaqus.Load.RotationalBodyForce.RotationalBodyForce
     :members:
 
 RotationalBodyForceState
 ************************
 
-.. autoclass:: abaqus.LoadAndLoadCase.RotationalBodyForceState.RotationalBodyForceState
+.. autoclass:: abaqus.Load.RotationalBodyForceState.RotationalBodyForceState
     :members:
 
 ShellEdgeLoad
 *************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ShellEdgeLoad.ShellEdgeLoad
+.. autoclass:: abaqus.Load.ShellEdgeLoad.ShellEdgeLoad
     :members:
 
 ShellEdgeLoadState
 ******************
 
-.. autoclass:: abaqus.LoadAndLoadCase.ShellEdgeLoadState.ShellEdgeLoadState
+.. autoclass:: abaqus.Load.ShellEdgeLoadState.ShellEdgeLoadState
     :members:
 
 SubmodelSB
 **********
 
-.. autoclass:: abaqus.LoadAndLoadCase.SubmodelSB.SubmodelSB
+.. autoclass:: abaqus.Load.SubmodelSB.SubmodelSB
     :members:
 
 SubmodelSBState
 ***************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SubmodelSBState.SubmodelSBState
+.. autoclass:: abaqus.Load.SubmodelSBState.SubmodelSBState
     :members:
 
 SubstructureLoad
 ****************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SubstructureLoad.SubstructureLoad
+.. autoclass:: abaqus.Load.SubstructureLoad.SubstructureLoad
     :members:
 
 SubstructureLoadState
 *********************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SubstructureLoadState.SubstructureLoadState
+.. autoclass:: abaqus.Load.SubstructureLoadState.SubstructureLoadState
     :members:
 
 SurfaceCharge
 *************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SurfaceCharge.SurfaceCharge
+.. autoclass:: abaqus.Load.SurfaceCharge.SurfaceCharge
     :members:
 
 SurfaceChargeState
 ******************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SurfaceChargeState.SurfaceChargeState
+.. autoclass:: abaqus.Load.SurfaceChargeState.SurfaceChargeState
     :members:
 
 SurfaceConcentrationFlux
 ************************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SurfaceConcentrationFlux.SurfaceConcentrationFlux
+.. autoclass:: abaqus.Load.SurfaceConcentrationFlux.SurfaceConcentrationFlux
     :members:
 
 SurfaceConcentrationFluxState
 *****************************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SurfaceConcentrationFluxState.SurfaceConcentrationFluxState
+.. autoclass:: abaqus.Load.SurfaceConcentrationFluxState.SurfaceConcentrationFluxState
     :members:
 
 SurfaceCurrent
 **************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SurfaceCurrent.SurfaceCurrent
+.. autoclass:: abaqus.Load.SurfaceCurrent.SurfaceCurrent
     :members:
 
 SurfaceCurrentDensity
 *********************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SurfaceCurrentDensity.SurfaceCurrentDensity
+.. autoclass:: abaqus.Load.SurfaceCurrentDensity.SurfaceCurrentDensity
     :members:
 
 SurfaceCurrentState
 *******************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SurfaceCurrentState.SurfaceCurrentState
+.. autoclass:: abaqus.Load.SurfaceCurrentState.SurfaceCurrentState
     :members:
 
 SurfaceHeatFlux
 ***************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SurfaceHeatFlux.SurfaceHeatFlux
+.. autoclass:: abaqus.Load.SurfaceHeatFlux.SurfaceHeatFlux
     :members:
 
 SurfaceHeatFluxState
 ********************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SurfaceHeatFluxState.SurfaceHeatFluxState
+.. autoclass:: abaqus.Load.SurfaceHeatFluxState.SurfaceHeatFluxState
     :members:
 
 SurfacePoreFluid
 ****************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SurfacePoreFluid.SurfacePoreFluid
+.. autoclass:: abaqus.Load.SurfacePoreFluid.SurfacePoreFluid
     :members:
 
 SurfacePoreFluidState
 *********************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SurfacePoreFluidState.SurfacePoreFluidState
+.. autoclass:: abaqus.Load.SurfacePoreFluidState.SurfacePoreFluidState
     :members:
 
 SurfaceTraction
 ***************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SurfaceTraction.SurfaceTraction
+.. autoclass:: abaqus.Load.SurfaceTraction.SurfaceTraction
     :members:
 
 SurfaceTractionState
 ********************
 
-.. autoclass:: abaqus.LoadAndLoadCase.SurfaceTractionState.SurfaceTractionState
+.. autoclass:: abaqus.Load.SurfaceTractionState.SurfaceTractionState
     :members:
 
 
@@ -531,12 +531,12 @@ The LoadCase object is used to define the loads and constraints comprising a par
 Create load cases
 ~~~~~~~~~~~~~~~~~
 
-.. autoclass:: abaqus.LoadAndLoadCase.LoadStep.LoadStep
+.. autoclass:: abaqus.Load.LoadStep.LoadStep
     :members:
 
 
 Object features of load cases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. autoclass:: abaqus.LoadAndLoadCase.LoadCase.LoadCase
+.. autoclass:: abaqus.Load.LoadCase.LoadCase
     :members:

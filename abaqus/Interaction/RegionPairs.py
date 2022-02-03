@@ -8,14 +8,16 @@ class RegionPairs:
     Notes
     -----
         This object can be accessed by:
-        - import interaction
-        - mdb.models[name].interactions[name].excludedPairs
-        - mdb.models[name].interactions[name].includedPairs
+        
+        .. code-block:: python
+            
+            import interaction
+            mdb.models[name].interactions[name].excludedPairs
+            mdb.models[name].interactions[name].includedPairs
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONTACT INCLUSIONS
-        - CONTACT EXCLUSIONS
+        The corresponding analysis keywords are:
+            - CONTACT INCLUSIONS
+            - CONTACT EXCLUSIONS
 
     """
 

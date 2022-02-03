@@ -52,7 +52,7 @@ class LeafFromConstraintNames(Leaf):
 
         Returns
         -------
-            A LeafFromConstraintNames object. . 
+            A LeafFromConstraintNames object.
         """
         super().__init__(DEFAULT_MODEL)
         pass

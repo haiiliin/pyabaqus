@@ -16,7 +16,10 @@ class InteractionContactInitializationModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ExpInitialization
+            
+            .. code-block:: python
+            
+                mdb.models[name].ExpInitialization
         
         Parameters
         ----------
@@ -81,7 +84,10 @@ class InteractionContactInitializationModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].StdInitialization
+            
+            .. code-block:: python
+            
+                mdb.models[name].StdInitialization
         
         Parameters
         ----------

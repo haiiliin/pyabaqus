@@ -4,14 +4,16 @@ class MeanFieldMatrix:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].constituents[name]
-        - import odbMaterial
-        - session.odbs[name].materials[name].constituents[name]
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].constituents[name]
+            import odbMaterial
+            session.odbs[name].materials[name].constituents[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONSTITUENT
+        The corresponding analysis keywords are:
+            - CONSTITUENT
 
     """
 
@@ -21,8 +23,11 @@ class MeanFieldMatrix:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].meanFieldHomogenization.MeanFieldMatrix
-            - session.odbs[name].materials[name].meanFieldHomogenization.MeanFieldMatrix
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].meanFieldHomogenization.MeanFieldMatrix
+                session.odbs[name].materials[name].meanFieldHomogenization.MeanFieldMatrix
         
         Parameters
         ----------
@@ -40,7 +45,7 @@ class MeanFieldMatrix:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -49,6 +54,6 @@ class MeanFieldMatrix:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

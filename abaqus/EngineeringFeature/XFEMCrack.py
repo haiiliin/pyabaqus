@@ -24,10 +24,9 @@ class XFEMCrack(Crack):
         import assembly
         mdb.models[name].rootAssembly.engineeringFeatures.cracks[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - ENRICHMENT
-        - INITIAL CONDITIONS
+        The corresponding analysis keywords are:
+            - ENRICHMENT
+            - INITIAL CONDITIONS
 
     """
 
@@ -95,7 +94,7 @@ class XFEMCrack(Crack):
 
         Returns
         -------
-            A XFEMCrack object. . 
+            A XFEMCrack object.
         """
         super().__init__()
         pass

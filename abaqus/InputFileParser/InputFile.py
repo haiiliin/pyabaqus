@@ -62,7 +62,7 @@ class InputFile:
 
         Returns
         -------
-            An InputFile object. . 
+            An InputFile object.
         """
         pass
 

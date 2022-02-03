@@ -117,7 +117,7 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
 
         Returns
         -------
-            A VelocityAdaptiveMeshConstraint object. . 
+            A VelocityAdaptiveMeshConstraint object.
         """
         super().__init__()
         pass

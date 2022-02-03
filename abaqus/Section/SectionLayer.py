@@ -16,10 +16,9 @@ class SectionLayer:
         import odbSection
         session.odbs[name].sections[name].layup[i]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SHELL SECTION
-        - SHELL GENERAL SECTION
+        The corresponding analysis keywords are:
+            - SHELL SECTION
+            - SHELL GENERAL SECTION
 
     """
 
@@ -78,6 +77,6 @@ class SectionLayer:
 
         Returns
         -------
-            A SectionLayer object. . 
+            A SectionLayer object.
         """
         pass

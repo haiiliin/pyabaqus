@@ -88,7 +88,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. . 
+            A TypeBC object.
         """
         pass
 
@@ -123,7 +123,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. . 
+            A TypeBC object.
         """
         pass
 
@@ -158,7 +158,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. . 
+            A TypeBC object.
         """
         pass
 
@@ -193,7 +193,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. . 
+            A TypeBC object.
         """
         pass
 
@@ -228,7 +228,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. . 
+            A TypeBC object.
         """
         pass
 
@@ -263,7 +263,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. . 
+            A TypeBC object.
         """
         pass
 
@@ -298,7 +298,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. . 
+            A TypeBC object.
         """
         pass
 
@@ -333,7 +333,7 @@ class TypeBC(BoundaryCondition):
 
         Returns
         -------
-            A TypeBC object. . 
+            A TypeBC object.
         """
         pass
 
@@ -374,7 +374,7 @@ class TypeBC(BoundaryCondition):
 
         Raises
         ------
-            - Value Error: 
+                - Value Error: 
               A Symmetry/Antisymmetry/Encastre BC cannot be edited in a propagated step. 
         """
         pass

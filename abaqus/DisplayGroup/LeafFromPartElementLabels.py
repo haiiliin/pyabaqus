@@ -51,7 +51,7 @@ class LeafFromPartElementLabels(Leaf):
 
         Returns
         -------
-            A LeafFromPartElementLabels object. . 
+            A LeafFromPartElementLabels object.
         """
         super().__init__(DEFAULT_MODEL)
         pass

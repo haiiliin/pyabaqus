@@ -44,7 +44,12 @@ class OptimizationConstraint:
 
         Returns
         -------
-            An OptimizationConstraint object.  and RangeError. 
+            An OptimizationConstraint object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         pass
 
@@ -61,6 +66,6 @@ class OptimizationConstraint:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

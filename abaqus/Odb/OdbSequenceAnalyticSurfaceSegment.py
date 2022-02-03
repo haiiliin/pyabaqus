@@ -29,7 +29,7 @@ class OdbSequenceAnalyticSurfaceSegment:
 
         Returns
         -------
-            An OdbSequenceAnalyticSurfaceSegment object. . 
+            An OdbSequenceAnalyticSurfaceSegment object.
         """
         pass
 

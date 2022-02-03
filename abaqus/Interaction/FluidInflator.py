@@ -15,9 +15,8 @@ class FluidInflator(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - FLUID INFLATOR
+        The corresponding analysis keywords are:
+            - FLUID INFLATOR
 
     """
 
@@ -52,7 +51,7 @@ class FluidInflator(Interaction):
 
         Returns
         -------
-            A FluidInflator object. . 
+            A FluidInflator object.
         """
         super().__init__()
         pass

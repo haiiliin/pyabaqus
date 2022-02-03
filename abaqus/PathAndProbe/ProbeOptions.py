@@ -80,9 +80,12 @@ class ProbeOptions:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.defaultProbeOptions
-        - session.probeOptions
+        
+        .. code-block:: python
+            
+            import visualization
+            session.defaultProbeOptions
+            session.probeOptions
 
     """
 

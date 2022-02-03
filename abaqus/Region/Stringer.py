@@ -60,7 +60,7 @@ class Stringer:
 
         Returns
         -------
-            A Stringer object. . 
+            A Stringer object.
         """
         pass
 
@@ -89,6 +89,6 @@ class Stringer:
 
         Returns
         -------
-            A Stringer object. . 
+            A Stringer object.
         """
         pass

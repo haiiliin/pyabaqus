@@ -7,8 +7,11 @@ class OdbDataFrame:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.odbData[name].steps[i].frames[i]
+        
+        .. code-block:: python
+            
+            import visualization
+            session.odbData[name].steps[i].frames[i]
 
     """
 

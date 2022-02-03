@@ -13,14 +13,17 @@ class MeshFace:
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].elementFaces[i]
-        - mdb.models[name].parts[name].elemFaces[i]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].elementFaces[i]
-        - mdb.models[name].rootAssembly.allInstances[name].elemFaces[i]
-        - mdb.models[name].rootAssembly.instances[name].elementFaces[i]
-        - mdb.models[name].rootAssembly.instances[name].elemFaces[i]
+        
+        .. code-block:: python
+            
+            import part
+            mdb.models[name].parts[name].elementFaces[i]
+            mdb.models[name].parts[name].elemFaces[i]
+            import assembly
+            mdb.models[name].rootAssembly.allInstances[name].elementFaces[i]
+            mdb.models[name].rootAssembly.allInstances[name].elemFaces[i]
+            mdb.models[name].rootAssembly.instances[name].elementFaces[i]
+            mdb.models[name].rootAssembly.instances[name].elemFaces[i]
 
     """
 
@@ -84,7 +87,7 @@ class MeshFace:
         -------
         normal: tuple[float]
             A tuple of 3 floats representing the unit normal vector. If the element face is 
-            collapsed such that a normal cannot be computed, a zero-length vector is returned. . 
+            collapsed such that a normal cannot be computed, a zero-length vector is returned.
         """
         pass
 
@@ -101,7 +104,7 @@ class MeshFace:
         Returns
         -------
         faces: MeshFaceArray
-            A MeshFaceArray object, which is a sequence of MeshFace objects. . 
+            A MeshFaceArray object, which is a sequence of MeshFace objects.
         """
         pass
 
@@ -118,7 +121,7 @@ class MeshFace:
         Returns
         -------
         edges: MeshEdgeArray
-            A MeshEdgeArray object, which is a sequence of MeshEdge objects. . 
+            A MeshEdgeArray object, which is a sequence of MeshEdge objects.
         """
         pass
 
@@ -135,7 +138,7 @@ class MeshFace:
         Returns
         -------
         elements: MeshElementArray
-            A MeshElementArray object, which is a sequence of MeshElement objects. . 
+            A MeshElementArray object, which is a sequence of MeshElement objects.
         """
         pass
 
@@ -152,7 +155,7 @@ class MeshFace:
         Returns
         -------
         faces: MeshFaceArray
-            A MeshFaceArray object, which is a sequence of MeshFace objects. . 
+            A MeshFaceArray object, which is a sequence of MeshFace objects.
         """
         pass
 
@@ -163,7 +166,7 @@ class MeshFace:
         Returns
         -------
         elements: MeshElementArray
-            A MeshElementArray object, which is a sequence of MeshElement objects. . 
+            A MeshElementArray object, which is a sequence of MeshElement objects.
         """
         pass
 
@@ -180,6 +183,6 @@ class MeshFace:
         Returns
         -------
         faces: MeshFaceArray
-            A MeshFaceArray object, which is a sequence of MeshFace objects. . 
+            A MeshFaceArray object, which is a sequence of MeshFace objects.
         """
         pass

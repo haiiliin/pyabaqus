@@ -9,12 +9,14 @@ class SlidingFormulationAssignment:
     Notes
     -----
         This object can be accessed by:
-        - import interaction
-        - mdb.models[name].interactions[name].slidingFormulationAssignments
+        
+        .. code-block:: python
+            
+            import interaction
+            mdb.models[name].interactions[name].slidingFormulationAssignments
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONTACT FORMULATION
+        The corresponding analysis keywords are:
+            - CONTACT FORMULATION
 
     """
 

@@ -7,22 +7,23 @@ class Solubility:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].solubility
-        - import odbMaterial
-        - session.odbs[name].materials[name].solubility
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].solubility
+            import odbMaterial
+            session.odbs[name].materials[name].solubility
 
-    Table Data
-    ----------
-        - Solubility.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Solubility.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SOLUBILITY
+        The corresponding analysis keywords are:
+            - SOLUBILITY
 
     """
 
@@ -32,8 +33,11 @@ class Solubility:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Solubility
-            - session.odbs[name].materials[name].Solubility
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Solubility
+                session.odbs[name].materials[name].Solubility
         
         Parameters
         ----------
@@ -50,7 +54,7 @@ class Solubility:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -59,6 +63,6 @@ class Solubility:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

@@ -30,11 +30,10 @@ class CompositeLayup:
         import part
         mdb.models[name].parts[name].compositeLayups[i]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SHELL SECTION
-        - SHELL GENERAL SECTION
-        - SOLID SECTION
+        The corresponding analysis keywords are:
+            - SHELL SECTION
+            - SHELL GENERAL SECTION
+            - SOLID SECTION
 
     """
 
@@ -310,7 +309,7 @@ class CompositeLayup:
 
         Returns
         -------
-            A CompositeShellSection object..
+            A CompositeShellSection object.
         """
         self.section = compositeShellSection = CompositeShellSection(name, layup, symmetric, thicknessType,
                                                                      preIntegrate, poissonDefinition, poisson,
@@ -387,7 +386,7 @@ class CompositeLayup:
 
         Returns
         -------
-            A GeometryShellSection object..
+            A GeometryShellSection object.
         """
         self.section = geometryShellSection = GeometryShellSection(nodalThicknessField, thicknessField, thicknessType,
                                                                    preIntegrate, poissonDefinition, poisson,
@@ -481,7 +480,7 @@ class CompositeLayup:
 
         Returns
         -------
-            A HomogeneousShellSection object..
+            A HomogeneousShellSection object.
         """
         self.section[name] = homogeneousShellSection = HomogeneousShellSection(name, material, thickness, numIntPts, thicknessType, preIntegrate, poissonDefinition, poisson, integrationRule, temperature, idealization, nTemp, thicknessModulus, useDensity, density, thicknessField, nodalThicknessField)
         return homogeneousShellSection

@@ -7,14 +7,16 @@ class MeanFieldHomogenization:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].meanFieldHomogenization
-        - import odbMaterial
-        - session.odbs[name].materials[name].meanFieldHomogenization
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].meanFieldHomogenization
+            import odbMaterial
+            session.odbs[name].materials[name].meanFieldHomogenization
 
-    Corresponding analysis keywords
-    -------------------------------
-        - MEAN FIELD HOMOGENIZATION
+        The corresponding analysis keywords are:
+            - MEAN FIELD HOMOGENIZATION
 
     """
 
@@ -25,8 +27,11 @@ class MeanFieldHomogenization:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].MeanFieldHomogenization
-            - session.odbs[name].materials[name].MeanFieldHomogenization
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].MeanFieldHomogenization
+                session.odbs[name].materials[name].MeanFieldHomogenization
         
         Parameters
         ----------
@@ -49,7 +54,7 @@ class MeanFieldHomogenization:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -58,6 +63,6 @@ class MeanFieldHomogenization:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

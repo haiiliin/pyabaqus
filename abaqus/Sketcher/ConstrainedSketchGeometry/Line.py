@@ -9,7 +9,10 @@ class Line(ConstrainedSketchGeometry):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].Line
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].Line
         
         Parameters
         ----------
@@ -20,7 +23,7 @@ class Line(ConstrainedSketchGeometry):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the line cannot be created). . 
-            !img 
+            A ConstrainedSketchGeometry object (None if the line cannot be created).
+            
         """
         pass

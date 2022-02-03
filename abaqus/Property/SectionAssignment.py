@@ -69,7 +69,7 @@ class SectionAssignment:
 
         Returns
         -------
-            A SectionAssignment object. . 
+            A SectionAssignment object.
         """
         pass
 
@@ -93,7 +93,7 @@ class SectionAssignment:
 
         Raises
         ------
-            - An exception is thrown if getVertices() is called on any section assignment except 
+                - An exception is thrown if getVertices() is called on any section assignment except 
             connector section assignment. 
               This method is valid only for connector section assignments. 
         """

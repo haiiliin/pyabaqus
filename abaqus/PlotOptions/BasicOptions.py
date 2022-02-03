@@ -297,10 +297,13 @@ class BasicOptions:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.defaultOdbDisplay.basicOptions
-        - session.viewports[name].layers[name].odbDisplay.basicOptions
-        - session.viewports[name].odbDisplay.basicOptions
+        
+        .. code-block:: python
+            
+            import visualization
+            session.defaultOdbDisplay.basicOptions
+            session.viewports[name].layers[name].odbDisplay.basicOptions
+            session.viewports[name].odbDisplay.basicOptions
 
     """
 
@@ -975,7 +978,7 @@ class BasicOptions:
 
         Raises
         ------
-            - If *featureAngle* is not in the valid range: 
+                - If *featureAngle* is not in the valid range: 
               RangeError: featureAngle must be a float in the range 0-90, inclusive 
         """
         pass

@@ -3,6 +3,17 @@ from abaqus.Model.ModelBase import ModelBase
 
 
 class CalibrationModel(ModelBase):
+    """Abaqus creates a Model object named `Model-1` when a session is started.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name]
+
+    """
 
     def Calibration(self, name: str) -> Calibration:
         """This method creates a Calibration object.
@@ -10,7 +21,10 @@ class CalibrationModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].Calibration
+            
+            .. code-block:: python
+            
+                mdb.models[name].Calibration
         
         Parameters
         ----------
@@ -19,7 +33,7 @@ class CalibrationModel(ModelBase):
 
         Returns
         -------
-            A Calibration object..
+            A Calibration object.
         """
         self.calibrations[name] = calibration = Calibration(name)
         return calibration

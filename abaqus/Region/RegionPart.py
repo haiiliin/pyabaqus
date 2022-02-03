@@ -24,7 +24,10 @@ class RegionPart(RegionPartBase):
     Notes
     -----
         This object can be accessed by:
-        - import regionToolset
+        
+        .. code-block:: python
+            
+            import regionToolset
 
     """
 
@@ -43,8 +46,11 @@ class RegionPart(RegionPartBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Surface
-            - mdb.models[*name*].rootAssembly.Surface
+            
+            .. code-block:: python
+            
+                mdb.models[*name*].parts[*name*].Surface
+                mdb.models[*name*].rootAssembly.Surface
         kwargs
 
             On three-dimensional solid faces, you can use the following arguments:
@@ -132,8 +138,11 @@ class RegionPart(RegionPartBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Set
-            - mdb.models[*name*].rootAssembly.Set
+            
+            .. code-block:: python
+            
+                mdb.models[*name*].parts[*name*].Set
+                mdb.models[*name*].rootAssembly.Set
         
         Parameters
         ----------
@@ -189,8 +198,11 @@ class RegionPart(RegionPartBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Set
-            - mdb.models[*name*].rootAssembly.Set
+            
+            .. code-block:: python
+            
+                mdb.models[*name*].parts[*name*].Set
+                mdb.models[*name*].rootAssembly.Set
         
         Parameters
         ----------
@@ -212,8 +224,11 @@ class RegionPart(RegionPartBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Set
-            - mdb.models[*name*].rootAssembly.Set
+            
+            .. code-block:: python
+            
+                mdb.models[*name*].parts[*name*].Set
+                mdb.models[*name*].rootAssembly.Set
         
         Parameters
         ----------
@@ -271,7 +286,10 @@ class RegionPart(RegionPartBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Skin
+            
+            .. code-block:: python
+            
+                mdb.models[*name*].parts[*name*].Skin
         
         Parameters
         ----------
@@ -306,7 +324,10 @@ class RegionPart(RegionPartBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].EditSkin
+            
+            .. code-block:: python
+            
+                mdb.models[*name*].parts[*name*].EditSkin
         
         Parameters
         ----------
@@ -340,7 +361,10 @@ class RegionPart(RegionPartBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Stringer
+            
+            .. code-block:: python
+            
+                mdb.models[*name*].parts[*name*].Stringer
         
         Parameters
         ----------

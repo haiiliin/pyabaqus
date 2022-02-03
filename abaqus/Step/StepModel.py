@@ -50,6 +50,17 @@ from ..StepMiscellaneous.SubstructureGenerateModesArray import SubstructureGener
 
 
 class StepModel(ModelBase):
+    """Abaqus creates a Model object named `Model-1` when a session is started.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name]
+
+    """
 
     def AnnealStep(self, name: str, previous: str, description: str = '', refTemp: float = None,
                    maintainAttributes: Boolean = False) -> AnnealStep:
@@ -58,7 +69,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].AnnealStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].AnnealStep
         
         Parameters
         ----------
@@ -94,7 +108,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].BuckleStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].BuckleStep
         
         Parameters
         ----------
@@ -155,7 +172,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ComplexFrequencyStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].ComplexFrequencyStep
         
         Parameters
         ----------
@@ -224,7 +244,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].CoupledTempDisplacementStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].CoupledTempDisplacementStep
         
         Parameters
         ----------
@@ -340,7 +363,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].CoupledThermalElectricalStructuralStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].CoupledThermalElectricalStructuralStep
         
         Parameters
         ----------
@@ -446,7 +472,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].CoupledThermalElectricStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].CoupledThermalElectricStep
         
         Parameters
         ----------
@@ -534,7 +563,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].DirectCyclicStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].DirectCyclicStep
         
         Parameters
         ----------
@@ -637,7 +669,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].EmagTimeHarmonicStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].EmagTimeHarmonicStep
         
         Parameters
         ----------
@@ -676,7 +711,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ExplicitDynamicsStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].ExplicitDynamicsStep
         
         Parameters
         ----------
@@ -757,7 +795,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].FrequencyStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].FrequencyStep
         
         Parameters
         ----------
@@ -886,7 +927,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].GeostaticStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].GeostaticStep
         
         Parameters
         ----------
@@ -968,7 +1012,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].HeatTransferStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].HeatTransferStep
         
         Parameters
         ----------
@@ -1066,7 +1113,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ImplicitDynamicsStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].ImplicitDynamicsStep
         
         Parameters
         ----------
@@ -1178,7 +1228,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].MassDiffusionStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].MassDiffusionStep
         
         Parameters
         ----------
@@ -1253,7 +1306,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ModalDynamicsStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].ModalDynamicsStep
         
         Parameters
         ----------
@@ -1313,7 +1369,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].RandomResponseStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].RandomResponseStep
         
         Parameters
         ----------
@@ -1371,7 +1430,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ResponseSpectrumStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].ResponseSpectrumStep
         
         Parameters
         ----------
@@ -1434,7 +1496,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SoilsStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].SoilsStep
         
         Parameters
         ----------
@@ -1544,7 +1609,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].StaticLinearPerturbationStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].StaticLinearPerturbationStep
         
         Parameters
         ----------
@@ -1588,7 +1656,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].StaticRiksStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].StaticRiksStep
         
         Parameters
         ----------
@@ -1695,7 +1766,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].StaticStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].StaticStep
         
         Parameters
         ----------
@@ -1805,7 +1879,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SteadyStateDirectStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].SteadyStateDirectStep
         
         Parameters
         ----------
@@ -1864,7 +1941,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SteadyStateModalStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].SteadyStateModalStep
         
         Parameters
         ----------
@@ -1925,7 +2005,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SteadyStateSubspaceStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].SteadyStateSubspaceStep
         
         Parameters
         ----------
@@ -1988,7 +2071,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SubspaceDynamicsStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].SubspaceDynamicsStep
         
         Parameters
         ----------
@@ -2046,7 +2132,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SubstructureGenerateStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].SubstructureGenerateStep
         
         Parameters
         ----------
@@ -2140,7 +2229,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].TempDisplacementDynamicsStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].TempDisplacementDynamicsStep
         
         Parameters
         ----------
@@ -2215,7 +2307,10 @@ class StepModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ViscoStep
+            
+            .. code-block:: python
+            
+                mdb.models[name].ViscoStep
         
         Parameters
         ----------

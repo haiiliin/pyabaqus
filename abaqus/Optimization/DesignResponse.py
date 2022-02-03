@@ -13,8 +13,11 @@ class DesignResponse:
     Notes
     -----
         This object can be accessed by:
-        - import optimization
-        - mdb.models[name].optimizationTasks[name].designResponses[name]
+        
+        .. code-block:: python
+            
+            import optimization
+            mdb.models[name].optimizationTasks[name].designResponses[name]
 
     """
 

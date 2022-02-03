@@ -9,8 +9,11 @@ class Control:
     Notes
     -----
         This object can be accessed by:
-        - import step
-        - mdb.models[name].steps[name].control
+        
+        .. code-block:: python
+        
+           import step
+           mdb.models[name].steps[name].control
 
     """
 
@@ -112,6 +115,6 @@ class Control:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

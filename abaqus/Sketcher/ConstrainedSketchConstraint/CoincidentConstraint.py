@@ -12,7 +12,10 @@ class CoincidentConstraint(ConstrainedSketchConstraint):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].CoincidentConstraint
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].CoincidentConstraint
         
         Parameters
         ----------
@@ -23,7 +26,7 @@ class CoincidentConstraint(ConstrainedSketchConstraint):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object. . 
-            !img 
+            A ConstrainedSketchConstraint object.
+            
         """
         pass

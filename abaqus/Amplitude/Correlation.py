@@ -26,8 +26,11 @@ class Correlation(Amplitude):
     Notes
     -----
         This object can be accessed by:
-        - import load
-        - mdb.models[name].boundaryConditions[name].correlation[i]
+        
+        .. code-block:: python
+            
+            import load
+            mdb.models[name].boundaryConditions[name].correlation[i]
 
     """
 

@@ -11,7 +11,10 @@ class FilletByRadius(ConstrainedSketchGeometry):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].FilletByRadius
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].FilletByRadius
         
         Parameters
         ----------
@@ -36,8 +39,8 @@ class FilletByRadius(ConstrainedSketchGeometry):
 
         Raises
         ------
-            - If the radius given cannot be used to create a fillet between the two curves given: 
+                - If the radius given cannot be used to create a fillet between the two curves given: 
               Range Error: cannot construct the Fillet specified 
-            !img 
+            
         """
         pass

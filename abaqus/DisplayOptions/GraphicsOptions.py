@@ -223,8 +223,8 @@ class GraphicsOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.defaultGraphicsOptions
-        - session.graphicsOptions
+            session.defaultGraphicsOptions
+            session.graphicsOptions
 
     """
 
@@ -681,6 +681,6 @@ class GraphicsOptions:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

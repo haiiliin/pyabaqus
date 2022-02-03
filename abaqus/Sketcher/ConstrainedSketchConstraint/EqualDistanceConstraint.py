@@ -15,7 +15,10 @@ class EqualDistanceConstraint(ConstrainedSketchConstraint):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].EqualDistanceConstraint
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].EqualDistanceConstraint
         
         Parameters
         ----------
@@ -29,7 +32,7 @@ class EqualDistanceConstraint(ConstrainedSketchConstraint):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object. . 
-            !img 
+            A ConstrainedSketchConstraint object.
+            
         """
         pass

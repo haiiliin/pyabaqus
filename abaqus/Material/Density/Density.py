@@ -7,22 +7,23 @@ class Density:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].density
-        - import odbMaterial
-        - session.odbs[name].materials[name].density
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].density
+            import odbMaterial
+            session.odbs[name].materials[name].density
 
-    Table Data
-    ----------
-        - The mass density.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - The mass density.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - DENSITY
+        The corresponding analysis keywords are:
+            - DENSITY
 
     """
 
@@ -33,8 +34,11 @@ class Density:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Density
-            - session.odbs[name].materials[name].Density
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Density
+                session.odbs[name].materials[name].Density
         
         Parameters
         ----------
@@ -59,7 +63,7 @@ class Density:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -68,6 +72,6 @@ class Density:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

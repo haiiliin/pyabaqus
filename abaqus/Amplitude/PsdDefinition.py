@@ -18,9 +18,8 @@ class PsdDefinition(Amplitude):
         import odbAmplitude
         session.odbs[name].amplitudes[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - PSD-DEFINITION
+        The corresponding analysis keywords are:
+            - PSD-DEFINITION
 
     """
 
@@ -70,7 +69,12 @@ class PsdDefinition(Amplitude):
 
         Returns
         -------
-            A PsdDefinition object.  and RangeError. 
+            A PsdDefinition object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -106,6 +110,6 @@ class PsdDefinition(Amplitude):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

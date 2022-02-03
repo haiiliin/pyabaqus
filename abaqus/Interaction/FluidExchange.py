@@ -16,9 +16,8 @@ class FluidExchange(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - FLUID EXCHANGE
+        The corresponding analysis keywords are:
+            - FLUID EXCHANGE
 
     """
 
@@ -57,7 +56,7 @@ class FluidExchange(Interaction):
 
         Returns
         -------
-            A FluidExchange object. . 
+            A FluidExchange object.
         """
         super().__init__()
         pass

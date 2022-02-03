@@ -14,9 +14,8 @@ class DiagnosticPrint:
         import step
         mdb.models[name].steps[name].diagnosticPrint
 
-    Corresponding analysis keywords
-    -------------------------------
-        - DIAGNOSTICS
+        The corresponding analysis keywords are:
+            - DIAGNOSTICS
 
     """
 
@@ -81,7 +80,7 @@ class DiagnosticPrint:
 
         Returns
         -------
-            A DiagnosticPrint object. . 
+            A DiagnosticPrint object.
         """
         pass
 

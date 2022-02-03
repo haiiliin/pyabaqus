@@ -4,14 +4,16 @@ class JouleHeatFraction:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].jouleHeatFraction
-        - import odbMaterial
-        - session.odbs[name].materials[name].jouleHeatFraction
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].jouleHeatFraction
+            import odbMaterial
+            session.odbs[name].materials[name].jouleHeatFraction
 
-    Corresponding analysis keywords
-    -------------------------------
-        - JOULE HEAT FRACTION
+        The corresponding analysis keywords are:
+            - JOULE HEAT FRACTION
 
     """
 
@@ -21,8 +23,11 @@ class JouleHeatFraction:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].JouleHeatFraction
-            - session.odbs[name].materials[name].JouleHeatFraction
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].JouleHeatFraction
+                session.odbs[name].materials[name].JouleHeatFraction
         
         Parameters
         ----------
@@ -36,7 +41,7 @@ class JouleHeatFraction:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -45,6 +50,6 @@ class JouleHeatFraction:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

@@ -239,7 +239,7 @@ class AssemblyBase(Feature):
 
         Returns
         -------
-            A PartInstance object..
+            A PartInstance object.
         """
         pass
 
@@ -268,7 +268,7 @@ class AssemblyBase(Feature):
 
         Returns
         -------
-            A ModelInstance object..
+            A ModelInstance object.
         """
         pass
 
@@ -299,7 +299,7 @@ class AssemblyBase(Feature):
 
         Returns
         -------
-            A PartInstance object..
+            A PartInstance object.
         """
         if 'part' in kwargs.keys() or (len(args) > 0 and isinstance(args[0], Part)):
             instance = PartInstance(name, *args, **kwargs)
@@ -460,7 +460,7 @@ class AssemblyBase(Feature):
             profile is not supported. 
             TAPERED_BEAM_MI: Moment of inertia calculations for tapered beams are not accurate. 
             SUBSTRUCTURE_INCORRECT_PROPERTIES: The user assigned density and thickness is not 
-            considered for substructures. . 
+            considered for substructures.
         """
         pass
 
@@ -492,7 +492,7 @@ class AssemblyBase(Feature):
         Returns
         -------
             A Float specifying the angle between the specified entities. If you provide a plane as 
-            an argument, Abaqus/CAE computes the angle using the normal to the plane. . 
+            an argument, Abaqus/CAE computes the angle using the normal to the plane.
         """
         pass
 
@@ -506,15 +506,15 @@ class AssemblyBase(Feature):
 
         Returns
         -------
-            A tuple of three Floats representing the coordinates of the specified point. . 
+            A tuple of three Floats representing the coordinates of the specified point.
         """
         pass
 
     def getDistance(self, entity1: str, entity2: str, printResults: Boolean = OFF):
         """Depending on the arguments provided, this method returns one of the following:
-        - The distance between two points.
-        - The minimum distance between a point and an edge.
-        - The minimum distance between two edges.
+            - The distance between two points.
+            - The minimum distance between a point and an edge.
+            - The minimum distance between two edges.
         
         Parameters
         ----------
@@ -529,7 +529,7 @@ class AssemblyBase(Feature):
 
         Returns
         -------
-            A Float specifying the calculated distance. . 
+            A Float specifying the calculated distance.
         """
         pass
 
@@ -555,7 +555,7 @@ class AssemblyBase(Feature):
             *startVertex*: A ConstrainedSketchVertex object specifying the vertex associated with one end of the
             attachment line. This end is also associated with the startFace. 
             *endVertex*: A ConstrainedSketchVertex object specifying the vertex associated with the other end of the
-            attachment line. This end is also associated with the endFace. . 
+            attachment line. This end is also associated with the endFace.
         """
         pass
 
@@ -571,7 +571,7 @@ class AssemblyBase(Feature):
         Returns
         -------
             A tuple of strings representing the section names. If no section names are found, the 
-            tuple will contain one empty string. . 
+            tuple will contain one empty string.
         """
         pass
 
@@ -830,7 +830,7 @@ class AssemblyBase(Feature):
 
         Raises
         ------
-            - If one or more features in the assembly fails to regenerate: 
+                - If one or more features in the assembly fails to regenerate: 
               FeatureError: Regeneration failed 
         """
         pass

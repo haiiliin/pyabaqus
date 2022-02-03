@@ -11,9 +11,8 @@ class TimePoint:
         import step
         mdb.models[name].timePoints[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - TIME POINTS
+        The corresponding analysis keywords are:
+            - TIME POINTS
 
     """
 
@@ -38,7 +37,12 @@ class TimePoint:
 
         Returns
         -------
-            A TimePoint object.  and RangeError. 
+            A TimePoint object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         pass
 
@@ -47,6 +51,6 @@ class TimePoint:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

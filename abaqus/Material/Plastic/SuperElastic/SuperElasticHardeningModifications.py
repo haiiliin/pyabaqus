@@ -5,22 +5,23 @@ class SuperElasticHardeningModifications:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].superElasticity.SuperElasticHardening
-        - import odbMaterial
-        - session.odbs[name].materials[name].superElasticity.SuperElasticHardening
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].superElasticity.SuperElasticHardening
+            import odbMaterial
+            session.odbs[name].materials[name].superElasticity.SuperElasticHardening
 
-    Table Data
-    ----------
-        - Start of Transformation (Loading).
-        - End of Transformation (Loading).
-        - Start of Transformation (Unloading).
-        - End of Transformation (Unloading).
-        - Plastic Strain.
+        The table data for this object are:
+            - Start of Transformation (Loading).
+            - End of Transformation (Loading).
+            - Start of Transformation (Unloading).
+            - End of Transformation (Unloading).
+            - Plastic Strain.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SUPERELASTIC HARDENING MODIFICATIONS
+        The corresponding analysis keywords are:
+            - SUPERELASTIC HARDENING MODIFICATIONS
 
     """
 
@@ -30,8 +31,11 @@ class SuperElasticHardeningModifications:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].superElasticity.SuperElasticHardeningModifications
-            - session.odbs[name].materials[name].superElasticity.SuperElasticHardeningModifications
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].superElasticity.SuperElasticHardeningModifications
+                session.odbs[name].materials[name].superElasticity.SuperElasticHardeningModifications
         
         Parameters
         ----------
@@ -46,7 +50,7 @@ class SuperElasticHardeningModifications:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -55,6 +59,6 @@ class SuperElasticHardeningModifications:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

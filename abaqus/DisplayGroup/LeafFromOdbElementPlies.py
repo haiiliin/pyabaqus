@@ -48,7 +48,7 @@ class LeafFromOdbElementPlies(Leaf):
 
         Returns
         -------
-            A LeafFromOdbElementPlies object. . 
+            A LeafFromOdbElementPlies object.
         """
         super().__init__(DEFAULT_MODEL)
         pass

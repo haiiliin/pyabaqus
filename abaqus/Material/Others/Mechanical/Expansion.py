@@ -7,43 +7,44 @@ class Expansion:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].expansion
-        - import odbMaterial
-        - session.odbs[name].materials[name].expansion
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].expansion
+            import odbMaterial
+            session.odbs[name].materials[name].expansion
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *type*=ISOTROPIC, the table data specify the following:
-        - α in Abaqus/Standard or Abaqus/Explicit analysis.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - α in Abaqus/Standard or Abaqus/Explicit analysis.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=ORTHOTROPIC, the table data specify the following:
-        - α11.
-        - α22.
-        - α33.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - α11.
+            - α22.
+            - α33.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=ANISOTROPIC, the table data specify the following:
-        - α11.
-        - α22.
-        - α33. (Not used for plane stress case.)
-        - α12.
-        - α13.
-        - α23.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - α11.
+            - α22.
+            - α33. (Not used for plane stress case.)
+            - α12.
+            - α13.
+            - α23.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=SHORT_FIBER, there is no table data.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - EXPANSION
+        The corresponding analysis keywords are:
+            - EXPANSION
 
     """
 
@@ -54,8 +55,11 @@ class Expansion:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Expansion
-            - session.odbs[name].materials[name].Expansion
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Expansion
+                session.odbs[name].materials[name].Expansion
         
         Parameters
         ----------
@@ -82,7 +86,7 @@ class Expansion:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -91,6 +95,6 @@ class Expansion:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

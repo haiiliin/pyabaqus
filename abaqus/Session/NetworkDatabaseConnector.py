@@ -73,7 +73,7 @@ class NetworkDatabaseConnector:
 
         Returns
         -------
-            A NetworkDatabaseConnector object. . 
+            A NetworkDatabaseConnector object.
         """
         pass
 

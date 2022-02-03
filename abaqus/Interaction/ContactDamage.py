@@ -72,109 +72,107 @@ class ContactDamage:
         import interaction
         mdb.models[name].interactionProperties[name].damage
 
-    Table Data
-    ----------
+        The table data for this object are:
         Table data for *initTable*:
         If *criterion*=MAX_STRESS or QUAD_TRACTION, the table data specify the following:
-        - Maximum nominal stress in the normal-only mode.
-        - Maximum nominal stress in the first shear direction (for a mode that involves separation only in this direction).
-        - Maximum nominal stress in the second shear direction (for a mode that involves separation only in this direction).
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Maximum nominal stress in the normal-only mode.
+            - Maximum nominal stress in the first shear direction (for a mode that involves separation only in this direction).
+            - Maximum nominal stress in the second shear direction (for a mode that involves separation only in this direction).
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *criterion*=MAX_SEPARATION or QUAD_SEPARATION, the table data specify the following:
-        - Separation at damage initiation in a normal-only mode.
-        - Separation at damage initiation in a shear-only mode that involves separation only along the first shear
+            - Separation at damage initiation in a normal-only mode.
+            - Separation at damage initiation in a shear-only mode that involves separation only along the first shear
           direction.
-        - Separation at damage initiation in a shear-only mode that involves separation only along the second shear
+            - Separation at damage initiation in a shear-only mode that involves separation only along the second shear
           direction.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         Table data for *evolTable*:
         If *evolutionType*=DISPLACEMENT, *softening*=LINEAR, and *useMixedMode*=OFF, the table data specify the following:
-        - Effective total or Plastic displacement at failure, measured from the time of damage initiation.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Effective total or Plastic displacement at failure, measured from the time of damage initiation.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *evolutionType*=ENERGY, *softening*=LINEAR or EXPONENTIAL, and *useMixedMode*=OFF, the table data specify
         the following:
-        - Fracture energy.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Fracture energy.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *evolutionType*=DISPLACEMENT, *softening*=LINEAR, *useMixedMode*=ON, *mixedModeType*=TABULAR, and
         *modeMixRatio*=ENERGY or TRACTION, the table data specify the following:
-        - Total displacement at failure, measured from the time of damage initiation.
-        - Appropriate mode mix ratio.
-        - Appropriate mode mix ratio (if relevant, for three dimensional problems with anisotropic shear behavior).
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Total displacement at failure, measured from the time of damage initiation.
+            - Appropriate mode mix ratio.
+            - Appropriate mode mix ratio (if relevant, for three dimensional problems with anisotropic shear behavior).
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *evolutionType*=ENERGY, *softening*=LINEAR or EXPONENTIAL, *useMixedMode*=ON, *mixedModeType*=TABULAR, and
         *modeMixRatio*=ENERGY or TRACTION, the table data specify the following:
-        - Fracture energy.
-        - Appropriate mode mix ratio.
-        - Appropriate mode mix ratio (if relevant, for three dimensional problems with anisotropic shear behavior).
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Fracture energy.
+            - Appropriate mode mix ratio.
+            - Appropriate mode mix ratio (if relevant, for three dimensional problems with anisotropic shear behavior).
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *evolutionType*=DISPLACEMENT, *softening*=EXPONENTIAL, and *useMixedMode*=OFF, the table data specify the
         following:
-        - Effective total or Plastic displacement at failure, measured from the time of damage initiation.
-        - Exponential law parameter.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Effective total or Plastic displacement at failure, measured from the time of damage initiation.
+            - Exponential law parameter.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *evolutionType*=DISPLACEMENT, *softening*=EXPONENTIAL, *useMixedMode*=ON, *mixedModeType*=TABULAR, and
         *modeMixRatio*=ENERGY or TRACTION, the table data specify the following:
-        - Total displacement at failure, measured from the time of damage initiation.
-        - Exponential law parameter.
-        - Appropriate mode mix ratio.
-        - Appropriate mode mix ratio (if relevant, for three dimensional problems with anisotropic shear behavior).
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Total displacement at failure, measured from the time of damage initiation.
+            - Exponential law parameter.
+            - Appropriate mode mix ratio.
+            - Appropriate mode mix ratio (if relevant, for three dimensional problems with anisotropic shear behavior).
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *evolutionType*=DISPLACEMENT, *softening*=TABULAR, and *useMixedMode*=OFF, the table data specify the following:
-        - Damage variable.
-        - Effective total or Plastic displacement at failure, measured from the time of damage initiation.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Damage variable.
+            - Effective total or Plastic displacement at failure, measured from the time of damage initiation.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *evolutionType*=DISPLACEMENT, *softening*=TABULAR, *useMixedMode*=ON, *mixedModeType*=TABULAR, and
         *modeMixRatio*=ENERGY or TRACTION, the table data specify the following:
-        - Damage variable.
-        - Effective total displacement, measured from the time of damage initiation.
-        - Appropriate mode mix ratio.
-        - Appropriate mode mix ratio (if relevant, for three dimensional problems with anisotropic shear behavior).
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Damage variable.
+            - Effective total displacement, measured from the time of damage initiation.
+            - Appropriate mode mix ratio.
+            - Appropriate mode mix ratio (if relevant, for three dimensional problems with anisotropic shear behavior).
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *evolutionType*=ENERGY, *softening*=LINEAR or EXPONENTIAL, *useMixedMode*=ON, *mixedModeType*=POWER_LAW or
         BK, and *modeMixRatio*=ENERGY, the table data specify the following:
-        - Normal mode fracture energy.
-        - Shear mode fracture energy for failure in the first shear direction.
-        - Shear mode fracture energy for failure in the second shear direction.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Normal mode fracture energy.
+            - Shear mode fracture energy for failure in the first shear direction.
+            - Shear mode fracture energy for failure in the second shear direction.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - DAMAGE INITIATION
-        - DAMAGE EVOLUTION
-        - DAMAGE STABILIZATION
+        The corresponding analysis keywords are:
+            - DAMAGE INITIATION
+            - DAMAGE EVOLUTION
+            - DAMAGE STABILIZATION
 
     """
 
@@ -328,7 +326,7 @@ class ContactDamage:
 
         Returns
         -------
-            A ContactDamage object. . 
+            A ContactDamage object.
         """
         pass
 

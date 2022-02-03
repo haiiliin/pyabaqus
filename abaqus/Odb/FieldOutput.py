@@ -101,7 +101,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. . 
+            A FieldOutput object.
         """
         pass
 
@@ -130,7 +130,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. . 
+            A FieldOutput object.
         """
         pass
 
@@ -146,15 +146,15 @@ class FieldOutput:
         ----------
         position
             A SymbolicConstant specifying the position of the output. Possible values are: 
-            - NODAL, specifying the values calculated at the nodes. 
-            - INTEGRATION_POINT, specifying the values calculated at the integration points. 
-            - ELEMENT_NODAL, specifying the values obtained by extrapolating results calculated at 
+                - NODAL, specifying the values calculated at the nodes. 
+                - INTEGRATION_POINT, specifying the values calculated at the integration points. 
+                - ELEMENT_NODAL, specifying the values obtained by extrapolating results calculated at 
             the integration points. 
-            - CENTROID, specifying the value at the centroid obtained by extrapolating results 
+                - CENTROID, specifying the value at the centroid obtained by extrapolating results 
             calculated at the integration points. 
-            - ELEMENT_FACE_INTEGRATION_POINT, specifying the values calculated at the element face 
+                - ELEMENT_FACE_INTEGRATION_POINT, specifying the values calculated at the element face 
             integration points. 
-            - SURFACE_INTEGRATION_POINT, specifying the values calculated at the surface integration 
+                - SURFACE_INTEGRATION_POINT, specifying the values calculated at the surface integration 
             points. Selecting this value prompts the Visualization module to calculate the sum of 
             the values at the ELEMENT_FACE_INTEGRATION_POINT position from multiple surfaces. 
         instance
@@ -190,7 +190,7 @@ class FieldOutput:
 
         Raises
         ------
-            - The addData method throws many exceptions of type odbException. For example, if the 
+                - The addData method throws many exceptions of type odbException. For example, if the 
             local coordinate system is specified for scalar data: 
               odbException: Transformation not allowed for scalar data. 
         """
@@ -209,7 +209,7 @@ class FieldOutput:
 
         Raises
         ------
-            - The addData method throws many exceptions of type odbException. For example, if the 
+                - The addData method throws many exceptions of type odbException. For example, if the 
             local coordinate system is specified for scalar data: 
               odbException: Transformation not allowed for scalar data. 
         """
@@ -260,9 +260,9 @@ class FieldOutput:
 
         Raises
         ------
-            - If you specify an odbSet containing entities from multiple instances: 
+                - If you specify an odbSet containing entities from multiple instances: 
               odbException: Entities from multiple instances present in set. 
-            - The addData method throws many exceptions of type odbException. For example, if the 
+                - The addData method throws many exceptions of type odbException. For example, if the 
             local coordinate system is specified for scalar data: 
               odbException: Transformation not allowed for scalar data. 
         """
@@ -288,7 +288,7 @@ class FieldOutput:
 
         Returns
         -------
-            AFieldOutput object. . 
+            AFieldOutput object.
         """
         pass
 
@@ -307,7 +307,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. . 
+            A FieldOutput object.
         """
         pass
 
@@ -321,11 +321,11 @@ class FieldOutput:
             *position* 
             A SymbolicConstant specifying the position of the output in the element. Possible values 
             are: 
-            - NODAL, specifying the values calculated at the nodes. 
-            - INTEGRATION_POINT, specifying the values calculated at the integration points. 
-            - ELEMENT_NODAL, specifying the values obtained by extrapolating results calculated at 
+                - NODAL, specifying the values calculated at the nodes. 
+                - INTEGRATION_POINT, specifying the values calculated at the integration points. 
+                - ELEMENT_NODAL, specifying the values obtained by extrapolating results calculated at 
             the integration points. 
-            - CENTROID, specifying the value at the centroid obtained by extrapolating results 
+                - CENTROID, specifying the value at the centroid obtained by extrapolating results 
             calculated at the integration points. 
             If the requested field values are not found in the output database at the specified 
             ELEMENT_NODAL or CENTROID positions, they are extrapolated from the field data at the 
@@ -342,7 +342,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. . 
+            A FieldOutput object.
         """
         pass
 
@@ -358,7 +358,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. . 
+            A FieldOutput object.
         """
         pass
 
@@ -374,7 +374,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. . 
+            A FieldOutput object.
         """
         pass
 
@@ -389,7 +389,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. . 
+            A FieldOutput object.
         """
         pass
 
@@ -404,7 +404,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. . 
+            A FieldOutput object.
         """
         pass
 
@@ -419,7 +419,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. . 
+            A FieldOutput object.
         """
         pass
 
@@ -434,7 +434,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. . 
+            A FieldOutput object.
         """
         pass
 
@@ -449,7 +449,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. . 
+            A FieldOutput object.
         """
         pass
 
@@ -465,7 +465,7 @@ class FieldOutput:
 
         Returns
         -------
-            A FieldOutput object. . 
+            A FieldOutput object.
         """
         pass
 
@@ -502,7 +502,7 @@ class FieldOutput:
 
         Raises
         ------
-            - The getTransformedField method throws an exception if the field contains any assembly 
+                - The getTransformedField method throws an exception if the field contains any assembly 
             level nodes. 
               odbException: Cannot apply transformation to field containing assembly level nodes. 
         """
@@ -542,7 +542,7 @@ class FieldOutput:
 
         Raises
         ------
-            - The getTransformedField method throws an exception if the field contains any assembly 
+                - The getTransformedField method throws an exception if the field contains any assembly 
             level nodes. 
               odbException: Cannot apply transformation to field containing assembly level nodes. 
         """
@@ -587,7 +587,7 @@ class FieldOutput:
 
         Raises
         ------
-            - The getTransformedField method throws an exception if the field contains any assembly 
+                - The getTransformedField method throws an exception if the field contains any assembly 
             level nodes. 
               odbException: Cannot apply transformation to field containing assembly level nodes. 
         """
@@ -615,7 +615,7 @@ class FieldOutput:
 
         Raises
         ------
-            - The getConnectorFieldXformedToNodeA method throws an exception if the field requires a 
+                - The getConnectorFieldXformedToNodeA method throws an exception if the field requires a 
             deformationField and the argument is not supplied. 
               odbException: Deformation field is required for transforming this connector field. 
         """
@@ -656,17 +656,17 @@ class FieldOutput:
             A sequence of SymbolicConstants specifying which invariants should be calculated for 
             this field. An empty sequence indicates that no invariants are valid for this field. 
             Possible values are: 
-            - MAGNITUDE 
-            - MISES 
-            - TRESCA 
-            - PRESS 
-            - INV3 
-            - MAX_PRINCIPAL 
-            - MID_PRINCIPAL 
-            - MIN_PRINCIPAL 
-            - MAX_INPLANE_PRINCIPAL 
-            - MIN_INPLANE_PRINCIPAL 
-            - OUTOFPLANE_PRINCIPAL 
+                - MAGNITUDE 
+                - MISES 
+                - TRESCA 
+                - PRESS 
+                - INV3 
+                - MAX_PRINCIPAL 
+                - MID_PRINCIPAL 
+                - MIN_PRINCIPAL 
+                - MAX_INPLANE_PRINCIPAL 
+                - MIN_INPLANE_PRINCIPAL 
+                - OUTOFPLANE_PRINCIPAL 
             The default value is an empty sequence. 
         """
         pass

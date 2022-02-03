@@ -13,31 +13,29 @@ class CohesiveBehavior:
         import interaction
         mdb.models[name].interactionProperties[name].cohesiveBehavior
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *coupling*=UNCOUPLED, the table data specify the following:
-        - Stiffness coefficient in the normal direction, Knn.
-        - Stiffness coefficient in the first shear direction, Kss.
-        - Stiffness coefficient in the second shear direction, Ktt.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Stiffness coefficient in the normal direction, Knn.
+            - Stiffness coefficient in the first shear direction, Kss.
+            - Stiffness coefficient in the second shear direction, Ktt.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *coupling*=COUPLED, the table data specify the following:
-        - Stiffness coefficient in the normal direction, Knn.
-        - Stiffness coefficient in the first shear direction, Kss.
-        - Stiffness coefficient in the second shear direction, Ktt.
-        - Coupled stiffness coefficient, Kns.
-        - Coupled stiffness coefficient, Knt.
-        - Coupled stiffness coefficient, Kst.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Stiffness coefficient in the normal direction, Knn.
+            - Stiffness coefficient in the first shear direction, Kss.
+            - Stiffness coefficient in the second shear direction, Ktt.
+            - Coupled stiffness coefficient, Kns.
+            - Coupled stiffness coefficient, Knt.
+            - Coupled stiffness coefficient, Kst.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - COHESIVE BEHAVIOR
+        The corresponding analysis keywords are:
+            - COHESIVE BEHAVIOR
 
     """
 
@@ -82,7 +80,7 @@ class CohesiveBehavior:
 
         Returns
         -------
-            A CohesiveBehavior object. . 
+            A CohesiveBehavior object.
         """
         pass
 

@@ -9,9 +9,3 @@ Create boundary conditions
 --------------------------
 
 .. autoclass:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel
-
-Create calibrations
--------------------
-
-.. autoclass:: abaqus.BoundaryCondition.Calibration.Calibration
-

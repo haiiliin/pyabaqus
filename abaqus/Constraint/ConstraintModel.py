@@ -17,6 +17,17 @@ from ..Region.Region import Region
 
 
 class ConstraintModel(ModelBase):
+    """Abaqus creates a Model object named `Model-1` when a session is started.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name]
+
+    """
 
     def AdjustPoints(self, name: str, surface: Region, controlPoints: Region) -> AdjustPoints:
         """This method creates an AdjustPoints object.
@@ -24,7 +35,10 @@ class ConstraintModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].AdjustPoints
+            
+            .. code-block:: python
+            
+                mdb.models[name].AdjustPoints
         
         Parameters
         ----------
@@ -37,7 +51,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            An AdjustPoints object..
+            An AdjustPoints object.
         """
         self.constraints[name] = constraint = AdjustPoints(name, surface, controlPoints)
         return constraint
@@ -52,7 +66,10 @@ class ConstraintModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].Coupling
+            
+            .. code-block:: python
+            
+                mdb.models[name].Coupling
         
         Parameters
         ----------
@@ -107,7 +124,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            A Coupling object..
+            A Coupling object.
         """
         self.constraints[name] = constraint = Coupling(name, surface, controlPoint, influenceRadius, couplingType,
                                                        adjust, localCsys, u1, u2, u3, ur1, ur2, ur3, weightingMethod)
@@ -119,7 +136,10 @@ class ConstraintModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].DisplayBody
+            
+            .. code-block:: python
+            
+                mdb.models[name].DisplayBody
         
         Parameters
         ----------
@@ -136,7 +156,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            A DisplayBody object..
+            A DisplayBody object.
         """
         self.constraints[name] = constraint = DisplayBody(name, instance, controlPoints)
         return constraint
@@ -149,7 +169,10 @@ class ConstraintModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].EmbeddedRegion
+            
+            .. code-block:: python
+            
+                mdb.models[name].EmbeddedRegion
         
         Parameters
         ----------
@@ -181,7 +204,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            An EmbeddedRegion object..
+            An EmbeddedRegion object.
         """
         self.constraints[name] = constraint = EmbeddedRegion(name, embeddedRegion, hostRegion, weightFactorTolerance,
                                                              toleranceMethod, absoluteTolerance, fractionalTolerance)
@@ -193,7 +216,10 @@ class ConstraintModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].Equation
+            
+            .. code-block:: python
+            
+                mdb.models[name].Equation
         
         Parameters
         ----------
@@ -209,7 +235,7 @@ class ConstraintModel(ModelBase):
 
         Raises
         ------
-            - If *terms* does not contain more than one entry:
+                - If *terms* does not contain more than one entry:
               Equation must have two or more terms.
         """
         self.constraints[name] = constraint = Equation(name, terms)
@@ -223,7 +249,10 @@ class ConstraintModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].MultipointConstraint
+            
+            .. code-block:: python
+            
+                mdb.models[name].MultipointConstraint
         
         Parameters
         ----------
@@ -253,7 +282,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            A MultipointConstraint object..
+            A MultipointConstraint object.
         """
         self.constraints[name] = constraint = MultipointConstraint(name, surface, controlPoint, mpcType, csys, userType,
                                                                    userMode)
@@ -267,7 +296,10 @@ class ConstraintModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].RigidBody
+            
+            .. code-block:: python
+            
+                mdb.models[name].RigidBody
         
         Parameters
         ----------
@@ -296,7 +328,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            A RigidBody object..
+            A RigidBody object.
         """
         self.constraints[name] = constraint = RigidBody(name, refPointRegion, bodyRegion, tieRegion, pinRegion,
                                                         surfaceRegion, refPointAtCOM, isothermal)
@@ -311,7 +343,10 @@ class ConstraintModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ShellSolidCoupling
+            
+            .. code-block:: python
+            
+                mdb.models[name].ShellSolidCoupling
         
         Parameters
         ----------
@@ -338,7 +373,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            A ShellSolidCoupling object..
+            A ShellSolidCoupling object.
         """
         self.constraints[name] = constraint = ShellSolidCoupling(name, shellEdge, solidFace, positionToleranceMethod,
                                                                  positionTolerance, influenceDistanceMethod,
@@ -355,7 +390,10 @@ class ConstraintModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].Tie
+            
+            .. code-block:: python
+            
+                mdb.models[name].Tie
         
         Parameters
         ----------
@@ -394,7 +432,7 @@ class ConstraintModel(ModelBase):
 
         Returns
         -------
-            A Tie object..
+            A Tie object.
         """
         self.constraints[name] = constraint = Tie(name, main, secondary, adjust, positionToleranceMethod,
                                                   positionTolerance, tieRotations, constraintRatioMethod,

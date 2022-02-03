@@ -70,32 +70,32 @@ class TemperatureState(PredefinedFieldState):
         A tuple of Floats specifying the temperature values when **distributionType=UNIFORM** or
         **distributionType=FIELD**. The value of the **magnitudes** argument is a function of the
         **crossSectionDistribution** argument, as shown in the following list:
-        - If **crossSectionDistribution=CONSTANT_THROUGH_THICKNESS** then **magnitudes** is a Double
+            - If **crossSectionDistribution=CONSTANT_THROUGH_THICKNESS** then **magnitudes** is a Double
         specifying the temperature.
-        - If **crossSectionDistribution=GRADIENTS_THROUGH_SHELL_CS** then **magnitudes** is a
+            - If **crossSectionDistribution=GRADIENTS_THROUGH_SHELL_CS** then **magnitudes** is a
         sequence of Doubles specifying the mean value and the gradient in the thickness
         direction.
-        - If **crossSectionDistribution=GRADIENTS_THROUGH_BEAM_CS** then **magnitudes** is a
+            - If **crossSectionDistribution=GRADIENTS_THROUGH_BEAM_CS** then **magnitudes** is a
         sequence of Doubles specifying the mean value, the gradient in the N1 direction, and the
         gradient in the N2 direction.
-        - If **crossSectionDistribution=POINTS_THROUGH_SECTION** then **magnitudes** is a sequence
+            - If **crossSectionDistribution=POINTS_THROUGH_SECTION** then **magnitudes** is a sequence
         of Doubles specifying the temperature at each point.
     status: SymbolicConstant
         A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.PredefinedField.:py:class:`~abaqus.PredefinedField.PredefinedFieldState.PredefinedFieldState`.:py:class:`~abaqus.PredefinedField.PredefinedFieldState.PredefinedFieldState`` object.
         Possible values are:
-        - NOT_YET_ACTIVE
-        - CREATED
-        - PROPAGATED
-        - MODIFIED
-        - DEACTIVATED
-        - DEACTIVATED_TO_INITIAL
-        - NO_LONGER_ACTIVE
-        - RESET_TO_INITIAL
-        - TO_BE_COMPUTED
-        - PROPAGATED_FROM_COMPUTED
-        - BUILT_INTO_BASE_STATE
-        - TYPE_NOT_APPLICABLE
-        - INSTANCE_NOT_APPLICABLE
+            - NOT_YET_ACTIVE
+            - CREATED
+            - PROPAGATED
+            - MODIFIED
+            - DEACTIVATED
+            - DEACTIVATED_TO_INITIAL
+            - NO_LONGER_ACTIVE
+            - RESET_TO_INITIAL
+            - TO_BE_COMPUTED
+            - PROPAGATED_FROM_COMPUTED
+            - BUILT_INTO_BASE_STATE
+            - TYPE_NOT_APPLICABLE
+            - INSTANCE_NOT_APPLICABLE
         This member exists in all :py:class:`~abaqus.PredefinedField.:py:class:`~abaqus.PredefinedField.PredefinedFieldState.PredefinedFieldState`.:py:class:`~abaqus.PredefinedField.PredefinedFieldState.PredefinedFieldState`` objects, but different predefined fields
         use different subsets of the entire list of possible values depending on propagation
         rules.
@@ -103,8 +103,11 @@ class TemperatureState(PredefinedFieldState):
     Notes
     -----
         This object can be accessed by:
-        - import load
-        - mdb.models[name].steps[name].predefinedFieldStates[name]
+        
+        .. code-block:: python
+            
+            import load
+            mdb.models[name].steps[name].predefinedFieldStates[name]
 
     """
 

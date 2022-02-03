@@ -9,12 +9,14 @@ class ContactPropertyAssignment:
     Notes
     -----
         This object can be accessed by:
-        - import interaction
-        - mdb.models[name].interactions[name].contactPropertyAssignments
+        
+        .. code-block:: python
+            
+            import interaction
+            mdb.models[name].interactions[name].contactPropertyAssignments
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONTACT PROPERTY ASSIGNMENT
+        The corresponding analysis keywords are:
+            - CONTACT PROPERTY ASSIGNMENT
 
     """
 

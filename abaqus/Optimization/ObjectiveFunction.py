@@ -46,7 +46,12 @@ class ObjectiveFunction:
 
         Returns
         -------
-            An ObjectiveFunction object.  and RangeError. 
+            An ObjectiveFunction object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         pass
 
@@ -61,6 +66,6 @@ class ObjectiveFunction:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

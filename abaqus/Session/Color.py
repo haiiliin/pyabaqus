@@ -12,7 +12,7 @@ class Color:
     Notes
     -----
         This object can be accessed by:
-        - session.colors[name]
+            session.colors[name]
 
     """
 

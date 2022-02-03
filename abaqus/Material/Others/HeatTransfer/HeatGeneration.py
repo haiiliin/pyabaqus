@@ -4,14 +4,16 @@ class HeatGeneration:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].heatGeneration
-        - import odbMaterial
-        - session.odbs[name].materials[name].heatGeneration
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].heatGeneration
+            import odbMaterial
+            session.odbs[name].materials[name].heatGeneration
 
-    Corresponding analysis keywords
-    -------------------------------
-        - HEAT GENERATION
+        The corresponding analysis keywords are:
+            - HEAT GENERATION
 
     """
 
@@ -21,11 +23,14 @@ class HeatGeneration:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].HeatGeneration
-            - session.odbs[name].materials[name].HeatGeneration
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].HeatGeneration
+                session.odbs[name].materials[name].HeatGeneration
 
         Returns
         -------
-            A HeatGeneration object. . 
+            A HeatGeneration object.
         """
         pass

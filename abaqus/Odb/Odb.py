@@ -63,7 +63,10 @@ class Odb(AmplitudeOdb,
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[name].Part
+            
+            .. code-block:: python
+            
+                session.odbs[name].Part
         
         Parameters
         ----------
@@ -78,7 +81,7 @@ class Odb(AmplitudeOdb,
 
         Returns
         -------
-            An OdbPart object..
+            An OdbPart object.
         """
         self.parts[name] = odbPart = OdbPart(name, embeddedSpace, type)
         return odbPart
@@ -90,7 +93,10 @@ class Odb(AmplitudeOdb,
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[name].Step
+            
+            .. code-block:: python
+            
+                session.odbs[name].Step
         
         Parameters
         ----------
@@ -172,7 +178,7 @@ class Odb(AmplitudeOdb,
 
         Raises
         ------
-            - If *previousStepName* is invalid:
+                - If *previousStepName* is invalid:
               ValueError: previousStepName is invalid
         """
         self.steps[name] = odbStep = OdbStep(name, description, domain, timePeriod, previousStepName, procedure,
@@ -185,7 +191,10 @@ class Odb(AmplitudeOdb,
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[*name*].SectionCategory
+            
+            .. code-block:: python
+            
+                session.odbs[*name*].SectionCategory
         
         Parameters
         ----------
@@ -196,7 +205,7 @@ class Odb(AmplitudeOdb,
 
         Returns
         -------
-            A SectionCategory object..
+            A SectionCategory object.
         """
         self.sectionCategories[name] = sectionCategory = SectionCategory(name, description)
         return sectionCategory

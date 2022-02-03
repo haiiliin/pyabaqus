@@ -9,19 +9,22 @@ class RegionAssemblyBase(AssemblyBase):
     Notes
     -----
         This object can be accessed by:
-        - import regionToolset
+        
+        .. code-block:: python
+            
+            import regionToolset
 
     """
 
     def clashSets(self, arg1: str, arg2: str):
         """This command prints a message describing the relationship between the contents of two
         sets. Possible outcomes are:
-        - Both sets are the same.
-        - Set 2 is a subset of set 1.
-        - Set 2 is a superset of set 1.
-        - Set 2 intersects set 1.
-        - Set 2 touches set 1 (their boundaries intersect).
-        - Set 2 and set 1 are disjoint.
+            - Both sets are the same.
+            - Set 2 is a subset of set 1.
+            - Set 2 is a superset of set 1.
+            - Set 2 intersects set 1.
+            - Set 2 touches set 1 (their boundaries intersect).
+            - Set 2 and set 1 are disjoint.
         This command accepts only positional arguments and has no keywords.
         
         Parameters

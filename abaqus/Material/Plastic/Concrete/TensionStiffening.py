@@ -8,30 +8,31 @@ class TensionStiffening:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].concrete.tensionStiffening
-        - import odbMaterial
-        - session.odbs[name].materials[name].concrete.tensionStiffening
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].concrete.tensionStiffening
+            import odbMaterial
+            session.odbs[name].materials[name].concrete.tensionStiffening
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *type*=STRAIN, the table data specify the following:
-        - Fraction of remaining stress to stress at cracking.
-        - Absolute value of the direct strain minus the direct strain at cracking.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Fraction of remaining stress to stress at cracking.
+            - Absolute value of the direct strain minus the direct strain at cracking.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=DISPLACEMENT, the table data specify the following:
-        - Displacement, u0u0, at which a linear loss of strength after cracking gives zero stress.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Displacement, u0u0, at which a linear loss of strength after cracking gives zero stress.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - TENSION STIFFENING
+        The corresponding analysis keywords are:
+            - TENSION STIFFENING
 
     """
 
@@ -42,8 +43,11 @@ class TensionStiffening:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].concrete.TensionStiffening
-            - session.odbs[name].materials[name].concrete.TensionStiffening
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].concrete.TensionStiffening
+                session.odbs[name].materials[name].concrete.TensionStiffening
         
         Parameters
         ----------
@@ -63,7 +67,7 @@ class TensionStiffening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -72,6 +76,6 @@ class TensionStiffening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

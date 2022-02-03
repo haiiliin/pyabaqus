@@ -16,19 +16,17 @@ class ArbitraryProfile(Profile):
         import odbSection
         session.odbs[name].profiles[name]
 
-    Table Data
-    ----------
+        The table data for this object are:
         The first sequence in the table specifies the following:
-        - 1-coordinate of the first point defining the profile.
-        - 2-coordinate of the first point defining the profile.
+            - 1-coordinate of the first point defining the profile.
+            - 2-coordinate of the first point defining the profile.
         All other sequences in the table specify the following:
-        - 1–coordinate of the next point defining the profile.
-        - 2–coordinate of the next point defining the profile.
-        - The thickness of the segment ending at that point.
+            - 1–coordinate of the next point defining the profile.
+            - 2–coordinate of the next point defining the profile.
+            - The thickness of the segment ending at that point.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - BEAM SECTION
+        The corresponding analysis keywords are:
+            - BEAM SECTION
 
     """
 
@@ -57,8 +55,8 @@ class ArbitraryProfile(Profile):
 
         Raises
         ------
-            RangeError. 
-            !img 
+        RangeError
+            
         """
         super().__init__()
         pass
@@ -68,8 +66,8 @@ class ArbitraryProfile(Profile):
 
         Raises
         ------
-            RangeError. 
-            !img 
+        RangeError
+            
         """
         pass
 

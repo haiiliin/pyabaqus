@@ -63,8 +63,11 @@ class HistoryOutputRequestState:
     Notes
     -----
         This object can be accessed by:
-        - import step
-        - mdb.models[name].steps[name].historyOutputRequestState[name]
+        
+        .. code-block:: python
+        
+           import step
+           mdb.models[name].steps[name].historyOutputRequestState[name]
 
     """
 

@@ -15,6 +15,17 @@ from ..Model.ModelBase import ModelBase
 
 
 class AmplitudeModel(ModelBase):
+    """Abaqus creates a Model object named `Model-1` when a session is started.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name]
+
+    """
 
     def ActuatorAmplitude(self, name: str, timeSpan: SymbolicConstant = STEP) -> ActuatorAmplitude:
         """This method creates a ActuatorAmplitude object.
@@ -22,8 +33,11 @@ class AmplitudeModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ActuatorAmplitude
-            - session.odbs[name].ActuatorAmplitude
+            
+            .. code-block:: python
+            
+                mdb.models[name].ActuatorAmplitude
+                session.odbs[name].ActuatorAmplitude
         
         Parameters
         ----------
@@ -35,7 +49,12 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            An ActuatorAmplitude object. and RangeError.
+            An ActuatorAmplitude object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.amplitudes[name] = amplitude = ActuatorAmplitude(name, timeSpan)
         return amplitude
@@ -47,8 +66,11 @@ class AmplitudeModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].DecayAmplitude
-            - session.odbs[name].DecayAmplitude
+            
+            .. code-block:: python
+            
+                mdb.models[name].DecayAmplitude
+                session.odbs[name].DecayAmplitude
         
         Parameters
         ----------
@@ -68,7 +90,12 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A DecayAmplitude object. and RangeError.
+            A DecayAmplitude object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.amplitudes[name] = amplitude = DecayAmplitude(name, initial, maximum, start, decayTime, timeSpan)
         return amplitude
@@ -81,8 +108,11 @@ class AmplitudeModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].EquallySpacedAmplitude
-            - session.odbs[name].EquallySpacedAmplitude
+            
+            .. code-block:: python
+            
+                mdb.models[name].EquallySpacedAmplitude
+                session.odbs[name].EquallySpacedAmplitude
         
         Parameters
         ----------
@@ -107,7 +137,12 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            An EquallySpacedAmplitude object. and RangeError.
+            An EquallySpacedAmplitude object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.amplitudes[name] = amplitude = EquallySpacedAmplitude(name, fixedInterval, data, begin, smooth, timeSpan)
         return amplitude
@@ -119,8 +154,11 @@ class AmplitudeModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ModulatedAmplitude
-            - session.odbs[name].ModulatedAmplitude
+            
+            .. code-block:: python
+            
+                mdb.models[name].ModulatedAmplitude
+                session.odbs[name].ModulatedAmplitude
         
         Parameters
         ----------
@@ -144,7 +182,12 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A ModulatedAmplitude object. and RangeError.
+            A ModulatedAmplitude object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.amplitudes[name] = amplitude = ModulatedAmplitude(name, initial, magnitude, start, frequency1, frequency2,
                                                                timeSpan)
@@ -157,8 +200,11 @@ class AmplitudeModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].PeriodicAmplitude
-            - session.odbs[name].PeriodicAmplitude
+            
+            .. code-block:: python
+            
+                mdb.models[name].PeriodicAmplitude
+                session.odbs[name].PeriodicAmplitude
         
         Parameters
         ----------
@@ -178,7 +224,12 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A PeriodicAmplitude object. and RangeError.
+            A PeriodicAmplitude object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.amplitudes[name] = amplitude = PeriodicAmplitude(name, frequency, start, a_0, data, timeSpan)
         return amplitude
@@ -191,8 +242,11 @@ class AmplitudeModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].PsdDefinition
-            - session.odbs[name].PsdDefinition
+            
+            .. code-block:: python
+            
+                mdb.models[name].PsdDefinition
+                session.odbs[name].PsdDefinition
         
         Parameters
         ----------
@@ -226,7 +280,12 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A PsdDefinition object. and RangeError.
+            A PsdDefinition object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.amplitudes[name] = amplitude = PsdDefinition(name, data, unitType, referenceGravityAcceleration,
                                                           referenecePower, user, timeSpan, amplitude)
@@ -238,8 +297,11 @@ class AmplitudeModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SmoothStepAmplitude
-            - session.odbs[name].SmoothStepAmplitude
+            
+            .. code-block:: python
+            
+                mdb.models[name].SmoothStepAmplitude
+                session.odbs[name].SmoothStepAmplitude
         
         Parameters
         ----------
@@ -254,7 +316,12 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A SmoothStepAmplitude object. and RangeError.
+            A SmoothStepAmplitude object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.amplitudes[name] = amplitude = SmoothStepAmplitude(name, data, timeSpan)
         return amplitude
@@ -266,8 +333,11 @@ class AmplitudeModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SolutionDependentAmplitude
-            - session.odbs[name].SolutionDependentAmplitude
+            
+            .. code-block:: python
+            
+                mdb.models[name].SolutionDependentAmplitude
+                session.odbs[name].SolutionDependentAmplitude
         
         Parameters
         ----------
@@ -288,7 +358,12 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A SolutionDependentAmplitude object. and RangeError.
+            A SolutionDependentAmplitude object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.amplitudes[name] = amplitude = SolutionDependentAmplitude(name, initial, minimum, maximum, timeSpan)
         return amplitude
@@ -304,8 +379,11 @@ class AmplitudeModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SpectrumAmplitude
-            - session.odbs[name].SpectrumAmplitude
+            
+            .. code-block:: python
+            
+                mdb.models[name].SpectrumAmplitude
+                session.odbs[name].SpectrumAmplitude
         
         Parameters
         ----------
@@ -350,7 +428,12 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A SpectrumAmplitude object. and RangeError.
+            A SpectrumAmplitude object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.amplitudes[name] = amplitude = SpectrumAmplitude(name, method, data, specificationUnits, eventUnits,
                                                               solution, timeIncrement, gravity, criticalDamping,
@@ -364,8 +447,11 @@ class AmplitudeModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].TabularAmplitude
-            - session.odbs[name].TabularAmplitude
+            
+            .. code-block:: python
+            
+                mdb.models[name].TabularAmplitude
+                session.odbs[name].TabularAmplitude
         
         Parameters
         ----------
@@ -385,7 +471,12 @@ class AmplitudeModel(ModelBase):
 
         Returns
         -------
-            A TabularAmplitude object. and RangeError.
+            A TabularAmplitude object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.amplitudes[name] = amplitude = TabularAmplitude(name, data, smooth, timeSpan)
         return amplitude

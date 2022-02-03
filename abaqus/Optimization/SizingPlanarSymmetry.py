@@ -48,7 +48,7 @@ class SizingPlanarSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A SizingPlanarSymmetry object. . 
+            A SizingPlanarSymmetry object.
         """
         super().__init__()
         pass

@@ -11,7 +11,10 @@ class EqualRadiusConstraint(ConstrainedSketchConstraint):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].EqualRadiusConstraint
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].EqualRadiusConstraint
         
         Parameters
         ----------
@@ -22,7 +25,7 @@ class EqualRadiusConstraint(ConstrainedSketchConstraint):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object. . 
-            !img 
+            A ConstrainedSketchConstraint object.
+            
         """
         pass

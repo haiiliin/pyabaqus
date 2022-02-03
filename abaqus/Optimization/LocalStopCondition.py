@@ -45,17 +45,17 @@ class LocalStopCondition(StopCondition):
         identifier
             A SymbolicConstant specifying the variable identifier of the compared value. Possible 
             values are: 
-            - ABSOLUTE_GROWTH_MOVEMENT 
-            - ABSOLUTE_SHRINK_MOVEMENT 
-            - GROWTH_MOVEMENT 
-            - SHRINK_MOVEMENT 
-            - MOVEMENT 
-            - TOTAL_ABSOLUTE_MOVEMENT 
-            - EQUIV_STRESS 
-            - FREE_TASK_REGION_EQUIV_STRESS 
-            - RESTRICTED_TASK_REGION_EQUIV_STRESS 
-            - SURFACE_POINT_EQUIV_STRESS 
-            - TASK_REGION_EQUIV_STRESS 
+                - ABSOLUTE_GROWTH_MOVEMENT 
+                - ABSOLUTE_SHRINK_MOVEMENT 
+                - GROWTH_MOVEMENT 
+                - SHRINK_MOVEMENT 
+                - MOVEMENT 
+                - TOTAL_ABSOLUTE_MOVEMENT 
+                - EQUIV_STRESS 
+                - FREE_TASK_REGION_EQUIV_STRESS 
+                - RESTRICTED_TASK_REGION_EQUIV_STRESS 
+                - SURFACE_POINT_EQUIV_STRESS 
+                - TASK_REGION_EQUIV_STRESS 
             The default value is MOVEMENT. 
         identifierOperation
             A SymbolicConstant specifying the operation used to evaluate values in the region. 
@@ -73,7 +73,7 @@ class LocalStopCondition(StopCondition):
 
         Returns
         -------
-            A LocalStopCondition object. . 
+            A LocalStopCondition object.
         """
         super().__init__()
         pass
@@ -94,17 +94,17 @@ class LocalStopCondition(StopCondition):
         identifier
             A SymbolicConstant specifying the variable identifier of the compared value. Possible 
             values are: 
-            - ABSOLUTE_GROWTH_MOVEMENT 
-            - ABSOLUTE_SHRINK_MOVEMENT 
-            - GROWTH_MOVEMENT 
-            - SHRINK_MOVEMENT 
-            - MOVEMENT 
-            - TOTAL_ABSOLUTE_MOVEMENT 
-            - EQUIV_STRESS 
-            - FREE_TASK_REGION_EQUIV_STRESS 
-            - RESTRICTED_TASK_REGION_EQUIV_STRESS 
-            - SURFACE_POINT_EQUIV_STRESS 
-            - TASK_REGION_EQUIV_STRESS 
+                - ABSOLUTE_GROWTH_MOVEMENT 
+                - ABSOLUTE_SHRINK_MOVEMENT 
+                - GROWTH_MOVEMENT 
+                - SHRINK_MOVEMENT 
+                - MOVEMENT 
+                - TOTAL_ABSOLUTE_MOVEMENT 
+                - EQUIV_STRESS 
+                - FREE_TASK_REGION_EQUIV_STRESS 
+                - RESTRICTED_TASK_REGION_EQUIV_STRESS 
+                - SURFACE_POINT_EQUIV_STRESS 
+                - TASK_REGION_EQUIV_STRESS 
             The default value is MOVEMENT. 
         identifierOperation
             A SymbolicConstant specifying the operation used to evaluate values in the region. 

@@ -48,7 +48,7 @@ class LeafFromOdbElementSections(Leaf):
 
         Returns
         -------
-            A LeafFromOdbElementSections object. . 
+            A LeafFromOdbElementSections object.
         """
         super().__init__(DEFAULT_MODEL)
         pass

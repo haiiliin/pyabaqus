@@ -14,6 +14,18 @@ from ..Odb.OdbBase import OdbBase
 
 
 class BeamSectionProfileOdb(OdbBase):
+    """The Odb object is the in-memory representation of an output database (ODB) file.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name]
+
+    """
 
     def ArbitraryProfile(self, name: str, table: tuple) -> ArbitraryProfile:
         """This method creates a ArbitraryProfile object.
@@ -21,8 +33,11 @@ class BeamSectionProfileOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ArbitraryProfile
-            - session.odbs[name].ArbitraryProfile
+            
+            .. code-block:: python
+            
+                mdb.models[name].ArbitraryProfile
+                session.odbs[name].ArbitraryProfile
         
         Parameters
         ----------
@@ -50,8 +65,11 @@ class BeamSectionProfileOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].BoxProfile
-            - session.odbs[name].BoxProfile
+            
+            .. code-block:: python
+            
+                mdb.models[name].BoxProfile
+                session.odbs[name].BoxProfile
         
         Parameters
         ----------
@@ -96,8 +114,11 @@ class BeamSectionProfileOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].CircularProfile
-            - session.odbs[name].CircularProfile
+            
+            .. code-block:: python
+            
+                mdb.models[name].CircularProfile
+                session.odbs[name].CircularProfile
         
         Parameters
         ----------
@@ -127,8 +148,11 @@ class BeamSectionProfileOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].GeneralizedProfile
-            - session.odbs[name].GeneralizedProfile
+            
+            .. code-block:: python
+            
+                mdb.models[name].GeneralizedProfile
+                session.odbs[name].GeneralizedProfile
         
         Parameters
         ----------
@@ -167,8 +191,11 @@ class BeamSectionProfileOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].HexagonalProfile
-            - session.odbs[name].HexagonalProfile
+            
+            .. code-block:: python
+            
+                mdb.models[name].HexagonalProfile
+                session.odbs[name].HexagonalProfile
         
         Parameters
         ----------
@@ -201,8 +228,11 @@ class BeamSectionProfileOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].IProfile
-            - session.odbs[name].IProfile
+            
+            .. code-block:: python
+            
+                mdb.models[name].IProfile
+                session.odbs[name].IProfile
         
         Parameters
         ----------
@@ -243,8 +273,11 @@ class BeamSectionProfileOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].LProfile
-            - session.odbs[name].LProfile
+            
+            .. code-block:: python
+            
+                mdb.models[name].LProfile
+                session.odbs[name].LProfile
         
         Parameters
         ----------
@@ -281,8 +314,11 @@ class BeamSectionProfileOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].PipeProfile
-            - session.odbs[name].PipeProfile
+            
+            .. code-block:: python
+            
+                mdb.models[name].PipeProfile
+                session.odbs[name].PipeProfile
         
         Parameters
         ----------
@@ -313,8 +349,11 @@ class BeamSectionProfileOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].RectangularProfile
-            - session.odbs[name].RectangularProfile
+            
+            .. code-block:: python
+            
+                mdb.models[name].RectangularProfile
+                session.odbs[name].RectangularProfile
         
         Parameters
         ----------
@@ -345,8 +384,11 @@ class BeamSectionProfileOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].TProfile
-            - session.odbs[name].TProfile
+            
+            .. code-block:: python
+            
+                mdb.models[name].TProfile
+                session.odbs[name].TProfile
         
         Parameters
         ----------
@@ -386,8 +428,11 @@ class BeamSectionProfileOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].TrapezoidalProfile
-            - session.odbs[name].TrapezoidalProfile
+            
+            .. code-block:: python
+            
+                mdb.models[name].TrapezoidalProfile
+                session.odbs[name].TrapezoidalProfile
         
         Parameters
         ----------

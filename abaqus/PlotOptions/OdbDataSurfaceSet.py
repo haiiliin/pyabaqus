@@ -15,8 +15,11 @@ class OdbDataSurfaceSet:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.odbData[name].surfaceSets[i]
+        
+        .. code-block:: python
+            
+            import visualization
+            session.odbData[name].surfaceSets[i]
 
     """
 

@@ -44,7 +44,7 @@ class SizingPointSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A SizingPointSymmetry object. . 
+            A SizingPointSymmetry object.
         """
         super().__init__()
         pass

@@ -23,31 +23,34 @@ class Edge:
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].allInternalSets[name].edges[i]
-        - mdb.models[name].parts[name].allInternalSurfaces[name].edges[i]
-        - mdb.models[name].parts[name].allSets[name].edges[i]
-        - mdb.models[name].parts[name].allSurfaces[name].edges[i]
-        - mdb.models[name].parts[name].edges[i]
-        - mdb.models[name].parts[name].sets[name].edges[i]
-        - mdb.models[name].parts[name].surfaces[name].edges[i]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].edges[i]
-        - mdb.models[name].rootAssembly.allInstances[name].sets[name].edges[i]
-        - mdb.models[name].rootAssembly.allInstances[name].surfaces[name].edges[i]
-        - mdb.models[name].rootAssembly.allInternalSets[name].edges[i]
-        - mdb.models[name].rootAssembly.allInternalSurfaces[name].edges[i]
-        - mdb.models[name].rootAssembly.allSets[name].edges[i]
-        - mdb.models[name].rootAssembly.allSurfaces[name].edges[i]
-        - mdb.models[name].rootAssembly.edges[i]
-        - mdb.models[name].rootAssembly.instances[name].edges[i]
-        - mdb.models[name].rootAssembly.instances[name].sets[name].edges[i]
-        - mdb.models[name].rootAssembly.instances[name].surfaces[name].edges[i]
-        - mdb.models[name].rootAssembly.modelInstances[i].edges[i]
-        - mdb.models[name].rootAssembly.modelInstances[i].sets[name].edges[i]
-        - mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].edges[i]
-        - mdb.models[name].rootAssembly.sets[name].edges[i]
-        - mdb.models[name].rootAssembly.surfaces[name].edges[i]
+        
+        .. code-block:: python
+            
+            import part
+            mdb.models[name].parts[name].allInternalSets[name].edges[i]
+            mdb.models[name].parts[name].allInternalSurfaces[name].edges[i]
+            mdb.models[name].parts[name].allSets[name].edges[i]
+            mdb.models[name].parts[name].allSurfaces[name].edges[i]
+            mdb.models[name].parts[name].edges[i]
+            mdb.models[name].parts[name].sets[name].edges[i]
+            mdb.models[name].parts[name].surfaces[name].edges[i]
+            import assembly
+            mdb.models[name].rootAssembly.allInstances[name].edges[i]
+            mdb.models[name].rootAssembly.allInstances[name].sets[name].edges[i]
+            mdb.models[name].rootAssembly.allInstances[name].surfaces[name].edges[i]
+            mdb.models[name].rootAssembly.allInternalSets[name].edges[i]
+            mdb.models[name].rootAssembly.allInternalSurfaces[name].edges[i]
+            mdb.models[name].rootAssembly.allSets[name].edges[i]
+            mdb.models[name].rootAssembly.allSurfaces[name].edges[i]
+            mdb.models[name].rootAssembly.edges[i]
+            mdb.models[name].rootAssembly.instances[name].edges[i]
+            mdb.models[name].rootAssembly.instances[name].sets[name].edges[i]
+            mdb.models[name].rootAssembly.instances[name].surfaces[name].edges[i]
+            mdb.models[name].rootAssembly.modelInstances[i].edges[i]
+            mdb.models[name].rootAssembly.modelInstances[i].sets[name].edges[i]
+            mdb.models[name].rootAssembly.modelInstances[i].surfaces[name].edges[i]
+            mdb.models[name].rootAssembly.sets[name].edges[i]
+            mdb.models[name].rootAssembly.surfaces[name].edges[i]
 
     """
 
@@ -75,8 +78,8 @@ class Edge:
 
         Returns
         -------
-            A Boolean value of True if the tangent is flipped and False if not. . 
-            !img 
+            A Boolean value of True if the tangent is flipped and False if not.
+            
         """
         pass
 
@@ -103,7 +106,7 @@ class Edge:
         Raises
         ------
             The given edge is straight. 
-            !img 
+            
         """
         pass
 
@@ -113,8 +116,8 @@ class Edge:
 
         Returns
         -------
-            A tuple of integers. . 
-            !img 
+            A tuple of integers.
+            
         """
         pass
 
@@ -123,8 +126,8 @@ class Edge:
 
         Returns
         -------
-            An EdgeArray object, which is a sequence of Edge objects. . 
-            !img 
+            An EdgeArray object, which is a sequence of Edge objects.
+            
         """
         pass
 
@@ -139,8 +142,8 @@ class Edge:
 
         Returns
         -------
-            An EdgeArray object, which is a sequence of Edgeobjects. . 
-            !img 
+            An EdgeArray object, which is a sequence of Edgeobjects.
+            
         """
         pass
 
@@ -149,8 +152,8 @@ class Edge:
 
         Returns
         -------
-            A MeshNodeArray object, which is a sequence of MeshNode objects. . 
-            !img 
+            A MeshNodeArray object, which is a sequence of MeshNode objects.
+            
         """
         pass
 
@@ -159,8 +162,8 @@ class Edge:
 
         Returns
         -------
-            A MeshElementArray object which is a sequence of MeshElement objects. . 
-            !img 
+            A MeshElementArray object which is a sequence of MeshElement objects.
+            
         """
         pass
 
@@ -174,7 +177,7 @@ class Edge:
         Raises
         ------
             The given edges is not circular. 
-            !img 
+            
         """
         pass
 
@@ -188,8 +191,8 @@ class Edge:
 
         Returns
         -------
-            A Float. . 
-            !img 
+            A Float.
+            
         """
         pass
 
@@ -201,7 +204,7 @@ class Edge:
 
         Returns
         -------
-            A tuple of integers. . 
-            !img 
+            A tuple of integers.
+            
         """
         pass

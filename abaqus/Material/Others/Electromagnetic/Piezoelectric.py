@@ -7,62 +7,63 @@ class Piezoelectric:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].piezoelectric
-        - import odbMaterial
-        - session.odbs[name].materials[name].piezoelectric
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].piezoelectric
+            import odbMaterial
+            session.odbs[name].materials[name].piezoelectric
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *type*=STRESS, the table data specify the following:
-        - e1 11φ.
-        - e1 22φ.
-        - e1 33φ.
-        - e1 12φ.
-        - e1 13φ.
-        - e1 23φ.
-        - e2 11φ.
-        - e2 22φ.
-        - e2 33φ.
-        - e2 12φ.
-        - e2 13φ.
-        - e2 23φ.
-        - e3 11φ.
-        - e3 22φ.
-        - e3 33φ.
-        - e3 12φ.
-        - e3 13φ.
-        - e3 23φ.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - e1 11φ.
+            - e1 22φ.
+            - e1 33φ.
+            - e1 12φ.
+            - e1 13φ.
+            - e1 23φ.
+            - e2 11φ.
+            - e2 22φ.
+            - e2 33φ.
+            - e2 12φ.
+            - e2 13φ.
+            - e2 23φ.
+            - e3 11φ.
+            - e3 22φ.
+            - e3 33φ.
+            - e3 12φ.
+            - e3 13φ.
+            - e3 23φ.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=STRAIN, the table data specify the following:
-        - d1 11φ.
-        - d1 22φ.
-        - d1 33φ.
-        - d1 12φ.
-        - d1 13φ.
-        - d1 23φ.
-        - d2 11φ.
-        - d2 22φ.
-        - d2 33φ.
-        - d2 12φ.
-        - d2 13φ.
-        - d2 23φ.
-        - d3 11φ.
-        - d3 22φ.
-        - d3 33φ.
-        - d3 13φ.
-        - d3 23φ.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - d1 11φ.
+            - d1 22φ.
+            - d1 33φ.
+            - d1 12φ.
+            - d1 13φ.
+            - d1 23φ.
+            - d2 11φ.
+            - d2 22φ.
+            - d2 33φ.
+            - d2 12φ.
+            - d2 13φ.
+            - d2 23φ.
+            - d3 11φ.
+            - d3 22φ.
+            - d3 33φ.
+            - d3 13φ.
+            - d3 23φ.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - PIEZOELECTRIC
+        The corresponding analysis keywords are:
+            - PIEZOELECTRIC
 
     """
 
@@ -73,8 +74,11 @@ class Piezoelectric:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Piezoelectric
-            - session.odbs[name].materials[name].Piezoelectric
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Piezoelectric
+                session.odbs[name].materials[name].Piezoelectric
         
         Parameters
         ----------
@@ -90,7 +94,7 @@ class Piezoelectric:
 
         Returns
         -------
-            A Piezoelectric object. . 
+            A Piezoelectric object.
         """
         pass
 

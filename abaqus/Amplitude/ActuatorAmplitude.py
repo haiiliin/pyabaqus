@@ -17,9 +17,8 @@ class ActuatorAmplitude(Amplitude):
         import odbAmplitude
         session.odbs[name].amplitudes[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - AMPLITUDE
+        The corresponding analysis keywords are:
+            - AMPLITUDE
 
     """
 
@@ -45,7 +44,12 @@ class ActuatorAmplitude(Amplitude):
 
         Returns
         -------
-            An ActuatorAmplitude object.  and RangeError. 
+            An ActuatorAmplitude object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -61,6 +65,6 @@ class ActuatorAmplitude(Amplitude):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

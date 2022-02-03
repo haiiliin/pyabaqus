@@ -2,6 +2,21 @@ from abaqus.Sketcher.ConstrainedSketchBase import ConstrainedSketchBase
 
 
 class ConstrainedSketchVertexModel(ConstrainedSketchBase):
+    """A ConstrainedSketch object contains the entities that are used to create a sketch. The
+    objects include ConstrainedSketchGeometry objects contained in the ConstrainedSketchGeometry Repository,
+    such as Line, Arc, and Spline. ConstrainedSketchVertex, ConstrainedSketchDimension, ConstrainedSketchConstraint, and ConstrainedSketchParameter objects are
+    contained in their respective repositories. 
+
+    Notes
+    -----
+        This object can be accessed by:
+        
+        .. code-block:: python
+            
+            import sketch
+            mdb.models[name].sketches[name]
+
+    """
 
     def Spot(self, point: tuple[float]):
         """This method creates a spot (construction point) located at the specified coordinates.
@@ -9,7 +24,10 @@ class ConstrainedSketchVertexModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].Spot
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].Spot
         
         Parameters
         ----------

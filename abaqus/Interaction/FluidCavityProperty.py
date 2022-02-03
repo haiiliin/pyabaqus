@@ -16,14 +16,13 @@ class FluidCavityProperty(ContactProperty):
         import interaction
         mdb.models[name].interactionProperties[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - FLUID BEHAVIOR
-        - CAPACITY
-        - FLUID BULK MODULUS
-        - FLUID DENSITY
-        - FLUID EXPANSION
-        - MOLECULAR WEIGHT
+        The corresponding analysis keywords are:
+            - FLUID BEHAVIOR
+            - CAPACITY
+            - FLUID BULK MODULUS
+            - FLUID DENSITY
+            - FLUID EXPANSION
+            - MOLECULAR WEIGHT
 
     """
 
@@ -80,11 +79,11 @@ class FluidCavityProperty(ContactProperty):
             A sequence of sequences of Floats specifying the thermal expansion coefficients. This 
             argument is applicable only when *definition*=HYDRAULIC and when *useExpansion*=True. 
             Each sequence contains the following data: 
-            - The mean coefficient of thermal expansion. 
-            - Temperature, if the data depend on temperature. 
-            - Value of the first field variable, if the data depend on field variables. 
-            - Value of the second field variable. 
-            - Etc. 
+                - The mean coefficient of thermal expansion. 
+                - Temperature, if the data depend on temperature. 
+                - Value of the first field variable, if the data depend on field variables. 
+                - Value of the second field variable. 
+                - Etc. 
         useBulkModulus
             A Boolean specifying whether fluid bulk modulus values will be defined. This argument is 
             applicable only when *definition*=HYDRAULIC. The default value is OFF. 
@@ -100,11 +99,11 @@ class FluidCavityProperty(ContactProperty):
             A sequence of sequences of Floats specifying the fluid bulk modulus values. This 
             argument is applicable only when *definition*=HYDRAULIC and when *useBulkModulus*=True. 
             Each sequence contains the following data: 
-            - The fluid bulk modulus. 
-            - Temperature, if the data depend on temperature. 
-            - Value of the first field variable, if the data depend on field variables. 
-            - Value of the second field variable. 
-            - Etc. 
+                - The fluid bulk modulus. 
+                - Temperature, if the data depend on temperature. 
+                - Value of the first field variable, if the data depend on field variables. 
+                - Value of the second field variable. 
+                - Etc. 
         useCapacity
             A Boolean specifying whether molar heat capacity values will be defined. This argument 
             is applicable only when *definition*=PNEUMATIC. The default value is OFF. 
@@ -124,24 +123,24 @@ class FluidCavityProperty(ContactProperty):
             of a polynomial expression. This argument is applicable only when 
             *definition*=PNEUMATIC, when *useCapacity*=True, and when *capacityType*=POLYNOMIAL. In 
             this form, only one sequence is specified and that sequence contains the following data: 
-            - The first molar heat capacity coefficient. 
-            - The second molar heat capacity coefficient. 
-            - The third molar heat capacity coefficient. 
-            - The fourth molar heat capacity coefficient. 
-            - The fifth molar heat capacity coefficient. 
+                - The first molar heat capacity coefficient. 
+                - The second molar heat capacity coefficient. 
+                - The third molar heat capacity coefficient. 
+                - The fourth molar heat capacity coefficient. 
+                - The fifth molar heat capacity coefficient. 
             Alternatively, the sequence data may specify the molar heat capacity values at constant 
             pressure for an ideal gas species. This argument is applicable only when 
             *definition*=PNEUMATIC, when *useCapacity*=True, and when *capacityType*=TABULAR. Each 
             sequence contains the following data: 
-            - The molar heat capacity at constant pressure. 
-            - Temperature, if the data depend on temperature. 
-            - Value of the first field variable, if the data depend on field variables. 
-            - Value of the second field variable. 
-            - Etc. 
+                - The molar heat capacity at constant pressure. 
+                - Temperature, if the data depend on temperature. 
+                - Value of the first field variable, if the data depend on field variables. 
+                - Value of the second field variable. 
+                - Etc. 
 
         Returns
         -------
-            A FluidCavityProperty object. . 
+            A FluidCavityProperty object.
         """
         super().__init__(name)
         pass
@@ -189,11 +188,11 @@ class FluidCavityProperty(ContactProperty):
             A sequence of sequences of Floats specifying the thermal expansion coefficients. This 
             argument is applicable only when *definition*=HYDRAULIC and when *useExpansion*=True. 
             Each sequence contains the following data: 
-            - The mean coefficient of thermal expansion. 
-            - Temperature, if the data depend on temperature. 
-            - Value of the first field variable, if the data depend on field variables. 
-            - Value of the second field variable. 
-            - Etc. 
+                - The mean coefficient of thermal expansion. 
+                - Temperature, if the data depend on temperature. 
+                - Value of the first field variable, if the data depend on field variables. 
+                - Value of the second field variable. 
+                - Etc. 
         useBulkModulus
             A Boolean specifying whether fluid bulk modulus values will be defined. This argument is 
             applicable only when *definition*=HYDRAULIC. The default value is OFF. 
@@ -209,11 +208,11 @@ class FluidCavityProperty(ContactProperty):
             A sequence of sequences of Floats specifying the fluid bulk modulus values. This 
             argument is applicable only when *definition*=HYDRAULIC and when *useBulkModulus*=True. 
             Each sequence contains the following data: 
-            - The fluid bulk modulus. 
-            - Temperature, if the data depend on temperature. 
-            - Value of the first field variable, if the data depend on field variables. 
-            - Value of the second field variable. 
-            - Etc. 
+                - The fluid bulk modulus. 
+                - Temperature, if the data depend on temperature. 
+                - Value of the first field variable, if the data depend on field variables. 
+                - Value of the second field variable. 
+                - Etc. 
         useCapacity
             A Boolean specifying whether molar heat capacity values will be defined. This argument 
             is applicable only when *definition*=PNEUMATIC. The default value is OFF. 
@@ -233,19 +232,19 @@ class FluidCavityProperty(ContactProperty):
             of a polynomial expression. This argument is applicable only when 
             *definition*=PNEUMATIC, when *useCapacity*=True, and when *capacityType*=POLYNOMIAL. In 
             this form, only one sequence is specified and that sequence contains the following data: 
-            - The first molar heat capacity coefficient. 
-            - The second molar heat capacity coefficient. 
-            - The third molar heat capacity coefficient. 
-            - The fourth molar heat capacity coefficient. 
-            - The fifth molar heat capacity coefficient. 
+                - The first molar heat capacity coefficient. 
+                - The second molar heat capacity coefficient. 
+                - The third molar heat capacity coefficient. 
+                - The fourth molar heat capacity coefficient. 
+                - The fifth molar heat capacity coefficient. 
             Alternatively, the sequence data may specify the molar heat capacity values at constant 
             pressure for an ideal gas species. This argument is applicable only when 
             *definition*=PNEUMATIC, when *useCapacity*=True, and when *capacityType*=TABULAR. Each 
             sequence contains the following data: 
-            - The molar heat capacity at constant pressure. 
-            - Temperature, if the data depend on temperature. 
-            - Value of the first field variable, if the data depend on field variables. 
-            - Value of the second field variable. 
-            - Etc. 
+                - The molar heat capacity at constant pressure. 
+                - Temperature, if the data depend on temperature. 
+                - Value of the first field variable, if the data depend on field variables. 
+                - Value of the second field variable. 
+                - Etc. 
         """
         pass

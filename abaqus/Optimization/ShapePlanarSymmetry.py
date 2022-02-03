@@ -70,7 +70,7 @@ class ShapePlanarSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A ShapePlanarSymmetry object. . 
+            A ShapePlanarSymmetry object.
         """
         super().__init__()
         pass

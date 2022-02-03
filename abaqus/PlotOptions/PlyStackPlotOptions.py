@@ -9,7 +9,7 @@ class PlyStackPlotOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.viewports[name].detailPlotOptions.plyStackPlotOptions
+            session.viewports[name].detailPlotOptions.plyStackPlotOptions
 
     """
 

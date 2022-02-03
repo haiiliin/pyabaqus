@@ -13,11 +13,14 @@ class IgnoredEdge:
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].ignoredEdges[i]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].ignoredEdges[i]
-        - mdb.models[name].rootAssembly.instances[name].ignoredEdges[i]
+        
+        .. code-block:: python
+            
+            import part
+            mdb.models[name].parts[name].ignoredEdges[i]
+            import assembly
+            mdb.models[name].rootAssembly.allInstances[name].ignoredEdges[i]
+            mdb.models[name].rootAssembly.instances[name].ignoredEdges[i]
 
     """
 
@@ -38,8 +41,8 @@ class IgnoredEdge:
 
         Returns
         -------
-            A Float. . 
-            !img 
+            A Float.
+            
         """
         pass
 
@@ -53,7 +56,7 @@ class IgnoredEdge:
         Raises
         ------
             The given IgnoredEdge object is not circular. 
-            !img 
+            
         """
         pass
 
@@ -81,6 +84,6 @@ class IgnoredEdge:
         Raises
         ------
             The given IgnoredEdge is straight. 
-            !img 
+            
         """
         pass

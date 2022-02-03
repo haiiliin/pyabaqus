@@ -35,10 +35,9 @@ class Temperature(PredefinedField):
         import load
         mdb.models[name].predefinedFields[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - INITIAL CONDITIONS
-        - TEMPERATURE
+        The corresponding analysis keywords are:
+            - INITIAL CONDITIONS
+            - TEMPERATURE
 
     """
 
@@ -97,10 +96,10 @@ class Temperature(PredefinedField):
         crossSectionDistribution
             A SymbolicConstant specifying how the predefined field is distributed over the cross 
             section of the region. Possible values are 
-            - CONSTANT_THROUGH_THICKNESS 
-            - GRADIENTS_THROUGH_SHELL_CS 
-            - GRADIENTS_THROUGH_BEAM_CS 
-            - POINTS_THROUGH_SECTION 
+                - CONSTANT_THROUGH_THICKNESS 
+                - GRADIENTS_THROUGH_SHELL_CS 
+                - GRADIENTS_THROUGH_BEAM_CS 
+                - POINTS_THROUGH_SECTION 
             The default value is CONSTANT_THROUGH_THICKNESS. 
         field
             A String specifying the name of the AnalyticalField or DiscreteField object associated 
@@ -143,15 +142,15 @@ class Temperature(PredefinedField):
             A Sequence of Doubles specifying the temperature values when *distributionType*=UNIFORM 
             or FIELD. The value of the *magnitudes* argument is a function of the 
             *crossSectionDistribution* argument, as shown in the following list: 
-            - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS then *magnitudes* is a Double 
+                - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS then *magnitudes* is a Double 
             specifying the temperature. 
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS then *magnitudes* is a 
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS then *magnitudes* is a 
             sequence of Doubles specifying the mean value and the gradient in the thickness 
             direction. 
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS then *magnitudes* is a 
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS then *magnitudes* is a 
             sequence of Doubles specifying the mean value, the gradient in the N1 direction, and the 
             gradient in the N2 direction. 
-            - If *crossSectionDistribution*=POINTS_THROUGH_SECTION then *magnitudes* is a sequence 
+                - If *crossSectionDistribution*=POINTS_THROUGH_SECTION then *magnitudes* is a sequence 
             of Doubles specifying the temperature at each point. 
         absoluteExteriorTolerance
             A Float specifying the absolute value by which a driven node of the field can lie 
@@ -164,7 +163,7 @@ class Temperature(PredefinedField):
 
         Returns
         -------
-            A Temperature object. . 
+            A Temperature object.
         """
         super().__init__()
         pass
@@ -204,10 +203,10 @@ class Temperature(PredefinedField):
         crossSectionDistribution
             A SymbolicConstant specifying how the predefined field is distributed over the cross 
             section of the region. Possible values are 
-            - CONSTANT_THROUGH_THICKNESS 
-            - GRADIENTS_THROUGH_SHELL_CS 
-            - GRADIENTS_THROUGH_BEAM_CS 
-            - POINTS_THROUGH_SECTION 
+                - CONSTANT_THROUGH_THICKNESS 
+                - GRADIENTS_THROUGH_SHELL_CS 
+                - GRADIENTS_THROUGH_BEAM_CS 
+                - POINTS_THROUGH_SECTION 
             The default value is CONSTANT_THROUGH_THICKNESS. 
         field
             A String specifying the name of the AnalyticalField or DiscreteField object associated 
@@ -250,15 +249,15 @@ class Temperature(PredefinedField):
             A Sequence of Doubles specifying the temperature values when *distributionType*=UNIFORM 
             or FIELD. The value of the *magnitudes* argument is a function of the 
             *crossSectionDistribution* argument, as shown in the following list: 
-            - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS then *magnitudes* is a Double 
+                - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS then *magnitudes* is a Double 
             specifying the temperature. 
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS then *magnitudes* is a 
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS then *magnitudes* is a 
             sequence of Doubles specifying the mean value and the gradient in the thickness 
             direction. 
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS then *magnitudes* is a 
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS then *magnitudes* is a 
             sequence of Doubles specifying the mean value, the gradient in the N1 direction, and the 
             gradient in the N2 direction. 
-            - If *crossSectionDistribution*=POINTS_THROUGH_SECTION then *magnitudes* is a sequence 
+                - If *crossSectionDistribution*=POINTS_THROUGH_SECTION then *magnitudes* is a sequence 
             of Doubles specifying the temperature at each point. 
         absoluteExteriorTolerance
             A Float specifying the absolute value by which a driven node of the field can lie 
@@ -324,15 +323,15 @@ class Temperature(PredefinedField):
             A Sequence of Doubles specifying the temperature values when *distributionType*=UNIFORM 
             or FIELD. The value of the *magnitudes* argument is a function of the 
             *crossSectionDistribution* argument, as shown in the following list: 
-            - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS then *magnitudes* is a Double 
+                - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS then *magnitudes* is a Double 
             specifying the temperature. 
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS then *magnitudes* is a 
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS then *magnitudes* is a 
             sequence of Doubles specifying the mean value and the gradient in the thickness 
             direction. 
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS then *magnitudes* is a 
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS then *magnitudes* is a 
             sequence of Doubles specifying the mean value, the gradient in the N1 direction, and the 
             gradient in the N2 direction. 
-            - If *crossSectionDistribution*=POINTS_THROUGH_SECTION then *magnitudes* is a sequence 
+                - If *crossSectionDistribution*=POINTS_THROUGH_SECTION then *magnitudes* is a sequence 
             of Doubles specifying the temperature at each point. 
         absoluteExteriorTolerance
             A Float specifying the absolute value by which a driven node of the field can lie 

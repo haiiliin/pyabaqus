@@ -10,7 +10,10 @@ class CircleByCenterPerimeter(ConstrainedSketchGeometry):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].CircleByCenterPerimeter
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].CircleByCenterPerimeter
         
         Parameters
         ----------
@@ -21,7 +24,7 @@ class CircleByCenterPerimeter(ConstrainedSketchGeometry):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the circle cannot be created). . 
-            !img 
+            A ConstrainedSketchGeometry object (None if the circle cannot be created).
+            
         """
         pass

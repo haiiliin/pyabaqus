@@ -3,6 +3,21 @@ from abaqusConstants import *
 
 
 class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
+    """A ConstrainedSketch object contains the entities that are used to create a sketch. The
+    objects include ConstrainedSketchGeometry objects contained in the ConstrainedSketchGeometry Repository,
+    such as Line, Arc, and Spline. ConstrainedSketchVertex, ConstrainedSketchDimension, ConstrainedSketchConstraint, and ConstrainedSketchParameter objects are
+    contained in their respective repositories. 
+
+    Notes
+    -----
+        This object can be accessed by:
+        
+        .. code-block:: python
+            
+            import sketch
+            mdb.models[name].sketches[name]
+
+    """
 
     def Arc3Points(self, point1: tuple[float], point2: tuple[float], point3: tuple[float]):
         """This method constructs an arc using a two endpoints and an intermediate third point on
@@ -11,7 +26,10 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].Arc3Points
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].Arc3Points
         
         Parameters
         ----------
@@ -38,7 +56,10 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].ArcByCenterEnds
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].ArcByCenterEnds
         
         Parameters
         ----------
@@ -70,7 +91,10 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].ArcByStartEndTangent
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].ArcByStartEndTangent
         
         Parameters
         ----------
@@ -95,7 +119,10 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].CircleByCenterPerimeter
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].CircleByCenterPerimeter
         
         Parameters
         ----------
@@ -119,7 +146,10 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].ConstructionCircleByCenterPerimeter
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].ConstructionCircleByCenterPerimeter
         
         Parameters
         ----------
@@ -143,7 +173,10 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].EllipseByCenterPerimeter
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].EllipseByCenterPerimeter
         
         Parameters
         ----------
@@ -169,7 +202,10 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].FilletByRadius
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].FilletByRadius
         
         Parameters
         ----------
@@ -195,7 +231,7 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
 
         Raises
         ------
-            - If the radius given cannot be used to create a fillet between the two curves given:
+                - If the radius given cannot be used to create a fillet between the two curves given:
               Range Error: cannot construct the Fillet specified
         """
         pass
@@ -206,7 +242,10 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].Line
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].Line
         
         Parameters
         ----------
@@ -228,7 +267,10 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].ConstructionLine
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].ConstructionLine
         
         Parameters
         ----------
@@ -250,7 +292,10 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].Spline
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].Spline
         
         Parameters
         ----------
@@ -275,7 +320,10 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].Spot
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].Spot
         
         Parameters
         ----------

@@ -27,10 +27,9 @@ class HomogeneousShellSection(GeometryShellSection):
         import odbSection
         session.odbs[name].sections[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SHELL SECTION
-        - SHELL GENERAL SECTION
+        The corresponding analysis keywords are:
+            - SHELL SECTION
+            - SHELL GENERAL SECTION
 
     """
 
@@ -129,7 +128,7 @@ class HomogeneousShellSection(GeometryShellSection):
 
         Returns
         -------
-            A HomogeneousShellSection object. . 
+            A HomogeneousShellSection object.
         """
         super().__init__()
         pass

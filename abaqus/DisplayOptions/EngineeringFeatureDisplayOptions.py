@@ -11,11 +11,11 @@ class EngineeringFeatureDisplayOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.viewports[name].assemblyDisplay.engineeringFeatureOptions
-        - session.viewports[name].layers[name].assemblyDisplay.engineeringFeatureOptions
-        - import part
-        - session.viewports[name].layers[name].partDisplay.engineeringFeatureOptions
-        - session.viewports[name].partDisplay.engineeringFeatureOptions
+            session.viewports[name].assemblyDisplay.engineeringFeatureOptions
+            session.viewports[name].layers[name].assemblyDisplay.engineeringFeatureOptions
+            import part
+            session.viewports[name].layers[name].partDisplay.engineeringFeatureOptions
+            session.viewports[name].partDisplay.engineeringFeatureOptions
 
     """
 
@@ -47,6 +47,6 @@ class EngineeringFeatureDisplayOptions:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

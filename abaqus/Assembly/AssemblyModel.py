@@ -10,8 +10,7 @@ class ModelBase:
 
 
 class AssemblyModel(ModelBase):
-    """The following commands operate on Model objects. For more information about the Model 
-    object, see Model object. 
+    """Abaqus creates a Model object named `Model-1` when a session is started.
 
     Notes
     -----
@@ -19,7 +18,7 @@ class AssemblyModel(ModelBase):
 
     .. code-block:: python
 
-        import assembly
+        mdb.models[name]
 
     """
 
@@ -44,7 +43,7 @@ class AssemblyModel(ModelBase):
 
         Returns
         -------
-            A Model object. . 
+            A Model object.
         """
         return self
 
@@ -65,7 +64,7 @@ class AssemblyModel(ModelBase):
         Returns
         -------
             A list of strings describing any warnings or errors encountered during the conversion 
-            process. . 
+            process.
         """
         pass
 
@@ -84,6 +83,6 @@ class AssemblyModel(ModelBase):
         Returns
         -------
             A list of strings describing any warnings or errors encountered during the conversion 
-            process. . 
+            process.
         """
         pass

@@ -145,4 +145,3 @@ class Ui_AbaqusExecutor(object):
         self.actionModel.setText(_translate("AbaqusExecutor", "Create Model"))
         self.actionOutput.setText(_translate("AbaqusExecutor", "Extract OutputData"))
         self.actionDraw.setText(_translate("AbaqusExecutor", "Draw Figures"))
-from abaqus.Tools.AbaqusExecutor import icons_rc

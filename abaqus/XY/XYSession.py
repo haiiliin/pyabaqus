@@ -25,8 +25,11 @@ class XYSession(XYSessionBase):
         Notes
         -----
             This function can be accessed by:
-            - session.AreaStyle
-            - xyPlot.AreaStyle
+            
+            .. code-block:: python
+            
+                session.AreaStyle
+                xyPlot.AreaStyle
         
         Parameters
         ----------
@@ -59,8 +62,11 @@ class XYSession(XYSessionBase):
         Notes
         -----
             This function can be accessed by:
-            - session.LineStyle
-            - xyPlot.LineStyle
+            
+            .. code-block:: python
+            
+                session.LineStyle
+                xyPlot.LineStyle
         
         Parameters
         ----------
@@ -96,8 +102,11 @@ class XYSession(XYSessionBase):
         Notes
         -----
             This function can be accessed by:
-            - session.QuantityType
-            - xyPlot.QuantityType
+            
+            .. code-block:: python
+            
+                session.QuantityType
+                xyPlot.QuantityType
         
         Parameters
         ----------
@@ -105,83 +114,83 @@ class XYSession(XYSessionBase):
             A String specifying the label for this quantity type.
         type
             A SymbolicConstant specifying the physical dimension of the axis. Possible values are:
-            - NONE.
-            - ACCELERATION.
-            - ACOUSTIC_INTENSITY.
-            - ANGLE.
-            - ANGULAR_MOMENTUM.
-            - ARC_LENGTH.
-            - AREA.
-            - AREA_VELOCITY_SQUARED, specifying "Velocity squared per area".
-            - BIMOMENT.
-            - CURVATURE.
-            - CORIOLIS_LOAD.
-            - DAMAGE.
-            - DAMAGE_CRITERION.
-            - DENSITY.
-            - DENSITY_ROTATIONAL_ACCELERATION, specifying "Density * Angular acceleration".
-            - DISPLACEMENT.
-            - ECURRENT_AREA_TIME, specifying "Time integrated electric current per area".
-            - ELECTRIC_CHARGE.
-            - ELECTRIC_CURRENT.
-            - ELECTRIC_CURRENT_AREA, specifying "Electric current per unit area".
-            - ELECTRIC_POTENTIAL.
-            - ENERGY.
-            - ENERGY_DENSITY.
-            - ENERGY_RELEASE_RATE.
-            - EPOTENTIAL_GRADIENT, specifying "Electric potential gradient".
-            - FREQUENCY.
-            - FORCE.
-            - FORCE_VOLUME, specifying "Force per volume".
-            - HEAT_FLUX.
-            - HEAT_FLUX_AREA, specifying "Heat flux per area".
-            - HEAT_FLUX_RATE.
-            - HEAT_FLUX_VOLUME, specifying "Heat flux per volume".
-            - LENGTH.
-            - LINEAR_PRESSURE.
-            - LUMIN, specifying "Luminous intensity".
-            - MASS.
-            - MASS_FLOW_AREA, specifying "Mass flow per area".
-            - MASS_FLOW_AREA_RATE, specifying "Mass flow rate per area".
-            - MASS_FLOW_RATE.
-            - MODE_NUMBER.
-            - MOMENT.
-            - NUMBER.
-            - PATH.
-            - PHASE.
-            - POSITION.
-            - PRESSURE.
-            - PRESSURE_GRADIENT.
-            - RATE.
-            - ROTARY_INERTIA.
-            - ROTATIONAL_ACCELERATION.
-            - ROTATIONAL_VELOCITY.
-            - STATUS.
-            - STRAIN.
-            - STRAIN_RATE.
-            - STRESS.
-            - STRESS_INTENS_FACTOR, specifying "Stress intensity factor".
-            - SUBSTANCE, specifying "Amount of substance".
-            - TEMPERATURE.
-            - THICKNESS.
-            - TIME.
-            - TIME_INCREMENT.
-            - TIME_HEAT_FLUX, specifying "Time integrated heat flux".
-            - TIME_HEAT_FLUX_AREA, specifying "Time integrated heat flux per area".
-            - TIME_VOLUME, specifying "Time integrated volume".
-            - TIME_VOLUME_FLUX, specifying "Time integrated volume flux per area".
-            - TWIST.
-            - VELOCITY.
-            - VELOCITY_SQUARED.
-            - VOLUME.
-            - VOLUME_FLUX.
-            - VOLUME_FLUX_AREA, specifying "Volume flux per area".
-            - VOLUME_FRACTION.
+                - NONE.
+                - ACCELERATION.
+                - ACOUSTIC_INTENSITY.
+                - ANGLE.
+                - ANGULAR_MOMENTUM.
+                - ARC_LENGTH.
+                - AREA.
+                - AREA_VELOCITY_SQUARED, specifying "Velocity squared per area".
+                - BIMOMENT.
+                - CURVATURE.
+                - CORIOLIS_LOAD.
+                - DAMAGE.
+                - DAMAGE_CRITERION.
+                - DENSITY.
+                - DENSITY_ROTATIONAL_ACCELERATION, specifying "Density * Angular acceleration".
+                - DISPLACEMENT.
+                - ECURRENT_AREA_TIME, specifying "Time integrated electric current per area".
+                - ELECTRIC_CHARGE.
+                - ELECTRIC_CURRENT.
+                - ELECTRIC_CURRENT_AREA, specifying "Electric current per unit area".
+                - ELECTRIC_POTENTIAL.
+                - ENERGY.
+                - ENERGY_DENSITY.
+                - ENERGY_RELEASE_RATE.
+                - EPOTENTIAL_GRADIENT, specifying "Electric potential gradient".
+                - FREQUENCY.
+                - FORCE.
+                - FORCE_VOLUME, specifying "Force per volume".
+                - HEAT_FLUX.
+                - HEAT_FLUX_AREA, specifying "Heat flux per area".
+                - HEAT_FLUX_RATE.
+                - HEAT_FLUX_VOLUME, specifying "Heat flux per volume".
+                - LENGTH.
+                - LINEAR_PRESSURE.
+                - LUMIN, specifying "Luminous intensity".
+                - MASS.
+                - MASS_FLOW_AREA, specifying "Mass flow per area".
+                - MASS_FLOW_AREA_RATE, specifying "Mass flow rate per area".
+                - MASS_FLOW_RATE.
+                - MODE_NUMBER.
+                - MOMENT.
+                - NUMBER.
+                - PATH.
+                - PHASE.
+                - POSITION.
+                - PRESSURE.
+                - PRESSURE_GRADIENT.
+                - RATE.
+                - ROTARY_INERTIA.
+                - ROTATIONAL_ACCELERATION.
+                - ROTATIONAL_VELOCITY.
+                - STATUS.
+                - STRAIN.
+                - STRAIN_RATE.
+                - STRESS.
+                - STRESS_INTENS_FACTOR, specifying "Stress intensity factor".
+                - SUBSTANCE, specifying "Amount of substance".
+                - TEMPERATURE.
+                - THICKNESS.
+                - TIME.
+                - TIME_INCREMENT.
+                - TIME_HEAT_FLUX, specifying "Time integrated heat flux".
+                - TIME_HEAT_FLUX_AREA, specifying "Time integrated heat flux per area".
+                - TIME_VOLUME, specifying "Time integrated volume".
+                - TIME_VOLUME_FLUX, specifying "Time integrated volume flux per area".
+                - TWIST.
+                - VELOCITY.
+                - VELOCITY_SQUARED.
+                - VOLUME.
+                - VOLUME_FLUX.
+                - VOLUME_FLUX_AREA, specifying "Volume flux per area".
+                - VOLUME_FRACTION.
             The default value is NONE
 
         Returns
         -------
-            A QuantityType object..
+            A QuantityType object.
         """
         quantityType = QuantityType(label, type)
         return quantityType
@@ -194,8 +203,11 @@ class XYSession(XYSessionBase):
         Notes
         -----
             This function can be accessed by:
-            - session.SymbolStyle
-            - xyPlot.SymbolStyle
+            
+            .. code-block:: python
+            
+                session.SymbolStyle
+                xyPlot.SymbolStyle
         
         Parameters
         ----------
@@ -208,17 +220,17 @@ class XYSession(XYSessionBase):
         marker
             A SymbolicConstant specifying the marker type be used when drawing symbols using this
             SymbolStyle object. Possible values are:
-            - FILLED_CIRCLE
-            - FILLED_SQUARE
-            - FILLED_DIAMOND
-            - FILLED_TRI
-            - HOLLOW_CIRCLE
-            - HOLLOW_SQUARE
-            - HOLLOW_DIAMOND
-            - HOLLOW_TRI
-            - CROSS
-            - XMARKER
-            - POINT
+                - FILLED_CIRCLE
+                - FILLED_SQUARE
+                - FILLED_DIAMOND
+                - FILLED_TRI
+                - HOLLOW_CIRCLE
+                - HOLLOW_SQUARE
+                - HOLLOW_DIAMOND
+                - HOLLOW_TRI
+                - CROSS
+                - XMARKER
+                - POINT
             The default value is FILLED_CIRCLE.
         size
             A Float specifying the marker size to be used when drawing markers using this
@@ -242,8 +254,11 @@ class XYSession(XYSessionBase):
         Notes
         -----
             This function can be accessed by:
-            - session.TextStyle
-            - xyPlot.TextStyle
+            
+            .. code-block:: python
+            
+                session.TextStyle
+                xyPlot.TextStyle
         
         Parameters
         ----------
@@ -282,8 +297,11 @@ class XYSession(XYSessionBase):
         Notes
         -----
             This function can be accessed by:
-            - session.XYData
-            - xyPlot.XYData
+            
+            .. code-block:: python
+            
+                session.XYData
+                xyPlot.XYData
         
         Parameters
         ----------
@@ -321,7 +339,7 @@ class XYSession(XYSessionBase):
 
         Returns
         -------
-            An XYData object..
+            An XYData object.
         """
         pass
 
@@ -333,9 +351,12 @@ class XYSession(XYSessionBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[*name*].userData.XYData
-            - session.XYData
-            - xyPlot.XYData
+            
+            .. code-block:: python
+            
+                session.odbs[*name*].userData.XYData
+                session.XYData
+                xyPlot.XYData
         
         Parameters
         ----------
@@ -344,7 +365,7 @@ class XYSession(XYSessionBase):
 
         Returns
         -------
-            An XYData object..
+            An XYData object.
         """
         pass
 
@@ -362,8 +383,11 @@ class XYSession(XYSessionBase):
         Notes
         -----
             This function can be accessed by:
-            - session.XYDataFromFile
-            - xyPlot.XYDataFromFile
+            
+            .. code-block:: python
+            
+                session.XYDataFromFile
+                xyPlot.XYDataFromFile
         
         Parameters
         ----------
@@ -423,8 +447,11 @@ class XYSession(XYSessionBase):
         Notes
         -----
             This function can be accessed by:
-            - session.XYDataFromHistory
-            - xyPlot.XYDataFromHistory
+            
+            .. code-block:: python
+            
+                session.XYDataFromHistory
+                xyPlot.XYDataFromHistory
         
         Parameters
         ----------
@@ -483,8 +510,11 @@ class XYSession(XYSessionBase):
         Notes
         -----
             This function can be accessed by:
-            - session.xyDataListFromField
-            - xyPlot.xyDataListFromField
+            
+            .. code-block:: python
+            
+                session.xyDataListFromField
+                xyPlot.xyDataListFromField
         
         Parameters
         ----------
@@ -566,8 +596,11 @@ class XYSession(XYSessionBase):
         Notes
         -----
             This function can be accessed by:
-            - session.XYDataFromFreeBody
-            - xyPlot.XYDataFromFreeBody
+            
+            .. code-block:: python
+            
+                session.XYDataFromFreeBody
+                xyPlot.XYDataFromFreeBody
         
         Parameters
         ----------
@@ -612,8 +645,11 @@ class XYSession(XYSessionBase):
         Notes
         -----
             This function can be accessed by:
-            - session.XYDataFromPath
-            - xyPlot.XYDataFromPath
+            
+            .. code-block:: python
+            
+                session.XYDataFromPath
+                xyPlot.XYDataFromPath
         
         Parameters
         ----------
@@ -696,25 +732,25 @@ class XYSession(XYSessionBase):
 
         Raises
         ------
-            - If *path* is invalid:
+                - If *path* is invalid:
               ErrorPathNotFound: Path not found.
-            - If *viewport* is invalid:
+                - If *viewport* is invalid:
               ErrorCurrentVPNotFound: Current viewport not found.
-            - If *step* and/or *frame* are invalid:
+                - If *step* and/or *frame* are invalid:
               ErrorInvalidUserStepAndFrame: The user step and frame specified have not been defined.
-            - If the *variable* argument is empty:
+                - If the *variable* argument is empty:
               ErrorNoVarInPathExtract: No variable selection for XY data extraction from path.
-            - If the specified output variable is not available in the output database:
+                - If the specified output variable is not available in the output database:
               ErrorUnavailableSelectedVariable: The selected variable is not available for the
             current frame.
-            - If the specified output variable cannot be used to obtain *X–Y* data:
+                - If the specified output variable cannot be used to obtain *X–Y* data:
               ErrorUnusableVarInPathExtract: Specified variable cannot be used in XY data extraction
             from path.
-            - If the SymbolicConstant specifying the refinement type is invalid:
+                - If the SymbolicConstant specifying the refinement type is invalid:
               ErrorUnsupportedRefinementType: Unsupported refinement type.
-            - If the label specifying the refinement invariant or component is invalid:
+                - If the label specifying the refinement invariant or component is invalid:
               ErrorInvalidRefinementSpecification: Invalid refinement specification.
-            - If *deformedMag* does not contain three Floats:
+                - If *deformedMag* does not contain three Floats:
               ErrorDeformedMagTupleInPathExtract: Deformed magnification tuple must contain X, Y and
             Z values.
         """

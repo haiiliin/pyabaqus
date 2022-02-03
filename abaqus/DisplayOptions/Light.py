@@ -10,8 +10,8 @@ class Light:
     Notes
     -----
         This object can be accessed by:
-        - session.defaultLightOptions.lights[i]
-        - session.viewports[name].lightOptions.lights[i]
+            session.defaultLightOptions.lights[i]
+            session.viewports[name].lightOptions.lights[i]
 
     """
 
@@ -48,6 +48,6 @@ class Light:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

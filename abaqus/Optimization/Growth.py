@@ -50,7 +50,7 @@ class Growth(GeometricRestriction):
 
         Returns
         -------
-            A Growth object. . 
+            A Growth object.
         """
         super().__init__()
         pass

@@ -1,8 +1,5 @@
 """These functions execute Python commands or functions.
 
-Access
-------
-
 """
 
 
@@ -11,9 +8,13 @@ def addImportCallback(moduleName: str, callback: str, userData: str = ''):
     imported. You cannot specify a custom module.
     For more information, see An example of a callback function.
 
-    Path
-    ----
-        - addImportCallback
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            addImportCallback
 
     Parameters
     ----------
@@ -26,10 +27,6 @@ def addImportCallback(moduleName: str, callback: str, userData: str = ''):
     userData
         Any Python object or None. This object is passed to the callback function. 
 
-    Returns
-    -------
-        None. 
-
     """
     pass
 
@@ -37,9 +34,13 @@ def addImportCallback(moduleName: str, callback: str, userData: str = ''):
 def removeImportCallback(callback: str, userData: str):
     """This function removes a callback added in addImportCallback.
 
-    Path
-    ----
-        - removeImportCallback
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            removeImportCallback
 
     Parameters
     ----------
@@ -49,10 +50,6 @@ def removeImportCallback(callback: str, userData: str):
     userData
         Any Python object or None; it must be the same as the *userData* argument specified in 
         the original call to addImportCallback. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass

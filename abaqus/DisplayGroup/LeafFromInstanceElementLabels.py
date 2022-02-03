@@ -49,7 +49,7 @@ class LeafFromInstanceElementLabels(Leaf):
 
         Returns
         -------
-            A LeafFromInstanceElementLabels object. . 
+            A LeafFromInstanceElementLabels object.
         """
         super().__init__(DEFAULT_MODEL)
         pass

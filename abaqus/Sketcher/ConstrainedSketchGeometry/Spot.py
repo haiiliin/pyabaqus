@@ -10,7 +10,10 @@ class Spot(ConstrainedSketchGeometry):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].Spot
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].Spot
         
         Parameters
         ----------
@@ -19,7 +22,7 @@ class Spot(ConstrainedSketchGeometry):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the spot cannot be created). . 
-            !img 
+            A ConstrainedSketchGeometry object (None if the spot cannot be created).
+            
         """
         pass

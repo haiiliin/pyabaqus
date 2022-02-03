@@ -11,7 +11,10 @@ class TangentConstraint(ConstrainedSketchConstraint):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].TangentConstraint
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].TangentConstraint
         
         Parameters
         ----------
@@ -22,7 +25,7 @@ class TangentConstraint(ConstrainedSketchConstraint):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object. . 
-            !img 
+            A ConstrainedSketchConstraint object.
+            
         """
         pass

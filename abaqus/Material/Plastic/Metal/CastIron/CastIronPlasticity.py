@@ -9,23 +9,24 @@ class CastIronPlasticity:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].castIronPlasticity
-        - import odbMaterial
-        - session.odbs[name].materials[name].castIronPlasticity
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].castIronPlasticity
+            import odbMaterial
+            session.odbs[name].materials[name].castIronPlasticity
 
-    Table Data
-    ----------
+        The table data for this object are:
         The table data specify the following:
-        - Plastic Poisson's ratio, νp⁢l (dimensionless).
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Plastic Poisson's ratio, νp⁢l (dimensionless).
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CAST IRON PLASTICITY
+        The corresponding analysis keywords are:
+            - CAST IRON PLASTICITY
 
     """
 
@@ -41,8 +42,11 @@ class CastIronPlasticity:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].CastIronPlasticity
-            - session.odbs[name].materials[name].CastIronPlasticity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].CastIronPlasticity
+                session.odbs[name].materials[name].CastIronPlasticity
         
         Parameters
         ----------
@@ -59,7 +63,7 @@ class CastIronPlasticity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -68,6 +72,6 @@ class CastIronPlasticity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

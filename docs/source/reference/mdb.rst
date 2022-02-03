@@ -7,7 +7,7 @@ Mdb commands are used to create and upgrade an Abaqus model database that stores
 
 .. toctree::
    :maxdepth: 1
-   :caption: Objects for Mdb
+   :caption: Objects in Mdb
    
    mdb/model
    mdb/job

@@ -1,7 +1,7 @@
-from abaqusConstants import *
 from abaqus.Material.Plastic.Concrete.FailureRatios import FailureRatios
 from abaqus.Material.Plastic.Concrete.ShearRetention import ShearRetention
 from abaqus.Material.Plastic.Concrete.TensionStiffening import TensionStiffening
+from abaqusConstants import *
 
 
 class Concrete:
@@ -10,23 +10,24 @@ class Concrete:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].concrete
-        - import odbMaterial
-        - session.odbs[name].materials[name].concrete
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].concrete
+            import odbMaterial
+            session.odbs[name].materials[name].concrete
 
-    Table Data
-    ----------
-        - Absolute value of compressive stress.
-        - Absolute value of Plastic strain.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Absolute value of compressive stress.
+            - Absolute value of Plastic strain.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONCRETE
+        The corresponding analysis keywords are:
+            - CONCRETE
 
     """
 
@@ -45,8 +46,11 @@ class Concrete:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Concrete
-            - session.odbs[name].materials[name].Concrete
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Concrete
+                session.odbs[name].materials[name].Concrete
         
         Parameters
         ----------
@@ -63,7 +67,7 @@ class Concrete:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -72,6 +76,6 @@ class Concrete:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

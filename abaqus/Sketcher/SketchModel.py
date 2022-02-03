@@ -3,6 +3,17 @@ from ..Model.ModelBase import ModelBase
 
 
 class SketchModel(ModelBase):
+    """Abaqus creates a Model object named `Model-1` when a session is started.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name]
+
+    """
 
     def ConstrainedSketch(self, name: str, sheetSize: float, gridSpacing: float = None, 
                           transform: tuple = ()) -> ConstrainedSketch:
@@ -12,7 +23,10 @@ class SketchModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ConstrainedSketch
+            
+            .. code-block:: python
+            
+                mdb.models[name].ConstrainedSketch
         
         Parameters
         ----------

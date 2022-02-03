@@ -334,7 +334,7 @@ class EulerianMotionBC(BoundaryCondition):
 
         Returns
         -------
-            An EulerianMotionBC object. . 
+            An EulerianMotionBC object.
         """
         super().__init__()
         pass

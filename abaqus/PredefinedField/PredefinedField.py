@@ -25,8 +25,11 @@ class PredefinedField:
     Notes
     -----
         This object can be accessed by:
-        - import load
-        - mdb.models[name].predefinedFields[name]
+        
+        .. code-block:: python
+            
+            import load
+            mdb.models[name].predefinedFields[name]
 
     """
 

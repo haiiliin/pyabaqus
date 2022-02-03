@@ -22,22 +22,25 @@ class Vertex:
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].allInternalSets[name].vertices[i]
-        - mdb.models[name].parts[name].allSets[name].vertices[i]
-        - mdb.models[name].parts[name].sets[name].vertices[i]
-        - mdb.models[name].parts[name].vertices[i]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].sets[name].vertices[i]
-        - mdb.models[name].rootAssembly.allInstances[name].vertices[i]
-        - mdb.models[name].rootAssembly.allInternalSets[name].vertices[i]
-        - mdb.models[name].rootAssembly.allSets[name].vertices[i]
-        - mdb.models[name].rootAssembly.instances[name].sets[name].vertices[i]
-        - mdb.models[name].rootAssembly.instances[name].vertices[i]
-        - mdb.models[name].rootAssembly.modelInstances[i].sets[name].vertices[i]
-        - mdb.models[name].rootAssembly.modelInstances[i].vertices[i]
-        - mdb.models[name].rootAssembly.sets[name].vertices[i]
-        - mdb.models[name].rootAssembly.vertices[i]
+        
+        .. code-block:: python
+            
+            import part
+            mdb.models[name].parts[name].allInternalSets[name].vertices[i]
+            mdb.models[name].parts[name].allSets[name].vertices[i]
+            mdb.models[name].parts[name].sets[name].vertices[i]
+            mdb.models[name].parts[name].vertices[i]
+            import assembly
+            mdb.models[name].rootAssembly.allInstances[name].sets[name].vertices[i]
+            mdb.models[name].rootAssembly.allInstances[name].vertices[i]
+            mdb.models[name].rootAssembly.allInternalSets[name].vertices[i]
+            mdb.models[name].rootAssembly.allSets[name].vertices[i]
+            mdb.models[name].rootAssembly.instances[name].sets[name].vertices[i]
+            mdb.models[name].rootAssembly.instances[name].vertices[i]
+            mdb.models[name].rootAssembly.modelInstances[i].sets[name].vertices[i]
+            mdb.models[name].rootAssembly.modelInstances[i].vertices[i]
+            mdb.models[name].rootAssembly.sets[name].vertices[i]
+            mdb.models[name].rootAssembly.vertices[i]
 
     """
 
@@ -64,8 +67,8 @@ class Vertex:
 
         Returns
         -------
-            A tuple of integers. . 
-            !img 
+            A tuple of integers.
+            
         """
         pass
 
@@ -74,8 +77,8 @@ class Vertex:
 
         Returns
         -------
-            A MeshNodeArray object which is a sequence of MeshNode objects. . 
-            !img 
+            A MeshNodeArray object which is a sequence of MeshNode objects.
+            
         """
         pass
 
@@ -84,7 +87,7 @@ class Vertex:
 
         Returns
         -------
-            A MeshElementArray object which is a sequence of MeshElement objects. . 
-            !img 
+            A MeshElementArray object which is a sequence of MeshElement objects.
+            
         """
         pass

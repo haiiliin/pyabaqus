@@ -3,6 +3,17 @@ from ..Model.ModelBase import ModelBase
 
 
 class MaterialModel(ModelBase):
+    """Abaqus creates a Model object named `Model-1` when a session is started.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name]
+
+    """
 
     def Material(self, name: str, description: str = '', materialIdentifier: str = ''):
         """This method creates a Material object.
@@ -10,7 +21,10 @@ class MaterialModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].Material
+            
+            .. code-block:: python
+            
+                mdb.models[name].Material
         
         Parameters
         ----------
@@ -25,7 +39,7 @@ class MaterialModel(ModelBase):
 
         Returns
         -------
-            A Material object..
+            A Material object.
         """
         self.materials[name] = material = Material(name, description, materialIdentifier)
         return material

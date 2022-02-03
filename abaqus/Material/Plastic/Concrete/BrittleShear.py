@@ -8,31 +8,32 @@ class BrittleShear:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].brittleCracking.brittleShear
-        - import odbMaterial
-        - session.odbs[name].materials[name].brittleCracking.brittleShear
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].brittleCracking.brittleShear
+            import odbMaterial
+            session.odbs[name].materials[name].brittleCracking.brittleShear
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *type*=RETENTION_FACTOR the table data specify the following:
-        - Shear retention factor.
-        - Crack opening strain.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Shear retention factor.
+            - Crack opening strain.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=POWER_LAW the table data specify the following:
-        - e.
-        - p.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - e.
+            - p.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - BRITTLE SHEAR
+        The corresponding analysis keywords are:
+            - BRITTLE SHEAR
 
     """
 
@@ -43,8 +44,11 @@ class BrittleShear:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].brittleCracking.BrittleShear
-            - session.odbs[name].materials[name].brittleCracking.BrittleShear
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].brittleCracking.BrittleShear
+                session.odbs[name].materials[name].brittleCracking.BrittleShear
         
         Parameters
         ----------
@@ -64,7 +68,7 @@ class BrittleShear:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -73,6 +77,6 @@ class BrittleShear:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

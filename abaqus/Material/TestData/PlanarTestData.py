@@ -8,28 +8,29 @@ class PlanarTestData:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].hyperelastic.planarTestData
-        - mdb.models[name].materials[name].hyperfoam.planarTestData
-        - mdb.models[name].materials[name].mullinsEffect.planarTests[i]
-        - import odbMaterial
-        - session.odbs[name].materials[name].hyperelastic.planarTestData
-        - session.odbs[name].materials[name].hyperfoam.planarTestData
-        - session.odbs[name].materials[name].mullinsEffect.planarTests[i]
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].hyperelastic.planarTestData
+            mdb.models[name].materials[name].hyperfoam.planarTestData
+            mdb.models[name].materials[name].mullinsEffect.planarTests[i]
+            import odbMaterial
+            session.odbs[name].materials[name].hyperelastic.planarTestData
+            session.odbs[name].materials[name].hyperfoam.planarTestData
+            session.odbs[name].materials[name].mullinsEffect.planarTests[i]
 
-    Table Data
-    ----------
+        The table data for this object are:
         For a hyperelastic material model, the table data specify the following:
-        - Nominal stress, TS.
-        - Nominal strain in the direction of loading, ϵS.
+            - Nominal stress, TS.
+            - Nominal strain in the direction of loading, ϵS.
         For a hyperfoam material model, the table data specify the following:
-        - Nominal stress, TL.
-        - Nominal strain in the direction of loading, ϵp.
-        - Nominal transverse strain, ϵ3. The default value is 0.
+            - Nominal stress, TL.
+            - Nominal strain in the direction of loading, ϵp.
+            - Nominal transverse strain, ϵ3. The default value is 0.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - PLANAR TEST DATA
+        The corresponding analysis keywords are:
+            - PLANAR TEST DATA
 
     """
 
@@ -40,12 +41,15 @@ class PlanarTestData:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].hyperelastic.PlanarTestData
-            - mdb.models[name].materials[name].hyperfoam.PlanarTestData
-            - mdb.models[name].materials[name].mullinsEffect.PlanarTestData
-            - session.odbs[name].materials[name].hyperelastic.PlanarTestData
-            - session.odbs[name].materials[name].hyperfoam.PlanarTestData
-            - session.odbs[name].materials[name].mullinsEffect.PlanarTestData
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].hyperelastic.PlanarTestData
+                mdb.models[name].materials[name].hyperfoam.PlanarTestData
+                mdb.models[name].materials[name].mullinsEffect.PlanarTestData
+                session.odbs[name].materials[name].hyperelastic.PlanarTestData
+                session.odbs[name].materials[name].hyperfoam.PlanarTestData
+                session.odbs[name].materials[name].mullinsEffect.PlanarTestData
         
         Parameters
         ----------
@@ -64,7 +68,7 @@ class PlanarTestData:
 
         Returns
         -------
-            A PlanarTestData object. . 
+            A PlanarTestData object.
         """
         pass
 

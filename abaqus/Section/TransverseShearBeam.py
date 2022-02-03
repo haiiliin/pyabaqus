@@ -17,9 +17,8 @@ class TransverseShearBeam:
         import odbSection
         session.odbs[name].sections[name].beamTransverseShear
 
-    Corresponding analysis keywords
-    -------------------------------
-        - TRANSVERSE SHEAR STIFFNESS
+        The corresponding analysis keywords are:
+            - TRANSVERSE SHEAR STIFFNESS
 
     """
 
@@ -53,7 +52,7 @@ class TransverseShearBeam:
 
         Returns
         -------
-            A TransverseShearBeam object. . 
+            A TransverseShearBeam object.
         """
         pass
 

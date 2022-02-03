@@ -107,7 +107,7 @@ class PorePressureBC(BoundaryCondition):
 
         Returns
         -------
-            A PorePressureBC object. . 
+            A PorePressureBC object.
         """
         super().__init__()
         pass

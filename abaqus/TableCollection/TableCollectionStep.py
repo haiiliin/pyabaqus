@@ -3,6 +3,21 @@ from abaqus.TableCollection.ActivateElements import ActivateElements
 
 
 class TableCollectionStep(StepBase):
+    """The Step object stores the parameters that determine the context of the step. The Step
+    object is the abstract base type for other Step objects. The Step object has no explicit 
+    constructor. The methods and members of the Step object are common to all objects 
+    derived from the Step. 
+
+    Notes
+    -----
+        This object can be accessed by:
+        
+        .. code-block:: python
+        
+           import step
+           mdb.models[name].steps[name]
+
+    """
 
     def ActivateElements(self, tableCollection: str, activation: str, eigenTimeConst: str = '',
                          expansionTimeConstant: str = '') -> ActivateElements:
@@ -11,7 +26,10 @@ class TableCollectionStep(StepBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ActivateElements
+            
+            .. code-block:: python
+            
+                mdb.models[name].ActivateElements
         
         Parameters
         ----------

@@ -17,9 +17,8 @@ class Chebyshev1Filter(Filter):
         import odbFilter
         session.odbs[name].filters[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - FILTER
+        The corresponding analysis keywords are:
+            - FILTER
 
     """
 
@@ -68,7 +67,12 @@ class Chebyshev1Filter(Filter):
 
         Returns
         -------
-            A Chebyshev1Filter object.  and RangeError. 
+            A Chebyshev1Filter object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -102,6 +106,6 @@ class Chebyshev1Filter(Filter):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

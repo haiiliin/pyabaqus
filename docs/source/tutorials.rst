@@ -175,7 +175,7 @@ It should be noted that region of the boundary condition should be a region of t
 Create loads
 ~~~~~~~~~~~~
 
-We can use :py:meth:`~abaqus.LoadAndLoadCase.LoadModel.LoadModel.Pressure` ro create a pressure:
+We can use :py:meth:`~abaqus.Load.LoadModel.LoadModel.Pressure` ro create a pressure:
 
 .. code-block:: Python
 

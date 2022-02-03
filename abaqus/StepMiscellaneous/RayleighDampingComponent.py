@@ -16,8 +16,11 @@ class RayleighDampingComponent:
     Notes
     -----
         This object can be accessed by:
-        - import step
-        - mdb.models[name].steps[name].rayleighDamping.components[i]
+        
+        .. code-block:: python
+        
+           import step
+           mdb.models[name].steps[name].rayleighDamping.components[i]
 
     """
 

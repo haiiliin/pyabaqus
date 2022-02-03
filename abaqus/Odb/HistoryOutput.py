@@ -66,7 +66,7 @@ class HistoryOutput:
 
         Returns
         -------
-            A HistoryOutput object. . 
+            A HistoryOutput object.
         """
         pass
 

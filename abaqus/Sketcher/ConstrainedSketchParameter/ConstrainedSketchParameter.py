@@ -5,8 +5,11 @@ class ConstrainedSketchParameter:
     Notes
     -----
         This object can be accessed by:
-        - import sketch
-        - mdb.models[name].sketches[name].parameters[i]
+        
+        .. code-block:: python
+            
+            import sketch
+            mdb.models[name].sketches[name].parameters[i]
 
     """
 
@@ -32,7 +35,10 @@ class ConstrainedSketchParameter:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].ConstrainedSketchParameter
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].ConstrainedSketchParameter
         
         Parameters
         ----------
@@ -52,7 +58,7 @@ class ConstrainedSketchParameter:
 
         Returns
         -------
-            A ConstrainedSketchParameter object. . 
-            !img 
+            A ConstrainedSketchParameter object.
+            
         """
         pass

@@ -1,5 +1,5 @@
-from abaqusConstants import *
 from abaqus.Material.TestData.UniaxialTestData import UniaxialTestData
+from abaqusConstants import *
 
 
 class LowDensityFoam:
@@ -8,14 +8,16 @@ class LowDensityFoam:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].lowDensityFoam
-        - import odbMaterial
-        - session.odbs[name].materials[name].lowDensityFoam
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].lowDensityFoam
+            import odbMaterial
+            session.odbs[name].materials[name].lowDensityFoam
 
-    Corresponding analysis keywords
-    -------------------------------
-        - LOW DENSITY FOAM
+        The corresponding analysis keywords are:
+            - LOW DENSITY FOAM
 
     """
 
@@ -34,8 +36,11 @@ class LowDensityFoam:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].LowDensityFoam
-            - session.odbs[name].materials[name].LowDensityFoam
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].LowDensityFoam
+                session.odbs[name].materials[name].LowDensityFoam
         
         Parameters
         ----------
@@ -65,7 +70,7 @@ class LowDensityFoam:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -74,6 +79,6 @@ class LowDensityFoam:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

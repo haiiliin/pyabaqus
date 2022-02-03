@@ -23,10 +23,13 @@ class EngineeringFeatureBase:
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].engineeringFeatures
-        - import assembly
-        - mdb.models[name].rootAssembly.engineeringFeatures
+        
+        .. code-block:: python
+            
+            import part
+            mdb.models[name].parts[name].engineeringFeatures
+            import assembly
+            mdb.models[name].rootAssembly.engineeringFeatures
 
     """
 

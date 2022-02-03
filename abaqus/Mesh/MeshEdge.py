@@ -9,14 +9,17 @@ class MeshEdge:
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].elemEdges[i]
-        - mdb.models[name].parts[name].elementEdges[i]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].elemEdges[i]
-        - mdb.models[name].rootAssembly.allInstances[name].elementEdges[i]
-        - mdb.models[name].rootAssembly.instances[name].elemEdges[i]
-        - mdb.models[name].rootAssembly.instances[name].elementEdges[i]
+        
+        .. code-block:: python
+            
+            import part
+            mdb.models[name].parts[name].elemEdges[i]
+            mdb.models[name].parts[name].elementEdges[i]
+            import assembly
+            mdb.models[name].rootAssembly.allInstances[name].elemEdges[i]
+            mdb.models[name].rootAssembly.allInstances[name].elementEdges[i]
+            mdb.models[name].rootAssembly.instances[name].elemEdges[i]
+            mdb.models[name].rootAssembly.instances[name].elementEdges[i]
 
     """
 
@@ -25,7 +28,7 @@ class MeshEdge:
 
         Returns
         -------
-            A tuple of MeshElement objects. . 
+            A tuple of MeshElement objects.
         """
         pass
 
@@ -41,7 +44,7 @@ class MeshEdge:
 
         Returns
         -------
-            A MeshElementArray object, which is a sequence of MeshElement objects. . 
+            A MeshElementArray object, which is a sequence of MeshElement objects.
         """
         pass
 
@@ -57,7 +60,7 @@ class MeshEdge:
 
         Returns
         -------
-            A MeshNodeArray object, which is a sequence of MeshNode objects. . 
+            A MeshNodeArray object, which is a sequence of MeshNode objects.
         """
         pass
 
@@ -66,7 +69,7 @@ class MeshEdge:
 
         Returns
         -------
-            A tuple of MeshFace objects. . 
+            A tuple of MeshFace objects.
         """
         pass
 
@@ -75,6 +78,6 @@ class MeshEdge:
 
         Returns
         -------
-            A tuple of MeshNode objects. . 
+            A tuple of MeshNode objects.
         """
         pass

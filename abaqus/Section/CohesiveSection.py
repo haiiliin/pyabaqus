@@ -17,9 +17,8 @@ class CohesiveSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - COHESIVE SECTION
+        The corresponding analysis keywords are:
+            - COHESIVE SECTION
 
     """
 
@@ -92,6 +91,6 @@ class CohesiveSection(Section):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

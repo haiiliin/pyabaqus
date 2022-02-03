@@ -16,9 +16,8 @@ class LayerProperties:
         import odbSection
         session.odbs[name].sections[name].rebarLayers.layerTable[i]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - REBAR LAYER
+        The corresponding analysis keywords are:
+            - REBAR LAYER
 
     """
 
@@ -70,6 +69,6 @@ class LayerProperties:
 
         Returns
         -------
-            A LayerProperties object. . 
+            A LayerProperties object.
         """
         pass

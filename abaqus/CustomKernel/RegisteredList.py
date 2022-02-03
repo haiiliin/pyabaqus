@@ -29,7 +29,7 @@ class RegisteredList(CommandRegister):
 
         Returns
         -------
-            A RegisteredList object. . 
+            A RegisteredList object.
         """
         super().__init__()
         pass

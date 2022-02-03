@@ -14,7 +14,10 @@ class HorizontalDimension(ConstrainedSketchDimension):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].HorizontalDimension
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].HorizontalDimension
         
         Parameters
         ----------
@@ -32,7 +35,7 @@ class HorizontalDimension(ConstrainedSketchDimension):
 
         Returns
         -------
-            A ConstrainedSketchDimension object (None if the dimension cannot be created). . 
-            !img 
+            A ConstrainedSketchDimension object (None if the dimension cannot be created).
+            
         """
         pass

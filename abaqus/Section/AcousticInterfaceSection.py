@@ -16,9 +16,8 @@ class AcousticInterfaceSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - INTERFACE
+        The corresponding analysis keywords are:
+            - INTERFACE
 
     """
 
@@ -44,7 +43,12 @@ class AcousticInterfaceSection(Section):
 
         Returns
         -------
-            An AcousticInterfaceSection object.  and RangeError. 
+            An AcousticInterfaceSection object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -60,6 +64,6 @@ class AcousticInterfaceSection(Section):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

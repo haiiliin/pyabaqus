@@ -32,8 +32,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].AcousticInfiniteSection
-            - session.odbs[name].AcousticInfiniteSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].AcousticInfiniteSection
+                session.odbs[name].AcousticInfiniteSection
         
         Parameters
         ----------
@@ -51,7 +54,12 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            An AcousticInfiniteSection object. and RangeError.
+            An AcousticInfiniteSection object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.sections[name] = section = AcousticInfiniteSection(name, material, thickness, order)
         return section
@@ -62,8 +70,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].AcousticInterfaceSection
-            - session.odbs[name].AcousticInterfaceSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].AcousticInterfaceSection
+                session.odbs[name].AcousticInterfaceSection
         
         Parameters
         ----------
@@ -75,7 +86,12 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            An AcousticInterfaceSection object. and RangeError.
+            An AcousticInterfaceSection object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.sections[name] = section = AcousticInterfaceSection(name, thickness)
         return section
@@ -95,8 +111,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].BeamSection
-            - session.odbs[name].BeamSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].BeamSection
+                session.odbs[name].BeamSection
         
         Parameters
         ----------
@@ -190,7 +209,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A BeamSection object..
+            A BeamSection object.
         """
         self.sections[name] = section = BeamSection(name, integration, profile, poissonRatio, thermalExpansion,
                                                     temperatureDependency, dependencies, density, referenceTemperature,
@@ -208,8 +227,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].CohesiveSection
-            - session.odbs[name].CohesiveSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].CohesiveSection
+                session.odbs[name].CohesiveSection
         
         Parameters
         ----------
@@ -259,9 +281,12 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].parts[name].compositeLayups[i].CompositeShellSection
-            - mdb.models[name].CompositeShellSection
-            - session.odbs[name].CompositeShellSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].parts[name].compositeLayups[i].CompositeShellSection
+                mdb.models[name].CompositeShellSection
+                session.odbs[name].CompositeShellSection
         
         Parameters
         ----------
@@ -330,7 +355,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A CompositeShellSection object..
+            A CompositeShellSection object.
         """
         self.sections[name] = section = CompositeShellSection(name, layup, symmetric, thicknessType, preIntegrate,
                                                               poissonDefinition, poisson, integrationRule, temperature,
@@ -345,8 +370,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].CompositeSolidSection
-            - session.odbs[name].CompositeSolidSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].CompositeSolidSection
+                session.odbs[name].CompositeSolidSection
         
         Parameters
         ----------
@@ -363,7 +391,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A CompositeSolidSection object..
+            A CompositeSolidSection object.
         """
         self.sections[name] = section = CompositeSolidSection(name, layup, symmetric, layupName)
         return section
@@ -383,8 +411,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ConnectorSection
-            - session.odbs[name].ConnectorSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].ConnectorSection
+                session.odbs[name].ConnectorSection
         
         Parameters
         ----------
@@ -468,7 +499,12 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A ConnectorSection object. and RangeError.
+            A ConnectorSection object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.sections[name] = section = ConnectorSection(name, assembledType, rotationalType, translationalType,
                                                          integration, u1ReferenceLength, u2ReferenceLength,
@@ -484,8 +520,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].EulerianSection
-            - session.odbs[name].EulerianSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].EulerianSection
+                session.odbs[name].EulerianSection
         
         Parameters
         ----------
@@ -497,7 +536,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            An EulerianSection object..
+            An EulerianSection object.
         """
         self.sections[name] = section = EulerianSection(name, data)
         return section
@@ -511,8 +550,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].GasketSection
-            - session.odbs[name].GasketSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].GasketSection
+                session.odbs[name].GasketSection
         
         Parameters
         ----------
@@ -557,8 +599,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].GeneralStiffnessSection
-            - session.odbs[name].GeneralStiffnessSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].GeneralStiffnessSection
+                session.odbs[name].GeneralStiffnessSection
         
         Parameters
         ----------
@@ -603,7 +648,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A GeneralStiffnessSection object..
+            A GeneralStiffnessSection object.
         """
         self.sections[name] = section = GeneralStiffnessSection(name, stiffnessMatrix, referenceTemperature,
                                                                 applyThermalStress, temperatureDependency, dependencies,
@@ -623,10 +668,13 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].parts[name].compositeLayups[i]\
-            - .HomogeneousShellSection
-            - mdb.models[name].HomogeneousShellSection
-            - session.odbs[name].HomogeneousShellSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].parts[name].compositeLayups[i]\
+                - .HomogeneousShellSection
+                mdb.models[name].HomogeneousShellSection
+                session.odbs[name].HomogeneousShellSection
         
         Parameters
         ----------
@@ -697,7 +745,7 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A HomogeneousShellSection object..
+            A HomogeneousShellSection object.
         """
         self.sections[name] = section = HomogeneousShellSection(name, material, thickness, numIntPts, thicknessType,
                                                                 preIntegrate, poissonDefinition, poisson,
@@ -712,8 +760,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].HomogeneousSolidSection
-            - session.odbs[name].HomogeneousSolidSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].HomogeneousSolidSection
+                session.odbs[name].HomogeneousSolidSection
         
         Parameters
         ----------
@@ -727,7 +778,12 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A HomogeneousSolidSection object. and RangeError.
+            A HomogeneousSolidSection object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.sections[name] = section = HomogeneousSolidSection(name, material, thickness)
         return section
@@ -741,8 +797,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].MembraneSection
-            - session.odbs[name].MembraneSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].MembraneSection
+                session.odbs[name].MembraneSection
         
         Parameters
         ----------
@@ -792,8 +851,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].MPCSection
-            - session.odbs[name].MPCSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].MPCSection
+                session.odbs[name].MPCSection
         
         Parameters
         ----------
@@ -829,8 +891,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].PEGSection
-            - session.odbs[name].PEGSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].PEGSection
+                session.odbs[name].PEGSection
         
         Parameters
         ----------
@@ -850,7 +915,12 @@ class SectionOdb(OdbBase):
 
         Returns
         -------
-            A PEGSection object. and RangeError.
+            A PEGSection object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.sections[name] = section = PEGSection(name, material, thickness, wedgeAngle1, wedgeAngle2)
         return section
@@ -861,8 +931,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SurfaceSection
-            - session.odbs[name].SurfaceSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].SurfaceSection
+                session.odbs[name].SurfaceSection
         
         Parameters
         ----------
@@ -892,8 +965,11 @@ class SectionOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].TrussSection
-            - session.odbs[name].TrussSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].TrussSection
+                session.odbs[name].TrussSection
         
         Parameters
         ----------

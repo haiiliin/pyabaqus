@@ -25,8 +25,11 @@ class OdbNumericalProblemSummary:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.odbData[name].diagnosticData.numericalProblemSummary
+        
+        .. code-block:: python
+            
+            import visualization
+            session.odbData[name].diagnosticData.numericalProblemSummary
 
     """
 

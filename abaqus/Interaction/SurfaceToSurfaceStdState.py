@@ -52,33 +52,35 @@ class SurfaceToSurfaceStdState(InteractionState):
         interaction.
     direction: float
         A tuple of three Floats specifying the following:
-        - X-direction cosine of the interference direction vector.
-        - Y-direction cosine of the interference direction vector.
-        - Z-direction cosine of the interference direction vector.
+            - X-direction cosine of the interference direction vector.
+            - Y-direction cosine of the interference direction vector.
+            - Z-direction cosine of the interference direction vector.
     status: SymbolicConstant
         A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.Interaction.InteractionState.InteractionState` object.
         Possible values are:
-        - NOT_YET_ACTIVE
-        - CREATED
-        - PROPAGATED
-        - MODIFIED
-        - DEACTIVATED
-        - NO_LONGER_ACTIVE
-        - TYPE_NOT_APPLICABLE
-        - INSTANCE_NOT_APPLICABLE
-        - BUILT_INTO_BASE_STATE
+            - NOT_YET_ACTIVE
+            - CREATED
+            - PROPAGATED
+            - MODIFIED
+            - DEACTIVATED
+            - NO_LONGER_ACTIVE
+            - TYPE_NOT_APPLICABLE
+            - INSTANCE_NOT_APPLICABLE
+            - BUILT_INTO_BASE_STATE
 
     Notes
     -----
         This object can be accessed by:
-        - import interaction
-        - mdb.models[name].steps[name].interactionStates[name]
+        
+        .. code-block:: python
+            
+            import interaction
+            mdb.models[name].steps[name].interactionStates[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONTACT CONTROLS
-        - CONTACT PAIR
-        - CONTACT INTERFERENCE
+        The corresponding analysis keywords are:
+            - CONTACT CONTROLS
+            - CONTACT PAIR
+            - CONTACT INTERFERENCE
 
     """
 

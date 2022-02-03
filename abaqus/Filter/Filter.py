@@ -35,10 +35,13 @@ class Filter:
     Notes
     -----
         This object can be accessed by:
-        - import filter
-        - mdb.models[name].filters[name]
-        - import odbFilter
-        - session.odbs[name].filters[name]
+        
+        .. code-block:: python
+            
+            import filter
+            mdb.models[name].filters[name]
+            import odbFilter
+            session.odbs[name].filters[name]
 
     """
 

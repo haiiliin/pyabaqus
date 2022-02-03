@@ -7,24 +7,25 @@ class VoidNucleation:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].porousMetalPlasticity.voidNucleation
-        - import odbMaterial
-        - session.odbs[name].materials[name].porousMetalPlasticity.voidNucleation
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].porousMetalPlasticity.voidNucleation
+            import odbMaterial
+            session.odbs[name].materials[name].porousMetalPlasticity.voidNucleation
 
-    Table Data
-    ----------
-        - εN, the mean value of the nucleation-strain normal distribution.
-        - sN, the standard deviation of the nucleation-strain normal distribution.
-        - fN, the volume fraction of nucleating voids.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - εN, the mean value of the nucleation-strain normal distribution.
+            - sN, the standard deviation of the nucleation-strain normal distribution.
+            - fN, the volume fraction of nucleating voids.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - VOID NUCLEATION
+        The corresponding analysis keywords are:
+            - VOID NUCLEATION
 
     """
 
@@ -34,9 +35,12 @@ class VoidNucleation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].porousMetalPlasticity.VoidNucleation
-            - session.odbs[name].materials[name].porousMetalPlasticity\
-            - .VoidNucleation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].porousMetalPlasticity.VoidNucleation
+                session.odbs[name].materials[name].porousMetalPlasticity\
+                - .VoidNucleation
         
         Parameters
         ----------
@@ -53,7 +57,7 @@ class VoidNucleation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -62,6 +66,6 @@ class VoidNucleation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

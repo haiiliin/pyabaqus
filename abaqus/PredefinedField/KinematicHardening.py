@@ -24,9 +24,8 @@ class KinematicHardening(PredefinedField):
         import load
         mdb.models[name].predefinedFields[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - INITIAL CONDITIONS
+        The corresponding analysis keywords are:
+            - INITIAL CONDITIONS
 
     """
 
@@ -78,7 +77,7 @@ class KinematicHardening(PredefinedField):
 
         Returns
         -------
-            A KinematicHardening object. . 
+            A KinematicHardening object.
         """
         super().__init__()
         pass

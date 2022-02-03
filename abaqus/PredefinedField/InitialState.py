@@ -16,9 +16,8 @@ class InitialState(PredefinedField):
         import load
         mdb.models[name].predefinedFields[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - INSTANCE
+        The corresponding analysis keywords are:
+            - INSTANCE
 
     """
 
@@ -58,7 +57,7 @@ class InitialState(PredefinedField):
 
         Returns
         -------
-            An InitialState object. . 
+            An InitialState object.
         """
         super().__init__()
         pass

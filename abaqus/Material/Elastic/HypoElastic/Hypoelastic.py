@@ -7,22 +7,23 @@ class Hypoelastic:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].hypoelastic
-        - import odbMaterial
-        - session.odbs[name].materials[name].hypoelastic
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].hypoelastic
+            import odbMaterial
+            session.odbs[name].materials[name].hypoelastic
 
-    Table Data
-    ----------
-        - Instantaneous Young's modulus, E.
-        - Instantaneous Poisson's ratio, ν.
-        - First strain invariant, I1.
-        - Second strain invariant, I2.
-        - Third strain invariant, I3.
+        The table data for this object are:
+            - Instantaneous Young's modulus, E.
+            - Instantaneous Poisson's ratio, ν.
+            - First strain invariant, I1.
+            - Second strain invariant, I2.
+            - Third strain invariant, I3.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - HYPOELASTIC
+        The corresponding analysis keywords are:
+            - HYPOELASTIC
 
     """
 
@@ -32,8 +33,11 @@ class Hypoelastic:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Hypoelastic
-            - session.odbs[name].materials[name].Hypoelastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Hypoelastic
+                session.odbs[name].materials[name].Hypoelastic
         
         Parameters
         ----------
@@ -45,7 +49,7 @@ class Hypoelastic:
 
         Returns
         -------
-            A Hypoelastic object. . 
+            A Hypoelastic object.
         """
         pass
 

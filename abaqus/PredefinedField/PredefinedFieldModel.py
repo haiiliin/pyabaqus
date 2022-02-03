@@ -14,6 +14,17 @@ from ..Region.Region import Region
 
 class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, KinematicHardening, MaterialAssignment,
                            Stress, Temperature, Velocity):
+    """Abaqus creates a Model object named `Model-1` when a session is started.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name]
+
+    """
 
     def Field(self, name: str, createStepName: str, region: Region, outputVariable: str = '',
               fieldVariableNum: int = None, distributionType: SymbolicConstant = UNIFORM,
@@ -27,7 +38,10 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].Field
+            
+            .. code-block:: python
+            
+                mdb.models[name].Field
         
         Parameters
         ----------
@@ -53,10 +67,10 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         crossSectionDistribution
             A SymbolicConstant specifying how the predefined field is distributed over the
             cross-section of the region. Possible values are
-            - CONSTANT_THROUGH_THICKNESS
-            - GRADIENTS_THROUGH_SHELL_CS
-            - GRADIENTS_THROUGH_BEAM_CS
-            - POINTS_THROUGH_SECTION
+                - CONSTANT_THROUGH_THICKNESS
+                - GRADIENTS_THROUGH_SHELL_CS
+                - GRADIENTS_THROUGH_BEAM_CS
+                - POINTS_THROUGH_SECTION
             The default value is CONSTANT_THROUGH_THICKNESS.
         field
             A String specifying the name of the AnalyticalField or DiscreteField object associated
@@ -99,19 +113,19 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
             A Sequence of Doubles specifying the Field values when *distributionType*=UNIFORM or
             FIELD. The value of the *magnitudes* argument is a function of the
             *crossSectionDistribution* argument, as shown in the following list:
-            - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS, *magnitudes* is a Double
+                - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS, *magnitudes* is a Double
             specifying the Field.
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS, *magnitudes* is a sequence
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS, *magnitudes* is a sequence
             of Doubles specifying the mean value and the gradient in the thickness direction.
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS, *magnitudes* is a sequence of
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS, *magnitudes* is a sequence of
             Doubles specifying the mean value, the gradient in the N1 direction, and the gradient in
             the N2 direction.
-            - If *crossSectionDistribution*=POINTS_THROUGH_SECTION, *magnitudes* is a sequence of
+                - If *crossSectionDistribution*=POINTS_THROUGH_SECTION, *magnitudes* is a sequence of
             Doubles specifying the Field at each point.
 
         Returns
         -------
-            A Field object..
+            A Field object.
         """
         self.predefinedFields[name] = predefinedField = Field(name, createStepName, region, outputVariable,
                                                               fieldVariableNum, distributionType,
@@ -126,7 +140,10 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].FluidCavityPressure
+            
+            .. code-block:: python
+            
+                mdb.models[name].FluidCavityPressure
         
         Parameters
         ----------
@@ -139,7 +156,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            A FluidCavityPressure object..
+            A FluidCavityPressure object.
         """
         self.predefinedFields[name] = predefinedField = FluidCavityPressure(name, fluidCavity, fluidPressure)
         return predefinedField
@@ -152,7 +169,10 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].InitialState
+            
+            .. code-block:: python
+            
+                mdb.models[name].InitialState
         
         Parameters
         ----------
@@ -177,7 +197,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            An InitialState object..
+            An InitialState object.
         """
         self.predefinedFields[name] = predefinedField = InitialState(name, instances, fileName, endStep, endIncrement,
                                                                      updateReferenceConfiguration)
@@ -192,7 +212,10 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].KinematicHardening
+            
+            .. code-block:: python
+            
+                mdb.models[name].KinematicHardening
         
         Parameters
         ----------
@@ -223,7 +246,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            A KinematicHardening object..
+            A KinematicHardening object.
         """
         self.predefinedFields[name] = predefinedField = KinematicHardening(name, region, numBackStress,
                                                                            equivPlasticStrain, backStress, sectPtNum,
@@ -239,7 +262,10 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].MaterialAssignment
+            
+            .. code-block:: python
+            
+                mdb.models[name].MaterialAssignment
         
         Parameters
         ----------
@@ -270,7 +296,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            A MaterialAssignment object..
+            A MaterialAssignment object.
         """
         self.predefinedFields[name] = predefinedField = MaterialAssignment(name, instanceList, useFields,
                                                                            assignmentList, fieldList, colorList)
@@ -284,7 +310,10 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].Stress
+            
+            .. code-block:: python
+            
+                mdb.models[name].Stress
         
         Parameters
         ----------
@@ -311,7 +340,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            A Stress object..
+            A Stress object.
         """
         self.predefinedFields[name] = predefinedField = Stress(name, region, distributionType, sigma11, sigma22,
                                                                sigma33, sigma12, sigma13, sigma23)
@@ -330,7 +359,10 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].Temperature
+            
+            .. code-block:: python
+            
+                mdb.models[name].Temperature
         
         Parameters
         ----------
@@ -349,10 +381,10 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         crossSectionDistribution
             A SymbolicConstant specifying how the predefined field is distributed over the cross
             section of the region. Possible values are
-            - CONSTANT_THROUGH_THICKNESS
-            - GRADIENTS_THROUGH_SHELL_CS
-            - GRADIENTS_THROUGH_BEAM_CS
-            - POINTS_THROUGH_SECTION
+                - CONSTANT_THROUGH_THICKNESS
+                - GRADIENTS_THROUGH_SHELL_CS
+                - GRADIENTS_THROUGH_BEAM_CS
+                - POINTS_THROUGH_SECTION
             The default value is CONSTANT_THROUGH_THICKNESS.
         field
             A String specifying the name of the AnalyticalField or DiscreteField object associated
@@ -395,15 +427,15 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
             A Sequence of Doubles specifying the temperature values when *distributionType*=UNIFORM
             or FIELD. The value of the *magnitudes* argument is a function of the
             *crossSectionDistribution* argument, as shown in the following list:
-            - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS then *magnitudes* is a Double
+                - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS then *magnitudes* is a Double
             specifying the temperature.
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS then *magnitudes* is a
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS then *magnitudes* is a
             sequence of Doubles specifying the mean value and the gradient in the thickness
             direction.
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS then *magnitudes* is a
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS then *magnitudes* is a
             sequence of Doubles specifying the mean value, the gradient in the N1 direction, and the
             gradient in the N2 direction.
-            - If *crossSectionDistribution*=POINTS_THROUGH_SECTION then *magnitudes* is a sequence
+                - If *crossSectionDistribution*=POINTS_THROUGH_SECTION then *magnitudes* is a sequence
             of Doubles specifying the temperature at each point.
         absoluteExteriorTolerance
             A Float specifying the absolute value by which a driven node of the field can lie
@@ -416,7 +448,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            A Temperature object..
+            A Temperature object.
         """
         self.predefinedFields[name] = predefinedField = Temperature(name, createStepName, region, distributionType,
                                                                     crossSectionDistribution, field, amplitude,
@@ -433,7 +465,10 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].Velocity
+            
+            .. code-block:: python
+            
+                mdb.models[name].Velocity
         
         Parameters
         ----------
@@ -465,7 +500,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
 
         Returns
         -------
-            A Velocity object..
+            A Velocity object.
         """
         self.predefinedFields[name] = predefinedField = Velocity(name, region, velocity1, velocity2, velocity3, omega,
                                                                  axisBegin, axisEnd, field, distributionType)

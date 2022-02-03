@@ -11,8 +11,8 @@ class PredefinedFieldDisplayOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.viewports[name].assemblyDisplay.predefinedFieldOptions
-        - session.viewports[name].layers[name].assemblyDisplay.predefinedFieldOptions
+            session.viewports[name].assemblyDisplay.predefinedFieldOptions
+            session.viewports[name].layers[name].assemblyDisplay.predefinedFieldOptions
 
     """
 
@@ -37,6 +37,6 @@ class PredefinedFieldDisplayOptions:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

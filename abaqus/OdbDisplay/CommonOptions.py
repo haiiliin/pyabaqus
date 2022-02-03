@@ -57,16 +57,16 @@ class CommonOptions(DGCommonOptions):
         A Boolean specifying whether to plot the node symbols. The default value is OFF.
     nodeSymbolType: SymbolicConstant
         A SymbolicConstant specifying the node symbol types. Possible values are:
-        - FILLED_CIRCLE
-        - FILLED_SQUARE
-        - FILLED_DIAMOND
-        - FILLED_TRI
-        - HOLLOW_CIRCLE
-        - HOLLOW_SQUARE
-        - HOLLOW_DIAMOND
-        - HOLLOW_TRI
-        - CROSS
-        - XMARKER
+            - FILLED_CIRCLE
+            - FILLED_SQUARE
+            - FILLED_DIAMOND
+            - FILLED_TRI
+            - HOLLOW_CIRCLE
+            - HOLLOW_SQUARE
+            - HOLLOW_DIAMOND
+            - HOLLOW_TRI
+            - CROSS
+            - XMARKER
         The default value is HOLLOW_CIRCLE.
     nodeSymbolSize: SymbolicConstant
         A SymbolicConstant specifying the node symbol size. Possible values are SMALL, MEDIUM,
@@ -142,16 +142,19 @@ class CommonOptions(DGCommonOptions):
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.defaultOdbDisplay.commonOptions
-        - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-        - session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-        - session.viewports[name].layers[name].odbDisplay.commonOptions
-        - session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-        - session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-        - session.viewports[name].odbDisplay.commonOptions
-        - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-        - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
+        
+        .. code-block:: python
+            
+            import visualization
+            session.defaultOdbDisplay.commonOptions
+            session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
+            session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
+            session.viewports[name].layers[name].odbDisplay.commonOptions
+            session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
+            session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
+            session.viewports[name].odbDisplay.commonOptions
+            session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
+            session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
 
     """
 
@@ -397,16 +400,16 @@ class CommonOptions(DGCommonOptions):
             A Boolean specifying whether to plot the node symbols. The default value is OFF. 
         nodeSymbolType
             A SymbolicConstant specifying the node symbol types. Possible values are: 
-            - FILLED_CIRCLE 
-            - FILLED_SQUARE 
-            - FILLED_DIAMOND 
-            - FILLED_TRI 
-            - HOLLOW_CIRCLE 
-            - HOLLOW_SQUARE 
-            - HOLLOW_DIAMOND 
-            - HOLLOW_TRI 
-            - CROSS 
-            - XMARKER 
+                - FILLED_CIRCLE 
+                - FILLED_SQUARE 
+                - FILLED_DIAMOND 
+                - FILLED_TRI 
+                - HOLLOW_CIRCLE 
+                - HOLLOW_SQUARE 
+                - HOLLOW_DIAMOND 
+                - HOLLOW_TRI 
+                - CROSS 
+                - XMARKER 
             The default value is HOLLOW_CIRCLE. 
         nodeSymbolColor
             A String specifying the color to be used to plot the node symbols. The default value is 
@@ -460,6 +463,6 @@ class CommonOptions(DGCommonOptions):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

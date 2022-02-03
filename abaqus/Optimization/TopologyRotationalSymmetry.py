@@ -53,7 +53,7 @@ class TopologyRotationalSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A TopologyRotationalSymmetry object. . 
+            A TopologyRotationalSymmetry object.
         """
         super().__init__()
         pass

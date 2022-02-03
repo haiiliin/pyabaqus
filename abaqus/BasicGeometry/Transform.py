@@ -8,8 +8,11 @@ class Transform:
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - import assembly
+        
+        .. code-block:: python
+            
+            import part
+            import assembly
 
     """
 
@@ -18,7 +21,7 @@ class Transform:
 
         Returns
         -------
-            A tuple of 12 Floats. . 
-            !img 
+            A tuple of 12 Floats.
+            
         """
         pass

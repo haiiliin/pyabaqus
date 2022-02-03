@@ -228,7 +228,7 @@ class GeometryShellSection(ShellSection):
 
         Returns
         -------
-            A GeometryShellSection object. . 
+            A GeometryShellSection object.
         """
         pass
 
@@ -253,7 +253,7 @@ class GeometryShellSection(ShellSection):
 
         Returns
         -------
-            A RebarLayers object..
+            A RebarLayers object.
         """
         self.rebarLayers = rebarLayers = RebarLayers(rebarSpacing, layerTable)
         return rebarLayers

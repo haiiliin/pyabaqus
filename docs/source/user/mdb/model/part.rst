@@ -9,20 +9,35 @@ Create parts
 
 .. autoclass:: abaqus.Part.PartModel.PartModel
 
-.. autoclass:: abaqus.Part.PartBase.PartBase
+.. autosummary::
+    :doctree: From other files
     
-    .. automethod:: PartFromBooleanCut
-    .. automethod:: PartFromBooleanMerge
-    .. automethod:: PartFromExtrude2DMesh
-    .. automethod:: PartFromGeometryFile
-    .. automethod:: PartFromInstanceMesh
-    .. automethod:: PartFromGeometryFile
-    .. automethod:: PartFromMesh
-    .. automethod:: PartFromMeshMirror
-    .. automethod:: PartFromNodesAndElements
-    .. automethod:: PartFromOdb
-    .. automethod:: PartFromSection3DMeshByPlane
-    .. automethod:: PartFromSubstructure
-    .. automethod:: Part2DGeomFrom2DMesh
-    .. automethod:: PartFromSubstructure
-    .. automethod:: PartFromSubstructure
+    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromBooleanCut
+
+    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromBooleanMerge
+
+    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromExtrude2DMesh
+
+    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromGeometryFile
+
+    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromInstanceMesh
+
+    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromGeometryFile
+
+    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromMesh
+
+    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromMeshMirror
+
+    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromNodesAndElements
+
+    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromOdb
+
+    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromSection3DMeshByPlane
+
+    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromSubstructure
+
+    .. automethod:: abaqus.Part.PartBase.PartBase.Part2DGeomFrom2DMesh
+
+    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromSubstructure
+
+    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromSubstructure

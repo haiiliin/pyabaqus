@@ -36,7 +36,7 @@ class MeshEdgeArray(list[MeshEdge]):
 
         Returns
         -------
-            A MeshEdgeArray object. . 
+            A MeshEdgeArray object.
         """
         super().__init__()
 
@@ -55,7 +55,7 @@ class MeshEdgeArray(list[MeshEdge]):
 
         Raises
         ------
-            - An exception occurs if the resulting sequence is empty. 
+                - An exception occurs if the resulting sequence is empty. 
               Error: The mask results in an empty sequence 
         """
         pass
@@ -65,6 +65,6 @@ class MeshEdgeArray(list[MeshEdge]):
 
         Returns
         -------
-            A String specifying the object or objects. . 
+            A String specifying the object or objects.
         """
         pass

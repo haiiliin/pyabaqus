@@ -24,9 +24,8 @@ class TableCollection:
 
         mdb.models[name].tableCollections[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - *TABLE COLLECTION
+        The corresponding analysis keywords are:
+            - *TABLE COLLECTION
 
     """
 
@@ -58,7 +57,7 @@ class TableCollection:
 
         Returns
         -------
-            A TableCollection object. . 
+            A TableCollection object.
         """
         pass
 
@@ -109,7 +108,7 @@ class TableCollection:
 
         Returns
         -------
-            A ParameterTable object..
+            A ParameterTable object.
         """
         self.parameterTables[name] = parameterTable = ParameterTable(name)
         return parameterTable

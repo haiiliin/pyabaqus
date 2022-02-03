@@ -4,8 +4,8 @@ from .Material import Material
 """ This command evaluates the behavior of a hyperelastic material under standard test 
 conditions. 
 
-Access
-------
+Notes
+-----
     - from material import evaluateMaterial
 
 """
@@ -22,9 +22,13 @@ def evaluateMaterial(material: Material, simulationName: str, dataSource: Symbol
     """This method evaluates the behavior of a hyperelastic material under standard test
     conditions.
 
-    Path
-    ----
-        - evaluateMaterial
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            evaluateMaterial
 
     Parameters
     ----------
@@ -84,19 +88,15 @@ def evaluateMaterial(material: Material, simulationName: str, dataSource: Symbol
         None or a Float specifying the time period for the creep response mode. The default 
         value is None. 
 
-    Returns
-    -------
-        None. 
-
     Exceptions
     ----------
-        - If *dataSource*=TEST_DATA and *strainEnergyPotentials* contains POLY_N3, POLY_N4, 
+            - If *dataSource*=TEST_DATA and *strainEnergyPotentials* contains POLY_N3, POLY_N4, 
         POLY_N5, or POLY_N6: 
           MaterialEvaluationError: POLY_N3, POLY_N4, POLY_N5, or POLY_N6not allowed for 
         *dataSource*=TEST_DATA. 
-        - If the material evaluation failed: 
+            - If the material evaluation failed: 
           MaterialEvaluationError: material evaluation failed, see*path to data file*. 
-        - If the material type of the material to be evaluated is not hyperelastic: 
+            - If the material type of the material to be evaluated is not hyperelastic: 
           MaterialEvaluationError: Material evaluation is currentlysupported only for 
         hyperelastic materials. 
     """

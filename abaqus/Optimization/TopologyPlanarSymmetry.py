@@ -51,7 +51,7 @@ class TopologyPlanarSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A TopologyPlanarSymmetry object. . 
+            A TopologyPlanarSymmetry object.
         """
         super().__init__()
         pass

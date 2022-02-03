@@ -7,23 +7,24 @@ class DeformationPlasticity:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].deformationPlasticity
-        - import odbMaterial
-        - session.odbs[name].materials[name].deformationPlasticity
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].deformationPlasticity
+            import odbMaterial
+            session.odbs[name].materials[name].deformationPlasticity
 
-    Table Data
-    ----------
-        - Young's modulus, E.
-        - Poisson's ratio, ν.
-        - Yield stress, σ0.
-        - Exponent, n.
-        - Yield offset, α.
-        - Temperature, if the data depend on temperature.
+        The table data for this object are:
+            - Young's modulus, E.
+            - Poisson's ratio, ν.
+            - Yield stress, σ0.
+            - Exponent, n.
+            - Yield offset, α.
+            - Temperature, if the data depend on temperature.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - DEFORMATION PLASTICITY
+        The corresponding analysis keywords are:
+            - DEFORMATION PLASTICITY
 
     """
 
@@ -33,8 +34,11 @@ class DeformationPlasticity:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].DeformationPlasticity
-            - session.odbs[name].materials[name].DeformationPlasticity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].DeformationPlasticity
+                session.odbs[name].materials[name].DeformationPlasticity
         
         Parameters
         ----------
@@ -49,7 +53,7 @@ class DeformationPlasticity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -58,6 +62,6 @@ class DeformationPlasticity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

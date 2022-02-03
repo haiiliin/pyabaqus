@@ -9,8 +9,11 @@ class RigidBodyConstraint:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.odbData[name].rigidbodies[i]
+        
+        .. code-block:: python
+            
+            import visualization
+            session.odbData[name].rigidbodies[i]
 
     """
 
@@ -22,6 +25,6 @@ class RigidBodyConstraint:
 
         Returns
         -------
-            A String Value: NONE in the absence of constraint data. . 
+            A String Value: NONE in the absence of constraint data.
         """
         pass

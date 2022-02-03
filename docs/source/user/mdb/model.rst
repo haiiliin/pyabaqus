@@ -7,8 +7,12 @@ Model commands are used to create Abaqus/CAE models. A finished model contains a
 Create models
 -------------
 
-.. autoclass:: abaqus.Job.JobMdb.JobMdb
-    :members: Model
+.. automethod:: abaqus.Mdb.Mdb.Mdb.Model
+
+Model
+-----
+
+.. autoclass:: abaqus.Model.Model.Model
 
 .. toctree::
    :maxdepth: 1
@@ -16,6 +20,7 @@ Create models
    
    model/adaptivity
    model/amplitude
+   model/assembly
    model/bc
    model/calibration
    model/constraint
@@ -24,10 +29,9 @@ Create models
    model/interaction
    model/load
    model/material
-   .. model/mesh
    model/optimization
    model/output
-   model/part_assembly
+   model/part
    model/predefined
    model/profile
    model/property

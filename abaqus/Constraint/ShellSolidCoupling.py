@@ -23,9 +23,8 @@ class ShellSolidCoupling(Constraint):
         import interaction
         mdb.models[name].constraints[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SHELL TO SOLID COUPLING
+        The corresponding analysis keywords are:
+            - SHELL TO SOLID COUPLING
 
     """
 
@@ -71,7 +70,7 @@ class ShellSolidCoupling(Constraint):
 
         Returns
         -------
-            A ShellSolidCoupling object. . 
+            A ShellSolidCoupling object.
         """
         super().__init__()
         pass

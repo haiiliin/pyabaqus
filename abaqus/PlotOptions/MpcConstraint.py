@@ -9,8 +9,11 @@ class MpcConstraint:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.odbData[name].multiPointConstraints[i]
+        
+        .. code-block:: python
+            
+            import visualization
+            session.odbData[name].multiPointConstraints[i]
 
     """
 
@@ -22,6 +25,6 @@ class MpcConstraint:
 
         Returns
         -------
-            A tuple containing coordinates of the nodes pertaining to the constraint. . 
+            A tuple containing coordinates of the nodes pertaining to the constraint.
         """
         pass

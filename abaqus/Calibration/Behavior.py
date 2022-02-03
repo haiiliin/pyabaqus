@@ -64,7 +64,7 @@ class Behavior:
 
         Returns
         -------
-            A Behavior object. . 
+            A Behavior object.
         """
         pass
 
@@ -183,7 +183,7 @@ class Behavior:
         Returns
         -------
             A tuple consisting of a and b values of the regression line(y = ax + b), coefficient of 
-            determination(r-squared) value and the start and end-points of the line. . 
+            determination(r-squared) value and the start and end-points of the line.
         """
         pass
 
@@ -199,7 +199,7 @@ class Behavior:
         Returns
         -------
             A tuple consisting of a and b values of the regression line(y = ax + b), coefficient of 
-            determination(r-squared) value and the start and end-points of the line. . 
+            determination(r-squared) value and the start and end-points of the line.
         """
         pass
 
@@ -214,7 +214,7 @@ class Behavior:
 
         Returns
         -------
-            Coordinates of the ultimate point. . 
+            Coordinates of the ultimate point.
         """
         pass
 
@@ -229,7 +229,7 @@ class Behavior:
 
         Returns
         -------
-            A float specifying the value of elastic modulus. . 
+            A float specifying the value of elastic modulus.
         """
         pass
 
@@ -275,6 +275,6 @@ class Behavior:
         Returns
         -------
             A sequence of strings specifying names of the DataSet objects containing loading, 
-            unloading, reloading and primary datasets. . 
+            unloading, reloading and primary datasets.
         """
         pass

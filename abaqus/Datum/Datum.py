@@ -7,13 +7,16 @@ class Datum:
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].datums[i]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].datums[i]
-        - mdb.models[name].rootAssembly.datums[i]
-        - mdb.models[name].rootAssembly.instances[name].datums[i]
-        - mdb.models[name].rootAssembly.modelInstances[i].datums[i]
+        
+        .. code-block:: python
+            
+            import part
+            mdb.models[name].parts[name].datums[i]
+            import assembly
+            mdb.models[name].rootAssembly.allInstances[name].datums[i]
+            mdb.models[name].rootAssembly.datums[i]
+            mdb.models[name].rootAssembly.instances[name].datums[i]
+            mdb.models[name].rootAssembly.modelInstances[i].datums[i]
 
     """
     pass

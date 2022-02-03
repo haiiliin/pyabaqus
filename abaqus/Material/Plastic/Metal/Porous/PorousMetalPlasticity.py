@@ -1,6 +1,6 @@
+from abaqus.Material.Plastic.Metal.Porous.VoidNucleation import VoidNucleation
 from abaqusConstants import *
 from .PorousFailureCriteria import PorousFailureCriteria
-from abaqus.Material.Plastic.Metal.Porous.VoidNucleation import VoidNucleation
 
 
 class PorousMetalPlasticity:
@@ -9,24 +9,25 @@ class PorousMetalPlasticity:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].porousMetalPlasticity
-        - import odbMaterial
-        - session.odbs[name].materials[name].porousMetalPlasticity
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].porousMetalPlasticity
+            import odbMaterial
+            session.odbs[name].materials[name].porousMetalPlasticity
 
-    Table Data
-    ----------
-        - q1.
-        - q2.
-        - q3.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - q1.
+            - q2.
+            - q3.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - POROUS METAL PLASTICITY
+        The corresponding analysis keywords are:
+            - POROUS METAL PLASTICITY
 
     """
 
@@ -43,8 +44,11 @@ class PorousMetalPlasticity:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].PorousMetalPlasticity
-            - session.odbs[name].materials[name].PorousMetalPlasticity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].PorousMetalPlasticity
+                session.odbs[name].materials[name].PorousMetalPlasticity
         
         Parameters
         ----------
@@ -64,7 +68,7 @@ class PorousMetalPlasticity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -73,6 +77,6 @@ class PorousMetalPlasticity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

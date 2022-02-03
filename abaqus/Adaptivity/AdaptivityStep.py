@@ -8,6 +8,21 @@ from ..Step.StepBase import StepBase
 
 
 class AdaptivityStep(StepBase):
+    """The Step object stores the parameters that determine the context of the step. The Step
+    object is the abstract base type for other Step objects. The Step object has no explicit 
+    constructor. The methods and members of the Step object are common to all objects 
+    derived from the Step. 
+
+    Notes
+    -----
+        This object can be accessed by:
+        
+        .. code-block:: python
+        
+           import step
+           mdb.models[name].steps[name]
+
+    """
 
     def AdaptiveMeshConstraintState(self, amplitudeState: SymbolicConstant = None, status: SymbolicConstant = None,
                                     amplitude: str = '') -> AdaptiveMeshConstraintState:
@@ -23,7 +38,7 @@ class AdaptivityStep(StepBase):
 
             .. code-block:: python
               
-            mdb.models[name].steps[name].AdaptiveMeshConstraintState
+               mdb.models[name].steps[name].AdaptiveMeshConstraintState
         
         Parameters
         ----------
@@ -33,18 +48,18 @@ class AdaptivityStep(StepBase):
         status
             A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible
             values are:
-                 - NOT_YET_ACTIVE
-                 - CREATED
-                 - PROPAGATED
-                 - MODIFIED
-                 - DEACTIVATED
-                 - NO_LONGER_ACTIVE
-                 - TYPE_NOT_APPLICABLE
-                 - INSTANCE_NOT_APPLICABLE
-                 - PROPAGATED_FROM_BASE_STATE
-                 - MODIFIED_FROM_BASE_STATE
-                 - DEACTIVATED_FROM_BASE_STATE
-                 - BUILT_INTO_MODES
+                - NOT_YET_ACTIVE
+                - CREATED
+                - PROPAGATED
+                - MODIFIED
+                - DEACTIVATED
+                - NO_LONGER_ACTIVE
+                - TYPE_NOT_APPLICABLE
+                - INSTANCE_NOT_APPLICABLE
+                - PROPAGATED_FROM_BASE_STATE
+                - MODIFIED_FROM_BASE_STATE
+                - DEACTIVATED_FROM_BASE_STATE
+                - BUILT_INTO_MODES
         amplitude
             A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh
             constraint has no amplitude reference.
@@ -118,18 +133,18 @@ class AdaptivityStep(StepBase):
         status
              A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible
              values  are:
-                 - NOT_YET_ACTIVE
-                 - CREATED
-                 - PROPAGATED
-                 - MODIFIED
-                 - DEACTIVATED
-                 - NO_LONGER_ACTIVE
-                 - TYPE_NOT_APPLICABLE
-                 - INSTANCE_NOT_APPLICABLE
-                 - PROPAGATED_FROM_BASE_STATE
-                 - MODIFIED_FROM_BASE_STATE
-                 - DEACTIVATED_FROM_BASE_STATE
-                 - BUILT_INTO_MODES
+                - NOT_YET_ACTIVE
+                - CREATED
+                - PROPAGATED
+                - MODIFIED
+                - DEACTIVATED
+                - NO_LONGER_ACTIVE
+                - TYPE_NOT_APPLICABLE
+                - INSTANCE_NOT_APPLICABLE
+                - PROPAGATED_FROM_BASE_STATE
+                - MODIFIED_FROM_BASE_STATE
+                - DEACTIVATED_FROM_BASE_STATE
+                - BUILT_INTO_MODES
         amplitude
              A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh
              constraint has no amplitude reference.
@@ -204,18 +219,18 @@ class AdaptivityStep(StepBase):
         status
              A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible
              values  are:
-                 - NOT_YET_ACTIVE
-                 - CREATED
-                 - PROPAGATED
-                 - MODIFIED
-                 - DEACTIVATED
-                 - NO_LONGER_ACTIVE
-                 - TYPE_NOT_APPLICABLE
-                 - INSTANCE_NOT_APPLICABLE
-                 - PROPAGATED_FROM_BASE_STATE
-                 - MODIFIED_FROM_BASE_STATE
-                 - DEACTIVATED_FROM_BASE_STATE
-                 - BUILT_INTO_MODES
+                - NOT_YET_ACTIVE
+                - CREATED
+                - PROPAGATED
+                - MODIFIED
+                - DEACTIVATED
+                - NO_LONGER_ACTIVE
+                - TYPE_NOT_APPLICABLE
+                - INSTANCE_NOT_APPLICABLE
+                - PROPAGATED_FROM_BASE_STATE
+                - MODIFIED_FROM_BASE_STATE
+                - DEACTIVATED_FROM_BASE_STATE
+                - BUILT_INTO_MODES
         amplitude
              A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh
              constraint has no amplitude reference.

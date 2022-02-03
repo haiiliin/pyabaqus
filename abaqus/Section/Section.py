@@ -1,9 +1,8 @@
 import typing
-from abaqusConstants import *
 
+from abaqusConstants import *
 from .TransverseShearBeam import TransverseShearBeam
 from .TransverseShearShell import TransverseShearShell
-from .SectionBase import SectionBase
 from ..Connector.ConnectorSection import ConnectorSection
 
 
@@ -16,8 +15,11 @@ class Section(ConnectorSection):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sections[name].TransverseShearBeam
-            - session.odbs[name].sections[name].TransverseShearBeam
+            
+            .. code-block:: python
+            
+                mdb.models[name].sections[name].TransverseShearBeam
+                session.odbs[name].sections[name].TransverseShearBeam
         
         Parameters
         ----------
@@ -36,7 +38,7 @@ class Section(ConnectorSection):
 
         Returns
         -------
-            A TransverseShearBeam object..
+            A TransverseShearBeam object.
         """
         self.beamTransverseShear = transverseShearBeam = TransverseShearBeam(scfDefinition, k23, k13,
                                                                              slendernessCompensation)
@@ -48,8 +50,11 @@ class Section(ConnectorSection):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sections[name].TransverseShearShell
-            - session.odbs[name].sections[name].TransverseShearShell
+            
+            .. code-block:: python
+            
+                mdb.models[name].sections[name].TransverseShearShell
+                session.odbs[name].sections[name].TransverseShearShell
         
         Parameters
         ----------
@@ -62,7 +67,7 @@ class Section(ConnectorSection):
 
         Returns
         -------
-            A TransverseShearShell object..
+            A TransverseShearShell object.
         """
         self.transverseShear = transverseShearShell = TransverseShearShell(k11, k22, k12)
         return transverseShearShell

@@ -23,9 +23,8 @@ class MembraneSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - MEMBRANE SECTION
+        The corresponding analysis keywords are:
+            - MEMBRANE SECTION
 
     """
 
@@ -119,6 +118,6 @@ class MembraneSection(Section):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

@@ -111,12 +111,12 @@ class DGCommonOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-        - session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-        - session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-        - session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-        - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-        - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
+            session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
+            session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
+            session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
+            session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
+            session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
+            session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
 
     """
 

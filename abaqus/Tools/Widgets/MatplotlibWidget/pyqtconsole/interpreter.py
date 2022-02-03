@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
-import sys
-import contextlib
-from functools import partial
-
 import ast
+import contextlib
+import sys
 from code import InteractiveInterpreter
+from functools import partial
 
 from qtpy.QtCore import QObject, Slot, Signal
 

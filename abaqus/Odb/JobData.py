@@ -29,8 +29,11 @@ class JobData:
     Notes
     -----
         This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].jobData
+        
+        .. code-block:: python
+            
+            import odbAccess
+            session.odbs[name].jobData
 
     """
 

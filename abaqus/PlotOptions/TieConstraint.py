@@ -9,8 +9,11 @@ class TieConstraint:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.odbData[name].ties[i]
+        
+        .. code-block:: python
+            
+            import visualization
+            session.odbData[name].ties[i]
 
     """
 
@@ -22,6 +25,6 @@ class TieConstraint:
 
         Returns
         -------
-            A tuple containing coordinates of the nodes pertaining to the constraint. . 
+            A tuple containing coordinates of the nodes pertaining to the constraint.
         """
         pass

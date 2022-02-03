@@ -1,8 +1,8 @@
+from abaqus.Material.Plastic.DruckerPrager.Extended.TriaxialTestData import TriaxialTestData
+from abaqus.Material.Plastic.Metal.RateDependent.RateDependent import RateDependent
 from abaqusConstants import *
 from .DruckerPragerCreep import DruckerPragerCreep
 from .DruckerPragerHardening import DruckerPragerHardening
-from abaqus.Material.Plastic.Metal.RateDependent.RateDependent import RateDependent
-from abaqus.Material.Plastic.DruckerPrager.Extended.TriaxialTestData import TriaxialTestData
 
 
 class DruckerPrager:
@@ -11,40 +11,41 @@ class DruckerPrager:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].druckerPrager
-        - import odbMaterial
-        - session.odbs[name].materials[name].druckerPrager
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].druckerPrager
+            import odbMaterial
+            session.odbs[name].materials[name].druckerPrager
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *shearCriterion*=LINEAR (the only option allowed in an Abaqus/Explicit analysis), the table data specify the following:
-            - Material angle of friction, β, in the p–t plane. Give the value in degrees.
-            - K, the ratio of the flow stress in triaxial tension to the flow stress in triaxial compression. 0.778≤K≤1.0.
+                - Material angle of friction, β, in the p–t plane. Give the value in degrees.
+                - K, the ratio of the flow stress in triaxial tension to the flow stress in triaxial compression. 0.778≤K≤1.0.
               If the default value of 0.0 is accepted, a value of 1.0 is assumed.
-            - Dilation angle, ψ, in the p–t plane. Give the value in degrees.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+                - Dilation angle, ψ, in the p–t plane. Give the value in degrees.
+                - Temperature, if the data depend on temperature.
+                - Value of the first field variable, if the data depend on field variables.
+                - Value of the second field variable.
+                - Etc.
         If *shearCriterion*=HYPERBOLIC, the table data specify the following:
-            - Material angle of friction, β, at high confining pressure in the p–q plane. Give the value in degrees.
-            - Initial hydrostatic tension strength, pt|0.
-            - Dilation angle, ψ, at high confining pressure in the p–q plane. Give the value in degrees.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+                - Material angle of friction, β, at high confining pressure in the p–q plane. Give the value in degrees.
+                - Initial hydrostatic tension strength, pt|0.
+                - Dilation angle, ψ, at high confining pressure in the p–q plane. Give the value in degrees.
+                - Temperature, if the data depend on temperature.
+                - Value of the first field variable, if the data depend on field variables.
+                - Value of the second field variable.
+                - Etc.
         If *shearCriterion*=EXPONENTIAL, the table data specify the following:
-            - Dilation angle, ψ, at high confining pressure in the p–q plane. Give the value in degrees.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+                - Dilation angle, ψ, at high confining pressure in the p–q plane. Give the value in degrees.
+                - Temperature, if the data depend on temperature.
+                - Value of the first field variable, if the data depend on field variables.
+                - Value of the second field variable.
+                - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - DRUCKER PRAGER
+        The corresponding analysis keywords are:
+            - DRUCKER PRAGER
 
     """
 
@@ -67,8 +68,11 @@ class DruckerPrager:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].DruckerPrager
-            - session.odbs[name].materials[name].DruckerPrager
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].DruckerPrager
+                session.odbs[name].materials[name].DruckerPrager
         
         Parameters
         ----------
@@ -99,7 +103,7 @@ class DruckerPrager:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -108,6 +112,6 @@ class DruckerPrager:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

@@ -148,16 +148,19 @@ class ContourOptions(DGContourOptions):
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.defaultOdbDisplay.contourOptions
-        - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-        - session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-        - session.viewports[name].layers[name].odbDisplay.contourOptions
-        - session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-        - session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-        - session.viewports[name].odbDisplay.contourOptions
-        - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-        - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
+        
+        .. code-block:: python
+            
+            import visualization
+            session.defaultOdbDisplay.contourOptions
+            session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
+            session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
+            session.viewports[name].layers[name].odbDisplay.contourOptions
+            session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
+            session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
+            session.viewports[name].odbDisplay.contourOptions
+            session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
+            session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
 
     """
 
@@ -465,6 +468,6 @@ class ContourOptions(DGContourOptions):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

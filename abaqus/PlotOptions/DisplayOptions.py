@@ -14,9 +14,12 @@ class DisplayOptions:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.viewports[name].layers[name].odbDisplay.display
-        - session.viewports[name].odbDisplay.display
+        
+        .. code-block:: python
+            
+            import visualization
+            session.viewports[name].layers[name].odbDisplay.display
+            session.viewports[name].odbDisplay.display
 
     """
 

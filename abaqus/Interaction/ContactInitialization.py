@@ -8,8 +8,11 @@ class ContactInitialization:
     Notes
     -----
         This object can be accessed by:
-        - import interaction
-        - mdb.models[name].contactInitializations[name]
+        
+        .. code-block:: python
+            
+            import interaction
+            mdb.models[name].contactInitializations[name]
 
     """
     pass

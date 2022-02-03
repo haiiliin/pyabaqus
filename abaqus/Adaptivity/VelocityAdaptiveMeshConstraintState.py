@@ -66,9 +66,8 @@ class VelocityAdaptiveMeshConstraintState(AdaptiveMeshConstraintState):
         import step
         mdb.models[name].steps[name].adaptiveMeshConstraintStates[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - ADAPTIVE MESH CONSTRAINT
+        The corresponding analysis keywords are:
+            - ADAPTIVE MESH CONSTRAINT
 
     """
 
@@ -189,18 +188,18 @@ class VelocityAdaptiveMeshConstraintState(AdaptiveMeshConstraintState):
         status
              A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible
              values  are:
-                 - NOT_YET_ACTIVE
-                 - CREATED
-                 - PROPAGATED
-                 - MODIFIED
-                 - DEACTIVATED
-                 - NO_LONGER_ACTIVE
-                 - TYPE_NOT_APPLICABLE
-                 - INSTANCE_NOT_APPLICABLE
-                 - PROPAGATED_FROM_BASE_STATE
-                 - MODIFIED_FROM_BASE_STATE
-                 - DEACTIVATED_FROM_BASE_STATE
-                 - BUILT_INTO_MODES
+                - NOT_YET_ACTIVE
+                - CREATED
+                - PROPAGATED
+                - MODIFIED
+                - DEACTIVATED
+                - NO_LONGER_ACTIVE
+                - TYPE_NOT_APPLICABLE
+                - INSTANCE_NOT_APPLICABLE
+                - PROPAGATED_FROM_BASE_STATE
+                - MODIFIED_FROM_BASE_STATE
+                - DEACTIVATED_FROM_BASE_STATE
+                - BUILT_INTO_MODES
         amplitude
              A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh
              constraint has no amplitude reference.

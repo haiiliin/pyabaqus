@@ -39,6 +39,6 @@ class Leaf:
 
         Returns
         -------
-            A Leaf object. . 
+            A Leaf object.
         """
         pass

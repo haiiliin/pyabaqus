@@ -11,8 +11,8 @@ class OptimizationTaskDisplayOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.viewports[name].assemblyDisplay.optimizationTaskOptions
-        - session.viewports[name].layers[name].assemblyDisplay.optimizationTaskOptions
+            session.viewports[name].assemblyDisplay.optimizationTaskOptions
+            session.viewports[name].layers[name].assemblyDisplay.optimizationTaskOptions
 
     """
 
@@ -28,6 +28,6 @@ class OptimizationTaskDisplayOptions:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

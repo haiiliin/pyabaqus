@@ -37,7 +37,7 @@ class SizingFrozenArea(GeometricRestriction):
 
         Returns
         -------
-            A SizingFrozenArea object. . 
+            A SizingFrozenArea object.
         """
         super().__init__()
         pass

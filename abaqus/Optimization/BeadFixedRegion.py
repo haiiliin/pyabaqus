@@ -52,7 +52,7 @@ class BeadFixedRegion(GeometricRestriction):
 
         Returns
         -------
-            A BeadFixedRegion object. . 
+            A BeadFixedRegion object.
         """
         super().__init__()
         pass

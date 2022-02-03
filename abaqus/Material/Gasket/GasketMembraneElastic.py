@@ -8,23 +8,24 @@ class GasketMembraneElastic:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].gasketMembraneElastic
-        - import odbMaterial
-        - session.odbs[name].materials[name].gasketMembraneElastic
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].gasketMembraneElastic
+            import odbMaterial
+            session.odbs[name].materials[name].gasketMembraneElastic
 
-    Table Data
-    ----------
-        - Young's modulus, E.
-        - Poisson's ratio, ν.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Young's modulus, E.
+            - Poisson's ratio, ν.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - GASKET ELASTICITY
+        The corresponding analysis keywords are:
+            - GASKET ELASTICITY
 
     """
 
@@ -34,8 +35,11 @@ class GasketMembraneElastic:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].GasketMembraneElastic
-            - session.odbs[name].materials[name].GasketMembraneElastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].GasketMembraneElastic
+                session.odbs[name].materials[name].GasketMembraneElastic
         
         Parameters
         ----------
@@ -52,7 +56,7 @@ class GasketMembraneElastic:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -61,6 +65,6 @@ class GasketMembraneElastic:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

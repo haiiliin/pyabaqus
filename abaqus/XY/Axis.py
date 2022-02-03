@@ -51,13 +51,16 @@ class Axis:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.charts[name].axes1[i]
-        - session.charts[name].axes2[i]
-        - session.defaultChartOptions.defaultAxis1Options
-        - session.defaultChartOptions.defaultAxis2Options
-        - session.xyPlots[name].charts[name].axes1[i]
-        - session.xyPlots[name].charts[name].axes2[i]
+        
+        .. code-block:: python
+            
+            import visualization
+            session.charts[name].axes1[i]
+            session.charts[name].axes2[i]
+            session.defaultChartOptions.defaultAxis1Options
+            session.defaultChartOptions.defaultAxis2Options
+            session.xyPlots[name].charts[name].axes1[i]
+            session.xyPlots[name].charts[name].axes2[i]
 
     """
 

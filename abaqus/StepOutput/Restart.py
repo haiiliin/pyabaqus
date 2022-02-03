@@ -13,9 +13,8 @@ class Restart:
         import step
         mdb.models[name].steps[name].restart
 
-    Corresponding analysis keywords
-    -------------------------------
-        - RESTART
+        The corresponding analysis keywords are:
+            - RESTART
 
     """
 
@@ -54,7 +53,7 @@ class Restart:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -63,6 +62,6 @@ class Restart:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

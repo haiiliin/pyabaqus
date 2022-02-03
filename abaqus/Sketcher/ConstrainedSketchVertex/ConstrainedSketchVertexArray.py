@@ -7,8 +7,11 @@ class ConstrainedSketchVertexArray:
     Notes
     -----
         This object can be accessed by:
-        - import sketch
-        - mdb.models[name].sketches[name].vertices[i]
+        
+        .. code-block:: python
+            
+            import sketch
+            mdb.models[name].sketches[name].vertices[i]
 
     """
 
@@ -25,6 +28,6 @@ class ConstrainedSketchVertexArray:
 
         Returns
         -------
-            A ConstrainedSketchVertex object. . 
+            A ConstrainedSketchVertex object.
         """
         pass

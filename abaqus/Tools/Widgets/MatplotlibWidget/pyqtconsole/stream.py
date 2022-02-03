@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from threading import Condition
+
 from qtpy.QtCore import QObject, Signal
 
 

@@ -13,7 +13,10 @@ class Field:
     Notes
     -----
         This object can be accessed by:
-        - import fields
+        
+        .. code-block:: python
+            
+            import fields
 
     """
 

@@ -7,7 +7,7 @@ Model commands are used to create Abaqus/CAE models. A finished model contains a
 
 .. toctree::
    :maxdepth: 1
-   :caption: Objects for Model
+   :caption: Objects in Model
    
    model/adaptivity
    model/amplitude
@@ -45,6 +45,7 @@ Model
 
 .. autoclass:: abaqus.Model.Model.Model
     :members:
+    :inherited-members:
 
 KeywordBlock
 ~~~~~~~~~~~~

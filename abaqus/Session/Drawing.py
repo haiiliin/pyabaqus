@@ -173,7 +173,7 @@ class Drawing:
         Raises
         ------
             ValueError. 
-            - If the user attempts to create a new drawing with the name of an existing drawing: 
+                - If the user attempts to create a new drawing with the name of an existing drawing: 
               ValueError: There is already a drawing with this name 
         """
         pass
@@ -198,13 +198,13 @@ class Drawing:
 
         Raises
         ------
-            RangeError. 
+        RangeError
             ValueError. 
-            - If an invalid *vertexDimension* is specified: 
+                - If an invalid *vertexDimension* is specified: 
               RangeError: *vertexDimension* must be in the range 2 <= value <= 4 
-            - If *vertexData* is an empty sequence: 
+                - If *vertexData* is an empty sequence: 
               ValueError: *vertexData* cannot be empty. 
-            - If setVertices has already been called and this call is sending fewer vertices: 
+                - If setVertices has already been called and this call is sending fewer vertices: 
               ValueError: *vertexData* cannot be reduced 
         """
         pass
@@ -226,11 +226,11 @@ class Drawing:
 
         Raises
         ------
-            RangeError. 
+        RangeError
             ValueError. 
-            - If *normalData* is sequence with less than 3 values: 
+                - If *normalData* is sequence with less than 3 values: 
               ValueError: *normalData* must have at least three values. 
-            - If setNormals has already been called and this call is sending fewer values: 
+                - If setNormals has already been called and this call is sending fewer values: 
               ValueError: *normalData* cannot be reduced. 
         """
         pass
@@ -260,13 +260,13 @@ class Drawing:
 
         Raises
         ------
-            RangeError. 
+        RangeError
             ValueError. 
-            - If an invalid *colorDimension* is specified: 
+                - If an invalid *colorDimension* is specified: 
               RangeError: *colorDimension* must be in the range 3 <= value <= 4 
-            - If *colorData* is an empty sequence: 
+                - If *colorData* is an empty sequence: 
               ValueError: *colorData* cannot be empty. 
-            - If setColors has already been called and this call is sending fewer colors: 
+                - If setColors has already been called and this call is sending fewer colors: 
               ValueError: *colorData* cannot be reduced 
         """
         pass
@@ -287,7 +287,7 @@ class Drawing:
         Raises
         ------
             ValueError. 
-            - If *edgeColor* is not a sequence of 0 or 3 Floats: 
+                - If *edgeColor* is not a sequence of 0 or 3 Floats: 
               ValueError: *edgeColor* must be a tuple with 3 values 
         """
         pass
@@ -308,7 +308,7 @@ class Drawing:
         Raises
         ------
             ValueError. 
-            - If *pointColor* is a not sequence of 0 or 3 Floats: 
+                - If *pointColor* is a not sequence of 0 or 3 Floats: 
               ValueError: *pointColor* must be a tuple with 3 values 
         """
         pass
@@ -342,12 +342,12 @@ class Drawing:
         Raises
         ------
             ValueError. 
-            - If (*startIndex* + *numVertices* - 1) is larger than the length of the vertex array: 
+                - If (*startIndex* + *numVertices* - 1) is larger than the length of the vertex array: 
               ValueError: Drawing request extends past array size of vertices. 
-            - If (*startIndex* + *numVertices* - 1) is larger than the length of the normal array 
+                - If (*startIndex* + *numVertices* - 1) is larger than the length of the normal array 
             and normals are required for the graphics primitive: 
               Drawing request extends past array size of normals. 
-            - If (*startIndex* + *numVertices* - 1) is larger than the length of the color array and 
+                - If (*startIndex* + *numVertices* - 1) is larger than the length of the color array and 
             vertex colors are required for the graphics primitive: 
               Drawing request extends past array size of colors. 
         """
@@ -379,14 +379,14 @@ class Drawing:
         Raises
         ------
             ValueError. 
-            - If any value in the *indices* sequence negative: 
+                - If any value in the *indices* sequence negative: 
               ValueError: Index values must be positive. 
-            - If any value in the *indices* sequence is larger than the length of the vertex array: 
+                - If any value in the *indices* sequence is larger than the length of the vertex array: 
               ValueError: Drawing request extends past array size of vertices. 
-            - If any value in the *indices* sequence is larger than the length of the normal array 
+                - If any value in the *indices* sequence is larger than the length of the normal array 
             and normals are required for the graphics primitive: 
               Drawing request extends past array size of normals. 
-            - If any value in the *indices* sequence is larger than the length of the color array 
+                - If any value in the *indices* sequence is larger than the length of the color array 
             and vertex colors are required for the graphics primitive: 
               Drawing request extends past array size of colors. 
         """
@@ -447,12 +447,12 @@ class Drawing:
 
         Raises
         ------
-            RangeError. 
-            - If an invalid *translucency* value is specified: 
+        RangeError
+                - If an invalid *translucency* value is specified: 
               RangeError: *translucency* must be in the range 0.0 <= value <= 1.0 
-            - If an invalid *lineSize* value is specified: 
+                - If an invalid *lineSize* value is specified: 
               RangeError: *lineSize* must be in the range 0.0 <= value <= 5.0 
-            - If an invalid *pointSize* value is specified: 
+                - If an invalid *pointSize* value is specified: 
               RangeError: *pointSize* must be in the range 0.0 <= value <= 5.0 
         """
         pass

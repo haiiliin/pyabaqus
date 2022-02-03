@@ -33,9 +33,8 @@ class PressurePenetration(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - PRESSURE PENETRATION
+        The corresponding analysis keywords are:
+            - PRESSURE PENETRATION
 
     """
 
@@ -102,7 +101,7 @@ class PressurePenetration(Interaction):
 
         Returns
         -------
-            A PressurePenetration object. . 
+            A PressurePenetration object.
         """
         super().__init__()
         pass

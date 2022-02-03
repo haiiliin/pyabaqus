@@ -30,7 +30,10 @@ class MeshStats:
     Notes
     -----
         This object can be accessed by:
-        - import mesh
+        
+        .. code-block:: python
+            
+            import mesh
 
     """
 

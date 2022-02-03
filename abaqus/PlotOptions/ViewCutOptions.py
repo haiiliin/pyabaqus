@@ -79,10 +79,13 @@ class ViewCutOptions:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.defaultOdbDisplay.viewCutOptions
-        - session.viewports[name].layers[name].odbDisplay.viewCutOptions
-        - session.viewports[name].odbDisplay.viewCutOptions
+        
+        .. code-block:: python
+            
+            import visualization
+            session.defaultOdbDisplay.viewCutOptions
+            session.viewports[name].layers[name].odbDisplay.viewCutOptions
+            session.viewports[name].odbDisplay.viewCutOptions
 
     """
 
@@ -247,6 +250,6 @@ class ViewCutOptions:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

@@ -1,9 +1,6 @@
 """The following command is used to record a user-defined command in the Abaqus journal
 file. 
 
-Access
-------
-
 """
 
 
@@ -22,9 +19,13 @@ def journalMethodCall(objectPath: str, methodName: str, args: tuple, kargs: str)
     default. A command that changes the mdb customData is one example of a command that
     should call journalMethodCall.
 
-    Path
-    ----
-        - journalMethodCall
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            journalMethodCall
 
     Parameters
     ----------
@@ -36,10 +37,6 @@ def journalMethodCall(objectPath: str, methodName: str, args: tuple, kargs: str)
         A sequence specifying the positional arguments to be written to the journal file. 
     kargs
         A Python dict object specifying the keyword arguments to be written to the journal file. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass

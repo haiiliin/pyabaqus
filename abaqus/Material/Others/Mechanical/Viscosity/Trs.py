@@ -8,22 +8,23 @@ class Trs:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].viscoelastic.trs
-        - mdb.models[name].materials[name].viscosity.trs
-        - import odbMaterial
-        - session.odbs[name].materials[name].viscoelastic.trs
-        - session.odbs[name].materials[name].viscosity.trs
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].viscoelastic.trs
+            mdb.models[name].materials[name].viscosity.trs
+            import odbMaterial
+            session.odbs[name].materials[name].viscoelastic.trs
+            session.odbs[name].materials[name].viscosity.trs
 
-    Table Data
-    ----------
-        - Reference temperature, θ0θ0.
-        - Calibration constant, C1C1.
-        - Calibration constant, C2C2.
+        The table data for this object are:
+            - Reference temperature, θ0θ0.
+            - Calibration constant, C1C1.
+            - Calibration constant, C2C2.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - TRS
+        The corresponding analysis keywords are:
+            - TRS
 
     """
 
@@ -33,10 +34,13 @@ class Trs:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].viscoelastic.Trs
-            - mdb.models[name].materials[name].viscosity.Trs
-            - session.odbs[name].materials[name].viscoelastic.Trs
-            - session.odbs[name].materials[name].viscosity.Trs
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].viscoelastic.Trs
+                mdb.models[name].materials[name].viscosity.Trs
+                session.odbs[name].materials[name].viscoelastic.Trs
+                session.odbs[name].materials[name].viscosity.Trs
         
         Parameters
         ----------
@@ -49,7 +53,7 @@ class Trs:
 
         Returns
         -------
-            A Trs object. . 
+            A Trs object.
         """
         pass
 

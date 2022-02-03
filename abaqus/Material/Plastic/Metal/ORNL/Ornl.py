@@ -8,16 +8,18 @@ class Ornl:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].creep.ornl
-        - mdb.models[name].materials[name].Plastic.ornl
-        - import odbMaterial
-        - session.odbs[name].materials[name].creep.ornl
-        - session.odbs[name].materials[name].Plastic.ornl
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].creep.ornl
+            mdb.models[name].materials[name].Plastic.ornl
+            import odbMaterial
+            session.odbs[name].materials[name].creep.ornl
+            session.odbs[name].materials[name].Plastic.ornl
 
-    Corresponding analysis keywords
-    -------------------------------
-        - ORNL
+        The corresponding analysis keywords are:
+            - ORNL
 
     """
 
@@ -27,10 +29,13 @@ class Ornl:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].creep.Ornl
-            - mdb.models[name].materials[name].Plastic.Ornl
-            - session.odbs[name].materials[name].creep.Ornl
-            - session.odbs[name].materials[name].Plastic.Ornl
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].creep.Ornl
+                mdb.models[name].materials[name].Plastic.Ornl
+                session.odbs[name].materials[name].creep.Ornl
+                session.odbs[name].materials[name].Plastic.Ornl
         
         Parameters
         ----------
@@ -54,7 +59,7 @@ class Ornl:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -63,6 +68,6 @@ class Ornl:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

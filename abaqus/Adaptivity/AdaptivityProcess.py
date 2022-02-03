@@ -134,7 +134,7 @@ class AdaptivityProcess:
 
         Returns
         -------
-            An AdaptivityIteration object..
+            An AdaptivityIteration object.
         """
         self.iterations[iteration] = iteration = AdaptivityIteration(iteration, jobName, modelName, odbPath,
                                                                      remeshingErrors)

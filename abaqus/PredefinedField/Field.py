@@ -35,10 +35,9 @@ class Field(PredefinedField):
         import load
         mdb.models[name].predefinedFields[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - INITIAL CONDITIONS
-        - FIELD
+        The corresponding analysis keywords are:
+            - INITIAL CONDITIONS
+            - FIELD
 
     """
 
@@ -103,10 +102,10 @@ class Field(PredefinedField):
         crossSectionDistribution
             A SymbolicConstant specifying how the predefined field is distributed over the 
             cross-section of the region. Possible values are 
-            - CONSTANT_THROUGH_THICKNESS 
-            - GRADIENTS_THROUGH_SHELL_CS 
-            - GRADIENTS_THROUGH_BEAM_CS 
-            - POINTS_THROUGH_SECTION 
+                - CONSTANT_THROUGH_THICKNESS 
+                - GRADIENTS_THROUGH_SHELL_CS 
+                - GRADIENTS_THROUGH_BEAM_CS 
+                - POINTS_THROUGH_SECTION 
             The default value is CONSTANT_THROUGH_THICKNESS. 
         field
             A String specifying the name of the AnalyticalField or DiscreteField object associated 
@@ -149,19 +148,19 @@ class Field(PredefinedField):
             A Sequence of Doubles specifying the Field values when *distributionType*=UNIFORM or 
             FIELD. The value of the *magnitudes* argument is a function of the 
             *crossSectionDistribution* argument, as shown in the following list: 
-            - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS, *magnitudes* is a Double 
+                - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS, *magnitudes* is a Double 
             specifying the Field. 
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS, *magnitudes* is a sequence 
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS, *magnitudes* is a sequence 
             of Doubles specifying the mean value and the gradient in the thickness direction. 
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS, *magnitudes* is a sequence of 
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS, *magnitudes* is a sequence of 
             Doubles specifying the mean value, the gradient in the N1 direction, and the gradient in 
             the N2 direction. 
-            - If *crossSectionDistribution*=POINTS_THROUGH_SECTION, *magnitudes* is a sequence of 
+                - If *crossSectionDistribution*=POINTS_THROUGH_SECTION, *magnitudes* is a sequence of 
             Doubles specifying the Field at each point. 
 
         Returns
         -------
-            A Field object. . 
+            A Field object.
         """
         super().__init__()
         pass
@@ -208,10 +207,10 @@ class Field(PredefinedField):
         crossSectionDistribution
             A SymbolicConstant specifying how the predefined field is distributed over the 
             cross-section of the region. Possible values are 
-            - CONSTANT_THROUGH_THICKNESS 
-            - GRADIENTS_THROUGH_SHELL_CS 
-            - GRADIENTS_THROUGH_BEAM_CS 
-            - POINTS_THROUGH_SECTION 
+                - CONSTANT_THROUGH_THICKNESS 
+                - GRADIENTS_THROUGH_SHELL_CS 
+                - GRADIENTS_THROUGH_BEAM_CS 
+                - POINTS_THROUGH_SECTION 
             The default value is CONSTANT_THROUGH_THICKNESS. 
         field
             A String specifying the name of the AnalyticalField or DiscreteField object associated 
@@ -254,14 +253,14 @@ class Field(PredefinedField):
             A Sequence of Doubles specifying the Field values when *distributionType*=UNIFORM or 
             FIELD. The value of the *magnitudes* argument is a function of the 
             *crossSectionDistribution* argument, as shown in the following list: 
-            - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS, *magnitudes* is a Double 
+                - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS, *magnitudes* is a Double 
             specifying the Field. 
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS, *magnitudes* is a sequence 
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS, *magnitudes* is a sequence 
             of Doubles specifying the mean value and the gradient in the thickness direction. 
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS, *magnitudes* is a sequence of 
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS, *magnitudes* is a sequence of 
             Doubles specifying the mean value, the gradient in the N1 direction, and the gradient in 
             the N2 direction. 
-            - If *crossSectionDistribution*=POINTS_THROUGH_SECTION, *magnitudes* is a sequence of 
+                - If *crossSectionDistribution*=POINTS_THROUGH_SECTION, *magnitudes* is a sequence of 
             Doubles specifying the Field at each point. 
         """
         pass
@@ -326,14 +325,14 @@ class Field(PredefinedField):
             A Sequence of Doubles specifying the Field values when *distributionType*=UNIFORM or 
             FIELD. The value of the *magnitudes* argument is a function of the 
             *crossSectionDistribution* argument, as shown in the following list: 
-            - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS, *magnitudes* is a Double 
+                - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS, *magnitudes* is a Double 
             specifying the Field. 
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS, *magnitudes* is a sequence 
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS, *magnitudes* is a sequence 
             of Doubles specifying the mean value and the gradient in the thickness direction. 
-            - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS, *magnitudes* is a sequence of 
+                - If *crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS, *magnitudes* is a sequence of 
             Doubles specifying the mean value, the gradient in the N1 direction, and the gradient in 
             the N2 direction. 
-            - If *crossSectionDistribution*=POINTS_THROUGH_SECTION, *magnitudes* is a sequence of 
+                - If *crossSectionDistribution*=POINTS_THROUGH_SECTION, *magnitudes* is a sequence of 
             Doubles specifying the Field at each point. 
         """
         pass

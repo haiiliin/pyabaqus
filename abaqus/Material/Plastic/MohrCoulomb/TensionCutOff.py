@@ -8,23 +8,24 @@ class TensionCutOff:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].mohrCoulombPlasticity.tensionCutOff
-        - import odbMaterial
-        - session.odbs[name].materials[name].mohrCoulombPlasticity.tensionCutOff
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].mohrCoulombPlasticity.tensionCutOff
+            import odbMaterial
+            session.odbs[name].materials[name].mohrCoulombPlasticity.tensionCutOff
 
-    Table Data
-    ----------
-        - Tension cutoff stress.
-        - The value of the corresponding tensile Plastic strain.(The first tabular value entered must always be zero.)
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Tension cutoff stress.
+            - The value of the corresponding tensile Plastic strain.(The first tabular value entered must always be zero.)
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - TENSION CUTOFF
+        The corresponding analysis keywords are:
+            - TENSION CUTOFF
 
     """
 
@@ -34,8 +35,11 @@ class TensionCutOff:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].mohrCoulombPlasticity.TensionCutOff
-            - session.odbs[name].materials[name].mohrCoulombPlasticity.TensionCutOff
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].mohrCoulombPlasticity.TensionCutOff
+                session.odbs[name].materials[name].mohrCoulombPlasticity.TensionCutOff
         
         Parameters
         ----------
@@ -52,7 +56,7 @@ class TensionCutOff:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -61,6 +65,6 @@ class TensionCutOff:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

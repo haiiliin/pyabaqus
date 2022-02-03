@@ -7,22 +7,23 @@ class SpecificHeat:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].specificHeat
-        - import odbMaterial
-        - session.odbs[name].materials[name].specificHeat
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].specificHeat
+            import odbMaterial
+            session.odbs[name].materials[name].specificHeat
 
-    Table Data
-    ----------
-        - Specific heat per unit mass.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Specific heat per unit mass.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SPECIFIC HEAT
+        The corresponding analysis keywords are:
+            - SPECIFIC HEAT
 
     """
 
@@ -33,8 +34,11 @@ class SpecificHeat:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].SpecificHeat
-            - session.odbs[name].materials[name].SpecificHeat
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].SpecificHeat
+                session.odbs[name].materials[name].SpecificHeat
         
         Parameters
         ----------
@@ -54,7 +58,7 @@ class SpecificHeat:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -63,6 +67,6 @@ class SpecificHeat:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

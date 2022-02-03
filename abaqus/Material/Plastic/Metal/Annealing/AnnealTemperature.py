@@ -5,22 +5,23 @@ class AnnealTemperature:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].Plastic.annealTemperature
-        - import odbMaterial
-        - session.odbs[name].materials[name].Plastic.annealTemperature
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].Plastic.annealTemperature
+            import odbMaterial
+            session.odbs[name].materials[name].Plastic.annealTemperature
 
-    Table Data
-    ----------
-        - The annealing temperature, θθ.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - The annealing temperature, θθ.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - ANNEAL TEMPERATURE
+        The corresponding analysis keywords are:
+            - ANNEAL TEMPERATURE
 
     """
 
@@ -30,8 +31,11 @@ class AnnealTemperature:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Plastic.AnnealTemperature
-            - session.odbs[name].materials[name].Plastic.AnnealTemperature
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Plastic.AnnealTemperature
+                session.odbs[name].materials[name].Plastic.AnnealTemperature
         
         Parameters
         ----------
@@ -46,7 +50,7 @@ class AnnealTemperature:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -55,6 +59,6 @@ class AnnealTemperature:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

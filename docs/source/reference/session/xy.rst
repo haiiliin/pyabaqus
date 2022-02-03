@@ -5,7 +5,7 @@ XY
 XY commands are used to plot X-Y data and store its display attributes and to write X-Y data to an ASCII file.
 
 
-Create XY objects for Session
+Create XY Objects in Session
 -----------------------------
 
 .. autoclass:: abaqus.XY.XYSession.XYSession

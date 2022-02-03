@@ -23,26 +23,24 @@ class BeamSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-    Table Data
-    ----------
+        The table data for this object are:
         The table data specify the following:
-        - E, the Young's modulus of the section.
-        - G, the torsional shear modulus of the section.
-        - Thermal expansion coefficient, if using thermal expansion.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - E, the Young's modulus of the section.
+            - G, the torsional shear modulus of the section.
+            - Thermal expansion coefficient, if using thermal expansion.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - BEAM GENERAL SECTION
-        - BEAM SECTION
-        - BEAM FLUID INERTIA
-        - CENTROID
-        - DAMPING
-        - SHEAR CENTER
-        - SECTION POINTS
+        The corresponding analysis keywords are:
+            - BEAM GENERAL SECTION
+            - BEAM SECTION
+            - BEAM FLUID INERTIA
+            - CENTROID
+            - DAMPING
+            - SHEAR CENTER
+            - SECTION POINTS
 
     """
 
@@ -162,7 +160,7 @@ class BeamSection(Section):
 
         Returns
         -------
-            A BeamSection object. . 
+            A BeamSection object.
         """
         super().__init__()
         pass

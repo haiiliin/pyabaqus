@@ -23,9 +23,8 @@ class MaterialAssignment(PredefinedField):
         import load
         mdb.models[name].predefinedFields[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - INITIAL CONDITIONS
+        The corresponding analysis keywords are:
+            - INITIAL CONDITIONS
 
     """
 
@@ -73,7 +72,7 @@ class MaterialAssignment(PredefinedField):
 
         Returns
         -------
-            A MaterialAssignment object. . 
+            A MaterialAssignment object.
         """
         super().__init__()
         pass

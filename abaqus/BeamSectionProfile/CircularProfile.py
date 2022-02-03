@@ -16,9 +16,8 @@ class CircularProfile(Profile):
         import odbSection
         session.odbs[name].profiles[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - BEAM SECTION
+        The corresponding analysis keywords are:
+            - BEAM SECTION
 
     """
 
@@ -49,8 +48,8 @@ class CircularProfile(Profile):
 
         Raises
         ------
-            RangeError. 
-            !img 
+        RangeError
+            
         """
         super().__init__()
         pass
@@ -60,8 +59,8 @@ class CircularProfile(Profile):
 
         Raises
         ------
-            RangeError. 
-            !img 
+        RangeError
+            
         """
         pass
 

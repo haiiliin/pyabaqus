@@ -7,6 +7,18 @@ from ..Odb.OdbBase import OdbBase
 
 
 class FilterOdb(OdbBase):
+    """The Odb object is the in-memory representation of an output database (ODB) file.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import odbAccess
+        session.odbs[name]
+
+    """
 
     def ButterworthFilter(self, name: str, cutoffFrequency: float, order: int = 2, operation: SymbolicConstant = NONE,
                           halt: Boolean = OFF, limit: float = None,
@@ -16,8 +28,11 @@ class FilterOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ButterworthFilter
-            - session.odbs[name].ButterworthFilter
+            
+            .. code-block:: python
+            
+                mdb.models[name].ButterworthFilter
+                session.odbs[name].ButterworthFilter
         
         Parameters
         ----------
@@ -47,7 +62,12 @@ class FilterOdb(OdbBase):
 
         Returns
         -------
-            A ButterworthFilter object. and RangeError.
+            A ButterworthFilter object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.filters[name] = butterworthFilter = ButterworthFilter(name, cutoffFrequency, order, operation, halt, limit,
                                                                    invariant)
@@ -61,8 +81,11 @@ class FilterOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].Chebyshev1Filter
-            - session.odbs[name].Chebyshev1Filter
+            
+            .. code-block:: python
+            
+                mdb.models[name].Chebyshev1Filter
+                session.odbs[name].Chebyshev1Filter
         
         Parameters
         ----------
@@ -95,7 +118,12 @@ class FilterOdb(OdbBase):
 
         Returns
         -------
-            A Chebyshev1Filter object. and RangeError.
+            A Chebyshev1Filter object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.filters[name] = chebyshev1Filter = Chebyshev1Filter(name, cutoffFrequency, rippleFactor, order, operation,
                                                                  halt, limit, invariant)
@@ -109,8 +137,11 @@ class FilterOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].Chebyshev2Filter
-            - session.odbs[name].Chebyshev2Filter
+            
+            .. code-block:: python
+            
+                mdb.models[name].Chebyshev2Filter
+                session.odbs[name].Chebyshev2Filter
         
         Parameters
         ----------
@@ -143,7 +174,12 @@ class FilterOdb(OdbBase):
 
         Returns
         -------
-            A Chebyshev2Filter object. and RangeError.
+            A Chebyshev2Filter object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.filters[name] = chebyshev2Filter = Chebyshev2Filter(name, cutoffFrequency, rippleFactor, order, operation,
                                                                  halt, limit, invariant)
@@ -156,8 +192,11 @@ class FilterOdb(OdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].OperatorFilter
-            - session.odbs[name].OperatorFilter
+            
+            .. code-block:: python
+            
+                mdb.models[name].OperatorFilter
+                session.odbs[name].OperatorFilter
         
         Parameters
         ----------
@@ -187,7 +226,12 @@ class FilterOdb(OdbBase):
 
         Returns
         -------
-            An OperatorFilter object. and RangeError.
+            An OperatorFilter object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.filters[name] = operatorFilter = OperatorFilter(name, cutoffFrequency, order, operation, halt, limit,
                                                              invariant)

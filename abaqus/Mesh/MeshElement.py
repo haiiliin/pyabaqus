@@ -93,7 +93,7 @@ class MeshElement:
         Returns
         -------
         element: MeshElement
-            A MeshElement object. . 
+            A MeshElement object.
         """
         pass
 
@@ -102,7 +102,7 @@ class MeshElement:
 
         Returns
         -------
-            A tuple of MeshNode objects. . 
+            A tuple of MeshNode objects.
         """
         pass
 
@@ -111,7 +111,7 @@ class MeshElement:
 
         Returns
         -------
-            A tuple of MeshEdge objects. . 
+            A tuple of MeshEdge objects.
         """
         pass
 
@@ -120,7 +120,7 @@ class MeshElement:
 
         Returns
         -------
-            A tuple of MeshFace objects. . 
+            A tuple of MeshFace objects.
         """
         pass
 
@@ -129,7 +129,7 @@ class MeshElement:
 
         Returns
         -------
-            A MeshElementArray object which is a sequence of MeshElement objects. . 
+            A MeshElementArray object which is a sequence of MeshElement objects.
         """
         pass
 
@@ -145,7 +145,7 @@ class MeshElement:
 
         Returns
         -------
-            A MeshElementArray object, which is a sequence of MeshElement objects. . 
+            A MeshElementArray object, which is a sequence of MeshElement objects.
         """
         pass
 

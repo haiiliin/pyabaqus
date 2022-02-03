@@ -66,7 +66,7 @@ class TopologyOverhangControl(GeometricRestriction):
 
         Returns
         -------
-            A TopologyOverhangControl object. . 
+            A TopologyOverhangControl object.
         """
         super().__init__()
         pass

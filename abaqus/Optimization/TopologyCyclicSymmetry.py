@@ -54,7 +54,7 @@ class TopologyCyclicSymmetry(GeometricRestriction):
 
         Returns
         -------
-            A TopologyCyclicSymmetry object. . 
+            A TopologyCyclicSymmetry object.
         """
         super().__init__()
         pass

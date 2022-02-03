@@ -32,9 +32,8 @@ class ConnectorPotential:
         session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i]
         session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONNECTOR POTENTIAL
+        The corresponding analysis keywords are:
+            - CONNECTOR POTENTIAL
 
     """
 

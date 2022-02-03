@@ -7,23 +7,24 @@ class PressureEffect:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].diffusivity.pressureEffect
-        - import odbMaterial
-        - session.odbs[name].materials[name].diffusivity.pressureEffect
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].diffusivity.pressureEffect
+            import odbMaterial
+            session.odbs[name].materials[name].diffusivity.pressureEffect
 
-    Table Data
-    ----------
-        - Pressure stress factor, κpκp.
-        - Concentration.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Pressure stress factor, κpκp.
+            - Concentration.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - KAPPA
+        The corresponding analysis keywords are:
+            - KAPPA
 
     """
 
@@ -33,8 +34,11 @@ class PressureEffect:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].diffusivity.PressureEffect
-            - session.odbs[name].materials[name].diffusivity.PressureEffect
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].diffusivity.PressureEffect
+                session.odbs[name].materials[name].diffusivity.PressureEffect
         
         Parameters
         ----------
@@ -51,7 +55,7 @@ class PressureEffect:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -60,6 +64,6 @@ class PressureEffect:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

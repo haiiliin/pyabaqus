@@ -3,8 +3,8 @@ from .AnalysisStep import AnalysisStep
 from ..Adaptivity.AdaptiveMeshConstraintState import AdaptiveMeshConstraintState
 from ..Adaptivity.AdaptiveMeshDomain import AdaptiveMeshDomain
 from ..BoundaryCondition.BoundaryConditionState import BoundaryConditionState
-from ..LoadAndLoadCase.LoadCase import LoadCase
-from ..LoadAndLoadCase.LoadState import LoadState
+from ..Load.LoadCase import LoadCase
+from ..Load.LoadState import LoadState
 from ..PredefinedField.PredefinedFieldState import PredefinedFieldState
 from ..StepMiscellaneous.Control import Control
 from ..StepMiscellaneous.SolverControl import SolverControl
@@ -44,32 +44,32 @@ class StaticLinearPerturbationStep(AnalysisStep):
         A Boolean specifying whether the step has a mechanical procedure type.
     procedureType: SymbolicConstant
         A SymbolicConstant specifying the Abaqus procedure. Possible values are:
-        - ANNEAL
-        - BUCKLE
-        - COMPLEX_FREQUENCY
-        - COUPLED_TEMP_DISPLACEMENT
-        - COUPLED_THERMAL_ELECTRIC
-        - DIRECT_CYCLIC
-        - DYNAMIC_IMPLICIT
-        - DYNAMIC_EXPLICIT
-        - DYNAMIC_SUBSPACE
-        - DYNAMIC_TEMP_DISPLACEMENT
-        - COUPLED_THERMAL_ELECTRICAL_STRUCTURAL
-        - FREQUENCY
-        - GEOSTATIC
-        - HEAT_TRANSFER
-        - MASS_DIFFUSION
-        - MODAL_DYNAMICS
-        - RANDOM_RESPONSE
-        - RESPONSE_SPECTRUM
-        - SOILS
-        - STATIC_GENERAL
-        - STATIC_LINEAR_PERTURBATION
-        - STATIC_RIKS
-        - STEADY_STATE_DIRECT
-        - STEADY_STATE_MODAL
-        - STEADY_STATE_SUBSPACE
-        - VISCO
+            - ANNEAL
+            - BUCKLE
+            - COMPLEX_FREQUENCY
+            - COUPLED_TEMP_DISPLACEMENT
+            - COUPLED_THERMAL_ELECTRIC
+            - DIRECT_CYCLIC
+            - DYNAMIC_IMPLICIT
+            - DYNAMIC_EXPLICIT
+            - DYNAMIC_SUBSPACE
+            - DYNAMIC_TEMP_DISPLACEMENT
+            - COUPLED_THERMAL_ELECTRICAL_STRUCTURAL
+            - FREQUENCY
+            - GEOSTATIC
+            - HEAT_TRANSFER
+            - MASS_DIFFUSION
+            - MODAL_DYNAMICS
+            - RANDOM_RESPONSE
+            - RESPONSE_SPECTRUM
+            - SOILS
+            - STATIC_GENERAL
+            - STATIC_LINEAR_PERTURBATION
+            - STATIC_RIKS
+            - STEADY_STATE_DIRECT
+            - STEADY_STATE_MODAL
+            - STEADY_STATE_SUBSPACE
+            - VISCO
     suppressed: Boolean
         A Boolean specifying whether the step is suppressed or not. The default value is OFF.
     fieldOutputRequestState: dict[str, FieldOutputRequestState]
@@ -95,9 +95,9 @@ class StaticLinearPerturbationStep(AnalysisStep):
     interactionStates: int
         A repository of :py:class:`~abaqus.Interaction.InteractionState.InteractionState` objects.
     loadStates: dict[str, LoadState]
-        A repository of :py:class:`~abaqus.LoadAndLoadCase.LoadState.LoadState` objects.
+        A repository of :py:class:`~abaqus.Load.LoadState.LoadState` objects.
     loadCases: dict[str, LoadCase]
-        A repository of :py:class:`~abaqus.LoadAndLoadCase.LoadCase.LoadCase` objects.
+        A repository of :py:class:`~abaqus.Load.LoadCase.LoadCase` objects.
     predefinedFieldStates: dict[str, PredefinedFieldState]
         A repository of :py:class:`~abaqus.PredefinedField.PredefinedFieldState.PredefinedFieldState` objects.
 
@@ -110,10 +110,9 @@ class StaticLinearPerturbationStep(AnalysisStep):
         import step
         mdb.models[name].steps[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - STATIC
-        - STEP
+        The corresponding analysis keywords are:
+            - STATIC
+            - STEP
 
     """
 
@@ -258,7 +257,7 @@ class StaticLinearPerturbationStep(AnalysisStep):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         super().__init__()
         pass
@@ -280,6 +279,6 @@ class StaticLinearPerturbationStep(AnalysisStep):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

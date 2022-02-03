@@ -11,12 +11,14 @@ class SurfaceFrictionAssignment:
     Notes
     -----
         This object can be accessed by:
-        - import interaction
-        - mdb.models[name].interactions[name].surfaceFrictionAssignments
+        
+        .. code-block:: python
+            
+            import interaction
+            mdb.models[name].interactions[name].surfaceFrictionAssignments
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SURFACE PROPERTY ASSIGNMENT
+        The corresponding analysis keywords are:
+            - SURFACE PROPERTY ASSIGNMENT
 
     """
 
@@ -35,7 +37,7 @@ class SurfaceFrictionAssignment:
         value
             A tuple specifying the value of the surface friction assignments for the surface whose 
             index is referenced. Each tuple contains: 
-            - A Float specifying the overriding friction coefficient value to be used in the contact 
+                - A Float specifying the overriding friction coefficient value to be used in the contact 
             definition. 
         """
         pass
@@ -52,9 +54,9 @@ class SurfaceFrictionAssignment:
         assignments
             A sequence of tuples specifying the surface friction assignments. Each tuple contains 
             two entries: 
-            - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
+                - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
             which the friction coefficient is assigned. 
-            - A Float specifying the overriding friction coefficient to be used in the contact 
+                - A Float specifying the overriding friction coefficient to be used in the contact 
             definition. 
         """
         pass

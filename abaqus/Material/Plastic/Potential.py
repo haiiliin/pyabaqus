@@ -7,31 +7,32 @@ class Potential:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].creep.potential
-        - mdb.models[name].materials[name].Plastic.potential
-        - mdb.models[name].materials[name].viscous.potential
-        - import odbMaterial
-        - session.odbs[name].materials[name].creep.potential
-        - session.odbs[name].materials[name].Plastic.potential
-        - session.odbs[name].materials[name].viscous.potential
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].creep.potential
+            mdb.models[name].materials[name].Plastic.potential
+            mdb.models[name].materials[name].viscous.potential
+            import odbMaterial
+            session.odbs[name].materials[name].creep.potential
+            session.odbs[name].materials[name].Plastic.potential
+            session.odbs[name].materials[name].viscous.potential
 
-    Table Data
-    ----------
-        - R11.
-        - R22.
-        - R33.
-        - R12.
-        - R13.
-        - R23.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - R11.
+            - R22.
+            - R33.
+            - R12.
+            - R13.
+            - R23.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - POTENTIAL
+        The corresponding analysis keywords are:
+            - POTENTIAL
 
     """
 
@@ -41,12 +42,15 @@ class Potential:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].creep.Potential
-            - mdb.models[name].materials[name].Plastic.Potential
-            - mdb.models[name].materials[name].viscous.Potential
-            - session.odbs[name].materials[name].creep.Potential
-            - session.odbs[name].materials[name].Plastic.Potential
-            - session.odbs[name].materials[name].viscous.Potential
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].creep.Potential
+                mdb.models[name].materials[name].Plastic.Potential
+                mdb.models[name].materials[name].viscous.Potential
+                session.odbs[name].materials[name].creep.Potential
+                session.odbs[name].materials[name].Plastic.Potential
+                session.odbs[name].materials[name].viscous.Potential
         
         Parameters
         ----------
@@ -63,7 +67,7 @@ class Potential:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -72,6 +76,6 @@ class Potential:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

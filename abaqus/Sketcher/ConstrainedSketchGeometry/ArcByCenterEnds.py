@@ -13,7 +13,10 @@ class ArcByCenterEnds(ConstrainedSketchGeometry):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].ArcByCenterEnds
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].ArcByCenterEnds
         
         Parameters
         ----------
@@ -34,6 +37,6 @@ class ArcByCenterEnds(ConstrainedSketchGeometry):
         Raises
         ------
             If incompatible data are given, the second endpoint is ignored. 
-            !img 
+            
         """
         pass

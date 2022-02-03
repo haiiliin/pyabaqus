@@ -12,8 +12,11 @@ class CurrentProbeValues:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.currentProbeValues
+        
+        .. code-block:: python
+            
+            import visualization
+            session.currentProbeValues
 
     """
 

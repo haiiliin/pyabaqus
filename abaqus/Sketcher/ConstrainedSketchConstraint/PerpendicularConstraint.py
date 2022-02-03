@@ -12,7 +12,10 @@ class PerpendicularConstraint(ConstrainedSketchConstraint):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].PerpendicularConstraint
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].PerpendicularConstraint
         
         Parameters
         ----------
@@ -23,7 +26,7 @@ class PerpendicularConstraint(ConstrainedSketchConstraint):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object. . 
-            !img 
+            A ConstrainedSketchConstraint object.
+            
         """
         pass

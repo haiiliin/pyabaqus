@@ -14,26 +14,24 @@ class GapElectricalConductance:
         import interaction
         mdb.models[name].interactionProperties[name].electricalConductance
 
-    Table Data
-    ----------
+        The table data for this object are:
         The *clearanceDepTable* data specify the following:
-        - Conductivity.
-        - Clearance.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Conductivity.
+            - Clearance.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         The *pressureDepTable* data specify the following:
-        - Conductivity.
-        - Pressure.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Conductivity.
+            - Pressure.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - GAP ELECTRICAL CONDUCTANCE
+        The corresponding analysis keywords are:
+            - GAP ELECTRICAL CONDUCTANCE
 
     """
 
@@ -82,7 +80,7 @@ class GapElectricalConductance:
 
         Returns
         -------
-            A GapElectricalConductance object. . 
+            A GapElectricalConductance object.
         """
         pass
 

@@ -17,9 +17,8 @@ class MPCSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - MPC
+        The corresponding analysis keywords are:
+            - MPC
 
     """
 

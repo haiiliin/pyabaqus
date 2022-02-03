@@ -10,7 +10,10 @@ class Viewport(AnnotationViewport):
         Notes
         -----
             This function can be accessed by:
-            - session.viewports[name].Layer
+            
+            .. code-block:: python
+            
+                session.viewports[name].Layer
         
         Parameters
         ----------
@@ -21,7 +24,7 @@ class Viewport(AnnotationViewport):
 
         Returns
         -------
-            A Layer object..
+            A Layer object.
         """
         self.layers[name] = layer = Layer(name, copyViewName)
         return layer

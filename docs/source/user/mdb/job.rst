@@ -11,6 +11,11 @@ Create jobs
 .. autoclass:: abaqus.Job.JobMdb.JobMdb
     :members: Job
 
+Job
+---
+
+.. autoclass:: abaqus.Job.Job.Job
+
 Create queues in Session
 ------------------------
 

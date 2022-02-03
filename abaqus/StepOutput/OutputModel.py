@@ -10,6 +10,17 @@ from ..Region.Region import Region
 
 
 class OutputModel(ModelBase):
+    """Abaqus creates a Model object named `Model-1` when a session is started.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name]
+
+    """
 
     def FieldOutputRequest(self, name: str, createStepName: str, region: SymbolicConstant = MODEL,
                            variables: SymbolicConstant = PRESELECT, frequency: SymbolicConstant = 1,
@@ -28,7 +39,10 @@ class OutputModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].FieldOutputRequest
+            
+            .. code-block:: python
+            
+                mdb.models[name].FieldOutputRequest
         
         Parameters
         ----------
@@ -111,7 +125,7 @@ class OutputModel(ModelBase):
 
         Returns
         -------
-            A FieldOutputRequest object..
+            A FieldOutputRequest object.
         """
         self.fieldOutputRequests[name] = FieldOutputRequest(name, createStepName, region, variables, frequency, modes,
                                                             timeInterval, numIntervals, timeMarks, boltLoad,
@@ -138,7 +152,10 @@ class OutputModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].HistoryOutputRequest
+            
+            .. code-block:: python
+            
+                mdb.models[name].HistoryOutputRequest
         
         Parameters
         ----------
@@ -221,7 +238,7 @@ class OutputModel(ModelBase):
 
         Returns
         -------
-            A HistoryOutputRequest object..
+            A HistoryOutputRequest object.
         """
         self.historyOutputRequests[name] = HistoryOutputRequest(name, createStepName, region, variables, frequency,
                                                                 modes, timeInterval, numIntervals, boltLoad,
@@ -240,7 +257,10 @@ class OutputModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].IntegratedOutputSection
+            
+            .. code-block:: python
+            
+                mdb.models[name].IntegratedOutputSection
         
         Parameters
         ----------
@@ -276,7 +296,7 @@ class OutputModel(ModelBase):
 
         Returns
         -------
-            An IntegratedOutputSection object..
+            An IntegratedOutputSection object.
         """
         self.integratedOutputSections[name] = integratedOutputSection = IntegratedOutputSection(
             name, surface, refPoint, refPointAtCenter, refPointMotion, localCsys, projectOrientation)
@@ -288,7 +308,10 @@ class OutputModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].TimePoint
+            
+            .. code-block:: python
+            
+                mdb.models[name].TimePoint
         
         Parameters
         ----------
@@ -300,7 +323,12 @@ class OutputModel(ModelBase):
 
         Returns
         -------
-            A TimePoint object. and RangeError.
+            A TimePoint object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.timePoints[name] = timePoint = TimePoint(name, points)
         return timePoint

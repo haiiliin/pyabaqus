@@ -16,9 +16,8 @@ class HomogeneousSolidSection(SolidSection):
         import odbSection
         session.odbs[name].sections[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SOLID SECTION
+        The corresponding analysis keywords are:
+            - SOLID SECTION
 
     """
 
@@ -46,7 +45,12 @@ class HomogeneousSolidSection(SolidSection):
 
         Returns
         -------
-            A HomogeneousSolidSection object.  and RangeError. 
+            A HomogeneousSolidSection object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -62,6 +66,6 @@ class HomogeneousSolidSection(SolidSection):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

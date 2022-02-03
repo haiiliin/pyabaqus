@@ -101,14 +101,16 @@ class Job:
     Notes
     -----
         This object can be accessed by:
-        - import job
-        - mdb.coexecutions[name].jobs[name]
-        - mdb.jobs[name]
+        
+        .. code-block:: python
+            
+            import job
+            mdb.coexecutions[name].jobs[name]
+            mdb.jobs[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - HEADING
-        - PREPRINT
+        The corresponding analysis keywords are:
+            - HEADING
+            - PREPRINT
 
     """
 

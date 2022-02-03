@@ -19,15 +19,15 @@ class Area:
     alignment: SymbolicConstant
         A SymbolicConstant specifying the relative position of the area in its parent when
         **positionMethod=AUTO_ALIGN**. Possible values are:
-        - BOTTOM_LEFT
-        - BOTTOM_CENTER
-        - BOTTOM_RIGHT
-        - CENTER_LEFT
-        - CENTER
-        - CENTER_RIGHT
-        - TOP_LEFT
-        - TOP_CENTER
-        - TOP_RIGHT
+            - BOTTOM_LEFT
+            - BOTTOM_CENTER
+            - BOTTOM_RIGHT
+            - CENTER_LEFT
+            - CENTER
+            - CENTER_RIGHT
+            - TOP_LEFT
+            - TOP_CENTER
+            - TOP_RIGHT
         The default value is BOTTOM_LEFT.
     sizeMethod: SymbolicConstant
         A SymbolicConstant specifying how the area size is defined. Possible values are
@@ -65,19 +65,22 @@ class Area:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.charts[name].area
-        - session.charts[name].gridArea
-        - session.charts[name].legend.area
-        - session.defaultChartOptions.gridArea
-        - session.defaultChartOptions.legend.area
-        - session.defaultPlot.area
-        - session.defaultPlot.title.area
-        - session.xyPlots[name].area
-        - session.xyPlots[name].charts[name].area
-        - session.xyPlots[name].charts[name].gridArea
-        - session.xyPlots[name].charts[name].legend.area
-        - session.xyPlots[name].title.area
+        
+        .. code-block:: python
+            
+            import visualization
+            session.charts[name].area
+            session.charts[name].gridArea
+            session.charts[name].legend.area
+            session.defaultChartOptions.gridArea
+            session.defaultChartOptions.legend.area
+            session.defaultPlot.area
+            session.defaultPlot.title.area
+            session.xyPlots[name].area
+            session.xyPlots[name].charts[name].area
+            session.xyPlots[name].charts[name].gridArea
+            session.xyPlots[name].charts[name].legend.area
+            session.xyPlots[name].title.area
 
     """
 
@@ -169,15 +172,15 @@ class Area:
         alignment
             A SymbolicConstant specifying the relative position of the area in its parent when 
             *positionMethod*=AUTO_ALIGN. Possible values are: 
-            - BOTTOM_LEFT 
-            - BOTTOM_CENTER 
-            - BOTTOM_RIGHT 
-            - CENTER_LEFT 
-            - CENTER 
-            - CENTER_RIGHT 
-            - TOP_LEFT 
-            - TOP_CENTER 
-            - TOP_RIGHT 
+                - BOTTOM_LEFT 
+                - BOTTOM_CENTER 
+                - BOTTOM_RIGHT 
+                - CENTER_LEFT 
+                - CENTER 
+                - CENTER_RIGHT 
+                - TOP_LEFT 
+                - TOP_CENTER 
+                - TOP_RIGHT 
             The default value is BOTTOM_LEFT. 
         sizeMethod
             A SymbolicConstant specifying how the area size is defined. Possible values are 
@@ -206,6 +209,6 @@ class Area:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

@@ -4,14 +4,16 @@ class UserDefinedField:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].userDefinedField
-        - import odbMaterial
-        - session.odbs[name].materials[name].userDefinedField
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].userDefinedField
+            import odbMaterial
+            session.odbs[name].materials[name].userDefinedField
 
-    Corresponding analysis keywords
-    -------------------------------
-        - USER DEFINED FIELD
+        The corresponding analysis keywords are:
+            - USER DEFINED FIELD
 
     """
 
@@ -21,11 +23,14 @@ class UserDefinedField:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].UserDefinedField
-            - session.odbs[name].materials[name].UserDefinedField
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].UserDefinedField
+                session.odbs[name].materials[name].UserDefinedField
 
         Returns
         -------
-            A UserDefinedField object. . 
+            A UserDefinedField object.
         """
         pass

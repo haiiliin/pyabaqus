@@ -22,9 +22,8 @@ class AdjustPoints(Constraint):
         import interaction
         mdb.models[name].constraints[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - ADJUST
+        The corresponding analysis keywords are:
+            - ADJUST
 
     """
 
@@ -54,7 +53,7 @@ class AdjustPoints(Constraint):
 
         Returns
         -------
-            An AdjustPoints object. . 
+            An AdjustPoints object.
         """
         super().__init__()
         pass

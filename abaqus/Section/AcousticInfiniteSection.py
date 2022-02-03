@@ -16,9 +16,8 @@ class AcousticInfiniteSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SOLID SECTION
+        The corresponding analysis keywords are:
+            - SOLID SECTION
 
     """
 
@@ -50,7 +49,12 @@ class AcousticInfiniteSection(Section):
 
         Returns
         -------
-            An AcousticInfiniteSection object.  and RangeError. 
+            An AcousticInfiniteSection object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -70,6 +74,6 @@ class AcousticInfiniteSection(Section):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

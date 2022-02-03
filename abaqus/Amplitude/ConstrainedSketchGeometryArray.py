@@ -7,8 +7,11 @@ class ConstrainedSketchGeometryArray:
     Notes
     -----
         This object can be accessed by:
-        - import sketch
-        - mdb.models[name].sketches[name].geometry[i]
+        
+        .. code-block:: python
+            
+            import sketch
+            mdb.models[name].sketches[name].geometry[i]
 
     """
 
@@ -26,6 +29,6 @@ class ConstrainedSketchGeometryArray:
 
         Returns
         -------
-            A ConstrainedSketchGeometry object. . 
+            A ConstrainedSketchGeometry object.
         """
         pass

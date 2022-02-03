@@ -63,7 +63,7 @@ class IntegratedOutputSection:
 
         Returns
         -------
-            An IntegratedOutputSection object. . 
+            An IntegratedOutputSection object.
         """
         pass
 

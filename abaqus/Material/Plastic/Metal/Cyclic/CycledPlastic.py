@@ -8,20 +8,21 @@ class CycledPlastic:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].Plastic.cycledPlastic
-        - import odbMaterial
-        - session.odbs[name].materials[name].Plastic.cycledPlastic
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].Plastic.cycledPlastic
+            import odbMaterial
+            session.odbs[name].materials[name].Plastic.cycledPlastic
 
-    Table Data
-    ----------
-        - Yield stress.
-        - Plastic strain.
-        - Temperature, if the data depend on temperature.
+        The table data for this object are:
+            - Yield stress.
+            - Plastic strain.
+            - Temperature, if the data depend on temperature.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CYCLED PLASTIC
+        The corresponding analysis keywords are:
+            - CYCLED PLASTIC
 
     """
 
@@ -31,8 +32,11 @@ class CycledPlastic:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Plastic.CycledPlastic
-            - session.odbs[name].materials[name].Plastic.CycledPlastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Plastic.CycledPlastic
+                session.odbs[name].materials[name].Plastic.CycledPlastic
         
         Parameters
         ----------
@@ -43,7 +47,7 @@ class CycledPlastic:
 
         Returns
         -------
-            A CycledPlastic object. . 
+            A CycledPlastic object.
         """
         pass
 

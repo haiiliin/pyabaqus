@@ -7,28 +7,29 @@ class FailStress:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].elastic.failStress
-        - import odbMaterial
-        - session.odbs[name].materials[name].elastic.failStress
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].elastic.failStress
+            import odbMaterial
+            session.odbs[name].materials[name].elastic.failStress
 
-    Table Data
-    ----------
-        - Tensile stress limit in fiber direction, Xt.
-        - Compressive stress limit in fiber direction, Xc.
-        - Tensile stress limit in transverse direction, Yt.
-        - Compressive stress limit in transverse direction, Yc.
-        - Shear strength in the X–Y plane, S.
-        - Cross product term coefficient, *f* (-1.0≤f*≤1.0). The default value is zero.
-        - Biaxial stress limit, σb⁢i⁢a⁢x.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Tensile stress limit in fiber direction, Xt.
+            - Compressive stress limit in fiber direction, Xc.
+            - Tensile stress limit in transverse direction, Yt.
+            - Compressive stress limit in transverse direction, Yc.
+            - Shear strength in the X–Y plane, S.
+            - Cross product term coefficient, *f* (-1.0≤f*≤1.0). The default value is zero.
+            - Biaxial stress limit, σb⁢i⁢a⁢x.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - FAIL STRESS
+        The corresponding analysis keywords are:
+            - FAIL STRESS
 
     """
 
@@ -38,8 +39,11 @@ class FailStress:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].elastic.FailStress
-            - session.odbs[name].materials[name].elastic.FailStress
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].elastic.FailStress
+                session.odbs[name].materials[name].elastic.FailStress
         
         Parameters
         ----------
@@ -56,7 +60,7 @@ class FailStress:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -65,6 +69,6 @@ class FailStress:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

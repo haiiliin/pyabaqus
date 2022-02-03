@@ -6,10 +6,10 @@ from ..Region.Region import Region
 The part and section modules must be imported to give access to the Property assignment 
 commands. 
 
-Access
-------
-    - import part
-    - import section
+Notes
+-----
+        import part
+        import section
 
 """
 
@@ -17,9 +17,13 @@ Access
 def assignBeamSectionOrientatio(region: tuple, method: SymbolicConstant, n1: tuple):
     """This method assigns a beam section orientation to a region of a part.
 
-    Path
-    ----
-        - mdb.models[*name*].parts[*name*].assignBeamSectionOrientation
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            mdb.models[*name*].parts[*name*].assignBeamSectionOrientation
 
     Parameters
     ----------
@@ -33,10 +37,6 @@ def assignBeamSectionOrientatio(region: tuple, method: SymbolicConstant, n1: tup
         A sequence of three Floats specifying the approximate local n1n1-direction of the beam 
         cross-section. 
 
-    Returns
-    -------
-        None. 
-
     """
     pass
 
@@ -44,9 +44,13 @@ def assignBeamSectionOrientatio(region: tuple, method: SymbolicConstant, n1: tup
 def assignMaterialOrientatio(region: tuple, localCsys: Datum, axis: SymbolicConstant = AXIS_1, angle: float = 0):
     """This method assigns a material orientation to a region.
 
-    Path
-    ----
-        - mdb.models[*name*].parts[*name*].assignMaterialOrientation
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            mdb.models[*name*].parts[*name*].assignMaterialOrientation
 
     Parameters
     ----------
@@ -63,10 +67,6 @@ def assignMaterialOrientatio(region: tuple, localCsys: Datum, axis: SymbolicCons
         AXIS_1. 
     angle
         A Float specifying the angle of the additional rotation. The default value is 0.0. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass
@@ -75,9 +75,13 @@ def assignMaterialOrientatio(region: tuple, localCsys: Datum, axis: SymbolicCons
 def assignRebarOrientatio(region: tuple, localCsys: Datum, axis: SymbolicConstant = AXIS_1, angle: float = 0):
     """This method assigns a rebar reference orientation to a region.
 
-    Path
-    ----
-        - mdb.models[*name*].parts[*name*].assignRebarOrientation
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            mdb.models[*name*].parts[*name*].assignRebarOrientation
 
     Parameters
     ----------
@@ -94,10 +98,6 @@ def assignRebarOrientatio(region: tuple, localCsys: Datum, axis: SymbolicConstan
         AXIS_1. 
     angle
         A Float specifying the angle of the additional rotation. The default value is 0.0. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass
@@ -107,9 +107,13 @@ def flipNorma(regions: Region, referenceRegion: str = ''):
     """This method flips the normals of shell or membrane elements of an orphan mesh or of
     two-dimensional geometric regions.
 
-    Path
-    ----
-        - mdb.models[*name*].parts[*name*].flipNormal
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            mdb.models[*name*].parts[*name*].flipNormal
 
     Parameters
     ----------
@@ -124,10 +128,6 @@ def flipNorma(regions: Region, referenceRegion: str = ''):
         argument is applicable only if the argument regions contain a sequence of quadrilateral 
         or triangular elements. 
 
-    Returns
-    -------
-        None. 
-
     """
     pass
 
@@ -136,19 +136,19 @@ def flipTangen(regions: Region):
     """This method flips the tangents of beam or truss elements of an orphan mesh or of
     one-dimensional geometric regions.
 
-    Path
-    ----
-        - mdb.models[*name*].parts[*name*].flipTangent
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            mdb.models[*name*].parts[*name*].flipTangent
 
     Parameters
     ----------
     regions
         A Region object specifying the region on which normals are flipped. The region contains 
         Edge objects or one-dimensional Element objects. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass
@@ -157,18 +157,18 @@ def flipTangen(regions: Region):
 def unassignBeamSectionOrientatio(index: int):
     """This method deletes a beam section orientation assignment.
 
-    Path
-    ----
-        - mdb.models[*name*].parts[*name*].unassignBeamSectionOrientation
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            mdb.models[*name*].parts[*name*].unassignBeamSectionOrientation
 
     Parameters
     ----------
     index
         An Int specifying the number of the beam section orientation assignment to be deleted. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass
@@ -177,18 +177,18 @@ def unassignBeamSectionOrientatio(index: int):
 def unassignMaterialOrientatio(index: int):
     """This method deletes a material orientation assignment.
 
-    Path
-    ----
-        - mdb.models[*name*].parts[*name*].unassignMaterialOrientation
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            mdb.models[*name*].parts[*name*].unassignMaterialOrientation
 
     Parameters
     ----------
     index
         An Int specifying the number of the material assignment to be deleted. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass
@@ -197,19 +197,19 @@ def unassignMaterialOrientatio(index: int):
 def unassignRebarOrientatio(index: int):
     """This method deletes a rebar orientation assignment.
 
-    Path
-    ----
-        - mdb.models[*name*].parts[*name*].unassignRebarOrientation
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            mdb.models[*name*].parts[*name*].unassignRebarOrientation
 
     Parameters
     ----------
     index
         An Int specifying the number of the rebar reference orientation assignment to be 
         deleted. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass

@@ -4,6 +4,17 @@ from abaqusConstants import *
 
 
 class PartModel(ModelBase):
+    """Abaqus creates a Model object named `Model-1` when a session is started.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name]
+
+    """
 
     def Part(self, name: str, dimensionality: SymbolicConstant, type: SymbolicConstant,
              twist: Boolean = OFF):
@@ -12,7 +23,10 @@ class PartModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].Part
+            
+            .. code-block:: python
+            
+                mdb.models[name].Part
         
         Parameters
         ----------
@@ -31,7 +45,7 @@ class PartModel(ModelBase):
 
         Returns
         -------
-            A Part object..
+            A Part object.
         """
         self.parts[name] = part = Part(name, dimensionality, type, twist)
         return part

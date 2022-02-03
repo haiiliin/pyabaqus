@@ -8,14 +8,16 @@ class UserMaterial:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].userMaterial
-        - import odbMaterial
-        - session.odbs[name].materials[name].userMaterial
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].userMaterial
+            import odbMaterial
+            session.odbs[name].materials[name].userMaterial
 
-    Corresponding analysis keywords
-    -------------------------------
-        - USER MATERIAL
+        The corresponding analysis keywords are:
+            - USER MATERIAL
 
     """
 
@@ -27,8 +29,11 @@ class UserMaterial:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].UserMaterial
-            - session.odbs[name].materials[name].UserMaterial
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].UserMaterial
+                session.odbs[name].materials[name].UserMaterial
         
         Parameters
         ----------
@@ -63,7 +68,7 @@ class UserMaterial:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -72,6 +77,6 @@ class UserMaterial:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

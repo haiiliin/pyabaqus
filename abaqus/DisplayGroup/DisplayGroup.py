@@ -84,7 +84,7 @@ class DisplayGroup:
 
         Returns
         -------
-            A DisplayGroup object. . 
+            A DisplayGroup object.
         """
         pass
 

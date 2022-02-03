@@ -5,25 +5,26 @@ class CombinedTestData:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].viscoelastic.combinedTestData
-        - import odbMaterial
-        - session.odbs[name].materials[name].viscoelastic.combinedTestData
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].viscoelastic.combinedTestData
+            import odbMaterial
+            session.odbs[name].materials[name].viscoelastic.combinedTestData
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *time*=RELAXATION_TEST_DATA, the table data specify the following:
-        - Normalized shear modulus, gR⁢(t) (0≤gR(t)≤1).
-        - Normalized volumetric (bulk) modulus, kR⁢(t) (0≤kR(t)≤1).
-        - Time t (t>0).
+            - Normalized shear modulus, gR⁢(t) (0≤gR(t)≤1).
+            - Normalized volumetric (bulk) modulus, kR⁢(t) (0≤kR(t)≤1).
+            - Time t (t>0).
         If *time*=CREEP_TEST_DATA, the table data specify the following:
-        - Normalized shear compliance, jS(t)(jS(t)≥1).
-        - Normalized volumetric (bulk) compliance, jK⁢(t) (jK(t)≥1)
-        - Time t (t>0)
+            - Normalized shear compliance, jS(t)(jS(t)≥1).
+            - Normalized volumetric (bulk) compliance, jK⁢(t) (jK(t)≥1)
+            - Time t (t>0)
 
-    Corresponding analysis keywords
-    -------------------------------
-        - COMBINED TEST DATA
+        The corresponding analysis keywords are:
+            - COMBINED TEST DATA
 
     """
 
@@ -33,8 +34,11 @@ class CombinedTestData:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].viscoelastic.CombinedTestData
-            - session.odbs[name].materials[name].viscoelastic.CombinedTestData
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].viscoelastic.CombinedTestData
+                session.odbs[name].materials[name].viscoelastic.CombinedTestData
         
         Parameters
         ----------
@@ -58,7 +62,7 @@ class CombinedTestData:
 
         Returns
         -------
-            A CombinedTestData object. . 
+            A CombinedTestData object.
         """
         pass
 

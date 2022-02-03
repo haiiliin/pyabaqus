@@ -18,9 +18,8 @@ class SmoothStepAmplitude(Amplitude):
         import odbAmplitude
         session.odbs[name].amplitudes[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - AMPLITUDE
+        The corresponding analysis keywords are:
+            - AMPLITUDE
 
     """
 
@@ -49,7 +48,12 @@ class SmoothStepAmplitude(Amplitude):
 
         Returns
         -------
-            A SmoothStepAmplitude object.  and RangeError. 
+            A SmoothStepAmplitude object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -65,6 +69,6 @@ class SmoothStepAmplitude(Amplitude):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

@@ -14,6 +14,20 @@ from ..Mesh.MeshNode import MeshNode
 
 
 class RegionAssembly(RegionAssemblyBase):
+    """An Assembly object is a container for instances of parts. The Assembly object has no
+    constructor command. Abaqus creates the *rootAssembly* member when a Model object is 
+    created. 
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import assembly
+        mdb.models[name].rootAssembly
+
+    """
 
     def Surface(self, side1Faces: tuple[Face] = None, side2Faces: tuple[Face] = None, side12Faces: tuple[Face] = None,
                 end1Edges: tuple[Face] = None, end2Edges: tuple[Face] = None, circumEdges: tuple[Face] = None,
@@ -30,8 +44,11 @@ class RegionAssembly(RegionAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Surface
-            - mdb.models[*name*].rootAssembly.Surface
+            
+            .. code-block:: python
+            
+                mdb.models[*name*].parts[*name*].Surface
+                mdb.models[*name*].rootAssembly.Surface
                 side1Faces
                 side2Faces
                 side12Faces
@@ -66,7 +83,7 @@ class RegionAssembly(RegionAssemblyBase):
 
         Returns
         -------
-            A Surface object..
+            A Surface object.
         """
         surface = Surface(side1Faces, side2Faces, side12Faces, end1Edges, end2Edges, circumEdges, side1Edges,
                           side2Edges, face1Elements, face2Elements, face3Elements, face4Elements, face5Elements,
@@ -88,8 +105,11 @@ class RegionAssembly(RegionAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Set
-            - mdb.models[*name*].rootAssembly.Set
+            
+            .. code-block:: python
+            
+                mdb.models[*name*].parts[*name*].Set
+                mdb.models[*name*].rootAssembly.Set
         
         Parameters
         ----------
@@ -133,7 +153,7 @@ class RegionAssembly(RegionAssemblyBase):
 
         Returns
         -------
-            A Set object..
+            A Set object.
         """
         pass
 
@@ -144,8 +164,11 @@ class RegionAssembly(RegionAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[*name*].parts[*name*].Set
-            - mdb.models[*name*].rootAssembly.Set
+            
+            .. code-block:: python
+            
+                mdb.models[*name*].parts[*name*].Set
+                mdb.models[*name*].rootAssembly.Set
         
         Parameters
         ----------
@@ -156,7 +179,7 @@ class RegionAssembly(RegionAssemblyBase):
 
         Returns
         -------
-            A Set object..
+            A Set object.
         """
         pass
 

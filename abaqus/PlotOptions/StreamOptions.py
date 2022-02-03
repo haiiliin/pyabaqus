@@ -17,10 +17,13 @@ class StreamOptions:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.defaultOdbDisplay.streamOptions
-        - session.viewports[name].layers[name].odbDisplay.streamOptions
-        - session.viewports[name].odbDisplay.streamOptions
+        
+        .. code-block:: python
+            
+            import visualization
+            session.defaultOdbDisplay.streamOptions
+            session.viewports[name].layers[name].odbDisplay.streamOptions
+            session.viewports[name].odbDisplay.streamOptions
 
     """
 

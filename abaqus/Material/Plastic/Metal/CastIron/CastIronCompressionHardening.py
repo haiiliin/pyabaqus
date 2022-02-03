@@ -8,23 +8,24 @@ class CastIronCompressionHardening:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].castIronPlasticity.castIronCompressionHardening
-        - import odbMaterial
-        - session.odbs[name].materials[name].castIronPlasticity.castIronCompressionHardening
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].castIronPlasticity.castIronCompressionHardening
+            import odbMaterial
+            session.odbs[name].materials[name].castIronPlasticity.castIronCompressionHardening
 
-    Table Data
-    ----------
-        - Yield stress in compression, σcσc.
-        - The absolute value of the corresponding Plastic strain.(The first tabular value entered must always be zero.)
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Yield stress in compression, σcσc.
+            - The absolute value of the corresponding Plastic strain.(The first tabular value entered must always be zero.)
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CAST IRON COMPRESSION HARDENING
+        The corresponding analysis keywords are:
+            - CAST IRON COMPRESSION HARDENING
 
     """
 
@@ -34,10 +35,13 @@ class CastIronCompressionHardening:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].castIronPlasticity\
-            - .CastIronCompressionHardening
-            - session.odbs[name].materials[name].castIronPlasticity\
-            - .CastIronCompressionHardening
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].castIronPlasticity\
+                - .CastIronCompressionHardening
+                session.odbs[name].materials[name].castIronPlasticity\
+                - .CastIronCompressionHardening
         
         Parameters
         ----------
@@ -54,7 +58,7 @@ class CastIronCompressionHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -63,6 +67,6 @@ class CastIronCompressionHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

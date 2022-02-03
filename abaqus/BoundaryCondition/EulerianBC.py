@@ -103,7 +103,7 @@ class EulerianBC(BoundaryCondition):
 
         Returns
         -------
-            An EulerianBC object. . 
+            An EulerianBC object.
         """
         super().__init__()
         pass

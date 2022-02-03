@@ -24,9 +24,8 @@ class ContourIntegral(Crack):
         import assembly
         mdb.models[name].rootAssembly.engineeringFeatures.cracks[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONTOUR INTEGRAL
+        The corresponding analysis keywords are:
+            - CONTOUR INTEGRAL
 
     """
 
@@ -101,7 +100,7 @@ class ContourIntegral(Crack):
 
         Returns
         -------
-            A ContourIntegral object. . 
+            A ContourIntegral object.
         """
         super().__init__()
         pass

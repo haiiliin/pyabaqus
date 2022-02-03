@@ -94,7 +94,7 @@ class OdbFrame:
 
         Returns
         -------
-            An OdbFrame object. . 
+            An OdbFrame object.
         """
         pass
 
@@ -124,7 +124,7 @@ class OdbFrame:
 
         Returns
         -------
-            An OdbFrame object. . 
+            An OdbFrame object.
         """
         pass
 
@@ -153,7 +153,7 @@ class OdbFrame:
 
         Returns
         -------
-            An OdbFrame object. . 
+            An OdbFrame object.
         """
         pass
 
@@ -204,7 +204,7 @@ class OdbFrame:
 
         Returns
         -------
-            A FieldOutput object..
+            A FieldOutput object.
         """
         pass
 
@@ -233,7 +233,7 @@ class OdbFrame:
 
         Returns
         -------
-            A FieldOutput object..
+            A FieldOutput object.
         """
         pass
 

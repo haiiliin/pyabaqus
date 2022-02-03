@@ -123,7 +123,7 @@ class DisplacementBaseMotionBC(BoundaryCondition):
 
         Returns
         -------
-            A DisplacementBaseMotionBC object. . 
+            A DisplacementBaseMotionBC object.
         """
         super().__init__()
         pass

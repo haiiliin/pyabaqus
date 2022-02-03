@@ -11,7 +11,10 @@ class DisplayGroupSession(SessionBase):
         Notes
         -----
             This function can be accessed by:
-            - session.DisplayGroup
+            
+            .. code-block:: python
+            
+                session.DisplayGroup
         
         Parameters
         ----------
@@ -22,7 +25,7 @@ class DisplayGroupSession(SessionBase):
 
         Returns
         -------
-            A DisplayGroup object..
+            A DisplayGroup object.
         """
         self.displayGroups[name] = displayGroup = DisplayGroup(name, leaf)
         return displayGroup

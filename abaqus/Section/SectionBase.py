@@ -67,6 +67,6 @@ class SectionBase:
 
         Returns
         -------
-            A list of Section objects. . 
+            A list of Section objects.
         """
         pass

@@ -43,14 +43,14 @@ class ElemType:
         elemCode
             A SymbolicConstant specifying the Abaqus element code or just the element shape. 
             Possible values are: 
-            - C3D8R, specifying a 8-node linear brick, reduced integration with hourglass control. 
-            - CODE, specifying add more codes. 
-            - UNKNOWN_TRI, specifying an unknown element type associated with a triangular shape. 
-            - UNKNOWN_QUAD, specifying an unknown element type associated with a quadrilateral 
+                - C3D8R, specifying a 8-node linear brick, reduced integration with hourglass control. 
+                - CODE, specifying add more codes. 
+                - UNKNOWN_TRI, specifying an unknown element type associated with a triangular shape. 
+                - UNKNOWN_QUAD, specifying an unknown element type associated with a quadrilateral 
             shape. 
-            - UNKNOWN_HEX, specifying an unknown element type associated with a hexahedral shape. 
-            - UNKNOWN_WEDGE, specifying an unknown element type associated with a wedge shape. 
-            - UNKNOWN_TET, specifying an unknown element type associated with a tetrahedral shape. 
+                - UNKNOWN_HEX, specifying an unknown element type associated with a hexahedral shape. 
+                - UNKNOWN_WEDGE, specifying an unknown element type associated with a wedge shape. 
+                - UNKNOWN_TET, specifying an unknown element type associated with a tetrahedral shape. 
         elemLibrary
             A SymbolicConstant specifying the Abaqus element library to use. Possible values are 
             STANDARD and EXPLICIT. The default value is STANDARD. 

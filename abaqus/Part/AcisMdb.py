@@ -4,6 +4,18 @@ from ..Mdb.MdbBase import MdbBase
 
 
 class AcisMdb(MdbBase):
+    """The Mdb object is the high-level Abaqus model database. A model database stores models
+    and analysis controls.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb
+
+    """
 
     @staticmethod
     def openAcis(fileName: str, scaleFromFile: Boolean = OFF):
@@ -13,7 +25,10 @@ class AcisMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.openAcis
+            
+            .. code-block:: python
+            
+                mdb.openAcis
         
         Parameters
         ----------
@@ -29,9 +44,9 @@ class AcisMdb(MdbBase):
 
         Raises
         ------
-            - File is from a newer version of ACIS than the CAE kernel.
+                - File is from a newer version of ACIS than the CAE kernel.
               Texterror: ACIS File version exceeds Kernel.
-            - The data in the ACIS file are corrupted.
+                - The data in the ACIS file are corrupted.
               Texterror: Failed to read ACIS file.
         """
         return AcisFile()
@@ -45,7 +60,10 @@ class AcisMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.openCatia
+            
+            .. code-block:: python
+            
+                mdb.openCatia
         
         Parameters
         ----------
@@ -67,7 +85,7 @@ class AcisMdb(MdbBase):
 
         Returns
         -------
-            An AcisFile object..
+            An AcisFile object.
         """
         return AcisFile()
 
@@ -81,7 +99,10 @@ class AcisMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.openEnf
+            
+            .. code-block:: python
+            
+                mdb.openEnf
         
         Parameters
         ----------
@@ -104,7 +125,7 @@ class AcisMdb(MdbBase):
 
         Returns
         -------
-            An AcisFile object..
+            An AcisFile object.
         """
         return AcisFile()
 
@@ -119,7 +140,10 @@ class AcisMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.openIges
+            
+            .. code-block:: python
+            
+                mdb.openIges
         
         Parameters
         ----------
@@ -160,7 +184,7 @@ class AcisMdb(MdbBase):
 
         Raises
         ------
-            - The data in the IGES file are corrupted.
+                - The data in the IGES file are corrupted.
               Texterror: Failed to read IGES file.
         """
         return AcisFile()
@@ -173,7 +197,10 @@ class AcisMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.openParasolid
+            
+            .. code-block:: python
+            
+                mdb.openParasolid
         
         Parameters
         ----------
@@ -188,7 +215,7 @@ class AcisMdb(MdbBase):
 
         Returns
         -------
-            An AcisFile object..
+            An AcisFile object.
         """
         return AcisFile()
 
@@ -200,7 +227,10 @@ class AcisMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.openStep
+            
+            .. code-block:: python
+            
+                mdb.openStep
         
         Parameters
         ----------
@@ -216,7 +246,7 @@ class AcisMdb(MdbBase):
 
         Raises
         ------
-            - The data in the STEP file are corrupted.
+                - The data in the STEP file are corrupted.
               Texterror: Failed to read STEP file.
         """
         return AcisFile()
@@ -229,7 +259,10 @@ class AcisMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.openVda
+            
+            .. code-block:: python
+            
+                mdb.openVda
         
         Parameters
         ----------
@@ -242,7 +275,7 @@ class AcisMdb(MdbBase):
 
         Raises
         ------
-            - The data in the VDA-FS file are corrupted.
+                - The data in the VDA-FS file are corrupted.
               Texterror: Failed to read VDA file.
         """
         return AcisFile()
@@ -255,7 +288,10 @@ class AcisMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            - openSolidworks
+            
+            .. code-block:: python
+            
+                openSolidworks
         
         Parameters
         ----------
@@ -274,7 +310,7 @@ class AcisMdb(MdbBase):
 
         Raises
         ------
-            - The data in the Solidworks file are corrupted.
+                - The data in the Solidworks file are corrupted.
               Texterror: Failed to read Solidworks file.
         """
         return AcisFile()

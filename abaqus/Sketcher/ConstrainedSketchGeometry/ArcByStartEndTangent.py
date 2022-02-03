@@ -10,7 +10,10 @@ class ArcByStartEndTangent(ConstrainedSketchGeometry):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].ArcByStartEndTangent
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].ArcByStartEndTangent
         
         Parameters
         ----------
@@ -23,7 +26,7 @@ class ArcByStartEndTangent(ConstrainedSketchGeometry):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the arc cannot be created). . 
-            !img 
+            A ConstrainedSketchGeometry object (None if the arc cannot be created).
+            
         """
         pass

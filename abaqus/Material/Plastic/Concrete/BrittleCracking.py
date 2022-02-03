@@ -10,38 +10,39 @@ class BrittleCracking:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].brittleCracking
-        - import odbMaterial
-        - session.odbs[name].materials[name].brittleCracking
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].brittleCracking
+            import odbMaterial
+            session.odbs[name].materials[name].brittleCracking
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *type*=STRAIN the table data specify the following:
-        - Remaining direct stress after cracking.
-        - Direct cracking strain.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Remaining direct stress after cracking.
+            - Direct cracking strain.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=DISPLACEMENT the table data specify the following:
-        - Remaining direct stress after cracking.
-        - Direct cracking displacement.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Remaining direct stress after cracking.
+            - Direct cracking displacement.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *type*=GFI the table data specify the following:
-        - Failure stress.
-        - Mode I fracture energy.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Failure stress.
+            - Mode I fracture energy.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - BRITTLE CRACKING
+        The corresponding analysis keywords are:
+            - BRITTLE CRACKING
 
     """
 
@@ -58,8 +59,11 @@ class BrittleCracking:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].BrittleCracking
-            - session.odbs[name].materials[name].BrittleCracking
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].BrittleCracking
+                session.odbs[name].materials[name].BrittleCracking
         
         Parameters
         ----------
@@ -75,7 +79,7 @@ class BrittleCracking:
 
         Returns
         -------
-            A BrittleCracking object. . 
+            A BrittleCracking object.
         """
         pass
 

@@ -61,16 +61,19 @@ class DisplayBodyOptions(DGDisplayBodyOptions):
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.defaultOdbDisplay.displayBodyOptions
-        - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
-        - session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
-        - session.viewports[name].layers[name].odbDisplay.displayBodyOptions
-        - session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
-        - session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
-        - session.viewports[name].odbDisplay.displayBodyOptions
-        - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
-        - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
+        
+        .. code-block:: python
+            
+            import visualization
+            session.defaultOdbDisplay.displayBodyOptions
+            session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
+            session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
+            session.viewports[name].layers[name].odbDisplay.displayBodyOptions
+            session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
+            session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
+            session.viewports[name].odbDisplay.displayBodyOptions
+            session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
+            session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
 
     """
 
@@ -182,6 +185,6 @@ class DisplayBodyOptions(DGDisplayBodyOptions):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

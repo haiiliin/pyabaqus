@@ -20,8 +20,11 @@ class OdbPretensionSection:
     Notes
     -----
         This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].rootAssembly.pretensionSections[i]
+        
+        .. code-block:: python
+            
+            import odbAccess
+            session.odbs[name].rootAssembly.pretensionSections[i]
 
     """
 

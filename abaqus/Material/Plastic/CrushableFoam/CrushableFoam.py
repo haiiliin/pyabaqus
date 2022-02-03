@@ -1,6 +1,6 @@
+from abaqus.Material.Plastic.Metal.RateDependent.RateDependent import RateDependent
 from abaqusConstants import *
 from .CrushableFoamHardening import CrushableFoamHardening
-from abaqus.Material.Plastic.Metal.RateDependent.RateDependent import RateDependent
 
 
 class CrushableFoam:
@@ -9,31 +9,32 @@ class CrushableFoam:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].crushableFoam
-        - import odbMaterial
-        - session.odbs[name].materials[name].crushableFoam
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].crushableFoam
+            import odbMaterial
+            session.odbs[name].materials[name].crushableFoam
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *hardening*=VOLUMETRIC, the table data specify the following:
-        - Ratio, k, of initial yield stress in uniaxial compression, σc0, to initial yield stress in hydrostatic compression, p0cpc0; 0.0 <k< 3.0.
-        - Ratio, kt, of yield stress in hydrostatic tension, pt, to initial yield stress in hydrostatic compression, pc0. The default value is 1.0.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Ratio, k, of initial yield stress in uniaxial compression, σc0, to initial yield stress in hydrostatic compression, p0cpc0; 0.0 <k< 3.0.
+            - Ratio, kt, of yield stress in hydrostatic tension, pt, to initial yield stress in hydrostatic compression, pc0. The default value is 1.0.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *hardening*=ISOTROPIC, the table data specify the following:
-        - Ratio, k, of initial yield stress in uniaxial compression, σ0cσc0, to initial yield stress in hydrostatic compression, p00; 0.0 ≤k≤ 3.0.
-        - Plastic Poisson's ratio.νpνp; -1≤νp≤0.5.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Ratio, k, of initial yield stress in uniaxial compression, σ0cσc0, to initial yield stress in hydrostatic compression, p00; 0.0 ≤k≤ 3.0.
+            - Plastic Poisson's ratio.νpνp; -1≤νp≤0.5.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CRUSHABLE FOAM
+        The corresponding analysis keywords are:
+            - CRUSHABLE FOAM
 
     """
 
@@ -50,8 +51,11 @@ class CrushableFoam:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].CrushableFoam
-            - session.odbs[name].materials[name].CrushableFoam
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].CrushableFoam
+                session.odbs[name].materials[name].CrushableFoam
         
         Parameters
         ----------
@@ -71,7 +75,7 @@ class CrushableFoam:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -80,6 +84,6 @@ class CrushableFoam:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

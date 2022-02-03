@@ -13,9 +13,8 @@ class Monitor:
         import step
         mdb.models[name].steps[name].monitor
 
-    Corresponding analysis keywords
-    -------------------------------
-        - MONITOR
+        The corresponding analysis keywords are:
+            - MONITOR
 
     """
 
@@ -38,19 +37,19 @@ class Monitor:
         dof
             A SymbolicConstant specifying the degree of freedom to be monitored at the node. 
             Possible values are: 
-            - U1 
-            - U2 
-            - U3 
-            - UR1 
-            - UR2 
-            - UR3 
-            - WARP 
-            - FLUID_PRESSURE 
-            - ELECTRICAL_POTENTIAL 
-            - NT11 
-            - NT30 
-            - NN11 
-            - NN30 
+                - U1 
+                - U2 
+                - U3 
+                - UR1 
+                - UR2 
+                - UR3 
+                - WARP 
+                - FLUID_PRESSURE 
+                - ELECTRICAL_POTENTIAL 
+                - NT11 
+                - NT30 
+                - NN11 
+                - NN30 
             The NT identifiers are not available for mass diffusion. The NN identifiers are 
             available only for mass diffusion. 
         frequency
@@ -63,7 +62,7 @@ class Monitor:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -72,6 +71,6 @@ class Monitor:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

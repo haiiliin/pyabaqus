@@ -11,7 +11,10 @@ class EllipseByCenterPerimeter(ConstrainedSketchGeometry):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].EllipseByCenterPerimeter
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].EllipseByCenterPerimeter
         
         Parameters
         ----------
@@ -24,7 +27,7 @@ class EllipseByCenterPerimeter(ConstrainedSketchGeometry):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the ellipse cannot be created). . 
-            !img 
+            A ConstrainedSketchGeometry object (None if the ellipse cannot be created).
+            
         """
         pass

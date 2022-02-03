@@ -25,9 +25,8 @@ class Coupling(Constraint):
         import interaction
         mdb.models[name].constraints[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - COUPLING
+        The corresponding analysis keywords are:
+            - COUPLING
 
     """
 
@@ -103,7 +102,7 @@ class Coupling(Constraint):
 
         Returns
         -------
-            A Coupling object. . 
+            A Coupling object.
         """
         super().__init__()
         pass

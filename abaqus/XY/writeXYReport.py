@@ -3,18 +3,19 @@ from .XYData import XYData
 
 """This method writes an XYData object to a user-defined ASCII file. 
 
-Access
-------
-
 """
 
 
 def writeXYRepor(fileName: str, xyData: tuple[XYData], appendMode: Boolean = ON):
     """This method writes an XYData object to a user-defined ASCII file.
 
-    Path
-    ----
-        - session.writeXYReport
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            session.writeXYReport
 
     Parameters
     ----------
@@ -25,10 +26,6 @@ def writeXYRepor(fileName: str, xyData: tuple[XYData], appendMode: Boolean = ON)
     appendMode
         A Boolean specifying whether to append the *X–Y* data to the existing file. The default 
         value is ON. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass

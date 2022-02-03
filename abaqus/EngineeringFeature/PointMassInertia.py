@@ -24,9 +24,8 @@ class PointMassInertia(Inertia):
         import assembly
         mdb.models[name].rootAssembly.engineeringFeatures.inertias[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - MASS
+        The corresponding analysis keywords are:
+            - MASS
 
     """
 
@@ -95,7 +94,7 @@ class PointMassInertia(Inertia):
 
         Returns
         -------
-            A PointMassInertia object. . 
+            A PointMassInertia object.
         """
         super().__init__()
         pass

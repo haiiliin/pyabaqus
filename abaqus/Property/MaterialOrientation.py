@@ -136,7 +136,7 @@ class MaterialOrientation:
 
         Returns
         -------
-            A MaterialOrientation object. . 
+            A MaterialOrientation object.
         """
         pass
 
@@ -237,7 +237,7 @@ class MaterialOrientation:
 
         Returns
         -------
-            A MaterialOrientation object. . 
+            A MaterialOrientation object.
         """
         pass
 

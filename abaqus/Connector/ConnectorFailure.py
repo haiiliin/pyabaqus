@@ -18,9 +18,8 @@ class ConnectorFailure(ConnectorBehaviorOption):
         import odbSection
         session.odbs[name].sections[name].behaviorOptions[i]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONNECTOR FAILURE
+        The corresponding analysis keywords are:
+            - CONNECTOR FAILURE
 
     """
 

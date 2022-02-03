@@ -6,7 +6,7 @@ The Section commands are used to create sections and profiles with their associa
 
 .. toctree::
    :maxdepth: 1
-   :caption: Objects for Section
+   :caption: Objects in Section
 
    section/connector
 

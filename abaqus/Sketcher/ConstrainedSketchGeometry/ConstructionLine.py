@@ -9,7 +9,10 @@ class ConstructionLine(ConstrainedSketchGeometry):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].ConstructionLine
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].ConstructionLine
         
         Parameters
         ----------
@@ -20,7 +23,7 @@ class ConstructionLine(ConstrainedSketchGeometry):
 
         Returns
         -------
-            A ConstrainedSketchGeometry object (None if the line cannot be created). . 
-            !img 
+            A ConstrainedSketchGeometry object (None if the line cannot be created).
+            
         """
         pass

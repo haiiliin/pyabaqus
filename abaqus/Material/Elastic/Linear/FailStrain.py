@@ -7,26 +7,27 @@ class FailStrain:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].elastic.failStrain
-        - import odbMaterial
-        - session.odbs[name].materials[name].elastic.failStrain
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].elastic.failStrain
+            import odbMaterial
+            session.odbs[name].materials[name].elastic.failStrain
 
-    Table Data
-    ----------
-        - Tensile strain limit in fiber direction, Xεt.
-        - Compressive strain limit in fiber direction, Xεc.
-        - Tensile strain limit in transverse direction, Yεt.
-        - Compressive strain limit in transverse direction, Yεc.
-        - Shear strain limit in the X–Y plane, Sε.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Tensile strain limit in fiber direction, Xεt.
+            - Compressive strain limit in fiber direction, Xεc.
+            - Tensile strain limit in transverse direction, Yεt.
+            - Compressive strain limit in transverse direction, Yεc.
+            - Shear strain limit in the X–Y plane, Sε.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - FAIL STRAIN
+        The corresponding analysis keywords are:
+            - FAIL STRAIN
 
     """
 
@@ -36,8 +37,11 @@ class FailStrain:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].elastic.FailStrain
-            - session.odbs[name].materials[name].elastic.FailStrain
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].elastic.FailStrain
+                session.odbs[name].materials[name].elastic.FailStrain
         
         Parameters
         ----------
@@ -54,7 +58,7 @@ class FailStrain:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -63,6 +67,6 @@ class FailStrain:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

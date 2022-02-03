@@ -4,7 +4,7 @@ Part and Assembly
 
 .. toctree::
    :maxdepth: 1
-   :caption: Objects for and Assembly
+   :caption: Objects in and Assembly
 
    part
    assembly

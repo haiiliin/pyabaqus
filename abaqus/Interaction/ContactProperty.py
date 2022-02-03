@@ -53,9 +53,8 @@ class ContactProperty(InteractionProperty):
         import interaction
         mdb.models[name].interactionProperties[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SURFACE INTERACTION
+        The corresponding analysis keywords are:
+            - SURFACE INTERACTION
 
     """
 
@@ -110,7 +109,7 @@ class ContactProperty(InteractionProperty):
 
         Returns
         -------
-            A ContactProperty object. . 
+            A ContactProperty object.
         """
         super().__init__()
         pass
@@ -178,7 +177,7 @@ class ContactProperty(InteractionProperty):
 
         Returns
         -------
-            A ContactTangentialBehavior object..
+            A ContactTangentialBehavior object.
         """
         self.tangentialBehavior = ContactTangentialBehavior(formulation, directionality, slipRateDependency,
                                                             pressureDependency, temperatureDependency, dependencies,
@@ -267,7 +266,7 @@ class ContactProperty(InteractionProperty):
 
         Returns
         -------
-            A NormalBehavior object..
+            A NormalBehavior object.
         """
         self.normalBehavior = NormalBehavior(contactStiffness, pressureOverclosure, allowSeparation, maxStiffness,
                                              table, constraintEnforcementMethod, overclosureFactor, overclosureMeasure,
@@ -308,7 +307,7 @@ class ContactProperty(InteractionProperty):
 
         Returns
         -------
-            A ContactDamping object..
+            A ContactDamping object.
         """
         self.damping = ContactDamping(definition, tangentFraction, clearanceDependence, table)
         return self.damping
@@ -391,7 +390,7 @@ class ContactProperty(InteractionProperty):
 
         Returns
         -------
-            A ContactDamage object..
+            A ContactDamage object.
         """
         self.damage = ContactDamage(initTable, criterion, initTempDep, initDependencies, useEvolution, evolutionType,
                                     softening, useMixedMode, mixedModeType, modeMixRatio, exponent, evolTempDep,
@@ -442,7 +441,7 @@ class ContactProperty(InteractionProperty):
 
         Returns
         -------
-            A FractureCriterion object..
+            A FractureCriterion object.
         """
         self.fractureCriterion = FractureCriterion(initTable, type, mixedModeBehavior, temperatureDependency,
                                                    dependencies, tolerance, specifyUnstableCrackProp, unstableTolerance)
@@ -489,7 +488,7 @@ class ContactProperty(InteractionProperty):
 
         Returns
         -------
-            A CohesiveBehavior object..
+            A CohesiveBehavior object.
         """
         self.cohesiveBehavior = CohesiveBehavior(repeatedContacts, eligibility, defaultPenalties, coupling,
                                                  temperatureDependency, dependencies, table)
@@ -547,7 +546,7 @@ class ContactProperty(InteractionProperty):
 
         Returns
         -------
-            A ThermalConductance object..
+            A ThermalConductance object.
         """
         self.thermalConductance = ThermalConductance(definition, clearanceDependency, pressureDependency,
                                                      temperatureDependencyC, massFlowRateDependencyC, dependenciesC,
@@ -577,7 +576,7 @@ class ContactProperty(InteractionProperty):
 
         Returns
         -------
-            A GapHeatGeneration object..
+            A GapHeatGeneration object.
         """
         self.heatGeneration = GapHeatGeneration(conversionFraction, secondaryFraction)
         return self.heatGeneration
@@ -605,7 +604,7 @@ class ContactProperty(InteractionProperty):
 
         Returns
         -------
-            A Radiation object..
+            A Radiation object.
         """
         self.radiation = Radiation(mainEmissivity, secondaryEmissivity, table)
         return self.radiation
@@ -654,7 +653,7 @@ class ContactProperty(InteractionProperty):
 
         Returns
         -------
-            A GeometricProperties object..
+            A GeometricProperties object.
         """
         self.geometricProperties = GeometricProperties(contactArea, padThickness, trackingThickness, dependentVariables,
                                                        numProperties, useUnsymmetricEqunProcedure, modelType)
@@ -705,7 +704,7 @@ class ContactProperty(InteractionProperty):
 
         Returns
         -------
-            A GapElectricalConductance object..
+            A GapElectricalConductance object.
         """
         self.electricalConductance = GapElectricalConductance(definition, clearanceDependency, pressureDependency,
                                                               temperatureDependencyC, dependenciesC, clearanceDepTable,

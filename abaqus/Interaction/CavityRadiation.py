@@ -113,15 +113,14 @@ class CavityRadiation(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CAVITY DEFINITION
-        - CYCLIC
-        - EMISSIVITY
-        - PERIODIC
-        - RADIATION SYMMETRY
-        - RADIATION VIEWFACTOR
-        - REFLECTION
+        The corresponding analysis keywords are:
+            - CAVITY DEFINITION
+            - CYCLIC
+            - EMISSIVITY
+            - PERIODIC
+            - RADIATION SYMMETRY
+            - RADIATION VIEWFACTOR
+            - REFLECTION
 
     """
 
@@ -424,7 +423,7 @@ class CavityRadiation(Interaction):
 
         Returns
         -------
-            A CavityRadiation object. . 
+            A CavityRadiation object.
         """
         super().__init__()
         pass

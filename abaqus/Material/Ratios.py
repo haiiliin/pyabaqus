@@ -17,19 +17,17 @@ class Ratios:
         session.odbs[name].materials[name].moistureSwelling.ratios
         session.odbs[name].materials[name].swelling.ratios
 
-    Table Data
-    ----------
-        - r11.
-        - r22.
-        - r33.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - r11.
+            - r22.
+            - r33.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - RATIOS
+        The corresponding analysis keywords are:
+            - RATIOS
 
     """
 
@@ -62,7 +60,7 @@ class Ratios:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -71,6 +69,6 @@ class Ratios:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

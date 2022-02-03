@@ -21,10 +21,13 @@ class OdbAuxiliaryData:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.odbData[name].diagnosticData.analysisErrors[i].data[i]
-        - session.odbData[name].diagnosticData.analysisWarnings[i].data[i]
-        - session.odbData[name].diagnosticData.steps[i].contactDiagnostics[i].data[i]
+        
+        .. code-block:: python
+            
+            import visualization
+            session.odbData[name].diagnosticData.analysisErrors[i].data[i]
+            session.odbData[name].diagnosticData.analysisWarnings[i].data[i]
+            session.odbData[name].diagnosticData.steps[i].contactDiagnostics[i].data[i]
 
     """
 

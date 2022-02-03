@@ -9,9 +9,12 @@ class XYReportOptions:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.defaultXYReportOptions
-        - session.xyReportOptions
+        
+        .. code-block:: python
+            
+            import visualization
+            session.defaultXYReportOptions
+            session.xyReportOptions
 
     """
 
@@ -54,8 +57,8 @@ class XYReportOptions:
 
         Raises
         ------
-            RangeError. 
-            - If *xyData*, *total*, and *minMax* are all OFF: 
+        RangeError
+                - If *xyData*, *total*, and *minMax* are all OFF: 
               At least one of the data print methods must be selected 
         """
         pass

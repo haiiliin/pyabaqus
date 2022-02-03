@@ -8,8 +8,11 @@ class FeatureOptions:
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - mdb.models[name].featureOptions
+        
+        .. code-block:: python
+            
+            import part
+            mdb.models[name].featureOptions
 
     """
 

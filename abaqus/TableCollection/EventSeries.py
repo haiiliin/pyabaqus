@@ -15,10 +15,9 @@ class EventSeries:
 
         mdb.models[name].eventSeriesDatas[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - EVENT SERIES TYPE
-        - EVENT SERIES
+        The corresponding analysis keywords are:
+            - EVENT SERIES TYPE
+            - EVENT SERIES
 
     """
 
@@ -62,7 +61,7 @@ class EventSeries:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -90,6 +89,6 @@ class EventSeries:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

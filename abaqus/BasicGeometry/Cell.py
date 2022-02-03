@@ -23,20 +23,23 @@ class Cell:
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].allInternalSets[name].cells[i]
-        - mdb.models[name].parts[name].allSets[name].cells[i]
-        - mdb.models[name].parts[name].cells[i]
-        - mdb.models[name].parts[name].sets[name].cells[i]
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].cells[i]
-        - mdb.models[name].rootAssembly.allInstances[name].sets[name].cells[i]
-        - mdb.models[name].rootAssembly.allInternalSets[name].cells[i]
-        - mdb.models[name].rootAssembly.allSets[name].cells[i]
-        - mdb.models[name].rootAssembly.instances[name].cells[i]
-        - mdb.models[name].rootAssembly.instances[name].sets[name].cells[i]
-        - mdb.models[name].rootAssembly.modelInstances[i].sets[name].cells[i]
-        - mdb.models[name].rootAssembly.sets[name].cells[i]
+        
+        .. code-block:: python
+            
+            import part
+            mdb.models[name].parts[name].allInternalSets[name].cells[i]
+            mdb.models[name].parts[name].allSets[name].cells[i]
+            mdb.models[name].parts[name].cells[i]
+            mdb.models[name].parts[name].sets[name].cells[i]
+            import assembly
+            mdb.models[name].rootAssembly.allInstances[name].cells[i]
+            mdb.models[name].rootAssembly.allInstances[name].sets[name].cells[i]
+            mdb.models[name].rootAssembly.allInternalSets[name].cells[i]
+            mdb.models[name].rootAssembly.allSets[name].cells[i]
+            mdb.models[name].rootAssembly.instances[name].cells[i]
+            mdb.models[name].rootAssembly.instances[name].sets[name].cells[i]
+            mdb.models[name].rootAssembly.modelInstances[i].sets[name].cells[i]
+            mdb.models[name].rootAssembly.sets[name].cells[i]
 
     """
 
@@ -69,8 +72,8 @@ class Cell:
 
         Returns
         -------
-            A Float. . 
-            !img 
+            A Float.
+            
         """
         pass
 
@@ -80,8 +83,8 @@ class Cell:
 
         Returns
         -------
-            A tuple of integers. . 
-            !img 
+            A tuple of integers.
+            
         """
         pass
 
@@ -90,8 +93,8 @@ class Cell:
 
         Returns
         -------
-            A tuple of integers. . 
-            !img 
+            A tuple of integers.
+            
         """
         pass
 
@@ -100,8 +103,8 @@ class Cell:
 
         Returns
         -------
-            A tuple of integers. . 
-            !img 
+            A tuple of integers.
+            
         """
         pass
 
@@ -110,8 +113,8 @@ class Cell:
 
         Returns
         -------
-            A CellArray object which is a sequence of Cell objects. . 
-            !img 
+            A CellArray object which is a sequence of Cell objects.
+            
         """
         pass
 
@@ -120,8 +123,8 @@ class Cell:
 
         Returns
         -------
-            A MeshNodeArray object which is a sequence of MeshNode objects. . 
-            !img 
+            A MeshNodeArray object which is a sequence of MeshNode objects.
+            
         """
         pass
 
@@ -130,8 +133,8 @@ class Cell:
 
         Returns
         -------
-            A MeshElementArray object which is a sequence of MeshElement objects. . 
-            !img 
+            A MeshElementArray object which is a sequence of MeshElement objects.
+            
         """
         pass
 
@@ -141,7 +144,7 @@ class Cell:
 
         Returns
         -------
-            An array of String. . 
-            !img 
+            An array of String.
+            
         """
         pass

@@ -45,6 +45,6 @@ class AbaqusBoolean:
 
         Returns
         -------
-            An AbaqusBoolean object. . 
+            An AbaqusBoolean object.
         """
         pass

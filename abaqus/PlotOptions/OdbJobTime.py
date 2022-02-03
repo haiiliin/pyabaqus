@@ -13,8 +13,11 @@ class OdbJobTime:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.odbData[name].diagnosticData.jobTime
+        
+        .. code-block:: python
+            
+            import visualization
+            session.odbData[name].diagnosticData.jobTime
 
     """
 

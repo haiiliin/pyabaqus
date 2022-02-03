@@ -11,10 +11,13 @@ class CouplingConstraint:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.odbData[name].kinematicCouplings[i]
-        - session.odbData[name].distributingCouplings[i]
-        - session.odbData[name].shellSolidCouplings[i]
+        
+        .. code-block:: python
+            
+            import visualization
+            session.odbData[name].kinematicCouplings[i]
+            session.odbData[name].distributingCouplings[i]
+            session.odbData[name].shellSolidCouplings[i]
 
     """
 
@@ -29,6 +32,6 @@ class CouplingConstraint:
 
         Returns
         -------
-            Tuple-of-Ints Dictionary specifying the node numbers on the controlled surface. . 
+            Tuple-of-Ints Dictionary specifying the node numbers on the controlled surface.
         """
         pass

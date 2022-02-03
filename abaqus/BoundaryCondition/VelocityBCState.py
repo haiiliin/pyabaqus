@@ -65,12 +65,14 @@ class VelocityBCState(BoundaryConditionState):
     Notes
     -----
         This object can be accessed by:
-        - import load
-        - mdb.models[name].steps[name].boundaryConditionStates[name]
+        
+        .. code-block:: python
+            
+            import load
+            mdb.models[name].steps[name].boundaryConditionStates[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - BOUNDARY
+        The corresponding analysis keywords are:
+            - BOUNDARY
 
     """
 

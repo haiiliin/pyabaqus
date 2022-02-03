@@ -43,7 +43,7 @@ class GraphicsInfo:
     Notes
     -----
         This object can be accessed by:
-        - session.graphicsInfo
+            session.graphicsInfo
 
     """
 

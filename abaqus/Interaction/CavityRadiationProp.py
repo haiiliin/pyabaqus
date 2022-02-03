@@ -16,9 +16,8 @@ class CavityRadiationProp(ContactProperty):
         import interaction
         mdb.models[name].interactionProperties[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - EMISSIVITY
+        The corresponding analysis keywords are:
+            - EMISSIVITY
 
     """
 
@@ -49,7 +48,7 @@ class CavityRadiationProp(ContactProperty):
 
         Returns
         -------
-            A CavityRadiationProp object. . 
+            A CavityRadiationProp object.
         """
         super().__init__(name)
         pass

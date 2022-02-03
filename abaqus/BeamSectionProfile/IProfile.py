@@ -16,9 +16,8 @@ class IProfile(Profile):
         import odbSection
         session.odbs[name].profiles[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - BEAM SECTION
+        The corresponding analysis keywords are:
+            - BEAM SECTION
 
     """
 
@@ -61,8 +60,8 @@ class IProfile(Profile):
 
         Raises
         ------
-            RangeError. 
-            !img 
+        RangeError
+            
         """
         super().__init__()
         pass
@@ -72,8 +71,8 @@ class IProfile(Profile):
 
         Raises
         ------
-            RangeError. 
-            !img 
+        RangeError
+            
         """
         pass
 

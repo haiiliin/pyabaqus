@@ -5,6 +5,17 @@ from ..Model.ModelBase import ModelBase
 
 
 class TableCollectionModel(ModelBase):
+    """Abaqus creates a Model object named `Model-1` when a session is started.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name]
+
+    """
 
     def EventSeries(self, name: str, createStepName: str, eventSeriesType: str, transformType: str = NONE,
                     timeSpan: str = STEP_TIME, transformations: str = '', fileName: str = '',
@@ -14,7 +25,10 @@ class TableCollectionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].EventSeriesData
+            
+            .. code-block:: python
+            
+                mdb.models[name].EventSeriesData
         
         Parameters
         ----------
@@ -55,7 +69,10 @@ class TableCollectionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].EventSeriesType
+            
+            .. code-block:: python
+            
+                mdb.models[name].EventSeriesType
         
         Parameters
         ----------

@@ -18,9 +18,8 @@ class CompositeSolidSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SOLID SECTION
+        The corresponding analysis keywords are:
+            - SOLID SECTION
 
     """
 
@@ -51,7 +50,7 @@ class CompositeSolidSection(Section):
 
         Returns
         -------
-            A CompositeSolidSection object. . 
+            A CompositeSolidSection object.
         """
         super().__init__()
         pass

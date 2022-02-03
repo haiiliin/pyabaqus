@@ -15,9 +15,8 @@ class XFEMCrackGrowth(Interaction):
         import interaction
         mdb.models[name].interactions[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - ENRICHMENT ACTIVATION
+        The corresponding analysis keywords are:
+            - ENRICHMENT ACTIVATION
 
     """
 
@@ -46,7 +45,7 @@ class XFEMCrackGrowth(Interaction):
 
         Returns
         -------
-            A XFEMCrackGrowth object. . 
+            A XFEMCrackGrowth object.
         """
         super().__init__()
         pass

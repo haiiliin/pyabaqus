@@ -54,7 +54,7 @@ class Arrow(Annotation):
             A sequence of three Floats specifies the *X*-, *Y*-, and *Z*-coordinates of a point in
             the model coordinate system. A SymbolicConstant indicates a relative position. Possible
             values are:
-                - BOTTOM_LEFT,,
+                - BOTTOM_LEFT
                 - BOTTOM_CENTER
                 - BOTTOM_RIGHT
                 - CENTER_LEFT
@@ -70,7 +70,7 @@ class Arrow(Annotation):
             A Sequence of three Floats specifies the *X*-, *Y*-, and *Z*-coordinates of a point in
             the model coordinate system. A SymbolicConstant indicates a relative position. Possible
             values are:
-                - BOTTOM_LEFT,,
+                - BOTTOM_LEFT
                 - BOTTOM_CENTER
                 - BOTTOM_RIGHT
                 - CENTER_LEFT
@@ -82,27 +82,27 @@ class Arrow(Annotation):
             The default value is BOTTOM_LEFT.
         startHeadStyle
             A SymbolicConstant specifying the style of the start head. Possible values are:
-                ARROW
-                FILLED_ARROW
-                HOLLOW_CIRCLE
-                FILLED_CIRCLE
-                HOLLOW_DIAMOND
-                FILLED_DIAMOND
-                HOLLOW_SQUARE
-                FILLED_SQUARE
-                NONE
+                - ARROW
+                - FILLED_ARROW
+                - HOLLOW_CIRCLE
+                - FILLED_CIRCLE
+                - HOLLOW_DIAMOND
+                - FILLED_DIAMOND
+                - HOLLOW_SQUARE
+                - FILLED_SQUARE
+                - NONE
             The default value is NONE.
         endHeadStyle
             A SymbolicConstant specifying the style of the end head. Possible values are:
             ARROW
-                FILLED_ARROW
-                HOLLOW_CIRCLE
-                FILLED_CIRCLE
-                HOLLOW_DIAMOND
-                FILLED_DIAMOND
-                HOLLOW_SQUARE
-                FILLED_SQUARE
-                NONE
+                - FILLED_ARROW
+                - HOLLOW_CIRCLE
+                - FILLED_CIRCLE
+                - HOLLOW_DIAMOND
+                - FILLED_DIAMOND
+                - HOLLOW_SQUARE
+                - FILLED_SQUARE
+                - NONE
             The default value is FILLED_ARROW.
         startGap
             A Float specifying the distance in millimeters between the arrow start point and the
@@ -122,8 +122,8 @@ class Arrow(Annotation):
 
         Returns
         -------
-            An Arrow object. . 
-            !img 
+            An Arrow object.
+            
         """
         super().__init__()
         pass
@@ -137,7 +137,7 @@ class Arrow(Annotation):
             A Float specifying the *X* translation amount in millimeters. 
         y
             A Float specifying the*Y* translation amount in millimeters. 
-            !img 
+            
         """
         pass
 
@@ -150,7 +150,7 @@ class Arrow(Annotation):
             A Float specifying the *X* translation amount in millimeters. 
         y
             A Float specifying the*Y* translation amount in millimeters. 
-            !img 
+            
         """
         pass
 
@@ -210,6 +210,6 @@ class Arrow(Annotation):
         lineThickness
             A SymbolicConstant specifying the line thickness of the arrow. Possible values are 
             VERY_THIN, THIN, MEDIUM, and THICK. The default value is VERY_THIN. 
-            !img 
+            
         """
         pass

@@ -57,7 +57,7 @@ class FixedRegion(GeometricRestriction):
 
         Returns
         -------
-            A FixedRegion object. . 
+            A FixedRegion object.
         """
         super().__init__()
         pass

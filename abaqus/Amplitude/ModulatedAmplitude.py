@@ -17,9 +17,8 @@ class ModulatedAmplitude(Amplitude):
         import odbAmplitude
         session.odbs[name].amplitudes[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - AMPLITUDE
+        The corresponding analysis keywords are:
+            - AMPLITUDE
 
     """
 
@@ -58,7 +57,12 @@ class ModulatedAmplitude(Amplitude):
 
         Returns
         -------
-            A ModulatedAmplitude object.  and RangeError. 
+            A ModulatedAmplitude object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -74,6 +78,6 @@ class ModulatedAmplitude(Amplitude):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

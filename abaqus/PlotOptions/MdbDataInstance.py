@@ -10,8 +10,11 @@ class MdbDataInstance:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.mdbData[name].instances[i]
+        
+        .. code-block:: python
+            
+            import visualization
+            session.mdbData[name].instances[i]
 
     """
 

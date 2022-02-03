@@ -23,9 +23,8 @@ class EmbeddedRegion(Constraint):
         import interaction
         mdb.models[name].constraints[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - EMBEDDED ELEMENT
+        The corresponding analysis keywords are:
+            - EMBEDDED ELEMENT
 
     """
 
@@ -76,7 +75,7 @@ class EmbeddedRegion(Constraint):
 
         Returns
         -------
-            An EmbeddedRegion object. . 
+            An EmbeddedRegion object.
         """
         super().__init__()
         pass

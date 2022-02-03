@@ -26,15 +26,18 @@ class DisplayGroupInstance:
     Notes
     -----
         This object can be accessed by:
-        - import assembly
-        - session.viewports[name].assemblyDisplay.displayGroupInstances[name]
-        - session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name]
-        - import visualization
-        - session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name]
-        - import part
-        - session.viewports[name].layers[name].partDisplay.displayGroupInstances[name]
-        - session.viewports[name].odbDisplay.displayGroupInstances[name]
-        - session.viewports[name].partDisplay.displayGroupInstances[name]
+        
+        .. code-block:: python
+            
+            import assembly
+            session.viewports[name].assemblyDisplay.displayGroupInstances[name]
+            session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name]
+            import visualization
+            session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name]
+            import part
+            session.viewports[name].layers[name].partDisplay.displayGroupInstances[name]
+            session.viewports[name].odbDisplay.displayGroupInstances[name]
+            session.viewports[name].partDisplay.displayGroupInstances[name]
 
     """
 
@@ -63,7 +66,7 @@ class DisplayGroupInstance:
 
         Returns
         -------
-            A Dictionary object. . 
+            A Dictionary object.
         """
         pass
 
@@ -77,7 +80,7 @@ class DisplayGroupInstance:
 
         Returns
         -------
-            A Dictionary object. . 
+            A Dictionary object.
         """
         pass
 

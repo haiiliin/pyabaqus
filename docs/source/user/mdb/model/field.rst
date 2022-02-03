@@ -8,13 +8,4 @@ A Field object stores the non-propagating data of a field as well as a number of
 Create fields
 -------------
 
-In Mdb
-~~~~~~
-
 .. autoclass:: abaqus.Field.FieldModel.FieldModel
-
-In Odb
-~~~~~~
-
-.. autoclass:: abaqus.Field.FieldOdb.FieldOdb
-

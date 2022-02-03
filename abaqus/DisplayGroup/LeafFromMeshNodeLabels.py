@@ -49,7 +49,7 @@ class LeafFromMeshNodeLabels(Leaf):
 
         Returns
         -------
-            A LeafFromMeshNodeLabels object. . 
+            A LeafFromMeshNodeLabels object.
         """
         super().__init__(DEFAULT_MODEL)
         pass

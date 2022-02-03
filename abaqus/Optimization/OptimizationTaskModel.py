@@ -9,6 +9,17 @@ from ..Model.ModelBase import ModelBase
 
 
 class OptimizationTaskModel(ModelBase):
+    """Abaqus creates a Model object named `Model-1` when a session is started.
+
+    Notes
+    -----
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        mdb.models[name]
+
+    """
 
     def BeadTask(self, name: str, abaqusSensitivities: Boolean = True,
                  algorithm: SymbolicConstant = GENERAL_OPTIMIZATION, areBCRegionsFrozen: Boolean = OFF,
@@ -26,7 +37,10 @@ class OptimizationTaskModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].BeadTask
+            
+            .. code-block:: python
+            
+                mdb.models[name].BeadTask
         
         Parameters
         ----------
@@ -100,7 +114,7 @@ class OptimizationTaskModel(ModelBase):
 
         Returns
         -------
-            A BeadTask object..
+            A BeadTask object.
         """
         self.optimizationTasks[name] = optimizationTask = BeadTask(name, abaqusSensitivities, algorithm,
                                                                    areBCRegionsFrozen, beadIter, beadMaxMembraneStress,
@@ -145,7 +159,10 @@ class OptimizationTaskModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].ShapeTask
+            
+            .. code-block:: python
+            
+                mdb.models[name].ShapeTask
         
         Parameters
         ----------
@@ -303,7 +320,7 @@ class OptimizationTaskModel(ModelBase):
 
         Returns
         -------
-            A ShapeTask object..
+            A ShapeTask object.
         """
         self.optimizationTasks[name] = optimizationTask = ShapeTask(name, abaqusSensitivities, absoluteStepSizeControl,
                                                                     activateDurability, additionalDurabilityFiles,
@@ -341,7 +358,10 @@ class OptimizationTaskModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].SizingTask
+            
+            .. code-block:: python
+            
+                mdb.models[name].SizingTask
         
         Parameters
         ----------
@@ -386,7 +406,7 @@ class OptimizationTaskModel(ModelBase):
 
         Returns
         -------
-            A SizingTask object..
+            A SizingTask object.
         """
         self.optimizationTasks[name] = optimizationTask = SizingTask(name, abaqusSensitivities,
                                                                      elementThicknessDeltaStopCriteria,
@@ -423,7 +443,10 @@ class OptimizationTaskModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            -           mdb.models[name].TopologyTask
+            
+            .. code-block:: python
+            
+                mdb.models[name].TopologyTask
         
         Parameters
         ----------
@@ -542,7 +565,7 @@ class OptimizationTaskModel(ModelBase):
 
         Returns
         -------
-            A TopologyTask object..
+            A TopologyTask object.
         """
         self.optimizationTasks[name] = optimizationTask = TopologyTask(name, abaqusSensitivities, algorithm,
                                                                        densityMoveLimit, densityUpdateStrategy,

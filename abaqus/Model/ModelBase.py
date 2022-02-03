@@ -19,7 +19,7 @@ from ..Interaction.ContactInitialization import ContactInitialization
 from ..Interaction.ContactProperty import ContactProperty
 from ..Interaction.ContactStabilization import ContactStabilization
 from ..Interaction.Interaction import Interaction
-from ..LoadAndLoadCase.Load import Load
+from ..Load.Load import Load
 from ..Material.Material import Material
 from ..Optimization.OptimizationTask import OptimizationTask
 from ..Part.Part import Part
@@ -120,7 +120,7 @@ class ModelBase:
         A tuple of tuples of Strings specifying the linked child Part name in the current model
         to the corresponding parent Part name in a different model.
     loads: dict[str, Load]
-        A repository of :py:class:`~abaqus.LoadAndLoadCase.Load.Load` objects.
+        A repository of :py:class:`~abaqus.Load.Load.Load` objects.
     materials: dict[str, Material]
         A repository of :py:class:`~abaqus.Material.Material.Material` objects.
     calibrations: dict[str, Calibration]
@@ -168,9 +168,8 @@ class ModelBase:
 
         mdb.models[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - PHYSICAL CONSTANTS
+        The corresponding analysis keywords are:
+            - PHYSICAL CONSTANTS
 
     """
 
@@ -391,7 +390,7 @@ class ModelBase:
 
         Returns
         -------
-            A Model object. . 
+            A Model object.
         """
         self.steps['Initial'] = InitialStep()
 
@@ -418,7 +417,7 @@ class ModelBase:
 
         Returns
         -------
-            A Model object. . 
+            A Model object.
         """
         pass
 
@@ -445,7 +444,7 @@ class ModelBase:
 
         Returns
         -------
-            A Model object. . 
+            A Model object.
         """
         pass
 
@@ -524,7 +523,7 @@ class ModelBase:
 
         Returns
         -------
-            A Model object. . 
+            A Model object.
         """
         pass
 

@@ -73,7 +73,7 @@ class StampControl(GeometricRestriction):
 
         Returns
         -------
-            A StampControl object. . 
+            A StampControl object.
         """
         super().__init__()
         pass

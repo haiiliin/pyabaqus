@@ -1,5 +1,4 @@
 # https://cloud.tencent.com/developer/article/1487066
-import os
 import sys
 
 from PyQt5.QtCore import QRegExp, Qt

@@ -16,9 +16,8 @@ class Velocity(PredefinedField):
         import load
         mdb.models[name].predefinedFields[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - INITIAL CONDITIONS
+        The corresponding analysis keywords are:
+            - INITIAL CONDITIONS
 
     """
 
@@ -65,7 +64,7 @@ class Velocity(PredefinedField):
 
         Returns
         -------
-            A Velocity object. . 
+            A Velocity object.
         """
         super().__init__()
         pass

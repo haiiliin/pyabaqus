@@ -23,7 +23,10 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ConstrainedSketch
+            
+            .. code-block:: python
+            
+                mdb.models[name].ConstrainedSketch
         
         Parameters
         ----------
@@ -60,7 +63,10 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ConstrainedSketch
+            
+            .. code-block:: python
+            
+                mdb.models[name].ConstrainedSketch
         
         Parameters
         ----------
@@ -85,7 +91,10 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ConstrainedSketchFromGeometryFile
+            
+            .. code-block:: python
+            
+                mdb.models[name].ConstrainedSketchFromGeometryFile
         
         Parameters
         ----------
@@ -104,10 +113,10 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
     def print(self):
         """This method prints the following statistics about a sketch:
-        - The sketch Id (a positive integer).
-        - The number of geometry curves (the number of ConstrainedSketchGeometry objects).
-        - The number of dimensions (the number of ConstrainedSketchDimension objects).
-        - The number of vertices (the number of ConstrainedSketchVertex objects).
+            - The sketch Id (a positive integer).
+            - The number of geometry curves (the number of ConstrainedSketchGeometry objects).
+            - The number of dimensions (the number of ConstrainedSketchDimension objects).
+            - The number of vertices (the number of ConstrainedSketchVertex objects).
         """
         pass
 
@@ -330,7 +339,7 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel, ConstrainedSketchDimen
 
         Raises
         ------
-            - AbaqusException
+                - AbaqusException
               Number must be greater than 1 for at least one direction
             !img
         """

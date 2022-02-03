@@ -60,5 +60,5 @@ class ReferencePoint:
 
         Returns
         -------
-            A Feature Object..
+            A Feature object.
         """

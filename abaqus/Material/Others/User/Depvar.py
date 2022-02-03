@@ -4,14 +4,16 @@ class Depvar:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].depvar
-        - import odbMaterial
-        - session.odbs[name].materials[name].depvar
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].depvar
+            import odbMaterial
+            session.odbs[name].materials[name].depvar
 
-    Corresponding analysis keywords
-    -------------------------------
-        - DEPVAR
+        The corresponding analysis keywords are:
+            - DEPVAR
 
     """
 
@@ -21,8 +23,11 @@ class Depvar:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Depvar
-            - session.odbs[name].materials[name].Depvar
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Depvar
+                session.odbs[name].materials[name].Depvar
         
         Parameters
         ----------
@@ -39,7 +44,7 @@ class Depvar:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -48,6 +53,6 @@ class Depvar:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

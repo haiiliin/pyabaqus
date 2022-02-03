@@ -5,14 +5,16 @@ class InelasticHeatFraction:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].inelasticHeatFraction
-        - import odbMaterial
-        - session.odbs[name].materials[name].inelasticHeatFraction
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].inelasticHeatFraction
+            import odbMaterial
+            session.odbs[name].materials[name].inelasticHeatFraction
 
-    Corresponding analysis keywords
-    -------------------------------
-        - INELASTIC HEAT FRACTION
+        The corresponding analysis keywords are:
+            - INELASTIC HEAT FRACTION
 
     """
 
@@ -22,8 +24,11 @@ class InelasticHeatFraction:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].InelasticHeatFraction
-            - session.odbs[name].materials[name].InelasticHeatFraction
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].InelasticHeatFraction
+                session.odbs[name].materials[name].InelasticHeatFraction
         
         Parameters
         ----------
@@ -38,7 +43,7 @@ class InelasticHeatFraction:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -47,6 +52,6 @@ class InelasticHeatFraction:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

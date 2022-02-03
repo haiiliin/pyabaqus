@@ -7,14 +7,16 @@ class AcousticMedium:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].acousticMedium
-        - import odbMaterial
-        - session.odbs[name].materials[name].acousticMedium
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].acousticMedium
+            import odbMaterial
+            session.odbs[name].materials[name].acousticMedium
 
-    Corresponding analysis keywords
-    -------------------------------
-        - ACOUSTIC MEDIUM
+        The corresponding analysis keywords are:
+            - ACOUSTIC MEDIUM
 
     """
 
@@ -26,8 +28,11 @@ class AcousticMedium:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].AcousticMedium
-            - session.odbs[name].materials[name].AcousticMedium
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].AcousticMedium
+                session.odbs[name].materials[name].AcousticMedium
         
         Parameters
         ----------
@@ -48,19 +53,19 @@ class AcousticMedium:
             *volumetricTable*. The default value is 0. 
         bulkTable
             A sequence of sequences of Floats specifying the following: 
-            - Bulk modulus. 
-            - Temperature, if the data depend on temperature. 
-            - Value of the first field variable, if the data depend on field variables. 
-            - Value of the second field variable. 
-            - Etc. 
+                - Bulk modulus. 
+                - Temperature, if the data depend on temperature. 
+                - Value of the first field variable, if the data depend on field variables. 
+                - Value of the second field variable. 
+                - Etc. 
         volumetricTable
             A sequence of sequences of Floats specifying the following: 
-            - Volumetric drag. 
-            - Frequency. 
-            - Temperature, if the data depend on temperature. 
-            - Value of the first field variable, if the data depend on field variables. 
-            - Value of the second field variable. 
-            - Etc. 
+                - Volumetric drag. 
+                - Frequency. 
+                - Temperature, if the data depend on temperature. 
+                - Value of the first field variable, if the data depend on field variables. 
+                - Value of the second field variable. 
+                - Etc. 
             The default value is an empty sequence. 
 
         Returns
@@ -69,7 +74,7 @@ class AcousticMedium:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -78,6 +83,6 @@ class AcousticMedium:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

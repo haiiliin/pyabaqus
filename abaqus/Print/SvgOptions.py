@@ -9,7 +9,7 @@ class SvgOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.svgOptions
+            session.svgOptions
 
     """
 
@@ -30,8 +30,8 @@ class SvgOptions:
 
         Raises
         ------
-            RangeError. 
-            - If either the width or height arguments of *imageSize* are out of range (where 
+        RangeError
+                - If either the width or height arguments of *imageSize* are out of range (where 
             *minWidth* and *minHeight* are the number of pixels corresponding to approximately 10 mm 
             for a given display and *maxWidth* and *maxHeight* are the largest allowable number of 
             pixels supported by the system graphics): 

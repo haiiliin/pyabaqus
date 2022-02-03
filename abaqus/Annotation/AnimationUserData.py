@@ -19,8 +19,11 @@ class AnimationUserData(UserDataBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.Arrow
-            - session.odbs[*name*].userData.Arrow
+            
+            .. code-block:: python
+            
+                mdb.Arrow
+                session.odbs[*name*].userData.Arrow
         
         Parameters
         ----------
@@ -38,15 +41,15 @@ class AnimationUserData(UserDataBase):
             A sequence of three Floats specifies the *X*-, *Y*-, and *Z*-coordinates of a point in
             the model coordinate system. A SymbolicConstant indicates a relative position. Possible
             values are:
-                - BOTTOM_LEFT,,
-                - BOTTOM_CENTER
-                - BOTTOM_RIGHT
-                - CENTER_LEFT
-                - CENTER
-                - CENTER_RIGHT
-                - TOP_LEFT
-                - TOP_CENTER
-                - TOP_RIGHT
+                    - BOTTOM_LEFT,,
+                    - BOTTOM_CENTER
+                    - BOTTOM_RIGHT
+                    - CENTER_LEFT
+                    - CENTER
+                    - CENTER_RIGHT
+                    - TOP_LEFT
+                    - TOP_CENTER
+                    - TOP_RIGHT
             The default value is BOTTOM_LEFT.
         endAnchor
             A SymbolicConstant or a sequence of Floats specifying a point. A sequence of two Floats
@@ -54,15 +57,15 @@ class AnimationUserData(UserDataBase):
             A Sequence of three Floats specifies the *X*-, *Y*-, and *Z*-coordinates of a point in
             the model coordinate system. A SymbolicConstant indicates a relative position. Possible
             values are:
-                - BOTTOM_LEFT,,
-                - BOTTOM_CENTER
-                - BOTTOM_RIGHT
-                - CENTER_LEFT
-                - CENTER
-                - CENTER_RIGHT
-                - TOP_LEFT
-                - TOP_CENTER
-                - TOP_RIGHT
+                    - BOTTOM_LEFT,,
+                    - BOTTOM_CENTER
+                    - BOTTOM_RIGHT
+                    - CENTER_LEFT
+                    - CENTER
+                    - CENTER_RIGHT
+                    - TOP_LEFT
+                    - TOP_CENTER
+                    - TOP_RIGHT
             The default value is BOTTOM_LEFT.
         startHeadStyle
             A SymbolicConstant specifying the style of the start head. Possible values are:
@@ -123,8 +126,11 @@ class AnimationUserData(UserDataBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.Text
-            - session.odbs[*name*].userData.Text
+            
+            .. code-block:: python
+            
+                mdb.Text
+                session.odbs[*name*].userData.Text
         
         Parameters
         ----------
@@ -141,30 +147,30 @@ class AnimationUserData(UserDataBase):
             A Sequence of three Floats specifies the *X*-, *Y*-, and *Z*-coordinates of a point in
             the model coordinate system. A SymbolicConstant specifies a relative position. Possible
             values are:
-                - BOTTOM_LEFT,,
-                - BOTTOM_CENTER
-                - BOTTOM_RIGHT
-                - CENTER_LEFT
-                - CENTER
-                - CENTER_RIGHT
-                - TOP_LEFT
-                - TOP_CENTER
-                - TOP_RIGHT
+                    - BOTTOM_LEFT,,
+                    - BOTTOM_CENTER
+                    - BOTTOM_RIGHT
+                    - CENTER_LEFT
+                    - CENTER
+                    - CENTER_RIGHT
+                    - TOP_LEFT
+                    - TOP_CENTER
+                    - TOP_RIGHT
             The default value is BOTTOM_LEFT.
         referencePoint
             A SymbolicConstant or a sequence of Floats specifying a point. The sequence of two
             Floats specifies the *X*- and *Y*-coordinates of the reference point of the Text
             annotation given as percentages of its width and height. The SymbolicConstant indicates
             a relative position. Possible values are:
-                - BOTTOM_LEFT,,
-                - BOTTOM_CENTER
-                - BOTTOM_RIGHT
-                - CENTER_LEFT
-                - CENTER
-                - CENTER_RIGHT
-                - TOP_LEFT
-                - TOP_CENTER
-                - TOP_RIGHT
+                    - BOTTOM_LEFT,,
+                    - BOTTOM_CENTER
+                    - BOTTOM_RIGHT
+                    - CENTER_LEFT
+                    - CENTER
+                    - CENTER_RIGHT
+                    - TOP_LEFT
+                    - TOP_CENTER
+                    - TOP_RIGHT
             The default value is BOTTOM_LEFT.
         rotationAngle
             A Float specifying the amount of rotation in degrees about *referencePoint*. The default
@@ -190,7 +196,7 @@ class AnimationUserData(UserDataBase):
 
         Returns
         -------
-            A Text object..
+            A Text object.
             !img
         """
         self.annotations[name] = text = Text(name, text, offset, anchor, referencePoint, rotationAngle, color, font,

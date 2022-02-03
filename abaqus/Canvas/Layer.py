@@ -70,7 +70,7 @@ class Layer:
 
         Returns
         -------
-            A Layer object. . 
+            A Layer object.
         """
         pass
 

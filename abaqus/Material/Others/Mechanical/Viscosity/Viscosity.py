@@ -1,5 +1,5 @@
-from abaqusConstants import *
 from abaqus.Material.Others.Mechanical.Viscosity.Trs import Trs
+from abaqusConstants import *
 
 
 class Viscosity:
@@ -8,23 +8,24 @@ class Viscosity:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].viscosity
-        - import odbMaterial
-        - session.odbs[name].materials[name].viscosity
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].viscosity
+            import odbMaterial
+            session.odbs[name].materials[name].viscosity
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *type*=NEWTONIAN, the table data specify the following:
-        - Viscosity, k.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Viscosity, k.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - VISCOSITY
+        The corresponding analysis keywords are:
+            - VISCOSITY
 
     """
 
@@ -38,8 +39,11 @@ class Viscosity:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Viscosity
-            - session.odbs[name].materials[name].Viscosity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Viscosity
+                session.odbs[name].materials[name].Viscosity
         
         Parameters
         ----------
@@ -58,7 +62,7 @@ class Viscosity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -67,6 +71,6 @@ class Viscosity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

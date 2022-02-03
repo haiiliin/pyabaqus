@@ -17,8 +17,11 @@ class StopCondition:
     Notes
     -----
         This object can be accessed by:
-        - import optimization
-        - mdb.models[name].optimizationTasks[name].stopConditions[name]
+        
+        .. code-block:: python
+            
+            import optimization
+            mdb.models[name].optimizationTasks[name].stopConditions[name]
 
     """
 

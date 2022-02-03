@@ -1,6 +1,6 @@
 from qtpy.QtCore import Qt, QRect
-from qtpy.QtWidgets import QWidget
 from qtpy.QtGui import QPainter
+from qtpy.QtWidgets import QWidget
 
 
 class PromptArea(QWidget):

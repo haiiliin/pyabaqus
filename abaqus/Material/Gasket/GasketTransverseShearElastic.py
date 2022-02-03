@@ -8,22 +8,23 @@ class GasketTransverseShearElastic:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].gasketTransverseShearElastic
-        - import odbMaterial
-        - session.odbs[name].materials[name].gasketTransverseShearElastic
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].gasketTransverseShearElastic
+            import odbMaterial
+            session.odbs[name].materials[name].gasketTransverseShearElastic
 
-    Table Data
-    ----------
-        - Shear stiffness. (This value cannot be negative.)
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Shear stiffness. (This value cannot be negative.)
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - GASKET ELASTICITY
+        The corresponding analysis keywords are:
+            - GASKET ELASTICITY
 
     """
 
@@ -34,8 +35,11 @@ class GasketTransverseShearElastic:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].GasketTransverseShearElastic
-            - session.odbs[name].materials[name].GasketTransverseShearElastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].GasketTransverseShearElastic
+                session.odbs[name].materials[name].GasketTransverseShearElastic
         
         Parameters
         ----------
@@ -55,7 +59,7 @@ class GasketTransverseShearElastic:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -64,6 +68,6 @@ class GasketTransverseShearElastic:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

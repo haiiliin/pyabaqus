@@ -11,146 +11,147 @@ class DamageInitiation:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].ductileDamageInitiation
-        - mdb.models[name].materials[name].fldDamageInitiation
-        - mdb.models[name].materials[name].flsdDamageInitiation
-        - mdb.models[name].materials[name].hashinDamageInitiation
-        - mdb.models[name].materials[name].johnsonCookDamageInitiation
-        - mdb.models[name].materials[name].maxeDamageInitiation
-        - mdb.models[name].materials[name].maxpeDamageInitiation
-        - mdb.models[name].materials[name].maxpsDamageInitiation
-        - mdb.models[name].materials[name].maxsDamageInitiation
-        - mdb.models[name].materials[name].mkDamageInitiation
-        - mdb.models[name].materials[name].msfldDamageInitiation
-        - mdb.models[name].materials[name].quadeDamageInitiation
-        - mdb.models[name].materials[name].quadsDamageInitiation
-        - mdb.models[name].materials[name].shearDamageInitiation
-        - import odbMaterial
-        - session.odbs[name].materials[name].ductileDamageInitiation
-        - session.odbs[name].materials[name].fldDamageInitiation
-        - session.odbs[name].materials[name].flsdDamageInitiation
-        - session.odbs[name].materials[name].hashinDamageInitiation
-        - session.odbs[name].materials[name].johnsonCookDamageInitiation
-        - session.odbs[name].materials[name].maxeDamageInitiation
-        - session.odbs[name].materials[name].maxpeDamageInitiation
-        - session.odbs[name].materials[name].maxpsDamageInitiation
-        - session.odbs[name].materials[name].maxsDamageInitiation
-        - session.odbs[name].materials[name].mkDamageInitiation
-        - session.odbs[name].materials[name].msfldDamageInitiation
-        - session.odbs[name].materials[name].quadeDamageInitiation
-        - session.odbs[name].materials[name].quadsDamageInitiation
-        - session.odbs[name].materials[name].shearDamageInitiation
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].ductileDamageInitiation
+            mdb.models[name].materials[name].fldDamageInitiation
+            mdb.models[name].materials[name].flsdDamageInitiation
+            mdb.models[name].materials[name].hashinDamageInitiation
+            mdb.models[name].materials[name].johnsonCookDamageInitiation
+            mdb.models[name].materials[name].maxeDamageInitiation
+            mdb.models[name].materials[name].maxpeDamageInitiation
+            mdb.models[name].materials[name].maxpsDamageInitiation
+            mdb.models[name].materials[name].maxsDamageInitiation
+            mdb.models[name].materials[name].mkDamageInitiation
+            mdb.models[name].materials[name].msfldDamageInitiation
+            mdb.models[name].materials[name].quadeDamageInitiation
+            mdb.models[name].materials[name].quadsDamageInitiation
+            mdb.models[name].materials[name].shearDamageInitiation
+            import odbMaterial
+            session.odbs[name].materials[name].ductileDamageInitiation
+            session.odbs[name].materials[name].fldDamageInitiation
+            session.odbs[name].materials[name].flsdDamageInitiation
+            session.odbs[name].materials[name].hashinDamageInitiation
+            session.odbs[name].materials[name].johnsonCookDamageInitiation
+            session.odbs[name].materials[name].maxeDamageInitiation
+            session.odbs[name].materials[name].maxpeDamageInitiation
+            session.odbs[name].materials[name].maxpsDamageInitiation
+            session.odbs[name].materials[name].maxsDamageInitiation
+            session.odbs[name].materials[name].mkDamageInitiation
+            session.odbs[name].materials[name].msfldDamageInitiation
+            session.odbs[name].materials[name].quadeDamageInitiation
+            session.odbs[name].materials[name].quadsDamageInitiation
+            session.odbs[name].materials[name].shearDamageInitiation
 
-    Table Data
-    ----------
+        The table data for this object are:
         If constructor is DuctileDamageInitiation, the table data specify the following:
-        - Equivalent fracture strain at damage initiation.
-        - Stress triaxiality.
-        - Strain rate.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Equivalent fracture strain at damage initiation.
+            - Stress triaxiality.
+            - Strain rate.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If constructor is FldDamageInitiation, the table data specify the following:
-        - Major principal strain at damage initiation.
-        - Minor principal strain.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Major principal strain at damage initiation.
+            - Minor principal strain.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If constructor FlsdDamageInitiation, the table data specify the following:
-        - Major principal stress at damage initiation.
-        - Minor principal stress.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Major principal stress at damage initiation.
+            - Minor principal stress.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If constructor is JohnsonCookDamageInitiation, the table data specify the following:
-        - Johnson-Cook failure parameter D1.
-        - Johnson-Cook failure parameter D2.
-        - Johnson-Cook failure parameter D3.
-        - Johnson-Cook failure parameter D4.
-        - Johnson-Cook failure parameter D5.
-        - Melting temperature.
-        - Transition temperature.
-        - Reference strain rate.
+            - Johnson-Cook failure parameter D1.
+            - Johnson-Cook failure parameter D2.
+            - Johnson-Cook failure parameter D3.
+            - Johnson-Cook failure parameter D4.
+            - Johnson-Cook failure parameter D5.
+            - Melting temperature.
+            - Transition temperature.
+            - Reference strain rate.
         If constructor MkDamageInitiation, the table data specify the following:
-        - Flaw size relative to nominal thickness of the section.
-        - Angle (in degrees) with respect to the 1-direction of the local material orientation.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Flaw size relative to nominal thickness of the section.
+            - Angle (in degrees) with respect to the 1-direction of the local material orientation.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If constructor is MsfldDamageInitiation and *definition*=MSFLD, the table data specify the following:
-        - Nominal strain at damage initiation in a normal-only mode.
-        - Equivalent Plastic strain at initiation of localized necking.
-        - Ratio of minor to major principal strains.
-        - Equivalent Plastic strain rate.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Nominal strain at damage initiation in a normal-only mode.
+            - Equivalent Plastic strain at initiation of localized necking.
+            - Ratio of minor to major principal strains.
+            - Equivalent Plastic strain rate.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If constructor is MsfldDamageInitiation and *definition*=FLD, the table data specify the following:
-        - Major principal strain at initiation of localized necking.
-        - Equivalent Plastic strain at initiation of localized necking.
-        - Ratio of minor to major principal strains.
-        - Equivalent Plastic strain rate.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Major principal strain at initiation of localized necking.
+            - Equivalent Plastic strain at initiation of localized necking.
+            - Ratio of minor to major principal strains.
+            - Equivalent Plastic strain rate.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If constructor is QuadeDamageInitiation or MaxeDamageInitiation, the table data specify the following:
-        - Nominal strain at damage initiation in a normal-only mode.
-        - Nominal strain at damage initiation in a shear-only mode that involves separation only along the first shear direction.
-        - Nominal strain at damage initiation in a shear-only mode that involves separation only along the second shear direction.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Nominal strain at damage initiation in a normal-only mode.
+            - Nominal strain at damage initiation in a shear-only mode that involves separation only along the first shear direction.
+            - Nominal strain at damage initiation in a shear-only mode that involves separation only along the second shear direction.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If constructor is QuadsDamageInitiation or MaxsDamageInitiation, the table data specify the following:
-        - Nominal strain at damage initiation in a normal-only mode.
-        - Nominal strain at damage initiation in a shear-only mode that involves separation only along the first shear direction.
-        - Nominal strain at damage initiation in a shear-only mode that involves separation only along the second shear direction.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Nominal strain at damage initiation in a normal-only mode.
+            - Nominal strain at damage initiation in a shear-only mode that involves separation only along the first shear direction.
+            - Nominal strain at damage initiation in a shear-only mode that involves separation only along the second shear direction.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If constructor is MaxpeDamageInitiation, the table data specify the following:
-        - Maximum principal strain at damage initiation.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Maximum principal strain at damage initiation.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If constructor is MaxpsDamageInitiation, the table data specify the following:
-        - Maximum principal stress at damage initiation.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Maximum principal stress at damage initiation.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If constructor is ShearDamageInitiation, the table data specify the following:
-        - Equivalent fracture strain at damage initiation.
-        - Shear stress ratio.
-        - Strain rate.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Equivalent fracture strain at damage initiation.
+            - Shear stress ratio.
+            - Strain rate.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If constructor is HashinDamageInitiation, the table data specify the following:
-        - Fiber tensile strength.
-        - Fiber compressive strength.
-        - Matrix tensile strength.
-        - Matrix compressive strength.
-        - Longitudinal shear strength.
-        - Transverse shear strength.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - Fiber tensile strength.
+            - Fiber compressive strength.
+            - Matrix tensile strength.
+            - Matrix compressive strength.
+            - Longitudinal shear strength.
+            - Transverse shear strength.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - DAMAGE INITIATION
+        The corresponding analysis keywords are:
+            - DAMAGE INITIATION
 
     """
 
@@ -227,8 +228,11 @@ class DamageInitiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].DuctileDamageInitiation
-            - session.odbs[name].materials[name].DuctileDamageInitiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].DuctileDamageInitiation
+                session.odbs[name].materials[name].DuctileDamageInitiation
         
         Parameters
         ----------
@@ -280,7 +284,7 @@ class DamageInitiation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -293,8 +297,11 @@ class DamageInitiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].FldDamageInitiation
-            - session.odbs[name].materials[name].FldDamageInitiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].FldDamageInitiation
+                session.odbs[name].materials[name].FldDamageInitiation
         
         Parameters
         ----------
@@ -346,7 +353,7 @@ class DamageInitiation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -359,8 +366,11 @@ class DamageInitiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].FlsdDamageInitiation
-            - session.odbs[name].materials[name].FlsdDamageInitiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].FlsdDamageInitiation
+                session.odbs[name].materials[name].FlsdDamageInitiation
         
         Parameters
         ----------
@@ -412,7 +422,7 @@ class DamageInitiation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -426,8 +436,11 @@ class DamageInitiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].JohnsonCookDamageInitiation
-            - session.odbs[name].materials[name].JohnsonCookDamageInitiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].JohnsonCookDamageInitiation
+                session.odbs[name].materials[name].JohnsonCookDamageInitiation
         
         Parameters
         ----------
@@ -479,7 +492,7 @@ class DamageInitiation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -493,8 +506,11 @@ class DamageInitiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].MaxeDamageInitiation
-            - session.odbs[name].materials[name].MaxeDamageInitiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].MaxeDamageInitiation
+                session.odbs[name].materials[name].MaxeDamageInitiation
         
         Parameters
         ----------
@@ -549,7 +565,7 @@ class DamageInitiation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -563,8 +579,11 @@ class DamageInitiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].MaxsDamageInitiation
-            - session.odbs[name].materials[name].MaxsDamageInitiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].MaxsDamageInitiation
+                session.odbs[name].materials[name].MaxsDamageInitiation
         
         Parameters
         ----------
@@ -619,7 +638,7 @@ class DamageInitiation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -632,8 +651,11 @@ class DamageInitiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].MkDamageInitiation
-            - session.odbs[name].materials[name].MkDamageInitiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].MkDamageInitiation
+                session.odbs[name].materials[name].MkDamageInitiation
         
         Parameters
         ----------
@@ -685,7 +707,7 @@ class DamageInitiation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -699,8 +721,11 @@ class DamageInitiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].MsfldDamageInitiation
-            - session.odbs[name].materials[name].MsfldDamageInitiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].MsfldDamageInitiation
+                session.odbs[name].materials[name].MsfldDamageInitiation
         
         Parameters
         ----------
@@ -752,7 +777,7 @@ class DamageInitiation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -767,8 +792,11 @@ class DamageInitiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].QuadeDamageInitiation
-            - session.odbs[name].materials[name].QuadeDamageInitiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].QuadeDamageInitiation
+                session.odbs[name].materials[name].QuadeDamageInitiation
         
         Parameters
         ----------
@@ -823,7 +851,7 @@ class DamageInitiation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -838,8 +866,11 @@ class DamageInitiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].QuadsDamageInitiation
-            - session.odbs[name].materials[name].QuadsDamageInitiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].QuadsDamageInitiation
+                session.odbs[name].materials[name].QuadsDamageInitiation
         
         Parameters
         ----------
@@ -894,7 +925,7 @@ class DamageInitiation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -909,8 +940,11 @@ class DamageInitiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].MaxpeDamageInitiation
-            - session.odbs[name].materials[name].MaxpeDamageInitiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].MaxpeDamageInitiation
+                session.odbs[name].materials[name].MaxpeDamageInitiation
         
         Parameters
         ----------
@@ -965,7 +999,7 @@ class DamageInitiation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -980,8 +1014,11 @@ class DamageInitiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].MaxpsDamageInitiation
-            - session.odbs[name].materials[name].MaxpsDamageInitiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].MaxpsDamageInitiation
+                session.odbs[name].materials[name].MaxpsDamageInitiation
         
         Parameters
         ----------
@@ -1036,7 +1073,7 @@ class DamageInitiation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -1050,8 +1087,11 @@ class DamageInitiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].ShearDamageInitiation
-            - session.odbs[name].materials[name].ShearDamageInitiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].ShearDamageInitiation
+                session.odbs[name].materials[name].ShearDamageInitiation
         
         Parameters
         ----------
@@ -1103,7 +1143,7 @@ class DamageInitiation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -1117,8 +1157,11 @@ class DamageInitiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].HashinDamageInitiation
-            - session.odbs[name].materials[name].HashinDamageInitiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].HashinDamageInitiation
+                session.odbs[name].materials[name].HashinDamageInitiation
         
         Parameters
         ----------
@@ -1170,7 +1213,7 @@ class DamageInitiation:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 

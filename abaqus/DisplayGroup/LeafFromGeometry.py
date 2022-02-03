@@ -58,7 +58,7 @@ class LeafFromGeometry(Leaf):
 
         Raises
         ------
-            - If at least one of the sequences is not passed to this method: 
+                - If at least one of the sequences is not passed to this method: 
               Cannot define empty leaf. 
         """
         super().__init__(DEFAULT_MODEL)

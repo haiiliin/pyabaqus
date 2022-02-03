@@ -12,8 +12,11 @@ class StructuralDampingByFrequencyComponent:
     Notes
     -----
         This object can be accessed by:
-        - import step
-        - mdb.models[name].steps[name].structuralDampingByFrequency.components[i]
+        
+        .. code-block:: python
+        
+           import step
+           mdb.models[name].steps[name].structuralDampingByFrequency.components[i]
 
     """
 

@@ -50,7 +50,7 @@ class AdaptiveMeshDomain:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -59,6 +59,6 @@ class AdaptiveMeshDomain:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

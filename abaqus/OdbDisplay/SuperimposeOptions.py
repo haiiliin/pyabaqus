@@ -133,16 +133,19 @@ class SuperimposeOptions(DGSuperimposeOptions):
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.defaultOdbDisplay.superimposeOptions
-        - session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
-        - session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
-        - session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
-        - session.viewports[name].layers[name].odbDisplay.superimposeOptions
-        - session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
-        - session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
-        - session.viewports[name].odbDisplay.superimposeOptions
-        - session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
+        
+        .. code-block:: python
+            
+            import visualization
+            session.defaultOdbDisplay.superimposeOptions
+            session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
+            session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
+            session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
+            session.viewports[name].layers[name].odbDisplay.superimposeOptions
+            session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
+            session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
+            session.viewports[name].odbDisplay.superimposeOptions
+            session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.superimposeOptions
 
     """
 
@@ -430,6 +433,6 @@ class SuperimposeOptions(DGSuperimposeOptions):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

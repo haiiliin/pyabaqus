@@ -58,8 +58,8 @@ class EdgeArray:
 
         Returns
         -------
-            A EdgeArray object. . 
-            !img 
+            A EdgeArray object.
+            
         """
         pass
 
@@ -93,8 +93,8 @@ class EdgeArray:
 
         Returns
         -------
-            An Edge object or a sequence of Edge objects. . 
-            !img 
+            An Edge object or a sequence of Edge objects.
+            
         """
         pass
 
@@ -122,8 +122,8 @@ class EdgeArray:
             objects. The first object in the sequence is an Edge that is close to the input point 
             referred to by the key. The second object in the sequence is a sequence of floats that 
             specifies the *X*-, *Y*-, and *Z*-location of the closest point on the Edge to the given 
-            point. See program listing above. . 
-            !img 
+            point. See program listing above.
+            
         """
         pass
 
@@ -144,9 +144,9 @@ class EdgeArray:
 
         Raises
         ------
-            - An exception occurs if the resulting sequence is empty. 
+                - An exception occurs if the resulting sequence is empty. 
               Error: The mask results in an empty sequence 
-            !img 
+            
         """
         pass
 
@@ -155,8 +155,8 @@ class EdgeArray:
 
         Returns
         -------
-            A String specifying the object or objects. . 
-            !img 
+            A String specifying the object or objects.
+            
         """
         pass
 
@@ -181,8 +181,8 @@ class EdgeArray:
 
         Returns
         -------
-            An EdgeArray object, which is a sequence of Edge objects. . 
-            !img 
+            An EdgeArray object, which is a sequence of Edge objects.
+            
         """
         pass
 
@@ -203,8 +203,8 @@ class EdgeArray:
 
         Returns
         -------
-            An EdgeArray object, which is a sequence of Edge objects. . 
-            !img 
+            An EdgeArray object, which is a sequence of Edge objects.
+            
         """
         pass
 
@@ -221,8 +221,8 @@ class EdgeArray:
 
         Returns
         -------
-            An EdgeArray object, which is a sequence of Edge objects. . 
-            !img 
+            An EdgeArray object, which is a sequence of Edge objects.
+            
         """
         pass
 
@@ -236,7 +236,7 @@ class EdgeArray:
             *low*: a tuple of three floats representing the minimum *X*-, *Y*-, and *Z*-boundary 
             values of the bounding box. 
             *high*: a tuple of three floats representing the maximum *X*-, *Y*-, and *Z*-boundary 
-            values of the bounding box. . 
-            !img 
+            values of the bounding box.
+            
         """
         pass

@@ -32,20 +32,18 @@ class ContactDamping:
         import interaction
         mdb.models[name].interactionProperties[name].damping
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *definition*=DAMPING_COEFFICIENT and *clearanceDependence*=STEP, the table data specify the following:
-        - Damping coefficient.
+            - Damping coefficient.
         If *definition*=DAMPING_COEFFICIENT and *clearanceDependence*=LINEAR or BILINEAR, the table data specify the following:
-        - Damping coefficient.
-        - Clearance.
+            - Damping coefficient.
+            - Clearance.
         Two pairs must be given for *clearanceDependence*=LINEAR and three pairs for *clearanceDependence*=BILINEAR. The first pair must have *clearance*=0.0, and the last pair must have *coefficient*=0.0.
         If *definition*=CRITICAL_DAMPING_FRACTION, the table data specify the following:
-        - Critical damping fraction.
+            - Critical damping fraction.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONTACT DAMPING
+        The corresponding analysis keywords are:
+            - CONTACT DAMPING
 
     """
 
@@ -99,7 +97,7 @@ class ContactDamping:
 
         Returns
         -------
-            A ContactDamping object. . 
+            A ContactDamping object.
         """
         pass
 

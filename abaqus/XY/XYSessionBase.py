@@ -9,7 +9,10 @@ class XYSessionBase(SessionBase):
     Notes
     -----
         This object can be accessed by:
-        - import visualization
+        
+        .. code-block:: python
+            
+            import visualization
 
     """
 
@@ -104,12 +107,12 @@ class XYSessionBase(SessionBase):
 
         Raises
         ------
-            - Text Error 
+                - Text Error 
               The stress line passes through incompatible part instances. Results cannot be 
             extracted. 
-            - Text Error 
+                - Text Error 
               Specified variables cannot be used for extracting results along the stress line. 
-            - Text Error 
+                - Text Error 
               Results for all the points along the stress line were not found. Selected end points 
             and all intermediate sample points must lie within the current display group, and within 
             solid continuum elements. Due to tolerance limitations, intermediate points lying on 
@@ -142,7 +145,7 @@ class XYSessionBase(SessionBase):
 
         Returns
         -------
-            A Double specifying the tolerance. . 
+            A Double specifying the tolerance.
         """
         pass
 
@@ -168,6 +171,6 @@ class XYSessionBase(SessionBase):
 
         Returns
         -------
-            Int specifying the limit for number of XY data objects. . 
+            Int specifying the limit for number of XY data objects.
         """
         pass

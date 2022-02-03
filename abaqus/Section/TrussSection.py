@@ -16,9 +16,8 @@ class TrussSection(Section):
         import odbSection
         session.odbs[name].sections[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SOLID SECTION
+        The corresponding analysis keywords are:
+            - SOLID SECTION
 
     """
 
@@ -66,6 +65,6 @@ class TrussSection(Section):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

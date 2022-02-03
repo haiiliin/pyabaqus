@@ -56,7 +56,7 @@ class MeshElementArray(list[MeshElement]):
 
         Returns
         -------
-            A MeshElementArray object. . 
+            A MeshElementArray object.
         """
         super().__init__()
 
@@ -70,7 +70,7 @@ class MeshElementArray(list[MeshElement]):
 
         Returns
         -------
-            A MeshElement object. . 
+            A MeshElement object.
         """
         pass
 
@@ -86,7 +86,7 @@ class MeshElementArray(list[MeshElement]):
 
         Returns
         -------
-            A MeshElementArray object. . 
+            A MeshElementArray object.
         """
         pass
 
@@ -95,7 +95,7 @@ class MeshElementArray(list[MeshElement]):
 
         Returns
         -------
-            A String specifying the object or objects. . 
+            A String specifying the object or objects.
         """
         pass
 
@@ -106,7 +106,7 @@ class MeshElementArray(list[MeshElement]):
 
         Returns
         -------
-            A MeshEdgeArray object specifying the element edges on the exterior. . 
+            A MeshEdgeArray object specifying the element edges on the exterior.
         """
         pass
 
@@ -117,7 +117,7 @@ class MeshElementArray(list[MeshElement]):
 
         Returns
         -------
-            A MeshFaceArray object specifying the element faces on the exterior. . 
+            A MeshFaceArray object specifying the element faces on the exterior.
         """
         pass
 
@@ -143,7 +143,7 @@ class MeshElementArray(list[MeshElement]):
 
         Returns
         -------
-            A MeshElementArray object, which is a sequence of MeshElement objects. . 
+            A MeshElementArray object, which is a sequence of MeshElement objects.
         """
         pass
 
@@ -163,7 +163,7 @@ class MeshElementArray(list[MeshElement]):
 
         Returns
         -------
-            A MeshElementArray object, which is a sequence of MeshElement objects. . 
+            A MeshElementArray object, which is a sequence of MeshElement objects.
         """
         pass
 
@@ -180,7 +180,7 @@ class MeshElementArray(list[MeshElement]):
 
         Returns
         -------
-            A MeshElementArray object, which is a sequence of MeshElement objects. . 
+            A MeshElementArray object, which is a sequence of MeshElement objects.
         """
         pass
 
@@ -194,7 +194,7 @@ class MeshElementArray(list[MeshElement]):
             *low*: a tuple of three floats representing the minimum x, y, and z boundary values of 
             the bounding box. 
             *high*: a tuple of three floats representing the maximum x, y, and z boundary values of 
-            the bounding box. . 
+            the bounding box.
         """
         pass
 
@@ -213,7 +213,7 @@ class MeshElementArray(list[MeshElement]):
 
         Raises
         ------
-            - An exception occurs if the resulting sequence is empty. 
+                - An exception occurs if the resulting sequence is empty. 
               Error: The mask results in an empty sequence 
         """
         pass

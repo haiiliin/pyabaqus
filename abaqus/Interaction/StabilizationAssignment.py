@@ -9,12 +9,14 @@ class StabilizationAssignment:
     Notes
     -----
         This object can be accessed by:
-        - import interaction
-        - mdb.models[name].interactions[name].stabilizationAssignments
+        
+        .. code-block:: python
+            
+            import interaction
+            mdb.models[name].interactions[name].stabilizationAssignments
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONTACT STABILIZATION
+        The corresponding analysis keywords are:
+            - CONTACT STABILIZATION
 
     """
 
@@ -48,9 +50,9 @@ class StabilizationAssignment:
         assignments
             A sequence of tuples specifying the stabilizations assigned to each surface pair. Each 
             tuple contains three entries: 
-            - A region object or the SymbolicConstant GLOBAL. 
-            - A region object or the SymbolicConstant SELF. 
-            - A String specifying a StdStabilization object associated with this pair of regions. 
+                - A region object or the SymbolicConstant GLOBAL. 
+                - A region object or the SymbolicConstant SELF. 
+                - A String specifying a StdStabilization object associated with this pair of regions. 
         """
         pass
 

@@ -5,9 +5,12 @@ class OdbModelFieldVarList:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.viewports[name].layers[name].odbDisplay.modelVariableList
-        - session.viewports[name].odbDisplay.modelVariableList
+        
+        .. code-block:: python
+            
+            import visualization
+            session.viewports[name].layers[name].odbDisplay.modelVariableList
+            session.viewports[name].odbDisplay.modelVariableList
 
     """
     pass

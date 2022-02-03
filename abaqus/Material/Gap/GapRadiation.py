@@ -5,20 +5,21 @@ class GapRadiation:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].gapRadiation
-        - import odbMaterial
-        - session.odbs[name].materials[name].gapRadiation
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].gapRadiation
+            import odbMaterial
+            session.odbs[name].materials[name].gapRadiation
 
-    Table Data
-    ----------
-        - Effective view factor.
-        - Gap clearance.
-        - Repeat this data line as often as necessary to define the dependence of the view factor on gap clearance.
+        The table data for this object are:
+            - Effective view factor.
+            - Gap clearance.
+            - Repeat this data line as often as necessary to define the dependence of the view factor on gap clearance.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - GAP RADIATION
+        The corresponding analysis keywords are:
+            - GAP RADIATION
 
     """
 
@@ -28,8 +29,11 @@ class GapRadiation:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Gapradiation
-            - session.odbs[name].materials[name].Gapradiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Gapradiation
+                session.odbs[name].materials[name].Gapradiation
         
         Parameters
         ----------
@@ -42,7 +46,7 @@ class GapRadiation:
 
         Returns
         -------
-            A Gapradiation object. . 
+            A Gapradiation object.
         """
         pass
 

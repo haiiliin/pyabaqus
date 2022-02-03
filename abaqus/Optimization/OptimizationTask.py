@@ -54,7 +54,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].SingleTermDesignResponse
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].SingleTermDesignResponse
         
         Parameters
         ----------
@@ -86,7 +89,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SingleTermDesignResponse object..
+            A SingleTermDesignResponse object.
         """
         self.designResponses[name] = singleTermDesignResponse = SingleTermDesignResponse(name, identifier, csys,
                                                                                          drivingRegion, operation,
@@ -101,7 +104,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].ObjectiveFunction
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].ObjectiveFunction
         
         Parameters
         ----------
@@ -115,7 +121,12 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            An ObjectiveFunction object. and RangeError.
+            An ObjectiveFunction object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.objectiveFunctions[name] = objectiveFunction = ObjectiveFunction(name, objectives, target)
         return objectiveFunction
@@ -127,7 +138,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].OptimizationConstraint
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].OptimizationConstraint
         
         Parameters
         ----------
@@ -145,7 +159,12 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            An OptimizationConstraint object. and RangeError.
+            An OptimizationConstraint object.
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError
         """
         self.optimizationConstraints[name] = optimizationConstraint = OptimizationConstraint(name, designResponse,
                                                                                              restrictionValue,
@@ -159,7 +178,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].BeadFixedRegion
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].BeadFixedRegion
         
         Parameters
         ----------
@@ -183,7 +205,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A BeadFixedRegion object..
+            A BeadFixedRegion object.
         """
         self.geometricRestrictions[name] = geometricRestriction = BeadFixedRegion(name, region, csys, u1, u2, u3)
         return geometricRestriction
@@ -194,7 +216,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].BeadGrowth
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].BeadGrowth
         
         Parameters
         ----------
@@ -211,7 +236,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A BeadGrowth object..
+            A BeadGrowth object.
         """
         self.geometricRestrictions[name] = geometricRestriction = BeadGrowth(name, region, beadGrowth, shrink)
         return geometricRestriction
@@ -223,7 +248,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].BeadPenetrationCheck
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].BeadPenetrationCheck
         
         Parameters
         ----------
@@ -236,7 +264,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A BeadPenetrationCheck object..
+            A BeadPenetrationCheck object.
         """
         self.geometricRestrictions[name] = geometricRestriction = BeadPenetrationCheck(name, beadPenetrationCheckRegion,
                                                                                        region)
@@ -249,7 +277,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].BeadPlanarSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].BeadPlanarSymmetry
         
         Parameters
         ----------
@@ -267,7 +298,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A BeadPlanarSymmetry object..
+            A BeadPlanarSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = BeadPlanarSymmetry(name, region, axis, csys)
         return geometricRestriction
@@ -278,7 +309,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].BeadPointSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].BeadPointSymmetry
         
         Parameters
         ----------
@@ -293,7 +327,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A BeadPointSymmetry object..
+            A BeadPointSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = BeadPointSymmetry(name, region, csys)
         return geometricRestriction
@@ -305,7 +339,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].BeadRotationalSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].BeadRotationalSymmetry
         
         Parameters
         ----------
@@ -325,7 +362,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A BeadRotationalSymmetry object..
+            A BeadRotationalSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = BeadRotationalSymmetry(name, angle, region, axis,
                                                                                          csys)
@@ -341,7 +378,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].DesignDirection
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].DesignDirection
         
         Parameters
         ----------
@@ -384,7 +424,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A DesignDirection object..
+            A DesignDirection object.
         """
         self.geometricRestrictions[name] = geometricRestriction = DesignDirection(name, region, csys, mainPoint,
                                                                                   mainPointDetermination,
@@ -403,7 +443,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].DrillControl
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].DrillControl
         
         Parameters
         ----------
@@ -446,7 +489,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A DrillControl object..
+            A DrillControl object.
         """
         self.geometricRestrictions[name] = geometricRestriction = DrillControl(name, clientDirection, region, csys,
                                                                                drawAngle, mainPoint,
@@ -463,7 +506,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].FixedRegion
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].FixedRegion
         
         Parameters
         ----------
@@ -492,7 +538,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A FixedRegion object..
+            A FixedRegion object.
         """
         self.geometricRestrictions[name] = geometricRestriction = FixedRegion(name, region, csys,
                                                                               presumeFeasibleRegionAtStart, u1, u2, u3)
@@ -504,7 +550,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].FrozenArea
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].FrozenArea
         
         Parameters
         ----------
@@ -517,7 +566,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A FrozenArea object..
+            A FrozenArea object.
         """
         self.geometricRestrictions[name] = geometricRestriction = FrozenArea(name, region)
         return geometricRestriction
@@ -529,7 +578,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].Growth
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].Growth
         
         Parameters
         ----------
@@ -551,7 +603,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A Growth object..
+            A Growth object.
         """
         self.geometricRestrictions[name] = geometricRestriction = Growth(name, region, growth,
                                                                          presumeFeasibleRegionAtStart, shrink)
@@ -564,7 +616,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].PenetrationCheck
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].PenetrationCheck
         
         Parameters
         ----------
@@ -582,7 +637,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A PenetrationCheck object..
+            A PenetrationCheck object.
         """
         self.geometricRestrictions[name] = geometricRestriction = PenetrationCheck(name, penetrationCheckRegion, region,
                                                                                    presumeFeasibleRegionAtStart)
@@ -599,7 +654,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].ShapeDemoldControl
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].ShapeDemoldControl
         
         Parameters
         ----------
@@ -643,7 +701,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A ShapeDemoldControl object..
+            A ShapeDemoldControl object.
         """
         self.geometricRestrictions[name] = geometricRestriction = ShapeDemoldControl(name, pullDirection, region,
                                                                                      collisionCheckRegion, csys,
@@ -661,7 +719,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].ShapeMemberSize
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].ShapeMemberSize
         
         Parameters
         ----------
@@ -685,7 +746,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A ShapeMemberSize object..
+            A ShapeMemberSize object.
         """
         self.geometricRestrictions[name] = geometricRestriction = ShapeMemberSize(name, region, maxThickness,
                                                                                   minThickness, sizeRestriction,
@@ -703,7 +764,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].ShapePlanarSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].ShapePlanarSymmetry
         
         Parameters
         ----------
@@ -742,7 +806,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A ShapePlanarSymmetry object..
+            A ShapePlanarSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = ShapePlanarSymmetry(name, clientDirection, region,
                                                                                       allowNonSymmetricMesh, csys,
@@ -761,7 +825,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].ShapePointSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].ShapePointSymmetry
         
         Parameters
         ----------
@@ -793,7 +860,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A ShapePointSymmetry object..
+            A ShapePointSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = ShapePointSymmetry(name, region, csys,
                                                                                      mainPointDetermination,
@@ -812,7 +879,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].ShapeRotationalSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].ShapeRotationalSymmetry
         
         Parameters
         ----------
@@ -860,7 +930,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A ShapeRotationalSymmetry object..
+            A ShapeRotationalSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = ShapeRotationalSymmetry(name, clientDirection, region,
                                                                                           allowNonSymmetricMesh, angle,
@@ -877,7 +947,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].SizingClusterAreas
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].SizingClusterAreas
         
         Parameters
         ----------
@@ -889,7 +962,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SizingClusterAreas object..
+            A SizingClusterAreas object.
         """
         self.geometricRestrictions[name] = geometricRestriction = SizingClusterAreas(name, regions)
         return geometricRestriction
@@ -901,7 +974,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].SizingCyclicSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].SizingCyclicSymmetry
         
         Parameters
         ----------
@@ -924,7 +1000,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SizingCyclicSymmetry object..
+            A SizingCyclicSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = SizingCyclicSymmetry(name, region, translation, axis,
                                                                                        csys, ignoreFrozenArea)
@@ -936,7 +1012,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].SizingFrozenArea
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].SizingFrozenArea
         
         Parameters
         ----------
@@ -947,7 +1026,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SizingFrozenArea object..
+            A SizingFrozenArea object.
         """
         self.geometricRestrictions[name] = geometricRestriction = SizingFrozenArea(name, region)
         return geometricRestriction
@@ -958,7 +1037,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].SizingMemberSize
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].SizingMemberSize
         
         Parameters
         ----------
@@ -985,7 +1067,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].SizingPlanarSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].SizingPlanarSymmetry
         
         Parameters
         ----------
@@ -1005,7 +1090,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SizingPlanarSymmetry object..
+            A SizingPlanarSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = SizingPlanarSymmetry(name, region, axis, csys,
                                                                                        ignoreFrozenArea)
@@ -1018,7 +1103,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].SizingPointSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].SizingPointSymmetry
         
         Parameters
         ----------
@@ -1035,7 +1123,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SizingPointSymmetry object..
+            A SizingPointSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = SizingPointSymmetry(name, region, csys,
                                                                                       ignoreFrozenArea)
@@ -1048,7 +1136,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].SizingRotationalSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].SizingRotationalSymmetry
         
         Parameters
         ----------
@@ -1070,7 +1161,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SizingRotationalSymmetry object..
+            A SizingRotationalSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = SizingRotationalSymmetry(name, angle, region, axis,
                                                                                            csys, ignoreFrozenArea)
@@ -1085,7 +1176,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].SlideRegionControl
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].SlideRegionControl
         
         Parameters
         ----------
@@ -1129,7 +1223,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A SlideRegionControl object..
+            A SlideRegionControl object.
         """
         self.geometricRestrictions[name] = geometricRestriction = SlideRegionControl(name, clientDirection, region,
                                                                                      approach, csys, freeFormRegion,
@@ -1148,7 +1242,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].StampControl
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].StampControl
         
         Parameters
         ----------
@@ -1190,7 +1287,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A StampControl object..
+            A StampControl object.
         """
         self.geometricRestrictions[name] = geometricRestriction = StampControl(name, clientDirection, region, csys,
                                                                                drawAngle, mainPoint,
@@ -1207,7 +1304,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].TopologyCyclicSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].TopologyCyclicSymmetry
         
         Parameters
         ----------
@@ -1232,7 +1332,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyCyclicSymmetry object..
+            A TopologyCyclicSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyCyclicSymmetry(name, region, translation,
                                                                                          axis, csys, ignoreFrozenArea)
@@ -1246,7 +1346,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].TopologyDemoldControl
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].TopologyDemoldControl
         
         Parameters
         ----------
@@ -1279,7 +1382,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyDemoldControl object..
+            A TopologyDemoldControl object.
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyDemoldControl(name, region, csys, draftAngle,
                                                                                         collisionCheckRegion,
@@ -1294,7 +1397,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].TopologyMemberSize
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].TopologyMemberSize
         
         Parameters
         ----------
@@ -1317,7 +1423,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyMemberSize object..
+            A TopologyMemberSize object.
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyMemberSize(name, region, maxThickness,
                                                                                      minThickness, separation,
@@ -1332,7 +1438,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].TopologyMillingControl
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].TopologyMillingControl
         
         Parameters
         ----------
@@ -1359,7 +1468,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyMillingControl object..
+            A TopologyMillingControl object.
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyMillingControl(name, millingDirections,
                                                                                          region, csys,
@@ -1375,7 +1484,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].TopologyOverhangControl
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].TopologyOverhangControl
         
         Parameters
         ----------
@@ -1410,7 +1522,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyOverhangControl object..
+            A TopologyOverhangControl object.
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyOverhangControl(name, pullDirection, region,
                                                                                           csys, draftAngle,
@@ -1426,7 +1538,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].TopologyPlanarSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].TopologyPlanarSymmetry
         
         Parameters
         ----------
@@ -1448,7 +1563,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyPlanarSymmetry object..
+            A TopologyPlanarSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyPlanarSymmetry(name, region, axis, csys,
                                                                                          ignoreFrozenArea)
@@ -1461,7 +1576,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].TopologyPointSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].TopologyPointSymmetry
         
         Parameters
         ----------
@@ -1480,7 +1598,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyPointSymmetry object..
+            A TopologyPointSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyPointSymmetry(name, region, csys,
                                                                                         ignoreFrozenArea)
@@ -1493,7 +1611,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].TopologyRotationalSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].TopologyRotationalSymmetry
         
         Parameters
         ----------
@@ -1517,7 +1638,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TopologyRotationalSymmetry object..
+            A TopologyRotationalSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = TopologyRotationalSymmetry(name, angle, region, axis,
                                                                                              csys, ignoreFrozenArea)
@@ -1532,7 +1653,10 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].optimizationTasks[name].TurnControl
+            
+            .. code-block:: python
+            
+                mdb.models[name].optimizationTasks[name].TurnControl
         
         Parameters
         ----------
@@ -1571,7 +1695,7 @@ class OptimizationTask(OptimizationTaskBase):
 
         Returns
         -------
-            A TurnControl object..
+            A TurnControl object.
         """
         self.geometricRestrictions[name] = geometricRestriction = TurnControl(name, clientDirection, region, csys,
                                                                               mainPoint, mainPointDetermination,

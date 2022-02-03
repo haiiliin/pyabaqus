@@ -66,7 +66,7 @@ class SectionCategory:
 
         Returns
         -------
-            A SectionCategory object. . 
+            A SectionCategory object.
         """
         pass
 
@@ -91,7 +91,7 @@ class SectionCategory:
 
         Returns
         -------
-            A SectionPoint object..
+            A SectionPoint object.
         """
         sectionPoint = SectionPoint(number, description)
         self.sectionPoints.append(sectionPoint)

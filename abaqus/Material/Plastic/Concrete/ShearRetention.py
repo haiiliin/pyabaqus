@@ -8,25 +8,26 @@ class ShearRetention:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].concrete.shearRetention
-        - import odbMaterial
-        - session.odbs[name].materials[name].concrete.shearRetention
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].concrete.shearRetention
+            import odbMaterial
+            session.odbs[name].materials[name].concrete.shearRetention
 
-    Table Data
-    ----------
-        - ϱclose for dry concrete. The default value is 1.0.
-        - εmax for dry concrete. The default value is a very large number (full shear retention).
-        - ϱclose for wet concrete. The default value is 1.0.
-        - εmax for wet concrete. The default value is a very large number (full shear retention).
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - ϱclose for dry concrete. The default value is 1.0.
+            - εmax for dry concrete. The default value is a very large number (full shear retention).
+            - ϱclose for wet concrete. The default value is 1.0.
+            - εmax for wet concrete. The default value is a very large number (full shear retention).
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SHEAR RETENTION
+        The corresponding analysis keywords are:
+            - SHEAR RETENTION
 
     """
 
@@ -36,8 +37,11 @@ class ShearRetention:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].concrete.ShearRetention
-            - session.odbs[name].materials[name].concrete.ShearRetention
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].concrete.ShearRetention
+                session.odbs[name].materials[name].concrete.ShearRetention
         
         Parameters
         ----------
@@ -54,7 +58,7 @@ class ShearRetention:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -63,6 +67,6 @@ class ShearRetention:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

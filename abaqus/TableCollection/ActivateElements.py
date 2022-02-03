@@ -11,10 +11,9 @@ class ActivateElements:
 
         mdb.models[name].steps[name].activateElements[key]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - ActivateElements
-        - ElementProgressiveActivation
+        The corresponding analysis keywords are:
+            - ActivateElements
+            - ElementProgressiveActivation
 
     """
 
@@ -49,7 +48,7 @@ class ActivateElements:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -61,6 +60,6 @@ class ActivateElements:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

@@ -6,6 +6,21 @@ from ..Step.StepBase import StepBase
 
 
 class OutputStep(StepBase):
+    """The Step object stores the parameters that determine the context of the step. The Step
+    object is the abstract base type for other Step objects. The Step object has no explicit 
+    constructor. The methods and members of the Step object are common to all objects 
+    derived from the Step. 
+
+    Notes
+    -----
+        This object can be accessed by:
+        
+        .. code-block:: python
+        
+           import step
+           mdb.models[name].steps[name]
+
+    """
 
     def DiagnosticPrint(self, allke: Boolean = ON, criticalElement: Boolean = ON, dmass: Boolean = OFF,
                         etotal: Boolean = OFF, contact: Boolean = ON, modelChange: Boolean = OFF,
@@ -16,7 +31,10 @@ class OutputStep(StepBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].steps[name].DiagnosticPrint
+            
+            .. code-block:: python
+            
+                mdb.models[name].steps[name].DiagnosticPrint
         
         Parameters
         ----------
@@ -80,7 +98,10 @@ class OutputStep(StepBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].steps[name].Monitor
+            
+            .. code-block:: python
+            
+                mdb.models[name].steps[name].Monitor
         
         Parameters
         ----------
@@ -89,19 +110,19 @@ class OutputStep(StepBase):
         dof
             A SymbolicConstant specifying the degree of freedom to be monitored at the node.
             Possible values are:
-            - U1
-            - U2
-            - U3
-            - UR1
-            - UR2
-            - UR3
-            - WARP
-            - FLUID_PRESSURE
-            - ELECTRICAL_POTENTIAL
-            - NT11
-            - NT30
-            - NN11
-            - NN30
+                - U1
+                - U2
+                - U3
+                - UR1
+                - UR2
+                - UR3
+                - WARP
+                - FLUID_PRESSURE
+                - ELECTRICAL_POTENTIAL
+                - NT11
+                - NT30
+                - NN11
+                - NN30
             The NT identifiers are not available for mass diffusion. The NN identifiers are
             available only for mass diffusion.
         frequency
@@ -123,7 +144,10 @@ class OutputStep(StepBase):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].steps[name].Restart
+            
+            .. code-block:: python
+            
+                mdb.models[name].steps[name].Restart
         
         Parameters
         ----------

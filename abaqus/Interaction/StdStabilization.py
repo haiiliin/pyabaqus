@@ -16,9 +16,8 @@ class StdStabilization(ContactStabilization):
         import interaction
         mdb.models[name].contactStabilizations[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONTACT STABILIZATION
+        The corresponding analysis keywords are:
+            - CONTACT STABILIZATION
 
     """
 
@@ -65,7 +64,7 @@ class StdStabilization(ContactStabilization):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         super().__init__()
         pass
@@ -98,6 +97,6 @@ class StdStabilization(ContactStabilization):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

@@ -9,8 +9,11 @@ class ImageAnimationOptions:
     Notes
     -----
         This object can be accessed by:
-        - import animation
-        - session.imageAnimationOptions
+        
+        .. code-block:: python
+            
+            import animation
+            session.imageAnimationOptions
 
     """
 

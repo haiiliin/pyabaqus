@@ -102,13 +102,16 @@ class AxisData:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.charts[name].axes1[i].axisData
-        - session.charts[name].axes2[i].axisData
-        - session.defaultChartOptions.defaultAxis1Options.axisData
-        - session.defaultChartOptions.defaultAxis2Options.axisData
-        - session.xyPlots[name].charts[name].axes1[i].axisData
-        - session.xyPlots[name].charts[name].axes2[i].axisData
+        
+        .. code-block:: python
+            
+            import visualization
+            session.charts[name].axes1[i].axisData
+            session.charts[name].axes2[i].axisData
+            session.defaultChartOptions.defaultAxis1Options.axisData
+            session.defaultChartOptions.defaultAxis2Options.axisData
+            session.xyPlots[name].charts[name].axes1[i].axisData
+            session.xyPlots[name].charts[name].axes2[i].axisData
 
     """
 
@@ -297,6 +300,6 @@ class AxisData:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

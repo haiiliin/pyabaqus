@@ -75,7 +75,7 @@ class Skin:
 
         Returns
         -------
-            A Skin object. . 
+            A Skin object.
         """
         pass
 
@@ -111,6 +111,6 @@ class Skin:
 
         Returns
         -------
-            A Skin object. . 
+            A Skin object.
         """
         pass

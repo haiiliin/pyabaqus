@@ -8,8 +8,11 @@ class ContactStabilization:
     Notes
     -----
         This object can be accessed by:
-        - import interaction
-        - mdb.models[name].contactStabilizations[name]
+        
+        .. code-block:: python
+            
+            import interaction
+            mdb.models[name].contactStabilizations[name]
 
     """
     pass

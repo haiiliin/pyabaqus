@@ -40,8 +40,11 @@ class DefaultOdbDisplay:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.defaultOdbDisplay
+        
+        .. code-block:: python
+            
+            import visualization
+            session.defaultOdbDisplay
 
     """
 

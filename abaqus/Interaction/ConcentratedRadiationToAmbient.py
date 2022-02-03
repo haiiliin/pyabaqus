@@ -71,7 +71,7 @@ class ConcentratedRadiationToAmbient(Interaction):
 
         Returns
         -------
-            A ConcentratedRadiationToAmbient object. . 
+            A ConcentratedRadiationToAmbient object.
         """
         super().__init__()
         pass

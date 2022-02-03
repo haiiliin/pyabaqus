@@ -3,9 +3,6 @@ from ..Odb.Odb import Odb
 
 """This command writes a free body output report to a file. 
 
-Access
-------
-
 """
 
 
@@ -13,9 +10,13 @@ def writeFreeBodyRepor(fileName: str, append: Boolean, step: int = None, frame: 
                        stepFrame: SymbolicConstant = SPECIFY, odb: Odb = None):
     """This method writes a FreeBody object to a user-defined ASCII file.
 
-    Path
-    ----
-        - session.writeFreeBodyReport
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            session.writeFreeBodyReport
 
     Parameters
     ----------

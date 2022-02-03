@@ -5,19 +5,20 @@ class SuperElasticHardening:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].superElasticity.SuperElasticHardening
-        - import odbMaterial
-        - session.odbs[name].materials[name].superElasticity.SuperElasticHardening
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].superElasticity.SuperElasticHardening
+            import odbMaterial
+            session.odbs[name].materials[name].superElasticity.SuperElasticHardening
 
-    Table Data
-    ----------
-        - Yield Stress.
-        - Total Strain.
+        The table data for this object are:
+            - Yield Stress.
+            - Total Strain.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SUPERELASTIC HARDENING
+        The corresponding analysis keywords are:
+            - SUPERELASTIC HARDENING
 
     """
 
@@ -27,8 +28,11 @@ class SuperElasticHardening:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].superElasticity.SuperElasticHardening
-            - session.odbs[name].materials[name].superElasticity.SuperElasticHardening
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].superElasticity.SuperElasticHardening
+                session.odbs[name].materials[name].superElasticity.SuperElasticHardening
         
         Parameters
         ----------
@@ -41,7 +45,7 @@ class SuperElasticHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -50,6 +54,6 @@ class SuperElasticHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

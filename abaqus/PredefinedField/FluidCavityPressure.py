@@ -21,9 +21,8 @@ class FluidCavityPressure(PredefinedField):
         import load
         mdb.models[name].predefinedFields[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - INITIAL CONDITIONS
+        The corresponding analysis keywords are:
+            - INITIAL CONDITIONS
 
     """
 
@@ -52,7 +51,7 @@ class FluidCavityPressure(PredefinedField):
 
         Returns
         -------
-            A FluidCavityPressure object. . 
+            A FluidCavityPressure object.
         """
         super().__init__()
         pass

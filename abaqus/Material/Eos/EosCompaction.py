@@ -4,14 +4,16 @@ class EosCompaction:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].eos.eosCompaction
-        - import odbMaterial
-        - session.odbs[name].materials[name].eos.eosCompaction
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].eos.eosCompaction
+            import odbMaterial
+            session.odbs[name].materials[name].eos.eosCompaction
 
-    Corresponding analysis keywords
-    -------------------------------
-        - EOS COMPACTION
+        The corresponding analysis keywords are:
+            - EOS COMPACTION
 
     """
 
@@ -21,8 +23,11 @@ class EosCompaction:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].eos.EosCompaction
-            - session.odbs[name].materials[name].eos.EosCompaction
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].eos.EosCompaction
+                session.odbs[name].materials[name].eos.EosCompaction
         
         Parameters
         ----------
@@ -41,7 +46,7 @@ class EosCompaction:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -50,6 +55,6 @@ class EosCompaction:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

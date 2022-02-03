@@ -34,10 +34,13 @@ class Legend:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.charts[name].legend
-        - session.defaultChartOptions.legend
-        - session.xyPlots[name].charts[name].legend
+        
+        .. code-block:: python
+            
+            import visualization
+            session.charts[name].legend
+            session.defaultChartOptions.legend
+            session.xyPlots[name].charts[name].legend
 
     """
 

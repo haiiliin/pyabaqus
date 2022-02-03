@@ -22,9 +22,12 @@ class Title:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.defaultPlot.title
-        - session.xyPlots[name].title
+        
+        .. code-block:: python
+            
+            import visualization
+            session.defaultPlot.title
+            session.xyPlots[name].title
 
     """
 

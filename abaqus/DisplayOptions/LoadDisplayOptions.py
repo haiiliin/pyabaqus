@@ -11,8 +11,8 @@ class LoadDisplayOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.viewports[name].assemblyDisplay.loadOptions
-        - session.viewports[name].layers[name].assemblyDisplay.loadOptions
+            session.viewports[name].assemblyDisplay.loadOptions
+            session.viewports[name].layers[name].assemblyDisplay.loadOptions
 
     """
 
@@ -112,6 +112,6 @@ class LoadDisplayOptions:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

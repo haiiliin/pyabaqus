@@ -40,7 +40,7 @@ class DataSet:
 
         Returns
         -------
-            A DataSet object. . 
+            A DataSet object.
         """
         pass
 

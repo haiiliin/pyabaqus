@@ -16,8 +16,11 @@ class NodeQuery:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.nodeQuery
+        
+        .. code-block:: python
+            
+            import visualization
+            session.nodeQuery
 
     """
 

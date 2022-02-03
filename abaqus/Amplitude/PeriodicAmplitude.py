@@ -17,9 +17,8 @@ class PeriodicAmplitude(Amplitude):
         import odbAmplitude
         session.odbs[name].amplitudes[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - AMPLITUDE
+        The corresponding analysis keywords are:
+            - AMPLITUDE
 
     """
 
@@ -54,7 +53,12 @@ class PeriodicAmplitude(Amplitude):
 
         Returns
         -------
-            A PeriodicAmplitude object.  and RangeError. 
+            A PeriodicAmplitude object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -70,6 +74,6 @@ class PeriodicAmplitude(Amplitude):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

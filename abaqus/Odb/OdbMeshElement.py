@@ -28,23 +28,26 @@ class OdbMeshElement:
     Notes
     -----
         This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].parts[name].elements[i]
-        - session.odbs[name].parts[name].elementSets[name].elements[i]
-        - session.odbs[name].parts[name].nodeSets[name].elements[i]
-        - session.odbs[name].parts[name].surfaces[name].elements[i]
-        - session.odbs[name].rootAssembly.elements[i]
-        - session.odbs[name].rootAssembly.elementSets[name].elements[i]
-        - session.odbs[name].rootAssembly.instances[name].elements[i]
-        - session.odbs[name].rootAssembly.instances[name].elementSets[name].elements[i]
-        - session.odbs[name].rootAssembly.instances[name].nodeSets[name].elements[i]
-        - session.odbs[name].rootAssembly.instances[name].surfaces[name].elements[i]
-        - session.odbs[name].rootAssembly.nodeSets[name].elements[i]
-        - session.odbs[name].rootAssembly.surfaces[name].elements[i]
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.elements[i]
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.elementSets[name].elements[i]
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.nodeSets[name].elements[i]
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.surfaces[name].elements[i]
+        
+        .. code-block:: python
+            
+            import odbAccess
+            session.odbs[name].parts[name].elements[i]
+            session.odbs[name].parts[name].elementSets[name].elements[i]
+            session.odbs[name].parts[name].nodeSets[name].elements[i]
+            session.odbs[name].parts[name].surfaces[name].elements[i]
+            session.odbs[name].rootAssembly.elements[i]
+            session.odbs[name].rootAssembly.elementSets[name].elements[i]
+            session.odbs[name].rootAssembly.instances[name].elements[i]
+            session.odbs[name].rootAssembly.instances[name].elementSets[name].elements[i]
+            session.odbs[name].rootAssembly.instances[name].nodeSets[name].elements[i]
+            session.odbs[name].rootAssembly.instances[name].surfaces[name].elements[i]
+            session.odbs[name].rootAssembly.nodeSets[name].elements[i]
+            session.odbs[name].rootAssembly.surfaces[name].elements[i]
+            session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.elements[i]
+            session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.elementSets[name].elements[i]
+            session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.nodeSets[name].elements[i]
+            session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.surfaces[name].elements[i]
 
     """
 
@@ -99,11 +102,11 @@ class OdbMeshElement:
 
         Raises
         ------
-            - If the exact frame is not found: 
+                - If the exact frame is not found: 
               OdbError: Frame not found. 
-            - If the step name is not found: 
+                - If the step name is not found: 
               OdbError: Step is not present in the ODB. 
-            - If *frameValue* is not provided and *stepName* is empty: 
+                - If *frameValue* is not provided and *stepName* is empty: 
               *frameValue*OdbError: *stepName* should be specified with *frameValue*. 
         """
         pass

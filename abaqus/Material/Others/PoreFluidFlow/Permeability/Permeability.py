@@ -1,6 +1,6 @@
-from abaqusConstants import *
 from abaqus.Material.Others.PoreFluidFlow.Permeability.SaturationDependence import SaturationDependence
 from abaqus.Material.Others.PoreFluidFlow.Permeability.VelocityDependence import VelocityDependence
+from abaqusConstants import *
 
 
 class Permeability:
@@ -9,36 +9,37 @@ class Permeability:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].permeability
-        - import odbMaterial
-        - session.odbs[name].materials[name].permeability
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].permeability
+            import odbMaterial
+            session.odbs[name].materials[name].permeability
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *type*=ISOTROPIC, the table data specify the following:
-        - k.
-        - Void ratio, e.
-        - Temperature, if the data depend on temperature.
+            - k.
+            - Void ratio, e.
+            - Temperature, if the data depend on temperature.
         If *type*=ORTHOTROPIC, the table data specify the following:
-        - k11.
-        - k22.
-        - k33.
-        - Void ratio, e.
-        - Temperature, if the data depend on temperature.
+            - k11.
+            - k22.
+            - k33.
+            - Void ratio, e.
+            - Temperature, if the data depend on temperature.
         If *type*=ANISOTROPIC, the table data specify the following:
-        - k11.
-        - k12.
-        - k22.
-        - k13.
-        - k23.
-        - k33.
-        - Void ratio, e.
-        - Temperature, if the data depend on temperature.
+            - k11.
+            - k12.
+            - k22.
+            - k13.
+            - k23.
+            - k33.
+            - Void ratio, e.
+            - Temperature, if the data depend on temperature.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - PERMEABILITY
+        The corresponding analysis keywords are:
+            - PERMEABILITY
 
     """
 
@@ -58,8 +59,11 @@ class Permeability:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].Permeability
-            - session.odbs[name].materials[name].Permeability
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].Permeability
+                session.odbs[name].materials[name].Permeability
         
         Parameters
         ----------
@@ -83,7 +87,7 @@ class Permeability:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -92,6 +96,6 @@ class Permeability:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

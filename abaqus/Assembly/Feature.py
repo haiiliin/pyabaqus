@@ -94,7 +94,7 @@ class Feature(FeatureBase):
 
         Returns
         -------
-            A Feature object..
+            A Feature object.
         """
         return Feature()
 

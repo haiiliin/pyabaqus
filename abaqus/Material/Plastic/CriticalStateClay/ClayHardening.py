@@ -7,23 +7,24 @@ class ClayHardening:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].clayPlasticity.clayHardening
-        - import odbMaterial
-        - session.odbs[name].materials[name].clayPlasticity.clayHardening
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].clayPlasticity.clayHardening
+            import odbMaterial
+            session.odbs[name].materials[name].clayPlasticity.clayHardening
 
-    Table Data
-    ----------
-        - The hydrostatic pressure stress at yield, pc.
-        - The absolute value of the corresponding volumetric Plastic strain.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - The hydrostatic pressure stress at yield, pc.
+            - The absolute value of the corresponding volumetric Plastic strain.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CLAY HARDENING
+        The corresponding analysis keywords are:
+            - CLAY HARDENING
 
     """
 
@@ -33,8 +34,11 @@ class ClayHardening:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].clayPlasticity.ClayHardening
-            - session.odbs[name].materials[name].clayPlasticity.ClayHardening
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].clayPlasticity.ClayHardening
+                session.odbs[name].materials[name].clayPlasticity.ClayHardening
         
         Parameters
         ----------
@@ -51,7 +55,7 @@ class ClayHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -60,6 +64,6 @@ class ClayHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

@@ -17,10 +17,13 @@ class Amplitude:
     Notes
     -----
         This object can be accessed by:
-        - import amplitude
-        - mdb.models[name].amplitudes[name]
-        - import odbAmplitude
-        - session.odbs[name].amplitudes[name]
+        
+        .. code-block:: python
+            
+            import amplitude
+            mdb.models[name].amplitudes[name]
+            import odbAmplitude
+            session.odbs[name].amplitudes[name]
 
     """
 

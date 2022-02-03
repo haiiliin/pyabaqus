@@ -15,19 +15,19 @@ class FieldValue:
     position: SymbolicConstant
         A SymbolicConstant specifying the position of the output in the element. Possible values
         are:
-        - NODAL, specifying the values calculated at the nodes.
-        - INTEGRATION_POINT, specifying the values calculated at the integration points.
-        - ELEMENT_NODAL, specifying the values obtained by extrapolating results calculated at
+            - NODAL, specifying the values calculated at the nodes.
+            - INTEGRATION_POINT, specifying the values calculated at the integration points.
+            - ELEMENT_NODAL, specifying the values obtained by extrapolating results calculated at
         the integration points.
-        - ELEMENT_FACE, specifying the results obtained for surface variables such as cavity
+            - ELEMENT_FACE, specifying the results obtained for surface variables such as cavity
         radiation that are defined for the surface facets of an element.
-        - CENTROID, specifying the value at the centroid obtained by extrapolating results
+            - CENTROID, specifying the value at the centroid obtained by extrapolating results
         calculated at the integration points.
     precision: SymbolicConstant
         A SymbolicConstant specifying the precision of the output in the element. Possible
         values are:
-        - SINGLE_PRECISION, specifying that the output values are in single precision.
-        - DOUBLE_PRECISION, specifying that the output values are in double precision.
+            - SINGLE_PRECISION, specifying that the output values are in single precision.
+            - DOUBLE_PRECISION, specifying that the output values are in double precision.
     elementLabel: int
         An Int specifying the element label of the element containing the location.
         **elementLabel** is available only if **position=INTEGRATION_POINT**, CENTROID,
@@ -128,8 +128,11 @@ class FieldValue:
     Notes
     -----
         This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i]
+        
+        .. code-block:: python
+            
+            import odbAccess
+            session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i]
 
     """
 

@@ -56,8 +56,8 @@ class FaceArray:
 
         Returns
         -------
-            A FaceArray object. . 
-            !img 
+            A FaceArray object.
+            
         """
         pass
 
@@ -95,8 +95,8 @@ class FaceArray:
 
         Returns
         -------
-            A Face object. . 
-            !img 
+            A Face object.
+            
         """
         pass
 
@@ -106,8 +106,8 @@ class FaceArray:
 
         Returns
         -------
-            An EdgeArray object specifying the exterior edges. . 
-            !img 
+            An EdgeArray object specifying the exterior edges.
+            
         """
         pass
 
@@ -124,8 +124,8 @@ class FaceArray:
 
         Returns
         -------
-            A Face object or a sequence of Face objects. . 
-            !img 
+            A Face object or a sequence of Face objects.
+            
         """
         pass
 
@@ -134,8 +134,8 @@ class FaceArray:
 
         Returns
         -------
-            A String specifying the object or objects. . 
-            !img 
+            A String specifying the object or objects.
+            
         """
         pass
 
@@ -160,8 +160,8 @@ class FaceArray:
 
         Returns
         -------
-            A FaceArray object, which is a sequence of Face objects. . 
-            !img 
+            A FaceArray object, which is a sequence of Face objects.
+            
         """
         pass
 
@@ -182,8 +182,8 @@ class FaceArray:
 
         Returns
         -------
-            A FaceArray object, which is a sequence of Face objects. . 
-            !img 
+            A FaceArray object, which is a sequence of Face objects.
+            
         """
         pass
 
@@ -200,8 +200,8 @@ class FaceArray:
 
         Returns
         -------
-            A FaceArray object, which is a sequence of Face objects. . 
-            !img 
+            A FaceArray object, which is a sequence of Face objects.
+            
         """
         pass
 
@@ -215,8 +215,8 @@ class FaceArray:
             *low*: a tuple of three floats representing the minimum *X*-, *Y*-, and *Z*-boundary 
             values of the bounding box. 
             *high*: a tuple of three floats representing the maximum *X*-, *Y*-, and *Z*-boundary 
-            values of the bounding box. . 
-            !img 
+            values of the bounding box.
+            
         """
         pass
 
@@ -248,8 +248,8 @@ class FaceArray:
 
         Raises
         ------
-            - An exception occurs if the resulting sequence is empty. 
+                - An exception occurs if the resulting sequence is empty. 
               Error: The mask results in an empty sequence 
-            !img 
+            
         """
         pass

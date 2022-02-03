@@ -434,11 +434,11 @@ class PartBase(Feature):
         -------
         part: Part
             A Part object
-            - If the specified part is not an orphan mesh part: 
+                - If the specified part is not an orphan mesh part: 
               Cannot extrude a geometric part. 
-            - If the specified part is not two-dimensional: 
+                - If the specified part is not two-dimensional: 
               Cannot extrude a 3D part. 
-            - If the specified part is a rigid body: 
+                - If the specified part is a rigid body: 
               Cannot change dimension of a rigid body. 
         """
         pass
@@ -515,11 +515,11 @@ class PartBase(Feature):
         -------
         part: Part
             A Part object
-            - If the ACIS file is corrupt: 
+                - If the ACIS file is corrupt: 
               PartError: the file is corrupt 
-            - If the dimensionality does not correspond to what is found in the ACIS file: 
+                - If the dimensionality does not correspond to what is found in the ACIS file: 
               PartError: dimensionality does not match the contents of the file 
-            - If the type does not correspond to what is found in the ACIS file: 
+                - If the type does not correspond to what is found in the ACIS file: 
               PartError: type does not match the contents of the file 
         """
         pass
@@ -556,12 +556,12 @@ class PartBase(Feature):
         -------
         part: Part
             A Part object
-            - If the analysis type (deformable or rigid) is not consistent among the supplied part 
+                - If the analysis type (deformable or rigid) is not consistent among the supplied part 
             instances: 
               The selected part instances do not have a consistent analysis type. 
-            - If the assembly does not contain a mesh: 
+                - If the assembly does not contain a mesh: 
               The current assembly does not contain a mesh for a mesh part. 
-            - If the specified part instances do not contain a mesh: 
+                - If the specified part instances do not contain a mesh: 
               The selected part instances do not have a mesh for a mesh part. 
         """
         pass
@@ -590,7 +590,7 @@ class PartBase(Feature):
         -------
         part: Part
             A Part object
-            - If the part does not contain a mesh: 
+                - If the part does not contain a mesh: 
               The current part does not contain a mesh for a mesh part. 
         """
         pass
@@ -627,13 +627,13 @@ class PartBase(Feature):
         -------
         part: Part
             A Part object
-            - If the specified part is not an orphan mesh part: 
+                - If the specified part is not an orphan mesh part: 
               Cannot mirror a geometric part. 
-            - If the specified part is a rigid body: 
+                - If the specified part is a rigid body: 
               Cannot mirror a rigid body. 
-            - If *point1* and *point2* are coincident: 
+                - If *point1* and *point2* are coincident: 
               Mirror plane director has zero length. 
-            - If the specified part is two-dimensional and the plane is not parallel to the 
+                - If the specified part is two-dimensional and the plane is not parallel to the 
             *Z*-axis: 
               Mirror plane must be parallel to Z axis for 2D parts 
         """
@@ -735,20 +735,20 @@ class PartBase(Feature):
         -------
         part: Part
             A Part object
-            - If the output database contains elements of more than one dimensionality or type: 
+                - If the output database contains elements of more than one dimensionality or type: 
               File contains both axisymmetric and nonaxisymmetric elements.File contains both 2D and 
             3D elements.File contains both rigid and deformable elements. 
-            - If more than one part is found on the output database: 
+                - If more than one part is found on the output database: 
               PartError: importing of more than one part is not currently supported 
-            - If the output database does not contain any valid results for the specified step: 
+                - If the output database does not contain any valid results for the specified step: 
               Error. File does not contain any valid frames. 
-            - If the specified step and frame do not contain any displacements: 
+                - If the specified step and frame do not contain any displacements: 
               Error. Specified frame does not contain nodal displacements. 
-            - If the specified element set is not found on the output database: 
+                - If the specified element set is not found on the output database: 
               Error. Specified element set is not defined in the ODB. 
-            - If the step number is invalid: 
+                - If the step number is invalid: 
               OdiError: Invalid step index: i. Available step indices: 0 - j. 
-            - If the frame number is invalid: 
+                - If the frame number is invalid: 
               OdiError: Invalid frame index: i. Available frame indices: 0 - j. 
         """
         pass
@@ -786,17 +786,17 @@ class PartBase(Feature):
         -------
         part: Part
             A Part object
-            - If the specified part is not an orphan mesh part: 
+                - If the specified part is not an orphan mesh part: 
               Cannot reduce dimension of a geometric part. 
-            - If the specified part is not three-dimensional: 
+                - If the specified part is not three-dimensional: 
               Cannot reduce dimension of a 2D part. 
-            - If the specified part is a rigid body: 
+                - If the specified part is a rigid body: 
               Cannot change dimension of a rigid body. 
-            - If *point1* and *point2* are coincident: 
+                - If *point1* and *point2* are coincident: 
               Cutting plane director has zero length. 
-            - If *point3* projects onto *point1*: 
+                - If *point3* projects onto *point1*: 
               Local axis point projects to origin. 
-            - If no elements are cut by the specified plane: 
+                - If no elements are cut by the specified plane: 
               Cannot reduce part dimension. 
         """
         pass
@@ -826,11 +826,11 @@ class PartBase(Feature):
         -------
         part: Part
             A Part object
-            - If the specified part is not a substructure: 
+                - If the specified part is not a substructure: 
               File specified does not contain a substructure. 
-            - If the specified part already exists: 
+                - If the specified part already exists: 
               A part with the same name already exists. 
-            - If the substructure cannot be imported: 
+                - If the substructure cannot be imported: 
               The output database is missing nodes and elements.Nested substructures are not 
             supported.The substructure sim file was generated using a version that is different from 
             the current version. 
@@ -874,14 +874,14 @@ class PartBase(Feature):
         -------
         part: Part
             A Part object
-            - If the specified part is not an orphan mesh part: 
+                - If the specified part is not an orphan mesh part: 
               Specified part must be an orphan mesh. 
-            - If the Part2DGeomFrom2DMesh method cannot create a valid two-dimensional shell section 
+                - If the Part2DGeomFrom2DMesh method cannot create a valid two-dimensional shell section 
             from the two-dimensional mesh: 
               Planar shell feature failed 
-            - If the specified part is not two-dimensional: 
+                - If the specified part is not two-dimensional: 
               Cannot create a geometry from a 3D part. 
-            - If the specified part is a rigid body: 
+                - If the specified part is a rigid body: 
               Cannot create a geometry from a rigid body. 
         """
         pass
@@ -891,7 +891,7 @@ class PartBase(Feature):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -1012,7 +1012,7 @@ class PartBase(Feature):
         -------
         angle: float
             A Float specifying the angle between the specified entities. If you provide a plane as 
-            an argument, Abaqus/CAE computes the angle using the normal to the plane. . 
+            an argument, Abaqus/CAE computes the angle using the normal to the plane.
         """
         pass
 
@@ -1030,7 +1030,7 @@ class PartBase(Feature):
         Returns
         -------
         area: float
-            A Float specifying the sum of the calculated areas of the given faces. . 
+            A Float specifying the sum of the calculated areas of the given faces.
         """
         pass
 
@@ -1057,14 +1057,14 @@ class PartBase(Feature):
         -------
         paras: dict
             A dictionary object representing a map of the name of the parameter and its associated 
-            value. . 
+            value.
         """
         pass
 
     def getCentroid(self, faces: tuple[Face], cells: tuple[Face], relativeAccuracy: float = 0):
         """Depending on the arguments provided, this method returns the following:
-        - The location of the centroid of a given face or group of faces.
-        - The location of the centroid of a given cell or group of cells.
+            - The location of the centroid of a given face or group of faces.
+            - The location of the centroid of a given cell or group of cells.
         faces
             A sequence of Face objects whose centroid the method will calculate. The arguments 
             *faces* and *cells* are mutually exclusive. 
@@ -1078,7 +1078,7 @@ class PartBase(Feature):
         Returns
         -------
         centroid: tuple[float]
-            A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the centroid. . 
+            A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the centroid.
         """
         pass
 
@@ -1092,7 +1092,7 @@ class PartBase(Feature):
 
         Returns
         -------
-            A tuple of 3 Floats representing the coordinates of the specified point. . 
+            A tuple of 3 Floats representing the coordinates of the specified point.
         """
         pass
 
@@ -1114,15 +1114,15 @@ class PartBase(Feature):
         Returns
         -------
         curvature: float
-            A Float specifying the maximum curvature. . 
+            A Float specifying the maximum curvature.
         """
         pass
 
     def getDistance(self, entity1: str, entity2: str):
         """Depending on the arguments provided, this method returns one of the following:
-        - The distance between two points.
-        - The minimum distance between a point and an edge.
-        - The minimum distance between two edges.
+            - The distance between two points.
+            - The minimum distance between a point and an edge.
+            - The minimum distance between two edges.
         
         Parameters
         ----------
@@ -1136,7 +1136,7 @@ class PartBase(Feature):
         Returns
         -------
         distance: float
-            A Float specifying the distance between *entity1* and *entity2*. . 
+            A Float specifying the distance between *entity1* and *entity2*.
         """
         pass
 
@@ -1296,7 +1296,7 @@ class PartBase(Feature):
             considered for substructures. 
             UNSUPPORTED_NON_STRUCTURAL_MASS_PROPORTIONAL: Non-structural mass with Mass Proportional 
             distribution is not supported. Results are computed using Volume Proportional 
-            distribution. . 
+            distribution.
         """
         pass
 
@@ -1315,7 +1315,7 @@ class PartBase(Feature):
 
         Raises
         ------
-            - An exception occurs if a feature with the given name does not exist. 
+                - An exception occurs if a feature with the given name does not exist. 
               Error : Incorrect feature name. 
         """
         pass
@@ -1335,7 +1335,7 @@ class PartBase(Feature):
 
         Raises
         ------
-            - An exception occurs if a feature with the given name does not exist. 
+                - An exception occurs if a feature with the given name does not exist. 
               Error : Incorrect feature name. 
         """
         pass
@@ -1355,7 +1355,7 @@ class PartBase(Feature):
 
         Raises
         ------
-            - An exception occurs if a feature with the given name does not exist. 
+                - An exception occurs if a feature with the given name does not exist. 
               Error : Incorrect feature name. 
         """
         pass
@@ -1375,7 +1375,7 @@ class PartBase(Feature):
 
         Raises
         ------
-            - An exception occurs if a feature with the given name does not exist. 
+                - An exception occurs if a feature with the given name does not exist. 
               Error : Incorrect feature name. 
         """
         pass
@@ -1391,7 +1391,7 @@ class PartBase(Feature):
 
         Raises
         ------
-            - If the part is not an analytical rigid part: 
+                - If the part is not an analytical rigid part: 
               AbaqusException: Can only be used with analytical rigid parts. 
         """
         pass
@@ -1455,10 +1455,10 @@ class PartBase(Feature):
 
     def queryAttributes(self, printResults: Boolean = OFF):
         """This method prints the following information about a part:
-        - the name, modeling space, and analysis type; and
-        - whether twist is included (only available when the modeling space is axisymmetric and
+            - the name, modeling space, and analysis type; and
+            - whether twist is included (only available when the modeling space is axisymmetric and
         the analysis type is deformable); and
-        - the number of vertices, edges, faces and cells if applicable.
+            - the number of vertices, edges, faces and cells if applicable.
         
         Parameters
         ----------
@@ -1471,7 +1471,7 @@ class PartBase(Feature):
         attributes: dict
             A Dictionary object with string keys and integer values which returns the above 
             information with the keys being numVertices, numEdges, numFaces, numCells, 
-            numWiredEdges, numShellFaces and numSolidFaces. . 
+            numWiredEdges, numShellFaces and numSolidFaces.
         """
         pass
 
@@ -1483,13 +1483,13 @@ class PartBase(Feature):
 
     def queryGeometry(self, relativeAccuracy: float = 0, printResults: Boolean = True):
         """This method prints the following information about a part:
-        - the name, modeling space, and analysis type;
-        - whether twist is included (only available when the modeling space is axisymmetric and
+            - the name, modeling space, and analysis type;
+            - whether twist is included (only available when the modeling space is axisymmetric and
         the analysis type is deformable);
-        - a 3D point representing the minimum of the part's bounding box;
-        - a 3D point representing the maximum of the part's bounding box;
-        - a 3D point representing the part's centroid (only on 3D solid parts); and
-        - the volume (only on 3D solid parts).
+            - a 3D point representing the minimum of the part's bounding box;
+            - a 3D point representing the maximum of the part's bounding box;
+            - a 3D point representing the part's centroid (only on 3D solid parts); and
+            - the volume (only on 3D solid parts).
         
         Parameters
         ----------
@@ -1504,7 +1504,7 @@ class PartBase(Feature):
         -------
         geometry: dict
             A Dictionary object with string keys, which returns the above information with the keys 
-            being name, space, type, volume, centroid, category and boundingBox. . 
+            being name, space, type, volume, centroid, category and boundingBox.
         """
         pass
 
@@ -1619,7 +1619,7 @@ class PartBase(Feature):
 
         Raises
         ------
-            - If the part is an orphan mesh part: 
+                - If the part is an orphan mesh part: 
               Cannot export orphan mesh parts to ACIS. 
         """
         pass
@@ -1655,7 +1655,7 @@ class PartBase(Feature):
 
         Raises
         ------
-            - If the part is an orphan mesh part: 
+                - If the part is an orphan mesh part: 
               Cannot export orphan mesh parts to IGES. 
         """
         pass
@@ -1670,7 +1670,7 @@ class PartBase(Feature):
 
         Raises
         ------
-            - If the part contains no geometry: 
+                - If the part contains no geometry: 
               Parterror: Cannot export orphan mesh parts to STEP. 
         """
         pass
@@ -1685,7 +1685,7 @@ class PartBase(Feature):
 
         Raises
         ------
-            - If the part is an orphan mesh part: 
+                - If the part is an orphan mesh part: 
               Cannot export orphan mesh parts to VDA-FS. 
         """
         pass

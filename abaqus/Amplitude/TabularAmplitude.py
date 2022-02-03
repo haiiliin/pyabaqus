@@ -26,9 +26,8 @@ class TabularAmplitude(Amplitude):
         import odbAmplitude
         session.odbs[name].amplitudes[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - AMPLITUDE
+        The corresponding analysis keywords are:
+            - AMPLITUDE
 
     """
 
@@ -66,7 +65,12 @@ class TabularAmplitude(Amplitude):
 
         Returns
         -------
-            A TabularAmplitude object.  and RangeError. 
+            A TabularAmplitude object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -88,6 +92,6 @@ class TabularAmplitude(Amplitude):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

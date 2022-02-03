@@ -133,7 +133,7 @@ class ConnectorBehaviorOption:
 
         Returns
         -------
-            A TangentialBehavior object..
+            A TangentialBehavior object.
         """
         self.tangentialBehavior = tangentialBehavior = TangentialBehavior(
             formulation, slipRateDependency, pressureDependency, temperatureDependency, dependencies,

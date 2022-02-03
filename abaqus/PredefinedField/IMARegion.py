@@ -18,8 +18,11 @@ class IMARegion:
     Notes
     -----
         This object can be accessed by:
-        - import load
-        - mdb.models[name].predefinedFields[name].assignmentList
+        
+        .. code-block:: python
+            
+            import load
+            mdb.models[name].predefinedFields[name].assignmentList
 
     """
 

@@ -166,7 +166,7 @@ class DisplacementBC(BoundaryCondition):
 
         Returns
         -------
-            A DisplacementBC object. . 
+            A DisplacementBC object.
         """
         super().__init__()
         pass

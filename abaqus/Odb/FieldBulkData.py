@@ -13,12 +13,12 @@ class FieldBulkData:
     position: SymbolicConstant
         A SymbolicConstant specifying the position of the output in the element. Possible values
         are:
-        - NODAL, specifying the values calculated at the nodes.
-        - INTEGRATION_POINT, specifying the values calculated at the integration points.
-        - ELEMENT_NODAL, specifying the values obtained by extrapolating results calculated at
+            - NODAL, specifying the values calculated at the nodes.
+            - INTEGRATION_POINT, specifying the values calculated at the integration points.
+            - ELEMENT_NODAL, specifying the values obtained by extrapolating results calculated at
         the integration points.
-        - ELEMENT_FACE.
-        - CENTROID, specifying the value at the centroid obtained by extrapolating results
+            - ELEMENT_FACE.
+            - CENTROID, specifying the value at the centroid obtained by extrapolating results
         calculated at the integration points.
     type: SymbolicConstant
         A SymbolicConstant specifying the output type. Possible values are SCALAR, VECTOR,
@@ -69,8 +69,11 @@ class FieldBulkData:
     Notes
     -----
         This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].bulkDataBlocks[i]
+        
+        .. code-block:: python
+            
+            import odbAccess
+            session.odbs[name].steps[name].frames[i].fieldOutputs[name].bulkDataBlocks[i]
 
     """
 

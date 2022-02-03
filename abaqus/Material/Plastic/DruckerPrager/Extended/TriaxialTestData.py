@@ -4,19 +4,20 @@ class TriaxialTestData:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].druckerPrager.triaxialTestData
-        - import odbMaterial
-        - session.odbs[name].materials[name].druckerPrager.triaxialTestData
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].druckerPrager.triaxialTestData
+            import odbMaterial
+            session.odbs[name].materials[name].druckerPrager.triaxialTestData
 
-    Table Data
-    ----------
-        - Sign and magnitude of confining stress, σ1=σ2.
-        - Sign and magnitude of the stress in loading direction, σ3.
+        The table data for this object are:
+            - Sign and magnitude of confining stress, σ1=σ2.
+            - Sign and magnitude of the stress in loading direction, σ3.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - TRIAXIAL TEST DATA
+        The corresponding analysis keywords are:
+            - TRIAXIAL TEST DATA
 
     """
 
@@ -26,8 +27,11 @@ class TriaxialTestData:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].druckerPrager.TriaxialTestData
-            - session.odbs[name].materials[name].druckerPrager.TriaxialTestData
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].druckerPrager.TriaxialTestData
+                session.odbs[name].materials[name].druckerPrager.TriaxialTestData
         
         Parameters
         ----------
@@ -49,7 +53,7 @@ class TriaxialTestData:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -58,6 +62,6 @@ class TriaxialTestData:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

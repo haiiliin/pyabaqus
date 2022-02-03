@@ -119,7 +119,7 @@ class View:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -261,7 +261,7 @@ class View:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -293,7 +293,7 @@ class View:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -342,7 +342,7 @@ class View:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 

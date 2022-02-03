@@ -9,8 +9,11 @@ class ConstrainedSketchImageOptions:
     Notes
     -----
         This object can be accessed by:
-        - import sketch
-        - mdb.models[name].sketches[name].imageOptions
+        
+        .. code-block:: python
+            
+            import sketch
+            mdb.models[name].sketches[name].imageOptions
 
     """
 
@@ -44,7 +47,7 @@ class ConstrainedSketchImageOptions:
 
         Raises
         ------
-            RangeError. 
-            !img 
+        RangeError
+            
         """
         pass

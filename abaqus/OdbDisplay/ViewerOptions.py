@@ -9,8 +9,11 @@ class ViewerOptions:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.viewerOptions
+        
+        .. code-block:: python
+            
+            import visualization
+            session.viewerOptions
 
     """
 

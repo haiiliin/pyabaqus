@@ -8,11 +8,14 @@ class IgnoredEdgeArray:
     Notes
     -----
         This object can be accessed by:
-        - import part
-        - mdb.models[name].parts[name].ignoredEdges
-        - import assembly
-        - mdb.models[name].rootAssembly.allInstances[name].ignoredEdges
-        - mdb.models[name].rootAssembly.instances[name].ignoredEdges
+        
+        .. code-block:: python
+            
+            import part
+            mdb.models[name].parts[name].ignoredEdges
+            import assembly
+            mdb.models[name].rootAssembly.allInstances[name].ignoredEdges
+            mdb.models[name].rootAssembly.instances[name].ignoredEdges
 
     """
 
@@ -47,8 +50,8 @@ class IgnoredEdgeArray:
 
         Returns
         -------
-            An IgnoredEdge object or a sequence of IgnoredEdge objects. . 
-            !img 
+            An IgnoredEdge object or a sequence of IgnoredEdge objects.
+            
         """
         pass
 
@@ -65,8 +68,8 @@ class IgnoredEdgeArray:
 
         Returns
         -------
-            An IgnoredEdge object or a sequence of IgnoredEdge objects. . 
-            !img 
+            An IgnoredEdge object or a sequence of IgnoredEdge objects.
+            
         """
         pass
 
@@ -75,8 +78,8 @@ class IgnoredEdgeArray:
 
         Returns
         -------
-            A String specifying the object or objects. . 
-            !img 
+            A String specifying the object or objects.
+            
         """
         pass
 
@@ -108,8 +111,8 @@ class IgnoredEdgeArray:
 
         Raises
         ------
-            - An exception occurs if the resulting sequence is empty. 
+                - An exception occurs if the resulting sequence is empty. 
               Error: The mask results in an empty sequence 
-            !img 
+            
         """
         pass

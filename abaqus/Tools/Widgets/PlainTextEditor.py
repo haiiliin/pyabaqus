@@ -1,6 +1,6 @@
 from PyQt5.QtCore import Qt, QRect, QSize
+from PyQt5.QtGui import QColor, QPainter, QTextFormat
 from PyQt5.QtWidgets import QWidget, QPlainTextEdit, QTextEdit
-from PyQt5.QtGui import QColor, QPainter, QTextFormat, QPalette
 
 
 # https://blog.csdn.net/weixin_42378324/article/details/106946784

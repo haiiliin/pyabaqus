@@ -69,7 +69,7 @@ class TurnControl(GeometricRestriction):
 
         Returns
         -------
-            A TurnControl object. . 
+            A TurnControl object.
         """
         super().__init__()
         pass

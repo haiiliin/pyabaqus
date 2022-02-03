@@ -243,7 +243,7 @@ class ShapeTask(OptimizationTask):
 
         Returns
         -------
-            A ShapeTask object. . 
+            A ShapeTask object.
         """
         super().__init__()
         pass

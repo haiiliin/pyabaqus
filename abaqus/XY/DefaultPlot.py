@@ -19,8 +19,11 @@ class DefaultPlot:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.defaultPlot
+        
+        .. code-block:: python
+            
+            import visualization
+            session.defaultPlot
 
     """
 

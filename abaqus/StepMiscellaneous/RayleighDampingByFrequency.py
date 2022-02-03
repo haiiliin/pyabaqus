@@ -12,8 +12,11 @@ class RayleighDampingByFrequency:
     Notes
     -----
         This object can be accessed by:
-        - import step
-        - mdb.models[name].steps[name].rayleighDampingByFrequency
+        
+        .. code-block:: python
+        
+           import step
+           mdb.models[name].steps[name].rayleighDampingByFrequency
 
     """
 

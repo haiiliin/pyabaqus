@@ -11,8 +11,8 @@ class InteractionDisplayOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.viewports[name].assemblyDisplay.interactionOptions
-        - session.viewports[name].layers[name].assemblyDisplay.interactionOptions
+            session.viewports[name].assemblyDisplay.interactionOptions
+            session.viewports[name].layers[name].assemblyDisplay.interactionOptions
 
     """
 
@@ -48,6 +48,6 @@ class InteractionDisplayOptions:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

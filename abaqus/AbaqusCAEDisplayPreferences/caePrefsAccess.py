@@ -17,8 +17,12 @@ This object can be accessed by:
 def getGuiPrefsFileName():
     """This function enables you to retrieve the location of your abaqus_2021.gpr file.
 
-    Path
-    ----
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
     This function can be accessed by:
         
     .. code-block:: python
@@ -66,8 +70,12 @@ def printValuesList(object: str, maxRecursionDepth: SymbolicConstant = None, asS
     """This function enables you to print all of the options and their values for a set of
     guiPreferences or sessionOptions settings derived from the abaqus_2021.gpr file.
 
-    Path
-    ----
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
     This function can be accessed by:
         
     .. code-block:: python
@@ -135,8 +143,12 @@ def openSessionOptions(fileName: str = '', directory: SymbolicConstant = HOME):
     FileSave Display ConstrainedSketchOptions menu option. Abaqus stores default session options in the
     sessionOptions section of the abaqus_2021.gpr file.
 
-    Path
-    ----
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
     This function can be accessed by:
         
     .. code-block:: python

@@ -13,7 +13,10 @@ class ConcentricConstraint(ConstrainedSketchConstraint):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].ConcentricConstraint
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].ConcentricConstraint
         
         Parameters
         ----------
@@ -26,7 +29,7 @@ class ConcentricConstraint(ConstrainedSketchConstraint):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object. . 
-            !img 
+            A ConstrainedSketchConstraint object.
+            
         """
         pass

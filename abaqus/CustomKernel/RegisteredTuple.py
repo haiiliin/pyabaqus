@@ -34,7 +34,7 @@ class RegisteredTuple(CommandRegister):
 
         Returns
         -------
-            A RegisteredTuple object. . 
+            A RegisteredTuple object.
         """
         super().__init__()
         pass

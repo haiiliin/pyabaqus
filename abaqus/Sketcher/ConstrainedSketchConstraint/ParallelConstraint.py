@@ -11,7 +11,10 @@ class ParallelConstraint(ConstrainedSketchConstraint):
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].sketches[name].ParallelConstraint
+            
+            .. code-block:: python
+            
+                mdb.models[name].sketches[name].ParallelConstraint
         
         Parameters
         ----------
@@ -22,7 +25,7 @@ class ParallelConstraint(ConstrainedSketchConstraint):
 
         Returns
         -------
-            A ConstrainedSketchConstraint object. . 
-            !img 
+            A ConstrainedSketchConstraint object.
+            
         """
         pass

@@ -19,7 +19,10 @@ class OdbAssembly(OdbAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[name].rootAssembly.DatumCsysByThreePoints
+            
+            .. code-block:: python
+            
+                session.odbs[name].rootAssembly.DatumCsysByThreePoints
         
         Parameters
         ----------
@@ -38,7 +41,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbDatumCsys object..
+            An OdbDatumCsys object.
         """
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
@@ -55,7 +58,10 @@ class OdbAssembly(OdbAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[name].rootAssembly.DatumCsysByThreeNodes
+            
+            .. code-block:: python
+            
+                session.odbs[name].rootAssembly.DatumCsysByThreeNodes
         
         Parameters
         ----------
@@ -73,7 +79,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbDatumCsys object..
+            An OdbDatumCsys object.
         """
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
@@ -91,7 +97,10 @@ class OdbAssembly(OdbAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[name].rootAssembly.DatumCsysByThreeCircNodes
+            
+            .. code-block:: python
+            
+                session.odbs[name].rootAssembly.DatumCsysByThreeCircNodes
         
         Parameters
         ----------
@@ -109,7 +118,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbDatumCsys object..
+            An OdbDatumCsys object.
         """
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
@@ -125,7 +134,10 @@ class OdbAssembly(OdbAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[name].rootAssembly.DatumCsysBy6dofNode
+            
+            .. code-block:: python
+            
+                session.odbs[name].rootAssembly.DatumCsysBy6dofNode
         
         Parameters
         ----------
@@ -139,7 +151,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbDatumCsys object..
+            An OdbDatumCsys object.
         """
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
@@ -150,7 +162,10 @@ class OdbAssembly(OdbAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[name].rootAssembly.DatumCsys
+            
+            .. code-block:: python
+            
+                session.odbs[name].rootAssembly.DatumCsys
         
         Parameters
         ----------
@@ -161,7 +176,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbDatumCsys object..
+            An OdbDatumCsys object.
         """
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
@@ -172,7 +187,10 @@ class OdbAssembly(OdbAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[*name*].rootAssembly.Instance
+            
+            .. code-block:: python
+            
+                session.odbs[*name*].rootAssembly.Instance
         
         Parameters
         ----------
@@ -196,7 +214,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbInstance object..
+            An OdbInstance object.
         """
         self.instances[name] = odbInstance = OdbInstance(name, object, localCoordSystem)
         return odbInstance
@@ -211,8 +229,11 @@ class OdbAssembly(OdbAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[*name*].rootAssembly.instances[*name*].RigidBody
-            - session.odbs[*name*].rootAssembly.RigidBody
+            
+            .. code-block:: python
+            
+                session.odbs[*name*].rootAssembly.instances[*name*].RigidBody
+                session.odbs[*name*].rootAssembly.RigidBody
         
         Parameters
         ----------
@@ -241,7 +262,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbRigidBody object..
+            An OdbRigidBody object.
         """
         odbRigidBody = OdbRigidBody(referenceNode, position, isothermal, elements, tieNodes, pinNodes, analyticSurface)
         self.rigidBodies.append(odbRigidBody)
@@ -255,9 +276,12 @@ class OdbAssembly(OdbAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[*name*].parts[*name*].NodeSet
-            - session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
-            - session.odbs[*name*].rootAssembly.NodeSet
+            
+            .. code-block:: python
+            
+                session.odbs[*name*].parts[*name*].NodeSet
+                session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
+                session.odbs[*name*].rootAssembly.NodeSet
         
         Parameters
         ----------
@@ -269,7 +293,7 @@ class OdbAssembly(OdbAssemblyBase):
 
         Returns
         -------
-            An OdbSet object..
+            An OdbSet object.
         """
         self.nodeSets[name] = odbSet = OdbSet(name, nodes)
         return odbSet

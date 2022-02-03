@@ -11,12 +11,14 @@ class SurfaceThicknessAssignment:
     Notes
     -----
         This object can be accessed by:
-        - import interaction
-        - mdb.models[name].interactions[name].surfaceThicknessAssignments
+        
+        .. code-block:: python
+            
+            import interaction
+            mdb.models[name].interactions[name].surfaceThicknessAssignments
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SURFACE PROPERTY ASSIGNMENT
+        The corresponding analysis keywords are:
+            - SURFACE PROPERTY ASSIGNMENT
 
     """
 
@@ -35,11 +37,11 @@ class SurfaceThicknessAssignment:
         value
             A tuple specifying the value of the surface thickness assignments for the surface whose 
             index is referenced. Each tuple contains two entries: 
-            - A Float or a SymbolicConstant specifying the overriding thickness value to be used in 
+                - A Float or a SymbolicConstant specifying the overriding thickness value to be used in 
             the contact definition. Possible values of the SymbolicConstant are ORIGINAL and 
             THINNING. The SymbolicConstant THINNING can be specified only in an Abaqus/Explicit 
             analysis. 
-            - A Float specifying a scale factor that multiplies the thickness value specified in the 
+                - A Float specifying a scale factor that multiplies the thickness value specified in the 
             second entry. 
         """
         pass
@@ -56,13 +58,13 @@ class SurfaceThicknessAssignment:
         assignments
             A sequence of tuples specifying the surface thickness assignments. Each tuple contains 
             three entries: 
-            - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
+                - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
             which the thickness is assigned. 
-            - A Float or a SymbolicConstant specifying the overriding thickness value to be used in 
+                - A Float or a SymbolicConstant specifying the overriding thickness value to be used in 
             the contact definition. Possible values of the SymbolicConstant are ORIGINAL and 
             THINNING. The SymbolicConstant THINNING can be specified only in an Abaqus/Explicit 
             analysis. 
-            - A Float specifying a scale factor that multiplies the thickness value specified in the 
+                - A Float specifying a scale factor that multiplies the thickness value specified in the 
             second entry. 
         """
         pass

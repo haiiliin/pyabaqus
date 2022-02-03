@@ -383,70 +383,70 @@ class MeshPart(PartBase):
         attribute
             A SymbolicConstant specifying the type of edge seed attribute to return. Possible values 
             are: 
-            - EDGE_SEEDING_METHOD 
-            - BIAS_METHOD 
-            - NUMBER 
-            - AVERAGE_SIZE 
-            - DEVIATION_FACTOR 
-            - MIN_SIZE_FACTOR 
-            - BIAS_RATIO 
-            - BIAS_MIN_SIZE 
-            - BIAS_MAX_SIZE 
-            - VERTEX_ADJ_TO_SMALLEST_ELEM 
-            - SMALLEST_ELEM_LOCATION 
-            - CONSTRAINT 
+                - EDGE_SEEDING_METHOD 
+                - BIAS_METHOD 
+                - NUMBER 
+                - AVERAGE_SIZE 
+                - DEVIATION_FACTOR 
+                - MIN_SIZE_FACTOR 
+                - BIAS_RATIO 
+                - BIAS_MIN_SIZE 
+                - BIAS_MAX_SIZE 
+                - VERTEX_ADJ_TO_SMALLEST_ELEM 
+                - SMALLEST_ELEM_LOCATION 
+                - CONSTRAINT 
             The return value is dependent on the *attribute* argument. 
-            - If *attribute*=EDGE_SEEDING_METHOD, the return value is a SymbolicConstant specifying 
+                - If *attribute*=EDGE_SEEDING_METHOD, the return value is a SymbolicConstant specifying 
             the edge seeding method used to create the seeds along the edge. Possible values are: 
-            - UNIFORM_BY_NUMBER 
-            - UNIFORM_BY_SIZE 
-            - CURVATURE_BASED_BY_SIZE 
-            - BIASED 
-            - NONE 
-            - If *attribute*=BIAS_METHOD, the return value is a SymbolicConstant specifying the bias 
+                - UNIFORM_BY_NUMBER 
+                - UNIFORM_BY_SIZE 
+                - CURVATURE_BASED_BY_SIZE 
+                - BIASED 
+                - NONE 
+                - If *attribute*=BIAS_METHOD, the return value is a SymbolicConstant specifying the bias 
             type used to create the seeds along the edge. Possible values are: 
-            - SINGLE 
-            - DOUBLE 
-            - NONE 
-            - If *attribute*=NUMBER, the return value is an Int specifying the number of element 
+                - SINGLE 
+                - DOUBLE 
+                - NONE 
+                - If *attribute*=NUMBER, the return value is an Int specifying the number of element 
             seeds along the edge. 
-            - If *attribute*=AVERAGE_SIZE, the return value is a Float specifying the average 
+                - If *attribute*=AVERAGE_SIZE, the return value is a Float specifying the average 
             element size along the edge. 
-            - If *attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation 
+                - If *attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation 
             factor h/Lh/L, where hh is the chordal deviation and LL is the element length. If edge 
             seeds are not defined, the return value is zero. 
-            - If *attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the 
+                - If *attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the 
             smallest allowable element as a fraction of the specified global element size. If edge 
             seeds are not defined, the return value is zero. 
-            - If *attribute*=BIAS_RATIO, the return value is a Float specifying the length ratio of 
+                - If *attribute*=BIAS_RATIO, the return value is a Float specifying the length ratio of 
             the largest element to the smallest element. 
-            - If *attribute*=BIAS_MIN_SIZE, the return value is a Float specifying the length of the 
+                - If *attribute*=BIAS_MIN_SIZE, the return value is a Float specifying the length of the 
             largest element; only applicable if the EDGE_SEEDING_METHOD is BIASED and seeds were 
             specified by minimum and maximum sizes. 
-            - If *attribute*=BIAS_MAX_SIZE, the return value is a Float specifying the length of the 
+                - If *attribute*=BIAS_MAX_SIZE, the return value is a Float specifying the length of the 
             largest element; only applicable if the EDGE_SEEDING_METHOD is BIASED and seeds were 
             specified by minimum and maximum sizes. 
-            - If *attribute*=VERTEX_ADJ_TO_SMALLEST_ELEM, the return value is an Int specifying the 
+                - If *attribute*=VERTEX_ADJ_TO_SMALLEST_ELEM, the return value is an Int specifying the 
             ID of the vertex next to the smallest element; only applicable if the 
             EDGE_SEEDING_METHOD is BIASED. 
-            - If *attribute*=SMALLEST_ELEM_LOCATION, the return value is a SymbolicConstant 
+                - If *attribute*=SMALLEST_ELEM_LOCATION, the return value is a SymbolicConstant 
             specifying the location of smallest elements for double bias seeds; only applicable if 
             the EDGE_SEEDING_METHOD is BIASED and BIAS_METHOD is DOUBLE. Possible values are: 
-            - SMALLEST_ELEM_AT_CENTER 
-            - SMALLEST_ELEM_AT_ENDS 
-            - NONE 
-            - If *attribute*=CONSTRAINT, the return value is a SymbolicConstant specifying how close 
+                - SMALLEST_ELEM_AT_CENTER 
+                - SMALLEST_ELEM_AT_ENDS 
+                - NONE 
+                - If *attribute*=CONSTRAINT, the return value is a SymbolicConstant specifying how close 
             the seeds must be matched by the mesh. Possible values are: 
-            - FREE 
-            - FINER 
-            - FIXED 
-            - NONE 
+                - FREE 
+                - FINER 
+                - FIXED 
+                - NONE 
             A value of NONE indicates that the edge is not seeded. 
 
         Returns
         -------
             The return value is a Float, an Int, or a SymbolicConstant depending on the value of the 
-            *attribute* argument. . 
+            *attribute* argument.
         """
         pass
 
@@ -461,12 +461,12 @@ class MeshPart(PartBase):
         elemShape
             A SymbolicConstant specifying the shape of the element for which to return the element 
             type. Possible values are: 
-            - LINE 
-            - QUAD 
-            - TRI 
-            - HEX 
-            - WEDGE 
-            - TET 
+                - LINE 
+                - QUAD 
+                - TRI 
+                - HEX 
+                - WEDGE 
+                - TET 
 
         Returns
         -------
@@ -474,7 +474,7 @@ class MeshPart(PartBase):
 
         Raises
         ------
-            - TypeError 
+                - TypeError 
               The region cannot be associated with element types or the *elemShape* is not 
             consistent with the dimension of the *region*. 
         """
@@ -491,7 +491,7 @@ class MeshPart(PartBase):
 
         Returns
         -------
-            A sequence of Face objects. . 
+            A sequence of Face objects.
         """
         pass
 
@@ -504,42 +504,42 @@ class MeshPart(PartBase):
             A Cell, a Face, or an Edge object specifying the region to be queried. 
         attribute
             A SymbolicConstant specifying the mesh control attribute to return. Possible values are: 
-            - ELEM_SHAPE 
-            - TECHNIQUE 
-            - ALGORITHM 
-            - MIN_TRANSITION 
+                - ELEM_SHAPE 
+                - TECHNIQUE 
+                - ALGORITHM 
+                - MIN_TRANSITION 
             The return value depends on the value of the *attribute* argument. 
-            - If *attribute*=ELEM_SHAPE, the return value is a SymbolicConstant specifying the 
+                - If *attribute*=ELEM_SHAPE, the return value is a SymbolicConstant specifying the 
             element shape used during meshing. Possible values are: 
-            - LINE 
-            - QUAD 
-            - TRI 
-            - QUAD_DOMINATED 
-            - HEX 
-            - TET 
-            - WEDGE 
-            - HEX_DOMINATED 
-            - If *attribute*=TECHNIQUE, the return value is a SymbolicConstant specifying the 
+                - LINE 
+                - QUAD 
+                - TRI 
+                - QUAD_DOMINATED 
+                - HEX 
+                - TET 
+                - WEDGE 
+                - HEX_DOMINATED 
+                - If *attribute*=TECHNIQUE, the return value is a SymbolicConstant specifying the 
             meshing technique to be used during meshing. Possible values are: 
-            - FREE 
-            - STRUCTURED 
-            - SWEEP 
-            - UNMESHABLE 
+                - FREE 
+                - STRUCTURED 
+                - SWEEP 
+                - UNMESHABLE 
             Where UNMESHABLE indicates that no meshing technique is applicable with the currently 
             assigned element shape. 
-            - If *attribute*=ALGORITHM, the return value is a SymbolicConstant specifying the 
+                - If *attribute*=ALGORITHM, the return value is a SymbolicConstant specifying the 
             meshing algorithm to be used during meshing. Possible values are: 
-            - MEDIAL_AXIS 
-            - ADVANCING_FRONT 
-            - DEFAULT 
-            - NON_DEFAULT 
-            - NONE 
+                - MEDIAL_AXIS 
+                - ADVANCING_FRONT 
+                - DEFAULT 
+                - NON_DEFAULT 
+                - NONE 
             Where NONE indicates that no algorithm is applicable. 
-            - If *attribute*=MIN_TRANSITION, the return value is a Boolean indicating whether 
+                - If *attribute*=MIN_TRANSITION, the return value is a Boolean indicating whether 
             minimum transition will be used during meshing. This option is applicable only to the 
             following: 
-            - Free quadrilateral meshing or sweep hexahedral meshing with *algorithm*=MEDIAL_AXIS. 
-            - Structured quadrilateral meshing. 
+                - Free quadrilateral meshing or sweep hexahedral meshing with *algorithm*=MEDIAL_AXIS. 
+                - Structured quadrilateral meshing. 
 
         Returns
         -------
@@ -548,7 +548,7 @@ class MeshPart(PartBase):
 
         Raises
         ------
-            - TypeError 
+                - TypeError 
               The region cannot carry mesh controls. 
         """
         pass
@@ -563,7 +563,7 @@ class MeshPart(PartBase):
 
         Returns
         -------
-            A MeshStats object. . 
+            A MeshStats object.
         """
         pass
 
@@ -575,19 +575,19 @@ class MeshPart(PartBase):
         attribute
             A SymbolicConstant specifying the type of part seed attribute to return. Possible values 
             are: 
-            - SIZE 
-            - DEFAULT_SIZE 
-            - DEVIATION_FACTOR 
-            - MIN_SIZE_FACTOR 
+                - SIZE 
+                - DEFAULT_SIZE 
+                - DEVIATION_FACTOR 
+                - MIN_SIZE_FACTOR 
             The return value depends on the value of the *attribute* argument. 
-            - If *attribute*=SIZE, the return value is a Float specifying the assigned global 
+                - If *attribute*=SIZE, the return value is a Float specifying the assigned global 
             element size. If part seeds are not defined, the return value is zero. 
-            - If *attribute*=DEFAULT_SIZE, the return value is a Float specifying a suggested 
+                - If *attribute*=DEFAULT_SIZE, the return value is a Float specifying a suggested 
             default global element size based upon the part geometry. 
-            - If *attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation 
+                - If *attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation 
             factor h/Lh/L, where hh is the chordal deviation and LL is the element length. If part 
             seeds are not defined, the return value is zero. 
-            - If *attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the 
+                - If *attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the 
             smallest allowable element as a fraction of the specified global element size. If part 
             seeds are not defined, the return value is zero. 
 
@@ -597,7 +597,7 @@ class MeshPart(PartBase):
 
         Raises
         ------
-            - An exception occurs if the part does not contain native geometry. 
+                - An exception occurs if the part does not contain native geometry. 
               Error: Part does not contain native geometry 
         """
         pass
@@ -608,7 +608,7 @@ class MeshPart(PartBase):
 
         Returns
         -------
-            A Region object, or None. . 
+            A Region object, or None.
         """
         pass
 
@@ -659,8 +659,8 @@ class MeshPart(PartBase):
             A SymbolicConstant specifying whether single- or double-biased seed distribution will be 
             applied. If unspecified, single-biased seed distribution will be applied. Possible 
             values are: 
-            - SINGLE: Single-biased seed distribution will be applied. 
-            - DOUBLE: Double-biased seed distribution will be applied. 
+                - SINGLE: Single-biased seed distribution will be applied. 
+                - DOUBLE: Double-biased seed distribution will be applied. 
         end1Edges
             A sequence of Edge objects specifying the edges to seed. The smallest elements will be 
             positioned near the end where the normalized curve parameter=0.0. You must provide 
@@ -694,9 +694,9 @@ class MeshPart(PartBase):
             A SymbolicConstant specifying how closely the seeds must be matched by the mesh. The 
             default value is FREE. If unspecified, the existing constraint will remain unchanged. 
             Possible values are: 
-            - FREE: The resulting mesh can be finer or coarser than the specified seeds. 
-            - FINER: The resulting mesh can be finer than the specified seeds. 
-            - FIXED: The seeds must be exactly matched by the mesh (only with respect to the number 
+                - FREE: The resulting mesh can be finer or coarser than the specified seeds. 
+                - FINER: The resulting mesh can be finer than the specified seeds. 
+                - FIXED: The seeds must be exactly matched by the mesh (only with respect to the number 
             of elements, not to the nodal positioning). 
         """
         pass
@@ -716,9 +716,9 @@ class MeshPart(PartBase):
             A SymbolicConstant specifying how closely the seeds must be matched by the mesh. The 
             default value is FREE. If unspecified, the existing constraint will remain unchanged. 
             Possible values are: 
-            - FREE: The resulting mesh can be finer or coarser than the specified seeds. 
-            - FINER: The resulting mesh can be finer than the specified seeds. 
-            - FIXED: The seeds must be exactly matched by the mesh (only with respect to the number 
+                - FREE: The resulting mesh can be finer or coarser than the specified seeds. 
+                - FINER: The resulting mesh can be finer than the specified seeds. 
+                - FIXED: The seeds must be exactly matched by the mesh (only with respect to the number 
             of elements, not to the nodal positioning). 
         """
         pass
@@ -744,9 +744,9 @@ class MeshPart(PartBase):
             A SymbolicConstant specifying how closely the seeds must be matched by the mesh. The 
             default value is FREE. If unspecified, the existing constraint will remain unchanged. 
             Possible values are: 
-            - FREE: The resulting mesh can be finer or coarser than the specified seeds. 
-            - FINER: The resulting mesh can be finer than the specified seeds. 
-            - FIXED: The seeds must be exactly matched by the mesh (only with respect to the number 
+                - FREE: The resulting mesh can be finer or coarser than the specified seeds. 
+                - FINER: The resulting mesh can be finer than the specified seeds. 
+                - FIXED: The seeds must be exactly matched by the mesh (only with respect to the number 
             of elements, not to the nodal positioning). 
         """
         pass
@@ -856,42 +856,42 @@ class MeshPart(PartBase):
             A SymbolicConstant specifying the element shape to be used for meshing. The default 
             value is QUAD for Face regions and HEX for Cell regions. If unspecified, the existing 
             element shape will remain unchanged. Possible values are: 
-            - QUAD: Quadrilateral mesh. 
-            - QUAD_DOMINATED: Quadrilateral-dominated mesh. 
-            - TRI: Triangular mesh. 
-            - HEX: Hexahedral mesh. 
-            - HEX_DOMINATED: Hex-dominated mesh. 
-            - TET: Tetrahedral mesh. 
-            - WEDGE: Wedge mesh. 
+                - QUAD: Quadrilateral mesh. 
+                - QUAD_DOMINATED: Quadrilateral-dominated mesh. 
+                - TRI: Triangular mesh. 
+                - HEX: Hexahedral mesh. 
+                - HEX_DOMINATED: Hex-dominated mesh. 
+                - TET: Tetrahedral mesh. 
+                - WEDGE: Wedge mesh. 
         technique
             A SymbolicConstant specifying the mesh technique to be used. The default value is FREE 
             for Face regions. For Cell regions the initial value depends on the geometry of the 
             regions and can be STRUCTURED, SWEEP, or unmeshable. If unspecified, the existing mesh 
             technique(s) will remain unchanged. Possible values are: 
-            - FREE: Free mesh technique. 
-            - STRUCTURED: Structured mesh technique. 
-            - SWEEP: Sweep mesh technique. 
-            - BOTTOM_UP: Bottom-up mesh technique. Only applicable for cell regions. 
-            - SYSTEM_ASSIGN: Allow the system to assign a suitable technique. The actual technique 
+                - FREE: Free mesh technique. 
+                - STRUCTURED: Structured mesh technique. 
+                - SWEEP: Sweep mesh technique. 
+                - BOTTOM_UP: Bottom-up mesh technique. Only applicable for cell regions. 
+                - SYSTEM_ASSIGN: Allow the system to assign a suitable technique. The actual technique 
             assigned can be STRUCTURED, SWEEP, or unmeshable. 
         algorithm
             A SymbolicConstant specifying the algorithm used to generate the mesh for the specified 
             regions. Possible values are MEDIAL_AXIS, ADVANCING_FRONT, and NON_DEFAULT. If 
             unspecified, the existing value will remain unchanged. This option is applicable only to 
             the following: 
-            - Free quadrilateral or quadrilateral-dominated meshing. In this case the possible 
+                - Free quadrilateral or quadrilateral-dominated meshing. In this case the possible 
             values are MEDIAL_AXIS and ADVANCING_FRONT. 
-            - Sweep hexahedral or hexahedral-dominated meshing. In this case the possible values are 
+                - Sweep hexahedral or hexahedral-dominated meshing. In this case the possible values are 
             MEDIAL_AXIS and ADVANCING_FRONT. 
-            - Free tetrahedral meshing. In this case the only possible value is NON_DEFAULT, and it 
+                - Free tetrahedral meshing. In this case the only possible value is NON_DEFAULT, and it 
             indicates that the free tetrahedral-meshing technique available in Abaqus 6.4 or earlier 
             will be used. If algorithm is not specified, the default 
         minTransition
             A Boolean specifying whether minimum transition is to be applied. The default value is 
             ON. If unspecified, the existing value will remain unchanged. This option is applicable 
             only in the following cases: 
-            - Free quadrilateral meshing or hexahedral sweep meshing with *algorithm*=MEDIAL_AXIS. 
-            - Structured quadrilateral meshing. 
+                - Free quadrilateral meshing or hexahedral sweep meshing with *algorithm*=MEDIAL_AXIS. 
+                - Structured quadrilateral meshing. 
         sizeGrowth
             A SymbolicConstant specifying element size growth to be applied when generating the 
             interior of a tetrahedral mesh. Possible values are MODERATE and MAXIMUM. If 
@@ -900,11 +900,11 @@ class MeshPart(PartBase):
         allowMapped
             A Boolean specifying whether mapped meshing can be used to replace the selected mesh 
             technique. The *allowMapped* argument is applicable only in the following cases: 
-            - Free triangular meshing. 
-            - Free quadrilateral or quadrilateral-dominated meshing with 
+                - Free triangular meshing. 
+                - Free quadrilateral or quadrilateral-dominated meshing with 
             *algorithm*=ADVANCING_FRONT. 
-            - Hexahedral or hexahedral-dominated sweep meshing with *algorithm*=ADVANCING_FRONT. 
-            - Free tetrahedral meshing. *allowMapped*=True implies that mapped triangular meshing 
+                - Hexahedral or hexahedral-dominated sweep meshing with *algorithm*=ADVANCING_FRONT. 
+                - Free tetrahedral meshing. *allowMapped*=True implies that mapped triangular meshing 
             can be used on faces that bound three-dimensional *regions*. 
         """
         pass
@@ -936,45 +936,45 @@ class MeshPart(PartBase):
         criterion
             A SymbolicConstant specifying the criterion used for the quality check. Possible values 
             are: 
-            - ANALYSIS_CHECKS 
+                - ANALYSIS_CHECKS 
             When this criterion is specified Abaqus/CAE will invoke the element quality checks 
             included with the input file processor for Abaqus/Standard and Abaqus/Explicit. 
-            - ANGULAR_DEVIATION 
+                - ANGULAR_DEVIATION 
             The maximum amount (in degrees) that an element's face corner angles deviate from the 
             ideal angle. The ideal angle is 90° for quadrilateral element faces and 60° for 
             triangular element faces. Elements with an angular deviation larger than the specified 
             threshold will fail this test. 
-            - ASPECT_RATIO 
+                - ASPECT_RATIO 
             The ratio between the lengths of the longest and shortest edges of an element. Elements 
             with an aspect ratio larger than the specified threshold will fail this test. 
-            - GEOM_DEVIATION_FACTOR 
+                - GEOM_DEVIATION_FACTOR 
             The largest geometric deviation factor evaluated along any of the element edges 
             associated with geometric edges or faces. The geometric deviation factor along an 
             element edge is calculated by dividing the maximum gap between the element edge and its 
             associated geometry by the length of the element edge. Elements with a geometric 
             deviation factor larger than the specified threshold will fail this test. 
-            - LARGE_ANGLE 
+                - LARGE_ANGLE 
             The largest corner angle on any of an element's faces. Elements with face angles larger 
             than the specified threshold (in degrees) will fail this test. 
-            - LONGEST_EDGE 
+                - LONGEST_EDGE 
             The length of an element's longest edge. Elements with an edge longer than the specified 
             threshold will fail this test. 
-            - MAX_FREQUENCY 
+                - MAX_FREQUENCY 
             An estimate of an element's contribution to the initial maximum allowable frequency for 
             Abaqus/Standard analyses. This calculation requires appropriate section assignments and 
             material definitions. Elements whose maximum allowable frequency is smaller than the 
             given value will fail this test. 
-            - SHAPE_FACTOR 
+                - SHAPE_FACTOR 
             The shape factor for triangular and tetrahedral elements. This is the ratio between the 
             element area or volume and the optimal element area or volume. Elements with a shape 
             factor smaller than the specified threshold will fail this test. 
-            - SHORTEST_EDGE 
+                - SHORTEST_EDGE 
             The length of an element's shortest edge. Elements with an edge shorter than the 
             specified threshold will fail this test. 
-            - SMALL_ANGLE 
+                - SMALL_ANGLE 
             The smallest corner angle on any of an element's faces. Elements with face angles 
             smaller than the given value (in degrees) will fail this test. 
-            - STABLE_TIME_INCREMENT 
+                - STABLE_TIME_INCREMENT 
             An estimate of an element's contribution to the initial maximum stable time increment 
             for Abaqus/Explicit analyses. This calculation requires appropriate section assignments 
             and material definitions. Elements that require a time increment smaller than the given 
@@ -1022,7 +1022,7 @@ class MeshPart(PartBase):
 
         Returns
         -------
-            A MeshNode object..
+            A MeshNode object.
         """
         node = MeshNode(coordinates, localCsys, label)
         self.nodes.append(node)

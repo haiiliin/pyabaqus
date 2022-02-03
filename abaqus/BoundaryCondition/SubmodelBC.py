@@ -149,7 +149,7 @@ class SubmodelBC(BoundaryCondition):
 
         Returns
         -------
-            A SubmodelBC object. . 
+            A SubmodelBC object.
         """
         super().__init__()
         pass

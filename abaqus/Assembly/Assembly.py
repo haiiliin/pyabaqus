@@ -106,8 +106,11 @@ class Assembly(MeshEditAssembly, MeshAssembly, PropertyAssembly, RegionAssembly,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].rootAssembly.ConnectorOrientation
-            - session.odbs[name].rootAssembly.ConnectorOrientation
+            
+            .. code-block:: python
+            
+                mdb.models[name].rootAssembly.ConnectorOrientation
+                session.odbs[name].rootAssembly.ConnectorOrientation
         
         Parameters
         ----------
@@ -137,7 +140,7 @@ class Assembly(MeshEditAssembly, MeshAssembly, PropertyAssembly, RegionAssembly,
 
         Returns
         -------
-            A ConnectorOrientation object..
+            A ConnectorOrientation object.
         """
         connectorOrientation = ConnectorOrientation(region, localCsys1, axis1, angle1, orient2sameAs1, localCsys2,
                                                     axis2, angle2)

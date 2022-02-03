@@ -7,22 +7,23 @@ class MeanFieldVoid:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].constituents[name]
-        - import odbMaterial
-        - session.odbs[name].materials[name].constituents[name]
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].constituents[name]
+            import odbMaterial
+            session.odbs[name].materials[name].constituents[name]
 
-    Table Data
-    ----------
+        The table data for this object are:
         The table data specify the following:
-        - Volume fraction.
-        - Aspect ratio.
-        - Components of the direction vector defined in the local coordinate system when *direction*=FIXED. Components of the second-order orientation tensor in the local coordinate system when *direction*=ORIENTATION_TENSOR.
-        - Etc.
+            - Volume fraction.
+            - Aspect ratio.
+            - Components of the direction vector defined in the local coordinate system when *direction*=FIXED. Components of the second-order orientation tensor in the local coordinate system when *direction*=ORIENTATION_TENSOR.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONSTITUENT
+        The corresponding analysis keywords are:
+            - CONSTITUENT
 
     """
 
@@ -38,8 +39,11 @@ class MeanFieldVoid:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].meanFieldHomogenization.MeanFieldVoid
-            - session.odbs[name].materials[name].meanFieldHomogenization.MeanFieldVoid
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].meanFieldHomogenization.MeanFieldVoid
+                session.odbs[name].materials[name].meanFieldHomogenization.MeanFieldVoid
         
         Parameters
         ----------
@@ -85,7 +89,7 @@ class MeanFieldVoid:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -94,6 +98,6 @@ class MeanFieldVoid:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

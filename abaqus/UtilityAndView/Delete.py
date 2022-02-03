@@ -10,9 +10,13 @@ def myCallback(path, userData):
     print 'About to delete', path 
 deleteObjectCallback.addCallback(path='mdb.jobs[*]') 
 
-Access
-------
-    - import deleteObjectCallback
+Notes
+-----
+    This object can be accessed by:
+    
+    .. code-block:: python
+    
+        import deleteObjectCallback
 
 """
 
@@ -24,9 +28,13 @@ def deleteObjectCallback(callback: str, path: str, userData: str = None, include
     when the object is deleted using an Abaqus Scripting Interface command such as
     mdb.models[name].parts[name].deleteFeature().
 
-    Path
-    ----
-        - deleteObjectCallback.addCallback
+    Notes
+    -----
+        This function can be accessed by:
+        
+        .. code-block:: python
+        
+            deleteObjectCallback.addCallback
 
     Parameters
     ----------
@@ -47,10 +55,6 @@ def deleteObjectCallback(callback: str, path: str, userData: str = None, include
     includeChildren
         A Boolean specifying that the callback should be called if an object owned by the object 
         specified by the *path* argument is about to be deleted. The default value is False. 
-
-    Returns
-    -------
-        None. 
 
     """
     pass

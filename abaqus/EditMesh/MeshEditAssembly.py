@@ -9,13 +9,18 @@ from ..Region.Region import Region
 
 
 class MeshEditAssembly(AssemblyBase):
-    """The following commands operate on Assembly objects. For more information about the 
-    Assembly object, see Assembly object. 
+    """An Assembly object is a container for instances of parts. The Assembly object has no
+    constructor command. Abaqus creates the *rootAssembly* member when a Model object is 
+    created. 
 
     Notes
     -----
-        This object can be accessed by:
-        - import meshEdit
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import assembly
+        mdb.models[name].rootAssembly
 
     """
 

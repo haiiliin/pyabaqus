@@ -7,33 +7,34 @@ class PorousElastic:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].porousElastic
-        - import odbMaterial
-        - session.odbs[name].materials[name].porousElastic
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].porousElastic
+            import odbMaterial
+            session.odbs[name].materials[name].porousElastic
 
-    Table Data
-    ----------
+        The table data for this object are:
         If *shear*=G, the table data specify the following:
-        - The logarithmic bulk modulus, κ. (Dimensionless.)
-        - The shear modulus, G.
-        - The elastic tensile limit, peltpte⁢l. (This value cannot be negative.)
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - The logarithmic bulk modulus, κ. (Dimensionless.)
+            - The shear modulus, G.
+            - The elastic tensile limit, peltpte⁢l. (This value cannot be negative.)
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         If *shear*=POISSON, the table data specify the following:
-        - The logarithmic bulk modulus, κ. (Dimensionless.)
-        - The Poisson's ratio, ν.
-        - The elastic tensile limit, peltpte⁢l. (This value cannot be negative.)
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+            - The logarithmic bulk modulus, κ. (Dimensionless.)
+            - The Poisson's ratio, ν.
+            - The elastic tensile limit, peltpte⁢l. (This value cannot be negative.)
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - POROUS ELASTIC
+        The corresponding analysis keywords are:
+            - POROUS ELASTIC
 
     """
 
@@ -44,8 +45,11 @@ class PorousElastic:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].PorousElastic
-            - session.odbs[name].materials[name].PorousElastic
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].PorousElastic
+                session.odbs[name].materials[name].PorousElastic
         
         Parameters
         ----------
@@ -65,7 +69,7 @@ class PorousElastic:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -74,6 +78,6 @@ class PorousElastic:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

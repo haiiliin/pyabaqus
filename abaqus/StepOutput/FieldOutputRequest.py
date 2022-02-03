@@ -27,16 +27,15 @@ class FieldOutputRequest:
         import step
         mdb.models[name].fieldOutputRequests[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONTACT OUTPUT
-        - ELEMENT OUTPUT
-        - ENERGY OUTPUT
-        - INCREMENTATION OUTPUT
-        - MODAL OUTPUT
-        - NODE OUTPUT
-        - OUTPUT
-        - RADIATION OUTPUT
+        The corresponding analysis keywords are:
+            - CONTACT OUTPUT
+            - ELEMENT OUTPUT
+            - ENERGY OUTPUT
+            - INCREMENTATION OUTPUT
+            - MODAL OUTPUT
+            - NODE OUTPUT
+            - OUTPUT
+            - RADIATION OUTPUT
 
     """
 

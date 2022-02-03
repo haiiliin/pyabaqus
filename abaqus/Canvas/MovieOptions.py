@@ -12,7 +12,7 @@ class MovieOptions:
     Notes
     -----
         This object can be accessed by:
-        - session.viewports[name].movieOptions
+            session.viewports[name].movieOptions
 
     """
 
@@ -77,6 +77,6 @@ class MovieOptions:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

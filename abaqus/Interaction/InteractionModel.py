@@ -66,20 +66,17 @@ from ..Region.RegionArray import RegionArray
 class InteractionModel(InteractionContactControlModel,
                        InteractionContactInitializationModel,
                        InteractionPropertyModel):
-    """The following commands operate on Model objects. For more information about the Model
-        object, see Model object.
+    """Abaqus creates a Model object named `Model-1` when a session is started.
 
-        Access
-        ------
-            - import interaction
+    Notes
+    -----
+    This object can be accessed by:
 
-        Table Data
-        ----------
+    .. code-block:: python
 
-        Corresponding analysis keywords
-        -------------------------------
+        mdb.models[name]
 
-        """
+    """
 
     def contactDetection(self, name: str = '', createStepName: str = '', searchDomain: SymbolicConstant = MODEL,
                          defaultType: SymbolicConstant = CONTACT, interactionProperty: str = '',
@@ -205,7 +202,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].AcousticImpedance
+            
+            .. code-block:: python
+            
+                mdb.models[name].AcousticImpedance
         
         Parameters
         ----------
@@ -250,7 +250,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            An AcousticImpedance object..
+            An AcousticImpedance object.
         """
         self.interactions[name] = interaction = AcousticImpedance(name, createStepName, surface, definition,
                                                                   interactionProperty, nonreflectingType, radius,
@@ -265,7 +265,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].AcousticImpedanceProp
+            
+            .. code-block:: python
+            
+                mdb.models[name].AcousticImpedanceProp
         
         Parameters
         ----------
@@ -287,7 +290,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            An AcousticImpedanceProp object..
+            An AcousticImpedanceProp object.
         """
         self.interactions[name] = interaction = AcousticImpedanceProp(name, tableType, table, frequencyDependency)
         return interaction
@@ -300,7 +303,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ActuatorSensor
+            
+            .. code-block:: python
+            
+                mdb.models[name].ActuatorSensor
         
         Parameters
         ----------
@@ -330,7 +336,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            An ActuatorSensor object..
+            An ActuatorSensor object.
         """
         self.interactions[name] = interaction = ActuatorSensor(name, createStepName, point, interactionProperty,
                                                                noCoordComponents, unsymm, noSolutionDepVar, userSubUel,
@@ -344,7 +350,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ActuatorSensorProp
+            
+            .. code-block:: python
+            
+                mdb.models[name].ActuatorSensorProp
         
         Parameters
         ----------
@@ -359,7 +368,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            An ActuatorSensorProp object..
+            An ActuatorSensorProp object.
         """
         self.interactions[name] = interaction = ActuatorSensorProp(name, realProperties, integerProperties)
         return interaction
@@ -386,7 +395,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].CavityRadiation
+            
+            .. code-block:: python
+            
+                mdb.models[name].CavityRadiation
         
         Parameters
         ----------
@@ -544,7 +556,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A CavityRadiation object..
+            A CavityRadiation object.
         """
         self.interactions[name] = interaction = CavityRadiation(name, createStepName, surfaces, surfaceEmissivities,
                                                                 ambientTemp, blocking, blockingSurfaces, rangeOfView,
@@ -570,7 +582,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].CavityRadiationProp
+            
+            .. code-block:: python
+            
+                mdb.models[name].CavityRadiationProp
         
         Parameters
         ----------
@@ -587,7 +602,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A CavityRadiationProp object..
+            A CavityRadiationProp object.
         """
         self.interactions[name] = interaction = CavityRadiationProp(name, temperatureDependency, dependencies, property)
         return interaction
@@ -603,7 +618,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ConcentratedFilmCondition
+            
+            .. code-block:: python
+            
+                mdb.models[name].ConcentratedFilmCondition
         
         Parameters
         ----------
@@ -665,7 +683,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A ConcentratedFilmCondition object..
+            A ConcentratedFilmCondition object.
         """
         self.interactions[name] = interaction = ConcentratedFilmCondition(name, createStepName, region, definition,
                                                                           nodalArea, explicitRegionType,
@@ -683,7 +701,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ConcentratedRadiationToAmbient
+            
+            .. code-block:: python
+            
+                mdb.models[name].ConcentratedRadiationToAmbient
         
         Parameters
         ----------
@@ -723,7 +744,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A ConcentratedRadiationToAmbient object..
+            A ConcentratedRadiationToAmbient object.
         """
         self.interactions[name] = interaction = ConcentratedRadiationToAmbient(name, createStepName, region,
                                                                                ambientTemperature,
@@ -749,7 +770,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ContactExp
+            
+            .. code-block:: python
+            
+                mdb.models[name].ContactExp
         
         Parameters
         ----------
@@ -797,7 +821,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A ContactExp object..
+            A ContactExp object.
         """
         self.interactions[name] = interaction = ContactExp(name, createStepName, useAllstar, globalSmoothing,
                                                            includedPairs, excludedPairs, contactPropertyAssignments,
@@ -813,7 +837,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ContactProperty
+            
+            .. code-block:: python
+            
+                mdb.models[name].ContactProperty
         
         Parameters
         ----------
@@ -822,7 +849,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A ContactProperty object..
+            A ContactProperty object.
         """
         interactionProperties = ContactProperty(name)
         self.interactions[name] = interactionProperties
@@ -849,7 +876,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ContactStd
+            
+            .. code-block:: python
+            
+                mdb.models[name].ContactStd
         
         Parameters
         ----------
@@ -906,7 +936,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A ContactStd object..
+            A ContactStd object.
         """
         self.interactions[name] = interaction = ContactStd(name, createStepName, useAllstar, globalSmoothing,
                                                            includedPairs, excludedPairs, contactPropertyAssignments,
@@ -929,7 +959,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].CyclicSymmetry
+            
+            .. code-block:: python
+            
+                mdb.models[name].CyclicSymmetry
         
         Parameters
         ----------
@@ -984,7 +1017,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A CyclicSymmetry object..
+            A CyclicSymmetry object.
         """
         self.interactions[name] = interaction = CyclicSymmetry(name, createStepName, main, secondary, repetitiveSectors,
                                                                axisPoint1, axisPoint2, extractedNodalDiameter,
@@ -999,7 +1032,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ElasticFoundation
+            
+            .. code-block:: python
+            
+                mdb.models[name].ElasticFoundation
         
         Parameters
         ----------
@@ -1015,7 +1051,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            An ElasticFoundation object..
+            An ElasticFoundation object.
         """
         self.interactions[name] = interaction = ElasticFoundation(name, createStepName, surface, stiffness)
         return interaction
@@ -1028,7 +1064,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ExpContactControl
+            
+            .. code-block:: python
+            
+                mdb.models[name].ExpContactControl
         
         Parameters
         ----------
@@ -1078,7 +1117,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ExpInitialization
+            
+            .. code-block:: python
+            
+                mdb.models[name].ExpInitialization
         
         Parameters
         ----------
@@ -1140,7 +1182,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].FilmCondition
+            
+            .. code-block:: python
+            
+                mdb.models[name].FilmCondition
         
         Parameters
         ----------
@@ -1193,7 +1238,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A FilmCondition object..
+            A FilmCondition object.
         """
         self.interactions[name] = interaction = FilmCondition(name, createStepName, surface, definition,
                                                               interactionProperty, sinkTemperature, sinkAmplitude,
@@ -1208,7 +1253,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].FilmConditionProp
+            
+            .. code-block:: python
+            
+                mdb.models[name].FilmConditionProp
         
         Parameters
         ----------
@@ -1220,15 +1268,15 @@ class InteractionModel(InteractionContactControlModel,
             An Int specifying the number of field variable dependencies. The default value is 0.
         property
             A sequence of sequences of Floats specifying the following:
-            - The film coefficient, hh.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+                - The film coefficient, hh.
+                - Temperature, if the data depend on temperature.
+                - Value of the first field variable, if the data depend on field variables.
+                - Value of the second field variable.
+                - Etc.
 
         Returns
         -------
-            A FilmConditionProp object..
+            A FilmConditionProp object.
         """
         self.interactions[name] = interaction = FilmConditionProp(name, temperatureDependency, dependencies, property)
         return interaction
@@ -1241,7 +1289,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].FluidCavity
+            
+            .. code-block:: python
+            
+                mdb.models[name].FluidCavity
         
         Parameters
         ----------
@@ -1270,7 +1321,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A FluidCavity object..
+            A FluidCavity object.
         """
         self.interactions[name] = interaction = FluidCavity(name, createStepName, cavityPoint, cavitySurface,
                                                             interactionProperty, ambientPressure, thickness,
@@ -1291,7 +1342,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].FluidCavityProperty
+            
+            .. code-block:: python
+            
+                mdb.models[name].FluidCavityProperty
         
         Parameters
         ----------
@@ -1327,11 +1381,11 @@ class InteractionModel(InteractionContactControlModel,
             A sequence of sequences of Floats specifying the thermal expansion coefficients. This
             argument is applicable only when *definition*=HYDRAULIC and when *useExpansion*=True.
             Each sequence contains the following data:
-            - The mean coefficient of thermal expansion.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+                - The mean coefficient of thermal expansion.
+                - Temperature, if the data depend on temperature.
+                - Value of the first field variable, if the data depend on field variables.
+                - Value of the second field variable.
+                - Etc.
         useBulkModulus
             A Boolean specifying whether fluid bulk modulus values will be defined. This argument is
             applicable only when *definition*=HYDRAULIC. The default value is OFF.
@@ -1347,11 +1401,11 @@ class InteractionModel(InteractionContactControlModel,
             A sequence of sequences of Floats specifying the fluid bulk modulus values. This
             argument is applicable only when *definition*=HYDRAULIC and when *useBulkModulus*=True.
             Each sequence contains the following data:
-            - The fluid bulk modulus.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+                - The fluid bulk modulus.
+                - Temperature, if the data depend on temperature.
+                - Value of the first field variable, if the data depend on field variables.
+                - Value of the second field variable.
+                - Etc.
         useCapacity
             A Boolean specifying whether molar heat capacity values will be defined. This argument
             is applicable only when *definition*=PNEUMATIC. The default value is OFF.
@@ -1371,24 +1425,24 @@ class InteractionModel(InteractionContactControlModel,
             of a polynomial expression. This argument is applicable only when
             *definition*=PNEUMATIC, when *useCapacity*=True, and when *capacityType*=POLYNOMIAL. In
             this form, only one sequence is specified and that sequence contains the following data:
-            - The first molar heat capacity coefficient.
-            - The second molar heat capacity coefficient.
-            - The third molar heat capacity coefficient.
-            - The fourth molar heat capacity coefficient.
-            - The fifth molar heat capacity coefficient.
+                - The first molar heat capacity coefficient.
+                - The second molar heat capacity coefficient.
+                - The third molar heat capacity coefficient.
+                - The fourth molar heat capacity coefficient.
+                - The fifth molar heat capacity coefficient.
             Alternatively, the sequence data may specify the molar heat capacity values at constant
             pressure for an ideal gas species. This argument is applicable only when
             *definition*=PNEUMATIC, when *useCapacity*=True, and when *capacityType*=TABULAR. Each
             sequence contains the following data:
-            - The molar heat capacity at constant pressure.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+                - The molar heat capacity at constant pressure.
+                - Temperature, if the data depend on temperature.
+                - Value of the first field variable, if the data depend on field variables.
+                - Value of the second field variable.
+                - Etc.
 
         Returns
         -------
-            A FluidCavityProperty object..
+            A FluidCavityProperty object.
         """
         self.interactions[name] = interaction = FluidCavityProperty(name, definition, fluidDensity, molecularWeight,
                                                                     useExpansion, expansionTempDep,
@@ -1407,7 +1461,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].FluidExchange
+            
+            .. code-block:: python
+            
+                mdb.models[name].FluidExchange
         
         Parameters
         ----------
@@ -1431,7 +1488,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A FluidExchange object..
+            A FluidExchange object.
         """
         self.interactions[name] = interaction = FluidExchange(name, createStepName, firstCavity, interactionProperty,
                                                               definition, secondCavity, exchangeArea)
@@ -1445,7 +1502,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].FluidExchangeProperty
+            
+            .. code-block:: python
+            
+                mdb.models[name].FluidExchangeProperty
         
         Parameters
         ----------
@@ -1455,43 +1515,43 @@ class InteractionModel(InteractionContactControlModel,
             A sequence of sequences of Floats specifying the viscous and hydrodynamic resistance
             coefficients when *definition*=BULK_VISCOSITY. Each sequence contains the following
             data:
-            - The viscous resistance coefficient.
-            - The hydrodynamic resistance coefficient.
-            - The average absolute pressure, if the data depend on pressure.
-            - The average temperature, if the data depend on temperature.
-            - The value of the first field variable, if the data depend on field variables.
-            - The value of the second field variable.
-            - Etc.
+                - The viscous resistance coefficient.
+                - The hydrodynamic resistance coefficient.
+                - The average absolute pressure, if the data depend on pressure.
+                - The average temperature, if the data depend on temperature.
+                - The value of the first field variable, if the data depend on field variables.
+                - The value of the second field variable.
+                - Etc.
             Alternatively, the sequence data may specify the mass flow rate. This is applicable only
             when *definition*=MASS_FLUX. In this form, only one sequence is specified and that
             sequence contains the following data:
-            - The mass flow rate per unit area.
+                - The mass flow rate per unit area.
             Alternatively, the sequence data may specify the mass rate leakage. This is applicable
             only when *definition*=MASS_RATE_LEAK. Each sequence contains the following data:
-            - The absolute value of the mass flow rate per unit area. (The first tabular value
+                - The absolute value of the mass flow rate per unit area. (The first tabular value
             entered must always be zero.)
-            - The absolute value of the pressure difference. (The first tabular value entered must
+                - The absolute value of the pressure difference. (The first tabular value entered must
             always be zero.)
-            - The average absolute pressure, if the data depend on pressure.
-            - The average temperature, if the data depend on temperature.
-            - The value of the first field variable, if the data depend on field variables.
-            - The value of the second field variable.
-            - Etc.
+                - The average absolute pressure, if the data depend on pressure.
+                - The average temperature, if the data depend on temperature.
+                - The value of the first field variable, if the data depend on field variables.
+                - The value of the second field variable.
+                - Etc.
             Alternatively, the sequence data may specify the volume flow rate. This is applicable
             only when *definition*=VOL_FLUX. In this form, only one sequence is specified and that
             sequence contains the following data:
-            - The volumetric flow rate per unit area.
+                - The volumetric flow rate per unit area.
             Alternatively, the sequence data may specify the volume rate leakage. This is applicable
             only when *definition*=VOL_RATE_LEAK. Each sequence contains the following data:
-            - The absolute value of the volumetric flow rate per unit area. (The first tabular value
+                - The absolute value of the volumetric flow rate per unit area. (The first tabular value
             entered must always be zero.)
-            - The absolute value of the pressure difference. (The first tabular value entered must
+                - The absolute value of the pressure difference. (The first tabular value entered must
             always be zero.)
-            - The average absolute pressure, if the data depend on pressure.
-            - The average temperature, if the data depend on temperature.
-            - The value of the first field variable, if the data depend on field variables.
-            - The value of the second field variable.
-            - Etc.
+                - The average absolute pressure, if the data depend on pressure.
+                - The average temperature, if the data depend on temperature.
+                - The value of the first field variable, if the data depend on field variables.
+                - The value of the second field variable.
+                - Etc.
         definition
             A SymbolicConstant specifying the type of fluid exchange property to be defined.
             Possible values are BULK_VISCOSITY, MASS_FLUX, MASS_RATE_LEAK, VOL_FLUX, and
@@ -1511,7 +1571,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A FluidExchangeProperty object..
+            A FluidExchangeProperty object.
         """
         self.interactions[name] = interaction = FluidExchangeProperty(name, dataTable, definition, pressureDependency,
                                                                       temperatureDependency, fieldDependencies)
@@ -1524,7 +1584,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].FluidInflator
+            
+            .. code-block:: python
+            
+                mdb.models[name].FluidInflator
         
         Parameters
         ----------
@@ -1545,7 +1608,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A FluidInflator object..
+            A FluidInflator object.
         """
         self.interactions[name] = interaction = FluidInflator(name, createStepName, cavity, interactionProperty,
                                                               inflationTimeAmplitude, massFlowAmplitude)
@@ -1560,7 +1623,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].FluidInflatorProperty
+            
+            .. code-block:: python
+            
+                mdb.models[name].FluidInflatorProperty
         
         Parameters
         ----------
@@ -1598,7 +1664,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A FluidInflatorProperty object..
+            A FluidInflatorProperty object.
         """
         self.interactions[name] = interaction = FluidInflatorProperty(name, definition, effectiveArea, tankVolume,
                                                                       dischargeCoefficient, dataTable, numFluids,
@@ -1616,7 +1682,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].IncidentWave
+            
+            .. code-block:: python
+            
+                mdb.models[name].IncidentWave
         
         Parameters
         ----------
@@ -1670,7 +1739,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            An IncidentWave object..
+            An IncidentWave object.
         """
         self.interactions[name] = interaction = IncidentWave(name, createStepName, sourcePoint, standoffPoint, surface,
                                                              interactionProperty, definition, amplitude,
@@ -1695,7 +1764,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].IncidentWaveProperty
+            
+            .. code-block:: python
+            
+                mdb.models[name].IncidentWaveProperty
         
         Parameters
         ----------
@@ -1819,7 +1891,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            An IncidentWaveProperty object..
+            An IncidentWaveProperty object.
         """
         self.interactions[name] = interaction = IncidentWaveProperty(name, definition, propagationModel, soundSpeed,
                                                                      fluidDensity, specificHeatRatio, gravity,
@@ -1841,7 +1913,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].ModelChange
+            
+            .. code-block:: python
+            
+                mdb.models[name].ModelChange
         
         Parameters
         ----------
@@ -1870,7 +1945,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A ModelChange object..
+            A ModelChange object.
         """
         self.interactions[name] = interaction = ModelChange(name, createStepName, isRestart, regionType, region,
                                                             activeInStep, includeStrain)
@@ -1884,7 +1959,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].PressurePenetration
+            
+            .. code-block:: python
+            
+                mdb.models[name].PressurePenetration
         
         Parameters
         ----------
@@ -1918,7 +1996,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A PressurePenetration object..
+            A PressurePenetration object.
         """
         self.interactions[name] = interaction = PressurePenetration(name, createStepName, contactInteraction,
                                                                     mainPoints, secondaryPoints, penetrationPressure,
@@ -1933,7 +2011,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].RadiationToAmbient
+            
+            .. code-block:: python
+            
+                mdb.models[name].RadiationToAmbient
         
         Parameters
         ----------
@@ -1971,7 +2052,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A RadiationToAmbient object..
+            A RadiationToAmbient object.
         """
         self.interactions[name] = interaction = RadiationToAmbient(name, createStepName, surface, emissivity, field,
                                                                    distributionType, radiationType, ambientTemperature,
@@ -1985,7 +2066,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SelfContactExp
+            
+            .. code-block:: python
+            
+                mdb.models[name].SelfContactExp
         
         Parameters
         ----------
@@ -2008,7 +2092,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A SelfContactExp object..
+            A SelfContactExp object.
         """
         self.interactions[name] = interaction = SelfContactExp(name, createStepName, surface, interactionProperty,
                                                                mechanicalConstraint, contactControls)
@@ -2022,7 +2106,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SelfContactStd
+            
+            .. code-block:: python
+            
+                mdb.models[name].SelfContactStd
         
         Parameters
         ----------
@@ -2052,7 +2139,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A SelfContactStd object..
+            A SelfContactStd object.
         """
         self.interactions[name] = interaction = SelfContactStd(name, createStepName, surface, interactionProperty,
                                                                enforcement, thickness, smooth, contactControls)
@@ -2072,7 +2159,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].StdContactControl
+            
+            .. code-block:: python
+            
+                mdb.models[name].StdContactControl
         
         Parameters
         ----------
@@ -2105,8 +2195,8 @@ class InteractionModel(InteractionContactControlModel,
         frictionOnset
             A SymbolicConstant specifying when the application of friction occurs. Possible values
             are:
-            - IMMEDIATE, specifying the friction is included in the increment when contact occurs.
-            - DELAYED, specifying the application of friction is delayed until the increment after
+                - IMMEDIATE, specifying the friction is included in the increment when contact occurs.
+                - DELAYED, specifying the application of friction is delayed until the increment after
             contact occurs.
         automaticTolerances
             A Boolean specifying whether Abaqus/Standard should automatically compute an overclosure
@@ -2183,7 +2273,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].StdInitialization
+            
+            .. code-block:: python
+            
+                mdb.models[name].StdInitialization
         
         Parameters
         ----------
@@ -2229,7 +2322,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].StdStabilization
+            
+            .. code-block:: python
+            
+                mdb.models[name].StdStabilization
         
         Parameters
         ----------
@@ -2275,7 +2371,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].StdXplCosimulation
+            
+            .. code-block:: python
+            
+                mdb.models[name].StdXplCosimulation
         
         Parameters
         ----------
@@ -2302,7 +2401,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A StdXplCosimulation object..
+            A StdXplCosimulation object.
         """
         self.interactions[name] = interaction = StdXplCosimulation(name, createStepName, region, incrementation,
                                                                    stepSize, stepSizeDefinition)
@@ -2324,7 +2423,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SurfaceToSurfaceContactExp
+            
+            .. code-block:: python
+            
+                mdb.models[name].SurfaceToSurfaceContactExp
         
         Parameters
         ----------
@@ -2382,7 +2484,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A SurfaceToSurfaceContactExp object..
+            A SurfaceToSurfaceContactExp object.
         """
         self.interactions[name] = interaction = SurfaceToSurfaceContactExp(name, createStepName, main, secondary,
                                                                            sliding, interactionProperty,
@@ -2415,7 +2517,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].SurfaceToSurfaceContactStd
+            
+            .. code-block:: python
+            
+                mdb.models[name].SurfaceToSurfaceContactStd
         
         Parameters
         ----------
@@ -2437,9 +2542,9 @@ class InteractionModel(InteractionContactControlModel,
         interferenceType
             A SymbolicConstant specifying the type of time-dependent allowable interference for
             contact pairs and contact elements. Possible values are:
-            - NONE, specifying no allowable contact interference.
-            - SHRINK_FIT.
-            - UNIFORM.
+                - NONE, specifying no allowable contact interference.
+                - SHRINK_FIT.
+                - UNIFORM.
             The default value is NONE.
         overclosure
             A Float specifying the maximum overclosure distance allowed. This argument applies only
@@ -2449,9 +2554,9 @@ class InteractionModel(InteractionContactControlModel,
             Possible values are COMPUTED and DIRECTION_COSINE. The default value is COMPUTED.
         direction
             A sequence of three Floats specifying the following:
-            - XX-direction cosine of the interference direction vector.
-            - YY-direction cosine of the interference direction vector.
-            - ZZ-direction cosine of the interference direction vector.
+                - XX-direction cosine of the interference direction vector.
+                - YY-direction cosine of the interference direction vector.
+                - ZZ-direction cosine of the interference direction vector.
             This argument is required only when *interferenceDirectionType*=DIRECTION_COSINE.
         amplitude
             A String specifying the name of the amplitude curve that defines the magnitude of the
@@ -2531,7 +2636,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A SurfaceToSurfaceContactStd object..
+            A SurfaceToSurfaceContactStd object.
         """
         self.interactions[name] = interaction = SurfaceToSurfaceContactStd(name, createStepName, master, slave, sliding,
                                                                            interactionProperty, interferenceType,
@@ -2554,7 +2659,10 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].XFEMCrackGrowth
+            
+            .. code-block:: python
+            
+                mdb.models[name].XFEMCrackGrowth
         
         Parameters
         ----------
@@ -2570,7 +2678,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            A XFEMCrackGrowth object..
+            A XFEMCrackGrowth object.
         """
         self.interactions[name] = interaction = XFEMCrackGrowth(name, createStepName, crackName, allowGrowth)
         return interaction

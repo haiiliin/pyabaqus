@@ -8,24 +8,25 @@ class GapConductance:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].gapConductance
-        - import odbMaterial
-        - session.odbs[name].materials[name].gapConductance
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].gapConductance
+            import odbMaterial
+            session.odbs[name].materials[name].gapConductance
 
-    Table Data
-    ----------
-        - Gap Conductance or Cohesive Separation.
-        - Gap Clearance, Gap Pressure (if optional parameter pressureDependency is used), or Closure, c (for coupled temperature-displacement gasket elements).
-        - Average Temperature if the data depend on temperature.
-        - Mass Flow Rate per unit area if the data depend on the average mass flow rate.
-        - Value of the first field variable if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Gap Conductance or Cohesive Separation.
+            - Gap Clearance, Gap Pressure (if optional parameter pressureDependency is used), or Closure, c (for coupled temperature-displacement gasket elements).
+            - Average Temperature if the data depend on temperature.
+            - Mass Flow Rate per unit area if the data depend on the average mass flow rate.
+            - Value of the first field variable if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - GAP CONDUCTANCE
+        The corresponding analysis keywords are:
+            - GAP CONDUCTANCE
 
     """
 
@@ -35,8 +36,11 @@ class GapConductance:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].GapConductance
-            - session.odbs[name].materials[name].GapConductance
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].GapConductance
+                session.odbs[name].materials[name].GapConductance
         
         Parameters
         ----------

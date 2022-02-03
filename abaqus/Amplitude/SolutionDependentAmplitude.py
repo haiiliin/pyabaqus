@@ -18,9 +18,8 @@ class SolutionDependentAmplitude(Amplitude):
         import odbAmplitude
         session.odbs[name].amplitudes[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - AMPLITUDE
+        The corresponding analysis keywords are:
+            - AMPLITUDE
 
     """
 
@@ -56,7 +55,12 @@ class SolutionDependentAmplitude(Amplitude):
 
         Returns
         -------
-            A SolutionDependentAmplitude object.  and RangeError. 
+            A SolutionDependentAmplitude object. 
+            
+        Raises
+        ------
+        InvalidNameError
+        RangeError 
         """
         super().__init__()
         pass
@@ -82,6 +86,6 @@ class SolutionDependentAmplitude(Amplitude):
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

@@ -8,28 +8,29 @@ class SuperElasticity:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].superElasticity
-        - import odbMaterial
-        - session.odbs[name].materials[name].superElasticity
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].superElasticity
+            import odbMaterial
+            session.odbs[name].materials[name].superElasticity
 
-    Table Data
-    ----------
-        - Young's Modulus (Martensite).
-        - Poisson's Ratio (Martensite).
-        - Transformation Strain.
-        - Start of Transformation (Loading).
-        - End of Transformation (Loading).
-        - Start of Transformation (Unloading).
-        - End of Transformation (Unloading).
-        - Start of Transformation in Compression (Loading).
-        - Reference Temperature.
-        - Loading.
-        - Unloading.
+        The table data for this object are:
+            - Young's Modulus (Martensite).
+            - Poisson's Ratio (Martensite).
+            - Transformation Strain.
+            - Start of Transformation (Loading).
+            - End of Transformation (Loading).
+            - Start of Transformation (Unloading).
+            - End of Transformation (Unloading).
+            - Start of Transformation in Compression (Loading).
+            - Reference Temperature.
+            - Loading.
+            - Unloading.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - SUPERELASTIC
+        The corresponding analysis keywords are:
+            - SUPERELASTIC
 
     """
 
@@ -47,8 +48,11 @@ class SuperElasticity:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].SuperElasticity
-            - session.odbs[name].materials[name].SuperElasticity
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].SuperElasticity
+                session.odbs[name].materials[name].SuperElasticity
         
         Parameters
         ----------
@@ -65,7 +69,7 @@ class SuperElasticity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -74,6 +78,6 @@ class SuperElasticity:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

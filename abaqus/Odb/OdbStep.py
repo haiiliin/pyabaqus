@@ -15,7 +15,10 @@ class OdbStep(OdbStepBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[name].steps[name].HistoryRegion
+            
+            .. code-block:: python
+            
+                session.odbs[name].steps[name].HistoryRegion
         
         Parameters
         ----------
@@ -31,7 +34,7 @@ class OdbStep(OdbStepBase):
 
         Returns
         -------
-            A HistoryRegion object..
+            A HistoryRegion object.
         """
         self.historyRegions[name] = historyRegion = HistoryRegion(name, description, point, loadCase)
         return historyRegion
@@ -43,7 +46,10 @@ class OdbStep(OdbStepBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[name].steps[name].Frame
+            
+            .. code-block:: python
+            
+                session.odbs[name].steps[name].Frame
         
         Parameters
         ----------
@@ -60,7 +66,7 @@ class OdbStep(OdbStepBase):
 
         Returns
         -------
-            An OdbFrame object..
+            An OdbFrame object.
         """
         pass
 
@@ -73,7 +79,10 @@ class OdbStep(OdbStepBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[name].steps[name].Frame
+            
+            .. code-block:: python
+            
+                session.odbs[name].steps[name].Frame
         
         Parameters
         ----------
@@ -87,7 +96,7 @@ class OdbStep(OdbStepBase):
 
         Returns
         -------
-            An OdbFrame object..
+            An OdbFrame object.
         """
         pass
 
@@ -99,7 +108,10 @@ class OdbStep(OdbStepBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[name].steps[name].Frame
+            
+            .. code-block:: python
+            
+                session.odbs[name].steps[name].Frame
         
         Parameters
         ----------
@@ -113,7 +125,7 @@ class OdbStep(OdbStepBase):
 
         Returns
         -------
-            An OdbFrame object..
+            An OdbFrame object.
         """
         pass
 
@@ -128,7 +140,10 @@ class OdbStep(OdbStepBase):
         Notes
         -----
             This function can be accessed by:
-            - session.odbs[*name*].steps[*name*].LoadCase
+            
+            .. code-block:: python
+            
+                session.odbs[*name*].steps[*name*].LoadCase
         
         Parameters
         ----------
@@ -137,7 +152,7 @@ class OdbStep(OdbStepBase):
 
         Returns
         -------
-            An OdbLoadCase object..
+            An OdbLoadCase object.
         """
         self.loadCases[name] = odbLoadCase = OdbLoadCase(name)
         return odbLoadCase

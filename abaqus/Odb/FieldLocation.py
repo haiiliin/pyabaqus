@@ -24,8 +24,11 @@ class FieldLocation:
     Notes
     -----
         This object can be accessed by:
-        - import odbAccess
-        - session.odbs[name].steps[name].frames[i].fieldOutputs[name].locations[i]
+        
+        .. code-block:: python
+            
+            import odbAccess
+            session.odbs[name].steps[name].frames[i].fieldOutputs[name].locations[i]
 
     """
 

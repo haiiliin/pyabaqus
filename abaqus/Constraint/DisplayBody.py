@@ -26,9 +26,8 @@ class DisplayBody(Constraint):
         import interaction
         mdb.models[name].constraints[name]
 
-    Corresponding analysis keywords
-    -------------------------------
-        - DISPLAY BODY
+        The corresponding analysis keywords are:
+            - DISPLAY BODY
 
     """
 
@@ -62,7 +61,7 @@ class DisplayBody(Constraint):
 
         Returns
         -------
-            A DisplayBody object. . 
+            A DisplayBody object.
         """
         super().__init__()
         pass

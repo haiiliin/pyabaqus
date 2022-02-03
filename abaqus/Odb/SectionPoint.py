@@ -54,6 +54,6 @@ class SectionPoint:
 
         Returns
         -------
-            A SectionPoint object. . 
+            A SectionPoint object.
         """
         pass

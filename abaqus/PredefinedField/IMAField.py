@@ -18,8 +18,11 @@ class IMAField:
     Notes
     -----
         This object can be accessed by:
-        - import load
-        - mdb.models[name].predefinedFields[name].fieldList
+        
+        .. code-block:: python
+            
+            import load
+            mdb.models[name].predefinedFields[name].fieldList
 
     """
 

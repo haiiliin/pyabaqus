@@ -4,14 +4,12 @@ import matplotlib.pyplot as plt
 from PyQt5.QtCore import QStandardPaths, Qt, pyqtSignal, QFileInfo
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import (QAction, QFileDialog, QMessageBox, QTabWidget, QToolBar, QVBoxLayout, QWidget, QTextEdit)
-from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from .pyqtconsole import highlighter
+from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 
 from .MatplotlibPythonConsole import MatplotlibPythonConsole
 from .PythonHighlighter import PythonHighlighter
-
-from .icons_rc import *
+from .pyqtconsole import highlighter
 
 # Just try to tell the IDE it is inherited by QToolBar to get the code hint
 

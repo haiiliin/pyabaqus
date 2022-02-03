@@ -8,24 +8,25 @@ class DruckerPragerHardening:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].druckerPrager.druckerPragerHardening
-        - import odbMaterial
-        - session.odbs[name].materials[name].druckerPrager.druckerPragerHardening
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].druckerPrager.druckerPragerHardening
+            import odbMaterial
+            session.odbs[name].materials[name].druckerPrager.druckerPragerHardening
 
-    Table Data
-    ----------
-        - Yield stress.
-        - Absolute value of the corresponding Plastic strain. (The first tabular value entered must always be zero.)
-        - Equivalent Plastic strain rate, ˙¯εpl, for which this hardening curve applies.
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Yield stress.
+            - Absolute value of the corresponding Plastic strain. (The first tabular value entered must always be zero.)
+            - Equivalent Plastic strain rate, ˙¯εpl, for which this hardening curve applies.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - DRUCKER PRAGER HARDENING
+        The corresponding analysis keywords are:
+            - DRUCKER PRAGER HARDENING
 
     """
 
@@ -36,9 +37,12 @@ class DruckerPragerHardening:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].druckerPrager.DruckerPragerHardening
-            - session.odbs[name].materials[name].druckerPrager\
-            - .DruckerPragerHardening
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].druckerPrager.DruckerPragerHardening
+                session.odbs[name].materials[name].druckerPrager\
+                - .DruckerPragerHardening
         
         Parameters
         ----------
@@ -60,7 +64,7 @@ class DruckerPragerHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -69,6 +73,6 @@ class DruckerPragerHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

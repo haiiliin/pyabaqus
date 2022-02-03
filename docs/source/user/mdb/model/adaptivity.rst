@@ -15,9 +15,3 @@ Create adaptivity mesh state features
 -------------------------------------
 
 .. autoclass:: abaqus.Adaptivity.AdaptivityStep.AdaptivityStep
-
-
-Create features for AdaptivityIteration
----------------------------------------
-
-.. autoclass:: abaqus.Adaptivity.RuleResult.RuleResult

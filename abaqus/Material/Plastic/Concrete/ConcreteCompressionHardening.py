@@ -8,24 +8,25 @@ class ConcreteCompressionHardening:
     Notes
     -----
         This object can be accessed by:
-        - import material
-        - mdb.models[name].materials[name].concreteDamagedPlasticity.concreteCompressionHardening
-        - import odbMaterial
-        - session.odbs[name].materials[name].concreteDamagedPlasticity.concreteCompressionHardening
+        
+        .. code-block:: python
+            
+            import material
+            mdb.models[name].materials[name].concreteDamagedPlasticity.concreteCompressionHardening
+            import odbMaterial
+            session.odbs[name].materials[name].concreteDamagedPlasticity.concreteCompressionHardening
 
-    Table Data
-    ----------
-        - Yield stress in compression, σcσc.
-        - Plastic (crushing) strain, ϵinc
-        - Plastic (crushing) strain rate, ϵinc
-        - Temperature, if the data depend on temperature.
-        - Value of the first field variable, if the data depend on field variables.
-        - Value of the second field variable.
-        - Etc.
+        The table data for this object are:
+            - Yield stress in compression, σcσc.
+            - Plastic (crushing) strain, ϵinc
+            - Plastic (crushing) strain rate, ϵinc
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
-    Corresponding analysis keywords
-    -------------------------------
-        - CONCRETE COMPRESSION HARDENING
+        The corresponding analysis keywords are:
+            - CONCRETE COMPRESSION HARDENING
 
     """
 
@@ -36,8 +37,11 @@ class ConcreteCompressionHardening:
         Notes
         -----
             This function can be accessed by:
-            - mdb.models[name].materials[name].concreteDamagedPlasticity.ConcreteCompressionHardening
-            - session.odbs[name].materials[name].concreteDamagedPlasticity.ConcreteCompressionHardening
+            
+            .. code-block:: python
+            
+                mdb.models[name].materials[name].concreteDamagedPlasticity.ConcreteCompressionHardening
+                session.odbs[name].materials[name].concreteDamagedPlasticity.ConcreteCompressionHardening
         
         Parameters
         ----------
@@ -56,7 +60,7 @@ class ConcreteCompressionHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass
 
@@ -65,6 +69,6 @@ class ConcreteCompressionHardening:
 
         Raises
         ------
-            RangeError. 
+        RangeError
         """
         pass

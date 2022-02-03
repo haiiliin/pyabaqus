@@ -13,8 +13,11 @@ class MdbDataStep:
     Notes
     -----
         This object can be accessed by:
-        - import visualization
-        - session.mdbData[name].steps[i]
+        
+        .. code-block:: python
+            
+            import visualization
+            session.mdbData[name].steps[i]
 
     """
 
