@@ -79,6 +79,9 @@ class MeshElement:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].Element
+        
+        Parameters
+        ----------
         nodes
             A sequence of MeshNode objects. 
         elemShape
@@ -134,6 +137,9 @@ class MeshElement:
         """This method returns an array of mesh element objects that are obtained by recursively
         finding adjacent elements along a feature edge with a face angle of less than or equal
         to the specified angle.
+        
+        Parameters
+        ----------
         angle
             A float specifying the value of the face angle in degrees. 
 
@@ -145,6 +151,9 @@ class MeshElement:
 
     def setValues(self, label: int = None):
         """This method modifies the MeshElement object.
+        
+        Parameters
+        ----------
         label
             An Int specifying the element label. This member may only be edited if the element 
             belongs to an orphan mesh part. The specified label must be non-negative and must not be 

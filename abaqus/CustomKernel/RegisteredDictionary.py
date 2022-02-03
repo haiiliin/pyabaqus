@@ -43,6 +43,9 @@ class RegisteredDictionary(CommandRegister):
 
     def changeKey(self, fromName: str, toName: str):
         """This method changes the name of a key in the dictionary.
+        
+        Parameters
+        ----------
         fromName
             A String or an integer specifying the name of the key to be changed. 
         toName

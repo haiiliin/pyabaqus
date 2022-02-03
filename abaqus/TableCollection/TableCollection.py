@@ -50,6 +50,9 @@ class TableCollection:
         .. code-block:: python
 
             mdb.models[name].TableCollection
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
 
@@ -69,6 +72,9 @@ class TableCollection:
         .. code-block:: python
 
             mdb.models[name].TableCollection
+        
+        Parameters
+        ----------
         label
             A String specifying a unique label name for the current ParameterTable object.
 
@@ -95,6 +101,9 @@ class TableCollection:
         .. code-block:: python
 
             mdb.models[name].TableCollection
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
 
@@ -115,6 +124,9 @@ class TableCollection:
         .. code-block:: python
 
             mdb.models[name].TableCollection
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         properties

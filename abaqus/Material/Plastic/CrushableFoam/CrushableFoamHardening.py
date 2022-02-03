@@ -37,6 +37,9 @@ class CrushableFoamHardening:
             - mdb.models[name].materials[name].crushableFoam.CrushableFoamHardening
             - session.odbs[name].materials[name].crushableFoam\
             - .CrushableFoamHardening
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

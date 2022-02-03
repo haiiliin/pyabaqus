@@ -55,6 +55,9 @@ class UniaxialTestData:
             - session.odbs[name].materials[name].hyperfoam.UniaxialTestData
             - session.odbs[name].materials[name].lowDensityFoam.UniaxialTestData
             - session.odbs[name].materials[name].mullinsEffect.UniaxialTestData
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         smoothing

@@ -88,6 +88,9 @@ class OdbAssemblyBase:
                              localCsys2: OdbDatumCsys = OdbDatumCsys(), axis2: SymbolicConstant = AXIS_1,
                              angle2: float = 0):
         """This method assigns a connector orientation to a connector region.
+        
+        Parameters
+        ----------
         region
             An OdbSet specifying a region. 
         localCsys1
@@ -124,6 +127,9 @@ class OdbAssemblyBase:
     def SectionAssignment(self, region: str, section: Section):
         """This method is used to assign a section on an assembly or part. Section assignment on
         the assembly is limited to the connector elements only.
+        
+        Parameters
+        ----------
         region
             An OdbSet specifying a region. 
         section
@@ -144,6 +150,9 @@ class OdbAssemblyBase:
         limitation.
         Warning:Adding elements not in ascending order of their labels may cause Abaqus/Viewer
         to plot contours incorrectly.
+        
+        Parameters
+        ----------
         labels
             A sequence of Ints specifying the element labels. 
         connectivity
@@ -173,6 +182,9 @@ class OdbAssemblyBase:
         """This method adds nodes to the OdbAssembly object using node labels and coordinates.
         Warning:Adding nodes not in ascending order of their labels may cause Abaqus/Viewer to
         plot contours incorrectly.
+        
+        Parameters
+        ----------
         labels
             A sequence of Ints specifying the node labels. 
         coordinates
@@ -192,6 +204,9 @@ class OdbAssemblyBase:
     def RigidBody(self, referenceNode: str, position: str = INPUT, isothermal: Boolean = OFF, elset: str = '',
                   pinNodes: str = '', tieNodes: str = '', analyticSurface: str = ''):
         """This method defines an OdbRigidBody on the assembly.
+        
+        Parameters
+        ----------
         referenceNode
             An OdbSet specifying the reference node assigned to the rigid body. 
         position

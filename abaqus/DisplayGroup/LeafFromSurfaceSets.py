@@ -39,6 +39,9 @@ class LeafFromSurfaceSets(Leaf):
         .. code-block:: python
 
             LeafFromSurfaceSets
+        
+        Parameters
+        ----------
         surfaceSets
             A sequence of Strings specifying surface sets, or a String specifying a single surface 
             set. 

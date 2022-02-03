@@ -50,6 +50,9 @@ class Text(Annotation):
 
             mdb.Text
             session.odbs[*name*].userData.Text
+        
+        Parameters
+        ----------
         name
             A String specifying the annotation repository key. 
         text
@@ -125,6 +128,9 @@ class Text(Annotation):
                   backgroundStyle: SymbolicConstant = TRANSPARENT, backgroundColor: str = '',
                   box: Boolean = OFF, justification: SymbolicConstant = JUSTIFY_LEFT):
         """This method modifies the Text object.
+        
+        Parameters
+        ----------
         text
             A String specifying the text of the Text object. The default value is an empty string. 
         offset

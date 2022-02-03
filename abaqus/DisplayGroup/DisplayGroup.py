@@ -74,6 +74,9 @@ class DisplayGroup:
         .. code-block:: python
 
             session.DisplayGroup
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         leaf
@@ -87,6 +90,9 @@ class DisplayGroup:
 
     def add(self, leaf: Leaf):
         """This method adds the specified items to the display group.
+        
+        Parameters
+        ----------
         leaf
             A Leaf object specifying the items to add to the display group. 
         """
@@ -95,6 +101,9 @@ class DisplayGroup:
     def either(self, leaf: Leaf):
         """This method redefines the display group to be only those items that are not shared by
         the *leaf* argument and by the display group.
+        
+        Parameters
+        ----------
         leaf
             A Leaf object specifying the items to be excluded from the display group. 
         """
@@ -103,6 +112,9 @@ class DisplayGroup:
     def intersect(self, leaf: Leaf):
         """This method redefines the display group to be only those items that are shared by the
         *leaf* argument and the display group.
+        
+        Parameters
+        ----------
         leaf
             A Leaf object specifying the items to be included in the display group. 
         """
@@ -115,6 +127,9 @@ class DisplayGroup:
 
     def remove(self, leaf: Leaf):
         """This method removes the specified items from the display group.
+        
+        Parameters
+        ----------
         leaf
             A Leaf object specifying the items to remove from the display group. 
         """
@@ -122,6 +137,9 @@ class DisplayGroup:
 
     def replace(self, leaf: Leaf):
         """This method replaces the contents of the display group with the specified items.
+        
+        Parameters
+        ----------
         leaf
             A Leaf object specifying the items with which to replace the current display group 
             contents. 

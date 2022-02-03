@@ -31,6 +31,9 @@ class PlyStackPlotOptions:
                   thicknessLabelsColor: str = '', showIntPoints: Boolean = OFF, intPointsColor: str = '',
                   sizeX: float = 1, sizeY: float = 1, sizeZ: float = 0):
         """This method modifies the PlyStackPlotOptions object.
+        
+        Parameters
+        ----------
         renderStyle
             A SymbolicConstant specifying how the plies in the viewport are rendered. Possible 
             values are WIRE_FRAME, FILLED, and SHADED. The default value is SHADED. 

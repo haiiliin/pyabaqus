@@ -33,6 +33,9 @@ class ConcentratedFilmCondition(Interaction):
         .. code-block:: python
 
             mdb.models[name].ConcentratedFilmCondition
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -102,6 +105,9 @@ class ConcentratedFilmCondition(Interaction):
                   sinkFieldName: str = '', sinkDistributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing ConcentratedFilmCondition object in the
         step where it is created.
+        
+        Parameters
+        ----------
         nodalArea
             A Float specifying the area associated with the node where the concentrated film 
             condition is applied. The default value is 1.0. 
@@ -152,6 +158,9 @@ class ConcentratedFilmCondition(Interaction):
     def setValuesInStep(self, stepName: str):
         """This method modifies the propagating data of an existing ConcentratedFilmCondition
         object in the specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         """

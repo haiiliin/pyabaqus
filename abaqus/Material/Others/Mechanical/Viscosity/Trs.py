@@ -37,6 +37,9 @@ class Trs:
             - mdb.models[name].materials[name].viscosity.Trs
             - session.odbs[name].materials[name].viscoelastic.Trs
             - session.odbs[name].materials[name].viscosity.Trs
+        
+        Parameters
+        ----------
         definition
             A SymbolicConstant specifying the definition of the shift function. Possible values are 
             WLF, ARRHENIUS, and USER. The default value is WLF. 

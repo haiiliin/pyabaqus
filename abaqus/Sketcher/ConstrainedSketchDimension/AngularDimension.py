@@ -14,6 +14,9 @@ class AngularDimension(ConstrainedSketchDimension):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].AngularDimension
+        
+        Parameters
+        ----------
         line1
             A ConstrainedSketchGeometry object specifying the first line. 
         line2

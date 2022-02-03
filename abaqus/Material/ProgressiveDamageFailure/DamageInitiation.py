@@ -229,6 +229,9 @@ class DamageInitiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].DuctileDamageInitiation
             - session.odbs[name].materials[name].DuctileDamageInitiation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described in the "Table data" 
             section. 
@@ -292,6 +295,9 @@ class DamageInitiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].FldDamageInitiation
             - session.odbs[name].materials[name].FldDamageInitiation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described in the "Table data" 
             section. 
@@ -355,6 +361,9 @@ class DamageInitiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].FlsdDamageInitiation
             - session.odbs[name].materials[name].FlsdDamageInitiation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described in the "Table data" 
             section. 
@@ -419,6 +428,9 @@ class DamageInitiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].JohnsonCookDamageInitiation
             - session.odbs[name].materials[name].JohnsonCookDamageInitiation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described in the "Table data" 
             section. 
@@ -483,6 +495,9 @@ class DamageInitiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].MaxeDamageInitiation
             - session.odbs[name].materials[name].MaxeDamageInitiation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described in the "Table data" 
             section. 
@@ -550,6 +565,9 @@ class DamageInitiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].MaxsDamageInitiation
             - session.odbs[name].materials[name].MaxsDamageInitiation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described in the "Table data" 
             section. 
@@ -616,6 +634,9 @@ class DamageInitiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].MkDamageInitiation
             - session.odbs[name].materials[name].MkDamageInitiation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described in the "Table data" 
             section. 
@@ -680,6 +701,9 @@ class DamageInitiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].MsfldDamageInitiation
             - session.odbs[name].materials[name].MsfldDamageInitiation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described in the "Table data" 
             section. 
@@ -745,6 +769,9 @@ class DamageInitiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].QuadeDamageInitiation
             - session.odbs[name].materials[name].QuadeDamageInitiation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described in the "Table data" 
             section. 
@@ -813,6 +840,9 @@ class DamageInitiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].QuadsDamageInitiation
             - session.odbs[name].materials[name].QuadsDamageInitiation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described in the "Table data" 
             section. 
@@ -881,6 +911,9 @@ class DamageInitiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].MaxpeDamageInitiation
             - session.odbs[name].materials[name].MaxpeDamageInitiation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described in the "Table data" 
             section. 
@@ -949,6 +982,9 @@ class DamageInitiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].MaxpsDamageInitiation
             - session.odbs[name].materials[name].MaxpsDamageInitiation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described in the "Table data" 
             section. 
@@ -1016,6 +1052,9 @@ class DamageInitiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].ShearDamageInitiation
             - session.odbs[name].materials[name].ShearDamageInitiation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described in the "Table data" 
             section. 
@@ -1080,6 +1119,9 @@ class DamageInitiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].HashinDamageInitiation
             - session.odbs[name].materials[name].HashinDamageInitiation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described in the "Table data" 
             section. 

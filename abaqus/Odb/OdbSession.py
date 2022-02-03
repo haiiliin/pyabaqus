@@ -12,6 +12,9 @@ class OdbSession(SessionBase):
         -----
             This function can be accessed by:
             - session.ScratchOdb
+        
+        Parameters
+        ----------
         odb
             An Odb object specifying the output database with which to associate.
 

@@ -28,6 +28,9 @@ class MeshFaceArray(list[MeshFace]):
         .. code-block:: python
 
             mesh.MeshFaceArray
+        
+        Parameters
+        ----------
         elemFaces
             A list of MeshFace objects. 
 
@@ -40,6 +43,9 @@ class MeshFaceArray(list[MeshFace]):
     def getSequenceFromMask(self, mask: str):
         """This method returns the objects in the MeshFaceArray identified using the specified
         *mask*. When large number of objects are involved, this method is highly efficient.
+        
+        Parameters
+        ----------
         mask
             A String specifying the object or objects. 
 

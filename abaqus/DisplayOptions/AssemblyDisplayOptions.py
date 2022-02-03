@@ -236,6 +236,9 @@ class AssemblyDisplayOptions:
                   optimizationTasks: Boolean = OFF, geometricRestrictions: Boolean = OFF,
                   stopConditions: Boolean = OFF):
         """This method modifies the AssemblyDisplayOptions object.
+        
+        Parameters
+        ----------
         visibleInstances
             A sequence of Strings specifying the names of the part instances that are visible in the 
             viewport. The default value is an empty sequence. 

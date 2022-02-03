@@ -23,6 +23,9 @@ class OdbDataStep:
 
     def setValues(self, activateFrames: Boolean, update: Boolean = OFF):
         """This method modifies the OdbDataStep object.
+        
+        Parameters
+        ----------
         activateFrames
             A Boolean specifying whether to activate all the frames in the step. 
         update

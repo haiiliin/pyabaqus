@@ -22,6 +22,9 @@ class BCDisplayOptions:
                   acousticPressure: Boolean = ON, electricPotential: Boolean = ON,
                   concentration: Boolean = ON, encastre: Boolean = ON, pinned: Boolean = ON):
         """This method modifies the BCDisplayOptions object.
+        
+        Parameters
+        ----------
         displacement
             A Boolean specifying whether displacement symbols are shown. The default value is ON. 
         velocity

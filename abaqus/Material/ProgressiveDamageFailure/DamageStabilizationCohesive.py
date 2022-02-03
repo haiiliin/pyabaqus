@@ -104,6 +104,9 @@ class DamageStabilizationCohesive:
             - .DamageStabilizationCohesive
             - session.odbs[name].materials[name].shearDamageInitiation\
             - .DamageStabilizationCohesive
+        
+        Parameters
+        ----------
         cohesiveCoeff
             None or a Float specifying the viscosity coefficient. The default value is None. 
 

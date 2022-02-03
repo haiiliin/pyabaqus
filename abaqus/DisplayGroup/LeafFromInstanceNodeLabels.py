@@ -40,6 +40,9 @@ class LeafFromInstanceNodeLabels(Leaf):
         .. code-block:: python
 
             LeafFromInstanceNodeLabels
+        
+        Parameters
+        ----------
         nodeLabels
             A sequence of sequences specifying node labels. Each inner sequence consists of a 
             PartInstance object followed by a sequence of Strings specifying node labels. 

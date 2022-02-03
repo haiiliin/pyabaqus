@@ -15,6 +15,9 @@ class AnnotationViewport(ViewportBase):
 
     def plotAnnotation(self, annotation: Annotation, index: str = 0.0):
         """This method plots an Annotation object in aViewport.
+        
+        Parameters
+        ----------
         annotation
             An Annotation object to plot. 
         index

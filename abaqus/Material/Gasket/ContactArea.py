@@ -38,6 +38,9 @@ class ContactArea:
             This function can be accessed by:
             - mdb.models[name].materials[name].gasketThicknessBehavior.ContactArea
             - session.odbs[name].materials[name].gasketThicknessBehavior.ContactArea
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

@@ -31,6 +31,9 @@ class Ornl:
             - mdb.models[name].materials[name].Plastic.Ornl
             - session.odbs[name].materials[name].creep.Ornl
             - session.odbs[name].materials[name].Plastic.Ornl
+        
+        Parameters
+        ----------
         a
             A Float specifying the saturation rates for kinematic shift caused by creep strain, as 
             defined by Equation (15) of Section 4.3.3–3 of the Nuclear Standard. The default value 

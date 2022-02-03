@@ -10,6 +10,9 @@ class Spot(ConstrainedSketchVertex):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].Spot
+        
+        Parameters
+        ----------
         point
             A pair of Floats specifying the coordinates of the construction point. 
 

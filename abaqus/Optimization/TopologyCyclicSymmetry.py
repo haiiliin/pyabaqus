@@ -30,6 +30,9 @@ class TopologyCyclicSymmetry(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].TopologyCyclicSymmetry
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -58,6 +61,9 @@ class TopologyCyclicSymmetry(GeometricRestriction):
 
     def setValues(self, axis: SymbolicConstant = AXIS_1, csys: int = None, ignoreFrozenArea: Boolean = OFF):
         """This method modifies the TopologyCyclicSymmetry object.
+        
+        Parameters
+        ----------
         axis
             A SymbolicConstant specifying the translation direction defined along an axis positioned 
             at the *csys* origin. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default value 

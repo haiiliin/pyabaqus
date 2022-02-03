@@ -35,6 +35,9 @@ class PeriodicAmplitude(Amplitude):
 
             mdb.models[name].PeriodicAmplitude
             session.odbs[name].PeriodicAmplitude
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         frequency
@@ -58,6 +61,9 @@ class PeriodicAmplitude(Amplitude):
 
     def setValues(self, timeSpan: SymbolicConstant = STEP):
         """This method modifies the PeriodicAmplitude object.
+        
+        Parameters
+        ----------
         timeSpan
             A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
             and TOTAL. The default value is STEP.

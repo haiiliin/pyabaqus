@@ -81,6 +81,9 @@ class ConnectorOptions:
             session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions
             session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.cdcTerms[i].ConnectorOptions
             session.odbs[name].sections[name].behaviorOptions[i].ConnectorOptions
+        
+        Parameters
+        ----------
         useBehRegSettings
             A Boolean specifying whether or not to use the behavior-level settings for 
             regularization options. This argument is applicable only for an Abaqus/Explicit 

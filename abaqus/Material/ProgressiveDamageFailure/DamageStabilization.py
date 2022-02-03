@@ -105,6 +105,9 @@ class DamageStabilization:
             - .DamageStabilization
             - session.odbs[name].materials[name].shearDamageInitiation\
             - .DamageStabilization
+        
+        Parameters
+        ----------
         fiberTensileCoeff
             A Float specifying the viscosity coefficient for the fiber tensile failure mode. 
         fiberCompressiveCoeff

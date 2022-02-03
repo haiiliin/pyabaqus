@@ -14,6 +14,9 @@ class ConstrainedSketchVertexArray:
 
     def findAt(self, coordinates: tuple, printWarning: Boolean = True):
         """This method returns the ConstrainedSketchVertex located at the given coordinates.
+        
+        Parameters
+        ----------
         coordinates
             A sequence of Floats specifying the *X*- and *Y*-coordinates of the object to find. 
         printWarning

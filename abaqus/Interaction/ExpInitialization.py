@@ -36,6 +36,9 @@ class ExpInitialization(ContactInitialization):
         .. code-block:: python
 
             mdb.models[name].ExpInitialization
+        
+        Parameters
+        ----------
         name
             A String specifying the contact initialization repository key. 
         overclosureType
@@ -87,6 +90,9 @@ class ExpInitialization(ContactInitialization):
                   overclosureTolerance: float = None, adjustNodalCoords: Boolean = True,
                   secondaryNodesetName: str = None, stepFraction: float = 1):
         """This method modifies the ExpInitialization object.
+        
+        Parameters
+        ----------
         overclosureType
             A SymbolicConstant specifying the type of overclosure to be defined. Possible values are 
             ADJUST, INTERFERENCE, and CLEARANCE. The default value is ADJUST. 

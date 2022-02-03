@@ -37,6 +37,9 @@ class SectionLayer:
 
             section.SectionLayer 
             odbSection.SectionLayer
+        
+        Parameters
+        ----------
         thickness
             A Float specifying the thickness of the section layer. 
         material

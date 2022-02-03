@@ -59,6 +59,9 @@ class HomogeneousShellSection(GeometryShellSection):
             .HomogeneousShellSection
             mdb.models[name].HomogeneousShellSection
             session.odbs[name].HomogeneousShellSection
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         material
@@ -139,6 +142,9 @@ class HomogeneousShellSection(GeometryShellSection):
                   thicknessModulus: float = None, useDensity: Boolean = OFF, density: float = 0,
                   thicknessField: str = '', nodalThicknessField: str = ''):
         """This method modifies the HomogeneousShellSection object.
+        
+        Parameters
+        ----------
         thickness
             A Float specifying the thickness of the section. The *thickness* argument applies only 
             when *thicknessType*=UNIFORM. The default value is 0.0. 

@@ -36,6 +36,9 @@ class GasketMembraneElastic:
             This function can be accessed by:
             - mdb.models[name].materials[name].GasketMembraneElastic
             - session.odbs[name].materials[name].GasketMembraneElastic
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

@@ -40,6 +40,9 @@ class LeafFromModelElemLabels(Leaf):
         .. code-block:: python
 
             LeafFromModelElemLabels
+        
+        Parameters
+        ----------
         elementLabels
             A sequence of Strings specifying expressions that denote element labels per part 
             instance in the model. Each part instance element expression is a sequence of a String 

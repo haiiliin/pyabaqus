@@ -279,6 +279,9 @@ class ModalDynamicsStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].ModalDynamicsStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         previous
@@ -329,6 +332,9 @@ class ModalDynamicsStep(AnalysisStep):
                   directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
                   rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency()):
         """This method modifies the ModalDynamicsStep object.
+        
+        Parameters
+        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         continueAnalysis

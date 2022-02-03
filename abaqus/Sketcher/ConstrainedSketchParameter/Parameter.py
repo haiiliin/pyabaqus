@@ -13,6 +13,9 @@ class Parameter(ConstrainedSketchParameter):
             - mdb.models[name].sketches[name].Parameter
 
         ----------
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the ConstrainedSketch object. No two parameters
             in the same ConstrainedSketch can have the same name. 

@@ -26,6 +26,9 @@ class SizingClusterAreas(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].SizingClusterAreas
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         regions

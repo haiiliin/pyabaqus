@@ -61,6 +61,9 @@ class SurfaceConcentrationFlux(Load):
         .. code-block:: python
 
             mdb.models[name].SurfaceConcentrationFlux
+        
+        Parameters
+        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -93,6 +96,9 @@ class SurfaceConcentrationFlux(Load):
     def setValues(self, field: str = '', distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):
         """This method modifies the data for an existing SurfaceConcentrationFlux object in the
         step where it is created.
+        
+        Parameters
+        ----------
         field
             A String specifying the name of the AnalyticalField object associated with this load. 
             The *field* argument applies only when *distributionType*=FIELD. The default value is an 
@@ -111,6 +117,9 @@ class SurfaceConcentrationFlux(Load):
     def setValuesInStep(self, stepName: str, magnitude: float = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing SurfaceConcentrationFlux
         object in the specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the surface concentration flux is 
             modified. 

@@ -84,6 +84,9 @@ class GasketThicknessBehavior:
             This function can be accessed by:
             - mdb.models[name].materials[name].GasketThicknessBehavior
             - session.odbs[name].materials[name].GasketThicknessBehavior
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying loading data. The first sequence must 
             contain only 0. At least two sequences must be specified if *type*=DAMAGE, and at least 

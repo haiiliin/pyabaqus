@@ -45,6 +45,9 @@ class NonstructuralMass(Inertia):
 
             mdb.models[name].parts[name].engineeringFeatures.NonstructuralMass
             mdb.models[name].rootAssembly.engineeringFeatures.NonstructuralMass
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         region
@@ -68,6 +71,9 @@ class NonstructuralMass(Inertia):
 
     def setValues(self, distribution: SymbolicConstant = MASS_PROPORTIONAL):
         """This method modifies the NonstructuralMass object.
+        
+        Parameters
+        ----------
         distribution
             A SymbolicConstant specifying the distribution of the nonstructural mass. Possible 
             values are MASS_PROPORTIONAL and VOLUME_PROPORTIONAL. The default value is 

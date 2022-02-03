@@ -34,6 +34,9 @@ class EventSeries:
         .. code-block:: python
 
             mdb.models[name].EventSeriesData
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -66,6 +69,9 @@ class EventSeries:
     def setValues(self, transformType: str = NONE, timeSpan: str = STEP_TIME, transformations: str = '',
                   fileName: str = '', data: str = ''):
         """This method modifies the EventSeries object.
+        
+        Parameters
+        ----------
         transformType
             A Symbolic constant specifying the type of transformation. Possible values are NONE, 
             BOTH, TRANSLATE, and ROTATE. The default value is NONE. 

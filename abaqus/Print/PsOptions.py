@@ -19,6 +19,9 @@ class PsOptions:
                   fontType: SymbolicConstant = PS_IF_AVAILABLE, imageFormat: SymbolicConstant = VECTOR,
                   shadingQuality: SymbolicConstant = MEDIUM):
         """This method modifies the PsOptions object.
+        
+        Parameters
+        ----------
         paperSize
             A SymbolicConstant specifying the paper size. Possible values are: 
             - LETTER 

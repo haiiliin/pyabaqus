@@ -29,6 +29,9 @@ class BeadFixedRegion(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].BeadFixedRegion
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -56,6 +59,9 @@ class BeadFixedRegion(GeometricRestriction):
 
     def setValues(self, csys: int = None, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF):
         """This method modifies the BeadFixedRegion object.
+        
+        Parameters
+        ----------
         csys
             None or a DatumCsys object specifying the local coordinate system. If *csys*=None, the 
             global coordinate system is used. When this member is queried, it returns an Int. The 

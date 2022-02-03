@@ -29,6 +29,9 @@ class OutputModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].FieldOutputRequest
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         createStepName
@@ -136,6 +139,9 @@ class OutputModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].HistoryOutputRequest
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         createStepName
@@ -235,6 +241,9 @@ class OutputModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].IntegratedOutputSection
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         surface
@@ -280,6 +289,9 @@ class OutputModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].TimePoint
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         points

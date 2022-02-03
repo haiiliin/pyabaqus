@@ -46,6 +46,9 @@ class DebondVCCT(Crack):
 
             mdb.models[name].parts[name].engineeringFeatures.DebondVCCT
             mdb.models[name].rootAssembly.engineeringFeatures.DebondVCCT
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         initiationStep
@@ -70,6 +73,9 @@ class DebondVCCT(Crack):
 
     def setValues(self, debondingForceAmplitude: SymbolicConstant = STEP, printToDATFrequency: int = 1):
         """This method modifies the DebondVCCT object.
+        
+        Parameters
+        ----------
         debondingForceAmplitude
             A SymbolicConstant specifying whether the debond force between the two surfaces at the 
             crack tip is to be released immediately or gradually during the following increment 

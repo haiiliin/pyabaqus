@@ -47,6 +47,9 @@ class Concrete:
             This function can be accessed by:
             - mdb.models[name].materials[name].Concrete
             - session.odbs[name].materials[name].Concrete
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

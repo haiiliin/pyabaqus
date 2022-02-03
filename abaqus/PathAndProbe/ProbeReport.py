@@ -21,6 +21,9 @@ class ProbeReport:
                   numFormat: SymbolicConstant = ENGINEERING, pageWidth: SymbolicConstant = NO_LIMIT,
                   printTotal: Boolean = OFF, printMinMax: Boolean = OFF):
         """This method modifies the ProbeReport object.
+        
+        Parameters
+        ----------
         options
             None or a ProbeReport object specifying values to be copied. If other arguments are also 
             supplied to setValues, they will override the values in *options*. The default value is 

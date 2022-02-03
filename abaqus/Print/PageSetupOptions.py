@@ -21,6 +21,9 @@ class PageSetupOptions:
                   rightMargin: float = 0, orientation: SymbolicConstant = PORTRAIT, logo: Boolean = ON,
                   date: Boolean = ON):
         """This method modifies the PageSetupOptions object.
+        
+        Parameters
+        ----------
         imageSize
             A SymbolicConstant or a pair of Floats specifying the size of the printed image in the 
             currently selected units (inches or millimeters). Possible values are FIT_TO_PAGE and 

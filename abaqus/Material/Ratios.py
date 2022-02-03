@@ -46,6 +46,9 @@ class Ratios:
             mdb.models[name].materials[name].swelling.Ratios
             session.odbs[name].materials[name].moistureSwelling.Ratios
             session.odbs[name].materials[name].swelling.Ratios
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

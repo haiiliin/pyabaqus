@@ -68,6 +68,9 @@ class TypeBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].EncastreBC
+        
+        Parameters
+        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -100,6 +103,9 @@ class TypeBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].EncastreBC
+        
+        Parameters
+        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -132,6 +138,9 @@ class TypeBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].EncastreBC
+        
+        Parameters
+        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -164,6 +173,9 @@ class TypeBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].EncastreBC
+        
+        Parameters
+        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -196,6 +208,9 @@ class TypeBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].EncastreBC
+        
+        Parameters
+        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -228,6 +243,9 @@ class TypeBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].EncastreBC
+        
+        Parameters
+        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -260,6 +278,9 @@ class TypeBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].EncastreBC
+        
+        Parameters
+        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -292,6 +313,9 @@ class TypeBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].EncastreBC
+        
+        Parameters
+        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -317,6 +341,9 @@ class TypeBC(BoundaryCondition):
                   buckleCase: SymbolicConstant = NOT_APPLICABLE, localCsys: str = None):
         """This method modifies the data for an existing TypeBC object in the step where it is
         created.
+        
+        Parameters
+        ----------
         region
             A Region object specifying the region to which the boundary condition is applied. 
         typeName
@@ -336,6 +363,9 @@ class TypeBC(BoundaryCondition):
     def setValuesInStep(self, stepName: str, typeName: SymbolicConstant = None):
         """This method always returns a value error for a TypeBC; it is inherited from the
         BoundaryCondition object.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         typeName

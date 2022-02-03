@@ -33,6 +33,9 @@ class AcousticInterfaceSection(Section):
 
             mdb.models[name].AcousticInterfaceSection
             session.odbs[name].AcousticInterfaceSection
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         thickness
@@ -48,6 +51,9 @@ class AcousticInterfaceSection(Section):
 
     def setValues(self, thickness: float = 1):
         """This method modifies the AcousticInterfaceSection object.
+        
+        Parameters
+        ----------
         thickness
             A Float specifying the thickness of the section. Possible values are *thickness* >> 0.0. 
             The default value is 1.0.

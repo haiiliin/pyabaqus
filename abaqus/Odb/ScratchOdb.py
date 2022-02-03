@@ -29,6 +29,9 @@ class ScratchOdb:
         .. code-block:: python
 
             session.ScratchOdb
+        
+        Parameters
+        ----------
         odb
             An Odb object specifying the output database with which to associate. 
 

@@ -14,6 +14,9 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].CoincidentConstraint
+        
+        Parameters
+        ----------
         entity1
             A ConstrainedSketchGeometry object or a ConstrainedSketchVertex object specifying the first object.
         entity2
@@ -36,6 +39,9 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].ConcentricConstraint
+        
+        Parameters
+        ----------
         entity1
             A ConstrainedSketchGeometry object specifying the first arc, circle, ellipse, or sketch
             vertex.
@@ -58,6 +64,9 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].EqualLengthConstraint
+        
+        Parameters
+        ----------
         entity1
             A ConstrainedSketchGeometry object specifying the first line.
         entity2
@@ -78,6 +87,9 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].EqualRadiusConstraint
+        
+        Parameters
+        ----------
         entity1
             A ConstrainedSketchGeometry object specifying the first arc or circle.
         entity2
@@ -99,6 +111,9 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].FixedConstraint
+        
+        Parameters
+        ----------
         entity
             A ConstrainedSketchGeometry object or a ConstrainedSketchVertex object specifying the item to fix in
             space.
@@ -118,6 +133,9 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].HorizontalConstraint
+        
+        Parameters
+        ----------
         entity
             A ConstrainedSketchGeometry object specifying the line to constrain.
 
@@ -136,6 +154,9 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].VerticalConstraint
+        
+        Parameters
+        ----------
         entity
             A ConstrainedSketchGeometry object specifying the line to constrain.
 
@@ -154,6 +175,9 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].ParallelConstraint
+        
+        Parameters
+        ----------
         entity1
             A ConstrainedSketchGeometry object specifying the first line.
         entity2
@@ -175,6 +199,9 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].PerpendicularConstraint
+        
+        Parameters
+        ----------
         entity1
             A ConstrainedSketchGeometry object specifying the first object.
         entity2
@@ -199,6 +226,9 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].EqualDistanceConstraint
+        
+        Parameters
+        ----------
         entity1
             AConstrainedSketchGeometry object specifying the first line or ConstrainedSketchVertex object.
         entity2
@@ -222,6 +252,9 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].TangentConstraint
+        
+        Parameters
+        ----------
         entity1
             A ConstrainedSketchGeometry object specifying the first object.
         entity2

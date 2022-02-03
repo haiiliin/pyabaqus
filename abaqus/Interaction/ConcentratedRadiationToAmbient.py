@@ -32,6 +32,9 @@ class ConcentratedRadiationToAmbient(Interaction):
         .. code-block:: python
 
             mdb.models[name].ConcentratedRadiationToAmbient
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -77,6 +80,9 @@ class ConcentratedRadiationToAmbient(Interaction):
                   field: str = '', distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing ConcentratedRadiationToAmbient object in
         the step where it is created.
+        
+        Parameters
+        ----------
         nodalArea
             A Float specifying the area associated with the node where the concentrated radiation 
             interaction is applied. The default value is 1.0. 
@@ -99,6 +105,9 @@ class ConcentratedRadiationToAmbient(Interaction):
                         distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the propagating data of an existing ConcentratedRadiationToAmbient
         object in the specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         nodalArea

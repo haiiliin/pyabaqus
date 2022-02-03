@@ -55,6 +55,9 @@ class Skin:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].Skin
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. The default value is an empty string. 
         faces
@@ -88,6 +91,9 @@ class Skin:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].Skin
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. The default value is an empty string. 
         faces

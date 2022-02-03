@@ -99,6 +99,9 @@ class XYCurve:
         .. code-block:: python
 
             session.Curve
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         data
@@ -113,6 +116,9 @@ class XYCurve:
     def setValues(self, displayTypes: SymbolicConstant = None, legendLabel: str = '', symbolFrequency: int = 1,
                   useDefault: Boolean = ON):
         """This method modifies the XYCurve object.
+        
+        Parameters
+        ----------
         displayTypes
             A sequence of SymbolicConstants specifying that describe how curves are to be displayed. 
             Possible values are LINE and SYMBOL. The default value is (LINE). 

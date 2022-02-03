@@ -50,6 +50,9 @@ class HistoryOutput:
         .. code-block:: python
 
             session.odbs[name].steps[name].historyRegions[name].HistoryOutput
+        
+        Parameters
+        ----------
         name
             A String specifying the output variable name. 
         description
@@ -70,6 +73,9 @@ class HistoryOutput:
     @typing.overload
     def addData(self, frame: str, value: str):
         """This method adds data to the *data* member of the HistoryOutput object.
+        
+        Parameters
+        ----------
         frame
             A Double specifying the frame value. *frame* can be specified in step time, frequency, 
             or mode number. 
@@ -81,6 +87,9 @@ class HistoryOutput:
     @typing.overload
     def addData(self, frame: tuple, value: tuple):
         """This method adds data to the *data* member of the HistoryOutput object.
+        
+        Parameters
+        ----------
         frame
             A sequence of Floats specifying the frame values. *frame* can be specified in step time, 
             frequency, or mode number. 
@@ -98,6 +107,9 @@ class HistoryOutput:
     @typing.overload
     def addData(self, data: tuple):
         """This method adds data to the *data* member of the HistoryOutput object.
+        
+        Parameters
+        ----------
         data
             A sequence of pairs of Floats specifying the pairs (*frameValue*, *value*) where 
             *frameValue* is either time, frequency, or mode and *value* is the value of the 

@@ -27,6 +27,9 @@ class SizingMemberSize(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].SizingMemberSize
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         region

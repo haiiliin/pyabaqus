@@ -37,6 +37,9 @@ class IncidentWave(Interaction):
         .. code-block:: python
 
             mdb.models[name].IncidentWave
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -97,6 +100,9 @@ class IncidentWave(Interaction):
                   referenceMagnitude: float = None, detonationTime: float = None,
                   magnitudeFactor: float = 1):
         """This method modifies the IncidentWave object.
+        
+        Parameters
+        ----------
         definition
             A SymbolicConstant specifying the type of incident wave to be defined. The value must be 
             PRESSURE for linear perturbation steps. An Explicit step is required when the value is 

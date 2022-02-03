@@ -33,6 +33,9 @@ class FilmConditionProp(ContactProperty):
         .. code-block:: python
 
             mdb.models[name].FilmConditionProp
+        
+        Parameters
+        ----------
         name
             A String specifying the interaction property repository key. 
         temperatureDependency
@@ -56,6 +59,9 @@ class FilmConditionProp(ContactProperty):
 
     def setValues(self, temperatureDependency: Boolean = OFF, dependencies: int = 0, property: tuple = ()):
         """This method modifies the FilmConditionProp object.
+        
+        Parameters
+        ----------
         temperatureDependency
             A Boolean specifying whether the data depend on temperature. The default value is OFF. 
         dependencies

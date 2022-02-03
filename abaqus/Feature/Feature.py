@@ -64,6 +64,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         name
             A String specifying a unique Feature name. 
         points
@@ -120,6 +123,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         name
             A String specifying a unique Feature name. 
         startPoint
@@ -203,6 +209,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         name
             A String specifying a unique Feature name. 
         edges
@@ -301,6 +310,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         face
             A cylindrical or conical Face object. 
 
@@ -326,6 +338,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         plane
             A planar Face, an ElementFace, or a Datum object representing a datum plane. 
         point
@@ -353,6 +368,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         edge
             A straight Edge, an ElementEdge, or a Datum object representing a datum axis. 
         point
@@ -380,6 +398,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         principalAxis
             A SymbolicConstant specifying the principal axis. Possible values are XAXIS, YAXIS, and 
             ZAXIS. 
@@ -407,6 +428,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         line
             A straight Edge, a Datum object representing a datum axis, or an ElementEdge object 
             specifying the line to rotate. 
@@ -439,6 +463,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         line
             A straight Edge, a Datum object representing a datum axis, or an ElementEdge object 
             specifying the line to rotate. 
@@ -473,6 +500,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         point1
             A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point
             specifying the first point on the circle. 
@@ -504,6 +534,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         edge
             A straight Edge or an ElementEdge object. 
 
@@ -529,6 +562,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         plane1
             A planar Face, an ElementFace, or a Datum object representing a datum plane. 
         plane2
@@ -556,6 +592,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         point1
             A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         point2
@@ -583,6 +622,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         coordSysType
             A SymbolicConstant specifying the default coordinate system to be used. Possible values 
             are CARTESIAN, CYLINDRICAL, and SPHERICAL. 
@@ -612,6 +654,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         coordSysType
             A SymbolicConstant specifying the type of coordinate system. Possible values are 
             CARTESIAN, CYLINDRICAL, and SPHERICAL. 
@@ -651,6 +696,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         coordSysType
             A SymbolicConstant specifying the type of coordinate system. Possible values are 
             CARTESIAN, CYLINDRICAL, and SPHERICAL. 
@@ -699,6 +747,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         coordSysType
             A SymbolicConstant specifying the type of coordinate system. Possible values are 
             CARTESIAN, CYLINDRICAL, and SPHERICAL. 
@@ -733,6 +784,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         principalPlane
             A SymbolicConstant specifying the principal plane. Possible values are XYPLANE, YZPLANE, 
             and XZPLANE. 
@@ -762,6 +816,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         plane
             A planar Face, an ElementFace, or a Datum object representing a datum plane. 
         flip
@@ -793,6 +850,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         plane
             A planar Face, an ElementFace, or a Datum object representing a datum plane. 
         point
@@ -823,6 +883,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         plane
             A planar Face, an ElementFace, or a Datum object representing a datum plane. 
         axis
@@ -852,6 +915,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         point1
             A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         point2
@@ -881,6 +947,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         line
             A straight Edge, an ElementEdge, or a Datum object representing a datum axis. 
         point
@@ -908,6 +977,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         point
             A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         normal
@@ -935,6 +1007,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         point1
             A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         point2
@@ -962,6 +1037,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         coords
             A sequence of three Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the datum 
             point. 
@@ -985,6 +1063,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         point
             A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         vector
@@ -1008,6 +1089,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         point1
             A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         point2
@@ -1032,6 +1116,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         face
             A planar Face or a Datum object representing a datum plane. 
         edge1
@@ -1065,6 +1152,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         edge
             An Edge object. 
         parameter
@@ -1093,6 +1183,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         point
             A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         edge
@@ -1120,6 +1213,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         point
             A ConstrainedSketchVertex, an InterestingPoint, a MeshNode, or a Datum object representing a datum point.
         face
@@ -1149,6 +1245,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         sketchPlane
             A Datum plane object or a planar Face object specifying the sketch plane. 
         origin
@@ -1187,6 +1286,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         cells
             A sequence of Cell objects specifying the cells to partition. 
         datumPlane
@@ -1214,6 +1316,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         cells
             A sequence of Cell objects specifying the cells to partition. 
         extendFace
@@ -1241,6 +1346,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         cells
             A sequence of Cell objects specifying the cells to partition. 
         edges
@@ -1276,6 +1384,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         cell
             A Cell object specifying the cell to partition. 
         cornerPoints
@@ -1303,6 +1414,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         cell
             A Cell specifying the cell to partition. 
         edges
@@ -1331,6 +1445,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         cells
             A sequence of Cell objects specifying the cells to partition. 
         edge
@@ -1360,6 +1477,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         cells
             A sequence of Cell objects specifying the cells to partition. 
         point
@@ -1388,6 +1508,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         cells
             A sequence of Cell objects specifying the cells to partition. 
         point1
@@ -1420,6 +1543,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         cells
             A sequence of Cell objects specifying the cells to partition. 
         edges
@@ -1451,6 +1577,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         edges
             A sequence of Edge objects specifying the edges to partition. 
         datumPlane
@@ -1477,6 +1606,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         edges
             A sequence of Edge objects specifying the edges to partition. 
         parameter
@@ -1504,6 +1636,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         edge
             An Edge object specifying the edge to partition. 
         point
@@ -1531,6 +1666,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         face
             A Face object specifying the face to partition. 
 
@@ -1554,6 +1692,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         face
             A Face object specifying the face to partition. 
         edge1
@@ -1589,6 +1730,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         face
             A Face object specifying the face to partition. 
         edge1
@@ -1621,6 +1765,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         faces
             A sequence of Face objects specifying the faces to partition. 
         datumPlane
@@ -1645,6 +1792,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         faces
             A sequence of Face objects specifying the faces to partition. 
         extendFace
@@ -1670,6 +1820,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         faces
             A sequence of Face objects specifying the faces to partition. 
         cuttingFaces
@@ -1694,6 +1847,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         faces
             A sequence of Face objects specifying the faces to partition. 
         edges
@@ -1722,6 +1878,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         faces
             A sequence of Face objects specifying the face to partition. 
         point1
@@ -1753,6 +1912,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         faces
             A sequence of Face objects specifying the faces to partition. 
         sketch
@@ -1789,6 +1951,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         faces
             A sequence of Face objects specifying the faces to partition. 
         sketchPlane
@@ -1832,6 +1997,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         faces
             A sequence of Face objects specifying the faces to partition. 
         sketchPlane
@@ -1872,6 +2040,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         faces
             A sequence of Face objects specifying the faces to partition. 
         sketchPlane
@@ -1911,6 +2082,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         point
             A ConstrainedSketchVertex, InterestingPoint, a MeshNode, or a Datum object specifying a reference point.
             *point* can also be a sequence of three Floats representing the *X*-, *Y*-, and 
@@ -1936,6 +2110,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         wireEdgeList
             A sequence of Edge objects specifying the edges to remove. Any specified edge that is 
             not a wire edge will not be removed. 
@@ -1962,6 +2139,9 @@ class Feature:
 
             mdb.models[*name*].parts[*name*].AttachmentPoints
             mdb.models[*name*].rootAssembly.AttachmentPoints
+        
+        Parameters
+        ----------
         points
             A tuple of point pairs, each pair being itself represented by a tuple. For part level 
             features each point can be a ConstrainedSketchVertex, Datum point, Reference point, orphan mesh Node, or
@@ -2018,6 +2198,9 @@ class Feature:
     def setValues(self, parameter: float = None, parameter1: float = None, parameter2: float = None,
                   sketch: ConstrainedSketch = None, distance: float = None):
         """This method modifies the Feature object.
+        
+        Parameters
+        ----------
         parameter
             A Float specifying the normalized distance along *edge* at which to partition. Possible 
             values are 0.0 << *parameter* << 1.0. You use this argument to modify a partition 

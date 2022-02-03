@@ -40,6 +40,9 @@ class LeafFromSets(Leaf):
         .. code-block:: python
 
             LeafFromSets
+        
+        Parameters
+        ----------
         sets
             A sequence of Set objects. 
 

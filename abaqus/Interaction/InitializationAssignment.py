@@ -21,6 +21,9 @@ class InitializationAssignment:
     def changeValuesInStep(self, stepName: str, index: int, value: str):
         """This method allows modification of contact initialization assignments to domain pairs
         already defined in a given step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the contact initialization assignments 
             are to be modified. 
@@ -36,6 +39,9 @@ class InitializationAssignment:
     def appendInStep(self, stepName: str, assignments: SymbolicConstant):
         """This method allows addition of contact initialization assignments to new domain pairs in
         a given step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which new contact initialization assignments 
             are to be defined. 
@@ -55,6 +61,9 @@ class InitializationAssignment:
     def delete(self, indices: tuple):
         """The delete method allows you to delete existing contact initialization assignments from
         a ContactStd or ContactExp object.
+        
+        Parameters
+        ----------
         indices
             A sequence of Ints specifying the index of each contact initialization assignment to 
             delete. 

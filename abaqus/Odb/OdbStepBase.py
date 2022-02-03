@@ -107,6 +107,9 @@ class OdbStepBase:
         .. code-block:: python
 
             session.odbs[name].Step
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         description
@@ -193,6 +196,9 @@ class OdbStepBase:
     @typing.overload
     def getFrame(self, frameValue: str, match: SymbolicConstant = CLOSEST):
         """This method retrieves an OdbFrame object associated with a given frame value.
+        
+        Parameters
+        ----------
         frameValue
             A Double specifying the value at which the frame is required. *frameValue* can be the 
             step time or frequency. 
@@ -218,6 +224,9 @@ class OdbStepBase:
     @typing.overload
     def getFrame(self, loadCase: OdbLoadCase):
         """This method retrieves an OdbFrame object associated with a given load case.
+        
+        Parameters
+        ----------
         loadCase
             An OdbLoadCase object specifying a load case in the step. 
 
@@ -236,6 +245,9 @@ class OdbStepBase:
     def getFrame(self, loadCase: OdbLoadCase, frameValue: str, match: SymbolicConstant = CLOSEST):
         """This method retrieves an OdbFrame object associated with a given load case and frame
         value.
+        
+        Parameters
+        ----------
         loadCase
             An OdbLoadCase object specifying a load case in the step. 
         frameValue
@@ -266,6 +278,9 @@ class OdbStepBase:
     def getHistoryRegion(self, point: HistoryPoint, loadCase: OdbLoadCase = OdbLoadCase('loadCase')):
         """This method retrieves a HistoryRegion object associated with a HistoryPoint in the
         model.
+        
+        Parameters
+        ----------
         point
             A HistoryPoint object specifying the point in the model. 
         loadCase
@@ -284,6 +299,9 @@ class OdbStepBase:
 
     def setDefaultDeformedField(self, field: FieldOutput):
         """This method sets the default deformed field variable in a step.
+        
+        Parameters
+        ----------
         field
             A FieldOutput object specifying the default deformed field variable for visualization. 
         """
@@ -291,6 +309,9 @@ class OdbStepBase:
 
     def setDefaultField(self, field: FieldOutput):
         """This method sets the default field variable in a step.
+        
+        Parameters
+        ----------
         field
             A FieldOutput object specifying the default field variable for visualization. 
         """

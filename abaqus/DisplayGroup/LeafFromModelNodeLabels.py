@@ -40,6 +40,9 @@ class LeafFromModelNodeLabels(Leaf):
         .. code-block:: python
 
             LeafFromModelNodeLabels
+        
+        Parameters
+        ----------
         nodeLabels
             A sequence of Strings specifying expressions that denote node labels per part instance 
             in the model. Each part instance node expression is a sequence of a String specifying 

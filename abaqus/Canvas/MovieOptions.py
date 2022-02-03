@@ -22,6 +22,9 @@ class MovieOptions:
                   xScale: float = 1, yScale: float = 1, origin: tuple[float] = (),
                   translucency: float = 1, options: str = None):
         """This method modifies the MovieOptions object.
+        
+        Parameters
+        ----------
         movieName
             A String specifying the name of the movie. A list of valid movie names is in the 
             *movies* repository in the *session* object. 

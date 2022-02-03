@@ -44,6 +44,9 @@ class MultipointConstraint(Constraint):
         .. code-block:: python
 
             mdb.models[name].MultipointConstraint
+        
+        Parameters
+        ----------
         name
             A String specifying the constraint repository key. 
         surface
@@ -77,6 +80,9 @@ class MultipointConstraint(Constraint):
 
     def setValues(self, csys: str = None, userType: int = 0, userMode: SymbolicConstant = DOF_MODE_MPC):
         """This method modifies the MultipointConstraint object.
+        
+        Parameters
+        ----------
         csys
             None or a DatumCsys object specifying the initial orientation of the local coordinate 
             system for the MultipointConstraint's degrees of freedom. If *localCsys*=None, the 

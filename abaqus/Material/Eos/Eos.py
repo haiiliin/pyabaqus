@@ -48,6 +48,9 @@ class Eos:
             This function can be accessed by:
             - mdb.models[name].materials[name].Eos
             - session.odbs[name].materials[name].Eos
+        
+        Parameters
+        ----------
         type
             A SymbolicConstant specifying the equation of state. Possible values are USUP, JWL, 
             IDEALGAS, TABULAR, and IGNITIONANDGROWTH. The default value is IDEALGAS. 

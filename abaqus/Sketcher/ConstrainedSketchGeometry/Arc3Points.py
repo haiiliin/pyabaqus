@@ -11,6 +11,9 @@ class Arc3Points(ConstrainedSketchGeometry):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].Arc3Points
+        
+        Parameters
+        ----------
         point1
             A pair of Floats specifying the first endpoint of the arc. 
         point2

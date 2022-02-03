@@ -144,9 +144,6 @@ class RemeshingRule:
         
         Parameters
         ----------
-        
-        Parameters
-        ----------
         description
             A String specifying a descriptive string for this rule. The default value is an empty 
             string. 

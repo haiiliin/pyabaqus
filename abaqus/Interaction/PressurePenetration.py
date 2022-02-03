@@ -69,6 +69,9 @@ class PressurePenetration(Interaction):
         .. code-block:: python
 
             mdb.models[name].PressurePenetration
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -107,6 +110,9 @@ class PressurePenetration(Interaction):
     def setValues(self, amplitude: str = UNSET, penetrationTime: float = 0):
         """This method modifies the data for an existing PressurePenetration object in the step
         where it is created.
+        
+        Parameters
+        ----------
         amplitude
             A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. 
             UNSET should be used if the load has no amplitude reference. The default value is UNSET. 
@@ -122,6 +128,9 @@ class PressurePenetration(Interaction):
                         amplitude: str = '', penetrationTime: float = 0):
         """This method modifies the propagating data for an existing PressurePenetration object in
         the specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         penetrationPressure

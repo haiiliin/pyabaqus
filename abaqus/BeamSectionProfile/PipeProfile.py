@@ -33,6 +33,9 @@ class PipeProfile(Profile):
 
             mdb.models[name].PipeProfile
             session.odbs[name].PipeProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         r

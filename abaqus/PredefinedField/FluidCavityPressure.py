@@ -40,6 +40,9 @@ class FluidCavityPressure(PredefinedField):
         .. code-block:: python
 
             mdb.models[name].FluidCavityPressure
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         fluidCavity

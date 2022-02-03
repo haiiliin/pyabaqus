@@ -40,6 +40,9 @@ class Sorption:
             This function can be accessed by:
             - mdb.models[name].materials[name].Sorption
             - session.odbs[name].materials[name].Sorption
+        
+        Parameters
+        ----------
         absorptionTable
             A sequence of sequences of Floats specifying the items described below. 
         lawAbsorption

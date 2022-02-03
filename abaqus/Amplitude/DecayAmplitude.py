@@ -35,6 +35,9 @@ class DecayAmplitude(Amplitude):
 
             mdb.models[name].DecayAmplitude
             session.odbs[name].DecayAmplitude
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         initial
@@ -58,6 +61,9 @@ class DecayAmplitude(Amplitude):
 
     def setValues(self, timeSpan: SymbolicConstant = STEP):
         """This method modifies the DecayAmplitude object.
+        
+        Parameters
+        ----------
         timeSpan
             A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
             and TOTAL. The default value is STEP.

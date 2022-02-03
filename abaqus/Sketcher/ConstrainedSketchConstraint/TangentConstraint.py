@@ -12,6 +12,9 @@ class TangentConstraint(ConstrainedSketchConstraint):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].TangentConstraint
+        
+        Parameters
+        ----------
         entity1
             A ConstrainedSketchGeometry object specifying the first object. 
         entity2

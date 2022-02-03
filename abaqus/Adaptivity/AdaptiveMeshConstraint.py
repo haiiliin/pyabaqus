@@ -89,9 +89,6 @@ class AdaptiveMeshConstraint:
         
         Parameters
         ----------
-        
-        Parameters
-        ----------
         stepName
             A String specifying the name of the step in which the adaptive mesh constraint is 
             deactivated.
@@ -104,9 +101,6 @@ class AdaptiveMeshConstraint:
 
     def move(self, fromStepName: str, toStepName: str):
         """This method moves the adaptive mesh constraint state from one step to a different step.
-        
-        Parameters
-        ----------
         
         Parameters
         ----------
@@ -126,9 +120,6 @@ class AdaptiveMeshConstraint:
     def reset(self, stepName: str):
         """This method resets the adaptive mesh constraint state of the specified step to the state
         of the previous analysis step.
-        
-        Parameters
-        ----------
         
         Parameters
         ----------
@@ -154,9 +145,6 @@ class AdaptiveMeshConstraint:
 
     def delete(self, indices: tuple):
         """This method allows you to delete existing adaptive mesh constraints.
-        
-        Parameters
-        ----------
         
         Parameters
         ----------

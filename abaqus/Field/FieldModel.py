@@ -19,6 +19,9 @@ class FieldModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].DiscreteField
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         defaultValues
@@ -64,6 +67,9 @@ class FieldModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ExpressionField
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         expression
@@ -101,6 +107,9 @@ class FieldModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].MappedField
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         regionType

@@ -288,6 +288,9 @@ class SteadyStateSubspaceStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].SteadyStateSubspaceStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         previous
@@ -344,6 +347,9 @@ class SteadyStateSubspaceStep(AnalysisStep):
                   projection: SymbolicConstant = ALL_FREQUENCIES, maxDampingChange: float = 0,
                   maxStiffnessChange: float = 0, frictionDamping: Boolean = OFF):
         """This method modifies the SteadyStateSubspaceStep object.
+        
+        Parameters
+        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         factorization

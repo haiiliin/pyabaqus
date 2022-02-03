@@ -97,6 +97,9 @@ class ConnVelocityBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].ConnVelocityBC
+        
+        Parameters
+        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -165,6 +168,9 @@ class ConnVelocityBC(BoundaryCondition):
                   distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing ConnVelocityBC object in the step where it
         is created.
+        
+        Parameters
+        ----------
         region
             The wire region to which the boundary condition is applied. This argument is not valid 
             when *fastenerName* and *fastenerSetName* are specified. 
@@ -224,6 +230,9 @@ class ConnVelocityBC(BoundaryCondition):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ConnVelocityBC object in the
         specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         v1

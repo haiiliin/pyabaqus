@@ -23,6 +23,9 @@ class BeamSectionProfileOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].ArbitraryProfile
             - session.odbs[name].ArbitraryProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         table
@@ -49,6 +52,9 @@ class BeamSectionProfileOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].BoxProfile
             - session.odbs[name].BoxProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         a
@@ -92,6 +98,9 @@ class BeamSectionProfileOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].CircularProfile
             - session.odbs[name].CircularProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         r
@@ -120,6 +129,9 @@ class BeamSectionProfileOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].GeneralizedProfile
             - session.odbs[name].GeneralizedProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         area
@@ -157,6 +169,9 @@ class BeamSectionProfileOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].HexagonalProfile
             - session.odbs[name].HexagonalProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         r
@@ -188,6 +203,9 @@ class BeamSectionProfileOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].IProfile
             - session.odbs[name].IProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         l
@@ -227,6 +245,9 @@ class BeamSectionProfileOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].LProfile
             - session.odbs[name].LProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         a
@@ -262,6 +283,9 @@ class BeamSectionProfileOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].PipeProfile
             - session.odbs[name].PipeProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         r
@@ -291,6 +315,9 @@ class BeamSectionProfileOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].RectangularProfile
             - session.odbs[name].RectangularProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         a
@@ -320,6 +347,9 @@ class BeamSectionProfileOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].TProfile
             - session.odbs[name].TProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         b
@@ -358,6 +388,9 @@ class BeamSectionProfileOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].TrapezoidalProfile
             - session.odbs[name].TrapezoidalProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         a

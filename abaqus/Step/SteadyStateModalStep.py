@@ -289,6 +289,9 @@ class SteadyStateModalStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].SteadyStateModalStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         previous
@@ -343,6 +346,9 @@ class SteadyStateModalStep(AnalysisStep):
                   structuralDampingByFrequency: StructuralDampingByFrequency = StructuralDampingByFrequency(),
                   subdivideUsingEigenfrequencies: Boolean = ON):
         """This method modifies the SteadyStateModalStep object.
+        
+        Parameters
+        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         scale

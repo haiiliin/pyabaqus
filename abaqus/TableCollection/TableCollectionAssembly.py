@@ -17,6 +17,9 @@ class TableCollectionAssembly(AssemblyBase):
         -----
             This function can be accessed by:
             - mdb.models[name].rootAssembly.ElementProgressiveActivation
+        
+        Parameters
+        ----------
         name
             A String specifying the key of the repository.
         elset

@@ -111,6 +111,9 @@ class OdbBase:
         .. code-block:: python
 
             session.Odb
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         analysisTitle
@@ -139,6 +142,9 @@ class OdbBase:
         interpolate values between frames. The method is not applicable to an Odb object
         containing steps with different domains or to an Odb object containing a step with load
         case specific data.
+        
+        Parameters
+        ----------
         frameValue
             A Double specifying the value at which the frame is required. *frameValue* can be the 
             total time or frequency. 

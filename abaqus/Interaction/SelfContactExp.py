@@ -29,6 +29,9 @@ class SelfContactExp(Interaction):
         .. code-block:: python
 
             mdb.models[name].SelfContactExp
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -56,6 +59,9 @@ class SelfContactExp(Interaction):
     def setValues(self, mechanicalConstraint: SymbolicConstant = KINEMATIC, contactControls: str = ''):
         """This method modifies the data for an existing SelfContactExp object in the step where it
         is created.
+        
+        Parameters
+        ----------
         mechanicalConstraint
             A SymbolicConstant specifying the mechanical constraint formulation. Possible values are 
             KINEMATIC and PENALTY. The default value is KINEMATIC. 
@@ -69,6 +75,9 @@ class SelfContactExp(Interaction):
     def setValuesInStep(self, stepName: str, interactionProperty: str = '', contactControls: str = ''):
         """This method modifies the propagating data for an existing SelfContactExp object in the
         specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         interactionProperty

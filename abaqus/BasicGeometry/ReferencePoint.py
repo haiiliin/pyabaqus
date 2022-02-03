@@ -48,6 +48,9 @@ class ReferencePoint:
 
             mdb.models[*name*].rootAssembly.ReferencePoint
             mdb.models[*name*].parts[name].ReferencePoint
+        
+        Parameters
+        ----------
         point
             A ConstrainedSketchVertex, InterestingPoint, a MeshNode, or a Datum object specifying a reference point.
             *point* can also be a sequence of three Floats representing the *X*-, *Y*-, and

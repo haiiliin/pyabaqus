@@ -36,6 +36,9 @@ class PoreFluidExpansion:
             This function can be accessed by:
             - mdb.models[name].materials[name].PoreFluidExpansion
             - session.odbs[name].materials[name].PoreFluidExpansion
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         zero

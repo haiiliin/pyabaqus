@@ -33,6 +33,9 @@ class EulerianSection(Section):
 
             mdb.models[name].EulerianSection
             session.odbs[name].EulerianSection
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         data

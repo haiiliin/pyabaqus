@@ -21,6 +21,9 @@ class XYSessionBase(SessionBase):
                         saveXy: Boolean = OFF, writeReport: Boolean = OFF, reportFile: str = '',
                         appendToFile: Boolean = OFF, saveToPath: Boolean = OFF):
         """This method is used to perform stress linearization along a defined stress line.
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the stress line. 
         path
@@ -121,6 +124,9 @@ class XYSessionBase(SessionBase):
         extracting results along Path objects. This command should be exercised with caution
         since setting a value too low or too high may result in getting no results or
         unpredictable results.
+        
+        Parameters
+        ----------
         tolerance
             A Double specifying the tolerance. The default value is 0.00001. 
 
@@ -143,6 +149,9 @@ class XYSessionBase(SessionBase):
     def setLimitForXYDataPlots(self, limit: int = None):
         """This method is used to set the *limit* for number of XY data objects while creating
         XYData from field output.
+        
+        Parameters
+        ----------
         limit
             None or an Int specifying the limit for number of XY data objects. The default value is 
             no limit 

@@ -41,6 +41,9 @@ class LeafFromDatums(Leaf):
         .. code-block:: python
 
             LeafFromDatums
+        
+        Parameters
+        ----------
         datumSeq
             A sequence of datum objects. 
 

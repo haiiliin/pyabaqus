@@ -266,6 +266,9 @@ class ContactDamage:
         .. code-block:: python
 
             mdb.models[name].interactionProperties[name].Damage
+        
+        Parameters
+        ----------
         initTable
             A sequence of sequences of Floats specifying the values defining the damage initiation. 
             The items in the table data are described below. 

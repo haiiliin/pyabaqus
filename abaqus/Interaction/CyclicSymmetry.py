@@ -42,6 +42,9 @@ class CyclicSymmetry(Interaction):
         .. code-block:: python
 
             mdb.models[name].CyclicSymmetry
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -110,6 +113,9 @@ class CyclicSymmetry(Interaction):
                   positionToleranceMethod: SymbolicConstant = COMPUTED_TOLERANCE):
         """This method modifies the data for an existing CyclicSymmetry object in the step where it
         is created.
+        
+        Parameters
+        ----------
         extractedNodalDiameter
             A SymbolicConstant specifying whether Abaqus should extract all possible nodal diameters 
             or the nodal diameters between the user-specified values for *lowestNodalDiameter* and 
@@ -146,6 +152,9 @@ class CyclicSymmetry(Interaction):
                         excitationNodalDiameter: int = 0):
         """This method modifies the propagating data of an existing CyclicSymmetry object in the
         specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         extractedNodalDiameter

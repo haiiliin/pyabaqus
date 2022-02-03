@@ -73,6 +73,9 @@ class MagneticPermeability:
             This function can be accessed by:
             - mdb.models[name].materials[name].MagneticPermeability
             - session.odbs[name].materials[name].MagneticPermeability
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below in “Table data.” 
             If *type*=ORTHOTROPIC and nonlinearBH=ON, the data specified in the *table* is for the 

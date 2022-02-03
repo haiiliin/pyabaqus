@@ -43,6 +43,9 @@ class SectionPoint:
         .. code-block:: python
 
             session.odbs[*name*].sectionCategories[*name*].SectionPoint
+        
+        Parameters
+        ----------
         number
             An Int specifying the number of the section point. See Beam elements and Shell elements 
             for the numbering convention. 

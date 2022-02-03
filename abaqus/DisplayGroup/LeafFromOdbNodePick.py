@@ -41,6 +41,9 @@ class LeafFromOdbNodePick(Leaf):
         .. code-block:: python
 
             LeafFromOdbNodePick
+        
+        Parameters
+        ----------
         nodePick
             A sequence of tuples of the form [part name, entity count, machine readable pick 
             strings]. 

@@ -23,6 +23,9 @@ class Damping:
             This function can be accessed by:
             - mdb.models[name].materials[name].Damping
             - session.odbs[name].materials[name].Damping
+        
+        Parameters
+        ----------
         alpha
             A Float specifying the αRαR factor to create mass proportional damping in 
             direct-integration and explicit dynamics. The default value is 0.0. 

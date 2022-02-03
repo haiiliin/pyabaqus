@@ -81,6 +81,9 @@ class Moment(Load):
         .. code-block:: python
 
             mdb.models[name].Moment
+        
+        Parameters
+        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -128,6 +131,9 @@ class Moment(Load):
                   distributionType: SymbolicConstant = UNIFORM, field: str = ''):
         """This method modifies the data for an existing Moment object in the step where it is
         created.
+        
+        Parameters
+        ----------
         cm1
             A Float or a Complex specifying the load component in the 4-direction.Note:Although 
             *comp1*, *comp2*, and *comp3* are optional arguments, at least one of them must be 
@@ -166,6 +172,9 @@ class Moment(Load):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing Moment object in the specified
         step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         comp1

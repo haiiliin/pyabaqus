@@ -21,6 +21,9 @@ class MainSecondaryAssignment:
     def changeValuesInStep(self, stepName: str, index: int, value: SymbolicConstant):
         """This method allows modification of main-secondary assignments already defined on surface
         pairs in a given step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the main-secondary assignments are to 
             be modified. 
@@ -37,6 +40,9 @@ class MainSecondaryAssignment:
     def appendInStep(self, stepName: str, assignments: SymbolicConstant):
         """This method allows addition of main-secondary assignments to new surface pairs in a
         given step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the main-secondary assignments are to 
             be defined. 
@@ -54,6 +60,9 @@ class MainSecondaryAssignment:
 
     def delete(self, indices: tuple):
         """The delete method allows you to delete existing main-secondary assignments.
+        
+        Parameters
+        ----------
         indices
             A sequence of Ints specifying the index of each main-secondary assignment to delete. 
         """

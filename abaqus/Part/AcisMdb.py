@@ -14,6 +14,9 @@ class AcisMdb(MdbBase):
         -----
             This function can be accessed by:
             - mdb.openAcis
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the ACIS file to open.
         scaleFromFile
@@ -43,6 +46,9 @@ class AcisMdb(MdbBase):
         -----
             This function can be accessed by:
             - mdb.openCatia
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the CATIA file to open.
         topology
@@ -76,6 +82,9 @@ class AcisMdb(MdbBase):
         -----
             This function can be accessed by:
             - mdb.openEnf
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the Elysium Neutral File that was created by I-DEAS,
             Pro/ENGINEER, or CATIA V5.
@@ -111,6 +120,9 @@ class AcisMdb(MdbBase):
         -----
             This function can be accessed by:
             - mdb.openIges
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the IGES file to open.
         trimCurve
@@ -162,6 +174,9 @@ class AcisMdb(MdbBase):
         -----
             This function can be accessed by:
             - mdb.openParasolid
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the Parasolid file to open.
         topology
@@ -186,6 +201,9 @@ class AcisMdb(MdbBase):
         -----
             This function can be accessed by:
             - mdb.openStep
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the STEP file to open.
         scale
@@ -212,6 +230,9 @@ class AcisMdb(MdbBase):
         -----
             This function can be accessed by:
             - mdb.openVda
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the VDA-FS file to open.
 
@@ -235,6 +256,9 @@ class AcisMdb(MdbBase):
         -----
             This function can be accessed by:
             - openSolidworks
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the Solidworks file to open.
         topology

@@ -72,6 +72,9 @@ class PipePressure(Load):
         .. code-block:: python
 
             mdb.models[name].PipePressure
+        
+        Parameters
+        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -115,6 +118,9 @@ class PipePressure(Load):
                   side: SymbolicConstant = INTERNAL):
         """This method modifies the data for an existing PipePressure object in the step where it
         is created.
+        
+        Parameters
+        ----------
         field
             A String specifying the name of the AnalyticalField object associated with this load. 
             The *field* argument applies only when *distributionType*=FIELD. The default value is an 
@@ -136,6 +142,9 @@ class PipePressure(Load):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing PipePressure object in the
         specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         magnitude

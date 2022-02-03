@@ -40,6 +40,9 @@ class NetworkDatabaseConnector:
         .. code-block:: python
 
             session.NetworkDatabaseConnector
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         hostName
@@ -76,6 +79,9 @@ class NetworkDatabaseConnector:
 
     def start(self, serverPort: int = 0, serverTimeout: int = 86400):
         """This method starts the remote network database connector server on the remote host.
+        
+        Parameters
+        ----------
         serverPort
             An Int specifying the server port on the remote computer. If *serverPort* =0, the host 
             and remote systems are allowed to establish their own port numbers. The default value is 
@@ -96,6 +102,9 @@ class NetworkDatabaseConnector:
                   sshPath: str = '', serverPort: int = 0, connectionPort: int = 0,
                   serverTimeout: int = 86400, allowAutomaticStartup: Boolean = ON):
         """This method modifies the NetworkDatabaseConnector object.
+        
+        Parameters
+        ----------
         remoteAbaqusDriverName
             A String specifying the name of command to execute Abaqus/CAE on the remote computer. 
         remoteLoginMechanism

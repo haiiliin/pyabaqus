@@ -78,9 +78,6 @@ class AdaptivityProcess:
         
         Parameters
         ----------
-        
-        Parameters
-        ----------
         waitForCompletion
             A Boolean specifying whether to interrupt the execution of a script until the end of the 
             adaptive remeshing process is reached. 
@@ -95,9 +92,6 @@ class AdaptivityProcess:
 
     def setValues(self, maxIterations: int = 3, jobPrefix: str = ''):
         """This method modifies the AdaptivityProcess object.
-        
-        Parameters
-        ----------
         
         Parameters
         ----------

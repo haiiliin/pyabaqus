@@ -240,6 +240,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].AcousticMedium
             - session.odbs[name].materials[name].AcousticMedium
+        
+        Parameters
+        ----------
         acousticVolumetricDrag
             A Boolean specifying whether the volumetricTable data is specified. The default value is 
             OFF. 
@@ -293,6 +296,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].BrittleCracking
             - session.odbs[name].materials[name].BrittleCracking
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -318,6 +324,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].CapPlasticity
             - session.odbs[name].materials[name].CapPlasticity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -345,6 +354,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].CastIronPlasticity
             - session.odbs[name].materials[name].CastIronPlasticity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -372,6 +384,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].ClayPlasticity
             - session.odbs[name].materials[name].ClayPlasticity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         intercept
@@ -405,6 +420,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Concrete
             - session.odbs[name].materials[name].Concrete
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -432,6 +450,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].ConcreteDamagedPlasticity
             - session.odbs[name].materials[name].ConcreteDamagedPlasticity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -459,6 +480,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Conductivity
             - session.odbs[name].materials[name].Conductivity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type
@@ -489,6 +513,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Creep
             - session.odbs[name].materials[name].Creep
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         law
@@ -523,6 +550,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].CrushableFoam
             - session.odbs[name].materials[name].CrushableFoam
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         hardening
@@ -552,6 +582,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Damping
             - session.odbs[name].materials[name].Damping
+        
+        Parameters
+        ----------
         alpha
             A Float specifying the αRαR factor to create mass proportional damping in 
             direct-integration and explicit dynamics. The default value is 0.0. 
@@ -585,6 +618,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].DeformationPlasticity
             - session.odbs[name].materials[name].DeformationPlasticity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -610,6 +646,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Density
             - session.odbs[name].materials[name].Density
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -644,6 +683,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Depvar
             - session.odbs[name].materials[name].Depvar
+        
+        Parameters
+        ----------
         deleteVar
             An Int specifying the state variable number controlling the element deletion flag. The 
             default value is 0.This argument applies only to Abaqus/Explicit analyses. 
@@ -671,6 +713,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Dielectric
             - session.odbs[name].materials[name].Dielectric
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type
@@ -699,6 +744,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Diffusivity
             - session.odbs[name].materials[name].Diffusivity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type
@@ -733,6 +781,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].DruckerPrager
             - session.odbs[name].materials[name].DruckerPrager
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         shearCriterion
@@ -776,6 +827,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Elastic
             - session.odbs[name].materials[name].Elastic
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type
@@ -824,6 +878,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].ElectricalConductivity
             - session.odbs[name].materials[name].ElectricalConductivity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type
@@ -859,6 +916,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Eos
             - session.odbs[name].materials[name].Eos
+        
+        Parameters
+        ----------
         type
             A SymbolicConstant specifying the equation of state. Possible values are USUP, JWL, 
             IDEALGAS, TABULAR, and IGNITIONANDGROWTH. The default value is IDEALGAS. 
@@ -934,6 +994,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Expansion
             - session.odbs[name].materials[name].Expansion
+        
+        Parameters
+        ----------
         type
             A SymbolicConstant specifying the type of expansion. Possible values are ISOTROPIC, 
             ORTHOTROPIC, ANISOTROPIC, and SHORT_FIBER. The default value is ISOTROPIC. 
@@ -971,6 +1034,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].FluidLeakoff
             - session.odbs[name].materials[name].FluidLeakoff
+        
+        Parameters
+        ----------
         temperatureDependency
             A Boolean specifying whether the data depend on temperature. The default value is OFF. 
         dependencies
@@ -998,6 +1064,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].GapFlow
             - session.odbs[name].materials[name].GapFlow
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         kmax
@@ -1028,6 +1097,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].GasketMembraneElastic
             - session.odbs[name].materials[name].GasketMembraneElastic
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -1059,6 +1131,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].GasketThicknessBehavior
             - session.odbs[name].materials[name].GasketThicknessBehavior
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying loading data. The first sequence must 
             contain only 0. At least two sequences must be specified if *type*=DAMAGE, and at least 
@@ -1122,6 +1197,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].GasketTransverseShearElastic
             - session.odbs[name].materials[name].GasketTransverseShearElastic
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         variableUnits
@@ -1152,6 +1230,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Gel
             - session.odbs[name].materials[name].Gel
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
 
@@ -1179,6 +1260,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Hyperelastic
             - session.odbs[name].materials[name].Hyperelastic
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. This argument is 
             valid only if *testData*=OFF. 
@@ -1259,6 +1343,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Hyperfoam
             - session.odbs[name].materials[name].Hyperfoam
+        
+        Parameters
+        ----------
         testData
             A Boolean specifying whether test data are supplied. The default value is OFF. 
         poisson
@@ -1295,6 +1382,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Hypoelastic
             - session.odbs[name].materials[name].Hypoelastic
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         user
@@ -1316,6 +1406,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].InelasticHeatFraction
             - session.odbs[name].materials[name].InelasticHeatFraction
+        
+        Parameters
+        ----------
         fraction
             A Float specifying the fraction of inelastic dissipation rate that appears as a heat 
             flux per unit volume. The fraction may include a unit conversion factor if required. 
@@ -1340,6 +1433,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].JouleHeatFraction
             - session.odbs[name].materials[name].JouleHeatFraction
+        
+        Parameters
+        ----------
         fraction
             A Float specifying the fraction of electrical energy released as heat, including any 
             unit conversion factor. The default value is 1.0. 
@@ -1363,6 +1459,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].LatentHeat
             - session.odbs[name].materials[name].LatentHeat
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
 
@@ -1388,6 +1487,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].LowDensityFoam
             - session.odbs[name].materials[name].LowDensityFoam
+        
+        Parameters
+        ----------
         elementRemoval
             A Boolean specifying whether elements are removed if exceeding maximum principal tensile 
             stress. This argument is valid only when *maxAllowablePrincipalStress* is defined. The 
@@ -1430,6 +1532,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].MagneticPermeability
             - session.odbs[name].materials[name].MagneticPermeability
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below in “Table data.” 
             If *type*=ORTHOTROPIC and nonlinearBH=ON, the data specified in the *table* is for the 
@@ -1478,6 +1583,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].MohrCoulombPlasticity
             - session.odbs[name].materials[name].MohrCoulombPlasticity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         deviatoricEccentricity
@@ -1515,6 +1623,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].MoistureSwelling
             - session.odbs[name].materials[name].MoistureSwelling
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
 
@@ -1535,6 +1646,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Permeability
             - session.odbs[name].materials[name].Permeability
+        
+        Parameters
+        ----------
         specificWeight
             A Float specifying the specific weight of the wetting liquid, γwγw. 
         inertialDragCoefficient
@@ -1570,6 +1684,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Piezoelectric
             - session.odbs[name].materials[name].Piezoelectric
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type
@@ -1597,6 +1714,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Plastic
             - session.odbs[name].materials[name].Plastic
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         hardening
@@ -1640,6 +1760,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].PoreFluidExpansion
             - session.odbs[name].materials[name].PoreFluidExpansion
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         zero
@@ -1668,6 +1791,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].PorousBulkModuli
             - session.odbs[name].materials[name].PorousBulkModuli
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -1689,6 +1815,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].PorousElastic
             - session.odbs[name].materials[name].PorousElastic
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         shear
@@ -1719,6 +1848,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].PorousMetalPlasticity
             - session.odbs[name].materials[name].PorousMetalPlasticity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         relativeDensity
@@ -1749,6 +1881,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Regularization
             - session.odbs[name].materials[name].Regularization
+        
+        Parameters
+        ----------
         rtol
             A Float specifying the tolerance to be used for regularizing material data. The default 
             value is 0.03. 
@@ -1776,6 +1911,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Solubility
             - session.odbs[name].materials[name].Solubility
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency
@@ -1804,6 +1942,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Sorption
             - session.odbs[name].materials[name].Sorption
+        
+        Parameters
+        ----------
         absorptionTable
             A sequence of sequences of Floats specifying the items described below. 
         lawAbsorption
@@ -1842,6 +1983,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].SpecificHeat
             - session.odbs[name].materials[name].SpecificHeat
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         law
@@ -1872,6 +2016,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Swelling
             - session.odbs[name].materials[name].Swelling
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below.This argument is 
             valid only when *law*=INPUT. 
@@ -1904,6 +2051,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].UserMaterial
             - session.odbs[name].materials[name].UserMaterial
+        
+        Parameters
+        ----------
         type
             A SymbolicConstant specifying the type of material behavior defined by the command. 
             Possible values are MECHANICAL, THERMAL, and THERMOMECHANICAL. The default value is 
@@ -1948,6 +2098,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].UserOutputVariables
             - session.odbs[name].materials[name].UserOutputVariables
+        
+        Parameters
+        ----------
         n
             An Int specifying the number of user-defined variables required at each material point. 
             The default value is 0. 
@@ -1974,6 +2127,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Viscoelastic
             - session.odbs[name].materials[name].Viscoelastic
+        
+        Parameters
+        ----------
         domain
             A SymbolicConstant specifying the domain definition. Possible values are:
             - FREQUENCY, specifying a frequency domain. This domain is only available for an Abaqus/Standard analysis.
@@ -2031,6 +2187,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Viscosity
             - session.odbs[name].materials[name].Viscosity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type
@@ -2060,6 +2219,9 @@ class Material(MaterialBase):
             This function can be accessed by:
             - mdb.models[name].materials[name].Viscous
             - session.odbs[name].materials[name].Viscous
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         law

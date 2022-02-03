@@ -27,6 +27,9 @@ class ExpressionField(AnalyticalField):
         .. code-block:: python
 
             mdb.models[name].ExpressionField
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         expression
@@ -52,6 +55,9 @@ class ExpressionField(AnalyticalField):
 
     def setValues(self, localCsys: str = None, description: str = ''):
         """This method modifies the ExpressionField object.
+        
+        Parameters
+        ----------
         localCsys
             None or a DatumCsys object specifying the local coordinate system of the field. If 
             *localCsys*=None, the field is defined in the global coordinate system. The default 

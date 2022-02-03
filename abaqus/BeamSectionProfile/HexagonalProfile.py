@@ -33,6 +33,9 @@ class HexagonalProfile(Profile):
 
             mdb.models[name].HexagonalProfile
             session.odbs[name].HexagonalProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         r

@@ -103,6 +103,9 @@ class Hyperelastic:
             This function can be accessed by:
             - mdb.models[name].materials[name].Hyperelastic
             - session.odbs[name].materials[name].Hyperelastic
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. This argument is 
             valid only if *testData*=OFF. 

@@ -20,6 +20,9 @@ class PathSession(SessionBase):
         -----
             This function can be accessed by:
             - session.Path
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         type
@@ -97,6 +100,9 @@ class PathSession(SessionBase):
         -----
             This function can be accessed by:
             - session.Spectrum
+        
+        Parameters
+        ----------
         name
             A string name for the spectrum.
         colors
@@ -116,6 +122,9 @@ class PathSession(SessionBase):
         -----
             This function can be accessed by:
             - session.Stream
+        
+        Parameters
+        ----------
         name
             A string name for the stream.
         numPointsOnRake

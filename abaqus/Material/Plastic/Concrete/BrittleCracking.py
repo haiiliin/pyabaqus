@@ -60,6 +60,9 @@ class BrittleCracking:
             This function can be accessed by:
             - mdb.models[name].materials[name].BrittleCracking
             - session.odbs[name].materials[name].BrittleCracking
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

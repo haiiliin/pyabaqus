@@ -64,6 +64,9 @@ class QuantityType:
 
             session.QuantityType
             xyPlot.QuantityType
+        
+        Parameters
+        ----------
         label
             A String specifying the label for this quantity type. 
         type

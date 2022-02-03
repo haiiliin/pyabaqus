@@ -33,6 +33,9 @@ class TProfile(Profile):
 
             mdb.models[name].TProfile
             session.odbs[name].TProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         b

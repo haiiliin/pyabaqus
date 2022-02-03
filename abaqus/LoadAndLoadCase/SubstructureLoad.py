@@ -42,6 +42,9 @@ class SubstructureLoad(Load):
         .. code-block:: python
 
             mdb.models[name].SubstructureLoad
+        
+        Parameters
+        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -67,6 +70,9 @@ class SubstructureLoad(Load):
     def setValues(self, amplitude: str = UNSET):
         """This method modifies the data for an existing SubstructureLoad object in the step where
         it is created.
+        
+        Parameters
+        ----------
         amplitude
             A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. 
             UNSET should be used if the load has no amplitude reference. The default value is UNSET. 
@@ -77,6 +83,9 @@ class SubstructureLoad(Load):
     def setValuesInStep(self, stepName: str, loadCaseNames: str = '', magnitude: float = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing SubstructureLoad object in the
         specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         loadCaseNames

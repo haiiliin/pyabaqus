@@ -33,6 +33,9 @@ class AcisFile:
         .. code-block:: python
 
             mdb.openAcis
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the ACIS file to open. 
         scaleFromFile
@@ -64,6 +67,9 @@ class AcisFile:
         .. code-block:: python
 
             mdb.openAcis
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the CATIA file to open. 
         topology
@@ -99,6 +105,9 @@ class AcisFile:
         .. code-block:: python
 
             mdb.openAcis
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the Elysium Neutral File that was created by I-DEAS, 
             Pro/ENGINEER, or CATIA V5. 
@@ -136,6 +145,9 @@ class AcisFile:
         .. code-block:: python
 
             mdb.openAcis
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the IGES file to open. 
         trimCurve
@@ -189,6 +201,9 @@ class AcisFile:
         .. code-block:: python
 
             mdb.openAcis
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the Parasolid file to open. 
         topology
@@ -215,6 +230,9 @@ class AcisFile:
         .. code-block:: python
 
             mdb.openAcis
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the STEP file to open. 
         scale
@@ -243,6 +261,9 @@ class AcisFile:
         .. code-block:: python
 
             mdb.openAcis
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the VDA-FS file to open. 
 
@@ -268,6 +289,9 @@ class AcisFile:
         .. code-block:: python
 
             mdb.openAcis
+        
+        Parameters
+        ----------
         fileName
             A String specifying the path to the Solidworks file to open.
         topology
@@ -290,6 +314,9 @@ class AcisFile:
 
     def writeAcisFile(self, fileName: str, version: float = None):
         """This method exports the assembly to a named file in ACIS format.
+        
+        Parameters
+        ----------
         fileName
             A String specifying the name of the file to which to write. 
         version

@@ -28,6 +28,9 @@ class FreeBody:
         .. code-block:: python
 
             session.FreeBodyFromEdges
+        
+        Parameters
+        ----------
         name
             A string name for the free body. 
         edges
@@ -61,6 +64,9 @@ class FreeBody:
         .. code-block:: python
 
             session.FreeBodyFromEdges
+        
+        Parameters
+        ----------
         name
             A string name for the free body. 
         faces
@@ -94,6 +100,9 @@ class FreeBody:
         .. code-block:: python
 
             session.FreeBodyFromEdges
+        
+        Parameters
+        ----------
         name
             A string name for the free body. 
         elements

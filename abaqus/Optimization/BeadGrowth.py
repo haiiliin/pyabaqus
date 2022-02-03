@@ -27,6 +27,9 @@ class BeadGrowth(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].BeadGrowth
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -47,6 +50,9 @@ class BeadGrowth(GeometricRestriction):
 
     def setValues(self, beadGrowth: float = 0, shrink: float = 0):
         """This method modifies the BeadGrowth object.
+        
+        Parameters
+        ----------
         beadGrowth
             A Float specifying the maximum optimization displacement in the growth direction. Either 
             *beadGrowth* or *shrink* or both must be specified. The default value is 0.0. 

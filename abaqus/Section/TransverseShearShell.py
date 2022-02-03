@@ -31,6 +31,9 @@ class TransverseShearShell:
 
             mdb.models[name].sections[name].TransverseShearShell
             session.odbs[name].sections[name].TransverseShearShell
+        
+        Parameters
+        ----------
         k11
             A Float specifying the shear stiffness of the section in the first direction. 
         k22

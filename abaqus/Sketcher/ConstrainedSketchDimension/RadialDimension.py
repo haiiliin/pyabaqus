@@ -15,6 +15,9 @@ class RadialDimension(ConstrainedSketchDimension):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].RadialDimension
+        
+        Parameters
+        ----------
         curve
             A ConstrainedSketchGeometry object specifying the circular or elliptical arc. 
         textPoint

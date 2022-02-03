@@ -94,6 +94,9 @@ class Viscous:
             This function can be accessed by:
             - mdb.models[name].materials[name].Viscous
             - session.odbs[name].materials[name].Viscous
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         law

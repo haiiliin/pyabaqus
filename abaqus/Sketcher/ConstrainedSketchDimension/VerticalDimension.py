@@ -14,6 +14,9 @@ class VerticalDimension(ConstrainedSketchDimension):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].VerticalDimension
+        
+        Parameters
+        ----------
         vertex1
             A ConstrainedSketchVertex object specifying the first endpoint. 
         vertex2

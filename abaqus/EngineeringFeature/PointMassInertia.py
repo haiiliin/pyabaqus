@@ -47,6 +47,9 @@ class PointMassInertia(Inertia):
 
             mdb.models[name].parts[name].engineeringFeatures.PointMassInertia
             mdb.models[name].rootAssembly.engineeringFeatures.PointMassInertia
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         region
@@ -101,6 +104,9 @@ class PointMassInertia(Inertia):
                   i22: float = 0, i33: float = 0, i12: float = 0, i13: float = 0, i23: float = 0,
                   localCsys: str = None, alpha: float = 0, composite: float = 0):
         """This method modifies the PointMassInertia object.
+        
+        Parameters
+        ----------
         mass
             A Float specifying the mass magnitude for isotropic mass. This parameter cannot be 
             specified when anisotropic mass terms are specified. The default value is 0.0. 

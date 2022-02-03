@@ -33,6 +33,9 @@ class TrapezoidalProfile(Profile):
 
             mdb.models[name].TrapezoidalProfile
             session.odbs[name].TrapezoidalProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         a

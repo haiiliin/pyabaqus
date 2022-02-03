@@ -70,6 +70,9 @@ class SecondaryBaseBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].SecondaryBaseBC
+        
+        Parameters
+        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -96,6 +99,9 @@ class SecondaryBaseBC(BoundaryCondition):
     def setValuesInStep(self, stepName: str):
         """This method modifies the propagating data for an existing SecondaryBaseBC object in the
         specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         """

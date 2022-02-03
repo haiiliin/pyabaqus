@@ -35,6 +35,9 @@ class CombinedTestData:
             This function can be accessed by:
             - mdb.models[name].materials[name].viscoelastic.CombinedTestData
             - session.odbs[name].materials[name].viscoelastic.CombinedTestData
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. The values of 
             the table data depend on the value of the *time* member of the Viscoelastic object. 

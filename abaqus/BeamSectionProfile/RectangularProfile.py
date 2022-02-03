@@ -33,6 +33,9 @@ class RectangularProfile(Profile):
 
             mdb.models[name].RectangularProfile
             session.odbs[name].RectangularProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         a

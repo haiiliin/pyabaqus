@@ -59,6 +59,9 @@ class BoltLoad(Load):
         .. code-block:: python
 
             mdb.models[name].BoltLoad
+        
+        Parameters
+        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -100,6 +103,9 @@ class BoltLoad(Load):
                   amplitude: str = UNSET, preTenSecPartLevel: Boolean = False):
         """This method modifies the data for an existing BoltLoad object in the step where it is
         created.
+        
+        Parameters
+        ----------
         boltMethod
             A SymbolicConstant specifying the method of applying the bolt load. Possible values are 
             APPLY_FORCE and ADJUST_LENGTH. The default value is APPLY_FORCE. 
@@ -123,6 +129,9 @@ class BoltLoad(Load):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing BoltLoad object in the
         specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         boltMethod

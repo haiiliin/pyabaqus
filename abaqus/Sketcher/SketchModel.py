@@ -13,6 +13,9 @@ class SketchModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ConstrainedSketch
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         sheetSize

@@ -32,6 +32,9 @@ class ElementProgressiveActivation:
         .. code-block:: python
 
             mdb.models[name].rootAssembly.ElementProgressiveActivation
+        
+        Parameters
+        ----------
         name
             A String specifying the key of the repository. 
         elset

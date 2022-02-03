@@ -22,6 +22,9 @@ class DataSet:
         .. code-block:: python
 
                       mdb.models[name].calibrations[name].DataSet
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the new dataset. 
         data
@@ -43,6 +46,9 @@ class DataSet:
 
     def setValues(self, data: tuple = ()):
         """This method modifies the data for an existing DataSet object.
+        
+        Parameters
+        ----------
         data
             A sequence of pairs of Floats specifying data set type pairs. 
         """

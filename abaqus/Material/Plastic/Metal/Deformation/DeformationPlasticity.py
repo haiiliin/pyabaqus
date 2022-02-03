@@ -35,6 +35,9 @@ class DeformationPlasticity:
             This function can be accessed by:
             - mdb.models[name].materials[name].DeformationPlasticity
             - session.odbs[name].materials[name].DeformationPlasticity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

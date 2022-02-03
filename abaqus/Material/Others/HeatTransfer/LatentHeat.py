@@ -29,6 +29,9 @@ class LatentHeat:
             This function can be accessed by:
             - mdb.models[name].materials[name].LatentHeat
             - session.odbs[name].materials[name].LatentHeat
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
 

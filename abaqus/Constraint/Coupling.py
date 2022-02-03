@@ -49,6 +49,9 @@ class Coupling(Constraint):
         .. code-block:: python
 
             mdb.models[name].Coupling
+        
+        Parameters
+        ----------
         name
             A String specifying the constraint repository key. 
         surface
@@ -109,6 +112,9 @@ class Coupling(Constraint):
                   u3: Boolean = ON, ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON,
                   weightingMethod: SymbolicConstant = UNIFORM):
         """This method modifies the Coupling object.
+        
+        Parameters
+        ----------
         adjust
             A Boolean specifying if the control point will be adjusted (moved) to the surface. The 
             point will be adjusted in the direction normal to the specified surface. The default 

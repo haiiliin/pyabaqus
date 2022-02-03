@@ -50,6 +50,9 @@ class ContourIntegral(Crack):
 
             mdb.models[name].parts[name].engineeringFeatures.ContourIntegral
             mdb.models[name].rootAssembly.engineeringFeatures.ContourIntegral
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         crackFront
@@ -107,6 +110,9 @@ class ContourIntegral(Crack):
                   crackTipName: str = '', crackNormal: tuple = (), qVectors: tuple = (),
                   midNodePosition: float = 0, collapsedElementAtTip: SymbolicConstant = NONE):
         """This method modifies the ContourIntegral object.
+        
+        Parameters
+        ----------
         symmetric
             A Boolean specifying whether the crack is defined on a half model (about a symmetry 
             plane) or whether it is defined on the whole model. The default value is OFF. 

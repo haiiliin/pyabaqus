@@ -24,6 +24,9 @@ class AmplitudeOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].ActuatorAmplitude
             - session.odbs[name].ActuatorAmplitude
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         timeSpan
@@ -46,6 +49,9 @@ class AmplitudeOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].DecayAmplitude
             - session.odbs[name].DecayAmplitude
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         initial
@@ -77,6 +83,9 @@ class AmplitudeOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].EquallySpacedAmplitude
             - session.odbs[name].EquallySpacedAmplitude
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         fixedInterval
@@ -112,6 +121,9 @@ class AmplitudeOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].ModulatedAmplitude
             - session.odbs[name].ModulatedAmplitude
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         initial
@@ -147,6 +159,9 @@ class AmplitudeOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].PeriodicAmplitude
             - session.odbs[name].PeriodicAmplitude
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         frequency
@@ -178,6 +193,9 @@ class AmplitudeOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].PsdDefinition
             - session.odbs[name].PsdDefinition
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         data
@@ -222,6 +240,9 @@ class AmplitudeOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].SmoothStepAmplitude
             - session.odbs[name].SmoothStepAmplitude
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         data
@@ -247,6 +268,9 @@ class AmplitudeOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].SolutionDependentAmplitude
             - session.odbs[name].SolutionDependentAmplitude
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         initial
@@ -282,6 +306,9 @@ class AmplitudeOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].SpectrumAmplitude
             - session.odbs[name].SpectrumAmplitude
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         method
@@ -339,6 +366,9 @@ class AmplitudeOdb(OdbBase):
             This function can be accessed by:
             - mdb.models[name].TabularAmplitude
             - session.odbs[name].TabularAmplitude
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         data

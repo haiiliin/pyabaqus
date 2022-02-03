@@ -54,6 +54,9 @@ class HeatCapacitance(Inertia):
 
             mdb.models[name].parts[name].engineeringFeatures.HeatCapacitance
             mdb.models[name].rootAssembly.engineeringFeatures.HeatCapacitance
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         region
@@ -75,6 +78,9 @@ class HeatCapacitance(Inertia):
 
     def setValues(self, temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method modifies the HeatCapacitance object.
+        
+        Parameters
+        ----------
         temperatureDependency
             A Boolean specifying whether the data depend on temperature. The default value is OFF. 
         dependencies

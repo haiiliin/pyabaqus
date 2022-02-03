@@ -32,6 +32,9 @@ class FieldReportOptions:
                   pageWidth: SymbolicConstant = NO_LIMIT, columnLayout: SymbolicConstant = SINGLE_TABLE,
                   sort: SymbolicConstant = ASCENDING, printLocalCSYS: Boolean = OFF):
         """This method modifies the FieldReportOptions object.
+        
+        Parameters
+        ----------
         numColumns
             An Int specifying the number of columns to display for the tabular report. The default 
             value is 80. 
@@ -80,6 +83,9 @@ class FieldReportOptions:
             session.defaultFieldReportOptions.NumberFormat
             session.fieldReportOptions.NumberFormat
             session.journalOptions.NumberFormat
+        
+        Parameters
+        ----------
         blankPad
             A Boolean specifying whether the printed digits should be padded with blank characters
             to ensure equal sized fields. The *blankPad* argument is useful when your printed output

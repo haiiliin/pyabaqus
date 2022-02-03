@@ -15,6 +15,9 @@ class DistanceDimension(ConstrainedSketchDimension):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].DistanceDimension
+        
+        Parameters
+        ----------
         entity1
             A ConstrainedSketchVertex object or ConstrainedSketchGeometry object. 
         entity2

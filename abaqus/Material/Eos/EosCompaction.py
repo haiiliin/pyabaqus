@@ -23,6 +23,9 @@ class EosCompaction:
             This function can be accessed by:
             - mdb.models[name].materials[name].eos.EosCompaction
             - session.odbs[name].materials[name].eos.EosCompaction
+        
+        Parameters
+        ----------
         soundSpeed
             A Float specifying reference sound speed in the porous material. 
         porosity

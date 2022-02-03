@@ -39,6 +39,9 @@ class LeafFromElementVarRange(Leaf):
         .. code-block:: python
 
             LeafFromElementVarRange
+        
+        Parameters
+        ----------
         minimumRange
             A Float specifying the minimum value for the variable range. The default value is 
             −3.40282346639E38. 

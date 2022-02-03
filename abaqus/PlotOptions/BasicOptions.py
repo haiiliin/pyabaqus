@@ -709,6 +709,9 @@ class BasicOptions:
                   regionBoundaries: SymbolicConstant = ODB_REGIONS, useRegionBoundaries: Boolean = ON,
                   userRegions: tuple = (), includeFeatureBoundaries: Boolean = ON):
         """This method modifies the BasicOptions object.
+        
+        Parameters
+        ----------
         options
             A BasicOptions object from which values are to be copied. If other arguments are also 
             supplied to setValues, they will override the values in *options*. The default value is 

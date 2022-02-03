@@ -55,6 +55,9 @@ class Conductivity:
             This function can be accessed by:
             - mdb.models[name].materials[name].Conductivity
             - session.odbs[name].materials[name].Conductivity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type

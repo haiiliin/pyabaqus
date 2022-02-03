@@ -28,6 +28,9 @@ class IntegratedOutputSection:
         .. code-block:: python
 
             mdb.models[name].IntegratedOutputSection
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         surface
@@ -68,6 +71,9 @@ class IntegratedOutputSection:
                   refPointAtCenter: Boolean = OFF, refPointMotion: SymbolicConstant = INDEPENDENT,
                   localCsys: str = None, projectOrientation: Boolean = OFF):
         """This method modifies the IntegratedOutputSection object.
+        
+        Parameters
+        ----------
         surface
             A Region object specifying the surface over which the output is based. 
         refPoint

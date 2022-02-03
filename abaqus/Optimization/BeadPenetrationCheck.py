@@ -27,6 +27,9 @@ class BeadPenetrationCheck(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].BeadPenetrationCheck
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         beadPenetrationCheckRegion

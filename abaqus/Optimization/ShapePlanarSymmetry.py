@@ -32,6 +32,9 @@ class ShapePlanarSymmetry(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].ShapePlanarSymmetry
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         clientDirection
@@ -77,6 +80,9 @@ class ShapePlanarSymmetry(GeometricRestriction):
                   presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                   tolerance2: float = 0, tolerance3: float = 0):
         """This method modifies the ShapePlanarSymmetry object.
+        
+        Parameters
+        ----------
         allowNonSymmetricMesh
             A Boolean specifying whether to allow a nonsymmetric mesh for this geometric 
             restriction. The default value is TRUE. 

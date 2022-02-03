@@ -99,6 +99,9 @@ class BackwardCompatibility:
     def setValues(self, includeDeprecated: Boolean = ON, reportDeprecated: Boolean = True,
                   showKeysInReport: Boolean = False):
         """This method modifies the BackwardCompatibility object.
+        
+        Parameters
+        ----------
         includeDeprecated
             A Boolean specifying whether deprecated members, methods, and arguments can be seen and 
             used. The default value is ON. 

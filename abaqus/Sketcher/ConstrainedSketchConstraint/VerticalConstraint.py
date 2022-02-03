@@ -12,6 +12,9 @@ class VerticalConstraint(ConstrainedSketchConstraint):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].VerticalConstraint
+        
+        Parameters
+        ----------
         entity
             A ConstrainedSketchGeometry object specifying the line to constrain. 
 

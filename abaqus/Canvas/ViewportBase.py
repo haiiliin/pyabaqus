@@ -447,6 +447,9 @@ class ViewportBase:
         .. code-block:: python
 
             session.Viewport
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         origin
@@ -540,6 +543,9 @@ class ViewportBase:
         current display group. The element labels are printed only when the *displayedObject*
         member in the Viewport object is set to an Odb. The getActiveElementLabels method has
         the following arguments:
+        
+        Parameters
+        ----------
         useCut
             A Boolean flag to specify if any active cutting plane is to be considered in determining 
             active elements. 
@@ -559,6 +565,9 @@ class ViewportBase:
         current display group. The node labels are printed only when the *displayedObject*
         member in the Viewport object is set to an Odb. The getActiveNodeLabels method has the
         following arguments:
+        
+        Parameters
+        ----------
         useCut
             A Boolean flag to specify if any active cutting plane is to be considered in determining 
             active nodes. 
@@ -603,6 +612,9 @@ class ViewportBase:
     def offset(self, deltaX: float = 0, deltaY: float = 0):
         """This method modifies the current *X*-*Y* location of the viewport by the specified
         distance.
+        
+        Parameters
+        ----------
         deltaX
             A Float specifying the offset in millimeters of the *X*-component of the viewport 
             origin. The default value is 0. 
@@ -628,6 +640,9 @@ class ViewportBase:
         """This method specifies the color assignment using *initialColor* and *translucency*. If
         *initialColor* has a value of 'As is', *translucency* has no effect. The setColor method
         has the following arguments:
+        
+        Parameters
+        ----------
         initialColor
             A string specifying the initial color applied to the objects. 
         translucency
@@ -640,6 +655,9 @@ class ViewportBase:
     def setColor(self, colorMapping: AttributeColorMap):
         """This method specifies the color assignment using attributes specified by an
         AttributeColorMap object. The setColor method has the following arguments:
+        
+        Parameters
+        ----------
         colorMapping
             An AttributeColorMap object. Possible values are any AttributeColorMap object. 
         """
@@ -651,6 +669,9 @@ class ViewportBase:
                  nodeSymbolType: SymbolicConstant = HOLLOW_CIRCLE,
                  nodeSymbolSize: SymbolicConstant = SMALL):
         """This method specifies the color of a Leaf object.
+        
+        Parameters
+        ----------
         leaf
             A Leaf object. Possible values are any Leaf object. 
         edgeColorWireHide
@@ -691,6 +712,9 @@ class ViewportBase:
         """This method modifies the Viewport object. The arguments to setValues are the same as the
         arguments to the Viewport method, except for the *name* argument. In addition, the
         setValues method has the following arguments:
+        
+        Parameters
+        ----------
         displayedObject
             A Displayable object specifying the object to be displayed. The Displayable type is an 
             abstract generalization. The concrete possible types are Part, Assembly, 
@@ -723,6 +747,9 @@ class ViewportBase:
 
     def addDrawings(self, names: tuple = ()):
         """This method identifies the names of Drawing objects to be rendered in the Viewport.
+        
+        Parameters
+        ----------
         names
             A sequence of String values identifying keys in the session.drawings repository.
 
@@ -735,6 +762,9 @@ class ViewportBase:
     def removeDrawings(self, names: tuple = ()):
         """This method identifies the names of Drawing objects to no longer be rendered in the
         Viewport.
+        
+        Parameters
+        ----------
         names
             A sequence of String values identifying keys in the Viewport sequence.
 
@@ -750,6 +780,9 @@ class ViewportBase:
         until the time has elapsed. At completion, the actual number of refreshes (frames)
         rendered and elapsed time will be reported along with the calculated frames-per-second
         (fps).
+        
+        Parameters
+        ----------
         numFrames
             An Int specifying the minimum number of times to refresh the Viewport. The default value 
             is 0. 

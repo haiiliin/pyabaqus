@@ -45,6 +45,9 @@ class IncidentWaveProperty(ContactProperty):
         .. code-block:: python
 
             mdb.models[name].IncidentWaveProperty
+        
+        Parameters
+        ----------
         name
             A String specifying the interaction property repository key. 
         definition
@@ -182,6 +185,9 @@ class IncidentWaveProperty(ContactProperty):
                   massTNT: float = None, massFactor: float = 1, lengthFactor: float = 1,
                   timeFactor: float = 1, pressureFactor: float = 1):
         """This method modifies the IncidentWaveProperty object.
+        
+        Parameters
+        ----------
         definition
             A SymbolicConstant specifying the type of wave to be defined. Possible values are 
             PLANAR, SPHERICAL, DIFFUSE, AIR_BLAST, and SURFACE_BLAST. The default value is PLANAR. 

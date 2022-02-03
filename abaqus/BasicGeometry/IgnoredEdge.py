@@ -30,6 +30,9 @@ class IgnoredEdge:
 
     def getSize(self, printResults: str = True):
         """This method returns a Float indicating the length of the edge.
+        
+        Parameters
+        ----------
         printResults
             A Bool specifying whether verbose output is printed. The default is True. 
 
@@ -56,6 +59,9 @@ class IgnoredEdge:
 
     def getCurvature(self, parameter: float, point: tuple):
         """This method returns curvature information at a location on the IgnoredEdge object.
+        
+        Parameters
+        ----------
         parameter
             A Float specifying the normalized parameter location on the IgnoredEdge where the 
             curvature is to be computed. This argument is mutually exclusive with the argument 

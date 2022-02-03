@@ -31,6 +31,9 @@ class ShapePointSymmetry(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].ShapePointSymmetry
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -68,6 +71,9 @@ class ShapePointSymmetry(GeometricRestriction):
                   presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                   tolerance2: float = 0, tolerance3: float = 0):
         """This method modifies the ShapePointSymmetry object.
+        
+        Parameters
+        ----------
         csys
             None or a DatumCsys object specifying the symmetry point represented as the origin of a 
             local coordinate system. If *csys*=None, the global coordinate system is used. When this 

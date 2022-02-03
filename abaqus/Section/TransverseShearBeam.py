@@ -35,6 +35,9 @@ class TransverseShearBeam:
 
             mdb.models[name].sections[name].TransverseShearBeam
             session.odbs[name].sections[name].TransverseShearBeam
+        
+        Parameters
+        ----------
         scfDefinition
             A SymbolicConstant specifying how slenderness compensation factor of the section is 
             given. Possible values are ANALYSIS_DEFAULT, COMPUTED, and VALUE. 

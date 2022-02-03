@@ -17,6 +17,9 @@ class PrintOptions:
                   vpBackground: Boolean = OFF, compass: Boolean = OFF, printCommand: str = '',
                   deleteTemporaryFiles: Boolean = ON, reduceColors: Boolean = OFF):
         """This method modifies the PrintOptions object.
+        
+        Parameters
+        ----------
         rendition
             A SymbolicConstant specifying how the image is rendered. Possible values are 
             BLACK_AND_WHITE, GREYSCALE, and COLOR. The default value is COLOR. 

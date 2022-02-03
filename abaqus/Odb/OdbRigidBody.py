@@ -37,6 +37,9 @@ class OdbRigidBody:
 
             session.odbs[*name*].rootAssembly.instances[*name*].RigidBody
             session.odbs[*name*].rootAssembly.RigidBody
+        
+        Parameters
+        ----------
         referenceNode
             An OdbSet object specifying the reference node set associated with the rigid body. 
         position

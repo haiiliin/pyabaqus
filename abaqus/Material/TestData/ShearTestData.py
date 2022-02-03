@@ -24,6 +24,9 @@ class ShearTestData:
             This function can be accessed by:
             - mdb.models[name].materials[name].viscoelastic.ShearTestData
             - session.odbs[name].materials[name].viscoelastic.ShearTestData
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying values that depend on the *time* member of 
             the Viscoelastic object. 

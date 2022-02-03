@@ -27,6 +27,9 @@ class OptimizationConstraint:
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].OptimizationConstraint
+        
+        Parameters
+        ----------
         name
             A String specifying the optimization constraint repository key. 
         designResponse
@@ -47,6 +50,9 @@ class OptimizationConstraint:
 
     def setValues(self, restrictionMethod: SymbolicConstant = ABSOLUTE_EQUAL):
         """This method modifies the OptimizationConstraint object.
+        
+        Parameters
+        ----------
         restrictionMethod
             A SymbolicConstant specifying the method used to constrain the design response. Possible 
             values are ABSOLUTE_EQUAL, ABSOLUTE_GREATER_THAN_EQUAL, ABSOLUTE_LESS_THAN_EQUAL, 

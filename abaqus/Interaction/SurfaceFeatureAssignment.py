@@ -23,6 +23,9 @@ class SurfaceFeatureAssignment:
     def changeValuesInStep(self, stepName: str, index: int, value: typing.Union[SymbolicConstant, float]):
         """This method allows modification of surface feature angle assignments already defined on
         surfaces in a given step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the surface feature assignments are to 
             be modified. 
@@ -49,6 +52,9 @@ class SurfaceFeatureAssignment:
     def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant, float]):
         """This method allows addition of surface feature angle assignments to new surfaces in a
         given step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which new surface feature angle assignments 
             are to be defined. 
@@ -73,6 +79,9 @@ class SurfaceFeatureAssignment:
     def delete(self, indices: tuple):
         """The delete method allows you to delete existing surface feature angle assignments from a
         ContactExp object.
+        
+        Parameters
+        ----------
         indices
             A sequence of Ints specifying the index of each surface feature angle assignment to 
             delete. 

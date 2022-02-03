@@ -65,6 +65,9 @@ class View:
         .. code-block:: python
 
             session.View
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the view (also used as the repository key). Possible 
             values are 'Front', 'Back', 'Top', 'Bottom', 'Left', `Right', 'Iso', 'User-1', 'User-2', 
@@ -123,6 +126,9 @@ class View:
     def fitView(self, drawImmediately: Boolean = False):
         """This method scales the displayable object (such as a part, the assembly, or an *X–Y*
         plot) to fit the viewport.
+        
+        Parameters
+        ----------
         drawImmediately
             A Boolean specifying the viewport should refresh immediately after the command is 
             processed. This is typically only used when writing a script and it is desirable to show 
@@ -135,6 +141,9 @@ class View:
         (There is a list of eight views stored for each viewport.) If there is no next view, no
         action is taken.
         Note:This method is not available for a Layer View.
+        
+        Parameters
+        ----------
         drawImmediately
             A Boolean specifying the viewport should refresh immediately after the command is 
             processed. This is typically only used when writing a script and it is desirable to show 
@@ -145,6 +154,9 @@ class View:
     def pan(self, xFraction: float = 0, yFraction: float = 0, asMovie: Boolean = OFF,
             drawImmediately: Boolean = False):
         """This method pans the view in the viewport using absolute, not relative, mode.
+        
+        Parameters
+        ----------
         xFraction
             A Float specifying the amount to pan the model in the screen *X*-direction as a fraction 
             of the viewport width. A positive value pans the model to the right. A negative value 
@@ -169,6 +181,9 @@ class View:
         (There is a list of eight views stored for each viewport.) If there is no previous view,
         no action is taken.
         Note:This method is not available for a Layer View.
+        
+        Parameters
+        ----------
         drawImmediately
             A Boolean specifying the viewport should refresh immediately after the command is 
             processed. This argument is typically used only when writing a script and it is 
@@ -182,6 +197,9 @@ class View:
         """This method rotates the view in the viewport. If a center of rotation has been
         previously specified and *asMovie* is OFF then this method will honor that rotation
         center.
+        
+        Parameters
+        ----------
         xAngle
             A Float specifying the degrees to rotate about the *X*-axis. The default value is 0.0. 
         yAngle
@@ -207,6 +225,9 @@ class View:
     def setLayerTransform(self, layerTransform: tuple = (), options: 'View' = None, drawImmediately: Boolean = False):
         """This method modifies the transformation used to position a Layer.
         Note:This method is not available for Session and Viewport Views.
+        
+        Parameters
+        ----------
         layerTransform
             A sequence of 16 Floats specifying the transformation matrix. 
         options
@@ -226,6 +247,9 @@ class View:
         Choosing PERSPECTIVE makes a model appear more realistic by decreasing the apparent size
         of features that are farther away from the viewing point.
         Note:This method is not available for a Layer View.
+        
+        Parameters
+        ----------
         projection
             A SymbolicConstant specifying the projection mode. Possible values are PERSPECTIVE and 
             PARALLEL. 
@@ -243,6 +267,9 @@ class View:
 
     def setRotationCenter(self, rotationCenter: tuple):
         """This method sets the center of rotation to the specified location.
+        
+        Parameters
+        ----------
         rotationCenter
             A sequence of a String and an Int specifying a part instance name and a node label or a 
             sequence of 3 Floats specifying a point.
@@ -257,6 +284,9 @@ class View:
     def setValues(self, movieMode: Boolean = OFF):
         """This method modifies the View object.
         Note:This method is not available for a Layer View.
+        
+        Parameters
+        ----------
         movieMode
             A Boolean specifying whether or not the camera is in movie mode. The default value is 
             OFF.
@@ -270,6 +300,9 @@ class View:
     def setViewpoint(self, viewVector: tuple, cameraUpVector: tuple = (), drawImmediately: Boolean = False):
         """This method sets the camera's position in the viewport.
         Note:This method is not available for a Layer View.
+        
+        Parameters
+        ----------
         viewVector
             A sequence of three Floats specifying the viewing vector (from the camera to the origin 
             of the model). 
@@ -287,6 +320,9 @@ class View:
     def zoom(self, zoomFactor: float, mode: SymbolicConstant = ABSOLUTE, asMovie: Boolean = OFF,
              drawImmediately: Boolean = False):
         """This method magnifies the view in the viewport.
+        
+        Parameters
+        ----------
         zoomFactor
             A Float specifying the amount to zoom. Possible values are 0.000001 ≤≤ *zoomFactor* ≤≤ 
             1000000. A *zoomFactor* less than one reduces the image. A *zoomFactor* greater than one 
@@ -312,6 +348,9 @@ class View:
 
     def zoomRectangle(self, point1: tuple[float], point2: tuple[float], drawImmediately: Boolean = False):
         """This method fills the viewport with the graphics located within the given rectangle.
+        
+        Parameters
+        ----------
         point1
             A pair of Floats specifying the*X*- and *Y*-coordinates of one corner of the rectangle 
             in fractions of the viewport width and height. 

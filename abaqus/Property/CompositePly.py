@@ -31,6 +31,9 @@ class CompositePly:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].compositeLayups[*name*].CompositePly
+        
+        Parameters
+        ----------
         thickness
             A Float specifying the thickness of the section layer. 
         region

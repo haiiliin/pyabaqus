@@ -12,6 +12,9 @@ class DisplayGroupSession(SessionBase):
         -----
             This function can be accessed by:
             - session.DisplayGroup
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         leaf

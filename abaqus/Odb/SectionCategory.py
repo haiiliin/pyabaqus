@@ -56,6 +56,9 @@ class SectionCategory:
         .. code-block:: python
 
             session.odbs[*name*].SectionCategory
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the category. 
         description
@@ -77,6 +80,9 @@ class SectionCategory:
         .. code-block:: python
 
             session.odbs[*name*].SectionCategory
+        
+        Parameters
+        ----------
         number
             An Int specifying the number of the section point. See Beam elements and Shell elements
             for the numbering convention.

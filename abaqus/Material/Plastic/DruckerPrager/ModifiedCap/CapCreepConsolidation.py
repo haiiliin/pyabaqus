@@ -56,6 +56,9 @@ class CapCreepConsolidation:
             This function can be accessed by:
             - mdb.models[name].materials[name].capPlasticity.CapCreepConsolidation
             - session.odbs[name].materials[name].capPlasticity.CapCreepConsolidation
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         law

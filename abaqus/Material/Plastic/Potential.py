@@ -47,6 +47,9 @@ class Potential:
             - session.odbs[name].materials[name].creep.Potential
             - session.odbs[name].materials[name].Plastic.Potential
             - session.odbs[name].materials[name].viscous.Potential
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

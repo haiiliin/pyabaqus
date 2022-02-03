@@ -23,6 +23,9 @@ class JouleHeatFraction:
             This function can be accessed by:
             - mdb.models[name].materials[name].JouleHeatFraction
             - session.odbs[name].materials[name].JouleHeatFraction
+        
+        Parameters
+        ----------
         fraction
             A Float specifying the fraction of electrical energy released as heat, including any 
             unit conversion factor. The default value is 1.0. 

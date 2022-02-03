@@ -35,6 +35,9 @@ class SpecificHeat:
             This function can be accessed by:
             - mdb.models[name].materials[name].SpecificHeat
             - session.odbs[name].materials[name].SpecificHeat
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         law

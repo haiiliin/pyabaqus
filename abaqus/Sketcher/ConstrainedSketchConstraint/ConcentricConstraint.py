@@ -14,6 +14,9 @@ class ConcentricConstraint(ConstrainedSketchConstraint):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].ConcentricConstraint
+        
+        Parameters
+        ----------
         entity1
             A ConstrainedSketchGeometry object specifying the first arc, circle, ellipse, or sketch 
             vertex. 

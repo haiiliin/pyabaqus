@@ -33,6 +33,9 @@ class ShapeRotationalSymmetry(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].ShapeRotationalSymmetry
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         clientDirection
@@ -87,6 +90,9 @@ class ShapeRotationalSymmetry(GeometricRestriction):
                   presumeFeasibleRegionAtStart: Boolean = ON, startPoint: float = None,
                   tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0):
         """This method modifies the ShapeRotationalSymmetry object.
+        
+        Parameters
+        ----------
         allowNonSymmetricMesh
             A Boolean specifying whether to allow a nonsymmetric mesh for this geometric 
             restriction. The default value is TRUE. 

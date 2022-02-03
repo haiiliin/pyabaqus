@@ -21,6 +21,9 @@ class AnimationUserData(UserDataBase):
             This function can be accessed by:
             - mdb.Arrow
             - session.odbs[*name*].userData.Arrow
+        
+        Parameters
+        ----------
         name
             A String specifying the annotation repository key.
         startPoint
@@ -122,6 +125,9 @@ class AnimationUserData(UserDataBase):
             This function can be accessed by:
             - mdb.Text
             - session.odbs[*name*].userData.Text
+        
+        Parameters
+        ----------
         name
             A String specifying the annotation repository key.
         text

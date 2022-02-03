@@ -45,6 +45,9 @@ class ShellSolidCoupling(Constraint):
         .. code-block:: python
 
             mdb.models[name].ShellSolidCoupling
+        
+        Parameters
+        ----------
         name
             A String specifying the constraint repository key. 
         shellEdge
@@ -76,6 +79,9 @@ class ShellSolidCoupling(Constraint):
     def setValues(self, positionToleranceMethod: SymbolicConstant = COMPUTED, positionTolerance: float = 0,
                   influenceDistanceMethod: SymbolicConstant = DEFAULT, influenceDistance: float = 0):
         """This method modifies the ShellSolidCoupling object.
+        
+        Parameters
+        ----------
         positionToleranceMethod
             A SymbolicConstant specifying the method used to determine the position tolerance. 
             Possible values are COMPUTED and SPECIFIED. The default value is COMPUTED. 

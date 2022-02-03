@@ -69,6 +69,9 @@ class LineLoad(Load):
         .. code-block:: python
 
             mdb.models[name].LineLoad
+        
+        Parameters
+        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -111,6 +114,9 @@ class LineLoad(Load):
                   system: SymbolicConstant = GLOBAL):
         """This method modifies the data for an existing LineLoad object in the step where it is
         created.
+        
+        Parameters
+        ----------
         distributionType
             A SymbolicConstant specifying how the load is distributed spatially. Possible values are 
             UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM. 
@@ -144,6 +150,9 @@ class LineLoad(Load):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing LineLoad object in the
         specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         comp1

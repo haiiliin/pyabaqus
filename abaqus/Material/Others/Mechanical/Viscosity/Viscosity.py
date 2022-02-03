@@ -40,6 +40,9 @@ class Viscosity:
             This function can be accessed by:
             - mdb.models[name].materials[name].Viscosity
             - session.odbs[name].materials[name].Viscosity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type

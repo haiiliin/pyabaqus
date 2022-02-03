@@ -40,6 +40,9 @@ class TensileFailure:
             - mdb.models[name].materials[name].eos.TensileFailure
             - session.odbs[name].materials[name].Plastic.TensileFailure
             - session.odbs[name].materials[name].eos.TensileFailure
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         dependencies

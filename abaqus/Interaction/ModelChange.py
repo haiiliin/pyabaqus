@@ -35,6 +35,9 @@ class ModelChange(Interaction):
         .. code-block:: python
 
             mdb.models[name].ModelChange
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -69,6 +72,9 @@ class ModelChange(Interaction):
                   region: Region = Region(), activeInStep: Boolean = OFF, includeStrain: Boolean = OFF):
         """This method modifies the data for an existing ModelChange object in the step where it is
         created.
+        
+        Parameters
+        ----------
         isRestart
             A Boolean specifying whether this interaction is being used solely to indicate that 
             model change may be required in a subsequent restart analysis (either for elements or 
@@ -93,6 +99,9 @@ class ModelChange(Interaction):
     def setValuesInStep(self, stepName: str, activeInStep: Boolean = OFF, includeStrain: Boolean = OFF):
         """This method modifies the propagating data of an existing ModelChange object in the
         specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         activeInStep

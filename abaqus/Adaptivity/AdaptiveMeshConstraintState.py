@@ -84,9 +84,6 @@ class AdaptiveMeshConstraintState:
             
         Parameters
         ----------
-        
-        Parameters
-        ----------
         amplitudeState
              A SymbolicConstant specifying the propagation state of the amplitude reference. Possible  values are
              UNSET, SET, UNCHANGED, FREED, and MODIFIED.

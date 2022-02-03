@@ -47,6 +47,9 @@ class NormalBehavior:
         .. code-block:: python
 
             mdb.models[name].interactionProperties[name].NormalBehavior
+        
+        Parameters
+        ----------
         contactStiffness
             The SymbolicConstant DEFAULT or a Float specifying the contact stiffness. This argument 
             is valid for *pressureOverclosure*=LINEAR. This argument is also valid for 

@@ -37,6 +37,9 @@ class ElemType:
         .. code-block:: python
 
             mesh.ElemType
+        
+        Parameters
+        ----------
         elemCode
             A SymbolicConstant specifying the Abaqus element code or just the element shape. 
             Possible values are: 

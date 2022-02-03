@@ -36,6 +36,9 @@ class AbaqusBoolean:
         .. code-block:: python
 
             AbaqusBoolean
+        
+        Parameters
+        ----------
         value
             An Int specifying whether the AbaqusBoolean object will test true or false. Possible 
             values are 0 and 1, which will create the AbaqusBoolean method OFF and ON, respectively. 

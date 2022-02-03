@@ -34,6 +34,9 @@ class ExpContactControl(ContactControl):
         .. code-block:: python
 
             mdb.models[name].ExpContactControl
+        
+        Parameters
+        ----------
         name
             A String specifying the contact controls repository key. 
         globTrkChoice
@@ -73,6 +76,9 @@ class ExpContactControl(ContactControl):
                   fastLocalTrk: Boolean = ON, scalePenalty: float = 1, warpCheckPeriod: int = 20,
                   warpCutoff: float = 20):
         """This method modifies the ExpContactControl object.
+        
+        Parameters
+        ----------
         globTrkChoice
             A SymbolicConstant specifying whether or not the default value will be used for the 
             maximum number of increments between global contact searches. Possible values are 

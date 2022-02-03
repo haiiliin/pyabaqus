@@ -30,6 +30,9 @@ class SaturationDependence:
             This function can be accessed by:
             - mdb.models[name].materials[name].permeability.SaturationDependence
             - session.odbs[name].materials[name].permeability.SaturationDependence
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
 

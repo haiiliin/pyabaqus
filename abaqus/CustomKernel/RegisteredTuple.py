@@ -26,6 +26,9 @@ class RegisteredTuple(CommandRegister):
         .. code-block:: python
 
             customKernel.RegisteredTuple
+        
+        Parameters
+        ----------
         tuple
             A tuple of objects. These objects must be derived from the CommandRegister class. 
 

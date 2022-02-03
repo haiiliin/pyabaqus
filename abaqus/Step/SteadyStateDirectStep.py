@@ -264,6 +264,9 @@ class SteadyStateDirectStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].SteadyStateDirectStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         previous
@@ -308,6 +311,9 @@ class SteadyStateDirectStep(AnalysisStep):
                   scale: SymbolicConstant = LOGARITHMIC, matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
                   subdivideUsingEigenfrequencies: Boolean = OFF, frictionDamping: Boolean = OFF):
         """This method modifies the SteadyStateDirectStep object.
+        
+        Parameters
+        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         factorization

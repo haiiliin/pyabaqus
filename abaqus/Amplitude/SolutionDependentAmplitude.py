@@ -36,6 +36,9 @@ class SolutionDependentAmplitude(Amplitude):
 
             mdb.models[name].SolutionDependentAmplitude
             session.odbs[name].SolutionDependentAmplitude
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         initial
@@ -61,6 +64,9 @@ class SolutionDependentAmplitude(Amplitude):
     def setValues(self, initial: float = 1, minimum: float = 0, maximum: float = 1000,
                   timeSpan: SymbolicConstant = STEP):
         """This method modifies the SolutionDependentAmplitude object.
+        
+        Parameters
+        ----------
         initial
             A Float specifying the initial amplitude value. Possible values are those between 
             *minimum* and *maximum*. The default value is 1.0. 

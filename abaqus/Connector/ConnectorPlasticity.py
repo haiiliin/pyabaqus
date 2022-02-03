@@ -110,6 +110,9 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
                       connectorBehavior.ConnectorPlasticity
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorPlasticity
+        
+        Parameters
+        ----------
         coupling
             A SymbolicConstant specifying whether or not the behavior is coupled. Possible values 
             are UNCOUPLED and COUPLED. The default value is UNCOUPLED. 

@@ -45,6 +45,9 @@ class DataTable:
         .. code-block:: python
 
             mdb.models[name].tableCollections[name].parameterTables[name].DataTable
+        
+        Parameters
+        ----------
         label
             A String specifying a unique label name for the current ParameterTable object. 
 

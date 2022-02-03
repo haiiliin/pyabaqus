@@ -84,6 +84,9 @@ class HistoryOutputRequest:
         .. code-block:: python
 
             mdb.models[name].HistoryOutputRequest
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -166,6 +169,9 @@ class HistoryOutputRequest:
     def deactivate(self, stepName: str):
         """This method deactivates the history output request in the specified step and all
         subsequent steps.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the history output request is 
             deactivated.
@@ -175,6 +181,9 @@ class HistoryOutputRequest:
     def move(self, fromStepName: str, toStepName: str):
         """This method moves the history output request state object from one step to a different
         step.
+        
+        Parameters
+        ----------
         fromStepName
             A String specifying the name of the step from which the history output request state is 
             moved. 
@@ -187,6 +196,9 @@ class HistoryOutputRequest:
     def reset(self, stepName: str):
         """This method resets the history output request state of the specified step to the state
         of the previous step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the history output request state is 
             reset.
@@ -216,6 +228,9 @@ class HistoryOutputRequest:
                   useGlobal: Boolean = True):
         """This method modifies the data for an existing HistoryOutputRequest object in the step
         where it is created.
+        
+        Parameters
+        ----------
         region
             The SymbolicConstant MODEL or a Region object specifying the region from which output is 
             requested. The SymbolicConstant MODEL represents the whole model. The default value is 
@@ -297,6 +312,9 @@ class HistoryOutputRequest:
                         numIntervals: int = 20, timePoints: str = None):
         """This method modifies the propagating data for an existing HistoryOutputRequest object in
         the specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the history output request is 
             modified. 

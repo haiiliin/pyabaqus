@@ -27,6 +27,9 @@ class XYSession(XYSessionBase):
             This function can be accessed by:
             - session.AreaStyle
             - xyPlot.AreaStyle
+        
+        Parameters
+        ----------
         color
             A String specifying the color to be used when filling an area with this AreaStyle
             object. The default value is "White".
@@ -58,6 +61,9 @@ class XYSession(XYSessionBase):
             This function can be accessed by:
             - session.LineStyle
             - xyPlot.LineStyle
+        
+        Parameters
+        ----------
         color
             A String specifying the color to be used when drawing a line with this LineStyle object.
             The default value is "White".
@@ -92,6 +98,9 @@ class XYSession(XYSessionBase):
             This function can be accessed by:
             - session.QuantityType
             - xyPlot.QuantityType
+        
+        Parameters
+        ----------
         label
             A String specifying the label for this quantity type.
         type
@@ -187,6 +196,9 @@ class XYSession(XYSessionBase):
             This function can be accessed by:
             - session.SymbolStyle
             - xyPlot.SymbolStyle
+        
+        Parameters
+        ----------
         color
             A String specifying the color to be used when drawing a marker with this SymbolStyle
             object. The default value is "White".
@@ -232,6 +244,9 @@ class XYSession(XYSessionBase):
             This function can be accessed by:
             - session.TextStyle
             - xyPlot.TextStyle
+        
+        Parameters
+        ----------
         color
             A String specifying the color to be used when drawing text with this TextStyle object.
             The default value is "White".
@@ -269,6 +284,9 @@ class XYSession(XYSessionBase):
             This function can be accessed by:
             - session.XYData
             - xyPlot.XYData
+        
+        Parameters
+        ----------
         data
             A sequence of pairs of Floats specifying the *X–Y* data pairs.
         name
@@ -318,6 +336,9 @@ class XYSession(XYSessionBase):
             - session.odbs[*name*].userData.XYData
             - session.XYData
             - xyPlot.XYData
+        
+        Parameters
+        ----------
         objectToCopy
             An XYData object to be copied.
 
@@ -343,6 +364,9 @@ class XYSession(XYSessionBase):
             This function can be accessed by:
             - session.XYDataFromFile
             - xyPlot.XYDataFromFile
+        
+        Parameters
+        ----------
         fileName
             A String specifying the name of the file from which the *X–Y* data will be read.
         name
@@ -401,6 +425,9 @@ class XYSession(XYSessionBase):
             This function can be accessed by:
             - session.XYDataFromHistory
             - xyPlot.XYDataFromHistory
+        
+        Parameters
+        ----------
         odb
             An Odb object specifying the output database from which data will be read.
         outputVariableName
@@ -458,6 +485,9 @@ class XYSession(XYSessionBase):
             This function can be accessed by:
             - session.xyDataListFromField
             - xyPlot.xyDataListFromField
+        
+        Parameters
+        ----------
         odb
             An Odb object specifying the output database from which data will be read.
         outputPosition
@@ -538,6 +568,9 @@ class XYSession(XYSessionBase):
             This function can be accessed by:
             - session.XYDataFromFreeBody
             - xyPlot.XYDataFromFreeBody
+        
+        Parameters
+        ----------
         odb
             An Odb object specifying the output database from which data will be read.
         force
@@ -581,6 +614,9 @@ class XYSession(XYSessionBase):
             This function can be accessed by:
             - session.XYDataFromPath
             - xyPlot.XYDataFromPath
+        
+        Parameters
+        ----------
         path
             A Path object to use in *X–Y* data generation.
         name

@@ -31,6 +31,9 @@ class SingleTermDesignResponse(DesignResponse):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].SingleTermDesignResponse
+        
+        Parameters
+        ----------
         name
             A String specifying the design response repository key. 
         identifier
@@ -68,6 +71,9 @@ class SingleTermDesignResponse(DesignResponse):
                   region: SymbolicConstant = MODEL, shellLayer: SymbolicConstant = MAXIMUM,
                   stepOperation: SymbolicConstant = SUM, stepOptions: StepOptionArray = None):
         """This method modifies the SingleTermDesignResponse object.
+        
+        Parameters
+        ----------
         csys
             None or a DatumCsys object specifying the local coordinate system. If *csys*=None, the 
             global coordinate system is used. When this member is queried, it returns an Int. The 

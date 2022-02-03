@@ -154,6 +154,9 @@ class Area:
                   originOffset: tuple[float] = (), widthScale: float = 1, heightScale: float = 1,
                   inset: Boolean = OFF, pl: float = 1, pr: float = 1, pt: float = 1, pb: float = 1):
         """This method modifies the Area object.
+        
+        Parameters
+        ----------
         area
             An Area object from which attributes are to be copied. 
         style

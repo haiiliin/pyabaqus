@@ -13,6 +13,9 @@ class LoadStep(StepBase):
         -----
             This function can be accessed by:
             - mdb.models[name].steps[name].LoadCase
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the object.
         boundaryConditions

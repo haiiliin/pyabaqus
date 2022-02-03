@@ -128,9 +128,6 @@ class DisplacementAdaptiveMeshConstraint(AdaptiveMeshConstraint):
         
         Parameters
         ----------
-        
-        Parameters
-        ----------
         u1
             A Float or a SymbolicConstant specifying the displacement component in the 1-direction. 
             Possible values for the SymbolicConstant are UNSET and SET. The default value is 
@@ -180,9 +177,6 @@ class DisplacementAdaptiveMeshConstraint(AdaptiveMeshConstraint):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing
         DisplacementAdaptiveMeshConstraint object in the specified step.
-        
-        Parameters
-        ----------
         
         Parameters
         ----------

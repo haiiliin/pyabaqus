@@ -35,6 +35,9 @@ class FluidExchangeProperty(ContactProperty):
         .. code-block:: python
 
             mdb.models[name].FluidExchangeProperty
+        
+        Parameters
+        ----------
         name
             A String specifying the interaction property repository key. 
         dataTable
@@ -105,6 +108,9 @@ class FluidExchangeProperty(ContactProperty):
     def setValues(self, definition: SymbolicConstant = BULK_VISCOSITY, pressureDependency: Boolean = OFF,
                   temperatureDependency: Boolean = OFF, fieldDependencies: int = 0):
         """This method modifies the FluidExchangeProperty object.
+        
+        Parameters
+        ----------
         definition
             A SymbolicConstant specifying the type of fluid exchange property to be defined. 
             Possible values are BULK_VISCOSITY, MASS_FLUX, MASS_RATE_LEAK, VOL_FLUX, and 

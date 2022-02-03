@@ -280,6 +280,9 @@ class BuckleStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].BuckleStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         previous
@@ -333,6 +336,9 @@ class BuckleStep(AnalysisStep):
                   blockSize: SymbolicConstant = DEFAULT, maxBlocks: SymbolicConstant = DEFAULT,
                   matrixStorage: SymbolicConstant = SOLVER_DEFAULT):
         """This method modifies the BuckleStep object.
+        
+        Parameters
+        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         eigensolver

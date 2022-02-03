@@ -33,6 +33,9 @@ class DiagnosticPrint:
         .. code-block:: python
 
             mdb.models[name].steps[name].DiagnosticPrint
+        
+        Parameters
+        ----------
         allke
             A Boolean specifying a request for a column containing the total kinetic energy. This 
             argument is valid only for an Abaqus/Explicit analysis. The default value is ON. 

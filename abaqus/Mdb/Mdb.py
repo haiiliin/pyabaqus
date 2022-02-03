@@ -57,6 +57,9 @@ class Mdb(AcisMdb, JobMdb):
         .. code-block:: python
 
             mdb.Model
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         description

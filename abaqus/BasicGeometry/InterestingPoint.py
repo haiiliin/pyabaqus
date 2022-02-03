@@ -33,6 +33,9 @@ class InterestingPoint:
 
             mdb.models[*name*].parts[*name*].InterestingPoint
             mdb.models[*name*].rootAssembly.instances[*name*].InterestingPoint
+        
+        Parameters
+        ----------
         edge
             An Edge object specifying the edge on which the interesting point is positioned. 
         rule

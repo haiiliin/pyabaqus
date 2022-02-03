@@ -377,6 +377,9 @@ class CoupledTempDisplacementStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].CoupledTempDisplacementStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         previous
@@ -475,6 +478,9 @@ class CoupledTempDisplacementStep(AnalysisStep):
                   extrapolation: SymbolicConstant = LINEAR, convertSDI: SymbolicConstant = PROPAGATED,
                   adaptiveDampingRatio: float = 0, continueDampingFactors: Boolean = OFF):
         """This method modifies the CoupledTempDisplacementStep object.
+        
+        Parameters
+        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         response

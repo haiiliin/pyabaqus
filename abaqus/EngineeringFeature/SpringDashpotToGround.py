@@ -51,6 +51,9 @@ class SpringDashpotToGround(SpringDashpot):
             mdb.models[name].parts[name].engineeringFeatures.SpringDashpotToGround
             mdb.models[name].rootAssembly.engineeringFeatures\
             .SpringDashpotToGround
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         region
@@ -87,6 +90,9 @@ class SpringDashpotToGround(SpringDashpot):
     def setValues(self, orientation: str = None, springBehavior: Boolean = OFF, dashpotBehavior: Boolean = OFF,
                   springStiffness: float = 0, dashpotCoefficient: float = 0):
         """This method modifies the SpringDashpotToGround object.
+        
+        Parameters
+        ----------
         orientation
             None or a DatumCsys object specifying the local directions for the spring and/or 
             dashpot. If *orientation*=None, the spring and/or dashpot data are defined in the global 

@@ -33,6 +33,9 @@ class ImageAnimation:
         .. code-block:: python
 
             session.ImageAnimation
+        
+        Parameters
+        ----------
         fileName
             A String specifying the name of the animation file to generate. 
         format
@@ -47,6 +50,9 @@ class ImageAnimation:
 
     def writeFrame(self, canvasObjects: tuple = ()):
         """This method adds a frame to the ImageAnimation object.
+        
+        Parameters
+        ----------
         canvasObjects
             A sequence specifying the canvas objects to capture. The default is to capture all 
             canvas objects. 

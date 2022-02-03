@@ -99,6 +99,9 @@ class OdbPartBase:
         .. code-block:: python
 
             session.odbs[name].Part
+        
+        Parameters
+        ----------
         name
             A String specifying the part name. 
         embeddedSpace
@@ -121,6 +124,9 @@ class OdbPartBase:
         connectivity.
         Warning:Adding elements not in ascending order of their labels may cause Abaqus/Viewer
         to plot contours incorrectly.
+        
+        Parameters
+        ----------
         labels
             A sequence of Ints specifying the element labels. 
         connectivity
@@ -141,6 +147,9 @@ class OdbPartBase:
         nodal connectivity.
         Warning:Adding elements not in ascending order of their labels may cause Abaqus/Viewer
         to plot contours incorrectly.
+        
+        Parameters
+        ----------
         elementData
             A sequence of sequences of Ints specifying the element labels and nodal connectivity, in 
             the form ((*label*, *c1*, *c2*, *c3*, *c4*), (*label*, *c1*, *c2*, *c3*, *c4*), ...). 
@@ -161,6 +170,9 @@ class OdbPartBase:
         """This method adds nodes to an OdbPart object using node labels and coordinates.
         Warning:Adding nodes not in ascending order of their labels may cause Abaqus/Viewer to
         plot contours incorrectly.
+        
+        Parameters
+        ----------
         labels
             A sequence of Ints specifying the node labels. 
         coordinates
@@ -176,6 +188,9 @@ class OdbPartBase:
         coordinates.
         Warning:Adding nodes not in ascending order of their labels may cause Abaqus/Viewer to
         plot contours incorrectly.
+        
+        Parameters
+        ----------
         nodeData
             A sequence of tuples specifying the node labels and coordinates, in the form ((*label*, 
             *x*, *y*, *z*), (*label*, *x*, *y*, *z*), ...). 
@@ -189,6 +204,9 @@ class OdbPartBase:
 
     def assignBeamOrientation(self, region: str, method: SymbolicConstant, vector: tuple):
         """This method assigns a beam section orientation to a region of a part instance.
+        
+        Parameters
+        ----------
         region
             An OdbSet specifying a region on an instance. 
         method
@@ -204,6 +222,9 @@ class OdbPartBase:
                                   angle: float = 0,
                                   stackDirection: SymbolicConstant = STACK_3):
         """This method assigns a material orientation to a region of a part instance.
+        
+        Parameters
+        ----------
         region
             An OdbSet specifying a region on an instance. 
         localCSys
@@ -226,6 +247,9 @@ class OdbPartBase:
     def assignRebarOrientation(self, region: str, localCsys: OdbDatumCsys, axis: SymbolicConstant = AXIS_1,
                                angle: float = 0):
         """This method assigns a rebar reference orientation to a region of a part instance.
+        
+        Parameters
+        ----------
         region
             An OdbSet specifying a region on an instance. 
         localCsys
@@ -243,6 +267,9 @@ class OdbPartBase:
 
     def getElementFromLabel(self, label: int):
         """This method is used to retrieved an element with a specific label from a part object.
+        
+        Parameters
+        ----------
         label
             An Int specifying the element label. 
 
@@ -259,6 +286,9 @@ class OdbPartBase:
 
     def getNodeFromLabel(self, label: int):
         """This method is used to retrieved a node with a specific label from a part object.
+        
+        Parameters
+        ----------
         label
             An Int specifying the node label. 
 
@@ -276,6 +306,9 @@ class OdbPartBase:
     def AnalyticRigidSurf2DPlanar(self, name: str, profile: tuple[AnalyticSurfaceSegment], filletRadius: str = 0):
         """This method is used to define a two-dimensional AnalyticSurface object on the part
         object.
+        
+        Parameters
+        ----------
         name
             The name of the analytic surface. 
         profile
@@ -296,6 +329,9 @@ class OdbPartBase:
     def AnalyticRigidSurfExtrude(self, name: str, profile: tuple[AnalyticSurfaceSegment], filletRadius: str = 0):
         """This method is used to define a three-dimensional cylindrical AnalyticSurface on the
         part object.
+        
+        Parameters
+        ----------
         name
             The name of the analytic surface. 
         profile
@@ -316,6 +352,9 @@ class OdbPartBase:
     def AnalyticRigidSurfRevolve(self, name: str, profile: tuple[AnalyticSurfaceSegment], filletRadius: str = 0):
         """This method is used to define a three-dimensional AnalyticSurface of revolution on the
         part object.
+        
+        Parameters
+        ----------
         name
             The name of the analytic surface. 
         profile

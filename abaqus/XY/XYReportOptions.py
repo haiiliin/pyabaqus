@@ -20,6 +20,9 @@ class XYReportOptions:
                   pageWidthLimited: Boolean = OFF, numberFormat: SymbolicConstant = ENGINEERING,
                   layout: SymbolicConstant = SINGLE_TABLE):
         """This method modifies the XYReportOptions object.
+        
+        Parameters
+        ----------
         pageWidth
             An Int specifying the number of characters per line of the report file when 
             *pageWidthLimited*=ON. Possible values are *pageWidth* >> 0. The default value is 80. 

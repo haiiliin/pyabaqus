@@ -29,6 +29,9 @@ class SuperElasticHardening:
             This function can be accessed by:
             - mdb.models[name].materials[name].superElasticity.SuperElasticHardening
             - session.odbs[name].materials[name].superElasticity.SuperElasticHardening
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
 

@@ -30,6 +30,9 @@ class Control:
                   temperatureField: typing.Union[SymbolicConstant, float] = DEFAULT,
                   vcctLinearScaling: typing.Union[SymbolicConstant, float] = DEFAULT):
         """This method modifies the Control object.
+        
+        Parameters
+        ----------
         allowPropagation
             A Boolean specifying whether to allow all control values to propagate from a previous 
             step. Setting this argument to ON automatically sets *resetDefaultValues* to OFF. The 

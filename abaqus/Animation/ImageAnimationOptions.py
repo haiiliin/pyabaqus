@@ -17,6 +17,9 @@ class ImageAnimationOptions:
     def setValues(self, frameRate: int = None, timeScale: int = None, vpDecorations: Boolean = ON,
                   vpBackground: Boolean = OFF, compass: Boolean = OFF):
         """This method modifies the ImageAnimationOptions object.
+        
+        Parameters
+        ----------
         frameRate
             An Int specifying the frame rate to record on the saved animation file. The effective 
             frame rate in frames per second will be obtained by dividing the given frame rate by the 

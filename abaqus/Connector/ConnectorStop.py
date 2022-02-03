@@ -36,6 +36,9 @@ class ConnectorStop(ConnectorBehaviorOption):
             connectorBehavior.ConnectorStop
             import odbConnectorBehavior
             odbConnectorBehavior.ConnectorStop
+        
+        Parameters
+        ----------
         minMotion
             None or a Float specifying the lower bound for the connector's relative position for all 
             specified components, or no lower bound. The default value is None. 

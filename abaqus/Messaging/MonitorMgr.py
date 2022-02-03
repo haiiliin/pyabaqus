@@ -19,6 +19,9 @@ class MonitorMgr:
         """This method specifies a callback function that will be called when the specified message
         is received from the analysis product.
         For more information, see An example of a callback function.
+        
+        Parameters
+        ----------
         jobName
             A String specifying the name of the job to be monitored or the SymbolicConstant ANY_JOB. 
         messageType
@@ -39,6 +42,9 @@ class MonitorMgr:
     def removeMessageCallback(self, jobName: str, messageType: SymbolicConstant, callback: str, userData: str):
         """This method removes a callback function. You specify the callback function to remove
         using the same arguments you used to add the callback.
+        
+        Parameters
+        ----------
         jobName
             A String specifying the name of the job to be monitored or the SymbolicConstant ANY_JOB. 
         messageType

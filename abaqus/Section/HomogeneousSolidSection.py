@@ -33,6 +33,9 @@ class HomogeneousSolidSection(SolidSection):
 
             mdb.models[name].HomogeneousSolidSection
             session.odbs[name].HomogeneousSolidSection
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         material
@@ -50,6 +53,9 @@ class HomogeneousSolidSection(SolidSection):
 
     def setValues(self, thickness: float = 1):
         """This method modifies the HomogeneousSolidSection object.
+        
+        Parameters
+        ----------
         thickness
             A Float specifying the thickness of the section. Possible values are None or greater 
             than zero. The default value is 1.0.

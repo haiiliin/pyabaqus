@@ -116,6 +116,9 @@ class ViewCut:
 
             session.viewports[name].layers[name].odbDisplay.ViewCut
             session.viewports[name].odbDisplay.ViewCut
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         shape
@@ -176,6 +179,9 @@ class ViewCut:
                   followDeformation: Boolean = OFF, overrideAveraging: Boolean = ON,
                   referenceFrame: SymbolicConstant = FIRST_FRAME):
         """This method modifies the ViewCut object.
+        
+        Parameters
+        ----------
         angle
             A Float specifying the rotation angle of the cut defined with a *shape* set to PLANE. 
         motion

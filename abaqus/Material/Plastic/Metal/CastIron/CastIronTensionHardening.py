@@ -38,6 +38,9 @@ class CastIronTensionHardening:
             - .CastIronTensionHardening
             - session.odbs[name].materials[name].castIronPlasticity\
             - .CastIronTensionHardening
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

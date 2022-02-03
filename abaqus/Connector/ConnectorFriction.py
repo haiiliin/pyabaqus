@@ -77,6 +77,9 @@ class ConnectorFriction(ConnectorBehaviorOption):
                       connectorBehavior.ConnectorFriction
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorFriction
+        
+        Parameters
+        ----------
         frictionModel
             A SymbolicConstant specifying the desired frictional response model. Possible values are 
             PREDEFINED and USER_CUSTOMIZED. The default value is PREDEFINED. 

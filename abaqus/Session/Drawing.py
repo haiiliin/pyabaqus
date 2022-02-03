@@ -160,6 +160,9 @@ class Drawing:
         .. code-block:: python
 
             session.Drawing
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
 
@@ -179,6 +182,9 @@ class Drawing:
         """This method accepts the vertex data that defines the Drawing object. It defines in an
         array of vertices with a length equal to the length of the *vertexData* sequence divided
         by *vertexDimension*.
+        
+        Parameters
+        ----------
         vertexDimension
             An Integer in the range of 2 to 4 specifying how many Float values are needed to compose 
             a single vertex. 
@@ -206,6 +212,9 @@ class Drawing:
     def setNormals(self, normalData: tuple):
         """This method accepts the normal data for each vertex. It defines in an array of normal
         vectors with a length equal to the length of the *normalData* sequence divided by 3.
+        
+        Parameters
+        ----------
         normalData
             A sequence of Float values that will be used to compose the normals. There must be 3 
             values in the sequence for each normal.If only one normal is specified, all vertices 
@@ -230,6 +239,9 @@ class Drawing:
         """This method accepts the color data for each vertex. It defines in an array of colors
         with a length equal to the length of the *colorData* sequence divided by
         *colorDimension*.
+        
+        Parameters
+        ----------
         colorDimension
             An Integer in the range of 3 to 4 specifying how many Float values are needed to compose 
             a single color. 
@@ -264,6 +276,9 @@ class Drawing:
         drawing. Once called, edges will be rendered using the specified color but facets will
         continue to use the colors specified in the setColors method. An empty sequence can be
         specified to resume using the colors arrays for edges.
+        
+        Parameters
+        ----------
         edgeColor
             A sequence of 0 or 3 Float values in the range of 0.0 to 1.0 that will be used to 
             compose the edge color.If the initial Float value is -1, the viewport background color 
@@ -282,6 +297,9 @@ class Drawing:
         drawing. Once called, points will be rendered using the specified color but facets will
         continue to use the colors specified in the setColors method. An empty sequence can be
         specified to resume using the colors arrays for points.
+        
+        Parameters
+        ----------
         pointColor
             A sequence of 0 or 3 Float values in the range of 0.0 to 1.0 that will be used to 
             compose the point color.If the initial Float value is -1, the viewport background color 
@@ -302,6 +320,9 @@ class Drawing:
         drawing commands are used the render the Drawing.
         The rendering command constructs the specified type of geometric primitive using
         *numVertices* array elements starting at element index *startIndex*.
+        
+        Parameters
+        ----------
         type
             A SymbolicConstant specifying the type of graphics primitive rendered by this command. 
             Possible values are POINTS, LINES, LINE_LOOP, LINE_STRIP, TRIANGLES, TRIANGLE_STRIP, 
@@ -338,6 +359,9 @@ class Drawing:
         drawing commands are used the render the Drawing.
         The rendering command constructs the specified type of geometric primitive using
         *numVertices* array elements starting at element index *startIndex*.
+        
+        Parameters
+        ----------
         type
             A SymbolicConstant specifying the type of graphics primitive rendered by this command. 
             Possible values are POINTS, LINES, LINE_LOOP, LINE_STRIP, TRIANGLES, TRIANGLE_STRIP, 
@@ -373,6 +397,9 @@ class Drawing:
                   edgesInShaded: Boolean = ON, translucency: float = 1, lineSize: float = 0,
                   pointSize: float = 0, depthTest: Boolean = ON):
         """This method modifies the rendering of the Drawing object.
+        
+        Parameters
+        ----------
         show
             A Boolean specifying whether the drawing object will be rendered when referenced. The 
             default value is OFF. 

@@ -58,6 +58,9 @@ class ElectricalConductivity:
             This function can be accessed by:
             - mdb.models[name].materials[name].ElectricalConductivity
             - session.odbs[name].materials[name].ElectricalConductivity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         type

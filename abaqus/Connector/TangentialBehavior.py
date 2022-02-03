@@ -57,6 +57,9 @@ class TangentialBehavior:
 
             mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior
             session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior
+        
+        Parameters
+        ----------
         formulation
             A SymbolicConstant specifying the friction coefficient formulation. Possible values are 
             PENALTY and EXPONENTIAL_DECAY. The default value is PENALTY. 

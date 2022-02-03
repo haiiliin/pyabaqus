@@ -159,6 +159,9 @@ class ContactTangentialBehavior:
         .. code-block:: python
 
             mdb.models[name].interactionProperties[name].TangentialBehavior
+        
+        Parameters
+        ----------
         formulation
             A SymbolicConstant specifying the friction formulation. Possible values are 
             FRICTIONLESS, PENALTY, EXPONENTIAL_DECAY, ROUGH, LAGRANGE, and USER_DEFINED. The default 

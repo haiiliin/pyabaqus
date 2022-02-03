@@ -27,6 +27,9 @@ class TimePoint:
         .. code-block:: python
 
             mdb.models[name].TimePoint
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         points

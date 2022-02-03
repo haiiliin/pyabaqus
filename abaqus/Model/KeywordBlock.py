@@ -55,6 +55,9 @@ class KeywordBlock:
 
     def setValues(self, edited: Boolean = OFF):
         """This method modifies the KeywordBlock object.
+        
+        Parameters
+        ----------
         edited
             A Boolean specifying whether this objects *sieBlocks* member has been edited. Setting 
             edited=False will set the *sieBlocks* member to an empty tuple, thereby discarding all 
@@ -64,6 +67,9 @@ class KeywordBlock:
 
     def insert(self, position: int, text: str):
         """This method inserts a String at a specified position in the *sieBlocks* member.
+        
+        Parameters
+        ----------
         position
             An Int specifying the position in the *sieBlocks* member after which the new string will 
             be inserted. 
@@ -79,6 +85,9 @@ class KeywordBlock:
 
     def replace(self, position: int, text: str):
         """This method replaces a String at a specified position in the *sieBlocks* member.
+        
+        Parameters
+        ----------
         position
             An Int specifying the position of the String to be replaced in the *sieBlocks* member. 
         text
@@ -98,6 +107,9 @@ class KeywordBlock:
         to synchVersions. As a side effect, synchVersions sets *lastSynchCount* to the current
         value of the counter associated with the Mdb object, which is used to determine if
         synchronization is necessary.
+        
+        Parameters
+        ----------
         storeNodesAndElements
             A Boolean specifying whether the nodal coordinates and element connectivities (i.e. the 
             data lines for the *NODE and *ELEMENT keyword blocks) are to be stored in the 

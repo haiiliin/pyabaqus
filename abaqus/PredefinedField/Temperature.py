@@ -79,6 +79,9 @@ class Temperature(PredefinedField):
         .. code-block:: python
 
             mdb.models[name].Temperature
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -168,6 +171,9 @@ class Temperature(PredefinedField):
 
     def move(self, fromStepName: str, toStepName: str):
         """This method moves the TemperatureState object from one step to a different step.
+        
+        Parameters
+        ----------
         fromStepName
             A String specifying the name of the step from which the PredefinedFieldState is moved. 
         toStepName
@@ -188,6 +194,9 @@ class Temperature(PredefinedField):
                   absoluteExteriorTolerance: float = 0, exteriorTolerance: float = 0):
         """This method modifies the data for an existing Temperature object in the step where it is
         created.
+        
+        Parameters
+        ----------
         distributionType
             A SymbolicConstant specifying how the predefined field varies spatially. Possible values 
             are UNIFORM, USER_DEFINED, FROM_FILE, FIELD, FROM_FILE_AND_USER_DEFINED, and 
@@ -269,6 +278,9 @@ class Temperature(PredefinedField):
                         absoluteExteriorTolerance: float = 0, exteriorTolerance: float = 0):
         """This method modifies the propagating data for an existing Temperature object in the
         specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the predefined field is modified. 
         field

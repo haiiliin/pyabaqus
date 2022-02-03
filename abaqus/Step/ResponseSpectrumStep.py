@@ -290,6 +290,9 @@ class ResponseSpectrumStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].ResponseSpectrumStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         previous
@@ -339,6 +342,9 @@ class ResponseSpectrumStep(AnalysisStep):
                   directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
                   rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency()):
         """This method modifies the ResponseSpectrumStep object.
+        
+        Parameters
+        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         comp

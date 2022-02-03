@@ -39,6 +39,9 @@ class LeafFromReferencePoint(Leaf):
         .. code-block:: python
 
             LeafFromReferencePoint
+        
+        Parameters
+        ----------
         refPtSeq
             A sequence of Reference Point objects. 
 

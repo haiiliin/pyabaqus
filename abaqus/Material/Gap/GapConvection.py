@@ -38,6 +38,9 @@ class GapConvection:
             This function can be accessed by:
             - mdb.models[name].materials[name].GapConvection
             - session.odbs[name].materials[name].GapConvection
+        
+        Parameters
+        ----------
         type
             An odb_String specifying the type of gap convection. Possible values are FLUX, 
             TEMPERATURE, and TABULAR. The default value is FLUX. 

@@ -18,6 +18,9 @@ class StopConditionDisplayOptions:
 
     def setValues(self, localStopCondition: Boolean = ON):
         """This method modifies the StopConditionDisplayOptions object.
+        
+        Parameters
+        ----------
         localStopCondition
             A Boolean specifying whether local stop condition symbols are shown. The default value 
             is ON.

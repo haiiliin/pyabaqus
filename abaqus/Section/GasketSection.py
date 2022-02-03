@@ -39,6 +39,9 @@ class GasketSection(Section):
 
             mdb.models[name].GasketSection
             session.odbs[name].GasketSection
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         material
@@ -74,6 +77,9 @@ class GasketSection(Section):
                   initialVoid: float = 0,
                   stabilizationStiffness: typing.Union[SymbolicConstant, float] = DEFAULT):
         """This method modifies the GasketSection object.
+        
+        Parameters
+        ----------
         crossSection
             A Float specifying the cross-sectional area, width, or out-of-plane thickness, if 
             applicable, depending on the gasket element type. The default value is 1.0. 

@@ -32,9 +32,6 @@ class AdaptivityModel(ModelBase):
         
         Parameters
         ----------
-        
-        Parameters
-        ----------
         odb
             An Odb object containing error output field results. 
 

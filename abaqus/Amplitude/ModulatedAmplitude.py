@@ -35,6 +35,9 @@ class ModulatedAmplitude(Amplitude):
 
             mdb.models[name].ModulatedAmplitude
             session.odbs[name].ModulatedAmplitude
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         initial
@@ -62,6 +65,9 @@ class ModulatedAmplitude(Amplitude):
 
     def setValues(self, timeSpan: SymbolicConstant = STEP):
         """This method modifies the ModulatedAmplitude object.
+        
+        Parameters
+        ----------
         timeSpan
             A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
             and TOTAL. The default value is STEP.

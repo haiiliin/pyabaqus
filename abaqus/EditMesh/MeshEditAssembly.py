@@ -22,6 +22,9 @@ class MeshEditAssembly(AssemblyBase):
     def collapseMeshEdge(self, edge: str, collapseMethod: SymbolicConstant):
         """This method collapses an edge of a quadrilateral or triangular element of a part
         instance.
+        
+        Parameters
+        ----------
         edge
             A single MeshEdge object specifying the element edge to collapse. 
         collapseMethod
@@ -32,6 +35,9 @@ class MeshEditAssembly(AssemblyBase):
 
     def combineElement(self, elements: tuple):
         """This method combines two triangular elements of a part instance.
+        
+        Parameters
+        ----------
         elements
             A sequence of triangular MeshElement objects specifying the elements to combine. 
         """
@@ -40,6 +46,9 @@ class MeshEditAssembly(AssemblyBase):
     def deleteElement(self, elements: tuple[MeshElement], deleteUnreferencedNodes: Boolean = OFF):
         """This method deletes the given elements from a part instance. The elements must have been
         generated using the bottom-up meshing technique.
+        
+        Parameters
+        ----------
         elements
             A sequence of MeshElement objects or a Set object containing elements. 
         deleteUnreferencedNodes
@@ -51,6 +60,9 @@ class MeshEditAssembly(AssemblyBase):
     def projectNode(self, nodes: tuple[MeshNode], projectionReference: str):
         """This method projects the given nodes of a part instance onto a mesh entity, geometric
         entity, or a datum object.
+        
+        Parameters
+        ----------
         nodes
             A sequence of MeshNode objects to be projected. 
         projectionReference
@@ -65,6 +77,9 @@ class MeshEditAssembly(AssemblyBase):
                  offset2: float = None, offset3: float = None, localCsys: DatumCsys = DatumCsys(),
                  projectToGeometry: Boolean = ON):
         """This method changes the coordinates of the given nodes on a part instance.
+        
+        Parameters
+        ----------
         nodes
             A sequence of MeshNode objects or a Set object containing nodes. 
         coordinate1
@@ -110,6 +125,9 @@ class MeshEditAssembly(AssemblyBase):
                    removeDuplicateElements: Boolean = True):
         """Merge the nodes of a part instance. The nodes must have been generated using the
         bottom-up meshing technique.
+        
+        Parameters
+        ----------
         nodes
             A sequence of MeshNode objects specifying the nodes to merge. 
         tolerance
@@ -126,6 +144,9 @@ class MeshEditAssembly(AssemblyBase):
     def mergeNodes(self, node1: MeshNode, node2: MeshNode, removeDuplicateElements: Boolean = True):
         """Merge two nodes of a part instance. At least one of the two nodes must have been
         generated using the bottom-up meshing technique.
+        
+        Parameters
+        ----------
         node1
             A MeshNode object specifying the first node to merge. 
         node2
@@ -141,6 +162,9 @@ class MeshEditAssembly(AssemblyBase):
 
     def splitElement(self, elements: tuple):
         """This method splits quadrilateral elements into triangular elements.
+        
+        Parameters
+        ----------
         elements
             A sequence of quadrilateral MeshElement objects specifying the elements to split. Each 
             quadrilateral element is split into two triangular elements by the shorter diagonal. 
@@ -149,6 +173,9 @@ class MeshEditAssembly(AssemblyBase):
 
     def splitMeshEdge(self, edge: str, parameter: float = 0):
         """This method splits an edge of a quadrilateral or triangular element of a part instance.
+        
+        Parameters
+        ----------
         edge
             A single MeshEdge object specifying the element edge to split. 
         parameter
@@ -159,6 +186,9 @@ class MeshEditAssembly(AssemblyBase):
 
     def swapMeshEdge(self, edge: str):
         """This method swaps the diagonal of two adjacent triangular elements of a part instance.
+        
+        Parameters
+        ----------
         edge
             A single MeshEdge object specifying the element edge to swap. 
         """
@@ -170,6 +200,9 @@ class MeshEditAssembly(AssemblyBase):
                              constantThicknessCorners: Boolean = False, extendElementSets: Boolean = False):
         """This method generates a solid or shell mesh from an orphan mesh surface by generating
         layers of elements that propagate out normal to the surface boundary.
+        
+        Parameters
+        ----------
         region
             A Region object specifying the domain to be offset. 
         meshType

@@ -32,6 +32,9 @@ class Hysteresis:
             This function can be accessed by:
             - mdb.models[name].materials[name].hyperelastic.Hysteresis
             - session.odbs[name].materials[name].hyperelastic.Hysteresis
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
 

@@ -34,6 +34,9 @@ class DiscreteField(Field):
         .. code-block:: python
 
             mdb.models[name].DiscreteField
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         defaultValues
@@ -82,6 +85,9 @@ class DiscreteField(Field):
         .. code-block:: python
 
             mdb.models[name].DiscreteField
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         eulerianInstance
@@ -122,6 +128,9 @@ class DiscreteField(Field):
         .. code-block:: python
 
             mdb.models[name].DiscreteField
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         location
@@ -146,6 +155,9 @@ class DiscreteField(Field):
                   data: DataTableArray = None, description: str = '',
                   orientationType: SymbolicConstant = CARTESIAN, partLevelOrientation: Boolean = OFF):
         """This method modifies the DiscreteField object.
+        
+        Parameters
+        ----------
         location
             A SymbolicConstant or an Int specifying the location of the domain data. Possible values 
             are NODES and ELEMENTS. The default value is NODES. 

@@ -29,6 +29,9 @@ class VelocityDependence:
             This function can be accessed by:
             - mdb.models[name].materials[name].permeability.VelocityDependence
             - session.odbs[name].materials[name].permeability.VelocityDependence
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
 

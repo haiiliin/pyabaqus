@@ -15,6 +15,9 @@ class PropertyAssembly(AssemblyBase):
             This function can be accessed by:
             - mdb.models[*name*].parts[*name*].SectionAssignment
             - mdb.models[*name*].rootAssembly.SectionAssignment
+        
+        Parameters
+        ----------
         region
             A Set object specifying the region to which the section is assigned.
         sectionName

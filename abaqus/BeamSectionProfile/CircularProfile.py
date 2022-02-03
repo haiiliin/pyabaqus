@@ -33,6 +33,9 @@ class CircularProfile(Profile):
 
             mdb.models[name].CircularProfile
             session.odbs[name].CircularProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         r

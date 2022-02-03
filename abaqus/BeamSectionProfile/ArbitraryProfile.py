@@ -43,6 +43,9 @@ class ArbitraryProfile(Profile):
 
             mdb.models[name].ArbitraryProfile
             session.odbs[name].ArbitraryProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         table

@@ -64,6 +64,9 @@ class BeadTask(OptimizationTask):
         .. code-block:: python
 
                       mdb.models[name].BeadTask
+        
+        Parameters
+        ----------
         name
             A String specifying the optimization task repository key. 
         abaqusSensitivities
@@ -151,6 +154,9 @@ class BeadTask(OptimizationTask):
                   nodeUpdateStrategy: SymbolicConstant = CONSERVATIVE, numTrackedModes: int = 5,
                   updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF):
         """This method modifies the BeadTask object.
+        
+        Parameters
+        ----------
         abaqusSensitivities
             A Boolean specifying whether to use Abaqus to compute the design responses and their 
             sensitivities. The default value is True. 

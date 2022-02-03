@@ -22,6 +22,9 @@ class Spectrum:
         .. code-block:: python
 
             session.Spectrum
+        
+        Parameters
+        ----------
         name
             A string name for the spectrum. 
         colors

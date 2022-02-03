@@ -78,6 +78,9 @@ class OdbFrame:
         .. code-block:: python
 
             session.odbs[name].steps[name].Frame
+        
+        Parameters
+        ----------
         incrementNumber
             An Int specifying the frame increment number within the step. The base frame has 
             normally increment number 0, and the results run from 1. In case of multiple load cases, 
@@ -108,6 +111,9 @@ class OdbFrame:
         .. code-block:: python
 
             session.odbs[name].steps[name].Frame
+        
+        Parameters
+        ----------
         mode
             An Int specifying the eigenmode. This member is valid only if *domain*=MODAL. 
         frequency
@@ -134,6 +140,9 @@ class OdbFrame:
         .. code-block:: python
 
             session.odbs[name].steps[name].Frame
+        
+        Parameters
+        ----------
         loadCase
             An OdbLoadCase object specifying the load case for the frame. 
         description
@@ -163,6 +172,9 @@ class OdbFrame:
         .. code-block:: python
 
             session.odbs[name].steps[name].Frame
+        
+        Parameters
+        ----------
         name
             A String specifying the output variable name.
         description
@@ -208,6 +220,9 @@ class OdbFrame:
         .. code-block:: python
 
             session.odbs[name].steps[name].Frame
+        
+        Parameters
+        ----------
         field
             A FieldOutput object.
         name

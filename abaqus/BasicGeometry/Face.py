@@ -84,6 +84,9 @@ class Face:
 
     def getCurvature(self, point: tuple, uParam: float, vParam: float):
         """This method returns information about the curvature at a location on the face.
+        
+        Parameters
+        ----------
         point
             A tuple specifying the *X*-, *Y*-, and *Z* coordinates of the point where the curvature 
             is desired. If the *point* does not lie on the face it will be projected onto the face. 
@@ -120,6 +123,9 @@ class Face:
     def getElementFaces(self, faceSide: SymbolicConstant = BOTH_SIDES):
         """This method returns an array of mesh face objects. Each mesh face object contains the
         element label and the side of the element that lies on the geometric face.
+        
+        Parameters
+        ----------
         faceSide
             A symbolic constant specifying the side of the geometric face of a solid from which the 
             element faces should be retrieved. Possible values are *SIDE1*, *SIDE2*, and 
@@ -135,6 +141,9 @@ class Face:
     def getNodes(self, faceSide: SymbolicConstant = BOTH_SIDES):
         """This method returns an array of mesh node objects. Each mesh node object contains the
         label of the node that lies on the geometric face.
+        
+        Parameters
+        ----------
         faceSide
             A symbolic constant specifying the side of the geometric face of a solid from which the 
             nodes should be retrieved. Possible values are xo*SIDE1*, *SIDE2*, and *BOTH_SIDES*. The 
@@ -153,6 +162,9 @@ class Face:
         """This method returns the normal to a face at the location specified by the *pointOn*
         member. The normal at a different location on the face can be obtained by specifying the
         optional *point* argument.
+        
+        Parameters
+        ----------
         point
             A tuple specifying the *X*-, *Y*-, and *Z* coordinates of the point where the normal to 
             the face is desired. If the *point* does not lie on the face it will be projected onto 
@@ -173,6 +185,9 @@ class Face:
 
     def getSize(self, printResults: str = True):
         """This method returns a Float indicating the area of the face.
+        
+        Parameters
+        ----------
         printResults
             A Bool specifying whether verbose output is printed. The default value is True. 
 
@@ -227,6 +242,9 @@ class Face:
     def getFacesByFaceAngle(self, angle: str):
         """This method returns an array of Face objects that are obtained by recursively finding
         adjacent faces that are at an angle of less than or equal to the specified angle.
+        
+        Parameters
+        ----------
         angle
             A float specifying the value of the face angle. 
 

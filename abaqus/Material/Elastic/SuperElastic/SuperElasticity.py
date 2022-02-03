@@ -49,6 +49,9 @@ class SuperElasticity:
             This function can be accessed by:
             - mdb.models[name].materials[name].SuperElasticity
             - session.odbs[name].materials[name].SuperElasticity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         nonassociated

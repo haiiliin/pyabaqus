@@ -35,6 +35,9 @@ class GeneralizedProfile(Profile):
 
             mdb.models[name].GeneralizedProfile
             session.odbs[name].GeneralizedProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         area

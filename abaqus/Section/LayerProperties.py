@@ -35,6 +35,9 @@ class LayerProperties:
 
             section.LayerProperties
             odbSection.LayerProperties
+        
+        Parameters
+        ----------
         barArea
             A Float specifying the area per bar. 
         orientationAngle

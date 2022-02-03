@@ -20,6 +20,9 @@ class EpsOptions:
                   fontType: SymbolicConstant = PS_IF_AVAILABLE, imageFormat: SymbolicConstant = VECTOR,
                   shadingQuality: SymbolicConstant = MEDIUM):
         """This method modifies the EpsOptions object.
+        
+        Parameters
+        ----------
         imageSize
             The SymbolicConstant SIZE_ON_SCREEN or a pair of Floats specifying the width and height 
             of the image in the units specified by *units*. Possible numeric values are *imageSize* 

@@ -175,6 +175,9 @@ class GeometryShellSection(ShellSection):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].compositeLayups[*name*].Section
+        
+        Parameters
+        ----------
         nodalThicknessField
             A String specifying the name of the AnalyticalField or DiscreteField object used to 
             define the thickness of the shell elements at each node. The *nodalThicknessField* 
@@ -239,6 +242,9 @@ class GeometryShellSection(ShellSection):
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].compositeLayups[*name*].Section
+        
+        Parameters
+        ----------
         rebarSpacing
             A SymbolicConstant specifying the type of rebar geometry. Possible values are CONSTANT,
             ANGULAR, and LIFT_EQUATION.

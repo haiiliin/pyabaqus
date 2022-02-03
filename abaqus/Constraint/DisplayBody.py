@@ -46,6 +46,9 @@ class DisplayBody(Constraint):
         .. code-block:: python
 
             mdb.models[name].DisplayBody
+        
+        Parameters
+        ----------
         name
             A String specifying the constraint repository key. 
         instance

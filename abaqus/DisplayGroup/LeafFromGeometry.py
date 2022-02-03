@@ -42,6 +42,9 @@ class LeafFromGeometry(Leaf):
         .. code-block:: python
 
             LeafFromGeometry
+        
+        Parameters
+        ----------
         edgeSeq
             A sequence of geometry edges. 
         faceSeq

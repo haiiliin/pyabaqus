@@ -11,6 +11,9 @@ class CalibrationModel(ModelBase):
         -----
             This function can be accessed by:
             -           mdb.models[name].Calibration
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the new calibration.
 

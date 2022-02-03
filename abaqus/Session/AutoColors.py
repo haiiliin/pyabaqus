@@ -10,6 +10,9 @@ class AutoColors:
 
     def setValues(self, colors: tuple):
         """This method changes the color palette.
+        
+        Parameters
+        ----------
         colors
             A sequence of Strings specifying the colors of the palette. Strings must be named colors 
             or represent red, green, blue components in hexadecimal form. For instance, '#FF0000' 

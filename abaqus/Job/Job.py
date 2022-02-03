@@ -232,6 +232,9 @@ class Job:
     def submit(self, consistencyChecking: Boolean = ON, datacheckJob: Boolean = False,
                continueJob: Boolean = False):
         """This method submits a job for analysis.
+        
+        Parameters
+        ----------
         consistencyChecking
             A Boolean specifying whether to perform consistency checking for the job. The default 
             value is ON. It is not recommended to turn the consistency checking off unless you are 

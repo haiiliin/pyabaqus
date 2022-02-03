@@ -69,6 +69,9 @@ class OdbDatumCsys:
         .. code-block:: python
 
             session.odbs[name].rootAssembly.DatumCsysByThreePoints
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         coordSysType
@@ -104,6 +107,9 @@ class OdbDatumCsys:
         .. code-block:: python
 
             session.odbs[name].rootAssembly.DatumCsysByThreePoints
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         coordSysType
@@ -139,6 +145,9 @@ class OdbDatumCsys:
         .. code-block:: python
 
             session.odbs[name].rootAssembly.DatumCsysByThreePoints
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         coordSysType
@@ -172,6 +181,9 @@ class OdbDatumCsys:
         .. code-block:: python
 
             session.odbs[name].rootAssembly.DatumCsysByThreePoints
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         coordSysType
@@ -196,6 +208,9 @@ class OdbDatumCsys:
         .. code-block:: python
 
             session.odbs[name].rootAssembly.DatumCsysByThreePoints
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         datumCsys

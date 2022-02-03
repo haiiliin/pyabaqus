@@ -29,6 +29,9 @@ class UserMaterial:
             This function can be accessed by:
             - mdb.models[name].materials[name].UserMaterial
             - session.odbs[name].materials[name].UserMaterial
+        
+        Parameters
+        ----------
         type
             A SymbolicConstant specifying the type of material behavior defined by the command. 
             Possible values are MECHANICAL, THERMAL, and THERMOMECHANICAL. The default value is 

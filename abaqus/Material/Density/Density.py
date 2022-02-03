@@ -35,6 +35,9 @@ class Density:
             This function can be accessed by:
             - mdb.models[name].materials[name].Density
             - session.odbs[name].materials[name].Density
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

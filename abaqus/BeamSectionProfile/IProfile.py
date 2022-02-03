@@ -33,6 +33,9 @@ class IProfile(Profile):
 
             mdb.models[name].IProfile
             session.odbs[name].IProfile
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         l

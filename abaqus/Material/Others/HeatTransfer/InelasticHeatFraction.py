@@ -24,6 +24,9 @@ class InelasticHeatFraction:
             This function can be accessed by:
             - mdb.models[name].materials[name].InelasticHeatFraction
             - session.odbs[name].materials[name].InelasticHeatFraction
+        
+        Parameters
+        ----------
         fraction
             A Float specifying the fraction of inelastic dissipation rate that appears as a heat 
             flux per unit volume. The fraction may include a unit conversion factor if required. 

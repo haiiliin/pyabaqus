@@ -13,6 +13,9 @@ class FixedConstraint(ConstrainedSketchConstraint):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].FixedConstraint
+        
+        Parameters
+        ----------
         entity
             A ConstrainedSketchGeometry object or a ConstrainedSketchVertex object specifying the item to fix in
             space. 

@@ -45,6 +45,9 @@ class Annotation:
 
     def moveBefore(self, name: str):
         """This method moves the Annotation object before another object in the same repository.
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the other Annotation object.
         """
@@ -52,6 +55,9 @@ class Annotation:
 
     def moveAfter(self, name: str):
         """This method moves the Annotation object after another object in the same repository.
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the other Annotation object. 
         """
@@ -59,6 +65,9 @@ class Annotation:
 
     def translate(self, x: float = None, y: float = None):
         """This method translates the Annotation object on the viewport plane.
+        
+        Parameters
+        ----------
         x
             A Float specifying the *X* translation amount in millimeters. 
         y

@@ -82,6 +82,9 @@ class Edge:
 
     def getCurvature(self, parameter: float, point: tuple):
         """This method returns curvature information at a location on the edge.
+        
+        Parameters
+        ----------
         parameter
             A Float specifying the normalized parameter location on the edge where the curvature is 
             to be computed. This argument is mutually exclusive with the argument *point*. 
@@ -128,6 +131,9 @@ class Edge:
     def getEdgesByEdgeAngle(self, angle: str):
         """This method returns an array of Edge objects that are obtained by recursively finding
         adjacent edges that are at an angle of less than or equal to the specified face angle.
+        
+        Parameters
+        ----------
         angle
             A float specifying the value of the face angle in degrees. 
 
@@ -174,6 +180,9 @@ class Edge:
 
     def getSize(self, printResults: str = True):
         """This method returns a Float indicating the length of the edge.
+        
+        Parameters
+        ----------
         printResults
             A Bool specifying whether verbose output is printed. The default is True. 
 

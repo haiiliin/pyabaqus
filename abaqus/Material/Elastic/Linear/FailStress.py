@@ -40,6 +40,9 @@ class FailStress:
             This function can be accessed by:
             - mdb.models[name].materials[name].elastic.FailStress
             - session.odbs[name].materials[name].elastic.FailStress
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

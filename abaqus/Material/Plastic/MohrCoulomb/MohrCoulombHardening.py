@@ -38,6 +38,9 @@ class MohrCoulombHardening:
             - .MohrCoulombHardening
             - session.odbs[name].materials[name].mohrCoulombPlasticity\
             - .MohrCoulombHardening
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

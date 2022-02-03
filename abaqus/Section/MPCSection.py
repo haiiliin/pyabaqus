@@ -35,6 +35,9 @@ class MPCSection(Section):
 
             mdb.models[name].MPCSection
             session.odbs[name].MPCSection
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         mpcType

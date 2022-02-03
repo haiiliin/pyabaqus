@@ -17,6 +17,9 @@ class ConstrainedSketchImageOptions:
     def setValues(self, imageName: str = '', showImage: Boolean = OFF, origin: tuple[float] = (),
                   xScale: float = 1, yScale: float = 1, translucency: float = 1):
         """This method modifies the ConstrainedSketchOptions object.
+        
+        Parameters
+        ----------
         imageName
             A String specifying the name of the image. A list of valid image names is in the 
             *images* repository in the *session* object. 

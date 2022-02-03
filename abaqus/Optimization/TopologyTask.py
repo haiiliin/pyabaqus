@@ -81,6 +81,9 @@ class TopologyTask(OptimizationTask):
         .. code-block:: python
 
                       mdb.models[name].TopologyTask
+        
+        Parameters
+        ----------
         name
             A String specifying the optimization task repository key. 
         abaqusSensitivities
@@ -221,6 +224,9 @@ class TopologyTask(OptimizationTask):
                   viscousMassDamping: float = None, viscousStiffnessDamping: float = None,
                   groupOperator: Boolean = OFF):
         """This method modifies the TopologyTask object.
+        
+        Parameters
+        ----------
         abaqusSensitivities
             A Boolean specifying whether to use Abaqus to compute the design responses and their 
             sensitivities. The default value is True. 

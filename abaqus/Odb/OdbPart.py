@@ -9,6 +9,9 @@ class OdbPart(OdbPartBase):
     def RigidBody(self, referenceNode: str, position: str = INPUT, isothermal: Boolean = OFF, elset: str = '',
                   pinNodes: str = '', tieNodes: str = '', analyticSurface: str = ''):
         """This method defines an OdbRigidBody on the part object.
+        
+        Parameters
+        ----------
         referenceNode
             An OdbSet specifying the reference node assigned to the rigid body.
         position
@@ -48,6 +51,9 @@ class OdbPart(OdbPartBase):
             - session.odbs[*name*].parts[*name*].NodeSet
             - session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
             - session.odbs[*name*].rootAssembly.NodeSet
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the set and the repository key.
         nodes

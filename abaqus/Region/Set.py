@@ -125,6 +125,9 @@ class Set:
 
             mdb.models[*name*].parts[*name*].Set
             mdb.models[*name*].rootAssembly.Set
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         nodes
@@ -181,6 +184,9 @@ class Set:
 
             mdb.models[*name*].parts[*name*].Set
             mdb.models[*name*].rootAssembly.Set
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the set. 
         objectToCopy
@@ -206,6 +212,9 @@ class Set:
 
             mdb.models[*name*].parts[*name*].Set
             mdb.models[*name*].rootAssembly.Set
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         sets
@@ -237,6 +246,9 @@ class Set:
 
             mdb.models[*name*].parts[*name*].Set
             mdb.models[*name*].rootAssembly.Set
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         color
@@ -261,6 +273,9 @@ class Set:
 
             mdb.models[*name*].parts[*name*].Set
             mdb.models[*name*].rootAssembly.Set
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         elementLabels
@@ -285,6 +300,9 @@ class Set:
 
             mdb.models[*name*].parts[*name*].Set
             mdb.models[*name*].rootAssembly.Set
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         nodeLabels
@@ -312,6 +330,9 @@ class Set:
 
             mdb.models[*name*].parts[*name*].Set
             mdb.models[*name*].rootAssembly.Set
+        
+        Parameters
+        ----------
         odbPath
             A String specifying the path to the ODB containing the source sets. 
         odbSets

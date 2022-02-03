@@ -43,6 +43,9 @@ class PropertyTable:
         .. code-block:: python
 
             mdb.models[name].tableCollections[name].PropertyTable
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         properties
@@ -63,6 +66,9 @@ class PropertyTable:
 
     def setValues(self, variables: str = ''):
         """This method modifies the PropertyTable object.
+        
+        Parameters
+        ----------
         variables
             A String array specifying multiple independent variables. The default value is an empty 
             array. 
@@ -88,6 +94,9 @@ class PropertyTable:
         .. code-block:: python
 
             mdb.models[name].tableCollections[name].PropertyTable
+        
+        Parameters
+        ----------
         label
             A String specifying a unique label name for the current PropertyTable object.
         regularize

@@ -23,6 +23,9 @@ class UserOutputVariables:
             This function can be accessed by:
             - mdb.models[name].materials[name].UserOutputVariables
             - session.odbs[name].materials[name].UserOutputVariables
+        
+        Parameters
+        ----------
         n
             An Int specifying the number of user-defined variables required at each material point. 
             The default value is 0. 

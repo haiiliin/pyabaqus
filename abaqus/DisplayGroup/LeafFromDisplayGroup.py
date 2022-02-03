@@ -40,6 +40,9 @@ class LeafFromDisplayGroup(Leaf):
         .. code-block:: python
 
             LeafFromDisplayGroup
+        
+        Parameters
+        ----------
         displayGroup
             A DisplayGroupArray object. 
 

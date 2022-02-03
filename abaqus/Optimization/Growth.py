@@ -29,6 +29,9 @@ class Growth(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].Growth
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -54,6 +57,9 @@ class Growth(GeometricRestriction):
 
     def setValues(self, growth: float = 0, presumeFeasibleRegionAtStart: Boolean = ON, shrink: float = 0):
         """This method modifies the Growth object.
+        
+        Parameters
+        ----------
         growth
             A Float specifying the maximum optimization displacement in the growth direction. Either 
             *growth* or *shrink* or both must be specified. The default value is 0.0. 

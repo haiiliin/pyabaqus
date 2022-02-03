@@ -77,6 +77,9 @@ class LineStyle:
 
             session.LineStyle
             xyPlot.LineStyle
+        
+        Parameters
+        ----------
         color
             A String specifying the color to be used when drawing a line with this LineStyle object. 
             The default value is "White". 
@@ -104,6 +107,9 @@ class LineStyle:
     def setValues(self, color: str = '', show: Boolean = ON, style: SymbolicConstant = SOLID,
                   thickness: float = 0):
         """This method modifies the LineStyle object.
+        
+        Parameters
+        ----------
         color
             A String specifying the color to be used when drawing a line with this LineStyle object. 
             The default value is "White". 

@@ -54,6 +54,9 @@ class CDCTerm:
             session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.CDCTerm
             session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.CDCTerm
             session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.CDCTerm
+        
+        Parameters
+        ----------
         intrinsicComponents
             A sequence of Ints specifying the components of relative motion for which the 
             contributing term is defined. Possible values are 1 ≤≤ *intrinsicComponents* ≤≤ 6. Only 
@@ -135,6 +138,9 @@ class CDCTerm:
             session.odbs[name].sections[name].behaviorOptions[i].derivedComponent.CDCTerm
             session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].derivedComponent.CDCTerm
             session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent.CDCTerm
+        
+        Parameters
+        ----------
         useBehRegSettings
             A Boolean specifying whether or not to use the behavior-level settings for
             regularization options. This argument is applicable only for an Abaqus/Explicit

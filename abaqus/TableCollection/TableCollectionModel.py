@@ -15,6 +15,9 @@ class TableCollectionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].EventSeriesData
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         createStepName
@@ -53,6 +56,9 @@ class TableCollectionModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].EventSeriesType
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         createStepName

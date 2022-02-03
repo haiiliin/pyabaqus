@@ -142,6 +142,9 @@ class HistoryPoint:
         .. code-block:: python
 
             odbAccess.HistoryPoint
+        
+        Parameters
+        ----------
         node
             An OdbMeshNode object specifying the node for which the data are to be collected. 
 
@@ -163,6 +166,9 @@ class HistoryPoint:
         .. code-block:: python
 
             odbAccess.HistoryPoint
+        
+        Parameters
+        ----------
         element
             An OdbMeshElement object specifying the element for which the data are to be collected. 
         ipNumber
@@ -208,6 +214,9 @@ class HistoryPoint:
         .. code-block:: python
 
             odbAccess.HistoryPoint
+        
+        Parameters
+        ----------
         region
             An OdbSet object specifying the region for which the data are to be collected. 
 
@@ -228,6 +237,9 @@ class HistoryPoint:
         .. code-block:: python
 
             odbAccess.HistoryPoint
+        
+        Parameters
+        ----------
         assembly
             An OdbAssembly object specifying the assembly for which the data are to be collected. 
 
@@ -248,6 +260,9 @@ class HistoryPoint:
         .. code-block:: python
 
             odbAccess.HistoryPoint
+        
+        Parameters
+        ----------
         instance
             An OdbInstance object specifying the instance for which the data are to be collected. 
 

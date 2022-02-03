@@ -55,6 +55,9 @@ class FluidInflatorProperty(ContactProperty):
         .. code-block:: python
 
             mdb.models[name].FluidInflatorProperty
+        
+        Parameters
+        ----------
         name
             A String specifying the interaction property repository key. 
         definition
@@ -98,6 +101,9 @@ class FluidInflatorProperty(ContactProperty):
                   mixtureType: str = '', inflationTime: tuple = (), fluidbehaviorName: tuple = (),
                   massFraction: tuple = ()):
         """This method modifies the FluidInflatorProperty object.
+        
+        Parameters
+        ----------
         dischargeCoefficient
             A Float specifying the discharge coefficient. This argument is applicable only if 
             *definition*=DUAL PRESSURE or *definition*=PRESSURE AND MASS. 

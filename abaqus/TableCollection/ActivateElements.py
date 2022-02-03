@@ -29,6 +29,9 @@ class ActivateElements:
         .. code-block:: python
 
             mdb.models[name].ActivateElements
+        
+        Parameters
+        ----------
         tableCollection
             A String specifying the name of the tableCollection object. 
         activation

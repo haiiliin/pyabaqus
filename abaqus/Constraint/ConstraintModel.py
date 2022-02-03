@@ -25,6 +25,9 @@ class ConstraintModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].AdjustPoints
+        
+        Parameters
+        ----------
         name
             A String specifying the constraint repository key.
         surface
@@ -50,6 +53,9 @@ class ConstraintModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].Coupling
+        
+        Parameters
+        ----------
         name
             A String specifying the constraint repository key.
         surface
@@ -114,6 +120,9 @@ class ConstraintModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].DisplayBody
+        
+        Parameters
+        ----------
         name
             A String specifying the constraint repository key.
         instance
@@ -141,6 +150,9 @@ class ConstraintModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].EmbeddedRegion
+        
+        Parameters
+        ----------
         name
             A String specifying the constraint repository key.
         embeddedRegion
@@ -182,6 +194,9 @@ class ConstraintModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].Equation
+        
+        Parameters
+        ----------
         name
             A String specifying the constraint repository key.
         terms
@@ -209,6 +224,9 @@ class ConstraintModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].MultipointConstraint
+        
+        Parameters
+        ----------
         name
             A String specifying the constraint repository key.
         surface
@@ -250,6 +268,9 @@ class ConstraintModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].RigidBody
+        
+        Parameters
+        ----------
         name
             A String specifying the constraint repository key.
         refPointRegion
@@ -291,6 +312,9 @@ class ConstraintModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ShellSolidCoupling
+        
+        Parameters
+        ----------
         name
             A String specifying the constraint repository key.
         shellEdge
@@ -332,6 +356,9 @@ class ConstraintModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].Tie
+        
+        Parameters
+        ----------
         name
             A String specifying the constraint repository key.
         main

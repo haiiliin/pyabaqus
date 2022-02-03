@@ -345,6 +345,9 @@ class HeatTransferStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].HeatTransferStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         previous
@@ -429,6 +432,9 @@ class HeatTransferStep(AnalysisStep):
                   solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
                   convertSDI: SymbolicConstant = PROPAGATED):
         """This method modifies the HeatTransferStep object.
+        
+        Parameters
+        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         response

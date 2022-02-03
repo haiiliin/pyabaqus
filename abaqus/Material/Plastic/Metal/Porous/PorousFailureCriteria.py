@@ -26,6 +26,9 @@ class PorousFailureCriteria:
             - .PorousFailureCriteria
             - session.odbs[name].materials[name].porousMetalPlasticity\
             - .PorousFailureCriteria
+        
+        Parameters
+        ----------
         fraction
             A Float specifying the void volume fraction at total failure, fF>0. The default value is 
             1.0. 

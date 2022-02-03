@@ -28,6 +28,9 @@ class Radiation:
         .. code-block:: python
 
             mdb.models[name].interactionProperties[name].Radiation
+        
+        Parameters
+        ----------
         mainEmissivity
             A Float specifying the emissivity of the main surface. 
         secondaryEmissivity

@@ -79,6 +79,9 @@ class XYData:
 
             session.XYData
             xyPlot.XYData
+        
+        Parameters
+        ----------
         data
             A sequence of pairs of Floats specifying the *X–Y* data pairs. 
         name
@@ -129,6 +132,9 @@ class XYData:
 
             session.XYData
             xyPlot.XYData
+        
+        Parameters
+        ----------
         objectToCopy
             An XYData object to be copied. 
 
@@ -157,6 +163,9 @@ class XYData:
 
             session.XYData
             xyPlot.XYData
+        
+        Parameters
+        ----------
         fileName
             A String specifying the name of the file from which the *X–Y* data will be read. 
         name
@@ -217,6 +226,9 @@ class XYData:
 
             session.XYData
             xyPlot.XYData
+        
+        Parameters
+        ----------
         odb
             An Odb object specifying the output database from which data will be read. 
         outputVariableName
@@ -275,6 +287,9 @@ class XYData:
 
             session.XYData
             xyPlot.XYData
+        
+        Parameters
+        ----------
         odb
             An Odb object specifying the output database from which data will be read. 
         outputPosition
@@ -357,6 +372,9 @@ class XYData:
 
             session.XYData
             xyPlot.XYData
+        
+        Parameters
+        ----------
         odb
             An Odb object specifying the output database from which data will be read. 
         force
@@ -399,6 +417,9 @@ class XYData:
 
             session.XYData
             xyPlot.XYData
+        
+        Parameters
+        ----------
         odb
             An Odb object specifying the output database from which data will be read. 
         outputPosition
@@ -475,6 +496,9 @@ class XYData:
 
             session.XYData
             xyPlot.XYData
+        
+        Parameters
+        ----------
         path
             A Path object to use in *X–Y* data generation. 
         name
@@ -589,6 +613,9 @@ class XYData:
                   yValuesLabel: str = '', axis1QuantityType: QuantityType = QuantityType(),
                   axis2QuantityType: QuantityType = QuantityType()):
         """This method modifies the XYData object.
+        
+        Parameters
+        ----------
         sourceDescription
             A String specifying the source of the *X–Y* data (e.g., “Entered from keyboard”, “Taken 
             from ASCII file”, “Read from an ODB”, etc.). The default value is an empty string. 

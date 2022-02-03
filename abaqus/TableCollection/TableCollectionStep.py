@@ -12,6 +12,9 @@ class TableCollectionStep(StepBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ActivateElements
+        
+        Parameters
+        ----------
         tableCollection
             A String specifying the name of the tableCollection object.
         activation

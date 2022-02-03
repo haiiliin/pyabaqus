@@ -23,6 +23,9 @@ class EngineeringFeatureDisplayOptions:
                   heatCapacitance: Boolean = ON, contourIntegral: Boolean = ON,
                   springToGround: Boolean = ON, twoPointSpring: Boolean = ON):
         """This method modifies the EngineeringFeatureDisplayOptions object.
+        
+        Parameters
+        ----------
         pointMassInertia
             A Boolean specifying whether point mass inertia symbols are shown. The default value is 
             ON. 

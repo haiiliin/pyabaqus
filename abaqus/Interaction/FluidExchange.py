@@ -34,6 +34,9 @@ class FluidExchange(Interaction):
         .. code-block:: python
 
             mdb.models[name].FluidExchange
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -62,6 +65,9 @@ class FluidExchange(Interaction):
     def setValues(self, definition: SymbolicConstant = TO_ENVIRONMENT, secondCavity: str = '',
                   exchangeArea: float = 1):
         """This method modifies the FluidExchange object.
+        
+        Parameters
+        ----------
         definition
             A SymbolicConstant specifying the type of fluid exchange to be defined. Possible values 
             are TO_ENVIRONMENT and BETWEEN_CAVITIES. The default value is TO_ENVIRONMENT. 

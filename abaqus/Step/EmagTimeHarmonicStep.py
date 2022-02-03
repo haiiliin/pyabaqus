@@ -215,6 +215,9 @@ class EmagTimeHarmonicStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].EmagTimeHarmonicStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         previous
@@ -242,6 +245,9 @@ class EmagTimeHarmonicStep(AnalysisStep):
 
     def setValues(self, description: str = '', factorization: SymbolicConstant = COMPLEX):
         """This method modifies the EmagTimeHarmonicStep object.
+        
+        Parameters
+        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         factorization

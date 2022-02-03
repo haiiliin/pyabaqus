@@ -79,6 +79,9 @@ class ContactDamping:
         .. code-block:: python
 
             mdb.models[name].interactionProperties[name].Damping
+        
+        Parameters
+        ----------
         definition
             A SymbolicConstant specifying the method used to define the damping. Possible values are 
             DAMPING_COEFFICIENT and CRITICAL_DAMPING_FRACTION. The default value is 

@@ -32,6 +32,9 @@ class FluidInflator(Interaction):
         .. code-block:: python
 
             mdb.models[name].FluidInflator
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -56,6 +59,9 @@ class FluidInflator(Interaction):
 
     def setValues(self, inflationTimeAmplitude: str = '', massFlowAmplitude: str = ''):
         """This method modifies the FluidInflator object.
+        
+        Parameters
+        ----------
         inflationTimeAmplitude
             A string specifying the name of the amplitude curve defining a mapping between the 
             inflation time and the actual time. 

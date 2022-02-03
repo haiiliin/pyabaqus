@@ -27,6 +27,9 @@ class DisplayOptions:
 
     def setValues(self, options: 'DisplayOptions' = None, plotState: SymbolicConstant = None):
         """This method modifies the DisplayOptions object.
+        
+        Parameters
+        ----------
         options
             A DisplayOptions object from which values are to be copied. If other arguments are also 
             supplied to setValues, they will override the values in *options*. The default value is 

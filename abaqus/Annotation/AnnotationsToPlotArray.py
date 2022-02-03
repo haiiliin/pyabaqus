@@ -17,6 +17,9 @@ class AnnotationsToPlotArray(list[Annotation]):
     def bringForward(self, index: str):
         """This method brings the Annotation object one position forward in the
         AnnotationsToPlotArray sequence.
+        
+        Parameters
+        ----------
         index
             An Int specifying the index of the Annotation object in the AnnotationsToPlotArray 
             sequence. 
@@ -27,6 +30,9 @@ class AnnotationsToPlotArray(list[Annotation]):
     def bringToFront(self, index: str):
         """This method brings the Annotation object to the beginning of the AnnotationsToPlotArray
         sequence.
+        
+        Parameters
+        ----------
         index
             An Int specifying the index of the Annotation object in the AnnotationsToPlotArray 
             sequence. 
@@ -37,6 +43,9 @@ class AnnotationsToPlotArray(list[Annotation]):
     def moveAfter(self, index: str, other: str):
         """This method moves the Annotation object after another object in the same
         AnnotationsToPlotArray sequence.
+        
+        Parameters
+        ----------
         index
             An Integer specifying the index of the Annotation object in the AnnotationsToPlotArray 
             sequence. 
@@ -50,6 +59,9 @@ class AnnotationsToPlotArray(list[Annotation]):
     def moveBefore(self, index: str, other: str):
         """This method moves the Annotation object before another object in the same
         AnnotationsToPlotArray sequence.
+        
+        Parameters
+        ----------
         index
             An Int specifying the index of the Annotation object in the AnnotationsToPlotArray 
             sequence. 
@@ -63,6 +75,9 @@ class AnnotationsToPlotArray(list[Annotation]):
     def sendBackward(self, index: str):
         """This method sends the Annotation object one position backward in the
         AnnotationsToPlotArray sequence.
+        
+        Parameters
+        ----------
         index
             An Int specifying the index of the Annotation object in the AnnotationsToPlotArray 
             sequence. 
@@ -73,6 +88,9 @@ class AnnotationsToPlotArray(list[Annotation]):
     def sendToBack(self, index: str):
         """This method sends the Annotation object to the end of the AnnotationsToPlotArray
         sequence.
+        
+        Parameters
+        ----------
         index
             An Int specifying the index of the Annotation object in the AnnotationsToPlotArray 
             sequence. 

@@ -27,6 +27,9 @@ class SizingFrozenArea(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].SizingFrozenArea
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         region

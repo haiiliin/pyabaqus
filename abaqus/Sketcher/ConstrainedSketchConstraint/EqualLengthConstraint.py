@@ -12,6 +12,9 @@ class EqualLengthConstraint(ConstrainedSketchConstraint):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].EqualLengthConstraint
+        
+        Parameters
+        ----------
         entity1
             A ConstrainedSketchGeometry object specifying the first line. 
         entity2

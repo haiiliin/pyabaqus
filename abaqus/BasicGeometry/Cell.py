@@ -60,6 +60,9 @@ class Cell:
 
     def getSize(self, printResults: Boolean = True):
         """This method returns a Float indicating the volume of the cell.
+        
+        Parameters
+        ----------
         printResults
             A Boolean that determines whether a verbose output is to be printed. The default is 
             True. 

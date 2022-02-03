@@ -64,6 +64,9 @@ class Odb(AmplitudeOdb,
         -----
             This function can be accessed by:
             - session.odbs[name].Part
+        
+        Parameters
+        ----------
         name
             A String specifying the part name.
         embeddedSpace
@@ -88,6 +91,9 @@ class Odb(AmplitudeOdb,
         -----
             This function can be accessed by:
             - session.odbs[name].Step
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         description
@@ -180,6 +186,9 @@ class Odb(AmplitudeOdb,
         -----
             This function can be accessed by:
             - session.odbs[*name*].SectionCategory
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the category.
         description

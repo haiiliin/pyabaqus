@@ -40,6 +40,9 @@ class LeafFromNodeLabels(Leaf):
         .. code-block:: python
 
             LeafFromNodeLabels
+        
+        Parameters
+        ----------
         partInstanceName
             A String specifying the name of the part instance to which *nodeLabels* refers. 
         nodeLabels

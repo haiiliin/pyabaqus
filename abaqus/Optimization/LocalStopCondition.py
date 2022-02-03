@@ -31,6 +31,9 @@ class LocalStopCondition(StopCondition):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].LocalStopCondition
+        
+        Parameters
+        ----------
         name
             A String specifying the stop condition repository key. 
         referenceFactor
@@ -81,6 +84,9 @@ class LocalStopCondition(StopCondition):
                   referenceDesignCycle: SymbolicConstant = PREVIOUS,
                   referenceOperation: SymbolicConstant = ADD, region: SymbolicConstant = MODEL):
         """This method modifies the LocalStopCondition object.
+        
+        Parameters
+        ----------
         comparisonOperation
             A SymbolicConstant specifying the operation used to compare the selected value to the 
             reference value. Possible values are LESS_THAN, LESS_THAN_EQUAL, EQUAL, 

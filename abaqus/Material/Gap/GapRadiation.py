@@ -30,6 +30,9 @@ class GapRadiation:
             This function can be accessed by:
             - mdb.models[name].materials[name].Gapradiation
             - session.odbs[name].materials[name].Gapradiation
+        
+        Parameters
+        ----------
         mainSurfaceEmissivity
             A Float specifying the Emissivity of main surface.ϵA 
         secondarySurfaceEmissivity

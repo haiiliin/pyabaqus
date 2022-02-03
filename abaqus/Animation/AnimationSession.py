@@ -23,6 +23,9 @@ class AnimationSession(SessionBase):
         """This method writes the animations present in the list of canvas objects to a file. It
         generates an animation file using the given file name and file format and uses the
         values in the appropriate options object.
+        
+        Parameters
+        ----------
         fileName
             A String specifying the name of the animation file to generate.
         format
@@ -46,6 +49,9 @@ class AnimationSession(SessionBase):
         .. code-block:: python
 
             session.Movie
+        
+        Parameters
+        ----------
         name
             A String specifying the repository name for the movie.
         fileName

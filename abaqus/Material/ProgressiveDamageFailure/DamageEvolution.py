@@ -192,6 +192,9 @@ class DamageEvolution:
             - .DamageEvolution
             - session.odbs[name].materials[name].shearDamageInitiation\
             - .DamageEvolution
+        
+        Parameters
+        ----------
         type
             A SymbolicConstant specifying the type of damage evolution. Possible values are 
             DISPLACEMENT and ENERGY. 

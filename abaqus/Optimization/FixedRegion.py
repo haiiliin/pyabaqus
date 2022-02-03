@@ -29,6 +29,9 @@ class FixedRegion(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].FixedRegion
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -62,6 +65,9 @@ class FixedRegion(GeometricRestriction):
     def setValues(self, csys: int = None, presumeFeasibleRegionAtStart: Boolean = ON, u1: Boolean = OFF,
                   u2: Boolean = OFF, u3: Boolean = OFF):
         """This method modifies the FixedRegion object.
+        
+        Parameters
+        ----------
         csys
             None or a DatumCsys object specifying the local coordinate system. If *csys*=None, the 
             global coordinate system is used. When this member is queried, it returns an Int. The 

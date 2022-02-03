@@ -46,6 +46,9 @@ class PlanarTestData:
             - session.odbs[name].materials[name].hyperelastic.PlanarTestData
             - session.odbs[name].materials[name].hyperfoam.PlanarTestData
             - session.odbs[name].materials[name].mullinsEffect.PlanarTestData
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         smoothing

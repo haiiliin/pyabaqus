@@ -41,6 +41,9 @@ class Constraint:
 
     def delete(self, indices: tuple):
         """This method allows you to delete existing constraints.
+        
+        Parameters
+        ----------
         indices
             A sequence of Ints specifying the index of each constraint to delete. 
         """

@@ -29,6 +29,9 @@ class CombinedTermDesignResponse(DesignResponse):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].CombinedTermDesignResponse
+        
+        Parameters
+        ----------
         name
             A String specifying the design response repository key. 
         terms
@@ -98,6 +101,9 @@ class CombinedTermDesignResponse(DesignResponse):
                   filterRadiusReduction: float = 0, highCutOff: str = None, lowCutOff: float = 0,
                   method: SymbolicConstant = ADD, weights: tuple = ()):
         """This method modifies the CombinedTermDesignResponse object.
+        
+        Parameters
+        ----------
         filterMaxRadius
             None or a sequence of Floats specifying the maximum radius of influence used when 
             *method* is FILTER. The default value is None. 

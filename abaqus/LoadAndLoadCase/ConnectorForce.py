@@ -66,6 +66,9 @@ class ConnectorForce(Load):
         .. code-block:: python
 
             mdb.models[name].ConnectorForce
+        
+        Parameters
+        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -108,6 +111,9 @@ class ConnectorForce(Load):
                   f2: float = None, f3: float = None, amplitude: str = UNSET):
         """This method modifies the data for an existing ConnectorForce object in the step where it
         is created.
+        
+        Parameters
+        ----------
         region
             The wire region to which the load is applied. This argument is not valid when 
             *fastenerName* and *fastenerSetName* are specified. 
@@ -144,6 +150,9 @@ class ConnectorForce(Load):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ConnectorForce object in the
         specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         f1

@@ -18,6 +18,9 @@ class OptimizationTaskDisplayOptions:
 
     def setValues(self, topologyTask: Boolean = ON, shapeTask: Boolean = ON):
         """This method modifies the OptimizationTaskDisplayOptions object.
+        
+        Parameters
+        ----------
         topologyTask
             A Boolean specifying whether topology task symbols are shown. The default value is ON. 
         shapeTask

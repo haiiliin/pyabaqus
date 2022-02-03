@@ -92,6 +92,9 @@ class AccelerationBaseMotionBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].AccelerationBaseMotionBC
+        
+        Parameters
+        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -130,6 +133,9 @@ class AccelerationBaseMotionBC(BoundaryCondition):
                   useComplex: Boolean = OFF, amplitude: str = UNSET):
         """This method modifies the data for an existing AccelerationBaseMotionBC object in the
         step where it is created.
+        
+        Parameters
+        ----------
         amplitudeScaleFactor
             A Float specifying the scale factor for the amplitude curve. The default value is 1.0. 
         centerOfRotation
@@ -154,6 +160,9 @@ class AccelerationBaseMotionBC(BoundaryCondition):
     def setValuesInStep(self, stepName: str, amplitude: str = ''):
         """This method modifies the propagating data for an existing AccelerationBaseMotionBC
         object in the specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         amplitude

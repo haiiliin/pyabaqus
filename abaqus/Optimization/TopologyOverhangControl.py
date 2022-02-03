@@ -32,6 +32,9 @@ class TopologyOverhangControl(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].TopologyOverhangControl
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         pullDirection
@@ -72,6 +75,9 @@ class TopologyOverhangControl(GeometricRestriction):
                   overhangCheckRegion: SymbolicConstant = OVERHANG_REGION, pointRegion: Region = Region(),
                   radius: float = None, technique: SymbolicConstant = AUTO):
         """This method modifies the TopologyOverhangControl object.
+        
+        Parameters
+        ----------
         csys
             None or a DatumCsys object specifying the local coordinate system of the 
             *pullDirection*. If *csys*=None, the global coordinate system is used. When this member 

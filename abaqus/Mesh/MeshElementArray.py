@@ -48,6 +48,9 @@ class MeshElementArray(list[MeshElement]):
         .. code-block:: python
 
             mesh.MeshElementArray
+        
+        Parameters
+        ----------
         elements
             A list of MeshElement objects. 
 
@@ -59,6 +62,9 @@ class MeshElementArray(list[MeshElement]):
 
     def getFromLabel(self, label: int):
         """This method returns the object in the MeshElementArray with the given label.
+        
+        Parameters
+        ----------
         label
             An Int specifying the label of the object. 
 
@@ -72,6 +78,9 @@ class MeshElementArray(list[MeshElement]):
         """This method returns the objects in the MeshElementArray identified using the specified
         *mask*. This command is generated when the JournalOptions are set to COMPRESSEDINDEX.
         When a large number of objects are involved, this method is highly efficient.
+        
+        Parameters
+        ----------
         mask
             A String specifying the object or objects. 
 
@@ -116,6 +125,9 @@ class MeshElementArray(list[MeshElement]):
                          zMax: str = ''):
         """This method returns an array of element objects that lie within the specified bounding
         box.
+        
+        Parameters
+        ----------
         xMin
             A float specifying the minimum X boundary of the bounding box. 
         yMin
@@ -138,6 +150,9 @@ class MeshElementArray(list[MeshElement]):
     def getByBoundingCylinder(self, center1: tuple, center2: tuple, radius: str):
         """This method returns an array of element objects that lie within the specified bounding
         cylinder.
+        
+        Parameters
+        ----------
         center1
             A tuple of the X-, Y-, and Z-coordinates of the center of the first end of the cylinder. 
         center2
@@ -155,6 +170,9 @@ class MeshElementArray(list[MeshElement]):
     def getByBoundingSphere(self, center: tuple, radius: str):
         """This method returns an array of element objects that lie within the specified bounding
         sphere.
+        
+        Parameters
+        ----------
         center
             A tuple of the X-, Y-, and Z-coordinates of the center of the sphere. 
         radius
@@ -183,6 +201,9 @@ class MeshElementArray(list[MeshElement]):
     def sequenceFromLabels(self, labels: tuple):
         """This method returns the objects in the MeshElementArray identified using the specified
         labels.
+        
+        Parameters
+        ----------
         labels
             A sequence of Ints specifying the labels. 
 

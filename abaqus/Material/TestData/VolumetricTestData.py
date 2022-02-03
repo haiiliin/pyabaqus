@@ -48,6 +48,9 @@ class VolumetricTestData:
             - session.odbs[name].materials[name].hyperelastic.VolumetricTestData
             - session.odbs[name].materials[name].hyperfoam.VolumetricTestData
             - session.odbs[name].materials[name].viscoelastic.VolumetricTestData
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         volinf

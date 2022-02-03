@@ -95,6 +95,9 @@ class DerivedComponent:
             session.odbs[name].sections[name].behaviorOptions[i].DerivedComponent
             session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
             session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent
+        
+        Parameters
+        ----------
         intrinsicComponents
             A sequence of Ints specifying the components of relative motion for which the
             contributing term is defined. Possible values are 1 ≤≤ *intrinsicComponents* ≤≤ 6. Only

@@ -134,9 +134,6 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
         
         Parameters
         ----------
-        
-        Parameters
-        ----------
         v1
             A Float or a SymbolicConstant specifying the velocity component in the 1-direction. 
             Possible values for the SymbolicConstant are UNSET and SET. The default value is 
@@ -186,9 +183,6 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing VelocityAdaptiveMeshConstraint
         object in the specified step.
-        
-        Parameters
-        ----------
         
         Parameters
         ----------

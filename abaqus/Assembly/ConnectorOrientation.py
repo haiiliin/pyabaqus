@@ -41,6 +41,9 @@ class ConnectorOrientation:
 
             mdb.models[name].rootAssembly.ConnectorOrientation
             session.odbs[name].rootAssembly.ConnectorOrientation
+        
+        Parameters
+        ----------
         region
             A Set object specifying the region to which the orientation is assigned. 
         localCsys1

@@ -224,6 +224,9 @@ class PartInstance:
         .. code-block:: python
 
             mdb.models[name].rootAssembly.Instance
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. The name must be a valid Abaqus object name. 
         part
@@ -269,6 +272,9 @@ class PartInstance:
         .. code-block:: python
 
             mdb.models[name].rootAssembly.Instance
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. The name must be a valid Abaqus object name. 
         instanceToBeCut
@@ -301,6 +307,9 @@ class PartInstance:
         .. code-block:: python
 
             mdb.models[name].rootAssembly.Instance
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. The name must be a valid Abaqus object name. 
         instances
@@ -348,6 +357,9 @@ class PartInstance:
         .. code-block:: python
 
             mdb.models[name].rootAssembly.Instance
+        
+        Parameters
+        ----------
         instanceList
             A sequence of Strings specifying the names of instances to pattern. 
         number1
@@ -387,6 +399,9 @@ class PartInstance:
         .. code-block:: python
 
             mdb.models[name].rootAssembly.Instance
+        
+        Parameters
+        ----------
         instanceList
             A sequence of Strings specifying the names of instances to pattern. 
         number
@@ -414,6 +429,9 @@ class PartInstance:
     def checkGeometry(self, detailed: Boolean = OFF, level: int = None):
         """This method checks the validity of the geometry of the part instance and prints a count
         of all topological entities on the part instance (faces, edges, vertices, etc.).
+        
+        Parameters
+        ----------
         detailed
             A Boolean specifying whether detailed output will be printed to the replay file. The 
             default value is OFF. 
@@ -437,6 +455,9 @@ class PartInstance:
                 isFaceEdges: Boolean = OFF):
         """This method translates an instance along the specified direction until it is in contact
         with a fixed instance.
+        
+        Parameters
+        ----------
         movableList
             A sequence of Face or Edge objects on the part instance to be moved. 
         fixedList
@@ -494,6 +515,9 @@ class PartInstance:
 
     def replace(self, instanceOf: Part, applyConstraints: Boolean = True):
         """This method replaces one instance with an instance of another part.
+        
+        Parameters
+        ----------
         instanceOf
             A Part object specifying which Part will be instanced in place of the original Part. 
         applyConstraints
@@ -506,6 +530,9 @@ class PartInstance:
 
     def rotateAboutAxis(self, axisPoint: tuple, axisDirection: tuple, angle: float):
         """This method translates an instance by the specified amount.
+        
+        Parameters
+        ----------
         axisPoint
             A sequence of three Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point on 
             the axis. 
@@ -519,6 +546,9 @@ class PartInstance:
 
     def translate(self, vector: tuple):
         """This method translates an instance by the specified amount.
+        
+        Parameters
+        ----------
         vector
             A sequence of three Floats specifying a translation vector. 
         """
@@ -528,6 +558,9 @@ class PartInstance:
                     vector: tuple = ()):
         """This method translates an instance along the specified direction until it is in contact
         with a fixed instance.
+        
+        Parameters
+        ----------
         movableList
             A sequence of Face or Edge objects on the part instance to be moved. 
         fixedList

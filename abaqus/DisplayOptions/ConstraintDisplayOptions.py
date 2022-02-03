@@ -20,6 +20,9 @@ class ConstraintDisplayOptions:
                   rigidBodyConstraint: Boolean = ON, displayBodyConstraint: Boolean = ON,
                   couplingConstrain: Boolean = ON):
         """This method modifies the ConstraintDisplayOptions object.
+        
+        Parameters
+        ----------
         constraintEquation
             A Boolean specifying whether constraint equation symbols are shown. The default value is 
             ON. 

@@ -36,6 +36,9 @@ class Chebyshev2Filter(Filter):
 
             mdb.models[name].Chebyshev2Filter
             session.odbs[name].Chebyshev2Filter
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. This name ANTIALIASING is reserved for filters 
             generated internally by the program. 
@@ -73,6 +76,9 @@ class Chebyshev2Filter(Filter):
     def setValues(self, rippleFactor: float = 0, order: int = 2, operation: SymbolicConstant = NONE,
                   halt: Boolean = OFF, limit: float = None, invariant: SymbolicConstant = NONE):
         """This method modifies the Chebyshev2Filter object.
+        
+        Parameters
+        ----------
         rippleFactor
             A Float specifying the amount of allowable ripple in the filter. Possible values are 
             non-negative numbers less than 1. The default value is 0.025. 

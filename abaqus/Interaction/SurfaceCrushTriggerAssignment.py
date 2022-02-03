@@ -23,6 +23,9 @@ class SurfaceCrushTriggerAssignment:
     def changeValuesInStep(self, stepName: str, index: int, value: typing.Union[SymbolicConstant, float]):
         """This method allows modification of surface crush trigger assignments already defined on
         surfaces in a given step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the surface crush trigger assignments 
             are to be modified. 
@@ -43,6 +46,9 @@ class SurfaceCrushTriggerAssignment:
     def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant, float]):
         """This method allows addition of surface crush trigger assignments to new surfaces in a
         given step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which new surface crush trigger assignments 
             are to be defined. 
@@ -62,6 +68,9 @@ class SurfaceCrushTriggerAssignment:
     def delete(self, indices: tuple):
         """The delete method allows you to delete existing surface crush trigger assignments from a
         ContactExp object.
+        
+        Parameters
+        ----------
         indices
             A sequence of Ints specifying the index of each surface crush trigger assignment to 
             delete. 

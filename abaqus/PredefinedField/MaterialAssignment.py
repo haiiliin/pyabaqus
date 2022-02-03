@@ -43,6 +43,9 @@ class MaterialAssignment(PredefinedField):
         .. code-block:: python
 
             mdb.models[name].MaterialAssignment
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         instanceList
@@ -78,6 +81,9 @@ class MaterialAssignment(PredefinedField):
     def setValues(self, useFields: Boolean = OFF, assignmentList: tuple = (), fieldList: tuple = (),
                   colorList: tuple = ()):
         """This method modifies the MaterialAssignment object.
+        
+        Parameters
+        ----------
         useFields
             A Boolean specifying whether the volume fraction data will be uniform or defined by 
             discrete fields. The default value is OFF. 

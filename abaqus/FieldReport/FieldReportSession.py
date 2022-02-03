@@ -16,6 +16,9 @@ class FieldReportSession(SessionBase):
         -----
             This function can be accessed by:
             - session.writeFieldReport
+        
+        Parameters
+        ----------
         filename
             A String specifying the name of the file to which field output will be written.
         append
@@ -84,6 +87,9 @@ class FieldReportSession(SessionBase):
         -----
             This function can be accessed by:
             - session.writeFreeBodyReport
+        
+        Parameters
+        ----------
         fileName
             A String specifying the name of the file to which the free body output will be written.
         append

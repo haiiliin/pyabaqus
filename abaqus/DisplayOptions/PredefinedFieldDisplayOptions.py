@@ -19,6 +19,9 @@ class PredefinedFieldDisplayOptions:
     def setValues(self, temperatureField: Boolean = ON, velocityField: Boolean = ON, generalField: Boolean = ON,
                   stressField: Boolean = ON, hardeningField: Boolean = ON):
         """This method modifies the PredefinedFieldDisplayOptions object.
+        
+        Parameters
+        ----------
         temperatureField
             A Boolean specifying whether temperature field symbols are shown. The default value is 
             ON. 

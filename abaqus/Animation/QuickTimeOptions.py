@@ -17,6 +17,9 @@ class QuickTimeOptions:
     def setValues(self, compressionMethod: SymbolicConstant = RLE24,
                   sizeDefinition: SymbolicConstant = SIZE_ON_SCREEN, imageSize: int = None):
         """This method modifies the QuickTimeOptions object.
+        
+        Parameters
+        ----------
         compressionMethod
             A SymbolicConstant specifying the compression method for the QuickTime format. Possible 
             values are: 

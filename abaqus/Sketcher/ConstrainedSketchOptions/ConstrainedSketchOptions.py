@@ -23,6 +23,9 @@ class ConstrainedSketchOptions:
                   autoConstrainOptions: SymbolicConstant = None,
                   dragMethod: SymbolicConstant = MINIMUM_MOVE, editMethod: SymbolicConstant = STANDARD):
         """This method modifies the ConstrainedSketchOptions object.
+        
+        Parameters
+        ----------
         sheetSize
             A Float specifying the sheet size. Possible values are Floats >> 0. The default value is 
             the *sheetSize* specified with the Sketch method. 

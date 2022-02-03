@@ -40,6 +40,9 @@ class StdContactControl(ContactControl):
         .. code-block:: python
 
             mdb.models[name].StdContactControl
+        
+        Parameters
+        ----------
         name
             A String specifying the contact controls repository key. 
         stiffnessScaleFactor
@@ -142,6 +145,9 @@ class StdContactControl(ContactControl):
                   zeroDampingChoice: SymbolicConstant = COMPUTE, zeroDamping: float = None,
                   enforceWithLagrangeMultipliers: SymbolicConstant = DEFAULT):
         """This method modifies the StdContactControl object.
+        
+        Parameters
+        ----------
         stiffnessScaleFactor
             A Float specifying the factor by which Abaqus/Standard will scale the default penalty 
             stiffness to obtain the stiffnesses used for the contact pairs. Only contact 

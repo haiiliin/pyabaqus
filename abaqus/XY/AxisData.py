@@ -234,6 +234,9 @@ class AxisData:
                   tickIncrement: float = None, tickCount: int = None, minorTickCount: int = 1,
                   title: str = '', useSystemTitle: Boolean = ON):
         """This method modifies the AxisData object.
+        
+        Parameters
+        ----------
         axisData
             An AxisData object from which attributes are to be copied. 
         labelFormat

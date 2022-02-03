@@ -40,6 +40,9 @@ class LeafFromMeshSurfaceSets(Leaf):
         .. code-block:: python
 
             LeafFromMeshSurfaceSets
+        
+        Parameters
+        ----------
         surfaceSets
             A sequence of Surface objects. 
 

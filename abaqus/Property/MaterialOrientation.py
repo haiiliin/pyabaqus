@@ -65,6 +65,9 @@ class MaterialOrientation:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].MaterialOrientation
+        
+        Parameters
+        ----------
         region
             A Set object specifying a region for which the material orientation is defined. 
         localCsys
@@ -158,6 +161,9 @@ class MaterialOrientation:
         .. code-block:: python
 
             mdb.models[*name*].parts[*name*].MaterialOrientation
+        
+        Parameters
+        ----------
         localCsys
             A DatumCsys object specifying the local coordinate system or None, describing the 
             material orientation for the given region. In the ODB, this member was previously 

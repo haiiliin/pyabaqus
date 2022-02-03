@@ -114,6 +114,9 @@ class Axis:
                   tickLength: float = 2, tickPlacement: SymbolicConstant = INSIDE,
                   tickStyle: LineStyle = LineStyle(), titleStyle: TextStyle = TextStyle()):
         """This method modifies the Axis object.
+        
+        Parameters
+        ----------
         axis
             An Axis object from which attributes are to be copied. 
         labelFrequency

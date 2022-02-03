@@ -331,6 +331,9 @@ class SymbolOptions(DGSymbolOptions):
                   tensorMaxValue: float = None, tensorMinValueAutoCompute: Boolean = ON,
                   tensorMinValue: float = None):
         """This method modifies the SymbolOptions object.
+        
+        Parameters
+        ----------
         options
             A SymbolOptions object from which values are to be copied. If other arguments are also 
             supplied to setValues, they will override the values in *options*. The default value is 

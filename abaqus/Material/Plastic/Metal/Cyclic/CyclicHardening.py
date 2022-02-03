@@ -38,6 +38,9 @@ class CyclicHardening:
             This function can be accessed by:
             - mdb.models[name].materials[name].Plastic.CyclicHardening
             - session.odbs[name].materials[name].Plastic.CyclicHardening
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

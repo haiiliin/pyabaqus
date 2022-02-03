@@ -46,6 +46,9 @@ class MohrCoulombPlasticity:
             This function can be accessed by:
             - mdb.models[name].materials[name].MohrCoulombPlasticity
             - session.odbs[name].materials[name].MohrCoulombPlasticity
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         deviatoricEccentricity

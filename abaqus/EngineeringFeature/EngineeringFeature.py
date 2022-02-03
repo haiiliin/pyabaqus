@@ -32,6 +32,9 @@ class EngineeringFeature(EngineeringFeatureBase):
             This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.AssembledFastener
             - mdb.models[name].rootAssembly.engineeringFeatures.AssembledFastener
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         region
@@ -87,6 +90,9 @@ class EngineeringFeature(EngineeringFeatureBase):
             This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.ContourIntegral
             - mdb.models[name].rootAssembly.engineeringFeatures.ContourIntegral
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         crackFront
@@ -154,6 +160,9 @@ class EngineeringFeature(EngineeringFeatureBase):
             This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.DebondVCCT
             - mdb.models[name].rootAssembly.engineeringFeatures.DebondVCCT
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         initiationStep
@@ -190,6 +199,9 @@ class EngineeringFeature(EngineeringFeatureBase):
             This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.DiscreteFastener
             - mdb.models[name].rootAssembly.engineeringFeatures.DiscreteFastener
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         region
@@ -239,6 +251,9 @@ class EngineeringFeature(EngineeringFeatureBase):
             This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.HeatCapacitance
             - mdb.models[name].rootAssembly.engineeringFeatures.HeatCapacitance
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         region
@@ -268,6 +283,9 @@ class EngineeringFeature(EngineeringFeatureBase):
             This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.NonstructuralMass
             - mdb.models[name].rootAssembly.engineeringFeatures.NonstructuralMass
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         region
@@ -311,6 +329,9 @@ class EngineeringFeature(EngineeringFeatureBase):
             This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.PointFastener
             - mdb.models[name].rootAssembly.engineeringFeatures.PointFastener
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         region
@@ -436,6 +457,9 @@ class EngineeringFeature(EngineeringFeatureBase):
             This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.PointMassInertia
             - mdb.models[name].rootAssembly.engineeringFeatures.PointMassInertia
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         region
@@ -498,6 +522,9 @@ class EngineeringFeature(EngineeringFeatureBase):
             - mdb.models[name].parts[name].engineeringFeatures.SpringDashpotToGround
             - mdb.models[name].rootAssembly.engineeringFeatures\
             - .SpringDashpotToGround
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         region
@@ -544,6 +571,9 @@ class EngineeringFeature(EngineeringFeatureBase):
             - mdb.models[name].parts[name].engineeringFeatures.TwoPointSpringDashpot
             - mdb.models[name].rootAssembly.engineeringFeatures\
             - .TwoPointSpringDashpot
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         regionPairs
@@ -605,6 +635,9 @@ class EngineeringFeature(EngineeringFeatureBase):
             This function can be accessed by:
             - mdb.models[name].parts[name].engineeringFeatures.XFEMCrack
             - mdb.models[name].rootAssembly.engineeringFeatures.XFEMCrack
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         crackDomain

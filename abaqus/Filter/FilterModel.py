@@ -18,6 +18,9 @@ class FilterModel(ModelBase):
             This function can be accessed by:
             - mdb.models[name].ButterworthFilter
             - session.odbs[name].ButterworthFilter
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. This name ANTIALIASING is reserved for filters
             generated internally by the program.
@@ -60,6 +63,9 @@ class FilterModel(ModelBase):
             This function can be accessed by:
             - mdb.models[name].Chebyshev1Filter
             - session.odbs[name].Chebyshev1Filter
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. This name ANTIALIASING is reserved for filters
             generated internally by the program.
@@ -105,6 +111,9 @@ class FilterModel(ModelBase):
             This function can be accessed by:
             - mdb.models[name].Chebyshev2Filter
             - session.odbs[name].Chebyshev2Filter
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. This name ANTIALIASING is reserved for filters
             generated internally by the program.
@@ -149,6 +158,9 @@ class FilterModel(ModelBase):
             This function can be accessed by:
             - mdb.models[name].OperatorFilter
             - session.odbs[name].OperatorFilter
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. This name ANTIALIASING is reserved for filters
             generated internally by the program.

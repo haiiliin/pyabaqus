@@ -189,6 +189,9 @@ class MdbBase:
         MdbError
             “abaqus.cae” is an invalid CAE filename; 
             If *pathName* is abaqus.cae
+        
+        Parameters
+        ----------
         MdbError
             cannot save file; 
             If the command fails to save the Mdb object to disk for reasons not mentioned above
@@ -246,6 +249,9 @@ class MdbBase:
 
         Raises
         ------
+        
+        Parameters
+        ----------
         MdbError
             The auxiliary Mdb was not opened;
             If the auxiliary Mdb was not opened earlier
@@ -262,6 +268,9 @@ class MdbBase:
 
         Raises
         ------
+        
+        Parameters
+        ----------
         MdbError
             The auxiliary Mdb was not opened; 
             If the auxiliary Mdb was not opened earlier

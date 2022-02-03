@@ -162,6 +162,9 @@ class ContactStd(Interaction):
         .. code-block:: python
 
             mdb.models[name].ContactStd
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -244,6 +247,9 @@ class ContactStd(Interaction):
         .. code-block:: python
 
             mdb.models[name].ContactStd
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName

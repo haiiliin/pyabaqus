@@ -149,6 +149,9 @@ class Surface:
             side1Elements
             side2Elements
 
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. The default value is an empty string. 
 
@@ -170,6 +173,9 @@ class Surface:
 
             mdb.models[*name*].parts[*name*].Surface
             mdb.models[*name*].rootAssembly.Surface
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the surface. 
         objectToCopy
@@ -196,6 +202,9 @@ class Surface:
 
             mdb.models[*name*].parts[*name*].Surface
             mdb.models[*name*].rootAssembly.Surface
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         surfaces
@@ -223,6 +232,9 @@ class Surface:
 
             mdb.models[*name*].parts[*name*].Surface
             mdb.models[*name*].rootAssembly.Surface
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         elementSetSeq

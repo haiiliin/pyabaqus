@@ -31,6 +31,9 @@ class ElasticFoundation(Interaction):
         .. code-block:: python
 
             mdb.models[name].ElasticFoundation
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -57,6 +60,9 @@ class ElasticFoundation(Interaction):
     def setValuesInStep(self, stepName: str, stiffness: float = None):
         """This method modifies the propagating data of an existing ElasticFoundation object in the
         specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         stiffness

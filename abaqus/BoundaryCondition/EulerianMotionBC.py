@@ -245,6 +245,9 @@ class EulerianMotionBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].EulerianMotionBC
+        
+        Parameters
+        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -349,6 +352,9 @@ class EulerianMotionBC(BoundaryCondition):
                   volThreshold: float = 0, bufferSize: float = 2):
         """This method modifies the data for an existing EulerianMotionBC object in the step where
         it is created.
+        
+        Parameters
+        ----------
         instanceName
             A String specifying the name of the Eulerian part instance. 
         followRegion
@@ -443,6 +449,9 @@ class EulerianMotionBC(BoundaryCondition):
                         volThreshold: float = 0, bufferSize: float = 2):
         """This method modifies the propagating data for an existing EulerianMotionBC object in the
         specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         ctrPosition1

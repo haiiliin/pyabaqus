@@ -46,6 +46,9 @@ class MembraneSection(Section):
 
             mdb.models[name].MembraneSection
             session.odbs[name].MembraneSection
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         material
@@ -88,6 +91,9 @@ class MembraneSection(Section):
                   poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
                   thicknessField: str = ''):
         """This method modifies the MembraneSection object.
+        
+        Parameters
+        ----------
         thickness
             A Float specifying the thickness for the section. Possible values are *thickness* >> 
             0.0. The default value is 1.0. 

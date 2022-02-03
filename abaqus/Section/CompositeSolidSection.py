@@ -35,6 +35,9 @@ class CompositeSolidSection(Section):
 
             mdb.models[name].CompositeSolidSection
             session.odbs[name].CompositeSolidSection
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         layup
@@ -55,6 +58,9 @@ class CompositeSolidSection(Section):
 
     def setValues(self, symmetric: Boolean = OFF, layupName: str = ''):
         """This method modifies the CompositeSolidSection object.
+        
+        Parameters
+        ----------
         symmetric
             A Boolean specifying whether or not the layup should be made symmetric by the analysis. 
             The default value is OFF. 

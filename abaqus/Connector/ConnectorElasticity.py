@@ -86,6 +86,9 @@ class ConnectorElasticity(ConnectorBehaviorOption):
                       connectorBehavior.ConnectorElasticity
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorElasticity
+        
+        Parameters
+        ----------
         behavior
             A SymbolicConstant specifying whether the elastic behavior is linear, nonlinear, or 
             rigid. Possible values are LINEAR, NONLINEAR, and RIGID. The default value is LINEAR. 

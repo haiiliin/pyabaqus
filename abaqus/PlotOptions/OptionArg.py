@@ -39,6 +39,9 @@ class OptionArg:
         .. code-block:: python
 
             visualization.OptionArg
+        
+        Parameters
+        ----------
         renderStyle
             A SymbolicConstant specifying the render style of the plot. Possible values are 
             WIREFRAME, FILLED, HIDDEN, and SHADED. The default value is WIREFRAME. 

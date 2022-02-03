@@ -30,6 +30,9 @@ class ShapeMemberSize(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].ShapeMemberSize
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         region
@@ -59,6 +62,9 @@ class ShapeMemberSize(GeometricRestriction):
                   sizeRestriction: SymbolicConstant = MINIMUM, assignNodeGroupRegion: str = OFF,
                   nodeGroupRegion: str = ''):
         """This method modifies the ShapeMemberSize object.
+        
+        Parameters
+        ----------
         maxThickness
             A Float specifying the maximum thickness. The default value is 0.0. 
         minThickness

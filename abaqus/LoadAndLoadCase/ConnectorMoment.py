@@ -66,6 +66,9 @@ class ConnectorMoment(Load):
         .. code-block:: python
 
             mdb.models[name].ConnectorMoment
+        
+        Parameters
+        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -107,6 +110,9 @@ class ConnectorMoment(Load):
                   m2: float = None, m3: float = None, amplitude: str = UNSET):
         """This method modifies the data for an existing ConnectorMoment object in the step where
         it is created.
+        
+        Parameters
+        ----------
         region
             The wire region to which the load is applied. This argument is not valid when 
             *fastenerName* and *fastenerSetName* are specified. 
@@ -142,6 +148,9 @@ class ConnectorMoment(Load):
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ConnectorMoment object in the
         specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         m1

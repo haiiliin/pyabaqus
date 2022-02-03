@@ -38,6 +38,9 @@ class FreeBodyOptions:
                   showComp3F: Boolean = ON, showComp3M: Boolean = ON, showForce: Boolean = ON,
                   showMoment: Boolean = ON, constantLengthArrow: Boolean = OFF):
         """This method modifies the FreeBodyOptions object.
+        
+        Parameters
+        ----------
         comp1ColorF
             A String specifying color of the first force component. The default value is "#FF1932". 
         comp1ColorM

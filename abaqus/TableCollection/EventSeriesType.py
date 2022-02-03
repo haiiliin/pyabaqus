@@ -28,6 +28,9 @@ class EventSeriesType:
         .. code-block:: python
 
             mdb.models[name].EventSeriesType
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -47,6 +50,9 @@ class EventSeriesType:
 
     def setValues(self, fields: str = ''):
         """This method modifies the EventSeriesType object.
+        
+        Parameters
+        ----------
         fields
             A String array specifying fields. The default value is an empty array. 
 

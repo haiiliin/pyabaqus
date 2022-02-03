@@ -59,6 +59,9 @@ class BodyConcentrationFlux(Load):
         .. code-block:: python
 
             mdb.models[name].BodyConcentrationFlux
+        
+        Parameters
+        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -90,6 +93,9 @@ class BodyConcentrationFlux(Load):
     def setValues(self, field: str = '', distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):
         """This method modifies the data for an existing BodyConcentrationFlux object in the step
         where it is created.
+        
+        Parameters
+        ----------
         field
             A String specifying the name of the AnalyticalField object associated with this load. 
             The *field* argument applies only when *distributionType*=FIELD. The default value is an 
@@ -107,6 +113,9 @@ class BodyConcentrationFlux(Load):
     def setValuesInStep(self, stepName: str, magnitude: float = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing BodyConcentrationFlux object
         in the specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the Body heat flux is modified. 
         magnitude

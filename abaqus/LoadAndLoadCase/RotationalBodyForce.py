@@ -87,6 +87,9 @@ class RotationalBodyForce(Load):
         .. code-block:: python
 
             mdb.models[name].RotationalBodyForce
+        
+        Parameters
+        ----------
         name
             A String specifying the load repository key. 
         createStepName
@@ -131,6 +134,9 @@ class RotationalBodyForce(Load):
                   centrifugal: Boolean = OFF, rotaryAcceleration: Boolean = OFF, amplitude: str = UNSET):
         """This method modifies the data for an existing RotationalBodyForce object in the step
         where it is created.
+        
+        Parameters
+        ----------
         distributionType
             A SymbolicConstant specifying how the load is distributed spatially. Possible values are 
             UNIFORM and FIELD. The default value is UNIFORM. 
@@ -156,6 +162,9 @@ class RotationalBodyForce(Load):
     def setValuesInStep(self, stepName: str, magnitude: float = None, amplitude: str = ''):
         """This method modifies the propagating data for an existing RotationalBodyForce object in
         the specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the load is modified. 
         magnitude

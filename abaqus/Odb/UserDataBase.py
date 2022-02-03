@@ -110,6 +110,9 @@ class UserDataBase:
         .. code-block:: python
 
             session.odbs[name].userData.XYData
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         data

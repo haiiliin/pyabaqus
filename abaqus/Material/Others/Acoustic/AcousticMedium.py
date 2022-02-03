@@ -28,6 +28,9 @@ class AcousticMedium:
             This function can be accessed by:
             - mdb.models[name].materials[name].AcousticMedium
             - session.odbs[name].materials[name].AcousticMedium
+        
+        Parameters
+        ----------
         acousticVolumetricDrag
             A Boolean specifying whether the volumetricTable data is specified. The default value is 
             OFF. 

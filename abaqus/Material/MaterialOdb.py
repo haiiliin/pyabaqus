@@ -11,6 +11,9 @@ class MaterialOdb(OdbBase):
         -----
             This function can be accessed by:
             - session.odbs[name].Material
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the new material.
         description

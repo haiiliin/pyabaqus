@@ -47,6 +47,9 @@ class ConcreteTensionDamage:
             - .ConcreteTensionDamage
             - session.odbs[name].materials[name].concreteDamagedPlasticity\
             - .ConcreteTensionDamage
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         compressionRecovery

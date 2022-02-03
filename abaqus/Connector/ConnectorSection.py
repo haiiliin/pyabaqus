@@ -42,6 +42,9 @@ class ConnectorSection(SectionBase):
                       connectorBehavior.ConnectorDamage
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorDamage
+        
+        Parameters
+        ----------
         coupling
             A SymbolicConstant specifying whether or not the behavior is coupled. Possible values 
             are UNCOUPLED and COUPLED. The default value is UNCOUPLED. 
@@ -154,6 +157,9 @@ class ConnectorSection(SectionBase):
                       connectorBehavior.ConnectorDamping
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorDamping
+        
+        Parameters
+        ----------
         behavior
             A SymbolicConstant specifying if the damping behavior is linear or nonlinear. Possible 
             values are LINEAR and NONLINEAR. The default value is LINEAR. 
@@ -215,6 +221,9 @@ class ConnectorSection(SectionBase):
                       connectorBehavior.ConnectorElasticity
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorElasticity
+        
+        Parameters
+        ----------
         behavior
             A SymbolicConstant specifying whether the elastic behavior is linear, nonlinear, or 
             rigid. Possible values are LINEAR, NONLINEAR, and RIGID. The default value is LINEAR. 
@@ -277,6 +286,9 @@ class ConnectorSection(SectionBase):
                       connectorBehavior.ConnectorFailure
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorFailure
+        
+        Parameters
+        ----------
         releaseComponent
             The SymbolicConstant ALL or an Int specifying the motion components that fail. If an Int 
             is specified, only that motion component fails when the failure criteria are satisfied. 
@@ -335,6 +347,9 @@ class ConnectorSection(SectionBase):
                       connectorBehavior.ConnectorFriction
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorFriction
+        
+        Parameters
+        ----------
         frictionModel
             A SymbolicConstant specifying the desired frictional response model. Possible values are 
             PREDEFINED and USER_CUSTOMIZED. The default value is PREDEFINED. 
@@ -449,6 +464,9 @@ class ConnectorSection(SectionBase):
                       connectorBehavior.ConnectorLock
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorLock
+        
+        Parameters
+        ----------
         lockingComponent
             The SymbolicConstant ALL or an Int specifying the motion components that are locked. If 
             an Int is specified, only that motion component is locked when the locking criteria are 
@@ -506,6 +524,9 @@ class ConnectorSection(SectionBase):
                       connectorBehavior.ConnectorPlasticity
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorPlasticity
+        
+        Parameters
+        ----------
         coupling
             A SymbolicConstant specifying whether or not the behavior is coupled. Possible values 
             are UNCOUPLED and COUPLED. The default value is UNCOUPLED. 
@@ -586,6 +607,9 @@ class ConnectorSection(SectionBase):
 
             mdb.models[name].sections[name].behaviorOptions[i].ConnectorPotential
             session.odbs[name].sections[name].behaviorOptions[i].ConnectorPotential
+        
+        Parameters
+        ----------
         componentStyle
             A SymbolicConstant specifying whether a component number or the name of the 
             DerivedComponent object will be used in the contribution. Possible values are 
@@ -638,6 +662,9 @@ class ConnectorSection(SectionBase):
             connectorBehavior.ConnectorStop
             import odbConnectorBehavior
             odbConnectorBehavior.ConnectorStop
+        
+        Parameters
+        ----------
         minMotion
             None or a Float specifying the lower bound for the connector's relative position for all 
             specified components, or no lower bound. The default value is None. 
@@ -706,6 +733,9 @@ class ConnectorSection(SectionBase):
 
             mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior
             session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior
+        
+        Parameters
+        ----------
         formulation
             A SymbolicConstant specifying the friction coefficient formulation. Possible values are
             PENALTY and EXPONENTIAL_DECAY. The default value is PENALTY.

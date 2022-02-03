@@ -20,6 +20,9 @@ class OdbInstance(OdbInstanceBase):
             This function can be accessed by:
             - session.odbs[*name*].rootAssembly.instances[*name*].RigidBody
             - session.odbs[*name*].rootAssembly.RigidBody
+        
+        Parameters
+        ----------
         referenceNode
             An OdbSet object specifying the reference node set associated with the rigid body.
         position
@@ -62,6 +65,9 @@ class OdbInstance(OdbInstanceBase):
             - session.odbs[*name*].parts[*name*].NodeSet
             - session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
             - session.odbs[*name*].rootAssembly.NodeSet
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the set and the repository key.
         nodes

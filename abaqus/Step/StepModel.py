@@ -59,6 +59,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].AnnealStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -92,6 +95,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].BuckleStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -150,6 +156,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ComplexFrequencyStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -216,6 +225,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].CoupledTempDisplacementStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -329,6 +341,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].CoupledThermalElectricalStructuralStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -432,6 +447,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].CoupledThermalElectricStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -517,6 +535,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].DirectCyclicStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -617,6 +638,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].EmagTimeHarmonicStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -653,6 +677,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ExplicitDynamicsStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -731,6 +758,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].FrequencyStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -857,6 +887,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].GeostaticStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -936,6 +969,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].HeatTransferStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -1031,6 +1067,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ImplicitDynamicsStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -1140,6 +1179,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].MassDiffusionStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -1212,6 +1254,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ModalDynamicsStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -1269,6 +1314,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].RandomResponseStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -1324,6 +1372,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ResponseSpectrumStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -1384,6 +1435,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SoilsStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -1491,6 +1545,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].StaticLinearPerturbationStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -1532,6 +1589,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].StaticRiksStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -1636,6 +1696,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].StaticStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -1743,6 +1806,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SteadyStateDirectStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -1799,6 +1865,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SteadyStateModalStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -1857,6 +1926,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SteadyStateSubspaceStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -1917,6 +1989,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SubspaceDynamicsStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -1972,6 +2047,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].SubstructureGenerateStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -2063,6 +2141,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].TempDisplacementDynamicsStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous
@@ -2135,6 +2216,9 @@ class StepModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ViscoStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key.
         previous

@@ -39,6 +39,9 @@ class ConnectorLock(ConnectorBehaviorOption):
                       connectorBehavior.ConnectorLock
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorLock
+        
+        Parameters
+        ----------
         lockingComponent
             The SymbolicConstant ALL or an Int specifying the motion components that are locked. If 
             an Int is specified, only that motion component is locked when the locking criteria are 

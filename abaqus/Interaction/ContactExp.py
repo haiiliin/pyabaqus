@@ -128,6 +128,9 @@ class ContactExp(Interaction):
         .. code-block:: python
 
             mdb.models[name].ContactExp
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName
@@ -199,6 +202,9 @@ class ContactExp(Interaction):
         .. code-block:: python
 
             mdb.models[name].ContactExp
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         createStepName

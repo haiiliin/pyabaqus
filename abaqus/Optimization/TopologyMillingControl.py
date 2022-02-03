@@ -30,6 +30,9 @@ class TopologyMillingControl(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].TopologyMillingControl
+        
+        Parameters
+        ----------
         name
             A String specifying the geometric restriction repository key. 
         millingDirections
@@ -61,6 +64,9 @@ class TopologyMillingControl(GeometricRestriction):
     def setValues(self, csys: int = None, millingCheckRegion: SymbolicConstant = MILLING_REGION,
                   radius: float = None):
         """This method modifies the TopologyMillingControl object.
+        
+        Parameters
+        ----------
         csys
             None or a DatumCsys object specifying the local coordinate system of the 
             *millingDirections*. If *csys*=None, the global coordinate system is used. When this 

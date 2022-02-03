@@ -30,6 +30,9 @@ class BaselineCorrection:
 
             mdb.models[name].amplitudes[name].BaselineCorrection
             session.odbs[name].amplitudes[name].BaselineCorrection
+        
+        Parameters
+        ----------
         intervals
             A sequence of Floats specifying the correction time interval end points. Possible values 
             are positive and monotonically increasing Floats. The default value is an empty 

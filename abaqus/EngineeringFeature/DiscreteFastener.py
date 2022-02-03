@@ -52,6 +52,9 @@ class DiscreteFastener(Fastener):
 
             mdb.models[name].parts[name].engineeringFeatures.DiscreteFastener
             mdb.models[name].rootAssembly.engineeringFeatures.DiscreteFastener
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         region
@@ -95,6 +98,9 @@ class DiscreteFastener(Fastener):
                   coupling: SymbolicConstant = CONTINUUM, weightingMethod: SymbolicConstant = UNIFORM,
                   localCsys: int = None):
         """This method modifies the DiscreteFastener object.
+        
+        Parameters
+        ----------
         ur1
             A Boolean specifying whether to constrain rotational displacement component about the 
             1-direction. The default value is ON. 

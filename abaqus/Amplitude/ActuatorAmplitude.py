@@ -34,6 +34,9 @@ class ActuatorAmplitude(Amplitude):
 
             mdb.models[name].ActuatorAmplitude
             session.odbs[name].ActuatorAmplitude
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         timeSpan
@@ -49,6 +52,9 @@ class ActuatorAmplitude(Amplitude):
 
     def setValues(self, timeSpan: SymbolicConstant = STEP):
         """This method modifies the ActuatorAmplitude object.
+        
+        Parameters
+        ----------
         timeSpan
             A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
             and TOTAL. The default value is STEP.

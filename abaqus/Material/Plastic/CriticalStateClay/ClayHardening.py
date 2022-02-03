@@ -35,6 +35,9 @@ class ClayHardening:
             This function can be accessed by:
             - mdb.models[name].materials[name].clayPlasticity.ClayHardening
             - session.odbs[name].materials[name].clayPlasticity.ClayHardening
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

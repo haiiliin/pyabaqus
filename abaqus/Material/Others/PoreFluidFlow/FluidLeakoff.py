@@ -38,6 +38,9 @@ class FluidLeakoff:
             This function can be accessed by:
             - mdb.models[name].materials[name].FluidLeakoff
             - session.odbs[name].materials[name].FluidLeakoff
+        
+        Parameters
+        ----------
         temperatureDependency
             A Boolean specifying whether the data depend on temperature. The default value is OFF. 
         dependencies

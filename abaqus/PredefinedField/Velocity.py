@@ -34,6 +34,9 @@ class Velocity(PredefinedField):
         .. code-block:: python
 
             mdb.models[name].Velocity
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         region
@@ -69,6 +72,9 @@ class Velocity(PredefinedField):
 
     def setValues(self, field: str = '', distributionType: SymbolicConstant = MAGNITUDE):
         """This method modifies the Velocity object.
+        
+        Parameters
+        ----------
         field
             A String specifying the name of the AnalyticalField object associated with this 
             predefined field. The *field* argument applies only when 

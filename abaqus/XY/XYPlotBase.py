@@ -61,6 +61,9 @@ class XYPlotBase:
         .. code-block:: python
 
             session.XYPlot
+        
+        Parameters
+        ----------
         name
             A String specifying the name of the XYPlot object. 
 
@@ -73,6 +76,9 @@ class XYPlotBase:
     def autoColor(self, lines: Boolean = OFF, symbols: Boolean = OFF):
         """This method distributes the colors on all curves displayed in the XYPlot using the color
         palette defined by the xyColors AutoColors object.
+        
+        Parameters
+        ----------
         lines
             A Boolean defining whether color distribution affects curve lines. 
         symbols
@@ -95,6 +101,9 @@ class XYPlotBase:
         """This method restores the *transform* member of the active Chart object to the next
         setting in the transform list. (There is a list of eight transforms stored for each
         chart.) If there is no next transform, no action is taken.
+        
+        Parameters
+        ----------
         drawImmediately
             A Boolean specifying the viewport should refresh immediately after the command is 
             processed. This is typically only used when writing a script and it is desirable to show 
@@ -106,6 +115,9 @@ class XYPlotBase:
         """This method restores the *transform* member of the active Chart object to the previous
         setting in the transform list. (There is a list of eight transforms stored for each
         chart.) If there is no next transform, no action is taken.
+        
+        Parameters
+        ----------
         drawImmediately
             A Boolean specifying the viewport should refresh immediately after the command is 
             processed. This is typically only used when writing a script and it is desirable to show 
@@ -115,6 +127,9 @@ class XYPlotBase:
 
     def setValues(self, title: Title = Title(), transform: tuple = ()):
         """This method modifies the XYPlot object.
+        
+        Parameters
+        ----------
         title
             A Title object specifying the title of the XYPlot object. 
         transform

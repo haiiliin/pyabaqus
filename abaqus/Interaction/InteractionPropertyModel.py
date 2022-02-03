@@ -21,6 +21,9 @@ class InteractionPropertyModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].AcousticImpedanceProp
+        
+        Parameters
+        ----------
         name
             A String specifying the interaction property repository key. 
         tableType
@@ -53,6 +56,9 @@ class InteractionPropertyModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ActuatorSensorProp
+        
+        Parameters
+        ----------
         name
             A String specifying the interaction property repository key. 
         realProperties
@@ -78,6 +84,9 @@ class InteractionPropertyModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].CavityRadiationProp
+        
+        Parameters
+        ----------
         name
             A String specifying the interaction property repository key. 
         temperatureDependency
@@ -104,6 +113,9 @@ class InteractionPropertyModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].ContactProperty
+        
+        Parameters
+        ----------
         name
             A String specifying the interaction property repository key. 
 
@@ -122,6 +134,9 @@ class InteractionPropertyModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].FilmConditionProp
+        
+        Parameters
+        ----------
         name
             A String specifying the interaction property repository key. 
         temperatureDependency
@@ -159,6 +174,9 @@ class InteractionPropertyModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].FluidCavityProperty
+        
+        Parameters
+        ----------
         name
             A String specifying the interaction property repository key. 
         definition
@@ -277,6 +295,9 @@ class InteractionPropertyModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].FluidExchangeProperty
+        
+        Parameters
+        ----------
         name
             A String specifying the interaction property repository key. 
         dataTable
@@ -357,6 +378,9 @@ class InteractionPropertyModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].FluidInflatorProperty
+        
+        Parameters
+        ----------
         name
             A String specifying the interaction property repository key. 
         definition
@@ -418,6 +442,9 @@ class InteractionPropertyModel(ModelBase):
         -----
             This function can be accessed by:
             - mdb.models[name].IncidentWaveProperty
+        
+        Parameters
+        ----------
         name
             A String specifying the interaction property repository key. 
         definition

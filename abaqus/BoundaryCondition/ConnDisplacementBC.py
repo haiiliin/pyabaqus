@@ -115,6 +115,9 @@ class ConnDisplacementBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].ConnDisplacementBC
+        
+        Parameters
+        ----------
         name
             A String specifying the boundary condition repository key. 
         createStepName
@@ -191,6 +194,9 @@ class ConnDisplacementBC(BoundaryCondition):
                   buckleCase: SymbolicConstant = NOT_APPLICABLE):
         """This method modifies the data for an existing ConnDisplacementBC object in the step
         where it is created.
+        
+        Parameters
+        ----------
         region
             The wire region to which the boundary condition is applied. This argument is not valid 
             when *fastenerName* and *fastenerSetName* are specified. 
@@ -257,6 +263,9 @@ class ConnDisplacementBC(BoundaryCondition):
                         amplitude: str = '', buckleCase: SymbolicConstant = NOT_APPLICABLE):
         """This method modifies the propagating data for an existing ConnDisplacementBC object in
         the specified step.
+        
+        Parameters
+        ----------
         stepName
             A String specifying the name of the step in which the boundary condition is modified. 
         u1

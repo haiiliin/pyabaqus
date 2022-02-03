@@ -35,6 +35,9 @@ class PressureEffect:
             This function can be accessed by:
             - mdb.models[name].materials[name].diffusivity.PressureEffect
             - session.odbs[name].materials[name].diffusivity.PressureEffect
+        
+        Parameters
+        ----------
         table
             A sequence of sequences of Floats specifying the items described below. 
         temperatureDependency

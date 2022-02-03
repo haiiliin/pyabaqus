@@ -14,6 +14,9 @@ class ArcByCenterEnds(ConstrainedSketchGeometry):
         -----
             This function can be accessed by:
             - mdb.models[name].sketches[name].ArcByCenterEnds
+        
+        Parameters
+        ----------
         center
             A pair of Floats specifying the center point of the arc. 
         point1

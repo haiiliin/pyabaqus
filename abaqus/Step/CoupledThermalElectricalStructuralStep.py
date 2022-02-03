@@ -371,6 +371,9 @@ class CoupledThermalElectricalStructuralStep(AnalysisStep):
         .. code-block:: python
 
             mdb.models[name].CoupledThermalElectricalStructuralStep
+        
+        Parameters
+        ----------
         name
             A String specifying the repository key. 
         previous
@@ -465,6 +468,9 @@ class CoupledThermalElectricalStructuralStep(AnalysisStep):
                   extrapolation: SymbolicConstant = LINEAR, convertSDI: SymbolicConstant = PROPAGATED,
                   adaptiveDampingRatio: float = 0, continueDampingFactors: Boolean = OFF):
         """This method modifies the CoupledThermalElectricalStructuralStep object.
+        
+        Parameters
+        ----------
         description
             A String specifying a description of the new step. The default value is an empty string. 
         response

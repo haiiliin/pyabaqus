@@ -357,6 +357,9 @@ class ModelJob(Job):
 
     def writeInput(self, consistencyChecking: Boolean = ON):
         """This method writes an input file.
+        
+        Parameters
+        ----------
         consistencyChecking
             A Boolean specifying whether to perform consistency checking for the job. The default 
             value is ON.It is not recommended to turn the consistency checking off unless you are 
