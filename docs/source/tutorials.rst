@@ -187,7 +187,7 @@ We can use :py:meth:`~abaqus.Load.LoadModel.LoadModel.Pressure` ro create a pres
 Mesh
 ~~~~
 
-When meshing, we have set the :py:class:`~abaqus.Mesh.ElemType.ElemType`, which is defined in the `mesh` module, so we need to import `mesh` module:
+To mesh the model, we have to set the :py:class:`~abaqus.Mesh.ElemType.ElemType`, which is defined in the `mesh` module, so we need to import `mesh` module:
 
 .. code-block:: Python
 
