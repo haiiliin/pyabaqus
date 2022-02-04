@@ -91,17 +91,6 @@ def submitJobByInputFile(inputFile: str, userSubroutine: str = None, options: st
     abaqusThread = Thread(target=_runAbaqus, args=(userSubroutine, abaqus, workDirectory, jobName, options))
     abaqusThread.start()
 
-
-def executor():
-    """
-    Open the Abaqus Executor GUI Application.
-    """
-    app = QApplication(sys.argv)
-    # app.setStyle(QStyleFactory.create("Fusion"))
-    abqExecutor = AbaqusExecutor()
-    abqExecutor.show()
-    sys.exit(app.exec_())
-
 def _runAbaqus(userSubroutine: str, abaqus: str, workDirectory: str, jobName: str, options: str):
     if userSubroutine is not None:
         commandLine = "{} job={} user={} {}".format(abaqus, jobName, userSubroutine, options)
