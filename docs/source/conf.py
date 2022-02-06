@@ -17,8 +17,6 @@
 
 # -- Project information -----------------------------------------------------
 
-from re import T
-
 
 project = 'pyabaqus'
 copyright = '2022, WANG Hailin'
