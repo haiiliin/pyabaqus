@@ -1,9 +1,9 @@
 {
-    "modelScript": "dst.py",
+    "modelScript": "compression.py",
     "input": "Job-1.inp",
     "user": "",
     "odb": "Job-1.odb",
-    "outputScript": "dst-output.py",
+    "outputScript": "compression-output.py",
     "data": "data.csv",
     "x": "TIME",
     "ys": [

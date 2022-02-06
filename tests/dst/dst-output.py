@@ -53,4 +53,4 @@ U3_AVG = np.mean(np.array(U3), axis=0)[:, 1]
 
 DATA = [TIME, CSHEAR1_AVG, U1_RP_AVG, RF1_RP_AVG, CSLIP1_AVG, U3_AVG]
 DATA = np.array(DATA).T
-np.savetxt('DATA/data.csv', DATA, header='TIME,CSHEAR1,U1_RP,RF1_RP,CSLIP1,U3_TOP', delimiter=',', comments='')
+np.savetxt('data.csv', DATA, header='TIME,CSHEAR1,U1_RP,RF1_RP,CSLIP1,U3_TOP', delimiter=',', comments='')

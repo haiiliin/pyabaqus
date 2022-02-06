@@ -130,3 +130,4 @@ dmypy.json
 /abaqus/Guess.py
 /abaqus/fix-parameters.py
 /abaqus/noindex.py
+/install.bat
