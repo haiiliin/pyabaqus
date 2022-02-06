@@ -28,7 +28,7 @@ class FixedRegion(GeometricRestriction):
 
         .. code-block:: python
 
-                      mdb.models[name].optimizationTasks[name].FixedRegion
+              mdb.models[name].optimizationTasks[name].FixedRegion
         
         Parameters
         ----------
