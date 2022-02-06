@@ -131,3 +131,8 @@ dmypy.json
 /abaqus/fix-parameters.py
 /abaqus/noindex.py
 /install.bat
+/src/abaqus/attributes.py
+/src/abaqus/code_blocks.py
+/src/abaqus/fix-parameters.py
+/src/abaqus/Guess.py
+/src/abaqus/noindex.py
