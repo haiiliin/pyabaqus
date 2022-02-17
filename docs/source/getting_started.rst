@@ -61,6 +61,39 @@ interpreter, it provides type hints for Python scripting for Abaqus, enabling us
 Abaqus Python script quickly.
 
 
+How does this package work?
+---------------------------
+
+`pyabaqus` is just a package to provide type hints for Abaqus/Python scripting, it is installed outside Abaqus/Python environment, you can use `pyabaqus` to write your Abaqus/Python scripts, and run the scripts inside Abaqus on your own. However, with the help of Abaqus command, an easier way can be achieved: **you can actually run the script using your own Python interpreter without opening Abaqus**, which is achieved via the **abaqus** command like this:
+
+.. code-block:: sh
+
+    abaqus job=job-name input=input-file user=user-file int double
+
+The secret is hided in the `saveAs` method:
+
+.. code-block:: python
+
+    def saveAs(self, pathName: str):
+        abaqus = 'abaqus'
+        if 'ABAQUS_BAT_PATH' in os.environ.keys():
+            abaqus = os.environ['ABAQUS_BAT_PATH']
+        os.system('{} cae -noGUI {}'.format(abaqus, os.path.abspath(sys.argv[0])))
+
+In this package, the py:meth:`~abaqus.Mdb.Mdb.saveAs` is reimplemented, if you call this method in your script (i.e., `mdb.saveAs('model.cae')`), the Python interpreter (not Abaqus Python interpreter) will use the **abaqus** command to submit this script to Abaqus, when it is submited to Abaqus, `saveAs` will be just a normal method to save the model because `pyabaqus` is not installed in Abaqus Python interpreter. 
+
+In the output script, we might not have to use the `saveAs` method, then another similar method `openOdb` is also reimplemented:
+
+.. code-block:: python
+
+    def openOdb(self, name: str, *args, **kwargs):
+        abaqus = 'abaqus'
+        if 'ABAQUS_BAT_PATH' in os.environ.keys():
+            abaqus = os.environ['ABAQUS_BAT_PATH']
+        os.system('{} cae database={} script={}'.format(abaqus, os.path.abspath(name), os.path.abspath(sys.argv[0])))
+
+Therefore, if you want to run your Python script in Abaqus Python environment, please make sure to use these methods.
+
 Installation
 ------------
 
