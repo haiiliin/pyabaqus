@@ -80,7 +80,7 @@ The secret is hided in the `saveAs` method:
             abaqus = os.environ['ABAQUS_BAT_PATH']
         os.system('{} cae -noGUI {}'.format(abaqus, os.path.abspath(sys.argv[0])))
 
-In this package, the py:meth:`~abaqus.Mdb.Mdb.saveAs` is reimplemented, if you call this method in your script (i.e., `mdb.saveAs('model.cae')`), the Python interpreter (not Abaqus Python interpreter) will use the **abaqus** command to submit this script to Abaqus, when it is submited to Abaqus, `saveAs` will be just a normal method to save the model because `pyabaqus` is not installed in Abaqus Python interpreter. 
+In this package, the py:meth:`~abaqus.Mdb.Mdb.Mdb.saveAs` is reimplemented, if you call this method in your script (i.e., `mdb.saveAs('model.cae')`), the Python interpreter (not Abaqus Python interpreter) will use the **abaqus** command to submit this script to Abaqus, when it is submited to Abaqus, `saveAs` will be just a normal method to save the model because `pyabaqus` is not installed in Abaqus Python interpreter. 
 
 In the output script, we might not have to use the `saveAs` method, then another similar method `openOdb` is also reimplemented:
 
