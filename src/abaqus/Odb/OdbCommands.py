@@ -14,7 +14,7 @@ database to a new file.
 """
 
 
-def isUpgradeRequiredForOd(upgradeRequiredOdbPath: str):
+def isUpgradeRequiredForOdb(upgradeRequiredOdbPath: str):
     """This method determines if an output database file needs to be upgraded to the current
     release.
     You can access this method using either of the following techniques:
@@ -27,8 +27,7 @@ def isUpgradeRequiredForOd(upgradeRequiredOdbPath: str):
     - From the Visualization module in Abaqus/CAE. For example
       ```
       import visualization
-      needsUpgrade = session.isUpgradeRequiredForOdb(
-          upgradeRequiredOdbPath='myOdb.odb')
+      needsUpgrade = session.isUpgradeRequiredForOdb(upgradeRequiredOdbPath='myOdb.odb')
       ```
 
     Parameters
@@ -173,11 +172,14 @@ def openOdb(name: str, path: str = '', readOnly: Boolean = OFF):
     pass
 
 
-def openOdb(*args, **kwargs):
-    pass
+def openOdb(name: str, *args, **kwargs):
+    abaqus = 'abaqus'
+    if 'ABAQUS_BAT_PATH' in os.environ.keys():
+        abaqus = os.environ['ABAQUS_BAT_PATH']
+    os.system('{} cae database={} script={}'.format(abaqus, os.path.abspath(name), os.path.abspath(sys.argv[0])))
 
 
-def upgradeOd(existingOdbPath: str, upgradedOdbPath: str):
+def upgradeOdb(existingOdbPath: str, upgradedOdbPath: str):
     """This method upgrades an existing Odb object to the current release and writes the
     upgraded version of the Odb object to a file. In addition, Abaqus/CAE writes information
     about the status of the upgrade to a log (*.log) file.
@@ -185,14 +187,12 @@ def upgradeOd(existingOdbPath: str, upgradedOdbPath: str):
     - From a script running outside Abaqus/CAE. For example
       ```
       import odbAccess
-      odbAccess.upgradeOdb(existingOdbPath='oldOdb',
-          upgradedOdbPath='upgradedOdb')
+      odbAccess.upgradeOdb(existingOdbPath='oldOdb', upgradedOdbPath='upgradedOdb')
       ```
     - From the session object in Abaqus/CAE. For example
       ```
       import visualization
-      session.upgradeOdb(existingOdbPath='oldOdb',
-          upgradedOdbPath='upgradedOdb')
+      session.upgradeOdb(existingOdbPath='oldOdb', upgradedOdbPath='upgradedOdb')
       ```
 
     Parameters
