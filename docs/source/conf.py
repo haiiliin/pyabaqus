@@ -38,7 +38,10 @@ extensions = [
     'numpydoc',
     'sphinx.ext.mathjax',
     # 'sphinx.ext.viewcode',
+    'sphinx.ext.githubpages', 
 ]
+
+html_baseurl = 'https://pyabaqus.haiiliin.com/'
 
 autosummary_generate = True  # Turn on sphinx.ext.autosummary
 numpydoc_show_class_members = True
