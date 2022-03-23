@@ -57,11 +57,13 @@ class PartBase(Feature):
     vertices: VertexArray
         A :py:class:`~abaqus.BasicGeometry.VertexArray.VertexArray` object specifying all the vertices in the part.
     ignoredVertices: IgnoredVertexArray
-        An :py:class:`~abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray` object specifying all the ignored vertices in the part.
+        An :py:class:`~abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray` object specifying all the ignored
+        vertices in the part.
     edges: EdgeArray
         An :py:class:`~abaqus.BasicGeometry.EdgeArray.EdgeArray` object specifying all the edges in the part.
     ignoredEdges: IgnoredEdgeArray
-        An :py:class:`~abaqus.BasicGeometry.IgnoredEdgeArray.IgnoredEdgeArray` object specifying all the ignored edges in the part.
+        An :py:class:`~abaqus.BasicGeometry.IgnoredEdgeArray.IgnoredEdgeArray` object specifying all the ignored edges
+        in the part.
     faces: FaceArray
         A :py:class:`~abaqus.BasicGeometry.FaceArray.FaceArray` object specifying all the faces in the part.
     cells: CellArray
@@ -69,44 +71,54 @@ class PartBase(Feature):
     features: dict[str, Feature]
         A repository of :py:class:`~abaqus.Assembly.Feature.Feature` objects specifying all the features in the part.
     featuresById: dict[str, Feature]
-        A repository of :py:class:`~abaqus.Feature.Feature.Feature` objects specifying all Feature objects in the part. The Feature 
+        A repository of :py:class:`~abaqus.Feature.Feature.Feature` objects specifying all Feature objects in the part.
+        The Feature
         objects in the featuresById repository are the same as the Feature objects in the 
-        features repository. However, the key to the objects in the featuresById repository is 
-        an integer specifying the *ID*, whereas the key to the objects in the features 
+        features' repository. However, the key to the objects in the featuresById repository is
+        an integer specifying the *ID*, whereas the key to the objects in the features'
         repository is a string specifying the **name**.
         datums: list[Datum]
         A repository of :py:class:`~abaqus.Datum.Datum.Datum` objects specifying all the datums in the part.
     elements: MeshElementArray
         A :py:class:`~abaqus.Mesh.MeshElementArray.MeshElementArray` object specifying all the elements in the part.
     elemFaces: dict[str, MeshFace]
-        A repository of :py:class:`~abaqus.Mesh.MeshFace.MeshFace` objects specifying all the element faces in the part. For a
-        given element and a given face index within that element, the corresponding :py:class:`~abaqus.Mesh.MeshFace.MeshFace`
+        A repository of :py:class:`~abaqus.Mesh.MeshFace.MeshFace` objects specifying all the element faces in the part.
+        For a
+        given element and a given face index within that element, the corresponding
+        :py:class:`~abaqus.Mesh.MeshFace.MeshFace`
         object can be retrieved from the repository by using the key calculated as (i*8 + j),
         where i and j are zero-based element and face indices, respectively.
     elementFaces: MeshFaceArray
-        A :py:class:`~abaqus.Mesh.MeshFaceArray.MeshFaceArray` object specifying all the unique element faces in the part.
+        A :py:class:`~abaqus.Mesh.MeshFaceArray.MeshFaceArray` object specifying all the unique element faces in the
+        part.
     nodes: MeshNodeArray
         A :py:class:`~abaqus.Mesh.MeshNodeArray.MeshNodeArray` object specifying all the nodes in the part.
     retainedNodes: MeshNodeArray
-        A :py:class:`~abaqus.Mesh.MeshNodeArray.MeshNodeArray` object specifying all the retained nodes in the substructure part.
+        A :py:class:`~abaqus.Mesh.MeshNodeArray.MeshNodeArray` object specifying all the retained nodes in the
+        substructure part.
     sets: dict[str, Set]
-        A repository of :py:class:`~abaqus.Region.Set.Set` objects specifying for more information, see :py:class:`~abaqus.Region.Set.Set`.
+        A repository of :py:class:`~abaqus.Region.Set.Set` objects specifying for more information, see
+        :py:class:`~abaqus.Region.Set.Set`.
     allSets: dict[str, Set]
-        A repository of :py:class:`~abaqus.Region.Set.Set` objects specifying the contents of the **all :py:class:`~abaqus.Region.Set.Set`s** repository is the
+        A repository of :py:class:`~abaqus.Region.Set.Set` objects specifying the contents of the **all
+        :py:class:`~abaqus.Region.Set.Set`s** repository is the
         same as the contents of the **sets** repository.
     allInternalSets: dict[str, Set]
         A repository of :py:class:`~abaqus.Region.Set.Set` objects specifying picked regions.
     surfaces: dict[str, Surface]
-        A repository of :py:class:`~abaqus.Region.Surface.Surface` objects specifying for more information, see :py:class:`~abaqus.Region.Surface.Surface`.
+        A repository of :py:class:`~abaqus.Region.Surface.Surface` objects specifying for more information, see
+        :py:class:`~abaqus.Region.Surface.Surface`.
     allSurfaces: dict[str, Surface]
-        A repository of :py:class:`~abaqus.Region.Surface.Surface` objects specifying the contents of the **all:py:class:`~abaqus.Region.Surface.Surface`s** repository
+        A repository of :py:class:`~abaqus.Region.Surface.Surface` objects specifying the contents of the
+        **allSurfaces** repository
         is the same as the contents of the **surfaces** repository.
     allInternalSurfaces: dict[str, Surface]
         A repository of :py:class:`~abaqus.Region.Surface.Surface` objects specifying picked regions.
     skins: dict[str, Skin]
         A repository of :py:class:`~abaqus.Region.Skin.Skin` objects specifying the skins created on the part.
     stringers: dict[str, Stringer]
-        A repository of :py:class:`~abaqus.Region.Stringer.Stringer` objects specifying the stringers created on the part.
+        A repository of :py:class:`~abaqus.Region.Stringer.Stringer` objects specifying the stringers created on the
+        part.
     referencePoints: ReferencePoints
         A repository of :py:class:`~abaqus.BasicGeometry.ReferencePoint.ReferencePoint` objects.
     engineeringFeatures: EngineeringFeature
@@ -118,13 +130,16 @@ class PartBase(Feature):
     compositeLayups: dict[str, CompositeLayup]
         A repository of :py:class:`~abaqus.Property.CompositeLayup.CompositeLayup` objects.
     elemEdges: dict[str, MeshEdge]
-        A repository of :py:class:`~abaqus.Mesh.:py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`.:py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`` objects specifying all the element edges in the part. For a
+        A repository of :py:class:`~abaqus.Mesh.:py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`.
+        :py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`` objects specifying all the element edges in the part. For a
         given element and a given edge index on a given face within that element, the
-        corresponding :py:class:`~abaqus.Mesh.:py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`.:py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`` object can be retrieved from the repository by using the key
+        corresponding :py:class:`~abaqus.Mesh.:py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`.
+        :py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`` object can be retrieved from the repository by using the key
         calculated as (i*32 + j*4 + k), where i, j, and k are zero-based element, face, and edge
         indices, respectively.
     elementEdges: MeshEdgeArray
-        A :py:class:`~abaqus.Mesh.MeshEdgeArray.MeshEdgeArray` object specifying all the unique element edges in the part.
+        A :py:class:`~abaqus.Mesh.MeshEdgeArray.MeshEdgeArray` object specifying all the unique element edges in the
+        part.
 
     Notes
     -----
@@ -172,7 +187,7 @@ class PartBase(Feature):
 
     # A repository of Feature objects specifying all Feature objects in the part. The Feature 
     # objects in the featuresById repository are the same as the Feature objects in the 
-    # features repository. However, the key to the objects in the featuresById repository is 
+    # features' repository. However, the key to the objects in the featuresById repository is
     # an integer specifying the *ID*, whereas the key to the objects in the features 
     # repository is a string specifying the *name*. 
     featuresById: dict[str, Feature] = dict[str, Feature]()

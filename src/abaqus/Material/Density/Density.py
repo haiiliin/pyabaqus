@@ -16,11 +16,11 @@ class Density:
             session.odbs[name].materials[name].density
 
         The table data for this object are:
-            - The mass density.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+        - The mass density.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
         - DENSITY

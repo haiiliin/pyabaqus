@@ -18,26 +18,26 @@ class Elastic:
             session.odbs[name].materials[name].elastic
 
         The table data for this object are:
-        If *type*=ISOTROPIC, the table data specify the following:
+        - If *type*=ISOTROPIC, the table data specify the following:
             - The Young's modulus, E.
-            - The Poisson's ratio, ν.
+            - The Poisson's ratio, v.
             - Temperature, if the data depend on temperature.
             - Value of the first field variable, if the data depend on field variables.
             - Value of the second field variable.
             - Etc.
-        If *type*=SHEAR, the table data specify the following:
+        - If *type*=SHEAR, the table data specify the following:
             - The shear modulus,G.
             - Temperature, if the data depend on temperature.
             - Value of the first field variable, if the data depend on field variables.
             - Value of the second field variable.
             - Etc.
-        If *type*=ENGINEERING_CONSTANTS, the table data specify the following:
+        - If *type*=ENGINEERING_CONSTANTS, the table data specify the following:
             - E1.
             - E2.
             - E3.
-            - ν12.
-            - ν13.
-            - ν23.
+            - v12.
+            - v13.
+            - v23.
             - G12.
             - G13.
             - G23.
@@ -45,10 +45,10 @@ class Elastic:
             - Value of the first field variable, if the data depend on field variables.
             - Value of the second field variable.
             - Etc.
-        If *type*=LAMINA, the table data specify the following:
+        - If *type*=LAMINA, the table data specify the following:
             - E1.
             - E2.
-            - ν12.
+            - v12.
             - G12.
             - G13. This shear modulus is needed to define transverse shear behavior in shells.
             - G23. This shear modulus is needed to define transverse shear behavior in shells.
@@ -56,7 +56,7 @@ class Elastic:
             - Value of the first field variable, if the data depend on field variables.
             - Value of the second field variable.
             - Etc.
-        If *type*=ORTHOTROPIC, the table data specify the following:
+        - If *type*=ORTHOTROPIC, the table data specify the following:
             - D1111.
             - D1122.
             - D2222.
@@ -70,7 +70,7 @@ class Elastic:
             - Value of the first field variable, if the data depend on field variables.
             - Value of the second field variable.
             - Etc.
-        If *type*=ANISOTROPIC, the table data specify the following:
+        - If *type*=ANISOTROPIC, the table data specify the following:
             - D1111.
             - D1122.
             - D2222.
@@ -96,27 +96,27 @@ class Elastic:
             - Value of the first field variable, if the data depend on field variables.
             - Value of the second field variable.
             - Etc.
-        If *type*=TRACTION, the table data specify the following:
-            - EE for warping elements; En⁢n for cohesive elements.
-            - G1 for warping elements; Es⁢s for cohesive elements.
-            - G2 for warping elements; Et⁢t for cohesive elements.
+        - If *type*=TRACTION, the table data specify the following:
+            - EE for warping elements; Enn for cohesive elements.
+            - G1 for warping elements; Ess for cohesive elements.
+            - G2 for warping elements; Ett for cohesive elements.
             - Temperature, if the data depend on temperature.
             - Value of the first field variable, if the data depend on field variables.
             - Value of the second field variable.
             - Etc.
-        If *type*=BILAMINA, the table data specify the following:
+        - If *type*=BILAMINA, the table data specify the following:
             - E1+.
             - E2+.
-            - ν12+.
+            - v12+.
             - G12.
-            - E1−.
-            - E2−.
-            - ν112−.
+            - E1-.
+            - E2-.
+            - v112-.
             - Temperature, if the data depend on temperature.
             - Value of the first field variable, if the data depend on field variables.
             - Value of the second field variable.
             - Etc.
-        If *type*=SHORT_FIBER, there is no table data.
+        - If *type*=SHORT_FIBER, there is no table data.
 
     The corresponding analysis keywords are:
         - ELASTIC

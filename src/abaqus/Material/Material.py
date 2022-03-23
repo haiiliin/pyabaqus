@@ -684,6 +684,13 @@ class Material(MaterialBase):
             
                 mdb.models[name].materials[name].Density
                 session.odbs[name].materials[name].Density
+
+        The table data for this object are:
+        - The mass density.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
         
         Parameters
         ----------
@@ -880,6 +887,107 @@ class Material(MaterialBase):
             
                 mdb.models[name].materials[name].Elastic
                 session.odbs[name].materials[name].Elastic
+
+        The table data for this object are:
+        - If **type**=ISOTROPIC, the table data specify the following:
+            - The Young's modulus, E.
+            - The Poisson's ratio, v.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
+        - If **type**=SHEAR, the table data specify the following:
+            - The shear modulus,G.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
+        - If **type**=ENGINEERING_CONSTANTS, the table data specify the following:
+            - E1.
+            - E2.
+            - E3.
+            - v12.
+            - v13.
+            - v23.
+            - G12.
+            - G13.
+            - G23.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
+        - If **type**=LAMINA, the table data specify the following:
+            - E1.
+            - E2.
+            - v12.
+            - G12.
+            - G13. This shear modulus is needed to define transverse shear behavior in shells.
+            - G23. This shear modulus is needed to define transverse shear behavior in shells.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
+        - If **type**=ORTHOTROPIC, the table data specify the following:
+            - D1111.
+            - D1122.
+            - D2222.
+            - D1133.
+            - D2233.
+            - D3333.
+            - D1212.
+            - D1313.
+            - D2323.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
+        - If **type**=ANISOTROPIC, the table data specify the following:
+            - D1111.
+            - D1122.
+            - D2222.
+            - D1133.
+            - D2233.
+            - D3333.
+            - D1112.
+            - D2212.
+            - D3312.
+            - D1212.
+            - D1113.
+            - D2213.
+            - D3313.
+            - D1213.
+            - D1313.
+            - D1123.
+            - D2223.
+            - D3323.
+            - D1223.
+            - D1323.
+            - D2323.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
+        - If **type**=TRACTION, the table data specify the following:
+            - EE for warping elements; En⁢n for cohesive elements.
+            - G1 for warping elements; Es⁢s for cohesive elements.
+            - G2 for warping elements; Et⁢t for cohesive elements.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
+        - If **type**=BILAMINA, the table data specify the following:
+            - E1+.
+            - E2+.
+            - v12+.
+            - G12.
+            - E1-.
+            - E2-.
+            - v112-.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
+        - If **type**=SHORT_FIBER, there is no table data.
         
         Parameters
         ----------
@@ -1074,7 +1182,7 @@ class Material(MaterialBase):
             An Int specifying the number of field variable dependencies. The default value is 0. 
         table
             A sequence of sequences of Floats specifying the items described below. The default 
-            value is an empty sequence.This argument is required only if *type* is not USER. 
+            value is an empty sequence.This argument is required only if **type** is not USER. 
 
         Returns
         -------
@@ -1140,7 +1248,7 @@ class Material(MaterialBase):
         kmax
             None or a Float specifying the maximum permeability value that should be used. If 
             *kmax*=None, Abaqus assumes that the permeability is not bounded. This value is 
-            meaningful only when *type*=NEWTONIAN. The default value is None. 
+            meaningful only when **type**=NEWTONIAN. The default value is None. 
         temperatureDependency
             A Boolean specifying whether the data depend on temperature. The default value is OFF. 
         dependencies
@@ -1210,8 +1318,8 @@ class Material(MaterialBase):
         ----------
         table
             A sequence of sequences of Floats specifying loading data. The first sequence must 
-            contain only 0. At least two sequences must be specified if *type*=DAMAGE, and at least 
-            3 sequences must be specified if *type*=ELASTIC_PLASTIC. The items in the table data are 
+            contain only 0. At least two sequences must be specified if **type**=DAMAGE, and at least 
+            3 sequences must be specified if **type**=ELASTIC_PLASTIC. The items in the table data are 
             described below. 
         temperatureDependency
             A Boolean specifying whether the loading data depend on temperature. The default value 
@@ -1360,12 +1468,12 @@ class Material(MaterialBase):
             A Boolean specifying whether the data depend on temperature. The default value is OFF. 
         n
             An Int specifying the order of the strain energy potential. The default value is 1.If 
-            *testData*=ON and *type*=POLYNOMIAL, *n* can take only the values 1 or 2.If 
-            *testData*=ON and *type*=OGDEN or if *testData*=OFF for either type, 1 ≤n≤≤n≤ 6.If 
-            *type*=USER, this argument cannot be used. 
+            *testData*=ON and **type**=POLYNOMIAL, *n* can take only the values 1 or 2.If 
+            *testData*=ON and **type**=OGDEN or if *testData*=OFF for either type, 1 ≤n≤≤n≤ 6.If 
+            **type**=USER, this argument cannot be used. 
         beta
             The SymbolicConstant FITTED_VALUE or a Float specifying the invariant mixture parameter. 
-            This argument is valid only if *testData*=ON and *type*=VAN_DER_WAALS. The default value 
+            This argument is valid only if *testData*=ON and **type**=VAN_DER_WAALS. The default value 
             is FITTED_VALUE. 
         testData
             A Boolean specifying whether test data are supplied. The default value is ON. 
@@ -1646,15 +1754,15 @@ class Material(MaterialBase):
         ----------
         table
             A sequence of sequences of Floats specifying the items described below in “Table data.” 
-            If *type*=ORTHOTROPIC and nonlinearBH=ON, the data specified in the *table* is for the 
+            If **type**=ORTHOTROPIC and nonlinearBH=ON, the data specified in the *table* is for the 
             first direction and *table2* and *table3* must be specified. 
         table2
             A sequence of sequences of Floats specifying the items described below in “Table data” 
-            in the second direction. *table2* must be specified only if *type*=ORTHOTROPIC and 
+            in the second direction. *table2* must be specified only if **type**=ORTHOTROPIC and 
             nonlinearBH=ON. 
         table3
             A sequence of sequences of Floats specifying the items described below in “Table data” 
-            in the third direction. *table3* must be specified only if *type*=ORTHOTROPIC and 
+            in the third direction. *table3* must be specified only if **type**=ORTHOTROPIC and 
             nonlinearBH=ON. 
         type
             A SymbolicConstant specifying the type of magnetic permeability. Possible values are 
@@ -2218,11 +2326,11 @@ class Material(MaterialBase):
             value is OFF. This argument is valid only for an Abaqus/Standard analysis. 
         mechanicalConstants
             A sequence of Floats specifying the mechanical constants of the material. This argument 
-            is valid only when *type*=MECHANICAL or THERMOMECHANICAL. The default value is an empty 
+            is valid only when **type**=MECHANICAL or THERMOMECHANICAL. The default value is an empty 
             sequence. 
         thermalConstants
             A sequence of Floats specifying the thermal constants of the material. This argument is 
-            valid only when *type*=THERMAL or THERMOMECHANICAL. The default value is an empty 
+            valid only when **type**=THERMAL or THERMOMECHANICAL. The default value is an empty 
             sequence. 
         effmod
             A Boolean specifying if effective bulk modulus and shear modulus are returned by user 
