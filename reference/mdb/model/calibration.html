@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calibration of Material &mdash; pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/mdb/model/calibration.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Constraint" href="constraint.html" />
+    <link rel="prev" title="Boundary Condition" href="bc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user.html">User Manual</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../references.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../mdb.html">Abaqus Model Database</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../model.html">Model</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bc.html">Boundary Condition</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Calibration of Material</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#create-material-calibrations">Create material calibrations</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#object-features">Object features</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#calibration">Calibration</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#behavior">Behavior</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#dataset">DataSet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh.html">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="output.html">Output Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="part_assembly.html">Part and Assembly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="property.html">Property</a></li>
+<li class="toctree-l4"><a class="reference internal" href="section.html">Section</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sketcher.html">Sketcher</a></li>
+<li class="toctree-l4"><a class="reference internal" href="step.html">Step</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model.html#create-models">Create models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model.html#object-features">Object features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../job.html">Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../annotation.html">Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../edit_mesh.html">Edit Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mdb.html#object-features">Object features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../session.html">Abaqus Session</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../kernel.html">Kernel</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../references.html">API Reference</a> &raquo;</li>
+          <li><a href="../../mdb.html">Abaqus Model Database</a> &raquo;</li>
+          <li><a href="../model.html">Model</a> &raquo;</li>
+      <li>Calibration of Material</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/reference/mdb/model/calibration.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="calibration-of-material">
+<h1>Calibration of Material<a class="headerlink" href="#calibration-of-material" title="Permalink to this headline"></a></h1>
+<p>The calibration commands are used for material calibration.</p>
+<div class="section" id="create-material-calibrations">
+<h2>Create material calibrations<a class="headerlink" href="#create-material-calibrations" title="Permalink to this headline"></a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Calibration.CalibrationModel.CalibrationModel.Calibration">
+<span class="sig-prename descclassname"><span class="pre">CalibrationModel.</span></span><span class="sig-name descname"><span class="pre">Calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Calibration.Calibration.Calibration" title="abaqus.Calibration.Calibration.Calibration"><span class="pre">abaqus.Calibration.Calibration.Calibration</span></a></span></span><a class="headerlink" href="#abaqus.Calibration.CalibrationModel.CalibrationModel.Calibration" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a Calibration object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the name of the new calibration.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Calibration.CalibrationModel.CalibrationModel.Calibration" title="abaqus.Calibration.CalibrationModel.CalibrationModel.Calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Calibration</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">Calibration</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="object-features">
+<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline"></a></h2>
+<div class="section" id="calibration">
+<h3>Calibration<a class="headerlink" href="#calibration" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Calibration.Calibration.Calibration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Calibration.Calibration.Calibration" title="Permalink to this definition"></a></dt>
+<dd><p>A Calibration object is the object used to specify a material calibration. The
+Calibration object stores the data that is used for specifying materials from test data.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">calibration</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">calibrations</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dataSets: DataSet</strong></dt><dd><p>A <a class="reference internal" href="#abaqus.Calibration.DataSet.DataSet" title="abaqus.Calibration.DataSet.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataSet</span></code></a> object.</p>
+</dd>
+<dt><strong>behaviors: Behavior</strong></dt><dd><p>A <a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior" title="abaqus.Calibration.Behavior.Behavior"><code class="xref py py-class docutils literal notranslate"><span class="pre">Behavior</span></code></a> object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Calibration.Calibration.Calibration.Behavior" title="abaqus.Calibration.Calibration.Calibration.Behavior"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Behavior</span></code></a>(name, typeName)</p></td>
+<td><p>This method creates a Behavior object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Calibration.Calibration.Calibration.DataSet" title="abaqus.Calibration.Calibration.Calibration.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSet</span></code></a>(name[, data, type, form])</p></td>
+<td><p>This method creates a DataSet object.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Calibration.Calibration.Calibration.Behavior">
+<span class="sig-name descname"><span class="pre">Behavior</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">typeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior" title="abaqus.Calibration.Behavior.Behavior"><span class="pre">abaqus.Calibration.Behavior.Behavior</span></a></span></span><a class="headerlink" href="#abaqus.Calibration.Calibration.Calibration.Behavior" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a Behavior object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the name of the new behavior.</p>
+</dd>
+<dt><strong>typeName</strong></dt><dd><p>A String specifying the type of the new Behavior. Values can be “ElasIsoBehavior”,
+“ElasPlasIsoBehavior”, “FeFpBehavior”, or a user plug-in behavior type.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Calibration.Calibration.Calibration.Behavior" title="abaqus.Calibration.Calibration.Calibration.Behavior"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Behavior</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">Calibration</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Calibration.Calibration.Calibration.DataSet">
+<span class="sig-name descname"><span class="pre">DataSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">form</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Calibration.DataSet.DataSet" title="abaqus.Calibration.DataSet.DataSet"><span class="pre">abaqus.Calibration.DataSet.DataSet</span></a></span></span><a class="headerlink" href="#abaqus.Calibration.Calibration.Calibration.DataSet" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a DataSet object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the name of the new dataset.</p>
+</dd>
+<dt><strong>data</strong></dt><dd><p>A sequence of pairs of Floats specifying data set type pairs. Possible values are for
+stress/strain, force/displacement, or transverse strain/axial strain pairs.</p>
+</dd>
+<dt><strong>type</strong></dt><dd><p>A String specifying the type of the new dataset. Values can be “STRESS/STRAIN”,
+“FORCE/DISPLACEMENT”, or “AXIALSTRAIN/TRANSVERSESTRAIN”. The default value is
+“STRESS/STRAIN”.</p>
+</dd>
+<dt><strong>form</strong></dt><dd><p>A String specifying the form of the new dataset. Values can be “NOMINAL” or “TRUE”. The
+default value is “NOMINAl”.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Calibration.Calibration.Calibration.DataSet" title="abaqus.Calibration.Calibration.Calibration.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSet</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">Calibration</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="behavior">
+<h3>Behavior<a class="headerlink" href="#behavior" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Calibration.Behavior.Behavior">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Behavior</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">typeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Calibration.Behavior.Behavior" title="Permalink to this definition"></a></dt>
+<dd><p>The Behavior object specifies the method used for calibrating a material.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">calibration</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">calibrations</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">behaviors</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>modelName: str</strong></dt><dd><p>A string specifying the name of the model to which the behavior belongs.</p>
+</dd>
+<dt><strong>calibrationName: str</strong></dt><dd><p>A string specifying the name of calibration to which the behavior belongs.</p>
+</dd>
+<dt><strong>biAxialAllName: str</strong></dt><dd><p>A String specifying the name of the dataset containing all the raw data in the test data
+file. Only valid if the behavior is of type FeFpBehavior</p>
+</dd>
+<dt><strong>uniAxialAllName: str</strong></dt><dd><p>A String specifying the name of the dataset containing all the raw data in the test data
+file. Only valid if the behavior is of type FeFpBehavior</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.compute_E" title="abaqus.Calibration.Behavior.Behavior.compute_E"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_E</span></code></a>(dataSet)</p></td>
+<td><p>This method computes the value of young's modulus from the existing DataSet object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.compute_elasticModulus" title="abaqus.Calibration.Behavior.Behavior.compute_elasticModulus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_elasticModulus</span></code></a>(yieldPoint)</p></td>
+<td><p>This method computes the value of the elastic modulus from the yieldpoint value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.compute_nu" title="abaqus.Calibration.Behavior.Behavior.compute_nu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_nu</span></code></a>(dataSet)</p></td>
+<td><p>This method computes the value of Poisson's Ratio from the existing DataSet object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.compute_plasticPoints" title="abaqus.Calibration.Behavior.Behavior.compute_plasticPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_plasticPoints</span></code></a>(dataSet, slider_val, ...)</p></td>
+<td><p>This method extracts the coordinates of the Plastic Points.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.compute_ultimatePoint" title="abaqus.Calibration.Behavior.Behavior.compute_ultimatePoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_ultimatePoint</span></code></a>(dataSet)</p></td>
+<td><p>This method computes the coordinates of the Ultimate point from the existing DataSet object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.mapToMaterial" title="abaqus.Calibration.Behavior.Behavior.mapToMaterial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mapToMaterial</span></code></a>(materialName)</p></td>
+<td><p>This method appends the calibration data obtained from the DataSet object to an existing material object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.setValues" title="abaqus.Calibration.Behavior.Behavior.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([E, nu, ds1Name, ds2Name, ...])</p></td>
+<td><p>This method modifies the data for an existing behavior object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.xyDataDissect" title="abaqus.Calibration.Behavior.Behavior.xyDataDissect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xyDataDissect</span></code></a>(dsName, modelName, calibrationName)</p></td>
+<td><p>This method extracts primary, unload, reload and permanent DataSet objects from the existing DataSet object.The method is only valid for FeFpBehavior type of behavior.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Calibration.Behavior.Behavior.compute_E">
+<span class="sig-name descname"><span class="pre">compute_E</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataSet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#abaqus.Calibration.DataSet.DataSet" title="abaqus.Calibration.DataSet.DataSet"><span class="pre">abaqus.Calibration.DataSet.DataSet</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Calibration.Behavior.Behavior.compute_E" title="Permalink to this definition"></a></dt>
+<dd><p>This method computes the value of young’s modulus from the existing DataSet object. The
+method is only valid for ElasIsoBehavior type of behavior.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dataSet</strong></dt><dd><p>A DataSet object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">python:tuple</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">consisting</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">a</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">and</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">b</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">regression</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">line</span></code>(<code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code> = <code class="xref py py-obj docutils literal notranslate"><span class="pre">ax</span></code> + <code class="xref py py-obj docutils literal notranslate"><span class="pre">b</span></code>), <code class="xref py py-obj docutils literal notranslate"><span class="pre">coefficient</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">determination</span></code>(r-squared) <code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">and</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">and</span></code> end-points <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> line.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Calibration.Behavior.Behavior.compute_elasticModulus">
+<span class="sig-name descname"><span class="pre">compute_elasticModulus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">yieldPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Calibration.Behavior.Behavior.compute_elasticModulus" title="Permalink to this definition"></a></dt>
+<dd><p>This method computes the value of the elastic modulus from the yieldpoint value. The
+method is only valid for ElasPlasIsoBehavior type of behavior.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>yieldPoint</strong></dt><dd><p>A tuple consisting of coordinates of the yieldpoint.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">python:float</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">specifying</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">elastic</span></code> modulus.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Calibration.Behavior.Behavior.compute_nu">
+<span class="sig-name descname"><span class="pre">compute_nu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataSet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#abaqus.Calibration.DataSet.DataSet" title="abaqus.Calibration.DataSet.DataSet"><span class="pre">abaqus.Calibration.DataSet.DataSet</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Calibration.Behavior.Behavior.compute_nu" title="Permalink to this definition"></a></dt>
+<dd><p>This method computes the value of Poisson’s Ratio from the existing DataSet object. The
+method is only valid for ElasIsoBehavior and ElasPlasIsoBehavior type of behavior.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dataSet</strong></dt><dd><p>A DataSet object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">python:tuple</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">consisting</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">a</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">and</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">b</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">regression</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">line</span></code>(<code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code> = <code class="xref py py-obj docutils literal notranslate"><span class="pre">ax</span></code> + <code class="xref py py-obj docutils literal notranslate"><span class="pre">b</span></code>), <code class="xref py py-obj docutils literal notranslate"><span class="pre">coefficient</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">determination</span></code>(r-squared) <code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">and</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">and</span></code> end-points <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> line.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Calibration.Behavior.Behavior.compute_plasticPoints">
+<span class="sig-name descname"><span class="pre">compute_plasticPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataSet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#abaqus.Calibration.DataSet.DataSet" title="abaqus.Calibration.DataSet.DataSet"><span class="pre">abaqus.Calibration.DataSet.DataSet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">slider_val</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Calibration.Behavior.Behavior.compute_plasticPoints" title="Permalink to this definition"></a></dt>
+<dd><p>This method extracts the coordinates of the Plastic Points. The method is only valid for
+ElasPlasIsoBehavior type of behavior.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dataSet</strong></dt><dd><p>A DataSet object.</p>
+</dd>
+<dt><strong>slider_val</strong></dt><dd><p>A float specifying the number of values to be taken.</p>
+</dd>
+<dt><strong>start_index</strong></dt><dd><p>A float specifying the lower limit of the range.</p>
+</dd>
+<dt><strong>end_index</strong></dt><dd><p>A float specifying the upper limit of the range.</p>
+</dd>
+<dt><strong>yp</strong></dt><dd><p>Coordinates of the yieldpoint. The default value is (0,0).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <span class="xref std std-term">python:sequence</span> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">coordinates</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">Plastic</span></code> points..</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Calibration.Behavior.Behavior.compute_ultimatePoint">
+<span class="sig-name descname"><span class="pre">compute_ultimatePoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataSet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#abaqus.Calibration.DataSet.DataSet" title="abaqus.Calibration.DataSet.DataSet"><span class="pre">abaqus.Calibration.DataSet.DataSet</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Calibration.Behavior.Behavior.compute_ultimatePoint" title="Permalink to this definition"></a></dt>
+<dd><p>This method computes the coordinates of the Ultimate point from the existing DataSet
+object. The method is only valid for ElasPlasIsoBehavior type of behavior.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dataSet</strong></dt><dd><p>A DataSet object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Coordinates</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">ultimate</span></code> point.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Calibration.Behavior.Behavior.mapToMaterial">
+<span class="sig-name descname"><span class="pre">mapToMaterial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">materialName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Calibration.Behavior.Behavior.mapToMaterial" title="Permalink to this definition"></a></dt>
+<dd><p>This method appends the calibration data obtained from the DataSet object to an existing
+material object. In the case of ElasIsoBehavior, it appends the young’s modulus and
+poisson’s ratio. For ElasPlasIsoBehavior it appends the young’s modulus, poisson’s ratio
+and Plastic points range and for FeFpBehavior it appends Plastic points range and
+Mullins effect properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>materialName</strong></dt><dd><p>A String specifying the name of the existing material</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Calibration.Behavior.Behavior.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ds1Name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ds2Name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">materialName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yieldPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ultimatePoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plasticPoints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PoissonsRatio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elasticModulus</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plasticPointsRange</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uniaxialName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">biaxialName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uniWeight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">biWeight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uMullinsReload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uMullinsUnload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uPYieldPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uPermSet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uPrimary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bMullinsReload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bMullinsUnload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bPYieldPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bPermSet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bPrimary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Calibration.Behavior.Behavior.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the data for an existing behavior object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>E</strong></dt><dd><p>Young’s modulus. Only valid if the behavior type is ElasIsoBehavior.</p>
+</dd>
+<dt><strong>nu</strong></dt><dd><p>Poisson’s ratio. Only valid if the behavior type is ElasIsoBehavior.</p>
+</dd>
+<dt><strong>ds1Name</strong></dt><dd><p>The name of the first data set. Only valid if the behavior type is ElasIsoBehavior or 
+ElasPlasIsoBehavior</p>
+</dd>
+<dt><strong>ds2Name</strong></dt><dd><p>The name of the second data set. Only valid if the behavior type is ElasIsoBehavior or 
+ElasPlasIsoBehavior</p>
+</dd>
+<dt><strong>materialName</strong></dt><dd><p>Material Name.</p>
+</dd>
+<dt><strong>yieldPoint</strong></dt><dd><p>Stress/strain value for the material yield point.Only valid if the behavior type is 
+ElasPlasIsoBehavior</p>
+</dd>
+<dt><strong>ultimatePoint</strong></dt><dd><p>Stress/strain value for the material ultimate point.Only valid if the behavior type is 
+ElasPlasIsoBehavior</p>
+</dd>
+<dt><strong>plasticPoints</strong></dt><dd><p>Stress/strain values for the Plastic portion of material curve. Only valid if the
+behavior type is ElasPlasIsoBehavior</p>
+</dd>
+<dt><strong>PoissonsRatio</strong></dt><dd><p>Poisson’s Ratio. Only valid if the behavior type is ElasPlasIsoBehavior</p>
+</dd>
+<dt><strong>elasticModulus</strong></dt><dd><p>Young’s Modulus for the elastic portion of the material curve. Only valid if the 
+behavior type is ElasPlasIsoBehavior</p>
+</dd>
+<dt><strong>plasticPointsRange</strong></dt><dd><p>Extent of the material Plastic points. Only valid if the behavior type is
+ElasPlasIsoBehavior</p>
+</dd>
+<dt><strong>name</strong></dt><dd><p>Name of the behavior.</p>
+</dd>
+<dt><strong>uniaxialName</strong></dt><dd><p>Name of the uniaxial dataset. Only valid if the behavior type is FeFpBehavior</p>
+</dd>
+<dt><strong>biaxialName</strong></dt><dd><p>Name of the biaxial dataset. Only valid if the behavior type is FeFpBehavior</p>
+</dd>
+<dt><strong>interpolation</strong></dt><dd><p>‘linear’ specifies linear interpolation between data points, otherwise ‘logarithmic’. 
+Only valid if the behavior type is FeFpBehavior</p>
+</dd>
+<dt><strong>uniWeight</strong></dt><dd><p>Uniaxial weight factor, uniWeight + biWeight should equal 1.0. Only valid if the 
+behavior type is FeFpBehavior</p>
+</dd>
+<dt><strong>biWeight</strong></dt><dd><p>Biaxial weight factor, uniWeight + biWeight should equal 1.0. Only valid if the behavior 
+type is FeFpBehavior</p>
+</dd>
+<dt><strong>uMullinsReload</strong></dt><dd><p>A List of strings, specifying names of reloading DataSet objects obtained from uniaxial 
+test data. Only valid if the behavior is of type FeFpBehavior</p>
+</dd>
+<dt><strong>uMullinsUnload</strong></dt><dd><p>A List of strings, specifying names of reloading DataSet objects obtained from uniaxial 
+test data. Only valid if the behavior is of type FeFpBehavior</p>
+</dd>
+<dt><strong>uPYieldPoint</strong></dt><dd><p>A tuple specifying the coordinates of yield point of the permanent data set. Only valid 
+if the behavior is of type FeFpBehavior</p>
+</dd>
+<dt><strong>uPermSet</strong></dt><dd><p>A List of strings, specifying names of permanent DataSet objects obtained from uniaxial 
+test data. Only valid if the behavior is of type FeFpBehavior</p>
+</dd>
+<dt><strong>uPrimary</strong></dt><dd><p>A string specifying name of Primary DataSet object.Only valid if the behavior is of type 
+FeFpBehavior</p>
+</dd>
+<dt><strong>bMullinsReload</strong></dt><dd><p>A List of strings, specifying names of reloading DataSet objects obtained from biaxial 
+test data. Only valid if the behavior is of type FeFpBehavior</p>
+</dd>
+<dt><strong>bMullinsUnload</strong></dt><dd><p>A List of strings, specifying names of unloading DataSet objects obtained from biaxial 
+test data. Only valid if the behavior is of type FeFpBehavior</p>
+</dd>
+<dt><strong>bPYieldPoint</strong></dt><dd><p>A tuple specifying the coordinates of yield point of the permanent data set. Only valid 
+if the behavior is of type FeFpBehavior</p>
+</dd>
+<dt><strong>bPermSet</strong></dt><dd><p>A List of strings, specifying names of permanent DataSet objects obtained from biaxial 
+test data. Only valid if the behavior is of type FeFpBehavior</p>
+</dd>
+<dt><strong>bPrimary</strong></dt><dd><p>A string specifying name of Primary DataSet object. Only valid if the behavior is of 
+type FeFpBehavior</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Calibration.Behavior.Behavior.xyDataDissect">
+<span class="sig-name descname"><span class="pre">xyDataDissect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dsName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibrationName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">biaxial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Calibration.Behavior.Behavior.xyDataDissect" title="Permalink to this definition"></a></dt>
+<dd><p>This method extracts primary, unload, reload and permanent DataSet objects from the
+existing DataSet object.The method is only valid for FeFpBehavior type of behavior.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dsName</strong></dt><dd><p>A string specifying the name of the uniaxial/biaxial test dataset.</p>
+</dd>
+<dt><strong>modelName</strong></dt><dd><p>A string specifying the name of the model to which the calibration behavior belongs.</p>
+</dd>
+<dt><strong>calibrationName</strong></dt><dd><p>A string specifying the name of the Calibration object to which the behavior belongs.</p>
+</dd>
+<dt><strong>biaxial</strong></dt><dd><p>A boolean specifying whether the test data is biaxial or uniaxial. The default value is 
+True.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <span class="xref std std-term">python:sequence</span> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">strings</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">specifying</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">names</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSet</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">objects</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">containing</span></code> loading,</dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">unloading</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">reloading</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">and</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">primary</span></code> datasets.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="dataset">
+<h3>DataSet<a class="headerlink" href="#dataset" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Calibration.DataSet.DataSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DataSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">form</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Calibration.DataSet.DataSet" title="Permalink to this definition"></a></dt>
+<dd><p>The DataSetobject specifies material test data.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">calibration</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">calibrations</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">dataSets</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Calibration.DataSet.DataSet.setValues" title="abaqus.Calibration.DataSet.DataSet.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([data])</p></td>
+<td><p>This method modifies the data for an existing DataSet object.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Calibration.DataSet.DataSet.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Calibration.DataSet.DataSet.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the data for an existing DataSet object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data</strong></dt><dd><p>A sequence of pairs of Floats specifying data set type pairs.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="bc.html" class="btn btn-neutral float-left" title="Boundary Condition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="constraint.html" class="btn btn-neutral float-right" title="Constraint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

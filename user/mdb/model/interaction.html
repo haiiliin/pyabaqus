@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interaction &mdash; pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="canonical" href="https://pyabaqus.haiiliin.com/user/mdb/model/interaction.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Load" href="load.html" />
+    <link rel="prev" title="Filter" href="filter.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../user.html">User Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../header.html">Header of the Python script</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../mdb.html">Abaqus Model Database</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../model.html">Abaqus Model</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../model.html#create-models">Create models</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../model.html#model">Model</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="amplitude.html">Amplitude</a></li>
+<li class="toctree-l5"><a class="reference internal" href="assembly.html">Assembly</a></li>
+<li class="toctree-l5"><a class="reference internal" href="bc.html">Boundary Condition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="calibration.html">Calibration of Material</a></li>
+<li class="toctree-l5"><a class="reference internal" href="constraint.html">Constraint</a></li>
+<li class="toctree-l5"><a class="reference internal" href="field.html">Field</a></li>
+<li class="toctree-l5"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Interaction</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#create-interactions">Create interactions</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="load.html">Load</a></li>
+<li class="toctree-l5"><a class="reference internal" href="material.html">Material</a></li>
+<li class="toctree-l5"><a class="reference internal" href="optimization.html">Optimization</a></li>
+<li class="toctree-l5"><a class="reference internal" href="output.html">Output Request</a></li>
+<li class="toctree-l5"><a class="reference internal" href="part.html">Part</a></li>
+<li class="toctree-l5"><a class="reference internal" href="predefined.html">Predefined Field</a></li>
+<li class="toctree-l5"><a class="reference internal" href="profile.html">Beam Section Profile</a></li>
+<li class="toctree-l5"><a class="reference internal" href="property.html">Property</a></li>
+<li class="toctree-l5"><a class="reference internal" href="section.html">Section</a></li>
+<li class="toctree-l5"><a class="reference internal" href="sketcher.html">Sketcher</a></li>
+<li class="toctree-l5"><a class="reference internal" href="step.html">Step</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../job.html">Abaqus Job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../session.html">Abaqus Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../user.html">User Manual</a> &raquo;</li>
+          <li><a href="../../mdb.html">Abaqus Model Database</a> &raquo;</li>
+          <li><a href="../model.html">Abaqus Model</a> &raquo;</li>
+      <li>Interaction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/user/mdb/model/interaction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="interaction">
+<h1>Interaction<a class="headerlink" href="#interaction" title="Permalink to this headline"></a></h1>
+<p>A specific type of interaction object and a specific type of interaction state object are designed for each type of interaction. An interaction object stores the non-propagating data of an interaction as well as a number of instances of the corresponding interaction state object, each of which stores the propagating data of the interaction in a single step. Instances of the interaction state object are created and deleted internally by its corresponding interaction object.</p>
+<div class="section" id="create-interactions">
+<h2>Create interactions<a class="headerlink" href="#create-interactions" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InteractionModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Abaqus creates a Model object named <cite>Model-1</cite> when a session is started.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.AcousticImpedance" title="abaqus.Interaction.InteractionModel.InteractionModel.AcousticImpedance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AcousticImpedance</span></code></a>(name, createStepName, surface)</p></td>
+<td><p>This method creates an AcousticImpedance object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.AcousticImpedanceProp" title="abaqus.Interaction.InteractionModel.InteractionModel.AcousticImpedanceProp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AcousticImpedanceProp</span></code></a>(name, tableType, table)</p></td>
+<td><p>This method creates an AcousticImpedanceProp object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ActuatorSensor" title="abaqus.Interaction.InteractionModel.InteractionModel.ActuatorSensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActuatorSensor</span></code></a>(name, createStepName, point, ...)</p></td>
+<td><p>This method creates an ActuatorSensor object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ActuatorSensorProp" title="abaqus.Interaction.InteractionModel.InteractionModel.ActuatorSensorProp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActuatorSensorProp</span></code></a>(name[, realProperties, ...])</p></td>
+<td><p>This method creates an ActuatorSensorProp object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.CavityRadiation" title="abaqus.Interaction.InteractionModel.InteractionModel.CavityRadiation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CavityRadiation</span></code></a>(name, createStepName, surfaces)</p></td>
+<td><p>This method creates a CavityRadiation object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.CavityRadiationProp" title="abaqus.Interaction.InteractionModel.InteractionModel.CavityRadiationProp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CavityRadiationProp</span></code></a>(name[, ...])</p></td>
+<td><p>This method creates a CavityRadiationProp object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ConcentratedFilmCondition" title="abaqus.Interaction.InteractionModel.InteractionModel.ConcentratedFilmCondition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConcentratedFilmCondition</span></code></a>(name, ...[, ...])</p></td>
+<td><p>This method creates a ConcentratedFilmCondition object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ConcentratedRadiationToAmbient" title="abaqus.Interaction.InteractionModel.InteractionModel.ConcentratedRadiationToAmbient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConcentratedRadiationToAmbient</span></code></a>(name, ...[, ...])</p></td>
+<td><p>This method creates a ConcentratedRadiationToAmbient object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ContactExp" title="abaqus.Interaction.InteractionModel.InteractionModel.ContactExp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ContactExp</span></code></a>(name, createStepName[, ...])</p></td>
+<td><p>This method creates a ContactExp object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ContactProperty" title="abaqus.Interaction.InteractionModel.InteractionModel.ContactProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ContactProperty</span></code></a>(name)</p></td>
+<td><p>This method creates a ContactProperty object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ContactStd" title="abaqus.Interaction.InteractionModel.InteractionModel.ContactStd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ContactStd</span></code></a>(name, createStepName[, ...])</p></td>
+<td><p>This method creates a ContactStd object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.CyclicSymmetry" title="abaqus.Interaction.InteractionModel.InteractionModel.CyclicSymmetry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CyclicSymmetry</span></code></a>(name, createStepName, main, ...)</p></td>
+<td><p>This method creates a CyclicSymmetry object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ElasticFoundation" title="abaqus.Interaction.InteractionModel.InteractionModel.ElasticFoundation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElasticFoundation</span></code></a>(name, createStepName, ...)</p></td>
+<td><p>This method creates an ElasticFoundation object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ExpContactControl" title="abaqus.Interaction.InteractionModel.InteractionModel.ExpContactControl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExpContactControl</span></code></a>(name[, globTrkChoice, ...])</p></td>
+<td><p>This method creates an ExpContactControl object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ExpInitialization" title="abaqus.Interaction.InteractionModel.InteractionModel.ExpInitialization"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExpInitialization</span></code></a>(name[, overclosureType, ...])</p></td>
+<td><p>This method creates an ExpInitialization object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FilmCondition" title="abaqus.Interaction.InteractionModel.InteractionModel.FilmCondition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FilmCondition</span></code></a>(name, createStepName, surface, ...)</p></td>
+<td><p>This method creates a FilmCondition object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FilmConditionProp" title="abaqus.Interaction.InteractionModel.InteractionModel.FilmConditionProp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FilmConditionProp</span></code></a>(name[, ...])</p></td>
+<td><p>This method creates a FilmConditionProp object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FluidCavity" title="abaqus.Interaction.InteractionModel.InteractionModel.FluidCavity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluidCavity</span></code></a>(name, createStepName, ...[, ...])</p></td>
+<td><p>This method creates an FluidCavity object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FluidCavityProperty" title="abaqus.Interaction.InteractionModel.InteractionModel.FluidCavityProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluidCavityProperty</span></code></a>(name[, definition, ...])</p></td>
+<td><p>This method creates a FluidCavityProperty object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FluidExchange" title="abaqus.Interaction.InteractionModel.InteractionModel.FluidExchange"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluidExchange</span></code></a>(name, createStepName, ...[, ...])</p></td>
+<td><p>This method creates an FluidExchange object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FluidExchangeProperty" title="abaqus.Interaction.InteractionModel.InteractionModel.FluidExchangeProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluidExchangeProperty</span></code></a>(name, dataTable[, ...])</p></td>
+<td><p>This method creates a FluidExchangeProperty object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FluidInflator" title="abaqus.Interaction.InteractionModel.InteractionModel.FluidInflator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluidInflator</span></code></a>(name, createStepName, cavity, ...)</p></td>
+<td><p>This method creates a FluidInflator object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FluidInflatorProperty" title="abaqus.Interaction.InteractionModel.InteractionModel.FluidInflatorProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluidInflatorProperty</span></code></a>(name, definition, ...)</p></td>
+<td><p>This method creates a FluidInflatorProperty object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.IncidentWave" title="abaqus.Interaction.InteractionModel.InteractionModel.IncidentWave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IncidentWave</span></code></a>(name, createStepName, ...[, ...])</p></td>
+<td><p>This method creates an IncidentWave object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.IncidentWaveProperty" title="abaqus.Interaction.InteractionModel.InteractionModel.IncidentWaveProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IncidentWaveProperty</span></code></a>(name[, definition, ...])</p></td>
+<td><p>This method creates an IncidentWaveProperty object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ModelChange" title="abaqus.Interaction.InteractionModel.InteractionModel.ModelChange"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModelChange</span></code></a>(name, createStepName[, ...])</p></td>
+<td><p>This method creates a ModelChange object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.PressurePenetration" title="abaqus.Interaction.InteractionModel.InteractionModel.PressurePenetration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PressurePenetration</span></code></a>(name, createStepName, ...)</p></td>
+<td><p>This method creates a PressurePenetration object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.RadiationToAmbient" title="abaqus.Interaction.InteractionModel.InteractionModel.RadiationToAmbient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RadiationToAmbient</span></code></a>(name, createStepName, ...)</p></td>
+<td><p>This method creates a RadiationToAmbient object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.SelfContactExp" title="abaqus.Interaction.InteractionModel.InteractionModel.SelfContactExp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SelfContactExp</span></code></a>(name, createStepName, ...[, ...])</p></td>
+<td><p>This method creates a SelfContactExp object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.SelfContactStd" title="abaqus.Interaction.InteractionModel.InteractionModel.SelfContactStd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SelfContactStd</span></code></a>(name, createStepName, ...[, ...])</p></td>
+<td><p>This method creates a SelfContactStd object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.StdContactControl" title="abaqus.Interaction.InteractionModel.InteractionModel.StdContactControl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StdContactControl</span></code></a>(name[, ...])</p></td>
+<td><p>This method creates an StdContactControl object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.StdInitialization" title="abaqus.Interaction.InteractionModel.InteractionModel.StdInitialization"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StdInitialization</span></code></a>(name[, overclosureType, ...])</p></td>
+<td><p>This method creates a StdInitialization object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.StdStabilization" title="abaqus.Interaction.InteractionModel.InteractionModel.StdStabilization"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StdStabilization</span></code></a>(name[, zeroDistance, ...])</p></td>
+<td><p>This method creates a StdStabilization object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.StdXplCosimulation" title="abaqus.Interaction.InteractionModel.InteractionModel.StdXplCosimulation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StdXplCosimulation</span></code></a>(name, createStepName, region)</p></td>
+<td><p>This method creates a StdXplCosimulation object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.SurfaceToSurfaceContactExp" title="abaqus.Interaction.InteractionModel.InteractionModel.SurfaceToSurfaceContactExp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SurfaceToSurfaceContactExp</span></code></a>(name, ...[, ...])</p></td>
+<td><p>This method creates a SurfaceToSurfaceContactExp object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.SurfaceToSurfaceContactStd" title="abaqus.Interaction.InteractionModel.InteractionModel.SurfaceToSurfaceContactStd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SurfaceToSurfaceContactStd</span></code></a>(name, ...[, ...])</p></td>
+<td><p>This method creates a SurfaceToSurfaceContactStd object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.XFEMCrackGrowth" title="abaqus.Interaction.InteractionModel.InteractionModel.XFEMCrackGrowth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XFEMCrackGrowth</span></code></a>(name, createStepName, crackName)</p></td>
+<td><p>This method creates an XFEMCrackGrowth object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.contactDetection" title="abaqus.Interaction.InteractionModel.InteractionModel.contactDetection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contactDetection</span></code></a>([name, createStepName, ...])</p></td>
+<td><p>This method uses contact detection to create SurfaceToSurfaceContactStd, SurfaceToSurfaceContactExp, and Tie objects.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSurfaceSeparation</span></code>()</p></td>
+<td><p>This method returns a list of all possible contacts that can be created using the ContactDetection method.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="filter.html" class="btn btn-neutral float-left" title="Filter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="load.html" class="btn btn-neutral float-right" title="Load" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

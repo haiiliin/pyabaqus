@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property &mdash; pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/mdb/model/property.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Section" href="section.html" />
+    <link rel="prev" title="Beam Section Profile" href="profile.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user.html">User Manual</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../references.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../mdb.html">Abaqus Model Database</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../model.html">Model</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh.html">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="output.html">Output Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="part_assembly.html">Part and Assembly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Property</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#create-properties-for-part">Create properties for Part</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#object-features">Object features</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#compositelayup">CompositeLayup</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#compositeply">CompositePly</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#compositeplyarray">CompositePlyArray</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#materialorientation">MaterialOrientation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#materialorientationarray">MaterialOrientationArray</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#plystackplot">PlyStackPlot</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#propertyassembly">PropertyAssembly</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sectionassignment">SectionAssignment</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sectionassignmentarray">SectionAssignmentArray</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="section.html">Section</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sketcher.html">Sketcher</a></li>
+<li class="toctree-l4"><a class="reference internal" href="step.html">Step</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model.html#create-models">Create models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model.html#object-features">Object features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../job.html">Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../annotation.html">Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../edit_mesh.html">Edit Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mdb.html#object-features">Object features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../session.html">Abaqus Session</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../kernel.html">Kernel</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../references.html">API Reference</a> &raquo;</li>
+          <li><a href="../../mdb.html">Abaqus Model Database</a> &raquo;</li>
+          <li><a href="../model.html">Model</a> &raquo;</li>
+      <li>Property</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/reference/mdb/model/property.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="property">
+<h1>Property<a class="headerlink" href="#property" title="Permalink to this headline"></a></h1>
+<p>The Property commands are used to create and manage reinforcements and to assign properties to a part.
+(See also Material commands and Section commands.) The Property commands are methods of a Part object.</p>
+<div class="section" id="create-properties-for-part">
+<h2>Create properties for Part<a class="headerlink" href="#create-properties-for-part" title="Permalink to this headline"></a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.PropertyPart.PropertyPart.CompositeLayup">
+<span class="sig-prename descclassname"><span class="pre">PropertyPart.</span></span><span class="sig-name descname"><span class="pre">CompositeLayup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GLOBAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetValues</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SHELL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Property.CompositeLayup.CompositeLayup" title="abaqus.Property.CompositeLayup.CompositeLayup"><span class="pre">abaqus.Property.CompositeLayup.CompositeLayup</span></a></span></span><a class="headerlink" href="#abaqus.Property.PropertyPart.PropertyPart.CompositeLayup" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a CompositeLayup object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>description</strong></dt><dd><p>A String specifying a description of the composite layup.</p>
+</dd>
+<dt><strong>offsetType</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the shell offset. If
+<em>offsetType*=OFFSET_FIELD the *offsetField</em> argument is required. This member is valid
+only if <a href="#id1"><span class="problematic" id="id2">*</span></a>elementType*=SHELL. Possible values are SINGLE_VALUE, MIDDLE_SURFACE,
+TOP_SURFACE, BOTTOM_SURFACE, OFFSET_FIELD, and GLOBAL. The default value is GLOBAL.</p>
+</dd>
+<dt><strong>offsetField</strong></dt><dd><p>A String specifying The name of the field specifying the offset. This member is valid
+only if <a href="#id3"><span class="problematic" id="id4">*</span></a>elementType*=SHELL. The default value is an empty string.</p>
+</dd>
+<dt><strong>offsetValues</strong></dt><dd><p>A Float specifying The offset of the shell section. This member is valid only if
+<a href="#id5"><span class="problematic" id="id6">*</span></a>elementType*=SHELL. The default value is 0.0.</p>
+</dd>
+<dt><strong>elementType</strong></dt><dd><p>A SymbolicConstant specifying the type of element in the composite layup. Possible
+values are SHELL, CONTINUUM_SHELL, and SOLID. The default value is SHELL.</p>
+</dd>
+<dt><strong>symmetric</strong></dt><dd><p>A Boolean specifying whether or not the layup should be made symmetric by the analysis.
+The default value is OFF.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>layup: <a class="reference internal" href="#abaqus.Property.PropertyPart.PropertyPart.CompositeLayup" title="abaqus.Property.PropertyPart.PropertyPart.CompositeLayup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CompositeLayup</span></code></a></dt><dd><p>A CompositeLayup object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>AbaqusException.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="o">*</span><span class="n">name</span><span class="o">*</span><span class="p">]</span><span class="o">.</span><span class="n">CompositeLayup</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.PropertyPart.PropertyPart.SectionAssignment">
+<span class="sig-prename descclassname"><span class="pre">PropertyPart.</span></span><span class="sig-name descname"><span class="pre">SectionAssignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="part_assembly/region.html#abaqus.Region.Set.Set" title="abaqus.Region.Set.Set"><span class="pre">abaqus.Region.Set.Set</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectionName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessAssignment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FROM_SECTION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SINGLE_VALUE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.PropertyPart.PropertyPart.SectionAssignment" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a SectionAssignment object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>region</strong></dt><dd><p>A Set object specifying the region to which the section is assigned.</p>
+</dd>
+<dt><strong>sectionName</strong></dt><dd><p>A String specifying the name of the section.</p>
+</dd>
+<dt><strong>thicknessAssignment</strong></dt><dd><p>A SymbolicConstant specifying section thickness assignment method. Possible values are
+FROM_SECTION and FROM_GEOMETRY. The default value is FROM_SECTION.</p>
+</dd>
+<dt><strong>offset</strong></dt><dd><p>A Float specifying the offset of the shell section. The default value is 0.0.</p>
+</dd>
+<dt><strong>offsetType</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the shell offset. If
+<em>offsetType</em> is set to OFFSET_FIELD the <em>offsetField</em> must have a value. Possible values
+are SINGLE_VALUE, MIDDLE_SURFACE, TOP_SURFACE, BOTTOM_SURFACE, FROM_GEOMETRY, and
+OFFSET_FIELD. The default value is SINGLE_VALUE.</p>
+</dd>
+<dt><strong>offsetField</strong></dt><dd><p>A String specifying the name of the field specifying the offset. The default value is
+“”.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>assignment: <a class="reference internal" href="#abaqus.Property.PropertyPart.PropertyPart.SectionAssignment" title="abaqus.Property.PropertyPart.PropertyPart.SectionAssignment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SectionAssignment</span></code></a></dt><dd><p>A SectionAssignment object</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="o">*</span><span class="n">name</span><span class="o">*</span><span class="p">]</span><span class="o">.</span><span class="n">SectionAssignment</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">SectionAssignment</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.PropertyPart.PropertyPart.MaterialOrientation">
+<span class="sig-prename descclassname"><span class="pre">PropertyPart.</span></span><span class="sig-name descname"><span class="pre">MaterialOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region:</span> <span class="pre">typing.Optional[abaqus.Region.Set.Set]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stackDirection:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'STACK_3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldName:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientationType:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'GLOBAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisDirection:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisDefinition:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'NORMAL_VECTOR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisRegion:</span> <span class="pre">typing.Optional[abaqus.Region.Surface.Surface]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisDatum:</span> <span class="pre">abaqus.Datum.DatumAxis.DatumAxis</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumAxis.DatumAxis</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flipNormalDirection:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisVector:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisDirection:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisDefinition:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'PRIMARY_VECTOR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisRegion:</span> <span class="pre">typing.Optional[abaqus.Region.Set.Set]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisDatum:</span> <span class="pre">abaqus.Datum.DatumAxis.DatumAxis</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumAxis.DatumAxis</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flipPrimaryDirection:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisVector:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Property.MaterialOrientation.MaterialOrientation" title="abaqus.Property.MaterialOrientation.MaterialOrientation"><span class="pre">abaqus.Property.MaterialOrientation.MaterialOrientation</span></a></span></span><a class="headerlink" href="#abaqus.Property.PropertyPart.PropertyPart.MaterialOrientation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a MaterialOrientation object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>region</strong></dt><dd><p>A Set object specifying a region for which the material orientation is defined.</p>
+</dd>
+<dt><strong>localCsys</strong></dt><dd><p>A DatumCsys object specifying the local coordinate system or None, describing the
+material orientation for the given region. In the ODB, this member was previously
+accessible using “csys,” but support has now been added for localCsys and the csys
+member will be deprecated.</p>
+</dd>
+<dt><strong>axis</strong></dt><dd><p>A SymbolicConstant specifying the axis of a datum coordinate system about which an
+additional rotation is applied. For shells this axis is also the shell normal. Possible
+values are AXIS_1, AXIS_2, and AXIS_3. The default value is AXIS_1.</p>
+</dd>
+<dt><strong>angle</strong></dt><dd><p>A Float specifying the angle of the additional rotation (if accessed from the ODB
+instead of the MDB, it will be a string instead of a float). The default value is 0.0.</p>
+</dd>
+<dt><strong>stackDirection</strong></dt><dd><p>A SymbolicConstant specifying the stack or thickness direction. Possible values are
+STACK_1, STACK_2, STACK_3, and STACK_ORIENTATION. The default value is STACK_3.</p>
+</dd>
+<dt><strong>fieldName</strong></dt><dd><p>A String specifying the name of the DiscreteField object specifying the orientation. The
+default value is an empty string.</p>
+</dd>
+<dt><strong>orientationType</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the material orientation. If
+<em>orientationType*=SYSTEM, the *region</em> and <em>localCsys</em> arguments are required. If
+<em>orientationType*=FIELD, the *fieldName</em> argument is required. Possible values are
+GLOBAL, SYSTEM, FIELD, DISCRETE, and USER. The default value is GLOBAL.</p>
+</dd>
+<dt><strong>normalAxisDirection</strong></dt><dd><p>A SymbolicConstant specifying the axis that is defined by the normal axis direction for
+a discrete orientation. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default
+value is AXIS_3.</p>
+</dd>
+<dt><strong>normalAxisDefinition</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the normal axis direction for a
+discrete orientation. Possible values are SURFACE, NORMAL_DATUM, and NORMAL_VECTOR. The
+default value is NORMAL_VECTOR.</p>
+</dd>
+<dt><strong>normalAxisRegion</strong></dt><dd><p>A Surface object specifying a region whose geometric normals define the normal axis for
+the discrete orientation.</p>
+</dd>
+<dt><strong>normalAxisDatum</strong></dt><dd><p>A DatumAxis object specifying the Datum Axis or None, describing the normal axis
+direction for the discrete orientation.</p>
+</dd>
+<dt><strong>flipNormalDirection</strong></dt><dd><p>A Boolean specifying the flag to reverse the direction of the defined normal axis
+direction. The default value is OFF.</p>
+</dd>
+<dt><strong>normalAxisVector</strong></dt><dd><p>A sequence of Floats specifying the vector that defines the direction of the normal axis
+of the discrete orientation.</p>
+</dd>
+<dt><strong>primaryAxisDirection</strong></dt><dd><p>A SymbolicConstant specifying the axis that is defined by the primary axis direction for
+a discrete orientation. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default
+value is AXIS_1.</p>
+</dd>
+<dt><strong>primaryAxisDefinition</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the primary axis direction for a
+discrete orientation. Possible values are SURFACE, PRIMARY_DATUM, and PRIMARY_VECTOR.
+The default value is PRIMARY_VECTOR.</p>
+</dd>
+<dt><strong>primaryAxisRegion</strong></dt><dd><p>A Set object specifying a region whose geometric tangents define the primary axis for
+the discrete orientation.</p>
+</dd>
+<dt><strong>primaryAxisDatum</strong></dt><dd><p>A DatumAxis object specifying the Datum Axis or None, describing the primary axis
+direction for the discrete orientation.</p>
+</dd>
+<dt><strong>flipPrimaryDirection</strong></dt><dd><p>A Boolean specifying the flag to reverse the direction of the defined primary axis
+direction. The default value is OFF.</p>
+</dd>
+<dt><strong>primaryAxisVector</strong></dt><dd><p>A sequence of Floats specifying the vector that defines the direction of the primary
+axis of the discrete orientation.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>orientation: <a class="reference internal" href="#abaqus.Property.PropertyPart.PropertyPart.MaterialOrientation" title="abaqus.Property.PropertyPart.PropertyPart.MaterialOrientation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialOrientation</span></code></a></dt><dd><p>A MaterialOrientation object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="o">*</span><span class="n">name</span><span class="o">*</span><span class="p">]</span><span class="o">.</span><span class="n">MaterialOrientation</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="object-features">
+<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline"></a></h2>
+<div class="section" id="compositelayup">
+<h3>CompositeLayup<a class="headerlink" href="#compositelayup" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Property.CompositeLayup.CompositeLayup">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CompositeLayup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GLOBAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetValues</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SHELL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.CompositeLayup.CompositeLayup" title="Permalink to this definition"></a></dt>
+<dd><p>The CompositeLayup object is used to specify a composite layup on a part.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">part</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">compositeLayups</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>SHELL SECTION</dt><dd><ul>
+<li><p>SHELL GENERAL SECTION</p></li>
+<li><p>SOLID SECTION</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>section: GeometryShellSection</strong></dt><dd><p>A <a class="reference internal" href="section.html#abaqus.Section.GeometryShellSection.GeometryShellSection" title="abaqus.Section.GeometryShellSection.GeometryShellSection"><code class="xref py py-class docutils literal notranslate"><span class="pre">GeometryShellSection</span></code></a> object.</p>
+</dd>
+<dt><strong>orientation: MaterialOrientation</strong></dt><dd><p>A <a class="reference internal" href="#abaqus.Property.MaterialOrientation.MaterialOrientation" title="abaqus.Property.MaterialOrientation.MaterialOrientation"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaterialOrientation</span></code></a> object.</p>
+</dd>
+<dt><strong>plies: CompositePlyArray</strong></dt><dd><p>A <a class="reference internal" href="#abaqus.Property.CompositePlyArray.CompositePlyArray" title="abaqus.Property.CompositePlyArray.CompositePlyArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">CompositePlyArray</span></code></a> object specifying the plies that make up this composite layup.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Property.CompositeLayup.CompositeLayup.CompositePly" title="abaqus.Property.CompositeLayup.CompositeLayup.CompositePly"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CompositePly</span></code></a>(thickness, region, material, ...)</p></td>
+<td><p>This method creates a CompositePly object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Property.CompositeLayup.CompositeLayup.CompositeShellSection" title="abaqus.Property.CompositeLayup.CompositeLayup.CompositeShellSection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CompositeShellSection</span></code></a>(name, layup[, ...])</p></td>
+<td><p>This method creates a CompositeShellSection object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Property.CompositeLayup.CompositeLayup.GeometryShellSection" title="abaqus.Property.CompositeLayup.CompositeLayup.GeometryShellSection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeometryShellSection</span></code></a>([nodalThicknessField, ...])</p></td>
+<td><p>This method creates a GeometryShellSection object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Property.CompositeLayup.CompositeLayup.HomogeneousShellSection" title="abaqus.Property.CompositeLayup.CompositeLayup.HomogeneousShellSection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HomogeneousShellSection</span></code></a>(name, material[, ...])</p></td>
+<td><p>This method creates a HomogeneousShellSection object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Property.CompositeLayup.CompositeLayup.deletePlies" title="abaqus.Property.CompositeLayup.CompositeLayup.deletePlies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deletePlies</span></code></a>()</p></td>
+<td><p>This method deletes all of the plies from a composite layup.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Property.CompositeLayup.CompositeLayup.resume" title="abaqus.Property.CompositeLayup.CompositeLayup.resume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resume</span></code></a>()</p></td>
+<td><p>This method resumes a composite layup that was previously suppressed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Property.CompositeLayup.CompositeLayup.setValues" title="abaqus.Property.CompositeLayup.CompositeLayup.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([description, offsetType, ...])</p></td>
+<td><p>This method modifies the CompositeLayup object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Property.CompositeLayup.CompositeLayup.suppress" title="abaqus.Property.CompositeLayup.CompositeLayup.suppress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">suppress</span></code></a>()</p></td>
+<td><p>This method suppresses a composite layup.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.CompositeLayup.CompositeLayup.CompositePly">
+<span class="sig-name descname"><span class="pre">CompositePly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="part_assembly/region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">material</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plyName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientationType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientationValue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numIntPts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additionalRotationType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ROTATION_NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additionalRotationField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Property.CompositePly.CompositePly" title="abaqus.Property.CompositePly.CompositePly"><span class="pre">abaqus.Property.CompositePly.CompositePly</span></a></span></span><a class="headerlink" href="#abaqus.Property.CompositeLayup.CompositeLayup.CompositePly" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a CompositePly object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>thickness</strong></dt><dd><p>A Float specifying the thickness of the section layer.</p>
+</dd>
+<dt><strong>region</strong></dt><dd><p>A Region object specifying the region to which the composite ply applies.</p>
+</dd>
+<dt><strong>material</strong></dt><dd><p>A String specifying the name of the material for the ply.</p>
+</dd>
+<dt><strong>plyName</strong></dt><dd><p>A String specifying the ply identifier for this section layer. The default value is an
+empty string.</p>
+</dd>
+<dt><strong>orientationType</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the relative orientation. If
+<em>orientationType*=SPECIFY_ORIENT the *orientationValue</em> argument is required. If
+<em>orientationType*=CSYS the *orientation</em> argument is required. Possible values are CSYS,
+SPECIFY_ORIENT, ANGLE_0, ANGLE_45, ANGLE_90, and ANGLE_NEG45. The default value is
+ANGLE_0.</p>
+</dd>
+<dt><strong>thicknessType</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the thickness. If
+<em>thicknessType*=SPECIFY_THICKNESS, the *thickness</em> argument is required. Possible values
+are SPECIFY_THICKNESS, FIELD_THICKNESS, and ANALYTICAL_FIELD_THICKNESS. The default
+value is SPECIFY_THICKNESS.</p>
+</dd>
+<dt><strong>orientationValue</strong></dt><dd><p>A Float specifying the relative orientation of the section layer. The default value is
+0.0.</p>
+</dd>
+<dt><strong>thicknessField</strong></dt><dd><p>A String specifying the name of the AnalyticalField or DiscreteField object used to
+define the thickness of the shell elements and composite ply. The <em>thicknessField</em>
+argument applies when <a href="#id7"><span class="problematic" id="id8">*</span></a>thicknessType*=ANALYTICAL_FIELD or <a href="#id9"><span class="problematic" id="id10">*</span></a>thicknessType*=DISCRETE_FIELD
+for shell elements and <a href="#id11"><span class="problematic" id="id12">*</span></a>thicknessType*=FIELD_THICKNESS or
+<a href="#id13"><span class="problematic" id="id14">*</span></a>thicknessType*=ANALYTICAL_FIELD_THICKNESS for composite ply. The default value is an
+empty string.</p>
+</dd>
+<dt><strong>numIntPts</strong></dt><dd><p>An Int specifying the number of integration points to be used through the section layer.
+This argument is valid only if <a href="#id15"><span class="problematic" id="id16">*</span></a>preIntegrate*=OFF. The default value is 3.</p>
+</dd>
+<dt><strong>axis</strong></dt><dd><p>A SymbolicConstant specifying the axis of a cylindrical or spherical datum coordinate
+system about which an additional rotation is applied. For shells this axis is also the
+shell normal. The <em>axis</em> argument applies only if a valid reference is provided for the
+<em>orientation</em>. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default value is
+AXIS_1.</p>
+</dd>
+<dt><strong>angle</strong></dt><dd><p>A Float specifying the angle of the additional rotation. The <em>angle</em> argument applies
+only if a valid reference is provided for the <em>orientation</em>. The default value is 0.0.</p>
+</dd>
+<dt><strong>additionalRotationType</strong></dt><dd><p>A SymbolicConstant specifying the method used to describe the additional rotation when a
+valid orientation is specified. Use <a href="#id17"><span class="problematic" id="id18">*</span></a>orientationType*=ANGLE_0 and
+<a href="#id19"><span class="problematic" id="id20">*</span></a>additionalRotationType*=ROTATION_FIELD to specify a discrete field of rotations for
+this CompositePly. Possible values are ROTATION_NONE, ROTATION_ANGLE, and
+ROTATION_FIELD. The default value is ROTATION_NONE.</p>
+</dd>
+<dt><strong>orientation</strong></dt><dd><p>The SymbolicConstant None or a DatumCsys object specifying a coordinate system reference
+for the relative orientation of this layer. The default value is None.</p>
+</dd>
+<dt><strong>additionalRotationField</strong></dt><dd><p>A String specifying the name of the field specifying the additional rotation. The
+default value is an empty string.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Property.CompositeLayup.CompositeLayup.CompositePly" title="abaqus.Property.CompositeLayup.CompositeLayup.CompositePly"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CompositePly</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>AbaqusException.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="o">*</span><span class="n">name</span><span class="o">*</span><span class="p">]</span><span class="o">.</span><span class="n">CompositeLayup</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.CompositeLayup.CompositeLayup.CompositeShellSection">
+<span class="sig-name descname"><span class="pre">CompositeShellSection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layup</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="section.html#abaqus.Section.SectionLayerArray.SectionLayerArray" title="abaqus.Section.SectionLayerArray.SectionLayerArray"><span class="pre">abaqus.Section.SectionLayerArray.SectionLayerArray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preIntegrate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poissonDefinition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrationRule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SIMPSON'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GRADIENT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idealization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NO_IDEALIZATION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nTemp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessModulus</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useDensity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layupName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodalThicknessField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="section.html#abaqus.Section.CompositeShellSection.CompositeShellSection" title="abaqus.Section.CompositeShellSection.CompositeShellSection"><span class="pre">abaqus.Section.CompositeShellSection.CompositeShellSection</span></a></span></span><a class="headerlink" href="#abaqus.Property.CompositeLayup.CompositeLayup.CompositeShellSection" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a CompositeShellSection object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>layup</strong></dt><dd><p>A SectionLayerArray object specifying the shell cross-section.</p>
+</dd>
+<dt><strong>symmetric</strong></dt><dd><p>A Boolean specifying whether or not the layup should be made symmetric by the analysis.
+The default value is OFF.</p>
+</dd>
+<dt><strong>thicknessType</strong></dt><dd><p>A SymbolicConstant specifying the distribution used for defining the thickness of the
+elements. Possible values are UNIFORM, ANALYTICAL_FIELD, DISCRETE_FIELD,
+NODAL_ANALYTICAL_FIELD, and NODAL_DISCRETE_FIELD. The default value is UNIFORM.</p>
+</dd>
+<dt><strong>preIntegrate</strong></dt><dd><p>A Boolean specifying whether the shell section properties are specified by the user
+prior to the analysis (ON) or integrated during the analysis (OFF). The default value is
+OFF.</p>
+</dd>
+<dt><strong>poissonDefinition</strong></dt><dd><p>A SymbolicConstant specifying whether to use the default value for the Poisson’s ratio.
+Possible values are:DEFAULT, specifying that the default value for the Poisson’s ratio
+is 0.5 in an Abaqus/Standard analysis and is obtained from the material definition in an
+Abaqus/Explicit analysis.VALUE, specifying that the Poisson’s ratio used in the analysis
+is the value provided in <em>poisson</em>.The default value is DEFAULT.</p>
+</dd>
+<dt><strong>poisson</strong></dt><dd><p>A Float specifying the Poisson’s ratio. Possible values are −1.0 ≤≤ <em>poisson</em> ≤≤ 0.5.
+This argument is valid only when <a href="#id21"><span class="problematic" id="id22">*</span></a>poissonDefinition*=VALUE. The default value is 0.5.</p>
+</dd>
+<dt><strong>integrationRule</strong></dt><dd><p>A SymbolicConstant specifying the shell section integration rule. Possible values are
+SIMPSON and GAUSS. The default value is SIMPSON.</p>
+</dd>
+<dt><strong>temperature</strong></dt><dd><p>A SymbolicConstant specifying the mode used for temperature and field variable input
+across the section thickness. Possible values are GRADIENT and POINTWISE. The default
+value is GRADIENT.</p>
+</dd>
+<dt><strong>idealization</strong></dt><dd><p>A SymbolicConstant specifying the mechanical idealization used for the section
+calculations. This member is only applicable when <em>preIntegrate</em> is set to ON. Possible
+values are NO_IDEALIZATION, SMEAR_ALL_LAYERS, MEMBRANE, and BENDING. The default value
+is NO_IDEALIZATION.</p>
+</dd>
+<dt><strong>nTemp</strong></dt><dd><p>None or an Int specifying the number of temperature points to be input. This argument is
+valid only when <a href="#id23"><span class="problematic" id="id24">*</span></a>temperature*=POINTWISE. The default value is None.</p>
+</dd>
+<dt><strong>thicknessModulus</strong></dt><dd><p>None or a Float specifying the effective thickness modulus. This argument is relevant
+only for continuum shells and must be used in conjunction with the argument <em>poisson</em>.
+The default value is None.</p>
+</dd>
+<dt><strong>useDensity</strong></dt><dd><p>A Boolean specifying whether or not to use the value of <em>density</em>. The default value is
+OFF.</p>
+</dd>
+<dt><strong>density</strong></dt><dd><p>A Float specifying the value of density to apply to this section. The default value is
+0.0.</p>
+</dd>
+<dt><strong>layupName</strong></dt><dd><p>A String specifying the layup name for this section. The default value is an empty
+string.</p>
+</dd>
+<dt><strong>thicknessField</strong></dt><dd><p>A String specifying the name of the AnalyticalField or DiscreteField object used to
+define the thickness of the shell elements. The <em>thicknessField</em> argument applies only
+when <a href="#id25"><span class="problematic" id="id26">*</span></a>thicknessType*=ANALYTICAL_FIELD or <a href="#id27"><span class="problematic" id="id28">*</span></a>thicknessType*=DISCRETE_FIELD. The default
+value is an empty string.</p>
+</dd>
+<dt><strong>nodalThicknessField</strong></dt><dd><p>A String specifying the name of the AnalyticalField or DiscreteField object used to
+define the thickness of the shell elements at each node. The <em>nodalThicknessField</em>
+argument applies only when <a href="#id29"><span class="problematic" id="id30">*</span></a>thicknessType*=NODAL_ANALYTICAL_FIELD or
+<a href="#id31"><span class="problematic" id="id32">*</span></a>thicknessType*=NODAL_DISCRETE_FIELD. The default value is an empty string.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Property.CompositeLayup.CompositeLayup.CompositeShellSection" title="abaqus.Property.CompositeLayup.CompositeLayup.CompositeShellSection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CompositeShellSection</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="o">*</span><span class="n">name</span><span class="o">*</span><span class="p">]</span><span class="o">.</span><span class="n">CompositeLayup</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.CompositeLayup.CompositeLayup.GeometryShellSection">
+<span class="sig-name descname"><span class="pre">GeometryShellSection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodalThicknessField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preIntegrate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poissonDefinition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrationRule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SIMPSON'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GRADIENT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nTemp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessModulus</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useDensity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="section.html#abaqus.Section.GeometryShellSection.GeometryShellSection" title="abaqus.Section.GeometryShellSection.GeometryShellSection"><span class="pre">abaqus.Section.GeometryShellSection.GeometryShellSection</span></a></span></span><a class="headerlink" href="#abaqus.Property.CompositeLayup.CompositeLayup.GeometryShellSection" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a GeometryShellSection object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>nodalThicknessField</strong></dt><dd><p>A String specifying the name of the AnalyticalField or DiscreteField object used to
+define the thickness of the shell elements at each node. The <em>nodalThicknessField</em>
+argument applies only when <a href="#id33"><span class="problematic" id="id34">*</span></a>thicknessType*=NODAL_ANALYTICAL_FIELD or
+<a href="#id35"><span class="problematic" id="id36">*</span></a>thicknessType*=NODAL_DISCRETE_FIELD. The default value is an empty string.</p>
+</dd>
+<dt><strong>thicknessField</strong></dt><dd><p>A String specifying the name of the AnalyticalField or DiscreteField object used to
+define the thickness of the shell elements. The <em>thicknessField</em> argument applies only
+when <a href="#id37"><span class="problematic" id="id38">*</span></a>thicknessType*=ANALYTICAL_FIELD or <a href="#id39"><span class="problematic" id="id40">*</span></a>thicknessType*=DISCRETE_FIELD. The default
+value is an empty string.</p>
+</dd>
+<dt><strong>thicknessType</strong></dt><dd><p>A SymbolicConstant specifying the distribution used for defining the thickness of the
+elements. Possible values are UNIFORM, ANALYTICAL_FIELD, DISCRETE_FIELD,
+NODAL_ANALYTICAL_FIELD, and NODAL_DISCRETE_FIELD. The default value is UNIFORM.</p>
+</dd>
+<dt><strong>preIntegrate</strong></dt><dd><p>A Boolean specifying whether the shell section properties are specified by the user
+prior to the analysis (ON) or integrated during the analysis (OFF). The default value is
+OFF.</p>
+</dd>
+<dt><strong>poissonDefinition</strong></dt><dd><p>A SymbolicConstant specifying whether to use the default value for the Poisson’s ratio.
+Possible values are:DEFAULT, specifying that the default value for the Poisson’s ratio
+is 0.5 in an Abaqus/Standard analysis and is obtained from the material definition in an
+Abaqus/Explicit analysis.VALUE, specifying that the Poisson’s ratio used in the analysis
+is the value provided in <em>poisson</em>.The default value is DEFAULT.</p>
+</dd>
+<dt><strong>poisson</strong></dt><dd><p>A Float specifying the Poisson’s ratio. Possible values are −1.0 ≤≤ <em>poisson</em> ≤≤ 0.5.
+This argument is valid only when <a href="#id41"><span class="problematic" id="id42">*</span></a>poissonDefinition*=VALUE. The default value is 0.5.</p>
+</dd>
+<dt><strong>integrationRule</strong></dt><dd><p>A SymbolicConstant specifying the shell section integration rule. Possible values are
+SIMPSON and GAUSS. The default value is SIMPSON.</p>
+</dd>
+<dt><strong>temperature</strong></dt><dd><p>A SymbolicConstant specifying the mode used for temperature and field variable input
+across the section thickness. Possible values are GRADIENT and POINTWISE. The default
+value is GRADIENT.</p>
+</dd>
+<dt><strong>nTemp</strong></dt><dd><p>None or an Int specifying the number of temperature points to be input. This argument is
+valid only when <a href="#id43"><span class="problematic" id="id44">*</span></a>temperature*=POINTWISE. The default value is None.</p>
+</dd>
+<dt><strong>thicknessModulus</strong></dt><dd><p>None or a Float specifying the effective thickness modulus. This argument is relevant
+only for continuum shells and must be used in conjunction with the argument <em>poisson</em>.
+The default value is None.</p>
+</dd>
+<dt><strong>useDensity</strong></dt><dd><p>A Boolean specifying whether or not to use the value of <em>density</em>. The default value is
+OFF.</p>
+</dd>
+<dt><strong>density</strong></dt><dd><p>A Float specifying the value of density to apply to this section. The default value is
+0.0.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Property.CompositeLayup.CompositeLayup.GeometryShellSection" title="abaqus.Property.CompositeLayup.CompositeLayup.GeometryShellSection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeometryShellSection</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="o">*</span><span class="n">name</span><span class="o">*</span><span class="p">]</span><span class="o">.</span><span class="n">CompositeLayup</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.CompositeLayup.CompositeLayup.HomogeneousShellSection">
+<span class="sig-name descname"><span class="pre">HomogeneousShellSection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">material</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numIntPts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preIntegrate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poissonDefinition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrationRule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SIMPSON'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GRADIENT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idealization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NO_IDEALIZATION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nTemp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessModulus</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useDensity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodalThicknessField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="section.html#abaqus.Section.HomogeneousShellSection.HomogeneousShellSection" title="abaqus.Section.HomogeneousShellSection.HomogeneousShellSection"><span class="pre">abaqus.Section.HomogeneousShellSection.HomogeneousShellSection</span></a></span></span><a class="headerlink" href="#abaqus.Property.CompositeLayup.CompositeLayup.HomogeneousShellSection" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a HomogeneousShellSection object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>material</strong></dt><dd><p>A String specifying the name of the section material.</p>
+</dd>
+<dt><strong>thickness</strong></dt><dd><p>A Float specifying the thickness of the section. The <em>thickness</em> argument applies only
+when <a href="#id45"><span class="problematic" id="id46">*</span></a>thicknessType*=UNIFORM. The default value is 0.0.</p>
+</dd>
+<dt><strong>numIntPts</strong></dt><dd><p>An Int specifying the number of integration points to be used through the section.
+Possible values are <em>numIntPts</em> &gt;&gt; 0. The default value is 5.To use the default settings
+of the analysis products, set <em>numIntPts</em> to 5 if <em>integrationRule*=SIMPSON or set
+*numIntPts</em> to 7 if <a href="#id47"><span class="problematic" id="id48">*</span></a>integrationRule*=GAUSS.</p>
+</dd>
+<dt><strong>thicknessType</strong></dt><dd><p>A SymbolicConstant specifying the distribution used for defining the thickness of the
+elements. Possible values are UNIFORM, ANALYTICAL_FIELD, DISCRETE_FIELD,
+NODAL_ANALYTICAL_FIELD, and NODAL_DISCRETE_FIELD. The default value is UNIFORM.</p>
+</dd>
+<dt><strong>preIntegrate</strong></dt><dd><p>A Boolean specifying whether the shell section properties are specified by the user
+prior to the analysis (ON) or integrated during the analysis (OFF). The default value is
+OFF.</p>
+</dd>
+<dt><strong>poissonDefinition</strong></dt><dd><p>A SymbolicConstant specifying whether to use the default value for the Poisson’s ratio.
+Possible values are:DEFAULT, specifying that the default value for the Poisson’s ratio
+is 0.5 in an Abaqus/Standard analysis and is obtained from the material definition in an
+Abaqus/Explicit analysis.VALUE, specifying that the Poisson’s ratio used in the analysis
+is the value provided in <em>poisson</em>.The default value is DEFAULT.</p>
+</dd>
+<dt><strong>poisson</strong></dt><dd><p>A Float specifying the Poisson’s ratio. Possible values are −1.0 ≤≤ <em>poisson</em> ≤≤ 0.5.
+This argument is valid only when <a href="#id49"><span class="problematic" id="id50">*</span></a>poissonDefinition*=VALUE. The default value is 0.5.</p>
+</dd>
+<dt><strong>integrationRule</strong></dt><dd><p>A SymbolicConstant specifying the shell section integration rule. Possible values are
+SIMPSON and GAUSS. The default value is SIMPSON.</p>
+</dd>
+<dt><strong>temperature</strong></dt><dd><p>A SymbolicConstant specifying the mode used for temperature and field variable input
+across the section thickness. Possible values are GRADIENT and POINTWISE. The default
+value is GRADIENT.</p>
+</dd>
+<dt><strong>idealization</strong></dt><dd><p>A SymbolicConstant specifying the mechanical idealization used for the section
+calculations. This member is only applicable when <em>preIntegrate</em> is set to ON. Possible
+values are NO_IDEALIZATION, SMEAR_ALL_LAYERS, MEMBRANE, and BENDING. The default value
+is NO_IDEALIZATION.</p>
+</dd>
+<dt><strong>nTemp</strong></dt><dd><p>None or an Int specifying the number of temperature points to be input. This argument is
+valid only when <a href="#id51"><span class="problematic" id="id52">*</span></a>temperature*=POINTWISE. The default value is None.</p>
+</dd>
+<dt><strong>thicknessModulus</strong></dt><dd><p>None or a Float specifying the effective thickness modulus. This argument is relevant
+only for continuum shells and must be used in conjunction with the argument <em>poisson</em>.
+The default value is None.</p>
+</dd>
+<dt><strong>useDensity</strong></dt><dd><p>A Boolean specifying whether or not to use the value of <em>density</em>. The default value is
+OFF.</p>
+</dd>
+<dt><strong>density</strong></dt><dd><p>A Float specifying the value of density to apply to this section. The default value is
+0.0.</p>
+</dd>
+<dt><strong>thicknessField</strong></dt><dd><p>A String specifying the name of the AnalyticalField or DiscreteField object used to
+define the thickness of the shell elements. The <em>thicknessField</em> argument applies only
+when <a href="#id53"><span class="problematic" id="id54">*</span></a>thicknessType*=ANALYTICAL_FIELD or <a href="#id55"><span class="problematic" id="id56">*</span></a>thicknessType*=DISCRETE_FIELD. The default
+value is an empty string.</p>
+</dd>
+<dt><strong>nodalThicknessField</strong></dt><dd><p>A String specifying the name of the AnalyticalField or DiscreteField object used to
+define the thickness of the shell elements at each node. The <em>nodalThicknessField</em>
+argument applies only when <a href="#id57"><span class="problematic" id="id58">*</span></a>thicknessType*=NODAL_ANALYTICAL_FIELD or
+<a href="#id59"><span class="problematic" id="id60">*</span></a>thicknessType*=NODAL_DISCRETE_FIELD. The default value is an empty string.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Property.CompositeLayup.CompositeLayup.HomogeneousShellSection" title="abaqus.Property.CompositeLayup.CompositeLayup.HomogeneousShellSection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HomogeneousShellSection</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="o">*</span><span class="n">name</span><span class="o">*</span><span class="p">]</span><span class="o">.</span><span class="n">CompositeLayup</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.CompositeLayup.CompositeLayup.deletePlies">
+<span class="sig-name descname"><span class="pre">deletePlies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.CompositeLayup.CompositeLayup.deletePlies" title="Permalink to this definition"></a></dt>
+<dd><p>This method deletes all of the plies from a composite layup.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.CompositeLayup.CompositeLayup.resume">
+<span class="sig-name descname"><span class="pre">resume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.CompositeLayup.CompositeLayup.resume" title="Permalink to this definition"></a></dt>
+<dd><p>This method resumes a composite layup that was previously suppressed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.CompositeLayup.CompositeLayup.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GLOBAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetValues</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SHELL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.CompositeLayup.CompositeLayup.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the CompositeLayup object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>description</strong></dt><dd><p>A String specifying a description of the composite layup.</p>
+</dd>
+<dt><strong>offsetType</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the shell offset. If 
+<em>offsetType*=OFFSET_FIELD the *offsetField</em> argument is required. This member is valid 
+only if <a href="#id61"><span class="problematic" id="id62">*</span></a>elementType*=SHELL. Possible values are SINGLE_VALUE, MIDDLE_SURFACE, 
+TOP_SURFACE, BOTTOM_SURFACE, OFFSET_FIELD, and GLOBAL. The default value is GLOBAL.</p>
+</dd>
+<dt><strong>offsetField</strong></dt><dd><p>A String specifying The name of the field specifying the offset. This member is valid 
+only if <a href="#id63"><span class="problematic" id="id64">*</span></a>elementType*=SHELL. The default value is an empty string.</p>
+</dd>
+<dt><strong>offsetValues</strong></dt><dd><p>A Float specifying The offset of the shell section. This member is valid only if 
+<a href="#id65"><span class="problematic" id="id66">*</span></a>elementType*=SHELL. The default value is 0.0.</p>
+</dd>
+<dt><strong>elementType</strong></dt><dd><p>A SymbolicConstant specifying the type of element in the composite layup. Possible 
+values are SHELL, CONTINUUM_SHELL, and SOLID. The default value is SHELL.</p>
+</dd>
+<dt><strong>symmetric</strong></dt><dd><p>A Boolean specifying whether or not the layup should be made symmetric by the analysis. 
+The default value is OFF.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.CompositeLayup.CompositeLayup.suppress">
+<span class="sig-name descname"><span class="pre">suppress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.CompositeLayup.CompositeLayup.suppress" title="Permalink to this definition"></a></dt>
+<dd><p>This method suppresses a composite layup.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="compositeply">
+<h3>CompositePly<a class="headerlink" href="#compositeply" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Property.CompositePly.CompositePly">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CompositePly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="part_assembly/region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">material</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plyName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientationType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientationValue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numIntPts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additionalRotationType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ROTATION_NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additionalRotationField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.CompositePly.CompositePly" title="Permalink to this definition"></a></dt>
+<dd><p>The CompositePly object defines the material layers in a composite layup.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">section</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">compositeLayups</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plies</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="compositeplyarray">
+<h3>CompositePlyArray<a class="headerlink" href="#compositeplyarray" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Property.CompositePlyArray.CompositePlyArray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CompositePlyArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.CompositePlyArray.CompositePlyArray" title="Permalink to this definition"></a></dt>
+<dd><p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>findAt</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="materialorientation">
+<h3>MaterialOrientation<a class="headerlink" href="#materialorientation" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Property.MaterialOrientation.MaterialOrientation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MaterialOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region:</span> <span class="pre">typing.Optional[abaqus.Region.Set.Set]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stackDirection:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'STACK_3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldName:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientationType:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'GLOBAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisDirection:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisDefinition:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'NORMAL_VECTOR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisRegion:</span> <span class="pre">typing.Optional[abaqus.Region.Surface.Surface]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisDatum:</span> <span class="pre">abaqus.Datum.DatumAxis.DatumAxis</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumAxis.DatumAxis</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flipNormalDirection:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisVector:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisDirection:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisDefinition:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'PRIMARY_VECTOR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisRegion:</span> <span class="pre">typing.Optional[abaqus.Region.Set.Set]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisDatum:</span> <span class="pre">abaqus.Datum.DatumAxis.DatumAxis</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumAxis.DatumAxis</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flipPrimaryDirection:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisVector:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.MaterialOrientation.MaterialOrientation" title="Permalink to this definition"></a></dt>
+<dd><p>The MaterialOrientation object represents the orientation of the material properties and
+composite layups.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">section</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">compositeLayups</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">orientation</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">materialOrientations</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="kn">import</span> <span class="nn">odbAccess</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">materialOrientations</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">materialOrientations</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">frames</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fieldOutputs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">materialOrientations</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>additionalRotationType: SymbolicConstant</strong></dt><dd><p>A SymbolicConstant specifying the method used to describe the additional rotation when a
+valid orientation is specified. Possible values are ROTATION_NONE, ROTATION_ANGLE, and
+ROTATION_FIELD. The default value is ROTATION_NONE.</p>
+</dd>
+<dt><strong>additionalRotationField: str</strong></dt><dd><p>A String specifying the name of the <a class="reference internal" href="field.html#abaqus.Field.DiscreteField.DiscreteField" title="abaqus.Field.DiscreteField.DiscreteField"><code class="xref py py-class docutils literal notranslate"><span class="pre">DiscreteField</span></code></a> object specifying the additional
+rotation. The default value is an empty string.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Property.MaterialOrientation.MaterialOrientation.ReferenceOrientation" title="abaqus.Property.MaterialOrientation.MaterialOrientation.ReferenceOrientation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ReferenceOrientation</span></code></a>([localCsys, axis, ...])</p></td>
+<td><p>This method creates a MaterialOrientation object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Property.MaterialOrientation.MaterialOrientation.setValues" title="abaqus.Property.MaterialOrientation.MaterialOrientation.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>()</p></td>
+<td><p>This method modifies the MaterialOrientation object.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.MaterialOrientation.MaterialOrientation.ReferenceOrientation">
+<span class="sig-name descname"><span class="pre">ReferenceOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">localCsys:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stackDirection:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'STACK_3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldName:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientationType:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'GLOBAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additionalRotationField:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additionalRotationType:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'ROTATION_NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisDirection:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisDefinition:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'VECTOR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisRegion:</span> <span class="pre">typing.Optional[abaqus.Region.Surface.Surface]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisDatum:</span> <span class="pre">abaqus.Datum.DatumAxis.DatumAxis</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumAxis.DatumAxis</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flipNormalDirection:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAxisVector:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisDirection:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisDefinition:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'VECTOR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisRegion:</span> <span class="pre">typing.Optional[abaqus.Region.Set.Set]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisDatum:</span> <span class="pre">abaqus.Datum.DatumAxis.DatumAxis</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumAxis.DatumAxis</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flipPrimaryDirection:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primaryAxisVector:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.MaterialOrientation.MaterialOrientation.ReferenceOrientation" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a MaterialOrientation object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>localCsys</strong></dt><dd><p>A DatumCsys object specifying the local coordinate system or None, describing the 
+material orientation for the given region. In the ODB, this member was previously 
+accessible using “csys,” but support has now been added for localCsys and the csys 
+member will be deprecated.</p>
+</dd>
+<dt><strong>axis</strong></dt><dd><p>A SymbolicConstant specifying the axis of a datum coordinate system about which an 
+additional rotation is applied. For shells this axis is also the shell normal. Possible 
+values are AXIS_1, AXIS_2, and AXIS_3. The default value is AXIS_1.</p>
+</dd>
+<dt><strong>angle</strong></dt><dd><p>A Float specifying the angle of the additional rotation (if accessed from the ODB 
+instead of the MDB, it will be a string instead of a float). The default value is 0.0.</p>
+</dd>
+<dt><strong>stackDirection</strong></dt><dd><p>A SymbolicConstant specifying the stack or thickness direction. Possible values are 
+STACK_1, STACK_2, STACK_3, and STACK_ORIENTATION. The default value is STACK_3.</p>
+</dd>
+<dt><strong>fieldName</strong></dt><dd><p>A String specifying the name of the DiscreteField object specifying the orientation. The 
+default value is an empty string.</p>
+</dd>
+<dt><strong>orientationType</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the material orientation. If 
+<em>orientationType*=SYSTEM, the *region</em> and <em>localCsys</em> arguments are required. If 
+<em>orientationType*=FIELD, the *fieldName</em> argument is required. Possible values are 
+GLOBAL, SYSTEM, FIELD, DISCRETE, and USER. The default value is GLOBAL.</p>
+</dd>
+<dt><strong>additionalRotationField</strong></dt><dd><p>A String specifying the name of the DiscreteField object specifying the additional 
+rotation. The default value is an empty string.</p>
+</dd>
+<dt><strong>additionalRotationType</strong></dt><dd><p>A SymbolicConstant specifying the method used to describe the additional rotation when a 
+valid orientation is specified. Possible values are ROTATION_NONE, ROTATION_ANGLE, and 
+ROTATION_FIELD. The default value is ROTATION_NONE.</p>
+</dd>
+<dt><strong>normalAxisDirection</strong></dt><dd><p>A SymbolicConstant specifying the axis that is defined by the normal axis direction for 
+a discrete orientation. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default 
+value is AXIS_3.</p>
+</dd>
+<dt><strong>normalAxisDefinition</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the normal axis direction for a 
+discrete orientation. Possible values are SURFACE, DATUM, and VECTOR. The default value 
+is VECTOR.</p>
+</dd>
+<dt><strong>normalAxisRegion</strong></dt><dd><p>A Surface object specifying a region whose geometric normals define the normal axis for 
+the discrete orientation.</p>
+</dd>
+<dt><strong>normalAxisDatum</strong></dt><dd><p>A DatumAxis object specifying the Datum Axis or None, describing the normal axis 
+direction for the discrete orientation.</p>
+</dd>
+<dt><strong>flipNormalDirection</strong></dt><dd><p>A Boolean specifying the flag to reverse the direction of the defined normal axis 
+direction. The default value is OFF.</p>
+</dd>
+<dt><strong>normalAxisVector</strong></dt><dd><p>A sequence of Floats specifying the vector that defines the direction of the normal axis 
+of the discrete orientation.</p>
+</dd>
+<dt><strong>primaryAxisDirection</strong></dt><dd><p>A SymbolicConstant specifying the axis that is defined by the primary axis direction for 
+a discrete orientation. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default 
+value is AXIS_1.</p>
+</dd>
+<dt><strong>primaryAxisDefinition</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the primary axis direction for a 
+discrete orientation. Possible values are EDGE, DATUM, and VECTOR. The default value is 
+VECTOR.</p>
+</dd>
+<dt><strong>primaryAxisRegion</strong></dt><dd><p>A Set object specifying a region whose geometric tangents define the primary axis for 
+the discrete orientation.</p>
+</dd>
+<dt><strong>primaryAxisDatum</strong></dt><dd><p>A DatumAxis object specifying the Datum Axis or None, describing the primary axis 
+direction for the discrete orientation.</p>
+</dd>
+<dt><strong>flipPrimaryDirection</strong></dt><dd><p>A Boolean specifying the flag to reverse the direction of the defined primary axis 
+direction. The default value is OFF.</p>
+</dd>
+<dt><strong>primaryAxisVector</strong></dt><dd><p>A sequence of Floats specifying the vector that defines the direction of the primary 
+axis of the discrete orientation.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Property.MaterialOrientation.MaterialOrientation" title="abaqus.Property.MaterialOrientation.MaterialOrientation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialOrientation</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="o">*</span><span class="n">name</span><span class="o">*</span><span class="p">]</span><span class="o">.</span><span class="n">MaterialOrientation</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.MaterialOrientation.MaterialOrientation.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.MaterialOrientation.MaterialOrientation.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the MaterialOrientation object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="materialorientationarray">
+<h3>MaterialOrientationArray<a class="headerlink" href="#materialorientationarray" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Property.MaterialOrientationArray.MaterialOrientationArray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MaterialOrientationArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.MaterialOrientationArray.MaterialOrientationArray" title="Permalink to this definition"></a></dt>
+<dd><p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>findAt</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="plystackplot">
+<h3>PlyStackPlot<a class="headerlink" href="#plystackplot" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Property.PlyStackPlot.PlyStackPlot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PlyStackPlot</span></span><a class="headerlink" href="#abaqus.Property.PlyStackPlot.PlyStackPlot" title="Permalink to this definition"></a></dt>
+<dd><p>The PlyStackPlot object is used to plot the stacking of plies in a composite layup or in
+a composite shell section.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">section</span>
+<span class="kn">import</span> <span class="nn">visualization</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="propertyassembly">
+<h3>PropertyAssembly<a class="headerlink" href="#propertyassembly" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Property.PropertyAssembly.PropertyAssembly">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PropertyAssembly</span></span><a class="headerlink" href="#abaqus.Property.PropertyAssembly.PropertyAssembly" title="Permalink to this definition"></a></dt>
+<dd><p>An Assembly object is a container for instances of parts. The Assembly object has no
+constructor command. Abaqus creates the <em>rootAssembly</em> member when a Model object is 
+created.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">assembly</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Property.PropertyAssembly.PropertyAssembly.SectionAssignment" title="abaqus.Property.PropertyAssembly.PropertyAssembly.SectionAssignment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SectionAssignment</span></code></a>(region, sectionName[, ...])</p></td>
+<td><p>This method creates a SectionAssignment object.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.PropertyAssembly.PropertyAssembly.SectionAssignment">
+<span class="sig-name descname"><span class="pre">SectionAssignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="part_assembly/region.html#abaqus.Region.Set.Set" title="abaqus.Region.Set.Set"><span class="pre">abaqus.Region.Set.Set</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectionName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessAssignment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FROM_SECTION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SINGLE_VALUE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.PropertyAssembly.PropertyAssembly.SectionAssignment" title="Permalink to this definition"></a></dt>
+<dd><p>This method creates a SectionAssignment object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>region</strong></dt><dd><p>A Set object specifying the region to which the section is assigned.</p>
+</dd>
+<dt><strong>sectionName</strong></dt><dd><p>A String specifying the name of the section.</p>
+</dd>
+<dt><strong>thicknessAssignment</strong></dt><dd><p>A SymbolicConstant specifying section thickness assignment method. Possible values are
+FROM_SECTION and FROM_GEOMETRY. The default value is FROM_SECTION.</p>
+</dd>
+<dt><strong>offset</strong></dt><dd><p>A Float specifying the offset of the shell section. The default value is 0.0.</p>
+</dd>
+<dt><strong>offsetType</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the shell offset. If
+<em>offsetType</em> is set to OFFSET_FIELD the <em>offsetField</em> must have a value. Possible values
+are SINGLE_VALUE, MIDDLE_SURFACE, TOP_SURFACE, BOTTOM_SURFACE, FROM_GEOMETRY, and
+OFFSET_FIELD. The default value is SINGLE_VALUE.</p>
+</dd>
+<dt><strong>offsetField</strong></dt><dd><p>A String specifying the name of the field specifying the offset. The default value is
+“”.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Property.PropertyAssembly.PropertyAssembly.SectionAssignment" title="abaqus.Property.PropertyAssembly.PropertyAssembly.SectionAssignment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SectionAssignment</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="o">*</span><span class="n">name</span><span class="o">*</span><span class="p">]</span><span class="o">.</span><span class="n">SectionAssignment</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">SectionAssignment</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="sectionassignment">
+<h3>SectionAssignment<a class="headerlink" href="#sectionassignment" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Property.SectionAssignment.SectionAssignment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SectionAssignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="part_assembly/region.html#abaqus.Region.Set.Set" title="abaqus.Region.Set.Set"><span class="pre">abaqus.Region.Set.Set</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectionName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thicknessAssignment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FROM_SECTION'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SINGLE_VALUE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsetField</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.SectionAssignment.SectionAssignment" title="Permalink to this definition"></a></dt>
+<dd><p>The SectionAssignment object is used to specify a section assignment on an assembly or
+part. Section assignments on the assembly are limited to connector elements only.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">section</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">sectionAssignments</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="kn">import</span> <span class="nn">assembly</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">sectionAssignments</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="kn">import</span> <span class="nn">odbAccess</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">sectionAssignments</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">sectionAssignments</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">sectionAssignments</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">frames</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fieldOutputs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">sectionAssignments</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>suppressed: Boolean</strong></dt><dd><p>A Boolean specifying whether the section assignment is suppressed or not. The default
+value is OFF.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Property.SectionAssignment.SectionAssignment.getVertices" title="abaqus.Property.SectionAssignment.SectionAssignment.getVertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVertices</span></code></a>()</p></td>
+<td><p>This method is only valid for connector section assignments.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Property.SectionAssignment.SectionAssignment.resume" title="abaqus.Property.SectionAssignment.SectionAssignment.resume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resume</span></code></a>()</p></td>
+<td><p>This method resumes the section assignment that was previously suppressed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Property.SectionAssignment.SectionAssignment.setValues" title="abaqus.Property.SectionAssignment.SectionAssignment.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>()</p></td>
+<td><p>This method modifies the SectionAssignment object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Property.SectionAssignment.SectionAssignment.suppress" title="abaqus.Property.SectionAssignment.SectionAssignment.suppress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">suppress</span></code></a>()</p></td>
+<td><p>This method suppresses the section assignment.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.SectionAssignment.SectionAssignment.getVertices">
+<span class="sig-name descname"><span class="pre">getVertices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.SectionAssignment.SectionAssignment.getVertices" title="Permalink to this definition"></a></dt>
+<dd><p>This method is only valid for connector section assignments. This method returns a
+sequence consisting of tuples of coordinates of the connector’s endpoints.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <span class="xref std std-term">python:sequence</span> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">tuples</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> floats.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">exception</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">is</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">thrown</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">if</span></code> <a class="reference internal" href="#abaqus.Property.SectionAssignment.SectionAssignment.getVertices" title="abaqus.Property.SectionAssignment.SectionAssignment.getVertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVertices</span></code></a>() <code class="xref py py-obj docutils literal notranslate"><span class="pre">is</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">called</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">on</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">any</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">section</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">assignment</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">except</span></code></dt><dd></dd>
+</dl>
+</li>
+</ul>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">connector</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">section</span></code> assignment.</dt><dd><p>This method is valid only for connector section assignments.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.SectionAssignment.SectionAssignment.resume">
+<span class="sig-name descname"><span class="pre">resume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.SectionAssignment.SectionAssignment.resume" title="Permalink to this definition"></a></dt>
+<dd><p>This method resumes the section assignment that was previously suppressed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.SectionAssignment.SectionAssignment.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.SectionAssignment.SectionAssignment.setValues" title="Permalink to this definition"></a></dt>
+<dd><p>This method modifies the SectionAssignment object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Property.SectionAssignment.SectionAssignment.suppress">
+<span class="sig-name descname"><span class="pre">suppress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.SectionAssignment.SectionAssignment.suppress" title="Permalink to this definition"></a></dt>
+<dd><p>This method suppresses the section assignment.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="sectionassignmentarray">
+<h3>SectionAssignmentArray<a class="headerlink" href="#sectionassignmentarray" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Property.SectionAssignmentArray.SectionAssignmentArray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SectionAssignmentArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Property.SectionAssignmentArray.SectionAssignmentArray" title="Permalink to this definition"></a></dt>
+<dd><p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>findAt</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="profile.html" class="btn btn-neutral float-left" title="Beam Section Profile" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="section.html" class="btn btn-neutral float-right" title="Section" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

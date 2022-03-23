@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header of the Python script &mdash; pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="canonical" href="https://pyabaqus.haiiliin.com/user/header.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Abaqus Model Database" href="mdb.html" />
+    <link rel="prev" title="User Manual" href="../user.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../user.html">User Manual</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Header of the Python script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdb.html">Abaqus Model Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session.html">Abaqus Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../user.html">User Manual</a> &raquo;</li>
+      <li>Header of the Python script</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/user/header.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="header-of-the-python-script">
+<h1>Header of the Python script<a class="headerlink" href="#header-of-the-python-script" title="Permalink to this headline"></a></h1>
+<p>Before you can access the Abaqus model and output database, you need to import some modules. In most cases, <cite>abaqus</cite>, <cite>abaqusConstants</cite>, and <cite>driverUtils</cite> are required:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">abaqus</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">abaqusConstants</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">driverUtils</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>In the module <cite>abaqus</cite>, two important objects are provided, <cite>mdb</cite> and <cite>session</cite>, which represent the Abaqus model database and a object controls the Abaqus options.</p>
+<ul class="simple">
+<li><p>The <cite>mdb</cite> object is the high-level Abaqus model database. A model database stores models and analysis controls. For more information about the <cite>mdb</cite> object, see <a class="reference internal" href="mdb.html"><span class="doc">mdb Summary</span></a> or <a class="reference internal" href="../reference/mdb.html"><span class="doc">mdb API Reference</span></a>.</p></li>
+<li><p>The <cite>odb</cite> object is the in-memory representation of an output database (ODB) file. For more information about the <cite>odb</cite> object, see <a class="reference internal" href="odb.html"><span class="doc">odb Summary</span></a> or <a class="reference internal" href="../reference/odb.html"><span class="doc">odb API Reference</span></a>.</p></li>
+<li><p>The <cite>session</cite> object has no constructor. Abaqus creates the session member when a session is started. For more information about the <cite>session</cite> object, see <a class="reference internal" href="session.html"><span class="doc">session Summary</span></a> or <a class="reference internal" href="../reference/session.html"><span class="doc">session API Reference</span></a>.</p></li>
+</ul>
+<p>In the module <cite>abaqusConstants</cite>, all the constant strings used in the Abaqus modeling are provided such as <cite>THREE_D</cite> (which specifies a 3-D model), for more constant strings, please refer to the API reference.</p>
+<p>In the module <cite>driverUtils</cite>, an important function <cite>executeOnCaeStartup</cite> is implemented, this function will be execute each time we open the Abaqus, so we need to call this function in our Python script.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">executeOnCaeStartup</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Other modules like <cite>field</cite>, <cite>material</cite>, <cite>mesh</cite> can be imported whenever required.</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../user.html" class="btn btn-neutral float-left" title="User Manual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mdb.html" class="btn btn-neutral float-right" title="Abaqus Model Database" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

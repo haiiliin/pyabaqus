@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adaptivity &mdash; pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="canonical" href="https://pyabaqus.haiiliin.com/user/mdb/model/adaptivity.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Amplitude" href="amplitude.html" />
+    <link rel="prev" title="Abaqus Model" href="../model.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../user.html">User Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../header.html">Header of the Python script</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../mdb.html">Abaqus Model Database</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../model.html">Abaqus Model</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../model.html#create-models">Create models</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../model.html#model">Model</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Adaptivity</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#create-adaptivity-mesh-control-features">Create adaptivity mesh control features</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#create-adaptivity-mesh-state-features">Create adaptivity mesh state features</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="amplitude.html">Amplitude</a></li>
+<li class="toctree-l5"><a class="reference internal" href="assembly.html">Assembly</a></li>
+<li class="toctree-l5"><a class="reference internal" href="bc.html">Boundary Condition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="calibration.html">Calibration of Material</a></li>
+<li class="toctree-l5"><a class="reference internal" href="constraint.html">Constraint</a></li>
+<li class="toctree-l5"><a class="reference internal" href="field.html">Field</a></li>
+<li class="toctree-l5"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l5"><a class="reference internal" href="interaction.html">Interaction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="load.html">Load</a></li>
+<li class="toctree-l5"><a class="reference internal" href="material.html">Material</a></li>
+<li class="toctree-l5"><a class="reference internal" href="optimization.html">Optimization</a></li>
+<li class="toctree-l5"><a class="reference internal" href="output.html">Output Request</a></li>
+<li class="toctree-l5"><a class="reference internal" href="part.html">Part</a></li>
+<li class="toctree-l5"><a class="reference internal" href="predefined.html">Predefined Field</a></li>
+<li class="toctree-l5"><a class="reference internal" href="profile.html">Beam Section Profile</a></li>
+<li class="toctree-l5"><a class="reference internal" href="property.html">Property</a></li>
+<li class="toctree-l5"><a class="reference internal" href="section.html">Section</a></li>
+<li class="toctree-l5"><a class="reference internal" href="sketcher.html">Sketcher</a></li>
+<li class="toctree-l5"><a class="reference internal" href="step.html">Step</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../job.html">Abaqus Job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../session.html">Abaqus Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../user.html">User Manual</a> &raquo;</li>
+          <li><a href="../../mdb.html">Abaqus Model Database</a> &raquo;</li>
+          <li><a href="../model.html">Abaqus Model</a> &raquo;</li>
+      <li>Adaptivity</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/user/mdb/model/adaptivity.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="adaptivity">
+<h1>Adaptivity<a class="headerlink" href="#adaptivity" title="Permalink to this headline"></a></h1>
+<p>The Adaptivity commands are used to define objects, perform analyses, and calculate new meshes for Arbitrary Lagrangian Eularian (ALE) adaptive smoothing (adaptive meshing) and varying topology adaptivity (adaptive remeshing).</p>
+<div class="section" id="create-adaptivity-mesh-control-features">
+<h2>Create adaptivity mesh control features<a class="headerlink" href="#create-adaptivity-mesh-control-features" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AdaptivityModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Abaqus creates a Model object named <cite>Model-1</cite> when a session is started.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.AdaptiveMeshConstraint" title="abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.AdaptiveMeshConstraint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AdaptiveMeshConstraint</span></code></a>([name, category, ...])</p></td>
+<td><p>The AdaptiveMeshConstraint object is the abstract base type for other Arbitrary Lagrangian Eularian (ALE) style AdaptiveMeshConstraint objects.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.AdaptiveMeshControl" title="abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.AdaptiveMeshControl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AdaptiveMeshControl</span></code></a>(name[, remapping, ...])</p></td>
+<td><p>This method creates an AdaptiveMeshControl object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.DisplacementAdaptiveMeshConstraint" title="abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.DisplacementAdaptiveMeshConstraint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DisplacementAdaptiveMeshConstraint</span></code></a>(name, ...)</p></td>
+<td><p>This method creates a DisplacementAdaptiveMeshConstraint object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.RemeshingRule" title="abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.RemeshingRule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RemeshingRule</span></code></a>(name, stepName, variables[, ...])</p></td>
+<td><p>This method creates a RemeshingRule object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.VelocityAdaptiveMeshConstraint" title="abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.VelocityAdaptiveMeshConstraint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VelocityAdaptiveMeshConstraint</span></code></a>(name, ...[, ...])</p></td>
+<td><p>This method creates a VelocityAdaptiveMeshConstraint object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">adaptiveRemesh</span></code>(odb)</p></td>
+<td><p>This method remeshes the model using the active remesh rules in the model and the error indicator results from a previous analysis.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="create-adaptivity-mesh-state-features">
+<h2>Create adaptivity mesh state features<a class="headerlink" href="#create-adaptivity-mesh-state-features" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AdaptivityStep</span></span></dt>
+<dd><p>The Step object stores the parameters that determine the context of the step. The Step
+object is the abstract base type for other Step objects. The Step object has no explicit 
+constructor. The methods and members of the Step object are common to all objects 
+derived from the Step.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">step</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.AdaptiveMeshConstraintState" title="abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.AdaptiveMeshConstraintState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AdaptiveMeshConstraintState</span></code></a>([...])</p></td>
+<td><p>The AdaptiveMeshConstraintState object is the abstract base type for other Arbitrary Lagrangian Eularian (ALE) style AdaptiveMeshConstraintState objects.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.AdaptiveMeshDomain" title="abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.AdaptiveMeshDomain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AdaptiveMeshDomain</span></code></a>(region[, controls, ...])</p></td>
+<td><p>The AdaptiveMeshDomain object defines the region and controls that govern an Arbitrary Lagrangian Eularian (ALE) style adaptive smoothing mesh domain.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.DisplacementAdaptiveMeshConstraintState" title="abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.DisplacementAdaptiveMeshConstraintState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DisplacementAdaptiveMeshConstraintState</span></code></a>([...])</p></td>
+<td><p>The DisplacementAdaptiveMeshConstraintState object stores the propagating data for an Arbitrary Lagrangian Eularian (ALE) style displacement/rotation adaptive mesh constraint in a step.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.VelocityAdaptiveMeshConstraintState" title="abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.VelocityAdaptiveMeshConstraintState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VelocityAdaptiveMeshConstraintState</span></code></a>([v1, ...])</p></td>
+<td><p>The VelocityAdaptiveMeshConstraintState object stores the propagating data for an Arbitrary Lagrangian Eularian (ALE) style velocity adaptive mesh constraint in a step.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../model.html" class="btn btn-neutral float-left" title="Abaqus Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="amplitude.html" class="btn btn-neutral float-right" title="Amplitude" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

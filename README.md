@@ -1,9 +1,3 @@
-# pyabaqus
- Type hints for Abaqus/Python scripting
+#GitHub Pages
 
-## Other links
-
-- Abaqus Executor: [Haiiliin/pyabaqus-executor: Abaqus Executor](https://github.com/Haiiliin/pyabaqus-executor)
-- GitHub repository: [Haiiliin/pyabaqus: Type hints for python scripting of Abaqus](https://github.com/Haiiliin/pyabaqus)
-- PyPI: [pyabaqus · PyPI](https://pypi.org/project/pyabaqus/)
-- Documentation: [Welcome to pyabaqus’s documentation! — pyabaqus documentation](https://haiiliin.com/pyabaqus/)
+Last update of sphinx html documentation from [884b7dc](https://github.com/Haiiliin/pyabaqus/tree/884b7dc63508bf231a901e09dafa88e8f500dd61)

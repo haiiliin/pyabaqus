@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Kernel &mdash; pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/kernel/kernel.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Messaging" href="messaging.html" />
+    <link rel="prev" title="Input File Parser" href="input.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user.html">User Manual</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../references.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mdb.html">Abaqus Model Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../session.html">Abaqus Session</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../kernel.html">Kernel</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cae_display_preferences.html">Abaqus CAE Display Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input.html">Input File Parser</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Custom Kernel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#object-features">Object features</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#commandregister">CommandRegister</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#registereddictionary">RegisteredDictionary</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#registeredlist">RegisteredList</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#registeredtuple">RegisteredTuple</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#repositorysupport">RepositorySupport</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="messaging.html">Messaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="table_collection.html">Table Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text_representation.html">Text Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utility.html">Utility and View</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../references.html">API Reference</a> &raquo;</li>
+          <li><a href="../kernel.html">Kernel</a> &raquo;</li>
+      <li>Custom Kernel</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/reference/kernel/kernel.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="custom-kernel">
+<h1>Custom Kernel<a class="headerlink" href="#custom-kernel" title="Permalink to this headline"></a></h1>
+<p>The customKernel module augments the mdb, odb, and session objects with an object called customData. The customData object can contain custom data that you created using standard Python objects; for example, dictionaries, strings, numbers, and classes. In addition, the customData object can contain objects that you created using the classes described in this section.</p>
+<p>All objects that you create under the mdb.customData and odb[odbName].customData object will be stored in the Abaqus/CAE model and output database, respectively, when you save the database; all objects that you create under the session.customData object will be lost when you exit Abaqus/CAE.</p>
+<p>The customData object is an instance of the RepositorySupport class; for more information, see RepositorySupport. The classes described in this section register with the GUI infrastructure when you create the class. As a result, if you write a custom GUI script, you can query these objects from the GUI, and you can also be notified when the contents of these objects change so you can update the GUI accordingly. For more information, see Extending the Abaqus Scripting Interface and Accessing kernel data from the GUI.</p>
+<div class="section" id="object-features">
+<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline"></a></h2>
+<div class="section" id="commandregister">
+<h3>CommandRegister<a class="headerlink" href="#commandregister" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.CustomKernel.CommandRegister.CommandRegister">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CommandRegister</span></span><a class="headerlink" href="#abaqus.CustomKernel.CommandRegister.CommandRegister" title="Permalink to this definition"></a></dt>
+<dd><p>This class allows you to derive a general class that can be queried from the GUI and is
+capable of notifying the GUI when the contents of the class change.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">customKernel</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="registereddictionary">
+<h3>RegisteredDictionary<a class="headerlink" href="#registereddictionary" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredDictionary.RegisteredDictionary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RegisteredDictionary</span></span><a class="headerlink" href="#abaqus.CustomKernel.RegisteredDictionary.RegisteredDictionary" title="Permalink to this definition"></a></dt>
+<dd><p>This class allows you to create a dictionary that can be queried from the GUI and is
+capable of notifying the GUI when the contents of the dictionary change. The keys to a 
+RegisteredDictionary must be either strings or integers. 
+The RegisteredDictionary object is derived from the CommandRegister object.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">customKernel</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.CustomKernel.RegisteredDictionary.RegisteredDictionary.Methods" title="abaqus.CustomKernel.RegisteredDictionary.RegisteredDictionary.Methods"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Methods</span></code></a>()</p></td>
+<td><p>The RegisteredDictionary object supports the same methods as a Python dictionary.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.CustomKernel.RegisteredDictionary.RegisteredDictionary.changeKey" title="abaqus.CustomKernel.RegisteredDictionary.RegisteredDictionary.changeKey"><code class="xref py py-obj docutils literal notranslate"><span class="pre">changeKey</span></code></a>(fromName, toName)</p></td>
+<td><p>This method changes the name of a key in the dictionary.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredDictionary.RegisteredDictionary.Methods">
+<span class="sig-name descname"><span class="pre">Methods</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.CustomKernel.RegisteredDictionary.RegisteredDictionary.Methods" title="Permalink to this definition"></a></dt>
+<dd><p>The RegisteredDictionary object supports the same methods as a Python dictionary. In
+addition, the RegisteredDictionary object supports the changeKey method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredDictionary.RegisteredDictionary.changeKey">
+<span class="sig-name descname"><span class="pre">changeKey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fromName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.CustomKernel.RegisteredDictionary.RegisteredDictionary.changeKey" title="Permalink to this definition"></a></dt>
+<dd><p>This method changes the name of a key in the dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fromName</strong></dt><dd><p>A String or an integer specifying the name of the key to be changed.</p>
+</dd>
+<dt><strong>toName</strong></dt><dd><p>A String or an integer specifying the new name for the key.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="registeredlist">
+<h3>RegisteredList<a class="headerlink" href="#registeredlist" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredList.RegisteredList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RegisteredList</span></span><a class="headerlink" href="#abaqus.CustomKernel.RegisteredList.RegisteredList" title="Permalink to this definition"></a></dt>
+<dd><p>This class allows you to create a list that can be queried from the GUI and is capable
+of notifying the GUI when the contents of the list change. 
+The RegisteredList object is derived from the CommandRegister object.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">customKernel</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.CustomKernel.RegisteredList.RegisteredList.Methods" title="abaqus.CustomKernel.RegisteredList.RegisteredList.Methods"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Methods</span></code></a>()</p></td>
+<td><p>The RegisteredList object supports the same methods as a standard Python list object.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredList.RegisteredList.Methods">
+<span class="sig-name descname"><span class="pre">Methods</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.CustomKernel.RegisteredList.RegisteredList.Methods" title="Permalink to this definition"></a></dt>
+<dd><p>The RegisteredList object supports the same methods as a standard Python list object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="registeredtuple">
+<h3>RegisteredTuple<a class="headerlink" href="#registeredtuple" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredTuple.RegisteredTuple">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RegisteredTuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.CustomKernel.RegisteredTuple.RegisteredTuple" title="Permalink to this definition"></a></dt>
+<dd><p>This class allows you to create a tuple that can be queried from the GUI and is capable
+of notifying the GUI when the contents of any of the tuple’s members change. 
+The RegisteredTuple object is derived from the CommandRegister object.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">customKernel</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.CustomKernel.RegisteredTuple.RegisteredTuple.Methods" title="abaqus.CustomKernel.RegisteredTuple.RegisteredTuple.Methods"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Methods</span></code></a>()</p></td>
+<td><p>The RegisteredTuple object supports the same methods as a standard Python list object.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredTuple.RegisteredTuple.Methods">
+<span class="sig-name descname"><span class="pre">Methods</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.CustomKernel.RegisteredTuple.RegisteredTuple.Methods" title="Permalink to this definition"></a></dt>
+<dd><p>The RegisteredTuple object supports the same methods as a standard Python list object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="repositorysupport">
+<h3>RepositorySupport<a class="headerlink" href="#repositorysupport" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.CustomKernel.RepositorySupport.RepositorySupport">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RepositorySupport</span></span><a class="headerlink" href="#abaqus.CustomKernel.RepositorySupport.RepositorySupport" title="Permalink to this definition"></a></dt>
+<dd><p>The RepositorySupport is a base class from which you can derive your own classes that
+are designed to contain custom repositories. Instances of this class can be queried from 
+the GUI and are capable of notifying the GUI when the contents of the instance change. 
+The RepositorySupport object is derived from the CommandRegister object.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">customKernel</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">customData</span>
+<span class="n">session</span><span class="o">.</span><span class="n">customData</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">customData</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.CustomKernel.RepositorySupport.RepositorySupport.Repository" title="abaqus.CustomKernel.RepositorySupport.RepositorySupport.Repository"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Repository</span></code></a>(name, constructors)</p></td>
+<td><p>This method installs a repository on the class.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.CustomKernel.RepositorySupport.RepositorySupport.Repository">
+<span class="sig-name descname"><span class="pre">Repository</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constructors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.CustomKernel.RepositorySupport.RepositorySupport.Repository" title="Permalink to this definition"></a></dt>
+<dd><p>This method installs a repository on the class. The repository is an instance of a
+RegisteredDictionary class. Refer to RegisteredDictionary for details on its methods.
+The objects stored in the repository are assumed to have an attribute called <em>name</em> that
+stores the key used to access the object in the repository. The name attribute will be
+modified by the changeKey method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the name of the repository.</p>
+</dd>
+<dt><strong>constructors</strong></dt><dd><p>A constructor or sequence of constructors specifying which classes will store their 
+instances in the repository.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="input.html" class="btn btn-neutral float-left" title="Input File Parser" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="messaging.html" class="btn btn-neutral float-right" title="Messaging" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

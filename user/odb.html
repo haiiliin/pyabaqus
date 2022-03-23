@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abaqus Output Database &mdash; pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="canonical" href="https://pyabaqus.haiiliin.com/user/odb.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Abaqus Session" href="session.html" />
+    <link rel="prev" title="Abaqus Job" href="mdb/job.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../user.html">User Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="header.html">Header of the Python script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdb.html">Abaqus Model Database</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session.html">Abaqus Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../user.html">User Manual</a> &raquo;</li>
+      <li>Abaqus Output Database</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/user/odb.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="abaqus-output-database">
+<h1>Abaqus Output Database<a class="headerlink" href="#abaqus-output-database" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Odb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analysisTitle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>The Odb object is the in-memory representation of an output database (ODB) file.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">odbAccess</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>isReadOnly: Boolean</strong></dt><dd><p>A Boolean specifying whether the output database was opened with read-only access.</p>
+</dd>
+<dt><strong>amplitudes: dict[str, Amplitude]</strong></dt><dd><p>A repository of <a class="reference internal" href="../reference/mdb/model/amplitude.html#abaqus.Amplitude.Amplitude.Amplitude" title="abaqus.Amplitude.Amplitude.Amplitude"><code class="xref py py-class docutils literal notranslate"><span class="pre">Amplitude</span></code></a> objects.</p>
+</dd>
+<dt><strong>filters: dict[str, Filter]</strong></dt><dd><p>A repository of <a class="reference internal" href="../reference/mdb/model/filter.html#abaqus.Filter.Filter.Filter" title="abaqus.Filter.Filter.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Filter</span></code></a> objects.</p>
+</dd>
+<dt><strong>rootAssembly: OdbAssembly</strong></dt><dd><p>An <a class="reference internal" href="../reference/odb.html#abaqus.Odb.OdbAssembly.OdbAssembly" title="abaqus.Odb.OdbAssembly.OdbAssembly"><code class="xref py py-class docutils literal notranslate"><span class="pre">OdbAssembly</span></code></a> object.</p>
+</dd>
+<dt><strong>jobData: JobData</strong></dt><dd><p>A <a class="reference internal" href="../reference/odb.html#abaqus.Odb.JobData.JobData" title="abaqus.Odb.JobData.JobData"><code class="xref py py-class docutils literal notranslate"><span class="pre">JobData</span></code></a> object.</p>
+</dd>
+<dt><strong>parts: dict[str, OdbPart]</strong></dt><dd><p>A repository of <a class="reference internal" href="../reference/odb.html#abaqus.Odb.OdbPart.OdbPart" title="abaqus.Odb.OdbPart.OdbPart"><code class="xref py py-class docutils literal notranslate"><span class="pre">OdbPart</span></code></a> objects.</p>
+</dd>
+<dt><strong>materials: dict[str, Material]</strong></dt><dd><p>A repository of <a class="reference internal" href="../reference/mdb/model/material.html#abaqus.Material.Material.Material" title="abaqus.Material.Material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">Material</span></code></a> objects.</p>
+</dd>
+<dt><strong>steps: dict[str, OdbStep]</strong></dt><dd><p>A repository of <a class="reference internal" href="../reference/odb.html#abaqus.Odb.OdbStep.OdbStep" title="abaqus.Odb.OdbStep.OdbStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">OdbStep</span></code></a> objects.</p>
+</dd>
+<dt><strong>sections: dict[str, Section]</strong></dt><dd><p>A repository of <a class="reference internal" href="../reference/mdb/model/section.html#abaqus.Section.Section.Section" title="abaqus.Section.Section.Section"><code class="xref py py-class docutils literal notranslate"><span class="pre">Section</span></code></a> objects.</p>
+</dd>
+<dt><strong>sectionCategories: dict[str, SectionCategory]</strong></dt><dd><p>A repository of <a class="reference internal" href="../reference/odb.html#abaqus.Odb.SectionCategory.SectionCategory" title="abaqus.Odb.SectionCategory.SectionCategory"><code class="xref py py-class docutils literal notranslate"><span class="pre">SectionCategory</span></code></a> objects.</p>
+</dd>
+<dt><strong>sectorDefinition: SectorDefinition</strong></dt><dd><p>A <a class="reference internal" href="../reference/odb.html#abaqus.Odb.SectorDefinition.SectorDefinition" title="abaqus.Odb.SectorDefinition.SectorDefinition"><code class="xref py py-class docutils literal notranslate"><span class="pre">SectorDefinition</span></code></a> object.</p>
+</dd>
+<dt><strong>userData: UserData</strong></dt><dd><p>A <a class="reference internal" href="../reference/odb.html#abaqus.Odb.UserData.UserData" title="abaqus.Odb.UserData.UserData"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserData</span></code></a> object.</p>
+</dd>
+<dt><strong>customData: RepositorySupport</strong></dt><dd><p>A <a class="reference internal" href="../reference/kernel/kernel.html#abaqus.CustomKernel.RepositorySupport.RepositorySupport" title="abaqus.CustomKernel.RepositorySupport.RepositorySupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">RepositorySupport</span></code></a> object.</p>
+</dd>
+<dt><strong>profiles: dict[str, Profile]</strong></dt><dd><p>A repository of <a class="reference internal" href="../reference/mdb/model/profile.html#abaqus.BeamSectionProfile.Profile.Profile" title="abaqus.BeamSectionProfile.Profile.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">Profile</span></code></a> objects.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../reference/odb.html#abaqus.Odb.Odb.Odb.Part" title="abaqus.Odb.Odb.Odb.Part"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Part</span></code></a>(name, embeddedSpace, type)</p></td>
+<td><p>This method creates an OdbPart object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../reference/odb.html#abaqus.Odb.Odb.Odb.SectionCategory" title="abaqus.Odb.Odb.Odb.SectionCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SectionCategory</span></code></a>(name, description)</p></td>
+<td><p>This method creates a SectionCategory object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../reference/odb.html#abaqus.Odb.Odb.Odb.Step" title="abaqus.Odb.Odb.Odb.Step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Step</span></code></a>(name, description, domain[, ...])</p></td>
+<td><p>This method creates an OdbStep object.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mdb/job.html" class="btn btn-neutral float-left" title="Abaqus Job" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="session.html" class="btn btn-neutral float-right" title="Abaqus Session" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

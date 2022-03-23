@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Step &mdash; pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="canonical" href="https://pyabaqus.haiiliin.com/user/mdb/model/step.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Step Miscellaneous" href="step/step_miscellaneous.html" />
+    <link rel="prev" title="Sketcher" href="sketcher.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> pyabaqus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../user.html">User Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../header.html">Header of the Python script</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../mdb.html">Abaqus Model Database</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../model.html">Abaqus Model</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../model.html#create-models">Create models</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../model.html#model">Model</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="amplitude.html">Amplitude</a></li>
+<li class="toctree-l5"><a class="reference internal" href="assembly.html">Assembly</a></li>
+<li class="toctree-l5"><a class="reference internal" href="bc.html">Boundary Condition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="calibration.html">Calibration of Material</a></li>
+<li class="toctree-l5"><a class="reference internal" href="constraint.html">Constraint</a></li>
+<li class="toctree-l5"><a class="reference internal" href="field.html">Field</a></li>
+<li class="toctree-l5"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l5"><a class="reference internal" href="interaction.html">Interaction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="load.html">Load</a></li>
+<li class="toctree-l5"><a class="reference internal" href="material.html">Material</a></li>
+<li class="toctree-l5"><a class="reference internal" href="optimization.html">Optimization</a></li>
+<li class="toctree-l5"><a class="reference internal" href="output.html">Output Request</a></li>
+<li class="toctree-l5"><a class="reference internal" href="part.html">Part</a></li>
+<li class="toctree-l5"><a class="reference internal" href="predefined.html">Predefined Field</a></li>
+<li class="toctree-l5"><a class="reference internal" href="profile.html">Beam Section Profile</a></li>
+<li class="toctree-l5"><a class="reference internal" href="property.html">Property</a></li>
+<li class="toctree-l5"><a class="reference internal" href="section.html">Section</a></li>
+<li class="toctree-l5"><a class="reference internal" href="sketcher.html">Sketcher</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Step</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="step/step_miscellaneous.html">Step Miscellaneous</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#create-steps">Create steps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../job.html">Abaqus Job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../session.html">Abaqus Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyabaqus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../user.html">User Manual</a> &raquo;</li>
+          <li><a href="../../mdb.html">Abaqus Model Database</a> &raquo;</li>
+          <li><a href="../model.html">Abaqus Model</a> &raquo;</li>
+      <li>Step</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/user/mdb/model/step.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="step">
+<h1>Step<a class="headerlink" href="#step" title="Permalink to this headline"></a></h1>
+<p>The Step commands described in this chapter are used to create and configure analysis steps. Step commands (output) describes the commands used to create and configure output requests and integrated output sections and the commands to configure diagnostic printing, monitoring, and restart. Step commands (miscellaneous) describes the commands used to configure controls, damping, and frequency tables.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Objects in Step</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</div>
+<div class="section" id="create-steps">
+<h2>Create steps<a class="headerlink" href="#create-steps" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StepModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Abaqus creates a Model object named <cite>Model-1</cite> when a session is started.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.AnnealStep" title="abaqus.Step.StepModel.StepModel.AnnealStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnnealStep</span></code></a>(name, previous[, description, ...])</p></td>
+<td><p>This method creates an AnnealStep object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.BuckleStep" title="abaqus.Step.StepModel.StepModel.BuckleStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BuckleStep</span></code></a>(name, previous, numEigen[, ...])</p></td>
+<td><p>This method creates a BuckleStep object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.ComplexFrequencyStep" title="abaqus.Step.StepModel.StepModel.ComplexFrequencyStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplexFrequencyStep</span></code></a>(name, previous[, ...])</p></td>
+<td><p>This method creates a ComplexFrequencyStep object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.CoupledTempDisplacementStep" title="abaqus.Step.StepModel.StepModel.CoupledTempDisplacementStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoupledTempDisplacementStep</span></code></a>(name, previous)</p></td>
+<td><p>This method creates a CoupledTempDisplacementStep object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.CoupledThermalElectricStep" title="abaqus.Step.StepModel.StepModel.CoupledThermalElectricStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoupledThermalElectricStep</span></code></a>(name, previous[, ...])</p></td>
+<td><p>This method creates a CoupledThermalElectricStep object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.CoupledThermalElectricalStructuralStep" title="abaqus.Step.StepModel.StepModel.CoupledThermalElectricalStructuralStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoupledThermalElectricalStructuralStep</span></code></a>(name, ...)</p></td>
+<td><p>This method creates a CoupledThermalElectricalStructuralStep object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.DirectCyclicStep" title="abaqus.Step.StepModel.StepModel.DirectCyclicStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DirectCyclicStep</span></code></a>(name, previous[, ...])</p></td>
+<td><p>This method creates a DirectCyclicStep object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.EmagTimeHarmonicStep" title="abaqus.Step.StepModel.StepModel.EmagTimeHarmonicStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EmagTimeHarmonicStep</span></code></a>(name, previous, ...[, ...])</p></td>
+<td><p>This method creates a EmagTimeHarmonicStep object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.ExplicitDynamicsStep" title="abaqus.Step.StepModel.StepModel.ExplicitDynamicsStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamicsStep</span></code></a>(name, previous[, ...])</p></td>
+<td><p>This method creates an ExplicitDynamicsStep object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.FrequencyStep" title="abaqus.Step.StepModel.StepModel.FrequencyStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FrequencyStep</span></code></a>(name, previous, eigensolver[, ...])</p></td>
+<td><p>This method creates a FrequencyStep object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.GeostaticStep" title="abaqus.Step.StepModel.StepModel.GeostaticStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeostaticStep</span></code></a>(name, previous[, description, ...])</p></td>
+<td><p>This method creates a GeostaticStep object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.HeatTransferStep" title="abaqus.Step.StepModel.StepModel.HeatTransferStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HeatTransferStep</span></code></a>(name, previous[, ...])</p></td>
+<td><p>This method creates a HeatTransferStep object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.ImplicitDynamicsStep" title="abaqus.Step.StepModel.StepModel.ImplicitDynamicsStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImplicitDynamicsStep</span></code></a>(name, previous[, ...])</p></td>
+<td><p>This method creates an ImplicitDynamicsStep object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.MassDiffusionStep" title="abaqus.Step.StepModel.StepModel.MassDiffusionStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MassDiffusionStep</span></code></a>(name, previous[, ...])</p></td>
+<td><p>This method creates a MassDiffusionStep object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.ModalDynamicsStep" title="abaqus.Step.StepModel.StepModel.ModalDynamicsStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModalDynamicsStep</span></code></a>(name, previous[, ...])</p></td>
+<td><p>This method creates a ModalDynamicsStep object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.RandomResponseStep" title="abaqus.Step.StepModel.StepModel.RandomResponseStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RandomResponseStep</span></code></a>(name, previous, freq[, ...])</p></td>
+<td><p>This method creates a RandomResponseStep object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.ResponseSpectrumStep" title="abaqus.Step.StepModel.StepModel.ResponseSpectrumStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ResponseSpectrumStep</span></code></a>(name, previous, components)</p></td>
+<td><p>This method creates a ResponseSpectrumStep object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.SoilsStep" title="abaqus.Step.StepModel.StepModel.SoilsStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SoilsStep</span></code></a>(name, previous[, description, ...])</p></td>
+<td><p>This method creates a SoilsStep object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.StaticLinearPerturbationStep" title="abaqus.Step.StepModel.StepModel.StaticLinearPerturbationStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StaticLinearPerturbationStep</span></code></a>(name, previous)</p></td>
+<td><p>This method creates a StaticLinearPerturbationStep object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.StaticRiksStep" title="abaqus.Step.StepModel.StepModel.StaticRiksStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StaticRiksStep</span></code></a>(name, previous[, ...])</p></td>
+<td><p>This method creates a StaticRiksStep object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.StaticStep" title="abaqus.Step.StepModel.StepModel.StaticStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StaticStep</span></code></a>(name, previous[, description, ...])</p></td>
+<td><p>This method creates a StaticStep object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.SteadyStateDirectStep" title="abaqus.Step.StepModel.StepModel.SteadyStateDirectStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SteadyStateDirectStep</span></code></a>(name, previous, ...[, ...])</p></td>
+<td><p>This method creates a SteadyStateDirectStep object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.SteadyStateModalStep" title="abaqus.Step.StepModel.StepModel.SteadyStateModalStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SteadyStateModalStep</span></code></a>(name, previous, ...[, ...])</p></td>
+<td><p>This method creates a SteadyStateModalStep object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.SteadyStateSubspaceStep" title="abaqus.Step.StepModel.StepModel.SteadyStateSubspaceStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SteadyStateSubspaceStep</span></code></a>(name, previous, ...)</p></td>
+<td><p>This method creates a SteadyStateSubspaceStep object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.SubspaceDynamicsStep" title="abaqus.Step.StepModel.StepModel.SubspaceDynamicsStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SubspaceDynamicsStep</span></code></a>(name, previous[, ...])</p></td>
+<td><p>This method creates a SubspaceDynamicsStep object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.SubstructureGenerateStep" title="abaqus.Step.StepModel.StepModel.SubstructureGenerateStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SubstructureGenerateStep</span></code></a>(name, previous, ...)</p></td>
+<td><p>This method creates a SubstructureGenerateStep object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.TempDisplacementDynamicsStep" title="abaqus.Step.StepModel.StepModel.TempDisplacementDynamicsStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TempDisplacementDynamicsStep</span></code></a>(name, previous)</p></td>
+<td><p>This method creates a TempDisplacementDynamicsStep object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../reference/mdb/model/step.html#abaqus.Step.StepModel.StepModel.ViscoStep" title="abaqus.Step.StepModel.StepModel.ViscoStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ViscoStep</span></code></a>(name, previous[, description, ...])</p></td>
+<td><p>This method creates a ViscoStep object.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sketcher.html" class="btn btn-neutral float-left" title="Sketcher" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step/step_miscellaneous.html" class="btn btn-neutral float-right" title="Step Miscellaneous" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

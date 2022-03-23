@@ -1,4 +1,0 @@
-
-
-class Canvas:
-    pass
