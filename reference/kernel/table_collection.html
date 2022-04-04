@@ -1,78 +1,264 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Table Collection &mdash; pyabaqus 1.0.13 documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-    <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/kernel/table_collection.html" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Text Representation" href="text_representation.html" />
-    <link rel="prev" title="Messaging" href="messaging.html" /> 
-</head>
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Text Representation" href="text_representation.html" /><link rel="prev" title="Messaging" href="messaging.html" />
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> pyabaqus
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.03.04"/>
+        <title>Table Collection - pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">pyabaqus 1.0.13 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">pyabaqus 1.0.13 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user.html">User Manual</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../references.html">API Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../mdb.html">Abaqus Model Database</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../user.html">User Manual</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user/header.html">Header of the Python script</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../user/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../user/mdb/model.html">Abaqus Model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/part.html">Part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../user/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../user/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../user/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../user/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../user/mdb/job.html">Abaqus Job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../user/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user/session.html">Abaqus Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../references.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../mdb/model.html">Model</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/mesh.html">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../mdb/model/part_assembly.html">Part and Assembly</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/part.html">Part</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/part_assembly/datum.html">Datum</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/part_assembly/engineering.html">Engineering Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/part_assembly/feature.html">Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/part_assembly/geometry.html">Basic Geometry</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/part_assembly/region.html">Region</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../mdb/job.html">Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mdb/annotation.html">Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mdb/edit_mesh.html">Edit Mesh</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../odb.html">Abaqus Output Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../session.html">Abaqus Session</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../kernel.html">Kernel</a><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../session.html">Abaqus Session</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../session/animation.html">Animation Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../session/canvas.html">Canvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../session/display_options.html">Display Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../session/display.html">Display Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../session/field_report.html">FieldReport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../session/odb_display.html">Odb Display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../session/path.html">Path and Probe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../session/plot_options.html">Plot Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../session/print.html">Print</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../session/xy.html">XY</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../kernel.html">Kernel</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cae_display_preferences.html">Abaqus CAE Display Preferences</a></li>
 <li class="toctree-l3"><a class="reference internal" href="input.html">Input File Parser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="kernel.html">Custom Kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="messaging.html">Messaging</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Table Collection</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#creat-table-collections-for-assembly">Creat table collections for Assembly</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#creat-table-collections-for-model">Creat table collections for Model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#creat-table-collections-for-step">Creat table collections for Step</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#object-features">Object features</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#activateelements">ActivateElements</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#datatable">DataTable</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#datatablearray">DataTableArray</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#elementprogressiveactivation">ElementProgressiveActivation</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#eventseries">EventSeries</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#eventseriesdata">EventSeriesData</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#eventseriestype">EventSeriesType</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#parametercolumn">ParameterColumn</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#parametercolumnarray">ParameterColumnArray</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#parametertable">ParameterTable</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#propertytable">PropertyTable</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#propertytabledata">PropertyTableData</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#tablecollection">TableCollection</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Table Collection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="text_representation.html">Text Representation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utility.html">Utility and View</a></li>
 </ul>
@@ -81,40 +267,44 @@
 </li>
 </ul>
 
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">pyabaqus</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../references.html">API Reference</a> &raquo;</li>
-          <li><a href="../kernel.html">Kernel</a> &raquo;</li>
-      <li>Table Collection</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/reference/kernel/table_collection.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
-  <div class="section" id="table-collection">
-<h1>Table Collection<a class="headerlink" href="#table-collection" title="Permalink to this headline"></a></h1>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <div class="section" id="table-collection">
+<h1>Table Collection<a class="headerlink" href="#table-collection" title="Permalink to this headline">#</a></h1>
 <p>Table Collection commands are used to create dynamic table types and tables.</p>
 <div class="section" id="creat-table-collections-for-assembly">
-<h2>Creat table collections for Assembly<a class="headerlink" href="#creat-table-collections-for-assembly" title="Permalink to this headline"></a></h2>
+<h2>Creat table collections for Assembly<a class="headerlink" href="#creat-table-collections-for-assembly" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.TableCollectionAssembly.TableCollectionAssembly">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TableCollectionAssembly</span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionAssembly.TableCollectionAssembly" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TableCollectionAssembly</span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionAssembly.TableCollectionAssembly" title="Permalink to this definition">#</a></dt>
 <dd><p>An Assembly object is a container for instances of parts. The Assembly object has no
 constructor command. Abaqus creates the <em>rootAssembly</em> member when a Model object is 
 created.</p>
@@ -125,20 +315,20 @@ created.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.TableCollection.TableCollectionAssembly.TableCollectionAssembly.ElementProgressiveActivation" title="abaqus.TableCollection.TableCollectionAssembly.TableCollectionAssembly.ElementProgressiveActivation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementProgressiveActivation</span></code></a>(name[, elset, ...])</p></td>
 <td><p>This method creates an ElementProgressiveActivation object and places it in the elementProgressiveActivation repository.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.TableCollectionAssembly.TableCollectionAssembly.ElementProgressiveActivation">
-<span class="sig-name descname"><span class="pre">ElementProgressiveActivation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elset:</span> <span class="pre">abaqus.Region.Region.Region</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Region.Region.Region</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deformation:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freeSurfaceType:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'NONE'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation" title="abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation"><span class="pre">abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionAssembly.TableCollectionAssembly.ElementProgressiveActivation" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ElementProgressiveActivation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elset:</span> <span class="pre">abaqus.Region.Region.Region</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Region.Region.Region</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deformation:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freeSurfaceType:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'NONE'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation" title="abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation"><span class="pre">abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionAssembly.TableCollectionAssembly.ElementProgressiveActivation" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates an ElementProgressiveActivation object and places it in the
 elementProgressiveActivation repository.</p>
 <dl class="field-list simple">
@@ -178,15 +368,13 @@ exposed areas of the element facets are considered. The default value is NONE.</
 </pre></div>
 </div>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="creat-table-collections-for-model">
-<h2>Creat table collections for Model<a class="headerlink" href="#creat-table-collections-for-model" title="Permalink to this headline"></a></h2>
+<h2>Creat table collections for Model<a class="headerlink" href="#creat-table-collections-for-model" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.TableCollectionModel.TableCollectionModel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TableCollectionModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionModel.TableCollectionModel" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TableCollectionModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionModel.TableCollectionModel" title="Permalink to this definition">#</a></dt>
 <dd><p>Abaqus creates a Model object named <cite>Model-1</cite> when a session is started.</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -194,10 +382,10 @@ exposed areas of the element facets are considered. The default value is NONE.</
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.TableCollection.TableCollectionModel.TableCollectionModel.EventSeries" title="abaqus.TableCollection.TableCollectionModel.TableCollectionModel.EventSeries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EventSeries</span></code></a>(name, createStepName, ...[, ...])</p></td>
@@ -207,10 +395,10 @@ exposed areas of the element facets are considered. The default value is NONE.</
 <td><p>This method creates an EventSeriesType object.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.TableCollectionModel.TableCollectionModel.EventSeries">
-<span class="sig-name descname"><span class="pre">EventSeries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">createStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eventSeriesType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP_TIME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.EventSeries.EventSeries" title="abaqus.TableCollection.EventSeries.EventSeries"><span class="pre">abaqus.TableCollection.EventSeries.EventSeries</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionModel.TableCollectionModel.EventSeries" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">EventSeries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">createStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eventSeriesType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP_TIME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.EventSeries.EventSeries" title="abaqus.TableCollection.EventSeries.EventSeries"><span class="pre">abaqus.TableCollection.EventSeries.EventSeries</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionModel.TableCollectionModel.EventSeries" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates an EventSeries object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -252,10 +440,9 @@ default value is STEP_TIME.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.TableCollectionModel.TableCollectionModel.EventSeriesType">
-<span class="sig-name descname"><span class="pre">EventSeriesType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">createStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.EventSeriesType.EventSeriesType" title="abaqus.TableCollection.EventSeriesType.EventSeriesType"><span class="pre">abaqus.TableCollection.EventSeriesType.EventSeriesType</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionModel.TableCollectionModel.EventSeriesType" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">EventSeriesType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">createStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.EventSeriesType.EventSeriesType" title="abaqus.TableCollection.EventSeriesType.EventSeriesType"><span class="pre">abaqus.TableCollection.EventSeriesType.EventSeriesType</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionModel.TableCollectionModel.EventSeriesType" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates an EventSeriesType object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -285,15 +472,13 @@ default value is STEP_TIME.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="creat-table-collections-for-step">
-<h2>Creat table collections for Step<a class="headerlink" href="#creat-table-collections-for-step" title="Permalink to this headline"></a></h2>
+<h2>Creat table collections for Step<a class="headerlink" href="#creat-table-collections-for-step" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.TableCollectionStep.TableCollectionStep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TableCollectionStep</span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionStep.TableCollectionStep" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TableCollectionStep</span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionStep.TableCollectionStep" title="Permalink to this definition">#</a></dt>
 <dd><p>The Step object stores the parameters that determine the context of the step. The Step
 object is the abstract base type for other Step objects. The Step object has no explicit 
 constructor. The methods and members of the Step object are common to all objects 
@@ -305,20 +490,20 @@ derived from the Step.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.TableCollection.TableCollectionStep.TableCollectionStep.ActivateElements" title="abaqus.TableCollection.TableCollectionStep.TableCollectionStep.ActivateElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActivateElements</span></code></a>(tableCollection, activation)</p></td>
 <td><p>This method creates an ActivateElements object.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.TableCollectionStep.TableCollectionStep.ActivateElements">
-<span class="sig-name descname"><span class="pre">ActivateElements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tableCollection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigenTimeConst</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expansionTimeConstant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.ActivateElements.ActivateElements" title="abaqus.TableCollection.ActivateElements.ActivateElements"><span class="pre">abaqus.TableCollection.ActivateElements.ActivateElements</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionStep.TableCollectionStep.ActivateElements" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ActivateElements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tableCollection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigenTimeConst</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expansionTimeConstant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.ActivateElements.ActivateElements" title="abaqus.TableCollection.ActivateElements.ActivateElements"><span class="pre">abaqus.TableCollection.ActivateElements.ActivateElements</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollectionStep.TableCollectionStep.ActivateElements" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates an ActivateElements object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -348,17 +533,15 @@ activation.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="object-features">
-<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline"></a></h2>
+<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
 <div class="section" id="activateelements">
-<h3>ActivateElements<a class="headerlink" href="#activateelements" title="Permalink to this headline"></a></h3>
+<h3>ActivateElements<a class="headerlink" href="#activateelements" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.ActivateElements.ActivateElements">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ActivateElements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tableCollection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigenTimeConst</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expansionTimeConstant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.ActivateElements.ActivateElements" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ActivateElements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tableCollection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigenTimeConst</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expansionTimeConstant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.ActivateElements.ActivateElements" title="Permalink to this definition">#</a></dt>
 <dd><p>The ActivateElements object is used turn on progressive element activation within a step
 definition.</p>
 <p class="rubric">Notes</p>
@@ -379,20 +562,20 @@ definition.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.TableCollection.ActivateElements.ActivateElements.setValues" title="abaqus.TableCollection.ActivateElements.ActivateElements.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>()</p></td>
 <td><p>This method modifies the ActivateElements object.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.ActivateElements.ActivateElements.setValues">
-<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.ActivateElements.ActivateElements.setValues" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.ActivateElements.ActivateElements.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the ActivateElements object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -404,15 +587,13 @@ definition.</p>
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="datatable">
-<h3>DataTable<a class="headerlink" href="#datatable" title="Permalink to this headline"></a></h3>
+<h3>DataTable<a class="headerlink" href="#datatable" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.DataTable.DataTable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DataTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.DataTable.DataTable" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DataTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.DataTable.DataTable" title="Permalink to this definition">#</a></dt>
 <dd><p>The DataTable object is used to specify the parameter table of the respective parameter
 table type. 
 The data type of the values in each column in the DataTable object corresponds to the 
@@ -441,21 +622,19 @@ current ParameterTable.</p>
 </dd>
 </dl>
 </dd></dl>
-
 </div>
 <div class="section" id="datatablearray">
-<h3>DataTableArray<a class="headerlink" href="#datatablearray" title="Permalink to this headline"></a></h3>
+<h3>DataTableArray<a class="headerlink" href="#datatablearray" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.DataTableArray.DataTableArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DataTableArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.DataTableArray.DataTableArray" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DataTableArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.DataTableArray.DataTableArray" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
-
 </div>
 <div class="section" id="elementprogressiveactivation">
-<h3>ElementProgressiveActivation<a class="headerlink" href="#elementprogressiveactivation" title="Permalink to this headline"></a></h3>
+<h3>ElementProgressiveActivation<a class="headerlink" href="#elementprogressiveactivation" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ElementProgressiveActivation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elset:</span> <span class="pre">abaqus.Region.Region.Region</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Region.Region.Region</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deformation:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freeSurfaceType:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'NONE'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ElementProgressiveActivation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elset:</span> <span class="pre">abaqus.Region.Region.Region</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Region.Region.Region</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deformation:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freeSurfaceType:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'NONE'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation" title="Permalink to this definition">#</a></dt>
 <dd><p>The ElementProgressiveActivation object is used to specify elements that can be
 activated during an analysis.</p>
 <p class="rubric">Notes</p>
@@ -470,20 +649,20 @@ activated during an analysis.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation.setValue" title="abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation.setValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValue</span></code></a>()</p></td>
 <td><p>The method modifies the ElementProgressiveActivation object.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation.setValue">
-<span class="sig-name descname"><span class="pre">setValue</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation.setValue" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setValue</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.ElementProgressiveActivation.ElementProgressiveActivation.setValue" title="Permalink to this definition">#</a></dt>
 <dd><p>The method modifies the ElementProgressiveActivation object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -492,15 +671,13 @@ activated during an analysis.</p>
 <dd class="field-even"></dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="eventseries">
-<h3>EventSeries<a class="headerlink" href="#eventseries" title="Permalink to this headline"></a></h3>
+<h3>EventSeries<a class="headerlink" href="#eventseries" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.EventSeries.EventSeries">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EventSeries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">createStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eventSeriesType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP_TIME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.EventSeries.EventSeries" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EventSeries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">createStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eventSeriesType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP_TIME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.EventSeries.EventSeries" title="Permalink to this definition">#</a></dt>
 <dd><p>The EventSeries object is used to define an event based on an already defined
 EventSeriesType object. 
 After EventSeries is instantiated, making changes to EventSeriesType may lead to data 
@@ -523,20 +700,20 @@ corruption.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.TableCollection.EventSeries.EventSeries.setValues" title="abaqus.TableCollection.EventSeries.EventSeries.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([transformType, timeSpan, ...])</p></td>
 <td><p>This method modifies the EventSeries object.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.EventSeries.EventSeries.setValues">
-<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transformType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP_TIME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.EventSeries.EventSeries.setValues" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transformType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP_TIME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.EventSeries.EventSeries.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the EventSeries object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -564,23 +741,20 @@ default value is STEP_TIME.</p>
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="eventseriesdata">
-<h3>EventSeriesData<a class="headerlink" href="#eventseriesdata" title="Permalink to this headline"></a></h3>
+<h3>EventSeriesData<a class="headerlink" href="#eventseriesdata" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.EventSeriesData.EventSeriesData">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EventSeriesData</span></span><a class="headerlink" href="#abaqus.TableCollection.EventSeriesData.EventSeriesData" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EventSeriesData</span></span><a class="headerlink" href="#abaqus.TableCollection.EventSeriesData.EventSeriesData" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
-
 </div>
 <div class="section" id="eventseriestype">
-<h3>EventSeriesType<a class="headerlink" href="#eventseriestype" title="Permalink to this headline"></a></h3>
+<h3>EventSeriesType<a class="headerlink" href="#eventseriestype" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.EventSeriesType.EventSeriesType">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EventSeriesType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">createStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.EventSeriesType.EventSeriesType" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EventSeriesType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">createStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.EventSeriesType.EventSeriesType" title="Permalink to this definition">#</a></dt>
 <dd><p>The EventSeriesType object is used to define a type of event in a process.</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -600,20 +774,20 @@ default value is STEP_TIME.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.TableCollection.EventSeriesType.EventSeriesType.setValues" title="abaqus.TableCollection.EventSeriesType.EventSeriesType.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([fields])</p></td>
 <td><p>This method modifies the EventSeriesType object.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.EventSeriesType.EventSeriesType.setValues">
-<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.EventSeriesType.EventSeriesType.setValues" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.EventSeriesType.EventSeriesType.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the EventSeriesType object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -631,15 +805,13 @@ default value is STEP_TIME.</p>
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="parametercolumn">
-<h3>ParameterColumn<a class="headerlink" href="#parametercolumn" title="Permalink to this headline"></a></h3>
+<h3>ParameterColumn<a class="headerlink" href="#parametercolumn" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.ParameterColumn.ParameterColumn">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParameterColumn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowedValues</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.ParameterColumn.ParameterColumn" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParameterColumn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowedValues</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.ParameterColumn.ParameterColumn" title="Permalink to this definition">#</a></dt>
 <dd><p>The ParameterColumn object is used to define the type of parameters that will
 collectively build the type of parameter table. Once the object is created, it is 
 noneditable.</p>
@@ -661,21 +833,19 @@ noneditable.</p>
 </dd>
 </dl>
 </dd></dl>
-
 </div>
 <div class="section" id="parametercolumnarray">
-<h3>ParameterColumnArray<a class="headerlink" href="#parametercolumnarray" title="Permalink to this headline"></a></h3>
+<h3>ParameterColumnArray<a class="headerlink" href="#parametercolumnarray" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.ParameterColumnArray.ParameterColumnArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParameterColumnArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.ParameterColumnArray.ParameterColumnArray" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParameterColumnArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.ParameterColumnArray.ParameterColumnArray" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
-
 </div>
 <div class="section" id="parametertable">
-<h3>ParameterTable<a class="headerlink" href="#parametertable" title="Permalink to this headline"></a></h3>
+<h3>ParameterTable<a class="headerlink" href="#parametertable" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.ParameterTable.ParameterTable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParameterTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.ParameterTable.ParameterTable" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParameterTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.ParameterTable.ParameterTable" title="Permalink to this definition">#</a></dt>
 <dd><p>A ParameterTable is an object that is used to define the containers that encapsulate
 ParameterColumn and DataTable objects. The data of DataTable is dependent on the 
 contents of ParameterColumn. After DataTable is instantiated, making changes to 
@@ -708,20 +878,20 @@ ParameterColumn may lead to data corruption.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.TableCollection.ParameterTable.ParameterTable.Column" title="abaqus.TableCollection.ParameterTable.ParameterTable.Column"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Column</span></code></a>(type[, unit, description, default, ...])</p></td>
 <td><p>ParameterColumn is a constructor method that creates a ParameterColumn object and stores it in the array data structure.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.ParameterTable.ParameterTable.Column">
-<span class="sig-name descname"><span class="pre">Column</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowedValues</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.ParameterColumn.ParameterColumn" title="abaqus.TableCollection.ParameterColumn.ParameterColumn"><span class="pre">abaqus.TableCollection.ParameterColumn.ParameterColumn</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.ParameterTable.ParameterTable.Column" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">Column</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowedValues</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.ParameterColumn.ParameterColumn" title="abaqus.TableCollection.ParameterColumn.ParameterColumn"><span class="pre">abaqus.TableCollection.ParameterColumn.ParameterColumn</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.ParameterTable.ParameterTable.Column" title="Permalink to this definition">#</a></dt>
 <dd><p>ParameterColumn is a constructor method that creates a ParameterColumn object and stores
 it in the array data structure. It is accessible from the ParameterTable object using a
 column member.</p>
@@ -759,15 +929,13 @@ value of <em>type</em> argument.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="propertytable">
-<h3>PropertyTable<a class="headerlink" href="#propertytable" title="Permalink to this headline"></a></h3>
+<h3>PropertyTable<a class="headerlink" href="#propertytable" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.PropertyTable.PropertyTable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PropertyTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.PropertyTable.PropertyTable" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PropertyTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.PropertyTable.PropertyTable" title="Permalink to this definition">#</a></dt>
 <dd><p>A PropertyTable is an object that is used to define the container that encapsulates the
 PropertyTableData object. 
 The data of the PropertyTableData object is dependent on the contents of the 
@@ -800,10 +968,10 @@ corruption.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.TableCollection.PropertyTable.PropertyTable.PropertyTableData" title="abaqus.TableCollection.PropertyTable.PropertyTable.PropertyTableData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PropertyTableData</span></code></a>([label, regularize, ...])</p></td>
@@ -813,10 +981,10 @@ corruption.</p>
 <td><p>This method modifies the PropertyTable object.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.PropertyTable.PropertyTable.PropertyTableData">
-<span class="sig-name descname"><span class="pre">PropertyTableData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrapolate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isTemp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldNums</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularizeTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.PropertyTableData.PropertyTableData" title="abaqus.TableCollection.PropertyTableData.PropertyTableData"><span class="pre">abaqus.TableCollection.PropertyTableData.PropertyTableData</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.PropertyTable.PropertyTable.PropertyTableData" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PropertyTableData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrapolate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isTemp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldNums</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularizeTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.PropertyTableData.PropertyTableData" title="abaqus.TableCollection.PropertyTableData.PropertyTableData"><span class="pre">abaqus.TableCollection.PropertyTableData.PropertyTableData</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.PropertyTable.PropertyTable.PropertyTableData" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a PropertyTableData object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -856,10 +1024,9 @@ PropertyTable, and the field variables mentioned in PropertyTableData.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.PropertyTable.PropertyTable.setValues">
-<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.PropertyTable.PropertyTable.setValues" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.PropertyTable.PropertyTable.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the PropertyTable object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -878,15 +1045,13 @@ array.</p>
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="propertytabledata">
-<h3>PropertyTableData<a class="headerlink" href="#propertytabledata" title="Permalink to this headline"></a></h3>
+<h3>PropertyTableData<a class="headerlink" href="#propertytabledata" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.PropertyTableData.PropertyTableData">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PropertyTableData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrapolate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isTemp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldNums</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularizeTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.PropertyTableData.PropertyTableData" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PropertyTableData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrapolate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isTemp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldNums</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularizeTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.PropertyTableData.PropertyTableData" title="Permalink to this definition">#</a></dt>
 <dd><p>A PropertyTableData is an object that is used to specify the property table of the
 respective property table type. 
 The values in each column in the PropertyTableData object corresponds to the properties 
@@ -909,20 +1074,20 @@ and variables mentioned in the PropertyTable object.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.TableCollection.PropertyTableData.PropertyTableData.setValues" title="abaqus.TableCollection.PropertyTableData.PropertyTableData.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>()</p></td>
 <td><p>This method modifies the PropertyTableData object.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.PropertyTableData.PropertyTableData.setValues">
-<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.PropertyTableData.PropertyTableData.setValues" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.PropertyTableData.PropertyTableData.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the PropertyTableData object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -934,15 +1099,13 @@ and variables mentioned in the PropertyTable object.</p>
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="tablecollection">
-<h3>TableCollection<a class="headerlink" href="#tablecollection" title="Permalink to this headline"></a></h3>
+<h3>TableCollection<a class="headerlink" href="#tablecollection" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TableCollection.TableCollection.TableCollection">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TableCollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.TableCollection.TableCollection" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TableCollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.TableCollection.TableCollection.TableCollection" title="Permalink to this definition">#</a></dt>
 <dd><p>A TableCollection is an object used to define the containers that encapsulate the
 ParameterTable and PropertyTable objects.</p>
 <p class="rubric">Notes</p>
@@ -969,10 +1132,10 @@ ParameterTable and PropertyTable objects.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.TableCollection.TableCollection.TableCollection.DataTable" title="abaqus.TableCollection.TableCollection.TableCollection.DataTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataTable</span></code></a>(label)</p></td>
@@ -985,10 +1148,10 @@ ParameterTable and PropertyTable objects.</p>
 <td><p>This method creates a PropertyTable object.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.TableCollection.TableCollection.DataTable">
-<span class="sig-name descname"><span class="pre">DataTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.DataTable.DataTable" title="abaqus.TableCollection.DataTable.DataTable"><span class="pre">abaqus.TableCollection.DataTable.DataTable</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollection.TableCollection.DataTable" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DataTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.DataTable.DataTable" title="abaqus.TableCollection.DataTable.DataTable"><span class="pre">abaqus.TableCollection.DataTable.DataTable</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollection.TableCollection.DataTable" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a DataTable object and places it in the dataTables array.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1014,10 +1177,9 @@ ParameterTable and PropertyTable objects.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.TableCollection.TableCollection.ParameterTable">
-<span class="sig-name descname"><span class="pre">ParameterTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.ParameterTable.ParameterTable" title="abaqus.TableCollection.ParameterTable.ParameterTable"><span class="pre">abaqus.TableCollection.ParameterTable.ParameterTable</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollection.TableCollection.ParameterTable" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ParameterTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.ParameterTable.ParameterTable" title="abaqus.TableCollection.ParameterTable.ParameterTable"><span class="pre">abaqus.TableCollection.ParameterTable.ParameterTable</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollection.TableCollection.ParameterTable" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a ParameterTable object and places it in the parameterTables
 repository.</p>
 <dl class="field-list simple">
@@ -1039,10 +1201,9 @@ repository.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TableCollection.TableCollection.TableCollection.PropertyTable">
-<span class="sig-name descname"><span class="pre">PropertyTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.PropertyTable.PropertyTable" title="abaqus.TableCollection.PropertyTable.PropertyTable"><span class="pre">abaqus.TableCollection.PropertyTable.PropertyTable</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollection.TableCollection.PropertyTable" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PropertyTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.TableCollection.PropertyTable.PropertyTable" title="abaqus.TableCollection.PropertyTable.PropertyTable"><span class="pre">abaqus.TableCollection.PropertyTable.PropertyTable</span></a></span></span><a class="headerlink" href="#abaqus.TableCollection.TableCollection.TableCollection.PropertyTable" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a PropertyTable object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1073,42 +1234,103 @@ array.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 </div>
 </div>
 
-
-           </div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="text_representation.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Text Representation</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="messaging.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Messaging</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, WANG Hailin
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="messaging.html" class="btn btn-neutral float-left" title="Messaging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="text_representation.html" class="btn btn-neutral float-right" title="Text Representation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
     </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Table Collection</a><ul>
+<li><a class="reference internal" href="#creat-table-collections-for-assembly">Creat table collections for Assembly</a></li>
+<li><a class="reference internal" href="#creat-table-collections-for-model">Creat table collections for Model</a></li>
+<li><a class="reference internal" href="#creat-table-collections-for-step">Creat table collections for Step</a></li>
+<li><a class="reference internal" href="#object-features">Object features</a><ul>
+<li><a class="reference internal" href="#activateelements">ActivateElements</a></li>
+<li><a class="reference internal" href="#datatable">DataTable</a></li>
+<li><a class="reference internal" href="#datatablearray">DataTableArray</a></li>
+<li><a class="reference internal" href="#elementprogressiveactivation">ElementProgressiveActivation</a></li>
+<li><a class="reference internal" href="#eventseries">EventSeries</a></li>
+<li><a class="reference internal" href="#eventseriesdata">EventSeriesData</a></li>
+<li><a class="reference internal" href="#eventseriestype">EventSeriesType</a></li>
+<li><a class="reference internal" href="#parametercolumn">ParameterColumn</a></li>
+<li><a class="reference internal" href="#parametercolumnarray">ParameterColumnArray</a></li>
+<li><a class="reference internal" href="#parametertable">ParameterTable</a></li>
+<li><a class="reference internal" href="#propertytable">PropertyTable</a></li>
+<li><a class="reference internal" href="#propertytabledata">PropertyTableData</a></li>
+<li><a class="reference internal" href="#tablecollection">TableCollection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, WANG Hailin.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
+          </div>
         </div>
       </div>
-    </section>
+      
+      
+    </aside>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    </body>
 </html>

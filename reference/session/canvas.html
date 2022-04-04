@@ -1,72 +1,248 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Canvas &mdash; pyabaqus 1.0.13 documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-    <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/session/canvas.html" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Display Options" href="display_options.html" />
-    <link rel="prev" title="Animation Options" href="animation.html" /> 
-</head>
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Display Options" href="display_options.html" /><link rel="prev" title="Animation Options" href="animation.html" />
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> pyabaqus
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.03.04"/>
+        <title>Canvas - pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">pyabaqus 1.0.13 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">pyabaqus 1.0.13 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user.html">User Manual</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../references.html">API Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../mdb.html">Abaqus Model Database</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../user.html">User Manual</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user/header.html">Header of the Python script</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../user/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../user/mdb/model.html">Abaqus Model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/part.html">Part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../user/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../user/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../user/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../user/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../user/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../user/mdb/job.html">Abaqus Job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../user/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user/session.html">Abaqus Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../references.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../mdb/model.html">Model</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/mesh.html">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../mdb/model/part_assembly.html">Part and Assembly</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/part.html">Part</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/part_assembly/datum.html">Datum</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/part_assembly/engineering.html">Engineering Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/part_assembly/feature.html">Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/part_assembly/geometry.html">Basic Geometry</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/part_assembly/region.html">Region</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../mdb/job.html">Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mdb/annotation.html">Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mdb/edit_mesh.html">Edit Mesh</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../odb.html">Abaqus Output Database</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../session.html">Abaqus Session</a><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../session.html">Abaqus Session</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="animation.html">Animation Options</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Canvas</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#create-layers-in-a-viewport">Create layers in a viewport</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#viewport">Viewport</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#object-features">Object features</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#annotation-features-of-viewport">Annotation features of Viewport</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#attributecolormap">AttributeColorMap</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#id7">Canvas</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#displayable">Displayable</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#drawingarea">DrawingArea</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#highlight">Highlight</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#imageoptions">ImageOptions</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#layer">Layer</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#movieoptions">MovieOptions</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#viewportbase">ViewportBase</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Canvas</a></li>
 <li class="toctree-l3"><a class="reference internal" href="display_options.html">Display Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="display.html">Display Group</a></li>
 <li class="toctree-l3"><a class="reference internal" href="field_report.html">FieldReport</a></li>
@@ -75,65 +251,77 @@
 <li class="toctree-l3"><a class="reference internal" href="plot_options.html">Plot Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="print.html">Print</a></li>
 <li class="toctree-l3"><a class="reference internal" href="xy.html">XY</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../session.html#object-features">Object features</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../kernel.html">Kernel</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../kernel.html">Kernel</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../kernel/cae_display_preferences.html">Abaqus CAE Display Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../kernel/input.html">Input File Parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../kernel/kernel.html">Custom Kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../kernel/messaging.html">Messaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../kernel/table_collection.html">Table Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../kernel/text_representation.html">Text Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../kernel/utility.html">Utility and View</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">pyabaqus</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../references.html">API Reference</a> &raquo;</li>
-          <li><a href="../session.html">Abaqus Session</a> &raquo;</li>
-      <li>Canvas</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/reference/session/canvas.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
-  <div class="section" id="canvas">
-<h1>Canvas<a class="headerlink" href="#canvas" title="Permalink to this headline"></a></h1>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <div class="section" id="canvas">
+<h1>Canvas<a class="headerlink" href="#canvas" title="Permalink to this headline">#</a></h1>
 <p>Canvas commands are used to create, position, and modify canvas objects. The Canvas commands need only the abaqus module to be imported; no additional modules need to be imported.</p>
 <div class="section" id="create-layers-in-a-viewport">
-<h2>Create layers in a viewport<a class="headerlink" href="#create-layers-in-a-viewport" title="Permalink to this headline"></a></h2>
+<h2>Create layers in a viewport<a class="headerlink" href="#create-layers-in-a-viewport" title="Permalink to this headline">#</a></h2>
 <div class="section" id="viewport">
-<h3>Viewport<a class="headerlink" href="#viewport" title="Permalink to this headline"></a></h3>
+<h3>Viewport<a class="headerlink" href="#viewport" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Canvas.Viewport.Viewport">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Viewport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">120</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">border</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titleBar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titleStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SYSTEM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">customTitleString</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.Viewport.Viewport" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Viewport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">120</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">border</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titleBar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titleStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SYSTEM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">customTitleString</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.Viewport.Viewport" title="Permalink to this definition">#</a></dt>
 <dd><p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.Viewport.Viewport.Layer" title="abaqus.Canvas.Viewport.Viewport.Layer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Layer</span></code></a>(name[, copyViewName])</p></td>
 <td><p>This method creates a Layer object in the Layer repository.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.Viewport.Viewport.Layer">
-<span class="sig-name descname"><span class="pre">Layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyViewName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Canvas.Layer.Layer" title="abaqus.Canvas.Layer.Layer"><span class="pre">abaqus.Canvas.Layer.Layer</span></a></span></span><a class="headerlink" href="#abaqus.Canvas.Viewport.Viewport.Layer" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">Layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyViewName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Canvas.Layer.Layer" title="abaqus.Canvas.Layer.Layer"><span class="pre">abaqus.Canvas.Layer.Layer</span></a></span></span><a class="headerlink" href="#abaqus.Canvas.Viewport.Viewport.Layer" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a Layer object in the Layer repository.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -156,18 +344,16 @@
 </pre></div>
 </div>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 </div>
 <div class="section" id="object-features">
-<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline"></a></h2>
+<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
 <div class="section" id="annotation-features-of-viewport">
-<h3>Annotation features of Viewport<a class="headerlink" href="#annotation-features-of-viewport" title="Permalink to this headline"></a></h3>
+<h3>Annotation features of Viewport<a class="headerlink" href="#annotation-features-of-viewport" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Annotation.AnnotationViewport.AnnotationViewport">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AnnotationViewport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">120</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">border</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titleBar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titleStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SYSTEM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">customTitleString</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Annotation.AnnotationViewport.AnnotationViewport" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AnnotationViewport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">120</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">border</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titleBar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titleStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SYSTEM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">customTitleString</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Annotation.AnnotationViewport.AnnotationViewport" title="Permalink to this definition">#</a></dt>
 <dd><p>The following commands operate on Viewport objects. For more information about the 
 Viewport object, see Viewport object.</p>
 <p class="rubric">Notes</p>
@@ -176,20 +362,20 @@ Viewport object, see Viewport object.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation" title="abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotAnnotation</span></code></a>(annotation[, index])</p></td>
 <td><p>This method plots an Annotation object in aViewport.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation">
-<span class="sig-name descname"><span class="pre">plotAnnotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">annotation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../mdb/annotation.html#abaqus.Annotation.Annotation.Annotation" title="abaqus.Annotation.Annotation.Annotation"><span class="pre">abaqus.Annotation.Annotation.Annotation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">plotAnnotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">annotation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../mdb/annotation.html#abaqus.Annotation.Annotation.Annotation" title="abaqus.Annotation.Annotation.Annotation"><span class="pre">abaqus.Annotation.Annotation.Annotation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation" title="Permalink to this definition">#</a></dt>
 <dd><p>This method plots an Annotation object in aViewport.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -203,15 +389,13 @@ plot. The default value is zero.</p>
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="attributecolormap">
-<h3>AttributeColorMap<a class="headerlink" href="#attributecolormap" title="Permalink to this headline"></a></h3>
+<h3>AttributeColorMap<a class="headerlink" href="#attributecolormap" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Canvas.AttributeColorMap.AttributeColorMap">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AttributeColorMap</span></span><a class="headerlink" href="#abaqus.Canvas.AttributeColorMap.AttributeColorMap" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AttributeColorMap</span></span><a class="headerlink" href="#abaqus.Canvas.AttributeColorMap.AttributeColorMap" title="Permalink to this definition">#</a></dt>
 <dd><p>The AttributeColorMap object is used to store values and attributes associated with
 AttributeColorMap type objects. AttributeColorMap objects can be modified using the 
 methods described below. The methods accessed via the Viewport object cause the 
@@ -247,10 +431,10 @@ created. When the key is created, it gets the appropriate values from this mappi
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.AttributeColorMap.AttributeColorMap.setDefaults" title="abaqus.Canvas.AttributeColorMap.AttributeColorMap.setDefaults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setDefaults</span></code></a>()</p></td>
@@ -263,16 +447,15 @@ created. When the key is created, it gets the appropriate values from this mappi
 <td><p>This method specifies additional overrides to be added to the current object definition.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.AttributeColorMap.AttributeColorMap.setDefaults">
-<span class="sig-name descname"><span class="pre">setDefaults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.AttributeColorMap.AttributeColorMap.setDefaults" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setDefaults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.AttributeColorMap.AttributeColorMap.setDefaults" title="Permalink to this definition">#</a></dt>
 <dd><p>This method resets the AttributeColorMap object to its default state.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.AttributeColorMap.AttributeColorMap.setValues">
-<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overrides</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultOverrides</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.AttributeColorMap.AttributeColorMap.setValues" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overrides</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultOverrides</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.AttributeColorMap.AttributeColorMap.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the AttributeColorMap object.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -294,10 +477,9 @@ example:<a href="#id3"><span class="problematic" id="id4">`</span></a>defaultOve
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.AttributeColorMap.AttributeColorMap.updateOverrides">
-<span class="sig-name descname"><span class="pre">updateOverrides</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overrides</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultOverrides</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.AttributeColorMap.AttributeColorMap.updateOverrides" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">updateOverrides</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overrides</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultOverrides</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.AttributeColorMap.AttributeColorMap.updateOverrides" title="Permalink to this definition">#</a></dt>
 <dd><p>This method specifies additional overrides to be added to the current object definition.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -319,31 +501,27 @@ example:<a href="#id5"><span class="problematic" id="id6">`</span></a>defaultOve
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="id7">
-<h3>Canvas<a class="headerlink" href="#id7" title="Permalink to this headline"></a></h3>
+<h3>Canvas<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Canvas.Canvas.Canvas">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Canvas</span></span><a class="headerlink" href="#abaqus.Canvas.Canvas.Canvas" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Canvas</span></span><a class="headerlink" href="#abaqus.Canvas.Canvas.Canvas" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
-
 </div>
 <div class="section" id="displayable">
-<h3>Displayable<a class="headerlink" href="#displayable" title="Permalink to this headline"></a></h3>
+<h3>Displayable<a class="headerlink" href="#displayable" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Canvas.Displayable.Displayable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Displayable</span></span><a class="headerlink" href="#abaqus.Canvas.Displayable.Displayable" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Displayable</span></span><a class="headerlink" href="#abaqus.Canvas.Displayable.Displayable" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
-
 </div>
 <div class="section" id="drawingarea">
-<h3>DrawingArea<a class="headerlink" href="#drawingarea" title="Permalink to this headline"></a></h3>
+<h3>DrawingArea<a class="headerlink" href="#drawingarea" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Canvas.DrawingArea.DrawingArea">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DrawingArea</span></span><a class="headerlink" href="#abaqus.Canvas.DrawingArea.DrawingArea" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DrawingArea</span></span><a class="headerlink" href="#abaqus.Canvas.DrawingArea.DrawingArea" title="Permalink to this definition">#</a></dt>
 <dd><p>The DrawingArea object specifies the location and size of the drawing area used for
 placement of viewports.</p>
 <p class="rubric">Notes</p>
@@ -365,16 +543,15 @@ millimeters.</p>
 </dd>
 </dl>
 </dd></dl>
-
 </div>
 <div class="section" id="highlight">
-<h3>Highlight<a class="headerlink" href="#highlight" title="Permalink to this headline"></a></h3>
+<h3>Highlight<a class="headerlink" href="#highlight" title="Permalink to this headline">#</a></h3>
 </div>
 <div class="section" id="imageoptions">
-<h3>ImageOptions<a class="headerlink" href="#imageoptions" title="Permalink to this headline"></a></h3>
+<h3>ImageOptions<a class="headerlink" href="#imageoptions" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Canvas.ImageOptions.ImageOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ImageOptions</span></span><a class="headerlink" href="#abaqus.Canvas.ImageOptions.ImageOptions" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ImageOptions</span></span><a class="headerlink" href="#abaqus.Canvas.ImageOptions.ImageOptions" title="Permalink to this definition">#</a></dt>
 <dd><p>The ImageOptions object stores settings that control how an image is rendered in a
 particular viewport. ImageOptions objects are accessed from the image options associated 
 with a particular viewport. 
@@ -387,20 +564,20 @@ the current viewport.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.ImageOptions.ImageOptions.setValues" title="abaqus.Canvas.ImageOptions.ImageOptions.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([imageName, showImage, ...])</p></td>
 <td><p>This method modifies the ImageOptions object.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ImageOptions.ImageOptions.setValues">
-<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imageName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showImage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positionMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FIT_TO_VIEWPORT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BEST_FIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CENTER'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xScale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yScale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translucency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ImageOptions.ImageOptions.setValues" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imageName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showImage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positionMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FIT_TO_VIEWPORT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BEST_FIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CENTER'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xScale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yScale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translucency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ImageOptions.ImageOptions.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the ImageOptions object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -461,15 +638,13 @@ If other arguments are also supplied to setValues, they will override the values
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="layer">
-<h3>Layer<a class="headerlink" href="#layer" title="Permalink to this headline"></a></h3>
+<h3>Layer<a class="headerlink" href="#layer" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Canvas.Layer.Layer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyViewName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.Layer.Layer" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyViewName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.Layer.Layer" title="Permalink to this definition">#</a></dt>
 <dd><p>Objects can be superimposed by displaying them in different layers of a viewport.</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -495,10 +670,10 @@ ConstrainedSketch, Odb, or XYPlot.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.Layer.Layer.moveAfter" title="abaqus.Canvas.Layer.Layer.moveAfter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">moveAfter</span></code></a>(name)</p></td>
@@ -508,10 +683,10 @@ ConstrainedSketch, Odb, or XYPlot.</p>
 <td><p>This method moves the layer object before another object in the layer repository.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.Layer.Layer.moveAfter">
-<span class="sig-name descname"><span class="pre">moveAfter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.Layer.Layer.moveAfter" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">moveAfter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.Layer.Layer.moveAfter" title="Permalink to this definition">#</a></dt>
 <dd><p>This method moves the layer object after another object in the layer repository.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -522,10 +697,9 @@ ConstrainedSketch, Odb, or XYPlot.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.Layer.Layer.moveBefore">
-<span class="sig-name descname"><span class="pre">moveBefore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.Layer.Layer.moveBefore" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">moveBefore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.Layer.Layer.moveBefore" title="Permalink to this definition">#</a></dt>
 <dd><p>This method moves the layer object before another object in the layer repository.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -536,15 +710,13 @@ ConstrainedSketch, Odb, or XYPlot.</p>
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="movieoptions">
-<h3>MovieOptions<a class="headerlink" href="#movieoptions" title="Permalink to this headline"></a></h3>
+<h3>MovieOptions<a class="headerlink" href="#movieoptions" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Canvas.MovieOptions.MovieOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MovieOptions</span></span><a class="headerlink" href="#abaqus.Canvas.MovieOptions.MovieOptions" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MovieOptions</span></span><a class="headerlink" href="#abaqus.Canvas.MovieOptions.MovieOptions" title="Permalink to this definition">#</a></dt>
 <dd><p>The MovieOptions object stores settings that control how the movie background for an
 animation is rendered in a particular viewport. MovieOptions objects are accessed from 
 the movie options associated with a particular viewport. 
@@ -557,20 +729,20 @@ the current viewport.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.MovieOptions.MovieOptions.setValues" title="abaqus.Canvas.MovieOptions.MovieOptions.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([movieName, showMovie, ...])</p></td>
 <td><p>This method modifies the MovieOptions object.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.MovieOptions.MovieOptions.setValues">
-<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movieName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showMovie</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positionMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FIT_TO_VIEWPORT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BEST_FIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CENTER'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xScale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yScale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translucency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.MovieOptions.MovieOptions.setValues" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movieName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showMovie</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positionMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FIT_TO_VIEWPORT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BEST_FIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CENTER'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xScale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yScale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translucency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.MovieOptions.MovieOptions.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the MovieOptions object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -633,15 +805,13 @@ If other arguments are also supplied to setValues, they will override the values
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="viewportbase">
-<h3>ViewportBase<a class="headerlink" href="#viewportbase" title="Permalink to this headline"></a></h3>
+<h3>ViewportBase<a class="headerlink" href="#viewportbase" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ViewportBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">120</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">border</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titleBar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titleStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SYSTEM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">customTitleString</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ViewportBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">120</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">border</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titleBar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titleStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SYSTEM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">customTitleString</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase" title="Permalink to this definition">#</a></dt>
 <dd><p>A viewport is the container for the graphics generated by the application. TheViewport
 object stores the various settings that determine how objects are displayed within that 
 viewport.</p>
@@ -841,10 +1011,10 @@ is an empty sequence.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.addDrawings" title="abaqus.Canvas.ViewportBase.ViewportBase.addDrawings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addDrawings</span></code></a>([names])</p></td>
@@ -911,21 +1081,21 @@ is an empty sequence.</p>
 <td><p>This method refreshes the Viewport display <em>numFrames</em> times and then checks to see if <em>numSeconds</em> seconds have elapsed.</p></td>
 </tr>
 </tbody>
-</table>
-<table class="docutils align-default">
+</table></div>
+<div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 55%" />
-<col style="width: 45%" />
+<col style="width: 55%"/>
+<col style="width: 45%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>setColor</strong></p></td>
 <td></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.addDrawings">
-<span class="sig-name descname"><span class="pre">addDrawings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.addDrawings" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">addDrawings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.addDrawings" title="Permalink to this definition">#</a></dt>
 <dd><p>This method identifies the names of Drawing objects to be rendered in the Viewport.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -941,66 +1111,57 @@ is an empty sequence.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.bringToFront">
-<span class="sig-name descname"><span class="pre">bringToFront</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.bringToFront" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">bringToFront</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.bringToFront" title="Permalink to this definition">#</a></dt>
 <dd><p>This method moves the Viewport object to the front.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.disableColorCodeUpdates">
-<span class="sig-name descname"><span class="pre">disableColorCodeUpdates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.disableColorCodeUpdates" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">disableColorCodeUpdates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.disableColorCodeUpdates" title="Permalink to this definition">#</a></dt>
 <dd><p>This method disables Viewport updates and internal computations triggered because of
 color coding. Performance improvement will be significant when color coding is ON and
 repeating operations are performed using a script each of which requires color code
 updates. No benefit will be had when color coding is OFF.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.disableMultipleColors">
-<span class="sig-name descname"><span class="pre">disableMultipleColors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.disableMultipleColors" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">disableMultipleColors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.disableMultipleColors" title="Permalink to this definition">#</a></dt>
 <dd><p>This method disables applying multiple color mappings that was enabled using
 enableMultipleColors</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.disableRefresh">
-<span class="sig-name descname"><span class="pre">disableRefresh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.disableRefresh" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">disableRefresh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.disableRefresh" title="Permalink to this definition">#</a></dt>
 <dd><p>This method disables Viewport refresh. Some methods that require the Viewport to be
 up-to-date will override this setting. It is advisable to use this method sparingly.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.enableColorCodeUpdates">
-<span class="sig-name descname"><span class="pre">enableColorCodeUpdates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.enableColorCodeUpdates" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">enableColorCodeUpdates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.enableColorCodeUpdates" title="Permalink to this definition">#</a></dt>
 <dd><p>This method enables Viewport color code updates disabled using disableColorCodeUpdates.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.enableMultipleColors">
-<span class="sig-name descname"><span class="pre">enableMultipleColors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.enableMultipleColors" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">enableMultipleColors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.enableMultipleColors" title="Permalink to this definition">#</a></dt>
 <dd><p>This method enables multiple color mappings to be applied at the same time. It also
 ensures that the Viewport is updated correctly when <em>initialColor</em> is set.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.enableRefresh">
-<span class="sig-name descname"><span class="pre">enableRefresh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.enableRefresh" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">enableRefresh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.enableRefresh" title="Permalink to this definition">#</a></dt>
 <dd><p>This method enables Viewport refresh disabled using disableRefresh.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.forceRefresh">
-<span class="sig-name descname"><span class="pre">forceRefresh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.forceRefresh" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">forceRefresh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.forceRefresh" title="Permalink to this definition">#</a></dt>
 <dd><p>This method causes the Viewport to refresh immediately. It is provided to allow scripts
 to refresh the Viewport before the script terminates. Normally, there would only be a
 single cumulative refresh that takes place immediately after the script completes.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.getActiveElementLabels">
-<span class="sig-name descname"><span class="pre">getActiveElementLabels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useCut</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printResults</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.getActiveElementLabels" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">getActiveElementLabels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useCut</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printResults</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.getActiveElementLabels" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns the element labels currently active in the viewport based on the
 current display group. The element labels are printed only when the <em>displayedObject</em>
 member in the Viewport object is set to an Odb. The getActiveElementLabels method has
@@ -1024,10 +1185,9 @@ file.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.getActiveNodeLabels">
-<span class="sig-name descname"><span class="pre">getActiveNodeLabels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useCut</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printResults</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.getActiveNodeLabels" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">getActiveNodeLabels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useCut</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printResults</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.getActiveNodeLabels" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns the node labels currently active in the viewport based on the
 current display group. The node labels are printed only when the <em>displayedObject</em>
 member in the Viewport object is set to an Odb. The getActiveNodeLabels method has the
@@ -1051,10 +1211,9 @@ file.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.getPrimVarMinMaxLoc">
-<span class="sig-name descname"><span class="pre">getPrimVarMinMaxLoc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.getPrimVarMinMaxLoc" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">getPrimVarMinMaxLoc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.getPrimVarMinMaxLoc" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns a dictionary containing the minimum, maximum and their location for
 the current primary variable. A contour plot should be displayed in the current viewport
 or else the method will return <em>None</em>.</p>
@@ -1067,28 +1226,24 @@ or else the method will return <em>None</em>.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.makeCurrent">
-<span class="sig-name descname"><span class="pre">makeCurrent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.makeCurrent" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">makeCurrent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.makeCurrent" title="Permalink to this definition">#</a></dt>
 <dd><p>This method makes theViewport object the current viewport.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.maximize">
-<span class="sig-name descname"><span class="pre">maximize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.maximize" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">maximize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.maximize" title="Permalink to this definition">#</a></dt>
 <dd><p>This method maximizes the Viewport object to fill the drawing area.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.minimize">
-<span class="sig-name descname"><span class="pre">minimize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.minimize" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">minimize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.minimize" title="Permalink to this definition">#</a></dt>
 <dd><p>This method minimizes the Viewport object to appear as an abbreviated title bar.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.offset">
-<span class="sig-name descname"><span class="pre">offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deltaX</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deltaY</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.offset" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deltaX</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deltaY</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.offset" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the current <em>X</em>-<em>Y</em> location of the viewport by the specified
 distance.</p>
 <dl class="field-list simple">
@@ -1104,10 +1259,9 @@ origin. The default value is 0.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.removeDrawings">
-<span class="sig-name descname"><span class="pre">removeDrawings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.removeDrawings" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">removeDrawings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.removeDrawings" title="Permalink to this definition">#</a></dt>
 <dd><p>This method identifies the names of Drawing objects to no longer be rendered in the
 Viewport.</p>
 <dl class="field-list simple">
@@ -1124,23 +1278,20 @@ Viewport.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.restore">
-<span class="sig-name descname"><span class="pre">restore</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.restore" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">restore</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.restore" title="Permalink to this definition">#</a></dt>
 <dd><p>This method restores a maximized or minimized Viewport object to its previous size and
 location.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.sendToBack">
-<span class="sig-name descname"><span class="pre">sendToBack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.sendToBack" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">sendToBack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.sendToBack" title="Permalink to this definition">#</a></dt>
 <dd><p>This method moves the Viewport object to the back.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.setValues">
-<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">displayedObject:</span> <span class="pre">abaqus.Canvas.Displayable.Displayable</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Canvas.Displayable.Displayable</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displayMode:</span> <span class="pre">typing.Optional[abaqusConstants.SymbolicConstantType]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visibleLayers:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">viewManipLayers:</span> <span class="pre">typing.Optional[abaqusConstants.SymbolicConstantType]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currentLayer:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerOffset:</span> <span class="pre">typing.Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.setValues" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">displayedObject:</span> <span class="pre">abaqus.Canvas.Displayable.Displayable</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Canvas.Displayable.Displayable</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displayMode:</span> <span class="pre">typing.Optional[abaqusConstants.SymbolicConstantType]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visibleLayers:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">viewManipLayers:</span> <span class="pre">typing.Optional[abaqusConstants.SymbolicConstantType]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currentLayer:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerOffset:</span> <span class="pre">typing.Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the Viewport object. The arguments to setValues are the same as the
 arguments to the Viewport method, except for the <em>name</em> argument. In addition, the
 setValues method has the following arguments:</p>
@@ -1179,10 +1330,9 @@ layers are plotted.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.timeDisplay">
-<span class="sig-name descname"><span class="pre">timeDisplay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numFrames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numSeconds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degreesPerFrame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.timeDisplay" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">timeDisplay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numFrames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numSeconds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degreesPerFrame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.timeDisplay" title="Permalink to this definition">#</a></dt>
 <dd><p>This method refreshes the Viewport display <em>numFrames</em> times and then checks to see if
 <em>numSeconds</em> seconds have elapsed. If not, it will continue refreshing the Viewport
 until the time has elapsed. At completion, the actual number of refreshes (frames)
@@ -1204,42 +1354,101 @@ before each refresh. The default value is 0.0.</p>
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 </div>
 </div>
 
-
-           </div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="display_options.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Display Options</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="animation.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Animation Options</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, WANG Hailin
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="animation.html" class="btn btn-neutral float-left" title="Animation Options" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="display_options.html" class="btn btn-neutral float-right" title="Display Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
     </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Canvas</a><ul>
+<li><a class="reference internal" href="#create-layers-in-a-viewport">Create layers in a viewport</a><ul>
+<li><a class="reference internal" href="#viewport">Viewport</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#object-features">Object features</a><ul>
+<li><a class="reference internal" href="#annotation-features-of-viewport">Annotation features of Viewport</a></li>
+<li><a class="reference internal" href="#attributecolormap">AttributeColorMap</a></li>
+<li><a class="reference internal" href="#id7">Canvas</a></li>
+<li><a class="reference internal" href="#displayable">Displayable</a></li>
+<li><a class="reference internal" href="#drawingarea">DrawingArea</a></li>
+<li><a class="reference internal" href="#highlight">Highlight</a></li>
+<li><a class="reference internal" href="#imageoptions">ImageOptions</a></li>
+<li><a class="reference internal" href="#layer">Layer</a></li>
+<li><a class="reference internal" href="#movieoptions">MovieOptions</a></li>
+<li><a class="reference internal" href="#viewportbase">ViewportBase</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, WANG Hailin.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
+          </div>
         </div>
       </div>
-    </section>
+      
+      
+    </aside>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    </body>
 </html>

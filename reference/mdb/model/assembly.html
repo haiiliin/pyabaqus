@@ -1,50 +1,202 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Assembly &mdash; pyabaqus 1.0.13 documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-    <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/mdb/model/assembly.html" />
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Datum" href="part_assembly/datum.html" />
-    <link rel="prev" title="Part" href="part.html" /> 
-</head>
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Datum" href="part_assembly/datum.html" /><link rel="prev" title="Part" href="part.html" />
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> pyabaqus
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.03.04"/>
+        <title>Assembly - pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.13 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  
+  <span class="sidebar-brand-text">pyabaqus 1.0.13 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../user.html">User Manual</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../../references.html">API Reference</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../mdb.html">Abaqus Model Database</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../model.html">Model</a><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../user.html">User Manual</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/header.html">Header of the Python script</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../user/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../user/mdb/model.html">Abaqus Model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/part.html">Part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../user/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../user/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../user/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../user/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../user/mdb/job.html">Abaqus Job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/session.html">Abaqus Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../../references.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../../mdb.html">Abaqus Model Database</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 current has-children"><a class="reference internal" href="../model.html">Model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="adaptivity.html">Adaptivity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="amplitude.html">Amplitude</a></li>
 <li class="toctree-l4"><a class="reference internal" href="bc.html">Boundary Condition</a></li>
@@ -58,22 +210,9 @@
 <li class="toctree-l4"><a class="reference internal" href="mesh.html">Mesh</a></li>
 <li class="toctree-l4"><a class="reference internal" href="optimization.html">Optimization</a></li>
 <li class="toctree-l4"><a class="reference internal" href="output.html">Output Request</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="part_assembly.html">Part and Assembly</a><ul class="current">
+<li class="toctree-l4 current has-children"><a class="reference internal" href="part_assembly.html">Part and Assembly</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l5"><a class="reference internal" href="part.html">Part</a></li>
-<li class="toctree-l5 current"><a class="current reference internal" href="#">Assembly</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="#create-instances">Create instances</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#object-features">Object features</a><ul>
-<li class="toctree-l7"><a class="reference internal" href="#id1">Assembly</a></li>
-<li class="toctree-l7"><a class="reference internal" href="#connectororientation">ConnectorOrientation</a></li>
-<li class="toctree-l7"><a class="reference internal" href="#connectororientationarray">ConnectorOrientationArray</a></li>
-<li class="toctree-l7"><a class="reference internal" href="#feature">Feature</a></li>
-<li class="toctree-l7"><a class="reference internal" href="#modelinstance">ModelInstance</a></li>
-<li class="toctree-l7"><a class="reference internal" href="#partinstance">PartInstance</a></li>
-<li class="toctree-l7"><a class="reference internal" href="#partinstancearray">PartInstanceArray</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l5 current current-page"><a class="current reference internal" href="#">Assembly</a></li>
 <li class="toctree-l5"><a class="reference internal" href="part_assembly/datum.html">Datum</a></li>
 <li class="toctree-l5"><a class="reference internal" href="part_assembly/engineering.html">Engineering Feature</a></li>
 <li class="toctree-l5"><a class="reference internal" href="part_assembly/feature.html">Feature</a></li>
@@ -84,62 +223,88 @@
 <li class="toctree-l4"><a class="reference internal" href="predefined.html">Predefined Field</a></li>
 <li class="toctree-l4"><a class="reference internal" href="profile.html">Beam Section Profile</a></li>
 <li class="toctree-l4"><a class="reference internal" href="property.html">Property</a></li>
-<li class="toctree-l4"><a class="reference internal" href="section.html">Section</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="section/connector.html">Connector</a></li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="sketcher.html">Sketcher</a></li>
-<li class="toctree-l4"><a class="reference internal" href="step.html">Step</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../model.html#create-models">Create models</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../model.html#object-features">Object features</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../job.html">Job</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../annotation.html">Annotation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../edit_mesh.html">Edit Mesh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../mdb.html#object-features">Object features</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../odb.html">Abaqus Output Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../session.html">Abaqus Session</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../kernel.html">Kernel</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../session.html">Abaqus Session</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../session/animation.html">Animation Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../session/canvas.html">Canvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../session/display_options.html">Display Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../session/display.html">Display Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../session/field_report.html">FieldReport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../session/odb_display.html">Odb Display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../session/path.html">Path and Probe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../session/plot_options.html">Plot Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../session/print.html">Print</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../session/xy.html">XY</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../kernel.html">Kernel</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../kernel/cae_display_preferences.html">Abaqus CAE Display Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../kernel/input.html">Input File Parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../kernel/kernel.html">Custom Kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../kernel/messaging.html">Messaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../kernel/table_collection.html">Table Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../kernel/text_representation.html">Text Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../kernel/utility.html">Utility and View</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../index.html">pyabaqus</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../../references.html">API Reference</a> &raquo;</li>
-          <li><a href="../../mdb.html">Abaqus Model Database</a> &raquo;</li>
-          <li><a href="../model.html">Model</a> &raquo;</li>
-          <li><a href="part_assembly.html">Part and Assembly</a> &raquo;</li>
-      <li>Assembly</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../../_sources/reference/mdb/model/assembly.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
-  <div class="section" id="assembly">
-<h1>Assembly<a class="headerlink" href="#assembly" title="Permalink to this headline"></a></h1>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <div class="section" id="assembly">
+<h1>Assembly<a class="headerlink" href="#assembly" title="Permalink to this headline">#</a></h1>
 <p>Features in Abaqus/CAE include Parts, Datums, Partitions, and Assembly operations. Assembly commands create Feature objects on only the rootAssembly object. The commands that create Feature objects on only the Part object are described in Part commands. The commands that create Feature objects on both the Part and the rootAssembly objects are described in Feature commands.</p>
 <div class="section" id="create-instances">
-<h2>Create instances<a class="headerlink" href="#create-instances" title="Permalink to this headline"></a></h2>
+<h2>Create instances<a class="headerlink" href="#create-instances" title="Permalink to this headline">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.AssemblyModel.AssemblyModel.Instance">
-<span class="sig-prename descclassname"><span class="pre">AssemblyModel.</span></span><span class="sig-name descname"><span class="pre">Instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#abaqus.Assembly.PartInstance.PartInstance" title="abaqus.Assembly.PartInstance.PartInstance"><span class="pre">abaqus.Assembly.PartInstance.PartInstance</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.AssemblyModel.AssemblyModel.Instance" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">AssemblyModel.</span></span><span class="sig-name descname"><span class="pre">Instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#abaqus.Assembly.PartInstance.PartInstance" title="abaqus.Assembly.PartInstance.PartInstance"><span class="pre">abaqus.Assembly.PartInstance.PartInstance</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.AssemblyModel.AssemblyModel.Instance" title="Permalink to this definition">#</a></dt>
 <dd><p>This method copies a PartInstance object from the specified model and creates a new
 PartInstance object.</p>
 <dl class="field-list simple">
@@ -163,18 +328,17 @@ PartInstance object.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 </div>
 <div class="section" id="object-features">
-<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline"></a></h2>
+<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
 <div class="section" id="id1">
-<h3>Assembly<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<h3>Assembly<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 </div>
 <div class="section" id="connectororientation">
-<h3>ConnectorOrientation<a class="headerlink" href="#connectororientation" title="Permalink to this headline"></a></h3>
+<h3>ConnectorOrientation<a class="headerlink" href="#connectororientation" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Assembly.ConnectorOrientation.ConnectorOrientation">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConnectorOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region:</span> <span class="pre">abaqus.Region.Set.Set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys1:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis1:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle1:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient2sameAs1:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys2:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis2:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle2:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.ConnectorOrientation.ConnectorOrientation" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConnectorOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region:</span> <span class="pre">abaqus.Region.Set.Set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys1:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis1:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle1:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient2sameAs1:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys2:</span> <span class="pre">abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumCsys.DatumCsys</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis2:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle2:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.ConnectorOrientation.ConnectorOrientation" title="Permalink to this definition">#</a></dt>
 <dd><p>The ConnectorOrientation object is used to assign a connector orientation to a
 connector.</p>
 <p class="rubric">Notes</p>
@@ -186,51 +350,48 @@ connector.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Assembly.ConnectorOrientation.ConnectorOrientation.setValues" title="abaqus.Assembly.ConnectorOrientation.ConnectorOrientation.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>()</p></td>
 <td><p>This method modifies the ConnectorOrientation object.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.ConnectorOrientation.ConnectorOrientation.setValues">
-<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.ConnectorOrientation.ConnectorOrientation.setValues" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.ConnectorOrientation.ConnectorOrientation.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the ConnectorOrientation object.</p>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="connectororientationarray">
-<h3>ConnectorOrientationArray<a class="headerlink" href="#connectororientationarray" title="Permalink to this headline"></a></h3>
+<h3>ConnectorOrientationArray<a class="headerlink" href="#connectororientationarray" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Assembly.ConnectorOrientationArray.ConnectorOrientationArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConnectorOrientationArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.ConnectorOrientationArray.ConnectorOrientationArray" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConnectorOrientationArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.ConnectorOrientationArray.ConnectorOrientationArray" title="Permalink to this definition">#</a></dt>
 <dd><p class="rubric">Methods</p>
-<table class="docutils align-default">
+<div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col style="width: 50%"/>
+<col style="width: 50%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </dd></dl>
-
 </div>
 <div class="section" id="feature">
-<h3>Feature<a class="headerlink" href="#feature" title="Permalink to this headline"></a></h3>
+<h3>Feature<a class="headerlink" href="#feature" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Assembly.Feature.Feature">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Feature</span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Feature</span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature" title="Permalink to this definition">#</a></dt>
 <dd><p>The following commands operate on Feature objects. For more information about the 
 Feature object, see Feature object.</p>
 <p class="rubric">Notes</p>
@@ -239,10 +400,10 @@ Feature object, see Feature object.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Assembly.Feature.Feature.AttachmentLines" title="abaqus.Assembly.Feature.Feature.AttachmentLines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttachmentLines</span></code></a>(name, points, sourceFaces, ...)</p></td>
@@ -270,10 +431,10 @@ Feature object, see Feature object.</p>
 <td><p>This method moves an instance so that its face is parallel to a face of a fixed instance.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.Feature.Feature.AttachmentLines">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AttachmentLines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sourceFaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face" title="abaqus.BasicGeometry.Face.Face"><span class="pre">abaqus.BasicGeometry.Face.Face</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sourceElementFaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mesh.html#abaqus.Mesh.MeshFace.MeshFace" title="abaqus.Mesh.MeshFace.MeshFace"><span class="pre">abaqus.Mesh.MeshFace.MeshFace</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetFaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face" title="abaqus.BasicGeometry.Face.Face"><span class="pre">abaqus.BasicGeometry.Face.Face</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetElementFaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mesh.html#abaqus.Mesh.MeshFace.MeshFace" title="abaqus.Mesh.MeshFace.MeshFace"><span class="pre">abaqus.Mesh.MeshFace.MeshFace</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projectionMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PROJECT_BY_PROXIMITY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projectionDirStartPt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projectionDirEndPt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sourceToTargetProjMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PROJECT_BY_NUMBER'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numProjections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projectionDistance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flipSourceToTargetDirection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.AttachmentLines" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AttachmentLines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sourceFaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face" title="abaqus.BasicGeometry.Face.Face"><span class="pre">abaqus.BasicGeometry.Face.Face</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sourceElementFaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mesh.html#abaqus.Mesh.MeshFace.MeshFace" title="abaqus.Mesh.MeshFace.MeshFace"><span class="pre">abaqus.Mesh.MeshFace.MeshFace</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetFaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face" title="abaqus.BasicGeometry.Face.Face"><span class="pre">abaqus.BasicGeometry.Face.Face</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetElementFaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mesh.html#abaqus.Mesh.MeshFace.MeshFace" title="abaqus.Mesh.MeshFace.MeshFace"><span class="pre">abaqus.Mesh.MeshFace.MeshFace</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projectionMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PROJECT_BY_PROXIMITY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projectionDirStartPt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projectionDirEndPt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sourceToTargetProjMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PROJECT_BY_NUMBER'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numProjections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projectionDistance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flipSourceToTargetDirection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.AttachmentLines" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a Feature object by creating attachment lines between the given set
 of source and target faces. The given points are first projected onto the source faces
 using the specified projection method. The points are then projected normal to the
@@ -344,10 +505,9 @@ target faces should be flipped.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.Feature.Feature.Coaxial">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Coaxial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movableAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.Coaxial" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Coaxial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movableAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.Coaxial" title="Permalink to this definition">#</a></dt>
 <dd><p>This method moves an instance so that its selected face is coaxial with the selected
 face of a fixed instance.</p>
 <dl class="field-list simple">
@@ -378,10 +538,9 @@ face of a fixed instance.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.Feature.Feature.CoincidentPoint">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CoincidentPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movablePoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.CoincidentPoint" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CoincidentPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movablePoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.CoincidentPoint" title="Permalink to this definition">#</a></dt>
 <dd><p>This method moves an instance so that a specified point is coincident with a specified
 point of a fixed instance.</p>
 <dl class="field-list simple">
@@ -408,10 +567,9 @@ part instance to remain fixed.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.Feature.Feature.EdgeToEdge">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EdgeToEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movableAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clearance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.EdgeToEdge" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EdgeToEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movableAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clearance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.EdgeToEdge" title="Permalink to this definition">#</a></dt>
 <dd><p>This method moves an instance so that its edge is parallel to an edge of a fixed
 instance.</p>
 <dl class="field-list simple">
@@ -448,10 +606,9 @@ axisymmetric instances only).</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.Feature.Feature.FaceToFace">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FaceToFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movablePlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clearance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.FaceToFace" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FaceToFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movablePlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clearance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.FaceToFace" title="Permalink to this definition">#</a></dt>
 <dd><p>This method moves an instance so that its face is coincident with a face of a fixed
 instance.</p>
 <dl class="field-list simple">
@@ -487,10 +644,9 @@ reverse aligned (ON).</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.Feature.Feature.ParallelCsys">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParallelCsys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movableCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.ParallelCsys" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParallelCsys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movableCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.ParallelCsys" title="Permalink to this definition">#</a></dt>
 <dd><p>This method moves an instance so that its Datum coordinate system is parallel to a Datum
 coordinate system of a fixed instance.</p>
 <dl class="field-list simple">
@@ -519,10 +675,9 @@ coordinate system of a fixed instance.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.Feature.Feature.ParallelEdge">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParallelEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movableAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.ParallelEdge" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParallelEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movableAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.ParallelEdge" title="Permalink to this definition">#</a></dt>
 <dd><p>This method moves an instance so that its edge is parallel to an edge of a fixed
 instance.</p>
 <dl class="field-list simple">
@@ -556,10 +711,9 @@ instance to remain fixed.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.Feature.Feature.ParallelFace">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParallelFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movablePlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.ParallelFace" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParallelFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movablePlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Assembly.Feature.Feature" title="abaqus.Assembly.Feature.Feature"><span class="pre">abaqus.Assembly.Feature.Feature</span></a></span></span><a class="headerlink" href="#abaqus.Assembly.Feature.Feature.ParallelFace" title="Permalink to this definition">#</a></dt>
 <dd><p>This method moves an instance so that its face is parallel to a face of a fixed
 instance.</p>
 <dl class="field-list simple">
@@ -593,18 +747,16 @@ reverse aligned (ON).</p>
 </pre></div>
 </div>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="modelinstance">
-<h3>ModelInstance<a class="headerlink" href="#modelinstance" title="Permalink to this headline"></a></h3>
+<h3>ModelInstance<a class="headerlink" href="#modelinstance" title="Permalink to this headline">#</a></h3>
 </div>
 <div class="section" id="partinstance">
-<h3>PartInstance<a class="headerlink" href="#partinstance" title="Permalink to this headline"></a></h3>
+<h3>PartInstance<a class="headerlink" href="#partinstance" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartInstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">part</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="part.html#abaqus.Part.Part.Part" title="abaqus.Part.Part.Part"><span class="pre">abaqus.Part.Part.Part</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoOffset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartInstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">part</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="part.html#abaqus.Part.Part.Part" title="abaqus.Part.Part.Part"><span class="pre">abaqus.Part.Part.Part</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoOffset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance" title="Permalink to this definition">#</a></dt>
 <dd><p>A PartInstance object is an instance of a Part object.</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -695,10 +847,10 @@ indices, respectively.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 10%"/>
+<col style="width: 90%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Assembly.PartInstance.PartInstance.Contact" title="abaqus.Assembly.PartInstance.PartInstance.Contact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Contact</span></code></a>(movableList, fixedList, direction, ...)</p></td>
@@ -744,10 +896,10 @@ indices, respectively.</p>
 <td><p>This method translates an instance along the specified direction until it is in contact with a fixed instance.</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.Contact">
-<span class="sig-name descname"><span class="pre">Contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movableList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clearance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isFaceEdges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.Contact" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">Contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movableList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clearance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isFaceEdges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.Contact" title="Permalink to this definition">#</a></dt>
 <dd><p>This method translates an instance along the specified direction until it is in contact
 with a fixed instance.</p>
 <dl class="field-list simple">
@@ -776,18 +928,16 @@ value is OFF.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.ConvertConstraints">
-<span class="sig-name descname"><span class="pre">ConvertConstraints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.ConvertConstraints" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ConvertConstraints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.ConvertConstraints" title="Permalink to this definition">#</a></dt>
 <dd><p>This method converts the position constraints of an instance to absolute positions. The
 method deletes the constraint features on the instance but preserves the position in
 space.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.InstanceFromBooleanCut">
-<span class="sig-name descname"><span class="pre">InstanceFromBooleanCut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instanceToBeCut</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cuttingInstances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'PartInstance'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">originalInstances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SUPPRESS'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.InstanceFromBooleanCut" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">InstanceFromBooleanCut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instanceToBeCut</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cuttingInstances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'PartInstance'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">originalInstances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SUPPRESS'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.InstanceFromBooleanCut" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a PartInstance in the instances repository after subtracting or
 cutting the geometries of a group of part instances from that of a base part instance.</p>
 <dl class="field-list simple">
@@ -818,10 +968,9 @@ value is SUPPRESS.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.InstanceFromBooleanMerge">
-<span class="sig-name descname"><span class="pre">InstanceFromBooleanMerge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'PartInstance'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keepIntersections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">originalInstances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SUPPRESS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GEOMETRY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mergeNodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOUNDARY_ONLY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeMergingTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">removeDuplicateElements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.InstanceFromBooleanMerge" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">InstanceFromBooleanMerge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'PartInstance'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keepIntersections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">originalInstances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SUPPRESS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GEOMETRY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mergeNodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOUNDARY_ONLY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeMergingTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">removeDuplicateElements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.InstanceFromBooleanMerge" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a PartInstance in the instances repository after merging two or more
 part instances.</p>
 <dl class="field-list simple">
@@ -869,10 +1018,9 @@ default value is True.</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.LinearInstancePattern">
-<span class="sig-name descname"><span class="pre">LinearInstancePattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instanceList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacing1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacing2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.LinearInstancePattern" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">LinearInstancePattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instanceList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacing1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacing2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.LinearInstancePattern" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates multiple PartInstance objects in a linear pattern and puts them into
 the instances repository.</p>
 <dl class="field-list simple">
@@ -912,10 +1060,9 @@ value is (0.0, 1.0, 0.0).</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.RadialInstancePattern">
-<span class="sig-name descname"><span class="pre">RadialInstancePattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instanceList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">totalAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.RadialInstancePattern" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">RadialInstancePattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instanceList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">totalAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.RadialInstancePattern" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates multiple PartInstance objects in a radial pattern and puts them into
 the instances repository.</p>
 <dl class="field-list simple">
@@ -952,10 +1099,9 @@ default value is (0.0, 0.0, 1.0).</p>
 </pre></div>
 </div>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.checkGeometry">
-<span class="sig-name descname"><span class="pre">checkGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detailed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.checkGeometry" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">checkGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detailed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.checkGeometry" title="Permalink to this definition">#</a></dt>
 <dd><p>This method checks the validity of the geometry of the part instance and prints a count
 of all topological entities on the part instance (faces, edges, vertices, etc.).</p>
 <dl class="field-list">
@@ -987,17 +1133,15 @@ status is updated to agree with the result of this check.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.getPosition">
-<span class="sig-name descname"><span class="pre">getPosition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.getPosition" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">getPosition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.getPosition" title="Permalink to this definition">#</a></dt>
 <dd><p>This method prints the sum of the translations and rotations applied to the PartInstance
 object.</p>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.getRotation">
-<span class="sig-name descname"><span class="pre">getRotation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.getRotation" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">getRotation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.getRotation" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns a tuple including the point of rotation, axis of rotation, and
 rotation angle (in degrees).</p>
 <dl class="field-list simple">
@@ -1009,10 +1153,9 @@ rotation angle (in degrees).</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.getTranslation">
-<span class="sig-name descname"><span class="pre">getTranslation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.getTranslation" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">getTranslation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.getTranslation" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns a tuple of three Floats representing translation in the <em>X</em>-, <em>Y</em>-,
 and <em>Z</em>-directions.</p>
 <dl class="field-list simple">
@@ -1023,10 +1166,9 @@ and <em>Z</em>-directions.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.replace">
-<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instanceOf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="part.html#abaqus.Part.Part.Part" title="abaqus.Part.Part.Part"><span class="pre">abaqus.Part.Part.Part</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">applyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.replace" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instanceOf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="part.html#abaqus.Part.Part.Part" title="abaqus.Part.Part.Part"><span class="pre">abaqus.Part.Part.Part</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">applyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.replace" title="Permalink to this definition">#</a></dt>
 <dd><p>This method replaces one instance with an instance of another part.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1042,10 +1184,9 @@ will be deleted from the feature list.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.rotateAboutAxis">
-<span class="sig-name descname"><span class="pre">rotateAboutAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axisPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisDirection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.rotateAboutAxis" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">rotateAboutAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axisPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisDirection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.rotateAboutAxis" title="Permalink to this definition">#</a></dt>
 <dd><p>This method translates an instance by the specified amount.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1062,10 +1203,9 @@ the direction.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.translate">
-<span class="sig-name descname"><span class="pre">translate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.translate" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">translate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.translate" title="Permalink to this definition">#</a></dt>
 <dd><p>This method translates an instance by the specified amount.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1076,10 +1216,9 @@ the direction.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstance.PartInstance.translateTo">
-<span class="sig-name descname"><span class="pre">translateTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movableList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clearance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.translateTo" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">translateTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">movableList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixedList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clearance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstance.PartInstance.translateTo" title="Permalink to this definition">#</a></dt>
 <dd><p>This method translates an instance along the specified direction until it is in contact
 with a fixed instance.</p>
 <dl class="field-list simple">
@@ -1107,62 +1246,114 @@ solving for the actual contact.</p>
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 </div>
 <div class="section" id="partinstancearray">
-<h3>PartInstanceArray<a class="headerlink" href="#partinstancearray" title="Permalink to this headline"></a></h3>
+<h3>PartInstanceArray<a class="headerlink" href="#partinstancearray" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Assembly.PartInstanceArray.PartInstanceArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartInstanceArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstanceArray.PartInstanceArray" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartInstanceArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Assembly.PartInstanceArray.PartInstanceArray" title="Permalink to this definition">#</a></dt>
 <dd><p class="rubric">Methods</p>
-<table class="docutils align-default">
+<div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col style="width: 50%"/>
+<col style="width: 50%"/>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </dd></dl>
-
 </div>
 </div>
 </div>
 
-
-           </div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="part_assembly/datum.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Datum</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="part.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Part</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, WANG Hailin
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="part.html" class="btn btn-neutral float-left" title="Part" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="part_assembly/datum.html" class="btn btn-neutral float-right" title="Datum" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
     </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Assembly</a><ul>
+<li><a class="reference internal" href="#create-instances">Create instances</a></li>
+<li><a class="reference internal" href="#object-features">Object features</a><ul>
+<li><a class="reference internal" href="#id1">Assembly</a></li>
+<li><a class="reference internal" href="#connectororientation">ConnectorOrientation</a></li>
+<li><a class="reference internal" href="#connectororientationarray">ConnectorOrientationArray</a></li>
+<li><a class="reference internal" href="#feature">Feature</a></li>
+<li><a class="reference internal" href="#modelinstance">ModelInstance</a></li>
+<li><a class="reference internal" href="#partinstance">PartInstance</a></li>
+<li><a class="reference internal" href="#partinstancearray">PartInstanceArray</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, WANG Hailin.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
+          </div>
         </div>
       </div>
-    </section>
+      
+      
+    </aside>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/scripts/furo.js"></script>
+    </body>
 </html>
