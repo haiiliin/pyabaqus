@@ -1,0 +1,1137 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
+
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.03.04"/>
+        <title>abaqus.Canvas.ViewportBase - pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.13 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  
+  <span class="sidebar-brand-text">pyabaqus 1.0.13 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../user.html">User Manual</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/header.html">Header of the Python script</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../user/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../user/mdb/model.html">Abaqus Model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/part.html">Part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../user/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../user/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../user/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../user/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../user/mdb/job.html">Abaqus Job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/session.html">Abaqus Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../references.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/mdb/model.html">Model</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/mesh.html">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/part_assembly.html">Part and Assembly</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part.html">Part</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/datum.html">Datum</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/engineering.html">Engineering Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/feature.html">Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/geometry.html">Basic Geometry</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/region.html">Region</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/job.html">Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/annotation.html">Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/edit_mesh.html">Edit Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/session.html">Abaqus Session</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/animation.html">Animation Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/canvas.html">Canvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/display_options.html">Display Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/display.html">Display Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/field_report.html">FieldReport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/odb_display.html">Odb Display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/path.html">Path and Probe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/plot_options.html">Plot Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/print.html">Print</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/xy.html">XY</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/kernel.html">Kernel</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/cae_display_preferences.html">Abaqus CAE Display Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/input.html">Input File Parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/kernel.html">Custom Kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/messaging.html">Messaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/table_collection.html">Table Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/text_representation.html">Text Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/utility.html">Utility and View</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <h1>Source code for abaqus.Canvas.ViewportBase</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">typing</span>
+
+<span class="kn">from</span> <span class="nn">abaqusConstants</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.AttributeColorMap</span> <span class="kn">import</span> <span class="n">AttributeColorMap</span>
+<span class="kn">from</span> <span class="nn">.Displayable</span> <span class="kn">import</span> <span class="n">Displayable</span>
+<span class="kn">from</span> <span class="nn">.ImageOptions</span> <span class="kn">import</span> <span class="n">ImageOptions</span>
+<span class="kn">from</span> <span class="nn">.Layer</span> <span class="kn">import</span> <span class="n">Layer</span>
+<span class="kn">from</span> <span class="nn">.MovieOptions</span> <span class="kn">import</span> <span class="n">MovieOptions</span>
+<span class="kn">from</span> <span class="nn">..Animation.AnimationController</span> <span class="kn">import</span> <span class="n">AnimationController</span>
+<span class="kn">from</span> <span class="nn">..Annotation.AnnotationsToPlotArray</span> <span class="kn">import</span> <span class="n">AnnotationsToPlotArray</span>
+<span class="kn">from</span> <span class="nn">..DisplayGroup.Leaf</span> <span class="kn">import</span> <span class="n">Leaf</span>
+<span class="kn">from</span> <span class="nn">..DisplayOptions.AssemblyDisplayOptions</span> <span class="kn">import</span> <span class="n">AssemblyDisplayOptions</span>
+<span class="kn">from</span> <span class="nn">..DisplayOptions.LightOptions</span> <span class="kn">import</span> <span class="n">LightOptions</span>
+<span class="kn">from</span> <span class="nn">..DisplayOptions.PartDisplayOptions</span> <span class="kn">import</span> <span class="n">PartDisplayOptions</span>
+<span class="kn">from</span> <span class="nn">..DisplayOptions.ViewportAnnotationOptions</span> <span class="kn">import</span> <span class="n">ViewportAnnotationOptions</span>
+<span class="kn">from</span> <span class="nn">..OdbDisplay.OdbDisplay</span> <span class="kn">import</span> <span class="n">OdbDisplay</span>
+<span class="kn">from</span> <span class="nn">..PlotOptions.DetailPlotOptions</span> <span class="kn">import</span> <span class="n">DetailPlotOptions</span>
+<span class="kn">from</span> <span class="nn">..UtilityAndView.View</span> <span class="kn">import</span> <span class="n">View</span>
+
+
+<div class="viewcode-block" id="ViewportBase"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase">[docs]</a><span class="k">class</span> <span class="nc">ViewportBase</span><span class="p">:</span>
+    <span class="sd">"""A viewport is the container for the graphics generated by the application. TheViewport</span>
+<span class="sd">    object stores the various settings that determine how objects are displayed within that </span>
+<span class="sd">    viewport. </span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    displayMode: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the display mode of the viewport. Possible values</span>
+<span class="sd">        are:SINGLE, specifying a single **displayedObject**.OVERLAY, specifying one or more layers</span>
+<span class="sd">        to be displayed simultaneously—each layer contains one **displayedObject**.</span>
+<span class="sd">    viewManipLayers: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying which layer or layers will be controlled by the view</span>
+<span class="sd">        manipulation tools when **displayMode=OVERLAY**. Possible values are ALL and CURRENT.</span>
+<span class="sd">    layerOffset: float</span>
+<span class="sd">        A Float specifying a factor to be used in offsetting layers in the screen Z direction.</span>
+<span class="sd">        Possible values are –1 to 1. A negative value reverses the apparent order in which the</span>
+<span class="sd">        layers are plotted.</span>
+<span class="sd">    windowState: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the current state of a viewport. Possible values are</span>
+<span class="sd">        NORMAL, MAXIMIZED, and MINIMIZED.</span>
+<span class="sd">    currentWidth: float</span>
+<span class="sd">        A Float specifying the width in millimeters of the current viewport, regardless of the</span>
+<span class="sd">        value of **windowState**.</span>
+<span class="sd">    currentHeight: float</span>
+<span class="sd">        A Float specifying the height in millimeters of the current viewport, regardless of the</span>
+<span class="sd">        value of **windowState**, and including the title bar.</span>
+<span class="sd">    applyLinkedCommands: Boolean</span>
+<span class="sd">        A Boolean specifying whether the viewport is linked for synchronization. The default</span>
+<span class="sd">        value is ON.</span>
+<span class="sd">    activeColorModes: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the currently active color mappings. Possible values</span>
+<span class="sd">        are:</span>
+<span class="sd">        DEFAULT_COLORS</span>
+<span class="sd">        PART_GEOM_MAP_COLORS</span>
+<span class="sd">        ASSEMBLY_MAP_COLORS</span>
+<span class="sd">        PART_MAP_COLORS</span>
+<span class="sd">        INSTANCE_MAP_COLORS</span>
+<span class="sd">        INSTANCE_TYPE_MAP_COLORS</span>
+<span class="sd">        SECTION_MAP_COLORS</span>
+<span class="sd">        MATERIAL_MAP_COLORS</span>
+<span class="sd">        LOAD_MAP_COLORS</span>
+<span class="sd">        BC_MAP_COLORS</span>
+<span class="sd">        INTERACTION_MAP_COLORS</span>
+<span class="sd">        CONSTRAINT_MAP_COLORS</span>
+<span class="sd">        SET_MAP_COLORS</span>
+<span class="sd">        SURFACE_MAP_COLORS</span>
+<span class="sd">        INTERNAL_SET_MAP_COLORS</span>
+<span class="sd">        INTERNAL_SURFACE_MAP_COLORS</span>
+<span class="sd">        DISPLAY_GRP_MAP_COLORS</span>
+<span class="sd">        SELECTION_GRP_MAP_COLORS</span>
+<span class="sd">        ELTYPE_MAP_COLORS</span>
+<span class="sd">        PLOT_MAP_COLORS</span>
+<span class="sd">        MESH_MAP_COLORS</span>
+<span class="sd">        The default value is DEFAULT_COLORS.</span>
+<span class="sd">    colorMode: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the last applied color mapping. Possible values</span>
+<span class="sd">        are:</span>
+<span class="sd">        DEFAULT_COLORS</span>
+<span class="sd">        PART_GEOM_MAP_COLORS</span>
+<span class="sd">        ASSEMBLY_MAP_COLORS</span>
+<span class="sd">        PART_MAP_COLORS</span>
+<span class="sd">        INSTANCE_MAP_COLORS</span>
+<span class="sd">        INSTANCE_TYPE_MAP_COLORS</span>
+<span class="sd">        SECTION_MAP_COLORS</span>
+<span class="sd">        MATERIAL_MAP_COLORS</span>
+<span class="sd">        LOAD_MAP_COLORS</span>
+<span class="sd">        BC_MAP_COLORS</span>
+<span class="sd">        INTERACTION_MAP_COLORS</span>
+<span class="sd">        CONSTRAINT_MAP_COLORS</span>
+<span class="sd">        SET_MAP_COLORS</span>
+<span class="sd">        SURFACE_MAP_COLORS</span>
+<span class="sd">        INTERNAL_SET_MAP_COLORS</span>
+<span class="sd">        INTERNAL_SURFACE_MAP_COLORS</span>
+<span class="sd">        DISPLAY_GRP_MAP_COLORS</span>
+<span class="sd">        SELECTION_GRP_MAP_COLORS</span>
+<span class="sd">        ELTYPE_MAP_COLORS</span>
+<span class="sd">        PLOT_MAP_COLORS</span>
+<span class="sd">        MESH_MAP_COLORS</span>
+<span class="sd">        The default value is DEFAULT_COLORS.</span>
+<span class="sd">    translucency: float</span>
+<span class="sd">        A Float specifying the translucency that will be applied :py:class:`~.to` objects colored using</span>
+<span class="sd">        **initialColor** and it needs :py:class:`~.to` be set along with **initialColor**. If **initialColor** is</span>
+<span class="sd">        set :py:class:`~.to` 'As is' then translucency will have no effect.</span>
+<span class="sd">    animationConnect: Boolean</span>
+<span class="sd">        A Boolean specifying whether an animation is connected to the viewport.</span>
+<span class="sd">    colorMappings: dict[str, AttributeColorMap]</span>
+<span class="sd">        A repository of :py:class:`~abaqus.Canvas.AttributeColorMap.AttributeColorMap` objects specifying :py:class:`~.the` objects cannot be constructed</span>
+<span class="sd">        but :py:class:`~.the` following attribute maps are supported:</span>
+<span class="sd">        "type"</span>
+<span class="sd">        "Element set"</span>
+<span class="sd">        "Material"</span>
+<span class="sd">        "Section"</span>
+<span class="sd">        "Default"</span>
+<span class="sd">        "Part"</span>
+<span class="sd">        "Part instance"</span>
+<span class="sd">        "Element type"</span>
+<span class="sd">        "Averaging region"</span>
+<span class="sd">        "Assembly"</span>
+<span class="sd">        "Property"</span>
+<span class="sd">        "Set"</span>
+<span class="sd">        "Surface"</span>
+<span class="sd">        "Skin"</span>
+<span class="sd">        "Profile"</span>
+<span class="sd">        "Part shape"</span>
+<span class="sd">        "Part status"</span>
+<span class="sd">        "Part geometry"</span>
+<span class="sd">        "Meshability"</span>
+<span class="sd">        "Instance type"</span>
+<span class="sd">        "Load"</span>
+<span class="sd">        "Boundary condition"</span>
+<span class="sd">        "Interaction"</span>
+<span class="sd">        "Constraint"</span>
+<span class="sd">        "Interaction type"</span>
+<span class="sd">        "Constraint type"</span>
+<span class="sd">        "Display group"</span>
+<span class="sd">        "Selection group"</span>
+<span class="sd">        "Interaction property"</span>
+<span class="sd">        "Connector"</span>
+<span class="sd">        "Connector type"</span>
+<span class="sd">        "Connector property"</span>
+<span class="sd">        "Internal set"</span>
+<span class="sd">        "Internal surface"</span>
+<span class="sd">        "mapColors"</span>
+<span class="sd">        "autoColors"</span>
+<span class="sd">        "overrides"</span>
+<span class="sd">        "defaultAutoColors"</span>
+<span class="sd">        "defaultOverrides"</span>
+<span class="sd">        "objectToCopy"</span>
+<span class="sd">        "colorMapping"</span>
+<span class="sd">        "colorMappings"</span>
+<span class="sd">        "colorMode"</span>
+<span class="sd">        "attributeColors"</span>
+<span class="sd">        "updateOverrides"</span>
+<span class="sd">        "colorCodeOverride"</span>
+<span class="sd">        "initialColor"</span>
+<span class="sd">        "Layup"</span>
+<span class="sd">        "Ply"</span>
+<span class="sd">    initialColor: str</span>
+<span class="sd">        A String specifying the color that will be applied to :py:class:`~.all` objects in the viewport at the</span>
+<span class="sd">        start of color coding. The possible values are 'As is', 'Default' or a string with a</span>
+<span class="sd">        hexadecimal representation of a color.</span>
+<span class="sd">    currentLayer: str</span>
+<span class="sd">        A String specifying which layer is affected by options settings when **displayMode**</span>
+<span class="sd">        =OVERLAY. The current layer is also the only layer affected by view manipulations</span>
+<span class="sd">        when**viewManipLayers** =CURRENT.</span>
+<span class="sd">    displayedObject: Displayable</span>
+<span class="sd">        A :py:class:`~abaqus.Canvas.Displayable.Displayable` object specifying :py:class:`~.the` object to be displayed. The :py:class:`~abaqus.Canvas.Displayable.Displayable` type is an</span>
+<span class="sd">        abstract generalization. The concrete possible types are Part, Assembly,</span>
+<span class="sd">        ConstrainedSketch, Odb, PlyStackPlot, or XYPlot. If **displayedObject=None**, Abaqus</span>
+<span class="sd">        displays an empty viewport.</span>
+<span class="sd">    layers: dict[str, Layer]</span>
+<span class="sd">        A repository of :py:class:`~abaqus.Canvas.Layer.Layer` objects specifying the key to the repository is a String with the</span>
+<span class="sd">        name of the layer.</span>
+<span class="sd">    view: View</span>
+<span class="sd">        A :py:class:`~abaqus.UtilityAndView.View.View` object specifying :py:class:`~.the` object that controls viewing of :py:class:`~.the` viewport content.</span>
+<span class="sd">    odbDisplay: OdbDisplay</span>
+<span class="sd">        An :py:class:`~abaqus.:py:class:`~abaqus.Odb.Odb.Odb`Display.:py:class:`~abaqus.Odb.Odb.Odb`Display.:py:class:`~abaqus.Odb.Odb.Odb`Display` object specifying the display options for the :py:class:`~abaqus.Odb.Odb.Odb` object.</span>
+<span class="sd">    partDisplay: PartDisplayOptions</span>
+<span class="sd">        A :py:class:`~abaqus.DisplayOptions.:py:class:`~abaqus.Part.Part.Part`DisplayOptions.:py:class:`~abaqus.Part.Part.Part`DisplayOptions` object specifying the display options for the :py:class:`~abaqus.Part.Part.Part` object.</span>
+<span class="sd">    assemblyDisplay: AssemblyDisplayOptions</span>
+<span class="sd">        An :py:class:`~abaqus.DisplayOptions.:py:class:`~abaqus.Assembly.Assembly.Assembly`DisplayOptions.:py:class:`~abaqus.Assembly.Assembly.Assembly`DisplayOptions` object specifying the display options for the :py:class:`~abaqus.Assembly.Assembly.Assembly` object.</span>
+<span class="sd">    viewportAnnotationOptions: ViewportAnnotationOptions</span>
+<span class="sd">        A :py:class:`~abaqus.DisplayOptions.ViewportAnnotationOptions.ViewportAnnotationOptions` object.</span>
+<span class="sd">    detailPlotOptions: DetailPlotOptions</span>
+<span class="sd">        A :py:class:`~abaqus.PlotOptions.DetailPlotOptions.DetailPlotOptions` object.</span>
+<span class="sd">    annotationsToPlot: AnnotationsToPlotArray</span>
+<span class="sd">        An :py:class:`~abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray` object.</span>
+<span class="sd">    visibleLayers: tuple</span>
+<span class="sd">        A tuple of Strings specifying the names of layers that will be displayed in the viewport</span>
+<span class="sd">        when **displayMode** = OVERLAY.</span>
+<span class="sd">    currentOrigin: tuple[float]</span>
+<span class="sd">        A pair of Floats specifying the **X**- and **Y**-coordinates in millimeters in the canvas</span>
+<span class="sd">        coordinate system of the lower left corner of the current viewport, regardless of the</span>
+<span class="sd">        value of **windowState**.</span>
+<span class="sd">    iconOrigin: tuple[float]</span>
+<span class="sd">        A pair of Floats specifying the **X**- and **Y**-coordinates in millimeters of the lower</span>
+<span class="sd">        left corner of the current viewport from a coordinate system having its origin in the</span>
+<span class="sd">        lower left corner of the drawing area. This origin refers to the viewport location when</span>
+<span class="sd">        **windowState** =MINIMIZED.</span>
+<span class="sd">    lightOptions: LightOptions</span>
+<span class="sd">        A :py:class:`~abaqus.DisplayOptions.LightOptions.LightOptions` object.</span>
+<span class="sd">    imageOptions: ImageOptions</span>
+<span class="sd">        An :py:class:`~abaqus.Canvas.ImageOptions.ImageOptions` object.</span>
+<span class="sd">    movieOptions: MovieOptions</span>
+<span class="sd">        A :py:class:`~abaqus.Canvas.MovieOptions.MovieOptions` object.</span>
+<span class="sd">    animationController: AnimationController</span>
+<span class="sd">        An :py:class:`~abaqus.Animation.AnimationController.AnimationController` object.</span>
+<span class="sd">    drawings: tuple</span>
+<span class="sd">        A tuple of Strings specifying keys to the session.drawings repository. The default value</span>
+<span class="sd">        is an empty sequence.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This object can be accessed by:</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        session.viewports[name]</span>
+
+<span class="sd">    """</span>
+
+    <span class="c1"># A SymbolicConstant specifying the display mode of the viewport. Possible values </span>
+    <span class="c1"># are:SINGLE, specifying a single *displayedObject*.OVERLAY, specifying one or more layers </span>
+    <span class="c1"># to be displayed simultaneously—each layer contains one *displayedObject*. </span>
+    <span class="n">displayMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A SymbolicConstant specifying which layer or layers will be controlled by the view </span>
+    <span class="c1"># manipulation tools when *displayMode*=OVERLAY. Possible values are ALL and CURRENT. </span>
+    <span class="n">viewManipLayers</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A Float specifying a factor to be used in offsetting layers in the screen Z direction. </span>
+    <span class="c1"># Possible values are –1 to 1. A negative value reverses the apparent order in which the </span>
+    <span class="c1"># layers are plotted. </span>
+    <span class="n">layerOffset</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A SymbolicConstant specifying the current state of a viewport. Possible values are </span>
+    <span class="c1"># NORMAL, MAXIMIZED, and MINIMIZED. </span>
+    <span class="n">windowState</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A Float specifying the width in millimeters of the current viewport, regardless of the </span>
+    <span class="c1"># value of *windowState*. </span>
+    <span class="n">currentWidth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A Float specifying the height in millimeters of the current viewport, regardless of the </span>
+    <span class="c1"># value of *windowState*, and including the title bar. </span>
+    <span class="n">currentHeight</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A Boolean specifying whether the viewport is linked for synchronization. The default </span>
+    <span class="c1"># value is ON. </span>
+    <span class="n">applyLinkedCommands</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A SymbolicConstant specifying the currently active color mappings. Possible values </span>
+    <span class="c1"># are:</span>
+    <span class="c1"># DEFAULT_COLORS</span>
+    <span class="c1"># PART_GEOM_MAP_COLORS</span>
+    <span class="c1"># ASSEMBLY_MAP_COLORS</span>
+    <span class="c1"># PART_MAP_COLORS</span>
+    <span class="c1"># INSTANCE_MAP_COLORS</span>
+    <span class="c1"># INSTANCE_TYPE_MAP_COLORS</span>
+    <span class="c1"># SECTION_MAP_COLORS</span>
+    <span class="c1"># MATERIAL_MAP_COLORS</span>
+    <span class="c1"># LOAD_MAP_COLORS</span>
+    <span class="c1"># BC_MAP_COLORS</span>
+    <span class="c1"># INTERACTION_MAP_COLORS</span>
+    <span class="c1"># CONSTRAINT_MAP_COLORS</span>
+    <span class="c1"># SET_MAP_COLORS</span>
+    <span class="c1"># SURFACE_MAP_COLORS</span>
+    <span class="c1"># INTERNAL_SET_MAP_COLORS</span>
+    <span class="c1"># INTERNAL_SURFACE_MAP_COLORS</span>
+    <span class="c1"># DISPLAY_GRP_MAP_COLORS</span>
+    <span class="c1"># SELECTION_GRP_MAP_COLORS</span>
+    <span class="c1"># ELTYPE_MAP_COLORS</span>
+    <span class="c1"># PLOT_MAP_COLORS</span>
+    <span class="c1"># MESH_MAP_COLORS</span>
+    <span class="c1"># The default value is DEFAULT_COLORS.</span>
+    <span class="n">activeColorModes</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT_COLORS</span>
+
+    <span class="c1"># A SymbolicConstant specifying the last applied color mapping. Possible values </span>
+    <span class="c1"># are:</span>
+    <span class="c1"># DEFAULT_COLORS</span>
+    <span class="c1"># PART_GEOM_MAP_COLORS</span>
+    <span class="c1"># ASSEMBLY_MAP_COLORS</span>
+    <span class="c1"># PART_MAP_COLORS</span>
+    <span class="c1"># INSTANCE_MAP_COLORS</span>
+    <span class="c1"># INSTANCE_TYPE_MAP_COLORS</span>
+    <span class="c1"># SECTION_MAP_COLORS</span>
+    <span class="c1"># MATERIAL_MAP_COLORS</span>
+    <span class="c1"># LOAD_MAP_COLORS</span>
+    <span class="c1"># BC_MAP_COLORS</span>
+    <span class="c1"># INTERACTION_MAP_COLORS</span>
+    <span class="c1"># CONSTRAINT_MAP_COLORS</span>
+    <span class="c1"># SET_MAP_COLORS</span>
+    <span class="c1"># SURFACE_MAP_COLORS</span>
+    <span class="c1"># INTERNAL_SET_MAP_COLORS</span>
+    <span class="c1"># INTERNAL_SURFACE_MAP_COLORS</span>
+    <span class="c1"># DISPLAY_GRP_MAP_COLORS</span>
+    <span class="c1"># SELECTION_GRP_MAP_COLORS</span>
+    <span class="c1"># ELTYPE_MAP_COLORS</span>
+    <span class="c1"># PLOT_MAP_COLORS</span>
+    <span class="c1"># MESH_MAP_COLORS</span>
+    <span class="c1"># The default value is DEFAULT_COLORS.</span>
+    <span class="n">colorMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT_COLORS</span>
+
+    <span class="c1"># A Float specifying the translucency that will be applied to objects colored using </span>
+    <span class="c1"># *initialColor* and it needs to be set along with *initialColor*. If *initialColor* is </span>
+    <span class="c1"># set to 'As is' then translucency will have no effect. </span>
+    <span class="n">translucency</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A Boolean specifying whether an animation is connected to the viewport. </span>
+    <span class="n">animationConnect</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A repository of AttributeColorMap objects specifying the objects cannot be constructed </span>
+    <span class="c1"># but the following attribute maps are supported:</span>
+    <span class="c1">#     "type"</span>
+    <span class="c1">#     "Element set"</span>
+    <span class="c1">#     "Material"</span>
+    <span class="c1">#     "Section"</span>
+    <span class="c1">#     "Default"</span>
+    <span class="c1">#     "Part"</span>
+    <span class="c1">#     "Part instance"</span>
+    <span class="c1">#     "Element type"</span>
+    <span class="c1">#     "Averaging region"</span>
+    <span class="c1">#     "Assembly"</span>
+    <span class="c1">#     "Property"</span>
+    <span class="c1">#     "Set"</span>
+    <span class="c1">#     "Surface"</span>
+    <span class="c1">#     "Skin"</span>
+    <span class="c1">#     "Profile"</span>
+    <span class="c1">#     "Part shape"</span>
+    <span class="c1">#     "Part status"</span>
+    <span class="c1">#     "Part geometry"</span>
+    <span class="c1">#     "Meshability"</span>
+    <span class="c1">#     "Instance type"</span>
+    <span class="c1">#     "Load"</span>
+    <span class="c1">#     "Boundary condition"</span>
+    <span class="c1">#     "Interaction"</span>
+    <span class="c1">#     "Constraint"</span>
+    <span class="c1">#     "Interaction type"</span>
+    <span class="c1">#     "Constraint type"</span>
+    <span class="c1">#     "Display group"</span>
+    <span class="c1">#     "Selection group"</span>
+    <span class="c1">#     "Interaction property"</span>
+    <span class="c1">#     "Connector"</span>
+    <span class="c1">#     "Connector type"</span>
+    <span class="c1">#     "Connector property"</span>
+    <span class="c1">#     "Internal set"</span>
+    <span class="c1">#     "Internal surface"</span>
+    <span class="c1">#     "mapColors"</span>
+    <span class="c1">#     "autoColors"</span>
+    <span class="c1">#     "overrides"</span>
+    <span class="c1">#     "defaultAutoColors"</span>
+    <span class="c1">#     "defaultOverrides"</span>
+    <span class="c1">#     "objectToCopy"</span>
+    <span class="c1">#     "colorMapping"</span>
+    <span class="c1">#     "colorMappings"</span>
+    <span class="c1">#     "colorMode"</span>
+    <span class="c1">#     "attributeColors"</span>
+    <span class="c1">#     "updateOverrides"</span>
+    <span class="c1">#     "colorCodeOverride"</span>
+    <span class="c1">#     "initialColor"</span>
+    <span class="c1">#     "Layup"</span>
+    <span class="c1">#     "Ply"</span>
+    <span class="n">colorMappings</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">AttributeColorMap</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">AttributeColorMap</span><span class="p">]()</span>
+
+    <span class="c1"># A String specifying the color that will be applied to all objects in the viewport at the </span>
+    <span class="c1"># start of color coding. The possible values are 'As is', 'Default' or a string with a </span>
+    <span class="c1"># hexadecimal representation of a color. </span>
+    <span class="n">initialColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+
+    <span class="c1"># A String specifying which layer is affected by options settings when *displayMode* </span>
+    <span class="c1"># =OVERLAY. The current layer is also the only layer affected by view manipulations </span>
+    <span class="c1"># when*viewManipLayers* =CURRENT. </span>
+    <span class="n">currentLayer</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+
+    <span class="c1"># A Displayable object specifying the object to be displayed. The Displayable type is an </span>
+    <span class="c1"># abstract generalization. The concrete possible types are Part, Assembly, </span>
+    <span class="c1"># ConstrainedSketch, Odb, PlyStackPlot, or XYPlot. If *displayedObject*=None, Abaqus </span>
+    <span class="c1"># displays an empty viewport. </span>
+    <span class="n">displayedObject</span><span class="p">:</span> <span class="n">Displayable</span> <span class="o">=</span> <span class="n">Displayable</span><span class="p">()</span>
+
+    <span class="c1"># A repository of Layer objects specifying the key to the repository is a String with the </span>
+    <span class="c1"># name of the layer. </span>
+    <span class="n">layers</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Layer</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Layer</span><span class="p">]()</span>
+
+    <span class="c1"># A View object specifying the object that controls viewing of the viewport content. </span>
+    <span class="n">view</span><span class="p">:</span> <span class="n">View</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># An OdbDisplay object specifying the display options for the Odb object. </span>
+    <span class="n">odbDisplay</span><span class="p">:</span> <span class="n">OdbDisplay</span> <span class="o">=</span> <span class="n">OdbDisplay</span><span class="p">()</span>
+
+    <span class="c1"># A PartDisplayOptions object specifying the display options for the Part object. </span>
+    <span class="n">partDisplay</span><span class="p">:</span> <span class="n">PartDisplayOptions</span> <span class="o">=</span> <span class="n">PartDisplayOptions</span><span class="p">()</span>
+
+    <span class="c1"># An AssemblyDisplayOptions object specifying the display options for the Assembly object. </span>
+    <span class="n">assemblyDisplay</span><span class="p">:</span> <span class="n">AssemblyDisplayOptions</span> <span class="o">=</span> <span class="n">AssemblyDisplayOptions</span><span class="p">()</span>
+
+    <span class="c1"># A ViewportAnnotationOptions object. </span>
+    <span class="n">viewportAnnotationOptions</span><span class="p">:</span> <span class="n">ViewportAnnotationOptions</span> <span class="o">=</span> <span class="n">ViewportAnnotationOptions</span><span class="p">()</span>
+
+    <span class="c1"># A DetailPlotOptions object. </span>
+    <span class="n">detailPlotOptions</span><span class="p">:</span> <span class="n">DetailPlotOptions</span> <span class="o">=</span> <span class="n">DetailPlotOptions</span><span class="p">()</span>
+
+    <span class="c1"># An AnnotationsToPlotArray object. </span>
+    <span class="n">annotationsToPlot</span><span class="p">:</span> <span class="n">AnnotationsToPlotArray</span> <span class="o">=</span> <span class="n">AnnotationsToPlotArray</span><span class="p">()</span>
+
+    <span class="c1"># A tuple of Strings specifying the names of layers that will be displayed in the viewport </span>
+    <span class="c1"># when *displayMode* = OVERLAY. </span>
+    <span class="n">visibleLayers</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()</span>
+
+    <span class="c1"># A pair of Floats specifying the *X*- and *Y*-coordinates in millimeters in the canvas </span>
+    <span class="c1"># coordinate system of the lower left corner of the current viewport, regardless of the </span>
+    <span class="c1"># value of *windowState*. </span>
+    <span class="n">currentOrigin</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>
+
+    <span class="c1"># A pair of Floats specifying the *X*- and *Y*-coordinates in millimeters of the lower </span>
+    <span class="c1"># left corner of the current viewport from a coordinate system having its origin in the </span>
+    <span class="c1"># lower left corner of the drawing area. This origin refers to the viewport location when </span>
+    <span class="c1"># *windowState* =MINIMIZED. </span>
+    <span class="n">iconOrigin</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>
+
+    <span class="c1"># A LightOptions object. </span>
+    <span class="n">lightOptions</span><span class="p">:</span> <span class="n">LightOptions</span> <span class="o">=</span> <span class="n">LightOptions</span><span class="p">()</span>
+
+    <span class="c1"># An ImageOptions object. </span>
+    <span class="n">imageOptions</span><span class="p">:</span> <span class="n">ImageOptions</span> <span class="o">=</span> <span class="n">ImageOptions</span><span class="p">()</span>
+
+    <span class="c1"># A MovieOptions object. </span>
+    <span class="n">movieOptions</span><span class="p">:</span> <span class="n">MovieOptions</span> <span class="o">=</span> <span class="n">MovieOptions</span><span class="p">()</span>
+
+    <span class="c1"># An AnimationController object. </span>
+    <span class="n">animationController</span><span class="p">:</span> <span class="n">AnimationController</span> <span class="o">=</span> <span class="n">AnimationController</span><span class="p">()</span>
+
+    <span class="c1"># A tuple of Strings specifying keys to the session.drawings repository. The default value </span>
+    <span class="c1"># is an empty sequence. </span>
+    <span class="n">drawings</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">origin</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">width</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">80</span><span class="p">,</span>
+                 <span class="n">border</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">titleBar</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">titleStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SYSTEM</span><span class="p">,</span>
+                 <span class="n">customTitleString</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
+        <span class="sd">"""This method creates a Viewport object with the specified origin and dimensions.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            session.Viewport</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name</span>
+<span class="sd">            A String specifying the repository key. </span>
+<span class="sd">        origin</span>
+<span class="sd">            A pair of Floats specifying the *X*- and *Y*-coordinates in millimeters in the canvas </span>
+<span class="sd">            coordinate system of the lower left corner of the viewport. The default origin is (0, </span>
+<span class="sd">            0). </span>
+<span class="sd">        width</span>
+<span class="sd">            A Float specifying the width in millimeters of the viewport. Possible values are 30 ≤≤ </span>
+<span class="sd">            *width* ≤≤ (*maxWidth*). The default value is 120.0.Note:The maximum value of width </span>
+<span class="sd">            (*maxWidth*) is the width of the screen in millimeters. </span>
+<span class="sd">        height</span>
+<span class="sd">            A Float specifying the height in millimeters of the viewport. This height includes the </span>
+<span class="sd">            title bar. Possible values are 30 ≤≤ *height* ≤≤ (*maxHeight*). The default value is </span>
+<span class="sd">            80.0.Note:The maximum value of height (*maxHeight*) is the height of the screen in </span>
+<span class="sd">            millimeters. </span>
+<span class="sd">        border</span>
+<span class="sd">            A Boolean specifying whether the viewport border is visible in a printed image. The </span>
+<span class="sd">            default value is ON. </span>
+<span class="sd">        titleBar</span>
+<span class="sd">            A Boolean specifying whether the viewport title should be displayed in a printed image. </span>
+<span class="sd">            The default value is ON.If *border* = OFF, the title will not be visible, even if </span>
+<span class="sd">            *titleBar* =ON. </span>
+<span class="sd">        titleStyle</span>
+<span class="sd">            A SymbolicConstant specifying which title to use for the viewport title. Possible values </span>
+<span class="sd">            are CUSTOM and SYSTEM. The default value is SYSTEM.If *titleStyle* = CUSTOM, </span>
+<span class="sd">            *customTitleString* will be used. If *titleStyle*= SYSTEM, a system-generated string </span>
+<span class="sd">            will be used. </span>
+<span class="sd">        customTitleString</span>
+<span class="sd">            A String specifying the viewport title when *titleStyle* =CUSTOM. The default value is </span>
+<span class="sd">            an empty string. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A Viewport object. </span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        RangeError</span>
+<span class="sd">            - If the user attempts to delete the only viewport: </span>
+<span class="sd">              SystemError: the current viewport may not be deleted. </span>
+<span class="sd">            - If *width* is out of range: </span>
+<span class="sd">              RangeError: width must be a Float in the range: 30 &lt;= width &lt;= *maxWidth* </span>
+<span class="sd">            - If *height* is out of range: </span>
+<span class="sd">              RangeError: height must be a Float in the range: 30 &lt;= width &lt;= *maxHeight* </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span>
+
+<div class="viewcode-block" id="ViewportBase.bringToFront"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.bringToFront">[docs]</a>    <span class="k">def</span> <span class="nf">bringToFront</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method moves the Viewport object to the front.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.disableMultipleColors"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.disableMultipleColors">[docs]</a>    <span class="k">def</span> <span class="nf">disableMultipleColors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method disables applying multiple color mappings that was enabled using</span>
+<span class="sd">        enableMultipleColors</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.disableRefresh"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.disableRefresh">[docs]</a>    <span class="k">def</span> <span class="nf">disableRefresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method disables Viewport refresh. Some methods that require the Viewport to be</span>
+<span class="sd">        up-to-date will override this setting. It is advisable to use this method sparingly.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.disableColorCodeUpdates"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.disableColorCodeUpdates">[docs]</a>    <span class="k">def</span> <span class="nf">disableColorCodeUpdates</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method disables Viewport updates and internal computations triggered because of</span>
+<span class="sd">        color coding. Performance improvement will be significant when color coding is ON and</span>
+<span class="sd">        repeating operations are performed using a script each of which requires color code</span>
+<span class="sd">        updates. No benefit will be had when color coding is OFF.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.enableMultipleColors"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.enableMultipleColors">[docs]</a>    <span class="k">def</span> <span class="nf">enableMultipleColors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method enables multiple color mappings to be applied at the same time. It also</span>
+<span class="sd">        ensures that the Viewport is updated correctly when *initialColor* is set.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.enableRefresh"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.enableRefresh">[docs]</a>    <span class="k">def</span> <span class="nf">enableRefresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method enables Viewport refresh disabled using disableRefresh.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.enableColorCodeUpdates"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.enableColorCodeUpdates">[docs]</a>    <span class="k">def</span> <span class="nf">enableColorCodeUpdates</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method enables Viewport color code updates disabled using disableColorCodeUpdates.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.getActiveElementLabels"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.getActiveElementLabels">[docs]</a>    <span class="k">def</span> <span class="nf">getActiveElementLabels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">useCut</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">printResults</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
+        <span class="sd">"""This method returns the element labels currently active in the viewport based on the</span>
+<span class="sd">        current display group. The element labels are printed only when the *displayedObject*</span>
+<span class="sd">        member in the Viewport object is set to an Odb. The getActiveElementLabels method has</span>
+<span class="sd">        the following arguments:</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        useCut</span>
+<span class="sd">            A Boolean flag to specify if any active cutting plane is to be considered in determining </span>
+<span class="sd">            active elements. </span>
+<span class="sd">        printResults</span>
+<span class="sd">            A Boolean flag to specify if the active element labels are to be printed to the replay </span>
+<span class="sd">            file. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A Dictionary object of element labels, keyed by OdbInstance name. Returns None if the </span>
+<span class="sd">            *displayedObject* member is not an Odb object.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.getActiveNodeLabels"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.getActiveNodeLabels">[docs]</a>    <span class="k">def</span> <span class="nf">getActiveNodeLabels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">useCut</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">printResults</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
+        <span class="sd">"""This method returns the node labels currently active in the viewport based on the</span>
+<span class="sd">        current display group. The node labels are printed only when the *displayedObject*</span>
+<span class="sd">        member in the Viewport object is set to an Odb. The getActiveNodeLabels method has the</span>
+<span class="sd">        following arguments:</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        useCut</span>
+<span class="sd">            A Boolean flag to specify if any active cutting plane is to be considered in determining </span>
+<span class="sd">            active nodes. </span>
+<span class="sd">        printResults</span>
+<span class="sd">            A Boolean flag to specify if the active node labels are to be printed to the replay </span>
+<span class="sd">            file. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A Dictionary object of node labels, keyed by OdbInstance name. Returns None if the </span>
+<span class="sd">            *displayedObject* member is not an Odb object.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.getPrimVarMinMaxLoc"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.getPrimVarMinMaxLoc">[docs]</a>    <span class="k">def</span> <span class="nf">getPrimVarMinMaxLoc</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method returns a dictionary containing the minimum, maximum and their location for</span>
+<span class="sd">        the current primary variable. A contour plot should be displayed in the current viewport</span>
+<span class="sd">        or else the method will return *None*.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A dictionary with keys 'minPartInstanceName', 'minElementLabel', 'minNodeLabel', </span>
+<span class="sd">            'minPosition', 'maxPartInstanceName', 'maxElementLabel', 'maxNodeLabel', 'maxPosition' . </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.makeCurrent"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.makeCurrent">[docs]</a>    <span class="k">def</span> <span class="nf">makeCurrent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method makes theViewport object the current viewport.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.maximize"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.maximize">[docs]</a>    <span class="k">def</span> <span class="nf">maximize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method maximizes the Viewport object to fill the drawing area.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.minimize"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.minimize">[docs]</a>    <span class="k">def</span> <span class="nf">minimize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method minimizes the Viewport object to appear as an abbreviated title bar.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.offset"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.offset">[docs]</a>    <span class="k">def</span> <span class="nf">offset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deltaX</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">deltaY</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="sd">"""This method modifies the current *X*-*Y* location of the viewport by the specified</span>
+<span class="sd">        distance.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        deltaX</span>
+<span class="sd">            A Float specifying the offset in millimeters of the *X*-component of the viewport </span>
+<span class="sd">            origin. The default value is 0. </span>
+<span class="sd">        deltaY</span>
+<span class="sd">            A Float specifying the offset in millimeters of the *Y*-component of the viewport </span>
+<span class="sd">            origin. The default value is 0. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.restore"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.restore">[docs]</a>    <span class="k">def</span> <span class="nf">restore</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method restores a maximized or minimized Viewport object to its previous size and</span>
+<span class="sd">        location.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.sendToBack"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.sendToBack">[docs]</a>    <span class="k">def</span> <span class="nf">sendToBack</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method moves the Viewport object to the back.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+    <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
+    <span class="k">def</span> <span class="nf">setColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initialColor</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">translucency</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
+        <span class="sd">"""This method specifies the color assignment using *initialColor* and *translucency*. If</span>
+<span class="sd">        *initialColor* has a value of 'As is', *translucency* has no effect. The setColor method</span>
+<span class="sd">        has the following arguments:</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        initialColor</span>
+<span class="sd">            A string specifying the initial color applied to the objects. </span>
+<span class="sd">        translucency</span>
+<span class="sd">            A float in the range of 0.0 to 1.0 specifying how translucent the objects drawn using </span>
+<span class="sd">            *initialColor* needs to be. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
+    <span class="k">def</span> <span class="nf">setColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">colorMapping</span><span class="p">:</span> <span class="n">AttributeColorMap</span><span class="p">):</span>
+        <span class="sd">"""This method specifies the color assignment using attributes specified by an</span>
+<span class="sd">        AttributeColorMap object. The setColor method has the following arguments:</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        colorMapping</span>
+<span class="sd">            An AttributeColorMap object. Possible values are any AttributeColorMap object. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
+    <span class="k">def</span> <span class="nf">setColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">leaf</span><span class="p">:</span> <span class="n">Leaf</span><span class="p">,</span> <span class="n">edgeColorWireHide</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">edgeColorFillShade</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                 <span class="n">fillColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">nodeSymbolColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                 <span class="n">nodeSymbolType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">HOLLOW_CIRCLE</span><span class="p">,</span>
+                 <span class="n">nodeSymbolSize</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SMALL</span><span class="p">):</span>
+        <span class="sd">"""This method specifies the color of a Leaf object.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        leaf</span>
+<span class="sd">            A Leaf object. Possible values are any Leaf object. </span>
+<span class="sd">        edgeColorWireHide</span>
+<span class="sd">            A String specifying the color to be used for drawing the edges of the elements contained </span>
+<span class="sd">            in *leaf* when the render style is wireframe or hidden. </span>
+<span class="sd">        edgeColorFillShade</span>
+<span class="sd">            A String specifying the color to be used for drawing the edges of the elements contained </span>
+<span class="sd">            in *leaf* when the render style is filled or shaded. </span>
+<span class="sd">        fillColor</span>
+<span class="sd">            A String specifying the color to be used for drawing the faces of the elements contained </span>
+<span class="sd">            in *leaf* when the render style is filled or shaded. </span>
+<span class="sd">        nodeSymbolColor</span>
+<span class="sd">            A String specifying the color to be used for drawing the nodes contained in *leaf*. </span>
+<span class="sd">        nodeSymbolType</span>
+<span class="sd">            A SymbolicConstant specifying the node symbol types for the nodes contained in *leaf*. </span>
+<span class="sd">            Possible values areFILLED_CIRCLE, FILLED_SQUARE, FILLED_DIAMOND, FILLED_TRI, </span>
+<span class="sd">            HOLLOW_CIRCLE, HOLLOW_SQUARE, HOLLOW_DIAMOND, HOLLOW_TRI, CROSS, and XMARKER. The </span>
+<span class="sd">            default value is HOLLOW_CIRCLE. </span>
+<span class="sd">        nodeSymbolSize</span>
+<span class="sd">            A SymbolicConstant specifying the node symbol size for the nodes contained in *leaf*. </span>
+<span class="sd">            Possible values are SMALL, MEDIUM, and LARGE. The default value is SMALL. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">setColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<div class="viewcode-block" id="ViewportBase.forceRefresh"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.forceRefresh">[docs]</a>    <span class="k">def</span> <span class="nf">forceRefresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method causes the Viewport to refresh immediately. It is provided to allow scripts</span>
+<span class="sd">        to refresh the Viewport before the script terminates. Normally, there would only be a</span>
+<span class="sd">        single cumulative refresh that takes place immediately after the script completes.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.setValues"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">displayedObject</span><span class="p">:</span> <span class="n">Displayable</span> <span class="o">=</span> <span class="n">Displayable</span><span class="p">(),</span> <span class="n">displayMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                  <span class="n">visibleLayers</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">viewManipLayers</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                  <span class="n">currentLayer</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">layerOffset</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="sd">"""This method modifies the Viewport object. The arguments to setValues are the same as the</span>
+<span class="sd">        arguments to the Viewport method, except for the *name* argument. In addition, the</span>
+<span class="sd">        setValues method has the following arguments:</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        displayedObject</span>
+<span class="sd">            A Displayable object specifying the object to be displayed. The Displayable type is an </span>
+<span class="sd">            abstract generalization. The concrete possible types are Part, Assembly, </span>
+<span class="sd">            ConstrainedSketch, Odb, PlyStackPlot, or XYPlot. If *displayedObject*=None, Abaqus </span>
+<span class="sd">            displays an empty viewport. </span>
+<span class="sd">        displayMode</span>
+<span class="sd">            A SymbolicConstant specifying the display mode of the viewport. Possible values </span>
+<span class="sd">            are:SINGLE, specifying a single *displayedObject*.OVERLAY, specifying one or more layers </span>
+<span class="sd">            to be displayed simultaneously—each layer contains one *displayedObject*. </span>
+<span class="sd">        visibleLayers</span>
+<span class="sd">            A sequence of Strings specifying the names of layers that will be displayed in the </span>
+<span class="sd">            viewport when *displayMode* = OVERLAY. </span>
+<span class="sd">        viewManipLayers</span>
+<span class="sd">            A SymbolicConstant specifying which layer or layers will be controlled by the view </span>
+<span class="sd">            manipulation tools when *displayMode*=OVERLAY. Possible values are ALL and CURRENT. </span>
+<span class="sd">        currentLayer</span>
+<span class="sd">            A String specifying which layer is affected by options settings when *displayMode* </span>
+<span class="sd">            =OVERLAY. The current layer is also the only layer affected by view manipulations </span>
+<span class="sd">            when*viewManipLayers* =CURRENT. </span>
+<span class="sd">        layerOffset</span>
+<span class="sd">            A Float specifying a factor to be used in offsetting layers in the screen Z direction. </span>
+<span class="sd">            Possible values are –1 to 1. A negative value reverses the apparent order in which the </span>
+<span class="sd">            layers are plotted.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        RangeError</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.addDrawings"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.addDrawings">[docs]</a>    <span class="k">def</span> <span class="nf">addDrawings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">"""This method identifies the names of Drawing objects to be rendered in the Viewport.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        names</span>
+<span class="sd">            A sequence of String values identifying keys in the session.drawings repository.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            ValueError. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.removeDrawings"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.removeDrawings">[docs]</a>    <span class="k">def</span> <span class="nf">removeDrawings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">"""This method identifies the names of Drawing objects to no longer be rendered in the</span>
+<span class="sd">        Viewport.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        names</span>
+<span class="sd">            A sequence of String values identifying keys in the Viewport sequence.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            ValueError. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ViewportBase.timeDisplay"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.ViewportBase.ViewportBase.timeDisplay">[docs]</a>    <span class="k">def</span> <span class="nf">timeDisplay</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numFrames</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">numSeconds</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">degreesPerFrame</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="sd">"""This method refreshes the Viewport display *numFrames* times and then checks to see if</span>
+<span class="sd">        *numSeconds* seconds have elapsed. If not, it will continue refreshing the Viewport</span>
+<span class="sd">        until the time has elapsed. At completion, the actual number of refreshes (frames)</span>
+<span class="sd">        rendered and elapsed time will be reported along with the calculated frames-per-second</span>
+<span class="sd">        (fps).</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        numFrames</span>
+<span class="sd">            An Int specifying the minimum number of times to refresh the Viewport. The default value </span>
+<span class="sd">            is 0. </span>
+<span class="sd">        numSeconds</span>
+<span class="sd">            An Int specifying the minimum number of seconds to spend refreshing the Viewport. The </span>
+<span class="sd">            default value is 10. </span>
+<span class="sd">        degreesPerFrame</span>
+<span class="sd">            A Float specifying the number of degrees to rotate the model view about its Z axis </span>
+<span class="sd">            before each refresh. The default value is 0.0. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div></div>
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, WANG Hailin
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/scripts/furo.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1325 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
+
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.03.04"/>
+        <title>abaqus.PlotOptions.BasicOptions - pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.13 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  
+  <span class="sidebar-brand-text">pyabaqus 1.0.13 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../user.html">User Manual</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/header.html">Header of the Python script</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../user/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../user/mdb/model.html">Abaqus Model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/part.html">Part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../user/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../user/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../user/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../user/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../user/mdb/job.html">Abaqus Job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/session.html">Abaqus Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../references.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/mdb/model.html">Model</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/mesh.html">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/part_assembly.html">Part and Assembly</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part.html">Part</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/datum.html">Datum</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/engineering.html">Engineering Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/feature.html">Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/geometry.html">Basic Geometry</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/region.html">Region</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/job.html">Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/annotation.html">Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/edit_mesh.html">Edit Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/session.html">Abaqus Session</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/animation.html">Animation Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/canvas.html">Canvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/display_options.html">Display Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/display.html">Display Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/field_report.html">FieldReport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/odb_display.html">Odb Display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/path.html">Path and Probe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/plot_options.html">Plot Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/print.html">Print</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/xy.html">XY</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/kernel.html">Kernel</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/cae_display_preferences.html">Abaqus CAE Display Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/input.html">Input File Parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/kernel.html">Custom Kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/messaging.html">Messaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/table_collection.html">Table Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/text_representation.html">Text Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/utility.html">Utility and View</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <h1>Source code for abaqus.PlotOptions.BasicOptions</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">abaqusConstants</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..Datum.DatumCsys</span> <span class="kn">import</span> <span class="n">DatumCsys</span>
+
+
+<div class="viewcode-block" id="BasicOptions"><a class="viewcode-back" href="../../../reference/session/plot_options.html#abaqus.PlotOptions.BasicOptions.BasicOptions">[docs]</a><span class="k">class</span> <span class="nc">BasicOptions</span><span class="p">:</span>
+    <span class="sd">"""The BasicOptions object stores values and attributes associated with an OdbDisplay</span>
+<span class="sd">    object. </span>
+<span class="sd">    The BasicOptions object has no constructor command. Abaqus creates the </span>
+<span class="sd">    *defaultOdbDisplay.basicOptions* member when you import the Visualization module. Abaqus </span>
+<span class="sd">    creates a *basicOptions* member when it creates the OdbDisplay object, using the values </span>
+<span class="sd">    from *defaultOdbDisplay.basicOptions*. Abaqus creates the *odbDisplay* member when a </span>
+<span class="sd">    viewport is created, using the attributes from the previous active viewport. The </span>
+<span class="sd">    previous active viewport contains the attributes from the *defaultOdbDisplay* object for </span>
+<span class="sd">    the session. The attributes from the *defaultOdbDisplay* object are copied from the </span>
+<span class="sd">    previous active viewport to create the new viewport. </span>
+<span class="sd">    BasicOptions objects are accessed in one of two ways: </span>
+<span class="sd">    - The default basic options: these settings are used as defaults when other </span>
+<span class="sd">    *basicOptions* members are created. These settings can be set to customize user </span>
+<span class="sd">    preferences. </span>
+<span class="sd">    - The basic options associated with a particular viewport. </span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    regionAveraging: Boolean</span>
+<span class="sd">        A Boolean specifying whether to ignore region boundaries when computing values. The</span>
+<span class="sd">        default value is ON.</span>
+<span class="sd">    cameraMovesWithCsys: Boolean</span>
+<span class="sd">        A Boolean specifying whether the camera moves with the coordinate system. The default</span>
+<span class="sd">        value is OFF.</span>
+<span class="sd">    cameraFollowsRotation: Boolean</span>
+<span class="sd">        A Boolean specifying whether the camera, when it moves, follows the rotation of the</span>
+<span class="sd">        coordinate system. The default value is OFF.</span>
+<span class="sd">    averagingThreshold: float</span>
+<span class="sd">        A Float specifying the nodal averaging threshold percentage. Possible values are 0 &lt;&lt;</span>
+<span class="sd">        **averagingThreshold** &lt;&lt; 100. The default value is 75.0.</span>
+<span class="sd">    quantityToPlot: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the quantity to plot. Possible values are FIELD_OUTPUT and</span>
+<span class="sd">        DISCONTINUITIES. The default value is FIELD_OUTPUT.</span>
+<span class="sd">    extrapAlgorithm: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the extrapolation algorithm. This member is for internal</span>
+<span class="sd">        use only. The only possible value is EXTRAP_COMPUTE_AVERAGE.</span>
+<span class="sd">    curveRefinementLevel: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the refinement level for drawing curves. Possible values</span>
+<span class="sd">        are EXTRA_COARSE, COARSE, MEDIUM, FINE, and EXTRA_FINE. The default value is COARSE.</span>
+<span class="sd">    featureAngle: float</span>
+<span class="sd">        A Float specifying the feature angle to be used when **visibleEdges=FEATURE**. The default</span>
+<span class="sd">        value is 30.0.</span>
+<span class="sd">    otherSymbolSize: int</span>
+<span class="sd">        An Int specifying the size of various glyph symbols (boundary conditions, coupling</span>
+<span class="sd">        constraints, etc.). The default value is 6.</span>
+<span class="sd">    renderBeamProfiles: Boolean</span>
+<span class="sd">        A Boolean specifying whether to render the beam profiles. The default value is OFF.</span>
+<span class="sd">    beamScaleFactor: float</span>
+<span class="sd">        A Float specifying the beam profile scale factor. The beamScaleFactor must be greater</span>
+<span class="sd">        than zero. The default value is 1.0.</span>
+<span class="sd">    renderShellThickness: Boolean</span>
+<span class="sd">        A Boolean specifying whether to render the shell thickness. The default value is OFF.</span>
+<span class="sd">    shellScaleFactor: float</span>
+<span class="sd">        A Float specifying the shell thickness scale factor. The shellScaleFactor must be</span>
+<span class="sd">        greater than zero. The default value is 1.0.</span>
+<span class="sd">    accountForDeactivatedElems: Boolean</span>
+<span class="sd">        A Boolean specifying whether to account for deactivated elements. The default value is</span>
+<span class="sd">        ON.</span>
+<span class="sd">    bcDisplay: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display boundary conditions. The default value is OFF.</span>
+<span class="sd">    connectorDisplay: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display connectors. The default value is OFF.</span>
+<span class="sd">    highlightConnectorPts: Boolean</span>
+<span class="sd">        A Boolean specifying whether to highlight connector points. The default value is ON.</span>
+<span class="sd">    showConnectorAxes: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display connector orientations or coordinate systems.</span>
+<span class="sd">        The default value is ON.</span>
+<span class="sd">    showConnectorType: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display the text that describes the connector type. The</span>
+<span class="sd">        default value is ON.</span>
+<span class="sd">    pointElements: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display point type elements. The default value is ON.</span>
+<span class="sd">    referencePoints: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display reference points. **referencePoints** is valid</span>
+<span class="sd">        only when **pointElements=ON**. The default value is ON.</span>
+<span class="sd">    massElements: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display mass, heat capacity and inertia elements.</span>
+<span class="sd">        **massElements** is valid only when **pointElements=ON**. The default value is OFF.</span>
+<span class="sd">    springElements: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display spring and dashpot elements. **springElements** is</span>
+<span class="sd">        valid only when **pointElements=ON**. The default value is OFF.</span>
+<span class="sd">    spotWelds: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display spot weld and distributed coupling elements.</span>
+<span class="sd">        **spotWelds** is valid only when **pointElements=ON**. The default value is OFF.</span>
+<span class="sd">    tracerParticles: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display tracer particles. **tracerParticles** is valid</span>
+<span class="sd">        only when **pointElements=ON**. The default value is OFF.</span>
+<span class="sd">    pc3dElements: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display PC3D elements. **pc3dElements** is valid only when</span>
+<span class="sd">        **pointElements=ON**. The default value is ON.</span>
+<span class="sd">    pd3dElements: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display PD3D elements. **pd3dElements** is valid only when</span>
+<span class="sd">        **pointElements=ON**. The default value is ON.</span>
+<span class="sd">    sweepArs: Boolean</span>
+<span class="sd">        A Boolean specifying whether to sweep the analytical surfaces. The default value is ON</span>
+<span class="sd">        or OFF, depending on the characteristics of your model.</span>
+<span class="sd">    sweepElem: Boolean</span>
+<span class="sd">        A Boolean specifying whether to sweep the deformable elements. The default value is ON</span>
+<span class="sd">        or OFF, depending on the characteristics of your model.</span>
+<span class="sd">    sweepStartAngleArs: float</span>
+<span class="sd">        A Float specifying the starting angle (in degrees) from which to sweep the analytical</span>
+<span class="sd">        surfaces when **sweepArs=ON**. The default value is 0.0.</span>
+<span class="sd">    sweepStartAngleElem: float</span>
+<span class="sd">        A Float specifying the starting angle (in degrees) from which to sweep the model when</span>
+<span class="sd">        **sweepElem=ON**. The default value is 0.0.</span>
+<span class="sd">    sweepEndAngleArs: float</span>
+<span class="sd">        A Float specifying the angle (in degrees) through which to sweep the analytical surfaces</span>
+<span class="sd">        when **sweepArs=ON**. The default value is 360.0.</span>
+<span class="sd">    sweepEndAngleElem: float</span>
+<span class="sd">        A Float specifying the angle (in degrees) through which to sweep the model when</span>
+<span class="sd">        **sweepElem=ON**. The default value is 180.0.</span>
+<span class="sd">    numSweepSegmentsArs: int</span>
+<span class="sd">        An Int specifying the number of segments to display when **sweepArs=ON**. The default</span>
+<span class="sd">        value is 10 or 20, depending on characteristics of your model.</span>
+<span class="sd">    numSweepSegmentsElem: int</span>
+<span class="sd">        An Int specifying the number of segments to display when **sweepElem=ON**. The default</span>
+<span class="sd">        value is 10 or 20, depending on characteristics of your model.</span>
+<span class="sd">    numericForm: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the numeric form in which to display results that contain</span>
+<span class="sd">        complex numbers. Possible values are COMPLEX_MAGNITUDE, COMPLEX_PHASE, REAL, IMAGINARY,</span>
+<span class="sd">        COMPLEX_MAG_AT_ANGLE, COMPLEX_ENVELOPE_MAX_ABS, COMPLEX_ENVELOPE_MAX, and</span>
+<span class="sd">        COMPLEX_ENVELOPE_MIN. The default value is REAL.</span>
+<span class="sd">    complexAngle: float</span>
+<span class="sd">        A Float specifying the angle (in degrees) at which to display results that contain</span>
+<span class="sd">        complex numbers when **numericForm=COMPLEX_MAG_AT_ANGLE**. The default value is 0.0.</span>
+<span class="sd">    sectionResults: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying which of the section points to use. Possible values are</span>
+<span class="sd">        USE_BOTTOM, USE_TOP, USE_BOTTOM_AND_TOP, and USE_ENVELOPE. The default value is</span>
+<span class="sd">        USE_BOTTOM.</span>
+<span class="sd">    envelopeCriteria: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the envelope criterion. Possible values are MAX_VALUE,</span>
+<span class="sd">        MIN_VALUE, and MAX_ABS_VALUE. The default value is MAX_ABS_VALUE.</span>
+<span class="sd">    envelopeDataPosition: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the output position for envelope calculations. Possible</span>
+<span class="sd">        values are CENTROID, ELEMENT_NODAL, and INTEGRATION_POINT. The default value is</span>
+<span class="sd">        INTEGRATION_POINT.</span>
+<span class="sd">    plyResultLocation: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the ply result location. Possible values are BOTTOM,</span>
+<span class="sd">        MIDDLE, TOP, and TOP_AND_BOTTOM. The default value is MIDDLE.</span>
+<span class="sd">    sectionPointScheme: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the section point scheme. Possible values are</span>
+<span class="sd">        CATEGORY_BASED and PLY_BASED. The default value is CATEGORY_BASED.</span>
+<span class="sd">    sweepSectors: Boolean</span>
+<span class="sd">        A Boolean specifying whether to sweep the cyclic symmetry sectors. The default value is</span>
+<span class="sd">        OFF.</span>
+<span class="sd">    sectorSelectionType: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying how sectors will be selected for sweeping. Possible values</span>
+<span class="sd">        are SELECT_BY_NUMBER, SELECT_BY_ANGLE, and SELECT_ALL. The default value is</span>
+<span class="sd">        SELECT_BY_NUMBER.</span>
+<span class="sd">    sweepSectorStartAngle: float</span>
+<span class="sd">        A Float specifying the angle (in degrees) from which to sweep cyclic symmetry sectors</span>
+<span class="sd">        when **sweepSectors=ON**. Possible values are multiples of the sector angle such that 0 ≤≤</span>
+<span class="sd">        **sweepSectorStartAngle** ≤≤ 360. The default value is 0.0.</span>
+<span class="sd">    sweepSectorEndAngle: float</span>
+<span class="sd">        A Float specifying the angle (in degrees) through which to sweep cyclic symmetry sectors</span>
+<span class="sd">        when **sweepSectors=ON**. Possible values are multiples of the sector angle such that 0 &lt;&lt;</span>
+<span class="sd">        **sweepSectorEndAngle** ≤≤ 360. The default value is 360.0.</span>
+<span class="sd">    extrudeArs: Boolean</span>
+<span class="sd">        A Boolean specifying whether to extrude analytical surfaces. The default value is ON or</span>
+<span class="sd">        OFF depending on characteristics of your model.</span>
+<span class="sd">    extrudeArsDepthAutoCompute: Boolean</span>
+<span class="sd">        A Boolean specifying whether to use automatic depth determination when extruding</span>
+<span class="sd">        analytical surfaces. The default value is ON. The default value is ON.</span>
+<span class="sd">    extrudeElem: Boolean</span>
+<span class="sd">        A Boolean specifying whether to extrude deformable elements. The default value is ON or</span>
+<span class="sd">        OFF depending on characteristics of your model.</span>
+<span class="sd">    extrudeArsDepth: float</span>
+<span class="sd">        A Float specifying the depth (in model units) by which the analytical surfaces are to be</span>
+<span class="sd">        extruded when **extrudeArs=ON**. The default value is 1.0.</span>
+<span class="sd">    extrudeElemDepth: float</span>
+<span class="sd">        A Float specifying the depth (in model units) by which the deformable elements are to be</span>
+<span class="sd">        extruded when **extrudeElem=ON**. The default value is 1.0.</span>
+<span class="sd">    mirrorPatternOrder: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the order of operations to create the mirror pattern.</span>
+<span class="sd">        Possible values are MIRROR_RECT_CIRC, RECT_MIRROR_CIRC, MIRROR_CIRC_RECT,</span>
+<span class="sd">        RECT_CIRC_MIRROR, CIRC_MIRROR_RECT, and CIRC_RECT_MIRROR. The default value is</span>
+<span class="sd">        MIRROR_RECT_CIRC.</span>
+<span class="sd">    mirrorAboutXyPlane: Boolean</span>
+<span class="sd">        A Boolean specifying whether to mirror about the XY plane. The default value is OFF.</span>
+<span class="sd">    mirrorAboutXzPlane: Boolean</span>
+<span class="sd">        A Boolean specifying whether to mirror about the XZ plane. The default value is OFF.</span>
+<span class="sd">    mirrorAboutYzPlane: Boolean</span>
+<span class="sd">        A Boolean specifying whether to mirror about the YZ plane. The default value is OFF.</span>
+<span class="sd">    mirrorDisplayBodies: Boolean</span>
+<span class="sd">        A Boolean specifying whether to mirror display bodies. The default value is OFF.</span>
+<span class="sd">    patternNumX: int</span>
+<span class="sd">        An Int specifying the number of patterns to create in the X-direction for a rectangular</span>
+<span class="sd">        pattern. The default value is 1.</span>
+<span class="sd">    patternNumY: int</span>
+<span class="sd">        An Int specifying the number of patterns to create in the Y-direction for a rectangular</span>
+<span class="sd">        pattern. The default value is 1.</span>
+<span class="sd">    patternNumZ: int</span>
+<span class="sd">        An Int specifying the number of patterns to create in the Z-direction for a rectangular</span>
+<span class="sd">        pattern. The default value is 1.</span>
+<span class="sd">    patternOffsetX: float</span>
+<span class="sd">        A Float specifying the offset of the pattern along the X-axis for a rectangular pattern.</span>
+<span class="sd">        The default value is 0.0.</span>
+<span class="sd">    patternOffsetY: float</span>
+<span class="sd">        A Float specifying the offset of the pattern along the Y-axis for a rectangular pattern.</span>
+<span class="sd">        The default value is 0.0.</span>
+<span class="sd">    patternOffsetZ: float</span>
+<span class="sd">        A Float specifying the offset of the pattern along the Z-axis for a rectangular pattern.</span>
+<span class="sd">        The default value is 0.0.</span>
+<span class="sd">    patternRotationAxis: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the axis of rotation for a circular. Possible values are</span>
+<span class="sd">        XAXIS, YAXIS, and ZAXIS. The default value is ZAXIS.</span>
+<span class="sd">    patternTotalAngle: float</span>
+<span class="sd">        A Float specifying the total angle of a circular pattern. The default value is 360.0.</span>
+<span class="sd">    patternNumCircular: int</span>
+<span class="sd">        An Int specifying the number of patterns to create in a circular pattern. The default</span>
+<span class="sd">        value is 1.</span>
+<span class="sd">    couplingDisplay: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display coupling constraints. The default value is ON.</span>
+<span class="sd">    coordSystemDisplay: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display coordinate systems. The default value is OFF.</span>
+<span class="sd">    scratchCoordSystemDisplay: Boolean</span>
+<span class="sd">        A Boolean specifying whether to display coordinate systems that represent user-defined</span>
+<span class="sd">        orientations. The default value is OFF.</span>
+<span class="sd">    transformationType: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the transformation to apply to the PrimaryVariable.</span>
+<span class="sd">        Possible values are DEFAULT, NODAL, USER_SPECIFIED, ANGULAR, and LAYUP_ORIENTATION. The</span>
+<span class="sd">        default value is DEFAULT.If **transformationType=NODAL**, Abaqus will transform nodal</span>
+<span class="sd">        vector fields into any orientation defined in the analysis with the TRANSFORM option.</span>
+<span class="sd">        Setting **transformationType=NODAL** has no effect on element-based results.If</span>
+<span class="sd">        **transformationType=USER_SPECIFIED**, Abaqus will transform tensor and vector fields into</span>
+<span class="sd">        the coordinate system specified by **datumCsys**.If</span>
+<span class="sd">        **transformationType=LAYUP_ORIENTATION**, Abaqus will transform tensor and vector fields</span>
+<span class="sd">        into the layup orientation defined in the composite section. The odb should contain the</span>
+<span class="sd">        field SORIENT in order to use this option.</span>
+<span class="sd">    rigidTransformPrimary: Boolean</span>
+<span class="sd">        A Boolean specifying whether to perform a rigid transformation of nodal vector datasets</span>
+<span class="sd">        based on the active user specific system The default value is OFF.</span>
+<span class="sd">    rigidTransformDeformed: Boolean</span>
+<span class="sd">        A Boolean specifying whether to perform a rigid transformation of current</span>
+<span class="sd">        deformedVariable based on the active user specific system The default value is OFF.</span>
+<span class="sd">    transformOnDeformed: Boolean</span>
+<span class="sd">        A Boolean specifying whether to include the effects of deformation on the transformation</span>
+<span class="sd">        calculations The default value is ON.</span>
+<span class="sd">    modelCanExtrude: Boolean</span>
+<span class="sd">        A Boolean specifying whether the model contains any elements or surfaces that can be</span>
+<span class="sd">        extruded.</span>
+<span class="sd">    sweepModelType: int</span>
+<span class="sd">        An Int specifying the types of sweepable elements and surfaces contained in the model,</span>
+<span class="sd">        if any.</span>
+<span class="sd">    averageElementOutput: Boolean</span>
+<span class="sd">        A Boolean specifying whether to average the element output. The default value is ON.</span>
+<span class="sd">    averageOnlyDisplayed: Boolean</span>
+<span class="sd">        A Boolean specifying whether to average only values on displayed elements. The default</span>
+<span class="sd">        value is ON.</span>
+<span class="sd">    regionBoundaries: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the type of averaging region boundaries. Possible values</span>
+<span class="sd">        are NONE, ODB_REGIONS, ELEMENT_SET, and DISPLAY_GROUPS. The default value is</span>
+<span class="sd">        ODB_REGIONS.</span>
+<span class="sd">    useRegionBoundaries: Boolean</span>
+<span class="sd">        A Boolean specifying whether to use region boundaries when averaging. The default value</span>
+<span class="sd">        is ON.</span>
+<span class="sd">    includeFeatureBoundaries: Boolean</span>
+<span class="sd">        A Boolean specifying whether to include additional averaging boundaries for shells and</span>
+<span class="sd">        membranes based on feature edges. The default value is ON.</span>
+<span class="sd">    numSectors: int</span>
+<span class="sd">        An Int specifying the number of sectors of a cyclic symmetric model. The value is</span>
+<span class="sd">        automatically computed from the cyclic symmetric model. This value is read-only.</span>
+<span class="sd">    sectorAngle: float</span>
+<span class="sd">        A Float specifying the sector angle of a cyclic symmetric model. The value is</span>
+<span class="sd">        automatically computed from the cyclic symmetric model. This value is read-only.</span>
+<span class="sd">    automaticExtrudeDepth: float</span>
+<span class="sd">        A Float specifying the automatic extrude depth used to extrude analytical rigid surfaces</span>
+<span class="sd">        in the default setting. This value is read-only.</span>
+<span class="sd">    cameraCsysName: str</span>
+<span class="sd">        A String specifying the name of the coordinate system driving the moving camera.</span>
+<span class="sd">    noResultsColor: str</span>
+<span class="sd">        A String specifying the color of elements that do not have any results. The default</span>
+<span class="sd">        value is "White".</span>
+<span class="sd">    mirrorCsysName: SymbolicConstant</span>
+<span class="sd">        The SymbolicConstant GLOBAL or a String specifying the name of the mirror's coordinate</span>
+<span class="sd">        system. The default value is GLOBAL.</span>
+<span class="sd">    patternCsysName: SymbolicConstant</span>
+<span class="sd">        The SymbolicConstant GLOBAL or a String specifying the name of the pattern's coordinate</span>
+<span class="sd">        system. The default value is GLOBAL.</span>
+<span class="sd">    datumCsys: DatumCsys</span>
+<span class="sd">        A :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the coordinate system to use for results transformation</span>
+<span class="sd">        when **transformationType=USER_SPECIFIED**.</span>
+<span class="sd">    selectedSectorNumbers: int</span>
+<span class="sd">        A tuple of Ints specifying which sectors to display when</span>
+<span class="sd">        **sectorSelectionType=SELECT_BY_NUMBER**. Possible values are 1 ≤≤ **selectedSectorNumbers**</span>
+<span class="sd">        ≤≤ the number of sectors. The default value is (1).</span>
+<span class="sd">    userRegions: tuple</span>
+<span class="sd">        A tuple of Strings specifying either element set or display group names (depending on</span>
+<span class="sd">        the value of regionBoundaries) defining the averaging region boundaries. The default</span>
+<span class="sd">        value is an empty sequence.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">        This object can be accessed by:</span>
+<span class="sd">        </span>
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">            </span>
+<span class="sd">            import visualization</span>
+<span class="sd">            session.defaultOdbDisplay.basicOptions</span>
+<span class="sd">            session.viewports[name].layers[name].odbDisplay.basicOptions</span>
+<span class="sd">            session.viewports[name].odbDisplay.basicOptions</span>
+
+<span class="sd">    """</span>
+
+    <span class="c1"># A Boolean specifying whether to ignore region boundaries when computing values. The </span>
+    <span class="c1"># default value is ON. </span>
+    <span class="n">regionAveraging</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A Boolean specifying whether the camera moves with the coordinate system. The default </span>
+    <span class="c1"># value is OFF. </span>
+    <span class="n">cameraMovesWithCsys</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether the camera, when it moves, follows the rotation of the </span>
+    <span class="c1"># coordinate system. The default value is OFF. </span>
+    <span class="n">cameraFollowsRotation</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Float specifying the nodal averaging threshold percentage. Possible values are 0 &lt;&lt; </span>
+    <span class="c1"># *averagingThreshold* &lt;&lt; 100. The default value is 75.0. </span>
+    <span class="n">averagingThreshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">75</span>
+
+    <span class="c1"># A SymbolicConstant specifying the quantity to plot. Possible values are FIELD_OUTPUT and </span>
+    <span class="c1"># DISCONTINUITIES. The default value is FIELD_OUTPUT. </span>
+    <span class="n">quantityToPlot</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FIELD_OUTPUT</span>
+
+    <span class="c1"># A SymbolicConstant specifying the extrapolation algorithm. This member is for internal </span>
+    <span class="c1"># use only. The only possible value is EXTRAP_COMPUTE_AVERAGE. </span>
+    <span class="n">extrapAlgorithm</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A SymbolicConstant specifying the refinement level for drawing curves. Possible values </span>
+    <span class="c1"># are EXTRA_COARSE, COARSE, MEDIUM, FINE, and EXTRA_FINE. The default value is COARSE. </span>
+    <span class="n">curveRefinementLevel</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COARSE</span>
+
+    <span class="c1"># A Float specifying the feature angle to be used when *visibleEdges*=FEATURE. The default </span>
+    <span class="c1"># value is 30.0. </span>
+    <span class="n">featureAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">30</span>
+
+    <span class="c1"># An Int specifying the size of various glyph symbols (boundary conditions, coupling </span>
+    <span class="c1"># constraints, etc.). The default value is 6. </span>
+    <span class="n">otherSymbolSize</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">6</span>
+
+    <span class="c1"># A Boolean specifying whether to render the beam profiles. The default value is OFF. </span>
+    <span class="n">renderBeamProfiles</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Float specifying the beam profile scale factor. The beamScaleFactor must be greater </span>
+    <span class="c1"># than zero. The default value is 1.0. </span>
+    <span class="n">beamScaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># A Boolean specifying whether to render the shell thickness. The default value is OFF. </span>
+    <span class="n">renderShellThickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Float specifying the shell thickness scale factor. The shellScaleFactor must be </span>
+    <span class="c1"># greater than zero. The default value is 1.0. </span>
+    <span class="n">shellScaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># A Boolean specifying whether to account for deactivated elements. The default value is </span>
+    <span class="c1"># ON. </span>
+    <span class="n">accountForDeactivatedElems</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A Boolean specifying whether to display boundary conditions. The default value is OFF. </span>
+    <span class="n">bcDisplay</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether to display connectors. The default value is OFF. </span>
+    <span class="n">connectorDisplay</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether to highlight connector points. The default value is ON. </span>
+    <span class="n">highlightConnectorPts</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A Boolean specifying whether to display connector orientations or coordinate systems. </span>
+    <span class="c1"># The default value is ON. </span>
+    <span class="n">showConnectorAxes</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A Boolean specifying whether to display the text that describes the connector type. The </span>
+    <span class="c1"># default value is ON. </span>
+    <span class="n">showConnectorType</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A Boolean specifying whether to display point type elements. The default value is ON. </span>
+    <span class="n">pointElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A Boolean specifying whether to display reference points. *referencePoints* is valid </span>
+    <span class="c1"># only when *pointElements*=ON. The default value is ON. </span>
+    <span class="n">referencePoints</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A Boolean specifying whether to display mass, heat capacity and inertia elements. </span>
+    <span class="c1"># *massElements* is valid only when *pointElements*=ON. The default value is OFF. </span>
+    <span class="n">massElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether to display spring and dashpot elements. *springElements* is </span>
+    <span class="c1"># valid only when *pointElements*=ON. The default value is OFF. </span>
+    <span class="n">springElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether to display spot weld and distributed coupling elements. </span>
+    <span class="c1"># *spotWelds* is valid only when *pointElements*=ON. The default value is OFF. </span>
+    <span class="n">spotWelds</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether to display tracer particles. *tracerParticles* is valid </span>
+    <span class="c1"># only when *pointElements*=ON. The default value is OFF. </span>
+    <span class="n">tracerParticles</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether to display PC3D elements. *pc3dElements* is valid only when </span>
+    <span class="c1"># *pointElements*=ON. The default value is ON. </span>
+    <span class="n">pc3dElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A Boolean specifying whether to display PD3D elements. *pd3dElements* is valid only when </span>
+    <span class="c1"># *pointElements*=ON. The default value is ON. </span>
+    <span class="n">pd3dElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A Boolean specifying whether to sweep the analytical surfaces. The default value is ON </span>
+    <span class="c1"># or OFF, depending on the characteristics of your model. </span>
+    <span class="n">sweepArs</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether to sweep the deformable elements. The default value is ON </span>
+    <span class="c1"># or OFF, depending on the characteristics of your model. </span>
+    <span class="n">sweepElem</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Float specifying the starting angle (in degrees) from which to sweep the analytical </span>
+    <span class="c1"># surfaces when *sweepArs*=ON. The default value is 0.0. </span>
+    <span class="n">sweepStartAngleArs</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># A Float specifying the starting angle (in degrees) from which to sweep the model when </span>
+    <span class="c1"># *sweepElem*=ON. The default value is 0.0. </span>
+    <span class="n">sweepStartAngleElem</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># A Float specifying the angle (in degrees) through which to sweep the analytical surfaces </span>
+    <span class="c1"># when *sweepArs*=ON. The default value is 360.0. </span>
+    <span class="n">sweepEndAngleArs</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">360</span>
+
+    <span class="c1"># A Float specifying the angle (in degrees) through which to sweep the model when </span>
+    <span class="c1"># *sweepElem*=ON. The default value is 180.0. </span>
+    <span class="n">sweepEndAngleElem</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">180</span>
+
+    <span class="c1"># An Int specifying the number of segments to display when *sweepArs*=ON. The default </span>
+    <span class="c1"># value is 10 or 20, depending on characteristics of your model. </span>
+    <span class="n">numSweepSegmentsArs</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># An Int specifying the number of segments to display when *sweepElem*=ON. The default </span>
+    <span class="c1"># value is 10 or 20, depending on characteristics of your model. </span>
+    <span class="n">numSweepSegmentsElem</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A SymbolicConstant specifying the numeric form in which to display results that contain </span>
+    <span class="c1"># complex numbers. Possible values are COMPLEX_MAGNITUDE, COMPLEX_PHASE, REAL, IMAGINARY, </span>
+    <span class="c1"># COMPLEX_MAG_AT_ANGLE, COMPLEX_ENVELOPE_MAX_ABS, COMPLEX_ENVELOPE_MAX, and </span>
+    <span class="c1"># COMPLEX_ENVELOPE_MIN. The default value is REAL. </span>
+    <span class="n">numericForm</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">REAL</span>
+
+    <span class="c1"># A Float specifying the angle (in degrees) at which to display results that contain </span>
+    <span class="c1"># complex numbers when *numericForm*=COMPLEX_MAG_AT_ANGLE. The default value is 0.0. </span>
+    <span class="n">complexAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># A SymbolicConstant specifying which of the section points to use. Possible values are </span>
+    <span class="c1"># USE_BOTTOM, USE_TOP, USE_BOTTOM_AND_TOP, and USE_ENVELOPE. The default value is </span>
+    <span class="c1"># USE_BOTTOM. </span>
+    <span class="n">sectionResults</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">USE_BOTTOM</span>
+
+    <span class="c1"># A SymbolicConstant specifying the envelope criterion. Possible values are MAX_VALUE, </span>
+    <span class="c1"># MIN_VALUE, and MAX_ABS_VALUE. The default value is MAX_ABS_VALUE. </span>
+    <span class="n">envelopeCriteria</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MAX_ABS_VALUE</span>
+
+    <span class="c1"># A SymbolicConstant specifying the output position for envelope calculations. Possible </span>
+    <span class="c1"># values are CENTROID, ELEMENT_NODAL, and INTEGRATION_POINT. The default value is </span>
+    <span class="c1"># INTEGRATION_POINT. </span>
+    <span class="n">envelopeDataPosition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">INTEGRATION_POINT</span>
+
+    <span class="c1"># A SymbolicConstant specifying the ply result location. Possible values are BOTTOM, </span>
+    <span class="c1"># MIDDLE, TOP, and TOP_AND_BOTTOM. The default value is MIDDLE. </span>
+    <span class="n">plyResultLocation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MIDDLE</span>
+
+    <span class="c1"># A SymbolicConstant specifying the section point scheme. Possible values are </span>
+    <span class="c1"># CATEGORY_BASED and PLY_BASED. The default value is CATEGORY_BASED. </span>
+    <span class="n">sectionPointScheme</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CATEGORY_BASED</span>
+
+    <span class="c1"># A Boolean specifying whether to sweep the cyclic symmetry sectors. The default value is </span>
+    <span class="c1"># OFF. </span>
+    <span class="n">sweepSectors</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A SymbolicConstant specifying how sectors will be selected for sweeping. Possible values </span>
+    <span class="c1"># are SELECT_BY_NUMBER, SELECT_BY_ANGLE, and SELECT_ALL. The default value is </span>
+    <span class="c1"># SELECT_BY_NUMBER. </span>
+    <span class="n">sectorSelectionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SELECT_BY_NUMBER</span>
+
+    <span class="c1"># A Float specifying the angle (in degrees) from which to sweep cyclic symmetry sectors </span>
+    <span class="c1"># when *sweepSectors*=ON. Possible values are multiples of the sector angle such that 0 ≤≤ </span>
+    <span class="c1"># *sweepSectorStartAngle* ≤≤ 360. The default value is 0.0. </span>
+    <span class="n">sweepSectorStartAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># A Float specifying the angle (in degrees) through which to sweep cyclic symmetry sectors </span>
+    <span class="c1"># when *sweepSectors*=ON. Possible values are multiples of the sector angle such that 0 &lt;&lt; </span>
+    <span class="c1"># *sweepSectorEndAngle* ≤≤ 360. The default value is 360.0. </span>
+    <span class="n">sweepSectorEndAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">360</span>
+
+    <span class="c1"># A Boolean specifying whether to extrude analytical surfaces. The default value is ON or </span>
+    <span class="c1"># OFF depending on characteristics of your model. </span>
+    <span class="n">extrudeArs</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether to use automatic depth determination when extruding </span>
+    <span class="c1"># analytical surfaces. The default value is ON. The default value is ON. </span>
+    <span class="n">extrudeArsDepthAutoCompute</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A Boolean specifying whether to extrude deformable elements. The default value is ON or </span>
+    <span class="c1"># OFF depending on characteristics of your model. </span>
+    <span class="n">extrudeElem</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Float specifying the depth (in model units) by which the analytical surfaces are to be </span>
+    <span class="c1"># extruded when *extrudeArs*=ON. The default value is 1.0. </span>
+    <span class="n">extrudeArsDepth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># A Float specifying the depth (in model units) by which the deformable elements are to be </span>
+    <span class="c1"># extruded when *extrudeElem*=ON. The default value is 1.0. </span>
+    <span class="n">extrudeElemDepth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># A SymbolicConstant specifying the order of operations to create the mirror pattern. </span>
+    <span class="c1"># Possible values are MIRROR_RECT_CIRC, RECT_MIRROR_CIRC, MIRROR_CIRC_RECT, </span>
+    <span class="c1"># RECT_CIRC_MIRROR, CIRC_MIRROR_RECT, and CIRC_RECT_MIRROR. The default value is </span>
+    <span class="c1"># MIRROR_RECT_CIRC. </span>
+    <span class="n">mirrorPatternOrder</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MIRROR_RECT_CIRC</span>
+
+    <span class="c1"># A Boolean specifying whether to mirror about the XY plane. The default value is OFF. </span>
+    <span class="n">mirrorAboutXyPlane</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether to mirror about the XZ plane. The default value is OFF. </span>
+    <span class="n">mirrorAboutXzPlane</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether to mirror about the YZ plane. The default value is OFF. </span>
+    <span class="n">mirrorAboutYzPlane</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether to mirror display bodies. The default value is OFF. </span>
+    <span class="n">mirrorDisplayBodies</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># An Int specifying the number of patterns to create in the X-direction for a rectangular </span>
+    <span class="c1"># pattern. The default value is 1. </span>
+    <span class="n">patternNumX</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># An Int specifying the number of patterns to create in the Y-direction for a rectangular </span>
+    <span class="c1"># pattern. The default value is 1. </span>
+    <span class="n">patternNumY</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># An Int specifying the number of patterns to create in the Z-direction for a rectangular </span>
+    <span class="c1"># pattern. The default value is 1. </span>
+    <span class="n">patternNumZ</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># A Float specifying the offset of the pattern along the X-axis for a rectangular pattern. </span>
+    <span class="c1"># The default value is 0.0. </span>
+    <span class="n">patternOffsetX</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># A Float specifying the offset of the pattern along the Y-axis for a rectangular pattern. </span>
+    <span class="c1"># The default value is 0.0. </span>
+    <span class="n">patternOffsetY</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># A Float specifying the offset of the pattern along the Z-axis for a rectangular pattern. </span>
+    <span class="c1"># The default value is 0.0. </span>
+    <span class="n">patternOffsetZ</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># A SymbolicConstant specifying the axis of rotation for a circular. Possible values are </span>
+    <span class="c1"># XAXIS, YAXIS, and ZAXIS. The default value is ZAXIS. </span>
+    <span class="n">patternRotationAxis</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ZAXIS</span>
+
+    <span class="c1"># A Float specifying the total angle of a circular pattern. The default value is 360.0. </span>
+    <span class="n">patternTotalAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">360</span>
+
+    <span class="c1"># An Int specifying the number of patterns to create in a circular pattern. The default </span>
+    <span class="c1"># value is 1. </span>
+    <span class="n">patternNumCircular</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># A Boolean specifying whether to display coupling constraints. The default value is ON. </span>
+    <span class="n">couplingDisplay</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A Boolean specifying whether to display coordinate systems. The default value is OFF. </span>
+    <span class="n">coordSystemDisplay</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether to display coordinate systems that represent user-defined </span>
+    <span class="c1"># orientations. The default value is OFF. </span>
+    <span class="n">scratchCoordSystemDisplay</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A SymbolicConstant specifying the transformation to apply to the PrimaryVariable. </span>
+    <span class="c1"># Possible values are DEFAULT, NODAL, USER_SPECIFIED, ANGULAR, and LAYUP_ORIENTATION. The </span>
+    <span class="c1"># default value is DEFAULT.If *transformationType*=NODAL, Abaqus will transform nodal </span>
+    <span class="c1"># vector fields into any orientation defined in the analysis with the TRANSFORM option. </span>
+    <span class="c1"># Setting *transformationType*=NODAL has no effect on element-based results.If </span>
+    <span class="c1"># *transformationType*=USER_SPECIFIED, Abaqus will transform tensor and vector fields into </span>
+    <span class="c1"># the coordinate system specified by *datumCsys*.If </span>
+    <span class="c1"># *transformationType*=LAYUP_ORIENTATION, Abaqus will transform tensor and vector fields </span>
+    <span class="c1"># into the layup orientation defined in the composite section. The odb should contain the </span>
+    <span class="c1"># field SORIENT in order to use this option. </span>
+    <span class="n">transformationType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span>
+
+    <span class="c1"># A Boolean specifying whether to perform a rigid transformation of nodal vector datasets </span>
+    <span class="c1"># based on the active user specific system The default value is OFF. </span>
+    <span class="n">rigidTransformPrimary</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether to perform a rigid transformation of current </span>
+    <span class="c1"># deformedVariable based on the active user specific system The default value is OFF. </span>
+    <span class="n">rigidTransformDeformed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether to include the effects of deformation on the transformation </span>
+    <span class="c1"># calculations The default value is ON. </span>
+    <span class="n">transformOnDeformed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A Boolean specifying whether the model contains any elements or surfaces that can be </span>
+    <span class="c1"># extruded. </span>
+    <span class="n">modelCanExtrude</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># An Int specifying the types of sweepable elements and surfaces contained in the model, </span>
+    <span class="c1"># if any. </span>
+    <span class="n">sweepModelType</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A Boolean specifying whether to average the element output. The default value is ON. </span>
+    <span class="n">averageElementOutput</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A Boolean specifying whether to average only values on displayed elements. The default </span>
+    <span class="c1"># value is ON. </span>
+    <span class="n">averageOnlyDisplayed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A SymbolicConstant specifying the type of averaging region boundaries. Possible values </span>
+    <span class="c1"># are NONE, ODB_REGIONS, ELEMENT_SET, and DISPLAY_GROUPS. The default value is </span>
+    <span class="c1"># ODB_REGIONS. </span>
+    <span class="n">regionBoundaries</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ODB_REGIONS</span>
+
+    <span class="c1"># A Boolean specifying whether to use region boundaries when averaging. The default value </span>
+    <span class="c1"># is ON. </span>
+    <span class="n">useRegionBoundaries</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># A Boolean specifying whether to include additional averaging boundaries for shells and </span>
+    <span class="c1"># membranes based on feature edges. The default value is ON. </span>
+    <span class="n">includeFeatureBoundaries</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
+
+    <span class="c1"># An Int specifying the number of sectors of a cyclic symmetric model. The value is </span>
+    <span class="c1"># automatically computed from the cyclic symmetric model. This value is read-only. </span>
+    <span class="n">numSectors</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A Float specifying the sector angle of a cyclic symmetric model. The value is </span>
+    <span class="c1"># automatically computed from the cyclic symmetric model. This value is read-only. </span>
+    <span class="n">sectorAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A Float specifying the automatic extrude depth used to extrude analytical rigid surfaces </span>
+    <span class="c1"># in the default setting. This value is read-only. </span>
+    <span class="n">automaticExtrudeDepth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A String specifying the name of the coordinate system driving the moving camera. </span>
+    <span class="n">cameraCsysName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+
+    <span class="c1"># A String specifying the color of elements that do not have any results. The default </span>
+    <span class="c1"># value is "White". </span>
+    <span class="n">noResultsColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+
+    <span class="c1"># The SymbolicConstant GLOBAL or a String specifying the name of the mirror's coordinate </span>
+    <span class="c1"># system. The default value is GLOBAL. </span>
+    <span class="n">mirrorCsysName</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GLOBAL</span>
+
+    <span class="c1"># The SymbolicConstant GLOBAL or a String specifying the name of the pattern's coordinate </span>
+    <span class="c1"># system. The default value is GLOBAL. </span>
+    <span class="n">patternCsysName</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GLOBAL</span>
+
+    <span class="c1"># A DatumCsys object specifying the coordinate system to use for results transformation </span>
+    <span class="c1"># when *transformationType*=USER_SPECIFIED. </span>
+    <span class="n">datumCsys</span><span class="p">:</span> <span class="n">DatumCsys</span> <span class="o">=</span> <span class="n">DatumCsys</span><span class="p">()</span>
+
+    <span class="c1"># A tuple of Ints specifying which sectors to display when </span>
+    <span class="c1"># *sectorSelectionType*=SELECT_BY_NUMBER. Possible values are 1 ≤≤ *selectedSectorNumbers* </span>
+    <span class="c1"># ≤≤ the number of sectors. The default value is (1). </span>
+    <span class="n">selectedSectorNumbers</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A tuple of Strings specifying either element set or display group names (depending on </span>
+    <span class="c1"># the value of regionBoundaries) defining the averaging region boundaries. The default </span>
+    <span class="c1"># value is an empty sequence. </span>
+    <span class="n">userRegions</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()</span>
+
+<div class="viewcode-block" id="BasicOptions.setValues"><a class="viewcode-back" href="../../../reference/session/plot_options.html#abaqus.PlotOptions.BasicOptions.BasicOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="s1">'BasicOptions'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">cameraCsysName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">cameraMovesWithCsys</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">cameraFollowsRotation</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">averagingThreshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">75</span><span class="p">,</span> <span class="n">quantityToPlot</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FIELD_OUTPUT</span><span class="p">,</span>
+                  <span class="n">curveRefinementLevel</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COARSE</span><span class="p">,</span> <span class="n">noResultsColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">featureAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">otherSymbolSize</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="n">renderBeamProfiles</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">beamScaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">renderShellThickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">shellScaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">accountForDeactivatedElems</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                  <span class="n">bcDisplay</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">connectorDisplay</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">highlightConnectorPts</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">showConnectorAxes</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                  <span class="n">showConnectorType</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">pointElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                  <span class="n">referencePoints</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">massElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">springElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">spotWelds</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">tracerParticles</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">pc3dElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">pd3dElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">sweepArs</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">sweepElem</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">sweepStartAngleArs</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sweepStartAngleElem</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="n">sweepEndAngleArs</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">360</span><span class="p">,</span> <span class="n">sweepEndAngleElem</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">180</span><span class="p">,</span>
+                  <span class="n">numSweepSegmentsArs</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">numSweepSegmentsElem</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                  <span class="n">numericForm</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">REAL</span><span class="p">,</span> <span class="n">complexAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="n">sectionResults</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">USE_BOTTOM</span><span class="p">,</span>
+                  <span class="n">envelopeCriteria</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MAX_ABS_VALUE</span><span class="p">,</span>
+                  <span class="n">envelopeDataPosition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">INTEGRATION_POINT</span><span class="p">,</span>
+                  <span class="n">plyResultLocation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MIDDLE</span><span class="p">,</span>
+                  <span class="n">sectionPointScheme</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CATEGORY_BASED</span><span class="p">,</span> <span class="n">sweepSectors</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">sectorSelectionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SELECT_BY_NUMBER</span><span class="p">,</span>
+                  <span class="n">selectedSectorNumbers</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">sweepSectorStartAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="n">sweepSectorEndAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">360</span><span class="p">,</span> <span class="n">extrudeArs</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">extrudeArsDepthAutoCompute</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">extrudeElem</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">extrudeArsDepth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">extrudeElemDepth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                  <span class="n">mirrorPatternOrder</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MIRROR_RECT_CIRC</span><span class="p">,</span>
+                  <span class="n">mirrorCsysName</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GLOBAL</span><span class="p">,</span> <span class="n">mirrorAboutXyPlane</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">mirrorAboutXzPlane</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">mirrorAboutYzPlane</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">mirrorDisplayBodies</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">patternCsysName</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GLOBAL</span><span class="p">,</span>
+                  <span class="n">patternNumX</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">patternNumY</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">patternNumZ</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                  <span class="n">patternOffsetX</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">patternOffsetY</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">patternOffsetZ</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="n">patternRotationAxis</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ZAXIS</span><span class="p">,</span> <span class="n">patternTotalAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">360</span><span class="p">,</span>
+                  <span class="n">patternNumCircular</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">couplingDisplay</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                  <span class="n">coordSystemDisplay</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">scratchCoordSystemDisplay</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">transformationType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span> <span class="n">datumCsys</span><span class="p">:</span> <span class="n">DatumCsys</span> <span class="o">=</span> <span class="n">DatumCsys</span><span class="p">(),</span>
+                  <span class="n">rigidTransformPrimary</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">rigidTransformDeformed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">transformOnDeformed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">averageElementOutput</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                  <span class="n">averageOnlyDisplayed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                  <span class="n">computeOutput</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">EXTRAPOLATE_AVERAGE_COMPUTE</span><span class="p">,</span>
+                  <span class="n">regionBoundaries</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ODB_REGIONS</span><span class="p">,</span> <span class="n">useRegionBoundaries</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                  <span class="n">userRegions</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">includeFeatureBoundaries</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
+        <span class="sd">"""This method modifies the BasicOptions object.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        options</span>
+<span class="sd">            A BasicOptions object from which values are to be copied. If other arguments are also </span>
+<span class="sd">            supplied to setValues, they will override the values in *options*. The default value is </span>
+<span class="sd">            None. </span>
+<span class="sd">        cameraCsysName</span>
+<span class="sd">            A String specifying the name of the coordinate system driving the moving camera. </span>
+<span class="sd">        cameraMovesWithCsys</span>
+<span class="sd">            A Boolean specifying whether the camera moves with the coordinate system. The default </span>
+<span class="sd">            value is OFF. </span>
+<span class="sd">        cameraFollowsRotation</span>
+<span class="sd">            A Boolean specifying whether the camera, when it moves, follows the rotation of the </span>
+<span class="sd">            coordinate system. The default value is OFF. </span>
+<span class="sd">        averagingThreshold</span>
+<span class="sd">            A Float specifying the nodal averaging threshold percentage. Possible values are 0 &lt;&lt; </span>
+<span class="sd">            *averagingThreshold* &lt;&lt; 100. The default value is 75.0. </span>
+<span class="sd">        quantityToPlot</span>
+<span class="sd">            A SymbolicConstant specifying the quantity to plot. Possible values are FIELD_OUTPUT and </span>
+<span class="sd">            DISCONTINUITIES. The default value is FIELD_OUTPUT. </span>
+<span class="sd">        curveRefinementLevel</span>
+<span class="sd">            A SymbolicConstant specifying the refinement level for drawing curves. Possible values </span>
+<span class="sd">            are EXTRA_COARSE, COARSE, MEDIUM, FINE, and EXTRA_FINE. The default value is COARSE. </span>
+<span class="sd">        noResultsColor</span>
+<span class="sd">            A String specifying the color of elements that do not have any results. The default </span>
+<span class="sd">            value is "White". </span>
+<span class="sd">        featureAngle</span>
+<span class="sd">            A Float specifying the feature angle to be used when *visibleEdges*=FEATURE. The default </span>
+<span class="sd">            value is 30.0. </span>
+<span class="sd">        otherSymbolSize</span>
+<span class="sd">            An Int specifying the size of various glyph symbols (boundary conditions, coupling </span>
+<span class="sd">            constraints, etc.). The default value is 6. </span>
+<span class="sd">        renderBeamProfiles</span>
+<span class="sd">            A Boolean specifying whether to render the beam profiles. The default value is OFF. </span>
+<span class="sd">        beamScaleFactor</span>
+<span class="sd">            A Float specifying the beam profile scale factor. The beamScaleFactor must be greater </span>
+<span class="sd">            than zero. The default value is 1.0. </span>
+<span class="sd">        renderShellThickness</span>
+<span class="sd">            A Boolean specifying whether to render the shell thickness. The default value is OFF. </span>
+<span class="sd">        shellScaleFactor</span>
+<span class="sd">            A Float specifying the shell thickness scale factor. The shellScaleFactor must be </span>
+<span class="sd">            greater than zero. The default value is 1.0. </span>
+<span class="sd">        accountForDeactivatedElems</span>
+<span class="sd">            A Boolean specifying whether to account for deactivated elements. The default value is </span>
+<span class="sd">            ON. </span>
+<span class="sd">        bcDisplay</span>
+<span class="sd">            A Boolean specifying whether to display boundary conditions. The default value is OFF. </span>
+<span class="sd">        connectorDisplay</span>
+<span class="sd">            A Boolean specifying whether to display connectors. The default value is OFF. </span>
+<span class="sd">        highlightConnectorPts</span>
+<span class="sd">            A Boolean specifying whether to highlight connector points. The default value is ON. </span>
+<span class="sd">        showConnectorAxes</span>
+<span class="sd">            A Boolean specifying whether to display connector orientations or coordinate systems. </span>
+<span class="sd">            The default value is ON. </span>
+<span class="sd">        showConnectorType</span>
+<span class="sd">            A Boolean specifying whether to display the text that describes the connector type. The </span>
+<span class="sd">            default value is ON. </span>
+<span class="sd">        pointElements</span>
+<span class="sd">            A Boolean specifying whether to display point type elements. The default value is ON. </span>
+<span class="sd">        referencePoints</span>
+<span class="sd">            A Boolean specifying whether to display reference points. *referencePoints* is valid </span>
+<span class="sd">            only when *pointElements*=ON. The default value is ON. </span>
+<span class="sd">        massElements</span>
+<span class="sd">            A Boolean specifying whether to display mass, heat capacity and inertia elements. </span>
+<span class="sd">            *massElements* is valid only when *pointElements*=ON. The default value is OFF. </span>
+<span class="sd">        springElements</span>
+<span class="sd">            A Boolean specifying whether to display spring and dashpot elements. *springElements* is </span>
+<span class="sd">            valid only when *pointElements*=ON. The default value is OFF. </span>
+<span class="sd">        spotWelds</span>
+<span class="sd">            A Boolean specifying whether to display spot weld and distributed coupling elements. </span>
+<span class="sd">            *spotWelds* is valid only when *pointElements*=ON. The default value is OFF. </span>
+<span class="sd">        tracerParticles</span>
+<span class="sd">            A Boolean specifying whether to display tracer particles. *tracerParticles* is valid </span>
+<span class="sd">            only when *pointElements*=ON. The default value is OFF. </span>
+<span class="sd">        pc3dElements</span>
+<span class="sd">            A Boolean specifying whether to display PC3D elements. *pc3dElements* is valid only when </span>
+<span class="sd">            *pointElements*=ON. The default value is ON. </span>
+<span class="sd">        pd3dElements</span>
+<span class="sd">            A Boolean specifying whether to display PD3D elements. *pd3dElements* is valid only when </span>
+<span class="sd">            *pointElements*=ON. The default value is ON. </span>
+<span class="sd">        sweepArs</span>
+<span class="sd">            A Boolean specifying whether to sweep the analytical surfaces. The default value is ON </span>
+<span class="sd">            or OFF, depending on the characteristics of your model. </span>
+<span class="sd">        sweepElem</span>
+<span class="sd">            A Boolean specifying whether to sweep the deformable elements. The default value is ON </span>
+<span class="sd">            or OFF, depending on the characteristics of your model. </span>
+<span class="sd">        sweepStartAngleArs</span>
+<span class="sd">            A Float specifying the starting angle (in degrees) from which to sweep the analytical </span>
+<span class="sd">            surfaces when *sweepArs*=ON. The default value is 0.0. </span>
+<span class="sd">        sweepStartAngleElem</span>
+<span class="sd">            A Float specifying the starting angle (in degrees) from which to sweep the model when </span>
+<span class="sd">            *sweepElem*=ON. The default value is 0.0. </span>
+<span class="sd">        sweepEndAngleArs</span>
+<span class="sd">            A Float specifying the angle (in degrees) through which to sweep the analytical surfaces </span>
+<span class="sd">            when *sweepArs*=ON. The default value is 360.0. </span>
+<span class="sd">        sweepEndAngleElem</span>
+<span class="sd">            A Float specifying the angle (in degrees) through which to sweep the model when </span>
+<span class="sd">            *sweepElem*=ON. The default value is 180.0. </span>
+<span class="sd">        numSweepSegmentsArs</span>
+<span class="sd">            An Int specifying the number of segments to display when *sweepArs*=ON. The default </span>
+<span class="sd">            value is 10 or 20, depending on characteristics of your model. </span>
+<span class="sd">        numSweepSegmentsElem</span>
+<span class="sd">            An Int specifying the number of segments to display when *sweepElem*=ON. The default </span>
+<span class="sd">            value is 10 or 20, depending on characteristics of your model. </span>
+<span class="sd">        numericForm</span>
+<span class="sd">            A SymbolicConstant specifying the numeric form in which to display results that contain </span>
+<span class="sd">            complex numbers. Possible values are COMPLEX_MAGNITUDE, COMPLEX_PHASE, REAL, IMAGINARY, </span>
+<span class="sd">            COMPLEX_MAG_AT_ANGLE, COMPLEX_ENVELOPE_MAX_ABS, COMPLEX_ENVELOPE_MAX, and </span>
+<span class="sd">            COMPLEX_ENVELOPE_MIN. The default value is REAL. </span>
+<span class="sd">        complexAngle</span>
+<span class="sd">            A Float specifying the angle (in degrees) at which to display results that contain </span>
+<span class="sd">            complex numbers when *numericForm*=COMPLEX_MAG_AT_ANGLE. The default value is 0.0. </span>
+<span class="sd">        sectionResults</span>
+<span class="sd">            A SymbolicConstant specifying which of the section points to use. Possible values are </span>
+<span class="sd">            USE_BOTTOM, USE_TOP, USE_BOTTOM_AND_TOP, and USE_ENVELOPE. The default value is </span>
+<span class="sd">            USE_BOTTOM. </span>
+<span class="sd">        envelopeCriteria</span>
+<span class="sd">            A SymbolicConstant specifying the envelope criterion. Possible values are MAX_VALUE, </span>
+<span class="sd">            MIN_VALUE, and MAX_ABS_VALUE. The default value is MAX_ABS_VALUE. </span>
+<span class="sd">        envelopeDataPosition</span>
+<span class="sd">            A SymbolicConstant specifying the output position for envelope calculations. Possible </span>
+<span class="sd">            values are CENTROID, ELEMENT_NODAL, and INTEGRATION_POINT. The default value is </span>
+<span class="sd">            INTEGRATION_POINT. </span>
+<span class="sd">        plyResultLocation</span>
+<span class="sd">            A SymbolicConstant specifying the ply result location. Possible values are BOTTOM, </span>
+<span class="sd">            MIDDLE, TOP, and TOP_AND_BOTTOM. The default value is MIDDLE. </span>
+<span class="sd">        sectionPointScheme</span>
+<span class="sd">            A SymbolicConstant specifying the section point scheme. Possible values are </span>
+<span class="sd">            CATEGORY_BASED and PLY_BASED. The default value is CATEGORY_BASED. </span>
+<span class="sd">        sweepSectors</span>
+<span class="sd">            A Boolean specifying whether to sweep the cyclic symmetry sectors. The default value is </span>
+<span class="sd">            OFF. </span>
+<span class="sd">        sectorSelectionType</span>
+<span class="sd">            A SymbolicConstant specifying how sectors will be selected for sweeping. Possible values </span>
+<span class="sd">            are SELECT_BY_NUMBER, SELECT_BY_ANGLE, and SELECT_ALL. The default value is </span>
+<span class="sd">            SELECT_BY_NUMBER. </span>
+<span class="sd">        selectedSectorNumbers</span>
+<span class="sd">            A sequence of Ints specifying which sectors to display when </span>
+<span class="sd">            *sectorSelectionType*=SELECT_BY_NUMBER. Possible values are 1 ≤≤ *selectedSectorNumbers* </span>
+<span class="sd">            ≤≤ the number of sectors. The default value is (1). </span>
+<span class="sd">        sweepSectorStartAngle</span>
+<span class="sd">            A Float specifying the angle (in degrees) from which to sweep cyclic symmetry sectors </span>
+<span class="sd">            when *sweepSectors*=ON. Possible values are multiples of the sector angle such that 0 ≤≤ </span>
+<span class="sd">            *sweepSectorStartAngle* ≤≤ 360. The default value is 0.0. </span>
+<span class="sd">        sweepSectorEndAngle</span>
+<span class="sd">            A Float specifying the angle (in degrees) through which to sweep cyclic symmetry sectors </span>
+<span class="sd">            when *sweepSectors*=ON. Possible values are multiples of the sector angle such that 0 &lt;&lt; </span>
+<span class="sd">            *sweepSectorEndAngle* ≤≤ 360. The default value is 360.0. </span>
+<span class="sd">        extrudeArs</span>
+<span class="sd">            A Boolean specifying whether to extrude analytical surfaces. The default value is ON or </span>
+<span class="sd">            OFF depending on characteristics of your model. </span>
+<span class="sd">        extrudeArsDepthAutoCompute</span>
+<span class="sd">            A Boolean specifying whether to use automatic depth determination when extruding </span>
+<span class="sd">            analytical surfaces. The default value is ON. The default value is ON. </span>
+<span class="sd">        extrudeElem</span>
+<span class="sd">            A Boolean specifying whether to extrude deformable elements. The default value is ON or </span>
+<span class="sd">            OFF depending on characteristics of your model. </span>
+<span class="sd">        extrudeArsDepth</span>
+<span class="sd">            A Float specifying the depth (in model units) by which the analytical surfaces are to be </span>
+<span class="sd">            extruded when *extrudeArs*=ON. The default value is 1.0. </span>
+<span class="sd">        extrudeElemDepth</span>
+<span class="sd">            A Float specifying the depth (in model units) by which the deformable elements are to be </span>
+<span class="sd">            extruded when *extrudeElem*=ON. The default value is 1.0. </span>
+<span class="sd">        mirrorPatternOrder</span>
+<span class="sd">            A SymbolicConstant specifying the order of operations to create the mirror pattern. </span>
+<span class="sd">            Possible values are MIRROR_RECT_CIRC, RECT_MIRROR_CIRC, MIRROR_CIRC_RECT, </span>
+<span class="sd">            RECT_CIRC_MIRROR, CIRC_MIRROR_RECT, and CIRC_RECT_MIRROR. The default value is </span>
+<span class="sd">            MIRROR_RECT_CIRC. </span>
+<span class="sd">        mirrorCsysName</span>
+<span class="sd">            The SymbolicConstant GLOBAL or a String specifying the name of the mirror's coordinate </span>
+<span class="sd">            system. The default value is GLOBAL. </span>
+<span class="sd">        mirrorAboutXyPlane</span>
+<span class="sd">            A Boolean specifying whether to mirror about the XY plane. The default value is OFF. </span>
+<span class="sd">        mirrorAboutXzPlane</span>
+<span class="sd">            A Boolean specifying whether to mirror about the XZ plane. The default value is OFF. </span>
+<span class="sd">        mirrorAboutYzPlane</span>
+<span class="sd">            A Boolean specifying whether to mirror about the YZ plane. The default value is OFF. </span>
+<span class="sd">        mirrorDisplayBodies</span>
+<span class="sd">            A Boolean specifying whether to mirror display bodies. The default value is OFF. </span>
+<span class="sd">        patternCsysName</span>
+<span class="sd">            The SymbolicConstant GLOBAL or a String specifying the name of the pattern's coordinate </span>
+<span class="sd">            system. The default value is GLOBAL. </span>
+<span class="sd">        patternNumX</span>
+<span class="sd">            An Int specifying the number of patterns to create in the X-direction for a rectangular </span>
+<span class="sd">            pattern. The default value is 1. </span>
+<span class="sd">        patternNumY</span>
+<span class="sd">            An Int specifying the number of patterns to create in the Y-direction for a rectangular </span>
+<span class="sd">            pattern. The default value is 1. </span>
+<span class="sd">        patternNumZ</span>
+<span class="sd">            An Int specifying the number of patterns to create in the Z-direction for a rectangular </span>
+<span class="sd">            pattern. The default value is 1. </span>
+<span class="sd">        patternOffsetX</span>
+<span class="sd">            A Float specifying the offset of the pattern along the X-axis for a rectangular pattern. </span>
+<span class="sd">            The default value is 0.0. </span>
+<span class="sd">        patternOffsetY</span>
+<span class="sd">            A Float specifying the offset of the pattern along the Y-axis for a rectangular pattern. </span>
+<span class="sd">            The default value is 0.0. </span>
+<span class="sd">        patternOffsetZ</span>
+<span class="sd">            A Float specifying the offset of the pattern along the Z-axis for a rectangular pattern. </span>
+<span class="sd">            The default value is 0.0. </span>
+<span class="sd">        patternRotationAxis</span>
+<span class="sd">            A SymbolicConstant specifying the axis of rotation for a circular. Possible values are </span>
+<span class="sd">            XAXIS, YAXIS, and ZAXIS. The default value is ZAXIS. </span>
+<span class="sd">        patternTotalAngle</span>
+<span class="sd">            A Float specifying the total angle of a circular pattern. The default value is 360.0. </span>
+<span class="sd">        patternNumCircular</span>
+<span class="sd">            An Int specifying the number of patterns to create in a circular pattern. The default </span>
+<span class="sd">            value is 1. </span>
+<span class="sd">        couplingDisplay</span>
+<span class="sd">            A Boolean specifying whether to display coupling constraints. The default value is ON. </span>
+<span class="sd">        coordSystemDisplay</span>
+<span class="sd">            A Boolean specifying whether to display coordinate systems. The default value is OFF. </span>
+<span class="sd">        scratchCoordSystemDisplay</span>
+<span class="sd">            A Boolean specifying whether to display coordinate systems that represent user-defined </span>
+<span class="sd">            orientations. The default value is OFF. </span>
+<span class="sd">        transformationType</span>
+<span class="sd">            A SymbolicConstant specifying the transformation to apply to the PrimaryVariable. </span>
+<span class="sd">            Possible values are DEFAULT, NODAL, USER_SPECIFIED, ANGULAR, and LAYUP_ORIENTATION. The </span>
+<span class="sd">            default value is DEFAULT.If *transformationType*=NODAL, Abaqus will transform nodal </span>
+<span class="sd">            vector fields into any orientation defined in the analysis with the TRANSFORM option. </span>
+<span class="sd">            Setting *transformationType*=NODAL has no effect on element-based results.If </span>
+<span class="sd">            *transformationType*=USER_SPECIFIED, Abaqus will transform tensor and vector fields into </span>
+<span class="sd">            the coordinate system specified by *datumCsys*.If </span>
+<span class="sd">            *transformationType*=LAYUP_ORIENTATION, Abaqus will transform tensor and vector fields </span>
+<span class="sd">            into the layup orientation defined in the composite section. The odb should contain the </span>
+<span class="sd">            field SORIENT in order to use this option. </span>
+<span class="sd">        datumCsys</span>
+<span class="sd">            A DatumCsys object specifying the coordinate system to use for results transformation </span>
+<span class="sd">            when *transformationType*=USER_SPECIFIED. </span>
+<span class="sd">        rigidTransformPrimary</span>
+<span class="sd">            A Boolean specifying whether to perform a rigid transformation of nodal vector datasets </span>
+<span class="sd">            based on the active user specific system The default value is OFF. </span>
+<span class="sd">        rigidTransformDeformed</span>
+<span class="sd">            A Boolean specifying whether to perform a rigid transformation of current </span>
+<span class="sd">            deformedVariable based on the active user specific system The default value is OFF. </span>
+<span class="sd">        transformOnDeformed</span>
+<span class="sd">            A Boolean specifying whether to include the effects of deformation on the transformation </span>
+<span class="sd">            calculations The default value is ON. </span>
+<span class="sd">        averageElementOutput</span>
+<span class="sd">            A Boolean specifying whether to average the element output. The default value is ON. </span>
+<span class="sd">        averageOnlyDisplayed</span>
+<span class="sd">            A Boolean specifying whether to average only values on displayed elements. The default </span>
+<span class="sd">            value is ON. </span>
+<span class="sd">        computeOutput</span>
+<span class="sd">            A SymbolicConstant specifying the order or the computations to be performed. Possible </span>
+<span class="sd">            values are EXTRAPOLATE_AVERAGE_COMPUTE, EXTRAPOLATE_COMPUTE_AVERAGE, </span>
+<span class="sd">            EXTRAPOLATE_COMPUTE, EXTRAPOLATE_COMPUTE_DISCONTINUITIES, and RAW_DATA. The default </span>
+<span class="sd">            value is EXTRAPOLATE_AVERAGE_COMPUTE. </span>
+<span class="sd">        regionBoundaries</span>
+<span class="sd">            A SymbolicConstant specifying the type of averaging region boundaries. Possible values </span>
+<span class="sd">            are NONE, ODB_REGIONS, ELEMENT_SET, and DISPLAY_GROUPS. The default value is </span>
+<span class="sd">            ODB_REGIONS. </span>
+<span class="sd">        useRegionBoundaries</span>
+<span class="sd">            A Boolean specifying whether to use region boundaries when averaging. The default value </span>
+<span class="sd">            is ON. </span>
+<span class="sd">        userRegions</span>
+<span class="sd">            A sequence of Strings specifying either element set or display group names (depending on </span>
+<span class="sd">            the value of regionBoundaries) defining the averaging region boundaries. The default </span>
+<span class="sd">            value is an empty sequence. </span>
+<span class="sd">        includeFeatureBoundaries</span>
+<span class="sd">            A Boolean specifying whether to include additional averaging boundaries for shells and </span>
+<span class="sd">            membranes based on feature edges. The default value is ON.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            - If *featureAngle* is not in the valid range: </span>
+<span class="sd">              RangeError: featureAngle must be a float in the range 0-90, inclusive </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div></div>
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, WANG Hailin
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/scripts/furo.js"></script>
+    </body>
+</html>

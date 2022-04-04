@@ -1,0 +1,923 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
+
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.03.04"/>
+        <title>abaqus.Assembly.PartInstance - pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.13 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  
+  <span class="sidebar-brand-text">pyabaqus 1.0.13 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../user.html">User Manual</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/header.html">Header of the Python script</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../user/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../user/mdb/model.html">Abaqus Model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/part.html">Part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../user/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../user/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../user/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../user/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../user/mdb/job.html">Abaqus Job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/session.html">Abaqus Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../references.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/mdb/model.html">Model</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/mesh.html">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/part_assembly.html">Part and Assembly</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part.html">Part</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/datum.html">Datum</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/engineering.html">Engineering Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/feature.html">Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/geometry.html">Basic Geometry</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/region.html">Region</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/job.html">Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/annotation.html">Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/edit_mesh.html">Edit Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/session.html">Abaqus Session</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/animation.html">Animation Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/canvas.html">Canvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/display_options.html">Display Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/display.html">Display Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/field_report.html">FieldReport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/odb_display.html">Odb Display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/path.html">Path and Probe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/plot_options.html">Plot Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/print.html">Print</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/xy.html">XY</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/kernel.html">Kernel</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/cae_display_preferences.html">Abaqus CAE Display Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/input.html">Input File Parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/kernel.html">Custom Kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/messaging.html">Messaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/table_collection.html">Table Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/text_representation.html">Text Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/utility.html">Utility and View</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <h1>Source code for abaqus.Assembly.PartInstance</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">abaqusConstants</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..BasicGeometry.CellArray</span> <span class="kn">import</span> <span class="n">CellArray</span>
+<span class="kn">from</span> <span class="nn">..BasicGeometry.EdgeArray</span> <span class="kn">import</span> <span class="n">EdgeArray</span>
+<span class="kn">from</span> <span class="nn">..BasicGeometry.FaceArray</span> <span class="kn">import</span> <span class="n">FaceArray</span>
+<span class="kn">from</span> <span class="nn">..BasicGeometry.IgnoredEdgeArray</span> <span class="kn">import</span> <span class="n">IgnoredEdgeArray</span>
+<span class="kn">from</span> <span class="nn">..BasicGeometry.IgnoredVertexArray</span> <span class="kn">import</span> <span class="n">IgnoredVertexArray</span>
+<span class="kn">from</span> <span class="nn">..BasicGeometry.ReferencePoint</span> <span class="kn">import</span> <span class="n">ReferencePoint</span>
+<span class="kn">from</span> <span class="nn">..BasicGeometry.VertexArray</span> <span class="kn">import</span> <span class="n">VertexArray</span>
+<span class="kn">from</span> <span class="nn">..Datum.Datum</span> <span class="kn">import</span> <span class="n">Datum</span>
+<span class="kn">from</span> <span class="nn">..Mesh.MeshEdge</span> <span class="kn">import</span> <span class="n">MeshEdge</span>
+<span class="kn">from</span> <span class="nn">..Mesh.MeshEdgeArray</span> <span class="kn">import</span> <span class="n">MeshEdgeArray</span>
+<span class="kn">from</span> <span class="nn">..Mesh.MeshElementArray</span> <span class="kn">import</span> <span class="n">MeshElementArray</span>
+<span class="kn">from</span> <span class="nn">..Mesh.MeshFace</span> <span class="kn">import</span> <span class="n">MeshFace</span>
+<span class="kn">from</span> <span class="nn">..Mesh.MeshFaceArray</span> <span class="kn">import</span> <span class="n">MeshFaceArray</span>
+<span class="kn">from</span> <span class="nn">..Mesh.MeshNodeArray</span> <span class="kn">import</span> <span class="n">MeshNodeArray</span>
+<span class="kn">from</span> <span class="nn">..Part.Part</span> <span class="kn">import</span> <span class="n">Part</span>
+<span class="kn">from</span> <span class="nn">..Region.Set</span> <span class="kn">import</span> <span class="n">Set</span>
+<span class="kn">from</span> <span class="nn">..Region.Skin</span> <span class="kn">import</span> <span class="n">Skin</span>
+<span class="kn">from</span> <span class="nn">..Region.Stringer</span> <span class="kn">import</span> <span class="n">Stringer</span>
+<span class="kn">from</span> <span class="nn">..Region.Surface</span> <span class="kn">import</span> <span class="n">Surface</span>
+
+
+<div class="viewcode-block" id="PartInstance"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance">[docs]</a><span class="k">class</span> <span class="nc">PartInstance</span><span class="p">:</span>
+    <span class="sd">"""A PartInstance object is an instance of a Part object.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    name: str</span>
+<span class="sd">        A String specifying the repository key. The name must be a valid :py:class:`~.Abaqus` object name.</span>
+<span class="sd">    dependent: Boolean</span>
+<span class="sd">        A Boolean specifying whether the part instance is dependent or independent. If</span>
+<span class="sd">        **dependent=OFF**, the part instance is independent. The default value is OFF.</span>
+<span class="sd">    excludedFromSimulation: Boolean</span>
+<span class="sd">        A Boolean specifying whether the part instance is excluded from the simulation. If</span>
+<span class="sd">        **excludedFromSimulation=ON**, the part instance is excluded from the simulation. The</span>
+<span class="sd">        default value is OFF.</span>
+<span class="sd">    geometryValidity: Boolean</span>
+<span class="sd">        A Boolean specifying the validity of the geometry of the instance. The value is</span>
+<span class="sd">        computed, but it can be set to ON to perform feature and mesh operations on an invalid</span>
+<span class="sd">        instance. There is no guarantee that such operations will work if the instance was</span>
+<span class="sd">        originally invalid.</span>
+<span class="sd">    analysisType: SymbolicConstant</span>
+<span class="sd">        A SymbolicConstant specifying the part type. Possible values are DEFORMABLE_BODY,</span>
+<span class="sd">        EULERIAN, DISCRETE_RIGID_SURFACE, and ANALYTIC_RIGID_SURFACE.</span>
+<span class="sd">    referenceNode: int</span>
+<span class="sd">        An Int specifying the reference node number. This member is valid only if</span>
+<span class="sd">        **analysisType=DISCRETE_RIGID_SURFACE** or ANALYTIC_RIGID_SURFACE.</span>
+<span class="sd">    part: Part</span>
+<span class="sd">        A :py:class:`~abaqus.Part.Part.Part` object specifying the instanced part.</span>
+<span class="sd">    sets: dict[str, Set]</span>
+<span class="sd">        A repository of :py:class:`~abaqus.Region.Set.Set` objects specifying the sets created on the part. For more</span>
+<span class="sd">        information, see [Region</span>
+<span class="sd">        commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).</span>
+<span class="sd">    surfaces: dict[str, Surface]</span>
+<span class="sd">        A repository of :py:class:`~abaqus.Region.Surface.Surface` objects specifying the surfaces created on the part. For more</span>
+<span class="sd">        information, see [Region</span>
+<span class="sd">        commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).</span>
+<span class="sd">    skins: dict[str, Skin]</span>
+<span class="sd">        A repository of :py:class:`~abaqus.Region.Skin.Skin` objects specifying the skins created on the part. For more</span>
+<span class="sd">        information, see [Region</span>
+<span class="sd">        commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).</span>
+<span class="sd">    stringers: dict[str, Stringer]</span>
+<span class="sd">        A repository of :py:class:`~abaqus.Region.Stringer.Stringer` objects specifying the stringers created on the part. For more</span>
+<span class="sd">        information, see [Region</span>
+<span class="sd">        commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).</span>
+<span class="sd">    vertices: VertexArray</span>
+<span class="sd">        A :py:class:`~abaqus.BasicGeometry.VertexArray.VertexArray` object.</span>
+<span class="sd">    ignoredVertices: IgnoredVertexArray</span>
+<span class="sd">        An :py:class:`~abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray` object.</span>
+<span class="sd">    edges: EdgeArray</span>
+<span class="sd">        An :py:class:`~abaqus.BasicGeometry.EdgeArray.EdgeArray` object.</span>
+<span class="sd">    ignoredEdges: IgnoredEdgeArray</span>
+<span class="sd">        An :py:class:`~abaqus.BasicGeometry.IgnoredEdgeArray.IgnoredEdgeArray` object.</span>
+<span class="sd">    faces: FaceArray</span>
+<span class="sd">        A :py:class:`~abaqus.BasicGeometry.FaceArray.FaceArray` object.</span>
+<span class="sd">    cells: CellArray</span>
+<span class="sd">        A :py:class:`~abaqus.BasicGeometry.CellArray.CellArray` object.</span>
+<span class="sd">    datums: list[Datum]</span>
+<span class="sd">        A repository of :py:class:`~abaqus.Datum.Datum.Datum` objects.</span>
+<span class="sd">    elements: MeshElementArray</span>
+<span class="sd">        A :py:class:`~abaqus.Mesh.MeshElementArray.MeshElementArray` object.</span>
+<span class="sd">    nodes: MeshNodeArray</span>
+<span class="sd">        A :py:class:`~abaqus.Mesh.MeshNodeArray.MeshNodeArray` object.</span>
+<span class="sd">    elemFaces: dict[str, MeshFace]</span>
+<span class="sd">        A repository of :py:class:`~abaqus.Mesh.:py:class:`~abaqus.Mesh.MeshFace.MeshFace`.:py:class:`~abaqus.Mesh.MeshFace.MeshFace`` objects specifying all the element faces in the part instance.</span>
+<span class="sd">        For a given element and a given face index within that element, the corresponding</span>
+<span class="sd">        :py:class:`~abaqus.Mesh.:py:class:`~abaqus.Mesh.MeshFace.MeshFace`.:py:class:`~abaqus.Mesh.MeshFace.MeshFace`` object can be retrieved from the repository by using the key calculated as (i*8</span>
+<span class="sd">        + j), where i and j are zero-based element and face indices, respectively.</span>
+<span class="sd">    elementFaces: MeshFaceArray</span>
+<span class="sd">        A :py:class:`~abaqus.Mesh.MeshFaceArray.MeshFaceArray` object.</span>
+<span class="sd">    elemEdges: dict[str, MeshEdge]</span>
+<span class="sd">        A repository of :py:class:`~abaqus.Mesh.:py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`.:py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`` objects specifying all the element edges in the part instance.</span>
+<span class="sd">        For a given element and a given edge index on a given face within that element, the</span>
+<span class="sd">        corresponding :py:class:`~abaqus.Mesh.:py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`.:py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`` object can be retrieved from the repository by using the key</span>
+<span class="sd">        calculated as (i*32 + j*4 + k), where i, j, and k are zero-based element, face, and edge</span>
+<span class="sd">        indices, respectively.</span>
+<span class="sd">    elementEdges: MeshEdgeArray</span>
+<span class="sd">        A :py:class:`~abaqus.Mesh.MeshEdgeArray.MeshEdgeArray` object.</span>
+<span class="sd">    referencePoints: dict[str, ReferencePoint]</span>
+<span class="sd">        A repository of :py:class:`~abaqus.BasicGeometry.ReferencePoint.ReferencePoint` objects.</span>
+<span class="sd">    partName: str</span>
+<span class="sd">        A String specifying the name of the part from which the instance was created.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This object can be accessed by:</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        import assembly</span>
+<span class="sd">        mdb.models[name].rootAssembly.allInstances[name]</span>
+<span class="sd">        mdb.models[name].rootAssembly.instances[name]</span>
+
+<span class="sd">    """</span>
+
+    <span class="c1"># A String specifying the repository key. The name must be a valid Abaqus object name. </span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+
+    <span class="c1"># A Boolean specifying whether the part instance is dependent or independent. If </span>
+    <span class="c1"># *dependent*=OFF, the part instance is independent. The default value is OFF. </span>
+    <span class="n">dependent</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying whether the part instance is excluded from the simulation. If </span>
+    <span class="c1"># *excludedFromSimulation*=ON, the part instance is excluded from the simulation. The </span>
+    <span class="c1"># default value is OFF. </span>
+    <span class="n">excludedFromSimulation</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A Boolean specifying the validity of the geometry of the instance. The value is </span>
+    <span class="c1"># computed, but it can be set to ON to perform feature and mesh operations on an invalid </span>
+    <span class="c1"># instance. There is no guarantee that such operations will work if the instance was </span>
+    <span class="c1"># originally invalid. </span>
+    <span class="n">geometryValidity</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
+
+    <span class="c1"># A SymbolicConstant specifying the part type. Possible values are DEFORMABLE_BODY, </span>
+    <span class="c1"># EULERIAN, DISCRETE_RIGID_SURFACE, and ANALYTIC_RIGID_SURFACE. </span>
+    <span class="n">analysisType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># An Int specifying the reference node number. This member is valid only if </span>
+    <span class="c1"># *analysisType*=DISCRETE_RIGID_SURFACE or ANALYTIC_RIGID_SURFACE. </span>
+    <span class="n">referenceNode</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A Part object specifying the instanced part. </span>
+    <span class="n">part</span><span class="p">:</span> <span class="n">Part</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># A repository of Set objects specifying the sets created on the part. For more </span>
+    <span class="c1"># information, see [Region </span>
+    <span class="c1"># commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). </span>
+    <span class="n">sets</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Set</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Set</span><span class="p">]()</span>
+
+    <span class="c1"># A repository of Surface objects specifying the surfaces created on the part. For more </span>
+    <span class="c1"># information, see [Region </span>
+    <span class="c1"># commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). </span>
+    <span class="n">surfaces</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Surface</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Surface</span><span class="p">]()</span>
+
+    <span class="c1"># A repository of Skin objects specifying the skins created on the part. For more </span>
+    <span class="c1"># information, see [Region </span>
+    <span class="c1"># commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). </span>
+    <span class="n">skins</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Skin</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Skin</span><span class="p">]()</span>
+
+    <span class="c1"># A repository of Stringer objects specifying the stringers created on the part. For more </span>
+    <span class="c1"># information, see [Region </span>
+    <span class="c1"># commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). </span>
+    <span class="n">stringers</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Stringer</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Stringer</span><span class="p">]()</span>
+
+    <span class="c1"># A VertexArray object. </span>
+    <span class="n">vertices</span><span class="p">:</span> <span class="n">VertexArray</span> <span class="o">=</span> <span class="n">VertexArray</span><span class="p">([])</span>
+
+    <span class="c1"># An IgnoredVertexArray object. </span>
+    <span class="n">ignoredVertices</span><span class="p">:</span> <span class="n">IgnoredVertexArray</span> <span class="o">=</span> <span class="n">IgnoredVertexArray</span><span class="p">()</span>
+
+    <span class="c1"># An EdgeArray object. </span>
+    <span class="n">edges</span><span class="p">:</span> <span class="n">EdgeArray</span> <span class="o">=</span> <span class="n">EdgeArray</span><span class="p">([])</span>
+
+    <span class="c1"># An IgnoredEdgeArray object. </span>
+    <span class="n">ignoredEdges</span><span class="p">:</span> <span class="n">IgnoredEdgeArray</span> <span class="o">=</span> <span class="n">IgnoredEdgeArray</span><span class="p">()</span>
+
+    <span class="c1"># A FaceArray object. </span>
+    <span class="n">faces</span><span class="p">:</span> <span class="n">FaceArray</span> <span class="o">=</span> <span class="n">FaceArray</span><span class="p">([])</span>
+
+    <span class="c1"># A CellArray object. </span>
+    <span class="n">cells</span><span class="p">:</span> <span class="n">CellArray</span> <span class="o">=</span> <span class="n">CellArray</span><span class="p">([])</span>
+
+    <span class="c1"># A repository of Datum objects. </span>
+    <span class="n">datums</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Datum</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">Datum</span><span class="p">]()</span>
+
+    <span class="c1"># A MeshElementArray object. </span>
+    <span class="n">elements</span><span class="p">:</span> <span class="n">MeshElementArray</span> <span class="o">=</span> <span class="n">MeshElementArray</span><span class="p">([])</span>
+
+    <span class="c1"># A MeshNodeArray object. </span>
+    <span class="n">nodes</span><span class="p">:</span> <span class="n">MeshNodeArray</span> <span class="o">=</span> <span class="n">MeshNodeArray</span><span class="p">([])</span>
+
+    <span class="c1"># A repository of MeshFace objects specifying all the element faces in the part instance. </span>
+    <span class="c1"># For a given element and a given face index within that element, the corresponding </span>
+    <span class="c1"># MeshFace object can be retrieved from the repository by using the key calculated as (i*8 </span>
+    <span class="c1"># + j), where i and j are zero-based element and face indices, respectively. </span>
+    <span class="n">elemFaces</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">MeshFace</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">MeshFace</span><span class="p">]()</span>
+
+    <span class="c1"># A MeshFaceArray object. </span>
+    <span class="n">elementFaces</span><span class="p">:</span> <span class="n">MeshFaceArray</span> <span class="o">=</span> <span class="n">MeshFaceArray</span><span class="p">([])</span>
+
+    <span class="c1"># A repository of MeshEdge objects specifying all the element edges in the part instance. </span>
+    <span class="c1"># For a given element and a given edge index on a given face within that element, the </span>
+    <span class="c1"># corresponding MeshEdge object can be retrieved from the repository by using the key </span>
+    <span class="c1"># calculated as (i*32 + j*4 + k), where i, j, and k are zero-based element, face, and edge </span>
+    <span class="c1"># indices, respectively. </span>
+    <span class="n">elemEdges</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">MeshEdge</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">MeshEdge</span><span class="p">]()</span>
+
+    <span class="c1"># A MeshEdgeArray object. </span>
+    <span class="n">elementEdges</span><span class="p">:</span> <span class="n">MeshEdgeArray</span> <span class="o">=</span> <span class="n">MeshEdgeArray</span><span class="p">([])</span>
+
+    <span class="c1"># A repository of ReferencePoint objects. </span>
+    <span class="n">referencePoints</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ReferencePoint</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ReferencePoint</span><span class="p">]()</span>
+
+    <span class="c1"># A String specifying the name of the part from which the instance was created. </span>
+    <span class="n">partName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">part</span><span class="p">:</span> <span class="n">Part</span><span class="p">,</span> <span class="n">autoOffset</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependent</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
+        <span class="sd">"""This method creates a PartInstance object and puts it into the instances repository.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            mdb.models[name].rootAssembly.Instance</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name</span>
+<span class="sd">            A String specifying the repository key. The name must be a valid Abaqus object name. </span>
+<span class="sd">        part</span>
+<span class="sd">            A Part object to be instanced. If the part does not exist, no PartInstance object is </span>
+<span class="sd">            created. </span>
+<span class="sd">        autoOffset</span>
+<span class="sd">            A Boolean specifying whether to apply an auto offset to the new part instance that will </span>
+<span class="sd">            offset it from existing part instances. The default value is OFF. </span>
+<span class="sd">        dependent</span>
+<span class="sd">            A Boolean specifying whether the part instance is dependent or independent. If </span>
+<span class="sd">            *dependent*=OFF, the part instance is independent. The default value is OFF. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A PartInstance object.</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">vertices</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ignoredEdges</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">ignoredEdges</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">faces</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">faces</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cells</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">cells</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">datums</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">datums</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">elements</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elemFaces</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">elemFaces</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elementFaces</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">elementFaces</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">nodes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">sets</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">surfaces</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">surfaces</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">skins</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">skins</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stringers</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">stringers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">referencePoints</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">referencePoints</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elemEdges</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">elemEdges</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elementEdges</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">elementEdges</span>
+
+<div class="viewcode-block" id="PartInstance.InstanceFromBooleanCut"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.InstanceFromBooleanCut">[docs]</a>    <span class="k">def</span> <span class="nf">InstanceFromBooleanCut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">instanceToBeCut</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">cuttingInstances</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="s1">'PartInstance'</span><span class="p">],</span>
+                               <span class="n">originalInstances</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SUPPRESS</span><span class="p">):</span>
+        <span class="sd">"""This method creates a PartInstance in the instances repository after subtracting or</span>
+<span class="sd">        cutting the geometries of a group of part instances from that of a base part instance.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            mdb.models[name].rootAssembly.Instance</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name</span>
+<span class="sd">            A String specifying the repository key. The name must be a valid Abaqus object name. </span>
+<span class="sd">        instanceToBeCut</span>
+<span class="sd">            A PartInstance specifying the base instance from which to cut other instances. </span>
+<span class="sd">        cuttingInstances</span>
+<span class="sd">            A sequence of PartInstance objects specifying the instances with which to cut the base </span>
+<span class="sd">            instance. </span>
+<span class="sd">        originalInstances</span>
+<span class="sd">            A SymbolicConstant specifying whether the original instances should be suppressed or </span>
+<span class="sd">            deleted after the merge operation. Possible values are SUPPRESS or DELETE. The default </span>
+<span class="sd">            value is SUPPRESS. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A PartInstance object.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PartInstance.InstanceFromBooleanMerge"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.InstanceFromBooleanMerge">[docs]</a>    <span class="k">def</span> <span class="nf">InstanceFromBooleanMerge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">instances</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="s1">'PartInstance'</span><span class="p">],</span> <span class="n">keepIntersections</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                                 <span class="n">originalInstances</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SUPPRESS</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GEOMETRY</span><span class="p">,</span>
+                                 <span class="n">mergeNodes</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">BOUNDARY_ONLY</span><span class="p">,</span> <span class="n">nodeMergingTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                 <span class="n">removeDuplicateElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+        <span class="sd">"""This method creates a PartInstance in the instances repository after merging two or more</span>
+<span class="sd">        part instances.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            mdb.models[name].rootAssembly.Instance</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name</span>
+<span class="sd">            A String specifying the repository key. The name must be a valid Abaqus object name. </span>
+<span class="sd">        instances</span>
+<span class="sd">            A sequence of PartInstance objects specifying the part instances to merge. </span>
+<span class="sd">        keepIntersections</span>
+<span class="sd">            A Boolean specifying whether the boundary intersections of Abaqus native part instances </span>
+<span class="sd">            should be retained after the merge operation. The default value is False. </span>
+<span class="sd">        originalInstances</span>
+<span class="sd">            A SymbolicConstant specifying whether the original instances should be suppressed or </span>
+<span class="sd">            deleted after the merge operation. Possible values are SUPPRESS or DELETE. The default </span>
+<span class="sd">            value is SUPPRESS. </span>
+<span class="sd">        domain</span>
+<span class="sd">            A SymbolicConstant specifying whether geometry or mesh of the specified part instances </span>
+<span class="sd">            is to be merged. Possible values are GEOMETRY, MESH or BOTH. The default value is </span>
+<span class="sd">            GEOMETRY. </span>
+<span class="sd">        mergeNodes</span>
+<span class="sd">            A SymbolicConstant specifying which nodes of the specified part instances should be </span>
+<span class="sd">            considered for merging. This argument is only applicable if *domain* is MESH. Possible </span>
+<span class="sd">            values are BOUNDARY_ONLY, ALL, or NONE. The default value is BOUNDARY_ONLY. </span>
+<span class="sd">        nodeMergingTolerance</span>
+<span class="sd">            A Float specifying the maximum distance between nodes of the specified part instances </span>
+<span class="sd">            that will be merged and replaced with a single node in the new part. The location of the </span>
+<span class="sd">            new node is the average position of the deleted nodes. This argument is only applicable </span>
+<span class="sd">            if *domain* is MESH. The default value is 10–6. </span>
+<span class="sd">        removeDuplicateElements</span>
+<span class="sd">            A Boolean specifying whether elements with the same connectivity in the new part will be </span>
+<span class="sd">            merged into a single element. This argument is only applicable if *domain* is MESH. The </span>
+<span class="sd">            default value is True. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A PartInstance object.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PartInstance.LinearInstancePattern"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.LinearInstancePattern">[docs]</a>    <span class="k">def</span> <span class="nf">LinearInstancePattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instanceList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">number1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">spacing1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">number2</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">spacing2</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                              <span class="n">direction1</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">direction2</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">"""This method creates multiple PartInstance objects in a linear pattern and puts them into</span>
+<span class="sd">        the instances repository.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            mdb.models[name].rootAssembly.Instance</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        instanceList</span>
+<span class="sd">            A sequence of Strings specifying the names of instances to pattern. </span>
+<span class="sd">        number1</span>
+<span class="sd">            An Int specifying the total number of instances, including the original instances, that </span>
+<span class="sd">            appear along the first direction in the pattern. </span>
+<span class="sd">        spacing1</span>
+<span class="sd">            A Float specifying the spacing between instances along the first direction in the </span>
+<span class="sd">            pattern. </span>
+<span class="sd">        number2</span>
+<span class="sd">            An Int specifying the total number of instances, including the original instances, that </span>
+<span class="sd">            appear along the second direction in the pattern. </span>
+<span class="sd">        spacing2</span>
+<span class="sd">            A Float specifying the spacing between instances along the second direction in the </span>
+<span class="sd">            pattern. </span>
+<span class="sd">        direction1</span>
+<span class="sd">            A sequence of three Floats specifying a vector along the first direction. The default </span>
+<span class="sd">            value is (1.0, 0.0, 0.0). </span>
+<span class="sd">        direction2</span>
+<span class="sd">            A sequence of three Floats specifying a vector along the second direction. The default </span>
+<span class="sd">            value is (0.0, 1.0, 0.0). </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A sequence of PartInstance objects.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PartInstance.RadialInstancePattern"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.RadialInstancePattern">[docs]</a>    <span class="k">def</span> <span class="nf">RadialInstancePattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instanceList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">number</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">totalAngle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
+                              <span class="n">axis</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">"""This method creates multiple PartInstance objects in a radial pattern and puts them into</span>
+<span class="sd">        the instances repository.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            mdb.models[name].rootAssembly.Instance</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        instanceList</span>
+<span class="sd">            A sequence of Strings specifying the names of instances to pattern. </span>
+<span class="sd">        number</span>
+<span class="sd">            An Int specifying the total number of instances, including the original instances, that </span>
+<span class="sd">            appear in the radial pattern. </span>
+<span class="sd">        totalAngle</span>
+<span class="sd">            A Float specifying the total angle in degrees between the first and last instance in the </span>
+<span class="sd">            pattern. A positive angle corresponds to a counter-clockwise direction. The values 360° </span>
+<span class="sd">            and −360° represent a special case where the pattern makes a full circle. In this case, </span>
+<span class="sd">            because the copy would overlay the original, the copy is not placed at the last </span>
+<span class="sd">            position. Possible values are −360.0 ≤≤ *totalAngle* ≤≤ 360.0. </span>
+<span class="sd">        point</span>
+<span class="sd">            A sequence of three Floats specifying the center of the radial pattern. The default </span>
+<span class="sd">            value is (0.0, 0.0, 0.0). </span>
+<span class="sd">        axis</span>
+<span class="sd">            A sequence of three Floats specifying the central axis of the radial pattern. The </span>
+<span class="sd">            default value is (0.0, 0.0, 1.0). </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A sequence of PartInstance objects.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PartInstance.checkGeometry"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.checkGeometry">[docs]</a>    <span class="k">def</span> <span class="nf">checkGeometry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">detailed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="sd">"""This method checks the validity of the geometry of the part instance and prints a count</span>
+<span class="sd">        of all topological entities on the part instance (faces, edges, vertices, etc.).</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        detailed</span>
+<span class="sd">            A Boolean specifying whether detailed output will be printed to the replay file. The </span>
+<span class="sd">            default value is OFF. </span>
+<span class="sd">        level</span>
+<span class="sd">            An Int specifying which level of checking is performed. Values can range from 20 to 70, </span>
+<span class="sd">            with higher values reporting less and less important errors. The default value is 20, </span>
+<span class="sd">            which reports all critical errors. When the default value is used, the stored validity </span>
+<span class="sd">            status is updated to agree with the result of this check.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            - An exception is thrown if this is a dependent part instance and *level* was either not </span>
+<span class="sd">            specified or was set to 20, because the validity status cannot be updated for a </span>
+<span class="sd">            dependent part instance. In this case, this command should be called on the Part </span>
+<span class="sd">            instead. </span>
+<span class="sd">              The geometry of dependent part instances cannot be changed. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PartInstance.Contact"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.Contact">[docs]</a>    <span class="k">def</span> <span class="nf">Contact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">movableList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">fixedList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">clearance</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                <span class="n">isFaceEdges</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
+        <span class="sd">"""This method translates an instance along the specified direction until it is in contact</span>
+<span class="sd">        with a fixed instance.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        movableList</span>
+<span class="sd">            A sequence of Face or Edge objects on the part instance to be moved. </span>
+<span class="sd">        fixedList</span>
+<span class="sd">            A sequence of Face or Edge objects on the part instance to remain fixed. </span>
+<span class="sd">        direction</span>
+<span class="sd">            A sequence of three Floats specifying the direction of contact. </span>
+<span class="sd">        clearance</span>
+<span class="sd">            A Float specifying the distance between the two faces along the direction of contact. </span>
+<span class="sd">        isFaceEdges</span>
+<span class="sd">            A Boolean specifying how Abaqus calculates the contact. If *isFaceEdges* is OFF, contact </span>
+<span class="sd">            is computed from the movable face to the fixed face. If *isFaceEdges* is ON, contact is </span>
+<span class="sd">            computed using only the edges of the movable face and not its interior. The default </span>
+<span class="sd">            value is OFF. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        feature: Feature</span>
+<span class="sd">            A Feature object</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PartInstance.ConvertConstraints"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.ConvertConstraints">[docs]</a>    <span class="k">def</span> <span class="nf">ConvertConstraints</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method converts the position constraints of an instance to absolute positions. The</span>
+<span class="sd">        method deletes the constraint features on the instance but preserves the position in</span>
+<span class="sd">        space.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PartInstance.getPosition"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.getPosition">[docs]</a>    <span class="k">def</span> <span class="nf">getPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method prints the sum of the translations and rotations applied to the PartInstance</span>
+<span class="sd">        object.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PartInstance.getRotation"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.getRotation">[docs]</a>    <span class="k">def</span> <span class="nf">getRotation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method returns a tuple including the point of rotation, axis of rotation, and</span>
+<span class="sd">        rotation angle (in degrees).</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A tuple including the point of rotation, axis of rotation, and rotation angle (in </span>
+<span class="sd">            degrees).</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PartInstance.getTranslation"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.getTranslation">[docs]</a>    <span class="k">def</span> <span class="nf">getTranslation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method returns a tuple of three Floats representing translation in the *X*-, *Y*-,</span>
+<span class="sd">        and *Z*-directions.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A tuple of three Floats representing the translation.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PartInstance.replace"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.replace">[docs]</a>    <span class="k">def</span> <span class="nf">replace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instanceOf</span><span class="p">:</span> <span class="n">Part</span><span class="p">,</span> <span class="n">applyConstraints</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+        <span class="sd">"""This method replaces one instance with an instance of another part.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        instanceOf</span>
+<span class="sd">            A Part object specifying which Part will be instanced in place of the original Part. </span>
+<span class="sd">        applyConstraints</span>
+<span class="sd">            A Boolean specifying whether to apply existing constraints on the new instance or to </span>
+<span class="sd">            position the new instance in the same place as the original instance. The default value </span>
+<span class="sd">            is True. A value of False indicates that constraints applies to the instance are deleted </span>
+<span class="sd">            will be deleted from the feature list. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PartInstance.rotateAboutAxis"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.rotateAboutAxis">[docs]</a>    <span class="k">def</span> <span class="nf">rotateAboutAxis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axisPoint</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">axisDirection</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="sd">"""This method translates an instance by the specified amount.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        axisPoint</span>
+<span class="sd">            A sequence of three Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point on </span>
+<span class="sd">            the axis. </span>
+<span class="sd">        axisDirection</span>
+<span class="sd">            A sequence of three Floats specifying the direction vector of the axis. </span>
+<span class="sd">        angle</span>
+<span class="sd">            A Float specifying the rotation angle in degrees. Use the right-hand rule to determine </span>
+<span class="sd">            the direction. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PartInstance.translate"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.translate">[docs]</a>    <span class="k">def</span> <span class="nf">translate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vector</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
+        <span class="sd">"""This method translates an instance by the specified amount.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        vector</span>
+<span class="sd">            A sequence of three Floats specifying a translation vector. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PartInstance.translateTo"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.translateTo">[docs]</a>    <span class="k">def</span> <span class="nf">translateTo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">movableList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">fixedList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">clearance</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                    <span class="n">vector</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">"""This method translates an instance along the specified direction until it is in contact</span>
+<span class="sd">        with a fixed instance.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        movableList</span>
+<span class="sd">            A sequence of Face or Edge objects on the part instance to be moved. </span>
+<span class="sd">        fixedList</span>
+<span class="sd">            A sequence of Face or Edge objects on the part instances to remain fixed. </span>
+<span class="sd">        direction</span>
+<span class="sd">            A sequence of three Floats specifying the direction of contact. </span>
+<span class="sd">        clearance</span>
+<span class="sd">            A Float specifying the distance between the two faces along the direction of contact. </span>
+<span class="sd">        vector</span>
+<span class="sd">            A sequence of three Floats specifying a translation vector. If this argument is </span>
+<span class="sd">            specified, the movable instance will be translated by the specified amount without </span>
+<span class="sd">            solving for the actual contact. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        feature: Feature</span>
+<span class="sd">            A Feature object</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div></div>
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, WANG Hailin
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/scripts/furo.js"></script>
+    </body>
+</html>

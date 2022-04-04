@@ -1,0 +1,741 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
+
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.03.04"/>
+        <title>abaqus.Adaptivity.AdaptivityModel - pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.13 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  
+  <span class="sidebar-brand-text">pyabaqus 1.0.13 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../user.html">User Manual</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/header.html">Header of the Python script</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../user/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../user/mdb/model.html">Abaqus Model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/part.html">Part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../user/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../user/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../user/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../user/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../user/mdb/job.html">Abaqus Job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/session.html">Abaqus Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../references.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/mdb/model.html">Model</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/mesh.html">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/part_assembly.html">Part and Assembly</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part.html">Part</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/datum.html">Datum</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/engineering.html">Engineering Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/feature.html">Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/geometry.html">Basic Geometry</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/region.html">Region</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/job.html">Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/annotation.html">Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/edit_mesh.html">Edit Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/session.html">Abaqus Session</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/animation.html">Animation Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/canvas.html">Canvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/display_options.html">Display Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/display.html">Display Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/field_report.html">FieldReport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/odb_display.html">Odb Display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/path.html">Path and Probe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/plot_options.html">Plot Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/print.html">Print</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/xy.html">XY</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/kernel.html">Kernel</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/cae_display_preferences.html">Abaqus CAE Display Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/input.html">Input File Parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/kernel.html">Custom Kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/messaging.html">Messaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/table_collection.html">Table Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/text_representation.html">Text Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/utility.html">Utility and View</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <h1>Source code for abaqus.Adaptivity.AdaptivityModel</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">typing</span>
+
+<span class="kn">from</span> <span class="nn">abaqusConstants</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.AdaptiveMeshConstraint</span> <span class="kn">import</span> <span class="n">AdaptiveMeshConstraint</span>
+<span class="kn">from</span> <span class="nn">.AdaptiveMeshControl</span> <span class="kn">import</span> <span class="n">AdaptiveMeshControl</span>
+<span class="kn">from</span> <span class="nn">.DisplacementAdaptiveMeshConstraint</span> <span class="kn">import</span> <span class="n">DisplacementAdaptiveMeshConstraint</span>
+<span class="kn">from</span> <span class="nn">.RemeshingRule</span> <span class="kn">import</span> <span class="n">RemeshingRule</span>
+<span class="kn">from</span> <span class="nn">.VelocityAdaptiveMeshConstraint</span> <span class="kn">import</span> <span class="n">VelocityAdaptiveMeshConstraint</span>
+<span class="kn">from</span> <span class="nn">..Datum.DatumCsys</span> <span class="kn">import</span> <span class="n">DatumCsys</span>
+<span class="kn">from</span> <span class="nn">..Model.ModelBase</span> <span class="kn">import</span> <span class="n">ModelBase</span>
+<span class="kn">from</span> <span class="nn">..Odb.Odb</span> <span class="kn">import</span> <span class="n">Odb</span>
+<span class="kn">from</span> <span class="nn">..Region.Region</span> <span class="kn">import</span> <span class="n">Region</span>
+
+
+<div class="viewcode-block" id="AdaptivityModel"><a class="viewcode-back" href="../../../user/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel">[docs]</a><span class="k">class</span> <span class="nc">AdaptivityModel</span><span class="p">(</span><span class="n">ModelBase</span><span class="p">):</span>
+    <span class="sd">"""Abaqus creates a Model object named `Model-1` when a session is started.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This object can be accessed by:</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        mdb.models[name]</span>
+
+<span class="sd">    """</span>
+
+    <span class="k">def</span> <span class="nf">adaptiveRemesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">odb</span><span class="p">:</span> <span class="n">Odb</span><span class="p">):</span>
+        <span class="sd">"""This method remeshes the model using the active remesh rules in the model and the error</span>
+<span class="sd">        indicator results from a previous analysis.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        odb</span>
+<span class="sd">            An Odb object containing error output field results. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            An AdaptivityIteration object.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span>
+
+<div class="viewcode-block" id="AdaptivityModel.AdaptiveMeshConstraint"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.AdaptiveMeshConstraint">[docs]</a>    <span class="k">def</span> <span class="nf">AdaptiveMeshConstraint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">category</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span>
+                               <span class="n">localCsys</span><span class="p">:</span> <span class="n">DatumCsys</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AdaptiveMeshConstraint</span><span class="p">:</span>
+        <span class="sd">"""The AdaptiveMeshConstraint object is the abstract base type for other Arbitrary</span>
+<span class="sd">        Lagrangian Eularian (ALE) style AdaptiveMeshConstraint objects. The</span>
+<span class="sd">        AdaptiveMeshConstraint object has no explicit constructor. The methods and members of</span>
+<span class="sd">        the AdaptiveMeshConstraint object are common to all objects derived from the</span>
+<span class="sd">        AdaptiveMeshConstraint object.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            mdb.models[name].AdaptiveMeshConstraint</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name</span>
+<span class="sd">             A String specifying the adaptive mesh constraint repository key.</span>
+<span class="sd">        category</span>
+<span class="sd">             A SymbolicConstant specifying the category of the adaptive mesh constraint. Possible values are</span>
+<span class="sd">             MECHANICAL and THERMAL.</span>
+<span class="sd">        region</span>
+<span class="sd">             A Region object specifying the region to which the adaptive mesh constraint is applied.</span>
+<span class="sd">        localCsys</span>
+<span class="sd">             None or a DatumCsys object specifying the local coordinate system of the adaptive mesh  constraint's</span>
+<span class="sd">             degrees of freedom. If *localCsys*=None, the degrees of freedom are defined  in the global coordinate</span>
+<span class="sd">             system. The default value is None.</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshConstraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshConstraint</span> <span class="o">=</span> <span class="n">AdaptiveMeshConstraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
+                                                                                             <span class="n">localCsys</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">adaptiveMeshConstraint</span></div>
+
+<div class="viewcode-block" id="AdaptivityModel.AdaptiveMeshControl"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.AdaptiveMeshControl">[docs]</a>    <span class="k">def</span> <span class="nf">AdaptiveMeshControl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">remapping</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SECOND_ORDER_ADVECTION</span><span class="p">,</span>
+                            <span class="n">smoothingAlgorithm</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GEOMETRY_ENHANCED</span><span class="p">,</span>
+                            <span class="n">smoothingPriority</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">initialFeatureAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
+                            <span class="n">transitionFeatureAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
+                            <span class="n">momentumAdvection</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ELEMENT_CENTER_PROJECTION</span><span class="p">,</span>
+                            <span class="n">meshingPredictor</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CURRENT</span><span class="p">,</span> <span class="n">curvatureRefinement</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                            <span class="n">volumetricSmoothingWeight</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">laplacianSmoothingWeight</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                            <span class="n">equipotentialSmoothingWeight</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">meshConstraintAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>
+                            <span class="n">originalConfigurationProjectionWeight</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                            <span class="n">standardVolumetricSmoothingWeight</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AdaptiveMeshControl</span><span class="p">:</span>
+        <span class="sd">"""This method creates an AdaptiveMeshControl object.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            mdb.models[name].AdaptiveMeshConstraint</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name</span>
+<span class="sd">            A String specifying the name of the object.</span>
+<span class="sd">        remapping</span>
+<span class="sd">            A SymbolicConstant specifying the remapping algorithm. Possible values are</span>
+<span class="sd">            FIRST_ORDER_ADVECTION and SECOND_ORDER_ADVECTION. The default value is</span>
+<span class="sd">            SECOND_ORDER_ADVECTION.</span>
+<span class="sd">        smoothingAlgorithm</span>
+<span class="sd">            A SymbolicConstant specifying the type of smoothing algorithm to use. Possible values</span>
+<span class="sd">            are STANDARD and GEOMETRY_ENHANCED. The default value is GEOMETRY_ENHANCED.</span>
+<span class="sd">        smoothingPriority</span>
+<span class="sd">            A SymbolicConstant specifying the type of smoothing to perform. Possible values are</span>
+<span class="sd">            UNIFORM and GRADED. The default value is UNIFORM.</span>
+<span class="sd">        initialFeatureAngle</span>
+<span class="sd">            A Float specifying the initial geometric feature angle, θI, in degrees. Possible values</span>
+<span class="sd">            are 0° ≤θI≤ 180°. The default value is 30.0.</span>
+<span class="sd">        transitionFeatureAngle</span>
+<span class="sd">            A Float specifying the transitional feature angle, θT, in degrees. Possible values are</span>
+<span class="sd">            0° ≤θT≤ 180°. The default value is 30.0.</span>
+<span class="sd">        momentumAdvection</span>
+<span class="sd">            A SymbolicConstant specifying the type of momentum advection algorithm. Possible values</span>
+<span class="sd">            are ELEMENT_CENTER_PROJECTION and HALF_INDEX_SHIFT. The default value is</span>
+<span class="sd">            ELEMENT_CENTER_PROJECTION.</span>
+<span class="sd">        meshingPredictor</span>
+<span class="sd">            A SymbolicConstant specifying the nodal starting location to use for remeshing. Possible</span>
+<span class="sd">            values are CURRENT and PREVIOUS. The default value is CURRENT.</span>
+<span class="sd">        curvatureRefinement</span>
+<span class="sd">            A Float specifying the solution dependence weight, αC. Possible values are 0.0 ≤αC≤ 1.0.</span>
+<span class="sd">            The default value is 1.0.</span>
+<span class="sd">        volumetricSmoothingWeight</span>
+<span class="sd">            A Float specifying the weight used by Abaqus/Explicit for the volumetric smoothing</span>
+<span class="sd">            method. The default value is 1.0.</span>
+<span class="sd">        laplacianSmoothingWeight</span>
+<span class="sd">            A Float specifying the weight for the Laplacian smoothing method. The default value is</span>
+<span class="sd">            0.0.</span>
+<span class="sd">        equipotentialSmoothingWeight</span>
+<span class="sd">            A Float specifying the weight for the equipotential smoothing method. The default value</span>
+<span class="sd">            is 0.0.</span>
+<span class="sd">        meshConstraintAngle</span>
+<span class="sd">            A Float specifying the initial geometric feature angle, θC. Possible values are 0° ≤θC≤</span>
+<span class="sd">            180°. The default value is 60.0.</span>
+<span class="sd">        originalConfigurationProjectionWeight</span>
+<span class="sd">            A Float specifying the weight for the original configuration projection method. The</span>
+<span class="sd">            default value is 1.0.</span>
+<span class="sd">        standardVolumetricSmoothingWeight</span>
+<span class="sd">            A Float specifying the weight used by Abaqus/Standard for the volumetric smoothing</span>
+<span class="sd">            method. The default value is 0.0.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            An AdaptiveMeshControl object</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshControls</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshControl</span> <span class="o">=</span> <span class="n">AdaptiveMeshControl</span><span class="p">(</span>
+            <span class="n">name</span><span class="p">,</span> <span class="n">remapping</span><span class="p">,</span> <span class="n">smoothingAlgorithm</span><span class="p">,</span> <span class="n">smoothingPriority</span><span class="p">,</span> <span class="n">initialFeatureAngle</span><span class="p">,</span> <span class="n">transitionFeatureAngle</span><span class="p">,</span>
+            <span class="n">momentumAdvection</span><span class="p">,</span> <span class="n">meshingPredictor</span><span class="p">,</span> <span class="n">curvatureRefinement</span><span class="p">,</span> <span class="n">volumetricSmoothingWeight</span><span class="p">,</span>
+            <span class="n">laplacianSmoothingWeight</span><span class="p">,</span> <span class="n">equipotentialSmoothingWeight</span><span class="p">,</span> <span class="n">meshConstraintAngle</span><span class="p">,</span>
+            <span class="n">originalConfigurationProjectionWeight</span><span class="p">,</span> <span class="n">standardVolumetricSmoothingWeight</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">adaptiveMeshControl</span></div>
+
+<div class="viewcode-block" id="AdaptivityModel.DisplacementAdaptiveMeshConstraint"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.DisplacementAdaptiveMeshConstraint">[docs]</a>    <span class="k">def</span> <span class="nf">DisplacementAdaptiveMeshConstraint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
+                                           <span class="n">u1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+                                           <span class="n">u2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+                                           <span class="n">u3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+                                           <span class="n">ur1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+                                           <span class="n">ur2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+                                           <span class="n">ur3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+                                           <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">motionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">INDEPENDENT</span><span class="p">,</span>
+                                           <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DisplacementAdaptiveMeshConstraint</span><span class="p">:</span>
+        <span class="sd">"""This method creates a DisplacementAdaptiveMeshConstraint object.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            mdb.models[name].AdaptiveMeshConstraint</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name</span>
+<span class="sd">            A String specifying the adaptive mesh constraint repository key.</span>
+<span class="sd">        createStepName</span>
+<span class="sd">            A String specifying the name of the step in which the adaptive mesh constraint is</span>
+<span class="sd">            created.</span>
+<span class="sd">        region</span>
+<span class="sd">            A Region object specifying the region to which the adaptive mesh constraint is applied.</span>
+<span class="sd">        u1</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the displacement component in the 1-direction.</span>
+<span class="sd">            Possible values for the SymbolicConstant are UNSET and SET. The default value is</span>
+<span class="sd">            UNSET.Note:Although *u1*, *u2*, *u3*, *ur1*, *ur2*, and *ur3* are optional arguments, at</span>
+<span class="sd">            least one of them must be specified.</span>
+<span class="sd">        u2</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the displacement component in the 2-direction.</span>
+<span class="sd">            Possible values for the SymbolicConstant are UNSET and SET. The default value is UNSET.</span>
+<span class="sd">        u3</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the displacement component in the 3-direction.</span>
+<span class="sd">            Possible values for the SymbolicConstant are UNSET and SET. The default value is UNSET.</span>
+<span class="sd">        ur1</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the rotational displacement component about the</span>
+<span class="sd">            1-direction. Possible values for the SymbolicConstant are UNSET and SET. The default</span>
+<span class="sd">            value is UNSET.</span>
+<span class="sd">        ur2</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the rotational displacement component about the</span>
+<span class="sd">            2-direction. Possible values for the SymbolicConstant are UNSET and SET. The default</span>
+<span class="sd">            value is UNSET.</span>
+<span class="sd">        ur3</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the rotational displacement component about the</span>
+<span class="sd">            3-direction. Possible values for the SymbolicConstant are UNSET and SET. The default</span>
+<span class="sd">            value is UNSET.</span>
+<span class="sd">        amplitude</span>
+<span class="sd">            A String or the SymbolicConstant UNSET specifying the name of the amplitude reference.</span>
+<span class="sd">            UNSET should be used if the adaptive mesh constraint has no amplitude reference. The</span>
+<span class="sd">            default value is UNSET. You should provide the *amplitude* argument only if it is valid</span>
+<span class="sd">            for the specified step.</span>
+<span class="sd">        motionType</span>
+<span class="sd">            A SymbolicConstant specifying the mesh motion in relation to the underlying material.</span>
+<span class="sd">            Possible values are INDEPENDENT, FOLLOW and USER_DEFINED. The default value is</span>
+<span class="sd">            INDEPENDENT.</span>
+<span class="sd">        localCsys</span>
+<span class="sd">            None or a DatumCsys object specifying the local coordinate system of the adaptive mesh</span>
+<span class="sd">            constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
+<span class="sd">            in the global coordinate system. The default value is None.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A DisplacementAdaptiveMeshConstraint object</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshConstraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshConstraint</span> <span class="o">=</span> <span class="n">DisplacementAdaptiveMeshConstraint</span><span class="p">(</span>
+            <span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">ur1</span><span class="p">,</span> <span class="n">ur2</span><span class="p">,</span> <span class="n">ur3</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">motionType</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">adaptiveMeshConstraint</span></div>
+
+<div class="viewcode-block" id="AdaptivityModel.RemeshingRule"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.RemeshingRule">[docs]</a>    <span class="k">def</span> <span class="nf">RemeshingRule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">variables</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                      <span class="n">region</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MODEL</span><span class="p">,</span> <span class="n">sizingMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span>
+                      <span class="n">errorTarget</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">maxSolutionErrorTarget</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                      <span class="n">minSolutionErrorTarget</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">meshBias</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">minElementSize</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                      <span class="n">maxElementSize</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">outputFrequency</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LAST_INCREMENT</span><span class="p">,</span>
+                      <span class="n">specifyMinSize</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">specifyMaxSize</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                      <span class="n">coarseningFactor</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT_LIMIT</span><span class="p">,</span>
+                      <span class="n">refinementFactor</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT_LIMIT</span><span class="p">,</span>
+                      <span class="n">elementCountLimit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RemeshingRule</span><span class="p">:</span>
+        <span class="sd">"""This method creates a RemeshingRule object.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            mdb.models[name].AdaptiveMeshConstraint</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name</span>
+<span class="sd">            A String specifying the name of the object.</span>
+<span class="sd">        stepName</span>
+<span class="sd">            A String specifying the name of the step in which resizing should occur for this rule.</span>
+<span class="sd">        variables</span>
+<span class="sd">            A sequence of Strings specifying the output request variables that Abaqus will use as</span>
+<span class="sd">            error indicators.</span>
+<span class="sd">        description</span>
+<span class="sd">            A String specifying a descriptive string for this rule. The default value is an empty</span>
+<span class="sd">            string.</span>
+<span class="sd">        region</span>
+<span class="sd">            The SymbolicConstant MODEL or a Region object specifying the region in which Abaqus will</span>
+<span class="sd">            remesh and generate output. The SymbolicConstant MODEL represents the entire applicable</span>
+<span class="sd">            model. The default value is MODEL.</span>
+<span class="sd">        sizingMethod</span>
+<span class="sd">            A SymbolicConstant specifying the method for calculating the new mesh sizes. The</span>
+<span class="sd">            SymbolicConstant DEFAULT indicates that Abaqus will use the default calculation method</span>
+<span class="sd">            for each individual variable. Possible values are DEFAULT, UNIFORM_ERROR, and</span>
+<span class="sd">            MINIMUM_MAXIMUM. The default value is DEFAULT.</span>
+<span class="sd">        errorTarget</span>
+<span class="sd">            A Float specifying the target error percentage for each variable in the region. A value</span>
+<span class="sd">            of 0.0 indicates that Abaqus will use automated error target reduction for the region.</span>
+<span class="sd">            You use the *errorTarget* argument when *sizingMethod*=UNIFORM_ERROR. The default value</span>
+<span class="sd">            is 0.0.</span>
+<span class="sd">        maxSolutionErrorTarget</span>
+<span class="sd">            A Float specifying the target error percentage at the location of the maximum solution</span>
+<span class="sd">            value in the region. A value of 0.0 indicates that Abaqus will use automated error</span>
+<span class="sd">            target reduction for the region. You use the *maxSolutionErrorTarget* argument when</span>
+<span class="sd">            *sizingMethod*=MINIMUM_MAXIMUM. The default value is 0.0.</span>
+<span class="sd">        minSolutionErrorTarget</span>
+<span class="sd">            A Float specifying the target error percentage at the location of the minimum solution</span>
+<span class="sd">            value in the region. A value of 0.0 indicates that Abaqus will use automated error</span>
+<span class="sd">            target reduction for the region. You use the *minSolutionErrorTarget* argument when</span>
+<span class="sd">            *sizingMethod*=MINIMUM_MAXIMUM. The default value is 0.0.</span>
+<span class="sd">        meshBias</span>
+<span class="sd">            An Int specifying an indication of how much Abaqus will bias the mesh toward the</span>
+<span class="sd">            location of the maximum solution value in the region. The higher the value, the more the</span>
+<span class="sd">            mesh will bias towards the location of the maximum solution value. You use the</span>
+<span class="sd">            *meshBias* argument when *sizingMethod*=MINIMUM_MAXIMUM. The default value is 0.0.</span>
+<span class="sd">        minElementSize</span>
+<span class="sd">            A Float specifying the minimum size of any single element. The default value is 0.0.</span>
+<span class="sd">        maxElementSize</span>
+<span class="sd">            A Float specifying the maximum size of any single element. The default value is 0.0.</span>
+<span class="sd">        outputFrequency</span>
+<span class="sd">            A SymbolicConstant specifying the frequency with which the error indicators are saved to</span>
+<span class="sd">            the output database file (.odb). Possible values are LAST_INCREMENT and ALL_INCREMENTS.</span>
+<span class="sd">            The default value is LAST_INCREMENT.</span>
+<span class="sd">        specifyMinSize</span>
+<span class="sd">            A Boolean specifying an indication of whether to use a user-supplied minimum element</span>
+<span class="sd">            size or to calculate a characteristic minimum element size. The default value is OFF.</span>
+<span class="sd">        specifyMaxSize</span>
+<span class="sd">            A Boolean specifying an indication of whether to use a user-supplied maximum element</span>
+<span class="sd">            size or to calculate a characteristic maximum element size. The default value is ON.</span>
+<span class="sd">        coarseningFactor</span>
+<span class="sd">            A SymbolicConstant or an Int specifying an indication of the upper limit on the element</span>
+<span class="sd">            growth from one remeshing iteration to the next. Possible values are DEFAULT_LIMIT and</span>
+<span class="sd">            NOT_ALLOWED. The default value is DEFAULT_LIMIT.</span>
+<span class="sd">        refinementFactor</span>
+<span class="sd">            A SymbolicConstant or an Int specifying an indication of the upper limit on element</span>
+<span class="sd">            shrinkage from one remeshing iteration to the next. Possible values are DEFAULT_LIMIT</span>
+<span class="sd">            and NOT_ALLOWED. The default value is DEFAULT_LIMIT.</span>
+<span class="sd">        elementCountLimit</span>
+<span class="sd">            None or an Int specifying an approximate limit on the number of elements that will be</span>
+<span class="sd">            created during remeshing. Use None to indicate there is not upper limit. The default</span>
+<span class="sd">            value is None.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A RemeshingRule object</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">remeshingRules</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">remeshingRule</span> <span class="o">=</span> <span class="n">RemeshingRule</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">stepName</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
+                                                                  <span class="n">sizingMethod</span><span class="p">,</span> <span class="n">errorTarget</span><span class="p">,</span> <span class="n">maxSolutionErrorTarget</span><span class="p">,</span>
+                                                                  <span class="n">minSolutionErrorTarget</span><span class="p">,</span> <span class="n">meshBias</span><span class="p">,</span> <span class="n">minElementSize</span><span class="p">,</span>
+                                                                  <span class="n">maxElementSize</span><span class="p">,</span> <span class="n">outputFrequency</span><span class="p">,</span> <span class="n">specifyMinSize</span><span class="p">,</span>
+                                                                  <span class="n">specifyMaxSize</span><span class="p">,</span> <span class="n">coarseningFactor</span><span class="p">,</span> <span class="n">refinementFactor</span><span class="p">,</span>
+                                                                  <span class="n">elementCountLimit</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">remeshingRule</span></div>
+
+<div class="viewcode-block" id="AdaptivityModel.VelocityAdaptiveMeshConstraint"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.VelocityAdaptiveMeshConstraint">[docs]</a>    <span class="k">def</span> <span class="nf">VelocityAdaptiveMeshConstraint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
+                                       <span class="n">v1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+                                       <span class="n">v2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+                                       <span class="n">v3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+                                       <span class="n">vr1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+                                       <span class="n">vr2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+                                       <span class="n">vr3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+                                       <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                       <span class="n">motionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">INDEPENDENT</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VelocityAdaptiveMeshConstraint</span><span class="p">:</span>
+        <span class="sd">"""This method creates a VelocityAdaptiveMeshConstraint object.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            mdb.models[name].AdaptiveMeshConstraint</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name</span>
+<span class="sd">            A String specifying the adaptive mesh constraint repository key.</span>
+<span class="sd">        createStepName</span>
+<span class="sd">            A String specifying the name of the step in which the adaptive mesh constraint is</span>
+<span class="sd">            created.</span>
+<span class="sd">        region</span>
+<span class="sd">            A Region object specifying the region to which the adaptive mesh constraint is applied.</span>
+<span class="sd">        v1</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the velocity component in the 1-direction.</span>
+<span class="sd">            Possible values for the SymbolicConstant are UNSET and SET. The default value is</span>
+<span class="sd">            UNSET.Note:Although *v1*, *v2*, *v3*, *vr1*, *vr2*, and *vr3* are optional arguments, at</span>
+<span class="sd">            least one of them must be specified.</span>
+<span class="sd">        v2</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the velocity component in the 2-direction.</span>
+<span class="sd">            Possible values for the SymbolicConstant are UNSET and SET. The default value is UNSET.</span>
+<span class="sd">        v3</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the velocity component in the 3-direction.</span>
+<span class="sd">            Possible values for the SymbolicConstant are UNSET and SET. The default value is UNSET.</span>
+<span class="sd">        vr1</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the rotational velocity component about the</span>
+<span class="sd">            1-direction. Possible values for the SymbolicConstant are UNSET and SET. The default</span>
+<span class="sd">            value is UNSET.</span>
+<span class="sd">        vr2</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the rotational velocity component about the</span>
+<span class="sd">            2-direction. Possible values for the SymbolicConstant are UNSET and SET. The default</span>
+<span class="sd">            value is UNSET.</span>
+<span class="sd">        vr3</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the rotational velocity component about the</span>
+<span class="sd">            3-direction. Possible values for the SymbolicConstant are UNSET and SET. The default</span>
+<span class="sd">            value is UNSET.</span>
+<span class="sd">        amplitude</span>
+<span class="sd">            A String or the SymbolicConstant UNSET specifying the name of the amplitude reference.</span>
+<span class="sd">            UNSET should be used if the adaptive mesh constraint has no amplitude reference. The</span>
+<span class="sd">            default value is UNSET. You should provide the *amplitude* argument only if it is valid</span>
+<span class="sd">            for the specified step.</span>
+<span class="sd">        localCsys</span>
+<span class="sd">            None or a DatumCsys object specifying the local coordinate system of the adaptive mesh</span>
+<span class="sd">            constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
+<span class="sd">            in the global coordinate system. The default value is None.</span>
+<span class="sd">        motionType</span>
+<span class="sd">            A SymbolicConstant specifying the mesh motion in relation to the underlying material.</span>
+<span class="sd">            Possible values are INDEPENDENT, FOLLOW and USER_DEFINED. The default value is</span>
+<span class="sd">            INDEPENDENT.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A VelocityAdaptiveMeshConstraint object</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshConstraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshConstraint</span> <span class="o">=</span> <span class="n">VelocityAdaptiveMeshConstraint</span><span class="p">(</span>
+            <span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">v3</span><span class="p">,</span> <span class="n">vr1</span><span class="p">,</span> <span class="n">vr2</span><span class="p">,</span> <span class="n">vr3</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">,</span> <span class="n">motionType</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">adaptiveMeshConstraint</span></div></div>
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, WANG Hailin
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/scripts/furo.js"></script>
+    </body>
+</html>

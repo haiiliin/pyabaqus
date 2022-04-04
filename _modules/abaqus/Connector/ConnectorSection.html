@@ -1,0 +1,1118 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
+
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.03.04"/>
+        <title>abaqus.Connector.ConnectorSection - pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.13 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  
+  <span class="sidebar-brand-text">pyabaqus 1.0.13 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../user.html">User Manual</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/header.html">Header of the Python script</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../user/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../user/mdb/model.html">Abaqus Model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/part.html">Part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../user/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../user/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../user/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../user/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../user/mdb/job.html">Abaqus Job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/session.html">Abaqus Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../references.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/mdb/model.html">Model</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/mesh.html">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/part_assembly.html">Part and Assembly</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part.html">Part</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/datum.html">Datum</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/engineering.html">Engineering Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/feature.html">Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/geometry.html">Basic Geometry</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/region.html">Region</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/job.html">Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/annotation.html">Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/edit_mesh.html">Edit Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/session.html">Abaqus Session</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/animation.html">Animation Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/canvas.html">Canvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/display_options.html">Display Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/display.html">Display Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/field_report.html">FieldReport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/odb_display.html">Odb Display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/path.html">Path and Probe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/plot_options.html">Plot Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/print.html">Print</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/xy.html">XY</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/kernel.html">Kernel</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/cae_display_preferences.html">Abaqus CAE Display Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/input.html">Input File Parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/kernel.html">Custom Kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/messaging.html">Messaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/table_collection.html">Table Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/text_representation.html">Text Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/utility.html">Utility and View</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <h1>Source code for abaqus.Connector.ConnectorSection</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">abaqusConstants</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.ConnectorDamage</span> <span class="kn">import</span> <span class="n">ConnectorDamage</span>
+<span class="kn">from</span> <span class="nn">.ConnectorDamping</span> <span class="kn">import</span> <span class="n">ConnectorDamping</span>
+<span class="kn">from</span> <span class="nn">.ConnectorElasticity</span> <span class="kn">import</span> <span class="n">ConnectorElasticity</span>
+<span class="kn">from</span> <span class="nn">.ConnectorFailure</span> <span class="kn">import</span> <span class="n">ConnectorFailure</span>
+<span class="kn">from</span> <span class="nn">.ConnectorFriction</span> <span class="kn">import</span> <span class="n">ConnectorFriction</span>
+<span class="kn">from</span> <span class="nn">.ConnectorLock</span> <span class="kn">import</span> <span class="n">ConnectorLock</span>
+<span class="kn">from</span> <span class="nn">.ConnectorPlasticity</span> <span class="kn">import</span> <span class="n">ConnectorPlasticity</span>
+<span class="kn">from</span> <span class="nn">.ConnectorPotential</span> <span class="kn">import</span> <span class="n">ConnectorPotential</span>
+<span class="kn">from</span> <span class="nn">.ConnectorPotentialArray</span> <span class="kn">import</span> <span class="n">ConnectorPotentialArray</span>
+<span class="kn">from</span> <span class="nn">.ConnectorStop</span> <span class="kn">import</span> <span class="n">ConnectorStop</span>
+<span class="kn">from</span> <span class="nn">.DerivedComponent</span> <span class="kn">import</span> <span class="n">DerivedComponent</span>
+<span class="kn">from</span> <span class="nn">.TangentialBehavior</span> <span class="kn">import</span> <span class="n">TangentialBehavior</span>
+<span class="kn">from</span> <span class="nn">..Section.SectionBase</span> <span class="kn">import</span> <span class="n">SectionBase</span>
+
+
+<span class="k">class</span> <span class="nc">ConnectorSection</span><span class="p">(</span><span class="n">SectionBase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ConnectorSection.ConnectorDamage"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorDamage">[docs]</a>    <span class="k">def</span> <span class="nf">ConnectorDamage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coupling</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNCOUPLED</span><span class="p">,</span> <span class="n">criterion</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FORCE</span><span class="p">,</span>
+                        <span class="n">initiationTemperature</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                        <span class="n">initiationPotentialOperator</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SUM</span><span class="p">,</span>
+                        <span class="n">initiationPotentialExponent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">initiationDependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="n">evolution</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">evolutionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MOTION_TYPE</span><span class="p">,</span>
+                        <span class="n">softening</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LINEAR</span><span class="p">,</span> <span class="n">useAffected</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                        <span class="n">degradation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MAXIMUM</span><span class="p">,</span> <span class="n">evolutionTemperature</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                        <span class="n">evolutionDependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">evolutionPotentialOperator</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SUM</span><span class="p">,</span>
+                        <span class="n">evolutionPotentialExponent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                        <span class="n">initiationPotentials</span><span class="p">:</span> <span class="n">ConnectorPotentialArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                        <span class="n">evolutionPotentials</span><span class="p">:</span> <span class="n">ConnectorPotentialArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                        <span class="n">initiationTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">evolutionTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">affectedComponents</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
+                        <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">"""This method creates a connector damage behavior option for a ConnectorSection object.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">                      import connectorBehavior</span>
+<span class="sd">                      connectorBehavior.ConnectorDamage</span>
+<span class="sd">                      import odbConnectorBehavior</span>
+<span class="sd">                      odbConnectorBehavior.ConnectorDamage</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        coupling</span>
+<span class="sd">            A SymbolicConstant specifying whether or not the behavior is coupled. Possible values </span>
+<span class="sd">            are UNCOUPLED and COUPLED. The default value is UNCOUPLED. </span>
+<span class="sd">        criterion</span>
+<span class="sd">            A SymbolicConstant specifying the damage initiation criterion to be used. Possible </span>
+<span class="sd">            values are FORCE, MOTION, and PLASTIC_MOTION. The default value is FORCE. </span>
+<span class="sd">        initiationTemperature</span>
+<span class="sd">            A Boolean specifying whether the initiation data depend on temperature. The default </span>
+<span class="sd">            value is OFF. </span>
+<span class="sd">        initiationPotentialOperator</span>
+<span class="sd">            A SymbolicConstant specifying the contribution operator for the initiation potential </span>
+<span class="sd">            contributions. Possible values are SUM and MAXIMUM. The default value is SUM.This </span>
+<span class="sd">            argument is only if *coupling*=COUPLED and if *criterion*=FORCE or MOTION. </span>
+<span class="sd">        initiationPotentialExponent</span>
+<span class="sd">            A Float specifying the number equal to the inverse of the overall exponent in the </span>
+<span class="sd">            initiation potential definition. The default value is 2.0.This argument is applicable </span>
+<span class="sd">            only if *coupling*=COUPLED, when *initiationPotentialOperator*=SUM, and when </span>
+<span class="sd">            *criterion*=FORCE or MOTION. </span>
+<span class="sd">        initiationDependencies</span>
+<span class="sd">            An Int specifying the number of field variable dependencies for the initiation data. The </span>
+<span class="sd">            default value is 0. </span>
+<span class="sd">        evolution</span>
+<span class="sd">            A Boolean specifying whether damage evolution data will be used. The default value is </span>
+<span class="sd">            ON. </span>
+<span class="sd">        evolutionType</span>
+<span class="sd">            A SymbolicConstant specifying the type of damage evolution to be specified. Possible </span>
+<span class="sd">            values are MOTION_TYPE and ENERGY_TYPE. The default value is MOTION_TYPE.This argument </span>
+<span class="sd">            is applicable only if *evolution*=ON. </span>
+<span class="sd">        softening</span>
+<span class="sd">            A SymbolicConstant specifying the damage evolution law to be specified. Possible values </span>
+<span class="sd">            are LINEAR, EXPONENTIAL, and TABULAR. The default value is LINEAR.This argument is </span>
+<span class="sd">            applicable only if *evolution*=ON and when *evolutionType*=MOTION_TYPE. </span>
+<span class="sd">        useAffected</span>
+<span class="sd">            A Boolean specifying whether or not *affectedComponents* will be specified. If </span>
+<span class="sd">            *useAffected*=OFF, then only the components of relative motion specified by *components* </span>
+<span class="sd">            will undergo damage. The default value is OFF.This argument is applicable only if </span>
+<span class="sd">            *evolution*=ON. </span>
+<span class="sd">        degradation</span>
+<span class="sd">            A SymbolicConstant specifying the contribution of each damage mechanism when more than </span>
+<span class="sd">            one damage mechanism is defined. Possible values are MAXIMUM and MULTIPLICATIVE. The </span>
+<span class="sd">            default value is MAXIMUM.This argument is applicable if *evolution*=ON. </span>
+<span class="sd">        evolutionTemperature</span>
+<span class="sd">            A Boolean specifying whether the evolution data depend on temperature. The default value </span>
+<span class="sd">            is OFF.This argument is applicable only if *evolution*=ON. </span>
+<span class="sd">        evolutionDependencies</span>
+<span class="sd">            An Int specifying the number of field variable dependencies for the evolution data. The </span>
+<span class="sd">            default value is 0.This argument is applicable only if *evolution*=ON. </span>
+<span class="sd">        evolutionPotentialOperator</span>
+<span class="sd">            A SymbolicConstant specifying the contribution operator for the evolution potential </span>
+<span class="sd">            contributions. Possible values are SUM and MAXIMUM. The default value is SUM.This </span>
+<span class="sd">            argument is applicable only if *coupling*=COUPLED, when *evolution*=ON, when </span>
+<span class="sd">            *evolutionType*=MOTION_TYPE, and when *criterion*=FORCE or MOTION. </span>
+<span class="sd">        evolutionPotentialExponent</span>
+<span class="sd">            A Float specifying the number equal to the inverse of the overall exponent in the </span>
+<span class="sd">            evolution potential definition. The default value is 2.0.This argument is applicable </span>
+<span class="sd">            only if *coupling*=COUPLED, when *evolution*=ON, when *evolutionPotentialOperator*=SUM, </span>
+<span class="sd">            when *evolutionType*=MOTION, and when *criterion*=FORCE or MOTION. </span>
+<span class="sd">        initiationPotentials</span>
+<span class="sd">            A ConnectorPotentialArray object specifying one ConnectorPotential object for each </span>
+<span class="sd">            initiation potential contribution. This member can be specified only if </span>
+<span class="sd">            *coupling*=COUPLED and if *criterion*=FORCE or MOTION. </span>
+<span class="sd">        evolutionPotentials</span>
+<span class="sd">            A ConnectorPotentialArray object specifying one ConnectorPotential object for each </span>
+<span class="sd">            evolution potential contribution). This member can be specified only if </span>
+<span class="sd">            *coupling*=COUPLED, if *evolution*=ON, if *evolutionType*=MOTION, and if </span>
+<span class="sd">            *criterion*=FORCE or MOTION. </span>
+<span class="sd">        initiationTable</span>
+<span class="sd">            A sequence of sequences of Floats specifying the initiation properties. The default </span>
+<span class="sd">            value is an empty sequence.Items in the *initiationTable* data are described below. </span>
+<span class="sd">        evolutionTable</span>
+<span class="sd">            A sequence of sequences of Floats specifying the evolution properties. The default value </span>
+<span class="sd">            is an empty sequence.Items in the *evolutionTable* data are described below. This </span>
+<span class="sd">            argument is only applicable if *evolution*=ON. </span>
+<span class="sd">        affectedComponents</span>
+<span class="sd">            A sequence of Ints specifying the components of relative motion that will be damaged. </span>
+<span class="sd">            Possible values are 1 ≤≤ *components* ≤≤ 6. Only available components can be specified. </span>
+<span class="sd">            This argument is applicable only if *evolution*=ON and *useAffected*=ON. The default </span>
+<span class="sd">            value is an empty sequence. </span>
+<span class="sd">        components</span>
+<span class="sd">            A sequence of Ints specifying the components of relative motion for which the behavior </span>
+<span class="sd">            is defined. Possible values are 1 ≤≤ *components* ≤≤ 6. Only available components can be </span>
+<span class="sd">            specified. This argument can be specified only if *coupling*=UNCOUPLED. The default </span>
+<span class="sd">            value is an empty sequence. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A ConnectorDamage object. </span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            ValueError and TextError. </span>
+<span class="sd">        """</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorDamage</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">option</span></div>
+
+<div class="viewcode-block" id="ConnectorSection.ConnectorDamping"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorDamping">[docs]</a>    <span class="k">def</span> <span class="nf">ConnectorDamping</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">behavior</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LINEAR</span><span class="p">,</span> <span class="n">coupling</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNCOUPLED</span><span class="p">,</span>
+                         <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                         <span class="n">frequencyDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
+                         <span class="n">independentComponents</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">"""This method creates a connector damping behavior option for a ConnectorSection object.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">                      import connectorBehavior</span>
+<span class="sd">                      connectorBehavior.ConnectorDamping</span>
+<span class="sd">                      import odbConnectorBehavior</span>
+<span class="sd">                      odbConnectorBehavior.ConnectorDamping</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        behavior</span>
+<span class="sd">            A SymbolicConstant specifying if the damping behavior is linear or nonlinear. Possible </span>
+<span class="sd">            values are LINEAR and NONLINEAR. The default value is LINEAR. </span>
+<span class="sd">        coupling</span>
+<span class="sd">            A SymbolicConstant specifying whether the damping behavior is coupled between the </span>
+<span class="sd">            connector's components of relative motion. If *behavior*=LINEAR, then possible values </span>
+<span class="sd">            are UNCOUPLED and COUPLED. If *behavior*=NONLINEAR, then possible values are UNCOUPLED, </span>
+<span class="sd">            COUPLED_POSITION, and COUPLED_MOTION. Possible values are UNCOUPLED, COUPLED, </span>
+<span class="sd">            COUPLED_POSITION, and COUPLED_MOTION. The default value is UNCOUPLED. </span>
+<span class="sd">        dependencies</span>
+<span class="sd">            An Int specifying the number of field variable dependencies. The default value is 0. </span>
+<span class="sd">        temperatureDependency</span>
+<span class="sd">            A Boolean specifying whether the behavior data depend on temperature. The default value </span>
+<span class="sd">            is OFF. </span>
+<span class="sd">        frequencyDependency</span>
+<span class="sd">            A Boolean specifying whether the behavior data depend on frequency. This value is </span>
+<span class="sd">            applicable only if *behavior*= LINEAR and *coupling*=UNCOUPLED. The default value is </span>
+<span class="sd">            OFF. </span>
+<span class="sd">        table</span>
+<span class="sd">            A sequence of sequences of Floats specifying damping properties. Items in the table data </span>
+<span class="sd">            are described below. The default value is an empty sequence. </span>
+<span class="sd">        independentComponents</span>
+<span class="sd">            A sequence of Ints specifying the list of independent components that are included in </span>
+<span class="sd">            the definition of the connector damping data. This argument is applicable only if </span>
+<span class="sd">            *behavior*=NONLINEAR and *coupling*=COUPLED_POSITION or COUPLED_MOTION. When this </span>
+<span class="sd">            argument is applicable, at least one value must be specified. Only available components </span>
+<span class="sd">            can be specified. The default value is an empty sequence. </span>
+<span class="sd">        components</span>
+<span class="sd">            A sequence of Ints specifying the components of relative motion for which the behavior </span>
+<span class="sd">            is defined. Possible values are 1 ≤≤ *components* ≤≤ 6. Only available components can be </span>
+<span class="sd">            specified. The default value is an empty sequence. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A ConnectorDamping object. </span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            ValueError and TextError. </span>
+<span class="sd">        """</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorDamping</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">option</span></div>
+
+<div class="viewcode-block" id="ConnectorSection.ConnectorElasticity"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorElasticity">[docs]</a>    <span class="k">def</span> <span class="nf">ConnectorElasticity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">behavior</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LINEAR</span><span class="p">,</span> <span class="n">coupling</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNCOUPLED</span><span class="p">,</span>
+                            <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                            <span class="n">frequencyDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
+                            <span class="n">independentComponents</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">"""This method creates a connector elasticity behavior option for a ConnectorSection</span>
+<span class="sd">        object.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">                      import connectorBehavior</span>
+<span class="sd">                      connectorBehavior.ConnectorElasticity</span>
+<span class="sd">                      import odbConnectorBehavior</span>
+<span class="sd">                      odbConnectorBehavior.ConnectorElasticity</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        behavior</span>
+<span class="sd">            A SymbolicConstant specifying whether the elastic behavior is linear, nonlinear, or </span>
+<span class="sd">            rigid. Possible values are LINEAR, NONLINEAR, and RIGID. The default value is LINEAR. </span>
+<span class="sd">        coupling</span>
+<span class="sd">            A SymbolicConstant specifying whether the elastic behavior is coupled between the </span>
+<span class="sd">            connector's components of relative motion. If *behavior*=LINEAR, then possible values </span>
+<span class="sd">            are UNCOUPLED and COUPLED. If *behavior*=NONLINEAR, then possible values are UNCOUPLED, </span>
+<span class="sd">            COUPLED_POSITION, and COUPLED_MOTION. Possible values are UNCOUPLED, COUPLED, </span>
+<span class="sd">            COUPLED_POSITION, and COUPLED_MOTION. The default value is UNCOUPLED.This argument is </span>
+<span class="sd">            not applicable if *behavior*=RIGID. </span>
+<span class="sd">        dependencies</span>
+<span class="sd">            An Int specifying the number of field variable dependencies. The default value is 0.This </span>
+<span class="sd">            argument is not applicable if *behavior*=RIGID. </span>
+<span class="sd">        temperatureDependency</span>
+<span class="sd">            A Boolean specifying whether the behavior data depend on temperature. The default value </span>
+<span class="sd">            is OFF.This argument is not applicable if *behavior*=RIGID. </span>
+<span class="sd">        frequencyDependency</span>
+<span class="sd">            A Boolean specifying whether the behavior data depend on frequency. This value is </span>
+<span class="sd">            applicable only if *behavior*=LINEAR and *coupling*=UNCOUPLED. The default value is </span>
+<span class="sd">            OFF.This argument is not applicable if *behavior*=RIGID. </span>
+<span class="sd">        table</span>
+<span class="sd">            A sequence of sequences of Floats specifying elasticity properties. Items in the table </span>
+<span class="sd">            data are described below. This argument is not applicable if *behavior*=RIGID. The </span>
+<span class="sd">            default value is an empty sequence. </span>
+<span class="sd">        independentComponents</span>
+<span class="sd">            A sequence of Ints specifying the list of independent components that are included in </span>
+<span class="sd">            the definition of the connector elasticity data. This argument is applicable only if </span>
+<span class="sd">            *behavior*=NONLINEAR and *coupling*=COUPLED_POSITION or COUPLED_MOTION. If this argument </span>
+<span class="sd">            is applicable, at least one value must be specified. Only available components can be </span>
+<span class="sd">            specified. The default value is an empty sequence. </span>
+<span class="sd">        components</span>
+<span class="sd">            A sequence of Ints specifying the components of relative motion for which the behavior </span>
+<span class="sd">            is defined. Possible values are 1 ≤≤ *components* ≤≤ 6. Only available components can be </span>
+<span class="sd">            specified. The default value is an empty sequence. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A ConnectorElasticity object. </span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            ValueError and TextError. </span>
+<span class="sd">        """</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorElasticity</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">option</span></div>
+
+<div class="viewcode-block" id="ConnectorSection.ConnectorFailure"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorFailure">[docs]</a>    <span class="k">def</span> <span class="nf">ConnectorFailure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">releaseComponent</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ALL</span><span class="p">,</span> <span class="n">minMotion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                         <span class="n">maxMotion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">minForce</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">maxForce</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                         <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">"""This method creates a connector failure behavior option for a ConnectorSection object.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">                      import connectorBehavior</span>
+<span class="sd">                      connectorBehavior.ConnectorFailure</span>
+<span class="sd">                      import odbConnectorBehavior</span>
+<span class="sd">                      odbConnectorBehavior.ConnectorFailure</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        releaseComponent</span>
+<span class="sd">            The SymbolicConstant ALL or an Int specifying the motion components that fail. If an Int </span>
+<span class="sd">            is specified, only that motion component fails when the failure criteria are satisfied. </span>
+<span class="sd">            If *releaseComponent*=ALL, all motion components fail. The default value is ALL. </span>
+<span class="sd">        minMotion</span>
+<span class="sd">            None or a Float specifying the lower bound for the connector's relative position for all </span>
+<span class="sd">            specified components, or no lower bound. The default value is None. </span>
+<span class="sd">        maxMotion</span>
+<span class="sd">            None or a Float specifying the upper bound for the connector's relative position for all </span>
+<span class="sd">            specified components, or no upper bound. The default value is None. </span>
+<span class="sd">        minForce</span>
+<span class="sd">            None or a Float specifying the lower bound of the force or moment in the directions of </span>
+<span class="sd">            the specified components at which locking occurs, or no lower bound. The default value </span>
+<span class="sd">            is None. </span>
+<span class="sd">        maxForce</span>
+<span class="sd">            None or a Float specifying the upper bound of the force or moment in the directions of </span>
+<span class="sd">            the specified components at which locking occurs, or no upper bound. The default value </span>
+<span class="sd">            is None. </span>
+<span class="sd">        components</span>
+<span class="sd">            A sequence of Ints specifying the components of relative motion for which the behavior </span>
+<span class="sd">            is defined. Possible values are 1 ≤≤ *components* ≤≤ 6. Only available components can be </span>
+<span class="sd">            specified. The default value is an empty sequence. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A ConnectorFailure object. </span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            ValueError and TextError. </span>
+<span class="sd">        """</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorFailure</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">option</span></div>
+
+<div class="viewcode-block" id="ConnectorSection.ConnectorFriction"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorFriction">[docs]</a>    <span class="k">def</span> <span class="nf">ConnectorFriction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frictionModel</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PREDEFINED</span><span class="p">,</span> <span class="n">slipStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SPECIFY</span><span class="p">,</span>
+                          <span class="n">tangentDirection</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">stickStiffness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                          <span class="n">componentType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NO_INDEPENDENT_COMPONENTS</span><span class="p">,</span>
+                          <span class="n">slipDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                          <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">useContactForceComponent</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                          <span class="n">contactForceStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COMPONENT_NUMBER</span><span class="p">,</span> <span class="n">contactForceComponent</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                          <span class="n">forcePotentialOperator</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SUM</span><span class="p">,</span> <span class="n">forcePotentialExponent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                          <span class="n">connectorPotentials</span><span class="p">:</span> <span class="n">ConnectorPotentialArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                          <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">independentComponents</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">"""This method creates a connector friction behavior option for a ConnectorSection object.</span>
+<span class="sd">        Depending upon the arguments provided, the friction behavior can be Coulomb-like or</span>
+<span class="sd">        hysteretic in nature.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">                      import connectorBehavior</span>
+<span class="sd">                      connectorBehavior.ConnectorFriction</span>
+<span class="sd">                      import odbConnectorBehavior</span>
+<span class="sd">                      odbConnectorBehavior.ConnectorFriction</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        frictionModel</span>
+<span class="sd">            A SymbolicConstant specifying the desired frictional response model. Possible values are </span>
+<span class="sd">            PREDEFINED and USER_CUSTOMIZED. The default value is PREDEFINED. </span>
+<span class="sd">        slipStyle</span>
+<span class="sd">            A SymbolicConstant specifying the method of indicating the slip direction: either </span>
+<span class="sd">            specified or computed based upon the force potential data. Possible values are SPECIFY </span>
+<span class="sd">            and COMPUTE. The default value is SPECIFY.This argument is applicable only if </span>
+<span class="sd">            *frictionModel*=USER_CUSTOMIZED. </span>
+<span class="sd">        tangentDirection</span>
+<span class="sd">            None or an Int specifying the direction for which the frictional behavior is specified. </span>
+<span class="sd">            Possible values are 1 ≤≤ *tangentDirection* ≤≤ 6, indicating an available component of </span>
+<span class="sd">            relative motion. This argument applies only if *frictionModel*=USER_CUSTOMIZED and if </span>
+<span class="sd">            *slipStyle*=SPECIFY. The default value is None. </span>
+<span class="sd">        stickStiffness</span>
+<span class="sd">            None or a Float specifying the stick stiffness associated with the frictional behavior </span>
+<span class="sd">            in the direction specified by *tangentDirection*. If this argument is omitted, Abaqus </span>
+<span class="sd">            computes an appropriate number for the stick stiffness. The default value is None. </span>
+<span class="sd">        componentType</span>
+<span class="sd">            A SymbolicConstant specifying the type of the *independentComponents*. Possible values </span>
+<span class="sd">            are POSITION, MOTION, and NO_INDEPENDENT_COMPONENTS. The default value is </span>
+<span class="sd">            NO_INDEPENDENT_COMPONENTS. </span>
+<span class="sd">        slipDependency</span>
+<span class="sd">            A Boolean specifying whether the table data depend on accumulated slip. The default </span>
+<span class="sd">            value is OFF.This argument applies only if *frictionModel*=USER_CUSTOMIZED. </span>
+<span class="sd">        temperatureDependency</span>
+<span class="sd">            A Boolean specifying whether the table data depend on temperature. The default value is </span>
+<span class="sd">            OFF.This argument applies only if *frictionModel*=USER_CUSTOMIZED. </span>
+<span class="sd">        dependencies</span>
+<span class="sd">            An Int specifying the number of field variable dependencies. The default value is 0.This </span>
+<span class="sd">            argument applies only if *frictionModel*=USER_CUSTOMIZED. </span>
+<span class="sd">        useContactForceComponent</span>
+<span class="sd">            A Boolean specifying whether the contact force component will be defined. The default </span>
+<span class="sd">            value is OFF.This argument applies only if *frictionModel*=USER_CUSTOMIZED. </span>
+<span class="sd">        contactForceStyle</span>
+<span class="sd">            A SymbolicConstant specifying the method of indicating the contact force component </span>
+<span class="sd">            direction: either specified or computed based on upon a DerivedComponent. Possible </span>
+<span class="sd">            values are COMPONENT_NUMBER and DERIVED_COMPONENT. The default value is </span>
+<span class="sd">            COMPONENT_NUMBER.This argument is applicable only if *frictionModel*=USER_CUSTOMIZED and </span>
+<span class="sd">            if *useContactForceComponent*=ON. </span>
+<span class="sd">        contactForceComponent</span>
+<span class="sd">            An Int specifying the contact force component direction. This argument applies only if </span>
+<span class="sd">            *frictionModel*=USER_CUSTOMIZED, if *useContactForceComponent*=ON, and if </span>
+<span class="sd">            *contactForceStyle*=COMPONENT_NUMBER. The default value is 0. </span>
+<span class="sd">        forcePotentialOperator</span>
+<span class="sd">            A SymbolicConstant specifying the contribution operator for the force potential </span>
+<span class="sd">            contributions. Possible values are SUM and MAXIMUM. The default value is SUM.This </span>
+<span class="sd">            argument is applicable only if *frictionModel*=USER_CUSTOMIZED and if </span>
+<span class="sd">            *slipStyle*=COMPUTE. </span>
+<span class="sd">        forcePotentialExponent</span>
+<span class="sd">            A Float specifying the number equal to the inverse of the overall exponent in the force </span>
+<span class="sd">            potential definition. The default value is 2.0.This argument is applicable only if </span>
+<span class="sd">            *frictionModel*=USER_CUSTOMIZED, if *slipStyle*=COMPUTE, and if </span>
+<span class="sd">            *forcePotentialOperator*=SUM. </span>
+<span class="sd">        connectorPotentials</span>
+<span class="sd">            A ConnectorPotentialArray object specifying one ConnectorPotential object for each force </span>
+<span class="sd">            potential contribution. This member can be specified only if </span>
+<span class="sd">            *frictionModel*=USER_CUSTOMIZED, and if *slipStyle*=COMPUTE. </span>
+<span class="sd">        table</span>
+<span class="sd">            A sequence of sequences of Floats specifying friction properties. The default value is </span>
+<span class="sd">            an empty sequence.If *frictionModel*=PREDEFINED, each sequence of the table data </span>
+<span class="sd">            specifies:If applicable, the first geometric scaling constant relevant to frictional </span>
+<span class="sd">            interactions.Etc., up to as many geometric scaling constants as are associated with this </span>
+<span class="sd">            connection type.Internal contact force/moment generating friction in the first </span>
+<span class="sd">            predefined slip direction.If applicable, internal contact force/moment generating </span>
+<span class="sd">            friction in the second predefined slip direction.Connector constitutive relative motion </span>
+<span class="sd">            in the direction specified by *independentComponent*.Accumulated slip in the first </span>
+<span class="sd">            predefined slip direction, if the data depend on accumulated slip.Temperature, if the </span>
+<span class="sd">            data depend on temperature.Value of the first field variable, if the data depend on </span>
+<span class="sd">            field variables.Value of the second field variable.Etc.If </span>
+<span class="sd">            *frictionModel*=USER_CUSTOMIZED, each sequence of the table data specifies:Effective </span>
+<span class="sd">            radius of the cylindrical or spherical surface over which frictional slip occurs in the </span>
+<span class="sd">            connector associated with frictional effects in the direction specified by </span>
+<span class="sd">            *tangentDirection*. This radius is relevant only if the connection type includes an </span>
+<span class="sd">            available rotational component of relative motion and </span>
+<span class="sd">            *tangentDirection*=SLIP_DIRECTION.Internal contact force/moment generating friction in </span>
+<span class="sd">            the direction specified by *tangentDirection*.Connector constitutive relative motion in </span>
+<span class="sd">            the direction specified by *independentComponent*.Accumulated slip in the direction </span>
+<span class="sd">            specified by *tangentDirection*, if the data depend on accumulated slip.Temperature, if </span>
+<span class="sd">            the data depend on temperature.Value of the first field variable, if the data depend on </span>
+<span class="sd">            field variables.Value of the second field variable.Etc. </span>
+<span class="sd">        independentComponents</span>
+<span class="sd">            A sequence of Ints specifying the independent components. Possible values are 1 ≤≤ </span>
+<span class="sd">            *independentComponents* ≤≤ 6. In addition, each independent component value must be </span>
+<span class="sd">            unique. The *independentComponents* argument applies only if </span>
+<span class="sd">            *frictionModel*=USER_CUSTOMIZED. Only available components can be specified. The default </span>
+<span class="sd">            value is an empty sequence. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A ConnectorFriction object. </span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            ValueError and TextError. </span>
+<span class="sd">        """</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorFriction</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">option</span></div>
+
+<div class="viewcode-block" id="ConnectorSection.ConnectorLock"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorLock">[docs]</a>    <span class="k">def</span> <span class="nf">ConnectorLock</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lockingComponent</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ALL</span><span class="p">,</span> <span class="n">minMotion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                      <span class="n">maxMotion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">minForce</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">maxForce</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                      <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">"""This method creates a connector lock behavior option for a ConnectorSection.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">                      import connectorBehavior</span>
+<span class="sd">                      connectorBehavior.ConnectorLock</span>
+<span class="sd">                      import odbConnectorBehavior</span>
+<span class="sd">                      odbConnectorBehavior.ConnectorLock</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        lockingComponent</span>
+<span class="sd">            The SymbolicConstant ALL or an Int specifying the motion components that are locked. If </span>
+<span class="sd">            an Int is specified, only that motion component is locked when the locking criteria are </span>
+<span class="sd">            satisfied. If *lockingComponent*=ALL, all motion components are locked. The default </span>
+<span class="sd">            value is ALL. </span>
+<span class="sd">        minMotion</span>
+<span class="sd">            None or a Float specifying the lower bound for the connector's relative position for all </span>
+<span class="sd">            specified components, or no lower bound. The default value is None. </span>
+<span class="sd">        maxMotion</span>
+<span class="sd">            None or a Float specifying the upper bound for the connector's relative position for all </span>
+<span class="sd">            specified components, or no upper bound. The default value is None. </span>
+<span class="sd">        minForce</span>
+<span class="sd">            None or a Float specifying the lower bound of the force or moment in the directions of </span>
+<span class="sd">            the specified components at which locking occurs, or no lower bound. The default value </span>
+<span class="sd">            is None. </span>
+<span class="sd">        maxForce</span>
+<span class="sd">            None or a Float specifying the upper bound of the force or moment in the directions of </span>
+<span class="sd">            the specified components at which locking occurs, or no upper bound. The default value </span>
+<span class="sd">            is None. </span>
+<span class="sd">        components</span>
+<span class="sd">            A sequence of Ints specifying the components of relative motion for which the behavior </span>
+<span class="sd">            is defined. Possible values are 1 ≤≤ *components* ≤≤ 6. Only available components can be </span>
+<span class="sd">            specified. The default value is an empty sequence. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A ConnectorLock object. </span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            ValueError and TextError. </span>
+<span class="sd">        """</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorLock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">option</span></div>
+
+<div class="viewcode-block" id="ConnectorSection.ConnectorPlasticity"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorPlasticity">[docs]</a>    <span class="k">def</span> <span class="nf">ConnectorPlasticity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coupling</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNCOUPLED</span><span class="p">,</span> <span class="n">isotropic</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                            <span class="n">isotropicType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TABULAR</span><span class="p">,</span> <span class="n">isotropicTemperature</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                            <span class="n">isotropicDependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">kinematic</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                            <span class="n">kinematicType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">HALF_CYCLE</span><span class="p">,</span> <span class="n">kinematicTemperature</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                            <span class="n">kinematicDependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">forcePotentialOperator</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SUM</span><span class="p">,</span>
+                            <span class="n">forcePotentialExponent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                            <span class="n">connectorPotentials</span><span class="p">:</span> <span class="n">ConnectorPotentialArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                            <span class="n">isotropicTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">kinematicTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">"""This method creates a connector plasticity behavior option for a ConnectorSection</span>
+<span class="sd">        object.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">                      import connectorBehavior</span>
+<span class="sd">                      connectorBehavior.ConnectorPlasticity</span>
+<span class="sd">                      import odbConnectorBehavior</span>
+<span class="sd">                      odbConnectorBehavior.ConnectorPlasticity</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        coupling</span>
+<span class="sd">            A SymbolicConstant specifying whether or not the behavior is coupled. Possible values </span>
+<span class="sd">            are UNCOUPLED and COUPLED. The default value is UNCOUPLED. </span>
+<span class="sd">        isotropic</span>
+<span class="sd">            A Boolean specifying whether isotropic hardening data will be used. The default value is </span>
+<span class="sd">            ON.If *isotropic*=OFF, then *kinematic* must be specified as ON. </span>
+<span class="sd">        isotropicType</span>
+<span class="sd">            A SymbolicConstant specifying the type of isotropic hardening to be specified. Possible </span>
+<span class="sd">            values are TABULAR and EXPONENTIAL_LAW. The default value is TABULAR.This argument is </span>
+<span class="sd">            applicable only if *isotropic*=ON. </span>
+<span class="sd">        isotropicTemperature</span>
+<span class="sd">            A Boolean specifying whether the isotropic data depend on temperature. The default value </span>
+<span class="sd">            is OFF.This argument is applicable only if *isotropic*=ON. </span>
+<span class="sd">        isotropicDependencies</span>
+<span class="sd">            An Int specifying the number of field variable dependencies for the isotropic data. The </span>
+<span class="sd">            default value is 0.This argument is applicable only if *isotropic*=ON. </span>
+<span class="sd">        kinematic</span>
+<span class="sd">            A Boolean specifying whether kinematic hardening data will be used. The default value is </span>
+<span class="sd">            OFF.If *kinematic*=OFF, then *isotropic* must be specified as ON. </span>
+<span class="sd">        kinematicType</span>
+<span class="sd">            A SymbolicConstant specifying the type of kinematic hardening to be specified. Possible </span>
+<span class="sd">            values are HALF_CYCLE, STABILIZED, and PARAMETERS. The default value is HALF_CYCLE.This </span>
+<span class="sd">            argument is applicable only if *kinematic*=ON. </span>
+<span class="sd">        kinematicTemperature</span>
+<span class="sd">            A Boolean specifying whether the kinematic data depend on temperature. The default value </span>
+<span class="sd">            is OFF.This argument is applicable only if *kinematic*=ON. </span>
+<span class="sd">        kinematicDependencies</span>
+<span class="sd">            An Int specifying the number of field variable dependencies for the kinematic data. The </span>
+<span class="sd">            default value is 0.This argument is applicable only if *kinematic*=ON. </span>
+<span class="sd">        forcePotentialOperator</span>
+<span class="sd">            A SymbolicConstant specifying the contribution operator for the force potential </span>
+<span class="sd">            contributions. Possible values are SUM and MAXIMUM. The default value is SUM.This </span>
+<span class="sd">            argument is applicable only if *coupling*=COUPLED. </span>
+<span class="sd">        forcePotentialExponent</span>
+<span class="sd">            A Float specifying the number equal to the inverse of the overall exponent in the force </span>
+<span class="sd">            potential definition. The default value is 2.0.This argument is applicable only if </span>
+<span class="sd">            *coupling*=COUPLED and if *forcePotentialOperator*=SUM. </span>
+<span class="sd">        connectorPotentials</span>
+<span class="sd">            A ConnectorPotentialArray object specifying one ConnectorPotential object for each force </span>
+<span class="sd">            potential contribution. This member can be specified only if *coupling*=COUPLED. </span>
+<span class="sd">        isotropicTable</span>
+<span class="sd">            A sequence of sequences of Floats specifying isotropic plasticity properties. Items in </span>
+<span class="sd">            the *isotropicTable* data are described below. This argument is applicable only if </span>
+<span class="sd">            *isotropic*=ON. The default value is an empty sequence. </span>
+<span class="sd">        kinematicTable</span>
+<span class="sd">            A sequence of sequences of Floats specifying kinematic plasticity properties. Items in </span>
+<span class="sd">            the *kinematicTable* data are described below. This argument is applicable only if </span>
+<span class="sd">            *kinematic*=ON. The default value is an empty sequence. </span>
+<span class="sd">        components</span>
+<span class="sd">            A sequence of Ints specifying the components of relative motion for which the behavior </span>
+<span class="sd">            is defined. Possible values are 1 ≤≤ *components* ≤≤ 6. Only available components can be </span>
+<span class="sd">            specified. This argument can be specified only if *coupling*=UNCOUPLED. The default </span>
+<span class="sd">            value is an empty sequence. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A ConnectorPlasticity object. </span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            ValueError and TextError. </span>
+<span class="sd">        """</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorPlasticity</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">option</span></div>
+
+<div class="viewcode-block" id="ConnectorSection.ConnectorPotential"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorPotential">[docs]</a>    <span class="k">def</span> <span class="nf">ConnectorPotential</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">componentStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COMPONENT_NUMBER</span><span class="p">,</span> <span class="n">componentNumber</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                           <span class="n">sign</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">POSITIVE</span><span class="p">,</span> <span class="n">scaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">positiveExponent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                           <span class="n">shiftFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hFunction</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ABS</span><span class="p">):</span>
+        <span class="sd">"""This method creates a connector potential object to be used in conjunction with an</span>
+<span class="sd">        allowable connector behavior option.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            mdb.models[name].sections[name].behaviorOptions[i].ConnectorPotential</span>
+<span class="sd">            session.odbs[name].sections[name].behaviorOptions[i].ConnectorPotential</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        componentStyle</span>
+<span class="sd">            A SymbolicConstant specifying whether a component number or the name of the </span>
+<span class="sd">            DerivedComponent object will be used in the contribution. Possible values are </span>
+<span class="sd">            COMPONENT_NUMBER and DERIVED_COMPONENT. The default value is COMPONENT_NUMBER. </span>
+<span class="sd">        componentNumber</span>
+<span class="sd">            An Int specifying the component number used in the contribution. This argument is </span>
+<span class="sd">            applicable only if *componentStyle*=COMPONENT_NUMBER. Possible values are 1 ≤≤ </span>
+<span class="sd">            *componentNumber* ≤≤ 6. Only available components can be specified. The default value is </span>
+<span class="sd">            0. </span>
+<span class="sd">        sign</span>
+<span class="sd">            A SymbolicConstant specifying the sign of the contribution. Possible values are POSITIVE </span>
+<span class="sd">            and NEGATIVE. The default value is POSITIVE. </span>
+<span class="sd">        scaleFactor</span>
+<span class="sd">            A Float specifying the scaling factor for the contribution. The default value is 1.0. </span>
+<span class="sd">        positiveExponent</span>
+<span class="sd">            A Float specifying the positive exponent for the contribution. The default value is </span>
+<span class="sd">            2.0.This argument is ignored if the potential operator of the invoking behavior option </span>
+<span class="sd">            is set to MAXIMUM. </span>
+<span class="sd">        shiftFactor</span>
+<span class="sd">            A Float specifying the shift factor for the contribution. The default value is 0.0. </span>
+<span class="sd">        hFunction</span>
+<span class="sd">            A SymbolicConstant specifying the H function of the contribution: either absolute value, </span>
+<span class="sd">            Macauley bracket, or the identity function. Possible values are ABS, MACAULEY, and </span>
+<span class="sd">            IDENTITY. The default value is ABS.The value of IDENTITY can be used only if </span>
+<span class="sd">            *positiveExponent*=1.0 and the potential exponent of the invoking behavior option is </span>
+<span class="sd">            also 1.0 (i.e., the potential operator of the invoking behavior option must be SUM). </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A ConnectorPotential object. </span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            ValueError and TextError. </span>
+<span class="sd">        """</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorPotential</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">option</span></div>
+
+<div class="viewcode-block" id="ConnectorSection.ConnectorStop"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorStop">[docs]</a>    <span class="k">def</span> <span class="nf">ConnectorStop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">minMotion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">maxMotion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">"""This method creates a connector stop behavior option for a ConnectorSection object.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            import connectorBehavior</span>
+<span class="sd">            connectorBehavior.ConnectorStop</span>
+<span class="sd">            import odbConnectorBehavior</span>
+<span class="sd">            odbConnectorBehavior.ConnectorStop</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        minMotion</span>
+<span class="sd">            None or a Float specifying the lower bound for the connector's relative position for all </span>
+<span class="sd">            specified components, or no lower bound. The default value is None. </span>
+<span class="sd">        maxMotion</span>
+<span class="sd">            None or a Float specifying the upper bound for the connector's relative position for all </span>
+<span class="sd">            specified components, or no upper bound. The default value is None. </span>
+<span class="sd">        components</span>
+<span class="sd">            A sequence of Ints specifying the components of relative motion for which the behavior </span>
+<span class="sd">            is defined. Possible values are 1 ≤≤ *components* ≤≤ 6. Only available components can be </span>
+<span class="sd">            specified. The default value is an empty sequence. </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A ConnectorStop object. </span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            ValueError and TextError. </span>
+<span class="sd">        """</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorStop</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">option</span></div>
+
+<div class="viewcode-block" id="ConnectorSection.DerivedComponent"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.DerivedComponent">[docs]</a>    <span class="k">def</span> <span class="nf">DerivedComponent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method creates a DerivedComponent object.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            mdb.models[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent</span>
+<span class="sd">            mdb.models[name].sections[name].behaviorOptions[i].DerivedComponent</span>
+<span class="sd">            mdb.models[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent</span>
+<span class="sd">            mdb.models[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent</span>
+<span class="sd">            session.odbs[name].sections[name].behaviorOptions[i].connectorPotentials[i].DerivedComponent</span>
+<span class="sd">            session.odbs[name].sections[name].behaviorOptions[i].DerivedComponent</span>
+<span class="sd">            session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent</span>
+<span class="sd">            session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A DerivedComponent object.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            ValueError and TextError.</span>
+<span class="sd">        """</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">DerivedComponent</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">option</span></div>
+
+<div class="viewcode-block" id="ConnectorSection.TangentialBehavior"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.TangentialBehavior">[docs]</a>    <span class="k">def</span> <span class="nf">TangentialBehavior</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">formulation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PENALTY</span><span class="p">,</span> <span class="n">slipRateDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                           <span class="n">pressureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                           <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">exponentialDecayDefinition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COEFFICIENTS</span><span class="p">,</span>
+                           <span class="n">shearStressLimit</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">maximumElasticSlip</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FRACTION</span><span class="p">,</span>
+                           <span class="n">fraction</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">absoluteDistance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">"""This method creates a TangentialBehavior object.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This function can be accessed by:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior</span>
+<span class="sd">            session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        formulation</span>
+<span class="sd">            A SymbolicConstant specifying the friction coefficient formulation. Possible values are</span>
+<span class="sd">            PENALTY and EXPONENTIAL_DECAY. The default value is PENALTY.</span>
+<span class="sd">        slipRateDependency</span>
+<span class="sd">            A Boolean specifying whether the data depend on slip rate. The default value is OFF.</span>
+<span class="sd">        pressureDependency</span>
+<span class="sd">            A Boolean specifying whether the data depend on contact pressure. The default value is</span>
+<span class="sd">            OFF.</span>
+<span class="sd">        temperatureDependency</span>
+<span class="sd">            A Boolean specifying whether the data depend on temperature. The default value is OFF.</span>
+<span class="sd">        dependencies</span>
+<span class="sd">            An Int specifying the number of field variables for the data. The default value is 0.</span>
+<span class="sd">        exponentialDecayDefinition</span>
+<span class="sd">            A SymbolicConstant specifying the exponential decay definition for the data. Possible</span>
+<span class="sd">            values are COEFFICIENTS and TEST_DATA. The default value is COEFFICIENTS.</span>
+<span class="sd">        shearStressLimit</span>
+<span class="sd">            None or a Float specifying no upper limit or the friction coefficient shear stress</span>
+<span class="sd">            limit. The default value is None.</span>
+<span class="sd">        maximumElasticSlip</span>
+<span class="sd">            A SymbolicConstant specifying the method for modifying the allowable elastic slip.</span>
+<span class="sd">            Possible values are FRACTION and ABSOLUTE_DISTANCE. The default value is FRACTION.This</span>
+<span class="sd">            argument applies only to Abaqus/Standard analyses.</span>
+<span class="sd">        fraction</span>
+<span class="sd">            A Float specifying the ratio of the allowable maximum elastic slip to a characteristic</span>
+<span class="sd">            model dimension. The default value is 10–4.This argument applies only to Abaqus/Standard</span>
+<span class="sd">            analyses.</span>
+<span class="sd">        absoluteDistance</span>
+<span class="sd">            None or a Float specifying the absolute magnitude of the allowable elastic slip. The</span>
+<span class="sd">            default value is None.This argument applies only to Abaqus/Standard analyses.</span>
+<span class="sd">        table</span>
+<span class="sd">            A sequence of sequences of Floats specifying the tangential properties. Items in the</span>
+<span class="sd">            table data are described below. The default value is an empty sequence.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            A TangentialBehavior object. .</span>
+<span class="sd">        """</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">TangentialBehavior</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">option</span></div>
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, WANG Hailin
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/scripts/furo.js"></script>
+    </body>
+</html>

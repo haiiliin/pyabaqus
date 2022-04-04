@@ -1,0 +1,860 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
+
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.03.04"/>
+        <title>abaqus.EditMesh.MeshEditPart - pyabaqus 1.0.13 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.13 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  
+  <span class="sidebar-brand-text">pyabaqus 1.0.13 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../user.html">User Manual</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/header.html">Header of the Python script</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../user/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../user/mdb/model.html">Abaqus Model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/part.html">Part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../user/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../user/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../user/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../user/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../user/mdb/job.html">Abaqus Job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/session.html">Abaqus Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../references.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/mdb.html">Abaqus Model Database</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/mdb/model.html">Model</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/adaptivity.html">Adaptivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/amplitude.html">Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/bc.html">Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/calibration.html">Calibration of Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/constraint.html">Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/interaction.html">Interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/load.html">Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/material.html">Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/mesh.html">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/optimization.html">Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/output.html">Output Request</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/part_assembly.html">Part and Assembly</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part.html">Part</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/assembly.html">Assembly</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/datum.html">Datum</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/engineering.html">Engineering Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/feature.html">Feature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/geometry.html">Basic Geometry</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/part_assembly/region.html">Region</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/predefined.html">Predefined Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/profile.html">Beam Section Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/property.html">Property</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/section.html">Section</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/section/connector.html">Connector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/mdb/model/sketcher.html">Sketcher</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../../reference/mdb/model/step.html">Step</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../reference/mdb/model/step/step_miscellaneous.html">Step Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/job.html">Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/annotation.html">Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/mdb/edit_mesh.html">Edit Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/odb.html">Abaqus Output Database</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/session.html">Abaqus Session</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/animation.html">Animation Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/canvas.html">Canvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/display_options.html">Display Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/display.html">Display Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/field_report.html">FieldReport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/odb_display.html">Odb Display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/path.html">Path and Probe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/plot_options.html">Plot Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/print.html">Print</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/session/xy.html">XY</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/kernel.html">Kernel</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/cae_display_preferences.html">Abaqus CAE Display Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/input.html">Input File Parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/kernel.html">Custom Kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/messaging.html">Messaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/table_collection.html">Table Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/text_representation.html">Text Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/kernel/utility.html">Utility and View</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <h1>Source code for abaqus.EditMesh.MeshEditPart</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">typing</span>
+
+<span class="kn">from</span> <span class="nn">abaqusConstants</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..Datum.DatumCsys</span> <span class="kn">import</span> <span class="n">DatumCsys</span>
+<span class="kn">from</span> <span class="nn">..Mesh.MeshEdge</span> <span class="kn">import</span> <span class="n">MeshEdge</span>
+<span class="kn">from</span> <span class="nn">..Mesh.MeshElement</span> <span class="kn">import</span> <span class="n">MeshElement</span>
+<span class="kn">from</span> <span class="nn">..Mesh.MeshFace</span> <span class="kn">import</span> <span class="n">MeshFace</span>
+<span class="kn">from</span> <span class="nn">..Mesh.MeshNode</span> <span class="kn">import</span> <span class="n">MeshNode</span>
+<span class="kn">from</span> <span class="nn">..Part.PartBase</span> <span class="kn">import</span> <span class="n">PartBase</span>
+<span class="kn">from</span> <span class="nn">..Region.Region</span> <span class="kn">import</span> <span class="n">Region</span>
+
+
+<span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">MeshNode</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<div class="viewcode-block" id="MeshEditPart"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart">[docs]</a><span class="k">class</span> <span class="nc">MeshEditPart</span><span class="p">(</span><span class="n">PartBase</span><span class="p">):</span>
+    <span class="sd">"""The following commands operate on Part objects. For more information about the Part </span>
+<span class="sd">    object, see Part object. </span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">        This object can be accessed by:</span>
+<span class="sd">        </span>
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">            </span>
+<span class="sd">            import meshEdit</span>
+
+<span class="sd">    """</span>
+
+<div class="viewcode-block" id="MeshEditPart.adjustMidsideNode"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.adjustMidsideNode">[docs]</a>    <span class="k">def</span> <span class="nf">adjustMidsideNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cornerNodes</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Node</span><span class="p">],</span> <span class="n">parameter</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="sd">"""This method is used to adjust the midside node of second-order elements of an orphan</span>
+<span class="sd">        mesh part.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        cornerNodes</span>
+<span class="sd">            A sequence of Node objects specifying the nodes towards which connected midside nodes </span>
+<span class="sd">            will be biased. </span>
+<span class="sd">        parameter</span>
+<span class="sd">            A Float specifying the normalized distance along the edge of the midside nodes. Possible </span>
+<span class="sd">            values are 0.0 ≤≤ *parameter* ≤≤ 1.0, where 0.0 specifies the position of the corner </span>
+<span class="sd">            node. The default value is 0.5. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.cleanMesh"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.cleanMesh">[docs]</a>    <span class="k">def</span> <span class="nf">cleanMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mergeTolerance</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">growEdges</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">refEdge</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">thicknessDir</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">moveLayers</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="sd">"""This method is used to collapse short element edges and delete collapsed elements, or</span>
+<span class="sd">        grow short element edges, on an orphan mesh part composed of linear elements.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        mergeTolerance</span>
+<span class="sd">            A Float specifying the edge length tolerance. During the operation, edges shorter than </span>
+<span class="sd">            the given tolerance will be collapsed, or grown to the specified length. </span>
+<span class="sd">        growEdges</span>
+<span class="sd">            A Boolean specifying whether short element edges will be grown to the specified </span>
+<span class="sd">            tolerance. Default is False, meaning short edges will be collapsed. </span>
+<span class="sd">        elements</span>
+<span class="sd">            The elements to consider as the domain for the operation. By default all elements on the </span>
+<span class="sd">            part are considered. The elements may be given as a MeshElementArray, a list of </span>
+<span class="sd">            MeshElement objects, a Set, or a list of Set objects. </span>
+<span class="sd">        refEdge</span>
+<span class="sd">            A MeshEdge specifying a reference edge to indicate a topological direction in a </span>
+<span class="sd">            structured mesh that will limit which edges within the element domain are considered. </span>
+<span class="sd">            That is, only edges that are found to be topologically parallel to the given reference </span>
+<span class="sd">            edge will be considered by the operation. By default all edges of the element domain are </span>
+<span class="sd">            considered, unless *thicknessDir* is specified, in which case the operation will attempt </span>
+<span class="sd">            to determine the topological edges from the thickness direction. </span>
+<span class="sd">        thicknessDir</span>
+<span class="sd">            A tuple of two or three Floats indicating a vector along which element edge lengths will </span>
+<span class="sd">            be measured. </span>
+<span class="sd">        moveLayers</span>
+<span class="sd">            A Boolean indicating whether element edges will be all grown in the direction of the </span>
+<span class="sd">            thickness vector specified by *thicknessDir*. This argument is ignored unless </span>
+<span class="sd">            *growEdges* is True and *thicknessDir* is provided. When this argument is True the </span>
+<span class="sd">            growth of any given element edge will no longer be constrained by short edges on </span>
+<span class="sd">            neighboring elements, but elements could move from their original positions in cases </span>
+<span class="sd">            where there are multiple adjacent layers of thin elements. The default value is False. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.collapseMeshEdge"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.collapseMeshEdge">[docs]</a>    <span class="k">def</span> <span class="nf">collapseMeshEdge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">collapseMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">):</span>
+        <span class="sd">"""This method collapses an edge of a quadrilateral or triangular element of an orphan mesh</span>
+<span class="sd">        part or part instance.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        edge</span>
+<span class="sd">            A single MeshEdge object specifying the element edge to collapse. </span>
+<span class="sd">        collapseMethod</span>
+<span class="sd">            A SymbolicConstant specifying the method used to collapse the edge. Possible values are </span>
+<span class="sd">            FORWARD, REVERSE, and AVERAGE. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.combineElement"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.combineElement">[docs]</a>    <span class="k">def</span> <span class="nf">combineElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
+        <span class="sd">"""This method combines two triangular elements of an orphan mesh part or an Abaqus native</span>
+<span class="sd">        mesh.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        elements</span>
+<span class="sd">            A sequence of triangular MeshElement objects specifying the elements to combine. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.convertSolidMeshToShell"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.convertSolidMeshToShell">[docs]</a>    <span class="k">def</span> <span class="nf">convertSolidMeshToShell</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method removes all solid elements from an orphan mesh part and creates triangular</span>
+<span class="sd">        or quadrilateral shell elements along their outer faces.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.deleteElement"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.deleteElement">[docs]</a>    <span class="k">def</span> <span class="nf">deleteElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshElement</span><span class="p">],</span> <span class="n">deleteUnreferencedNodes</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
+        <span class="sd">"""This method deletes the given elements from an orphan mesh part or an Abaqus native</span>
+<span class="sd">        mesh. If the elements belong to an Abaqus native mesh then the elements must have been</span>
+<span class="sd">        generated using the bottom-up meshing technique.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        elements</span>
+<span class="sd">            A sequence of MeshElement objects or a Set object containing elements. </span>
+<span class="sd">        deleteUnreferencedNodes</span>
+<span class="sd">            A Boolean specifying whether to delete all those associated nodes that become </span>
+<span class="sd">            unreferenced after the given elements are deleted. The default value is OFF. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.deleteNode"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.deleteNode">[docs]</a>    <span class="k">def</span> <span class="nf">deleteNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshNode</span><span class="p">],</span> <span class="n">deleteUnreferencedNodes</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
+        <span class="sd">"""This method deletes the given nodes from an orphan mesh part.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        nodes</span>
+<span class="sd">            A sequence of MeshNode objects or a Set object containing nodes. </span>
+<span class="sd">        deleteUnreferencedNodes</span>
+<span class="sd">            A Boolean specifying whether to delete all those associated nodes that become </span>
+<span class="sd">            unreferenced after the given nodes and the connected elements are deleted. The default </span>
+<span class="sd">            value is OFF. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.editNode"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.editNode">[docs]</a>    <span class="k">def</span> <span class="nf">editNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshNode</span><span class="p">],</span> <span class="n">coordinate1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">coordinate2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">coordinate3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">offset1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">offset2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">offset3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="n">DatumCsys</span> <span class="o">=</span> <span class="n">DatumCsys</span><span class="p">(),</span>
+                 <span class="n">projectToGeometry</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
+        <span class="sd">"""This method changes the coordinates of the given nodes on an orphan mesh part or on an</span>
+<span class="sd">        Abaqus native mesh.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        nodes</span>
+<span class="sd">            A sequence of MeshNode objects or a Set object containing nodes. </span>
+<span class="sd">        coordinate1</span>
+<span class="sd">            A Float specifying the value of the first coordinate. If *coordinate1* and *offset1* are </span>
+<span class="sd">            unspecified, the existing value does not change. </span>
+<span class="sd">        coordinate2</span>
+<span class="sd">            A Float specifying the value of the second coordinate. If *coordinate2* and *offset2* </span>
+<span class="sd">            are unspecified, the existing value does not change. </span>
+<span class="sd">        coordinate3</span>
+<span class="sd">            A Float specifying the value of the third coordinate. If *coordinate3* and *offset3* are </span>
+<span class="sd">            unspecified, the existing value does not change. </span>
+<span class="sd">        coordinates</span>
+<span class="sd">            A sequence of three-dimensional coordinate tuples specifying the coordinates for each of </span>
+<span class="sd">            the given nodes. When specified, the number of coordinate tuples must match the number </span>
+<span class="sd">            of given nodes, and be ordered to correspond to the given nodes in *ascending order* </span>
+<span class="sd">            according to index. Furthermore, *coordinate1*, *coordinate2*, *coordinate3*, *offset1*, </span>
+<span class="sd">            *offset2*, or *offset3* may not be specified. </span>
+<span class="sd">        offset1</span>
+<span class="sd">            A Float specifying an offset to apply to the value of the first coordinate of the </span>
+<span class="sd">            specified nodes. </span>
+<span class="sd">        offset2</span>
+<span class="sd">            A Float specifying an offset to apply to the value of the second coordinate of the </span>
+<span class="sd">            specified nodes. </span>
+<span class="sd">        offset3</span>
+<span class="sd">            A Float specifying an offset to apply to the value of the third coordinate of the </span>
+<span class="sd">            specified nodes. </span>
+<span class="sd">        localCsys</span>
+<span class="sd">            A DatumCsys object specifying the local coordinate system. If unspecified, the global </span>
+<span class="sd">            coordinate system will be used. </span>
+<span class="sd">        projectToGeometry</span>
+<span class="sd">            A Boolean specifying whether to project nodes back to their original geometry. For </span>
+<span class="sd">            example, if a node is on a face, this method first positions the node at the new </span>
+<span class="sd">            location and then projects it back to the original face. The default value is ON.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            A coordinate and an offset may not both be specified for the same coordinate component. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.projectNode"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.projectNode">[docs]</a>    <span class="k">def</span> <span class="nf">projectNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshNode</span><span class="p">],</span> <span class="n">projectionReference</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">"""This method projects the given nodes onto a mesh entity, geometric entity, or a datum</span>
+<span class="sd">        object. The nodes may belong to an orphan mesh part or to an Abaqus native mesh.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        nodes</span>
+<span class="sd">            A sequence of MeshNode objects to be projected. </span>
+<span class="sd">        projectionReference</span>
+<span class="sd">            An object specifying the target for the node projection operation. The </span>
+<span class="sd">            *projectionReference* can be any one of the following objects: MeshNode, MeshEdge, </span>
+<span class="sd">            MeshFace, ConstrainedSketchVertex, Edge, Face, DatumPoint, DatumAxis, or DatumPlane.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.generateMesh"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.generateMesh">[docs]</a>    <span class="k">def</span> <span class="nf">generateMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elemShape</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="sd">"""This method generates a new mesh on an orphan mesh part based on the original mesh.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        elemShape</span>
+<span class="sd">            A SymbolicConstant specifying the element shape to be used for meshing. Possible values </span>
+<span class="sd">            are:TRIRefine a planar triangular mesh and replace it with a new one. If no element </span>
+<span class="sd">            sizes are attached, the new mesh will be governed by the sizes of the boundary edges in </span>
+<span class="sd">            the old mesh.TETCreate a tetrahedral mesh from a closed shell of triangular elements. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.generateMeshByOffset"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.generateMeshByOffset">[docs]</a>    <span class="k">def</span> <span class="nf">generateMeshByOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">meshType</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">totalThickness</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">distanceBetweenLayers</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                             <span class="n">numLayers</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">offsetDirection</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">OUTWARD</span><span class="p">,</span> <span class="n">initialOffset</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+                             <span class="n">shareNodes</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">deleteBaseElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                             <span class="n">constantThicknessCorners</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">extendElementSets</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="sd">"""This method generates a solid or shell mesh from an orphan mesh surface by generating</span>
+<span class="sd">        layers of elements that propagate out normal to the surface boundary.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        region</span>
+<span class="sd">            A Region object specifying the domain to be offset. </span>
+<span class="sd">        meshType</span>
+<span class="sd">            A Symbolic Constant specifying the type of mesh to be generated. Possible values are </span>
+<span class="sd">            SOLID or SHELL. </span>
+<span class="sd">        totalThickness</span>
+<span class="sd">            A Float specifying the total thickness of the solid layers. This argument applies only </span>
+<span class="sd">            when *meshType*=SOLID. </span>
+<span class="sd">        distanceBetweenLayers</span>
+<span class="sd">            A Float specifying the distance between shell layers. This argument applies only when </span>
+<span class="sd">            *meshType*=SHELL. </span>
+<span class="sd">        numLayers</span>
+<span class="sd">            An Int specifying the number of element layers to be generated. </span>
+<span class="sd">        offsetDirection</span>
+<span class="sd">            A Symbolic Constant specifying the direction of the offset. This argument is required </span>
+<span class="sd">            only when the given region relates to a shell mesh. Possible values are OUTWARD, INWARD, </span>
+<span class="sd">            and BOTH. The default value is OUTWARD. </span>
+<span class="sd">        initialOffset</span>
+<span class="sd">            A Float specifying the magnitude of the initial offset. The default value is zero. </span>
+<span class="sd">        shareNodes</span>
+<span class="sd">            Boolean specifying whether the first layer of nodes should be shared with nodes on the </span>
+<span class="sd">            base surface. The default value is False. </span>
+<span class="sd">        deleteBaseElements</span>
+<span class="sd">            A Boolean specifying whether to delete the shell elements after the offset layers are </span>
+<span class="sd">            generated. The default value is False. This argument applies only when *meshType*=SHELL. </span>
+<span class="sd">        constantThicknessCorners</span>
+<span class="sd">            A Boolean specifying whether to use element-based thickness or nodal-based thickness. </span>
+<span class="sd">            The default value is False. </span>
+<span class="sd">        extendElementSets</span>
+<span class="sd">            A Boolean specifying whether existing element sets that include base elements will be </span>
+<span class="sd">            extended to include corresponding offset elements. The default value is False. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.mergeElement"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.mergeElement">[docs]</a>    <span class="k">def</span> <span class="nf">mergeElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">"""Merge a selection of elements arranged in layers on an orphan mesh part into a single</span>
+<span class="sd">        layer.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        edge</span>
+<span class="sd">            A MeshEdge of one of the specified elements that serves as a reference edge to indicate </span>
+<span class="sd">            the topological direction for merging elements. All specified elements must be reachable </span>
+<span class="sd">            by topological navigation from this element edge, and the topological direction must be </span>
+<span class="sd">            unambiguous. </span>
+<span class="sd">        elements</span>
+<span class="sd">            A MeshElementArray, a list of MeshElement objects, a Set, or a list of Set objects </span>
+<span class="sd">            containing the elements to be included in the merge operation. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+    <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
+    <span class="k">def</span> <span class="nf">mergeNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Node</span><span class="p">],</span> <span class="n">tolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">removeDuplicateElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                   <span class="n">keepHighLabels</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="sd">"""Merge the nodes of an orphan mesh part, or nodes that were generated using the bottom-up</span>
+<span class="sd">        meshing technique.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        nodes</span>
+<span class="sd">            A sequence of Node objects specifying the nodes to merge.</span>
+<span class="sd">        tolerance</span>
+<span class="sd">            A Float specifying the maximum distance between nodes that will be merged to a single</span>
+<span class="sd">            node. The location of the new node is the average position of the merged nodes. The</span>
+<span class="sd">            default value is 10–6.</span>
+<span class="sd">        removeDuplicateElements</span>
+<span class="sd">            A Boolean specifying whether elements with the same connectivity after the merge will</span>
+<span class="sd">            merged into a single element. The default value is True.</span>
+<span class="sd">        keepHighLabels</span>
+<span class="sd">            A Boolean specifying which node labels will remain after nodes are merged. If True then</span>
+<span class="sd">            the highest node labels are kept; when False the lowest node labels are kept. The</span>
+<span class="sd">            default value is False. This argument applies only to merging of orphan mesh nodes.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
+    <span class="k">def</span> <span class="nf">mergeNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node1</span><span class="p">:</span> <span class="n">MeshNode</span><span class="p">,</span> <span class="n">node2</span><span class="p">:</span> <span class="n">MeshNode</span><span class="p">,</span> <span class="n">removeDuplicateElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                   <span class="n">keepHighLabels</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="sd">"""Merge two nodes of an orphan mesh part or an Abaqus native mesh. If the nodes belong to</span>
+<span class="sd">        an Abaqus native mesh then at least one of the two nodes must have been generated using</span>
+<span class="sd">        the bottom-up meshing technique.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        node1</span>
+<span class="sd">            A MeshNode object specifying the first node to merge. </span>
+<span class="sd">        node2</span>
+<span class="sd">            A MeshNode object specifying the second node to merge. </span>
+<span class="sd">        removeDuplicateElements</span>
+<span class="sd">            A Boolean specifying whether elements with the same connectivity after the merge will </span>
+<span class="sd">            merged into a single element. The default value is True. </span>
+<span class="sd">        keepHighLabels</span>
+<span class="sd">            A Boolean specifying which node label will remain after nodes are merged. If True then </span>
+<span class="sd">            the higher node label is kept; when False the lower node label is kept. The default </span>
+<span class="sd">            value is False. This argument applies only to merging of orphan mesh nodes. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">mergeNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<div class="viewcode-block" id="MeshEditPart.orientElements"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.orientElements">[docs]</a>    <span class="k">def</span> <span class="nf">orientElements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pickedElements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshElement</span><span class="p">],</span> <span class="n">referenceRegion</span><span class="p">:</span> <span class="n">MeshFace</span><span class="p">):</span>
+        <span class="sd">"""This method orients the stack direction of elements in a continuum shell or gasket mesh.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        pickedElements</span>
+<span class="sd">            A sequence of MeshElement objects specifying the elements to orient. </span>
+<span class="sd">        referenceRegion</span>
+<span class="sd">            A MeshFace object specifying a reference top face that indicates the desired </span>
+<span class="sd">            orientation. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.removeElementSize"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.removeElementSize">[docs]</a>    <span class="k">def</span> <span class="nf">removeElementSize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method removes the global element size from an orphan mesh part.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.renumberElement"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.renumberElement">[docs]</a>    <span class="k">def</span> <span class="nf">renumberElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">startLabel</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">increment</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                        <span class="n">labels</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
+        <span class="sd">"""This method assigns new labels to orphan mesh elements.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        elements</span>
+<span class="sd">            A MeshElementArray or a tuple or list of MeshElement objects, or a Set containing </span>
+<span class="sd">            elements to be renumbered. If unspecified, all elements in the part will be renumbered. </span>
+<span class="sd">        startLabel</span>
+<span class="sd">            A positive Int specifying the new label for the first element in *elements*. </span>
+<span class="sd">        increment</span>
+<span class="sd">            A positive Int specifying the increment used for computation of new labels for all </span>
+<span class="sd">            consecutive elements in *elements*. </span>
+<span class="sd">        offset</span>
+<span class="sd">            An Int by which existing labels of the specified elements will be offset. </span>
+<span class="sd">        labels</span>
+<span class="sd">            A list of labels for the specified elements. The length of this list must match the </span>
+<span class="sd">            number of specified elements.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            - Renumbering is attempted on a native part: </span>
+<span class="sd">              Error: Renumbering can be applied to orphan mesh parts only </span>
+<span class="sd">            - Renumbering data is specified incorrectly: </span>
+<span class="sd">              Error: Either startLabel and increment or offset must be specified </span>
+<span class="sd">            - Renumbering will result in invalid labels: </span>
+<span class="sd">              Error: Specified data will result in invalid labels </span>
+<span class="sd">            - Renumbering will result in conflicting labels: </span>
+<span class="sd">              Error: Specified data will result in conflicting labels </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.renumberNode"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.renumberNode">[docs]</a>    <span class="k">def</span> <span class="nf">renumberNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">startLabel</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">increment</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                     <span class="n">labels</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
+        <span class="sd">"""This method assigns new labels to orphan mesh nodes.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        nodes</span>
+<span class="sd">            A MeshNodeArray or a tuple or list of MeshNode objects, or a Set containing nodes to be </span>
+<span class="sd">            renumbered. If unspecified, all nodes in the part will be renumbered. </span>
+<span class="sd">        startLabel</span>
+<span class="sd">            A positive Int specifying the new label for the first node in *nodes*. </span>
+<span class="sd">        increment</span>
+<span class="sd">            A positive Int specifying the increment used for computation of new labels for all </span>
+<span class="sd">            consecutive nodes in *nodes*. </span>
+<span class="sd">        offset</span>
+<span class="sd">            An Int by which existing labels of the specified nodes will be offset. </span>
+<span class="sd">        labels</span>
+<span class="sd">            A list of labels for the specified nodes. The length of this list must match the number </span>
+<span class="sd">            of specified nodes.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            - Renumbering is attempted on a native part: </span>
+<span class="sd">              Error: Renumbering can be applied to orphan mesh parts only </span>
+<span class="sd">            - Renumbering data is specified incorrectly: </span>
+<span class="sd">              Error: Either startLabel and increment or offset must be specified </span>
+<span class="sd">            - Renumbering will result in invalid labels: </span>
+<span class="sd">              Error: Specified data will result in invalid labels </span>
+<span class="sd">            - Renumbering will result in conflicting labels: </span>
+<span class="sd">              Error: Specified data will result in conflicting labels </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.setElementSize"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.setElementSize">[docs]</a>    <span class="k">def</span> <span class="nf">setElementSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="sd">"""This method sets the global element size for an orphan mesh part.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        size</span>
+<span class="sd">            A Float specifying the desired element size. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.splitElement"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.splitElement">[docs]</a>    <span class="k">def</span> <span class="nf">splitElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
+        <span class="sd">"""This method splits quadrilateral elements of an orphan mesh part or a Abaqus native mesh</span>
+<span class="sd">        into triangular elements.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        elements</span>
+<span class="sd">            A sequence of quadrilateral MeshElement objects specifying the elements to split. Each </span>
+<span class="sd">            quadrilateral element is split into two triangular elements by the shorter diagonal. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.splitMeshEdge"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.splitMeshEdge">[docs]</a>    <span class="k">def</span> <span class="nf">splitMeshEdge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">parameter</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="sd">"""This method splits an edge of a quadrilateral or triangular element of an orphan mesh</span>
+<span class="sd">        part or an Abaqus native mesh.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        edge</span>
+<span class="sd">            A single MeshEdge object specifying the element edge to split. </span>
+<span class="sd">        parameter</span>
+<span class="sd">            A Float specifying the normalized distance along *edge* at which to split. Possible </span>
+<span class="sd">            values are 0.0 &lt;&lt; *parameter* &lt;&lt; 1.0. The default value is 0.5. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.subdivideElement"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.subdivideElement">[docs]</a>    <span class="k">def</span> <span class="nf">subdivideElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">divisionNumber</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">face</span><span class="p">:</span> <span class="n">MeshFace</span> <span class="o">=</span> <span class="n">MeshFace</span><span class="p">(),</span>
+                         <span class="n">edge</span><span class="p">:</span> <span class="n">MeshEdge</span> <span class="o">=</span> <span class="n">MeshEdge</span><span class="p">()):</span>
+        <span class="sd">"""Subdivide a selection of elements on an orphan mesh part in one or more directions.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        elements</span>
+<span class="sd">            A MeshElementArray, a list of MeshElement objects, a Set, or a list of Set objects </span>
+<span class="sd">            containing the elements to be subdivided. By default all the elements of the part are </span>
+<span class="sd">            subdivided. </span>
+<span class="sd">        divisionNumber</span>
+<span class="sd">            An Int specifying the number of resulting elements for each input element in each </span>
+<span class="sd">            direction of the subdivision. If *face* or *edge* are not specified, elements will be </span>
+<span class="sd">            subdivided according to this number in all possible directions. Must be greater than </span>
+<span class="sd">            one. Default is 2. </span>
+<span class="sd">        face</span>
+<span class="sd">            A MeshFace object that serves as a reference for indicating two topological directions </span>
+<span class="sd">            for the subdivision operation. Must be a face of one of the specified elements, and all </span>
+<span class="sd">            specified elements must be reachable by topological navigation from this element face. </span>
+<span class="sd">            May not be combined with *edge*. </span>
+<span class="sd">        edge</span>
+<span class="sd">            A MeshEdge object that serves as a reference for indicating a single topological </span>
+<span class="sd">            direction for the subdivision operation. Must be an edge of one of the specified </span>
+<span class="sd">            elements, and all specified elements must be reachable by topological navigation from </span>
+<span class="sd">            this element edge. May not be combined with *face*. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.swapMeshEdge"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.swapMeshEdge">[docs]</a>    <span class="k">def</span> <span class="nf">swapMeshEdge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">"""This method swaps the diagonal of two adjacent triangular elements of an orphan mesh</span>
+<span class="sd">        part or an Abaqus native mesh.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        edge</span>
+<span class="sd">            A single MeshEdge object specifying the element edge to swap. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.wrapMesh"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.wrapMesh">[docs]</a>    <span class="k">def</span> <span class="nf">wrapMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="sd">"""This method wraps a planar orphan mesh part about the *Z*-axis.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        radius</span>
+<span class="sd">            A Float specifying the radius of the cylinder about which the part is to be wrapped. The </span>
+<span class="sd">            wrapping procedure will relocate a node at point (xx, yy) on the planar mesh to </span>
+<span class="sd">            (x,θ,zx,θ,z), where rr is the specified radius, θθ = xrxr, and zz=yy. </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.redoMeshEdit"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.redoMeshEdit">[docs]</a>    <span class="k">def</span> <span class="nf">redoMeshEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method executes the edit mesh or the bottom-up meshing operation most recently</span>
+<span class="sd">        undone by the undoMeshEdit method on an part. A redo action must be currently available</span>
+<span class="sd">        for the part. This implies that the user must have executed the undoMeshEdit method on</span>
+<span class="sd">        the part and that the user has not subsequently executed any further edit mesh commands</span>
+<span class="sd">        on the assembly. It also implies that the user provided a sufficient cache allowance to</span>
+<span class="sd">        store the undo operation.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MeshEditPart.undoMeshEdit"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditPart.MeshEditPart.undoMeshEdit">[docs]</a>    <span class="k">def</span> <span class="nf">undoMeshEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""This method undoes the most recent edit mesh or the bottom-up meshing operation on a</span>
+<span class="sd">        part and restores the mesh to its previous state. An edit mesh undo action must be</span>
+<span class="sd">        available for the part. This implies that prior to executing an edit mesh command on the</span>
+<span class="sd">        part, the user enabled edit mesh undo with a sufficient cache allowance to store the</span>
+<span class="sd">        edit mesh operation.</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div></div>
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, WANG Hailin
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/scripts/furo.js"></script>
+    </body>
+</html>
