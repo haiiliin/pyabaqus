@@ -1,0 +1,7 @@
+numpy
+numoydoc
+PyQt5
+sphinx_rtd_theme
+sphinx-toolbox
+sphinxcontrib-bibtex
+
