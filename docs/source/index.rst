@@ -71,12 +71,12 @@ Now you can just run your Abaqus/Python script using your own Python interpreter
 .. image:: images/Model.gif
     :width: 100%
     :align: center
-    :caption: Create an Abaqus Model
+    :alt: Create an Abaqus Model
 
 .. image:: images/Output.gif
     :width: 100%
     :align: center
-    :caption: Extract Output Data
+    :alt: Extract Output Data
 
 More Information
 ----------------
