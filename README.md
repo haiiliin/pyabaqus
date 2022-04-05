@@ -49,8 +49,13 @@ system variable named `ABAQUS_BAT_PATH`, and set the value to the file path of t
 
 Now you can just run your Abaqus/Python script using your own Python interpreter that `pyabaqus` is installed.
 
-![Model](https://github.com/Haiiliin/pyabaqus/blob/main/screenshots/Model.gif)
-![Output](https://github.com/Haiiliin/pyabaqus/blob/main/screenshots/Output.gif)
+- Create an Abaqus Model
+
+  ![Model](https://github.com/Haiiliin/pyabaqus/blob/main/screenshots/Model.gif "Create an Abaqus Model")
+
+- Extract Output Data
+
+  ![Output](https://github.com/Haiiliin/pyabaqus/blob/main/screenshots/Output.gif "Extract Output Data")
 
 ## More Information
 
