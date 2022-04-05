@@ -96,7 +96,7 @@ Related project
 
 Abaqus Executor is an application to run your Abaqus model more fluently,
 check it in `github.com/Haiiliin/pyabaqus-executor <https://github.com/Haiiliin/pyabaqus-executor>`_ or check 
-the `documentation <executor.haiiliin.com>`_.
+the `documentation <https://executor.haiiliin.com/>`_.
 
 Documentation
 -------------
