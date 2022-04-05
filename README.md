@@ -57,9 +57,14 @@ Now you can just run your Abaqus/Python script using your own Python interpreter
 
   ![Output](https://github.com/Haiiliin/pyabaqus/blob/main/screenshots/Output.gif "Extract Output Data")
 
-## More Information
+## Other links for this project
 
-- Abaqus Executor: [Haiiliin/pyabaqus-executor: Abaqus Executor](https://github.com/Haiiliin/pyabaqus-executor)
-- GitHub repository: [Haiiliin/pyabaqus: Type hints for python scripting of Abaqus](https://github.com/Haiiliin/pyabaqus)
+- GitHub repository: [github.com/Haiiliin/pyabaqus](https://github.com/Haiiliin/pyabaqus)
 - PyPI: [pyabaqus · PyPI](https://pypi.org/project/pyabaqus/)
-- Documentation: [Welcome to pyabaqus’s documentation! — pyabaqus documentation](https://haiiliin.com/pyabaqus/)
+- Documentation: [pyabaqus documentation](https://haiiliin.com/pyabaqus/)
+
+## Related project
+
+Abaqus Executor is an application to run your Abaqus model more fluently,
+check it in [github.com/Haiiliin/pyabaqus-executor](https://github.com/Haiiliin/pyabaqus-executor).
+
