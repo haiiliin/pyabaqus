@@ -68,10 +68,14 @@ Run your Abaqus/Python script
 
 Now you can just run your Abaqus/Python script using your own Python interpreter that `pyabaqus` is installed.
 
+- Create an Abaqus Model
+
 .. image:: images/Model.gif
     :width: 100%
     :align: center
     :alt: Create an Abaqus Model
+
+- Extract Output Data
 
 .. image:: images/Output.gif
     :width: 100%
