@@ -66,5 +66,6 @@ Now you can just run your Abaqus/Python script using your own Python interpreter
 ## Related project
 
 Abaqus Executor is an application to run your Abaqus model more fluently,
-check it in [github.com/Haiiliin/pyabaqus-executor](https://github.com/Haiiliin/pyabaqus-executor).
+check it in [github.com/Haiiliin/pyabaqus-executor](https://github.com/Haiiliin/pyabaqus-executor)
+or check the [documentation](https://executor.haiiliin.com/).
 
