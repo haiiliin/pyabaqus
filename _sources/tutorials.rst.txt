@@ -7,7 +7,7 @@ For more tests, check `pyabaqus/tests at main · Haiiliin/pyabaqus <https://gith
 
 Usually in Abaqus, we have several things to do:
     * Build the model
-    * Submit the monitor the job
+    * Submit and monitor the job
     * Get the output data and visualize it
 
 
