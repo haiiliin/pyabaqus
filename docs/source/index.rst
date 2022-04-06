@@ -99,7 +99,7 @@ Now you can just run your Abaqus/Python script using your own Python interpreter
     :alt: Extract Output Data
 
 What next?
--—--------
+----------
 
 You may wonder how does this package work, 
 you can go :doc:`getting_started` for more detailed introduction and go
