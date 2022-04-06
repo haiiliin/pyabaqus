@@ -19,6 +19,13 @@ Python script, even without opening the Abaqus/CAE.
 .. model, submit and monitor the job, and visualize the results in just one python script, you 
 .. don't even need to open Abaqus the whole time.
 
+Related project
+---------------
+
+Abaqus Executor is an application to run your Abaqus model more fluently,
+check it in `github.com/Haiiliin/pyabaqus-executor <https://github.com/Haiiliin/pyabaqus-executor>`_ or check 
+the `documentation <https://executor.haiiliin.com/>`_.
+
 Quick Start
 -----------
 
@@ -90,13 +97,6 @@ Other links for this project
 * PyPI: `pyabaqus · PyPI <https://pypi.org/project/pyabaqus/>`_
 * PDF version of this documentation: `pyabaqus.pdf <https://github.com/Haiiliin/pyabaqus/releases/latest/download/pyabaqus.pdf>`_
 * Abaqus Executor: `executor_setup.exe <https://github.com/Haiiliin/pyabaqus-executor/releases/latest/download/executor_setup.exe>`_
-
-Related project
----------------
-
-Abaqus Executor is an application to run your Abaqus model more fluently,
-check it in `github.com/Haiiliin/pyabaqus-executor <https://github.com/Haiiliin/pyabaqus-executor>`_ or check 
-the `documentation <https://executor.haiiliin.com/>`_.
 
 Documentation
 -------------
