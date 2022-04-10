@@ -7,6 +7,19 @@ It also provides some simple APIs to execute the Abaqus commands so that you can
 Python script to build the model, submit the job and extract the output data in just one 
 Python script, even without opening the Abaqus/CAE. 
 
+## Other links for this project
+
+- GitHub repository: [github.com/Haiiliin/pyabaqus](https://github.com/Haiiliin/pyabaqus)
+- PyPI: [pyabaqus · PyPI](https://pypi.org/project/pyabaqus/)
+- Documentation: [pyabaqus documentation](https://haiiliin.com/pyabaqus/)
+
+
+## Related project
+
+Abaqus Executor is an application to run your Abaqus model more fluently,
+check it in [github.com/Haiiliin/pyabaqus-executor](https://github.com/Haiiliin/pyabaqus-executor)
+or check the [documentation](https://executor.haiiliin.com/).
+
 ## Quick start
 
 ### Installation
@@ -57,9 +70,3 @@ Now you can just run your Abaqus/Python script using your own Python interpreter
 
   ![Output](https://github.com/Haiiliin/pyabaqus/blob/main/screenshots/Output.gif "Extract Output Data")
 
-## More Information
-
-- Abaqus Executor: [Haiiliin/pyabaqus-executor: Abaqus Executor](https://github.com/Haiiliin/pyabaqus-executor)
-- GitHub repository: [Haiiliin/pyabaqus: Type hints for python scripting of Abaqus](https://github.com/Haiiliin/pyabaqus)
-- PyPI: [pyabaqus · PyPI](https://pypi.org/project/pyabaqus/)
-- Documentation: [Welcome to pyabaqus’s documentation! — pyabaqus documentation](https://haiiliin.com/pyabaqus/)
