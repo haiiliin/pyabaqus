@@ -5,7 +5,8 @@ from threading import Thread
 from PyQt5.QtWidgets import QApplication, QStyle
 
 from .Mdb.Mdb import Mdb as AbaqusMdb
-from .Session.Session import Session
+from .Odb.Odb import Odb
+from .Session.Session import Session as AbaqusSession
 from .Tools.JobMonitor.JobMonitor import JobMonitor
 
 
@@ -21,7 +22,22 @@ class Mdb(AbaqusMdb):
         abaqus = 'abaqus'
         if 'ABAQUS_BAT_PATH' in os.environ.keys():
             abaqus = os.environ['ABAQUS_BAT_PATH']
+        os.system('cd {}'.format(os.path.basename(os.path.abspath(sys.argv[0]))))
         os.system('{} cae -noGUI {}'.format(abaqus, os.path.abspath(sys.argv[0])))
+        
+
+class Session(AbaqusSession):
+    
+    def openOdb(self, name: str, *args, **kwargs) -> Odb:
+        self.odbs[name] = odb = Odb(name, *args, **kwargs)
+
+        abaqus = 'abaqus'
+        if 'ABAQUS_BAT_PATH' in os.environ.keys():
+            abaqus = os.environ['ABAQUS_BAT_PATH']
+        os.system('cd {}'.format(os.path.basename(os.path.abspath(sys.argv[0]))))
+        os.system('{} cae database={} script={}'.format(abaqus, os.path.abspath(name), os.path.abspath(sys.argv[0])))
+        self.exit()
+        return odb
 
 
 session = Session()
