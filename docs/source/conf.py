@@ -69,7 +69,7 @@ exclude_patterns = []
 html_theme = 'furo'
 
 # Logo
-html_logo = "ds-dark.svg"
+html_logo = "_static/3ds-dark.svg"
 
 
 html_theme_options = {
