@@ -68,6 +68,9 @@ exclude_patterns = []
 # a list of builtin themes.
 html_theme = 'furo'
 
+# Logo
+html_logo = "ds-dark.svg"
+
 
 html_theme_options = {
     'navigation_depth': 9,
