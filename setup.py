@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="pyabaqus",
+    name="pyabaqus-alpha",
     version="1.0.14",
     author="WANG Hailin",
     author_email="hailin.wang@connect.polyu.hk",
@@ -20,10 +20,15 @@ setuptools.setup(
     python_requires='>=3.6',
     package_dir={'': 'src'},
     packages=setuptools.find_packages('src'),
-    py_modules=['abaqusConstants', 'animation', 'annotationToolset', 'assembly', 'caeModules', 'caePrefsAccess',
-                'calibration', 'connectorBehavior', 'customKernel', 'deleteObjectCallback', 'displayGroupMdbToolset',
-                'displayGroupOdbToolset', 'driverUtils', 'field', 'fields', 'inpParser', 'interaction', 'material',
-                'mesh', 'meshEdit', 'methodCallback', 'monitorManager', 'odbAccess', 'odbConnectorBehavior',
-                'odbMaterial', 'odbSection', 'part', 'redentABQ', 'section', 'symbolicConstants', 'textRepr',
-                'upgradeScript', 'visualization'],
+    py_modules=[
+        'abaqusConstants', 'animation', 'annotationToolset', 'assembly',
+        'caeModules', 'caePrefsAccess', 'calibration', 'connectorBehavior',
+        'customKernel', 'deleteObjectCallback', 'displayGroupMdbToolset',
+        'displayGroupOdbToolset', 'driverUtils', 'field', 'fields',
+        'inpParser', 'interaction', 'material', 'mesh', 'meshEdit',
+        'methodCallback', 'monitorManager', 'odbAccess',
+        'odbConnectorBehavior', 'odbMaterial', 'odbSection', 'part',
+        'redentABQ', 'section', 'symbolicConstants', 'textRepr',
+        'upgradeScript', 'visualization'
+    ],
 )
