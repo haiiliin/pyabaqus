@@ -355,7 +355,7 @@ Abaqus Python script quickly.</p>
 environment, you can use <cite>pyabaqus</cite> to write your Abaqus/Python scripts, and run the scripts inside Abaqus on your own.
 However, with the help of Abaqus command, an easier way can be achieved: <strong>you can actually run the script using your
 own Python interpreter without opening Abaqus</strong>, which is achieved via the <strong>abaqus</strong> command like this:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>abaqus <span class="nv">job</span><span class="o">=</span>job-name <span class="nv">input</span><span class="o">=</span>input-file <span class="nv">user</span><span class="o">=</span>user-file int double
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>abaqus cae -noGUI script.py
 </pre></div>
 </div>
 <p>The secret is hided in the <a class="reference internal" href="reference/mdb.html#abaqus.Mdb.Mdb.Mdb.saveAs" title="abaqus.Mdb.Mdb.Mdb.saveAs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">saveAs()</span></code></a> method:</p>

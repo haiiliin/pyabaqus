@@ -71,7 +71,7 @@ own Python interpreter without opening Abaqus**, which is achieved via the **aba
 
 .. code-block:: sh
 
-    abaqus job=job-name input=input-file user=user-file int double
+    abaqus cae -noGUI script.py
 
 The secret is hided in the :py:meth:`~abaqus.Mdb.Mdb.Mdb.saveAs` method:
 
